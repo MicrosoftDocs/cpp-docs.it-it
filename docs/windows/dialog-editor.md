@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: editor finestre (C++)'
 title: Editor finestre (C++)
 ms.date: 02/15/2019
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 6a83640bd50d4af40be3cdb7a47b29ae5ffb3f09
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 547d00208cc2a05814a9820e219cdfc5c7163436
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504546"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327161"
 ---
 # <a name="dialog-editor-c"></a>Editor finestre (C++)
 
@@ -36,7 +37,7 @@ L' **editor finestre** consente di creare o modificare le risorse della finestra
 
 - Per aprire l'editor, fare doppio clic sul file RC di una finestra di dialogo nella finestra di **visualizzazione risorse** o andare a menu **Visualizza**  >  **altre finestre**  >  **visualizzazione risorse**.
 
-Uno dei primi passaggi per creare una nuova finestra di dialogo o un modello di finestra di dialogo consiste nell'aggiungere controlli. Nell' **editor finestre**è possibile disporre i controlli per adattarli a una determinata dimensione, forma o allineamento oppure è possibile spostarli in modo che funzionino all'interno della finestra di dialogo. È inoltre facile eliminare un controllo.
+Uno dei primi passaggi per creare una nuova finestra di dialogo o un modello di finestra di dialogo consiste nell'aggiungere controlli. Nell' **editor finestre** è possibile disporre i controlli per adattarli a una determinata dimensione, forma o allineamento oppure è possibile spostarli in modo che funzionino all'interno della finestra di dialogo. È inoltre facile eliminare un controllo.
 
 È possibile archiviare una finestra di dialogo come modello in modo da poterla riusare. È possibile passare facilmente dalla progettazione della finestra di dialogo e alla modifica del codice che la implementa e viceveresa.
 
@@ -65,7 +66,7 @@ La barra degli strumenti dell' **editor finestre** contiene i pulsanti per la di
 |![Pulsante Centra verticalmente](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Vertical|![Pulsante Attiva/Disattiva griglia](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|Attiva/Disattiva griglia|
 |![Pulsante Centra orizzontalmente](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|Ridimensionamento orizzontale|![Pulsante Attiva/Disattiva guide](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|Attiva/Disattiva guide|
 
-- Per visualizzare o nascondere la barra degli strumenti dell' **editor finestre** , passare a **visualizzazione**menu  >  **Toolbars**  >  **editor finestre di dialogo**.
+- Per visualizzare o nascondere la barra degli strumenti dell' **editor finestre** , passare a **visualizzazione** menu  >    >  **editor finestre di dialogo**.
 
 Quando si apre l' **editor finestre** in un progetto C++, la barra degli strumenti dell' **editor finestre** viene visualizzata automaticamente nella parte superiore della soluzione. Tuttavia, se si chiude in modo esplicito la barra degli strumenti, sarà necessario richiamarla alla successiva apertura dell' **editor finestre**. È possibile abilitare o disabilitare la visualizzazione selezionandola dall'elenco delle barre degli strumenti e delle finestre disponibili.
 
@@ -112,7 +113,7 @@ Di seguito sono riportati i tasti di scelta rapida predefiniti per i comandi del
 |Format.TestDialog|**CTRL**  +  **T**|Esegue la finestra di dialogo per verificare l'aspetto e il comportamento.|
 |Format.ToggleGuides|**CTRL**  +  **G**|Cicli tra nessuna griglia, linee guida e griglia per la modifica della finestra di dialogo.|
 
-- Per modificare i tasti di scelta rapida, passare a menu **strumenti**  >  **Opzioni**e scegliere **tastiera** nella cartella **ambiente** .
+- Per modificare i tasti di scelta rapida, passare a menu **strumenti**  >  **Opzioni** e scegliere **tastiera** nella cartella **ambiente** .
 
    Per altre informazioni, vedere [Identificazione e personalizzazione dei tasti di scelta rapida](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 
@@ -124,7 +125,7 @@ Di seguito sono riportati i tasti di scelta rapida predefiniti per i comandi del
 
 Win32
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Editor di risorse](../windows/resource-editors.md)<br/>
 [Procedura: creare una finestra di dialogo](../windows/creating-a-new-dialog-box.md)<br/>

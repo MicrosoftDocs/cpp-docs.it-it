@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: tempo, _time32, _time64'
 title: time, _time32, _time64
 ms.date: 11/06/2018
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - system time
 - time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
-ms.openlocfilehash: 02dc7f250fe26d9ed7abfd89ca9a4c2163312e6d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8602e485c15b11b8f4e740ceead382aa88f8f5f7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946095"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326154"
 ---
 # <a name="time-_time32-_time64"></a>time, _time32, _time64
 
@@ -64,17 +65,17 @@ Puntatore al percorso di archiviazione per l'ora.
 
 Restituisce l'ora in secondi trascorsi dalla mezzanotte del 1 gennaio 1970 o-1 in caso di errore.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 La funzione **Time** restituisce il numero di secondi trascorsi dalla mezzanotte (00:00:00) del 1 ° gennaio 1970, UTC (Coordinated Universal Time), in base al clock di sistema. Il valore restituito viene archiviato nella posizione specificata da *destTime*. Questo parametro può essere **null**, nel qual caso il valore restituito non viene archiviato.
 
-**Time** è un wrapper per **_time64** e **time_t** è, per impostazione predefinita, equivalente a **__time64_t**. Se è necessario forzare il compilatore a interpretare **time_t** come **time_t**precedente a 32 bit, è possibile definire **_USE_32BIT_TIME_T**. Questa operazione non è consigliabile perché l'applicazione potrebbe non riuscire dopo il 18 gennaio 2038. L'uso di questa macro non è consentito su piattaforme a 64 bit.
+**Time** è un wrapper per **_time64** e **time_t** è, per impostazione predefinita, equivalente a **__time64_t**. Se è necessario forzare il compilatore a interpretare **time_t** come la precedente **time_t** a 32 bit, è possibile definire **_USE_32BIT_TIME_T**. Questa operazione non è consigliabile perché l'applicazione potrebbe non riuscire dopo il 18 gennaio 2038. L'uso di questa macro non è consentito su piattaforme a 64 bit.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
 |-------|------|---------------------|
-|**time**, **\_time32**, **\_time64**|\<time.h>|\<> CTime o \<time. h >|
+|**Time**, **\_ time32**, **\_ time64**|\<time.h>|\<ctime> o \<time.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
@@ -232,7 +233,7 @@ Today is Friday, day 25 of April in the year 2003.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione dell'ora](../../c-runtime-library/time-management.md)<br/>
+[Gestione del tempo](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>
 [asctime_s, _wasctime_s](asctime-s-wasctime-s.md)<br/>
 [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)<br/>

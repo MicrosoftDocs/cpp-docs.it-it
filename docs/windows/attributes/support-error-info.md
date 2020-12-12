@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: support_error_info'
 title: support_error_info (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - support_error_info attribute
 ms.assetid: 20a2b55c-4738-4b35-a71d-e5e9c3a7e3bc
-ms.openlocfilehash: cf02af793b97c55de4c52280ad2795a460a98d9f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3d707179511dadda0f24a2d13e95a32de3705f62
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832178"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327273"
 ---
 # <a name="support_error_info"></a>support_error_info
 
@@ -28,7 +29,7 @@ Implementa il supporto per la restituzione di errori dettagliati.
 *error_interface*<br/>
 Identificatore dell'interfaccia che implementa `IErrorInfo` .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'attributo **support_error_info** di C++ implementa il supporto per la restituzione di errori contestuali e dettagliati rilevati dall'oggetto di destinazione al client. Perché l'oggetto supporti gli errori, i metodi dell' `IErrorInfo` interfaccia devono essere implementati dall'oggetto. Per altre informazioni, vedere [Supporto di IDispatch e IErrorInfo](../../atl/supporting-idispatch-and-ierrorinfo.md).
 
@@ -69,7 +70,7 @@ class CMyClass
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi COM](com-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)

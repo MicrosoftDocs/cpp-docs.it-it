@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Threading (C++)'
 title: Threading (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: 6f83dca442b6508207a4123fa918fc5078bdf664
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e46a3720280fe7ee7b9debae98e3270825e8db40
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840817"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327256"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -40,7 +41,7 @@ Opzionale Uno dei modelli di threading seguenti:
 
 Il valore predefinito è `apartment`.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'attributo C++ **Threading** non viene visualizzato nel file con estensione IDL generato ma verrà usato nell'implementazione dell'oggetto com.
 
@@ -63,7 +64,7 @@ Vedere l'esempio [concesso in licenza](licensed.md) per un esempio di utilizzo d
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi COM](com-attributes.md)<br/>
 [Attributi typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)<br/>

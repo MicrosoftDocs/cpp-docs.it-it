@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: switch_type'
 title: switch_type (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-ms.openlocfilehash: 0c39aa442c9d4eaf3a482e411cda762fe0cc34b3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e291524d00afff89aa17634307426ef62cd40f4b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838529"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327267"
 ---
 # <a name="switch_type"></a>switch_type
 
@@ -30,7 +31,7 @@ type
 *type*<br/>
 Il tipo di opzione può essere un Integer, un carattere, un valore booleano o un tipo di enumerazione.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'attributo **switch_type** C++ ha la stessa funzionalità dell'attributo [switch_type](/windows/win32/Midl/switch-type) MIDL.
 
@@ -68,7 +69,7 @@ Vedere l'esempio di [caso](case-cpp.md) per un uso di esempio di **switch_type**
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)<br/>

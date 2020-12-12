@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: procedura: creare un'icona o un'altra immagine"
 title: "Procedura: creare un'icona o un'altra immagine"
 ms.date: 02/15/2019
 helpviewer_keywords:
@@ -79,12 +80,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: bbaa008d8dac74588fc15bfebbc7cb2611260349
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: fee71fdfa073365b0ba63b1a789e0928bb1557ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504553"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327133"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>Procedura: creare un'icona o un'altra immagine
 
@@ -125,7 +126,7 @@ Quando si apre la risorsa icona o cursore nell' [editor di immagini](../windows/
 > [!NOTE]
 > Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).
 
-La finestra di dialogo **nuovo &lt; tipo di &gt; immagine del dispositivo** consente di creare una nuova immagine del dispositivo di un tipo specificato. Per aprire la finestra di dialogo **nuova \<Device> immagine** , passare a **immagine**menu  >  **nuovo tipo di immagine**. Sono incluse le proprietà seguenti: **tipo di immagine di destinazione** e **personalizzato**.
+La finestra di dialogo **nuovo &lt; tipo di &gt; immagine del dispositivo** consente di creare una nuova immagine del dispositivo di un tipo specificato. Per aprire la finestra di dialogo **nuova \<Device> immagine** , passare a **immagine** menu  >  **nuovo tipo di immagine**. Sono incluse le proprietà seguenti: **tipo di immagine di destinazione** e **personalizzato**.
 
 La proprietà **tipo immagine di destinazione** elenca i tipi di immagine disponibili in cui è possibile selezionare il tipo di immagine che si desidera aprire:
 
@@ -182,13 +183,13 @@ Usare la finestra di dialogo **Apri &lt; &gt; immagine dispositivo** per aprire 
 
 ### <a name="to-add-an-image-for-a-different-display-device"></a>Per aggiungere un'immagine per un diverso dispositivo di visualizzazione
 
-1. Passare a **immagine**menu  >  **nuovo dispositivo immagine**oppure fare clic con il pulsante destro del mouse nel riquadro **editor di immagini** e scegliere **nuova immagine dispositivo**.
+1. Passare a **immagine** menu  >  **nuovo dispositivo immagine** oppure fare clic con il pulsante destro del mouse nel riquadro **editor di immagini** e scegliere **nuova immagine dispositivo**.
 
 1. Selezionare il tipo di immagine che si desidera aggiungere. È anche possibile selezionare **personalizzato** per creare un'icona le cui dimensioni non sono disponibili nell'elenco predefinito.
 
 ### <a name="to-copy-a-device-image"></a>Per copiare un'immagine del dispositivo
 
-1. Vai a **immagine**del menu  >  **Apri immagine dispositivo** e scegli un'immagine dall'elenco immagini correnti. Ad esempio, scegliere la versione 32 × 32, a 16 colori di un'icona.
+1. Vai a **immagine** del menu  >  **Apri immagine dispositivo** e scegli un'immagine dall'elenco immagini correnti. Ad esempio, scegliere la versione 32 × 32, a 16 colori di un'icona.
 
 1. Copiare l'immagine icona attualmente visualizzata (**CTRL** + **C**).
 
@@ -239,7 +240,7 @@ Usando l' **editor di immagini**, le icone e i cursori possono essere di grandi 
 
 1. Nella finestra di [dialogo Inserisci risorsa](./how-to-create-a-resource-script-file.md)selezionare **icona** o **cursore** e scegliere **nuovo**.
 
-1. Passare a **immagine**menu  >  **nuovo dispositivo immagine** e selezionare lo stile di immagine a 256 colori desiderato.
+1. Passare a **immagine** menu  >  **nuovo dispositivo immagine** e selezionare lo stile di immagine a 256 colori desiderato.
 
 #### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>Per scegliere un colore dalla tavolozza dei colori 256 per le icone grandi
 
@@ -271,9 +272,9 @@ Quando si crea una bitmap, l'immagine viene creata in formato bitmap (BMP). È t
 > [!NOTE]
 > Questo processo non si applica alle icone e ai cursori.
 
-1. Scegliere Apri dal menu **file**  >  **Open**, quindi selezionare **file**.
+1. Scegliere Apri dal menu **file**  >  , quindi selezionare **file**.
 
-1. Nella finestra di **dialogo nuovo file**scegliere la cartella **Visual C++** , quindi selezionare **file bitmap (. bmp)** nella casella **modelli** e selezionare **Apri**.
+1. Nella finestra di **dialogo nuovo file** scegliere la cartella **Visual C++** , quindi selezionare **file bitmap (. bmp)** nella casella **modelli** e selezionare **Apri**.
 
    La bitmap viene aperta nell' **editor di immagini**.
 
@@ -294,7 +295,7 @@ Quando si crea una bitmap, l'immagine viene creata in formato bitmap (BMP). È t
 
 1. Aprire l'immagine nell' **editor di immagini**.
 
-1. Andare al menu **file**  >  **Salva *nomefile con nome* **.
+1. Andare al menu **file**  >  **Salva *nomefile con nome***.
 
 1. Nella casella **nome file** della finestra di dialogo **Salva file** con nome digitare il nome del file e l'estensione che denota il formato desiderato.
 
@@ -304,15 +305,15 @@ Quando si crea una bitmap, l'immagine viene creata in formato bitmap (BMP). È t
 
 1. In [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources)fare clic con il pulsante destro del mouse sul file *RC* , quindi scegliere **Inserisci risorsa**. Se nel file *RC* è già presente una risorsa immagine esistente, ad esempio un cursore, è sufficiente fare clic con il pulsante destro del mouse sulla cartella del **cursore** e scegliere **Inserisci cursore**.
 
-1. Nella finestra di [dialogo Inserisci risorsa](./how-to-create-a-resource-script-file.md)selezionare il tipo di risorsa immagine che si vuole creare, ad esempio**bitmap**, quindi scegliere **nuovo**.
+1. Nella finestra di [dialogo Inserisci risorsa](./how-to-create-a-resource-script-file.md)selezionare il tipo di risorsa immagine che si vuole creare, ad esempio **bitmap**, quindi scegliere **nuovo**.
 
    Se viene visualizzato un segno più ( **+** ) accanto al tipo di risorsa immagine nella finestra di dialogo **Inserisci risorsa** , significa che i modelli della barra degli strumenti sono disponibili. Selezionare il segno più per espandere l'elenco dei modelli, selezionare un modello e scegliere **nuovo**.
 
 ### <a name="to-add-a-new-image-resource-to-a-project-in-a-net-programming-language"></a>Per aggiungere una nuova risorsa immagine a un progetto in un linguaggio di programmazione .NET
 
-1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla cartella del progetto (ad esempio, *WindowsApplication1*).
+1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sulla cartella del progetto (ad esempio, *WindowsApplication1*).
 
-1. Scegliere **Aggiungi**dal menu di scelta rapida, quindi **Aggiungi nuovo elemento**.
+1. Scegliere **Aggiungi** dal menu di scelta rapida, quindi **Aggiungi nuovo elemento**.
 
 1. Nel riquadro **categorie** , espandere la cartella **elementi del progetto locale** , quindi scegliere **risorse**.
 
@@ -324,7 +325,7 @@ Quando si crea una bitmap, l'immagine viene creata in formato bitmap (BMP). È t
 
 Nessuno
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Editor di immagini per le icone](../windows/image-editor-for-icons.md)<br/>
 [Procedura: modificare un'immagine](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>

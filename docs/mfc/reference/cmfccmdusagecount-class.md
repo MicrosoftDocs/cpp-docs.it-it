@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CMFCCmdUsageCount'
 title: Classe CMFCCmdUsageCount
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: 95dca548856510cd8b06914932cc46435c28399d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 40d09e96672cafb022baab98787fe10b1258048b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834277"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327720"
 ---
 # <a name="cmfccmdusagecount-class"></a>Classe CMFCCmdUsageCount
 
@@ -37,18 +38,18 @@ Tiene traccia del numero di utilizzi dei messaggi di Windows, ad esempio quando 
 class CMFCCmdUsageCount : public CObject
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |`CMFCCmdUsageCount::CMFCCmdUsageCount`|Costruttore predefinito.|
 |`CMFCCmdUsageCount::~CMFCCmdUsageCount`|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[CMFCCmdUsageCount:: AddCmd](#addcmd)|Incrementa di uno il contatore associato al comando specificato.|
 |[CMFCCmdUsageCount:: GetCount](#getcount)|Recupera il conteggio di utilizzo associato all'ID di comando specificato.|
@@ -60,14 +61,14 @@ class CMFCCmdUsageCount : public CObject
 
 ### <a name="data-members"></a>Membri dei dati
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |`m_CmdUsage`|`CMap`Oggetto che esegue il mapping dei comandi ai conteggi di utilizzo.|
 |`m_nMinUsagePercentage`|Percentuale di utilizzo minima per un comando da utilizzare di frequente.|
 |`m_nStartCount`|Il contatore iniziale utilizzato per determinare se l'oggetto ha raccolto la quantità minima di dati di rilevamento.|
 |`m_nTotalUsage`|Conteggio di tutti i comandi rilevati.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La `CMFCCmdUsageCount` classe esegue il mapping di ogni identificatore di messaggio di Windows numerico a un contatore Unsigned Integer a 32 bit. `CMFCToolBar` Usa questa classe per visualizzare gli elementi della barra degli strumenti usati di frequente. Per ulteriori informazioni su `CMFCToolBar` , vedere [Classe CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md).
 
@@ -96,7 +97,7 @@ void AddCmd(UINT uiCmd);
 *uiCmd*\
 in Specifica il contatore dei comandi da incrementare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo aggiunge una nuova voce alla struttura della mappa dei conteggi dei comandi, `m_CmdUsage` , se la voce non esiste già.
 
@@ -137,7 +138,7 @@ BOOL HasEnoughInformation() const;
 
 Diverso da zero se l'oggetto ha ricevuto la quantità minima di dati di rilevamento. in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo restituisce un valore diverso da zero se il conteggio totale, `m_nTotalUsage` , di tutti i comandi rilevati è uguale o maggiore del numero iniziale, `m_nStartCount` . Per impostazione predefinita, il Framework imposta il conteggio iniziale 0. È possibile eseguire l'override di questo valore usando il metodo [CMFCCmdUsageCount:: SetOption](#setoptions) .
 
@@ -160,7 +161,7 @@ in Specifica il comando da controllare.
 
 Diverso da zero se il comando viene usato di frequente; in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo restituisce 0 se l'utilizzo totale del comando, `m_nTotalUsage` , è 0. In caso contrario, questo metodo restituisce un valore diverso da zero se la percentuale di utilizzo del comando specificato è maggiore della percentuale minima `m_nMinUsagePercentage` . Per impostazione predefinita, il Framework imposta la percentuale minima su 5. È possibile eseguire l'override di questo valore usando il metodo [CMFCCmdUsageCount:: SetOption](#setoptions) . Se la percentuale minima è 0, questo metodo restituisce un valore diverso da zero se il numero di comandi specificato è maggiore di 0.
 
@@ -174,7 +175,7 @@ Cancella il conteggio di utilizzo di tutti i comandi.
 void Reset();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamare questo metodo per cancellare tutte le voci dalla struttura della mappa dei conteggi dei comandi, `m_CmdUsage` , e per reimpostare l'utilizzo totale del comando, `m_nTotalUsage` , Counter su 0.
 
@@ -191,7 +192,7 @@ virtual void Serialize(CArchive& ar);
 *AR*\
 in `CArchive` Oggetto da serializzare da o a.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo serializza la struttura della mappa dei conteggi dei comandi, `m_CmdUsage` , e l'utilizzo del comando totale, `m_nTotalUsage` , il contatore da o all'archivio specificato.
 
@@ -219,13 +220,13 @@ in Nuova percentuale di utilizzo minima.
 
 TRUE se il metodo ha esito positivo, FALSE se il parametro *nMinUsagePercentage* è maggiore o uguale a 100.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo imposta rispettivamente i `CMFCCmdUsageCount` membri dati della classe condivisa `m_nStartCount` e `m_nMinUsagePercentage` *nStartCount* e *nMinUsagePercentage*. `m_nStartCount` viene usato dal metodo [CMFCCmdUsageCount:: HasEnoughInformation](#hasenoughinformation) per determinare se l'oggetto ha raccolto la quantità minima di dati di rilevamento. `m_nMinUsagePercentage` viene usato dal metodo [CMFCCmdUsageCount:: IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd) per determinare se viene usato di frequente un determinato comando.
 
 Nelle compilazioni di debug questo metodo genera un errore di asserzione se il parametro *nMinUsagePercentage* è maggiore o uguale a 100.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Casin, casinf, casinl'
 title: casin, casinf, casinl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - casinf function
 - casinl function
 ms.assetid: b75d1455-7b1e-43b0-bd46-c530be190be9
-ms.openlocfilehash: e3ae944c9808fd0fc6e8d1ffbd02da2a69454cc6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 222e1b99bcc366b3d3d6656bd438d69f670f75eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943388"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326337"
 ---
 # <a name="casin-casinf-casinl"></a>casin, casinf, casinl
 
@@ -73,7 +74,7 @@ Numero complesso che rappresenta un angolo, espresso in radianti.
 
 Arcoseno di *z*, in radianti. Il risultato è unbounded lungo l'asse immaginario e nell'intervallo [-π/2, + π/2] lungo l'asse reale.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Poiché C++ consente l'overload, è possibile chiamare overload di **Casin** che accettano e restituiscono valori **_Fcomplex** e **_Lcomplex** . In un programma C **Casin** accetta e restituisce sempre un valore **_Dcomplex** .
 
@@ -81,11 +82,11 @@ Poiché C++ consente l'overload, è possibile chiamare overload di **Casin** che
 
 |Routine|Intestazione C|Intestazione C++|
 |-------------|--------------|------------------|
-|**casin**,               **casinf**, **casinl**|\<complex.h>|\<ccomplex>|
+|**Casin**,               **casinf**, **casinl**|\<complex.h>|\<ccomplex>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
 [catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: unorm_2 Class'
 title: Classe unorm_2
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unnorm_2::g
 - amp_short_vectors/Concurrency::graphics::unnorm_2::operator++
 ms.assetid: 62e88ea7-e29f-4f62-95ce-61a1f39f5e34
-ms.openlocfilehash: 325a1532a079c8eff9c8dcdc5410dcbfe58fb914
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 1a91c1c203466f6ece535d45d5c2c828c8150dbd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126202"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326376"
 ---
 # <a name="unorm_2-class"></a>Classe unorm_2
 
@@ -49,63 +50,63 @@ class unorm_2;
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Costruttore unorm_2](#ctor)|Di overload. Costruttore predefinito, Inizializza tutti gli elementi con 0.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|unorm_2::get_x||
-|unorm_2::get_xy||
-|unorm_2::get_y||
-|unorm_2::get_yx||
-|unorm_2::ref_g||
-|unorm_2::ref_r||
-|unorm_2::ref_x||
-|unorm_2::ref_y||
-|unorm_2::set_x||
-|unorm_2::set_xy||
-|unorm_2::set_y||
-|unorm_2::set_yx||
+|unorm_2:: get_x||
+|unorm_2:: get_xy||
+|unorm_2:: get_y||
+|unorm_2:: get_yx||
+|unorm_2:: ref_g||
+|unorm_2:: ref_r||
+|unorm_2:: ref_x||
+|unorm_2:: ref_y||
+|unorm_2:: set_x||
+|unorm_2:: set_xy||
+|unorm_2:: set_y||
+|unorm_2:: set_yx||
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|unorm_2::operator--||
-|unorm_2::operator*=||
-|unorm_2::operator/=||
-|unorm_2::operator++||
-|unorm_2::operator+=||
-|unorm_2::operator=||
-|unorm_2::operator-=||
+|unorm_2:: operator--||
+|unorm_2:: operator * =||
+|unorm_2:: operator/=||
+|unorm_2:: operator + +||
+|unorm_2:: operator + =||
+|unorm_2:: operator =||
+|unorm_2:: operator-=||
 
 ### <a name="public-constants"></a>Costanti pubbliche
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |Costante unorm_2::size||
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|unorm_2::g||
-|unorm_2::gr||
-|unorm_2::r||
-|unorm_2::rg||
-|unorm_2::x||
-|unorm_2::xy||
-|unorm_2::y||
-|unorm_2::yx||
+|unorm_2:: g||
+|unorm_2:: gr||
+|unorm_2:: r||
+|unorm_2:: RG||
+|unorm_2:: x||
+|unorm_2:: XY||
+|unorm_2:: y||
+|unorm_2:: YX||
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -117,7 +118,7 @@ class unorm_2;
 
 **Spazio dei nomi:** Concurrency:: graphics
 
-## <a name="ctor"></a>unorm_2
+## <a name="unorm_2"></a><a name="ctor"></a> unorm_2
 
 Costruttore predefinito, Inizializza tutti gli elementi con 0.
 
@@ -182,12 +183,12 @@ Valore per l'inizializzazione.
 *_Other*<br/>
 Oggetto utilizzato per inizializzare.
 
-## <a name="unorm_2__size"></a>dimensioni
+## <a name="size"></a><a name="unorm_2__size"></a> dimensioni
 
 ```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)

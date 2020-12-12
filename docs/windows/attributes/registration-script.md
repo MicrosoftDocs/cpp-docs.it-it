@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: registration_script'
 title: registration_script (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
-ms.openlocfilehash: 8a57f0b3d0925d1e1096a31734fa4c9d666c5743
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3722a799818c8ad76d710e4c570bc5fdd6b2e10c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846082"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327340"
 ---
 # <a name="registration_script"></a>registration_script
 
@@ -28,7 +29,7 @@ Esegue lo script di registrazione personalizzato specificato.
 *script*<br/>
 Percorso completo di un file di script di registrazione personalizzato (con estensione RGS). Il valore **None**, ad esempio `script = "none"` , indica che la coclasse non presenta requisiti di registrazione.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'attributo **registration_script** C++ esegue lo script di registrazione personalizzato specificato dallo *script*. Se questo attributo non viene specificato, viene utilizzato un file con estensione rgs standard (contenente le informazioni per la registrazione del componente). Per ulteriori informazioni sui file con estensione RGS, vedere [il componente del registro di sistema ATL (Registrar)](../../atl/atl-registry-component-registrar.md).
 
@@ -68,7 +69,7 @@ class CMyClass:public IFace {};
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi COM](com-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l'
 title: strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 ms.date: 4/2/2020
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - strings [C++], comparing locale
 - _wcsxfrm_l function
 ms.assetid: 6ba8e1f6-4484-49aa-83b8-bc2373187d9e
-ms.openlocfilehash: 3ab3f978d4162f968f518272612c18767247f2fb
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ce49d725673e909cd2befb322bbd90450bfba2e7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912346"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326265"
 ---
 # <a name="strxfrm-wcsxfrm-_strxfrm_l-_wcsxfrm_l"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 
@@ -97,7 +98,7 @@ Impostazioni locali da usare.
 
 Restituisce la lunghezza della stringa trasformata, senza contare il carattere di terminazione null. Se il valore restituito è maggiore o uguale al *conteggio*, il contenuto di *strDest* è imprevedibile. In un errore, ogni funzione imposta **errno** e restituisce **INT_MAX**. Per un carattere non valido, **errno** viene impostato su **EILSEQ**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **strxfrm** trasforma la stringa a cui punta *strSource* in un nuovo modulo fascicolato archiviato in *strDest*. Non più di *count* character, incluso il carattere null, vengono trasformati e inseriti nella stringa risultante. La trasformazione viene eseguita utilizzando l'impostazione della categoria **LC_COLLATE** delle impostazioni locali. Per ulteriori informazioni su **LC_COLLATE**, vedere [setlocale](setlocale-wsetlocale.md). **strxfrm** usa le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali; **_strxfrm_l** è identico, ad eccezione del fatto che usa le impostazioni locali passate anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
@@ -144,12 +145,12 @@ return( strlen( _string1 ) );
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
 [localeconv](localeconv.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Funzioni strcoll](../../c-runtime-library/strcoll-functions.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

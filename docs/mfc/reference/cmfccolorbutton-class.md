@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CMFCColorButton'
 title: Classe CMFCColorButton
 ms.date: 11/04/2016
 f1_keywords:
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 7abe37969799d7fcd78d525a5ec1c6faa9d876ee
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b3f3e40f1e52c1a387563fde2aa1027046d557f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560998"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327698"
 ---
 # <a name="cmfccolorbutton-class"></a>Classe CMFCColorButton
 
@@ -61,17 +62,17 @@ Le `CMFCColorButton` classi della [classe e CMFCColorBar](../../mfc/reference/cm
 class CMFCColorButton : public CMFCButton
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CMFCColorButton:: CMFCColorButton](#cmfccolorbutton)|Costruisce un oggetto `CMFCColorButton` nuovo.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CMFCColorButton:: EnableAutomaticButton](#enableautomaticbutton)|Abilita e Disabilita un pulsante "automatico" posizionato sopra i pulsanti di colore normale. Il pulsante automatico sistema standard è contrassegnato come **automatico**.|
 |[CMFCColorButton:: EnableOtherButton](#enableotherbutton)|Abilita e Disabilita un pulsante "altro" posizionato sotto i pulsanti di colore normale. Il pulsante "altro" di sistema standard è contrassegnato con un **numero maggiore di colori**.|
@@ -86,7 +87,7 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CMFCColorButton:: IsDrawXPTheme](#isdrawxptheme)|Indica se il pulsante colore corrente viene visualizzato nello stile di visualizzazione di Windows XP.|
 |[CMFCColorButton:: onpare](#ondraw)|Chiamata eseguita dal Framework per visualizzare un'immagine del pulsante.|
@@ -98,7 +99,7 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="data-members"></a>Membri dei dati
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`m_bAltColorDlg`|Un valore Boolean. Se è TRUE, il Framework Visualizza la finestra di dialogo colore [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) quando si fa clic sul pulsante *altro* oppure se è false, la finestra di dialogo colore sistema. Il valore predefinito è TRUE. Per ulteriori informazioni, vedere [CMFCColorButton:: EnableOtherButton](#enableotherbutton).|
 |`m_bAutoSetFocus`|Un valore Boolean. Se è TRUE, il Framework imposta lo stato attivo sul menu colori quando viene visualizzato il menu o, se FALSE, non modifica lo stato attivo. Il valore predefinito è TRUE.|
@@ -107,14 +108,14 @@ class CMFCColorButton : public CMFCButton
 |`m_ColorAutomatic`|Valore [COLORREF](/windows/win32/gdi/colorref) . Contiene il colore predefinito attualmente selezionato.|
 |`m_Colors`|Oggetto [CArray](../../mfc/reference/carray-class.md) dei valori [COLORREF](/windows/win32/gdi/colorref) . Contiene i colori attualmente disponibili.|
 |`m_lstDocColors`|[CList](../../mfc/reference/clist-class.md) di valori [COLORREF](/windows/win32/gdi/colorref) . Contiene i colori del documento corrente.|
-|`m_nColumns`|Intero. Contiene il numero di colonne da visualizzare nella griglia dei colori in un menu di selezione colori.|
+|`m_nColumns`|Valore intero. Contiene il numero di colonne da visualizzare nella griglia dei colori in un menu di selezione colori.|
 |`m_pPalette`|Puntatore a un [CPalette](../../mfc/reference/cpalette-class.md). Contiene i colori disponibili nel menu di selezione colori corrente.|
 |`m_pPopup`|Puntatore a un oggetto della [classe CMFCColorPopupMenu](../../mfc/reference/cmfccolorpopupmenu-class.md) . Menu di selezione colori visualizzato quando si fa clic sul pulsante colore.|
 |`m_strAutoColorText`|Stringa. Etichetta del pulsante "automatico" in un menu di selezione colori.|
 |`m_strDocColorsText`|Stringa. Etichetta del pulsante in un menu di selezione dei colori che Visualizza i colori del documento.|
 |`m_strOtherText`|Stringa. Etichetta del pulsante "altro" in un menu di selezione colori.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, la `CMFCColorButton` classe si comporta come un pulsante di push che apre una finestra di dialogo di selezione colori. La finestra di dialogo Selezione colori contiene una matrice di pulsanti colorati piccoli e un pulsante "altro" che visualizza una selezione colori personalizzata. Il pulsante "altro" di sistema standard è contrassegnato con un **numero maggiore di colori**. Quando un utente seleziona un nuovo colore, l' `CMFCColorButton` oggetto riflette la modifica e visualizza il colore selezionato.
 
@@ -165,7 +166,7 @@ in Valore RGB che specifica il colore predefinito del pulsante automatico.
 *bEnable*<br/>
 in Specifica se il pulsante automatico è abilitato o disabilitato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfccolorbuttonenableotherbutton"></a><a name="enableotherbutton"></a> CMFCColorButton:: EnableOtherButton
 
@@ -189,7 +190,7 @@ in Specifica se la finestra di dialogo [CMFCColorDialog](../../mfc/reference/cmf
 *bEnable*<br/>
 in Specifica se il pulsante "altro" è abilitato o disabilitato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Fare clic sul pulsante "altro" per visualizzare una finestra di dialogo colore. Se il parametro *bAltColorDlg* è true, viene visualizzata la [classe CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) ; in caso contrario, viene visualizzata la finestra di dialogo colore di sistema.
 
@@ -205,7 +206,7 @@ COLORREF GetAutomaticColor() const;
 
 Valore RGB che rappresenta il colore automatico corrente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il colore automatico corrente viene impostato dal metodo [CMFCColorButton:: EnableAutomaticButton](#enableautomaticbutton) .
 
@@ -221,7 +222,7 @@ COLORREF GetColor() const;
 
 Valore RGB.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfccolorbuttonisdrawxptheme"></a><a name="isdrawxptheme"></a> CMFCColorButton:: IsDrawXPTheme
 
@@ -243,7 +244,7 @@ Imposta un pulsante colore sulla modalità di personalizzazione.
 BOOL m_bEnabledInCustomizeMode;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se è necessario aggiungere un pulsante colore a una pagina della finestra di dialogo di personalizzazione (o consentire all'utente di effettuare un'altra selezione colori durante la personalizzazione), abilitare il pulsante impostando il `m_bEnabledInCustomizeMode` membro su true. Per impostazione predefinita, questo membro è impostato su FALSE.
 
@@ -269,7 +270,7 @@ in Rettangolo che delimita il pulsante.
 *uiState*<br/>
 in Specifica lo stato di visualizzazione del pulsante.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Eseguire l'override di questo metodo per personalizzare il processo di rendering.
 
@@ -295,7 +296,7 @@ in Rettangolo nel contesto di dispositivo specificato dal parametro *PDC* che de
 *uiState*<br/>
 in Specifica lo stato di visualizzazione del pulsante.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Eseguire l'override di questa funzione per personalizzare l'aspetto del bordo del pulsante colori.
 
@@ -317,7 +318,7 @@ in Punta al contesto di dispositivo usato per creare il rettangolo di attivazion
 *rectClient*<br/>
 in Rettangolo nel contesto di dispositivo specificato dal parametro *PDC* che definisce i limiti del pulsante.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Eseguire l'override di questo metodo per personalizzare l'aspetto del rettangolo di attivazione.
 
@@ -329,7 +330,7 @@ Chiamato prima che venga visualizzata la barra dei colori popup.
 virtual void OnShowColorPopup();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfccolorbuttonrebuildpalette"></a><a name="rebuildpalette"></a> CMFCColorButton:: RebuildPalette
 
@@ -357,7 +358,7 @@ void SetColor(COLORREF color);
 *color*<br/>
 in Valore RGB.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfccolorbuttonsetcolorname"></a><a name="setcolorname"></a> CMFCColorButton:: secolorname
 
@@ -377,7 +378,7 @@ in Valore RGB del colore.
 *strName*<br/>
 in Nome del colore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'elenco dei nomi di colore è globale per ogni applicazione. Di conseguenza, questo metodo trasferisce i parametri a [CMFCColorBar:: Secolorname](../../mfc/reference/cmfccolorbar-class.md#setcolorname).
 
@@ -394,7 +395,7 @@ void SetColumnsNumber(int nColumns);
 *nColumns*<br/>
 in Specifica il numero di colonne.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'utente può selezionare un colore da una barra dei colori popup che visualizza una tabella di colori predefiniti. Utilizzare questo metodo per definire il numero di colonne nella tabella.
 
@@ -416,7 +417,7 @@ in Specifica l'etichetta da visualizzare con il set di colori del documento.
 *lstColors*<br/>
 in Riferimento a un elenco di valori RGB.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un `CMFCColorButton` oggetto gestisce un elenco di valori RGB trasferiti a un oggetto della [classe CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) . Quando viene visualizzata la barra dei colori, questi colori vengono mostrati in una sezione speciale la cui etichetta è specificata dal parametro *lpszLabel* .
 
@@ -433,7 +434,7 @@ void SetPalette(CPalette* pPalette);
 *pPalette*<br/>
 in Puntatore a una tavolozza dei colori.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfccolorbuttonsizetocontent"></a><a name="sizetocontent"></a> CMFCColorButton:: SizeToContent
 
@@ -452,7 +453,7 @@ in Se è diverso da zero, la nuova dimensione del controllo Button viene calcola
 
 `CSize`Oggetto che specifica una nuova dimensione del controllo pulsante.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfccolorbuttonupdatecolor"></a><a name="updatecolor"></a> CMFCColorButton:: UpdateColor
 
@@ -467,7 +468,7 @@ virtual void UpdateColor(COLORREF color);
 *color*<br/>
 in Colore selezionato dall'utente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La `UpdateColor` funzione modifica il colore del pulsante attualmente selezionato e invia una notifica all'elemento padre inviando un messaggio di WM_COMMAND con una notifica di BN_CLICKED standard. Usare il metodo [CMFCColorButton:: GetColor](#getcolor) per recuperare il colore selezionato.
 

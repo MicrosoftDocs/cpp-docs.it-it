@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: procedura: definire l'accesso e i valori del controllo (C++)"
 title: "Procedura: definire l'accesso e i valori del controllo (C++)"
 ms.date: 02/15/2019
 helpviewer_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: 59d81c0b835171132ebf29739a4e130191a87769
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: cedaa5c455dc5810c78158bec628f57c7f6e52b3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504448"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327119"
 ---
 # <a name="how-to-define-control-access-and-values-c"></a>Procedura: definire l'accesso e i valori del controllo (C++)
 
@@ -40,13 +41,13 @@ Anche i controlli che non dispongono della proprietà **TabStop** impostata su *
 > [!NOTE]
 > Se la finestra di dialogo contiene controlli sovrapposti, la modifica dell'ordine di tabulazione può cambiare il modo in cui vengono visualizzati i controlli. I controlli che si trovano in un secondo momento nell'ordine di tabulazione vengono sempre visualizzati sopra tutti i controlli sovrapposti che li precedono nell'ordine di tabulazione.
 
-- Per visualizzare l'ordine di tabulazione corrente per tutti i controlli, passare a **formato**menu  >  **ordine di tabulazione**oppure premere **CTRL**  +  **D**.
+- Per visualizzare l'ordine di tabulazione corrente per tutti i controlli, passare a **formato** menu  >  **ordine di tabulazione** oppure premere **CTRL**  +  **D**.
 
    Un numero nell'angolo superiore sinistro di ogni controllo ne mostra la posizione nell'ordine di tabulazione corrente.
 
-- Per modificare l'ordine di tabulazione per tutti i controlli, passare a **formato**menu ordine di tabulazione  >  **Tab Order** e impostare l'ordine di tabulazione selezionando ogni controllo nell'ordine in cui si desidera che il tasto **Tab** segua.
+- Per modificare l'ordine di tabulazione per tutti i controlli, passare a **formato** menu ordine di tabulazione  >   e impostare l'ordine di tabulazione selezionando ogni controllo nell'ordine in cui si desidera che il tasto **Tab** segua.
 
-- Per modificare l'ordine di tabulazione per due o più controlli, passare a **formato**menu  >  **ordine di tabulazione**. Tenere premuto il tasto **CTRL** e selezionare il controllo in cui inizierà la modifica in ordine, quindi rilasciare il tasto **CTRL** e selezionare i controlli nell'ordine in cui si desidera che il tasto **Tab** segua tale punto.
+- Per modificare l'ordine di tabulazione per due o più controlli, passare a **formato** menu  >  **ordine di tabulazione**. Tenere premuto il tasto **CTRL** e selezionare il controllo in cui inizierà la modifica in ordine, quindi rilasciare il tasto **CTRL** e selezionare i controlli nell'ordine in cui si desidera che il tasto **Tab** segua tale punto.
 
    Se ad esempio si desidera modificare l'ordine dei controlli `7` tramite `9` , tenere premuto **CTRL**, quindi selezionare prima il controllo `6` .
 
@@ -67,7 +68,7 @@ In genere, gli utenti della tastiera spostano lo stato attivo di input da un con
 
 1. Premere **INVIO**.
 
-   Una sottolineatura viene visualizzata nella didascalia visualizzata per indicare la chiave di accesso, ad esempio **R**adio1.
+   Una sottolineatura viene visualizzata nella didascalia visualizzata per indicare la chiave di accesso, ad esempio **R** adio1.
 
 ### <a name="to-define-an-access-key-for-a-control-without-a-visible-caption"></a>Per definire una chiave di accesso per un controllo senza una didascalia visibile
 
@@ -78,14 +79,14 @@ In genere, gli utenti della tastiera spostano lo stato attivo di input da un con
 1. Verificare che il controllo testo statico preceda immediatamente il controllo da essa etichettato nell'ordine di tabulazione.
 
 > [!NOTE]
-> Tutte le chiavi di accesso all'interno di una finestra di dialogo devono essere univoche. Per verificare la presenza di chiavi di accesso duplicate, passare a menu **formato**tasti di scelta  >  **Check Mnemonics**.
+> Tutte le chiavi di accesso all'interno di una finestra di dialogo devono essere univoche. Per verificare la presenza di chiavi di accesso duplicate, passare a menu **formato** tasti di scelta  >  .
 
 ## <a name="combo-box-values"></a>Valori della casella combinata
 
 È possibile aggiungere valori a un controllo casella combinata fino a quando l' **editor finestre** è aperto.
 
 > [!TIP]
-> È consigliabile aggiungere tutti i valori alla casella combinata *prima* di ridimensionare la casella nell' **editor finestre**oppure è possibile troncare il testo che dovrebbe essere visualizzato nel controllo combinato.
+> È consigliabile aggiungere tutti i valori alla casella combinata *prima* di ridimensionare la casella nell' **editor finestre** oppure è possibile troncare il testo che dovrebbe essere visualizzato nel controllo combinato.
 
 ### <a name="to-enter-values-into-a-combo-box-control"></a>Per immettere i valori in un controllo casella combinata
 
@@ -103,7 +104,7 @@ In genere, gli utenti della tastiera spostano lo stato attivo di input da un con
 
 1. Premere **invio** al termine dell'aggiunta di valori.
 
-Per informazioni sull'ampliamento della parte a discesa di una casella combinata, vedere [impostazione delle dimensioni della casella combinata e del relativo elenco a discesa](./arrangement-of-controls-on-dialog-boxes.md).
+Per informazioni sull'ampliamento della parte a discesa di una casella combinata, vedere [impostazione delle dimensioni della casella combinata e del relativo elenco di Drop-Down](./arrangement-of-controls-on-dialog-boxes.md).
 
 > [!NOTE]
 > Non è possibile aggiungere valori ai progetti Win32 utilizzando questa procedura (la proprietà **dei dati** è disattivata per i progetti Win32). Poiché i progetti Win32 non dispongono di librerie che aggiungono questa funzionalità, è necessario aggiungere i valori a una casella combinata con un progetto Win32 a livello di codice.
@@ -133,7 +134,7 @@ Quando si aggiungono pulsanti di opzione a una finestra di dialogo, considerarli
    Se si modifica la proprietà **Group** su **true** , lo stile WS_GROUP viene aggiunto alla voce del pulsante nell'oggetto finestra di dialogo dello script di risorsa e si impedisce all'utente di selezionare più pulsanti di opzione alla volta nel gruppo di pulsanti (se l'utente seleziona un pulsante di opzione, gli altri nel gruppo vengono cancellati).
 
    > [!NOTE]
-   > La proprietà **Group** deve essere impostata su **True**solo per il primo pulsante di opzione del gruppo. Se sono presenti controlli aggiuntivi che non fanno parte del gruppo di pulsanti, impostare anche la proprietà **Group** del primo controllo *che non è incluso nel gruppo* su **true** . È possibile identificare rapidamente il primo controllo esterno al gruppo utilizzando **CTRL** + **D** per visualizzare l'ordine di tabulazione.
+   > La proprietà **Group** deve essere impostata su **True** solo per il primo pulsante di opzione del gruppo. Se sono presenti controlli aggiuntivi che non fanno parte del gruppo di pulsanti, impostare anche la proprietà **Group** del primo controllo *che non è incluso nel gruppo* su **true** . È possibile identificare rapidamente il primo controllo esterno al gruppo utilizzando **CTRL** + **D** per visualizzare l'ordine di tabulazione.
 
 ### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>Per aggiungere una variabile membro per il gruppo di pulsanti di opzione
 
@@ -151,7 +152,7 @@ Quando si aggiungono pulsanti di opzione a una finestra di dialogo, considerarli
 
 Win32
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli della finestra di dialogo Gestisci](controls-in-dialog-boxes.md)<br/>
 [Procedura: aggiungere, modificare o eliminare controlli](adding-editing-or-deleting-controls.md)<br/>

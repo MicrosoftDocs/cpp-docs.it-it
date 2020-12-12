@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _swab'
 title: _swab
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - swab function
 - bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
-ms.openlocfilehash: 7353081fab92fcc3324a214688be28a4f651b05f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 178189ede5330d467e8ec263a4558bb55108f354
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912419"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326252"
 ---
 # <a name="_swab"></a>_swab
 
@@ -69,9 +70,9 @@ La funzione del **tampone** non restituisce un valore. La funzione imposta **err
 
 Per altre informazioni su questo e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Se *n* è pari, la funzione **_swab** copia *n* byte da *src*, scambia ogni coppia di byte adiacenti e archivia il risultato in *dest*. Se *n* è dispari, **_swab** copia e scambia i primi *n*-1 byte di *src*e il byte finale non viene copiato. La funzione **_swab** viene in genere usata per preparare i dati binari per il trasferimento in un computer che usa un ordine dei byte diverso.
+Se *n* è pari, la funzione **_swab** copia *n* byte da *src*, scambia ogni coppia di byte adiacenti e archivia il risultato in *dest*. Se *n* è dispari, **_swab** copia e scambia i primi *n*-1 byte di *src* e il byte finale non viene copiato. La funzione **_swab** viene in genere usata per preparare i dati binari per il trasferimento in un computer che usa un ordine dei byte diverso.
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -112,4 +113,4 @@ After:  BADCFEHGJILKNMPORQTSVUXWZY
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modifica del buffer](../../c-runtime-library/buffer-manipulation.md)<br/>
+[Manipolazione del buffer](../../c-runtime-library/buffer-manipulation.md)<br/>

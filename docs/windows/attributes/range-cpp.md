@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: intervallo (C++)'
 title: Range (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: 8ed0ba2c53992dd19d1c4491f8085e955146224c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0c1a45ac1f4e968de52c9ed2bffb89ac2cf5fd04
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839478"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327351"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -31,7 +32,7 @@ Valore dell'intervallo minimo.
 *alta*<br/>
 Valore di intervallo massimo.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'attributo dell' **intervallo** C++ ha la stessa funzionalità dell'attributo [Range](/windows/win32/Midl/range) MIDL.
 
@@ -62,7 +63,7 @@ __interface ICustom {
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di metodo](method-attributes.md)<br/>

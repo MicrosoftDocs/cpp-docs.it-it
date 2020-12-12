@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; operatori di coda &gt;'
 title: Operatori &lt;queue&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - std::operator&lt; (queue)
 - std::operator&lt;= (queue)
 - std::operator== (queue)
-ms.openlocfilehash: 8c02e79e6a300f23ac31ea876c9d4576cfe5e9a8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6d6280ca4fe1e1277a79862a5016d55dfbecc425
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232924"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327574"
 ---
 # <a name="ltqueuegt-operators"></a>Operatori &lt;queue&gt;
 
-## <a name="operator"></a><a name="op_neq"></a>operatore! =
+## <a name="operator"></a><a name="op_neq"></a> operatore! =
 
 Verifica se l'oggetto queue a sinistra dell'operatore non è uguale all'oggetto queue a destra.
 
@@ -45,7 +46,7 @@ Oggetto di tipo `queue`.
 
 **`true`** Se le code non sono uguali. **`false`** se le code sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti queue si basa su un confronto a coppie dei relativi elementi. Due oggetti queue sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -92,7 +93,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>operatore&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> operatore&lt;
 
 Verifica se l'oggetto queue a sinistra dell'operatore è minore dell'oggetto queue a destra.
 
@@ -112,7 +113,7 @@ Oggetto di tipo `queue`.
 
 **`true`** Se la coda sul lato sinistro dell'operatore è minore e non uguale alla coda sul lato destro dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti queue si basa su un confronto a coppie dei relativi elementi. La relazione minore di tra due oggetti queue si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -155,7 +156,7 @@ The queue q1 is less than the queue q2.
 The queue q1 is not less than the queue q3.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>operatore&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> operatore&lt;=
 
 Verifica se l'oggetto queue a sinistra dell'operatore è minore o uguale all'oggetto queue a destra.
 
@@ -175,7 +176,7 @@ Oggetto di tipo `queue`.
 
 **`true`** Se la coda sul lato sinistro dell'operatore è strettamente inferiore alla coda a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti queue si basa su un confronto a coppie dei relativi elementi. La relazione minore di o uguale a tra due oggetti queue si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -220,7 +221,7 @@ The queue q1 is greater than the queue q2.
 The queue q1 is less than or equal to the queue q3.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operatore = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operatore = =
 
 Verifica se l'oggetto queue a sinistra dell'operatore è uguale all'oggetto queue a destra.
 
@@ -240,7 +241,7 @@ Oggetto di tipo `queue`.
 
 **`true`** Se le code non sono uguali. **`false`** se le code sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti queue si basa su un confronto a coppie dei relativi elementi. Due oggetti queue sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -286,7 +287,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>operatore&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> operatore&gt;
 
 Verifica se l'oggetto queue a sinistra dell'operatore è maggiore dell'oggetto queue a destra.
 
@@ -306,7 +307,7 @@ Oggetto di tipo `queue`.
 
 **`true`** Se la coda sul lato sinistro dell'operatore è strettamente inferiore alla coda a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti queue si basa su un confronto a coppie dei relativi elementi. La relazione maggiore di tra due oggetti queue si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -352,7 +353,7 @@ The queue q1 is not greater than the queue q2.
 The queue q1 is greater than the queue q3.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>operatore&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> operatore&gt;=
 
 Verifica se l'oggetto queue a sinistra dell'operatore è maggiore o uguale all'oggetto queue a destra.
 
@@ -372,7 +373,7 @@ Oggetto di tipo `queue`.
 
 **`true`** Se la coda sul lato sinistro dell'operatore è strettamente inferiore alla coda a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti queue si basa su un confronto a coppie dei relativi elementi. Due oggetti queue sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 

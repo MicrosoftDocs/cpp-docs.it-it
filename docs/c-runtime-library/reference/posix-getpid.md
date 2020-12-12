@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: getpid'
 title: getpid
 ms.date: 12/16/2019
 api_name:
@@ -23,16 +24,16 @@ f1_keywords:
 helpviewer_keywords:
 - getpid function
 ms.assetid: 4eaabab4-362b-429f-854e-ae4941919824
-ms.openlocfilehash: 22ae4d0f5d9da6157d204aee89c3f60544580b97
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 2bdc404734473aafe740fb6029e2447a7e8c632d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300976"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326961"
 ---
 # <a name="getpid"></a>getpid
 
-Il nome della funzione POSIX implementato da Microsoft `getpid` è un alias deprecato per la funzione di [_getpid](getpid.md) . Per impostazione predefinita, viene generato un [Avviso del compilatore (livello 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Il nome è deprecato perché non segue le regole C standard per i nomi specifici dell'implementazione. Tuttavia, la funzione è ancora supportata.
+Il nome della funzione POSIX implementato `getpid` da Microsoft è un alias deprecato per la funzione [_getpid](getpid.md) . Per impostazione predefinita, viene generato un [Avviso del compilatore (livello 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Il nome è deprecato perché non segue le regole C standard per i nomi specifici dell'implementazione. Tuttavia, la funzione è ancora supportata.
 
 Si consiglia di usare invece [_getpid](getpid.md) . In alternativa, è possibile continuare a usare il nome della funzione e disabilitare l'avviso. Per altre informazioni, vedere [disabilitare i](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) [nomi di funzione](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)di avviso e POSIX.
 

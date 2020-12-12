@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: editor binario (C++)'
 title: Editor binario (C++)
 ms.date: 02/14/2019
 f1_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: 078d702232cde49a4666551a8d9fcbb320173450
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 8abe63f662d25b5e8108d0671dd17490143a07fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503536"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327213"
 ---
 # <a name="binary-editor-c"></a>Editor binario (C++)
 
@@ -45,7 +46,7 @@ L' **editor binario** consente di modificare qualsiasi risorsa a livello binario
 Nell' **editor binario** vengono rappresentati solo alcuni valori ASCII (0x20 tramite 0x7E). I caratteri estesi vengono visualizzati come punti nella sezione valore ASCII del riquadro destro dell' **editor binario**. I caratteri stampabili sono valori ASCII compresi tra 32 e 126.
 
 > [!TIP]
-> Quando si usa l' **editor binario**, in molti casi è possibile fare clic con il pulsante destro del mouse per visualizzare un menu di scelta rapida dei comandi specifici della risorsa. I comandi disponibili dipendono dalla destinazione a cui fa riferimento il cursore. Se ad esempio si fa clic con il pulsante destro del mouse mentre si punta all' **editor binario** con i valori esadecimali selezionati, il menu di scelta rapida Mostra i comandi **taglia**, **copia**e **Incolla** .
+> Quando si usa l' **editor binario**, in molti casi è possibile fare clic con il pulsante destro del mouse per visualizzare un menu di scelta rapida dei comandi specifici della risorsa. I comandi disponibili dipendono dalla destinazione a cui fa riferimento il cursore. Se ad esempio si fa clic con il pulsante destro del mouse mentre si punta all' **editor binario** con i valori esadecimali selezionati, il menu di scelta rapida Mostra i comandi **taglia**, **copia** e **Incolla** .
 
 ## <a name="how-to"></a>Procedure
 
@@ -62,7 +63,7 @@ L' **editor binario** consente di:
 
 ### <a name="to-open-a-managed-resource-for-binary-editing"></a>Per aprire una risorsa gestita per la modifica binaria
 
-1. In **Esplora soluzioni**selezionare il file di risorse specifico che si desidera modificare.
+1. In **Esplora soluzioni** selezionare il file di risorse specifico che si desidera modificare.
 
 1. Fare clic con il pulsante destro del mouse sulla risorsa e scegliere **Apri con**.
 
@@ -104,7 +105,7 @@ Se si vuole usare l' **editor binario** su una risorsa già modificata in un'alt
 
    È possibile digitare dati personalizzati in un file RC sotto forma di stringhe con terminazione Null racchiuse tra virgolette o di numeri interi in formato decimale, esadecimale o ottale.
 
-1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul file RC del progetto e scegliere **Includi risorse**.
+1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul file RC del progetto e scegliere **Includi risorse**.
 
 1. Nella casella **direttive in fase di compilazione** Digitare un' `#include` istruzione che fornisce il nome del file che contiene la risorsa personalizzata, ad esempio:
 
@@ -125,6 +126,6 @@ Un altro modo per creare una risorsa personalizzata consiste nell'importare un f
 
 Nessuno
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Editor di risorse](resource-editors.md)

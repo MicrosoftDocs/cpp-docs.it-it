@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Terminate (CRT)'
 title: terminate (CRT)
 ms.date: 4/2/2020
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
-ms.openlocfilehash: 1ec4e27096dd6b5fea089e21c95022542d7adc82
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8370c1f1aff54b5286ad4472b053275e3468a8d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912216"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326168"
 ---
 # <a name="terminate-crt"></a>terminate (CRT)
 
@@ -62,7 +63,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**termine**|\<eh.h>|
+|**terminare**|\<eh.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

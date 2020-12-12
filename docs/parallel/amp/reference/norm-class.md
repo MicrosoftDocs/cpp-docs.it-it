@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: classe Norm'
 title: Classe norm
 ms.date: 11/04/2016
 f1_keywords:
 - AMP_SHORT_VECTORS/norm
 - AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
-ms.openlocfilehash: b5740f33dea6aad79770f77f179803023432248a
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 29e376e5e42212c87ae244c7a606a38d6a07ddf1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447532"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327644"
 ---
 # <a name="norm-class"></a>Classe norm
 
@@ -26,23 +27,23 @@ class norm;
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Costruttore Norm](#ctor)|Di overload. Costruttore predefinito. Inizializzare su 0,0 f.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|norm::operator-||
-|norm::operator--||
+|Norm:: operator-||
+|Norm:: operator--||
 |Norm:: operator float|Operatore di conversione. Converte il numero di norma in un valore a virgola mobile.|
-|norm::operator*=||
-|norm::operator/=||
-|norm::operator++||
-|norm::operator+=||
-|norm::operator=||
-|norm::operator-=||
+|Norm:: operator * =||
+|Norm:: operator/=||
+|Norm:: operator + +||
+|Norm:: operator + =||
+|Norm:: operator =||
+|Norm:: operator-=||
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -54,7 +55,7 @@ class norm;
 
 **Spazio dei nomi:** Concurrency:: graphics
 
-## <a name="ctor"></a>norma
+## <a name="norm"></a><a name="ctor"></a> norma
 
 Costruttore predefinito. Inizializzare su 0,0 f.
 
@@ -96,6 +97,6 @@ Valore utilizzato per inizializzare.
 *_Other*<br/>
 Oggetto utilizzato per inizializzare.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)

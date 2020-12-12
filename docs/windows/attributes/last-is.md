@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: last_is'
 title: last_is (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: ad82a5a9688dfbc6c5eb59883be00e8dc39e1942
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 41f436d1cd4317385d702d8763d69e6df7d07849
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840882"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327533"
 ---
 # <a name="last_is"></a>last_is
 
@@ -28,7 +29,7 @@ Specifica l'indice dell'ultimo elemento della matrice da trasmettere.
 *expression*<br/>
 Una o più espressioni del linguaggio C. Sono consentiti slot di argomento vuoti.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'attributo **last_is** C++ ha la stessa funzionalità dell'attributo [last_is](/windows/win32/Midl/last-is) MIDL.
 
@@ -47,7 +48,7 @@ Vedere [first_is](first-is.md) per un esempio di come specificare una sezione di
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)<br/>

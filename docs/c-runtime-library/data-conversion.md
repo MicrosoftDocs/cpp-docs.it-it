@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: conversione dei dati'
 title: Conversione dati
 ms.date: 03/21/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - data conversion routines [C++]
 - converting data
 ms.assetid: b15b5268-7467-49f1-bf95-5299b598f94c
-ms.openlocfilehash: 94e6a8182e12ecd74f9d2cd5dddaa84a1e3eb847
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4ce9a7e04ed8d7e561e256929b8b8625e34d2620
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218767"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327048"
 ---
 # <a name="data-conversion"></a>Conversione dati
 
@@ -20,13 +21,13 @@ Queste routine convertono i dati da un formato a un altro. In genere l'esecuzion
 
 ## <a name="data-conversion-routines"></a>Routine di conversione dati
 
-|Routine|Uso|
+|Routine|Usa|
 |-------------|---------|
 |[ABS](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|Trova il valore assoluto di un intero|
-|[atof, _atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Converti stringa in**`float`**|
-|[atoi, _atoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|Converti stringa in**`int`**|
-|[_atoi64, _atoi64_l](../c-runtime-library/reference/atoi64-atoi64-l-wtoi64-wtoi64-l.md)|Converte una stringa in **`__int64`** o**`long long`**|
-|[atol, _atol_l](../c-runtime-library/reference/atol-atol-l-wtol-wtol-l.md)|Converti stringa in**`long`**|
+|[atof, _atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Converti stringa in **`float`**|
+|[atoi, _atoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|Converti stringa in **`int`**|
+|[_atoi64, _atoi64_l](../c-runtime-library/reference/atoi64-atoi64-l-wtoi64-wtoi64-l.md)|Converte una stringa in **`__int64`** o **`long long`**|
+|[atol, _atol_l](../c-runtime-library/reference/atol-atol-l-wtol-wtol-l.md)|Converti stringa in **`long`**|
 |[c16rtomb, c32rtomb](../c-runtime-library/reference/c16rtomb-c32rtomb1.md)|Converte un carattere UTF-16 o UTF-32 nel carattere multibyte equivalente|
 |[_ecvt](../c-runtime-library/reference/ecvt.md), [_ecvt_s](../c-runtime-library/reference/ecvt-s.md)|Converte **`double`** in una stringa di lunghezza specificata|
 |[_fcvt](../c-runtime-library/reference/fcvt.md), [_fcvt_s](../c-runtime-library/reference/fcvt-s.md)|Converte **`double`** in stringa con il numero di cifre specificato dopo il separatore decimale|
@@ -43,7 +44,7 @@ Queste routine convertono i dati da un formato a un altro. In genere l'esecuzion
 |[mbrtoc16, mbrtoc32](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)|Converte un carattere multibyte nel carattere UTF-16 o UTF-32 equivalente|
 |[mbstowcs, _mbstowcs_l](../c-runtime-library/reference/mbstowcs-mbstowcs-l.md), [mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)|Converte una sequenza di caratteri multibyte in una sequenza di caratteri wide corrispondente|
 |[mbtowc, _mbtowc_l](../c-runtime-library/reference/mbtowc-mbtowc-l.md)|Converte un carattere multibyte in un carattere wide corrispondente|
-|[strtod, _strtod_l, wcstod, _wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)|Converti stringa in**`double`**|
+|[strtod, _strtod_l, wcstod, _wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)|Converti stringa in **`double`**|
 |[strtol, wcstol, _strtol_l, _wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)|Converte una stringa in un **`long`** Integer|
 |[strtoul, _strtoul_l, wcstoul, _wcstoul_l](../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)|Converte una stringa in un **`unsigned long`** Integer|
 |[strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)|Trasforma la stringa in un formato basato su informazioni specifiche delle impostazioni locali|
@@ -54,11 +55,11 @@ Queste routine convertono i dati da un formato a un altro. In genere l'esecuzion
 |[toupper, _toupper, towupper, _toupper_l, _towupper_l](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|Converte un carattere in maiuscolo in maniera incondizionata|
 |[wcstombs, _wcstombs_l](../c-runtime-library/reference/wcstombs-wcstombs-l.md), [wcstombs_s, _wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)|Converte una sequenza di caratteri wide in una sequenza di caratteri multibyte corrispondente|
 |[wctomb, _wctomb_l](../c-runtime-library/reference/wctomb-wctomb-l.md), [wctomb_s, _wctomb_s_l](../c-runtime-library/reference/wctomb-s-wctomb-s-l.md)|Converte un carattere wide in un carattere multibyte corrispondente|
-|[_wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Converte una stringa di caratteri wide in un**`double`**|
-|[_wtoi, _wtoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|Converte una stringa di caratteri wide in**`int`**|
-|[_wtoi64, _wtoi64_l](../c-runtime-library/reference/atoi64-atoi64-l-wtoi64-wtoi64-l.md)|Converte una stringa di caratteri wide in **`__int64`** o**`long long`**|
-|[_wtol, _wtol_l](../c-runtime-library/reference/atol-atol-l-wtol-wtol-l.md)|Converte una stringa di caratteri wide in**`long`**|
+|[_wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Converte una stringa di caratteri wide in un **`double`**|
+|[_wtoi, _wtoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|Converte una stringa di caratteri wide in **`int`**|
+|[_wtoi64, _wtoi64_l](../c-runtime-library/reference/atoi64-atoi64-l-wtoi64-wtoi64-l.md)|Converte una stringa di caratteri wide in **`__int64`** o **`long long`**|
+|[_wtol, _wtol_l](../c-runtime-library/reference/atol-atol-l-wtol-wtol-l.md)|Converte una stringa di caratteri wide in **`long`**|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>

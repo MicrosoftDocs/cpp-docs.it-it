@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: vi_progid'
 title: vi_progid (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - vi_progid attribute
 ms.assetid: a52449be-b93e-4111-b883-44bb8da53261
-ms.openlocfilehash: b27a9a2f5a05535bd11b8091059e5be277b9692c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 766ebcee636b3fb0bcdb1aeabd53ee0e977ca790
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832919"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327187"
 ---
 # <a name="vi_progid"></a>vi_progid
 
@@ -30,7 +31,7 @@ ProgID indipendente dalla versione che rappresenta l'oggetto.
 
 I ProgID presentano una versione leggibile dell'identificatore di classe (CLSID) utilizzato per identificare gli oggetti COM/ActiveX.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'attributo **vi_progid** C++ consente di specificare un ProgID indipendente dalla versione per un oggetto com. Un ProgID ha il formato *name1. name2. Version*. Un ProgID indipendente dalla versione non dispone di una *versione*. È possibile specificare gli `progid` attributi e **vi_progid** in un oggetto `coclass` . Se non si specifica **vi_progid**, il ProgID indipendente dalla versione è il valore specificato dall'attributo [ProgID](progid.md) .
 
@@ -55,7 +56,7 @@ Vedere l'esempio di [coclasse](coclass.md) per un uso di esempio di **vi_progid*
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)<br/>

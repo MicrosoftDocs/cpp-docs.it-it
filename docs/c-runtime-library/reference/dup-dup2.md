@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _dup, _dup2'
 title: _dup, _dup2
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - dup2 function
 - _dup function
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
-ms.openlocfilehash: 6c635930fdbc8da550a2a32ea614e150fbeb08a8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e9801cc11b6d7a8d4250f61780c5c9b23dd3e1ac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915206"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327006"
 ---
 # <a name="_dup-_dup2"></a>_dup, _dup2
 
@@ -66,11 +67,11 @@ Qualsiasi descrittore del file.
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le funzioni **_dup** e **_dup2** associano un secondo descrittore di file a un file attualmente aperto. Queste funzioni possono essere usate per associare un descrittore di file predefinito, ad esempio per **stdout**, con un file diverso. Le operazioni sul file possono essere eseguite utilizzando qualsiasi descrittore del file. Il tipo di accesso consentito per il file non viene influenzato dalla creazione di un nuovo descrittore. **_dup** restituisce il descrittore del file successivo disponibile per il file specificato. **_dup2** impone a *FD2* di fare riferimento allo stesso file di *FD1*. Se *FD2* è associato a un file aperto al momento della chiamata, tale file viene chiuso.
 
-Sia **_dup** che **_dup2** accettano descrittori di file come parametri. Per passare un flusso (`FILE *`) a una di queste funzioni, usare [_fileno](fileno.md). La routine **Fileno** restituisce il descrittore di file attualmente associato al flusso specificato. Nell'esempio seguente viene illustrato come associare **stderr** (definito come `FILE *` in stdio. h) a un descrittore di file:
+Sia **_dup** che **_dup2** accettano descrittori di file come parametri. Per passare un flusso ( `FILE *` ) a una di queste funzioni, usare [_fileno](fileno.md). La routine **Fileno** restituisce il descrittore di file attualmente associato al flusso specificato. Nell'esempio seguente viene illustrato come associare **stderr** (definito come `FILE *` in stdio. h) a un descrittore di file:
 
 ```C
 int cstderr = _dup( _fileno( stderr ));
@@ -85,7 +86,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |**_dup**|\<io.h>|
 |**_dup2**|\<io.h>|
 
-La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout**e **stderr**devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout** e **stderr** devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -150,7 +151,7 @@ This goes to file 'data'
 
 ## <a name="see-also"></a>Vedere anche
 
-[I/O a basso livello](../../c-runtime-library/low-level-i-o.md)<br/>
+[I/O di basso livello](../../c-runtime-library/low-level-i-o.md)<br/>
 [_close](close.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>

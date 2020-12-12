@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Source (C++)'
 title: Source (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-ms.openlocfilehash: f9a1f576e26805c5dd84c2d83cdf3615d0661af3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 493795f41571fd9c940147eda3b8dd6dd543f18a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842767"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327286"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -28,7 +29,7 @@ In una classe, specifica le interfacce di origine dell'oggetto COM per i punti d
 *interfaces*<br/>
 Una o più interfacce specificate quando si applica l'attributo di origine a una classe. Questo parametro non viene utilizzato quando l'origine viene applicata a una proprietà o a un metodo.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'attributo di **origine** C++ ha la stessa funzionalità dell'attributo MIDL di [origine](/windows/win32/Midl/source) .
 
@@ -79,7 +80,7 @@ class NN : public b
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)<br/>

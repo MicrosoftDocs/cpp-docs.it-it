@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: strupr, wcsupr'
 title: strupr, wcsupr
 ms.date: 12/16/2019
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - strupr function
 - wcsupr function
 ms.assetid: 17dfe1cd-3b09-4702-9f89-2207f44953e6
-ms.openlocfilehash: ce51eb4f7eeb80766e19cfdb4a39a3a7dd50d85a
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: aefd25cc4d2a8d3fa51fba2da323c74ed199d116
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300456"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326281"
 ---
 # <a name="strupr-wcsupr"></a>strupr, wcsupr
 

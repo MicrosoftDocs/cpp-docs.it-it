@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: funzioni membro del flusso di file di output'
 title: Funzioni membro del flussi di file di output
 ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
-ms.openlocfilehash: f20ed4e238d23211a6eeec4a3091daeb4d02a9b3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f2e9bde7bcac8ebccc668c68f222b495b53e0889
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217675"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327571"
 ---
 # <a name="output-file-stream-member-functions"></a>Funzioni membro del flussi di file di output
 
@@ -106,12 +107,12 @@ Usare queste funzioni membro per verificare gli errori durante la scrittura in u
 |--------------|------------------|
 |[non valido](basic-ios-class.md#bad)|Restituisce **`true`** se si verifica un errore irreversibile.|
 |[esito negativo](basic-ios-class.md#fail)|Restituisce se si verifica un **`true`** errore irreversibile o una condizione "prevista", ad esempio un errore di conversione, oppure se il file non viene trovato. L'elaborazione può spesso riprendersi dopo una chiamata a `clear` con un argomento zero.|
-|[buona](basic-ios-class.md#good)|Restituisce **`true`** se non è presente alcuna condizione di errore (irreversibile o diversa) e il flag di fine del file non è impostato.|
+|[good](basic-ios-class.md#good)|Restituisce **`true`** se non è presente alcuna condizione di errore (irreversibile o diversa) e il flag di fine del file non è impostato.|
 |[EOF](basic-ios-class.md#eof)|Restituisce **`true`** la condizione di fine del file.|
 |[deselezionare](basic-ios-class.md#clear)|Imposta lo stato di errore interno. Se chiamato con gli argomenti predefiniti, cancella tutti i bit di errore.|
 |rdstate (Basic-iOS-Class. MD # rdstate|Restituisce lo stato di errore corrente.|
 
-Il **.** viene eseguito l'overload dell'operatore per eseguire la stessa funzione della `fail` funzione. Pertanto, l'espressione:
+L'operatore **!** viene eseguito l'overload dell'operatore per eseguire la stessa funzione della `fail` funzione. Pertanto, l'espressione:
 
 ```cpp
 if(!cout)...
@@ -137,6 +138,6 @@ if(!cout.fail())...
 
 L'operatore **void \* ()** non è equivalente a `good` perché non verifica la fine del file.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Flussi di output](../standard-library/output-streams.md)

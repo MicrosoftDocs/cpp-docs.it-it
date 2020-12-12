@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 2) C4146'
 title: Avviso del compilatore (livello 2) C4146
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4146
 ms.assetid: d6c31ab1-3120-40d5-8d80-32b5f7046e32
-ms.openlocfilehash: b945853a3d32f91c821d6fa174371df39bf183b3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 85aebd34ed83ef14e306f7512689ccdfba713eec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218156"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326504"
 ---
 # <a name="compiler-warning-level-2-c4146"></a>Avviso del compilatore (livello 2) C4146
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: System, _wsystem'
 title: system, _wsystem
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 15e4637d709fdf4600ecb4c66c7d4a75c4fa07eb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3fb2045b932347669a756be1c8bc2f87694bd50d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844977"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326239"
 ---
 # <a name="system-_wsystem"></a>system, _wsystem
 
@@ -69,7 +70,7 @@ Comando da eseguire.
 
 Se *Command* è **null** e viene trovato l'interprete dei comandi, restituisce un valore diverso da zero. Se l'interprete dei comandi non viene trovato, restituisce 0 e **errno** viene impostato su **ENOENT**. Se *Command* non è **null**, **System** restituisce il valore restituito dall'interprete dei comandi. Restituisce il valore 0 solo se l'interprete dei comandi restituisce il valore 0. Il valore restituito-1 indica un errore e **errno** viene impostato su uno dei valori seguenti:
 
-| Valore | Descrizione |
+| Valore | Description |
 |-|-|
 | **E2BIG** | L'elenco degli argomenti (che è dipendente dal sistema) è troppo grande. |
 | **ENOENT** | L'interprete dei comandi non viene trovato. |
@@ -78,7 +79,7 @@ Se *Command* è **null** e viene trovato l'interprete dei comandi, restituisce u
 
 Per altre informazioni su questi codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione di **sistema** passa il *comando* all'interprete dei comandi che esegue la stringa come comando del sistema operativo. il **sistema** usa le variabili di ambiente **COMSPEC** e **path** per individuare il file dell'interprete dei comandi CMD.exe. Se *Command* è **null**, la funzione verifica solo se l'interprete dei comandi esiste.
 
@@ -132,7 +133,7 @@ Line one.
 Line two.
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_exec, funzioni _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>

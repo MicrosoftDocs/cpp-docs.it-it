@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: difftime, _difftime32, _difftime64'
 title: difftime, _difftime32, _difftime64
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-ms.openlocfilehash: e8d9ed3e33935c8e6c788380c02b9ae179dd06e8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3f2c4f713f5e4dd667bd4e0a557170e9d23e6700
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914783"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327020"
 ---
 # <a name="difftime-_difftime32-_difftime64"></a>difftime, _difftime32, _difftime64
 
@@ -69,7 +70,7 @@ Tempo iniziale.
 
 **difftime** restituisce il tempo trascorso in secondi, da *timeStart* a *timeEnd*. Il valore restituito è un numero a virgola mobile e precisione doppia. Il valore restituito può essere 0 e indica un errore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **difftime** calcola la differenza tra i due valori temporali forniti *timeStart* e *timeEnd*.
 
@@ -149,6 +150,6 @@ Program takes      3 seconds.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [Gestione del tempo](../../c-runtime-library/time-management.md)<br/>
 [time, _time32, _time64](time-time32-time64.md)<br/>

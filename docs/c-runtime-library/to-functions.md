@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: funzioni'
 title: Funzioni to
 ms.date: 11/04/2016
 api_location:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: a54f20d6ae4dead5ba7c606fd28d456e96ff31d6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4e2e8993bfe3ecc85071ab53bcd38c38c9da3370
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836078"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326867"
 ---
 # <a name="to-functions"></a>Funzioni to
 
@@ -38,11 +39,11 @@ Ognuna delle funzioni **to** e le relative macro associate, se presenti, convert
 [ToLower, _tolower, towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)\
 [toupper, _toupper, towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le conversioni delle funzioni **to** e delle macro sono le seguenti.
 
-|Routine|Macro|Descrizione|
+|Routine|Macro|Description|
 |-------------|-----------|-----------------|
 |`__toascii`|`__toascii`|Converte `c` in un carattere ASCII|
 |`tolower`|`tolower`|Converte `c` in minuscolo se appropriato|
@@ -66,7 +67,7 @@ Le routine `_tolower` e `_toupper`:
 
 - Sono versioni indipendenti dalle impostazioni locali e molto più veloci di `tolower` e **toupper**.
 
-- Può essere utilizzato solo quando i valori di tipo **(**) e () `c` **)** rispettivamente sono diversi da **isupper(** `c` **)** **islower(** `c` **)** zero.
+- Può essere utilizzato solo quando i valori di tipo **(**) e () `c`  rispettivamente sono diversi da  `c`   `c` zero.
 
 - Hanno risultati indefiniti se `c` non è una lettera ASCII con la combinazione di maiuscole/minuscole appropriata per la conversione.
 

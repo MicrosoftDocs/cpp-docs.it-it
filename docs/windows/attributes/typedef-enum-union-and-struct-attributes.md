@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: typedef, enum, Union e struct attributi'
 title: Attributi typedef, enum, Union e struct (C++ COM)
 ms.date: 10/02/2018
 helpviewer_keywords:
 - union attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-ms.openlocfilehash: 5e9eccd5e4464e92757d6dd78dd0f5187372ea3e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9f72f5ff45709287d31aa4da05b2569a0b37baff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222108"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327239"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Attributi Typedef, Enum, Union e Struct
 
@@ -20,7 +21,7 @@ Gli attributi seguenti si applicano alle parole chiave [typedef](../../cpp/alias
 
 |Attributo|Descrizione|
 |---------------|-----------------|
-|[caso](case-cpp.md)|Utilizzato con l'attributo [switch_type](switch-type.md) in un oggetto **`union`** .|
+|[case](case-cpp.md)|Utilizzato con l'attributo [switch_type](switch-type.md) in un oggetto **`union`** .|
 |[personalizzato](custom-cpp.md)|Consente di definire un attributo personalizzato.|
 |[esportazione](export.md)|Determina la posizione di una struttura di dati nel file con estensione IDL.|
 |[first_is](first-is.md)|Specifica l'indice del primo elemento di matrice da trasmettere.|
@@ -29,7 +30,7 @@ Gli attributi seguenti si applicano alle parole chiave [typedef](../../cpp/alias
 |[helpstring](helpstring.md)|Specifica una stringa di caratteri usata per descrivere l'elemento a cui viene applicata.|
 |[library_block](library-block.md)|Inserisce un costrutto all'interno del blocco di libreria del file IDL.|
 |[ptr](ptr.md)|Designa un puntatore come puntatore completo.|
-|[pubblico](public-cpp-attributes.md)|Assicura che un typedef entri nella libreria dei tipi anche se non vi viene fatto riferimento dall'interno del file IDL.|
+|[public](public-cpp-attributes.md)|Assicura che un typedef entri nella libreria dei tipi anche se non vi viene fatto riferimento dall'interno del file IDL.|
 |[ref](ref-cpp.md)|Identifica un puntatore di riferimento.|
 |[switch_is](switch-is.md)|Specifica l'espressione o l'identificatore che funge da discriminante di Unione che seleziona il membro di Unione.|
 |[switch_type](switch-type.md)|Identifica il tipo della variabile utilizzata come unione discriminante.|
@@ -42,7 +43,7 @@ Gli attributi seguenti si applicano alle parole chiave [typedef](../../cpp/alias
 |---------------|-----------------|
 |[personalizzato](custom-cpp.md)|Consente di definire un attributo personalizzato.|
 |[esportazione](export.md)|Determina la posizione di una struttura di dati nel file con estensione IDL.|
-|[uuid](uuid-cpp-attributes.md)|Specifica l'ID univoco per una classe o un'interfaccia.|
+|[UUID](uuid-cpp-attributes.md)|Specifica l'ID univoco per una classe o un'interfaccia.|
 |[v1_enum](v1-enum.md)|Indica che il tipo enumerato specificato deve essere trasmesso come entità a 32 bit, anziché come valore predefinito a 16 bit.|
 
 ### <a name="union"></a>union
@@ -57,7 +58,7 @@ Gli attributi seguenti si applicano alle parole chiave [typedef](../../cpp/alias
 |[max_is](max-is.md)|Definisce il valore massimo per un indice di matrice valido.|
 |[size_is](size-is.md)|Specifica le dimensioni della memoria allocata per i puntatori dimensionati, i puntatori dimensionati ai puntatori di dimensione e le matrici mono o multidimensionali.|
 |[unique](unique-cpp.md)|Specifica un puntatore univoco.|
-|[uuid](uuid-cpp-attributes.md)|Specifica l'ID univoco per una classe o un'interfaccia.|
+|[UUID](uuid-cpp-attributes.md)|Specifica l'ID univoco per una classe o un'interfaccia.|
 
 ### <a name="nonencapsulated-union"></a>Unione non incapsulata
 
@@ -82,7 +83,7 @@ Gli attributi seguenti si applicano alle parole chiave [typedef](../../cpp/alias
 |[db_param](db-param.md)|Associa la variabile membro specificata a un parametro di input o output e delimita la variabile.|
 |[db_source](db-source.md)|Crea una connessione a un'origine dati.|
 |[db_table](db-table.md)|Apre una tabella OLE DB.|
-|[predefinita](default-cpp.md)|Indica che l'interfaccia personalizzata o dispatch definita in una coclasse rappresenta l'interfaccia di programmabilità predefinita.|
+|[default](default-cpp.md)|Indica che l'interfaccia personalizzata o dispatch definita in una coclasse rappresenta l'interfaccia di programmabilità predefinita.|
 |[defaultvtable](defaultvtable.md)|Definisce un'interfaccia come interfaccia vtable predefinita per un controllo.|
 |[event_receiver](event-receiver.md)|Crea un ricevitore di eventi.|
 |[event_source](event-source.md)|Crea un'origine evento.|
@@ -98,10 +99,10 @@ Gli attributi seguenti si applicano alle parole chiave [typedef](../../cpp/alias
 |[source](source-cpp.md)|In una classe, specifica le interfacce di origine dell'oggetto COM per i punti di connessione. In una proprietà o un metodo indica che il membro restituisce un oggetto o una variante che è un'origine di eventi.|
 |[Threading](threading-cpp.md)|Specifica il modello di threading per un oggetto COM.|
 |[unique](unique-cpp.md)|Specifica un puntatore univoco.|
-|[uuid](uuid-cpp-attributes.md)|Specifica l'ID univoco per una classe o un'interfaccia.|
+|[UUID](uuid-cpp-attributes.md)|Specifica l'ID univoco per una classe o un'interfaccia.|
 |[version](version-cpp.md)|Identifica una particolare versione tra più versioni di una classe.|
 |[vi_progid](vi-progid.md)|Specifica una forma indipendente dalla versione del ProgID.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi per utilizzo](attributes-by-usage.md)
