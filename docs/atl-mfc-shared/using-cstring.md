@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso di CString'
 title: Uso di CString
 ms.date: 06/18/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - CString objects, reference counting
 - CString class (Visual C++)
 ms.assetid: ed018aaf-8b10-46f9-828c-f9c092dc7609
-ms.openlocfilehash: 8ebf3441c7d8856fe412e2efed4c717b01ced362
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f0afea345f2a01d66cbb541aa2a6c958c28365a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219014"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166395"
 ---
 # <a name="using-cstring"></a>Uso di CString
 
@@ -23,7 +24,7 @@ Le `CString` `CStringA` classi, e `CStringW` sono specializzazioni di un modello
 
 Un `CStringW` oggetto contiene il **`wchar_t`** tipo e supporta le stringhe Unicode. Un `CStringA` oggetto contiene il **`char`** tipo e supporta stringhe a byte singolo e multibyte (MBCS). Un `CString` oggetto supporta il **`char`** tipo o il **`wchar_t`** tipo, a seconda che il simbolo MBCS o il simbolo Unicode venga definito in fase di compilazione.
 
-Un oggetto `CString` mantiene i dati di tipo carattere in un oggetto `CStringData`. `CString`accetta stringhe in formato C con terminazione NULL. `CString`tiene traccia della lunghezza della stringa per ottenere prestazioni più veloci, ma mantiene anche il carattere NULL nei dati di tipo carattere archiviati per supportare la conversione in LPCWSTR. `CString`include il carattere di terminazione null quando viene esportata una stringa di tipo C. È possibile inserire un valore NULL in altre posizioni in un oggetto `CString` , ma potrebbe produrre risultati imprevisti.
+Un oggetto `CString` mantiene i dati di tipo carattere in un oggetto `CStringData`. `CString` accetta stringhe in formato C con terminazione NULL. `CString` tiene traccia della lunghezza della stringa per ottenere prestazioni più veloci, ma mantiene anche il carattere NULL nei dati di tipo carattere archiviati per supportare la conversione in LPCWSTR. `CString` include il carattere di terminazione null quando viene esportata una stringa di tipo C. È possibile inserire un valore NULL in altre posizioni in un oggetto `CString` , ma potrebbe produrre risultati imprevisti.
 
 Il set di classi stringa seguente può essere usato senza collegare una libreria MFC, con o senza il supporto della libreria run-time C: `CAtlString`, `CAtlStringA` e `CAtlStringW`.
 
@@ -68,7 +69,7 @@ Spiega come passare gli oggetti CString alle funzioni e come restituire oggetti 
 [Supporto del set di caratteri Unicode e multibyte (MBCS)](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)<br/>
 Descrive il supporto di Unicode e MBCS in MFC.
 
-## <a name="reference"></a>Informazioni di riferimento
+## <a name="reference"></a>Riferimento
 
 [CStringT](../atl-mfc-shared/reference/cstringt-class.md)<br/>
 Fornisce informazioni di riferimento sulla classe `CStringT`.

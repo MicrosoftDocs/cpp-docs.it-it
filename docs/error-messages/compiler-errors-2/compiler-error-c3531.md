@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3531'
 title: Errore del compilatore C3531
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3531
 ms.assetid: 2bdb9fdc-9ddf-403e-8b92-02763d434487
-ms.openlocfilehash: 4537c6c76814f2aeb8f8d62579caec86785de252
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 996a9cbda0bf1719c5fd14a1b36632d1710f8beb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91510132"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97113181"
 ---
 # <a name="compiler-error-c3531"></a>Errore del compilatore C3531
 
@@ -39,6 +40,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Parola chiave auto](../../cpp/auto-cpp.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: punti di connessione ATL'
 title: Punti di connessione ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - ATL, connection points
 - connection points [C++], about connection points
 ms.assetid: 17d76165-5f83-4f95-b36d-483821c247a1
-ms.openlocfilehash: df69496a6d245702a9598d684b25122ca55b1e6d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 60b9018185bea2af26407ee9d7a203148c8dc477
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491805"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165823"
 ---
 # <a name="atl-connection-points"></a>Punti di connessione ATL
 
@@ -21,9 +22,9 @@ Un oggetto collegabile è un oggetto che supporta interfacce in uscita. Un'inter
 
 Ogni punto di connessione supporta l'interfaccia [IConnectionPoint](/windows/win32/api/ocidl/nn-ocidl-iconnectionpoint) . L'oggetto collegabile espone i punti di connessione al client tramite l'interfaccia [IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer) .
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
-[Classi dei punti di connessione ATL](../atl/atl-connection-point-classes.md)<br/>
+[Classi del punto di connessione ATL](../atl/atl-connection-point-classes.md)<br/>
 Descrive in breve le classi ATL che supportano i punti di connessione.
 
 [Aggiunta di punti di connessione a un oggetto](../atl/adding-connection-points-to-an-object.md)<br/>
@@ -37,6 +38,6 @@ Fornisce un esempio di dichiarazione di un punto di connessione.
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Fornisce collegamenti ad argomenti concettuali sulla programmazione con Active Template Library.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Concetti](../atl/active-template-library-atl-concepts.md)

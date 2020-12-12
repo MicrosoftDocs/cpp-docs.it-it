@@ -1,34 +1,35 @@
 ---
+description: 'Altre informazioni su: aggiunta di una proprietà al controllo (esercitazione di ATL, parte 3)'
 title: Aggiunta di una proprietà al controllo (Esercitazione di ATL, parte 3)
 ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: f775fe34-103b-4f07-9999-400e987ee030
-ms.openlocfilehash: c5f71880f780e793cd77eb5a7571d31de4a8d01a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 22a44b6878afd6d51fb396d8f02a60e93436cf05
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219001"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166330"
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Aggiunta di una proprietà al controllo (Esercitazione di ATL, parte 3)
 
-`IPolyCtl`è l'interfaccia che contiene le proprietà e i metodi personalizzati del controllo e si aggiungerà una proprietà.
+`IPolyCtl` è l'interfaccia che contiene le proprietà e i metodi personalizzati del controllo e si aggiungerà una proprietà.
 
 ### <a name="to-add-the-property-definitions-to-your-project"></a>Per aggiungere le definizioni di proprietà al progetto
 
-1. In **Visualizzazione classi**espandere il `Polygon` ramo.
+1. In **Visualizzazione classi** espandere il `Polygon` ramo.
 
 1. Fare clic con il pulsante destro del mouse `IPolyCtl` .
 
-1. Scegliere **Aggiungi**dal menu di scelta rapida e quindi fare clic su **Aggiungi proprietà**. Verrà visualizzata l' **Aggiunta guidata proprietà** .
+1. Scegliere **Aggiungi** dal menu di scelta rapida e quindi fare clic su **Aggiungi proprietà**. Verrà visualizzata l' **Aggiunta guidata proprietà** .
 
 1. Digitare `Sides` come **nome della proprietà**.
 
-1. Nell'elenco a discesa del tipo di **Proprietà**selezionare **`short`** .
+1. Nell'elenco a discesa del tipo di **Proprietà** selezionare **`short`** .
 
 1. Fare clic su **OK** per completare l'aggiunta della proprietà.
 
-1. Da **Esplora soluzioni**aprire Polygon. idl e sostituire le righe seguenti alla fine dell' `IPolyCtl : IDispatch` interfaccia:
+1. Da **Esplora soluzioni** aprire Polygon. idl e sostituire le righe seguenti alla fine dell' `IPolyCtl : IDispatch` interfaccia:
 
     ```cpp
     short get_Sides();
@@ -42,7 +43,7 @@ ms.locfileid: "87219001"
     [propput, id(1), helpstring("property Sides")] HRESULT Sides([in] short newVal);
     ```
 
-1. Da **Esplora soluzioni**aprire PolyCtl. h e aggiungere le righe seguenti dopo la definizione di `m_clrFillColor` :
+1. Da **Esplora soluzioni** aprire PolyCtl. h e aggiungere le righe seguenti dopo la definizione di `m_clrFillColor` :
 
     [!code-cpp[NVC_ATL_Windowing#44](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_1.h)]
 
@@ -64,6 +65,6 @@ A questo punto è disponibile una proprietà denominata `Sides` . Nel passaggio 
 
 [Tornare al passaggio 2](../atl/adding-a-control-atl-tutorial-part-2.md) &#124; al [passaggio 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Esercitazione](../atl/active-template-library-atl-tutorial.md)

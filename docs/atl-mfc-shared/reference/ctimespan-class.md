@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CTimeSpan'
 title: Classe CTimeSpan
 ms.date: 10/18/2018
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - shared classes, CTimeSpan
 - time, elapsed
 ms.assetid: ee1e42f6-1839-477a-8435-fb26ad475140
-ms.openlocfilehash: 0c13aa0d8f6c46db3b018283ab2a408a3f9531e1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b15fa247baaa4de77c5caab12d584a80321b9420
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832022"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166577"
 ---
 # <a name="ctimespan-class"></a>Classe CTimeSpan
 
@@ -40,17 +41,17 @@ Intervallo di tempo, che viene archiviato internamente come numero di secondi ne
 class CTimeSpan
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CTimeSpan:: CTimeSpan](#ctimespan)|Costruisce `CTimeSpan` oggetti in diversi modi.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CTimeSpan:: Format](#format)|Converte un oggetto `CTimeSpan` in una stringa formattata.|
 |[CTimeSpan:: GetDays](#getdays)|Restituisce un valore che rappresenta il numero di giorni completi in questo oggetto `CTimeSpan` .|
@@ -65,13 +66,13 @@ class CTimeSpan
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[operatore +-](#operator_add_-)|Aggiunge e sottrae `CTimeSpan` oggetti.|
 |[operatore + =-=](#operator_add_eq_-_eq)|Aggiunge e sottrae un `CTimeSpan` oggetto da e verso questo oggetto `CTimeSpan` .|
 |[operator = = < e così via.](#ctimespan_comparison_operators)|Confronta due valori temporali relativi.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 `CTimeSpan` non dispone di una classe base.
 
@@ -141,7 +142,7 @@ Valore di **__time64_t** ora, ovvero il numero di secondi nell'intervallo di tem
 *lDays*, *nHours*, *nMins*, *nSecs*<br/>
 Rispettivamente giorni, ore, minuti e secondi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Tutti questi costruttori creano un nuovo `CTimeSpan` oggetto inizializzato con l'ora relativa specificata. Ogni costruttore è descritto di seguito:
 
@@ -198,7 +199,7 @@ ID della stringa che identifica il formato.
 
 `CString`Oggetto che contiene il tempo formattato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La versione di debug della libreria controlla i codici di formattazione e le asserzioni se il codice non è presente nell'elenco precedente.
 
@@ -218,7 +219,7 @@ LONGLONG GetDays() const throw();
 
 Restituisce il numero di giorni di 24 ore completi nell'intervallo di tempo. Questo valore può essere negativo se l'intervallo di tempo è negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si noti che l'ora legale può causare `GetDays` la restituzione di un risultato potenzialmente sorprendente. Ad esempio, quando DST è attivo, `GetDays` indica il numero di giorni compresi tra il 1 ° aprile e il 1 ° maggio 29, non 30, perché un giorno di aprile viene abbreviato di un'ora e pertanto non viene conteggiato come giorno completo.
 
@@ -352,7 +353,7 @@ Valore da aggiungere all' `CTimeSpan` oggetto.
 
 `CTimeSpan`Oggetto che rappresenta il risultato dell'operazione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questi due operatori consentono di aggiungere e sottrarre `CTimeSpan` oggetti tra loro.
 
@@ -378,7 +379,7 @@ Valore da aggiungere all' `CTimeSpan` oggetto.
 
 Oggetto aggiornato `CTimeSpan` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questi operatori consentono di aggiungere e sottrarre un `CTimeSpan` oggetto da e verso questo `CTimeSpan` .
 
@@ -399,14 +400,14 @@ CArchive& Serialize64(CArchive& ar);
 
 ### <a name="parameters"></a>Parametri
 
-*AR*<br/>
+*ar*<br/>
 `CArchive`Oggetto che si desidera aggiornare.
 
 ### <a name="return-value"></a>Valore restituito
 
 Oggetto aggiornato `CArchive` .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)<br/>
 [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)<br/>

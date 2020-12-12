@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CRect'
 title: Classe CRect
 ms.date: 11/06/2018
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: f45090971e8dbb89ae281b408cc3a14e102ffe17
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 229ec3b54f1b128641034bc763d2a62c0a6fe0a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502875"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166681"
 ---
 # <a name="crect-class"></a>Classe CRect
 
@@ -55,13 +56,13 @@ class CRect : public tagRECT
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CRect:: CRect](#crect)|Costruisce un oggetto `CRect`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CRect:: BottomRight](#bottomright)|Restituisce il punto inferiore destro di `CRect` .|
 |[CRect:: CenterPoint](#centerpoint)|Restituisce l'Centerpoint di `CRect` .|
@@ -89,7 +90,7 @@ class CRect : public tagRECT
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CRect:: operator-](#operator_-)|Sottrae gli offset `CRect` o deflats specificati `CRect` e restituisce l'oggetto risultante `CRect` .|
 |[CRect:: operator LPCRECT](#operator_lpcrect)|Converte `CRect` in `LPCRECT`.|
@@ -105,7 +106,7 @@ class CRect : public tagRECT
 |[CRect:: operator-=](#operator_-_eq)|Sottrae gli offset `CRect` o i deflati specificati `CRect` .|
 |[CRect:: operator = =](#operator_eq_eq)|Determina se `CRect` è uguale a un rettangolo.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 `CRect` include anche funzioni membro per modificare `CRect` gli oggetti e le strutture di Windows `RECT` .
 
@@ -145,7 +146,7 @@ const CPoint& BottomRight() const throw();
 
 Coordinate dell'angolo inferiore destro del rettangolo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione può essere utilizzata per ottenere o impostare l'angolo inferiore destro del rettangolo. Impostare l'angolo utilizzando questa funzione sul lato sinistro dell'operatore di assegnazione.
 
@@ -249,7 +250,7 @@ void CopyRect(LPCRECT lpSrcRect) throw();
 ### <a name="parameters"></a>Parametri
 
 *lpSrcRect*<br/>
-Punta alla struttura [RECT](/windows/win32/api/windef/ns-windef-rect) o `CRect` all'oggetto Rect da copiare.
+Punta alla struttura [](/windows/win32/api/windef/ns-windef-rect) o `CRect` all'oggetto Rect da copiare.
 
 ### <a name="example"></a>Esempio
 
@@ -318,7 +319,7 @@ Specifica la posizione in alto a sinistra di `CRect` .
 *bottomRight*<br/>
 Specifica la posizione in basso a destra di `CRect` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se non viene specificato alcun argomento `left` , `top` `right` i membri,, e `bottom` vengono impostati su 0.
 
@@ -399,7 +400,7 @@ Specifica il numero di unità per cui deflatre il lato destro di `CRect` .
 *b*<br/>
 Specifica il numero di unità da cui deflatare la parte inferiore di `CRect` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 A tale scopo, `DeflateRect` aggiunge unità a sinistra e in alto e sottrae le unità a destra e in basso. I parametri di `DeflateRect` sono valori con segno; i valori positivi sono deflate `CRect` e i valori negativi lo inflatano.
 
@@ -471,7 +472,7 @@ int Height() const throw();
 
 Altezza di `CRect` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore risultante può essere negativo.
 
@@ -525,7 +526,7 @@ Specifica il numero di unità per ingrandire il lato destro di `CRect` .
 *b*<br/>
 Specifica il numero di unità per ingrandire la parte inferiore di `CRect` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 A tale scopo, `InflateRect` sottrae le unità dal lato sinistro e superiore e aggiunge le unità a destra e in basso. I parametri di `InflateRect` sono valori con segno; i valori positivi sono inflat `CRect` e i valori negativi lo deflatno.
 
@@ -561,7 +562,7 @@ Punta a una `RECT` struttura o a un `CRect` oggetto che contiene un rettangolo d
 
 Diverso da zero se l'intersezione non è vuota. 0 se l'intersezione è vuota.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intersezione è il rettangolo più grande contenuto in entrambi i rettangoli esistenti.
 
@@ -596,7 +597,7 @@ BOOL IsRectEmpty() const throw();
 
 Diverso da zero se `CRect` è vuoto; 0 se `CRect` non è vuoto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un rettangolo è vuoto se la larghezza e/o l'altezza sono 0 o negativo. È diverso da `IsRectNull` , che determina se tutte le coordinate del rettangolo sono pari a zero.
 
@@ -626,7 +627,7 @@ BOOL IsRectNull() const throw();
 
 Diverso da zero se `CRect` i valori in alto, a sinistra, in basso e a destra sono tutti uguali a 0; in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È diverso da `IsRectEmpty` , che determina se il rettangolo è vuoto.
 
@@ -725,7 +726,7 @@ Normalizza in `CRect` modo che sia l'altezza che la larghezza siano positive.
 void NormalizeRect() throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il rettangolo viene normalizzato per il posizionamento del quarto quadrante, che in genere viene utilizzato da Windows per le coordinate. `NormalizeRect` Confronta i valori superiore e inferiore e li scambia se la parte superiore è maggiore della parte inferiore. Analogamente, scambia i valori di sinistra e di destra se il lato sinistro è maggiore di quello a destra. Questa funzione è utile quando si gestiscono diverse modalità di mapping e rettangoli invertiti.
 
@@ -766,7 +767,7 @@ Contiene una struttura [Point](/windows/win32/api/windef/ns-windef-point) o un o
 *size*<br/>
 Contiene una struttura di [dimensioni](/windows/win32/api/windef/ns-windef-size) o un oggetto [CSize](csize-class.md) che specifica entrambe le dimensioni in base alle quali spostare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Sposta le `CRect` unità *x* lungo l'asse x e le unità *y* lungo l'asse y. I parametri *x* e *y* sono valori con segno, quindi `CRect` possono essere spostati a sinistra o a destra e in alto o in basso.
 
@@ -786,7 +787,7 @@ ASSERT(rect == CRect(230, 230, 265, 265));
 operator LPCRECT() const throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando si usa questa funzione, non è necessario l'operatore address-of ( **&** ). Questo operatore verrà usato automaticamente quando si passa un `CRect` oggetto a una funzione che prevede un `LPCRECT` .
 
@@ -798,7 +799,7 @@ Converte un oggetto `CRect` in un [lpRect](../../mfc/reference/data-types-mfc.md
 operator LPRECT() throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando si usa questa funzione, non è necessario l'operatore address-of ( **&** ). Questo operatore verrà usato automaticamente quando si passa un `CRect` oggetto a una funzione che prevede un `LPRECT` .
 
@@ -846,7 +847,7 @@ Fa riferimento a un rettangolo di origine. Può essere un oggetto [Rect](/window
 
 Diverso da zero se uguale a; in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 > [!NOTE]
 > Entrambi i rettangoli devono essere normalizzati o questa funzione potrebbe non riuscire. È possibile chiamare [NormalizeRect](#normalizerect) per normalizzare i rettangoli prima di chiamare questa funzione.
@@ -886,7 +887,7 @@ Fa riferimento a un rettangolo di origine. Può essere un oggetto [Rect](/window
 
 Diverso da zero se non uguale a; in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 > [!NOTE]
 > Entrambi i rettangoli devono essere normalizzati o questa funzione potrebbe non riuscire. È possibile chiamare [NormalizeRect](#normalizerect) per normalizzare i rettangoli prima di chiamare questa funzione.
@@ -930,7 +931,7 @@ Struttura [size](/windows/win32/api/windef/ns-windef-size) o oggetto [CSize](csi
 *lpRect*<br/>
 Punta a una struttura o a un oggetto [Rect](/windows/win32/api/windef/ns-windef-rect) `CRect` che contiene il numero di unità per cui si desidera gonfiare ogni lato `CRect` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I valori *x* e *y* del parametro (o `cx` e `cy` ) vengono aggiunti a `CRect` .
 
@@ -968,7 +969,7 @@ Struttura [size](/windows/win32/api/windef/ns-windef-size) o oggetto [CSize](csi
 *lpRect*<br/>
 Punta a una struttura o a un oggetto [Rect](/windows/win32/api/windef/ns-windef-rect) `CRect` che contiene il numero di unità per cui deflatare ogni lato `CRect` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I valori *x* e *y* del parametro (o `cx` e `cy` ) vengono sottratti da `CRect` .
 
@@ -998,7 +999,7 @@ void operator&=(const RECT& rect) throw();
 *Rect*<br/>
 Contiene un oggetto [Rect](/windows/win32/api/windef/ns-windef-rect) o `CRect` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intersezione è il rettangolo più grande contenuto in entrambi i rettangoli.
 
@@ -1022,7 +1023,7 @@ void operator|=(const RECT& rect) throw();
 *Rect*<br/>
 Contiene un oggetto `CRect` o [Rect](/windows/win32/api/windef/ns-windef-rect).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'Unione è il rettangolo più piccolo che contiene entrambi i rettangoli di origine.
 
@@ -1065,7 +1066,7 @@ Punta a una struttura o a un oggetto [Rect](/windows/win32/api/windef/ns-windef-
 
 Oggetto `CRect` risultante dallo spostamento o dal `CRect` numero di unità specificato nel parametro.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I parametri *x* e *y* del parametro (o `cx` e `cy` ) vengono aggiunti alla `CRect` posizione di.
 
@@ -1108,7 +1109,7 @@ Punta a una struttura o a un oggetto [Rect](/windows/win32/api/windef/ns-windef-
 
 Oggetto `CRect` risultante dallo stato di trasferimento o Deflating `CRect` per il numero di unità specificato nel parametro.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I parametri *x* e *y* del parametro (o `cx` e `cy` ) vengono sottratti dalla `CRect` posizione di.
 
@@ -1143,7 +1144,7 @@ Contiene un oggetto [Rect](/windows/win32/api/windef/ns-windef-rect) o `CRect` .
 
 Oggetto `CRect` che rappresenta l'intersezione di `CRect` e *rect2*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intersezione è il rettangolo più grande contenuto in entrambi i rettangoli.
 
@@ -1180,7 +1181,7 @@ Contiene un oggetto [Rect](/windows/win32/api/windef/ns-windef-rect) o `CRect` .
 
 Oggetto `CRect` che rappresenta l'Unione di `CRect` e *rect2*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'Unione è il rettangolo più piccolo che contiene entrambi i rettangoli.
 
@@ -1216,7 +1217,7 @@ Contiene una struttura [Point](/windows/win32/api/windef/ns-windef-point) o un o
 
 Diverso da zero se il punto si trova all'interno di `CRect` ; in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un punto si trova all'interno `CRect` di se si trova sul lato sinistro o superiore oppure si trova all'interno di tutti e quattro i lati. Un punto sul lato destro o inferiore è esterno `CRect` .
 
@@ -1311,7 +1312,7 @@ CSize Size() const throw();
 
 Oggetto [CSize](csize-class.md) che contiene la dimensione di `CRect` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'altezza o la larghezza possono essere negative.
 
@@ -1346,7 +1347,7 @@ Punta alla `RECT` struttura o `CRect` all'oggetto che deve essere sottratto dal 
 
 Diverso da zero se la funzione ha esito positivo; in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La sottrazione è il rettangolo più piccolo che contiene tutti i punti in *lpRectScr1* che non si trovano nell'intersezione tra *lpRectScr1* e *lpRectScr2*.
 
@@ -1406,7 +1407,7 @@ const CPoint& TopLeft() const throw();
 
 Coordinate dell'angolo superiore sinistro del rettangolo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione può essere utilizzata per ottenere o impostare l'angolo superiore sinistro del rettangolo. Impostare l'angolo utilizzando questa funzione sul lato sinistro dell'operatore di assegnazione.
 
@@ -1434,7 +1435,7 @@ Punta a un oggetto `RECT` o `CRect` che contiene un rettangolo di origine.
 
 Diverso da zero se l'Unione non è vuota. 0 se l'Unione è vuota.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'Unione è il rettangolo più piccolo che contiene entrambi i rettangoli di origine.
 
@@ -1467,7 +1468,7 @@ int Width() const throw();
 
 Larghezza di `CRect` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La larghezza può essere negativa.
 

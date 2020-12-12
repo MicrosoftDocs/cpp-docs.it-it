@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: domande frequenti sul contenimento di controlli ATL'
 title: Domande frequenti sul contenimento di controlli ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - ActiveX controls [C++], hosting
 - controls [ATL]
 ms.assetid: d4bdfbe0-82ca-4f2f-bb95-cb89bdcc9b53
-ms.openlocfilehash: 693617589f157d352972485396777cec587a5b8f
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 5c5d3d452a119908cb6c8dcdb08da3276db78f51
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352700"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165771"
 ---
 # <a name="atl-control-containment-faq"></a>Domande frequenti sul contenimento di controlli ATL
 
 ## <a name="which-atl-classes-facilitate-activex-control-containment"></a>Quali classi ATL semplificano il contenimento di controlli ActiveX?
 
-Il codice di hosting del controllo ATL non richiede l'utilizzo di alcuna classe ATL; Se necessario, è possibile creare semplicemente una finestra **"AtlAxWinLic80"** e usare l'API di hosting del controllo (per altre informazioni, vedere **che cos'è l'API di hosting del controllo ATL**). Tuttavia, le classi seguenti rendono più semplice l'uso delle funzionalità di contenimento.
+Il codice di hosting del controllo ATL non richiede l'utilizzo di alcuna classe ATL; Se necessario, è possibile creare semplicemente una finestra **"AtlAxWinLic80"** e usare l'API di hosting del controllo (per altre informazioni, vedere **che cos'è l'API ATL Control-Hosting**. Tuttavia, le classi seguenti rendono più semplice l'uso delle funzionalità di contenimento.
 
 |Classe|Descrizione|
 |-----------|-----------------|
@@ -105,7 +106,7 @@ Di seguito è disponibile un riepilogo:
 
 [!code-cpp[NVC_ATL_AxHost#1](../atl/codesnippet/cpp/hosting-activex-controls-using-atl-axhost_1.cpp)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Domande frequenti sul contenimento di controlli](../atl/atl-control-containment-faq.md)<br/>
 [AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)<br/>

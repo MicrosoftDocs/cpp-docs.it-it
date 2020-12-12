@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classi Collection ATL'
 title: Panoramica della classe di raccolta ATL
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-ms.openlocfilehash: 039af388a3713540c6ba7d39e8b639cf83d291ff
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 32d9fe928024d82af7031fbbb8d88aba5e3eae31
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040860"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166083"
 ---
 # <a name="atl-collection-classes"></a>Classi di raccolta ATL
 
@@ -51,7 +52,7 @@ Le classi seguenti implementano matrici, elenchi e mappe e vengono fornite come 
 |[CAtlList](../atl/reference/catllist-class.md)|Implementa un elenco.|
 |[CAtlMap](../atl/reference/catlmap-class.md)|Implementa una struttura di mapping, in base alla quale è possibile fare riferimento ai dati mediante chiave o valore.|
 |[CRBMap](../atl/reference/crbmap-class.md)|Implementa una struttura di mapping utilizzando l'algoritmo Red-Black.|
-|[CRBMultiMap](../atl/reference/crbmultimap-class.md)|Implementa una struttura di multimapping Red-Black.|
+|[CRBMultiMap](../atl/reference/crbmultimap-class.md)|Implementa una struttura di Red-Black multimapping.|
 
 Queste classi intercettano molti errori di programmazione quando vengono usati nelle compilazioni di debug, ma, per motivi di prestazioni, questi controlli non verranno eseguiti nelle compilazioni finali.
 
@@ -87,8 +88,8 @@ Ognuna delle classi di raccolte disponibili offre diverse caratteristiche di pre
 |Elenco|Sì|No|Fast (tempo costante)|O lento (n)|Sì|
 |Array|Sì|Per int (tempo costante)|Slow O (n) eccetto se si inserisce alla fine, nel qual caso l'ora costante|O lento (n)|Sì|
 |Mappa|No|Per chiave (ora costante)|Fast (tempo costante)|Fast (tempo costante)|No (chiavi) Sì (valori)|
-|Mappa rosso-nero|Sì (per chiave)|Per chiave O (log n)|Veloce O (log n)|Veloce O (log n)|No|
-|Multimap rosso-nero|Sì (per chiave)|Per chiave O (log n) (più valori per chiave)|Veloce O (log n)|Veloce O (log n)|Sì (più valori per chiave)|
+|Mappa Red-Black|Sì (per chiave)|Per chiave O (log n)|Veloce O (log n)|Veloce O (log n)|No|
+|Multimap Red-Black|Sì (per chiave)|Per chiave O (log n) (più valori per chiave)|Veloce O (log n)|Veloce O (log n)|Sì (più valori per chiave)|
 
 ## <a name="using-ctraits-objects"></a>Uso di oggetti CTraits
 

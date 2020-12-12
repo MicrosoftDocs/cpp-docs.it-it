@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: dichiarazioni di struttura'
 title: Dichiarazioni di struttura
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - structure members
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
-ms.openlocfilehash: 3b9aa30cfeecbd60fda61e6a484043c82c9a3b28
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6fe2a241e28ce9b8c9c1ee114c18e2aa9afc704c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217051"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114611"
 ---
 # <a name="structure-declarations"></a>Dichiarazioni di struttura
 
@@ -22,7 +23,7 @@ Una "dichiarazione di struttura" denomina un tipo e specifica una sequenza di va
 ## <a name="syntax"></a>Sintassi
 
 *struct-or-Union-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;identificatore *struct-or-Union* *identifier*<sub>opz</sub> **{** *struct-declaration-list* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;identificatore *struct-or-Union* <sub>opz</sub> **{** *struct-declaration-list* **}**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*
 
 *struct-or-union*:<br/>
@@ -81,7 +82,7 @@ struct a var3;
 struct b var4;
 ```
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 In questi esempi vengono illustrate le dichiarazioni di strutture:
 
@@ -149,7 +150,7 @@ struct somestruct
 
 Il compilatore consente l'utilizzo di una matrice senza dimensione o di dimensione pari a zero come ultimo membro di una struttura. Questa operazione può risultare utile se la dimensione di una matrice costante è diversa quando viene utilizzata in situazioni differenti. La dichiarazione di una struttura è simile alla seguente:
 
-**`struct`***identificatore* **{** *set-of-Declarations* *Type* <em>nome-matrice</em>** \[ ];};**
+**`struct`***identificatore* **{** *set-of-Declarations* *Type* <em>nome-matrice</em>**\[ ];};**
 
 Le matrici senza dimensione possono apparire solo come ultimo membro di una struttura. Le strutture contenenti le dichiarazioni di matrice senza dimensione possono essere annidate in altre strutture purché nelle strutture di inclusione non siano dichiarati altri membri. Le matrici di queste strutture non sono consentite. L' **`sizeof`** operatore, quando applicato a una variabile di questo tipo o al tipo stesso, presuppone il valore 0 per la dimensione della matrice.
 
@@ -175,6 +176,6 @@ Per altre informazioni sui riferimenti alle strutture, vedere [Membri di struttu
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Dichiaratori e dichiarazioni di variabili](../c-language/declarators-and-variable-declarations.md)

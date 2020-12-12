@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: opzione'
 title: OPTION (MASM)
 ms.date: 07/15/2020
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - OPTION directive
 ms.assetid: 8e10dabd-e36f-4586-ab01-ada96736b0bd
-ms.openlocfilehash: 3d5bef52106b38487d1a2be248cff274f39e009c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e2ab1f232b63c2a368204584c1fed69efb40e6ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830839"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97126230"
 ---
 # <a name="option"></a>OPTION
 
@@ -21,7 +22,7 @@ Abilita e Disabilita le funzionalità dell'assembler.
 
 > **`OPTION`***elenco di opzioni*
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le opzioni disponibili includono:
 
@@ -66,7 +67,7 @@ Le opzioni disponibili includono:
 
 La sintassi per Language è **`OPTION LANGUAGE:`** _`x`_ , dove *`x`* è uno tra **`C`** ,,, **`SYSCALL`** **`STDCALL`** **`PASCAL`** , **`FORTRAN`** o **`BASIC`** . **`SYSCALL`**, **`PASCAL`** , **`FORTRAN`** e **`BASIC`** non sono supportati con [`.MODEL`](dot-model.md) **`FLAT`** .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento alle direttive](directives-reference.md)\
 [Grammatica BNF di MASM](masm-bnf-grammar.md)

@@ -1,14 +1,15 @@
 ---
+description: Altre informazioni sull'aggiunta di una pagina delle proprietà (esercitazione di ATL, parte 6)
 title: Aggiunta di una pagina di proprietà (Esercitazione di ATL, parte 6)
 ms.custom: get-started-article
 ms.date: 09/27/2018
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
-ms.openlocfilehash: 467ae19c372e24b2d368002cb83367b7087136fd
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: c33789919e104cc1600622dc3972a23069afe573
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078774"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166287"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Aggiunta di una pagina di proprietà (Esercitazione di ATL, parte 6)
 
@@ -31,9 +32,9 @@ Per aggiungere la pagina delle proprietà al controllo, usare il modello Pagina 
 
 1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse su `Polygon`.
 
-1. Scegliere **Aggiungi** > **Nuovo elemento** dal menu di scelta rapida.
+1. Scegliere **Aggiungi**  >  **nuovo elemento** dal menu di scelta rapida.
 
-1. Nell'elenco dei modelli selezionare **ATL** > **Pagina delle proprietà ATL** e fare clic su **Aggiungi**.
+1. Dall'elenco dei **modelli selezionare la**  >  **pagina delle proprietà ATL** ATL e fare clic su **Aggiungi**.
 
 1. Quando viene visualizzata la **Creazione guidata pagina delle proprietà ATL**, immettere *PolyProp* come nome in **Nome breve**.
 
@@ -109,7 +110,7 @@ Il codice verifica ora che l'impostazione della proprietà `Sides` funzioni effe
 
 1. Espandere il nodo `IDC_SIDES` nell'elenco di eventi.
 
-1. Selezionare `EN_CHANGE` e dal menu a discesa a destra fare clic su **\<Aggiungi > OnEnChangeSides**. Verranno aggiunte la dichiarazione del gestore `OnEnChangeSides` a PolyProp.h e l'implementazione del gestore a PolyProp.cpp.
+1. Selezionare `EN_CHANGE` , quindi scegliere **\<Add> OnEnChangeSides** dal menu a discesa a destra. Verranno aggiunte la dichiarazione del gestore `OnEnChangeSides` a PolyProp.h e l'implementazione del gestore a PolyProp.cpp.
 
 È ora necessario modificare il gestore.
 
@@ -149,6 +150,6 @@ Si inserirà ora il controllo in una pagina Web.
 
 [Torna al passaggio 5](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [Vai al passaggio 7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Esercitazione](../atl/active-template-library-atl-tutorial.md)

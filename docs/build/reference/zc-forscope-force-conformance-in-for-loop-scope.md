@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su:/Zc: forScope (Imponi conformità nell'ambito di un ciclo for)"
 title: /Zc:forScope (Imponi conformità nell'ambito di un ciclo For)
 ms.date: 03/06/2018
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: 3031f02d-3b14-4ad0-869e-22b0110c3aed
-ms.openlocfilehash: b1173ad609a1b2c95d6cf118f4e2d5defeec5b9c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7124bba6608facfea546974cfa40ef9556ff713a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234341"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114663"
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (Imponi conformità nell'ambito di un ciclo For)
 
@@ -26,7 +27,7 @@ Permette di implementare il comportamento C++ standard per cicli [for](../../cpp
 
 > **/Zc: forScope**[ **-** ]
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il comportamento standard consiste nel consentire all' **`for`** inizializzatore di un ciclo di uscire dall'ambito dopo il **`for`** ciclo. In **/Zc: forScope-** and [/ze](za-ze-disable-language-extensions.md)l' **`for`** inizializzatore del ciclo rimane nell'ambito fino al termine dell'ambito locale.
 
@@ -63,7 +64,7 @@ Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonsta
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la pagina delle proprietà di **configurazione**proprietà del  >  **linguaggio C/C++**  >  **Language** .
+1. Selezionare la pagina delle proprietà di **configurazione** proprietà del  >  **linguaggio C/C++**  >   .
 
 1. Modificare la proprietà **Imponi conformità nell'ambito di un ciclo For** .
 
@@ -71,7 +72,7 @@ Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonsta
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForceConformanceInForLoopScope%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [/Zc (Conformità)](zc-conformance.md)<br/>
 [/Za,/ze (Disabilita estensioni linguaggio)](za-ze-disable-language-extensions.md)<br/>

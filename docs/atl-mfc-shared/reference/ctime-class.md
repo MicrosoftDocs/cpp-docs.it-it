@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CTime'
 title: Classe CTime
 ms.date: 10/18/2018
 f1_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - CTime class
 - shared classes, CTime
 ms.assetid: 0a299544-485b-48dc-9d3c-fdc30f57d612
-ms.openlocfilehash: d551698a81921227dd0d7b7d80436bba960ed176
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3768423a4d3bf873e9161b846e21fda4beffdc9c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832035"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166603"
 ---
 # <a name="ctime-class"></a>Classe CTime
 
@@ -41,17 +42,17 @@ Rappresenta una data e un'ora assolute.
 class CTime
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CTime:: CTime](#ctime)|Costruisce `CTime` oggetti in diversi modi.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CTime:: Format](#format)|Converte un `CTime` oggetto in una stringa formattata, in base al fuso orario locale.|
 |[CTime:: FormatGmt](#formatgmt)|Converte un `CTime` oggetto in una stringa formattata, in base all'ora UTC.|
@@ -72,14 +73,14 @@ class CTime
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[operatore +-](#operator_add_-)|Questi operatori aggiungono e sottratno `CTimeSpan` `CTime` oggetti e.|
 |[operatore + =,-=](#operator_add_eq_-_eq)|Questi operatori aggiungono e sottraono un `CTimeSpan` oggetto da e verso questo `CTime` oggetto.|
 |[operatore =](#operator_eq)|Operatore di assegnazione.|
 |[operator = =, < e così via.](#ctime_comparison_operators)|Operatori di confronto.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 `CTime` non dispone di una classe base.
 
@@ -94,7 +95,7 @@ Le `CTime` `CTimeSpan` classi e non sono progettate per la derivazione. Poiché 
 > [!NOTE]
 > Il limite di data superiore è 12/31/3000. Il limite inferiore è 1/1/1970 12:00:00 GMT.
 
-Per ulteriori informazioni sull'utilizzo di `CTime` , vedere gli articoli [data e ora](../../atl-mfc-shared/date-and-time.md)e [gestione dell'ora](../../c-runtime-library/time-management.md) in riferimenti alla libreria di Runtime.
+Per ulteriori informazioni sull'utilizzo di `CTime` , vedere gli articoli [data e ora](../../atl-mfc-shared/date-and-time.md)e [gestione dell'ora](../../c-runtime-library/time-management.md) nel riferimento alla libreria Run-Time.
 
 > [!NOTE]
 > La `CTime` struttura è cambiata da mfc 7,1 a mfc 8,0. Se si serializza una `CTime` struttura utilizzando l' **operatore <<** in MFC 8,0 o versione successiva, il file risultante non sarà leggibile nelle versioni precedenti di MFC.
@@ -176,7 +177,7 @@ Struttura [FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime) da co
 *DBTS*<br/>
 Riferimento a una struttura DBTIMESTAMP contenente l'ora locale corrente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Ogni costruttore è descritto di seguito:
 
@@ -235,7 +236,7 @@ ID della stringa che identifica il formato.
 
 Oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.md) che contiene il tempo formattato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se lo stato di questo `CTime` oggetto è null, il valore restituito è una stringa vuota.
 
@@ -266,7 +267,7 @@ ID della stringa che identifica il formato.
 
 Oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.md) che contiene il tempo formattato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore di ora non viene convertito e quindi riflette l'ora UTC.
 
@@ -293,7 +294,7 @@ Riferimento a una struttura DBTIMESTAMP contenente l'ora locale corrente.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Archivia il tempo risultante nella struttura *DBTS* a cui si fa riferimento. La `DBTIMESTAMP` struttura dei dati inizializzata da questa funzione avrà il relativo `fraction` membro impostato su zero.
 
@@ -318,7 +319,7 @@ Riferimento a una struttura [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwin
 
 TRUE se l'operazione riesce; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `GetAsSystemTime` Archivia il tempo risultante *nella struttura a* cui si fa riferimento. La `SYSTEMTIME` struttura dei dati inizializzata da questa funzione avrà il relativo `wMilliseconds` membro impostato su zero.
 
@@ -334,7 +335,7 @@ Restituisce un `CTime` oggetto che rappresenta l'ora corrente.
 static CTime WINAPI GetCurrentTime() throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Restituisce la data e l'ora di sistema correnti nell'ora UTC (Coordinated Universal Time).
 
@@ -354,7 +355,7 @@ int GetDay() const throw();
 
 Restituisce il giorno del mese, in base all'ora locale, nell'intervallo compreso tra 1 e 31.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione chiama `GetLocalTm` , che usa un buffer interno allocato in modo statico. I dati in questo buffer vengono sovrascritti a causa di chiamate ad altre `CTime` funzioni membro.
 
@@ -374,7 +375,7 @@ int GetDayOfWeek() const throw();
 
 Restituisce il giorno della settimana in base all'ora locale; 1 = domenica, 2 = lunedì, a 7 = sabato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione chiama `GetLocalTm` , che usa un buffer interno allocato in modo statico. I dati in questo buffer vengono sovrascritti a causa di chiamate ad altre `CTime` funzioni membro.
 
@@ -397,9 +398,9 @@ Punta a un buffer che riceverà i dati temporali. Se questo puntatore è NULL, v
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore a una **struttura TM** compilata come definito nell'ora del file di inclusione. H. Per il layout della struttura, vedere [gmtime, _gmtime32 _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) .
+Un puntatore a una **TM struct** compilata come definito nel file di inclusione time. H. Per il layout della struttura, vedere [gmtime, _gmtime32 _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `GetGmtTm` Restituisce l'ora UTC.
 
@@ -421,7 +422,7 @@ int GetHour() const throw();
 
 Restituisce l'ora, in base all'ora locale, nell'intervallo compreso tra 0 e 23.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione chiama `GetLocalTm` , che usa un buffer interno allocato in modo statico. I dati in questo buffer vengono sovrascritti a causa di chiamate ad altre `CTime` funzioni membro.
 
@@ -444,9 +445,9 @@ Punta a un buffer che riceverà i dati temporali. Se questo puntatore è NULL, v
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore a una **struttura TM** compilata come definito nell'ora del file di inclusione. H. Per il layout della struttura, vedere [gmtime, _gmtime32 _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) .
+Un puntatore a una **TM struct** compilata come definito nel file di inclusione time. H. Per il layout della struttura, vedere [gmtime, _gmtime32 _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `GetLocalTm` Restituisce l'ora locale.
 
@@ -468,7 +469,7 @@ int GetMinute() const throw();
 
 Restituisce il minuto, in base all'ora locale, nell'intervallo compreso tra 0 e 59.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione chiama `GetLocalTm` , che usa un buffer interno allocato in modo statico. I dati in questo buffer vengono sovrascritti a causa di chiamate ad altre `CTime` funzioni membro.
 
@@ -488,7 +489,7 @@ int GetMonth() const throw();
 
 Restituisce il mese, in base all'ora locale, nell'intervallo compreso tra 1 e 12 (1 = gennaio).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione chiama `GetLocalTm` , che usa un buffer interno allocato in modo statico. I dati in questo buffer vengono sovrascritti a causa di chiamate ad altre `CTime` funzioni membro.
 
@@ -508,7 +509,7 @@ int GetSecond() const throw();
 
 Restituisce il secondo oggetto, in base all'ora locale, nell'intervallo compreso tra 0 e 59.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione chiama `GetLocalTm` , che usa un buffer interno allocato in modo statico. I dati in questo buffer vengono sovrascritti a causa di chiamate ad altre `CTime` funzioni membro.
 
@@ -544,7 +545,7 @@ int GetYear();
 
 Restituisce l'anno, in base all'ora locale, nell'intervallo dal 1 ° gennaio 1970 al 18 gennaio 2038 (inclusivo).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione chiama `GetLocalTm` , che usa un buffer interno allocato in modo statico. I dati in questo buffer vengono sovrascritti a causa di chiamate ad altre `CTime` funzioni membro.
 
@@ -569,7 +570,7 @@ Nuovo valore di data/ora.
 
 Oggetto aggiornato `CTime` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo operatore di assegnazione di overload copia l'ora di origine in questo `CTime` oggetto. L'archiviazione interna del tempo in un `CTime` oggetto è indipendente dal fuso orario. La conversione del fuso orario non è necessaria durante l'assegnazione.
 
@@ -595,7 +596,7 @@ CTimeSpan operator-(CTime time) const throw();
 
 `CTime`Oggetto o `CTimeSpan` che rappresenta il risultato dell'operazione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `CTime` gli oggetti rappresentano il tempo assoluto, `CTimeSpan` gli oggetti rappresentano l'ora relativa. I primi due operatori consentono di aggiungere e sottrarre `CTimeSpan` oggetti da e verso `CTime` oggetti. Il terzo operatore consente di sottrarre un `CTime` oggetto da un altro per produrre un `CTimeSpan` oggetto.
 
@@ -621,7 +622,7 @@ CTime& operator-=(CTimeSpan span) throw();
 
 Oggetto aggiornato `CTime` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questi operatori consentono di aggiungere e sottrarre un `CTimeSpan` oggetto da e verso questo `CTime` oggetto.
 
@@ -642,14 +643,14 @@ CArchive& Serialize64(CArchive& ar);
 
 ### <a name="parameters"></a>Parametri
 
-*AR*<br/>
+*ar*<br/>
 `CArchive`Oggetto che si desidera aggiornare.
 
 ### <a name="return-value"></a>Valore restituito
 
 Oggetto aggiornato `CArchive` .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)<br/>
 [_ftime_s, _ftime32_s, _ftime64_s](../../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)<br/>

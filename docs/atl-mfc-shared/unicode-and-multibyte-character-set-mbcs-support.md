@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: supporto per Unicode e set di caratteri multibyte (MBCS)'
 title: Supporto per set di caratteri Unicode e multibyte (MBCS)
 ms.date: 01/09/2017
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Unicode [C++], string objects
 - strings [C++], Unicode
 - strings [C++], character set support
-ms.openlocfilehash: efa90acd169aeb8739b0bf97a5ab27026cc80cc6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9e9a09777e835872a5c8bc6613460478acf9be9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831983"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166408"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Supporto per set di caratteri Unicode e multibyte (MBCS)
 
@@ -25,7 +26,7 @@ Alcuni linguaggi, ad esempio giapponese e cinese, dispongono di set di caratteri
 
 - [Set di caratteri multibyte (MBCS)](#mfc-support-for-mbcs-strings), **`char`** caratteri a byte singolo o a doppio byte e stringhe codificate in un set di caratteri specifico delle impostazioni locali.
 
-Microsoft ha raccomandato le librerie Unicode MFC per tutte le nuove attività di sviluppo e le librerie MBCS sono state deprecate in Visual Studio 2013 e Visual Studio 2015. Questa procedura non è più necessaria. Gli avvisi di deprecazione MBCS sono stati rimossi in Visual Studio 2017.
+Microsoft ha raccomandato le librerie Unicode MFC per tutte le nuove attività di sviluppo e le librerie MBCS sono state deprecate in Visual Studio 2013 e Visual Studio 2015. Questo non si verifica più. Gli avvisi di deprecazione MBCS sono stati rimossi in Visual Studio 2017.
 
 ## <a name="mfc-support-for-unicode-strings"></a>Supporto MFC per stringhe Unicode
 
@@ -35,30 +36,30 @@ Questi file di libreria, debugger e DLL vengono utilizzati per supportare Unicod
 
 :::row:::
    :::column span="":::
-      *Versione*MFC U. lib \
-      *Versione*MFC UD. LIB
-      MFCM*versione*U. lib \
-      MFCM*versione*UD. LIB
-      MFC*versione*U. lib \
-      MFC*versione*UD. LIB
+      *Versione* MFC U. lib \
+      *Versione* MFC UD. LIB
+      MFCM *versione* U. lib \
+      MFCM *versione* UD. LIB
+      MFC *versione* U. lib \
+      MFC *versione* UD. LIB
       UAFXCW. LIB
       UAFXCWD. LIB
    :::column-end:::
    :::column span="":::
-      *Versione*MFC U. pdb \
-      *Versione*MFC UD. PDB
-      MFCM*versione*U. pdb \
-      MFCM*versione*UD. PDB
-      MFC*versione*U. pdb \
-      MFC*versione*UD. PDB
+      *Versione* MFC U. pdb \
+      *Versione* MFC UD. PDB
+      MFCM *versione* U. pdb \
+      MFCM *versione* UD. PDB
+      MFC *versione* U. pdb \
+      MFC *versione* UD. PDB
       UAFXCW. PDB
       UAFXCWD. PDB
    :::column-end:::
    :::column span="":::
       *Versione* MFCU.DLL \
       *Versione* MFCUD.DLL \
-      MFCM*versione*U.DLL \
-      UD.DLL*versione* MFCM
+      MFCM *versione* U.DLL \
+      UD.DLL *versione* MFCM
    :::column-end:::
 :::row-end:::
 
@@ -110,11 +111,11 @@ In DBCS, una determinata stringa può contenere tutti i caratteri ANSI a byte si
 > [!NOTE]
 > I simboli _MBCS e _UNICODE si escludono a vicenda.
 
-I mapping delle funzioni di testo generico per tutte le routine di gestione delle stringhe in fase di esecuzione sono descritti in [riferimenti alla libreria di runtime C](../c-runtime-library/c-run-time-library-reference.md). Per un elenco, vedere [internazionalizzazione](../c-runtime-library/internationalization.md).
+I mapping delle funzioni di testo generico per tutte le routine di gestione delle stringhe in fase di esecuzione sono descritti in [C Run-Time riferimenti alla libreria](../c-runtime-library/c-run-time-library-reference.md). Per un elenco, vedere [internazionalizzazione](../c-runtime-library/internationalization.md).
 
 Analogamente, `CString` i metodi vengono implementati usando mapping di tipi di dati generici. Per abilitare sia MBCS che Unicode, MFC utilizza TCHAR per **`char`** o **`wchar_t`** , LPTSTR per **`char`** <strong>\*</strong> o `wchar_t*` e LPCTSTR per **const char** <strong>\*</strong> o `const wchar_t*` . Che garantiscono i mapping corretti per MBCS o Unicode.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Stringhe (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [Manipolazione di stringhe](../c-runtime-library/string-manipulation-crt.md)

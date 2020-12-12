@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: classe CImage'
 title: Classe CImage
 ms.date: 08/19/2019
 f1_keywords:
@@ -54,12 +55,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 6e7197648fd91b2280d406c19c1019ca23f6a470
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: a094aecfae57a678f306d00e0998247000361822
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684300"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166825"
 ---
 # <a name="cimage-class"></a>Classe CImage
 
@@ -78,13 +79,13 @@ class CImage
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CImage:: CImage](#cimage)|Costruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CImage:: AlphaBlend](#alphablend)|Visualizza le bitmap con pixel trasparenti o semitrasparenti.|
 |[CImage:: Connetti](#attach)|Connette un HBITMAP a un `CImage` oggetto. Può essere usato con bitmap di sezione non DIB o bitmap di sezione DIB.|
@@ -128,11 +129,11 @@ class CImage
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CImage:: operator HBITMAP](#operator_hbitmap)|Restituisce l'handle di Windows collegato all' `CImage` oggetto.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 `CImage` accetta le bitmap che sono sezioni di bitmap indipendenti dal dispositivo (DIB); Tuttavia, è possibile usare [create](#create) o [CImage:: Load](#load) solo con le sezioni DIB. È possibile alleghi una bitmap di sezione non DIB a un `CImage` oggetto utilizzando [Connetti](#attach), ma non è possibile utilizzare i `CImage` metodi seguenti, che supportano solo bitmap di sezione DIB:
 
@@ -160,7 +161,7 @@ Per determinare se una bitmap collegata è una sezione DIB, chiamare [IsDibSecti
 
 `CImage` non può essere selezionato in un nuovo [CDC](../../mfc/reference/cdc-class.md). `CImage` Crea il proprio HDC per l'immagine. Poiché un HBITMAP può essere selezionato solo in un HDC alla volta, il HBITMAP associato a `CImage` non può essere selezionato in un altro HDC. Se è necessario un CDC, recuperare l'HDC da `CImage` e assegnarlo a [CDC:: FromHandle](../../mfc/reference/cdc-class.md#fromhandle).
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 ```cpp
 // Get a CDC for the image
@@ -286,7 +287,7 @@ Riferimento a una `RECT` struttura che identifica l'origine.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le bitmap Alpha-Blend supportano la fusione di colori in base ai singoli pixel.
 
@@ -314,7 +315,7 @@ Specifica l'orientamento della bitmap. Può essere uno dei valori seguenti:
 
 - DIBOR_TOPDOWN le righe della bitmap si trovano nell'ordine dall'alto verso il basso. In questo modo [, CImage:: GetBits](#getbits) restituisce un puntatore al primo byte del buffer bitmap e [CImage:: GetPitch](#getpitch) per restituire un numero positivo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La bitmap può essere una bitmap di sezione non DIB o una bitmap di sezione DIB. Vedere [IsDibSection](#isdibsection) per un elenco di metodi che è possibile usare solo con le bitmap della sezione DIB.
 
@@ -390,7 +391,7 @@ Struttura [Rect](/windows/win32/api/windef/ns-windef-rect) che indica il rettang
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni, vedere [BitBlt](/windows/win32/api/wingdi/nf-wingdi-bitblt) nel Windows SDK.
 
@@ -402,7 +403,7 @@ Costruisce un oggetto `CImage`.
 CImage() throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Una volta creato l'oggetto, chiamare [create](#create), [Load](#load), [LoadFromResource](#loadfromresource)o [Connetti](#attach) per alleghiare una bitmap all'oggetto.
 
@@ -605,7 +606,7 @@ Riferimento a una struttura di [punti](/windows/win32/api/windef/ns-windef-point
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `Draw` esegue la stessa operazione di [StretchBlt](#stretchblt), a meno che l'immagine non contenga un colore trasparente o un canale alfa. In tal caso, `Draw` esegue la stessa operazione di [TransparentBlt](#transparentblt) o [AlphaBlend](#alphablend) secondo le esigenze.
 
@@ -623,7 +624,7 @@ void* GetBits() throw();
 
 Puntatore al buffer bitmap. Se la bitmap è una DIB dal basso in alto, il puntatore punta alla fine del buffer. Se la bitmap è una DIB dall'alto verso il basso, il puntatore punta al primo byte del buffer.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Utilizzando questo puntatore, insieme al valore restituito da [GetPitch](#getpitch), è possibile individuare e modificare i singoli pixel in un'immagine.
 
@@ -642,7 +643,7 @@ int GetBPP() const throw();
 
 Numero di bit per pixel.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo valore determina il numero di bit che definiscono ogni pixel e il numero massimo di colori nella bitmap.
 
@@ -682,7 +683,7 @@ HDC GetDC() const throw();
 
 Handle per un contesto di dispositivo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ogni chiamata a `GetDC` , è necessario avere una chiamata successiva a [ReleaseDC](#releasedc).
 
@@ -705,7 +706,7 @@ static HRESULT GetExporterFilterString(
 Riferimento a un oggetto `CSimpleString`. Vedere **osservazioni** Per ulteriori informazioni.
 
 *aguidFileTypes*<br/>
-Matrice di GUID, con ogni elemento corrispondente a uno dei tipi di file nella stringa. Nell'esempio riportato di *pszAllFilesDescription* seguito, pszAllFilesDescription riportato *aguidFileTypes*[0] è GUID_NULL e i valori della matrice rimanenti sono i formati di file di immagine supportati dal sistema operativo corrente.
+Matrice di GUID, con ogni elemento corrispondente a uno dei tipi di file nella stringa. Nell'esempio riportato di  seguito, pszAllFilesDescription riportato *aguidFileTypes*[0] è GUID_NULL e i valori della matrice rimanenti sono i formati di file di immagine supportati dal sistema operativo corrente.
 
 > [!NOTE]
 > Per un elenco completo di costanti, vedere **costanti del formato del file di immagine** nel Windows SDK.
@@ -755,7 +756,7 @@ Separatore usato tra i formati di immagine. Vedere **osservazioni** Per ulterior
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È possibile passare la stringa di formato risultante all'oggetto [CFILEDIALOG](../../mfc/reference/cfiledialog-class.md) MFC per esporre le estensioni di file dei formati di immagine disponibili nella finestra di dialogo Salva con nome.
 
@@ -846,7 +847,7 @@ Set di flag di bit che specificano i tipi di file da escludere dall'elenco. I fl
 *chSeparator*<br/>
 Separatore usato tra i formati di immagine. Vedere **osservazioni** Per ulteriori informazioni.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È possibile passare la stringa di formato risultante all'oggetto [CFILEDIALOG](../../mfc/reference/cfiledialog-class.md) MFC per esporre le estensioni di file dei formati di immagine disponibili nella finestra di dialogo **Apri file** .
 
@@ -872,7 +873,7 @@ int GetMaxColorTableEntries() const throw();
 
 Numero di voci nella tabella dei colori.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo supporta solo bitmap di sezione DIB.
 
@@ -888,7 +889,7 @@ int GetPitch() const throw();
 
 Il passo dell'immagine. Se il valore restituito è negativo, la bitmap è una DIB dal basso verso l'alto e l'origine è l'angolo inferiore sinistro. Se il valore restituito è positivo, la bitmap è una DIB dall'alto verso il basso e la relativa origine è l'angolo superiore sinistro.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il pitch è la distanza, in byte, tra due indirizzi di memoria che rappresentano l'inizio di una riga bitmap e l'inizio della riga bitmap successiva. Poiché il pitch viene misurato in byte, il passo di un'immagine consente di determinare il formato pixel. Il pitch può includere anche memoria aggiuntiva, riservata per la bitmap.
 
@@ -933,7 +934,7 @@ Coordinata x del pixel.
 *y*<br/>
 Coordinata y del pixel.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'indirizzo viene determinato in base alle coordinate di un pixel, al passo della bitmap e ai bit per pixel.
 
@@ -978,7 +979,7 @@ bool IsDIBSection() const throw();
 
 TRUE se la bitmap collegata è una sezione DIB. In caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se la bitmap non è una sezione DIB, non è possibile usare i `CImage` metodi seguenti, che supportano solo bitmap di sezione DIB:
 
@@ -1008,7 +1009,7 @@ bool IsIndexed() const throw();
 
 TRUE se indicizzato; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo restituisce TRUE solo se la bitmap è a 8 bit (colori 256) o meno.
 
@@ -1023,7 +1024,7 @@ Determina se una bitmap è attualmente caricata.
 bool IsNull() const throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo restituisce TRUE se una bitmap non è attualmente caricata. in caso contrario, FALSE.
 
@@ -1039,7 +1040,7 @@ static BOOL IsTransparencySupported() throw();
 
 Diverso da zero se la piattaforma corrente supporta la trasparenza. In caso contrario, 0
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il valore restituito è diverso da zero e la trasparenza è supportata, una chiamata a [AlphaBlend](#alphablend), [TransparentBlt](#transparentblt)o a [disegni](#draw) gestirà i colori trasparenti.
 
@@ -1064,7 +1065,7 @@ Puntatore a un flusso contenente il nome del file di immagine da caricare.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Carica l'immagine specificata da *pszFileName* o *pStream*.
 
@@ -1095,7 +1096,7 @@ Puntatore alla stringa che contiene il nome della risorsa che contiene l'immagin
 *nIDResource*<br/>
 ID della risorsa da caricare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La risorsa deve essere di tipo BITMAP.
 
@@ -1190,7 +1191,7 @@ Riferimento a una `POINT` struttura che identifica l'angolo superiore sinistro d
 
 Diverso da zero se ha esito positivo, in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo si applica solo a Windows NT, versioni 4,0 e successive.
 
@@ -1266,7 +1267,7 @@ Struttura [Point](/windows/win32/api/windef/ns-windef-point) che indica l'angolo
 
 Diverso da zero se ha esito positivo, in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se *hbmMask* identifica una bitmap monocromatica valida, `PlgBit` Usa questa bitmap per mascherare i bit dei dati relativi al colore dal rettangolo di origine.
 
@@ -1280,7 +1281,7 @@ Rilascia il contesto di dispositivo.
 void ReleaseDC() const throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Poiché è possibile selezionare una sola bitmap in un contesto di dispositivo alla volta, è necessario chiamare `ReleaseDC` per ogni chiamata a [GetDC](#getdc).
 
@@ -1292,7 +1293,7 @@ Rilascia le risorse utilizzate da GDI+.
 void ReleaseGDIPlus() throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo deve essere chiamato per liberare risorse allocate da un `CImage` oggetto globale. Vedere [CImage:: CImage](#cimage).
 
@@ -1336,7 +1337,7 @@ Tipo di file in cui salvare l'immagine. Può essere uno dei valori seguenti:
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamare questa funzione per salvare l'immagine usando il nome e il tipo specificati. Se il parametro *guidFileType* non è incluso, verrà utilizzata l'estensione di file del nome file per determinare il formato dell'immagine. Se non viene specificata alcuna estensione, l'immagine verrà salvata in formato BMP.
 
@@ -1362,7 +1363,7 @@ Numero di voci della tabella dei colori da impostare.
 *prgbColors*<br/>
 Puntatore alla matrice di strutture [RGBQUAD](/windows/win32/api/wingdi/ns-wingdi-rgbquad) per impostare le voci della tabella dei colori.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo supporta solo bitmap di sezione DIB.
 
@@ -1385,7 +1386,7 @@ Posizione verticale del pixel da impostare.
 *color*<br/>
 Il colore in cui si imposta il pixel.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo ha esito negativo se le coordinate dei pixel si trovano al di fuori dell'area di visualizzazione selezionata.
 
@@ -1410,7 +1411,7 @@ Indice di un colore nella tavolozza dei colori.
 
 ## <a name="cimagesetpixelrgb"></a><a name="setpixelrgb"></a> CImage:: SetPixelRGB
 
-Imposta il pixel nei percorsi specificati da *x* e *y* sui colori indicati da *r*, *g*e *b*, in un'immagine rossa, verde, blu (RGB).
+Imposta il pixel nei percorsi specificati da *x* e *y* sui colori indicati da *r*, *g* e *b*, in un'immagine rossa, verde, blu (RGB).
 
 ```cpp
 void SetPixelRGB(
@@ -1438,7 +1439,7 @@ Intensità del colore verde.
 *b*<br/>
 Intensità del colore blu.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I parametri rosso, verde e blu sono rappresentati da un numero compreso tra 0 e 255. Se si impostano tutti e tre i parametri su zero, il colore risultante combinato è nero. Se si impostano tutti e tre i parametri su 255, il colore risultante combinato è bianco.
 
@@ -1538,7 +1539,7 @@ Riferimento a una `RECT` struttura che identifica l'origine.
 
 Diverso da zero se ha esito positivo, in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni, vedere [StretchBlt](/windows/win32/api/wingdi/nf-wingdi-stretchblt) nel Windows SDK.
 
@@ -1621,7 +1622,7 @@ Riferimento a una `RECT` struttura che identifica l'origine.
 
 TRUE se ha esito positivo, in caso contrario FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `TransparentBlt` è supportato per le bitmap di origine di 4 bit per pixel e 8 bit per pixel. Usare [CImage:: AlphaBlend](#alphablend) per specificare 32 bitmap con bit per pixel con trasparenza.
 

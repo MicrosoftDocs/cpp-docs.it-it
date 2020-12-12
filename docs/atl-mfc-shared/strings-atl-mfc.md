@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: stringhe (ATL/MFC)'
 title: Stringhe (ATL-MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -21,33 +22,33 @@ helpviewer_keywords:
 - strings [C++], class CString
 - literal strings [C++], class CStringT
 ms.assetid: 3b33125b-1684-4542-a3a7-b00de7d0419e
-ms.openlocfilehash: f4d300bccb6387c510dc16d55eda17de20b4b134
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a63f69373f230d87880f0b3f2d016ce3263d3513
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62199024"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166486"
 ---
 # <a name="strings-atlmfc"></a>Stringhe (ATL/MFC)
 
-Quasi tutti i programmi di lavorare con dati di tipo stringa. Visual C++ fornisce diversi modi per gestire i dati stringa.
+Quasi tutti i programmi funzionano con dati di stringa. Visual C++ offre diversi modi per gestire i dati di stringa.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Uso di CStringT](../atl-mfc-shared/using-cstringt.md)<br/>
-Descrive la programmazione usando la classe modello CStringT.
+Descrive la programmazione usando la classe modello CStringt.
 
 [Uso di CString](../atl-mfc-shared/using-cstring.md)<br/>
-Descrive l'uso di CString, l'implementazione predefinita di CStringT di programmazione.
+Viene descritta la programmazione con CString, l'implementazione predefinita di CStringt.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[Panoramica di CStringT](../atl-mfc-shared/reference/cstringt-class.md)<br/>
-Fornisce informazioni di riferimento su condiviso `CStringT` classe.
+[Cenni preliminari su CStringt](../atl-mfc-shared/reference/cstringt-class.md)<br/>
+Fornisce informazioni di riferimento sulla `CStringT` classe condivisa.
 
 [Concetti relativi a MFC](../mfc/mfc-concepts.md)<br/>
-Fornisce argomenti concettuali e basato su attività che consentono di programmare usando la libreria MFC.
+Fornisce argomenti concettuali e basati sulle attività per semplificare la programmazione tramite la libreria MFC.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classi condivise ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)

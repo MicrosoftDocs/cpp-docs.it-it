@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CStringData'
 title: Classe CStringData
 ms.date: 11/04/2016
 f1_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-ms.openlocfilehash: 140836f45ed2f4088bc0baed67676f93cb268d01
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 74bf3563cb5dca506498ceef05ddc84f13c44f41
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832113"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166590"
 ---
 # <a name="cstringdata-class"></a>Classe CStringData
 
@@ -36,11 +37,11 @@ Questa classe rappresenta i dati di un oggetto String.
 struct CStringData
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metodi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[AddRef](#addref)|Incrementa il conteggio dei riferimenti dell'oggetto dati di stringa.|
 |[data](#data)|Recupera i dati di tipo carattere di un oggetto String.|
@@ -48,18 +49,18 @@ struct CStringData
 |[IsShared](#isshared)|Determina se il buffer dell'oggetto stringa associato è attualmente condiviso.|
 |[Lock](#lock)|Blocca il buffer dell'oggetto stringa associato.|
 |[Versione](#release)|Rilascia l'oggetto stringa specificato.|
-|[Sbloccare](#unlock)|Sblocca il buffer dell'oggetto stringa associato.|
+|[Sblocca](#unlock)|Sblocca il buffer dell'oggetto stringa associato.|
 
 ### <a name="data-members"></a>Membri dei dati
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[nAllocLength](#nalloclength)|Lunghezza dei dati allocati in `XCHAR` s (escluso il termine null)|
 |[nDataLength](#ndatalength)|Lunghezza dei dati attualmente utilizzati in `XCHAR` s (escluso il termine null)|
 |[nRefs](#nrefs)|Conteggio dei riferimenti correnti dell'oggetto.|
 |[pStringMgr](#pstringmgr)|Puntatore alla gestione delle stringhe di questo oggetto stringa.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questa classe deve essere usata solo dagli sviluppatori che implementano gestioni stringhe personalizzate. Per altre informazioni sui gestori di stringhe personalizzati, vedere [gestione della memoria e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)
 
@@ -95,7 +96,7 @@ Incrementa il conteggio dei riferimenti dell'oggetto stringa.
 void AddRef() throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Incrementa il conteggio dei riferimenti dell'oggetto stringa.
 
@@ -114,7 +115,7 @@ void* data() throw();
 
 Puntatore al buffer di caratteri dell'oggetto stringa.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamare questa funzione per restituire il buffer di caratteri corrente dell'oggetto stringa associato.
 
@@ -133,7 +134,7 @@ bool IsLocked() const throw();
 
 Restituisce TRUE se il buffer è bloccato. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamare questa funzione per determinare se il buffer di caratteri di un oggetto stringa è attualmente bloccato.
 
@@ -149,7 +150,7 @@ bool IsShared() const throw();
 
 Restituisce TRUE se il buffer è condiviso; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamare questa funzione per determinare se il buffer di caratteri di un oggetto dati stringa è attualmente condiviso tra più oggetti stringa.
 
@@ -161,7 +162,7 @@ Blocca il buffer di caratteri dell'oggetto stringa associato.
 void Lock() throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamare questa funzione per bloccare il buffer di caratteri dell'oggetto dati stringa. Il blocco e lo sblocco vengono usati quando lo sviluppatore deve accedere direttamente al buffer di caratteri. Un valido esempio di blocco è dimostrato dai metodi [LockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer) e [UnlockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer) di `CSimpleStringT` .
 
@@ -176,7 +177,7 @@ Lunghezza del buffer di caratteri allocato.
 int nAllocLength;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Archivia la lunghezza del buffer di dati allocato in `XCHAR` s (escluso il termine null).
 
@@ -188,7 +189,7 @@ Lunghezza corrente dell'oggetto stringa.
 int nDataLength;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Archivia la lunghezza dei dati attualmente utilizzati in `XCHAR` s (escluso il termine null).
 
@@ -200,7 +201,7 @@ Conteggio dei riferimenti dell'oggetto dati di stringa.
 long nRefs;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Archivia il conteggio dei riferimenti dell'oggetto dati di stringa. Questo conteggio indica il numero di oggetti stringa più elevati associati all'oggetto dati stringa. Un valore negativo indica che l'oggetto dati stringa è attualmente bloccato.
 
@@ -212,7 +213,7 @@ Gestore della memoria dell'oggetto stringa associato.
 IAtlStringMgr* pStringMgr;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Archivia il gestore della memoria per l'oggetto stringa associato. Per ulteriori informazioni sui gestori della memoria e sulle stringhe, vedere [gestione della memoria e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
@@ -224,7 +225,7 @@ Decrementa il conteggio dei riferimenti dell'oggetto dati di stringa.
 void Release() throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamare questa funzione per decrementare il conteggio dei riferimenti, liberando la `CStringData` struttura se il conteggio dei riferimenti raggiunge zero. Questa operazione viene in genere eseguita quando un oggetto stringa viene eliminato e pertanto non deve più fare riferimento all'oggetto dati di stringa.
 
@@ -240,7 +241,7 @@ Sblocca il buffer di caratteri dell'oggetto stringa associato.
 void Unlock() throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamare questa funzione per sbloccare il buffer di caratteri dell'oggetto dati stringa. Una volta sbloccato, un buffer può essere condiviso e può essere conteggiato come riferimento.
 
@@ -249,7 +250,7 @@ Chiamare questa funzione per sbloccare il buffer di caratteri dell'oggetto dati 
 
 Il blocco e lo sblocco vengono usati quando lo sviluppatore deve assicurarsi che i dati stringa non siano condivisi. Un valido esempio di blocco è dimostrato dai metodi [LockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer) e [UnlockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer) di `CSimpleStringT` .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi condivise ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

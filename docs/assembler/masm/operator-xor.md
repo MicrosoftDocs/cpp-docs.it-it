@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: operator XOR'
 title: Operatore XOR
 ms.date: 12/17/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - operator XOR
 - XOR operator
 ms.assetid: 856eb920-314a-49b9-aebf-7d50e5384e4d
-ms.openlocfilehash: b89d6c54a2a00353d10f2c6b2d9bbab61977b1e8
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 3c90267be5bd3947d2bb4f1a839dce5067cd30b8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318787"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97126308"
 ---
 # <a name="operator-xor"></a>Operatore XOR
 
@@ -23,7 +24,7 @@ Restituisce il risultato di un'operazione **Xor** bit per bit per *expression1* 
 
 > *expression1* **Xor** *expression2*
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-Guida di [riferimento agli operatori](operators-reference.md)\
+[Guida di riferimento agli operatori](operators-reference.md)\
 [Grammatica BNF di MASM](masm-bnf-grammar.md)

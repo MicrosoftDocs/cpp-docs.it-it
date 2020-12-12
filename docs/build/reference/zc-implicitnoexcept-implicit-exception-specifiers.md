@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su:/Zc: implicitNoexcept (identificatori di eccezioni implicite)'
 title: /Zc:implicitNoexcept (identificatori di eccezioni implicite)
 ms.date: 03/06/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Zc:implicitNoexcept
 - -Zc:implicitNoexcept
 ms.assetid: 71807652-6f9d-436b-899e-f52daa6f500b
-ms.openlocfilehash: bb1a632ffe684ac0777d0089a2edfd514bf66d0b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8c6aabe2878282b42ad0f2ce1e205ac387bd9a96
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223798"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114637"
 ---
 # <a name="zcimplicitnoexcept-implicit-exception-specifiers"></a>/Zc:implicitNoexcept (identificatori di eccezioni implicite)
 
@@ -23,7 +24,7 @@ Quando si specifica l'opzione **/Zc: implicitNoexcept** , il compilatore aggiung
 
 > **/Zc: implicitNoexcept**[ **-** ]
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 **/Zc: implicitNoexcept** indica al compilatore di seguire la sezione 15,4 dello standard ISO c++ 11. Viene aggiunto implicitamente un **`noexcept`** identificatore di eccezione a ciascuna funzione membro speciale dichiarata in modo implicito o esplicitamente predefinita, ovvero il costruttore predefinito, il costruttore di copia, il costruttore di spostamento, il distruttore, l'operatore di assegnazione di copia o l'operatore di assegnazione di spostamento e ogni funzione di deallocatore o distruttore definito dall'utente. Un deallocatore definito dall'utente ha un identificatore di eccezione `noexcept(true)` implicita. Per i distruttori definiti dall'utente, l'identificatore di eccezione implicita è `noexcept(true)`, a meno che una classe di membro contenuta o una classe di base non abbia un distruttore diverso da `noexcept(true)`. Per le speciali funzioni membro generate dal compilatore, se una funzione richiamata direttamente da questa funzione è effettivamente `noexcept(false)`, l'identificatore di eccezione implicita è `noexcept(false)`. In caso contrario, l'identificatore di eccezione implicita è `noexcept(true)`.
 
@@ -131,11 +132,11 @@ Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonsta
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la pagina delle proprietà di **configurazione**proprietà della riga di comando di  >  **c/C++**  >  **Command Line** .
+1. Selezionare la pagina delle proprietà di **configurazione** proprietà della riga di comando di  >  **c/C++**  >   .
 
 1. Modificare la proprietà **Opzioni aggiuntive** in modo da includere **/Zc: implicitNoexcept** o **/Zc: implicitNoexcept,** quindi scegliere **OK**.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [/Zc (Conformità)](zc-conformance.md)<br/>
 [noexcept](../../cpp/noexcept-cpp.md)<br/>

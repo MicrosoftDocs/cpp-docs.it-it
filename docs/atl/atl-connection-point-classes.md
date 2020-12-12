@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classi del punto di connessione ATL'
 title: Classi dei punti di connessione ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - CFirePropNotifyEvent class
 - CComUnkArray class, connection point classes
 ms.assetid: 9582ba71-7ace-4df4-9c9b-1b0636953efc
-ms.openlocfilehash: 8644fc087d7f0a651724c40d2868e96c9b6ec96a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: af3b52715d7aeca13a711557bdba2c9428d4bff5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491815"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165849"
 ---
 # <a name="atl-connection-point-classes"></a>Classi dei punti di connessione ATL
 
@@ -22,7 +23,7 @@ ATL utilizza le classi seguenti per supportare i punti di connessione:
 
 - [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) implementa un punto di connessione. L'IID dell'interfaccia in uscita che rappresenta viene passato come parametro di modello.
 
-- [IConnectionPointContainerImpl](../atl/reference/iconnectionpointcontainerimpl-class.md) implementa il contenitore del punto di connessione e gestisce l' `IConnectionPointImpl` elenco di oggetti.
+- [IConnectionPointContainerImpl](../atl/reference/iconnectionpointcontainerimpl-class.md) implementa il contenitore del punto di connessione e gestisce l'elenco di `IConnectionPointImpl` oggetti.
 
 - [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) implementa un punto di connessione che rappresenta l'interfaccia [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) .
 
@@ -36,6 +37,6 @@ ATL utilizza le classi seguenti per supportare i punti di connessione:
 
 - [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) funziona insieme alla mappa di sink di evento nella classe per indirizzare gli eventi alla funzione del gestore appropriata.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Punto di connessione](../atl/atl-connection-points.md)
