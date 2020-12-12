@@ -1,13 +1,14 @@
 ---
+description: 'Ulteriori informazioni su: funzioni di utilità HTTP ATL'
 title: Funzioni di utilità HTTP ATL
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-ms.openlocfilehash: d2e30f940ded0bf355000cd42ff46a67662b54f5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fb8cc8789db45095f969dd9513dcf70a9bd0d05c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833985"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165368"
 ---
 # <a name="atl-http-utility-functions"></a>Funzioni di utilità HTTP ATL
 
@@ -72,7 +73,7 @@ ATL_URL flag che controllano il comportamento di questa funzione.
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si comporta come la versione corrente di [InternetCanonicalizeUrl](/windows/win32/api/wininet/nf-wininet-internetcanonicalizeurlw) , ma non richiede l'installazione di WinInet o Internet Explorer.
 
@@ -110,7 +111,7 @@ Flag che controllano il comportamento di questa funzione. Vedere [AtlCanonicaliz
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si comporta come la versione corrente di [InternetCombineUrl](/windows/win32/api/wininet/nf-wininet-internetcombineurlw) , ma non richiede l'installazione di WinInet o Internet Explorer.
 
@@ -189,7 +190,7 @@ Carattere di cui verificare la sicurezza.
 
 Restituisce TRUE se il carattere di input non è sicuro; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I caratteri che non devono essere usati negli URL possono essere testati usando questa funzione e convertiti usando [AtlCanonicalizeUrl](#atlcanonicalizeurl).
 
@@ -229,7 +230,7 @@ Dimensione del buffer *lpszStringOut*.
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Inverte il processo di conversione applicato da [AtlEscapeUrl](#atlescapeurl).
 
@@ -259,7 +260,7 @@ Dimensioni in byte del buffer (incluso lo spazio per il carattere di terminazion
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un valore di colore HTML è un segno di cancelletto seguito da un valore esadecimale a 6 cifre che usa 2 cifre per ogni componente rosso, verde e blu del colore, ad esempio #FFFFFF è bianco.
 
@@ -281,7 +282,7 @@ Ora di sistema da ottenere come stringa di formato HTTP.
 *strTime*<br/>
 Riferimento a una variabile di stringa per ricevere la data e l'ora HTTP come definito in RFC 2616 ( [https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt) ) e rfc 1123 ( [https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt) ).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Concetti](../active-template-library-atl-concepts.md)<br/>
 [Componenti Desktop COM ATL](../atl-com-desktop-components.md)<br/>

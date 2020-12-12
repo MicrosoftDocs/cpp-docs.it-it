@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: struttura _ATL_BASE_MODULE70'
 title: Struttura _ATL_BASE_MODULE70
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - ATL_BASE_MODULE70 structure
 - _ATL_BASE_MODULE70 structure
 ms.assetid: 4539282f-15b8-4d7c-aafa-a85dc56f4980
-ms.openlocfilehash: 3893e4ce4fcd24f48d9e981ad24505f82dc98833
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 5bcf2083f9c8991871c05535fd3e20a39bfeb822
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168644"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165511"
 ---
 # <a name="_atl_base_module70-structure"></a>Struttura _ATL_BASE_MODULE70
 
@@ -41,7 +42,7 @@ struct _ATL_BASE_MODULE70 {
 Dimensioni della struttura, utilizzate per il controllo delle versioni.
 
 `m_hInst`<br/>
-`hInstance` Per questo modulo (exe o dll).
+`hInstance`Per questo modulo (exe o dll).
 
 `m_hInstResource`<br/>
 Handle di risorsa dell'istanza predefinita.
@@ -56,12 +57,12 @@ Archivia la versione di ATL. Attualmente 0x0700.
 GUID interno di ATL.
 
 `m_csResource`<br/>
-Utilizzato per sincronizzare l' `m_rgResourceInstance` accesso alla matrice. Utilizzato internamente da ATL.
+Utilizzato per sincronizzare l'accesso alla `m_rgResourceInstance` matrice. Utilizzato internamente da ATL.
 
 `m_rgResourceInstance`<br/>
 Matrice utilizzata per la ricerca di risorse in tutte le istanze di risorse di cui è in grado di riconoscere ATL. Utilizzato internamente da ATL.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) viene definito come typedef di _ATL_BASE_MODULE70.
 
@@ -69,6 +70,6 @@ Matrice utilizzata per la ricerca di risorse in tutte le istanze di risorse di c
 
 **Intestazione:** atlcore. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classi e struct](../../atl/reference/atl-classes.md)

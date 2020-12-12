@@ -1,15 +1,16 @@
 ---
+description: 'Ulteriori informazioni su: procedura guidata provider OLE DB ATL'
 title: Creazione guidata provider OLE DB ATL
 ms.date: 05/09/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-ms.openlocfilehash: 43b8ed4507b004f1e78bc1b9dda64c44ff56e1d7
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 068670205c45c559e8b312d633d715f51a78190d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921139"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165342"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Creazione guidata provider OLE DB ATL
 
@@ -21,9 +22,9 @@ Questa procedura guidata non è disponibile in Visual Studio 2019 e versioni suc
 
 ::: moniker range="<=msvc-150"
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-A partire da Visual Studio 2008, lo script di registrazione prodotto da questa procedura guidata registra i componenti COM in **HKEY_CURRENT_USER** invece che in **HKEY_LOCAL_MACHINE** . Per modificare questo comportamento, impostare l'opzione **Registra componente per tutti gli utenti** della procedura guidata.
+A partire da Visual Studio 2008, lo script di registrazione prodotto da questa procedura guidata registra i componenti COM in **HKEY_CURRENT_USER** invece che in **HKEY_LOCAL_MACHINE**. Per modificare questo comportamento, impostare l'opzione **Registra componente per tutti gli utenti** della procedura guidata.
 
 La tabella seguente descrive le opzioni per la Creazione guidata provider OLE DB ATL:
 
@@ -43,9 +44,9 @@ La tabella seguente descrive le opzioni per la Creazione guidata provider OLE DB
 
 - **ProgID**
 
-   Il ProgID o identificatore a livello di codice è una stringa di testo che l'applicazione può usare al posto di un GUID. Il nome di ProgID ha il formato *Nomeprogetto.Nomecoclasse* .
+   Il ProgID o identificatore a livello di codice è una stringa di testo che l'applicazione può usare al posto di un GUID. Il nome di ProgID ha il formato *Nomeprogetto.Nomecoclasse*.
 
-- **Versione**
+- **Version**
 
    Numero di versione del provider. Il valore predefinito è 1.
 
@@ -87,6 +88,6 @@ La tabella seguente descrive le opzioni per la Creazione guidata provider OLE DB
 
 ::: moniker-end
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Provider OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-provider.md)

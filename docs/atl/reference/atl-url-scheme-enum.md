@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: ATL_URL_SCHEME'
 title: Enumerazione ATL_URL_SCHEME
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ATLUTIL/ATL::ATL_URL_SCHEME
 ms.assetid: f4131046-8ba0-4ec1-8209-84203f05d20e
-ms.openlocfilehash: 6d8307d6ea51c5ec7e63735360b8628a4c1ed782
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 72c149345a0e1edd41bfc9b32d1e94ab6477d488
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168579"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165134"
 ---
 # <a name="atl_url_scheme"></a>ATL_URL_SCHEME
 
@@ -35,7 +36,7 @@ enum ATL_URL_SCHEME{
 
 **Intestazione:** atlutil. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Concetti](../active-template-library-atl-concepts.md)<br/>
 [CUrl:: sescheme](curl-class.md#setscheme)<br/>

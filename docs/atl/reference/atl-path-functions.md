@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: funzioni di percorso ATL'
 title: Funzioni di percorso ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -41,12 +42,12 @@ f1_keywords:
 - ATLPATH/ATL::ATLPath::StripToRoot
 - ATLPATH/ATL::ATLPath::UnquoteSpaces
 ms.assetid: d1ec2b8d-7ec7-43ea-90dd-0a740d2a742b
-ms.openlocfilehash: e9e8af5a902a51d9a3ee4956a60ad162196f659c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7244494c6be2819b3cd4142f5d1404ea356fdc30
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833998"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165303"
 ---
 # <a name="atl-path-functions"></a>Funzioni di percorso ATL
 
@@ -346,7 +347,7 @@ inline BOOL IsDirectory(const char* pszPath);
 inline BOOL IsDirectory(const wchar_t* pszPath);
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per informazioni dettagliate, vedere PathIsDirectory.
 

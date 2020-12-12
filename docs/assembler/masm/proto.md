@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: PROTO'
 title: PROTO
 ms.date: 12/06/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
-ms.openlocfilehash: 3963fa29050653d1706222d33734c4b5f2a17919
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 34dbf9d877dbbc52484e45c5f94212108aeacb42
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318644"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97126009"
 ---
 # <a name="proto"></a>PROTO
 
@@ -19,7 +20,7 @@ Prototipo di una funzione o di una routine. È possibile chiamare la funzione co
 
 ## <a name="syntax"></a>Sintassi
 
-> *Label* **proto** ⟦*distance*⟧ ⟦*Language-Type*⟧ ⟦ __,__ ⟦*parametro*⟧ __:__ *tag* ... ⟧
+> *Label* **proto** ⟦*distance*⟧ ⟦*Language-Type*⟧ ⟦__,__ ⟦*parametro*⟧__:__*tag* ... ⟧
 
 ### <a name="parameters"></a>Parametri
 
@@ -36,10 +37,10 @@ Opzionale Imposta la convenzione di chiamata e di denominazione per le procedure
 
 - modelli a 16 bit: **C**, **Basic**, **FORTRAN**, **Pascal**, **syscall**, **stdcall**
 
-\ *parametro*
+*parametro*\
 Nome facoltativo per un parametro di funzione.
 
-\ *tag*
+*Tag*\
 Tipo di un parametro di funzione.
 
 Il *parametro* e i parametri dei *tag* possono essere visualizzati più volte, una volta per ogni argomento passato.
@@ -52,8 +53,8 @@ In questo esempio viene illustrata una Dichiarazione **proto** per una funzione 
 addup3 PROTO NEAR C, argcount:WORD, arg1:VARARG
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimento alle direttive](directives-reference.md)\
+[Guida di riferimento alle direttive](directives-reference.md)\
 [. Riferimento al modello](dot-model.md)\
 [Grammatica BNF di MASM](masm-bnf-grammar.md)

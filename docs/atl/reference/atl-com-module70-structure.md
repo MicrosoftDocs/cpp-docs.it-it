@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: struttura _ATL_COM_MODULE70'
 title: Struttura _ATL_COM_MODULE70
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - _ATL_COM_MODULE70 structure
 - ATL_COM_MODULE70 structure
 ms.assetid: 5b0b2fd0-bdeb-4c7e-8870-78fa69ace6e6
-ms.openlocfilehash: c2e9e3d6695a7fbbcc87c489edf2e96fcdffb835
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: db2139d1c816c13e6da104f6a6d785ef35a07721
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168631"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165408"
 ---
 # <a name="_atl_com_module70-structure"></a>Struttura _ATL_COM_MODULE70
 
@@ -49,7 +50,7 @@ Indirizzo dell'elemento di matrice che indica la fine delle voci della mappa ogg
 `m_csObjMap`<br/>
 Sezione critica per serializzare l'accesso alle voci della mappa degli oggetti. Utilizzato internamente da ATL.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) viene definito come typedef di _ATL_COM_MODULE70.
 
@@ -57,6 +58,6 @@ Sezione critica per serializzare l'accesso alle voci della mappa degli oggetti. 
 
 **Intestazione:** atlbase. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classi e struct](../../atl/reference/atl-classes.md)

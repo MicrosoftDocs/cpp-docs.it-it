@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: creazione guidata controllo ATL'
 title: Creazione guidata controllo ATL
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - controls [ATL], adding to projects
 - ATL Control Wizard
 ms.assetid: 991f8e72-ffbc-4382-a4ce-e255acfba5b6
-ms.openlocfilehash: c89fe17272399212e4436481abc2800c3ab6e660
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 3dd36e9ad2e14a87b86a56b8c035c4d4f8407430
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353142"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165433"
 ---
 # <a name="atl-control-wizard"></a>Creazione guidata controllo ATL
 
@@ -27,7 +28,7 @@ Inserisce in un progetto ATL (o un progetto MFC con supporto ATL) un controllo A
 
 Inoltre, è possibile specificare un controllo minimo, rimuovendo le interfacce dall'elenco [interfacce](../../atl/reference/interfaces-atl-control-wizard.md) , che vengono fornite come impostazioni predefinite per i controlli da aprire nella maggior parte dei contenitori. È possibile impostare le interfacce che si desidera supportare per il controllo nella pagina **interfacce** della procedura guidata.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Lo script di registrazione prodotto da questa procedura guidata registrerà i componenti COM in HKEY_CURRENT_USER anziché HKEY_LOCAL_MACHINE. Per modificare questo comportamento, impostare l'opzione **Registra componente per tutti gli utenti** della procedura guidata.
 
@@ -95,7 +96,7 @@ Fornisce informazioni sulla funzionalità COM per l'oggetto.
 
    Imposta il nome che può essere usato dai contenitori invece del CLSID dell'oggetto. Questo campo non viene popolato automaticamente. Se non si popola manualmente questo campo, il controllo potrebbe non essere disponibile per altri strumenti. Ad esempio, i controlli ActiveX generati senza a `ProgID` non sono disponibili nella finestra di dialogo **Inserisci controllo ActiveX** . Per ulteriori informazioni sulla finestra di dialogo, vedere [Insert ActiveX Controls](../../windows/adding-editing-or-deleting-controls.md#insert-activex-controls).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controllo ATL](../../atl/reference/adding-an-atl-control.md)<br/>
 [Aggiunta di funzionalità al controllo composito](../../atl/adding-functionality-to-the-composite-control.md)<br/>

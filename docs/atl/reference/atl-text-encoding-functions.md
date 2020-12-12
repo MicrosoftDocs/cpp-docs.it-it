@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: funzioni di codifica del testo ATL'
 title: Funzioni di codifica del testo ATL
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-ms.openlocfilehash: 330a73e0d41bf384a799635d5f2e6f09f7e3dd03
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1cc0848fed5832d0d91752c4c52d1e7310df0932
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833855"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165251"
 ---
 # <a name="atl-text-encoding-functions"></a>Funzioni di codifica del testo ATL
 
@@ -187,7 +188,7 @@ Puntatore a una variabile che contiene la lunghezza in caratteri di *szDest*. Se
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Ogni byte di dati di origine è codificato come 2 caratteri esadecimali.
 
@@ -255,7 +256,7 @@ Lunghezza, in byte, del buffer.
 
 Restituisce il numero di caratteri per la stringa convertita.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per determinare le dimensioni del buffer necessarie per la stringa convertita, chiamare questa funzione passando 0 per *szDest* e *nDest*.
 
@@ -293,7 +294,7 @@ Set di caratteri da utilizzare per la conversione.
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Lo schema di codifica "B" è descritto nella specifica RFC 2047 ( [https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt) ).
 
@@ -317,7 +318,7 @@ Lunghezza in caratteri del set di caratteri da utilizzare per la conversione.
 
 Il numero di caratteri necessari per un buffer che può conservare dati codificati di *nSrcLen* byte.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Lo schema di codifica "B" è descritto nella specifica RFC 2047 ( [https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt) ).
 
@@ -358,7 +359,7 @@ ATL_ESC flag che descrivono il modo in cui deve essere eseguita la conversione.
 
 Lunghezza in caratteri della stringa convertita.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le conversioni possibili eseguite da questa funzione sono illustrate nella tabella:
 
@@ -445,7 +446,7 @@ Un puntatore a una variabile che restituisce un valore contenente il numero di c
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Lo schema di codifica "Q" è descritto nella specifica RFC 2047 ( [https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt) ).
 
@@ -469,7 +470,7 @@ Lunghezza in caratteri del set di caratteri da utilizzare per la conversione.
 
 Il numero di caratteri necessari per un buffer che può conservare dati codificati di *nSrcLen* byte.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Lo schema di codifica "Q" è descritto nella specifica RFC 2047 ( [https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt) ).
 
@@ -507,7 +508,7 @@ in ATLSMTP_QPENCODE flag che descrivono il modo in cui deve essere eseguita la c
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Lo schema di codifica racchiuso tra virgolette è descritto nella specifica RFC 2045 ( [https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt) ).
 
@@ -528,7 +529,7 @@ Numero di caratteri nella stringa codificata.
 
 Numero di byte necessari per un buffer che potrebbe memorizzare una stringa decodificata di caratteri *nSrcLen* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Lo schema di codifica racchiuso tra virgolette è descritto nella specifica RFC 2045 ( [https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt) ).
 
@@ -572,7 +573,7 @@ Lo schema di codifica racchiuso tra virgolette è descritto nella [specifica RFC
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Lo schema di codifica racchiuso tra virgolette è descritto nella specifica RFC 2045 ( [https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt) ).
 
@@ -593,7 +594,7 @@ Numero di byte di dati da codificare.
 
 Il numero di caratteri necessari per un buffer che può conservare dati codificati di *nSrcLen* byte.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Lo schema di codifica racchiuso tra virgolette è descritto nella specifica RFC 2045 ( [https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt) ).
 
@@ -627,7 +628,7 @@ Puntatore a una variabile che contiene la lunghezza, in byte, di *pbDest*. Se la
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa implementazione di uuencoding segue la specifica POSIX P 1003.2 b/D11.
 
@@ -648,7 +649,7 @@ Numero di caratteri nella stringa codificata.
 
 Numero di byte necessari per un buffer che potrebbe memorizzare una stringa decodificata di caratteri *nSrcLen* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa implementazione di uuencoding segue la specifica POSIX P 1003.2 b/D11.
 
@@ -696,7 +697,7 @@ Flag che controllano il comportamento di questa funzione.
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa implementazione di uuencoding segue la specifica POSIX P 1003.2 b/D11.
 
@@ -717,11 +718,11 @@ Numero di byte di dati da codificare.
 
 Il numero di caratteri necessari per un buffer che può conservare dati codificati di *nSrcLen* byte.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa implementazione di uuencoding segue la specifica POSIX P 1003.2 b/D11.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Concetti](../active-template-library-atl-concepts.md)<br/>
 [Componenti Desktop COM ATL](../atl-com-desktop-components.md)

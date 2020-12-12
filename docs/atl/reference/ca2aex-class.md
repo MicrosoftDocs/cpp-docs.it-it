@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CA2AEX'
 title: Classe CA2AEX
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CA2AEX class
 ms.assetid: 57dc65df-d9cf-4a84-99d3-6e031dde3664
-ms.openlocfilehash: dfd8967d21005d83b38eeae36cfc147051d7beaf
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 408e04760d6b614fd344b3cab1b34f22678db315
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168527"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165108"
 ---
 # <a name="ca2aex-class"></a>Classe CA2AEX
 
@@ -36,35 +37,35 @@ class CA2AEX
 *t_nBufferLength*<br/>
 Dimensioni del buffer utilizzato nel processo di conversione. La lunghezza predefinita è 128 byte.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CA2AEX:: CA2AEX](#ca2aex)|Costruttore.|
 |[CA2AEX:: ~ CA2AEX](#dtor)|Distruttore.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CA2AEX:: operator LPSTR](#operator_lpstr)|Operatore di conversione.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CA2AEX:: m_psz](#m_psz)|Membro dati che archivia la stringa di origine.|
 |[CA2AEX:: m_szBuffer](#m_szbuffer)|Buffer statico utilizzato per archiviare la stringa convertita.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 A meno che non sia necessaria una funzionalità aggiuntiva, usare CA2TEX, CT2AEX o CA2A nel proprio codice.
 
 Questa classe contiene un buffer statico di dimensioni fisse usato per archiviare il risultato della conversione. Se il risultato è troppo grande per essere inserito nel buffer statico, la classe alloca memoria utilizzando **malloc**, liberando la memoria quando l'oggetto esce dall'ambito. Ciò garantisce che, a differenza delle macro di conversione del testo disponibili nelle versioni precedenti di ATL, questa classe è sicura per l'utilizzo in cicli e che non si inun overflow dello stack.
 
-Se la classe tenta di allocare memoria nell'heap e ha esito negativo, `AtlThrow` verrà chiamata con un argomento di E_OUTOFMEMORY.
+Se la classe tenta di allocare memoria nell'heap e ha esito negativo, verrà chiamata `AtlThrow` con un argomento di E_OUTOFMEMORY.
 
 Per impostazione predefinita, le classi e le macro di conversione ATL utilizzano la tabella codici ANSI del thread corrente per la conversione.
 
@@ -88,7 +89,7 @@ Vedere [macro di conversione di stringhe ATL e MFC](string-conversion-macros.md)
 
 **Intestazione:** atlconv. h
 
-## <a name="ca2aexca2aex"></a><a name="ca2aex"></a>CA2AEX:: CA2AEX
+## <a name="ca2aexca2aex"></a><a name="ca2aex"></a> CA2AEX:: CA2AEX
 
 Costruttore.
 
@@ -105,11 +106,11 @@ Stringa di testo da convertire.
 *nCodePage*<br/>
 Non usato in questa classe.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Crea il buffer necessario per la traduzione.
 
-## <a name="ca2aexca2aex"></a><a name="dtor"></a>CA2AEX:: ~ CA2AEX
+## <a name="ca2aexca2aex"></a><a name="dtor"></a> CA2AEX:: ~ CA2AEX
 
 Distruttore.
 
@@ -117,11 +118,11 @@ Distruttore.
 ~CA2AEX() throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Libera il buffer allocato.
 
-## <a name="ca2aexm_psz"></a><a name="m_psz"></a>CA2AEX:: m_psz
+## <a name="ca2aexm_psz"></a><a name="m_psz"></a> CA2AEX:: m_psz
 
 Membro dati che archivia la stringa di origine.
 
@@ -129,7 +130,7 @@ Membro dati che archivia la stringa di origine.
 LPSTR m_psz;
 ```
 
-## <a name="ca2aexm_szbuffer"></a><a name="m_szbuffer"></a>CA2AEX:: m_szBuffer
+## <a name="ca2aexm_szbuffer"></a><a name="m_szbuffer"></a> CA2AEX:: m_szBuffer
 
 Buffer statico utilizzato per archiviare la stringa convertita.
 
@@ -137,7 +138,7 @@ Buffer statico utilizzato per archiviare la stringa convertita.
 char m_szBuffer[ t_nBufferLength];
 ```
 
-## <a name="ca2aexoperator-lpstr"></a><a name="operator_lpstr"></a>CA2AEX:: operator LPSTR
+## <a name="ca2aexoperator-lpstr"></a><a name="operator_lpstr"></a> CA2AEX:: operator LPSTR
 
 Operatore di conversione.
 
@@ -149,7 +150,7 @@ operator LPSTR() const throw();
 
 Restituisce la stringa di testo come tipo LPSTR.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CA2CAEX](../../atl/reference/ca2caex-class.md)<br/>
 [Classe CA2WEX](../../atl/reference/ca2wex-class.md)<br/>
