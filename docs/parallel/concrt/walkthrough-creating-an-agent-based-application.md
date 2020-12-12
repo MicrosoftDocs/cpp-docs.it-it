@@ -1,22 +1,23 @@
 ---
+description: "Altre informazioni su: procedura dettagliata: creazione di un'applicazione Agent-Based"
 title: "Procedura dettagliata: Creazione di un'applicazione basata sugli agenti"
 ms.date: 04/25/2019
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 9d9fdd3ddface01f84f6426dd334600cf88b84e7
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: cca3fc5e8467b7eb5699e4e9f513e35d5b97da93
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924828"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180375"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Procedura dettagliata: Creazione di un'applicazione basata sugli agenti
 
 In questo argomento viene descritto come creare un'applicazione di base basata su agenti. In questa procedura dettagliata è possibile creare un agente che legge i dati da un file di testo in modo asincrono. L'applicazione usa l'algoritmo di checksum Adler-32 per calcolare il checksum del contenuto di tale file.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per completare questa procedura dettagliata, è necessario comprendere gli argomenti seguenti:
 
@@ -46,15 +47,15 @@ In questa sezione viene illustrato come creare un'applicazione console C++ che f
 
 ### <a name="to-create-a-c-console-application-in-visual-studio-2019"></a>Per creare un'applicazione console C++ in Visual Studio 2019
 
-1. Dal menu principale scegliere **File** > **Nuovo** > **Progetto** per aprire la finestra di dialogo **Crea nuovo progetto** .
+1. Dal menu principale scegliere **File** > **Nuovo** > **Progetto** per aprire la finestra di dialogo **Crea nuovo progetto**.
 
-1. Nella parte superiore della finestra di dialogo impostare **Linguaggio** su **C++** , impostare **Piattaforma** su **Windows** e impostare **Tipo di progetto** su **Console** .
+1. Nella parte superiore della finestra di dialogo impostare **Linguaggio** su **C++**, impostare **Piattaforma** su **Windows** e impostare **Tipo di progetto** su **Console**.
 
-1. Nell'elenco filtrato dei tipi di progetto scegliere **App console** e quindi scegliere **Avanti** . Nella pagina successiva immettere `BasicAgent` come nome del progetto e specificare il percorso del progetto, se necessario.
+1. Nell'elenco filtrato dei tipi di progetto scegliere **App console** e quindi scegliere **Avanti**. Nella pagina successiva immettere `BasicAgent` come nome del progetto e specificare il percorso del progetto, se necessario.
 
 1. Scegliere il pulsante **Crea** per creare il progetto.
 
-1. Fare clic con il pulsante destro del mouse sul nodo del progetto in **Esplora soluzioni** , quindi scegliere **Proprietà** . In **proprietà di configurazione**  >  **C/C++**  >  **intestazioni precompilate**  >  **intestazione precompilata** scegliere **Crea** .
+1. Fare clic con il pulsante destro del mouse sul nodo del progetto in **Esplora soluzioni**, quindi scegliere **Proprietà**. In **proprietà di configurazione**  >  **C/C++**  >  **intestazioni precompilate**  >  **intestazione precompilata** scegliere **Crea**.
 
 ::: moniker-end
 
@@ -64,13 +65,13 @@ In questa sezione viene illustrato come creare un'applicazione console C++ che f
 
 1. Scegliere **nuovo** dal menu **file** , quindi fare clic su **progetto** per visualizzare la finestra di dialogo **nuovo progetto** .
 
-1. Nella finestra di dialogo **nuovo progetto** selezionare il nodo **Visual C++** nel riquadro **tipi di progetto** e quindi selezionare **applicazione console Win32** nel riquadro **modelli** . Digitare un nome per il progetto, ad esempio, `BasicAgent` e quindi fare clic su **OK** per visualizzare la **creazione guidata applicazione console Win32** .
+1. Nella finestra di dialogo **nuovo progetto** selezionare il nodo **Visual C++** nel riquadro **tipi di progetto** e quindi selezionare **applicazione console Win32** nel riquadro **modelli** . Digitare un nome per il progetto, ad esempio, `BasicAgent` e quindi fare clic su **OK** per visualizzare la **creazione guidata applicazione console Win32**.
 
-1. Nella finestra di dialogo **creazione guidata applicazione console Win32** fare clic su **fine** .
+1. Nella finestra di dialogo **creazione guidata applicazione console Win32** fare clic su **fine**.
 
 ::: moniker-end
 
-1. In *PCH. h* ( *stdafx. h* in Visual Studio 2017 e versioni precedenti) aggiungere il codice seguente:
+1. In *PCH. h* (*stdafx. h* in Visual Studio 2017 e versioni precedenti) aggiungere il codice seguente:
 
 [!code-cpp[concrt-basic-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_1.h)]
 
@@ -86,7 +87,7 @@ In questa sezione viene illustrato come creare la `file_reader` classe. Il runti
 
 #### <a name="to-create-the-file_reader-class"></a>Per creare la classe file_reader
 
-1. Aggiungere un nuovo file di intestazione C++ al progetto. A tale scopo, fare clic con il pulsante destro del mouse sul nodo **file di intestazione** in **Esplora soluzioni** , scegliere **Aggiungi** , quindi fare clic su **nuovo elemento** . Nel riquadro **modelli** selezionare file di **intestazione (. h)** . Nella finestra di dialogo **Aggiungi nuovo elemento** Digitare `file_reader.h` nella casella **nome** , quindi fare clic su **Aggiungi** .
+1. Aggiungere un nuovo file di intestazione C++ al progetto. A tale scopo, fare clic con il pulsante destro del mouse sul nodo **file di intestazione** in **Esplora soluzioni**, scegliere **Aggiungi**, quindi fare clic su **nuovo elemento**. Nel riquadro **modelli** selezionare file di **intestazione (. h)**. Nella finestra di dialogo **Aggiungi nuovo elemento** Digitare `file_reader.h` nella casella **nome** , quindi fare clic su **Aggiungi**.
 
 1. In file_reader. h aggiungere il codice seguente.
 
@@ -202,7 +203,7 @@ Chiamare sempre il metodo [Concurrency:: Agent::d un](reference/agent-class.md#d
 
 Per un altro esempio di un'applicazione basata su agenti, vedere [procedura dettagliata: uso di join per impedire il deadlock](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Blocchi di messaggi asincroni](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

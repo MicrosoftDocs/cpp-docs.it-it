@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avvisi degli strumenti del linker LNK4227'
 title: Avviso degli strumenti del linker LNK4227
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4227
 ms.assetid: 941a0414-9964-4e02-8487-f9daa42ef7f9
-ms.openlocfilehash: 7ac3ef2b6ad8f05a454dafe5e6a7ea0abc07a066
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: d8fd0f6755b675490f35579a4609c5b2742e4e46
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685489"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180422"
 ---
 # <a name="linker-tools-warning-lnk4227"></a>Avviso degli strumenti del linker LNK4227
 
@@ -29,7 +30,7 @@ LNK4227 viene usato anche per segnalare i problemi che hanno origine con un altr
 
 È necessario correggere i problemi relativi ai metadati per risolvere l'avviso.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 LNK4227 viene generato quando un assembly a cui si fa riferimento è stato firmato in modo diverso rispetto all'assembly a cui fa riferimento.
 

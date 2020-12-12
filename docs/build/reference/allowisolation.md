@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/ALLOWISOLATION
 title: /ALLOWISOLATION
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /ALLOWISOLATION editbin option
 - ALLOWISOLATION editbin option
 ms.assetid: 91430344-f64f-491a-a5a5-7ea3b21cbe68
-ms.openlocfilehash: 3dae8ee83e25492fab0ba2c6a55681728d5f3453
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 7d935bc122b5f32bb8f1193feae58b5fc61e7faa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79440377"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179590"
 ---
 # <a name="allowisolation"></a>/ALLOWISOLATION
 
@@ -32,12 +33,12 @@ Specifica il comportamento per la ricerca del manifesto.
 
 **/ALLOWISOLATION** è il valore predefinito.
 
-**/ALLOWISOLATION: No** indica che i file eseguibili vengono caricati come se non fosse presente alcun manifesto e fa in modo che il [riferimento EDITBIN)](editbin-reference.md) imposti il bit `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` nel campo `DllCharacteristics` dell'intestazione facoltativa.
+**/ALLOWISOLATION: No** indica che i file eseguibili vengono caricati come se non fosse presente alcun manifesto e fa in modo che il [riferimento EDITBIN)](editbin-reference.md) imposti il `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit nel campo dell'intestazione facoltativa `DllCharacteristics` .
 
 Se per un eseguibile è disabilitato l'isolamento, il caricatore di Windows non tenterà di individuare un manifest di applicazione per i processi creati più di recente. Il nuovo processo non dispone di un contesto di attivazione predefinito, anche se è presente un manifesto nell'eseguibile stesso o se è presente un manifesto con il nome *executable-name*. exe. manifest.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Opzioni di EDITBIN](editbin-options.md)<br/>
+[Opzioni di EDITBIN)](editbin-options.md)<br/>
 [/ALLOWISOLATION (ricerca di manifesti)](allowisolation-manifest-lookup.md)<br/>
 [Riferimento ai file manifesto](/windows/win32/SbsCs/manifest-files-reference)

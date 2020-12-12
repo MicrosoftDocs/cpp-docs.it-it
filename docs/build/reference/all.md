@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su:'
 title: /ALL
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -ALL dumpbin option
 - ALL dumpbin option
 ms.assetid: aa7eb74a-33ba-4d77-8620-3d7ea8b19952
-ms.openlocfilehash: 4b02a13be70963d8c2dcf934cf2c750daf8052a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 175d4ea7fb7bf4895c304846e6064be5e24bec67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273183"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179681"
 ---
 # <a name="all"></a>/ALL
 
@@ -21,12 +22,12 @@ ms.locfileid: "62273183"
 /ALL
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Questa opzione consente di visualizzare tutte le informazioni disponibili, ad eccezione di codice disassembly. Uso [opzione /DISASM](disasm.md) visualizzare disassembly. È possibile usare [/RAWDATA](rawdata.md): nessuno con/tutto a omettere i dettagli di binari non elaborati del file.
+Questa opzione consente di visualizzare tutte le informazioni disponibili eccetto il disassembly del codice. Usare [/DISASM](disasm.md) per visualizzare il disassembly. È possibile usare [/RAWDATA](rawdata.md): None con l'utente non elaborato per omettere i dettagli binari non elaborati del file.
 
-Solo le [/HEADERS](headers.md) (opzione dumpbin) è disponibile per l'uso con i file generati con la [/GL](gl-whole-program-optimization.md) opzione del compilatore.
+Solo l'opzione [/HEADERS](headers.md) DUMPBIN può essere usata nei file generati con l'opzione del compilatore [/GL](gl-whole-program-optimization.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni di DUMPBIN](dumpbin-options.md)

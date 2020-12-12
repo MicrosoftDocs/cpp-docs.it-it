@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/C (conserva i commenti durante la pre-elaborazione)
 title: /C (Conserva i commenti durante la pre-elaborazione)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - c compiler option [C++]
 - /c compiler option [C++]
 ms.assetid: 944567ca-16bc-4728-befe-d414a7787f26
-ms.openlocfilehash: f80ebf45dd396a3f92d9b755c56522d4731bb2d0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 2cf5bf562db78dcb6c570d7313b56ad4a9fc5adb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79440269"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179356"
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C (Conserva i commenti durante la pre-elaborazione)
 
@@ -30,7 +31,7 @@ Conserva i commenti durante la pre-elaborazione.
 
 ## <a name="remarks"></a>Osservazioni
 
-Questa opzione del compilatore richiede l'opzione **/e**, **/p**o **/EP** .
+Questa opzione del compilatore richiede l'opzione **/e**, **/p** o **/EP** .
 
 Nell'esempio di codice seguente viene visualizzato il commento del codice sorgente.
 
@@ -49,7 +50,7 @@ int i;   // a variable
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare le proprietà del compilatore e di compilazione C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -61,10 +62,10 @@ int i;   // a variable
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.KeepComments%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
-[/E (pre-elabora in stdout)](e-preprocess-to-stdout.md)<br/>
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[/E (Pre-elabora in stdout)](e-preprocess-to-stdout.md)<br/>
 [/P (pre-elabora in un file)](p-preprocess-to-a-file.md)<br/>
 [/EP (pre-elabora in stdout senza direttive #line)](ep-preprocess-to-stdout-without-hash-line-directives.md)

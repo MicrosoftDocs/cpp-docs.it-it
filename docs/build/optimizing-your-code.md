@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: ottimizzazione del codice'
 title: Ottimizzazione del codice
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - optimization, C++ code
 - code, optimizing
 - performance, compiler
-ms.openlocfilehash: 00356cf50ca8e50c80e8a1142adf654816490c9b
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 893e3dce64400d47026e478b081283e3f1d82262
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078501"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179798"
 ---
 # <a name="optimizing-your-code"></a>Ottimizzazione del codice
 
@@ -52,7 +53,7 @@ Paradossalmente, l'ottimizzazione di un programma per la velocità potrebbe caus
 
 Negli argomenti seguenti vengono illustrate le buone procedure di programmazione.
 
-[Suggerimenti per il miglioramento del codice critico per il tempo](tips-for-improving-time-critical-code.md) \
+[Suggerimenti per il miglioramento del codice Time-Critical](tips-for-improving-time-critical-code.md) \
 Migliori tecniche di codifica possono produrre prestazioni migliori. Questo argomento suggerisce tecniche di codifica che consentono di assicurarsi che le parti cruciali del codice vengano eseguite in modo soddisfacente.
 
 [Procedure consigliate per l'ottimizzazione](optimization-best-practices.md) \
@@ -68,15 +69,15 @@ Negli argomenti seguenti vengono fornite informazioni su come eseguire il debug 
 
 - [Procedura: eseguire il debug di codice ottimizzato](/visualstudio/debugger/how-to-debug-optimized-code)
 
-- [Causa della possibile perdita di precisione dei numeri a virgola mobile](why-floating-point-numbers-may-lose-precision.md)
+- [Perché i numeri di Floating-Point potrebbero perdere precisione](why-floating-point-numbers-may-lose-precision.md)
 
 Negli argomenti seguenti vengono fornite informazioni su come ottimizzare la compilazione, il caricamento e l'esecuzione del codice.
 
-- [Incremento dell'efficienza delle operazioni del compilatore](improving-compiler-throughput.md)
+- [Miglioramento della velocità effettiva del compilatore](improving-compiler-throughput.md)
 
-- [Mancata generazione di codice in seguito all'uso di nomi di funzione senza ()](using-function-name-without-parens-produces-no-code.md)
+- [L'utilizzo del nome della funzione senza () non produce codice](using-function-name-without-parens-produces-no-code.md)
 
-- [Ottimizzazione dell'assembly Inline](../assembler/inline/optimizing-inline-assembly.md)
+- [Ottimizzazione dell'assembly inline](../assembler/inline/optimizing-inline-assembly.md)
 
 - [Impostazione dell'ottimizzazione del compilatore per un progetto ATL](../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)
 
@@ -86,18 +87,18 @@ Negli argomenti seguenti vengono fornite informazioni su come ottimizzare la com
 
 [Pragma e parole chiave di ottimizzazione](optimization-pragmas-and-keywords.md) \
 [Miglioramento della velocità effettiva del compilatore](improving-compiler-throughput.md) \
-[Motivi per cui i numeri a virgola mobile potrebbero perdere precisione](why-floating-point-numbers-may-lose-precision.md) \
-[Rappresentazione a virgola mobile IEEE](ieee-floating-point-representation.md) \
-[Suggerimenti per il miglioramento del codice critico per il tempo](tips-for-improving-time-critical-code.md) \
+[Perché i numeri di Floating-Point potrebbero perdere precisione](why-floating-point-numbers-may-lose-precision.md) \
+[Rappresentazione Floating-Point IEEE](ieee-floating-point-representation.md) \
+[Suggerimenti per il miglioramento del codice Time-Critical](tips-for-improving-time-critical-code.md) \
 [L'utilizzo del nome della funzione senza () non produce codice](using-function-name-without-parens-produces-no-code.md) \
 [Procedure consigliate per l'ottimizzazione](optimization-best-practices.md) \
 [Ottimizzazioni PGO](profile-guided-optimizations.md) \
-[Variabili di ambiente per le ottimizzazioni PGO](environment-variables-for-profile-guided-optimizations.md) \
+[Variabili di ambiente per le ottimizzazioni Profile-Guided](environment-variables-for-profile-guided-optimizations.md) \
 [PgoAutoSweep](pgoautosweep.md) \
 [pgomgr](pgomgr.md) \
 [pgosweep](pgosweep.md) \
 [Procedura: unire più profili PGO in un unico profilo](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimenti alla compilazione in C/C++](reference/c-cpp-building-reference.md)

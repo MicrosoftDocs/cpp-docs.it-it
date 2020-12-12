@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Editor menu (C++)'
 title: Editor menu (C++)
 ms.date: 02/15/2019
 f1_keywords:
@@ -39,16 +40,16 @@ helpviewer_keywords:
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-ms.openlocfilehash: 3671dbe33b2d6e373e2df3d54267c6aac5bbf20d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ab4b0c3f2fe7986b7b30b3c9bce9c6558b09fc60
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214448"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180175"
 ---
 # <a name="menu-editor-c"></a>Editor menu (C++)
 
-I menu consentono di disporre i comandi in modo logico e facile da trovare. Con l' **editor di menu**è possibile creare e modificare i menu lavorando direttamente con una barra dei menu molto simile a quella dell'applicazione finita.
+I menu consentono di disporre i comandi in modo logico e facile da trovare. Con l' **editor di menu** è possibile creare e modificare i menu lavorando direttamente con una barra dei menu molto simile a quella dell'applicazione finita.
 
 > [!TIP]
 > Quando si usa l' **editor di menu**, in molti casi è possibile fare clic con il pulsante destro del mouse per visualizzare un menu a comparsa con i comandi usati di frequente. I comandi disponibili dipendono dalla destinazione a cui fa riferimento il puntatore.
@@ -59,11 +60,11 @@ L' **editor di menu** consente di:
 
 ### <a name="to-create-a-standard-menu"></a>Per creare un menu standard
 
-1. Passare alla **visualizzazione** menu > **altre finestre** > **visualizzazione risorse** e fare clic con il pulsante destro del mouse sull'intestazione di **menu** . Scegliere **Aggiungi risorsa**, quindi **menu**.
+1. Passare a menu **Visualizza**  >  **altre finestre**  >  **visualizzazione risorse** e fare clic con il pulsante destro del mouse sull'intestazione di **menu** . Scegliere **Aggiungi risorsa**, quindi **menu**.
 
 1. Selezionare la casella **nuovo elemento** (il rettangolo che contiene il *tipo qui*) sulla barra dei menu.
 
-   ![Casella nuovo elemento nell'editor dei menu](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")<br/>
+   ![Casella Nuovo elemento dell'editor menu](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")<br/>
    Casella **nuovo elemento**
 
 1. Digitare un nome per il nuovo menu, ad esempio *file*.
@@ -96,7 +97,7 @@ Selezionare un nome di menu esistente e premere il tasto **ins** oppure fare cli
 
 1. Creare un menu. Quindi selezionare un nome di menu, ad esempio **file**.
 
-   Ciascuna voce di menu espanderà ed esporrà una casella nuovo elemento per i comandi. Ad esempio, è possibile aggiungere i comandi **nuovo**, **Apri**e **Chiudi** a un menu **file** .
+   Ciascuna voce di menu espanderà ed esporrà una casella nuovo elemento per i comandi. Ad esempio, è possibile aggiungere i comandi **nuovo**, **Apri** e **Chiudi** a un menu **file** .
 
 1. Nella casella del nuovo elemento, digitare un nome per il nuovo comando di menu.
 
@@ -104,7 +105,7 @@ Selezionare un nome di menu esistente e premere il tasto **ins** oppure fare cli
    > Il testo digitato viene visualizzato nell' **editor di menu** e nella casella **didascalia** nella [finestra Proprietà](/visualstudio/ide/reference/properties-window). È possibile modificare le proprietà per il nuovo menu in questa posizione.
 
    > [!TIP]
-   > È possibile definire un tasto di scelta rapida che consente all'utente di selezionare il comando di menu. Digitare una e commerciale (`&`) davanti a una lettera per specificarla come tasto di scelta. L'utente può selezionare il comando di menu digitando quella lettera.
+   > È possibile definire un tasto di scelta rapida che consente all'utente di selezionare il comando di menu. Digitare una e commerciale () davanti a `&` una lettera per specificarla come tasto di scelta. L'utente può selezionare il comando di menu digitando quella lettera.
 
 1. Nella finestra **Proprietà** selezionare le proprietà del comando di menu che si applicano. Per informazioni dettagliate, vedere [proprietà dei comandi di menu](../windows/menu-command-properties.md).
 
@@ -194,7 +195,7 @@ In genere, quando si lavora nell' **editor di menu**, una risorsa di menu viene 
 
 Win32
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Editor di risorse](../windows/resource-editors.md)<br/>
 [Comandi di menu](../windows/menu-command-properties.md)<br/>

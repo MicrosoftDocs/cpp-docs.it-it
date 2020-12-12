@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: Panoramica della programmazione Windows in C++'
 title: Cenni preliminari sulla programmazione Windows in C++
 ms.date: 09/17/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 0aa667168f88f48458ae3a9b3541d4944f7530cc
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 812fef686208f5f9d4f1c23cd5eb9b2cb8b227bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404987"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180110"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Cenni preliminari sulla programmazione Windows in C++
 
@@ -101,7 +102,7 @@ Visual Studio include un potente debugger per codice nativo, strumenti di analis
 |-----------|-----------------|
 |[Procedura dettagliata: creazione di un programma C++ standard](walkthrough-creating-a-standard-cpp-program-cpp.md)| Creare un'applicazione console di Windows.|
 |[Procedura dettagliata: creazione di applicazioni desktop di Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Creare un'applicazione desktop di Windows nativa.|
-|[Creazione guidata desktop di Windows](windows-desktop-wizard.md)|Utilizzare la procedura guidata per creare nuovi progetti Windows.|
+|[Creazione guidata applicazione desktop di Windows](windows-desktop-wizard.md)|Utilizzare la procedura guidata per creare nuovi progetti Windows.|
 |[Active Template Library (ATL)](../atl/atl-com-desktop-components.md)|Utilizzare la libreria ATL per creare componenti COM in C++.|
 |[Microsoft Foundation Classes (MFC)](../mfc/mfc-desktop-applications.md)|Usare MFC per creare applicazioni Windows di grandi dimensioni o piccole con finestre di dialogo e controlli|
 |[Classi condivise ATL e MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)|Utilizzare classi come CString condivise in ATL e MFC.|

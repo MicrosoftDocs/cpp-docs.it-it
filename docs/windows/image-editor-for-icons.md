@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: editor di immagini per le icone (C++)'
 title: Editor di immagini per le icone (C++)
 ms.date: 02/15/2019
 f1_keywords:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: bb028833aa0e9f0615ec7575dbe41feb173efedb
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 778f6deb3ccb6ba8b3ecff52b6f11524a1073092
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504382"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180240"
 ---
 # <a name="image-editor-for-icons-c"></a>Editor di immagini per le icone (C++)
 
@@ -68,7 +69,7 @@ Per informazioni sull' **editor di immagini**, vedere come [creare un'icona o un
 
 Il menu **immagine** , visualizzato solo quando l' **editor di immagini** è attivo, dispone di comandi per la modifica delle immagini, la gestione delle tavolozze dei colori e l'impostazione delle opzioni delle finestre dell'editor di **Immagini** . Inoltre, i comandi per l'utilizzo di immagini del dispositivo sono disponibili quando si utilizzano icone e cursori.
 
-|Comando|Descrizione|
+|Comando|Description|
 |---|---|
 |**Inverti colori**|Inverte i colori.|
 |**Capovolgi orizzontalmente**|Consente di capovolgere orizzontalmente l'immagine o la selezione.|
@@ -101,7 +102,7 @@ La finestra di dialogo **Impostazioni griglia** consente di specificare le impos
 
 La barra degli strumenti dell' **editor di immagini** contiene gli strumenti per disegnare, disegnare, immettere testo, cancellare e modificare le visualizzazioni. Contiene anche un selettore di opzioni con cui è possibile selezionare le opzioni per l'uso di ogni strumento. Ad esempio, è possibile scegliere tra diverse larghezze del pennello, fattori di ingrandimento e stili di linea.
 
-Tutti gli strumenti disponibili sulla barra degli strumenti dell' **editor di immagini** sono disponibili anche dagli strumenti per le **Immagini**dei menu  >  **Tools**. Per utilizzare la barra degli strumenti dell' **editor di immagini** e il selettore di **Opzioni** , selezionare lo strumento o l'opzione desiderata.
+Tutti gli strumenti disponibili sulla barra degli strumenti dell' **editor di immagini** sono disponibili anche dagli strumenti per le **Immagini** dei menu  >  . Per utilizzare la barra degli strumenti dell' **editor di immagini** e il selettore di **Opzioni** , selezionare lo strumento o l'opzione desiderata.
 
 ![Barra degli strumenti dell'editor di immagini](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")<br/>
 Barra degli strumenti **editor di immagini**
@@ -140,7 +141,7 @@ Per accedere a questa finestra di dialogo, selezionare il pulsante **carattere**
 |---|---|
 |**Carattere**|Elenca i tipi di carattere disponibili.|
 |**Stile carattere**|Elenca gli stili disponibili per il tipo di carattere specificato.|
-|**Dimensione**|Elenca le dimensioni dei punti disponibili per il tipo di carattere specificato.|
+|**Size**|Elenca le dimensioni dei punti disponibili per il tipo di carattere specificato.|
 |**Esempio**|Mostra un esempio di come verrà visualizzato il testo con le impostazioni del tipo di carattere specificate.|
 |**Script**|Elenca gli script di lingua disponibili per il tipo di carattere specificato.<br/><br/>Quando si seleziona uno script di lingua diverso, il set di caratteri per tale lingua diventa disponibile per la creazione di documenti multilingue.|
 
@@ -150,13 +151,13 @@ Di seguito è riportato un esempio di come aggiungere testo a un'icona in un'app
 
 1. Creare un'applicazione C++ Windows Forms. Per informazioni dettagliate, vedere [procedura: creare Windows Forms applicazioni](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). Per impostazione predefinita, al progetto viene aggiunto un file *app. ico* .
 
-1. In **Esplora soluzioni**fare doppio clic sul file *app. ico*. Si aprirà l' **editor di immagini** .
+1. In **Esplora soluzioni** fare doppio clic sul file *app. ico*. Si aprirà l' **editor di immagini** .
 
-1. Passare a strumenti **immagine**menu  >  **Tools** e selezionare **strumento testo**.
+1. Passare a strumenti **immagine** menu  >   e selezionare **strumento testo**.
 
 1. Nella finestra di dialogo **strumento testo** Digitare *C++* nell'area di testo vuota. Questo testo verrà visualizzato in una casella ridimensionabile posizionata nell'angolo superiore sinistro di *app. ico* nell' **editor di immagini**.
 
-1. Nell' **editor di immagini**trascinare la casella ridimensionabile al centro di *app. ico* per migliorare la leggibilità del testo.
+1. Nell' **editor di immagini** trascinare la casella ridimensionabile al centro di *app. ico* per migliorare la leggibilità del testo.
 
 1. Nella finestra di dialogo **strumento testo** selezionare il pulsante **carattere** .
 
@@ -197,7 +198,7 @@ Per impostazione predefinita, l' **editor di immagini** Visualizza la visualizza
 
 1. Selezionare il riquadro **editor di immagini** di cui si desidera modificare il fattore di ingrandimento.
 
-1. Sulla barra degli strumenti dell' **editor di immagini** selezionare la freccia a destra dello **strumento di ingrandimento** e selezionare il fattore di ingrandimento dal sottomenu: **1x**, **2x**, **6x**o **8x**.
+1. Sulla barra degli strumenti dell' **editor di immagini** selezionare la freccia a destra dello **strumento di ingrandimento** e selezionare il fattore di ingrandimento dal sottomenu: **1x**, **2x**, **6x** o **8x**.
 
    > [!NOTE]
    > Per selezionare un fattore di ingrandimento diverso da quelli elencati nello strumento di **ingrandimento** , usare i tasti di scelta rapida.
@@ -214,7 +215,7 @@ Per tutti i riquadri dell' **editor di immagini** con un fattore di ingrandiment
 
 Nessuno
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Editor di risorse](../windows/resource-editors.md)<br/>
 [Icone](/windows/win32/menurc/icons)

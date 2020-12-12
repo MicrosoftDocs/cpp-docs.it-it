@@ -1,16 +1,17 @@
 ---
+description: "Altre informazioni su: procedure consigliate per l'ottimizzazione"
 title: Procedure consigliate di ottimizzazione
 ms.date: 05/06/2019
 helpviewer_keywords:
 - C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-ms.openlocfilehash: 425fa0bb6b7aab502ce493ced8b587fad8ce59a8
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 06588225838da3b52216fa0ae3eb51b7538ee58d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833348"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179824"
 ---
 # <a name="optimization-best-practices"></a>Procedure consigliate di ottimizzazione
 
@@ -30,7 +31,7 @@ Per ulteriori informazioni, vedere [ `/GL` (ottimizzazione dell'intero programma
 
 Se possibile, le compilazioni di versione finale devono essere compilate con ottimizzazioni PGO. Se non è possibile eseguire la compilazione con PGO, a causa dell'infrastruttura insufficiente per eseguire le compilazioni instrumentate o non avere accesso agli scenari, è consigliabile creare con l'ottimizzazione dell'intero programma.
 
-**`/Gy`** Anche l'opzione è molto utile. Genera un COMDAT separato per ogni funzione, assicurando al linker maggiore flessibilità quando si tratta di rimuovere la riduzione COMDAT e COMDAT senza riferimenti. L'unico svantaggio di usare **`/Gy`** è che può causare problemi durante il debug. Pertanto, è in genere consigliabile utilizzarlo. Per ulteriori informazioni, vedere [ `/Gy` (Abilita collegamento a livello di funzione)](reference/gy-enable-function-level-linking.md).
+**`/Gy`** Anche l'opzione è molto utile. Genera un COMDAT separato per ogni funzione, assicurando al linker maggiore flessibilità quando si tratta di rimuovere la riduzione COMDAT e COMDAT senza riferimenti. L'unico svantaggio di usare **`/Gy`** è che può causare problemi durante il debug. Pertanto, è in genere consigliabile utilizzarlo. Per ulteriori informazioni, vedere la pagina relativa all' [ `/Gy` Abilitazione del collegamento Function-Level](reference/gy-enable-function-level-linking.md).
 
 Per il collegamento in ambienti a 64 bit, è consigliabile usare l'opzione del **`/OPT:REF,ICF`** linker e, in ambienti a 32 bit, **`/OPT:REF`** è consigliato. Per ulteriori informazioni, vedere [/opt (ottimizzazioni)](reference/opt-optimizations.md).
 
@@ -40,14 +41,14 @@ Si consiglia inoltre di generare i simboli di debug, anche con le build di versi
 
 L' **`/Op`** opzione del compilatore è stata rimossa e sono state aggiunte le quattro opzioni del compilatore seguenti che gestiscono le ottimizzazioni a virgola mobile:
 
-|Opzione|Descrizione|
+|Opzione|Description|
 |-|-|
 |**`/fp:precise`**|Si tratta dell'indicazione predefinita e deve essere usata nella maggior parte dei casi.|
 |**`/fp:fast`**|Consigliato se le prestazioni sono di importanza fondamentale, ad esempio nei giochi. Questo comporterà le prestazioni più veloci.|
 |**`/fp:strict`**|Consigliato se si desiderano eccezioni a virgola mobile precise e il comportamento IEEE. Questo comporterà prestazioni più lente.|
 |**`/fp:except[-]`**|Può essere usato in combinazione con **`/fp:strict`** o **`/fp:precise`** , ma non con **`/fp:fast`** .|
 
-Per ulteriori informazioni, vedere [ `/fp` (specificare il comportamento](reference/fp-specify-floating-point-behavior.md)della virgola mobile).
+Per ulteriori informazioni, vedere [ `/fp` (specificare il comportamento di Floating-Point)](reference/fp-specify-floating-point-behavior.md).
 
 ## <a name="optimization-declspecs"></a>Ottimizzazione declspec
 
@@ -131,6 +132,6 @@ Si è verificato un impatto sulle prestazioni associato all'utilizzo delle eccez
 
 Infine, generare eccezioni solo per casi eccezionali. L'uso di eccezioni per il flusso di controllo generale può comportare una riduzione delle prestazioni.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Ottimizzazione del codice](optimizing-your-code.md)

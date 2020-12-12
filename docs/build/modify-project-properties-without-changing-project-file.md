@@ -1,18 +1,19 @@
 ---
+description: 'Altre informazioni su: procedura: modificare le proprietà e le destinazioni del progetto C++ senza modificare il file di progetto'
 title: 'Procedura: modificare le proprietà e le destinazioni del progetto C++ senza modificare il file di progetto'
 ms.date: 11/28/2018
 helpviewer_keywords:
 - project properties [C++], modifying outside project file
-ms.openlocfilehash: a1ba5647542f69cfc7748986e512e74401bfc404
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 91f71ccf7764307fef174d31a63583d6a3ce2aeb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833361"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179863"
 ---
 # <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>Procedura: modificare le proprietà e le destinazioni del progetto C++ senza modificare il file di progetto
 
-È possibile ignorare le proprietà e le destinazioni del progetto al prompt dei comandi di MSBuild senza modificare il file di progetto. Ciò è utile quando si intende applicare alcune proprietà in modo temporaneo o occasionalmente. Si presuppone una conoscenza di MSBuild. Per ulteriori informazioni, vedere [MSBuild](/visualstudio/msbuild/msbuild).
+È possibile ignorare le proprietà e le destinazioni del progetto al prompt dei comandi di MSBuild senza modificare il file di progetto. Ciò è utile quando si intende applicare alcune proprietà in modo temporaneo o occasionalmente. Si presuppone una conoscenza di MSBuild. Per altre informazioni, vedere [MSBuild](/visualstudio/msbuild/msbuild).
 
 > [!IMPORTANT]
 > È possibile usare l'Editor XML in Visual Studio o qualsiasi editor di testo per creare il file con estensione props o targets. Non usare **Gestione proprietà** in questo scenario perché aggiunge le proprietà del file di progetto.

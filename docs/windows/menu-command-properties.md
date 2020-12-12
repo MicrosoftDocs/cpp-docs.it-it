@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: comandi di menu (C++)'
 title: Comandi di menu (C++)
 ms.date: 02/15/2019
 helpviewer_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: a950e7d0156d1b952782fddcdff26718fcf0e291
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 86b9a4343da269cb3dcd403fbc0d2469e85a391f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504323"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180162"
 ---
 # <a name="menu-commands-c"></a>Comandi di menu (C++)
 
@@ -31,12 +32,12 @@ Le informazioni riportate di seguito sono organizzate in base alle proprietà de
 |Proprietà|Descrizione|
 |--------------|-----------------|
 |**Interruzione**|I possibili valori sono i seguenti:<br/>  - **None**: nessuna pausa. Questo è il valore predefinito.<br/>  - **Column**: per i menu statici, questo valore posiziona il comando di menu su una nuova riga.<br/>      Nei menu a comparsa questo valore consente di posizionare il comando di menu in una nuova colonna, senza linee di separazione tra le colonne.<br/>      L'impostazione di questa proprietà influisce sull'aspetto del menu solo in fase di esecuzione e non nell'Editor dei menu.<br />   - **Barra**: uguale a **Column** eccetto per i menu a comparsa, questo valore separa la nuova colonna dalla colonna precedente con una linea verticale.<br/>      L'impostazione di questa proprietà influisca sull'aspetto del menu solo in fase di esecuzione e non nell' **Editor dei menu**.|
-|**Sottotitolo**|Il testo che costituisce l'etichetta del comando di menu ovvero il nome del menu. Per impostare come tasto di scelta una lettera della didascalia di un comando di menu, anteporre alla lettera desiderata una e commerciale (&).|
+|**Didascalia**|Il testo che costituisce l'etichetta del comando di menu ovvero il nome del menu. Per impostare come tasto di scelta una lettera della didascalia di un comando di menu, anteporre alla lettera desiderata una e commerciale (&).|
 |**Selezionata**|Se **true**, il comando di menu viene inizialmente controllato. Tipo: **bool**. Impostazione predefinita: **false**.|
-|**Enabled**|Se il valore impostato è **False**, la voce di menu è disabilitata.|
+|**Abilitato**|Se il valore impostato è **False**, la voce di menu è disabilitata.|
 |**Grayed**|Se **true**, il comando di menu è inizialmente grigio e inattivo. Tipo: **bool**. Impostazione predefinita: **false**.|
 |**Guida**|Allinea a destra la voce di menu. Impostazione predefinita: **false**.<br/><br/>In tutte le applicazioni Windows, ad esempio, il comando di menu **?** è sempre posizionato a destra. Impostando questa proprietà su una voce di menu, tale voce verrà visualizzata all'estremità destra del menu. Si applica alle voci di primo livello.|
-|**ID**|Un simbolo definito nel file di intestazione. Tipo: **simbolo**, **numero intero**o **stringa racchiusa tra virgolette**.<br/><br/>È possibile usare qualsiasi simbolo normalmente disponibile negli editor. La [finestra Proprietà](/visualstudio/ide/reference/properties-window) non fornisce un elenco a discesa da cui effettuare una selezione.|
+|**ID**|Un simbolo definito nel file di intestazione. Tipo: **simbolo**, **numero intero** o **stringa racchiusa tra virgolette**.<br/><br/>È possibile usare qualsiasi simbolo normalmente disponibile negli editor. La [finestra Proprietà](/visualstudio/ide/reference/properties-window) non fornisce un elenco a discesa da cui effettuare una selezione.|
 |**Popup**|Se **true**, il comando di menu è un menu a comparsa. Tipo: **bool**. Impostazione predefinita: **true** per i menu di primo livello su una barra dei menu, in caso contrario **false**.|
 |**Messaggio di richiesta**|Contiene il testo da visualizzare nella barra di stato quando il comando di menu viene evidenziato. Il testo viene inserito nella tabella di stringhe con lo stesso identificatore usato per il comando di menu.<br/><br/>Questa proprietà è disponibile per qualsiasi tipo di progetto, ma la funzionalità in fase di esecuzione è specifica dei progetti MFC.|
 |**Right to Left Justify**|Allinea a destra il comando di menu sulla barra dei menu in fase di esecuzione. Tipo: **bool**. Impostazione predefinita: **false**.|
@@ -49,13 +50,13 @@ Spesso è utile che una voce di menu e una combinazione di tasti eseguano lo ste
 
 ### <a name="to-associate-a-menu-command-with-an-accelerator-key"></a>Per associare un comando di menu a un tasto di scelta rapida
 
-1. Nell' **Editor dei menu**selezionare il comando di menu desiderato.
+1. Nell' **Editor dei menu** selezionare il comando di menu desiderato.
 
 1. Nella [Finestra Proprietà](/visualstudio/ide/reference/properties-window)aggiungere il nome del tasto di scelta rapida alla proprietà **Caption** :
 
    - Dopo la didascalia di menu, digitare la sequenza di escape relativa a un carattere di tabulazione (\t), in modo che tutti che i tasti di scelta rapida del menu vengano allineati a sinistra.
 
-   - Digitare il nome del tasto di modifica (**CTRL**, **ALT**o **MAIUSC**) seguito da un segno più ( **+** ) e dal nome, dalla lettera o dal simbolo della chiave aggiuntiva.
+   - Digitare il nome del tasto di modifica (**CTRL**, **ALT** o **MAIUSC**) seguito da un segno più ( **+** ) e dal nome, dalla lettera o dal simbolo della chiave aggiuntiva.
 
    Ad esempio, per assegnare **CTRL** + **O** al comando **Apri** nel menu **file** , modificare la **didascalia** del comando di menu in modo che sia simile al testo seguente:
 
@@ -80,13 +81,13 @@ In un progetto C++ è possibile assegnare una chiave di accesso (un tasto di sce
    La voce di menu visualizzerà un segnale visivo che indica che a una delle lettere è assegnato un tasto di scelta rapida. La lettera che segue la e commerciale verrà visualizzata con una sottolineatura (a seconda del sistema operativo).
 
 > [!NOTE]
-> Assicurarsi che tutte le chiavi di accesso in un menu siano univoche facendo clic con il pulsante destro del mouse sul menu e scegliendo **Controlla tasti**di scelta.
+> Assicurarsi che tutte le chiavi di accesso in un menu siano univoche facendo clic con il pulsante destro del mouse sul menu e scegliendo **Controlla tasti** di scelta.
 
 ## <a name="requirements"></a>Requisiti
 
 Win32
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Editor menu](../windows/menu-editor.md)
 

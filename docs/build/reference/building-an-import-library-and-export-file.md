@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: compilazione di una libreria di importazione e di un file di esportazione'
 title: Compilazione di una libreria di importazione e di un file di esportazione
 ms.date: 09/05/2018
 f1_keywords:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-ms.openlocfilehash: 5cb5224b3edaf84dbcb7c0429044a647fb5ac19a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8fbd06ce06d77721e64294b88632933b3ad71a03
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229753"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179512"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Compilazione di una libreria di importazione e di un file di esportazione
 
@@ -66,6 +67,6 @@ Aggiunge il *simbolo* specificato alla tabella dei simboli. Questa opzione è ut
 
 Si noti che se si crea la libreria di importazione in un passaggio preliminare, prima di creare il file con estensione dll, è necessario passare lo stesso set di file oggetto quando si compila la libreria di importazione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Utilizzo di librerie di importazione ed esportazione di file](working-with-import-libraries-and-export-files.md)

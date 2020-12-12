@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: simboli predefiniti di MFC'
 title: Simboli predefiniti di MFC
 ms.date: 02/14/2019
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - databases [C++], MFC programming model
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-ms.openlocfilehash: 376b25b457ae0bb9ebc473d997b91c7acfd7316e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a55cc0d3e572da7321d992715257e444bbe1d261
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846303"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180084"
 ---
 # <a name="mfc-predefined-symbols"></a>Simboli predefiniti di MFC
 
@@ -558,7 +559,7 @@ Quando si usano i menu nell'editor di **menu**, questi simboli verranno visualiz
 
 MFC
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [ID simbolo predefiniti](../windows/predefined-symbol-ids.md)<br/>
 [Simboli predefiniti ATL](../windows/atl-predefined-symbols.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: tasti di scelta rapida (C++)'
 title: Tasti di scelta rapida (C++)
 ms.date: 02/14/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: 4f838caa8ca9e4a996fa4cb8018d663c6c7aecea
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 397e0735ba33af6adf8f10c6188f73d6f504e68b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504300"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180097"
 ---
 # <a name="accelerator-keys-c"></a>Tasti di scelta rapida (C++)
 
@@ -57,7 +58,7 @@ Esistono numerosi tasti di scelta rapida predefiniti che possono far parte di un
 |VK_OEM_2|Windows Per la tastiera standard degli Stati Uniti, il **/?** Key|
 |VK_OEM_3|Windows Per la tastiera standard degli Stati Uniti, la **`~** chiave|
 |VK_OEM_4|Windows Per la tastiera standard degli Stati Uniti, **[{** Key|
-|VK_OEM_5|Windows Per la tastiera standard degli Stati Uniti, la chiave di ** \\&#124;**|
+|VK_OEM_5|Windows Per la tastiera standard degli Stati Uniti, la chiave di **\\&#124;**|
 |VK_OEM_6|Windows Per la tastiera standard degli Stati Uniti, il tasto **]}**|
 |VK_OEM_7|Windows Per la tastiera standard degli Stati Uniti, il tasto ' virgolette singole/virgolette doppie '|
 |VK_OEM_COMMA|Windows Per ogni paese/area geografica **, la chiave**|
@@ -83,6 +84,6 @@ Molte volte si vuole che una voce di menu e una combinazione di tasti esegua lo 
 
 Win32
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Editor tasti di scelta rapida](../windows/accelerator-editor.md)<br/>

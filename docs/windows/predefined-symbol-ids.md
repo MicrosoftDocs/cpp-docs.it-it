@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: ID simbolo predefiniti'
 title: ID di simbolo già definiti
 ms.date: 02/14/2019
 helpviewer_keywords:
 - symbols [C++], predefined IDs
 - predefined symbol IDs
 ms.assetid: 91a5d610-1a04-47e8-b8a4-63ad650a90df
-ms.openlocfilehash: 8f7fcba864f4e1a47d217d684b87c257503aeb13
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f28f41b3194e65824b0c06285c0c4e73cfce8b39
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215163"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180032"
 ---
 # <a name="predefined-symbol-ids"></a>ID di simbolo già definiti
 
@@ -20,11 +21,11 @@ Questi ID simbolo diventano importanti quando si usano le risorse. Sono disponib
 
 Le librerie hanno simboli predefiniti che verranno visualizzati come parte del progetto:
 
-- [Simboli predefiniti di ATL](../windows/atl-predefined-symbols.md)
+- [Simboli predefiniti ATL](../windows/atl-predefined-symbols.md)
 
 - [Simboli predefiniti di MFC](../windows/mfc-predefined-symbols.md)
 
-- [Simboli predefiniti di Win32](../windows/win32-predefined-symbols.md)
+- [Simboli predefiniti Win32](../windows/win32-predefined-symbols.md)
 
 > [!NOTE]
 > Simboli predefiniti sono sempre di sola lettura.
@@ -33,7 +34,7 @@ Le librerie hanno simboli predefiniti che verranno visualizzati come parte del p
 
 Win32, MFC o ATL
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Identificatori di risorsa (simboli)](../windows/symbols-resource-identifiers.md)<br/>
 [Procedura: creare simboli](../windows/creating-new-symbols.md)<br/>
