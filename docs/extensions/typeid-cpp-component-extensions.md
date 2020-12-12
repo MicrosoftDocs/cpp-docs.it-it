@@ -1,16 +1,17 @@
 ---
+description: 'Ulteriori informazioni su: typeid (C++/CLI e C++/CX)'
 title: typeid (C++/CLI e C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-ms.openlocfilehash: bfb226bc11f0fd7d3feddfb2c50ffe1aa6311d3d
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 0452de57b93eb5d55bed34fc1f9745280a6b6184
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500385"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185661"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid (C++/CLI e C++/CX)
 
@@ -45,7 +46,7 @@ Platform::Type^ type = T::typeid;
 *T*<br/>
 Un nome di tipo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 In C++/CX typeid restituisce un oggetto [Platform::Type](../cppcx/platform-type-class.md) costruito dalle informazioni sul tipo di runtime.
 
@@ -66,7 +67,7 @@ type::typeid
 *type*<br/>
 Nome di un tipo (dichiaratore astratto) per il quale si vuole ottenere l'oggetto `System::Type`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **`typeid`** viene utilizzato per ottenere <xref:System.Type> per un tipo in fase di compilazione.
 
@@ -188,6 +189,6 @@ int::typeid != pointer_to_int::typeid, as expected
 int::typeid == handle_to_int::typeid, as expected
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)

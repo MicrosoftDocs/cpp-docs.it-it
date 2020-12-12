@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: determinazione delle dll da ridistribuire'
 title: Determinazione delle DLL da ridistribuire
 ms.date: 07/15/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-ms.openlocfilehash: 079bfa33ced9f62d6abbccca86435b1b5654a2de
-ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
+ms.openlocfilehash: 016351a6d204c71cfef516862c9b57bebafcc1a2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344709"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329393"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>Determinazione delle DLL da ridistribuire
 
@@ -37,7 +38,7 @@ Non è possibile ridistribuire tutti i file inclusi in Visual Studio. È consent
 
 Nella tabella seguente vengono descritte alcune DLL di Visual C++ da cui l'applicazione potrebbe dipendere.
 
-|Libreria di Visual C++|Descrizione|Si applica a|
+|Libreria di Visual C++|Description|Si applica a|
 |--------------------------|-----------------|----------------|
 |vcruntime *Version*. dll|Libreria di runtime per codice nativo.|Applicazioni che usano i servizi di avvio e terminazione normali dei linguaggi C e C++ normali.|
 |vccorlib *version*.dll|Libreria di runtime per codice gestito.|Applicazioni che usano i servizi del linguaggio C++ per il codice gestito.|
@@ -59,7 +60,7 @@ Per altre informazioni su come ridistribuire queste DLL con l'applicazione, vede
 
 In genere non è necessario ridistribuire le DLL di sistema, perché fanno parte del sistema operativo. Possono tuttavia verificarsi eccezioni, ad esempio quando l'applicazione verrà eseguita in versioni diverse dei sistemi operativi Microsoft. In questo caso, assicurarsi di leggere le Condizioni di licenza corrispondenti. Tentare inoltre di aggiornare le DLL di sistema tramite Windows Update, Service Pack o pacchetti ridistribuibili forniti da Microsoft.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Scelta di un metodo di distribuzione](choosing-a-deployment-method.md)<br/>
 [Distribuzione di applicazioni desktop](deploying-native-desktop-applications-visual-cpp.md)

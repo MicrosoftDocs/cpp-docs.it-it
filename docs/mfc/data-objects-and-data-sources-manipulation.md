@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: oggetti dati e origini dati: manipolazione'
 title: 'Oggetti dati e origini dati: modifica'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-ms.openlocfilehash: f1a83511edbf240d9a05d6d489f6cda9453ccea9
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a9611fefc94e8437f9e0e5361e0d95972f867984
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620406"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97291233"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Oggetti dati e origini dati: modifica
 
@@ -29,7 +30,7 @@ Dopo la creazione di un oggetto dati o di un'origine dati, è possibile eseguire
 
 - [Recupero di dati da un oggetto dati](#_core_retrieving_data_from_a_data_object)
 
-## <a name="inserting-data-into-a-data-source"></a><a name="_core_inserting_data_into_a_data_source"></a>Inserimento di dati in un'origine dati
+## <a name="inserting-data-into-a-data-source"></a><a name="_core_inserting_data_into_a_data_source"></a> Inserimento di dati in un'origine dati
 
 Il modo in cui i dati vengono inseriti in un'origine dati varia a seconda che i dati vengano forniti immediatamente o su richiesta e in quale supporto viene fornito. Di seguito sono riportate le possibilità.
 
@@ -51,7 +52,7 @@ Si tratta di un argomento avanzato.
 
 - Se si utilizza un `CFile` oggetto per fornire i dati, chiamare `COleDataSource::DelayRenderFileData` anziché `COleDataSource::DelayRenderData` nell'opzione precedente. Quando i dati vengono richiesti, il Framework chiamerà `COleDataSource::OnRenderFileData` , di cui è necessario eseguire l'override.
 
-## <a name="determining-the-formats-available-in-a-data-object"></a><a name="_core_determining_the_formats_available_in_a_data_object"></a>Determinazione dei formati disponibili in un oggetto dati
+## <a name="determining-the-formats-available-in-a-data-object"></a><a name="_core_determining_the_formats_available_in_a_data_object"></a> Determinazione dei formati disponibili in un oggetto dati
 
 Prima che un'applicazione consenta all'utente di incollare i dati, è necessario stabilire se sono presenti formati negli Appunti che è in grado di gestire. A tale scopo, l'applicazione deve eseguire le operazioni seguenti:
 
@@ -59,7 +60,7 @@ Prima che un'applicazione consenta all'utente di incollare i dati, è necessario
 
 1. Chiamare la funzione membro dell'oggetto dati `AttachClipboard` per associare l'oggetto dati ai dati negli Appunti.
 
-1. Eseguire una delle operazioni seguenti:
+1. Eseguire una di queste operazioni:
 
    - Chiamare la funzione membro dell'oggetto dati `IsDataAvailable` se sono presenti solo uno o due formati necessari. In questo modo si risparmia tempo nei casi in cui i dati negli Appunti supportano un numero significativamente maggiore di formati rispetto all'applicazione.
 
@@ -69,7 +70,7 @@ Prima che un'applicazione consenta all'utente di incollare i dati, è necessario
 
 Se si usa **ON_UPDATE_COMMAND_UI**, è ora possibile abilitare l'operazione Incolla e, possibilmente, incollare elementi speciali nel menu Modifica. A tale scopo, chiamare `CMenu::EnableMenuItem` o `CCmdUI::Enable` . Per ulteriori informazioni sulle applicazioni contenitore che devono essere eseguite con le voci di menu e quando, vedere [menu e risorse: aggiunte di contenitori](menus-and-resources-container-additions.md).
 
-## <a name="retrieving-data-from-a-data-object"></a><a name="_core_retrieving_data_from_a_data_object"></a>Recupero di dati da un oggetto dati
+## <a name="retrieving-data-from-a-data-object"></a><a name="_core_retrieving_data_from_a_data_object"></a> Recupero di dati da un oggetto dati
 
 Una volta scelto un formato dati, tutto ciò che rimane è quello di recuperare i dati dall'oggetto dati. A tale scopo, l'utente decide dove inserire i dati e l'applicazione chiama la funzione appropriata. I dati saranno disponibili in uno dei seguenti supporti:
 
@@ -91,7 +92,7 @@ L'utente può ora inserire i dati nel documento come per tutti gli altri dati ne
 
 - [Appunti](clipboard.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Oggetti dati e origini dati (OLE)](data-objects-and-data-sources-ole.md)<br/>
 [Classe COleDataObject](reference/coledataobject-class.md)<br/>

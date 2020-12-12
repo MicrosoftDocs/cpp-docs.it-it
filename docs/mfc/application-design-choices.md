@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: opzioni di progettazione delle applicazioni'
 title: Scelte di progettazione delle applicazioni
 ms.date: 09/12/2019
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - server applications [MFC], vs. client applications on Internet
 - client applications [MFC], vs. server applications on Internet
 ms.assetid: 9b96172c-b4d4-4c69-bfb2-226ce0de6d08
-ms.openlocfilehash: 5ae6d5d3087720a1cfed3fcc33569ed4bed0ebfd
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 0402cfe8cb58ed538e1429d2edc4f95cc9a23a0c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616017"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335925"
 ---
 # <a name="application-design-choices"></a>Scelte di progettazione delle applicazioni
 
@@ -30,7 +31,7 @@ Gli argomenti trattati in questo articolo includono:
 
 - [Pagina Web](#_core_the_web_page)
 
-- [Browser o applicazione autonoma](#_core_browser_or_standalone)
+- [Browser o applicazione Stand-Alone](#_core_browser_or_standalone)
 
 - [COM su Internet](#_core_com_on_the_internet)
 
@@ -38,7 +39,7 @@ Gli argomenti trattati in questo articolo includono:
 
 Se si è pronti per iniziare a scrivere il programma, vedere [scrittura di applicazioni MFC](writing-mfc-applications.md).
 
-## <a name="intranet-versus-internet"></a><a name="_core_intranet_versus_internet"></a>Intranet rispetto a Internet
+## <a name="intranet-versus-internet"></a><a name="_core_intranet_versus_internet"></a> Intranet rispetto a Internet
 
 Molte applicazioni vengono eseguite su Internet e sono accessibili a chiunque disponga di un browser e di accesso a Internet. Le aziende implementano anche Intranet, ovvero reti a livello aziendale che usano protocolli TCP/IP e Web browser. Le Intranet offrono una fonte centrale facilmente aggiornabile per le informazioni a livello aziendale. Possono essere usati per l'aggiornamento del software, per la distribuzione e la tabulazione dei sondaggi, per il supporto tecnico e per la distribuzione di informazioni. Nella tabella seguente vengono confrontate le funzionalità di Internet e Intranet.
 
@@ -48,11 +49,11 @@ Molte applicazioni vengono eseguite su Internet e sono accessibili a chiunque di
 |Riduzione della sicurezza di dati e sistemi|Accesso controllato ai dati e ai sistemi|
 |Controllo minimo del contenuto|Controllo elevato del contenuto|
 
-## <a name="client-or-server-application"></a><a name="_core_client_or_server_application"></a>Applicazione client o server
+## <a name="client-or-server-application"></a><a name="_core_client_or_server_application"></a> Applicazione client o server
 
 L'applicazione può essere eseguita in un computer client o in un computer server. L'applicazione può anche essere archiviata in un server e quindi scaricata attraverso Internet ed eseguita in un computer client. Le classi WinInet di MFC vengono usate per il download dei file da applicazioni client. Le classi di moniker MFC e asincrone vengono usate per scaricare i file e le proprietà del controllo. Le classi per i controlli ActiveX e i documenti attivi vengono usate per le applicazioni client e per le applicazioni che vengono scaricate dal server per l'esecuzione su un client.
 
-## <a name="the-web-page-html-active-documents-activex-controls"></a><a name="_core_the_web_page"></a>Pagina Web: HTML, documenti attivi, controlli ActiveX
+## <a name="the-web-page-html-active-documents-activex-controls"></a><a name="_core_the_web_page"></a> Pagina Web: HTML, documenti attivi, controlli ActiveX
 
 Microsoft offre diversi modi per fornire contenuti in una pagina Web. Le pagine Web possono utilizzare le estensioni HTML o HTML standard, ad esempio il tag Object, per fornire contenuto dinamico, ad esempio i controlli ActiveX.
 
@@ -60,11 +61,11 @@ I Web browser in genere visualizzano pagine HTML. I documenti attivi possono anc
 
 I controlli ActiveX scritti possono essere scaricati in modo asincrono dal server e visualizzati in una pagina Web. È possibile utilizzare un linguaggio di scripting, ad esempio VBScript, per eseguire la convalida sul lato client prima di inviare informazioni al server.
 
-## <a name="browser-or-stand-alone-application"></a><a name="_core_browser_or_standalone"></a>Browser o applicazione autonoma
+## <a name="browser-or-stand-alone-application"></a><a name="_core_browser_or_standalone"></a> Browser o applicazione Stand-Alone
 
 È possibile scrivere controlli ActiveX incorporati in una pagina HTML e server di documenti attivi visualizzati in un browser. È possibile scrivere pagine HTML che contengono un pulsante per inviare una richiesta di esecuzione dell'applicazione ISAPI in un server Web. È possibile scrivere un'applicazione autonoma che usa protocolli Internet per scaricare i file e visualizzare le informazioni all'utente senza mai usare un'applicazione browser.
 
-## <a name="com-on-the-internet"></a><a name="_core_com_on_the_internet"></a>COM su Internet
+## <a name="com-on-the-internet"></a><a name="_core_com_on_the_internet"></a> COM su Internet
 
 I controlli ActiveX, i documenti attivi e i moniker asincroni utilizzano le tecnologie COM (Component Object Model).
 
@@ -72,7 +73,7 @@ I controlli ActiveX forniscono contenuto dinamico ai documenti e alle pagine nei
 
 I moniker asincroni forniscono funzionalità per consentire a un controllo di funzionare correttamente in un ambiente Internet, incluso un mezzo incrementale o progressivo per il download dei dati. I controlli devono inoltre funzionare correttamente con altri controlli che potrebbero anche recuperare i propri dati in modo asincrono nello stesso momento.
 
-## <a name="client-data-download-services"></a><a name="_core_client_data_download_services"></a>Servizi di download dei dati client
+## <a name="client-data-download-services"></a><a name="_core_client_data_download_services"></a> Servizi di download dei dati client
 
 Due set di API che aiuteranno a trasferire i dati al client sono WinInet e i moniker asincroni. Se nella pagina HTML sono presenti file. gif e. avi e controlli ActiveX di grandi dimensioni, è possibile aumentare la velocità di risposta all'utente scaricando in modo asincrono, usando moniker asincroni o con WinInet in modo asincrono.
 
@@ -86,7 +87,7 @@ Nella tabella seguente sono riepilogate diverse modalità di utilizzo di MFC per
 |[WinInet](win32-internet-extensions-wininet.md)|Per protocolli Internet per HTTP, FTP e gopher. I dati possono essere trasferiti in modalità sincrona o asincrona e archiviati in una cache a livello di sistema.|[CInternetSession](reference/cinternetsession-class.md), [CFtpFileFind](reference/cftpfilefind-class.md), [CGopherFileFind](reference/cgopherfilefind-class.md)e molti altri.|
 |[WinSock](windows-sockets-in-mfc.md)|Per ottimizzare l'efficienza e il controllo. Richiede la comprensione dei socket e dei protocolli TCP/IP.|[CSocket](reference/csocket-class.md), [CAsyncSocket](reference/casyncsocket-class.md)|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attività di programmazione Internet MFC](mfc-internet-programming-tasks.md)<br/>
 [Nozioni fondamentali sulla programmazione Internet MFC](mfc-internet-programming-basics.md)<br/>

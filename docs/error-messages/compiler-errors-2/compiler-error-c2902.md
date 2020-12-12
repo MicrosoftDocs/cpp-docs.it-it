@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2902'
 title: Errore del compilatore C2902
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2902
 ms.assetid: 89d78d0e-78e5-4c2c-a0f9-a60110e9395e
-ms.openlocfilehash: 287ca42be0f1c09a6438af067feb299e7a01df6b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 45e58615e6bd2465489da7059a350ef476b705a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230883"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97270758"
 ---
 # <a name="compiler-error-c2902"></a>Errore del compilatore C2902
 

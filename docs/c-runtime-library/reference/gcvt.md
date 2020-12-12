@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _gcvt'
 title: _gcvt
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-ms.openlocfilehash: d13ae6cee293036f0454b23e0349cabb2869be30
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 942f233e3b0e4c1ac3bc96d1fa64fd46cdccbcc2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919404"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341503"
 ---
 # <a name="_gcvt"></a>_gcvt
 
@@ -69,7 +70,7 @@ Posizione di archiviazione per il risultato.
 
 **_gcvt** restituisce un puntatore alla stringa di cifre.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_gcvt** converte un *valore* a virgola mobile in una stringa di caratteri (che include un separatore decimale e un possibile byte di segno) e archivia la stringa nel *buffer*. Il *buffer* deve essere sufficientemente grande da contenere il valore convertito e un carattere null di terminazione, che viene aggiunto automaticamente. Se viene usata una dimensione del buffer di *cifre* + 1, la funzione sovrascrive la fine del buffer. Ciò perché la stringa convertita include un separatore decimale e può contenere informazioni su segno ed esponente. Non sono previste misure per l'overflow. **_gcvt** tenta *di produrre cifre cifre in* formato decimale. In caso contrario, *le cifre vengono generate* in formato esponenziale. Gli zeri finali possono essere eliminati nella conversione.
 
@@ -146,7 +147,7 @@ buffer: '-1.23456789012e-002' (19 chars)
 ## <a name="see-also"></a>Vedere anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>

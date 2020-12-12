@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura: gestire le risorse (C++)'
 title: 'Procedura: gestire le risorse (C++)'
 ms.date: 02/14/2019
 f1_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 0af4e8faeb3d8606fb351b193364a2748fbc944e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3720cb5f3ab3b99ecba798abce1e4fdba25f8646
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215215"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329387"
 ---
 # <a name="how-to-manage-resources-c"></a>Procedura: gestire le risorse (C++)
 
@@ -58,7 +59,7 @@ Non è possibile trascinare, copiare, tagliare o incollare tra i file di risorse
 
    - Usare il metodo di trascinamento della selezione
 
-      1. Selezionare la risorsa che si vuole copiare. Ad esempio, in *source1. RC*selezionare **IDD_DIALOG1**.
+      1. Selezionare la risorsa che si vuole copiare. Ad esempio, in *source1. RC* selezionare **IDD_DIALOG1**.
 
       1. Tenere premuto il tasto **CTRL** e trascinare la risorsa nel secondo file RC. Ad esempio, trascinare **IDD_DIALOG1** da *source1. RC* a *source2. RC*.
 
@@ -72,7 +73,7 @@ Non è possibile trascinare, copiare, tagliare o incollare tra i file di risorse
       1. Fare clic con il pulsante destro del mouse sul file di risorse in cui si vuole incollare la risorsa (ad esempio, *source2. RC*) e scegliere **Incolla**.
 
 > [!NOTE]
-> Per evitare conflitti con i nomi o i valori dei simboli nel file esistente C++ , Visual può modificare il valore del simbolo della risorsa trasferita o il nome e il valore del simbolo quando lo si copia nel nuovo file.
+> Per evitare conflitti con i nomi o i valori dei simboli nel file esistente, Visual C++ possibile modificare il valore del simbolo della risorsa trasferita o il nome e il valore del simbolo quando lo si copia nel nuovo file.
 
 Durante la copia in una risorsa, è possibile modificarne la proprietà relativa alla lingua o alla condizione oppure entrambe.
 
@@ -80,7 +81,7 @@ Durante la copia in una risorsa, è possibile modificarne la proprietà relativa
 
 - La condizione di una risorsa è un simbolo definito che identifica una condizione in cui è necessario usare questa particolare copia della risorsa.
 
-La lingua e la condizione di una risorsa vengono visualizzate tra parentesi dopo il nome della risorsa nella finestra dell' **area di lavoro** . Qui la risorsa denominata `IDD_AboutBox` USA `Finnish` come lingua e la relativa condizione è `XX33`:
+La lingua e la condizione di una risorsa vengono visualizzate tra parentesi dopo il nome della risorsa nella finestra dell' **area di lavoro** . Qui la risorsa denominata `IDD_AboutBox` Usa `Finnish` come lingua e la relativa condizione è `XX33` :
 
 ```cpp
 IDD_AboutBox (Finnish - XX33)
@@ -100,7 +101,7 @@ I file di risorse gestite (resx) sono file XML. Quando si aggiunge un file di ri
 
 ## <a name="import-and-export-resources"></a>Importare ed esportare risorse
 
-È possibile importare risorse grafiche (bitmap, icone, cursori e barre degli strumenti), file HTML e risorse personalizzate da usare in Visual C++. È possibile esportare gli stessi tipi di file da un progetto di C++ Visual Studio per separare i file che possono essere usati all'esterno dell'ambiente di sviluppo.
+È possibile importare risorse grafiche (bitmap, icone, cursori e barre degli strumenti), file HTML e risorse personalizzate da usare in Visual C++. È possibile esportare gli stessi tipi di file da un progetto Visual Studio C++ per separare i file che possono essere usati all'esterno dell'ambiente di sviluppo.
 
 > [!NOTE]
 > I tipi di risorse, ad esempio acceleratori, finestre di dialogo e tabelle di stringhe, non possono essere importati o esportati perché non sono tipi di file autonomi.
@@ -116,7 +117,7 @@ I file di risorse gestite (resx) sono file XML. Quando si aggiunge un file di ri
 > [!NOTE]
 > Il processo di importazione funziona allo stesso modo indipendentemente dal tipo di risorsa selezionato. La risorsa importata viene aggiunta automaticamente al nodo corretto del tipo di risorsa.
 
-### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>Per esportare una risorsa da usare all'esterno di VisualC++
+### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>Per esportare una risorsa da usare all'esterno di Visual C++
 
 1. In [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources)fare clic con il pulsante destro del mouse sulla risorsa che si desidera esportare e scegliere **Esporta**. È possibile accettare il nome del file corrente o digitarne uno nuovo.
 
@@ -126,8 +127,8 @@ I file di risorse gestite (resx) sono file XML. Quando si aggiunge un file di ri
 
 Win32
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [File di risorse](../windows/resource-files-visual-studio.md)<br/>
 [Procedura: creare risorse](../windows/how-to-create-a-resource-script-file.md)<br/>
-[Procedura: Includere risorse in fase di compilazione](../windows/how-to-include-resources-at-compile-time.md)
+[Procedura: includere risorse in fase di compilazione](../windows/how-to-include-resources-at-compile-time.md)

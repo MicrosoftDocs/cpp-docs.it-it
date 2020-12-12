@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore degli strumenti del linker LNK1301'
 title: Errore degli strumenti del linker LNK1301
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1301
 ms.assetid: 760da428-7182-4b25-b20a-de90d4b9a9cd
-ms.openlocfilehash: fe64eecfbc9fed57c3748afd5804b76d6e4284a4
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: ac282aea62836591c6e30abb3030ef2143a78003
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990932"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335947"
 ---
 # <a name="linker-tools-error-lnk1301"></a>Errore degli strumenti del linker LNK1301
 
@@ -23,11 +24,11 @@ Le ottimizzazioni PGO non sono supportate per i moduli/CLR.
 
 Per altre informazioni, vedere:
 
-- [/GL (ottimizzazione intero programma)](../../build/reference/gl-whole-program-optimization.md)
+- [/GL (Ottimizzazione intero programma)](../../build/reference/gl-whole-program-optimization.md)
 
 - [/LTCG (generazione di codice in fase di collegamento)](../../build/reference/ltcg-link-time-code-generation.md)
 
-- [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
+- [/CLR (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
 
 - [Ottimizzazioni PGO](../../build/profile-guided-optimizations.md)
 

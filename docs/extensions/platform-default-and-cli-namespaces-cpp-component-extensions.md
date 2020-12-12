@@ -1,4 +1,5 @@
 ---
+description: 'Scopri di più su: spazi dei nomi Platform, default e CLI (C++/CLI e C++/CX)'
 title: Spazi dei nomi Platform, default e cli (C++/CLI e C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-ms.openlocfilehash: df699b12404d9de1a9acaae6e9dc8c00fd2f15df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1b4b47a1568b1a137bc49a09b8b50feb8ec3a76b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87195356"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185674"
 ---
 # <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Spazi dei nomi Platform, default e cli (C++/CLI e C++/CX)
 
@@ -58,7 +59,7 @@ Le funzionalità del linguaggio seguenti si trovano nello spazio dei nomi **cli*
 
 Opzione del compilatore: `/clr`
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 L'esempio di codice seguente illustra che è possibile usare un simbolo nello spazio dei nomi **cli** come simbolo definito dall'utente nel codice.  Se tuttavia si esegue questa operazione, è necessario qualificare in modo esplicito o implicito i riferimenti all'elemento del linguaggio **cli** con lo stesso nome.
 
@@ -78,6 +79,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: modificare la firma'
 title: Modifica firma
 ms.date: 11/16/2016
 ms.assetid: 8daaa060-7305-4035-99d2-8b460b4f4454
-ms.openlocfilehash: 1599a7900e33db61994ea75581f9d87b1aee83f9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2530a13f3e0e4a1aad987a4eed9dfc49b91323de
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171905"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185687"
 ---
 # <a name="change-signature"></a>Modifica firma
 
@@ -17,7 +18,7 @@ ms.locfileid: "80171905"
 
 **Motivo:** è possibile modificare manualmente questi parametri e poi cercare tutte le chiamate alla funzione e modificarle una alla volta, ma si tratta di un processo soggetto a errori.  Questo strumento di refactoring eseguirà l'attività automaticamente.
 
-**Modalità:**
+**Come**
 
 1. Posizionare il cursore del testo o del mouse all'interno del nome del metodo da modificare o di uno dei relativi utilizzi:
 
@@ -26,7 +27,7 @@ ms.locfileid: "80171905"
 1. Eseguire quindi una delle operazioni seguenti:
    * **Tastiera**
      * Premere **CTRL+R** e quindi **CTRL+O**.  Si noti che i tasti di scelta rapida possono essere diversi a seconda del profilo selezionato.
-     * Premere **CTRL+.** per attivare il menu **Azioni rapide e refactoring** e selezionare **Modifica firma** menu di scelta rapida.
+     * Premere **CTRL +.** per attivare il menu **Azioni rapide e refactoring** e selezionare **Modifica firma** menu di scelta rapida.
    * **Mouse**
      * Selezionare **Modifica > Refactoring > Riordina parametri**.
      * Fare clic con il pulsante destro del mouse sul codice, selezionare il menu **Azioni rapide e refactoring** e selezionare **Modifica firma** dal menu di scelta rapida.
@@ -40,8 +41,8 @@ ms.locfileid: "80171905"
    | **Su/Giù**    | Consente di spostare il parametro selezionato verso l'alto e verso il basso nell'elenco
    | **Aggiungere**        | Consente di aggiungere un nuovo parametro all'elenco
    | **Rimuovi**     | Consente di rimuovere il parametro selezionato dall'elenco
-   | **Modificare**     | Consente di modificare il parametro selezionato cambiandone il tipo, il nome e indicando se è facoltativo e quale deve essere il relativo valore inserito
-   | **Ripristina**     | Consente di ripristinare lo stato originale del parametro selezionato
+   | **Modifica**     | Consente di modificare il parametro selezionato cambiandone il tipo, il nome e indicando se è facoltativo e quale deve essere il relativo valore inserito
+   | **Ripristinare**     | Consente di ripristinare lo stato originale del parametro selezionato
    | **Revert All** (Ripristina tutto) | Consente di ripristinare lo stato originale di tutti i parametri
 
    > [!TIP]
@@ -53,7 +54,7 @@ ms.locfileid: "80171905"
 
    Qui è possibile effettuare le seguenti operazioni:
 
-   | Voce | Descrizione
+   | Voce | Description
    | ----- | ---
    | **Tipo**               | Tipo del parametro (int, double, float e così via)
    | **Nome**               | Nome del parametro

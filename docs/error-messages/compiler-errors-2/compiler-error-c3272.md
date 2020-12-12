@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3272'
 title: Errore del compilatore C3272
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3272
 ms.assetid: 7cdf254d-f207-4116-a1bf-7386f3b82a6f
-ms.openlocfilehash: 14eefa303a8148b79ca7bc0d1777688ffce176f1
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 1222db43922081efbb8195c29b905d2efc7bbe5d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74753848"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185752"
 ---
 # <a name="compiler-error-c3272"></a>Errore del compilatore C3272
 

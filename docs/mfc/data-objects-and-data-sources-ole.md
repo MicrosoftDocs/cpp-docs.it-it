@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: oggetti dati e origini dati (OLE)'
 title: Oggetti dati e origini dati (OLE)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - OLE [MFC], data objects
 - OLE [MFC], data sources
 ms.assetid: 8f68eed8-0ce8-4489-a4cc-f95554f89090
-ms.openlocfilehash: dfe400dddfecce3e52337f7f449e975dff2ca83e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 719053e2a75b18fbf54440403351198acc66b9d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616215"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97291207"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>Oggetti dati e origini dati (OLE)
 
@@ -29,7 +30,7 @@ Negli articoli seguenti viene illustrato come utilizzare gli oggetti dati e le o
 
 - [Oggetti dati e origini dati: creazione e distruzione](data-objects-and-data-sources-creation-and-destruction.md)
 
-- [Oggetti dati e origini dati: modifica](data-objects-and-data-sources-manipulation.md)
+- [Oggetti dati e origini dati: manipolazione](data-objects-and-data-sources-manipulation.md)
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
@@ -37,7 +38,7 @@ Negli articoli seguenti viene illustrato come utilizzare gli oggetti dati e le o
 
 [Appunti](clipboard.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [OLE](ole-in-mfc.md)<br/>
 [Classe COleDataObject](reference/coledataobject-class.md)<br/>
