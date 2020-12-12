@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: esecuzione come membro del gruppo Users'
 title: Esecuzione come membro del gruppo Users
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - user accounts [C++]
 - administrator (not running as) [C++]
 ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-ms.openlocfilehash: 117ef426950fc9aff5ae41e894f0d7ae898369cd
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 7b3f73dc572a3a132300eb0f246f68030f0b27dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445437"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319993"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>Esecuzione come membro del gruppo Users
 
@@ -48,6 +49,6 @@ Generalmente, queste azioni devono essere limitate ai programmi di installazione
 
 Entrando a far parte del gruppo di debug, è possibile eseguire il debug di qualsiasi applicazione avviata in Visual Studio (nativa e non gestita) come utente non amministratore. In questo modo è possibile eseguire la connessione a un'applicazione in esecuzione tramite il comando Connetti a processo. È necessaria tuttavia l'appartenenza al gruppo Administrators per eseguire il debug di applicazioni native o gestite avviate da un altro utente.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Procedure di sicurezza consigliate](security-best-practices-for-cpp.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: linee guida per sviluppatori C++ per canali laterali di esecuzione speculativa'
 title: Linee guida per sviluppatori C++ per canali laterali di esecuzione speculativa
 ms.date: 07/10/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-ms.openlocfilehash: 72dffd25eef847d1bdffe61c4a18a27d9cb33644
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 41376f02c04a9baf83fec19791d77c169c73fa31
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842455"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97320079"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Linee guida per sviluppatori C++ per canali laterali di esecuzione speculativa
 
@@ -51,11 +52,11 @@ Dal punto di vista dell'architettura, questa sequenza di codice è perfettamente
 
 Mentre la CPU rileverà la stima errata, potrebbero essere presenti effetti collaterali residui nella cache della CPU che rivelano informazioni sul valore byte che è stato letto fuori dai limiti da `buffer` . Questi effetti collaterali possono essere rilevati da un contesto meno privilegiato in esecuzione nel sistema eseguendo il probe della velocità con cui viene eseguito l'accesso a ogni riga della cache `shared_buffer` . Di seguito sono riportati i passaggi che è possibile eseguire per eseguire questa operazione:
 
-1. **Richiama `ReadByte` più volte con `untrusted_index` minore di `buffer_size` **. Il contesto di attacco può causare il richiamo del contesto della vittima, `ReadByte` ad esempio tramite RPC, in modo che il predittore del ramo venga sottoposto a training in modo da non essere eseguito come `untrusted_index` è minore di `buffer_size` .
+1. **Richiama `ReadByte` più volte con `untrusted_index` minore di `buffer_size`**. Il contesto di attacco può causare il richiamo del contesto della vittima, `ReadByte` ad esempio tramite RPC, in modo che il predittore del ramo venga sottoposto a training in modo da non essere eseguito come `untrusted_index` è minore di `buffer_size` .
 
-2. **Svuotare tutte le righe `shared_buffer` della cache in **. Il contesto di attacco deve scaricare tutte le righe della cache nell'area condivisa di memoria a cui fa riferimento `shared_buffer` . Poiché l'area di memoria è condivisa, è semplice e può essere eseguita usando intrinseci come `_mm_clflush` .
+2. **Svuotare tutte le righe `shared_buffer` della cache in**. Il contesto di attacco deve scaricare tutte le righe della cache nell'area condivisa di memoria a cui fa riferimento `shared_buffer` . Poiché l'area di memoria è condivisa, è semplice e può essere eseguita usando intrinseci come `_mm_clflush` .
 
-3. **Invoke `ReadByte` con `untrusted_index` maggiore di `buffer_size` **. Il contesto di attacco fa in modo che il contesto della vittima richiami in `ReadByte` modo che non venga correttamente stimato che il ramo non verrà utilizzato. In questo modo, il processore speculativamente l'esecuzione del corpo del blocco if con `untrusted_index` maggiore di, causando la `buffer_size` lettura di `buffer` . Di conseguenza, `shared_buffer` viene indicizzato usando un valore potenzialmente segreto che è stato letto fuori limite, causando in tal modo la carica della rispettiva riga della cache da parte della CPU.
+3. **Invoke `ReadByte` con `untrusted_index` maggiore di `buffer_size`**. Il contesto di attacco fa in modo che il contesto della vittima richiami in `ReadByte` modo che non venga correttamente stimato che il ramo non verrà utilizzato. In questo modo, il processore speculativamente l'esecuzione del corpo del blocco if con `untrusted_index` maggiore di, causando la `buffer_size` lettura di `buffer` . Di conseguenza, `shared_buffer` viene indicizzato usando un valore potenzialmente segreto che è stato letto fuori limite, causando in tal modo la carica della rispettiva riga della cache da parte della CPU.
 
 4. **Leggere ogni riga della cache in `shared_buffer` per vedere quali sono gli accessi più rapidi**. Il contesto di attacco può leggere ogni riga della cache in `shared_buffer` e rilevare la riga della cache che viene caricata significativamente più velocemente rispetto alle altre. Si tratta della riga della cache che probabilmente è stata introdotta nel passaggio 3. Poiché in questo esempio esiste una relazione 1:1 tra il valore di byte e la riga della cache, questo consente all'autore dell'attacco di dedurre il valore effettivo del byte che è stato letto fuori limite.
 
@@ -67,11 +68,11 @@ Lo sviluppo di software protetti tramite un processo come [Security Development 
 
 La tabella seguente fornisce un riepilogo dei modelli di sicurezza del software in cui gli sviluppatori possono avere la necessità di preoccuparsi di queste vulnerabilità:
 
-|Limite di attendibilità|Descrizione|
+|Limite di attendibilità|Description|
 |----------------|----------------|
 |Limite macchina virtuale|Le applicazioni che isolano i carichi di lavoro in macchine virtuali separate che ricevono dati non attendibili da un'altra macchina virtuale possono essere a rischio.|
 |Limite kernel|Un driver di dispositivo in modalità kernel che riceve dati non attendibili da un processo in modalità utente non amministratore può essere a rischio.|
-|Limite processo|Un'applicazione che riceve dati non attendibili da un altro processo in esecuzione nel sistema locale, ad esempio tramite una chiamata di procedura remota (RPC), una memoria condivisa o altri meccanismi di comunicazione interprocesso (IPC) può essere a rischio.|
+|Limite processo|Un'applicazione che riceve dati non attendibili da un altro processo in esecuzione nel sistema locale, ad esempio tramite una chiamata di procedura remota (RPC), una memoria condivisa o altri meccanismi di comunicazione Inter-Process (IPC) può essere a rischio.|
 |Confine enclave|Un'applicazione che viene eseguita all'interno di un enclave sicuro (ad esempio Intel SGX) che riceve dati non attendibili dall'esterno dell'enclave può essere a rischio.|
 |Confine della lingua|Un'applicazione che interpreta o JIT (just-in-Time) compila ed esegue codice non attendibile scritto in una lingua di livello superiore può essere a rischio.|
 
@@ -302,13 +303,13 @@ void DispatchMessage(unsigned int untrusted_message_id, unsigned char *buffer, u
 
 ## <a name="mitigation-options"></a>Opzioni di mitigazione
 
-Le vulnerabilità del canale laterale per l'esecuzione speculativa possono essere mitigate apportando modifiche al codice sorgente. Queste modifiche possono implicare la mitigazione di istanze specifiche di una vulnerabilità, ad esempio l'aggiunta di una *barriera speculativa*o la modifica della progettazione di un'applicazione per rendere le informazioni riservate inaccessibili all'esecuzione speculativa.
+Le vulnerabilità del canale laterale per l'esecuzione speculativa possono essere mitigate apportando modifiche al codice sorgente. Queste modifiche possono implicare la mitigazione di istanze specifiche di una vulnerabilità, ad esempio l'aggiunta di una *barriera speculativa* o la modifica della progettazione di un'applicazione per rendere le informazioni riservate inaccessibili all'esecuzione speculativa.
 
 ### <a name="speculation-barrier-via-manual-instrumentation"></a>Ostacolo alla speculazione tramite strumentazione manuale
 
 Una *barriera di speculazione* può essere inserita manualmente da uno sviluppatore per evitare che l'esecuzione speculativa prosegue in un percorso non architettonico. Ad esempio, uno sviluppatore può inserire una barriera speculativa prima di un modello di codifica pericoloso nel corpo di un blocco condizionale, all'inizio del blocco (dopo il ramo condizionale) o prima del primo carico di interesse. In questo modo si impedisce a un ramo condizionale di prevedere l'esecuzione del codice pericoloso in un percorso non architettonico serializzando l'esecuzione. La sequenza di barriera speculativa è diversa dall'architettura hardware descritta nella tabella seguente:
 
-|Architecture|Intrinseco della barriera speculativa per CVE-2017-5753|Intrinseco della barriera speculativa per CVE-2018-3639|
+|Architettura|Intrinseco della barriera speculativa per CVE-2017-5753|Intrinseco della barriera speculativa per CVE-2018-3639|
 |----------------|----------------|----------------|
 |x86/x64|_mm_lfence ()|_mm_lfence ()|
 |ARM|Attualmente non disponibile|__dsb (0)|
@@ -356,7 +357,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 Un'altra tecnica che può essere usata per attenuare le vulnerabilità del canale laterale per l'esecuzione speculativa consiste nel rimuovere le informazioni riservate dalla memoria. Gli sviluppatori di software possono cercare le opportunità di effettuare il refactoring dell'applicazione in modo che le informazioni riservate non siano accessibili durante l'esecuzione speculativa. Questa operazione può essere eseguita effettuando il refactoring della progettazione di un'applicazione per isolare le informazioni riservate in processi distinti. Ad esempio, un'applicazione Web browser può tentare di isolare i dati associati a ogni origine Web in processi distinti, impedendo in tal modo a un processo di accedere ai dati tra origini mediante un'esecuzione speculativa.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Linee guida per attenuare le vulnerabilità del canale laterale per l'esecuzione speculativa](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)<br/>
 [Attenuazione di vulnerabilità hardware del canale lato esecuzione speculativa](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

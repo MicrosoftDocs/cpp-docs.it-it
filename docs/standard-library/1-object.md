@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: oggetto _1'
 title: Oggetto _1
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - _1 object
 ms.assetid: 30c3c480-ff31-4708-94be-7d0d65f243c9
-ms.openlocfilehash: 8fdb53ea03031f2bf1634a105275c72263ee20e3
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: dc081cff3fcb64826508dd9d2373b3eab219c82b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620919"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319957"
 ---
 # <a name="_1-object"></a>Oggetto _1
 

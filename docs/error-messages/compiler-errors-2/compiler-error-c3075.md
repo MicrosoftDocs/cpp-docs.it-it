@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3075'
 title: Errore del compilatore C3075
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3075
 ms.assetid: f431daa9-e0fa-48f0-a5c3-f99be96b55e3
-ms.openlocfilehash: 345cdd17b9da0be8f8d6e9f7b5f48624ade412bd
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 68169ade5e9de13b618fe6d90936cbe887690775
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761582"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97320223"
 ---
 # <a name="compiler-error-c3075"></a>Errore del compilatore C3075
 
@@ -19,7 +20,7 @@ ms.locfileid: "74761582"
 
 Un tipo valore non può contenere un'istanza di un tipo riferimento.
 
-Per ulteriori informazioni, vedere [ C++ semantica dello stack per i tipi di riferimento](../../dotnet/cpp-stack-semantics-for-reference-types.md).
+Per ulteriori informazioni, vedere [semantica dello stack C++ per i tipi di riferimento](../../dotnet/cpp-stack-semantics-for-reference-types.md).
 
 ## <a name="example"></a>Esempio
 

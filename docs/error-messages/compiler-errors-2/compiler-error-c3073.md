@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3073'
 title: Errore del compilatore C3073
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3073
 ms.assetid: b24b9b8b-f9fb-4c3c-a1a0-97fad2081bfc
-ms.openlocfilehash: 0b53e704c14746579a32550726364c062a9ade6f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: e26938d6c708c364bb2447b793abf7d51adb5779
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756747"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97320247"
 ---
 # <a name="compiler-error-c3073"></a>Errore del compilatore C3073
 
@@ -19,7 +20,7 @@ ms.locfileid: "74756747"
 
 In una compilazione [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) , il compilatore non genererà un costruttore di copia per un tipo di riferimento. In qualsiasi compilazione **/CLR** è necessario definire un costruttore di copia personalizzato per un tipo riferimento se si prevede che un'istanza del tipo venga copiata.
 
-Per ulteriori informazioni, vedere [ C++ semantica dello stack per i tipi di riferimento](../../dotnet/cpp-stack-semantics-for-reference-types.md).
+Per ulteriori informazioni, vedere [semantica dello stack C++ per i tipi di riferimento](../../dotnet/cpp-stack-semantics-for-reference-types.md).
 
 ## <a name="example"></a>Esempio
 
