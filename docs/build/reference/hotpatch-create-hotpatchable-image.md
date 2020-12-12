@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/hotpatch (Crea immagine Hotpatchable)
 title: /hotpatch (Crea immagine con funzionalità di patch a caldo)
 ms.date: 11/12/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - /hotpatch compiler option [C++]
 - hotpatching
 ms.assetid: aad539b6-c053-4c78-8682-853d98327798
-ms.openlocfilehash: 8830b26b8fdfc3db2aa5fe31a52e6226fd554946
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2fc5fe629afcb1e721943b852c6f92351900ab7e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291652"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199870"
 ---
 # <a name="hotpatch-create-hotpatchable-image"></a>/hotpatch (Crea immagine con funzionalità di patch a caldo)
 
@@ -27,29 +28,29 @@ Prepara un'immagine per l'applicazione di una patch a caldo.
 /hotpatch
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Quando **/hotpatch** viene usato in una compilazione, il compilatore assicura che la prima istruzione di ogni funzione sia almeno di due byte, che è necessario per l'applicazione di patch a caldo.
+Quando **/hotpatch** viene usato in una compilazione, il compilatore garantisce che la prima istruzione di ogni funzione sia almeno di due byte, necessaria per l'applicazione di patch a caldo.
 
-Per completare la preparazione di una patch a caldo un'immagine, dopo aver usato **/hotpatch** per compilare, è necessario usare [/FUNCTIONPADMIN (Crea immagine con patch a caldo)](functionpadmin-create-hotpatchable-image.md) da collegare. Quando si compila e si collega un'immagine con una singola chiamata di, cl.exe **/hotpatch** implica **/functionpadmin**.
+Per completare la preparazione per la creazione di un'immagine Hotpatchable, dopo aver usato **/hotpatch** per la compilazione, è necessario usare [/FUNCTIONPADMIN (Create Hotpatchable Image)](functionpadmin-create-hotpatchable-image.md) per il collegamento. Quando si compila e si collega un'immagine usando una chiamata di cl.exe, **/hotpatch** implica **/FUNCTIONPADMIN**.
 
-Poiché le istruzioni sono sempre due byte o più grandi nell'architettura ARM e poiché x64 la compilazione viene sempre considerata come se **/hotpatch** è stata specificata, non è necessario specificare **/hotpatch** quando si esegue la compilazione di queste destinazioni; Tuttavia, è comunque necessario collegare tramite **/functionpadmin** per creare le immagini con patch a caldo per loro. Il **/hotpatch** la compilazione del compilatore opzione solo influisce su x86.
+Poiché le istruzioni sono sempre di due byte o maggiori nell'architettura ARM e perché la compilazione x64 viene sempre considerata come se fosse stato specificato **/hotpatch** , non è necessario specificare **/hotpatch** quando si esegue la compilazione per queste destinazioni. Tuttavia, è comunque necessario eseguire il collegamento usando **/FUNCTIONPADMIN** per creare immagini Hotpatchable. L'opzione del compilatore **/hotpatch** ha effetto solo sulla compilazione x86.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare il **C/C++** cartella.
+1. Selezionare la cartella **C/C++** .
 
-1. Selezionare il **riga di comando** pagina delle proprietà.
+1. Selezionare la pagina delle proprietà **riga di comando** .
 
-1. Aggiungere l'opzione del compilatore per il **opzioni aggiuntive** casella.
+1. Aggiungere l'opzione del compilatore alla casella **Opzioni aggiuntive** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

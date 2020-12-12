@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/IGNOREIDL (Don&#39;t elabora gli attributi in MIDL)
 title: /IGNOREIDL (Don&#39;t elabora gli attributi in MIDL)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -IGNOREIDL linker option
 - /IGNOREIDL linker option
 ms.assetid: 29514098-6a1c-4317-af2f-1dc268972780
-ms.openlocfilehash: eac6209e0c34562254117d6ab9db5f47545037ea
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: c68b3ec2f9bd5607ef523667bcddc68b22d3c34c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506886"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199818"
 ---
 # <a name="ignoreidl-don39t-process-attributes-into-midl"></a>/IGNOREIDL (Don&#39;t elabora gli attributi in MIDL)
 
@@ -22,7 +23,7 @@ ms.locfileid: "91506886"
 /IGNOREIDL
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'opzione/IGNOREIDL specifica che [gli eventuali attributi IDL](../../windows/attributes/idl-attributes.md) presenti nel codice sorgente non devono essere elaborati in un file con estensione IDL.
 
@@ -40,7 +41,7 @@ L'opzione/IGNOREIDL specifica che [gli eventuali attributi IDL](../../windows/at
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreEmbeddedIDL%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Informazioni di riferimento sul linker MSVC](linking.md)<br/>
 [Opzioni del linker MSVC](linker-options.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: Scopri di più su:/GR (Abilita informazioni sul tipo di Run-Time)
 title: /GR (Attiva informazioni sui tipi in fase di esecuzione)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - /Gr compiler option [C++]
 - enable run-time type information compiler option [C++]
 ms.assetid: d1f9f850-dcec-49fd-96ef-e72d01148906
-ms.openlocfilehash: 974a2b38c793b21abc9f17f5b7ca5c9f5e3305f5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 61b1a595999e5e00bf6b28c75be2de03467cc4ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215231"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200163"
 ---
 # <a name="gr-enable-run-time-type-information"></a>/GR (Attiva informazioni sui tipi in fase di esecuzione)
 
@@ -44,13 +45,13 @@ Per ulteriori informazioni sul controllo dei tipi in fase di esecuzione, vedere 
 
 1. Fare clic sulla pagina delle proprietà **lingua** .
 
-1. Modificare la proprietà **Abilita informazioni sul tipo in fase di esecuzione** .
+1. Modificare la proprietà **Abilita informazioni sul tipo di Run-Time** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.RuntimeTypeInfo%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

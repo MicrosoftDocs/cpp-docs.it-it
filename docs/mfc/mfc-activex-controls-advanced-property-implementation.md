@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: controlli ActiveX MFC: implementazione di proprietà avanzate'
 title: 'Controlli ActiveX MFC: implementazione di proprietà avanzate'
 ms.date: 09/12/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-ms.openlocfilehash: 017959c5809d324af6ab13247fd093a6df280dab
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3cdd4353348d4c233b71dd25d2950adaac2ef06f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502201"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202834"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>Controlli ActiveX MFC: implementazione di proprietà avanzate
 
@@ -24,7 +25,7 @@ Questo articolo descrive gli argomenti relativi all'implementazione di propriet�
 
 - [Restituzione di codici di errore da una proprietà](#_core_returning_error_codes_from_a_property)
 
-## <a name="read-only-and-write-only-properties"></a><a name="_core_read2donly_and_write2donly_properties"></a> Proprietà di sola lettura e di sola scrittura
+## <a name="read-only-and-write-only-properties"></a><a name="_core_read2donly_and_write2donly_properties"></a> Proprietà Read-Only e Write-Only
 
 L'aggiunta guidata proprietà fornisce un metodo semplice e rapido per implementare le proprietà di sola lettura o di sola scrittura per il controllo.
 
@@ -71,7 +72,7 @@ Sono disponibili funzioni di supporto per i SCODE predefiniti più comuni, ad es
 
 Per ulteriori informazioni sulla creazione di report sulle eccezioni in altre aree del codice, vedere [COleControl:: FireError (](reference/colecontrol-class.md#fireerror) e la sezione [gestione degli errori nel controllo ActiveX](mfc-activex-controls-advanced-topics.md) nell'articolo controlli ActiveX: argomenti avanzati.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli ActiveX MFC](mfc-activex-controls.md)<br/>
 [Controlli ActiveX MFC: Proprietà](mfc-activex-controls-properties.md)<br/>

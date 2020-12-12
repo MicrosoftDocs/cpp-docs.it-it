@@ -1,5 +1,6 @@
 ---
-title: '&lt;includere > (C++ commenti per la documentazione)'
+description: 'Altre informazioni su: &lt; Includi&gt;'
+title: '&lt;Includi> (commenti sulla documentazione C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - <include>
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - include C++ XML tag
 - <include> C++ XML tag
 ms.assetid: 392a3e61-0371-4617-8362-446650876ce3
-ms.openlocfilehash: e1d6a26f28069cfb4a1c74bd591d63bc89352774
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 577281b293fcca9b9b0b9491dd239240d435f32c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439515"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199779"
 ---
 # <a name="ltincludegt"></a>&lt;include&gt;
 
-Il tag \<include> consente di fare riferimento ai commenti di un altro file per la descrizione dei tipi e dei membri del codice sorgente, eliminando la necessità di inserire i commenti relativi alla documentazione direttamente nel file del codice sorgente.  Ad esempio, è possibile usare \<include> per inserire commenti "boilerplate" standard che vengono usati in tutto il team o la società.
+Il \<include> tag consente di fare riferimento ai commenti in un altro file che descrive i tipi e i membri nel codice sorgente. eliminando la necessità di inserire i commenti relativi alla documentazione direttamente nel file del codice sorgente.  Ad esempio, è possibile usare \<include> per inserire commenti "standard" standard che vengono usati in tutto il team o la società.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -38,15 +39,15 @@ Identificatore del nome contenuto nel tag che precede i commenti. `name` ha semp
 *id*<br/>
 ID del tag che precede i commenti.  Racchiudere il nome tra virgolette singole o doppie.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Il tag \<include> usa la sintassi XML XPath. Per informazioni sulla personalizzazione dell'uso di \<include>, vedere la documentazione relativa a XPath.
+Il \<include> tag utilizza la sintassi XPath XML. Per informazioni su come personalizzare l'utilizzo di, vedere la documentazione di XPath \<include> .
 
 Compilare con [/doc](doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.
 
 ## <a name="example"></a>Esempio
 
-In questo esempio vengono presi in considerazione più file. Il primo file, che usa \<include>, contiene i commenti alla documentazione seguenti:
+In questo esempio vengono presi in considerazione più file. Il primo file, che utilizza \<include> , contiene i seguenti commenti alla documentazione:
 
 ```cpp
 // xml_include_tag.cpp
@@ -109,6 +110,6 @@ The summary for this other type.
 </doc>
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Documentazione di XML](xml-documentation-visual-cpp.md)
+[Documentazione XML](xml-documentation-visual-cpp.md)

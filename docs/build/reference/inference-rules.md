@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: regole di inferenza'
 title: Regole di inferenza
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - rules, inference
 - NMAKE program, inference rules
 ms.assetid: caff320f-fb07-4eea-80c3-a6a2133a8492
-ms.openlocfilehash: d3d7ca41d96d3845237b445edefff05044dacdc2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fc063f71ff88442ce6f7fc02c5b22f015ce0010c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170514"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199753"
 ---
 # <a name="inference-rules"></a>Regole di inferenza
 
@@ -25,12 +26,12 @@ Se una dipendenza non aggiornata non dispone di comandi e se [. I SUFFISSi](dot-
 
 [Regole in modalità batch](batch-mode-rules.md)
 
-[Regole predefinite](predefined-rules.md)
+[Regole già definite](predefined-rules.md)
 
 [Dipendenti dedotti e regole](inferred-dependents-and-rules.md)
 
 [Precedenza nelle regole di inferenza](precedence-in-inference-rules.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimenti a NMAKE](nmake-reference.md)
+[Riferimento a NMAKE](nmake-reference.md)

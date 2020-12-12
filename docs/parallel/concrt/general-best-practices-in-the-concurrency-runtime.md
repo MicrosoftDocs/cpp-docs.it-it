@@ -1,21 +1,22 @@
 ---
+description: 'Ulteriori informazioni su: procedure consigliate generali nel runtime di concorrenza'
 title: Procedure consigliate generali nel runtime di concorrenza
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-ms.openlocfilehash: 77ca8acbd3dedc28aaa6c330c3e91ed09046d162
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a0de8d9a0070bfc0691aeb9484c755cbfcbb40b1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228453"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197426"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>Procedure consigliate generali nel runtime di concorrenza
 
 Questo documento descrive le procedure consigliate che si applicano a più aree del runtime di concorrenza.
 
-## <a name="sections"></a><a name="top"></a>Sezioni
+## <a name="sections"></a><a name="top"></a> Sezioni
 
 Questo documento contiene le seguenti sezioni:
 
@@ -33,13 +34,13 @@ Questo documento contiene le seguenti sezioni:
 
 - [Non usare oggetti di concorrenza nei segmenti di dati condivisi](#shared-data)
 
-## <a name="use-cooperative-synchronization-constructs-when-possible"></a><a name="synchronization"></a>Usare costrutti di sincronizzazione cooperativa quando possibile
+## <a name="use-cooperative-synchronization-constructs-when-possible"></a><a name="synchronization"></a> Usare costrutti di sincronizzazione cooperativa quando possibile
 
 Il runtime di concorrenza fornisce molti costrutti indipendenti dalla concorrenza che non richiedono un oggetto di sincronizzazione esterno. La classe [Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) , ad esempio, fornisce operazioni di Accodamento e accesso agli elementi indipendenti dalla concorrenza. In tal caso, i puntatori o gli iteratori sono sempre validi. Non si tratta di una garanzia di inizializzazione di elementi o di un ordine di attraversamento specifico. Tuttavia, per i casi in cui è necessario l'accesso esclusivo a una risorsa, il runtime fornisce le classi Concurrency [:: critical_section](../../parallel/concrt/reference/critical-section-class.md), [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)e [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) . Questi tipi si comportano in modo cooperativo; l'utilità di pianificazione può pertanto riallocare le risorse di elaborazione a un altro contesto, perché la prima attività resta in attesa di dati. Quando possibile, usare questi tipi di sincronizzazione invece di altri meccanismi di sincronizzazione, ad esempio quelli forniti dall'API Windows, che non si comportano in modo cooperativo. Per ulteriori informazioni su questi tipi di sincronizzazione e un esempio di codice, vedere la pagina relativa alle [strutture di dati di sincronizzazione](../../parallel/concrt/synchronization-data-structures.md) e [confronto tra le strutture di dati di sincronizzazione e l'API Windows](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)
 
 [All'[inizio](#top)]
 
-## <a name="avoid-lengthy-tasks-that-do-not-yield"></a><a name="yield"></a>Evitare le attività di lunga durata che non producono
+## <a name="avoid-lengthy-tasks-that-do-not-yield"></a><a name="yield"></a> Evitare le attività di lunga durata che non producono
 
 Poiché l'utilità di pianificazione si comporta in modo cooperativo, non fornisce l'equità tra le attività. Pertanto, un'attività può impedire l'avvio di altre attività. Sebbene questo sia accettabile in alcuni casi, in altri casi ciò può causare un deadlock o una mancanza di risorse.
 
@@ -74,7 +75,7 @@ Esistono altri modi per abilitare la collaborazione tra le attività a esecuzion
 
 [All'[inizio](#top)]
 
-## <a name="use-oversubscription-to-offset-operations-that-block-or-have-high-latency"></a><a name="oversubscription"></a>Usare l'oversubscription per eseguire l'offset di operazioni che bloccano o hanno latenza elevata
+## <a name="use-oversubscription-to-offset-operations-that-block-or-have-high-latency"></a><a name="oversubscription"></a> Usare l'oversubscription per eseguire l'offset di operazioni che bloccano o hanno latenza elevata
 
 Il runtime di concorrenza fornisce le primitive di sincronizzazione, ad esempio [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md), che consentono alle attività di bloccarsi e cedere in modo cooperativo. Quando un'attività si blocca o cede in modo cooperativo, l'utilità di pianificazione può riallocare le risorse di elaborazione a un altro contesto, perché la prima attività resta in attesa di dati.
 
@@ -88,7 +89,7 @@ Poiché la `GetHttpFile` funzione esegue un'operazione potenzialmente latente, l
 
 [All'[inizio](#top)]
 
-## <a name="use-concurrent-memory-management-functions-when-possible"></a><a name="memory"></a>Usare le funzioni di gestione della memoria simultanee quando possibile
+## <a name="use-concurrent-memory-management-functions-when-possible"></a><a name="memory"></a> Usare le funzioni di gestione della memoria simultanee quando possibile
 
 Utilizzare le funzioni di gestione della memoria, [Concurrency:: Alloc](reference/concurrency-namespace-functions.md#alloc) e [Concurrency:: Free](reference/concurrency-namespace-functions.md#free), quando si dispone di attività con granularità fine che allocano spesso oggetti piccoli che hanno una durata relativamente breve. Il runtime di concorrenza include una cache di memoria separata per ogni thread in esecuzione. Le `Alloc` `Free` funzioni e allocano e liberano memoria da queste cache senza usare blocchi o barriere di memoria.
 
@@ -96,7 +97,7 @@ Per ulteriori informazioni su queste funzioni di gestione della memoria, vedere 
 
 [All'[inizio](#top)]
 
-## <a name="use-raii-to-manage-the-lifetime-of-concurrency-objects"></a><a name="raii"></a>Usare RAII per gestire la durata degli oggetti di concorrenza
+## <a name="use-raii-to-manage-the-lifetime-of-concurrency-objects"></a><a name="raii"></a> Usare RAII per gestire la durata degli oggetti di concorrenza
 
 Il runtime di concorrenza utilizza la gestione delle eccezioni per implementare funzionalità come l'annullamento. Pertanto, scrivere codice indipendente dalle eccezioni quando si effettua una chiamata al runtime o si chiama un'altra libreria che chiama nel Runtime.
 
@@ -124,11 +125,11 @@ Error details:
     negative balance: -76
 ```
 
-Per altri esempi in cui si usa il modello RAII per gestire la durata degli oggetti di concorrenza, vedere [procedura dettagliata: rimozione di lavoro da un thread dell'interfaccia utente](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md), [procedura: usare la classe Context per implementare un semaforo cooperativo](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)e [procedura: usare l'oversubscription per compensare la latenza](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Per altri esempi in cui si usa il modello RAII per gestire la durata degli oggetti di concorrenza, vedere [procedura dettagliata: rimozione di lavoro da un thread di User-Interface](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md), [procedura: usare la classe Context per implementare un semaforo cooperativo](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)e [procedura: usare l'oversubscription per compensare la latenza](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
 [All'[inizio](#top)]
 
-## <a name="do-not-create-concurrency-objects-at-global-scope"></a><a name="global-scope"></a>Non creare oggetti di concorrenza in ambito globale
+## <a name="do-not-create-concurrency-objects-at-global-scope"></a><a name="global-scope"></a> Non creare oggetti di concorrenza in ambito globale
 
 Quando si crea un oggetto di concorrenza in ambito globale, nell'applicazione si possono verificare problemi come il deadlock o violazioni di accesso alla memoria.
 
@@ -142,13 +143,13 @@ Per esempi del modo corretto per creare `Scheduler` oggetti, vedere [utilità di
 
 [All'[inizio](#top)]
 
-## <a name="do-not-use-concurrency-objects-in-shared-data-segments"></a><a name="shared-data"></a>Non usare oggetti di concorrenza nei segmenti di dati condivisi
+## <a name="do-not-use-concurrency-objects-in-shared-data-segments"></a><a name="shared-data"></a> Non usare oggetti di concorrenza nei segmenti di dati condivisi
 
 Il runtime di concorrenza non supporta l'utilizzo di oggetti di concorrenza in una sezione di dati condivisa, ad esempio una sezione di dati creata dalla direttiva [data_seg](../../preprocessor/data-seg.md) `#pragma` . Un oggetto di concorrenza condiviso tra i limiti del processo potrebbe impostare il runtime in uno stato incoerente o non valido.
 
 [All'[inizio](#top)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Procedure consigliate runtime di concorrenza](../../parallel/concrt/concurrency-runtime-best-practices.md)<br/>
 [PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
@@ -159,6 +160,6 @@ Il runtime di concorrenza non supporta l'utilizzo di oggetti di concorrenza in u
 [Procedura: usare Alloc e Free per migliorare le prestazioni di memoria](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)<br/>
 [Procedura: usare l'oversubscription per compensare la latenza](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)<br/>
 [Procedura: usare la classe Context per implementare un semaforo cooperativo](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
-[Procedura dettagliata: rimozione di lavoro da un thread dell'interfaccia utente](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)<br/>
+[Procedura dettagliata: rimozione di lavoro da un thread di User-Interface](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)<br/>
 [Procedure consigliate nella libreria di modelli paralleli](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br/>
 [Procedure consigliate nella libreria di agenti asincroni](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)

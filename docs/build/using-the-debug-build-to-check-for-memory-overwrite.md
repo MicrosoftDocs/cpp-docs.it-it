@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: uso della build di debug per verificare la sovrascrittura della memoria'
 title: Utilizzo della compilazione di debug per il controllo della sovrascrittura di memoria
 ms.date: 11/04/2016
 helpviewer_keywords:
 - memory, overwrites
 ms.assetid: 1345eb4d-24ba-4595-b1cc-2da66986311e
-ms.openlocfilehash: 152f72749d2ebdacd46dd3e4db671bc5705d4b6a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 03981696a0314632aebb959d6fa1d986145c087c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213749"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199064"
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>Utilizzo della compilazione di debug per il controllo della sovrascrittura di memoria
 
@@ -39,6 +40,6 @@ Se la prima ASSERZIONe ha esito positivo e la seconda ha esito negativo, signifi
 
 A seconda della natura dell'applicazione, è possibile che `afxMemDF` il programma venga eseguito troppo lentamente per eseguire il test. La `afxMemDF` variabile causa la `AfxCheckMemory` chiamata a ogni chiamata a New ed Delete. In tal caso, è necessario disperdere le proprie chiamate a `AfxCheckMemory` () come illustrato in precedenza e provare a isolare la sovrascrittura della memoria in questo modo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Correzione dei problemi di compilazione della versione](fixing-release-build-problems.md)

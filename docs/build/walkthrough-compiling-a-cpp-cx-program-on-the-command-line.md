@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: procedura dettagliata: compilazione di un programma C++/CX dalla riga di comando'
 title: 'Procedura dettagliata: Compilazione di un programma in C++/CX dalla riga di comando'
 ms.date: 04/23/2019
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: 8dcd27ca8fff826f33ee8bd752cd32f2d44d3691
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 10bee181f347864fdef1703f88ca002a6c7c40b9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836712"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198947"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Procedura dettagliata: Compilazione di un programma in C++/CX dalla riga di comando
 
@@ -56,7 +57,7 @@ Per abilitare la compilazione per C++/CX, è necessario usare l'opzione del comp
 
 1. Al prompt dei comandi, immettere **cl/EHsc/ZW basiccx. cpp/link/Subsystem: console**. Il compilatore cl.exe compilerà il codice sorgente in un file .obj, quindi eseguirà il linker per generare un programma eseguibile denominato basiccx.exe. L'opzione del compilatore [/EHsc](reference/eh-exception-handling-model.md) specifica il modello di gestione delle eccezioni C++ e il flag [/link](reference/link-pass-options-to-linker.md) specifica un'applicazione console.
 
-1. Per eseguire il programma basiccx.exe, digitare **basiccx**al prompt dei comandi.
+1. Per eseguire il programma basiccx.exe, digitare **basiccx** al prompt dei comandi.
 
    Il programma viene avviato e chiuso dopo aver visualizzato il testo seguente:
 
@@ -64,7 +65,7 @@ Per abilitare la compilazione per C++/CX, è necessario usare l'opzione del comp
     This is a C++/CX program.
     ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Progetti e sistemi di compilazione](projects-and-build-systems-cpp.md)<br/>
 [Opzioni del compilatore MSVC](reference/compiler-options.md)

@@ -1,28 +1,29 @@
 ---
-title: "Procedura: Set di LIB. Exe nell'ambiente di sviluppo di Visual Studio"
+description: "Altre informazioni su: procedura: impostare le opzioni di LIB.EXE nell'ambiente di sviluppo di Visual Studio"
+title: "Procedura: impostare le opzioni di LIB.EXE nell'ambiente di sviluppo di Visual Studio"
 ms.date: 11/04/2016
 helpviewer_keywords:
 - lib.exe options, setting in the Visual Studio Development Environment
 ms.assetid: b00da2bb-19e2-4078-a912-0d2e9294d7a7
-ms.openlocfilehash: 24f4d0c783f90f93466633d7d02ec46746d939f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04ec371f0ae2aa07bc414e2ef46db7b500744823
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291483"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199857"
 ---
-# <a name="how-to-set-libexe-options-in-the-visual-studio-development-environment"></a>Procedura: Set di LIB. Exe nell'ambiente di sviluppo di Visual Studio
+# <a name="how-to-set-libexe-options-in-the-visual-studio-development-environment"></a>Procedura: impostare le opzioni di LIB.EXE nell'ambiente di sviluppo di Visual Studio
 
-### <a name="to-set-libexe-options-in-the-visual-studio-development-environment"></a>Per impostare LIB. Opzioni file EXE nell'ambiente di sviluppo Visual Studio
+### <a name="to-set-libexe-options-in-the-visual-studio-development-environment"></a>Per impostare le opzioni di LIB.EXE nell'ambiente di sviluppo di Visual Studio
 
-1. Accedere al progetto [pagina delle proprietà](../working-with-project-properties.md) nella finestra di dialogo.
+1. Accedere alla finestra di dialogo della [pagina delle proprietà](../working-with-project-properties.md) del progetto.
 
-1. Con un progetto libreria statica è attivo, selezionare la **bibliotecario** nodo.
+1. Con un progetto di libreria statica attivo, selezionare il nodo Gestione **librerie** .
 
-1. Seleziona pagina delle proprietà generale o Input/Output.
+1. Selezionare la pagina delle proprietà generale o input/output.
 
 1. Modificare le proprietà in base alle esigenze.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimento a LIB](lib-reference.md)
+[Guida di riferimento a LIB](lib-reference.md)

@@ -1,16 +1,17 @@
 ---
+description: "Altre informazioni su: procedura: gestire un'istanza dell'utilità di pianificazione"
 title: "Procedura: Gestire un'istanza dell'utilità di pianificazione"
 ms.date: 11/04/2016
 helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-ms.openlocfilehash: c7ec321eaf0960dc14b61bbd8fdc76b53a31f8c5
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 53d3e1af2a7d0dd434882e0a7ce9e5a36516834c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141719"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197400"
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>Procedura: Gestire un'istanza dell'utilità di pianificazione
 
@@ -24,7 +25,7 @@ Negli esempi vengono create le utilità di pianificazione che utilizzano i crite
 
 1. Chiamare il metodo [Concurrency:: CurrentScheduler:: create](reference/currentscheduler-class.md#create) o il metodo [Concurrency:: Scheduler:: create](reference/scheduler-class.md#create) per creare un'istanza dell'utilità di pianificazione.
 
-   Se si usa il metodo `Scheduler::Create`, chiamare il metodo [Concurrency:: Scheduler:: Connetti](reference/scheduler-class.md#attach) quando è necessario associare l'utilità di pianificazione al contesto corrente.
+   Se si usa il `Scheduler::Create` metodo, chiamare il metodo [Concurrency:: Scheduler:: Connetti](reference/scheduler-class.md#attach) quando è necessario associare l'utilità di pianificazione al contesto corrente.
 
 1. Chiamare la funzione [CreateEvent](/windows/win32/api/synchapi/nf-synchapi-createeventw) per creare un handle per un oggetto evento di reimpostazione automatica non segnalato.
 
@@ -34,7 +35,7 @@ Negli esempi vengono create le utilità di pianificazione che utilizzano i crite
 
 1. Chiamare il metodo [Concurrency:: CurrentScheduler::D etach](reference/currentscheduler-class.md#detach) per scollegare l'utilità di pianificazione corrente e ripristinare l'utilità di pianificazione precedente come quella corrente.
 
-   Se si usa il metodo `Scheduler::Create`, chiamare il metodo [Concurrency:: Scheduler:: Release](reference/scheduler-class.md#release) per decrementare il conteggio dei riferimenti dell'oggetto `Scheduler`.
+   Se si usa il `Scheduler::Create` metodo, chiamare il metodo [Concurrency:: Scheduler:: Release](reference/scheduler-class.md#release) per decrementare il conteggio dei riferimenti dell' `Scheduler` oggetto.
 
 1. Passare l'handle all'evento alla funzione [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) per attendere l'arresto dell'utilità di pianificazione.
 
@@ -44,7 +45,7 @@ Negli esempi vengono create le utilità di pianificazione che utilizzano i crite
 
 Nel codice seguente vengono illustrati due modi per gestire un'istanza dell'utilità di pianificazione. Ogni esempio USA innanzitutto l'utilità di pianificazione predefinita per eseguire un'attività che stampa l'identificatore univoco dell'utilità di pianificazione corrente. In ogni esempio viene quindi utilizzata un'istanza dell'utilità di pianificazione per eseguire nuovamente la stessa attività. Infine, in ogni esempio viene ripristinata l'utilità di pianificazione predefinita come quella corrente ed eseguita una volta l'attività.
 
-Nel primo esempio viene utilizzata la classe [Concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) per creare un'istanza dell'utilità di pianificazione e associarla al contesto corrente. Nel secondo esempio viene utilizzata la classe [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) per eseguire la stessa attività. In genere, la classe `CurrentScheduler` viene utilizzata per lavorare con l'utilità di pianificazione corrente. Il secondo esempio, che usa la classe `Scheduler`, è utile quando si vuole controllare quando l'utilità di pianificazione è associata al contesto corrente o quando si vuole associare utilità di pianificazione specifiche a attività specifiche.
+Nel primo esempio viene utilizzata la classe [Concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) per creare un'istanza dell'utilità di pianificazione e associarla al contesto corrente. Nel secondo esempio viene utilizzata la classe [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) per eseguire la stessa attività. In genere, la `CurrentScheduler` classe viene utilizzata per lavorare con l'utilità di pianificazione corrente. Il secondo esempio, che usa la `Scheduler` classe, è utile quando si vuole controllare quando l'utilità di pianificazione è associata al contesto corrente o quando si vuole associare utilità di pianificazione specifiche a attività specifiche.
 
 [!code-cpp[concrt-scheduler-instance#1](../../parallel/concrt/codesnippet/cpp/how-to-manage-a-scheduler-instance_1.cpp)]
 
@@ -71,11 +72,11 @@ Current scheduler id: 0
 
 ## <a name="compiling-the-code"></a>Compilazione del codice
 
-Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `scheduler-instance.cpp`, quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.
+Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato, `scheduler-instance.cpp` quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.
 
-> **CL. exe/EHsc scheduler-instance. cpp**
+> **cl.exe/EHsc scheduler-instance. cpp**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Istanze dell'utilità di pianificazione](../../parallel/concrt/scheduler-instances.md)<br/>
-[Procedura: Definire criteri dell'utilità di pianificazione specifici](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)
+[Procedura: specificare criteri dell'utilità di pianificazione specifici](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: pagine delle proprietà del compilatore HLSL'
 title: Pagine delle proprietà HLSL
 ms.date: 07/24/2019
 ms.assetid: 0c65f5ec-a2a5-4f5b-8d4c-fa57113a5a1d
@@ -23,12 +24,12 @@ f1_keywords:
 - VC.Project.FXCompilerTool.AssemblerOutputFile
 - VC.Project.FXCompilerTool.CompileD2DCustomEffect
 - VC.Project.FXCompilerTool.MultiProcFXC
-ms.openlocfilehash: 629a242d3698c9c3c2d3c697298b5c6625e4768f
-ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
+ms.openlocfilehash: 3a374c36d87429fac9d9aee8dda2d1035da247c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344683"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199962"
 ---
 # <a name="hlsl-compiler-property-pages"></a>Pagine delle proprietà del compilatore HLSL
 
@@ -56,7 +57,7 @@ L'argomento della riga di comando **/Od** per il compilatore HLSL applica in mod
 
 ### <a name="shader-type"></a>Tipo shader
 
-Specifica il tipo di shader. Tipi diversi di shader implementano parti diverse della pipeline grafica. Alcuni tipi di shader (specificati dalla proprietà **Modello di shader** ) sono disponibili solo in modelli di shader più recenti, come ad esempio i compute shader, che sono stati introdotti nel modello di shader 5.
+Specifica il tipo di shader. Tipi diversi di shader implementano parti diverse della pipeline grafica. Alcuni tipi di shader (specificati dalla proprietà **Modello di shader**) sono disponibili solo in modelli di shader più recenti, come ad esempio i compute shader, che sono stati introdotti nel modello di shader 5.
 
 Questa proprietà corrisponde alla parte del **\[ tipo]** dell'argomento della riga di comando **/t \[ Type] _ \[ Model]** al compilatore HLSL. La proprietà **Modello di shader** specifica la parte dell'argomento **[model]**.
 
@@ -74,7 +75,7 @@ Questa proprietà corrisponde alla parte del **\[ tipo]** dell'argomento della r
 
 ### <a name="shader-model"></a>Modello di shader
 
-Specifica il modello di shader. I diversi modelli di shader hanno funzionalità diverse. In generale, i modelli di shader più recenti offrono funzionalità avanzate, ma richiedono componenti hardware grafici più moderni per eseguire il codice dello shader. Alcuni tipi di shader (specificati dalla proprietà **Tipo di shader** ) sono disponibili solo in modelli di shader più recenti come ad esempio i compute shader, che sono stati introdotti nel modello di shader 5.
+Specifica il modello di shader. I diversi modelli di shader hanno funzionalità diverse. In generale, i modelli di shader più recenti offrono funzionalità avanzate, ma richiedono componenti hardware grafici più moderni per eseguire il codice dello shader. Alcuni tipi di shader (specificati dalla proprietà **Tipo di shader**) sono disponibili solo in modelli di shader più recenti come ad esempio i compute shader, che sono stati introdotti nel modello di shader 5.
 
 Questa proprietà corrisponde alla parte del **\[ modello]** dell'argomento della riga di comando **/t \[ Type] _ \[ Model]** al compilatore HLSL. La proprietà **Tipo di shader** specifica la parte dell'argomento **[type]**.
 
@@ -142,7 +143,7 @@ Specifica il contenuto del file di output in linguaggio assembly. (/FC,/FX)
 
 Specifica il nome file per il file listato di codice assembly
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento alla pagina delle proprietà del progetto C++](property-pages-visual-cpp.md)<br>
 [Pagine delle proprietà della riga di comando](command-line-property-pages.md)<br>

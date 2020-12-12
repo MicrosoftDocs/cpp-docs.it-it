@@ -1,16 +1,17 @@
 ---
+description: "Altre informazioni su: procedura: specificare criteri dell'utilità di pianificazione specifici"
 title: "Procedura: specificare criteri dell'utilità di pianificazione specifici"
 ms.date: 11/04/2016
 helpviewer_keywords:
 - specifying scheduler policies [Concurrency Runtime]
 - scheduler policies, specifying [Concurrency Runtime]
 ms.assetid: 9c5149f9-ac34-4ff3-9e79-0bad103e4e6b
-ms.openlocfilehash: bd5edfbdf6b0fda9c7e327dab9538bbf6b5e4b12
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: c4aeeea04d69613ef3eb80f36863b16530e18e37
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142445"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197257"
 ---
 # <a name="how-to-specify-specific-scheduler-policies"></a>Procedura: specificare criteri dell'utilità di pianificazione specifici
 
@@ -45,12 +46,12 @@ Sebbene entrambi i set di attività producano lo stesso risultato, la versione c
 
 ## <a name="compiling-the-code"></a>Compilazione del codice
 
-Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `scheduler-policy.cpp`, quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.
+Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato, `scheduler-policy.cpp` quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.
 
-> **CL. exe/EHsc Scheduler-Policy. cpp**
+> **cl.exe/EHsc Scheduler-Policy. cpp**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Criteri dell'utilità di pianificazione](../../parallel/concrt/scheduler-policies.md)<br/>
-[Procedura: Gestire un'istanza dell'utilità di pianificazione](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
-[Procedura: Creare agenti che usano criteri dell'utilità di pianificazione specifici](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
+[Procedura: gestire un'istanza dell'utilità di pianificazione](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
+[Procedura: creare agenti che usano criteri dell'utilità di pianificazione specifici](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)

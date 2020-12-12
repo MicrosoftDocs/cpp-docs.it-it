@@ -1,4 +1,5 @@
 ---
+description: Ulteriori informazioni su:/DRIVER (driver in modalità kernel di Windows NT)
 title: /DRIVER (Driver in modalità kernel di Windows NT)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - DRIVER linker option
 - /DRIVER linker option
 ms.assetid: aeee8e28-5d97-40f5-ba16-9f370fe8a1b8
-ms.openlocfilehash: c935c20d6c1c009cff64d48e0c0122c8b91bbba3
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: a9c066aa58b6cae64bd60ab451c6edd04f71f256
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041159"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201092"
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER (Driver in modalità kernel di Windows NT)
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: controlli ActiveX MFC: aggiunta di eventi azionari a un controllo ActiveX'
 title: 'Controlli ActiveX MFC: aggiunta di eventi predefiniti a un controllo ActiveX'
 ms.date: 11/04/2016
 f1_keywords:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - EVENT_STOCK_READYSTATECHANGE event
 - EVENT_STOCK_KEYPRESS event
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
-ms.openlocfilehash: e63e63b914b9db64139b9b81a2c749a78ac4a58f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: e5b99ca2cd8675ab133f56d0e815abe0829867eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503858"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202899"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Controlli ActiveX MFC: aggiunta di eventi predefiniti a un controllo ActiveX
 
@@ -59,7 +60,7 @@ La `COleControl` classe fornisce dieci eventi azionari, elencati nella tabella s
 
 ### <a name="stock-events"></a>Eventi azionari
 
-|Event|Funzione di attivazione|Commenti|
+|Evento|Funzione di attivazione|Commenti|
 |-----------|---------------------|--------------|
 |Fare clic su|**void FireClick ()**|Generato quando il controllo acquisisce il mouse, viene ricevuto un messaggio **BUTTONUP** (Left, Middle o right) e il pulsante viene rilasciato sul controllo. Gli eventi MouseDown e MouseUp di azione si verificano prima di questo evento.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_CLICK ()**|
 |DblClick|**void FireDblClick ()**|Simile a clic ma generato quando viene ricevuto un messaggio **BUTTONDBLCLK** .<br /><br /> Voce della mappa eventi: **EVENT_STOCK_DBLCLICK ()**|
@@ -104,7 +105,7 @@ L'aggiunta guidata evento aggiunge la seguente riga di codice all'oggetto del co
 
 Questa riga associa l'evento KeyPress con l'ID di invio standard e consente al contenitore di prevedere l'evento KeyPress.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli ActiveX MFC](mfc-activex-controls.md)<br/>
 [Controlli ActiveX MFC: metodi](mfc-activex-controls-methods.md)<br/>

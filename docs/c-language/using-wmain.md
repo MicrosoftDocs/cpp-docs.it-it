@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: uso di wmain'
 title: Utilizzo di wmain
 ms.date: 11/04/2016
 helpviewer_keywords:
 - wmain function
 ms.assetid: d0300812-adc4-40c6-bba3-b2da25468c80
-ms.openlocfilehash: d467d50a7188cd665f64de8b6f0ce6e6a37df752
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 575637700924876ffb3b54a4ea23dc2b62e5feb6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290820"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198934"
 ---
 # <a name="using-wmain"></a>Utilizzo di wmain
 
@@ -35,6 +36,6 @@ Per altre informazioni sull'ambiente MBCS, vedere [Internazionalizzazione](../c-
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Funzione principale ed esecuzione di programmi](../c-language/main-function-and-program-execution.md)

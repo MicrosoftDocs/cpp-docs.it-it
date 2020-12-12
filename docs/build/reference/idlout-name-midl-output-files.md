@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/IDLOUT (assegnare un nome ai file di output MIDL)
 title: /IDLOUT (Assegna un nome ai file di output MIDL)
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - -IDLOUT linker option
 - IDLOUT linker option
 ms.assetid: 10d00a6a-85b4-4de1-8732-e422c6931509
-ms.openlocfilehash: 8dc26a0564a979c918d1eb1eb85e63e9c73caba0
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 9835721d3e9b376feca51d87d375efa79dc43df7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506928"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199844"
 ---
 # <a name="idlout-name-midl-output-files"></a>/IDLOUT (Assegna un nome ai file di output MIDL)
 
@@ -34,7 +35,7 @@ Specifica del percorso assoluto o relativo. Specificando un percorso, si influis
 *filename*<br/>
 Specifica il nome del file idl creato dal compilatore MIDL. Non viene presupposta alcuna estensione di file; specificare *filename*. idl se si desidera un'estensione. idl.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'opzione/IDLOUT specifica il nome e l'estensione del file IDL.
 
@@ -44,9 +45,9 @@ Il compilatore MIDL viene chiamato dal linker MSVC quando si collegano i progett
 
 - *nomefile*. tlb
 
-- *filename*_P. c
+- *filename* _P. c
 
-- *filename*_i. c
+- *filename* _i. c
 
 - *nomefile*. h
 
@@ -68,7 +69,7 @@ Se non si specifica né/IDLOUT né/TLBOUT, il linker creerà vc70. tlb, vc70. id
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MergedIDLBaseFileName%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Informazioni di riferimento sul linker MSVC](linking.md)<br/>
 [Opzioni del linker MSVC](linker-options.md)<br/>

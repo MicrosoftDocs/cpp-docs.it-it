@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/GL (Ottimizzazione intero programma)
 title: /GL (Ottimizzazione intero programma)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -GL compiler option [C++]
 - GL compiler option [C++]
 ms.assetid: 09d51e2d-9728-4bd0-b5dc-3b8284aca1d1
-ms.openlocfilehash: 875865a32dcb80cb8a6d8fa53646260f3d9413a5
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ad42eaeeacf897686831c9b415aa62026b5644f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439660"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200195"
 ---
 # <a name="gl-whole-program-optimization"></a>/GL (Ottimizzazione intero programma)
 
@@ -30,7 +31,7 @@ Attiva l'ottimizzazione dell'intero programma.
 
 L'ottimizzazione dell'intero programma consente al compilatore di eseguire ottimizzazioni con informazioni su tutti i moduli del programma. Senza l'ottimizzazione dell'intero programma, le ottimizzazioni vengono eseguite in base al modulo (modulo).
 
-L'ottimizzazione dell'intero programma è disattivata per impostazione predefinita e deve essere abilitata in modo esplicito. Tuttavia, è anche possibile disabilitarlo in modo esplicito con **/GL-** .
+L'ottimizzazione dell'intero programma è disattivata per impostazione predefinita e deve essere abilitata in modo esplicito. Tuttavia, è anche possibile disabilitarlo in modo esplicito con **/GL-**.
 
 Con informazioni su tutti i moduli, il compilatore può:
 
@@ -48,7 +49,7 @@ Se si compila il programma con **/GL** e [/c](c-compile-without-linking.md), è 
 
 Impossibile utilizzare [/Zi](z7-zi-zi-debug-information-format.md) con **/GL**
 
-Il formato dei file prodotti con **/GL** nella versione corrente potrebbe non essere leggibile dalle versioni successive di Visual C++. Non è necessario fornire un file con estensione LIB costituito da file obj creati con **/GL** , a meno che non si sia disposti a inviare copie del file con estensione LIB per tutte le versioni C++ di visuale che si prevede vengano usate dagli utenti, ora e in futuro.
+Il formato dei file prodotti con **/GL** nella versione corrente potrebbe non essere leggibile dalle versioni successive di Visual C++. Non è necessario fornire un file con estensione LIB costituito da file obj creati con **/GL** , a meno che non si sia disposti a spedire copie del file lib per tutte le versioni di Visual C++ si prevede che gli utenti usino, ora e in futuro.
 
 i file con estensione obj prodotti con **/GL** e i file di intestazione precompilata non devono essere usati per compilare un file con estensione LIB, a meno che il file con estensione LIB non sia collegato nello stesso computer che ha generato il file **/GL** . obj. Le informazioni del file di intestazione precompilata del file con estensione obj saranno necessarie in fase di collegamento.
 
@@ -62,7 +63,7 @@ Per ulteriori informazioni sulle ottimizzazioni disponibili con e sulle limitazi
 
 1. Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WholeProgramOptimization%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

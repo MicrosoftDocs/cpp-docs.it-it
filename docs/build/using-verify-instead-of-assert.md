@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso di VERIFY anziché ASSERT'
 title: Utilizzo di VERIFY invece di ASSERT
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - debugging assertions
 - assertions, debugging
 ms.assetid: 4c46397b-3fb1-49c1-a09b-41a72fae3797
-ms.openlocfilehash: bfc0847677ae232fef67ab6200c626472f042bdb
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: cbb878e9184536a6888b84f7861a3e8b7b9ab2b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438618"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199051"
 ---
 # <a name="using-verify-instead-of-assert"></a>Utilizzo di VERIFY invece di ASSERT
 
@@ -38,13 +39,13 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );
 ```
 
-Questo codice viene eseguito perfettamente in una versione di debug di un'applicazione MFC. Se la chiamata a `calloc( )` ha esito negativo, viene visualizzato un messaggio di diagnostica che include il file e il numero di riga. Tuttavia, in una build finale di un'applicazione MFC:
+Questo codice viene eseguito perfettamente in una versione di debug di un'applicazione MFC. Se la chiamata a ha `calloc( )` esito negativo, viene visualizzato un messaggio di diagnostica che include il file e il numero di riga. Tuttavia, in una build finale di un'applicazione MFC:
 
-- la chiamata a `calloc( )` non viene mai eseguita `buf` , lasciando non inizializzata o
+- la chiamata a `calloc( )` non viene mai eseguita, lasciando non `buf` inizializzata o
 
-- `strcpy_s( )`copia "`Hello, World`" in una porzione casuale di memoria, eventualmente arrestando l'arresto anomalo dell'applicazione o causando l'interruzione della risposta del sistema o
+- `strcpy_s( )` copia " `Hello, World` " in una porzione casuale di memoria, eventualmente arrestando l'arresto anomalo dell'applicazione o causando l'interruzione della risposta del sistema o
 
-- `free()`tenta di liberare memoria che non è mai stata allocata.
+- `free()` tenta di liberare memoria che non è mai stata allocata.
 
 Per utilizzare ASSERT correttamente, è necessario modificare l'esempio di codice nel modo seguente:
 
@@ -71,6 +72,6 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Correzione dei problemi della build di versione](fixing-release-build-problems.md)
+[Correzione dei problemi di compilazione della versione](fixing-release-build-problems.md)

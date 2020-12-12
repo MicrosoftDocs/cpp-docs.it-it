@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: riferimenti a LIB'
 title: Riferimenti a LIB
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,32 +11,32 @@ helpviewer_keywords:
 - LIB [C++]
 - 32-Bit Library Manager
 ms.assetid: ecc7f643-bbd4-47a3-8dc6-b360f880db91
-ms.openlocfilehash: d4ce4e4723faa943a8de1431a604fc7acca2d528
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 64b7f70418fe640eb4067e8133b29465443b4c0e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328209"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199558"
 ---
 # <a name="lib-reference"></a>Riferimenti a LIB
 
-Gestione librerie Microsoft (LIB.exe) crea e gestisce una libreria di file oggetto COFF (Common Object File Format). LIB può essere utilizzato anche per creare file di esportazione e librerie di importazione per fare riferimento alle definizioni esportate.
+Microsoft Library Manager (LIB.exe) crea e gestisce una libreria di file oggetto COFF (Common Object File Format). È inoltre possibile utilizzare LIB per creare file di esportazione e librerie di importazione per fare riferimento a definizioni esportate.
 
 > [!NOTE]
-> È possibile avviare questo strumento solo dal prompt dei comandi di Visual Studio.You can start this tool only from the Visual Studio command prompt. Non è possibile avviarlo da un prompt dei comandi di sistema o da Esplora File.
+> È possibile avviare questo strumento solo dal prompt dei comandi di Visual Studio. Non è possibile avviarlo da un prompt dei comandi di sistema o da Esplora File.
 
-- [Panoramica di LIB](overview-of-lib.md)
+- [Cenni preliminari su LIB](overview-of-lib.md)
 
-- [Procedura: Impostare le opzioni di LIB.EXE nell'ambiente di sviluppo di Visual Studio](how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)
+- [Procedura: impostare opzioni di LIB.EXE nell'ambiente di sviluppo di Visual Studio](how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)
 
 - [Esecuzione di LIB](running-lib.md)
 
 - [Gestione di una libreria](managing-a-library.md)
 
-- [Estrazione di membri dalle librerie](extracting-a-library-member.md)
+- [Estrazione di un membro di libreria](extracting-a-library-member.md)
 
-- [Uso di librerie di importazione e file di esportazione](working-with-import-libraries-and-export-files.md)
+- [Utilizzo di librerie di importazione ed esportazione di file](working-with-import-libraries-and-export-files.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Strumenti di compilazione aggiuntivi MSVC](c-cpp-build-tools.md)
+[Ulteriori strumenti di compilazione MSVC](c-cpp-build-tools.md)

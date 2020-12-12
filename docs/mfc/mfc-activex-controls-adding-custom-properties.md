@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: controlli ActiveX MFC: aggiunta di proprietà personalizzate'
 title: 'Controlli ActiveX MFC: aggiunta di proprietà personalizzate'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: af1ca2d63abcb112bfe1e7d7538dbf70fb817ae5
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: efae1c7cedc2202a2a40974393be881466442b84
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503877"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202938"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Controlli ActiveX MFC: aggiunta di proprietà personalizzate
 
@@ -92,7 +93,7 @@ Infine, le implementazioni delle `GetCircleOffset` funzioni e `SetCircleOffset` 
 
 Si noti che l'aggiunta guidata proprietà aggiunge automaticamente una chiamata, a [SetModifiedFlag](reference/colecontrol-class.md#setmodifiedflag), al corpo della funzione set. La chiamata di questa funzione contrassegna il controllo come modificato. Se un controllo è stato modificato, il nuovo stato verrà salvato quando il contenitore viene salvato. Questa funzione deve essere chiamata ogni volta che una proprietà, salvata come parte dello stato persistente del controllo, modifica il valore.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli ActiveX MFC](mfc-activex-controls.md)<br/>
 [Controlli ActiveX MFC: Proprietà](mfc-activex-controls-properties.md)<br/>

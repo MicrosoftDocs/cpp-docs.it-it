@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/Diagnostics (opzioni di diagnostica del compilatore)
 title: /Diagnostics (opzioni di diagnostica del compilatore)
 ms.date: 11/11/2016
 f1_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - -diagnostics compiler diagnostic options [C++]
 - diagnostics compiler diagnostic options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 6b7d043e00204fa191530f03bbed069d71a25fc5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c34edc0374e59720eb05e97379702833efaa703
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293823"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201417"
 ---
 # <a name="diagnostics-compiler-diagnostic-options"></a>/Diagnostics (opzioni di diagnostica del compilatore)
 
-Usare la **/diagnostics** opzione del compilatore per specificare la visualizzazione delle informazioni di percorso di errore e avviso.
+Usare l'opzione del compilatore **/Diagnostics** per specificare la visualizzazione delle informazioni sul percorso di errore e di avviso.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,31 +27,31 @@ Usare la **/diagnostics** opzione del compilatore per specificare la visualizzaz
 /diagnostics:{caret|classic|column}
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Questa opzione è supportata in Visual Studio 2017 e versioni successive.
 
-Il **/diagnostics** opzione del compilatore determina la visualizzazione dell'errore e le informazioni sull'avviso.
+L'opzione del compilatore **/Diagnostics** controlla la visualizzazione delle informazioni sugli errori e sugli avvisi.
 
-Il **/diagnostics:classic** opzione è l'impostazione predefinita, che indica solo il numero di riga in cui è stato trovato il problema.
+L'opzione **/Diagnostics: Classic** è l'impostazione predefinita, che indica solo il numero di riga in cui è stato rilevato il problema.
 
-Il **/diagnostics:column** opzione include anche la colonna in cui è stato trovato il problema. Ciò consente di identificare il costrutto di linguaggio specifico o un carattere che causa il problema.
+L'opzione **/Diagnostics: column** include anche la colonna in cui è stato rilevato il problema. Ciò consente di identificare il costrutto o il carattere di linguaggio specifico che causa il problema.
 
-Il **/diagnostics:caret** opzione include la colonna in cui il problema è stato trovato e inserisce un accento circonflesso (^) sotto la posizione della riga di codice in cui è stato rilevato il problema.
+L'opzione **/Diagnostics: Caret** include la colonna in cui è stato rilevato il problema e inserisce un accento circonflesso (^) nella posizione nella riga di codice in cui è stato rilevato il problema.
 
-Si noti che in alcuni casi, il compilatore non rileva un problema in cui si è verificato. Ad esempio, un punto e virgola mancante non può essere rilevato fino a quando non sono stati rilevati i simboli di altre e imprevisti. La colonna viene restituita e il punto di inserimento viene posizionato in cui il compilatore ha rilevato che qualcosa è sbagliato, che non è sempre in cui è necessario apportare la correzione.
+Si noti che in alcuni casi il compilatore non rileva un problema in cui si è verificato. Un punto e virgola mancante, ad esempio, non può essere rilevato fino a quando non vengono rilevati altri simboli imprevisti. La colonna viene segnalata e il punto di inserimento viene inserito nel punto in cui il compilatore ha rilevato un errore, che non è sempre necessario per apportare la correzione.
 
-Il **/diagnostics** opzione è disponibile a partire da Visual Studio 2017.
+L'opzione **/Diagnostics** è disponibile a partire da Visual Studio 2017.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire il progetto **pagine delle proprietà** nella finestra di dialogo.
+1. Aprire la finestra di dialogo **pagine delle proprietà** del progetto.
 
-1. Sotto **le proprietà di configurazione**, espandere il **C/C++** cartella e scegliere il **generali** pagina delle proprietà.
+1. In **proprietà di configurazione** espandere la cartella **C/C++** e scegliere la pagina delle proprietà **generale** .
 
-1. Usare il controllo elenco a discesa nel **formato diagnostica** campo per selezionare una diagnostica visualizzare l'opzione. Scegli **OK** oppure **applica** per salvare le modifiche.
+1. Usare il controllo elenco a discesa nel campo **formato di diagnostica** per selezionare un'opzione di visualizzazione di diagnostica. Scegliere **OK** o **applica** per salvare le modifiche.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)
