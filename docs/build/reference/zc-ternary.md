@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: `/Zc:ternary` (applica regole di operatore condizionale)'
 title: /Zc:ternary (Applica le regole per l'operatore condizionale)
 ms.date: 09/12/2019
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - /Zc:ternary
 - Zc:ternary
 - -Zc:ternary
-ms.openlocfilehash: 04bd0c49528d86ddd4d1e6c77804cf64278db188
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ea1cf57aa1633e08095dfd01964a2255cb0b3c70
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211879"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271317"
 ---
-# <a name="zcternary-enforce-conditional-operator-rules"></a>`/Zc:ternary`(Applicare regole di operatore condizionale)
+# <a name="zcternary-enforce-conditional-operator-rules"></a>`/Zc:ternary` (Applicare regole di operatore condizionale)
 
 Abilitare l'imposizione delle regole standard C++ per i tipi e la qualificazione const o volatile (CV) del secondo e del terzo operando in un'espressione di operatore condizionale.
 
@@ -22,7 +23,7 @@ Abilitare l'imposizione delle regole standard C++ per i tipi e la qualificazione
 
 > **`/Zc:ternary`**[**`-`**]
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 A partire da Visual Studio 2017, il compilatore supporta il comportamento dell' *operatore condizionale* standard C++ ( **`?:`** ). È noto anche come *operatore ternario*. Lo standard C++ richiede che gli operandi ternari soddisfino una delle tre condizioni seguenti: gli operandi devono essere dello stesso tipo e della stessa **`const`** **`volatile`** qualifica (CV-Qualification) oppure un solo operando deve essere convertibile in modo non ambiguo allo stesso tipo e alla qualificazione CV come altro. Oppure, uno o entrambi gli operandi devono essere un'espressione throw. Nelle versioni precedenti a Visual Studio 2017 versione 15,5, il compilatore consentiva le conversioni considerate ambigue dallo standard.
 
@@ -30,7 +31,7 @@ Quando **`/Zc:ternary`** si specifica l'opzione, il compilatore è conforme allo
 
 **`/Zc:ternary`** Per impostazione predefinita, l'opzione è disattivata in Visual Studio 2017. Usare **`/Zc:ternary`** per abilitare il comportamento conforme oppure **`/Zc:ternary-`** per specificare in modo esplicito il comportamento precedente del compilatore non conforme. L' [`/permissive-`](permissive-standards-conformance.md) opzione Abilita in modo implicito questa opzione, ma è possibile eseguirne l'override usando **`/Zc:ternary-`** .
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 In questo esempio viene illustrato come una classe che fornisce l'inizializzazione non esplicita da un tipo e la conversione in un tipo può causare conversioni ambigue. Questo codice viene accettato dal compilatore per impostazione predefinita, ma viene rifiutato **/`Zc:ternary`** quando **`/permissive-`** viene specificato o.
 
@@ -155,10 +156,10 @@ Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonsta
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la pagina delle proprietà di **configurazione**proprietà della riga di comando di  >  **c/C++**  >  **Command Line** .
+1. Selezionare la pagina delle proprietà di **configurazione** proprietà della riga di comando di  >  **c/C++**  >   .
 
 1. Modificare la proprietà **Opzioni aggiuntive** in modo da includere **`/Zc:ternary`** o **`/Zc:ternary-`** , quindi scegliere **OK**.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[`/Zc`Conformità](zc-conformance.md)
+[`/Zc` Conformità](zc-conformance.md)

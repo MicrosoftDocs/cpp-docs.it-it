@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: supporto dei set di righe dello schema'
 title: Supporto dei set di righe dello schema
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: 156fe9c7a2b15f7254fb0c83f8b25982aa5ad09a
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 029b05f594dda01112cd975543462f92e351b1c3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924307"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272734"
 ---
 # <a name="supporting-schema-rowsets"></a>Supporto dei set di righe dello schema
 
@@ -94,7 +95,7 @@ class CUpdateSessionTRSchemaRowset :
                     ULONG cRestrictions, const VARIANT* rgRestrictions)
 ```
 
-`CUpdateSession` eredita da `IDBSchemaRowsetImpl`, quindi ha tutti i metodi per la gestione delle restrizioni. Usando `CSchemaRowsetImpl`, dichiarare tre classi figlio (elencate nella mappa di schema precedente): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset` e `CUpdateSessionPTSchemaRowset`. Ognuna di queste classi figlio ha un metodo `Execute` che gestisce il rispettivo set di restrizioni (criteri di ricerca). Ogni metodo `Execute` confronta i valori dei parametri *cRestrictions* e *rgRestrictions* . Vedere la descrizione di questi parametri in [SetRestrictions](./idbschemarowsetimpl-class.md#setrestrictions).
+`CUpdateSession` eredita da `IDBSchemaRowsetImpl`, quindi ha tutti i metodi per la gestione delle restrizioni. Usando `CSchemaRowsetImpl`, dichiarare tre classi figlio (elencate nella mappa di schema precedente): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset` e `CUpdateSessionPTSchemaRowset`. Ognuna di queste classi figlio ha un metodo `Execute` che gestisce il rispettivo set di restrizioni (criteri di ricerca). Ogni metodo `Execute` confronta i valori dei parametri *cRestrictions* e *rgRestrictions*. Vedere la descrizione di questi parametri in [SetRestrictions](./idbschemarowsetimpl-class.md#setrestrictions).
 
 Per altre informazioni sulle restrizioni corrispondenti a un particolare set di righe dello schema, vedere la tabella dei GUID dei set di righe dello schema in [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) nella **guida di riferimento per programmatori OLE DB** in Windows SDK.
 
@@ -146,7 +147,7 @@ if (InlineIsEqualGUID(rguidSchema[l], DBSCHEMA_TABLES))
     rgRestrictions[l] = 0x0C;
 ```
 
-La funzione `Execute` seguente è simile a quelle nei normali set di righe. Ci sono tre argomenti: *pcRowsAffected* , *cRestrictions* e *rgRestrictions* . La variabile *pcRowsAffected* è un parametro di output in cui il provider può restituire il conteggio delle righe nel set di righe dello schema. Il parametro *cRestrictions* è un parametro di input che contiene il numero di restrizioni passate dal consumer al provider. Il parametro *rgRestrictions* è una matrice di valori VARIANT che contengono i valori delle restrizioni.
+La funzione `Execute` seguente è simile a quelle nei normali set di righe. Ci sono tre argomenti: *pcRowsAffected*, *cRestrictions* e *rgRestrictions*. La variabile *pcRowsAffected* è un parametro di output in cui il provider può restituire il conteggio delle righe nel set di righe dello schema. Il parametro *cRestrictions* è un parametro di input che contiene il numero di restrizioni passate dal consumer al provider. Il parametro *rgRestrictions* è una matrice di valori VARIANT che contengono i valori delle restrizioni.
 
 ```cpp
 HRESULT Execute(DBROWCOUNT* pcRowsAffected, ULONG cRestrictions,
@@ -194,7 +195,7 @@ if (cRestrictions >= 3 && rgRestrictions[2].vt != VT_EMPTY)
 }
 ```
 
-Il supporto della quarta restrizione (TABLE_TYPE) è simile a quello della terza restrizione. Controllare che il valore non sia VT_EMPTY. Questa restrizione restituisce solo il tipo di tabella, TABLE. Per determinare i valori validi per DBSCHEMA_TABLES, esaminare l' **appendice B** della **guida di riferimento per programmatori OLE DB** nella sezione relativa al set di righe TABLES.
+Il supporto della quarta restrizione (TABLE_TYPE) è simile a quello della terza restrizione. Controllare che il valore non sia VT_EMPTY. Questa restrizione restituisce solo il tipo di tabella, TABLE. Per determinare i valori validi per DBSCHEMA_TABLES, esaminare l'**appendice B** della **guida di riferimento per programmatori OLE DB** nella sezione relativa al set di righe TABLES.
 
 ```cpp
 // TABLE_TYPE restriction:
@@ -213,7 +214,7 @@ if (cRestrictions >=4 && rgRestrictions[3].vt != VT_EMPTY)
 }
 ```
 
-Questo punto è quello in cui si crea effettivamente una voce di riga per il set di righe. La variabile `trData` corrisponde a `CTABLESRow`, una struttura definita nei modelli di provider OLE DB. `CTABLESRow` corrisponde alla definizione del set di righe TABLES nell' **appendice B** della specifica OLE DB. C'è una sola una riga da aggiungere perché si può supportare solo una tabella alla volta.
+Questo punto è quello in cui si crea effettivamente una voce di riga per il set di righe. La variabile `trData` corrisponde a `CTABLESRow`, una struttura definita nei modelli di provider OLE DB. `CTABLESRow` corrisponde alla definizione del set di righe TABLES nell'**appendice B** della specifica OLE DB. C'è una sola una riga da aggiungere perché si può supportare solo una tabella alla volta.
 
 ```cpp
 // Bring over the data:
@@ -263,14 +264,14 @@ virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
 }
 ```
 
-Poiché la funzione `Execute` restituisce i dati per i campi TABLE_NAME, TABLE_TYPE e DESCRIPTION del set di righe TABLES, è possibile cercare nell' **appendice B** della specifica OLE DB e determinare (contando dall'alto in basso) che si tratta degli ordinali 3, 4 e 6. Per ognuna di queste colonne, restituire DBSTATUS_S_OK. Per tutte le altre colonne, restituire DBSTATUS_S_ISNULL. È importante restituire questo stato perché un consumer potrebbe non comprendere che il valore restituito è NULL o un altro valore. Anche in questo caso, NULL non equivale a vuoto.
+Poiché la funzione `Execute` restituisce i dati per i campi TABLE_NAME, TABLE_TYPE e DESCRIPTION del set di righe TABLES, è possibile cercare nell'**appendice B** della specifica OLE DB e determinare (contando dall'alto in basso) che si tratta degli ordinali 3, 4 e 6. Per ognuna di queste colonne, restituire DBSTATUS_S_OK. Per tutte le altre colonne, restituire DBSTATUS_S_ISNULL. È importante restituire questo stato perché un consumer potrebbe non comprendere che il valore restituito è NULL o un altro valore. Anche in questo caso, NULL non equivale a vuoto.
 
-Per altre informazioni sull'interfaccia del set di righe dello schema OLE DB, vedere l'interfaccia [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) nella **guida di riferimento per programmatori OLE DB** .
+Per altre informazioni sull'interfaccia del set di righe dello schema OLE DB, vedere l'interfaccia [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) nella **guida di riferimento per programmatori OLE DB**.
 
 Per informazioni su come i consumer possono usare i metodi `IDBSchemaRowset`, vedere [Recupero di metadati con i set di righe dello schema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).
 
 Per un esempio di provider che supporta i set di righe dello schema, vedere l'esempio [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Tecniche avanzate per i provider](../../data/oledb/advanced-provider-techniques.md)

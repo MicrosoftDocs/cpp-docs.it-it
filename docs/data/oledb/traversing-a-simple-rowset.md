@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: attraversamento di un set di righe semplice'
 title: Scorrimento di un rowset semplice
 ms.date: 10/19/2018
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - accessors [C++], rowsets
 ms.assetid: b45acf16-4029-429d-ab8d-b7fba98b9740
-ms.openlocfilehash: a6b2ebf918f42e274c372d1dda1e277f7fd49cd5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f2e0c1f9647e168d8de2a10eaea6425bf9ad5a88
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209469"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272630"
 ---
 # <a name="traversing-a-simple-rowset"></a>Scorrimento di un rowset semplice
 
-Nell'esempio seguente viene illustrato l'accesso ai database rapido e semplice che non riguarda i comandi. Il codice consumer seguente, in un progetto ATL, recupera i record da una tabella denominata *Artists* in un database di Microsoft Access utilizzando il Provider Microsoft OLE DB per ODBC. Il codice crea un oggetto tabella [CTable](../../data/oledb/ctable-class.md) con una funzione di accesso basata sulla classe di record utente `CArtists`. Apre una connessione, apre una sessione sulla connessione e apre la tabella nella sessione.
+Nell'esempio seguente viene illustrato l'accesso ai database rapido e semplice che non riguarda i comandi. Il codice consumer seguente, in un progetto ATL, recupera i record da una tabella denominata *Artists* in un database di Microsoft Access utilizzando il Provider Microsoft OLE DB per ODBC. Il codice crea un oggetto tabella [CTable](../../data/oledb/ctable-class.md) con una funzione di accesso basata sulla classe di record utente `CArtists` . Apre una connessione, apre una sessione sulla connessione e apre la tabella nella sessione.
 
 ```cpp
 #include <atldbcli.h>
@@ -54,7 +55,7 @@ int main()
 }
 ```
 
-Il record utente, `CArtists`, ha un aspetto simile a questo esempio:
+Il record utente, `CArtists` , ha un aspetto simile all'esempio seguente:
 
 ```cpp
 class CArtists
@@ -74,6 +75,6 @@ END_COLUMN_MAP()
 };
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Uso dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

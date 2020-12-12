@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso di CObject'
 title: Utilizzo di CObject
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - MFC, base class
 - CObject class [MFC]
 ms.assetid: d0cd19bb-2856-4b41-abbc-620fd64cb223
-ms.openlocfilehash: b5399f02819407a529fd5ec66d4f5acbb16ca002
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 203e2a498f787f23de21db4469e5cdd7c5543761
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441932"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271642"
 ---
 # <a name="using-cobject"></a>Utilizzo di CObject
 
-[CObject](../mfc/reference/cobject-class.md) è la classe base radice per la maggior parte delle libreria Microsoft Foundation Class (MFC). La classe `CObject` contiene molte funzionalità utili che è possibile incorporare nei propri oggetti Program, tra cui il supporto della serializzazione, le informazioni sulle classi di runtime e l'output di diagnostica degli oggetti. Se si deriva la classe da `CObject`, la classe può sfruttare queste funzionalità `CObject`.
+[CObject](../mfc/reference/cobject-class.md) è la classe base radice per la maggior parte delle libreria Microsoft Foundation Class (MFC). La `CObject` classe contiene molte funzionalità utili che è possibile incorporare nei propri oggetti Program, tra cui il supporto della serializzazione, le informazioni sulle classi di runtime e l'output di diagnostica degli oggetti. Se si deriva la classe da `CObject` , la classe può sfruttare queste `CObject` funzionalità.
 
 ## <a name="what-do-you-want-to-do"></a>Cosa si vuole fare
 
@@ -37,7 +38,7 @@ ms.locfileid: "79441932"
 
 - Vedere un elenco di [domande frequenti su CObject](../mfc/cobject-class-frequently-asked-questions.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Concetti](../mfc/mfc-concepts.md)<br/>
 [Argomenti MFC generali](../mfc/general-mfc-topics.md)<br/>

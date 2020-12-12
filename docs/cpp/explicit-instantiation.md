@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: creazione di un'istanza esplicita"
 title: creazione di un'istanza esplicita
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - explicit instantiation
 - instantiation, explicit
 ms.assetid: 8b0d4e32-45a6-49d5-8041-1ebdd674410e
-ms.openlocfilehash: 4b1808791110c4eed237d18436897dac59170206
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c3d6587490215627a867b7e20d49a50a089940da
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232300"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273475"
 ---
 # <a name="explicit-instantiation"></a>creazione di un'istanza esplicita
 
@@ -50,6 +51,6 @@ extern template MyStack<int, 6>::MyStack( void );
 > [!NOTE]
 > La **`extern`** parola chiave nella specializzazione si applica solo alle funzioni membro definite all'esterno del corpo della classe. Le funzioni definite all'interno della dichiarazione della classe vengono considerate funzioni inline e ne viene sempre creata un'istanza.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di funzione](../cpp/function-templates.md)

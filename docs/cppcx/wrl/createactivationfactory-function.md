@@ -1,5 +1,6 @@
 ---
-title: Funzione CreateActivationFactory
+description: 'Altre informazioni su: funzione CreateActivationFactory'
+title: CreateActivationFactory (funzione)
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CreateActivationFactory function
 ms.assetid: a1a53e04-6757-4faf-a4c8-ecf06e43b959
-ms.openlocfilehash: ab03b15a968c6aba3fa6df8c975fb98e873f8e23
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 25f2181a00bb018361b05ea6570ebbadc6f7a975
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214071"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273107"
 ---
-# <a name="createactivationfactory-function"></a>Funzione CreateActivationFactory
+# <a name="createactivationfactory-function"></a>CreateActivationFactory (funzione)
 
 Crea una factory che produce istanze della classe specificata che può essere attivata da Windows Runtime.
 
@@ -33,7 +34,7 @@ template<typename Factory>
 *flags*<br/>
 Combinazione di uno o più valori di enumerazione [RuntimeClassType](runtimeclasstype-enumeration.md) .
 
-*entry*<br/>
+*voce*<br/>
 Puntatore a un [CreatorMap](creatormap-structure.md) che contiene le informazioni di inizializzazione e registrazione sul parametro *riid*.
 
 *riid*<br/>
@@ -46,9 +47,9 @@ Se questa operazione viene completata correttamente, un puntatore a una factory 
 
 S_OK se riesce; in caso contrario, HRESULT indica un errore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Viene generato un errore di asserzione se la *Factory* del parametro di modello non deriva dall'interfaccia `IActivationFactory`.
+Viene generato un errore di asserzione se la *Factory* del parametro di modello non deriva dall'interfaccia `IActivationFactory` .
 
 ## <a name="requirements"></a>Requisiti
 
@@ -56,6 +57,6 @@ Viene generato un errore di asserzione se la *Factory* del parametro di modello 
 
 **Spazio dei nomi:** Microsoft::WRL
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi Microsoft::WRL::Wrappers::Details](microsoft-wrl-wrappers-details-namespace.md)
+[Microsoft:: WRL:: Wrappers: spazio dei nomi:D etails](microsoft-wrl-wrappers-details-namespace.md)

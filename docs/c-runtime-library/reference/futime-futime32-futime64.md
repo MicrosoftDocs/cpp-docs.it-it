@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _futime, _futime32, _futime64'
 title: _futime, _futime32, _futime64
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - futime function
 - _futime32 function
 ms.assetid: b942ce8f-5cc7-4fa8-ab47-de5965eded53
-ms.openlocfilehash: 615e436abf9d763e73d26db61d9063d5e586232b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d0e438c14d8fa7ba472be77d9d6f064b41d61431
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909917"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273761"
 ---
 # <a name="_futime-_futime32-_futime64"></a>_futime, _futime32, _futime64
 
@@ -78,7 +79,7 @@ Puntatore alla struttura contenente la nuova data di modifica.
 
 Restituisce 0 in caso di esito positivo. Quando si verifica un errore, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce-1 e **errno** viene impostato su **EBADF**, che indica un descrittore di file non valido, o **EINVAL**, che indica un parametro non valido.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La routine **_futime** imposta la data di modifica e l'ora di accesso nel file aperto associato a *FD*. **_futime** è identico a [_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md), ad eccezione del fatto che il relativo argomento è il descrittore di file aperto, anziché il nome di un file o un percorso di un file. La struttura **_utimbuf** contiene i campi per la nuova data di modifica e l'ora di accesso. Entrambi i campi devono contenere valori validi. **_utimbuf32** e **_utimbuf64** sono identici ai **_utimbuf** tranne che per l'uso dei tipi time a 32 bit e 64 bit, rispettivamente. **_futime** e **_utimbuf** usano un tipo time a 64 bit e **_futime** è identico nel comportamento per **_futime64**. Se è necessario forzare il comportamento precedente, definire **_USE_32BIT_TIME_T**. In questo modo **_futime** comportamento identico al **_futime32** e fa in modo che la struttura **_utimbuf** usi il tipo di ora a 32 bit, rendendolo equivalente a **__utimbuf32**.
 
@@ -88,7 +89,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|Intestazione facoltativa|
+|Funzione|Intestazione obbligatoria|Intestazione facoltativa|
 |--------------|---------------------|---------------------|
 |**_futime**|\<sys/utime.h>|\<errno.h>|
 |**_futime32**|\<sys/utime.h>|\<errno.h>|
@@ -160,6 +161,6 @@ Directory of Z:\crt
 File time modified
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione del tempo](../../c-runtime-library/time-management.md)<br/>

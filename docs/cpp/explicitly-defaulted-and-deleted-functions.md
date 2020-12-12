@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: funzioni esplicitamente impostate come predefinite ed eliminate'
 title: Funzioni impostate come predefinite ed eliminate in modo esplicito
 ms.date: 11/04/2016
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
-ms.openlocfilehash: fd3fb53dec0cc08274b7ea54176c2a15dbab45d7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a3c4789996d39acd4ddd3bbc186ce39509a1d62f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211580"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273358"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Funzioni impostate come predefinite ed eliminate in modo esplicito
 

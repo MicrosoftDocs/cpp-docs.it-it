@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore irreversibile del compilatore di risorse risorse RC1203'
 title: Errore irreversibile del compilatore di risorse RC1203
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - RC1203
 ms.assetid: 60d08fb1-6a51-407c-854e-9a68080cfe2d
-ms.openlocfilehash: 1847a756847fa0a831228086b8339dafaf1bbc18
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f24fae169adc3bbabebf3782237f437966c9ca6e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172880"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271967"
 ---
 # <a name="resource-compiler-fatal-error-rc1203"></a>Errore irreversibile del compilatore di risorse RC1203
 

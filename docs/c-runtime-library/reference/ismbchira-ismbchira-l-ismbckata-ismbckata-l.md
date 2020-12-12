@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l'
 title: _ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 ms.date: 4/2/2020
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - Hiragana
 - ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
-ms.openlocfilehash: 89c6aacbb6726165703d38e3ea519806b1f970d2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a3df603c53a320898ab7eb94176d4e150a3073c9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910701"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273579"
 ---
 # <a name="_ismbchira-_ismbchira_l-_ismbckata-_ismbckata_l"></a>_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 
@@ -93,7 +94,7 @@ Impostazioni locali da usare.
 
 Ognuna di queste routine restituisce un valore diverso da zero se il carattere soddisfa la condizione di test oppure 0 in caso contrario. Se *c* <= 255 ed è presente una routine **_ismbb** corrispondente (ad esempio, **_ismbcalnum** corrisponde a **_ismbbalnum**), il risultato è il valore restituito della routine di **_ismbb** corrispondente.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Ognuna di queste funzioni testa una particolare condizione su un determinato carattere multibyte.
 
@@ -121,10 +122,10 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Classificazione di caratteri](../../c-runtime-library/character-classification.md)<br/>
-[Routines _ismbc](../../c-runtime-library/ismbc-routines.md)<br/>
-[is, isw Routines](../../c-runtime-library/is-isw-routines.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Classificazione caratteri](../../c-runtime-library/character-classification.md)<br/>
+[Routine di _ismbc](../../c-runtime-library/ismbc-routines.md)<br/>
+[is, ISW routines](../../c-runtime-library/is-isw-routines.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe SafeInt'
 title: Classe SafeInt
 ms.date: 10/22/2018
 ms.topic: reference
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: d61ce20a8644ca64d37c0eca605d52fb308c0863
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b5ee9147347f2c01ff05fd93b8b22ea3ce30ee37
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560961"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271330"
 ---
 # <a name="safeint-class"></a>Classe SafeInt
 
@@ -55,7 +56,7 @@ Tipo Integer o parametro booleano per il secondo operando.
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-| Nome                          |  Descrizione |
+| Nome                          |  Description |
 |---------------------------|--------------------|
 | [SafeInt:: SafeInt](#safeint)  |  Costruttore predefinito. |
 
@@ -168,7 +169,7 @@ Tipo Integer o parametro booleano per il secondo operando.
 | &#124;=  |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (U rhs) throw()` |
 | &#124;=  |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (SafeInt<U, E> rhs) throw()` |
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La classe `SafeInt` protegge dall'overflow di Integer nelle operazioni matematiche. Si consideri, ad esempio, la somma di due Integer a 8 bit: uno ha un valore pari a 200 e il secondo un valore pari a 100. L'operazione matematica corretta sarebbe 200 + 100 = 300. Tuttavia, a causa del limite di 8 bit per gli Integer, il bit superiore andrà perso e il compilatore restituirà 44 (300 - 2<sup>8</sup>) come risultato. Qualsiasi operazione che dipende da questa equazione matematica genererà un comportamento imprevisto.
 
@@ -285,7 +286,7 @@ SafeInt (const U& i)
 
 `U` Tipo di dati archiviati in `SafeInt` . Può trattarsi di un tipo booleano, carattere o Integer. Se è di tipo Integer, può essere firmato o senza segno e deve avere una lunghezza compresa tra 8 e 64 bit.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il parametro di input per il costruttore, *i* o *u*, deve essere un tipo booleano, carattere o Integer. Se è un altro tipo di parametro, la `SafeInt` classe chiama [static_assert](../cpp/static-assert.md) per indicare un parametro di input non valido.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: puntatori basati su (C++)'
 title: Puntatori based (C++)
 ms.date: 10/09/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - based pointers
 - pointers, based
 ms.assetid: 1e5f2e96-c52e-4738-8e14-87278681205e
-ms.openlocfilehash: a76fe56e0e6bd0501bbc3e23e138cb2e75055c73
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 40f6a081081eebdff87a9682818de3f89a44b982
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229142"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273501"
 ---
 # <a name="based-pointers-c"></a>Puntatori based (C++)
 
@@ -89,7 +90,7 @@ int main() {
 11
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Parole chiave](../cpp/keywords-cpp.md)<br/>
 [alloc_text](../preprocessor/alloc-text.md)

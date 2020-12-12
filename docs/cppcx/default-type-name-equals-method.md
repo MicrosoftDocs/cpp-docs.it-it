@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: valore predefinito::(type_name):: Equals (metodo)'
 title: Metodo default::(type_name)::Equals
 ms.date: 12/30/2016
 ms.assetid: 4450f835-06fc-4758-8d0a-72cf00007873
-ms.openlocfilehash: 2e50cd10217dbf5c639a131e758264c7cd8f68a9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3a927d3146fb3157908c5a19ca26bde2fe2bf4cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225787"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273306"
 ---
 # <a name="defaulttype_nameequals-method"></a>Metodo default::(type_name)::Equals
 
@@ -40,6 +41,6 @@ Oggetto da confrontare.
 
 **Intestazione:** vccorlib.h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [spazio dei nomi predefinito](../cppcx/default-namespace.md)

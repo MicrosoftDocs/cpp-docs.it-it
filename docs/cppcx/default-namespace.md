@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: spazio dei nomi predefinito'
 title: spazio dei nomi predefinito
 ms.date: 12/30/2016
 ms.assetid: 4712e9dc-57ba-43cc-811e-022e1dae4de8
-ms.openlocfilehash: 5696730bcef08ad11be4a2b689e95eb3c13e11eb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 46fa1e6162d0d9ffe25a47bfec88d8461f366828
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845705"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273319"
 ---
 # <a name="default-namespace"></a>spazio dei nomi predefinito
 
@@ -19,11 +20,11 @@ Lo `default` spazio dei nomi include i tipi incorporati supportati da C++/CX.
 namespace default;
 ```
 
-### <a name="members"></a>Membri
+### <a name="members"></a>Members
 
 Tutti i tipi incorporati ereditano i membri seguenti.
 
-| Nome | Descrizione |
+| Nome | Description |
 |--|--|
 | [default::(type_name)::Equals](../cppcx/default-type-name-equals-method.md) | Determina se l'oggetto specificato è uguale all'oggetto corrente. |
 | [default::(type_name)::GetHashCode](../cppcx/default-type-name-gethashcode-method.md) | Restituisce il codice hash per l'istanza. |
@@ -32,7 +33,7 @@ Tutti i tipi incorporati ereditano i membri seguenti.
 
 ### <a name="built-in-types"></a>Tipi incorporati
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`char16`|Valore non numerico a 16 bit che rappresenta un punto di codice Unicode (UTF-16).|
 |`float32`|Numero a virgola mobile IEEE 754 a 32 bit.|
@@ -50,6 +51,6 @@ Tutti i tipi incorporati ereditano i membri seguenti.
 
 **Intestazione:** vccorlib.h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimenti per il linguaggio C++/CX](../cppcx/visual-c-language-reference-c-cx.md)

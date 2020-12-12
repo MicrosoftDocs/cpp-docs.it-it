@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2384'
 title: Errore del compilatore C2384
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2384
 ms.assetid: 8145f7ad-31b1-406d-ac43-0d557feab635
-ms.openlocfilehash: 321ccd23bc273f5fa548f75fd44bc320bcf4c426
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f72db8d5beb871bbb9adf1cdc234769705db2b9d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225514"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272513"
 ---
 # <a name="compiler-error-c2384"></a>Errore del compilatore C2384
 
 'member': impossibile applicare __declspec(thread) ai membri delle classi gestite o WinRT
 
-Il [thread](../../cpp/thread.md) **`__declspec`** modificatore di thread non può essere usato in un membro di una classe gestita o Windows Runtime.
+Il [](../../cpp/thread.md) **`__declspec`** modificatore di thread non può essere usato in un membro di una classe gestita o Windows Runtime.
 
 L'archiviazione thread-locale statica nel codice gestito può essere usata solo per le DLL caricate in modo statico. La DLL deve essere caricata in modo statico all'avvio del processo. Windows Runtime non supporta l'archiviazione thread-local.
 

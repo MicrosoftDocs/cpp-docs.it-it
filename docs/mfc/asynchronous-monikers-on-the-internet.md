@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: moniker asincroni in Internet'
 title: Moniker asincroni in Internet
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - optimization [MFC], asynchronous downloading across Internet
 - Internet [MFC], asynchronous downloading
 ms.assetid: 418b0c64-0046-4dae-8118-c9c762b5822e
-ms.openlocfilehash: 74add1ad894f883c67eefab888898c0abf518b83
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f937c2c1189dcb44bf49b4b386bca68a61f925fd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625040"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274021"
 ---
 # <a name="asynchronous-monikers-on-the-internet"></a>Moniker asincroni in Internet
 
@@ -63,7 +64,7 @@ L'oggetto `CDataPathProperty` è derivato da `CAsyncMonikerFile`. L'oggetto `CCa
 
 Per informazioni sul download asincrono in un controllo ActiveX, vedere [controlli ActiveX in Internet](activex-controls-on-the-internet.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attività di programmazione Internet MFC](mfc-internet-programming-tasks.md)<br/>
 [Nozioni fondamentali sulla programmazione Internet MFC](mfc-internet-programming-basics.md)

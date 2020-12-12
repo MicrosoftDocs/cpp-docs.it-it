@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Utilità di pianificazione (runtime di concorrenza)'
 title: Utilità di pianificazione (runtime di concorrenza)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -16,19 +17,19 @@ helpviewer_keywords:
 - scheduler policies [Concurrency Runtime]
 - task scheduler [Concurrency Runtime], wait function
 ms.assetid: 9aba278c-e0c9-4ede-b7c6-fedf7a365d90
-ms.openlocfilehash: e4a2e66afe656f9588ed3040218d1f70b3684190
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: db52b6714f5bdb96cb33aeea1bce1d92f5d5d4a1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143302"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271382"
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>Utilità di pianificazione (runtime di concorrenza)
 
 Negli argomenti contenuti in questa parte della documentazione vengono descritte le funzionalità principali dell'utilità di pianificazione del runtime di concorrenza. L'Utilità di pianificazione è utile quando si vuole ottimizzare le prestazioni del codice esistente che usa il runtime di concorrenza.
 
 > [!IMPORTANT]
-> Il Utilità di pianificazione non è disponibile da un'app piattaforma UWP (Universal Windows Platform) (UWP). Per altre informazioni, vedere [creazione di operazioni asincrone C++ in per app UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).
+> Il Utilità di pianificazione non è disponibile da un'app piattaforma UWP (Universal Windows Platform) (UWP). Per altre informazioni, vedere [creazione di operazioni asincrone in C++ per app UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).
 >
 > In Visual Studio 2015 e versioni successive, la classe [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) e i tipi correlati in ppltasks. h usano il pool di thread di Windows come utilità di pianificazione. Questo argomento non si applica più ai tipi definiti in ppltasks.h. Gli algoritmi paralleli come parallel_for continuano a usare il runtime di concorrenza come utilità di pianificazione predefinita.
 
@@ -41,7 +42,7 @@ L'Utilità di pianificazione gestisce i dettagli correlati alla pianificazione e
 
 Il [confronto con altri modelli di concorrenza](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md) descrive le differenze tra i meccanismi di pianificazione di tipo preemptive e cooperativa. L'Utilità di pianificazione usa la pianificazione cooperativa e un algoritmo di acquisizione del lavoro insieme all'utilità di pianificazione di tipo preemptive del sistema operativo per ottimizzare l'uso delle risorse di elaborazione.
 
-Il runtime di concorrenza fornisce un'utilità di pianificazione predefinita in modo da evitare di dover gestire i dettagli dell'infrastruttura. Pertanto, l'Utilità di pianificazione in genere non viene usata direttamente. Tuttavia, per soddisfare le esigenze di qualità dell'applicazione, è possibile usare l'Utilità di pianificazione per fornire criteri di pianificazione personalizzati o associare utilità di pianificazione a specifiche attività. Si supponga ad esempio di avere una routine di ordinamento parallela che non possa essere usata con più di quattro processori. È possibile usare i *criteri dell'utilità di pianificazione* per creare un'utilità di pianificazione che non generi più di quattro attività simultanee. L'esecuzione della routine di ordinamento su questa utilità di pianificazione consente alle altre utilità di pianificazione attive di usare tutte le risorse di elaborazione rimanenti.
+Il runtime di concorrenza fornisce un'utilità di pianificazione predefinita in modo da evitare di dover gestire i dettagli dell'infrastruttura.  Pertanto, l'Utilità di pianificazione in genere non viene usata direttamente. Tuttavia, per soddisfare le esigenze di qualità dell'applicazione, è possibile usare l'Utilità di pianificazione per fornire criteri di pianificazione personalizzati o associare utilità di pianificazione a specifiche attività. Si supponga ad esempio di avere una routine di ordinamento parallela che non possa essere usata con più di quattro processori. È possibile usare i *criteri dell'utilità di pianificazione* per creare un'utilità di pianificazione che non generi più di quattro attività simultanee. L'esecuzione della routine di ordinamento su questa utilità di pianificazione consente alle altre utilità di pianificazione attive di usare tutte le risorse di elaborazione rimanenti.
 
 ## <a name="related-topics"></a>Argomenti correlati
 
@@ -55,5 +56,5 @@ Il runtime di concorrenza fornisce un'utilità di pianificazione predefinita in 
 |[Funzioni di gestione della memoria](../../parallel/concrt/memory-management-functions.md)|Descrive le funzioni `concurrency::Alloc` e `concurrency::Free`. Queste funzioni consentono di migliorare le prestazioni di memoria allocando e liberando memoria in modo simultaneo.|
 |[Confronto con altri modelli di concorrenza](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|Descrive le differenze tra i meccanismi di pianificazione di tipo preemptive e cooperativa.|
 |[PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Descrive come usare i vari modelli paralleli, ad esempio gli algoritmi paralleli, nelle applicazioni.|
-|[Libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md)|Descrive come usare gli agenti asincroni nelle applicazioni.|
+|[libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md)|Descrive come usare gli agenti asincroni nelle applicazioni.|
 |[Runtime di concorrenza](../../parallel/concrt/concurrency-runtime.md)|Descrive il runtime di concorrenza che semplifica la programmazione parallela e contiene i collegamenti ad argomenti correlati.|

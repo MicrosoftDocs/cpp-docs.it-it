@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: DLL MFC regolari collegate a MFC in modo dinamico'
 title: DLL MFC regolari collegate a MFC in modo dinamico
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - dynamically linked DLLs [C++]
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
-ms.openlocfilehash: 3bfed5f75dab4c501708950fdb99f53c40ec142c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a16320427d881e2d37dd2afedc0566a759d59b9a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315001"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273862"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>DLL MFC regolari collegate a MFC in modo dinamico
 
@@ -39,19 +40,19 @@ Una normale DLL MFC collegata a MFC in modo dinamico presenta i requisiti seguen
 
 - Queste dll vengono compilate con **_AFXDLL** definito, proprio come un file eseguibile collegato in modo dinamico alla DLL MFC. Viene tuttavia definito anche **_USRDLL** , analogamente a una normale DLL MFC collegata in modo statico a MFC.
 
-- Questo tipo di DLL deve creare un'istanza `CWinApp`di una classe derivata da.
+- Questo tipo di DLL deve creare un'istanza di una `CWinApp` classe derivata da.
 
-- Questo tipo di DLL usa la `DllMain` fornita da MFC. Inserire tutto il codice di inizializzazione specifico della `InitInstance` dll nella funzione membro e il codice `ExitInstance` di terminazione in come in una normale applicazione MFC.
+- Questo tipo di DLL usa la `DllMain` fornita da MFC. Inserire tutto il codice di inizializzazione specifico della DLL nella `InitInstance` funzione membro e il codice di terminazione in `ExitInstance` come in una normale applicazione MFC.
 
 Poiché questo tipo di DLL utilizza la versione della libreria a collegamento dinamico di MFC, è necessario impostare in modo esplicito lo stato del modulo corrente su quello per la DLL. A tale scopo, usare la macro [AFX_MANAGE_STATE](../mfc/reference/extension-dll-macros.md#afx_manage_state) all'inizio di ogni funzione esportata dalla dll.
 
-le normali DLL MFC devono avere `CWinApp`una classe derivata da e un singolo oggetto della classe dell'applicazione, così come un'applicazione MFC. Tuttavia, l' `CWinApp` oggetto della dll non dispone di un message pump principale, così come l' `CWinApp` oggetto di un'applicazione.
+le normali DLL MFC devono avere una `CWinApp` classe derivata da e un singolo oggetto della classe dell'applicazione, così come un'applicazione MFC. Tuttavia, l' `CWinApp` oggetto della dll non dispone di un message pump principale, così come l' `CWinApp` oggetto di un'applicazione.
 
-Si noti che `CWinApp::Run` il meccanismo non è applicabile a una dll, perché l'applicazione è proprietaria del pump principale del messaggio. Se la DLL Visualizza finestre di dialogo non modali o ha una finestra cornice principale, il pump del messaggio principale dell'applicazione deve chiamare una routine esportata da DLL che chiama `CWinApp::PreTranslateMessage`.
+Si noti che il `CWinApp::Run` meccanismo non è applicabile a una dll, perché l'applicazione è proprietaria del pump principale del messaggio. Se la DLL Visualizza finestre di dialogo non modali o ha una finestra cornice principale, il pump del messaggio principale dell'applicazione deve chiamare una routine esportata da DLL che chiama `CWinApp::PreTranslateMessage` .
 
-Inserire tutte le inizializzazioni specifiche della DLL `CWinApp::InitInstance` nella funzione membro come in una normale applicazione MFC. La `CWinApp::ExitInstance` funzione membro della classe `CWinApp` derivata viene chiamata dalla funzione MFC fornita `DllMain` prima che la dll venga scaricata.
+Inserire tutte le inizializzazioni specifiche della DLL nella `CWinApp::InitInstance` funzione membro come in una normale applicazione MFC. La `CWinApp::ExitInstance` funzione membro della `CWinApp` classe derivata viene chiamata dalla funzione MFC fornita `DllMain` prima che la dll venga scaricata.
 
-È necessario distribuire le DLL condivise MFCx0. dll e Msvcr * 0. dll (o file simili) con l'applicazione.
+È necessario distribuire le DLL condivise MFCx0.dll e Msvcr * 0.dll (o file simili) con l'applicazione.
 
 Una DLL collegata in modo dinamico a MFC non può inoltre collegarsi in modo statico a MFC. Le applicazioni si collegano a DLL MFC regolari collegate a MFC in modo dinamico, esattamente come qualsiasi altra DLL.
 
@@ -95,6 +96,6 @@ Per un esempio di come scrivere, compilare e usare una normale DLL MFC, vedere l
 
 - [Utilizzo di MFC come parte di una DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Tipi di DLL](kinds-of-dlls.md)

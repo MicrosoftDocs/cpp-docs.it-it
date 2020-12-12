@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: is_standard_layout Class'
 title: Classe is_standard_layout
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - is_standard_layout class
 - is_standard_layout
 ms.assetid: 15ccf111-f537-45ef-b552-59152a7ba312
-ms.openlocfilehash: fba77be22796f3cb5495543d262dd270ac13d598
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 8f1f24fcb29e862dff10c2a51d1c9d0b2b28541f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560595"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271252"
 ---
 # <a name="is_standard_layout-class"></a>Classe is_standard_layout
 
@@ -30,7 +31,7 @@ struct is_standard_layout;
 *Ty*\
 Tipo su cui eseguire una query
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un'istanza di questo predicato di tipo contiene true se il tipo *Ty* è una classe che ha un layout standard di oggetti membro in memoria; in caso contrario, contiene false.
 
@@ -40,6 +41,6 @@ Un'istanza di questo predicato di tipo contiene true se il tipo *Ty* è una clas
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)

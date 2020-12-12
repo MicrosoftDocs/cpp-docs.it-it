@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: contenitori di controlli ActiveX: connessione di un controllo ActiveX a una variabile membro'
 title: 'Contenitori di controlli ActiveX: connessione di un controllo ActiveX a una variabile membro'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - member variables [MFC], ActiveX controls in project
 - ActiveX control containers [MFC], ActiveX controls as member variables
 ms.assetid: 7898a336-440d-4a60-be43-cb062b807aee
-ms.openlocfilehash: 87cb560a1054a912a4e8574cfe2dee74d5e61fe6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c3b890b5705624a18ec42583b143fbd33e4f0608
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625141"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271902"
 ---
 # <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>Contenitori di controlli ActiveX: connessione di un controllo ActiveX a una variabile membro
 
@@ -39,6 +40,6 @@ Il modo più semplice per accedere a un controllo ActiveX dall'interno dell'appl
 
 1. Fare clic su **fine** per accettare le scelte e uscire dalla procedura guidata Aggiungi variabile membro.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Contenitori di controlli ActiveX](activex-control-containers.md)

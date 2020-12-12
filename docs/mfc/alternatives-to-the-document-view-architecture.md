@@ -1,17 +1,18 @@
 ---
-title: Alternative all'architettura documento/visualizzazione
+description: "Altre informazioni su: alternative all'architettura documento/visualizzazione"
+title: Alternative all'architettura Document-View
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [MFC], applications without
 - CDocument class [MFC], space requirements
 - views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
-ms.openlocfilehash: 66325d1ae087b29f59f37197fb8695504bbddbc6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 6462a7aabdf52e3ec881f32d68d12128595f2110
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619748"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274047"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternative all'architettura documento/visualizzazione
 
@@ -64,6 +65,6 @@ Si consiglia di utilizzare la Creazione guidata applicazione MFC per creare appl
 
 L'articolo [MFC: utilizzo di classi di database senza documenti e visualizzazioni](../data/mfc-using-database-classes-without-documents-and-views.md) fornisce esempi più concreti di alternative documento/visualizzazione nel contesto di applicazioni di database.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Architettura documento/visualizzazione](document-view-architecture.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 1) C4091'
 title: Avviso del compilatore (livello 1) C4091
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4091
 ms.assetid: 3a404967-ab42-49b0-b324-fd7ba1859d78
-ms.openlocfilehash: 1a9fef0a825f98ab3ce8d935c98eefe1866be6cf
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 970283964174ced3f3665ff31199e12d8c14be8b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684690"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272253"
 ---
 # <a name="compiler-warning-level-1-c4091"></a>Avviso del compilatore (livello 1) C4091
 
@@ -19,7 +20,7 @@ ms.locfileid: "90684690"
 
 Il compilatore ha rilevato una situazione in cui l'utente probabilmente ha voluto dichiarare una variabile, ma il compilatore non è stato in grado di dichiarare la variabile.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Un **`__declspec`** attributo all'inizio di una dichiarazione di tipo definito dall'utente si applica alla variabile di quel tipo. C4091 indica che non è stata dichiarata alcuna variabile. L'esempio seguente genera l'C4091.
 

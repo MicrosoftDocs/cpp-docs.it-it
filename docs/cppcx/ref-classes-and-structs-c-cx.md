@@ -1,17 +1,18 @@
 ---
+description: 'Altre informazioni su: classi e struct di riferimento (C++/CX)'
 title: Classi e struct di riferimento (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
-ms.openlocfilehash: d128734f8c78c9198f0731b415c1be35b0c58e65
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e87709febd03c185ec50845ff6fbb1a5ee27aba7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214958"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273228"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Classi e struct di riferimento (C++/CX)
 
-Il/CX C++ supporta *le classi di riferimento* definite dall'utente e gli *struct di riferimento*e *le classi di valori* e gli *struct*di valore definiti dall'utente. Queste strutture di dati sono i contenitori primari in base ai quali C++/CX supporta il sistema di tipi Windows Runtime. Il relativo contenuto viene emesso ai metadati in base a determinate regole specifiche e ciò consente di passare tra Windows Runtime componenti e piattaforma UWP (Universal Windows Platform) app scritte in C++ o in altri linguaggi.
+Il/CX C++ supporta *le classi di riferimento* definite dall'utente e gli *struct di riferimento* e *le classi di valori* e gli *struct* di valore definiti dall'utente. Queste strutture di dati sono i contenitori primari in base ai quali C++/CX supporta il sistema di tipi Windows Runtime. Il relativo contenuto viene emesso ai metadati in base a determinate regole specifiche e ciò consente di passare tra Windows Runtime componenti e piattaforma UWP (Universal Windows Platform) app scritte in C++ o in altri linguaggi.
 
 Le classi e gli struct di riferimento presentano le seguenti caratteristiche principali:
 
@@ -97,7 +98,7 @@ Non sono consentite altre combinazioni.  Se non dichiari un distruttore in modo 
 
 Il comportamento non è definito se tenti di accedere ai membri di una classe il cui distruttore è già stato eseguito; ciò potrebbe provocare un arresto anomalo del programma. La chiamata a `delete t` su un tipo senza un distruttore pubblico non ha alcun effetto. La chiamata `delete this` a su un tipo o una classe di base con un **`private`** **`protected private`** distruttore o noto all'interno della gerarchia dei tipi non ha alcun effetto.
 
-Quando dichiari un distruttore pubblico, il compilatore genera il codice in modo che la classe di riferimento implementi `Platform::IDisposable` e il distruttore implementi il metodo `Dispose` . `Platform::IDisposable`è la proiezione C++/CX di `Windows::Foundation::IClosable` . Non implementare mai tali interfacce in modo esplicito.
+Quando dichiari un distruttore pubblico, il compilatore genera il codice in modo che la classe di riferimento implementi `Platform::IDisposable` e il distruttore implementi il metodo `Dispose` . `Platform::IDisposable` è la proiezione C++/CX di `Windows::Foundation::IClosable` . Non implementare mai tali interfacce in modo esplicito.
 
 ## <a name="inheritance"></a>Ereditarietà
 
@@ -127,7 +128,7 @@ Nell'esempio riportato di seguito viene mostrato come esporre una classe di rife
 
 [!code-cpp[cx_classes#09](../cppcx/codesnippet/CPP/classesstructs/class1.h#09)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Sistema di tipi](../cppcx/type-system-c-cx.md)<br/>
 [Classi e struct di valore](../cppcx/value-classes-and-structs-c-cx.md)<br/>

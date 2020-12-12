@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _mbsnbcat, _mbsnbcat_l'
 title: _mbsnbcat, _mbsnbcat_l
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - _mbsnbcat function
 - tcsncat function
 ms.assetid: aa0f1d30-0ddd-48d1-88eb-c6884b20fd91
-ms.openlocfilehash: 25df567525fc190be94529fba3b7de131122e6b5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 633ee28a1ab90eef286eb27d75e7a5e808c06ef8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915661"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271044"
 ---
 # <a name="_mbsnbcat-_mbsnbcat_l"></a>_mbsnbcat, _mbsnbcat_l
 
@@ -99,7 +100,7 @@ Impostazioni locali da usare.
 
 **_mbsnbcat** restituisce un puntatore alla stringa di destinazione. Nessun valore restituito è riservato per indicare un errore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_mbsnbcat** aggiunge al massimo il primo *numero* di byte di *src* a *dest*. Se il byte immediatamente prima del carattere null in *dest* è un byte di apertura, il byte iniziale di *src* sovrascrive il byte di apertura. In caso contrario, il byte iniziale di *src* sovrascrive il carattere null di terminazione di *dest*. Se un byte null viene visualizzato in *src* prima che vengano aggiunti i byte *count* , **_mbsnbcat** aggiunge tutti i byte da *src*, fino al carattere null. Se *count* è maggiore della lunghezza di *src*, viene utilizzata la lunghezza di *src* al posto del *conteggio*. La stringa risultante termina con un carattere Null. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
@@ -129,7 +130,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>

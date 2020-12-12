@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso di CHotKeyCtrl'
 title: Utilizzo di CHotKeyCtrl
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - CHotKeyCtrl class [MFC], using
 - hot key controls
 ms.assetid: 9b207117-d848-4224-8888-c3d197bb0c95
-ms.openlocfilehash: e2002d96a1eba913e260fa92281f730355a83ca5
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 7f17063a4fb3732a9b121e2b93f5d55e51d5654a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447237"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271681"
 ---
 # <a name="using-chotkeyctrl"></a>Utilizzo di CHotKeyCtrl
 
@@ -21,14 +22,14 @@ Utilizzare un controllo tasto di scelta rapida per ottenere l'input di un utente
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-- [Uso di un controllo tasto di scelta rapida](../mfc/using-a-hot-key-control.md)
+- [Utilizzo di un controllo tasto di scelta](../mfc/using-a-hot-key-control.md)
 
-- [Impostazione di un tasto di scelta rapida](../mfc/setting-a-hot-key.md)
+- [Impostazione di un tasto di scelta](../mfc/setting-a-hot-key.md)
 
 - [Tasti di scelta rapida globali](../mfc/global-hot-keys.md)
 
-- [Tasti di scelta rapida specifici di thread](../mfc/thread-specific-hot-keys.md)
+- [Tasti di scelta rapida specifici del thread](../mfc/thread-specific-hot-keys.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli](../mfc/controls-mfc.md)

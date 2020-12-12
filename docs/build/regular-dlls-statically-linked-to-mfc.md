@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: normali DLL MFC collegate in modo statico a MFC'
 title: DLL MFC regolari collegate a MFC in modo statico
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - statically linked DLLs [C++]
 - regular MFC DLLs [C++], statically linked to MFC
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
-ms.openlocfilehash: 1f05b5e3c268935cf3161fb7184e04b3e3ea1446
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b213be6bf076557fc57a5bcac62cbf9767587bd3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314780"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273800"
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>DLL MFC regolari collegate a MFC in modo statico
 
@@ -32,15 +33,15 @@ Una normale DLL MFC, collegata in modo statico a MFC, presenta le funzionalità 
 
 Una normale DLL MFC, collegata in modo statico a MFC, presenta i requisiti seguenti:
 
-- Questo tipo di DLL deve creare un'istanza di una classe `CWinApp`derivata da.
+- Questo tipo di DLL deve creare un'istanza di una classe derivata da `CWinApp` .
 
-- Questo tipo di DLL usa la `DllMain` fornita da MFC. Inserire tutto il codice di inizializzazione specifico della `InitInstance` dll nella funzione membro e il codice `ExitInstance` di terminazione in come in una normale applicazione MFC.
+- Questo tipo di DLL usa la `DllMain` fornita da MFC. Inserire tutto il codice di inizializzazione specifico della DLL nella `InitInstance` funzione membro e il codice di terminazione in `ExitInstance` come in una normale applicazione MFC.
 
 - Anche se il termine USRDLL è obsoleto, è comunque necessario definire "**_USRDLL**" nella riga di comando del compilatore. Questa definizione determina quali dichiarazioni vengono estratte dai file di intestazione MFC.
 
-le normali DLL MFC devono avere `CWinApp`una classe derivata da e un singolo oggetto della classe dell'applicazione, così come un'applicazione MFC. Tuttavia, l' `CWinApp` oggetto della dll non dispone di un message pump principale, così come l' `CWinApp` oggetto di un'applicazione.
+le normali DLL MFC devono avere una `CWinApp` classe derivata da e un singolo oggetto della classe dell'applicazione, così come un'applicazione MFC. Tuttavia, l' `CWinApp` oggetto della dll non dispone di un message pump principale, così come l' `CWinApp` oggetto di un'applicazione.
 
-Si noti che `CWinApp::Run` il meccanismo non è applicabile a una dll, perché l'applicazione è proprietaria del pump principale del messaggio. Se la DLL apre finestre di dialogo non modali o ha una finestra cornice principale, il pump del messaggio principale dell'applicazione deve chiamare una routine esportata dalla DLL che a sua volta chiama `CWinApp::PreTranslateMessage` la funzione membro dell'oggetto applicazione della dll.
+Si noti che il `CWinApp::Run` meccanismo non è applicabile a una dll, perché l'applicazione è proprietaria del pump principale del messaggio. Se la DLL apre finestre di dialogo non modali o ha una finestra cornice principale, il pump del messaggio principale dell'applicazione deve chiamare una routine esportata dalla DLL che a sua volta chiama la `CWinApp::PreTranslateMessage` funzione membro dell'oggetto applicazione della dll.
 
 Per un esempio di questa funzione, vedere l'esempio DLLScreenCap.
 
@@ -62,7 +63,7 @@ Se è necessario eseguire una delle operazioni precedenti o se è necessario pas
 
 Una DLL collegata in modo statico a MFC non può inoltre collegarsi in modo dinamico alle DLL MFC condivise. Una DLL collegata in modo statico a MFC viene associata dinamicamente a un'applicazione come qualsiasi altra DLL. le applicazioni vi si collegano esattamente come qualsiasi altra DLL.
 
-Le librerie di collegamento statico MFC standard vengono denominate in base alla convenzione descritta in [convenzioni di denominazione per le DLL MFC](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). Tuttavia, con MFC versione 3,0 e successive, non è più necessario specificare manualmente al linker la versione della libreria MFC che si desidera collegare. Al contrario, i file di intestazione MFC determinano automaticamente la versione corretta della libreria MFC da collegare in base alle definizioni del preprocessore, ad esempio ** \_debug** o **_UNICODE**. I file di intestazione MFC aggiungono direttive/DEFAULTLIB che indicano al linker di collegarsi a una versione specifica della libreria MFC.
+Le librerie di collegamento statico MFC standard vengono denominate in base alla convenzione descritta in [convenzioni di denominazione per le DLL MFC](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). Tuttavia, con MFC versione 3,0 e successive, non è più necessario specificare manualmente al linker la versione della libreria MFC che si desidera collegare. Al contrario, i file di intestazione MFC determinano automaticamente la versione corretta della libreria MFC da collegare in base alle definizioni del preprocessore, ad esempio **\_ DEBUG** o **_UNICODE**. I file di intestazione MFC aggiungono direttive/DEFAULTLIB che indicano al linker di collegarsi a una versione specifica della libreria MFC.
 
 ## <a name="what-do-you-want-to-do"></a>Per saperne di più
 
@@ -80,6 +81,6 @@ Le librerie di collegamento statico MFC standard vengono denominate in base alla
 
 - [MFC (DLL di estensione)](extension-dlls-overview.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Tipi di DLL](kinds-of-dlls.md)

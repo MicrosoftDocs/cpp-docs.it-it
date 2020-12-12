@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CriticalSection'
 title: CriticalSection (classe)
 ms.date: 09/24/2018
 ms.topic: reference
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::CriticalSection::CriticalSection, constructor
 - Microsoft::WRL::Wrappers::CriticalSection::TryLock method
 ms.assetid: f2e0a024-71a3-4f6b-99ea-d93a4a608ac4
-ms.openlocfilehash: b95e512f89ee1ff32ca9f1bea51bce643d185a2e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e570dfaef8fcf16084792d205fc3e322cf8be908
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220522"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273033"
 ---
 # <a name="criticalsection-class"></a>CriticalSection (classe)
 
@@ -36,18 +37,18 @@ Rappresenta un oggetto sezione critica.
 class CriticalSection;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="constructor"></a>Costruttore
 
-Nome                                                        | Descrizione
+Nome                                                        | Description
 ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------
 [CriticalSection:: CriticalSection](#criticalsection)        | Inizializza un oggetto di sincronizzazione simile a un oggetto mutex, ma può essere utilizzato solo dai thread di un singolo processo.
 [CriticalSection:: ~ CriticalSection](#tilde-criticalsection) | Consente di deinizializzare ed eliminare definitivamente l' `CriticalSection` oggetto corrente.
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-Nome                                 | Descrizione
+Nome                                 | Description
 ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------
 [CriticalSection:: IsValid](#isvalid) | Indica se la sezione critica corrente è valida.
 [CriticalSection:: Lock](#lock)       | Attende la proprietà dell'oggetto sezione critico specificato. La funzione restituisce quando al thread chiamante viene concessa la proprietà.
@@ -55,7 +56,7 @@ Nome                                 | Descrizione
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-Nome                        | Descrizione
+Nome                        | Description
 --------------------------- | ----------------------------------------
 [CriticalSection:: cs_](#cs) | Dichiara un membro dati della sezione critica.
 
@@ -69,7 +70,7 @@ Nome                        | Descrizione
 
 **Spazio dei nomi:** Microsoft:: WRL:: Wrappers
 
-## <a name="criticalsectioncriticalsection"></a><a name="tilde-criticalsection"></a>CriticalSection:: ~ CriticalSection
+## <a name="criticalsectioncriticalsection"></a><a name="tilde-criticalsection"></a> CriticalSection:: ~ CriticalSection
 
 Consente di deinizializzare ed eliminare definitivamente l' `CriticalSection` oggetto corrente.
 
@@ -77,7 +78,7 @@ Consente di deinizializzare ed eliminare definitivamente l' `CriticalSection` og
 WRL_NOTHROW ~CriticalSection();
 ```
 
-## <a name="criticalsectioncriticalsection"></a><a name="criticalsection"></a>CriticalSection:: CriticalSection
+## <a name="criticalsectioncriticalsection"></a><a name="criticalsection"></a> CriticalSection:: CriticalSection
 
 Inizializza un oggetto di sincronizzazione simile a un oggetto mutex, ma può essere utilizzato solo dai thread di un singolo processo.
 
@@ -92,11 +93,11 @@ explicit CriticalSection(
 *SpinCount*<br/>
 Il numero di spin per l'oggetto sezione critica. Il valore predefinito è 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni sulle sezioni critiche e spincounts, vedere la `InitializeCriticalSectionAndSpinCount` funzione nella `Synchronization` sezione dell'API Windows documentazione.
 
-## <a name="criticalsectioncs_"></a><a name="cs"></a>CriticalSection:: cs_
+## <a name="criticalsectioncs_"></a><a name="cs"></a> CriticalSection:: cs_
 
 Dichiara un membro dati della sezione critica.
 
@@ -104,11 +105,11 @@ Dichiara un membro dati della sezione critica.
 CRITICAL_SECTION cs_;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo membro dati è protetto.
 
-## <a name="criticalsectionisvalid"></a><a name="isvalid"></a>CriticalSection:: IsValid
+## <a name="criticalsectionisvalid"></a><a name="isvalid"></a> CriticalSection:: IsValid
 
 Indica se la sezione critica corrente è valida.
 
@@ -120,7 +121,7 @@ bool IsValid() const;
 
 Per impostazione predefinita, restituisce sempre **`true`** .
 
-## <a name="criticalsectionlock"></a><a name="lock"></a>CriticalSection:: Lock
+## <a name="criticalsectionlock"></a><a name="lock"></a> CriticalSection:: Lock
 
 Attende la proprietà dell'oggetto sezione critico specificato. La funzione restituisce quando al thread chiamante viene concessa la proprietà.
 
@@ -141,11 +142,11 @@ Oggetto sezione critica specificato dall'utente.
 
 Oggetto Lock che può essere utilizzato per sbloccare la sezione critica corrente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La prima `Lock` funzione ha effetto sull'oggetto sezione critica corrente. La seconda `Lock` funzione interessa una sezione critica specificata dall'utente.
 
-## <a name="criticalsectiontrylock"></a><a name="trylock"></a>CriticalSection:: TryLock
+## <a name="criticalsectiontrylock"></a><a name="trylock"></a> CriticalSection:: TryLock
 
 Tenta di immettere una sezione critica senza blocco. Se la chiamata ha esito positivo, il thread chiamante acquisisce la proprietà della sezione critica.
 
@@ -166,6 +167,6 @@ Oggetto sezione critica specificato dall'utente.
 
 Valore diverso da zero se la sezione critica è stata immessa correttamente o il thread corrente è già proprietario della sezione critica. Zero se un altro thread è già proprietario della sezione critica.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La prima `TryLock` funzione ha effetto sull'oggetto sezione critica corrente. La seconda `TryLock` funzione interessa una sezione critica specificata dall'utente.

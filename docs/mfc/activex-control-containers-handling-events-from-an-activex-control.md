@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: contenitori di controlli ActiveX: gestione di eventi da un controllo ActiveX'
 title: 'Contenitori di controlli ActiveX: gestione di eventi da un controllo ActiveX'
 ms.date: 09/12/2018
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
-ms.openlocfilehash: 4b7bc78a2937c010a4d2f1fb000ae0fe8ca2416c
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 451061467b87df82b8bca141684ea70f222edcac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625120"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271876"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Contenitori di controlli ActiveX: gestione di eventi da un controllo ActiveX
 
@@ -32,7 +33,7 @@ Utilizzando il pulsante eventi nella finestra **Proprietà** (in **Visualizzazio
 
 Per ulteriori informazioni sulle mappe di sink di evento, vedere [mapping di sink di evento](reference/event-sink-maps.md) nei riferimenti alla libreria di *classi*.
 
-## <a name="event-handler-modifications-to-the-project"></a><a name="_core_event_handler_modifications_to_the_project"></a>Modifiche al gestore eventi per il progetto
+## <a name="event-handler-modifications-to-the-project"></a><a name="_core_event_handler_modifications_to_the_project"></a> Modifiche al gestore eventi per il progetto
 
 Quando si usa la finestra **Proprietà** per aggiungere gestori eventi, viene dichiarata e definita una mappa di sink di evento nel progetto. Al controllo vengono aggiunte le istruzioni seguenti. File CPP la prima volta che viene aggiunto un gestore eventi. Questo codice dichiara una mappa di sink di evento per la classe della finestra di dialogo (in questo caso, `CContainerDlg` ):
 
@@ -63,10 +64,10 @@ Per altre informazioni sulle macro di sink di evento, vedere [mapping di sink di
 
 1. Selezionare l'evento che si desidera venga gestito dalla classe della finestra di dialogo. Per questo esempio, selezionare **fare clic su**.
 
-1. Nella casella di riepilogo a discesa a destra selezionare ** \<Add> ClickCircctrl1**.
+1. Nella casella di riepilogo a discesa a destra selezionare **\<Add> ClickCircctrl1**.
 
 1. Fare doppio clic sulla nuova funzione di gestione da Visualizzazione classi per passare al codice del gestore eventi nell'implementazione di (. CPP) del file `CContainerDlg` .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Contenitori di controlli ActiveX](activex-control-containers.md)

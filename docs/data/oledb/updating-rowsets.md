@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: aggiornamento dei set di righe'
 title: aggiornamento rowset
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: 134ab73428b7535bb34094b7d5b1952fd61a3d69
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3e5fcd374e446670df586c27e6b6e89d5da30da6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509440"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272526"
 ---
 # <a name="updating-rowsets"></a>aggiornamento rowset
 
@@ -31,7 +32,7 @@ I consumer possono eseguire i tipi di aggiornamento seguenti sui dati del set di
 > [!NOTE]
 > La Creazione guidata consumer OLE DB ATL non è disponibile in Visual Studio 2019 e versioni successive. È comunque possibile aggiungere la funzionalità manualmente. Per altre informazioni, vedere [Creazione di un consumer senza utilizzare una procedura guidata](creating-a-consumer-without-using-a-wizard.md).
 
-Quando si crea un consumer con la **creazione guidata consumer OLE DB ATL**, è possibile supportare le operazioni di aggiornamento selezionando una o più delle tre caselle di controllo **modifica**, **Inserisci**ed **Elimina**. Se si selezionano queste opzioni, la procedura guidata modifica il codice in modo che supporti il tipo di modifiche scelte. Se tuttavia non si usa la procedura guidata, per supportare gli aggiornamenti è necessario impostare le proprietà del set di righe seguenti su `VARIANT_TRUE`:
+Quando si crea un consumer con la **creazione guidata consumer OLE DB ATL**, è possibile supportare le operazioni di aggiornamento selezionando una o più delle tre caselle di controllo **modifica**, **Inserisci** ed **Elimina**. Se si selezionano queste opzioni, la procedura guidata modifica il codice in modo che supporti il tipo di modifiche scelte. Se tuttavia non si usa la procedura guidata, per supportare gli aggiornamenti è necessario impostare le proprietà del set di righe seguenti su `VARIANT_TRUE`:
 
 - `DBPROPVAL_UP_CHANGE` consente di modificare i valori dei dati in una riga.
 
@@ -206,7 +207,7 @@ Ad esempio, se la prima chiamata a `Update` non fosse presente nel codice preced
 
 Infine, uno dei motivi principali per il rinvio delle modifiche consiste nella possibilità di annullarle. La chiamata a [CRowset::Undo](./crowset-class.md#undo) ripristina lo stato della cache delle modifiche locale allo stato dell'archivio dati prima che venissero apportate le modifiche in sospeso. È importante notare che `Undo` non esegue il rollback dello stato della cache locale al passaggio precedente (lo stato prima dell'ultima modifica), bensì cancella la cache locale per la riga. `Undo`, inoltre, ha effetto solo sulla riga corrente.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Uso dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
 [Classe CRowset](../../data/oledb/crowset-class.md)<br/>

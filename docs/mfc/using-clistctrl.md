@@ -1,40 +1,41 @@
 ---
+description: 'Altre informazioni su: uso di CListCtrl'
 title: Utilizzo di CListCtrl
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CListCtrl class [MFC], using
 ms.assetid: 20d6a5d6-8f07-4ddf-975f-ea2dfebcc835
-ms.openlocfilehash: ff7e075247d5883f2a9f1d098578f017d8de6464
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e1a405206d6af5f6918834382dd42b71270b00b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366514"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271668"
 ---
 # <a name="using-clistctrl"></a>Utilizzo di CListCtrl
 
-Utilizzare un controllo elenco per visualizzare qualsiasi disposizione di icone con etichette, come in Esplora file, oppure elenchi in formato colonna di testo, con o senza icone. Per una descrizione delle quattro possibili "visualizzazioni" (da non confondere con le visualizzazioni MFC) è possibile avere in un controllo elenco, ovvero visualizzazione icone, visualizzazione icone piccole, visualizzazione elenco e visualizzazione report, vedere Visualizzazioni nella cenni preliminari sulla classe [CListCtrl.](../mfc/reference/clistctrl-class.md)
+Utilizzare un controllo elenco per visualizzare qualsiasi disposizione di icone con etichette, come in Esplora file, oppure elenchi in formato colonna di testo, con o senza icone. Per una descrizione delle quattro possibili "viste" (da non confondere con le viste MFC), è possibile disporre di un controllo elenco, visualizzazione icone, visualizzazione icona piccola, visualizzazione elenco e visualizzazione report, vedere Visualizzazioni nella panoramica della classe [CListCtrl](../mfc/reference/clistctrl-class.md) .
 
 In alcune visualizzazioni, gli utenti possono trascinare le icone in posizioni diverse o modificare le etichette delle icone. Come esempio vedere il riquadro destro di Esplora file, che utilizza un controllo elenco in una finestra non di dialogo. È possibile sperimentare le visualizzazioni disponibili nel menu Visualizza di Esplora risorse.
 
-Per informazioni correlate, vedere [Informazioni sui controlli di visualizzazione](/windows/win32/Controls/list-view-controls-overview) elenco in Windows SDK.
+Per informazioni correlate, vedere [informazioni sui controlli List-View](/windows/win32/Controls/list-view-controls-overview) nel Windows SDK.
 
 > [!NOTE]
-> Windows SDK fa riferimento ai controlli elenco come "controlli visualizzazione elenco". Questo utilizzo di "visualizzazione" non si riferisce alle classi di visualizzazione MFC, in particolare `CListView`. Per ulteriori informazioni, vedere [Controllo elenco e Visualizzazione elenco](../mfc/list-control-and-list-view.md).
+> Il Windows SDK si riferisce ai controlli elenco come "controlli visualizzazione elenco". Questo utilizzo di "visualizzazione" non si riferisce alle classi di visualizzazione MFC, in particolare `CListView`. Per altre informazioni, vedere [elenco di controllo e visualizzazione elenco](../mfc/list-control-and-list-view.md).
 
-## <a name="what-do-you-want-to-know-more-about"></a>Cosa vuoi sapere di più su
+## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-- [Controllo List e visualizzazione elenco](../mfc/list-control-and-list-view.md)
+- [Controllo elenco e visualizzazione elenco](../mfc/list-control-and-list-view.md)
 
 - [Elementi elenco ed elenchi di immagini](../mfc/list-items-and-image-lists.md)
 
 - [Elementi di callback e maschera di callback](../mfc/callback-items-and-the-callback-mask.md)
 
-- [Creazione del controllo List](../mfc/creating-the-list-control.md)
+- [Creazione del controllo elenco](../mfc/creating-the-list-control.md)
 
 - [Creazione degli elenchi di immagini](../mfc/creating-the-image-lists.md)
 
-- [Aggiunta di colonne al controllo (visualizzazione dei rapporti)](../mfc/adding-columns-to-the-control-report-view.md)
+- [Aggiunta di colonne al controllo (visualizzazione report)](../mfc/adding-columns-to-the-control-report-view.md)
 
 - [Aggiunta di elementi al controllo](../mfc/adding-items-to-the-control.md)
 
@@ -46,10 +47,10 @@ Per informazioni correlate, vedere [Informazioni sui controlli di visualizzazion
 
 - [Modifica degli stili del controllo List](../mfc/changing-list-control-styles.md)
 
-- [Controlli List virtuali](../mfc/virtual-list-controls.md)
+- [Controlli elenco virtuale](../mfc/virtual-list-controls.md)
 
-- [Distruzione del controllo List](../mfc/destroying-the-list-control.md)
+- [Eliminazione definitiva del controllo elenco](../mfc/destroying-the-list-control.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli](../mfc/controls-mfc.md)

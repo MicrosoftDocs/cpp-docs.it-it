@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: overwrite_buffer Class'
 title: Classe overwrite_buffer
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
-ms.openlocfilehash: 7579ee4b9c650b0fe707eccb0f8c2b67a3efac14
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 20acc133a988c145546e680acb394f0cb69307f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231689"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271395"
 ---
 # <a name="overwrite_buffer-class"></a>Classe overwrite_buffer
 
@@ -47,21 +48,21 @@ Tipo di payload dei messaggi archiviati e propagati dal buffer.
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[overwrite_buffer](#ctor)|Di overload. Costruisce un `overwrite_buffer` blocco della messaggistica.|
 |[distruttore ~ overwrite_buffer](#dtor)|Elimina definitivamente il `overwrite_buffer` blocco della messaggistica.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[has_value](#has_value)|Verifica se il `overwrite_buffer` blocco della messaggistica ha ancora un valore.|
 |[value](#value)|Ottiene un riferimento al payload corrente del messaggio archiviato nel `overwrite_buffer` blocco della messaggistica.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[accept_message](#accept_message)|Accetta un messaggio offerto dal `overwrite_buffer` blocco della messaggistica, restituendo una copia del messaggio al chiamante.|
 |[consume_message](#consume_message)|Utilizza un messaggio precedentemente offerto dal blocco della `overwrite_buffer` messaggistica e riservato dalla destinazione, restituendo una copia del messaggio al chiamante.|
@@ -74,7 +75,7 @@ Tipo di payload dei messaggi archiviati e propagati dal buffer.
 |[send_message](#send_message)|Passa in modo sincrono un messaggio da un `ISource` blocco a questo `overwrite_buffer` blocco di messaggistica. Viene richiamato dal `send` metodo, quando viene chiamato da un blocco di origine.|
 |[supports_anonymous_source](#supports_anonymous_source)|Esegue l'override del metodo `supports_anonymous_source` per indicare che questo blocco può accettare messaggi offerti da un'origine non collegata. Esegue l'override di [ITarget:: supports_anonymous_source](itarget-class.md#supports_anonymous_source).|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un `overwrite_buffer` blocco di messaggistica propaga copie del messaggio archiviato in ognuna delle relative destinazioni.
 
@@ -98,7 +99,7 @@ Per altre informazioni, vedere [blocchi di messaggi asincroni](../../../parallel
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="accept_message"></a><a name="accept_message"></a>accept_message
+## <a name="accept_message"></a><a name="accept_message"></a> accept_message
 
 Accetta un messaggio offerto dal `overwrite_buffer` blocco della messaggistica, restituendo una copia del messaggio al chiamante.
 
@@ -115,11 +116,11 @@ virtual message<T>* accept_message(runtime_object_identity _MsgId);
 
 Puntatore all' `message` oggetto di cui il chiamante è ora proprietario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il `overwrite_buffer` blocco della messaggistica restituisce le copie del messaggio alle relative destinazioni, anziché trasferire la proprietà del messaggio attualmente mantenuto.
 
-## <a name="consume_message"></a><a name="consume_message"></a>consume_message
+## <a name="consume_message"></a><a name="consume_message"></a> consume_message
 
 Utilizza un messaggio precedentemente offerto dal blocco della `overwrite_buffer` messaggistica e riservato dalla destinazione, restituendo una copia del messaggio al chiamante.
 
@@ -136,11 +137,11 @@ virtual message<T>* consume_message(runtime_object_identity _MsgId);
 
 Puntatore all' `message` oggetto di cui il chiamante è ora proprietario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Simile a `accept` , ma è sempre preceduto da una chiamata a `reserve` .
 
-## <a name="has_value"></a><a name="has_value"></a>has_value
+## <a name="has_value"></a><a name="has_value"></a> has_value
 
 Verifica se il `overwrite_buffer` blocco della messaggistica ha ancora un valore.
 
@@ -152,7 +153,7 @@ bool has_value() const;
 
 **`true`** Se il blocco ha ricevuto un valore; **`false`** in caso contrario,.
 
-## <a name="link_target_notification"></a><a name="link_target_notification"></a>link_target_notification
+## <a name="link_target_notification"></a><a name="link_target_notification"></a> link_target_notification
 
 Callback che notifica che una nuova destinazione è stata collegata a questo blocco di `overwrite_buffer` messaggistica.
 
@@ -165,7 +166,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 *_PTarget*<br/>
 Puntatore alla destinazione appena collegata.
 
-## <a name="overwrite_buffer"></a><a name="dtor"></a>~ overwrite_buffer
+## <a name="overwrite_buffer"></a><a name="dtor"></a> ~ overwrite_buffer
 
 Elimina definitivamente il `overwrite_buffer` blocco della messaggistica.
 
@@ -173,7 +174,7 @@ Elimina definitivamente il `overwrite_buffer` blocco della messaggistica.
 ~overwrite_buffer();
 ```
 
-## <a name="overwrite_buffer"></a><a name="ctor"></a>overwrite_buffer
+## <a name="overwrite_buffer"></a><a name="ctor"></a> overwrite_buffer
 
 Costruisce un `overwrite_buffer` blocco della messaggistica.
 
@@ -209,13 +210,13 @@ Oggetto `Scheduler` all'interno del quale è pianificata l'attività di propagaz
 *_PScheduleGroup*<br/>
 Oggetto `ScheduleGroup` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `overwrite_buffer` . L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se non si specificano i parametri `_PScheduler` o `_PScheduleGroup` , il runtime usa l'utilità di pianificazione predefinita.
 
 Il tipo `filter_method` è un functor con la firma `bool (T const &)` richiamata da questo `overwrite_buffer` blocco di messaggistica per determinare se deve accettare o meno un messaggio offerto.
 
-## <a name="propagate_message"></a><a name="propagate_message"></a>propagate_message
+## <a name="propagate_message"></a><a name="propagate_message"></a> propagate_message
 
 Passa in modo asincrono un messaggio da un `ISource` blocco a questo `overwrite_buffer` blocco di messaggistica. Viene richiamato dal `propagate` metodo, quando viene chiamato da un blocco di origine.
 
@@ -237,7 +238,7 @@ Puntatore al blocco di origine che offre il messaggio.
 
 [Message_status](concurrency-namespace-enums.md) indicazione della decisione da parte della destinazione con il messaggio.
 
-## <a name="propagate_to_any_targets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a><a name="propagate_to_any_targets"></a> propagate_to_any_targets
 
 Inserisce `message _PMessage` in questo `overwrite_buffer` blocco di messaggistica e lo offre a tutte le destinazioni collegate.
 
@@ -250,11 +251,11 @@ virtual void propagate_to_any_targets(_Inout_ message<T>* _PMessage);
 *_PMessage*<br/>
 Puntatore a un `message` oggetto `overwrite_buffer` di cui ha assunto la proprietà.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo sovrascrive il messaggio corrente in `overwrite_buffer` con il nuovo messaggio accettato `_PMessage` .
 
-## <a name="send_message"></a><a name="send_message"></a>send_message
+## <a name="send_message"></a><a name="send_message"></a> send_message
 
 Passa in modo sincrono un messaggio da un `ISource` blocco a questo `overwrite_buffer` blocco di messaggistica. Viene richiamato dal `send` metodo, quando viene chiamato da un blocco di origine.
 
@@ -276,7 +277,7 @@ Puntatore al blocco di origine che offre il messaggio.
 
 [Message_status](concurrency-namespace-enums.md) indicazione della decisione da parte della destinazione con il messaggio.
 
-## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a>supports_anonymous_source
+## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a> supports_anonymous_source
 
 Esegue l'override del metodo `supports_anonymous_source` per indicare che questo blocco può accettare messaggi offerti da un'origine non collegata.
 
@@ -288,7 +289,7 @@ virtual bool supports_anonymous_source();
 
 **`true`** Poiché il blocco non posticipa i messaggi offerti.
 
-## <a name="release_message"></a><a name="release_message"></a>release_message
+## <a name="release_message"></a><a name="release_message"></a> release_message
 
 Rilascia una prenotazione del messaggio precedente.
 
@@ -301,7 +302,7 @@ virtual void release_message(runtime_object_identity _MsgId);
 *_MsgId*<br/>
 `runtime_object_identity` `message` Oggetto dell'oggetto da rilasciare.
 
-## <a name="reserve_message"></a><a name="reserve_message"></a>reserve_message
+## <a name="reserve_message"></a><a name="reserve_message"></a> reserve_message
 
 Riserva un messaggio offerto in precedenza dal `overwrite_buffer` blocco della messaggistica.
 
@@ -318,11 +319,11 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 **`true`** Se il messaggio è stato riservato correttamente; **`false`** in caso contrario,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Dopo `reserve` la chiamata a, se restituisce **`true`** , è `consume` `release` necessario chiamare o per prendere o rilasciare la proprietà del messaggio.
 
-## <a name="resume_propagation"></a><a name="resume_propagation"></a>resume_propagation
+## <a name="resume_propagation"></a><a name="resume_propagation"></a> resume_propagation
 
 Riprende la propagazione dopo che una prenotazione è stata rilasciata.
 
@@ -342,11 +343,11 @@ T value();
 
 Payload del messaggio attualmente archiviato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore archiviato in `overwrite_buffer` può cambiare immediatamente dopo la restituzione di questo metodo. Questo metodo attenderà l'arrivo di un messaggio se nessun messaggio è attualmente archiviato in `overwrite_buffer` .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Concurrency](concurrency-namespace.md)<br/>
 [Classe unbounded_buffer](unbounded-buffer-class.md)<br/>

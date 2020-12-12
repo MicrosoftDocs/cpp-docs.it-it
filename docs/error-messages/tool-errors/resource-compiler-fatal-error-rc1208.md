@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore irreversibile del compilatore di risorse risorse RC1208'
 title: Errore irreversibile del compilatore di risorse RC1208
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - RC1208
 ms.assetid: 7dacc4ec-3ebd-49b3-ba4c-1a2982bac720
-ms.openlocfilehash: 2663f586934d7877a827d3a6f6357d3b52071c24
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 34d4644efbd5c6286bdfee68da1f7a8b10d6026c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172854"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271941"
 ---
 # <a name="resource-compiler-fatal-error-rc1208"></a>Errore irreversibile del compilatore di risorse RC1208
 

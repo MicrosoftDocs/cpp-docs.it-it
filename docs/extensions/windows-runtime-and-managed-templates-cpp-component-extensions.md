@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: Windows Runtime e modelli gestiti (C++/CLI e C++/CX)'
 title: Windows Runtime e modelli gestiti (C++/CLI e C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-ms.openlocfilehash: 5765370e611e5822b3b2d156d2eee5d21e5b453d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 75b39c58bc42c23da313525f125dc98abdb0866b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376312"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274034"
 ---
 # <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Windows Runtime e modelli gestiti (C++/CLI e C++/CX)
 
@@ -38,7 +39,7 @@ La creazione di modelli di classe dai tipi gestiti presenta alcune limitazioni c
 
 Opzione del compilatore: `/clr`
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 È possibile creare un'istanza di un tipo generico con un parametro di modello di tipo gestito, ma non di un modello gestito con un parametro di modello di tipo generico. Questa condizione dipende dal fatto che i tipi generici vengono risolti in fase di esecuzione. Per altre informazioni, vedere [Generics e modelli (C++/CLI)](generics-and-templates-visual-cpp.md).
 
@@ -130,6 +131,6 @@ template <>
 class A <int> {};
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Estensioni dei componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)

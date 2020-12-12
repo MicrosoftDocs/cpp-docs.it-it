@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Struttura EnableIf'
 title: EnableIf (struttura)
 ms.date: 10/03/2018
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - EnableIf structure
 ms.assetid: 7825b283-e6b2-4f39-a4b9-c03bcd431b8e
-ms.openlocfilehash: f43166920f3582ab681b67d2c89563dcf78ff0f1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 098dd5fdc7e37a7754d7124eba3e146575c127be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220496"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272851"
 ---
 # <a name="enableif-structure"></a>EnableIf (struttura)
 
@@ -36,7 +37,7 @@ Tipo.
 *b*<br/>
 Espressione booleana.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Definisce un membro dati del tipo specificato dal secondo parametro di modello se il primo parametro di modello restituisce **`true`** .
 
@@ -44,7 +45,7 @@ Definisce un membro dati del tipo specificato dal secondo parametro di modello s
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`type`|Se il parametro di modello *b* restituisce **`true`** , la specializzazione parziale definisce il membro dati `type` di tipo `T` .|
 
@@ -58,6 +59,6 @@ Definisce un membro dati del tipo specificato dal secondo parametro di modello s
 
 **Spazio dei nomi:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Microsoft:: WRL::D etails](microsoft-wrl-details-namespace.md)

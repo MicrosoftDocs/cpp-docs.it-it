@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso di CAnimateCtrl'
 title: Utilizzo di CAnimateCtrl
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - controls [MFC], animation
 - CAnimateCtrl class [MFC], about CAnimateCtrl class [MFC]
 ms.assetid: 696c0805-bef0-4e2e-a9e7-b37b9215b7f0
-ms.openlocfilehash: 79c1a0111317514ef6fd68acd0c6a2ebdccc3ba4
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: bb13d23f45b3a19516a688fd9e9857f750196d56
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447099"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271785"
 ---
 # <a name="using-canimatectrl"></a>Utilizzo di CAnimateCtrl
 
@@ -25,8 +26,8 @@ I controlli di animazione possono riprodurre solo clip AVI semplici e non suppor
 
 - [Uso di un controllo Animation](../mfc/using-an-animation-control.md)
 
-- [Notifiche inviate mediante controlli Animation](../mfc/notifications-sent-by-animation-controls.md)
+- [Notifiche inviate da controlli di animazione](../mfc/notifications-sent-by-animation-controls.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli](../mfc/controls-mfc.md)

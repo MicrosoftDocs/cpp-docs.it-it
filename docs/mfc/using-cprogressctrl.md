@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso di CProgressCtrl'
 title: Utilizzo di CProgressCtrl
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - progress controls [MFC], CProgressCtrl
 - progress controls [MFC], using
 ms.assetid: 61473270-196b-41ab-bf2b-467f46673539
-ms.openlocfilehash: a575a766650a77b0908f0fa3016139239b23dc56
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 652349a62d62652db32fbe002cdc714ac7ca1420
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441900"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271629"
 ---
 # <a name="using-cprogressctrl"></a>Utilizzo di CProgressCtrl
 
@@ -24,12 +25,12 @@ Quando si crea inizialmente il controllo dello stato di avanzamento, è necessar
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-- [Stili per il controllo Progress](../mfc/styles-for-the-progress-control.md)
+- [Stili per il controllo progress](../mfc/styles-for-the-progress-control.md)
 
-- [Impostazioni per il controllo Progress](../mfc/settings-for-the-progress-control.md)
+- [Impostazioni per il controllo dello stato di avanzamento](../mfc/settings-for-the-progress-control.md)
 
-- [Modifica del controllo Progress](../mfc/manipulating-the-progress-control.md)
+- [Manipolazione del controllo progress](../mfc/manipulating-the-progress-control.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli](../mfc/controls-mfc.md)

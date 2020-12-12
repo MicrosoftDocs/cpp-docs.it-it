@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: uso di CToolBarCtrl'
 title: Utilizzo di CToolBarCtrl
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CToolBarCtrl class [MFC]
 - toolbar controls [MFC], creating
 ms.assetid: 13cf3753-135b-4a3e-a850-ed30177fcf9d
-ms.openlocfilehash: a82a763ca357feccbe5b61d4f85d6038563c1c11
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4d2d72ab6368c66e76648cd7ff00771bde4f5a60
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442246"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271551"
 ---
 # <a name="using-ctoolbarctrl"></a>Utilizzo di CToolBarCtrl
 
@@ -26,10 +27,10 @@ ms.locfileid: "79442246"
 
 - [Uso di elenchi di immagini in un controllo Toolbar](../mfc/using-image-lists-in-a-toolbar-control.md)
 
-- [Uso di pulsanti a discesa in un controllo Toolbar](../mfc/using-drop-down-buttons-in-a-toolbar-control.md)
+- [Uso di Drop-Down pulsanti in un controllo Toolbar](../mfc/using-drop-down-buttons-in-a-toolbar-control.md)
 
 - [Personalizzazione dell'aspetto di un controllo Toolbar](../mfc/customizing-the-appearance-of-a-toolbar-control.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli](../mfc/controls-mfc.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: mbrtowc'
 title: mbrtowc
 ms.date: 4/2/2020
 api_name:
@@ -26,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-ms.openlocfilehash: 55d866e6f0e372c148de36bf259954bed11a953c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f00c9fd01826a80cb729bfe10af242db8dec2414
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229428"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271161"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
@@ -50,7 +51,7 @@ size_t mbrtowc(
 
 ### <a name="parameters"></a>Parametri
 
-*WCHAR*<br/>
+*wchar*<br/>
 Indirizzo di un carattere wide per ricevere la stringa di caratteri wide convertita (tipo **`wchar_t`** ). Questo valore può essere un puntatore Null se non è richiesta la restituzione di caratteri wide.
 
 *mbchar*<br/>
@@ -74,7 +75,7 @@ Uno dei valori seguenti:
 
 (size_t) (-2) Il *numero* di byte successivo contribuisce a un carattere multibyte incompleto ma potenzialmente valido e tutti i byte del *conteggio* sono stati elaborati. Nessun valore viene archiviato in *WCHAR*, ma *mbstate* viene aggiornato per riavviare la funzione.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Se *mbchar* è un puntatore null, la funzione è equivalente alla chiamata:
 
@@ -213,8 +214,8 @@ WC String: AaBbCcÜïα∩≡xXyYzZ
 |-------------|---------------------|
 |**mbrtowc**|\<wchar.h>|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
 [Impostazioni locali](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

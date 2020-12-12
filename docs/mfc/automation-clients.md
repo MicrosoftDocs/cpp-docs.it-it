@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: client di automazione'
 title: client di automazione
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - type libraries, Automation clients
 - clients
 ms.assetid: 84e34a79-06f6-4752-a33b-ae0ede1d8ecf
-ms.openlocfilehash: 9c34f6fccd06635dfb686e6eb1f2cf895bb86989
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 38379feb0881b154418daa5c02980eeee2dd21e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626075"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273956"
 ---
 # <a name="automation-clients"></a>client di automazione
 
@@ -38,7 +39,7 @@ Viene quindi specificato il file della libreria dei tipi che descrive le proprie
 
 Se si desidera gestire gli eventi nel client di automazione, è necessario aggiungere un'interfaccia sink. MFC fornisce supporto per la procedura guidata per aggiungere interfacce di sink per i controlli ActiveX, ma non per altri server COM.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Client di automazione: utilizzo delle librerie dei tipi](automation-clients-using-type-libraries.md)<br/>
 [Automazione](automation.md)<br/>

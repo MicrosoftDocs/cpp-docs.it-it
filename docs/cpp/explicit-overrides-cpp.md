@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: override espliciti (C++)'
 title: Override espliciti (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,22 +9,22 @@ helpviewer_keywords:
 - explicit virtual function overrides
 - explicit override of virtual function
 ms.assetid: ee583234-5cda-4e90-b55e-3f9fbf079ced
-ms.openlocfilehash: c3bf48b3dac9f23fd3894d7d3cdd41b7ec000ba4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4abb57c16f8fc4105b4fe3bb598cb84f66d07de9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189026"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273410"
 ---
 # <a name="explicit-overrides-c"></a>Override espliciti (C++)
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Se la stessa funzione virtuale viene dichiarata in due o più [interfacce](../cpp/interface.md) e se una classe è derivata da queste interfacce, è possibile eseguire l'override esplicito di ogni funzione virtuale.
 
-Per informazioni sulle sostituzioni esplicite nel codice C++gestito con/CLI, vedere [override espliciti](../extensions/explicit-overrides-cpp-component-extensions.md).
+Per informazioni sulle sostituzioni esplicite nel codice gestito con C++/CLI, vedere [override espliciti](../extensions/explicit-overrides-cpp-component-extensions.md).
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="example"></a>Esempio
 
@@ -119,6 +120,6 @@ In CMyClass::IMyInt2::mf2()
 In CMyClass::IMyInt2::mf2(int)
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Ereditarietà](../cpp/inheritance-cpp.md)

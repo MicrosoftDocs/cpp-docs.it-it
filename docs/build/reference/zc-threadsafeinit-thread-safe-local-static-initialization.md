@@ -1,5 +1,6 @@
 ---
-title: /Zc:threadSafeInit (Thread-safe Local Static Initialization)
+description: 'Altre informazioni su:/Zc: threadSafeInit (inizializzazione statica locale thread-safe)'
+title: '/Zc: threadSafeInit (inizializzazione statica locale thread-safe)'
 ms.date: 03/14/2018
 f1_keywords:
 - threadSafeInit
@@ -11,45 +12,45 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: a0fc4b34-2cf0-45a7-a642-b8afc4ca19f2
-ms.openlocfilehash: 92a1bfa5ec3bab2814397d51e35e617b7666c706
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac14e7979d2adab0b21229f426e00a489c14f38f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315703"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271213"
 ---
-# <a name="zcthreadsafeinit-thread-safe-local-static-initialization"></a>/Zc:threadSafeInit (Thread-safe Local Static Initialization)
+# <a name="zcthreadsafeinit-thread-safe-local-static-initialization"></a>/Zc: threadSafeInit (inizializzazione statica locale thread-safe)
 
-Il **/Zc: threadsafeinit** opzione del compilatore indica al compilatore per inizializzare le variabili locali statiche (ambito funzione) in modo thread-safe, eliminando la necessità di una sincronizzazione manuale. Solo l'inizializzazione è thread-safe. Uso e la modifica delle variabili locali statiche da più thread devono ancora essere sincronizzati manualmente. Questa opzione è disponibile a partire da Visual Studio 2015. Per impostazione predefinita, Visual Studio abilita questa opzione.
+L'opzione del compilatore **/Zc: threadSafeInit** indica al compilatore di inizializzare variabili locali (ambito di funzione) statiche in modo thread-safe, eliminando la necessità di eseguire la sincronizzazione manuale. Solo l'inizializzazione è thread-safe. L'uso e la modifica delle variabili locali statiche da più thread devono comunque essere sincronizzate manualmente. Questa opzione è disponibile a partire da Visual Studio 2015. Per impostazione predefinita, Visual Studio Abilita questa opzione.
 
 ## <a name="syntax"></a>Sintassi
 
-> **/Zc:threadSafeInit**[**-**]
+> **/Zc: threadSafeInit**[ **-** ]
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-In c++11 standard, le variabili di ambito blocco con statica o una durata di archiviazione thread debba essere inizializzate su zero prima di qualsiasi altra inizializzazione viene eseguita. Inizializzazione si verifica quando il controllo passa innanzitutto attraverso la dichiarazione della variabile. Se viene generata un'eccezione durante l'inizializzazione, la variabile viene considerata non inizializzato e l'inizializzazione viene tentata nuovamente il controllo della fase successivo passa attraverso la dichiarazione. Se il controllo entra la dichiarazione contemporaneamente con l'inizializzazione, i blocchi di esecuzione simultanea durante l'inizializzazione è stata completata. Il comportamento è indefinito se il controllo entra nuovamente in modo ricorsivo la dichiarazione durante l'inizializzazione. Per impostazione predefinita, Visual Studio a partire da Visual Studio 2015 implementa questo comportamento standard. Questo comportamento può essere specificato in modo esplicito, impostando il **/Zc: threadsafeinit** opzione del compilatore.
+Nello standard C++ 11, le variabili di ambito del blocco con durata di archiviazione statica o thread devono essere inizializzate su zero prima che venga eseguita un'altra inizializzazione. L'inizializzazione si verifica quando il controllo passa per la prima volta alla dichiarazione della variabile. Se viene generata un'eccezione durante l'inizializzazione, la variabile viene considerata non inizializzata e l'inizializzazione viene ritentata al successivo passaggio del controllo nella dichiarazione. Se il controllo immette la dichiarazione simultaneamente all'inizializzazione, i blocchi di esecuzione simultanei al termine dell'inizializzazione. Il comportamento non è definito se il controllo immette nuovamente la dichiarazione in modo ricorsivo durante l'inizializzazione. Per impostazione predefinita, Visual Studio a partire da Visual Studio 2015 implementa questo comportamento standard. Questo comportamento può essere specificato in modo esplicito impostando l'opzione del compilatore **/Zc: threadSafeInit** .
 
-Il **/Zc: threadsafeinit** opzione del compilatore è attivata per impostazione predefinita. Il [/PERMISSIVE--](permissive-standards-conformance.md) opzione non riguarda **/Zc: threadsafeinit**.
+L'opzione del compilatore **/Zc: threadSafeInit** è abilitata per impostazione predefinita. L'opzione [/permissive-](permissive-standards-conformance.md) non influisce su **/Zc: threadSafeInit**.
 
-L'inizializzazione thread-safe delle variabili locali statiche si basa sul codice implementato nella libreria Universal C Runtime (UCRT). Per evitare di creare una dipendenza nella libreria UCRT, o per mantenere il comportamento di inizializzazione non thread-safe delle versioni di Visual Studio precedenti a Visual Studio 2015, usare il **/Zc:threadSafeInit-** opzione. Se si conosce che tale thread safety non è necessaria, è possibile usare questa opzione per generare il codice leggermente più piccolo e più veloce le dichiarazioni locali statiche.
+L'inizializzazione thread-safe di variabili locali statiche si basa sul codice implementato nella libreria di runtime C universale (UCRT). Per evitare di assumere una dipendenza da UCRT o per mantenere il comportamento di inizializzazione non thread-safe delle versioni di Visual Studio precedenti a Visual Studio 2015, usare l'opzione **/Zc: threadSafeInit-** . Se si è certi che la thread safety non è necessaria, usare questa opzione per generare codice leggermente più veloce e più rapido nelle dichiarazioni locali statiche.
 
-Le variabili locali statiche thread-safe usano internamente archiviazione thread-local (TLS) per fornire un'esecuzione efficiente quando il metodo statico è già stato inizializzato. L'implementazione di questa funzionalità si basa su funzioni di supporto del sistema operativo Windows in Windows Vista e sistemi operativi successivi. Windows XP, Windows Server 2003 e sistemi operativi meno recenti non è questo supporto, in modo che non si ottengono il vantaggio di efficienza. Questi sistemi operativi è anche un limite inferiore al numero di sezioni TLS che possono essere caricati. Superamento TLS limite sezione può causare un arresto anomalo del sistema. Se si tratta di un problema nel codice, in particolare nel codice che deve essere eseguito nei sistemi operativi precedenti, usare **/Zc:threadSafeInit-** per disabilitare il codice di inizializzazione thread-safe.
+Le variabili locali statiche thread-safe usano internamente il protocollo TLS (thread-local storage) per fornire un'esecuzione efficiente quando l'oggetto statico è già stato inizializzato. L'implementazione di questa funzionalità si basa sulle funzioni di supporto del sistema operativo Windows in Windows Vista e nei sistemi operativi successivi. Windows XP, Windows Server 2003 e i sistemi operativi meno recenti non dispongono di questo supporto, quindi non ottengono il vantaggio di efficienza. Questi sistemi operativi hanno anche un limite inferiore al numero di sezioni TLS che è possibile caricare. Il superamento del limite della sezione TLS può causare un arresto anomalo. Se si tratta di un problema nel codice, specialmente nel codice che deve essere eseguito in sistemi operativi precedenti, usare **/Zc: threadSafeInit** per disabilitare il codice di inizializzazione thread-safe.
 
 Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Dal **configurazioni** dal menu a discesa, scegliere **tutte le configurazioni**.
+1. Dal menu a discesa **configurazioni** scegliere **tutte le configurazioni**.
 
-1. Selezionare il **le proprietà di configurazione** > **C/C++** > **della riga di comando** pagina delle proprietà.
+1. Selezionare la pagina delle proprietà di **configurazione** proprietà della riga di comando di  >  **c/C++**  >   .
 
-1. Modificare il **opzioni aggiuntive** proprietà da includere **/Zc: threadsafeinit** oppure **/Zc:threadSafeInit-** e quindi scegliere **OK**.
+1. Modificare la proprietà **Opzioni aggiuntive** in modo da includere **/Zc: threadSafeInit** o **/Zc: threadSafeInit,** quindi scegliere **OK**.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
-[/Zc (conformità)](zc-conformance.md)<br/>
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[/Zc (Conformità)](zc-conformance.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: result_of Class'
 title: Classe result_of
 ms.date: 02/21/2019
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - std::result_of_t
 - std::result_of::type
 ms.assetid: 5374a096-4b4a-4712-aa97-6852c5cdd6be
-ms.openlocfilehash: 54806f965cc46058e3c82b4863bb45782abe079e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2aba6b073309be064b9ff0edc7bffa4d8d0098e7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87202311"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273904"
 ---
 # <a name="result_of-class"></a>Classe result_of
 
@@ -43,7 +44,7 @@ Tipo chiamabile su cui eseguire una query.
 *ArgTypes*\
 Tipi dell'elenco di argomenti al tipo chiamabile su cui eseguire una query.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Usare questo modello per determinare in fase di compilazione il tipo di risultato di `Fn` ( `ArgTypes` ), dove *FN* è un tipo chiamabile, un riferimento a una funzione o un riferimento al tipo chiamabile, richiamato usando un elenco di argomenti dei tipi in *argTypes*. Il `type` membro del modello di classe assegna un nome al tipo di risultato `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` se l'espressione non valutata `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` è ben formata. In caso contrario, il modello di classe non dispone di membri `type` . Il tipo *FN* e tutti i tipi nel pacchetto di parametri *argTypes* devono essere tipi completi, **`void`** o matrici di associazione sconosciuta. Deprecato a favore di [invoke_result](invoke-result-class.md) in c++ 17.
 
@@ -53,7 +54,7 @@ Usare questo modello per determinare in fase di compilazione il tipo di risultat
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Classe invoke_result](invoke-result-class.md)

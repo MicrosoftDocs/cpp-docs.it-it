@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: record utente'
 title: Record utente
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - user records, described
 - rowsets, user record
 ms.assetid: 9c0d2864-2738-4f62-a750-1016d9c3523f
-ms.openlocfilehash: 4a8fb6c9eeee3736501a04a095bdd763de16de7d
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: f858660800391eff45cb88115f8fb09afa26a77f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079008"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272500"
 ---
 # <a name="user-record"></a>Record utente
 
@@ -69,6 +70,6 @@ Quando un record utente viene creato in fase di esecuzione `GetColumnInfo` usa i
 
 Per un esempio più dettagliato di come eseguire l'override di `GetColumnInfo` in un record utente, vedere [Determinazione dinamica delle colonne restituite al consumer](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

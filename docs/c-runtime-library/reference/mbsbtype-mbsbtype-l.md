@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _mbsbtype, _mbsbtype_l'
 title: _mbsbtype, _mbsbtype_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _mbsbtype_l function
 - mbsbtype_l function
 ms.assetid: 0d5dd91a-d32d-4f98-ac57-98dfc9e98eac
-ms.openlocfilehash: c1431a2d0886ffd3d16b43abf82b7342c166273a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a1d17a947d830281b05291601c74ee944cebdb10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909476"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271057"
 ---
 # <a name="_mbsbtype-_mbsbtype_l"></a>_mbsbtype, _mbsbtype_l
 
@@ -84,7 +85,7 @@ Impostazioni locali da usare.
 |**_MBC_TRAIL** (2)|Byte di chiusura del carattere multibyte. Ad esempio, nella tabella codici 932, **_mbsbtype** restituisce 2 Se il byte specificato è compreso nell'intervallo 0X40-0x7E o 0X80-0xFC.|
 |**_MBC_ILLEGAL** (-1)|Stringa **null** , carattere non valido o byte NULL trovato prima del byte al *numero* di offset in *mbstr*.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_mbsbtype** determina il tipo di un byte in una stringa di caratteri multibyte. La funzione esamina solo il byte al *numero* di offset in *mbstr*, ignorando i caratteri non validi prima del byte specificato.
 
@@ -105,6 +106,6 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Classificazione per byte](../../c-runtime-library/byte-classification.md)<br/>
+[Classificazione byte](../../c-runtime-library/byte-classification.md)<br/>
