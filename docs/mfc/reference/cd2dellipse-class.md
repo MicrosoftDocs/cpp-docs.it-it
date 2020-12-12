@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Classe CD2DEllipse'
 title: Classe CD2DEllipse
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DEllipse [MFC], CD2DEllipse
 ms.assetid: e9f02f54-acf2-427e-b349-db50cd9a77df
-ms.openlocfilehash: 82ad2fbfb8558486134f85d7ec9bcaa6eb4e7507
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 827ba5515cb4b20cb8e5b10012590a001e01c08f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369263"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313060"
 ---
 # <a name="cd2dellipse-class"></a>Classe CD2DEllipse
 
@@ -25,13 +26,13 @@ Wrapper per `D2D1_ELLIPSE`.
 class CD2DEllipse : public D2D1_ELLIPSE;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Di overload. Costruisce un `CD2DEllipse` oggetto `D2D1_ELLIPSE` dall'oggetto.|
+|[CD2DEllipse:: CD2DEllipse](#cd2dellipse)|Di overload. Costruisce un `CD2DEllipse` oggetto da un `D2D1_ELLIPSE` oggetto.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -41,9 +42,9 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxrendertarget.h
+**Intestazione:** afxrendertarget. h
 
-## <a name="cd2dellipsecd2dellipse"></a><a name="cd2dellipse"></a>CD2DEllipse::CD2DEllipse
+## <a name="cd2dellipsecd2dellipse"></a><a name="cd2dellipse"></a> CD2DEllipse:: CD2DEllipse
 
 Costruisce un oggetto CD2DEllipse dall'oggetto CD2DRectF.
 
@@ -62,15 +63,15 @@ CD2DEllipse(
 *Rect*<br/>
 rettangolo di origine
 
-*ellipse*<br/>
+*ellisse*<br/>
 ellisse di origine
 
 *ptCenter*<br/>
-Il punto centrale dell'ellisse.
+Punto centrale dell'ellisse.
 
 *sizeRadius*<br/>
-Raggio X e Raggio Y dell'ellisse.
+Raggio X e raggio Y dell'ellisse.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classi](../../mfc/reference/mfc-classes.md)
