@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _set_printf_count_output'
 title: _set_printf_count_output
 ms.date: 11/04/2016
 api_name:
@@ -27,16 +28,16 @@ helpviewer_keywords:
 - set_printf_count_output function
 - _set_printf_count_output function
 ms.assetid: d8259ec5-764e-42d0-9169-72172e95163b
-ms.openlocfilehash: 0d53b4e4c56a69582a4eb517fa1a5c9e10cd7d2f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 455c4f0e49ce111853145a05d78efabcd76386fe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948414"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114247"
 ---
 # <a name="_set_printf_count_output"></a>_set_printf_count_output
 
-Abilitare o disabilitare il supporto del formato **% n** nelle funzioni della famiglia [printf, _printf_l, wprintf e _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+Abilitare o disabilitare il supporto del formato **% n** nelle funzioni [printf, _printf_l, wprintf _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-Family.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -55,9 +56,9 @@ Valore diverso da zero per abilitare il supporto **% n** , 0 per disabilitare il
 
 Lo stato di **% n** supporta prima di chiamare questa funzione: diverso da zero se il supporto **% n** è stato abilitato, 0 se è stato disabilitato.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Per motivi di sicurezza, il supporto per l'identificatore di formato **% n** è disabilitato per impostazione predefinita in **printf** e in tutte le relative varianti. Se viene rilevato **% n** in una specifica di formato **printf** , il comportamento predefinito consiste nel richiamare il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se si chiama **_set_printf_count_output** con un argomento diverso da zero, le funzioni della famiglia **printf**possono interpretare **% n** , come descritto in sintassi per la [specifica del formato: funzioni printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Per motivi di sicurezza, il supporto per l'identificatore di formato **% n** è disabilitato per impostazione predefinita in **printf** e in tutte le relative varianti. Se viene rilevato **% n** in una specifica di formato **printf** , il comportamento predefinito consiste nel richiamare il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se si chiama **_set_printf_count_output** con un argomento diverso da zero, le funzioni della famiglia **printf** possono interpretare **% n** , come descritto in sintassi per la [specifica del formato: funzioni printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="requirements"></a>Requisiti
 

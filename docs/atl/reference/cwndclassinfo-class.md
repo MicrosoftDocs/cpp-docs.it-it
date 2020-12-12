@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CWndClassInfo'
 title: Classe CWndClassInfo
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWndClassInfo class
 ms.assetid: c36fe7e1-75f1-4cf5-a06f-9f59c43fe6fb
-ms.openlocfilehash: c1b516f6e92f98d660f7757870a3e634dcef4518
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7a857812fa35743fbab0968fb94095bf8fdcabcf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835506"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140023"
 ---
 # <a name="cwndclassinfo-class"></a>Classe CWndClassInfo
 
@@ -35,7 +36,7 @@ Questa classe fornisce metodi per la registrazione di informazioni per una class
 class CWndClassInfo
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -45,7 +46,7 @@ class CWndClassInfo
 
 ### <a name="data-members"></a>Membri dei dati
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[m_atom](#m_atom)|Identifica in modo univoco la classe della finestra registrata.|
 |[m_bSystemCursor](#m_bsystemcursor)|Specifica se la risorsa del cursore fa riferimento a un cursore di sistema o a un cursore contenuto in una risorsa del modulo.|
@@ -55,11 +56,11 @@ class CWndClassInfo
 |[m_wc](#m_wc)|Mantiene le informazioni sulla classe della finestra in una `WNDCLASSEX` struttura.|
 |[pWndProc](#pwndproc)|Punta alla routine della finestra di una classe di finestra esistente.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 `CWndClassInfo` gestisce le informazioni di una classe di finestra. In genere si usa `CWndClassInfo` una delle tre macro, DECLARE_WND_CLASS, DECLARE_WND_CLASS_EX o DECLARE_WND_SUPERCLASS, come descritto nella tabella seguente:
 
-|Macro|Descrizione|
+|Macro|Description|
 |-----------|-----------------|
 |[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)|`CWndClassInfo` registra le informazioni per una nuova classe di finestra.|
 |[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)|`CWndClassInfo` registra le informazioni per una nuova classe di finestra, inclusi i parametri della classe.|
@@ -95,7 +96,7 @@ Se è TRUE, la risorsa cursore di sistema verrà caricata quando la classe della
 BOOL m_bSystemCursor;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 In caso contrario, verrà caricata la risorsa di cursore contenuta nel modulo.
 
@@ -109,7 +110,7 @@ Specifica il nome della risorsa del cursore o l'identificatore di risorsa nella 
 LPCTSTR m_lpszCursorID;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando la classe della finestra è registrata, l'handle per il cursore identificato da `m_lpszCursorID` viene recuperato e archiviato da [m_wc](#m_wc).
 
@@ -123,7 +124,7 @@ Contiene il nome di una classe di finestra esistente.
 LPCTSTR m_lpszOrigName;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `CWndClassInfo` USA `m_lpszOrigName` solo quando si include la macro [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) nella definizione della classe. In questo caso, `CWndClassInfo` registra una classe della finestra basata sulla classe denominata da `m_lpszOrigName` . Per ulteriori informazioni, vedere Panoramica di [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) .
 
@@ -135,7 +136,7 @@ Include il nome della classe della finestra.
 TCHAR m_szAutoName[13];
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `CWndClassInfo` USA `m_szAutoName` solo se viene passato null per il `WndClassName` parametro da [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class), [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) o [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass). ATL creerà un nome quando la classe della finestra è registrata.
 
@@ -147,7 +148,7 @@ Mantiene le informazioni sulla classe della finestra in una struttura [WNDCLASSE
 WNDCLASSEX m_wc;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se è stato specificato il [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (impostazione predefinita in [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) o la macro [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) , `m_wc` contiene informazioni su una nuova classe di finestra.
 
@@ -161,7 +162,7 @@ Punta alla routine della finestra di una classe di finestra esistente.
 WNDPROC pWndProc;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `CWndClassInfo` USA `pWndProc` solo quando si include la macro [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) nella definizione della classe. In questo caso, `CWndClassInfo` registra una classe della finestra basata su una classe esistente ma utilizza una routine della finestra diversa. La routine della finestra della classe della finestra esistente viene salvata in `pWndProc` . Per ulteriori informazioni, vedere Panoramica di [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) .
 
@@ -182,13 +183,13 @@ out Specifica la procedura della finestra originale di una classe di finestra es
 
 Se ha esito positivo, un Atom che identifica in modo univoco la classe della finestra da registrare. Altrimenti, è impostato su 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se è stato specificato il [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (impostazione predefinita in [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) o la macro [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) , `Register` registra una nuova classe di finestra. In questo caso, il parametro *pProc* non viene utilizzato.
 
 Se è stata specificata la macro [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) , `Register` registra una superclasse, una classe della finestra basata su una classe esistente ma utilizza una routine di finestra diversa. La routine della finestra della classe della finestra esistente viene restituita in *pProc*.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

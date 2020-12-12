@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: Riepilogo di durata e visibilità'
 title: Riepilogo di durata e di visibilità
 ms.date: 11/04/2016
 helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-ms.openlocfilehash: 760973bba1798068b5a19ebeb7a285d241d4ef72
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a1ce139b4fdc2562862eaef1828ec481685eca60
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220808"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114481"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>Riepilogo di durata e di visibilità
 
@@ -18,15 +19,15 @@ Nella tabella seguente è riportato un riepilogo delle caratteristiche di visibi
 
 ### <a name="summary-of-lifetime-and-visibility"></a>Riepilogo di durata e di visibilità
 
-|Attributi:<br /><br /> Livello|Elemento|Classe di archiviazione<br /><br /> Identificatore|Risultato:<br /><br /> Durata|Visibilità|
+|Attributi:<br /><br /> Level|Elemento|Classe di archiviazione<br /><br /> Identificatore|Risultato:<br /><br /> Durata|Visibilità|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
-|Ambito di tipo file|Definizione di variabile|**`static`**|Global|Resto del file di origine in cui si verifica|
-||Dichiarazione di variabile|**`extern`**|Global|Resto del file di origine in cui si verifica|
-||Prototipo o definizione di funzione|**`static`**|Global|File di origine singolo|
-||Prototipo di funzione|**`extern`**|Global|Resto del file di origine|
-|Ambito del blocco|Dichiarazione di variabile|**`extern`**|Global|Blocca|
-||Definizione di variabile|**`static`**|Global|Blocca|
-||Definizione di variabile|**`auto`** o**`register`**|Locale|Blocca|
+|Ambito di tipo file|Definizione di variabile|**`static`**|Globale|Resto del file di origine in cui si verifica|
+||Dichiarazione di variabile|**`extern`**|Globale|Resto del file di origine in cui si verifica|
+||Prototipo o definizione di funzione|**`static`**|Globale|File di origine singolo|
+||Prototipo di funzione|**`extern`**|Globale|Resto del file di origine|
+|Ambito del blocco|Dichiarazione di variabile|**`extern`**|Globale|Blocca|
+||Definizione di variabile|**`static`**|Globale|Blocca|
+||Definizione di variabile|**`auto`** o **`register`**|Locale|Blocca|
 
 ## <a name="example"></a>Esempio
 
@@ -66,6 +67,6 @@ int main()  // main function defined at external level
 
 In questo esempio, sono disponibili quattro livelli di visibilità: il livello esterno e tre livelli di blocco. I valori vengono visualizzati sullo schermo come indicato nei commenti che seguono ogni istruzione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Durata, ambito, visibilità e collegamento](../c-language/lifetime-scope-visibility-and-linkage.md)

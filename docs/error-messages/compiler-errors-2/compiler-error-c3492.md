@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3492'
 title: Errore del compilatore C3492
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3492
 ms.assetid: b1dc6342-9133-4b1f-a9c3-e8c65d20d121
-ms.openlocfilehash: bdaeb8797eb71b205f737d08e74430f161cb8caa
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: bceeded1de628604c29ef124adacc23ded72f15b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686548"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97113155"
 ---
 # <a name="compiler-error-c3492"></a>Errore del compilatore C3492
 
@@ -23,7 +24,7 @@ Non è possibile acquisire un membro di un'unione senza nome.
 
 - Assegnare un nome all'unione e passare la struttura di unione completa all'elenco di acquisizione dell'espressione lambda.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 L'esempio seguente genera l'errore C3492 perché acquisisce un membro di un'unione anonima:
 
@@ -61,6 +62,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Espressioni lambda](../../cpp/lambda-expressions-in-cpp.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: SUBTTL'
 title: SUBTTL
 ms.date: 12/16/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - SUBTTL directive
 ms.assetid: 927efadd-ec99-4de9-b64d-229bb2df3bf4
-ms.openlocfilehash: bd2d59a86a7b3a10ce2382d200f968d4572aa3db
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: b344aaf8375bff6afc62c621f83f797a3dd31ba7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75319164"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97125320"
 ---
 # <a name="subttl"></a>SUBTTL
 
@@ -21,7 +22,7 @@ Vedere [sottotitolo](subtitle.md).
 
 > **SUBTTL**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-Informazioni di [riferimento sulle direttive](directives-reference.md)
-la [grammatica BNF di MASM](masm-bnf-grammar.md)
+Guida di [riferimento](directives-reference.md) 
+ alle direttive [Grammatica BNF di MASM](masm-bnf-grammar.md)

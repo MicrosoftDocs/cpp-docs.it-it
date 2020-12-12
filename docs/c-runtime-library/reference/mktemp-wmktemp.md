@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _mktemp, _wmktemp'
 title: _mktemp, _wmktemp
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - mktemp function
 - temporary files [C++]
 ms.assetid: 055eb539-a8c2-4a7d-be54-f5b6d1eb5c85
-ms.openlocfilehash: 536a63841c6e29fa003eb8b99c896f6d1cf5519f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 06f75f8fd46bdd7ece42c292fd8ab6272ad39250
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919094"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114170"
 ---
 # <a name="_mktemp-_wmktemp"></a>_mktemp, _wmktemp
 
@@ -78,7 +79,7 @@ Modello di nome di file.
 
 Ognuna di queste funzioni restituisce un puntatore al nameTemplate modificato. La funzione restituisce **null** se *nameTemplate* non è in formato corretto o se non è possibile creare più nomi univoci dal nameTemplate specificato.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_mktemp** crea un nome di file univoco modificando l'argomento *nameTemplate* . **_mktemp** gestisce automaticamente gli argomenti della stringa di caratteri multibyte in base alle esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente utilizzata dal sistema di Runtime. **_wmktemp** è una versione a caratteri wide di **_mktemp**; l'argomento e il valore restituito di **_wmktemp** sono stringhe a caratteri wide. **_wmktemp** e **_mktemp** si comportano in modo identico, ad eccezione del fatto che **_wmktemp** non gestisce le stringhe di caratteri multibyte.
 
@@ -211,7 +212,7 @@ Out of unique filenames.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione dei file](../../c-runtime-library/file-handling.md)<br/>
+[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [_getmbcp](getmbcp.md)<br/>
 [_getpid](getpid.md)<br/>

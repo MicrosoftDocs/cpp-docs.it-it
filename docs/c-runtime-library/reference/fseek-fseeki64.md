@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: fseek, _fseeki64'
 title: fseek, _fseeki64
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - file pointers [C++]
 - seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
-ms.openlocfilehash: c9bfc9a575504d890d0021937713c720c4557441
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7e15bd7cd273da2f73a58c2bd012670216c1938c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910187"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114325"
 ---
 # <a name="fseek-_fseeki64"></a>fseek, _fseeki64
 
@@ -75,7 +76,7 @@ Posizione iniziale.
 
 Se ha esito positivo, **fseek** e **_fseeki64** restituisce 0. In caso contrario, viene restituito un valore diverso da zero. Nei dispositivi che non supportano la ricerca, il valore restituito è indefinito. Se il *flusso* è un puntatore null o se *Origin* non è uno dei valori consentiti descritti di seguito, **fseek** e **_fseeki64** richiamano il gestore di parametro non valido, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono-1.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le funzioni **fseek** e **_fseeki64** spostano il puntatore del file (se presente) associato al *flusso* in una nuova posizione che è un *offset* di byte dall' *origine*. L'operazione successiva nel flusso viene eseguita nella nuova posizione. In un flusso aperto per l'aggiornamento, l'operazione successiva può essere un'operazione di lettura o scrittura. L' *origine* dell'argomento deve essere una delle costanti seguenti, definite in stdio. H
 
@@ -105,7 +106,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**fseek**|\<stdio.h>|
 |**_fseeki64**|\<stdio.h>|

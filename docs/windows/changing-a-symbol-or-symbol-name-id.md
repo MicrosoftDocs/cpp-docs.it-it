@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura: gestire i simboli'
 title: 'Procedura: gestire i simboli'
 ms.date: 02/14/2019
 f1_keywords:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 67a5c801c13038e7215473edecc2d41a8f7086e0
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2a7bdc6994bfcdadc9b7d1d5b98350fcd47ad6fe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505727"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118225"
 ---
 # <a name="how-to-manage-symbols"></a>Procedura: gestire i simboli
 
@@ -212,7 +213,7 @@ L'ambiente interpreterà correttamente questi simboli calcolati purché:
 
 Win32
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Identificatori di risorsa (simboli)](symbols-resource-identifiers.md)<br/>
 [Procedura: creare simboli](creating-new-symbols.md)<br/>

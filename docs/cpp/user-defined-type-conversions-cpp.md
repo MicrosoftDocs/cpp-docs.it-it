@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: conversioni di tipi di User-Defined (C++)'
 title: Conversioni di tipi definite dall'utente (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - conversions [C++], by constructors
 - data type conversion [C++], explicit
 ms.assetid: d40e4310-a190-4e95-a34c-22c5c20aa0b9
-ms.openlocfilehash: e7889a7365a6b3a362804d3dad4b2fefc3780d01
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ac3a373a7c6075e75c79f636e54f15425301ec3f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227036"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116873"
 ---
 # <a name="user-defined-type-conversions-c"></a>Conversioni di tipi definite dall'utente (C++)
 
@@ -71,7 +72,7 @@ La **`explicit`** parola chiave indica al compilatore che la conversione specifi
 
 La **`explicit`** parola chiave può essere applicata ai costruttori di conversione da c++ 98 e alle funzioni di conversione a partire da c++ 11. Le sezioni seguenti contengono ulteriori informazioni su come usare la **`explicit`** parola chiave.
 
-## <a name="conversion-constructors"></a><a name="ConvCTOR"></a>Costruttori di conversione
+## <a name="conversion-constructors"></a><a name="ConvCTOR"></a> Costruttori di conversione
 
 I costruttori di conversione definiscono le conversioni da tipi definiti dall'utente o incorporati in un tipo definito dall'utente. Nell'esempio seguente viene illustrato un costruttore di conversione che esegue la conversione dal tipo incorporato **`double`** a un tipo definito dall'utente `Money` .
 
@@ -155,7 +156,7 @@ In questo esempio, notare che è ancora possibile usare il costruttore di conver
 
 Benché la comodità di consentire conversioni implicite sia allettante, ciò potrebbe introdurre bug difficili da risolvere. La regola empirica consiste nel rendere espliciti tutti i costruttori di conversione, tranne quando si è sicuri di volere che una specifica conversione avvenga in maniera implicita.
 
-## <a name="conversion-functions"></a><a name="ConvFunc"></a>Funzioni di conversione
+## <a name="conversion-functions"></a><a name="ConvFunc"></a> Funzioni di conversione
 
 Le funzioni di conversione consentono di definire le conversioni da un tipo definiti dall'utente verso altri tipi. Queste funzioni sono spesso denominate "operatori di cast" perché, assieme ai costruttori, vengono chiamate quando un valore viene sottoposto a cast di un tipo differente. Nell'esempio seguente viene illustrata una funzione di conversione che esegue la conversione dal tipo definito dall'utente, `Money` , a un tipo incorporato **`double`** :
 
@@ -181,7 +182,7 @@ void display_balance(const Money balance)
 
 Si noti che la variabile membro `amount` viene resa privata e che una funzione di conversione pubblica nel tipo **`double`** viene introdotta solo per restituire il valore di `amount` . Nella funzione `display_balance`, si ha una conversione implicita quando il valore `balance` viene trasmesso all'output standard usando l'operatore di inserimento del flusso `<<`. Poiché non è definito alcun operatore di inserimento del flusso per il tipo definito dall'utente `Money` , ma ne esiste uno per il tipo incorporato **`double`** , il compilatore può usare la funzione di conversione da `Money` a per **`double`** soddisfare l'operatore di inserimento del flusso.
 
-Le funzioni di conversione vengono ereditate dalle classi derivate. Le funzioni di conversione in una classe derivata eseguono l'override solo di una funzione di conversione ereditata quando vengono convertite esattamente nello stesso tipo. Una funzione di conversione definita dall'utente dell' **operatore int** della classe derivata, ad esempio, non esegue l'override, né influenza, una funzione di conversione definita dall'utente dell' **operatore**della classe base Short, anche se le conversioni standard definiscono una relazione di conversione tra **`int`** e **`short`** .
+Le funzioni di conversione vengono ereditate dalle classi derivate. Le funzioni di conversione in una classe derivata eseguono l'override solo di una funzione di conversione ereditata quando vengono convertite esattamente nello stesso tipo. Una funzione di conversione definita dall'utente dell' **operatore int** della classe derivata, ad esempio, non esegue l'override, né influenza, una funzione di conversione definita dall'utente dell' **operatore** della classe base Short, anche se le conversioni standard definiscono una relazione di conversione tra **`int`** e **`short`** .
 
 ### <a name="declaring-conversion-functions"></a>Dichiarazione delle funzioni di conversione
 

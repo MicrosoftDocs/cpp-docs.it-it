@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: funzioni globali di debug e segnalazione errori'
 title: Funzioni globali di debug e segnalazione errori
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,18 +9,18 @@ f1_keywords:
 helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
-ms.openlocfilehash: 10aca6862f6989c126981a9f6437c61f1c07bdae
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 3c729a7d8e870ce7b104ca53cd83bf8c41112dea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742788"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139984"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>Funzioni globali di debug e segnalazione errori
 
 Queste funzioni forniscono funzionalità di debug e di traccia utili.
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)|Restituisce un `GetLastError` codice di errore sotto forma di HRESULT.|
 |[AtlHresultFromWin32](debugging-and-error-reporting-global-functions.md#atlhresultfromwin32)|Converte un codice di errore Win32 in HRESULT.|
@@ -35,7 +36,7 @@ Restituisce il valore del codice dell'ultimo errore del thread chiamante sotto f
 HRESULT AtlHresultFromLastError();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `AtlHresultFromLastError` chiama `GetLastError` per ottenere l'ultimo errore e restituisce l'errore dopo la conversione in un HRESULT utilizzando la HRESULT_FROM_WIN32 macro.
 
@@ -56,7 +57,7 @@ AtlHresultFromWin32(DWORD error);
 *error*<br/>
 Valore di errore da convertire.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Converte un codice di errore Win32 in un HRESULT utilizzando la macro HRESULT_FROM_WIN32.
 
@@ -147,7 +148,7 @@ in Handle per la risorsa. Per impostazione predefinita, questo parametro è `__A
 
 Se il parametro *hRes* è diverso da zero, restituisce il valore di *hRes*. Se *hRes* è zero, le prime quattro versioni di `AtlReportError` restituiscono DISP_E_EXCEPTION. Le ultime due versioni restituiscono il risultato della macro **MAKE_HRESULT (1, FACILITY_ITF,** `nID` **)**.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La stringa *lpszDesc* viene utilizzata come descrizione del testo dell'errore. Quando il client riceve il *hRes* restituito da `AtlReportError` , il client può accedere alla `IErrorInfo` struttura per informazioni dettagliate sull'errore.
 
@@ -175,7 +176,7 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 *h*<br/>
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione viene utilizzata da ATL e dal codice MFC in caso di una condizione di errore. Può anche essere chiamato dal codice. L'implementazione predefinita di questa funzione dipende dalla definizione del simbolo _ATL_NO_EXCEPTIONS e dal tipo di progetto, MFC o ATL.
 
@@ -207,7 +208,7 @@ Chiamare questa funzione per segnalare un errore in base al risultato della funz
 inline void AtlThrowLastWin32();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione traccia il risultato di `GetLastError` nel debugger.
 

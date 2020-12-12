@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: set di istruzioni per l'assembly inline"
 title: Set di istruzioni per assembly inline
 ms.date: 08/30/2018
 ms.topic: reference
@@ -8,21 +9,21 @@ helpviewer_keywords:
 - assembler [C++], instruction set
 - instruction set [C++]
 ms.assetid: a45b5b22-9b5f-4545-81ec-70eb8ea2ef9b
-ms.openlocfilehash: e6d2dea1af43b52a7704af58855842075087a221
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 22c68caa02fea59b70c2ff49ac127b547eca22ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169357"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117757"
 ---
 # <a name="instruction-set-for-inline-assembly"></a>Set di istruzioni per assembly inline
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Il compilatore C++ Microsoft supporta tutti i codici operativi tramite Pentium 4 e AMD Athlon. È possibile creare altre istruzioni supportate dal processore di destinazione con il [_Emit Emit](../../assembler/inline/emit-pseudoinstruction.md).
+Il compilatore Microsoft C++ supporta tutti i codici operativi tramite Pentium 4 e AMD Athlon. È possibile creare altre istruzioni supportate dal processore di destinazione con il [_Emit Emit](../../assembler/inline/emit-pseudoinstruction.md).
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso del linguaggio assembly in blocchi __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>
+[Uso del linguaggio assembly nei blocchi di __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

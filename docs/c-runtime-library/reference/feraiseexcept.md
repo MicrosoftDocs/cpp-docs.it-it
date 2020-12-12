@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: feraiseexcept'
 title: feraiseexcept
 ms.date: 04/05/2018
 api_name:
@@ -22,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-ms.openlocfilehash: e98c402169ed0f35ab1bdf0b8221a2248f252f21
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: 8e7a06006cfdc768fdaa306bc293857f1c375b90
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972214"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124943"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -43,18 +44,18 @@ int feraiseexcept(
 
 ### <a name="parameters"></a>Parametri
 
-*excepts*<br/>
+*eccetto*<br/>
 Eccezioni a virgola mobile da generare.
 
 ## <a name="return-value"></a>Valore restituito
 
 Se tutte le eccezioni specificate vengono generate correttamente, restituisce 0.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-La funzione **feraiseexcept** tenta di generare le eccezioni a virgola mobile specificate da *excepts*.   La funzione **feraiseexcept** supporta queste macro di eccezioni, definite in \<fenv. h >:
+La funzione **feraiseexcept** tenta di generare le eccezioni a virgola mobile specificate da *excepts*.   La funzione **feraiseexcept** supporta queste macro di eccezioni, definite in \<fenv.h> :
 
-|Macro di eccezioni|Descrizione|
+|Macro di eccezioni|Description|
 |---------------------|-----------------|
 |FE_DIVBYZERO|Si è verificato un errore di singolarità o polo in un'operazione precedente a virgola mobile. È stato creato un valore di infinità.|
 |FE_INEXACT|La funzione è stata forzata ad arrotondare il risultato archiviato di un'operazione precedente a virgola mobile.|
@@ -69,7 +70,7 @@ Per usare questa funzione, è necessario disattivare le ottimizzazioni a virgola
 
 **Specifico di Microsoft:** Le eccezioni specificate in *excepts* vengono generate nell'ordine FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW FE_INEXACT. Tuttavia, FE_INEXACT può essere generato quando viene generato FE_OVERFLOW o FE_UNDERFLOW, anche se non è specificato in *excepts*.
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
 |Funzione|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
@@ -77,9 +78,9 @@ Per usare questa funzione, è necessario disattivare le ottimizzazioni a virgola
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Alphabetical Function Reference](crt-alphabetical-function-reference.md) (Riferimento alfabetico alle funzioni)<br/>
+[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
 [fesetexceptflag](fesetexceptflag2.md)<br/>
 [feholdexcept](feholdexcept2.md)<br/>
 [fetestexcept](fetestexcept1.md)<br/>

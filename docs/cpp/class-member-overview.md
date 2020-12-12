@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Cenni preliminari sui membri della classe'
 title: Panoramica dei membri di classe
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - class members [C++], types of
 - class members
 ms.assetid: 8802cfa9-705d-4f37-acde-245d6838010c
-ms.openlocfilehash: 02c5593d9fb5e72ee6b398c9637397ab26c9f3f2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6059fc589d7065863c37f03a6e40882e1039b17c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229064"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114117"
 ---
 # <a name="class-member-overview"></a>Panoramica dei membri di classe
 
@@ -102,7 +103,7 @@ Un membro dati può essere dichiarato come statico, ovvero tutti gli oggetti del
 
 Le funzioni membro speciali sono funzioni fornite automaticamente dal compilatore se non vengono specificate nel codice sorgente.
 
-1. Costruttore predefinito.
+1. Costruttore predefinito
 
 1. Costruttore di copia
 
@@ -170,6 +171,6 @@ int CanInit2::j = i;
 > [!NOTE]
 > Il nome della classe, `CanInit2`, deve precedere `i` per specificare che `i` da definire è un membro della classe `CanInit2`.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classi e struct](../cpp/classes-and-structs-cpp.md)

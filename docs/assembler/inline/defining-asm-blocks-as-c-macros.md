@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: definizione di blocchi di __asm come macro C'
 title: Definizione dei blocchi __asm come macro C
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - Visual C, macros
 - __asm keyword [C++], as C macros
 ms.assetid: 677ba11c-21c8-4609-bba7-cd47312243b0
-ms.openlocfilehash: 4195624078c53f6c1f20cd2a03ed53dac937d9cd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a0fe13acdd5a75fd86fd8107396632a5c6e7c283
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87192106"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117837"
 ---
 # <a name="defining-__asm-blocks-as-c-macros"></a>Definizione dei blocchi __asm come macro C
 
@@ -47,7 +48,7 @@ La terza e la quarta **`__asm`** parola chiave sono necessarie come separatori d
 
 Anche le parentesi graffe sono indispensabili. Se vengono omesse, il compilatore può essere confuso dalle istruzioni C o C++ che si trovano nella stessa riga a destra della chiamata di macro. Senza la parentesi graffa di chiusura, il compilatore non può stabilire dove si interrompe il codice assembly e visualizza le istruzioni C o C++ dopo il **`__asm`** blocco come istruzioni di assembly.
 
-I commenti in stile assembly che iniziano con un punto**e**virgola (;) continuano fino alla fine della riga. Questo causa problemi nelle macro perché il compilatore ignora tutti gli elementi dopo il commento, fino alla fine della riga logica. Lo stesso vale per i commenti a riga singola C o C++ (`// comment`). Per evitare errori, usare i commenti di tipo C obsoleti ( `/* comment */` ) in **`__asm`** blocchi definiti come macro.
+I commenti in stile assembly che iniziano con un punto **e** virgola (;) continuano fino alla fine della riga. Questo causa problemi nelle macro perché il compilatore ignora tutti gli elementi dopo il commento, fino alla fine della riga logica. Lo stesso vale per i commenti a riga singola C o C++ (`// comment`). Per evitare errori, usare i commenti di tipo C obsoleti ( `/* comment */` ) in **`__asm`** blocchi definiti come macro.
 
 Un **`__asm`** blocco scritto come macro C può assumere argomenti. A differenza di una normale macro C, tuttavia, una **`__asm`** macro non può restituire un valore. Pertanto non è possibile utilizzare tali macro nelle espressioni C o C++.
 
@@ -55,6 +56,6 @@ Prestare attenzione a non richiamare le macro di questo tipo senza alcun criteri
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Assembler inline](../../assembler/inline/inline-assembler.md)<br/>

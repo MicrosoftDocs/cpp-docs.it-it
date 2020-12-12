@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _mktemp_s, _wmktemp_s'
 title: _mktemp_s, _wmktemp_s
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - wmktemp_s function
 - temporary files [C++]
 ms.assetid: 92a7e269-7f3d-4c71-bad6-14bc827a451d
-ms.openlocfilehash: 7834049fe8d28f7294976ac29a3daa663a06cff6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c1dcaa7817de70a3478e9bf8014b4ab223837c34
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919136"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114304"
 ---
 # <a name="_mktemp_s-_wmktemp_s"></a>_mktemp_s, _wmktemp_s
 
@@ -92,7 +93,7 @@ Entrambe queste funzioni restituiscono zero in caso di esito positivo e un codic
 
 Se si verifica una delle condizioni di errore precedenti, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e le funzioni restituiscono **EINVAL**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_mktemp_s** crea un nome file univoco modificando l'argomento *nameTemplate* , in modo che, dopo la chiamata, il puntatore *nameTemplate* punti a una stringa contenente il nuovo nome file. **_mktemp_s** gestisce automaticamente gli argomenti della stringa di caratteri multibyte in base alle esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente utilizzata dal sistema di Runtime. **_wmktemp_s** è una versione a caratteri wide di **_mktemp_s**; l'argomento di **_wmktemp_s** è una stringa di caratteri wide. **_wmktemp_s** e **_mktemp_s** si comportano in modo identico, ad eccezione del fatto che **_wmktemp_s** non gestisce le stringhe di caratteri multibyte.
 
@@ -191,9 +192,9 @@ Unique filename is fnd03188
 Unique filename is fne03188
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Gestione dei file](../../c-runtime-library/file-handling.md)<br/>
+[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [_getmbcp](getmbcp.md)<br/>
 [_getpid](getpid.md)<br/>

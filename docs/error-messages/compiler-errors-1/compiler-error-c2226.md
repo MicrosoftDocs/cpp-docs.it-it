@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2226'
 title: Errore del compilatore C2226
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2226
 ms.assetid: b3aaa2a5-254a-46a9-a508-de2371ecffeb
-ms.openlocfilehash: 1b5f74a62004e1af61b206590aeae57cba838b0c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 604b02e71367ccf20f568ad06a72739ed83f963f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80206553"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116405"
 ---
 # <a name="compiler-error-c2226"></a>Errore del compilatore C2226
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2842'
 title: Errore del compilatore C2842
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2842
 ms.assetid: 8674f08d-9f50-46ad-9229-abc6b74fa0e5
-ms.openlocfilehash: 99b2c86d1e914c9425c2664d4e858bba6cb99486
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f086c6c5fcfa451f320d96470615e4f5f4d5674a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382944"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119983"
 ---
 # <a name="compiler-error-c2842"></a>Errore del compilatore C2842
 
-> '*classe*': un oggetto gestito o WinRT tipo non può definire il proprio 'operator new' o 'operator delete'
+> '*Class*': un tipo gestito o WinRT non può definire il proprio ' operator new ' o ' operator delete '
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-È possibile definire il proprio **operatore new** oppure **operatore delete** per gestire l'allocazione di memoria nell'heap nativo. Tuttavia, le classi di riferimento non possono definire questi operatori perché vengono allocati esclusivamente nell'heap gestito.
+È possibile definire il proprio **operatore New** o **operator delete** per gestire l'allocazione di memoria nell'heap nativo. Tuttavia, le classi di riferimento non possono definire questi operatori perché vengono allocati esclusivamente nell'heap gestito.
 
-Per altre informazioni, vedere [operatori definiti dall'utente (C++/CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
+Per ulteriori informazioni, vedere [operatori definiti dall'utente (C++/CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
 
 ## <a name="example"></a>Esempio
 

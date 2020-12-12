@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: Windows Sockets: utilizzo della classe CAsyncSocket'
 title: 'Windows Sockets: utilizzo della classe CAsyncSocket'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - sockets [MFC], asynchronous operation
 - Windows Sockets [MFC], converting Unicode and MBCS strings
 ms.assetid: 825dae17-7c1b-4b86-8d6c-da7f1afb5d8d
-ms.openlocfilehash: 6a3b3469b908eaf6f8062b8db7fc4287606b7f02
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9fbf385a2e327588685fdcb996465386628e5e4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228505"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118602"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets: utilizzo della classe CAsyncSocket
 
-Questo articolo illustra come usare la classe [CAsyncSocket](../mfc/reference/casyncsocket-class.md). Tenere presente che questa classe incapsula l'API Windows Sockets a un livello molto basso. `CAsyncSocket`viene usato dai programmatori che conoscono in dettaglio le comunicazioni di rete, ma vogliono la convenienza dei callback per la notifica degli eventi di rete. In base a questo presupposto, questo articolo fornisce solo istruzioni di base. È consigliabile considerare l'uso `CAsyncSocket` di se si vuole semplificare la gestione di più protocolli di rete in un'applicazione MFC, ma non si vuole sacrificare la flessibilità. È anche possibile che si possa ottenere una migliore efficienza tramite la programmazione delle comunicazioni in modo più diretto rispetto a quanto si può usare il modello alternativo più generale della classe `CSocket` .
+Questo articolo illustra come usare la classe [CAsyncSocket](../mfc/reference/casyncsocket-class.md). Tenere presente che questa classe incapsula l'API Windows Sockets a un livello molto basso. `CAsyncSocket` viene usato dai programmatori che conoscono in dettaglio le comunicazioni di rete, ma vogliono la convenienza dei callback per la notifica degli eventi di rete. In base a questo presupposto, questo articolo fornisce solo istruzioni di base. È consigliabile considerare l'uso `CAsyncSocket` di se si vuole semplificare la gestione di più protocolli di rete in un'applicazione MFC, ma non si vuole sacrificare la flessibilità. È anche possibile che si possa ottenere una migliore efficienza tramite la programmazione delle comunicazioni in modo più diretto rispetto a quanto si può usare il modello alternativo più generale della classe `CSocket` .
 
-`CAsyncSocket`è documentato nella Guida di *riferimento a MFC*. Visual C++ fornisce anche la specifica di Windows Sockets, che si trova nel Windows SDK. I dettagli sono stati lasciati dall'utente. Visual C++ non fornisce un'applicazione di esempio per `CAsyncSocket` .
+`CAsyncSocket` è documentato nella Guida di *riferimento a MFC*. Visual C++ fornisce anche la specifica di Windows Sockets, che si trova nel Windows SDK. I dettagli sono stati lasciati dall'utente. Visual C++ non fornisce un'applicazione di esempio per `CAsyncSocket` .
 
 Se non si dispone di un'elevata conoscenza delle comunicazioni di rete e si desidera una soluzione semplice, utilizzare la classe [CSocket](../mfc/reference/csocket-class.md) con un `CArchive` oggetto. Per ulteriori informazioni, vedere [Windows Sockets: utilizzo di socket con archivi](../mfc/windows-sockets-using-sockets-with-archives.md) .
 
@@ -30,7 +31,7 @@ Questo articolo riguarda:
 
 - [Responsabilità dell'utente con CAsyncSocket](#_core_your_responsibilities_with_casyncsocket).
 
-## <a name="creating-and-using-a-casyncsocket-object"></a><a name="_core_creating_and_using_a_casyncsocket_object"></a>Creazione e utilizzo di un oggetto CAsyncSocket
+## <a name="creating-and-using-a-casyncsocket-object"></a><a name="_core_creating_and_using_a_casyncsocket_object"></a> Creazione e utilizzo di un oggetto CAsyncSocket
 
 #### <a name="to-use-casyncsocket"></a>Per usare CAsyncSocket
 
@@ -85,7 +86,7 @@ Questo articolo riguarda:
 
 Per un esempio di questa sequenza nel codice (effettivamente per un `CSocket` oggetto), vedere [Windows Sockets: sequenza di operazioni](../mfc/windows-sockets-sequence-of-operations.md).
 
-## <a name="your-responsibilities-with-casyncsocket"></a><a name="_core_your_responsibilities_with_casyncsocket"></a>Responsabilità di CAsyncSocket
+## <a name="your-responsibilities-with-casyncsocket"></a><a name="_core_your_responsibilities_with_casyncsocket"></a> Responsabilità di CAsyncSocket
 
 Quando si crea un oggetto della classe [CAsyncSocket](../mfc/reference/casyncsocket-class.md), l'oggetto incapsula un handle di **socket** di Windows e fornisce operazioni su tale handle. Quando si usa `CAsyncSocket` , è necessario gestire tutti i problemi che si possono affrontare se si usa direttamente l'API. Ad esempio:
 
@@ -97,7 +98,7 @@ Quando si crea un oggetto della classe [CAsyncSocket](../mfc/reference/casyncsoc
 
 Per le definizioni di questi termini e informazioni aggiuntive, vedere [Windows Sockets: blocco](../mfc/windows-sockets-blocking.md), [Windows Sockets: ordinamento dei byte](../mfc/windows-sockets-byte-ordering.md), [Windows Sockets: conversione di stringhe](../mfc/windows-sockets-converting-strings.md).
 
-Nonostante questi problemi, `CAsycnSocket` la classe può essere la scelta migliore se l'applicazione richiede tutta la flessibilità e il controllo che è possibile ottenere. In caso contrario, è consigliabile usare invece la classe `CSocket` . `CSocket`viene nascosta una grande quantità di dettagli: viene eseguita la pompa dei messaggi di Windows durante le chiamate di blocco e viene concesso l'accesso a `CArchive` , che gestisce le differenze nell'ordine dei byte e la conversione delle stringhe.
+Nonostante questi problemi, `CAsycnSocket` la classe può essere la scelta migliore se l'applicazione richiede tutta la flessibilità e il controllo che è possibile ottenere. In caso contrario, è consigliabile usare invece la classe `CSocket` . `CSocket` viene nascosta una grande quantità di dettagli: viene eseguita la pompa dei messaggi di Windows durante le chiamate di blocco e viene concesso l'accesso a `CArchive` , che gestisce le differenze nell'ordine dei byte e la conversione delle stringhe.
 
 Per altre informazioni, vedere:
 
@@ -107,6 +108,6 @@ Per altre informazioni, vedere:
 
 - [Windows Sockets: socket di datagramma](../mfc/windows-sockets-datagram-sockets.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)

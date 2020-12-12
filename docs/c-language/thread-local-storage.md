@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: archiviazione thread-local'
 title: archiviazione thread-local
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - thread-local storage
 - storage, thread local storage
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
-ms.openlocfilehash: a1099228e072a772ee7d8e7e93253b674d0cd24b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 188646ec6ae980cc61bd5882c15e2e9040e4a7ca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500273"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114338"
 ---
 # <a name="thread-local-storage"></a>archiviazione thread-local
 
@@ -86,12 +87,12 @@ Nella dichiarazione di variabili thread-local associate in modo statico, è nece
 
    Tenere presente che un'espressione sizeof che include la variabile in fase di inizializzazione non rappresenta un riferimento a se stessa ed è consentita.
 
-- L'uso di ** \_ \_declspec (thread)** potrebbe interferire con il [caricamento ritardato](../build/reference/linker-support-for-delay-loaded-dlls.md) delle importazioni dll.
+- L'uso di **\_ \_ declspec (thread)** potrebbe interferire con il [caricamento ritardato](../build/reference/linker-support-for-delay-loaded-dlls.md) delle importazioni dll.
 
 Per altre informazioni sull'uso dell'attributo thread, vedere [Multithreading Topics](../parallel/multithreading-support-for-older-code-visual-cpp.md) (Argomenti relativi al multithreading).
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Attributi di classi di archiviazione estesi C](../c-language/c-extended-storage-class-attributes.md)
+[Attributi di Storage-Class estese C](../c-language/c-extended-storage-class-attributes.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso della dichiarazione'
 title: dichiarazione using
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - namespaces [C++], unqualified names in
 - using keyword [C++]
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-ms.openlocfilehash: 072ecd325a76e80dbd710c241e39fdf7b969e537
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: eb0c3367b3d526c0b5cc30eff6865d41ba33070b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008245"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116847"
 ---
 # <a name="using-declaration"></a>dichiarazione using
 
@@ -325,7 +326,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Namespaces](../cpp/namespaces-cpp.md) (Spazi dei nomi)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)

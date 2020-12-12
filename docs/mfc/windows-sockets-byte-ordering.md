@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Windows Sockets: ordinamento dei byte'
 title: 'Windows Sockets: ordinamento dei byte'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - sockets [MFC], byte order issues
 - Windows Sockets [MFC], byte order issues
 ms.assetid: 8a787a65-f9f4-4002-a02f-ac25a5dace5d
-ms.openlocfilehash: f00936f3de07df8c1e4d9df1c678b2cfd5f3e3ad
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d143967fdcc9b4d1dac772bf0fe25b67d70aef53
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226802"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118654"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows Sockets: ordinamento dei byte
 
@@ -23,11 +24,11 @@ Se si utilizza o si deriva dalla classe [CAsyncSocket](../mfc/reference/casyncso
 
 Diverse architetture di computer a volte archiviano i dati usando ordini di byte diversi. Ad esempio, i computer basati su Intel archiviano i dati in ordine inverso rispetto ai computer Macintosh (Motorola). L'ordine dei byte Intel, denominato "Little-Endian", è anche il contrario dell'ordine "big-endian" standard di rete. Nella tabella seguente vengono illustrate queste condizioni.
 
-### <a name="big--and-little-endian-byte-ordering"></a>Ordinamento di byte big-endian
+### <a name="big--and-little-endian-byte-ordering"></a>Ordinamento di byte big e Little-Endian
 
 |ordinamento dei byte|Significato|
 |-------------------|-------------|
-|Big endian|Il byte più significativo si trova all'estremità sinistra di una parola.|
+|Big-Endian|Il byte più significativo si trova all'estremità sinistra di una parola.|
 |Little-Endian|Il byte più significativo si trova all'estremità destra di una parola.|
 
 In genere, non è necessario preoccuparsi della conversione dell'ordine dei byte per i dati inviati e ricevuti in rete, ma in alcuni casi è necessario convertire gli ordini di byte.
@@ -54,14 +55,14 @@ In genere, non è necessario preoccuparsi della conversione dell'ordine dei byte
 
 Utilizzando [CAsyncSocket](../mfc/reference/casyncsocket-class.md), è necessario gestire manualmente le conversioni necessarie per l'ordine dei byte. Windows Sockets standardizza il modello di ordine dei byte "big-endian" e fornisce funzioni per la conversione tra questo ordine e altri. [CArchive](../mfc/reference/carchive-class.md), tuttavia, usato con [CSocket](../mfc/reference/csocket-class.md), usa l'ordine opposto ("Little-Endian"), ma gestisce automaticamente `CArchive` i dettagli delle conversioni dell'ordine dei byte. Utilizzando questo ordinamento standard nelle applicazioni o utilizzando le funzioni di conversione dell'ordine dei byte di Windows Sockets, è possibile rendere il codice più portabile.
 
-Il caso ideale per l'utilizzo dei socket MFC è quando si scrivono entrambe le estremità della comunicazione: utilizzando MFC a entrambe le estremità. Se si sta scrivendo un'applicazione che comunicherà con le applicazioni non MFC, ad esempio un server FTP, sarà probabilmente necessario gestire manualmente lo scambio di byte prima di passare i dati all'oggetto Archive, usando le routine di conversione Windows Sockets **ntohs**, **ntohl**, **htons**e **htonl**. Un esempio di queste funzioni usate per la comunicazione con un'applicazione non MFC viene visualizzato più avanti in questo articolo.
+Il caso ideale per l'utilizzo dei socket MFC è quando si scrivono entrambe le estremità della comunicazione: utilizzando MFC a entrambe le estremità. Se si sta scrivendo un'applicazione che comunicherà con le applicazioni non MFC, ad esempio un server FTP, sarà probabilmente necessario gestire manualmente lo scambio di byte prima di passare i dati all'oggetto Archive, usando le routine di conversione Windows Sockets **ntohs**, **ntohl**, **htons** e **htonl**. Un esempio di queste funzioni usate per la comunicazione con un'applicazione non MFC viene visualizzato più avanti in questo articolo.
 
 > [!NOTE]
 > Quando l'altra estremità della comunicazione non è un'applicazione MFC, è necessario evitare di trasmettere gli oggetti C++ derivati da `CObject` nell'archivio, perché il ricevitore non sarà in grado di gestirli. Vedere la nota in [Windows Sockets: utilizzo di socket con archivi](../mfc/windows-sockets-using-sockets-with-archives.md).
 
 Per ulteriori informazioni sugli ordini di byte, vedere la specifica di Windows Sockets, disponibile nel Windows SDK.
 
-## <a name="a-byte-order-conversion-example"></a>Esempio di conversione dell'ordine di byte
+## <a name="a-byte-order-conversion-example"></a>Esempio di conversione Byte-Order
 
 Nell'esempio seguente viene illustrata una funzione di serializzazione per un `CSocket` oggetto che utilizza un archivio. Viene inoltre illustrato l'utilizzo delle funzioni di conversione degli ordini di byte nell'API Windows Sockets.
 
@@ -81,7 +82,7 @@ In C++, un **`struct`** è essenzialmente la stessa cosa di una classe. La `Mess
 
 In questo esempio vengono chiamate le conversioni degli ordini di byte dei dati a causa di una mancata corrispondenza netta tra l'ordine dei byte dell'applicazione server non MFC in un'unica estremità e l'oggetto `CArchive` utilizzato nell'applicazione client MFC sull'altra estremità. Nell'esempio vengono illustrate diverse funzioni di conversione degli ordini di byte fornite da Windows Sockets. Nella tabella seguente vengono descritte queste funzioni.
 
-### <a name="windows-sockets-byte-order-conversion-functions"></a>Funzioni di conversione degli ordini di byte di Windows Sockets
+### <a name="windows-sockets-byte-order-conversion-functions"></a>Funzioni di conversione di Windows Sockets Byte-Order
 
 |Funzione|Scopo|
 |--------------|-------------|
@@ -106,6 +107,6 @@ Per altre informazioni, vedere:
 
 - [Windows Sockets: socket di datagramma](../mfc/windows-sockets-datagram-sockets.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)

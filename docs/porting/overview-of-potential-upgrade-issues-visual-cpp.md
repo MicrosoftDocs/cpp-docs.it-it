@@ -1,13 +1,14 @@
 ---
+description: 'Ulteriori informazioni su: Panoramica dei potenziali problemi di aggiornamento (Visual C++)'
 title: Panoramica dei potenziali problemi di aggiornamento (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: d62bccfb3e508145773c01b26976f46dbcb6490f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 42060fc7bd1aeedebf6cdfc7f645ad8eea38153c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839673"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97115209"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Panoramica dei potenziali problemi di aggiornamento (Visual C++)
 
@@ -183,7 +184,7 @@ Prima dell'introduzione dello standard Unicode, molti programmi usavano set di c
 
 Per altre informazioni, vedere [Porting da MBCS a Unicode](porting-guide-spy-increment.md#porting_to_unicode). Per informazioni generali su MBCS e Unicode, vedere il [testo e le stringhe in Visual C++](../text/text-and-strings-in-visual-cpp.md) e [internazionalizzazione](../c-runtime-library/internationalization.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Aggiornamento di progetti da versioni precedenti di Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Miglioramenti della conformità di C++ in Visual Studio 2017](../overview/cpp-conformance-improvements.md)

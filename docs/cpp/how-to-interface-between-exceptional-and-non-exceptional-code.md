@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: procedura: interfaccia tra codice eccezionale e non eccezionale'
 title: 'Procedura: interfaccia tra codice eccezionale e non eccezionale'
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-ms.openlocfilehash: 88dacda9b20f351eb67dde24a8335bdcbba27dd3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 34a0966d496e5e22099de051a74f3458d1cc05d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187699"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114026"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Procedura: interfaccia tra codice eccezionale e non eccezionale
 
@@ -234,7 +235,7 @@ bool DiffFiles3(const string& file1, const string& file2)
 
 Per ulteriori informazioni sulle espressioni lambda, vedere [espressioni lambda](lambda-expressions-in-cpp.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Procedure consigliate per C++ moderne per le eccezioni e la gestione degli errori](errors-and-exception-handling-modern-cpp.md)<br/>
-[Procedura: progettare per la sicurezza delle eccezioni](how-to-design-for-exception-safety.md)<br/>
+[Procedura: Progettazione per la sicurezza delle eccezioni](how-to-design-for-exception-safety.md)<br/>

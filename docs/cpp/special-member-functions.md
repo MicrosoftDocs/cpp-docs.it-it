@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: funzioni membro speciali'
 title: Funzioni membro speciali
 ms.date: 12/06/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - move operators [C++]
 - assignment operators [C++]
 ms.assetid: 017d6817-b012-44f0-b153-f3076c251ea7
-ms.openlocfilehash: b15a0e50774bbc4e70912a31f9a57ea0439f2c12
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ab3b5be3c7006729e135cc273e9b7856adbd3252
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178691"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97113831"
 ---
 # <a name="special-member-functions"></a>Funzioni membro speciali
 
@@ -30,6 +31,6 @@ Il distruttore predefinito esegue la distruzione del membro dell'oggetto. È vir
 
 Le operazioni di creazione e assegnazione predefinite di copia e spostamento eseguono copie dei criteri di bit a livello di membro o spostamenti di membri dati non statici. Le operazioni di spostamento vengono generate solo quando non viene dichiarata alcuna operazione di distruttore o di spostamento o copia. Un costruttore di copia predefinito viene generato solo quando non viene dichiarato alcun costruttore di copia. Viene eliminato in modo implicito se viene dichiarata un'operazione di spostamento. Un operatore di assegnazione di copia predefinito viene generato solo quando non viene dichiarato in modo esplicito alcun operatore di assegnazione di copia. Viene eliminato in modo implicito se viene dichiarata un'operazione di spostamento.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimenti al linguaggio C++](cpp-language-reference.md)
+[Riferimenti per il linguaggio C++](cpp-language-reference.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: operatore sizeof'
 title: Operatore sizeof
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof operator
 ms.assetid: 8bc3b6fb-54a1-4eb7-ada0-05f8c5efc532
-ms.openlocfilehash: 13e181bf84e359d433fbe951b1aa69320a1f0013
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d4af55697a1466829e81f5eb220ffba72bf73f6a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186295"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116886"
 ---
 # <a name="sizeof-operator"></a>Operatore sizeof
 
@@ -103,7 +104,7 @@ L' **`sizeof`** operatore viene spesso usato per calcolare il numero di elementi
 sizeof array / sizeof array[0]
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Espressioni con operatori unari](../cpp/expressions-with-unary-operators.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)

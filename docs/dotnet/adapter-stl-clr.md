@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Adapter (STL/CLR)'
 title: adapter (STL/CLR)
 ms.date: 06/15/2018
 ms.topic: reference
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - operator= member [STL/CLR]
 - range_adapter member [STL/CLR]
 ms.assetid: 71ce7e51-42b6-4f70-9595-303791a97677
-ms.openlocfilehash: 3278371cc7afb08f0d461c77cde9578e1f2840c6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 66e6346c644bc0d176d90701722cfcd90cbb3590
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502431"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116419"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 
@@ -128,7 +129,7 @@ Tipo della raccolta di cui è stato eseguito il Wrapped.
 
 ### <a name="specializations"></a>Specializzazioni
 
-|Specializzazione|Descrizione|
+|Specializzazione|Description|
 |--------------------|-----------------|
 |IEnumerable|Sequenze tramite elementi.|
 |ICollection|Mantiene un gruppo di elementi.|
@@ -151,7 +152,7 @@ Tipo della raccolta di cui è stato eseguito il Wrapped.
 |[collection_adapter::size_type (STL/CLR)](#size_type)|Tipo di una distanza Signed tra due elementi.|
 |[collection_adapter::value_type (STL/CLR)](#value_type)|Tipo di un elemento.|
 
-|Funzione membro|Descrizione|
+|Funzione membro|Description|
 |---------------------|-----------------|
 |[collection_adapter::base (STL/CLR)](#base)|Definisce l'interfaccia BCL di cui è stato eseguito il wrapper.|
 |[collection_adapter::begin (STL/CLR)](#begin)|Indica l'inizio della sequenza controllata.|
@@ -164,7 +165,7 @@ Tipo della raccolta di cui è stato eseguito il Wrapped.
 |--------------|-----------------|
 |[collection_adapter::operator= (STL/CLR)](#op_eq)|Sostituisce l'handle di BCL archiviato.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa classe modello per modificare un contenitore BCL come contenitore STL/CLR. `collection_adapter`Archivia un handle per un'interfaccia BCL, che a sua volta controlla una sequenza di elementi. Un `collection_adapter` oggetto `X` restituisce una coppia di iteratori di input `X.begin()` e `X.end()` che si utilizza per visitare gli elementi in ordine. Alcune specializzazioni consentono inoltre `X.size()` di scrivere per determinare la lunghezza della sequenza controllata.
 
@@ -284,7 +285,7 @@ Handle BCL di cui eseguire il wrapping.
 *Ok*<br/>
 Oggetto da copiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il costruttore:
 
@@ -614,7 +615,7 @@ collection_adapter<Coll>% operator=(collection_adapter<Coll>% right);
 *Ok*<br/>
 Adapter da copiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operatore membro copia *right* nell'oggetto, quindi restituisce **`*this`** . È possibile usarlo per sostituire il punto di controllo di BCL archiviato con una copia dell'handle di BCL archiviato a *destra*.
 
@@ -807,7 +808,7 @@ void swap(collection_adapter<Coll>% right);
 *Ok*<br/>
 Contenitore con cui scambiare il contenuto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro scambia gli handle di BCL archiviati tra **`*this`** e *right*.
 
@@ -873,7 +874,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>Osservazioni
 
-Il tipo è un sinonimo del *valore*del parametro di modello, se presente nella specializzazione; in caso contrario, è un sinonimo di `System::Object^` .
+Il tipo è un sinonimo del *valore* del parametro di modello, se presente nella specializzazione; in caso contrario, è un sinonimo di `System::Object^` .
 
 ### <a name="example"></a>Esempio
 
@@ -932,7 +933,7 @@ Primo iteratore di cui eseguire il wrapping.
 *last*<br/>
 Secondo iteratore di cui eseguire il wrapping.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione modello restituisce `gcnew range_adapter<Iter>(first, last)`. Viene usato per costruire un `range_adapter<Iter>` oggetto da una coppia di iteratori.
 
@@ -1012,7 +1013,7 @@ Tipo associato agli iteratori di cui è stato eseguito il wrapper.
 
 ### <a name="members"></a>Membri
 
-|Funzione membro|Descrizione|
+|Funzione membro|Description|
 |---------------------|-----------------|
 |[range_adapter::range_adapter (STL/CLR)](#range_adapter_range_adapter)|Costruisce un oggetto adapter.|
 
@@ -1029,7 +1030,7 @@ Tipo associato agli iteratori di cui è stato eseguito il wrapper.
 |<xref:System.Collections.Generic.IEnumerable%601>|Scorre gli elementi tipizzati nella raccolta.|
 |<xref:System.Collections.Generic.ICollection%601>|Mantiene un gruppo di elementi tipizzati.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il range_adapter archivia una coppia di iteratori, che a sua volta delimita una sequenza di elementi. L'oggetto implementa quattro interfacce BCL che consentono di scorrere gli elementi in ordine. Usare questa classe modello per modificare gli intervalli STL/CLR in modo analogo ai contenitori BCL.
 
@@ -1048,7 +1049,7 @@ range_adapter<Iter>% operator=(range_adapter<Iter>% right);
 *Ok*<br/>
 Adapter da copiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operatore membro copia *right* nell'oggetto, quindi restituisce **`*this`** . Viene usato per sostituire la coppia di iteratori archiviati con una copia della coppia di iteratori archiviati a *destra*.
 
@@ -1114,7 +1115,7 @@ Secondo iteratore di cui eseguire il wrapping.
 *Ok*<br/>
 Oggetto da copiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il costruttore:
 

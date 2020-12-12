@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _clear87, _clearfp'
 title: _clear87, _clearfp
 ms.date: 04/05/2018
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - _clearfp function
 - clear87 function
 ms.assetid: 72d24a70-7688-4793-ae09-c96d33fcca52
-ms.openlocfilehash: 4ca49895b881d9e307c1116681bc36f86b167c25
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c15dd66f9a6598f351a54f0269619d9768eaa152
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942960"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124956"
 ---
 # <a name="_clear87-_clearfp"></a>_clear87, _clearfp
 
@@ -54,11 +55,11 @@ unsigned int _clearfp( void );
 
 I bit nel valore restituito indicano lo stato a virgola mobile prima della chiamata a **_clear87** o **_clearfp**. Per una definizione completa dei bit restituiti da **_clear87**, vedere float. h. Molte funzioni della libreria matematica modificano la parola di stato 8087/80287, con risultati imprevisti. I valori restituiti da **_clear87** e **_status87** diventano più affidabili se vengono eseguite meno operazioni a virgola mobile tra gli stati noti della parola di stato a virgola mobile.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 La funzione **_clear87** Cancella i flag di eccezione nella parola di stato a virgola mobile, imposta il bit occupato su 0 e restituisce la parola di stato. La parola di stato a virgola mobile è una combinazione della parola di stato 8087/80287 e di altre condizioni rilevate dal gestore eccezioni 8087/80287, come ad esempio l'overflow e underflow di stack a virgola mobile.
 
-**_clearfp** è una versione portatile indipendente dalla piattaforma della routine **_clear87** . È identica a **_clear87** sulle piattaforme Intel (x86) ed è supportata anche dalle piattaforme x64 e ARM. Per assicurarsi che il codice a virgola mobile sia portabile a x64 e ARM, usare **_clearfp**. Se si fa riferimento solo a piattaforme x86, è possibile usare **_clear87** o **_clearfp**.
+**_clearfp** è una versione portatile indipendente dalla piattaforma della **_clear87** routine. È identica a **_clear87** sulle piattaforme Intel (x86) ed è supportata anche dalle piattaforme x64 e ARM. Per assicurarsi che il codice a virgola mobile sia portabile a x64 e ARM, usare **_clearfp**. Se si fa riferimento solo a piattaforme x86, è possibile usare **_clear87** o **_clearfp**.
 
 Queste funzioni sono deprecate quando si esegue la compilazione con [/CLR (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) perché il Common Language Runtime supporta solo la precisione a virgola mobile predefinita.
 
@@ -69,7 +70,7 @@ Queste funzioni sono deprecate quando si esegue la compilazione con [/CLR (compi
 |**_clear87**|\<float.h>|
 |**_clearfp**|\<float.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -112,6 +113,6 @@ Status: 80000 - denormal
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[_control87, _controlfp, \_ _control87_2](control87-controlfp-control87-2.md)<br/>
 [_status87, _statusfp, _statusfp2](status87-statusfp-statusfp2.md)<br/>

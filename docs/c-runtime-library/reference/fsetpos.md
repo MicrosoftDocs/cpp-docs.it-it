@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: fsetpos'
 title: fsetpos
 ms.date: 4/2/2020
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - streams, setting position indicators
 - fsetpos function
 ms.assetid: 6d19ff48-1a2b-47b3-9f23-ed0a47b5a46e
-ms.openlocfilehash: 8fa6ec1f37703ce51e0c9c565d766c56cf164322
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e8259bcf4dba951bf6603fb5d4984db6ece0e266
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910185"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114221"
 ---
 # <a name="fsetpos"></a>fsetpos
 
@@ -52,7 +53,7 @@ int fsetpos(
 *flusso*<br/>
 Puntatore alla struttura **FILE**.
 
-*POS*<br/>
+*pos*<br/>
 Archiviazione dell'indicatore di posizione.
 
 ## <a name="return-value"></a>Valore restituito
@@ -61,7 +62,7 @@ Se ha esito positivo, **fsetpos** restituisce 0. In caso di errore, la funzione 
 
 Per altre informazioni su questo e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **fsetpos** imposta l'indicatore di posizione del file per il *flusso* sul valore di *pos*, ottenuto in una chiamata precedente a **fgetpos** in base al *flusso*. La funzione Cancella l'indicatore di fine del file e Annulla gli effetti di [ungetc](ungetc-ungetwc.md) nel *flusso*. Dopo la chiamata a **fsetpos**, l'operazione successiva nel *flusso* può essere di input o di output.
 
@@ -69,7 +70,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**fsetpos**|\<stdio.h>|
 
@@ -79,7 +80,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 Vedere l'esempio relativo a [fgetpos](fgetpos.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetpos](fgetpos.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: wire_marshal'
 title: wire_marshal (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
-ms.openlocfilehash: 04d6e7dcc887815b6f1b3becd67bd11bef4a81d7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 69e3b85137d656e40cb77f9f75c361495c88f4a0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832881"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118290"
 ---
 # <a name="wire_marshal"></a>wire_marshal
 
@@ -58,7 +59,7 @@ Il codice seguente illustra l'uso di **wire_marshal**:
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)
