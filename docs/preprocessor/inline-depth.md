@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: inline_depth pragma'
 title: Pragma inline_depth
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pragmas, inline_depth
 - inline_depth pragma
 ms.assetid: 2bba60fe-43ea-4d09-90f7-aafaba3bad07
-ms.openlocfilehash: 73540ec19c4ecc18a740dace0d23a37ad43182c0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 10ac7f5543108018eb7b51e8916dfed149363899
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219417"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236399"
 ---
 # <a name="inline_depth-pragma"></a>Pragma inline_depth
 
@@ -23,7 +24,7 @@ Specifica la profondità della ricerca euristica inline. Le funzioni a una profo
 
 > **#pragma inline_depth (** [ *n* ] **)**
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questo pragma controlla l'incorporamento di funzioni contrassegnate come [inline](../cpp/inline-functions-cpp.md) e [__inline](../cpp/inline-functions-cpp.md)o inline automaticamente sotto l' `/Ob` opzione.
 
@@ -40,7 +41,7 @@ Il **inline_depth** pragma non ha alcun effetto sulle funzioni contrassegnate co
 > [!NOTE]
 > Le funzioni ricorsive possono essere sostituite inline a un livello di profondità massima di 16 chiamate.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
 [inline_recursion](../preprocessor/inline-recursion.md)

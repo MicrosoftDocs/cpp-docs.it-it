@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: operation_timed_out Class'
 title: Classe operation_timed_out
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - operation_timed_out class
 ms.assetid: 963efe1d-a6e0-477c-9a70-d93d8412c897
-ms.openlocfilehash: 7a2513d30aa68798707f3bb16318db9b594b9e16
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 476dfc2d7f29b2769c076ff525f3d0eb1e20a8f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77138869"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236555"
 ---
 # <a name="operation_timed_out-class"></a>Classe operation_timed_out
 
@@ -29,7 +30,7 @@ class operation_timed_out : public std::exception;
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[operation_timed_out](#ctor)|Di overload. Costruisce un oggetto `operation_timed_out`.|
 
@@ -45,7 +46,7 @@ class operation_timed_out : public std::exception;
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="ctor"></a>operation_timed_out
+## <a name="operation_timed_out"></a><a name="ctor"></a> operation_timed_out
 
 Costruisce un oggetto `operation_timed_out`.
 
@@ -60,6 +61,6 @@ operation_timed_out() throw();
 *_Message*<br/>
 Messaggio descrittivo dell'errore.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)
+[Spazio dei nomi Concurrency](concurrency-namespace.md)

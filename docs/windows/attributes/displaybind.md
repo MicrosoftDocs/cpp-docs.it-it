@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: displaybind'
 title: displaybind (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - displaybind attribute
 ms.assetid: b3d70396-78e4-43d9-9583-16ddb8c9bb1f
-ms.openlocfilehash: e5c870aefbc73893b5bf14edec384a93fe0b057b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 98411ec7f07c3145216c536db3e1c19ef7043429
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841662"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236321"
 ---
 # <a name="displaybind"></a>displaybind
 
@@ -42,7 +43,7 @@ Vedere l'esempio per [associabile](bindable.md) per un esempio di come usare **d
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di metodo](method-attributes.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: init_seg pragma'
 title: Pragma init_seg
 ms.date: 08/29/2019
 f1_keywords:
@@ -9,24 +10,24 @@ helpviewer_keywords:
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-ms.openlocfilehash: 5e57ea0eedfc1df6e196391c5edd3acfbad0a7c7
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: cab1c82acd3e06a0ace4d55be3ce82e8fd7aed1c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221013"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236464"
 ---
 # <a name="init_seg-pragma"></a>Pragma init_seg
 
-**C++Specifico**
+**Sezione specifica C++**
 
 Specifica una parola chiave o una sezione di codice che influisce sull'ordine in cui viene eseguito il codice di avvio.
 
 ## <a name="syntax"></a>Sintassi
 
-> **#pragma init_seg (** {**utente** **lib** |  **del compilatore** | | "*nome-sezione*" [ **,** *Func-Name* ]} **)**
+> **#pragma init_seg (** utente **lib del compilatore**  |    |   | "*nome-sezione*" [ **,** *Func-Name* ]} **)**
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 I termini *Segment* e *Section* hanno lo stesso significato in questo articolo.
 
@@ -67,7 +68,7 @@ Gli oggetti verranno comunque inseriti nelle sezioni definite dagli altri `XXX_s
 
 Gli oggetti dichiarati nel modulo non vengono inizializzati automaticamente dalla fase di esecuzione del linguaggio C. Il codice deve eseguire l'inizializzazione.
 
-Per impostazione predefinita, le sezioni `init_seg` sono di sola lettura. Se il nome della sezione `.CRT`è, il compilatore modifica automaticamente l'attributo in sola lettura, anche se è contrassegnato come lettura, scrittura.
+Per impostazione predefinita, le sezioni `init_seg` sono di sola lettura. Se il nome della sezione è `.CRT` , il compilatore modifica automaticamente l'attributo in sola lettura, anche se è contrassegnato come lettura, scrittura.
 
 Non è possibile specificare **init_seg** più di una volta in un'unità di conversione.
 
