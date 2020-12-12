@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: errore dell'analizzatore di espressioni CXX0054"
 title: Errore dell‘analizzatore di espressioni CXX0054
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - CXX0054
 - CAN0054
 ms.assetid: d5d4a093-6a7a-45c0-8aa7-e555023353ef
-ms.openlocfilehash: 3709757a79a01f95c004ce2449a5cc07dfdb92fa
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 778f000dca899e102ef82a4d635473341528584c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80184775"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97208359"
 ---
 # <a name="expression-evaluator-error-cxx0054"></a>Errore dell‘analizzatore di espressioni CXX0054
 
