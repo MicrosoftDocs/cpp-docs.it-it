@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 4) C4239'
 title: Avviso del compilatore (livello 4) C4239
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4239
 ms.assetid: a23dc16a-649e-4870-9a24-275de1584fcd
-ms.openlocfilehash: 25b97cfb50847a0929f3d3a97b822209e6a11900
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 635795392b5544f4985305a02e8534188c049224
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686678"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334866"
 ---
 # <a name="compiler-warning-level-4-c4239"></a>Avviso del compilatore (livello 4) C4239
 
@@ -19,7 +20,7 @@ utilizzata estensione non standard:' token ': conversione da' type ' a' type '
 
 Questa conversione del tipo non è consentita dallo standard C++, ma è consentita come estensione. Questo avviso è sempre seguito da almeno una riga di spiegazione che descrive la regola del linguaggio violata.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 L'esempio seguente genera l'C4239.
 

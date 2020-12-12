@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _create_locale, _wcreate_locale'
 title: _create_locale, _wcreate_locale
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-ms.openlocfilehash: 31bde3d032bdb47d63db5730ba53016de573332c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: feb2fee7befbaf3f798dc36466674eaa4aec55fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912085"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341522"
 ---
 # <a name="_create_locale-_wcreate_locale"></a>_create_locale, _wcreate_locale
 
@@ -70,7 +71,7 @@ Identificatore delle impostazioni locali.
 
 Se vengono specificate le impostazioni *locali* e la *categoria* valide, restituisce le impostazioni locali specificate come oggetto **_locale_t** . Le impostazioni locali correnti del programma non vengono modificate.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_create_locale** consente di creare un oggetto che rappresenta determinate impostazioni specifiche dell'area, da usare in versioni specifiche delle impostazioni locali di molte funzioni CRT (funzioni con il suffisso **_L** ). Il comportamento è simile a **setlocale**, ad eccezione del fatto che anziché applicare le impostazioni locali specificate all'ambiente corrente, le impostazioni vengono salvate in una struttura **_locale_t** restituita. La struttura di **_locale_t** deve essere liberata utilizzando [_free_locale](free-locale.md) quando non è più necessaria.
 
@@ -81,8 +82,8 @@ L'argomento *Category* specifica le parti del comportamento specifico delle impo
 | flag *categoria* | Impatto |
 |-----------------|---------|
 | **LC_ALL** |Tutte le categorie, come indicato di seguito. |
-| **LC_COLLATE** |Funzioni **strcoll**, **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**e **wcsxfrm** . |
-| **LC_CTYPE** | Funzioni di gestione dei caratteri **, ad eccezione di** **isxdigit**, **mbstowcs**e **mbtowc**, che non sono interessate. |
+| **LC_COLLATE** |Funzioni **strcoll**, **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll** e **wcsxfrm** . |
+| **LC_CTYPE** | Funzioni di gestione dei caratteri **, ad eccezione di** **isxdigit**, **mbstowcs** e **mbtowc**, che non sono interessate. |
 | **LC_MONETARY** | Informazioni sulla formattazione monetaria restituite dalla funzione **localeconv** . |
 | **LC_NUMERIC** | Carattere del separatore decimale per le routine di output formattate, ad esempio **printf**, per le routine di conversione dei dati e per le informazioni di formattazione non monetarie restituite da **localeconv**. Oltre al carattere del separatore decimale, **LC_NUMERIC** imposta il separatore delle migliaia e la stringa di controllo del raggruppamento restituiti da [localeconv](localeconv.md). |
 | **LC_TIME** | Funzioni **strftime** e **wcsftime** . |
@@ -173,12 +174,12 @@ In 'C' locale, _strftime_l returns 'Saturday, February 09, 2002'
 ## <a name="see-also"></a>Vedere anche
 
 [Nomi delle impostazioni locali, lingue e stringhe di paese/area geografica](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-[Language Strings](../../c-runtime-library/language-strings.md)<br/>
-[Stringhe relative a paesi](../../c-runtime-library/country-region-strings.md)<br/>
+[Stringhe relative a lingue](../../c-runtime-library/language-strings.md)<br/>
+[Stringhe di paese/area geografica](../../c-runtime-library/country-region-strings.md)<br/>
 [_free_locale](free-locale.md)<br/>
 [_configthreadlocale](configthreadlocale.md)<br/>
 [setlocale](../../preprocessor/setlocale.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: con licenza'
 title: concesso in licenza (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-ms.openlocfilehash: 07a2b68517721ac4244fc1952e4fe3c5f2fbb153
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 348180412c1e8b19994cf5ef3e9bedb4115bfbda
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832490"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327520"
 ---
 # <a name="licensed"></a>licensed
 
@@ -59,7 +60,7 @@ public:
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)

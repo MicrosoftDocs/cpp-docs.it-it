@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: procedura: usare i contenitori paralleli per aumentare l'efficienza"
 title: "Procedura: Usare i contenitori paralleli per aumentare l'efficienza"
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - concurrent_queue class, examples
 - concurrent_vector class, examples
 ms.assetid: bd00046d-e9b6-4ae1-b661-3995f671b867
-ms.openlocfilehash: 361e0e32efb45468ba108ee975879f990ac98395
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 6e416da7b1cdcbe1a9b3073569cf4dda6434ceea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008324"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341555"
 ---
 # <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>Procedura: Usare i contenitori paralleli per aumentare l'efficienza
 
@@ -69,7 +70,7 @@ Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure
 
 > **cl.exe/EHsc carmichael-primes. cpp**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Contenitori e oggetti paralleli](../../parallel/concrt/parallel-containers-and-objects.md)<br/>
 [Parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>

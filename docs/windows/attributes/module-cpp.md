@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: modulo (C++)'
 title: Module (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: b6cde0baaae9901258e90ededf05c60cb13a7dc1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1780ebcb89e7d19f3f3a4c2656d383725d85657a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833972"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327483"
 ---
 # <a name="module-c"></a>modulo (C++)
 
@@ -42,7 +43,7 @@ Opzionale Nome del blocco di libreria.
 *version*<br/>
 Opzionale Numero di versione che si desidera assegnare al blocco di libreria. Il valore predefinito è 1,0.
 
-*uuid*<br/>
+*UUID*<br/>
 L'ID univoco per la libreria. Se si omette questo parametro, viene generato automaticamente un ID per la libreria. Potrebbe essere necessario recuperare il *uuid* del blocco di libreria ed è possibile farlo mediante l'identificatore **__uuidof(** *nomelibreria* **)**.
 
 *lcid*<br/>
@@ -85,7 +86,7 @@ L'ID di risorsa stringa del file RGS utilizzato per registrare l'ID di APP della
 > [!NOTE]
 > Sia il file RGS che la stringa contenente il nome del servizio devono contenere lo stesso valore numerico.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Se non si imposta il parametro *restricted* su [emitidl](emitidl.md), **module** è obbligatorio in qualsiasi programma che usa gli attributi di C++.
 
@@ -157,7 +158,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)<br/>

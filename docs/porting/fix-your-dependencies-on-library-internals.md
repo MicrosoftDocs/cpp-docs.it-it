@@ -1,18 +1,19 @@
 ---
-title: Correggere le dipendenze C++ dagli elementi interni della libreria
+description: 'Altre informazioni su: correggere le dipendenze da elementi interni della libreria C++'
+title: Correggere le dipendenze dagli elementi interni della libreria C++
 ms.date: 05/24/2017
 helpviewer_keywords:
 - library internals in an upgraded Visual Studio C++ project
 - _Hash_seq in an upgraded Visual Studio C++ project
 ms.assetid: 493e0452-6ecb-4edc-ae20-b6fce2d7d3c5
-ms.openlocfilehash: b101234c582d8730b1a8fb62e8182df68554b18c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5d9cbcdd039786c3f1bb637e6a59bcfce43bc883
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214994"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341542"
 ---
-# <a name="fix-your-dependencies-on-c-library-internals"></a>Correggere le dipendenze C++ dagli elementi interni della libreria
+# <a name="fix-your-dependencies-on-c-library-internals"></a>Correggere le dipendenze dagli elementi interni della libreria C++
 
 Microsoft ha pubblicato il codice sorgente per la libreria standard, la maggior parte della libreria di runtime C e altre librerie Microsoft in molte versioni di Visual Studio. Lo scopo è consentire una migliore comprensione del comportamento delle librerie e agevolare il debug del codice. Un effetto collaterale della pubblicazione del codice sorgente delle librerie è l'esposizione di alcuni valori, strutture di dati e funzioni, anche se non fanno parte dell'interfaccia della libreria. Si tratta di elementi che hanno in genere nomi che iniziano con due caratteri di sottolineatura o un carattere di sottolineatura seguito da una lettera maiuscola, ovvero i nomi riservati dallo standard C++ alle implementazioni. Questi valori, strutture e funzioni sono dettagli di implementazione che possono cambiare in seguito alle evoluzioni delle librerie nel tempo, quindi è caldamente consigliabile evitare di creare dipendenze da questi elementi. In caso contrario, si rischia di realizzare codice non portabile e possono verificarsi problemi quando si tenta di eseguire la migrazione del codice a nuove versioni delle librerie.
 
@@ -74,8 +75,8 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Aggiornamento di progetti da versioni precedenti di VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Aggiornamento di progetti da versioni precedenti di Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Panoramica dei potenziali problemi di aggiornamento (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Aggiornare il codice a Universal CRT](upgrade-your-code-to-the-universal-crt.md)

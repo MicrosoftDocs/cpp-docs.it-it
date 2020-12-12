@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: Nozioni fondamentali su HTML'
 title: Nozioni fondamentali su HTML
 ms.date: 11/04/2016
 helpviewer_keywords:
 - HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
-ms.openlocfilehash: 29ca2e3df4981db22a10281ba2a2938fc91d5b46
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f32926beb9152441169320bf3553b0066f78fa7c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619998"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290245"
 ---
 # <a name="html-basics"></a>Nozioni fondamentali su HTML
 
@@ -21,7 +22,7 @@ La procedura seguente usa i tag HTML per creare una semplice pagina Web. In ques
 
 1. Aprire il blocco note o qualsiasi editor di testo normale.
 
-1. Scegliere **nuovo**dal menu **file** .
+1. Scegliere **nuovo** dal menu **file** .
 
 1. Digitare le righe seguenti:
 
@@ -33,9 +34,9 @@ La procedura seguente usa i tag HTML per creare una semplice pagina Web. In ques
     </HTML>
     ```
 
-1. Scegliere **Salva**dal menu **file** e salvare il file come c:\webpages\First.htm. Lasciare aperto il file nell'editor.
+1. Scegliere **Salva** dal menu **file** e salvare il file come c:\webpages\First.htm. Lasciare aperto il file nell'editor.
 
-1. Passare al browser e scegliere **Apri**dal menu **File** o digitare *file://C:/WEBPAGES/First.htm* nella casella di modifica URL del browser. Verrà visualizzata una pagina vuota con la didascalia della finestra "Top HTML Tags".
+1. Passare al browser e scegliere **Apri** dal menu **File** o digitare *file://C:/webpages/first.htm* nella casella di modifica URL del browser. Verrà visualizzata una pagina vuota con la didascalia della finestra "Top HTML Tags".
 
    Si noti che i tag sono abbinati e sono inclusi tra parentesi angolari. I tag non fanno distinzione tra maiuscole e minuscole, ma la maiuscola viene spesso usata per far emergere i tag.
 
@@ -50,7 +51,7 @@ La procedura seguente usa i tag HTML per creare una semplice pagina Web. In ques
     </BODY>
     ```
 
-1. Scegliere **Salva**dal menu **file** .
+1. Scegliere **Salva** dal menu **file** .
 
 1. Tornare al browser e aggiornare la pagina.
 
@@ -109,6 +110,6 @@ Per una descrizione completa di tag, attributi ed estensioni, vedere la specific
 
 [Ultima versione pubblicata del codice HTML](https://www.w3.org/TR/html/) in W3C.org.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Nozioni fondamentali sulla programmazione Internet MFC](mfc-internet-programming-basics.md)

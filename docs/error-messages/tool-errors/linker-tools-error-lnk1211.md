@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore degli strumenti del linker LNK1211'
 title: Errore degli strumenti del linker LNK1211
 ms.date: 12/05/2017
 f1_keywords:
@@ -6,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1211
 ms.assetid: 607400eb-4180-4892-817f-eedfa628af61
-ms.openlocfilehash: 7c918cacb87460c2aad30285b750d9b170425534
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3201055643f5874ccc319f04fb6eb2d976bf67f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242669"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341620"
 ---
 # <a name="linker-tools-error-lnk1211"></a>Errore degli strumenti del linker LNK1211
 
-> informazioni sul tipo precompilato non trovati. «*filename*' non è collegato o sovrascritto
+> informazioni sul tipo precompilato non trovate; '*filename*' non collegato o sovrascritto
 
-Il *nomefile* file oggetto compilati con [/Yc](../../build/reference/yc-create-precompiled-header-file.md), non è stato specificato nel comando collegamento o è stato sovrascritto.
+Il file oggetto *filename* , compilato usando [/YC](../../build/reference/yc-create-precompiled-header-file.md), non è stato specificato nel comando link o è stato sovrascritto.
 
-Se si sta creando una libreria di debug che usa intestazioni precompilate e se si specifica **/Yc** e [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md), Visual C++ genera un file oggetto precompilato che contiene le informazioni di debug. L'errore si verifica solo quando si memorizza il file oggetto precompilate in una raccolta, usare la libreria per creare un'immagine eseguibile e i file di oggetto cui vengono fatto riferimento non sono disponibili riferimenti transitivi a una delle funzioni definite dal file oggetto precompilato.
+Se si sta creando una libreria di debug che usa intestazioni precompilate e se si specifica **/YC** e [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md), Visual C++ genera un file oggetto precompilato che contiene informazioni di debug. L'errore si verifica solo quando si archivia il file oggetto precompilato in una libreria, si utilizza la libreria per compilare un'immagine eseguibile e i file oggetto a cui viene fatto riferimento non hanno riferimenti transitivi a nessuna delle funzioni definite dal file oggetto precompilato.
 
-Esistono due metodi per risolvere questo problema:
+Esistono due metodi per ovviare a questa situazione:
 
-- Specificare il [/Yd](../../build/reference/yd-place-debug-information-in-object-file.md) opzione del compilatore per aggiungere le informazioni di debug dall'intestazione precompilata per ogni modulo oggetto. Questo metodo è meno consigliato perché produce in genere i moduli di oggetti di grandi dimensioni che consentono di aumentare il tempo necessario per collegare l'applicazione.
+- Specificare l'opzione del compilatore [/YD](../../build/reference/yd-place-debug-information-in-object-file.md) per aggiungere le informazioni di debug dall'intestazione precompilata a ogni modulo dell'oggetto. Questo metodo è meno auspicabile, perché in genere produce moduli LOB che possono aumentare il tempo necessario per collegare l'applicazione.
 
-- Specificare [/Yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md) e passare il nome di una stringa arbitraria, quando si crea un file di intestazione precompilata che non contiene alcuna definizione di funzione. Ciò indica al compilatore di creare un simbolo nel file oggetto precompilato e la generazione di un riferimento al simbolo in ogni file oggetto che utilizzato il file di intestazione precompilata che viene associato al file oggetto precompilato.
+- Specificare [/YL](../../build/reference/yl-inject-pch-reference-for-debug-library.md) e passare il nome di una stringa arbitraria, quando si crea un file di intestazione precompilato che non contiene alcuna definizione di funzione. Ciò indica al compilatore di creare un simbolo nel file oggetto precompilato e di emettere un riferimento a tale simbolo in ogni file oggetto che ha utilizzato il file di intestazione precompilato associato al file oggetto precompilato.
 
-Quando si compila un modulo con **/Yc** e **/Yl**, il compilatore crea un simbolo simile a `__@@_PchSym_@00@...@symbol_name`, dove i puntini di sospensione (...) rappresenta una stringa di caratteri generato dal compilatore e lo archivia di modulo di oggetto. Qualsiasi file di origine che si esegue la compilazione con questa intestazione precompilata fa riferimento al simbolo specificato, che indica al linker di includere il modulo di oggetto e le relative informazioni di debug dalla libreria.
+Quando si compila un modulo con **/YC** e **/YL**, il compilatore crea un simbolo simile a `__@@_PchSym_@00@...@symbol_name` , dove i puntini di sospensione (...) rappresentano una stringa di caratteri generata dal compilatore e la archivia nel modulo dell'oggetto. Tutti i file di origine compilati con l'intestazione precompilata fanno riferimento al simbolo specificato, che fa in modo che il linker includa il modulo oggetto e le relative informazioni di debug dalla libreria.

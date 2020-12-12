@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CReBarCtrl'
 title: Classe CReBarCtrl
 ms.date: 11/19/2018
 f1_keywords:
@@ -98,12 +99,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: 872d577c2272939a6bf7ed1e3069cda426083e3f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 75caee2fb0b6bb883ecb421325d41b25c38252b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561895"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301230"
 ---
 # <a name="crebarctrl-class"></a>Classe CReBarCtrl
 
@@ -115,17 +116,17 @@ Incapsula la funzionalità di un controllo Rebar, ovvero un contenitore per una 
 class CReBarCtrl : public CWnd
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CReBarCtrl:: CReBarCtrl](#crebarctrl)|Costruisce un oggetto `CReBarCtrl`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CReBarCtrl:: BeginDrag](#begindrag)|Posiziona il controllo Rebar in modalità di trascinamento della selezione.|
 |[CReBarCtrl:: create](#create)|Crea il controllo Rebar e lo collega all' `CReBarCtrl` oggetto.|
@@ -173,7 +174,7 @@ class CReBarCtrl : public CWnd
 |[CReBarCtrl:: ShowBand](#showband)|Mostra o nasconde una determinata banda in un controllo Rebar.|
 |[CReBarCtrl:: SizeToRect](#sizetorect)|Consente di adattare un controllo Rebar a un rettangolo specificato.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'applicazione in cui risiede il controllo Rebar assegna la finestra figlio contenuta dal controllo Rebar alla banda Rebar. La finestra figlio è in genere un altro controllo comune.
 
@@ -267,7 +268,7 @@ Specifica l'ID del controllo Rebar.
 
 Diverso da zero se l'oggetto è stato creato correttamente; in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Creare un controllo Rebar in due passaggi:
 
@@ -315,7 +316,7 @@ ID della finestra figlio del controllo.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare `CreateEx` anziché [create](#create) per applicare gli stili estesi di Windows, specificati dall'introduzione allo stile esteso di Windows **WS_EX_**.
 
@@ -438,7 +439,7 @@ void GetBandMargins(PMARGINS pMargins);
 *pMargins*<br/>
 Puntatore a una struttura dei [margini](/windows/win32/api/uxtheme/ns-uxtheme-margins)che riceverà le informazioni.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [RB_GETBANDMARGINS](/windows/win32/Controls/rb-getbandmargins) , come descritto nel Windows SDK.
 
@@ -500,7 +501,7 @@ Puntatore a una struttura [ColorScheme](/windows/win32/api/commctrl/ns-commctrl-
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La `COLORSCHEME` struttura include il colore di evidenziazione del pulsante e il colore dell'ombreggiatura pulsante.
 
@@ -528,7 +529,7 @@ DWORD GetExtendedStyle() const;
 
 Combinazione bit per bit (o) di flag che indicano gli stili estesi. I flag possibili sono RBS_EX_SPLITTER e RBS_EX_TRANSPARENT. Per ulteriori informazioni, vedere il parametro *dwMask* del metodo [CReBarCtrl:: SetExtendedStyle](#setextendedstyle) .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [RB_GETEXTENDEDSTYLE](/windows/win32/Controls/rb-dragmove) , descritto nel Windows SDK.
 
@@ -544,7 +545,7 @@ CImageList* GetImageList() const;
 
 Puntatore a un oggetto [CImageList](../../mfc/reference/cimagelist-class.md) . Restituisce NULL se non è impostato alcun elenco di immagini per il controllo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro usa le informazioni sulle dimensioni e sulla maschera archiviate nella struttura [REBARINFO](/windows/win32/api/commctrl/ns-commctrl-rebarinfo) , come descritto nell'Windows SDK.
 
@@ -560,7 +561,7 @@ CPalette* GetPalette() const;
 
 Puntatore a un oggetto [CPalette](../../mfc/reference/cpalette-class.md) che specifica la tavolozza corrente del controllo Rebar.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si noti che questa funzione membro utilizza un `CPalette` oggetto come valore restituito, anziché un HPALETTE.
 
@@ -655,7 +656,7 @@ CToolTipCtrl* GetToolTips() const;
 
 Puntatore a un oggetto [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si noti che l'implementazione MFC di `GetToolTips` restituisce un puntatore a un `CToolTipCtrl` , anziché un HWND.
 
@@ -732,7 +733,7 @@ void MaximizeBand(UINT uBand);
 *uBand*<br/>
 Indice in base zero della banda da ingrandire.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Implementa il comportamento del messaggio Win32 [RB_MAXIMIZEBAND](/windows/win32/Controls/rb-maximizeband) con `fIdeal` impostato su 0, come descritto nell'Windows SDK.
 
@@ -753,7 +754,7 @@ void MinimizeBand(UINT uBand);
 *uBand*<br/>
 Indice in base zero della banda da ridurre a icona.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Implementa il comportamento del [RB_MINIMIZEBAND](/windows/win32/Controls/rb-minimizeband)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -814,7 +815,7 @@ void RestoreBand(UINT uBand);
 *uBand*<br/>
 Indice in base zero della banda da ingrandire.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Implementa il comportamento del messaggio Win32 [RB_MAXIMIZEBAND](/windows/win32/Controls/rb-maximizeband) con `fIdeal` impostato su 1, come descritto nel Windows SDK.
 
@@ -870,7 +871,7 @@ in Nuova larghezza della banda del Rebar, in pixel.
 
 TRUE se il metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [RB_SETBANDWIDTH](/windows/win32/Controls/rb-setbandwidth) , descritto nel Windows SDK.
 
@@ -924,7 +925,7 @@ Valore di COLORREF che rappresenta il nuovo colore di sfondo predefinito.
 
 Valore [COLORREF](/windows/win32/gdi/colorref) che rappresenta il colore di sfondo predefinito precedente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni su quando impostare il colore di sfondo e su come impostare il valore predefinito, vedere questo argomento.
 
@@ -941,7 +942,7 @@ void SetColorScheme(const COLORSCHEME* lpcs);
 *LPCS*<br/>
 Puntatore a una struttura [ColorScheme](/windows/win32/api/commctrl/ns-commctrl-colorscheme) , come descritto nell'Windows SDK.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La `COLORSCHEME` struttura include il colore di evidenziazione del pulsante e il colore dell'ombreggiatura pulsante.
 
@@ -970,7 +971,7 @@ in Combinazione bit per bit (o) di flag che specificano gli stili da applicare. 
 
 Stile esteso precedente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [RB_SETEXTENDEDSTYLE](/windows/win32/Controls/rb-setextendedstyle) , descritto nel Windows SDK.
 
@@ -1008,7 +1009,7 @@ Puntatore a un `CWnd` oggetto da impostare come proprietario del controllo Rebar
 
 Puntatore a un oggetto [CWnd](../../mfc/reference/cwnd-class.md) che rappresenta il proprietario corrente del controllo Rebar.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si noti che questa funzione membro utilizza i puntatori agli `CWnd` oggetti sia per il proprietario corrente che per quello selezionato del controllo Rebar anziché per gli handle di Windows.
 
@@ -1032,7 +1033,7 @@ Oggetto HPALETTE che specifica la nuova tavolozza che il controllo Rebar utilizz
 
 Puntatore a un oggetto [CPalette](../../mfc/reference/cpalette-class.md) che specifica la tavolozza precedente del controllo Rebar.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si noti che questa funzione membro utilizza un `CPalette` oggetto come valore restituito, anziché un HPALETTE.
 
@@ -1053,7 +1054,7 @@ Valore COLORREF che rappresenta il nuovo colore del testo nell' `CReBarCtrl` ogg
 
 Valore [COLORREF](/windows/win32/gdi/colorref) che rappresenta il colore del testo precedente associato all' `CReBarCtrl` oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Viene fornito per supportare la flessibilità del colore del testo in un controllo Rebar.
 
@@ -1070,7 +1071,7 @@ void SetToolTips(CToolTipCtrl* pToolTip);
 *pToolTip*<br/>
 Puntatore a un oggetto [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Al termine dell'operazione, è necessario eliminare l' `CToolTipCtrl` oggetto.
 
@@ -1091,7 +1092,7 @@ Puntatore a una stringa Unicode che contiene lo stile di visualizzazione Rebar d
 
 Il valore restituito non viene utilizzato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [RB_SETWINDOWTHEME](/windows/win32/Controls/rb-setwindowtheme) , come descritto nel Windows SDK.
 
@@ -1134,7 +1135,7 @@ Riferimento a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) 
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si noti che questa funzione membro utilizza un `CRect` oggetto come parametro, anziché una `RECT` struttura.
 

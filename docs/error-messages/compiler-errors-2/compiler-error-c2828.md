@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2828'
 title: Errore del compilatore C2828
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2828
 ms.assetid: d8df6ed4-5954-46c2-b59b-52881d4e923d
-ms.openlocfilehash: e5984573074b07ae4cbd961ad7d8821173e0b04b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 178b1998510d8119358d63ae0cf6f264efa6c9cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80201896"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97194553"
 ---
 # <a name="compiler-error-c2828"></a>Errore del compilatore C2828
 

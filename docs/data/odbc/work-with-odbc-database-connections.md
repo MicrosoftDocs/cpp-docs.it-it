@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: usare le connessioni al database ODBC'
 title: Utilizzo di connessioni a database ODBC
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - databases [C++], connecting to
 - ODBC connections [C++], databases
 ms.assetid: f41a67c7-168d-4657-9999-257535e44c87
-ms.openlocfilehash: 29626d9ce98ac5bcd3889ee9417298ddfe3d7f1d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c74c8d1407c2ba29aa04eba10c7cb6a720294b56
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212485"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246136"
 ---
 # <a name="work-with-odbc-database-connections"></a>Utilizzo di connessioni a database ODBC
 
@@ -26,6 +27,6 @@ Negli argomenti seguenti viene illustrato come connettersi alle origini dati ODB
 
 - [Configurare un'origine dati ODBC a livello di codice](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

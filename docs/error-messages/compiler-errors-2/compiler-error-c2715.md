@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2715'
 title: Errore del compilatore C2715
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2715
 ms.assetid: c81567a7-5b65-468f-aaf9-835f91e468e4
-ms.openlocfilehash: 24f972452f9c823d2082e1c29758b39f088021d0
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 6575e5b678189834a035f9e236b3d768dc7ab368
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760530"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97320808"
 ---
 # <a name="compiler-error-c2715"></a>Errore del compilatore C2715
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _gcvt_s'
 title: _gcvt_s
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-ms.openlocfilehash: 83e34bffbe62bf07d2d3f9f649d12607b0e08be7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f96822920430122a56d8503b99cc0b881d9f06be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919421"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341523"
 ---
 # <a name="_gcvt_s"></a>_gcvt_s
 
@@ -92,7 +93,7 @@ Zero in caso di esito positivo. Se si verifica un errore a causa di un parametro
 
 **_gcvt_s** possibile generare una violazione di accesso se il *buffer* non punta alla memoria valida e non è **null**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_gcvt_s** converte un *valore* a virgola mobile in una stringa di caratteri (che include un separatore decimale e un possibile byte di segno) e archivia la stringa nel *buffer*. il *buffer* deve essere sufficientemente grande da contenere il valore convertito e un carattere null di terminazione, che viene aggiunto automaticamente. Un buffer di lunghezza **_CVTBUFSIZE** è sufficiente per qualsiasi valore a virgola mobile. Se viene utilizzata una dimensione del buffer di *cifre* + 1, la funzione non sovrascriverà la fine del buffer, pertanto assicurarsi di specificare un buffer sufficiente per questa operazione. **_gcvt_s** tenta *di produrre cifre cifre in* formato decimale. In caso contrario, *le cifre vengono generate* in formato esponenziale. Gli zeri finali possono essere eliminati nella conversione.
 
@@ -144,7 +145,7 @@ Converted value: 1.2
 ## <a name="see-also"></a>Vedere anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
 [_ecvt_s](ecvt-s.md)<br/>
 [_fcvt_s](fcvt-s.md)<br/>
