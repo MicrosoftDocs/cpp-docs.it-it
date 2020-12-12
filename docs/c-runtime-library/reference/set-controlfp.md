@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _set_controlfp'
 title: _set_controlfp
 ms.date: 04/05/2018
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - floating-point functions, setting control word
 - _set_controlfp function
 ms.assetid: e0689d50-f68a-4028-a9c1-fb23eedee4ad
-ms.openlocfilehash: 4d39406db0f4c9ba6374776da62aea2dbb61e23d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 44316cb4114d06ced1b3d67a261bc8d3ceb1aee6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948677"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288867"
 ---
 # <a name="_set_controlfp"></a>_set_controlfp
 
@@ -59,7 +60,7 @@ Maschera di bit della parola di controllo nuova da impostare.
 
 No.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La funzione **_set_controlfp** è simile a **_control87**, ma imposta solo la parola di controllo a virgola mobile su *newControl*. I bit dei valori indicano lo stato di controllo a virgola mobile. Lo stato di controllo a virgola mobile consente al programma di modificare le modalità di precisione, arrotondamento e infinito nel pacchetto matematico a virgola mobile. È anche possibile mascherare o annullare il mascheramento delle eccezioni a virgola mobile usando **_set_controlfp**. Per altre informazioni, vedere [_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md).
 
@@ -71,10 +72,10 @@ Questa funzione è deprecata durante la compilazione con [/CLR (compilazione Com
 |-------------|---------------------|-------------------|
 |**_set_controlfp**|\<float.h>|solo processore x86|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [_clear87, _clearfp](clear87-clearfp.md)<br/>
 [_status87, _statusfp, _statusfp2](status87-statusfp-statusfp2.md)<br/>

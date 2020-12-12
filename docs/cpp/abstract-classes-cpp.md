@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classi astratte (C++)'
 title: Classi astratte (C ++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - abstract classes [C++]
 - derived classes [C++], abstract classes [C++]
 ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
-ms.openlocfilehash: 2ea9d3765f65434cb738c2b7c53f9499bba24545
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bb1c42ce7930128e72c88afaca90da7aaac0bde5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181694"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288412"
 ---
 # <a name="abstract-classes-c"></a>Classi astratte (C ++)
 
@@ -55,7 +56,7 @@ Le funzioni virtuali pure possono essere definite per le classi astratte, ma pos
 
 *abstract-class-name*::*function-name*()
 
-Questa operazione può essere utile quando si progettano le gerarchie di classe le cui classi base includono i distruttori virtuali pure, poiché i distruttori di classe base sono sempre chiamati nel processo di eliminazione definitiva di un oggetto. Prendere in considerazione gli esempi seguenti:
+Questa operazione può essere utile quando si progettano le gerarchie di classe le cui classi base includono i distruttori virtuali pure, poiché i distruttori di classe base sono sempre chiamati nel processo di eliminazione definitiva di un oggetto. Si consideri l'esempio seguente:
 
 ```cpp
 // Declare an abstract base class with a pure virtual destructor.
@@ -86,6 +87,6 @@ Quando l'oggetto a cui si fa riferimento `pDerived` viene eliminato, viene chiam
 > [!NOTE]
 > Nell'esempio precedente, la funzione virtuale pure `base::~base` viene chiamata in modo implicito da `derived::~derived`. È inoltre possibile chiamare le funzioni virtuali pure in modo esplicito utilizzando un nome di funzione membro completo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Ereditarietà](../cpp/inheritance-cpp.md)

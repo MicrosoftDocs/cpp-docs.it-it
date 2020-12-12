@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l'
 title: _strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l
 ms.date: 4/2/2020
 api_name:
@@ -47,12 +48,12 @@ helpviewer_keywords:
 - strtoi64 function
 - wcstoi64_l function
 ms.assetid: ea2abc50-7bfe-420e-a46b-703c3153593a
-ms.openlocfilehash: ede96e39b596225d13c041468eb6172853959c6a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5aaf65f3b1c15d24c9a858ff366cc2d53eab481a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233951"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288763"
 ---
 # <a name="_strtoi64-_wcstoi64-_strtoi64_l-_wcstoi64_l"></a>_strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l
 
@@ -103,13 +104,13 @@ Impostazioni locali da usare.
 
 **_strtoi64** restituisce il valore rappresentato nella stringa *strSource*, tranne quando la rappresentazione potrebbe causare un overflow, nel qual caso restituisce **_I64_MAX** o **_I64_MIN**. La funzione restituirà 0 se è non possibile eseguire alcuna conversione. **_wcstoi64** restituisce valori in modo analogo a **strtoi64**.
 
-**_I64_MAX** e **_I64_MIN** sono definiti nei limiti. H.
+**_I64_MAX** e **_I64_MIN** sono definiti in limits. H.
 
 Se *strSource* è **null** o la *base* è diversa da zero e minore di 2 o maggiore di 36, **errno** viene impostato su **EINVAL**.
 
 Per altre informazioni su questo e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_strtoi64** converte *strSource* in un oggetto **`__int64`** . Entrambe le funzioni interrompono la lettura della stringa *strSource* al primo carattere che non sono in grado di riconoscere come parte di un numero. Potrebbe trattarsi del carattere null di terminazione o del primo carattere numerico maggiore o uguale alla *base*. **_wcstoi64** è una versione a caratteri wide di **_strtoi64**; il relativo argomento *strSource* è una stringa di caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
 
@@ -128,7 +129,7 @@ Se *endptr* non è **null**, un puntatore al carattere che ha interrotto l'anali
 
 **_strtoi64** prevede che *strSource* punti a una stringa nel formato seguente:
 
-> [*spazi vuoti*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*cifre* &#124; *lettere*]
+> [*spazi vuoti*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*cifre*  &#124; *lettere*]
 
 Uno spazio *vuoto* può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati; le *cifre* corrispondono a una o più cifre decimali; le *lettere* sono una o più lettere da' a' a' z ' (o da' A ' a' z ').  Il primo carattere che non corrisponde a questo formato interrompe la lettura. Se *base* è compreso tra 2 e 36, viene usato come base del numero. Se *base* è 0, per determinare la base vengono usati i caratteri iniziali della stringa a cui punta *strSource* . Se il primo carattere è 0 e il secondo carattere non è 'x' né 'X', la stringa viene interpretata come un Integer ottale. Se il primo carattere è '0' e il secondo carattere è 'x' o 'X', la stringa viene interpretata come integer esadecimale. Se il primo carattere è compreso tra '1' e '9', la stringa viene interpretata come integer decimale. Alle lettere da 'a' a 'z' (o da 'A' a 'Z') vengono assegnati i valori da 10 a 35. Sono consentite solo le lettere con valori assegnati minori di *base*. Il primo carattere non compreso nell'intervallo della base interrompe la lettura. Se ad esempio *base* è 0 e il primo carattere analizzato è' 0', si presuppone un Integer ottale e il carattere ' 8' o ' 9' arresterà l'analisi.
 
@@ -141,7 +142,7 @@ Uno spazio *vuoto* può essere costituito da caratteri di spazio e tabulazione, 
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
 [Impostazioni locali](../../c-runtime-library/locale.md)<br/>

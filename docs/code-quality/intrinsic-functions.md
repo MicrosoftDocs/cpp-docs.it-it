@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: funzioni intrinseche'
 title: Funzioni intrinseche
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,12 +11,12 @@ f1_keywords:
 - _Nullterm_length_
 - _Inexpressible_
 ms.assetid: adf29f8c-89fd-4a5e-9804-35ac83e1c457
-ms.openlocfilehash: d1a7bae43a6fcd875f2e713695969f0d88b0dfe5
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 6d193052520203e3716e72f8c60031ab55f63c6d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504163"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288594"
 ---
 # <a name="intrinsic-functions"></a>Funzioni intrinseche
 
@@ -25,7 +26,7 @@ Un'espressione in SAL può essere un'espressione C/C++ a condizione che sia un'e
 
 Le seguenti annotazioni di funzioni intrinseche forniscono l'utilità generale per SAL.
 
-|Annotazione|Descrizione|
+|Annotazione|Description|
 |----------------|-----------------|
 |`_Curr_`|Sinonimo dell'oggetto attualmente annotato.  Quando viene utilizzata l'annotazione `_At_`, `_Curr_` è identica al primo parametro di `_At_`.  In caso contrario, è il parametro o l'intera funzione/valore restituito con cui l'annotazione è lessicalmente associata.|
 |`_Inexpressible_(expr)`|Esprime una situazione in cui la dimensione di un buffer è troppo complessa per essere rappresentata con un'espressione di annotazione, ad esempio quando viene calcolata esaminando un set di dati di input e successivamente contando i membri selezionati.|
@@ -38,13 +39,13 @@ Le seguenti annotazioni di funzioni intrinseche forniscono l'utilità generale p
 
 Le seguenti annotazioni di funzioni intrinseche abilitano la modifica delle stringhe. Tutte e quattro queste funzioni presentano lo stesso scopo: restituire il numero di elementi del tipo trovati prima di un terminatore null. Le differenze sono i tipi di dati negli elementi a cui fanno riferimento. Si noti che se si desidera specificare la lunghezza del buffer con terminazione null che non è composto da caratteri, utilizzare l'annotazione di `_Nullterm_length_(param)` dalla sezione precedente.
 
-|Annotazione|Descrizione|
+|Annotazione|Description|
 |----------------|-----------------|
 |`_String_length_(param)`|`param` numero di elementi nella stringa che non include un carattere di terminazione null. Questa annotazione è riservata ai tipi di stringa di caratteri.|
 |`strlen(param)`|`param` numero di elementi nella stringa che non include un carattere di terminazione null. Questa annotazione è riservata per l'utilizzo su matrici di caratteri ed è simile alla funzione di runtime C [strlen ()](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md).|
 |`wcslen(param)`|`param` numero di elementi nella stringa fino a un carattere di terminazione null, ma non incluso. Questa annotazione è riservata per l'uso su matrici di caratteri wide ed è simile alla funzione di runtime C [wcslen ()](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md).|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Uso delle annotazioni SAL per ridurre gli errori del codice C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [Informazioni su SAL](../code-quality/understanding-sal.md)

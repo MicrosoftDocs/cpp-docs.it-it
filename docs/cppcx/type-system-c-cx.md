@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: sistema di tipi (C++/CX)'
 title: Sistema di tipi (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-ms.openlocfilehash: 242fbde1774ef4537eedce26cafff6b8625ac2a5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 43b1e9dd2df6e9e457525ebf337604f68f0c267f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845146"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288165"
 ---
 # <a name="type-system-ccx"></a>Sistema di tipi (C++/CX)
 
@@ -168,7 +169,7 @@ Una variabile boxed è un tipo di valore di cui è stato eseguito il wrapping in
 
 Per ulteriori informazioni, vedi [Boxing](../cppcx/boxing-c-cx.md).
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attributi
 
 Un attributo è un valore di metadati che può essere applicato a qualsiasi tipo Windows Runtime o membro di tipo e può essere esaminato in fase di esecuzione. Il Windows Runtime definisce un set di attributi comuni nello `Windows::Foundation::Metadata` spazio dei nomi. Gli attributi definiti dall'utente nelle interfacce pubbliche non sono supportati da Windows Runtime in questa versione.
 
@@ -178,6 +179,6 @@ Viene descritto come contrassegnare le API pubbliche come deprecate usando lo st
 
 Per ulteriori informazioni, vedere [deprecazione di tipi e membri](../cppcx/deprecating-types-and-members-c-cx.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimenti per il linguaggio C++/CX](../cppcx/visual-c-language-reference-c-cx.md)

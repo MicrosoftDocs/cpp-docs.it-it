@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: macro e funzioni globali per OLE DB modelli di consumer'
 title: Macro e funzioni globali per modelli consumer OLE DB
 ms.date: 02/11/2019
 f1_keywords:
@@ -99,12 +100,12 @@ helpviewer_keywords:
 - END_PARAM_MAP macro
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-ms.openlocfilehash: 60f642366589bb13b15665331a81d440322eb13f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: fb6e126483690e43ceaf3814f6c288ecfdc69da1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504041"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287073"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Macro e funzioni globali per modelli consumer OLE DB
 
@@ -112,13 +113,13 @@ I modelli consumer OLE DB includono le macro e le funzioni globali seguenti:
 
 ## <a name="global-functions"></a>Funzioni globali
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[AtlTraceErrorRecords](#atltraceerrorrecords)|Consente di eseguire il dump OLE DB informazioni del record di errore nel dispositivo di dump se viene restituito un errore.|
 
 ## <a name="accessor-map-macros"></a>Macro mapping delle funzioni di accesso
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[BEGIN_ACCESSOR](#begin_accessor)|Contrassegna l'inizio di una voce della funzione di accesso.|
 |[BEGIN_ACCESSOR_MAP](#begin_accessor_map)|Contrassegna l'inizio delle voci della mappa delle funzioni di accesso.|
@@ -127,7 +128,7 @@ I modelli consumer OLE DB includono le macro e le funzioni globali seguenti:
 
 ## <a name="column-map-macros"></a>Macro della mappa colonne
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[BEGIN_COLUMN_MAP](#begin_column_map)|Contrassegna l'inizio delle voci della mappa delle colonne nella classe di record utente.|
 |[BLOB_ENTRY](#blob_entry)|Utilizzato per associare un BLOB (Binary Large Object).|
@@ -140,7 +141,7 @@ I modelli consumer OLE DB includono le macro e le funzioni globali seguenti:
 |[BLOB_NAME_STATUS](#blob_name_status)|Segnala lo stato della colonna di dati BLOB.|
 |[BOOKMARK_ENTRY](#bookmark_entry)|Rappresenta una voce di segnalibro nel set di righe. Una voce di segnalibro è un tipo speciale di voce di colonna.|
 |[COLUMN_ENTRY](#column_entry)|Rappresenta un'associazione a una colonna specifica nel database.|
-|[COLUMN_ENTRY_EX](#column_entry_ex)|Rappresenta un'associazione alla colonna specifica nel database. Supporta i parametri di *tipo*, *lunghezza*, *precisione*, *scala*e *stato* .|
+|[COLUMN_ENTRY_EX](#column_entry_ex)|Rappresenta un'associazione alla colonna specifica nel database. Supporta i parametri di *tipo*, *lunghezza*, *precisione*, *scala* e *stato* .|
 |[COLUMN_ENTRY_LENGTH](#column_entry_length)|Rappresenta un'associazione alla colonna specifica nel database. Supporta la variabile di *lunghezza* .|
 |[COLUMN_ENTRY_LENGTH_STATUS](#column_entry_length_status)|Rappresenta un'associazione alla colonna specifica nel database. Supporta parametri di *stato* e di *lunghezza* .|
 |[COLUMN_ENTRY_PS](#column_entry_ps)|Rappresenta un'associazione alla colonna specifica nel database. Supporta i parametri di *precisione* e *scala* .|
@@ -167,14 +168,14 @@ I modelli consumer OLE DB includono le macro e le funzioni globali seguenti:
 
 ## <a name="command-macros"></a>Macro di comando
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[DEFINE_COMMAND](#define_command)|Specifica il comando che verrà usato per creare il set di righe quando si usa la classe [CCommand](../../data/oledb/ccommand-class.md) . Accetta solo i tipi stringa che corrispondono al tipo di applicazione specificato (ANSI o Unicode). Si consiglia di utilizzare [DEFINE_COMMAND_EX](#define_command_ex) anziché DEFINE_COMMAND.|
 |[DEFINE_COMMAND_EX](#define_command_ex)|Specifica il comando che verrà usato per creare il set di righe quando si usa la classe [CCommand](../../data/oledb/ccommand-class.md) . Supporta le applicazioni ANSI e Unicode.|
 
 ## <a name="parameter-map-macros"></a>Macro della mappa parametri
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[BEGIN_PARAM_MAP](#begin_param_map)|Contrassegna l'inizio delle voci della mappa dei parametri nella classe di record utente.|
 |[END_PARAM_MAP](#end_param_map)|Contrassegna la fine delle voci della mappa dei parametri.|
@@ -195,7 +196,7 @@ inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);
 *hErr*<br/>
 in HRESULT restituito da un OLE DB funzione membro del modello consumer.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Se *Herr* non è S_OK, esegue il `AtlTraceErrorRecords` dump OLE DB informazioni sul record di errore nel dispositivo di dump (la scheda **debug** della finestra di output o di un file). Le informazioni sul record di errore, ottenute dal provider, includono il numero di riga, l'origine, la descrizione, il file della guida, il contesto e il GUID per ogni voce del record di errore. `AtlTraceErrorRecords` esegue il dump di queste informazioni solo nelle compilazioni di debug. Nelle build di rilascio, si tratta di uno stub vuoto ottimizzato. Per ulteriori informazioni, vedere la [classe CDBErrorInfo](../../data/oledb/cdberrorinfo-class.md).
 
@@ -217,7 +218,7 @@ in Numero di offset zero per la funzione di accesso in questo mapping della funz
 *bAuto*<br/>
 in Specifica se la funzione di accesso è una funzione di accesso automatica o una funzione di accesso manuale. Se **`true`** , la funzione di accesso è auto; se **`false`** , la funzione di accesso è manuale. Una funzione di accesso automatica indica che i dati vengono recuperati automaticamente durante le operazioni di spostamento.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Nel caso di più funzioni di accesso su un set di righe, è necessario specificare BEGIN_ACCESSOR_MAP e usare la macro BEGIN_ACCESSOR per ogni singola funzione di accesso. La macro BEGIN_ACCESSOR viene completata con la macro END_ACCESSOR. La macro BEGIN_ACCESSOR_MAP viene completata con la macro END_ACCESSOR_MAP.
 
@@ -243,7 +244,7 @@ BEGIN_ACCESSOR_MAP(x, num)
 *num*<br/>
 [in] Il numero delle funzioni di accesso in questa mappa.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Nel caso di più funzioni di accesso su un set di righe, è necessario specificare BEGIN_ACCESSOR_MAP all'inizio e usare la macro BEGIN_ACCESSOR per ogni singola funzione di accesso. La macro BEGIN_ACCESSOR viene completata con la macro END_ACCESSOR. Il mapping della funzione di accesso viene completato con la macro END_ACCESSOR_MAP.
 
@@ -345,7 +346,7 @@ BEGIN_COLUMN_MAP(x)
 *x*<br/>
 [in] Il nome della classe di record utente derivata da `CAccessor`.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Questa macro viene usata nel caso di un'unica funzione di accesso su un set di righe. Se ci sono più funzioni di accesso su un set di righe, usare [BEGIN_ACCESSOR_MAP](#begin_accessor_map).
 
@@ -686,7 +687,7 @@ Vedere [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) nella G
 *data*<br/>
 [in] Membro dati corrispondente nel record utente.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 La macro COLUMN_ENTRY viene utilizzata nelle posizioni seguenti:
 
@@ -738,7 +739,7 @@ in La scala da usare quando si recuperano i dati e *wType* è `DBTYPE_NUMERIC` o
 *Stato*<br/>
 [in] Variabile da associare allo stato della colonna.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 La macro COLUMN_ENTRY_EX viene utilizzata nelle posizioni seguenti:
 
@@ -775,7 +776,7 @@ in Numero di colonna, a partire da uno. Il segnalibro corrisponde alla colonna z
 *length*<br/>
 [in] Variabile da associare alla lunghezza della colonna.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Questa macro supporta la variabile *length* . Viene utilizzata nelle seguenti posizioni:
 
@@ -811,7 +812,7 @@ Vedere [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) nella G
 *Stato*<br/>
 [in] Variabile da associare allo stato della colonna.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Utilizzare questa macro quando si desidera supportare le variabili di stato e di lunghezza. Viene utilizzata nelle seguenti posizioni:
 
@@ -847,7 +848,7 @@ Vedere [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) nella G
 *data*<br/>
 [in] Membro dati corrispondente nel record utente.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Consente di specificare la precisione e la scala della colonna che si desidera associare. Viene utilizzata nelle seguenti posizioni:
 
@@ -886,7 +887,7 @@ in Numero di colonna, a partire da uno. Il segnalibro corrisponde alla colonna z
 *length*<br/>
 [in] Variabile da associare alla lunghezza della colonna.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Consente di specificare la precisione e la scala della colonna che si desidera associare. Questa macro supporta la variabile *length* . Viene utilizzata nelle seguenti posizioni:
 
@@ -928,7 +929,7 @@ Vedere [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) nella G
 *Stato*<br/>
 [in] Variabile da associare allo stato della colonna.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Consente di specificare la precisione e la scala della colonna che si desidera associare. Utilizzare questa macro quando si desidera supportare le variabili di stato e di lunghezza. Viene utilizzata nelle seguenti posizioni:
 
@@ -967,7 +968,7 @@ Vedere [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) nella G
 *Stato*<br/>
 [in] Variabile da associare allo stato della colonna.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Consente di specificare la precisione e la scala della colonna che si desidera associare. Questa macro supporta la variabile di *stato* . Viene utilizzata nelle seguenti posizioni:
 
@@ -1000,7 +1001,7 @@ Vedere [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) nella G
 *Stato*<br/>
 [in] Variabile da associare allo stato della colonna.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Questa macro supporta la variabile di *stato* . Viene utilizzata nelle seguenti posizioni:
 
@@ -1031,7 +1032,7 @@ in Tipo di dati della voce della colonna.
 *data*<br/>
 [in] Membro dati corrispondente nel record utente.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Questa macro è una variante specializzata della [COLUMN_ENTRY](#column_entry) macro che fornisce un mezzo per specificare il tipo di dati.
 
@@ -1059,7 +1060,7 @@ in Dimensione della voce di colonna in byte.
 *data*<br/>
 [in] Membro dati corrispondente nel record utente.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Questa macro è una variante specializzata della [COLUMN_ENTRY](#column_entry) macro che fornisce un mezzo per specificare le dimensioni e il tipo dei dati.
 
@@ -1081,7 +1082,7 @@ in Puntatore al nome della colonna. Il nome deve essere una stringa Unicode. È 
 *data*<br/>
 [in] Membro dati corrispondente nel record utente.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Le macro COLUMN_NAME_ * vengono usate nelle stesse posizioni di [COLUMN_ENTRY](#column_entry):
 
@@ -1127,7 +1128,7 @@ in La scala da usare quando si recuperano i dati e *wType* è `DBTYPE_NUMERIC` o
 *Stato*<br/>
 [in] Variabile da associare allo stato della colonna.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Per informazioni sulla posizione in cui vengono usate le macro COLUMN_NAME_ *, vedere [column_name](#column_name) .
 
@@ -1152,7 +1153,7 @@ in Puntatore al nome della colonna. Il nome deve essere una stringa Unicode. È 
 *length*<br/>
 [in] Variabile da associare alla lunghezza della colonna.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Per informazioni sulla posizione in cui vengono usate le macro COLUMN_NAME_ *, vedere [column_name](#column_name) .
 
@@ -1180,7 +1181,7 @@ in Puntatore al nome della colonna. Il nome deve essere una stringa Unicode. È 
 *Stato*<br/>
 [in] Variabile da associare allo stato della colonna.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Per informazioni sulla posizione in cui vengono usate le macro COLUMN_NAME_ *, vedere [column_name](#column_name) .
 
@@ -1208,7 +1209,7 @@ in Puntatore al nome della colonna. Il nome deve essere una stringa Unicode. È 
 *data*<br/>
 [in] Membro dati corrispondente nel record utente.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Per informazioni sulla posizione in cui vengono usate le macro COLUMN_NAME_ *, vedere [column_name](#column_name) .
 
@@ -1239,7 +1240,7 @@ in Puntatore al nome della colonna. Il nome deve essere una stringa Unicode. È 
 *length*<br/>
 [in] Variabile da associare alla lunghezza della colonna.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Per informazioni sulla posizione in cui vengono usate le macro COLUMN_NAME_ *, vedere [column_name](#column_name) .
 
@@ -1273,7 +1274,7 @@ in Puntatore al nome della colonna. Il nome deve essere una stringa Unicode. È 
 *Stato*<br/>
 [in] Variabile da associare allo stato della colonna.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Per informazioni sulla posizione in cui vengono usate le macro COLUMN_NAME_ *, vedere [column_name](#column_name) .
 
@@ -1304,7 +1305,7 @@ in Puntatore al nome della colonna. Il nome deve essere una stringa Unicode. È 
 *Stato*<br/>
 [in] Variabile da associare allo stato della colonna.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Per informazioni sulla posizione in cui vengono usate le macro COLUMN_NAME_ *, vedere [column_name](#column_name) .
 
@@ -1329,7 +1330,7 @@ in Puntatore al nome della colonna. Il nome deve essere una stringa Unicode. È 
 *Stato*<br/>
 [in] Variabile da associare allo stato della colonna.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Per informazioni sulla posizione in cui vengono usate le macro COLUMN_NAME_ *, vedere [column_name](#column_name) .
 
@@ -1354,7 +1355,7 @@ in Tipo di dati.
 *data*<br/>
 [in] Membro dati corrispondente nel record utente.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Per informazioni sulla posizione in cui vengono usate le macro COLUMN_NAME_ *, vedere [column_name](#column_name) .
 
@@ -1385,7 +1386,7 @@ in La scala da usare quando si recuperano i dati e *wType* è `DBTYPE_NUMERIC` o
 *data*<br/>
 [in] Membro dati corrispondente nel record utente.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Per informazioni sulla posizione in cui vengono usate le macro COLUMN_NAME_ *, vedere [column_name](#column_name) .
 
@@ -1413,7 +1414,7 @@ in Dimensioni dei dati in byte.
 *data*<br/>
 [in] Membro dati corrispondente nel record utente.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Per informazioni sulla posizione in cui vengono usate le macro COLUMN_NAME_ *, vedere [column_name](#column_name) .
 
@@ -1441,7 +1442,7 @@ in Tipo di dati.
 *data*<br/>
 [in] Membro dati corrispondente nel record utente.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Per informazioni sulla posizione in cui vengono usate le macro COLUMN_NAME_ *, vedere [column_name](#column_name) .
 
@@ -1484,7 +1485,7 @@ in Nome della classe di record utente (comando).
 *szCommand*<br/>
 in Stringa di comando che verrà utilizzata per creare il set di righe quando si utilizza [CCommand](../../data/oledb/ccommand-class.md).
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 La stringa di comando specificata verrà usata come impostazione predefinita se non si specifica il testo del comando nel metodo [CCommand:: Open](./ccommand-class.md#open) .
 
@@ -1512,7 +1513,7 @@ in Nome della classe di record utente (comando).
 *wszCommand*<br/>
 in Stringa di comando che verrà utilizzata per creare il set di righe quando si utilizza [CCommand](../../data/oledb/ccommand-class.md).
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 La stringa di comando specificata verrà usata come impostazione predefinita se non si specifica il testo del comando nel metodo [CCommand:: Open](./ccommand-class.md#open) .
 
@@ -1537,7 +1538,7 @@ BEGIN_PARAM_MAP(x)
 *x*<br/>
 [in] Nome della classe di record utente.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 I parametri vengono usati dai [comandi](/previous-versions/windows/desktop/ms724608(v=vs.85)).
 
@@ -1574,7 +1575,7 @@ SET_PARAM_TYPE(type)
 *type*<br/>
 [in] Tipo da impostare per il parametro.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 I provider supportano solo i tipi di parametro input/output supportati dall'origine dati sottostante. Il tipo è una combinazione di uno o più `DBPARAMIO` valori (vedere [DBBINDING Structures](/previous-versions/windows/desktop/ms716845(v=vs.85)) in the *OLE DB Programmer ' s Reference*):
 
@@ -1632,7 +1633,7 @@ END_COLUMN_MAP()
 
 **Intestazione:** atldbcli.h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro e funzioni globali per modelli consumer OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)<br/>
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe IRowsetChangeImpl'
 title: Classe IRowsetChangeImpl
 ms.date: 11/04/2016
 f1_keywords:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: 66e7b758752a46fffff177323fe83eecc0b2fa55
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6536b589cdf936b653d87941fb717e96ff88422c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832779"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287229"
 ---
 # <a name="irowsetchangeimpl-class"></a>Classe IRowsetChangeImpl
 
@@ -79,7 +80,7 @@ Unità di archiviazione per tutti gli handle di riga utilizzati dal provider.
 
 ### <a name="interface-methods-used-with-irowsetchange"></a>Metodi di interfaccia (utilizzati con IRowsetChange)
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[DeleteRows](#deleterows)|Elimina le righe dal set di righe.|
 |[InsertRow](#insertrow)|Inserisce una riga nel set di righe.|
@@ -87,11 +88,11 @@ Unità di archiviazione per tutti gli handle di riga utilizzati dal provider.
 
 ### <a name="implementation-method-callback"></a>Metodo di implementazione (callback)
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[FlushData](#flushdata)|Sottoposto a override dal provider per eseguire il commit dei dati nell'archivio.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questa interfaccia è responsabile delle operazioni di scrittura immediate in un archivio dati. "Immediato" significa che quando l'utente finale (la persona che usa il consumer) apporta le modifiche, queste modifiche vengono immediatamente trasmesse all'archivio dati e non possono essere annullate.
 
@@ -181,7 +182,7 @@ in Handle per la funzione di accesso che contiene informazioni sull'associazione
 
 Valore HRESULT standard.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

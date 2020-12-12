@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CUtlProps'
 title: Classe CUtlProps
 ms.date: 11/04/2016
 f1_keywords:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: 1e9e636824ff67ee93587637c0e098e625229c06
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 535da4b2dd7d3214633a1e76c04be1e4627b965a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509092"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287749"
 ---
 # <a name="cutlprops-class"></a>Classe CUtlProps
 
@@ -60,7 +61,7 @@ Classe che contiene `BEGIN_PROPSET_MAP` .
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[GetPropValue](#getpropvalue)|Ottiene una proprietà da un set di proprietà.|
 |[IsValidValue](#isvalidvalue)|Utilizzato per convalidare un valore prima di impostare una proprietà.|
@@ -68,7 +69,7 @@ Classe che contiene `BEGIN_PROPSET_MAP` .
 |[OnPropertyChanged](#onpropertychanged)|Chiamato dopo l'impostazione di una proprietà per gestire le proprietà concatenate.|
 |[SetPropValue](#setpropvalue)|Imposta una proprietà in un set di proprietà.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La maggior parte di questa classe è un dettaglio di implementazione.
 
@@ -126,7 +127,7 @@ ID della proprietà e nuovo valore in una struttura [DBPROP](/previous-versions/
 
 Valore HRESULT standard. Il valore restituito predefinito è S_OK.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se si desidera eseguire routine di convalida in un valore che si sta per utilizzare per impostare una proprietà, è necessario eseguire l'override di questa funzione. È ad esempio possibile convalidare DBPROP_AUTH_PASSWORD in base a una tabella delle password per determinare un valore valido.
 
@@ -145,7 +146,7 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 *riid*<br/>
 in IID per l'interfaccia richiesta. Per ulteriori informazioni, vedere la descrizione del parametro *riid* di `ICommand::Execute` in *OLE DB Programmer ' s Reference* (in *MDAC SDK*).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `OnInterfaceRequested` gestisce le richieste del consumer per un'interfaccia facoltativa quando un consumer chiama un metodo su una delle interfacce di creazione di oggetti, ad esempio `IDBCreateSession` ,, `IDBCreateCommand` `IOpenRowset` o `ICommand` . Imposta la proprietà OLE DB corrispondente per l'interfaccia richiesta. Se, ad esempio, il consumer richiede `IID_IRowsetLocate` , `OnInterfaceRequested` imposta l' `DBPROP_IRowsetLocate` interfaccia. In questo modo viene mantenuto lo stato corretto durante la creazione del set di righe.
 
@@ -188,7 +189,7 @@ ID della proprietà e nuovo valore in una struttura [DBPROP](/previous-versions/
 
 Valore HRESULT standard. Il valore restituito predefinito è S_OK.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se si desidera gestire proprietà concatenate, ad esempio segnalibri o aggiornamenti i cui valori dipendono dal valore di un'altra proprietà, è necessario eseguire l'override di questa funzione.
 
@@ -225,7 +226,7 @@ in Puntatore a un Variant che contiene il nuovo valore della proprietà.
 
 `Failure` in caso di errore e S_OK se ha esito positivo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

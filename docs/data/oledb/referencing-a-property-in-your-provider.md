@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: fare riferimento a una proprietà nel provider'
 title: Riferimento a una proprietà nel provider
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - references, to properties in providers
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-ms.openlocfilehash: ecb11c54d4c5926fbead0196c441ec23e8b0891f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: dfc3b06820b98477a033b450d42feca52c5c7a72
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509523"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286618"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>Riferimento a una proprietà nel provider
 
@@ -66,6 +67,6 @@ if (pPropSet)
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Uso dei modelli di provider di OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

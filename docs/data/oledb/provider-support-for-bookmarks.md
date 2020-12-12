@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: supporto del provider per i segnalibri'
 title: Supporto dei bookmark nel provider
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-ms.openlocfilehash: 240cb4da03d6c8c1958b7a86e78171aca2dc30e9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0a2225f44d9d094f52e97b88eb58c6942906edf6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216453"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286657"
 ---
 # <a name="provider-support-for-bookmarks"></a>Supporto dei bookmark nel provider
 
@@ -40,7 +41,7 @@ class CCustomRowset : public CRowsetImpl< CCustomRowset,
           IRowsetLocateImpl<CCustomRowset, IRowsetLocate>>
 ```
 
-Sono stati aggiunti il quarto, il quinto e il sesto parametro. In questo esempio vengono utilizzate le impostazioni predefinite per il quarto e il quinto `IRowsetLocateImpl` parametro, ma viene specificato come sesto parametro. `IRowsetLocateImpl`è una classe modello OLE DB che accetta due parametri di modello: questi consentono di collegare l' `IRowsetLocate` interfaccia alla `CCustomRowset` classe. Per aggiungere la maggior parte delle interfacce, è possibile ignorare questo passaggio e passare a quello successivo. `IRowsetLocate` `IRowsetScroll` In questo modo è necessario gestire solo le interfacce e.
+Sono stati aggiunti il quarto, il quinto e il sesto parametro. In questo esempio vengono utilizzate le impostazioni predefinite per il quarto e il quinto `IRowsetLocateImpl` parametro, ma viene specificato come sesto parametro. `IRowsetLocateImpl` è una classe modello OLE DB che accetta due parametri di modello: questi consentono di collegare l' `IRowsetLocate` interfaccia alla `CCustomRowset` classe. Per aggiungere la maggior parte delle interfacce, è possibile ignorare questo passaggio e passare a quello successivo. `IRowsetLocate` `IRowsetScroll` In questo modo è necessario gestire solo le interfacce e.
 
 È quindi necessario indicare all'oggetto `CCustomRowset` di chiamare `QueryInterface` per l' `IRowsetLocate` interfaccia. Aggiungere la riga `COM_INTERFACE_ENTRY(IRowsetLocate)` alla mappa. La mappa dell'interfaccia per `CCustomRowset` dovrebbe essere visualizzata come illustrato nel codice seguente:
 
@@ -78,7 +79,7 @@ class CTextData
 };
 ```
 
-Implementare quindi la `GetColumnInfo` funzione nel file *Custom*RS. cpp come indicato di seguito:
+Implementare quindi la `GetColumnInfo` funzione nel file *Custom* RS. cpp come indicato di seguito:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////
@@ -148,7 +149,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 }
 ```
 
-`GetColumnInfo`Verifica innanzitutto se è stata impostata una proprietà denominata `DBPROP_IRowsetLocate` . OLE DB dispone di proprietà per ognuna delle interfacce facoltative disattivate dall'oggetto set di righe. Se il consumer vuole usare una di queste interfacce facoltative, imposta una proprietà su true. Il provider può quindi verificare questa proprietà e intraprendere un'azione speciale basata su di essa.
+`GetColumnInfo` Verifica innanzitutto se è stata impostata una proprietà denominata `DBPROP_IRowsetLocate` . OLE DB dispone di proprietà per ognuna delle interfacce facoltative disattivate dall'oggetto set di righe. Se il consumer vuole usare una di queste interfacce facoltative, imposta una proprietà su true. Il provider può quindi verificare questa proprietà e intraprendere un'azione speciale basata su di essa.
 
 Nell'implementazione di si ottiene la proprietà utilizzando il puntatore all'oggetto Command. Il `pThis` puntatore rappresenta il set di righe o la classe di comando. Poiché i modelli vengono usati qui, è necessario passarli come **`void`** puntatore o il codice non viene compilato.
 
@@ -264,6 +265,6 @@ END_ACCESSOR_MAP()
 
 Una volta aggiornato il codice, dovrebbe essere possibile compilare ed eseguire il provider con l' `IRowsetLocate` interfaccia.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Tecniche avanzate per i provider](../../data/oledb/advanced-provider-techniques.md)

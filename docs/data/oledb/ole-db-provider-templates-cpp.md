@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: modelli di provider OLE DB (C++)'
 title: Modelli provider OLE DB (C++)
 ms.date: 10/24/2018
 helpviewer_keywords:
@@ -7,67 +8,67 @@ helpviewer_keywords:
 - OLE DB provider templates [C++], about OLE DB provider templates
 - templates [C++], OLE DB
 ms.assetid: fccff85f-2af8-4500-82bd-6312d28a74b8
-ms.openlocfilehash: 793aa08630ec92f99c33c2a4f3688e78630a6c58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8706fcd9467e6d184633917d7c83ac81ad137b9d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361256"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286917"
 ---
 # <a name="ole-db-provider-templates-c"></a>Modelli provider OLE DB (C++)
 
-OLE DB è una parte importante della strategia di Microsoft Universal Data Access. La progettazione di OLE DB consente l'accesso ai dati ad alte prestazioni da qualsiasi origine dati. I dati tabulari sono visualizzabili tramite OLE DB indipendentemente dal fatto che proviene da un database. La flessibilità ti offre una notevole quantità di energia elettrica.
+OLE DB è una parte importante della strategia Microsoft Universal Data Access. Il OLE DB progettazione consente l'accesso ai dati ad alte prestazioni da qualsiasi origine dati. Tutti i dati tabulari possono essere visualizzati tramite OLE DB indipendentemente dal fatto che provengano da un database. La flessibilità ti offre una notevole quantità di potenza.
 
-Come illustrato in [consumer OLE DB e provider](../../data/oledb/ole-db-consumers-and-providers.md), OLE DB Usa il concetto di consumer e provider. Il consumer effettua le richieste per i dati. il provider restituisce i dati in un formato tabulare al consumer. Da una prospettiva di programmazione, l'implicazione più importante di questo modello è che il provider deve implementare tutte le chiamate che dal consumer.
+Come illustrato in [OLE DB consumer e provider](../../data/oledb/ole-db-consumers-and-providers.md), OLE DB usa il concetto di consumer e provider. Il consumer effettua richieste di dati; il provider restituisce i dati in formato tabulare al consumer. Dal punto di vista della programmazione, l'implicazione più importante di questo modello è che il provider deve implementare qualsiasi chiamata che può essere apportata dal consumer.
 
-## <a name="what-is-a-provider"></a>Che cos'è un Provider?
+## <a name="what-is-a-provider"></a>Che cos'è un provider?
 
-Un provider OLE DB è un set di oggetti COM che servono interfaccia chiamate da un oggetto di consumer, il trasferimento dei dati in un formato tabulare da un'origine permanente (denominata archivio dati) per il consumer.
+Un provider OLE DB è un set di oggetti COM che forniscono chiamate di interfaccia da un oggetto consumer, trasferendo i dati in un formato tabulare da un'origine durevole (denominata archivio dati) al consumer.
 
-I provider possono essere semplici o complesse. Il provider possa supportare una quantità minima di funzionalità o un provider di qualità di produzione completa implementare più interfacce. Un provider può restituire una tabella, consentono al client determinare il formato della tabella ed eseguire operazioni su tali dati.
+I provider possono essere semplici o complessi. Il provider può supportare una quantità minima di funzionalità o un provider di qualità di produzione completo mediante l'implementazione di più interfacce. Un provider può restituire una tabella, consentire al client di determinare il formato della tabella ed eseguire operazioni su tali dati.
 
-Ogni provider implementa un set standard di oggetti COM per gestire le richieste dal client, con un significato standard che eventuali consumer OLE DB possono accedere ai dati da qualsiasi provider, indipendentemente dalla lingua (ad esempio C++ e Basic).
+Ogni provider implementa un set standard di oggetti COM per gestire le richieste dal client, con un significato standard che qualsiasi utente OLE DB può accedere ai dati da qualsiasi provider, indipendentemente dalla lingua (ad esempio C++ e Basic).
 
-Ogni oggetto COM contiene diverse interfacce, alcuni dei quali sono necessari e alcuni dei quali sono facoltativi. Implementando le interfacce obbligatorie, un provider garantisce un livello minimo di funzionalità (detto conformità) che deve essere in grado di usare qualsiasi client. Un provider può implementare interfacce facoltative per fornire funzionalità aggiuntive. Il [architettura dei modelli Provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md) descrive queste interfacce in modo dettagliato. Il client deve chiamare sempre `QueryInterface` per determinare se un provider supporta una determinata interfaccia.
+Ogni oggetto COM contiene diverse interfacce, alcune delle quali sono obbligatorie e alcune delle quali sono facoltative. Implementando le interfacce obbligatorie, un provider garantisce un livello minimo di funzionalità (denominato conformità) che tutti i client devono essere in grado di utilizzare. Un provider può implementare interfacce facoltative per fornire funzionalità aggiuntive. L' [architettura del modello di Provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md) descrive in modo dettagliato tali interfacce. Il client deve sempre chiamare `QueryInterface` per determinare se un provider supporta un'interfaccia specificata.
 
-## <a name="ole-db-specification-level-support"></a>Supporto a livello di OLE DB specifica
+## <a name="ole-db-specification-level-support"></a>Supporto del livello di specifica OLE DB
 
-I modelli di provider OLE DB supportano la specifica della versione 2.7 OLE DB. Utilizzare i modelli di provider OLE DB, è possibile implementare un provider conforme a livello 0. Il `Provider` campione, ad esempio, Usa i modelli per implementare un server di comando non-MS-DOS che esegue il comando DIR DOS per eseguire una query nel file system. Il `Provider` esempio restituisce le informazioni sulla directory in un set di righe, ovvero il meccanismo standard OLE DB per la restituzione di dati tabulari.
+I modelli di provider OLE DB supportano la specifica OLE DB versione 2,7. Utilizzando i modelli di provider di OLE DB, è possibile implementare un provider conforme a livello 0. Nell' `Provider` esempio, ad esempio, vengono usati i modelli per implementare un server di comando non SQL (MS-DOS) che esegue il comando DOS dir per eseguire una query sul file System. Nell' `Provider` esempio vengono restituite le informazioni sulla directory in un set di righe, ovvero il meccanismo di OLE DB standard per la restituzione dei dati tabulari.
 
-Il tipo più semplice di provider supportati da modelli OLE DB è un provider di sola lettura con nessun comando. Provider con i comandi sono anche supportate, così come le funzionalità di aggiunta di segnalibri e di lettura/scrittura. È possibile implementare un provider di lettura/scrittura per scrivere codice aggiuntivo. Le transazioni e set di righe dinamici non sono supportate dalla versione corrente, ma è possibile aggiungerli se si desidera.
+Il tipo di provider più semplice supportato dai modelli di OLE DB è un provider di sola lettura senza comandi. Sono supportati anche i provider con comandi, come le funzionalità di segnalibro e di lettura/scrittura. È possibile implementare un provider di lettura/scrittura scrivendo codice aggiuntivo. I set di righe e le transazioni dinamici non sono supportati dalla versione corrente, ma è possibile aggiungerli se lo si desidera.
 
-## <a name="when-do-you-need-to-create-an-ole-db-provider"></a>Quando devi creare un Provider OLE DB?
+## <a name="when-do-you-need-to-create-an-ole-db-provider"></a>Quando è necessario creare un provider OLE DB?
 
-Non è sempre necessario creare un proprio provider; Microsoft offre diversi provider standard, preassemblati nel **proprietà di Data Link** finestra di dialogo in Visual C++. Viene eseguita principalmente per creare un provider OLE DB per sfruttare i vantaggi della strategia di Universal Data Access. Alcuni dei vantaggi di tale operazione sono:
+Non è sempre necessario creare un provider personalizzato. Nella finestra di dialogo **proprietà di data link** di Microsoft sono disponibili diversi provider standard preconfezionati, in Visual C++. Il motivo principale per cui si crea un provider di OLE DB consiste nel sfruttare la strategia di accesso ai dati universale. Ecco alcuni dei vantaggi di questa operazione:
 
-- L'accesso ai dati tramite qualsiasi linguaggio, ad esempio C++, Basic e Visual Basic Scripting Edition. Consente ai programmatori diversi all'interno dell'organizzazione di accedere agli stessi dati nello stesso modo, indipendentemente dal fatto che di linguaggio usano.
+- Accesso ai dati tramite qualsiasi linguaggio, ad esempio C++, Basic e Visual Basic Scripting Edition. Consente a diversi programmatori dell'organizzazione di accedere agli stessi dati nello stesso modo, indipendentemente dal linguaggio usato.
 
-- Aprire i dati ad altre origini dati, ad esempio SQL Server, Excel e Access. Ciò può essere utile se si desidera trasferire i dati tra formati diversi.
+- Aprire i dati in altre origini dati, ad esempio SQL Server, Excel e Access. Questa operazione può essere utile se si desidera trasferire dati tra formati diversi.
 
-- Che fanno parte di operazioni di cross-zdroj dat (eterogenei). Può trattarsi di un metodo efficace per il data warehousing. Tramite i provider OLE DB, è possibile mantenere i dati nel relativo formato nativo e ancora essere in grado di accedervi in un'operazione semplice.
+- Partecipazione a operazioni eterogenee per l'origine dati. Questo può essere un modo efficace per il data warehousing. Utilizzando i provider di OLE DB, è possibile mantenere i dati nel formato nativo ed essere comunque in grado di accedervi in un'operazione semplice.
 
 - Aggiunta di funzionalità aggiuntive ai dati, ad esempio l'elaborazione delle query.
 
-- Miglioramento delle prestazioni di accesso ai dati controllando la modifica.
+- Migliorare le prestazioni di accesso ai dati controllando la modalità di manipolazione.
 
-- Maggiore affidabilità. Se si dispone di un formato dati proprietari che solo un programmatore può accedere, si è a rischio. Utilizzando provider OLE DB, è possibile aprire tale formato proprietario per tutti i programmatori.
+- Maggiore affidabilità. Se si dispone di un formato di dati proprietario a cui un solo programmatore può accedere, si è a rischio. Utilizzando i provider di OLE DB, è possibile aprire il formato proprietario per tutti i programmatori.
 
-## <a name="read-only-and-updatable-providers"></a>Provider aggiornabili e di sola lettura
+## <a name="read-only-and-updatable-providers"></a>Provider Read-Only e aggiornabili
 
-I provider possono variare significativamente in funzionalità e complessità. È utile suddividere i provider provider aggiornabili e provider di sola lettura:
+I provider possono variare notevolmente in merito a complessità e funzionalità. È utile categorizzare i provider in provider di sola lettura e provider aggiornabili:
 
-- Visual C++ 6.0 supportati solo i provider di sola lettura. [Creazione di un Provider OLE DB](../../data/oledb/creating-an-ole-db-provider.md) viene illustrato come creare un provider di sola lettura.
-- Visual C++ supporta i provider aggiornabili, che è possono aggiornare (scrivere) nell'archivio dati. Per informazioni sui provider aggiornabili, vedere [creazione di un Provider aggiornabile](../../data/oledb/creating-an-updatable-provider.md); gli [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) esempio è riportato un esempio di un provider aggiornabile.
+- Visual C++ 6,0 supporta solo provider di sola lettura. [Creazione di un provider OLE DB](../../data/oledb/creating-an-ole-db-provider.md) viene illustrato come creare un provider di sola lettura.
+- Visual C++ supporta i provider aggiornabili, che possono aggiornare (scrivere) nell'archivio dati. Per informazioni sui provider aggiornabili, vedere [creazione di un provider aggiornabile](../../data/oledb/creating-an-updatable-provider.md). L'esempio [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) è un esempio di provider aggiornabile.
 
 Per altre informazioni, vedere:
 
-- [L'architettura dei modelli Provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+- [Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
 
-- [Creazione di un provider OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+- [Creazione di un provider di OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
 
-- [Programmazione con OLE DB](../../data/oledb/ole-db-programming.md)
+- [Programmazione OLE DB](../../data/oledb/ole-db-programming.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Accesso ai dati](../data-access-in-cpp.md)<br/>
 [Documentazione di OLE DB SDK](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>

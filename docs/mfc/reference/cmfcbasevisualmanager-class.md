@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CMFCBaseVisualManager'
 title: Classe CMFCBaseVisualManager
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: 79a3c0945fdd0df04e9ee52d7bad97dc0847fa91
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 14727eea4bcefdc7b7de53f19f188d7cb9c528c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834297"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284980"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>Classe CMFCBaseVisualManager
 
@@ -49,18 +50,18 @@ Questa classe è solo per uso interno.
 class CMFCBaseVisualManager: public CObject
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[CMFCBaseVisualManager:: CMFCBaseVisualManager](#cmfcbasevisualmanager)|Costruisce e inizializza un oggetto `CMFCBaseVisualManager`.|
 |`CMFCBaseVisualManager::~CMFCBaseVisualManager`|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[CMFCBaseVisualManager::D rawCheckBox](#drawcheckbox)|Disegna un controllo casella di controllo utilizzando il tema Windows corrente.|
 |[CMFCBaseVisualManager::D rawComboBorder](#drawcomboborder)|Disegna un bordo della casella combinata usando il tema di Windows corrente.|
@@ -73,12 +74,12 @@ class CMFCBaseVisualManager: public CObject
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[CMFCBaseVisualManager:: CleanUpThemes](#cleanupthemes)|Chiama `CloseThemeData` per tutti gli handle ottenuti in `UpdateSystemColors` .|
 |[CMFCBaseVisualManager:: UpdateSystemColors](#updatesystemcolors)|Chiama `OpenThemeData` per ottenere gli handle per il disegno di diversi controlli: Windows, barre degli strumenti, pulsanti e così via.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Non è necessario creare direttamente un'istanza di oggetti di questa classe.
 
@@ -102,7 +103,7 @@ Chiama `CloseThemeData` per tutti gli handle ottenuti in `UpdateSystemColors` .
 void CleanUpThemes();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Solo per uso interno.
 
@@ -156,7 +157,7 @@ in Specifica se la casella di controllo è premuta.
 
 TRUE se l'API del tema è abilitata; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I valori di *nState* corrispondono agli stili della casella di controllo seguenti.
 
@@ -408,11 +409,11 @@ Chiama `OpenThemeData` per ottenere gli handle per il disegno di diversi control
 void UpdateSystemColors();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Solo per uso interno.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)

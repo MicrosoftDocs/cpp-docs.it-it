@@ -1,16 +1,17 @@
 ---
+description: 'Scopri di più su: enumerazioni dello spazio dei nomi Concurrency (AMP)'
 title: Enumerazioni dello spazio dei nomi Concurrency (AMP)
 ms.date: 11/04/2016
 f1_keywords:
 - amp/Concurrency::access_type
 - amp/Concurrency::queuing_mode
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
-ms.openlocfilehash: 3dbb8f265706f7a4c369c80d3050cd1bfd2f5acb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 60f4b325de47a600ee5a28f30ecc4a06fc2082a2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845094"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284902"
 ---
 # <a name="concurrency-namespace-enums-amp"></a>Enumerazioni dello spazio dei nomi Concurrency (AMP)
 
@@ -27,7 +28,7 @@ enum access_type;
 
 ### <a name="values"></a>Valori
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`access_type_auto`|Scegliere automaticamente il migliore `access_type` per il tasto di scelta rapida.|
 |`access_type_none`|Dedicato. L'allocazione è accessibile solo sul tasto di scelta rapida e non sulla CPU.|
@@ -45,11 +46,11 @@ enum queuing_mode;
 
 ### <a name="values"></a>Valori
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`queuing_mode_immediate`|Modalità di accodamento che specifica che tutti i comandi, ad esempio [Parallel_for_each funzione (C++ amp)](concurrency-namespace-functions-amp.md#parallel_for_each), vengono inviati al dispositivo acceleratore corrispondente non appena vengono restituiti al chiamante.|
 |`queuing_mode_automatic`|Modalità di accodamento che specifica che i comandi devono essere accodati in una coda di comandi che corrisponde all'oggetto [accelerator_view](accelerator-view-class.md) . Quando viene chiamato [accelerator_view:: Flush](accelerator-view-class.md#flush) , i comandi vengono inviati al dispositivo.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

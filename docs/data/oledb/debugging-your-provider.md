@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: debug del provider'
 title: Debug del provider
 ms.date: 10/29/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Visual C++ debugger, debugging providers
 - Visual C++ debugger
 ms.assetid: 90d4e7db-06ea-4de0-a7f4-4f3751d50d93
-ms.openlocfilehash: f80ce5dc82dd2baeefe3410a488a5fefda0e9bf0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9a178bfa55f8efeb11a3265ab8aa14a5418d7516
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211094"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287580"
 ---
 # <a name="debugging-your-provider"></a>Debug del provider
 
@@ -26,7 +27,7 @@ Esistono due modi per eseguire il debug del provider:
 
 1. Aprire il progetto del provider.
 
-1. Scegliere **Proprietà**dal menu **progetti** .
+1. Scegliere **Proprietà** dal menu **progetti** .
 
 1. Nella finestra di dialogo **pagine delle proprietà** fare clic sulla scheda **debug** .
 
@@ -34,6 +35,6 @@ Esistono due modi per eseguire il debug del provider:
 
 1. Impostare i punti di interruzione, quindi eseguire il debug come di consueto.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso dei modelli provider OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+[Uso dei modelli di provider di OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

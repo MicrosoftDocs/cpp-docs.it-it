@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3389'
 title: Errore del compilatore C3389
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3389
 ms.assetid: eaaffe17-23f2-413c-b1ad-f7220cfa1334
-ms.openlocfilehash: 8a040e649074e115b1b86ea56db6c9ef48f4c0d0
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: b9fedf0993738d054cd5ded605d96001b3db13eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520473"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97285500"
 ---
 # <a name="compiler-error-c3389"></a>Errore del compilatore C3389
 
@@ -21,7 +22,7 @@ ms.locfileid: "87520473"
 
 Le **`/clr:pure`** **`/clr:safe`** Opzioni del compilatore e sono deprecate in visual studio 2015 e non sono supportate in visual studio 2017.
 
-Un [`__declspec`](../../cpp/declspec.md) modificatore usato implica uno stato per processo.  [`/clr:pure`](../../build/reference/clr-common-language-runtime-compilation.md)implica uno per [`appdomain`](../../cpp/appdomain.md) stato.  Quindi, la dichiarazione di una variabile con il modificatore di *parole chiave* **`__declspec`** e la compilazione con **`/clr:pure`** non è consentita.
+Un [`__declspec`](../../cpp/declspec.md) modificatore usato implica uno stato per processo.  [`/clr:pure`](../../build/reference/clr-common-language-runtime-compilation.md) implica uno per [`appdomain`](../../cpp/appdomain.md) stato.  Quindi, la dichiarazione di una variabile con il modificatore di *parole chiave* **`__declspec`** e la compilazione con **`/clr:pure`** non è consentita.
 
 ## <a name="example"></a>Esempio
 

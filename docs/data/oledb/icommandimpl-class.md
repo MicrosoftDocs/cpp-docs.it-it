@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe ICommandImpl'
 title: Classe ICommandImpl
 ms.date: 11/04/2016
 f1_keywords:
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: 2f2d3938d63e5e67fc501d52d269c06f6b144ac8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 62066d689e51a8ca8a71bb8120199c05ed2811d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91501825"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287385"
 ---
 # <a name="icommandimpl-class"></a>Classe ICommandImpl
 
@@ -85,7 +86,7 @@ Interfaccia di comando. Il valore predefinito è `ICommand`.
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[Annulla](#cancel)|Annulla l'esecuzione del comando corrente.|
 |[CancelExecution](#cancelexecution)|Annulla l'esecuzione del comando corrente.|
@@ -96,13 +97,13 @@ Interfaccia di comando. Il valore predefinito è `ICommand`.
 
 ### <a name="data-members"></a>Membri dei dati
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[m_bCancel](#bcancel)|Indica se il comando deve essere annullato.|
 |[m_bCancelWhenExecuting](#bcancelwhenexecuting)|Indica se il comando deve essere annullato durante l'esecuzione.|
 |[m_bIsExecuting](#bisexecuting)|Indica se il comando è attualmente in esecuzione.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Interfaccia obbligatoria sull'oggetto Command.
 
@@ -173,7 +174,7 @@ out Puntatore a un oggetto set di righe. In genere, questo parametro non viene u
 
 Valore HRESULT standard. `ICommand::Execute`Per un elenco di valori tipici, vedere.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per creare più di un set di righe o per fornire condizioni personalizzate per la creazione di set di righe diversi, effettuare chiamate diverse a `CreateRowset` dall'interno di `Execute` .
 
@@ -197,7 +198,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 Vedere [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'interfaccia in uscita richiesta sarà un'interfaccia acquisita dall'oggetto set di righe creato da questa funzione.
 
@@ -218,7 +219,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 
 Vedere [ICommand:: GetDBSession](/previous-versions/windows/desktop/ms719622(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Utile per recuperare le proprietà dalla sessione.
 
@@ -274,7 +275,7 @@ unsigned m_bIsExecuting:1;
 
 Il `Execute` metodo della classe Command può impostare questa variabile su **`true`** .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

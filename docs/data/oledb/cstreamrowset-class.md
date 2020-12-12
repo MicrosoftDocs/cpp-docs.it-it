@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CStreamRowset'
 title: Classe CStreamRowset
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - CStreamRowset class, constructor
 - Close method
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-ms.openlocfilehash: 304dfe0e026a9fbba899c1ef17c06cf1baf1529b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 278f85b36a2b4ec1c3d6b3c2bd5ecc5b47c5ef73
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841051"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287814"
 ---
 # <a name="cstreamrowset-class"></a>Classe CStreamRowset
 
@@ -57,18 +58,18 @@ Classe della funzione di accesso.
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[CStreamRowset](#cstreamrowset)|Costruttore. Crea un'istanza dell'oggetto e lo inizializza `CStreamRowset` .|
 |[Close](#close)|Rilascia il puntatore all'interfaccia [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) nella classe.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Usare `CStreamRowset` nella `CCommand` dichiarazione o `CTable` , ad esempio:
 
 [!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]
 
-o
+oppure
 
 [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]
 

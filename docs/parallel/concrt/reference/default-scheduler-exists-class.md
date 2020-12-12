@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: default_scheduler_exists Class'
 title: Classe default_scheduler_exists
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - default_scheduler_exists class
 ms.assetid: f6e575e2-4e0f-455a-9e06-54f462ce0c1c
-ms.openlocfilehash: eed5dd242beb4c4cd481f22635e0d5f71c28d7e6
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 6921f7bd820271cf590707c2e56cefa9f576cefe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139182"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284850"
 ---
 # <a name="default_scheduler_exists-class"></a>Classe default_scheduler_exists
 
@@ -29,7 +30,7 @@ class default_scheduler_exists : public std::exception;
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[default_scheduler_exists](#ctor)|Di overload. Costruisce un oggetto `default_scheduler_exists`.|
 
@@ -45,7 +46,7 @@ class default_scheduler_exists : public std::exception;
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="ctor"></a>default_scheduler_exists
+## <a name="default_scheduler_exists"></a><a name="ctor"></a> default_scheduler_exists
 
 Costruisce un oggetto `default_scheduler_exists`.
 
@@ -60,6 +61,6 @@ default_scheduler_exists() throw();
 *_Message*<br/>
 Messaggio descrittivo dell'errore.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)
+[Spazio dei nomi Concurrency](concurrency-namespace.md)

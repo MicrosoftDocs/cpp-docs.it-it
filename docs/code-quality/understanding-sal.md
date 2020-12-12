@@ -1,14 +1,15 @@
 ---
+description: 'Altre informazioni: informazioni su SAL'
 title: Informazioni su SAL
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: a94d6907-55f2-4874-9571-51d52d6edcfd
-ms.openlocfilehash: 78a254bca6a90826d47f20ee9909a8cc66e23e28
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: affbca9eb65467b65ee5ba4ed3ae550a6da25ac7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226047"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288503"
 ---
 # <a name="understanding-sal"></a>Informazioni su SAL
 
@@ -40,7 +41,7 @@ void * memcpy(
 
 La documentazione contiene un paio di informazioni che indicano che il codice deve mantenere determinate proprietà per garantire la correttezza del programma:
 
-- `memcpy`copia l'oggetto `count` di byte dal buffer di origine nel buffer di destinazione.
+- `memcpy` copia l'oggetto `count` di byte dal buffer di origine nel buffer di destinazione.
 
 - Il buffer di destinazione deve avere una dimensione almeno uguale al buffer di origine.
 
@@ -78,7 +79,7 @@ Questa implementazione contiene un errore comune. Fortunatamente, l'autore del c
 
 SAL definisce quattro tipi di parametri di base, classificati in base al modello di utilizzo.
 
-|Categoria|Annotazione parametro|Descrizione|
+|Category|Annotazione parametro|Description|
 |--------------|--------------------------|-----------------|
 |**Input per la funzione chiamata**|`_In_`|I dati vengono passati alla funzione chiamata e vengono considerati di sola lettura.|
 |**Input della funzione chiamata e output al chiamante**|`_Inout_`|I dati utilizzabili vengono passati nella funzione e potenzialmente modificati.|
@@ -126,9 +127,9 @@ L' `_In_` annotazione indica che:
 
 - Il chiamante deve fornire il buffer e inizializzarlo.
 
-- `_In_`specifica "di sola lettura". Un errore comune consiste nell'applicare `_In_` a un parametro che deve avere `_Inout_` invece l'annotazione.
+- `_In_` specifica "di sola lettura". Un errore comune consiste nell'applicare `_In_` a un parametro che deve avere `_Inout_` invece l'annotazione.
 
-- `_In_`è consentito ma ignorato dall'analizzatore su scalari non puntatore.
+- `_In_` è consentito ma ignorato dall'analizzatore su scalari non puntatore.
 
 ```cpp
 void InCallee(_In_ int *pInt)
@@ -156,7 +157,7 @@ Se si usa Visual Studio Code analisi in questo esempio, viene convalidato che i 
 
 ### <a name="example-the-_in_opt_-annotation"></a>Esempio: l' \_ \_ \_ annotazione in opt
 
-`_In_opt_`è identico a `_In_` , ad eccezione del fatto che il parametro di input può essere null e, pertanto, la funzione deve verificare la presenza di questa.
+`_In_opt_` è identico a `_In_` , ad eccezione del fatto che il parametro di input può essere null e, pertanto, la funzione deve verificare la presenza di questa.
 
 ```cpp
 
@@ -184,7 +185,7 @@ Visual Studio Code analisi convalida che la funzione verifica la presenza di val
 
 ### <a name="example-the-_out_-annotation"></a>Esempio: l' \_ \_ annotazione out
 
-`_Out_`supporta uno scenario comune in cui un puntatore non NULL che punta a un buffer di elemento viene passato e la funzione Inizializza l'elemento. Il chiamante non deve inizializzare il buffer prima della chiamata. la funzione chiamata promette di inizializzarla prima della restituzione.
+`_Out_` supporta uno scenario comune in cui un puntatore non NULL che punta a un buffer di elemento viene passato e la funzione Inizializza l'elemento. Il chiamante non deve inizializzare il buffer prima della chiamata. la funzione chiamata promette di inizializzarla prima della restituzione.
 
 ```cpp
 void GoodOutCallee(_Out_ int *pInt)
@@ -210,7 +211,7 @@ Visual Studio Code strumento di analisi verifica che il chiamante passi un punta
 
 ### <a name="example-the-_out_opt_-annotation"></a>Esempio: \_ \_ \_ annotazione opt out
 
-`_Out_opt_`è identico `_Out_` a, ad eccezione del fatto che il parametro può essere null e, pertanto, la funzione deve verificare la presenza di questa.
+`_Out_opt_` è identico `_Out_` a, ad eccezione del fatto che il parametro può essere null e, pertanto, la funzione deve verificare la presenza di questa.
 
 ```cpp
 void GoodOutOptCallee(_Out_opt_ int *pInt)
@@ -237,7 +238,7 @@ Visual Studio Code analisi convalida che questa funzione verifica la presenza di
 
 ### <a name="example-the-_inout_-annotation"></a>Esempio: \_ \_ annotazione InOut
 
-`_Inout_`viene utilizzato per annotare un parametro del puntatore che può essere modificato dalla funzione. Il puntatore deve puntare a dati inizializzati validi prima della chiamata e anche in caso di modifica, deve comunque avere un valore valido al momento della restituzione. L'annotazione specifica che la funzione può leggere liberamente e scrivere nel buffer a elemento singolo. Il chiamante deve fornire il buffer e inizializzarlo.
+`_Inout_` viene utilizzato per annotare un parametro del puntatore che può essere modificato dalla funzione. Il puntatore deve puntare a dati inizializzati validi prima della chiamata e anche in caso di modifica, deve comunque avere un valore valido al momento della restituzione. L'annotazione specifica che la funzione può leggere liberamente e scrivere nel buffer a elemento singolo. Il chiamante deve fornire il buffer e inizializzarlo.
 
 > [!NOTE]
 > Like `_Out_` , `_Inout_` deve essere applicato a un valore modificabile.
@@ -268,7 +269,7 @@ Visual Studio Code analisi convalida che i chiamanti passano un puntatore non NU
 
 ### <a name="example-the-_inout_opt_-annotation"></a>Esempio: \_ \_ \_ annotazione opz di Inout
 
-`_Inout_opt_`è identico a `_Inout_` , ad eccezione del fatto che il parametro di input può essere null e, pertanto, la funzione deve verificare la presenza di questa.
+`_Inout_opt_` è identico a `_Inout_` , ad eccezione del fatto che il parametro di input può essere null e, pertanto, la funzione deve verificare la presenza di questa.
 
 ```cpp
 void GoodInOutOptCallee(_Inout_opt_ int *pInt)
@@ -297,7 +298,7 @@ Visual Studio Code analisi convalida che questa funzione verifica la presenza di
 
 ### <a name="example-the-_outptr_-annotation"></a>Esempio: \_ \_ annotazione Outptr
 
-`_Outptr_`viene utilizzato per annotare un parametro progettato per restituire un puntatore.  Il parametro non deve essere NULL e la funzione chiamata restituisce un puntatore non NULL al suo interno e il puntatore punta ai dati inizializzati.
+`_Outptr_` viene utilizzato per annotare un parametro progettato per restituire un puntatore.  Il parametro non deve essere NULL e la funzione chiamata restituisce un puntatore non NULL al suo interno e il puntatore punta ai dati inizializzati.
 
 ```cpp
 void GoodOutPtrCallee(_Outptr_ int **pInt)
@@ -327,7 +328,7 @@ Visual Studio Code analisi verifica che il chiamante passi un puntatore non NULL
 
 ### <a name="example-the-_outptr_opt_-annotation"></a>Esempio: \_ \_ \_ annotazione Outptr opt
 
-`_Outptr_opt_`è identico a `_Outptr_` , ad eccezione del fatto che il parametro è facoltativo, il chiamante può passare un puntatore null per il parametro.
+`_Outptr_opt_` è identico a `_Outptr_` , ad eccezione del fatto che il parametro è facoltativo, il chiamante può passare un puntatore null per il parametro.
 
 ```cpp
 void GoodOutPtrOptCallee(_Outptr_opt_ int **pInt)
@@ -398,7 +399,7 @@ Di seguito sono riportate alcune linee guida:
 
 In alternativa, è possibile aggiungere annotazioni a tutti i parametri per rendere chiara l'intento e per semplificare la verifica dell'avvenuta annotazione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Uso delle annotazioni SAL per ridurre gli errori del codice C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [Annotazione di parametri di funzione e valori restituiti](../code-quality/annotating-function-parameters-and-return-values.md)

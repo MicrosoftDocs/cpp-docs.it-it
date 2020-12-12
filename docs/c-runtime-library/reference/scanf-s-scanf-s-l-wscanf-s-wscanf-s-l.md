@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l'
 title: scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l
 ms.date: 03/26/2019
 api_name:
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - wscanf_s_l function
 - buffers [C++], avoiding overruns
 ms.assetid: 42cafcf7-52d6-404a-80e4-b056a7faf2e5
-ms.openlocfilehash: 8811bd0b6e4009cd6aba570e65d0687fab465614
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f7044a5f0a29e9421b7105ac177228e7fad3ab30
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231364"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289101"
 ---
 # <a name="scanf_s-_scanf_s_l-wscanf_s-_wscanf_s_l"></a>scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l
 
@@ -96,15 +97,15 @@ Restituisce il numero di campi convertiti e assegnati correttamente. Il valore r
 
 Per informazioni su questi e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **scanf_s** legge i dati dal flusso di input standard, **stdin**e li scrive in un *argomento*. Ogni *argomento* deve essere un puntatore a un tipo di variabile che corrisponde all'identificatore di tipo nel *formato*. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
+La funzione **scanf_s** legge i dati dal flusso di input standard, **stdin** e li scrive in un *argomento*. Ogni *argomento* deve essere un puntatore a un tipo di variabile che corrisponde all'identificatore di tipo nel *formato*. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
 **wscanf_s** è una versione a caratteri wide di **scanf_s**; l'argomento *Format* per **wscanf_s** è una stringa di caratteri wide. **wscanf_s** e **scanf_s** si comportano in modo identico se il flusso viene aperto in modalità ANSI. **scanf_s** attualmente non supporta l'input da un flusso Unicode.
 
 Le versioni di queste funzioni che hanno il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle *impostazioni locali* anziché le impostazioni locali del thread corrente.
 
-Diversamente da **scanf** e **wscanf**, **scanf_s** e **wscanf_s** richiedono di specificare le dimensioni del buffer per alcuni parametri. Specificare le dimensioni per tutti i parametri **c**, **c**, **s** **, o**set di controllo stringa **[]** . La dimensione del buffer in caratteri viene passata come parametro aggiuntivo. Segue immediatamente il puntatore al buffer o alla variabile. Ad esempio, se si sta leggendo una stringa, la dimensione del buffer per tale stringa viene passata nel modo seguente:
+Diversamente da **scanf** e **wscanf**, **scanf_s** e **wscanf_s** richiedono di specificare le dimensioni del buffer per alcuni parametri. Specificare le dimensioni per tutti i parametri **c**, **c**, **s** **, o** set di controllo stringa **[]** . La dimensione del buffer in caratteri viene passata come parametro aggiuntivo. Segue immediatamente il puntatore al buffer o alla variabile. Ad esempio, se si sta leggendo una stringa, la dimensione del buffer per tale stringa viene passata nel modo seguente:
 
 ```C
 char s[10];
@@ -157,7 +158,7 @@ Per altre informazioni, vedere [Campi di specifica di formato: funzioni scanf e 
 |**scanf_s**, **_scanf_s_l**|\<stdio.h>|
 |**wscanf_s**, **_wscanf_s_l**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Il flusso standard gestisce **stdin**, **stdout**e **stderr** devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Il flusso standard gestisce **stdin**, **stdout** e **stderr** devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -206,7 +207,7 @@ The number of fields input is 6
 The contents are: 36 92.300003 y n Wide characters
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>

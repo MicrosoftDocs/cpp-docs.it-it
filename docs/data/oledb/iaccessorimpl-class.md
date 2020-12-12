@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe IAccessorImpl'
 title: Classe IAccessorImpl
 ms.date: 11/04/2016
 f1_keywords:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - GetBindings method
 - ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-ms.openlocfilehash: 356278b316912bdb81f1c43bbf2034f00ec3d785
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e7b2c2ea7192ec0fdb8c943ce4062ada0b1f0504
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845614"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287411"
 ---
 # <a name="iaccessorimpl-class"></a>Classe IAccessorImpl
 
@@ -75,20 +76,20 @@ Unità di archiviazione per le informazioni sulle colonne. Il valore predefinito
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[IAccessorImpl](#iaccessorimpl)|Costruttore.|
 
 ### <a name="interface-methods"></a>Metodi di interfaccia
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[AddRefAccessor](#addrefaccessor)|Aggiunge un conteggio dei riferimenti a una funzione di accesso esistente.|
 |[CreateAccessor](#createaccessor)|Crea una funzione di accesso da un insieme di associazioni.|
 |[GetBindings](#getbindings)|Restituisce le associazioni contenute in una funzione di accesso.|
 |[ReleaseAccessor](#releaseaccessor)|Rilascia una funzione di accesso.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questa operazione è obbligatoria per i set di righe e i comandi. OLE DB richiede che i provider implementino un HACCESSOR, che è un tag per una matrice di strutture [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) . HACCESSORoggetti fornite da `IAccessorImpl` sono indirizzi delle `BindType` strutture. Per impostazione predefinita, `BindType` è definito come `ATLBINDINGS` una `IAccessorImpl` definizione di modello in. `BindType` fornisce un meccanismo utilizzato da `IAccessorImpl` per tenere traccia del numero di elementi nella `DBBINDING` matrice, nonché di un conteggio dei riferimenti e dei flag della funzione di accesso.
 
@@ -168,7 +169,7 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
 
 Vedere [IAccessor:: ReleaseAccessor](/previous-versions/windows/desktop/ms719717(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

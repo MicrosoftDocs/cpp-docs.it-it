@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: recupero di un BLOB'
 title: Recupero di un BLOB
 ms.date: 10/24/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - BLOB (binary large object), retrieving
 - OLE DB, BLOBs (binary large objects)
 ms.assetid: 2893eb0a-5c05-4016-8914-1e40ccbaf0b3
-ms.openlocfilehash: 352841595e8b197407ccb52a22c8b0502d314c98
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: ef870d84c286f72621e87858cea944cc70cbe0cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509512"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286605"
 ---
 # <a name="retrieving-a-blob"></a>Recupero di un BLOB
 
@@ -53,7 +54,7 @@ while (categories.MoveNext() == S_OK)
 
 Per altre informazioni sulle macro che gestiscono dati BLOB, vedere **macro della mappa delle colonne** in [macro e funzioni globali per OLE DB modelli di consumer](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)<br/>
 [Macro e funzioni globali per modelli consumer OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)<br/>

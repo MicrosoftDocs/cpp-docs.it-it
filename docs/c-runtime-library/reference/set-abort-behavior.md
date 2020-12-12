@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _set_abort_behavior'
 title: _set_abort_behavior
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - aborting programs
 - _set_abort_behavior function
 - set_abort_behavior function
-ms.openlocfilehash: 06f72597a384cc5c90b2e345e62e13dee96c4dca
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1e024cf825115204f51e727d81af7aba74c305fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913135"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288906"
 ---
 # <a name="_set_abort_behavior"></a>_set_abort_behavior
 
@@ -56,14 +57,14 @@ unsigned int _set_abort_behavior(
 *flags*<br/>
 Nuovo valore dei flag di [interruzione](abort.md) .
 
-*mask*<br/>
+*maschera*<br/>
 Maschera per i bit dei flag di [interruzione](abort.md) da impostare.
 
 ## <a name="return-value"></a>Valore restituito
 
 Valore precedente dei flag.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Sono presenti due flag di [interruzione](abort.md) : **_WRITE_ABORT_MSG** e **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** determina se viene stampato un messaggio di testo utile quando un programma viene terminato in modo anomalo. Il messaggio indica che l'applicazione ha chiamato la funzione [Abort](abort.md) . Il comportamento predefinito prevede la stampa del messaggio. **_CALL_REPORTFAULT**, se impostato, specifica che viene generato un dump di arresto anomalo di Watson e viene segnalato quando viene chiamato [Abort](abort.md) . Per impostazione predefinita, la segnalazione di dump di arresto anomalo del sistema è abilitata per le compilazioni non di debug.
 

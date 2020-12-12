@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Classe IDBInitializeImpl'
 title: Classe IDBInitializeImpl
 ms.date: 11/04/2016
 f1_keywords:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: aff02e812d2806201a08164aeb4a8ef290550725
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6b37998c78c3e88921318654653995ff356ba18a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845536"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287320"
 ---
 # <a name="idbinitializeimpl-class"></a>Classe IDBInitializeImpl
 
@@ -69,25 +70,25 @@ Classe derivata da `IDBInitializeImpl` .
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[IDBInitializeImpl](#idbinitializeimpl)|Costruttore.|
 
 ### <a name="interface-methods"></a>Metodi di interfaccia
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[Inizializzare](#initialize)|Avvia il provider.|
 |[Uninitialize](#uninitialize)|Arresta il provider.|
 
 ### <a name="data-members"></a>Membri dei dati
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[m_dwStatus](#dwstatus)|Flag dell'origine dati.|
 |[m_pCUtlPropInfo](#pcutlpropinfo)|Puntatore all'implementazione delle informazioni sulle proprietà del database.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Interfaccia obbligatoria sugli oggetti origine dati e sull'interfaccia facoltativa sugli enumeratori.
 
@@ -155,7 +156,7 @@ enum DATASOURCE_FLAGS {
 };
 ```
 
-| Valore | Descrizione |
+| Valore | Description |
 |-|-|
 |`DSF_MASK_INIT`|Maschera per consentire il ripristino dello stato non inizializzato.|
 |`DSF_PERSIST_DIRTY`|Impostare se l'oggetto origine dati richiede la persistenza, ovvero se sono state apportate modifiche.|

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: ActivatableClass Macros'
 title: Macro ActivatableClass
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - ActivatableClass
 - ActivatableClassWithFactoryEx
 ms.assetid: 9bd64709-ec2c-4678-8c96-ea5982622bdd
-ms.openlocfilehash: 7bc3d789d6c0d304aa170d59dff23a97a67061d7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2b59101373de72ca88338750bb7fe9169376ac65
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214273"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287944"
 ---
 # <a name="activatableclass-macros"></a>Macro ActivatableClass
 
@@ -46,15 +47,15 @@ ActivatableClassWithFactoryEx(
 *className*<br/>
 Nome della classe da creare.
 
-*fabbrica*<br/>
+*factory*<br/>
 Factory che creerà un'istanza della classe specificata.
 
 *serverName*<br/>
 Nome che specifica un subset di Factory nel modulo.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Non usare queste macro con COM classico a meno che non si usi la direttiva `#undef` per assicurarsi che la definizione della macro `__WRL_WINRT_STRICT__` venga rimossa.
+Non usare queste macro con COM classico, a meno che non si usi la `#undef` direttiva per assicurarsi che la `__WRL_WINRT_STRICT__` definizione della macro venga rimossa.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -62,6 +63,6 @@ Non usare queste macro con COM classico a meno che non si usi la direttiva `#und
 
 **Spazio dei nomi:** Microsoft::WRL
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe Module](module-class.md)

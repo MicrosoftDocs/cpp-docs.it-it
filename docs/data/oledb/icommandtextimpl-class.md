@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Classe ICommandTextImpl'
 title: Classe ICommandTextImpl
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: 7d31933b162a74db31bdd3c65dc68e396a3896c4
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4b48b9f8f2ee535a648681064cc6b1083c76e489
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91501727"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287372"
 ---
 # <a name="icommandtextimpl-class"></a>Classe ICommandTextImpl
 
@@ -54,18 +55,18 @@ Classe Command derivata da `ICommandTextImpl` .
 
 ### <a name="interface-methods"></a>Metodi di interfaccia
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[GetCommandText](#getcommandtext)|Restituisce il comando di testo impostato dall'ultima chiamata a [CommandText](#setcommandtext).|
 |[SetCommandText](#setcommandtext)|Imposta il testo del comando, sostituendo il testo del comando esistente.|
 
 ### <a name="data-members"></a>Membri dei dati
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[m_strCommandText](#strcommandtext)|Archivia il testo del comando.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Interfaccia obbligatoria sui comandi.
 

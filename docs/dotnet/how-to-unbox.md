@@ -1,17 +1,18 @@
 ---
-title: 'Procedura: Unbox'
+description: 'Altre informazioni su: procedura: unboxing'
+title: 'Procedura: Eseguire la conversione unboxing'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - unboxing
 ms.assetid: 75794696-9275-47bf-9a7d-5abe6585ab91
-ms.openlocfilehash: b184b0b534e2720af833f34b908ede5b998803ec
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: e5f3ae72f1d7b2340baa868a2e1d009b3534e701
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988144"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286319"
 ---
-# <a name="how-to-unbox"></a>Procedura: Unbox
+# <a name="how-to-unbox"></a>Procedura: Eseguire la conversione unboxing
 
 Viene illustrato come eseguire l'unboxing e modificare un valore.
 
@@ -41,4 +42,4 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Conversione boxing](../extensions/boxing-cpp-component-extensions.md)
+[Boxing](../extensions/boxing-cpp-component-extensions.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _searchenv_s, _wsearchenv_s'
 title: _searchenv_s, _wsearchenv_s
 ms.date: 4/2/2020
 api_name:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-ms.openlocfilehash: 5dd21013c8910ba07e2d23606af49bc80458dbc6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c618840c904bb03eb2f04b9931c7fe7999a278a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918988"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288958"
 ---
 # <a name="_searchenv_s-_wsearchenv_s"></a>_searchenv_s, _wsearchenv_s
 
@@ -115,9 +116,9 @@ Se *filename* è una stringa vuota, il valore restituito è **ENOENT**.
 
 Se si verifica una di queste condizioni di errore, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono **EINVAL**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Il **_searchenv_s** routine Cerca il file di destinazione nel dominio specificato. La variabile *VarName* può essere qualsiasi ambiente o variabile definita dall'utente che specifica un elenco di percorsi di directory, ad esempio **path**, **lib**e **include**. Poiché **_searchenv_s** fa distinzione tra maiuscole e minuscole, *VarName* deve corrispondere al case della variabile di ambiente. Se *VarName* non corrisponde al nome di una variabile di ambiente definita nell'ambiente del processo, la funzione restituisce zero e la variabile *pathname* è invariata.
+Il **_searchenv_s** routine Cerca il file di destinazione nel dominio specificato. La variabile *VarName* può essere qualsiasi ambiente o variabile definita dall'utente che specifica un elenco di percorsi di directory, ad esempio **path**, **lib** e **include**. Poiché **_searchenv_s** fa distinzione tra maiuscole e minuscole, *VarName* deve corrispondere al case della variabile di ambiente. Se *VarName* non corrisponde al nome di una variabile di ambiente definita nell'ambiente del processo, la funzione restituisce zero e la variabile *pathname* è invariata.
 
 La routine cerca innanzitutto il file nella directory di lavoro corrente. Se non trova il file, cerca nelle directory specificate dalla variabile d'ambiente. Se il file di destinazione si trova in una di queste directory, il percorso appena creato viene copiato in *pathname*. Se il file *filename* non viene trovato, *pathname* contiene una stringa vuota con terminazione null.
 
@@ -182,7 +183,7 @@ C:\Program Files\Microsoft Visual Studio 2010\VC\BIN\CL.EXE
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controllo delle directory](../../c-runtime-library/directory-control.md)<br/>
+[Controllo Directory](../../c-runtime-library/directory-control.md)<br/>
 [_searchenv, _wsearchenv](searchenv-wsearchenv.md)<br/>
 [getenv, _wgetenv](getenv-wgetenv.md)<br/>
 [_putenv, _wputenv](putenv-wputenv.md)<br/>

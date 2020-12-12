@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: riferimenti al linguaggio C++/CX'
 title: Riferimenti per il linguaggio C++/CX
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-ms.openlocfilehash: f28270ace3965a3cf89e250a873af14e48390708
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: ac72abeb84c656ce0ab9569ad5c944ea61b7d646
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507424"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288035"
 ---
 # <a name="ccx-language-reference"></a>Riferimenti per il linguaggio C++/CX
 

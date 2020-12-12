@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: modifica dell'ereditarietà di RCustomRowset"
 title: Modifica dell'ereditarietà di RCustomRowset
 ms.date: 10/26/2018
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - inheritance [C++]
 - RCustomRowset
 ms.assetid: 33089c90-98a4-43e7-8e67-d4bb137e267e
-ms.openlocfilehash: d22c6902667ec84abe7bd85ffbffd1f5c5c57f2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c54533122083c526ad12ac6514efa3ad9ba47cf5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395573"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287008"
 ---
 # <a name="modifying-the-inheritance-of-rcustomrowset"></a>Modifica dell'ereditarietà di RCustomRowset
 
-Per aggiungere il `IRowsetLocate` l'interfaccia per l'esempio di un provider semplice in sola lettura, modifica dell'ereditarietà di `CCustomRowset`. Inizialmente `CCustomRowset` eredita da `CRowsetImpl`. È necessario modificare in modo che erediti da `CRowsetBaseImpl`.
+Per aggiungere l' `IRowsetLocate` interfaccia all'esempio di provider semplice in sola lettura, modificare l'ereditarietà di `CCustomRowset` . Inizialmente `CCustomRowset` eredita da `CRowsetImpl` . È necessario modificarlo per ereditare da `CRowsetBaseImpl` .
 
-A questo scopo, creare una nuova classe `CCustomRowsetImpl`, in *Custom*RS:
+A tale scopo, creare una nuova classe, `CCustomRowsetImpl` , in RS. h *personalizzata*:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -31,7 +32,7 @@ class CMyRowsetImpl:
 };
 ```
 
-A questo punto, modifica mappa dell'interfaccia COM *Custom*RS essere come segue:
+Modificare ora la mappa dell'interfaccia COM in RS. h *personalizzata* in modo che sia la seguente:
 
 ```cpp
 BEGIN_COM_MAP(CMyRowsetImpl)
@@ -40,18 +41,18 @@ BEGIN_COM_MAP(CMyRowsetImpl)
 END_COM_MAP()
 ```
 
-Questo codice crea una mappa dell'interfaccia COM che comunica `CMyRowsetImpl` chiamare `QueryInterface` sia per il `IRowset` e `IRowsetLocate` interfacce. Per ottenere tutti l'implementazione per l'altro set di righe classi, i collegamenti della mappa la `CMyRowsetImpl` classe verso il `CRowsetBaseImpl` classe definiti tramite i modelli OLE DB; la mappa usa la macro COM_INTERFACE_ENTRY_CHAIN, richiedendo di modelli OLE DB per analizzare la mappa COM in `CRowsetBaseImpl` in risposta a un `QueryInterface` chiamare.
+Questo codice crea una mappa dell'interfaccia COM che indica `CMyRowsetImpl` a di chiamare `QueryInterface` per entrambe le `IRowset` `IRowsetLocate` interfacce e. Per ottenere tutte le implementazioni per le altre classi del set di righe, la mappa collega la `CMyRowsetImpl` classe alla `CRowsetBaseImpl` classe definita dai modelli di OLE DB; la mappa usa la macro COM_INTERFACE_ENTRY_CHAIN, che indica OLE DB modelli di eseguire l'analisi della mappa com in `CRowsetBaseImpl` in risposta a una `QueryInterface` chiamata.
 
-Infine, collegare `CCustomRowset` al `CMyRowsetBaseImpl` modificando `CCustomRowset` da cui ereditare `CMyRowsetImpl`, come indicato di seguito:
+Infine, `CCustomRowset` eseguire il collegamento a `CMyRowsetBaseImpl` modificando in modo da `CCustomRowset` ereditare da `CMyRowsetImpl` , come indicato di seguito:
 
 ```cpp
 class CCustomRowset : public CMyRowsetImpl<CCustomRowset, CCustomWindowsFile, CCustomCommand>
 ```
 
-`CCustomRowset` a questo punto è possibile usare il `IRowsetLocate` interfaccia sfruttando il resto dell'implementazione per la classe di set di righe.
+`CCustomRowset` Ora è possibile usare l'interfaccia sfruttando `IRowsetLocate` il resto dell'implementazione per la classe del set di righe.
 
-Quando questa operazione, è possibile [determinare in modo dinamico le colonne restituite al consumer](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).
+Al termine di questa operazione, è possibile [determinare in modo dinamico le colonne restituite al consumer](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Miglioramento di un provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md)<br/>
+[Miglioramento del provider di Read-Only semplice](../../data/oledb/enhancing-the-simple-read-only-provider.md)<br/>

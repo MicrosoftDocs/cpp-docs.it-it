@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: specificare quando e dove si applica un'annotazione"
 title: Specificare dove e quando applicare un'annotazione
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -8,12 +9,12 @@ f1_keywords:
 - _When_
 - _At_buffer_
 ms.assetid: 8e4f4f9c-5dfa-4835-87df-ecd1698fc650
-ms.openlocfilehash: 790a1349c3f4d7dbee878f3eb695d83682a7fa7d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 73b461b4e072958b25f43ac3692241549e1c7823
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216661"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288516"
 ---
 # <a name="specifying-when-and-where-an-annotation-applies"></a>Specificare dove e quando applicare un'annotazione
 
@@ -23,14 +24,14 @@ Quando un'annotazione è condizionale, potrebbe essere necessario specificare al
 
 Per controllare quando e dove si applicano le annotazioni, utilizzare le seguenti annotazioni strutturali.
 
-|Annotazione|Descrizione|
+|Annotazione|Description|
 |----------------|-----------------|
-|`_At_(expr, anno-list)`|`expr`espressione che restituisce un lvalue. Le annotazioni in `anno-list` vengono applicate all'oggetto denominato da `expr` . Per ogni annotazione in `anno-list` , `expr` viene interpretato nella pre-condizione se l'annotazione viene interpretata nella pre-condizione e in post-condizione se l'annotazione viene interpretata in post-condizione.|
-|`_At_buffer_(expr, iter, elem-count, anno-list)`|`expr`espressione che restituisce un lvalue. Le annotazioni in `anno-list` vengono applicate all'oggetto denominato da `expr` . Per ogni annotazione in `anno-list` , `expr` viene interpretato nella pre-condizione se l'annotazione viene interpretata nella precondizione e in post-condizione se l'annotazione viene interpretata in post-condizione.<br /><br /> `iter`nome di una variabile che ha come ambito l'annotazione (inclusa `anno-list` ). `iter`ha un tipo implicito **`long`** . Le variabili denominate in modo identico in qualsiasi ambito di inclusione sono nascoste dalla valutazione.<br /><br /> `elem-count`espressione che restituisce un valore integer.|
+|`_At_(expr, anno-list)`|`expr` espressione che restituisce un lvalue. Le annotazioni in `anno-list` vengono applicate all'oggetto denominato da `expr` . Per ogni annotazione in `anno-list` , `expr` viene interpretato nella pre-condizione se l'annotazione viene interpretata nella pre-condizione e in post-condizione se l'annotazione viene interpretata in post-condizione.|
+|`_At_buffer_(expr, iter, elem-count, anno-list)`|`expr` espressione che restituisce un lvalue. Le annotazioni in `anno-list` vengono applicate all'oggetto denominato da `expr` . Per ogni annotazione in `anno-list` , `expr` viene interpretato nella pre-condizione se l'annotazione viene interpretata nella precondizione e in post-condizione se l'annotazione viene interpretata in post-condizione.<br /><br /> `iter` nome di una variabile che ha come ambito l'annotazione (inclusa `anno-list` ). `iter` ha un tipo implicito **`long`** . Le variabili denominate in modo identico in qualsiasi ambito di inclusione sono nascoste dalla valutazione.<br /><br /> `elem-count` espressione che restituisce un valore integer.|
 |`_Group_(anno-list)`|Le annotazioni in `anno-list` sono tutte considerate con qualsiasi qualificatore applicabile all'annotazione di gruppo applicata a ogni annotazione.|
-|`_When_(expr, anno-list)`|`expr`espressione che può essere convertita in **`bool`** . Quando è diverso da zero ( **`true`** ), le annotazioni specificate in `anno-list` sono considerate applicabili.<br /><br /> Per impostazione predefinita, per ogni annotazione in `anno-list` , `expr` viene interpretato come utilizzando i valori di input se l'annotazione è una precondizione e come se si utilizzasse i valori di output se l'annotazione è una post-condizione. Per eseguire l'override dell'impostazione predefinita, è possibile utilizzare la funzione `_Old_` intrinseca quando si valuta una post-condizione per indicare che devono essere utilizzati i valori di input. **Nota:**  Le annotazioni diverse possono essere abilitate come conseguenza dell'utilizzo di `_When_` se viene utilizzato un valore modificabile, ad esempio, `*pLength` perché il risultato valutato di `expr` in precondizione può differire dal risultato valutato in post-condizione.|
+|`_When_(expr, anno-list)`|`expr` espressione che può essere convertita in **`bool`** . Quando è diverso da zero ( **`true`** ), le annotazioni specificate in `anno-list` sono considerate applicabili.<br /><br /> Per impostazione predefinita, per ogni annotazione in `anno-list` , `expr` viene interpretato come utilizzando i valori di input se l'annotazione è una precondizione e come se si utilizzasse i valori di output se l'annotazione è una post-condizione. Per eseguire l'override dell'impostazione predefinita, è possibile utilizzare la funzione `_Old_` intrinseca quando si valuta una post-condizione per indicare che devono essere utilizzati i valori di input. **Nota:**  Le annotazioni diverse possono essere abilitate come conseguenza dell'utilizzo di `_When_` se viene utilizzato un valore modificabile, ad esempio, `*pLength` perché il risultato valutato di `expr` in precondizione può differire dal risultato valutato in post-condizione.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Uso delle annotazioni SAL per ridurre gli errori del codice C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [Informazioni su SAL](../code-quality/understanding-sal.md)

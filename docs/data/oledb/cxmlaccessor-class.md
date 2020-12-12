@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CXMLAccessor'
 title: Classe CXMLAccessor
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - GetXMLColumnData method
 - GetXMLRowData method
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
-ms.openlocfilehash: 36419e85554982d1c3784d0d73663b48cc820b6d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 30725f47add9f9b965fe36226a366342988275e6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845627"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287697"
 ---
 # <a name="cxmlaccessor-class"></a>Classe CXMLAccessor
 
@@ -45,12 +46,12 @@ class CXMLAccessor : public CDynamicStringAccessorW
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[GetXMLColumnData](#getxmlcolumndata)|Recupera le informazioni sulla colonna.|
 |[GetXMLRowData](#getxmlrowdata)|Recupera l'intero contenuto di una tabella in base alle righe.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Tuttavia, `CXMLAccessor` differisce da perché `CDynamicStringAccessorW` converte tutti i dati a cui si accede dall'archivio dati come dati in formato XML (con tag). Questa operazione è particolarmente utile per l'output in pagine Web compatibili con XML. I nomi di tag XML corrispondono al più possibile i nomi di colonna dell'archivio dati.
 
@@ -81,7 +82,7 @@ out Riferimento a un buffer di stringa contenente le informazioni sul tipo di co
 
 Uno dei valori HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Di seguito viene illustrato come formattare le informazioni sul tipo di colonna in XML. `type` Specifica il tipo di dati della colonna. Si noti che i tipi di dati sono basati su OLE DB tipi di dati, non su quelli del database a cui si accede.
 
@@ -114,7 +115,7 @@ in Valore booleano che specifica se accodare una stringa alla fine dei dati di o
 
 Uno dei valori HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Di seguito viene illustrato il formato dei dati delle righe in XML. `DATA` di seguito sono rappresentati i dati della riga. Usare i metodi Move per passare alla riga desiderata.
 
@@ -124,7 +125,7 @@ Di seguito viene illustrato il formato dei dati delle righe in XML. `DATA` di se
 
 `</row>`
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

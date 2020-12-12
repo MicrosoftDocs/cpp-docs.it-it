@@ -1,21 +1,22 @@
 ---
+description: 'Altre informazioni su: lettura di stringhe nel provider di OLE DB'
 title: Lettura di stringhe in un provider OLE DB
 ms.date: 10/13/2018
 helpviewer_keywords:
 - OLE DB providers, reading strings into
 ms.assetid: 517f322c-f37e-4eed-bf5e-dd9a412c2f98
-ms.openlocfilehash: d46b4e1a53e7e489763f40e7a5238e65b493f7c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5df8812d5589dd457684bf5e36a8a49f798f99aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283837"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286631"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Lettura di stringhe in un provider OLE DB
 
-Il `CCustomRowset::Execute` funzione apre un file e legge le stringhe. Il consumer passa il nome del file al provider chiamando [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)). Il provider riceve il nome del file e lo archivia nella variabile membro `m_strCommandText`. `Execute` legge il nome del file da `m_strCommandText`. Se il nome del file non è valido o non è disponibile, il file `Execute` restituisce un errore. In caso contrario, viene aperto il file e le chiamate `fgets` per recuperare le stringhe. Per ciascun insieme di stringhe, operazioni di lettura, `Execute` crea un'istanza del record utente (modificato `CCustomWindowsFile` dalla [l'archiviazione di stringhe nel Provider OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md)) e lo inserisce in una matrice.
+La `CCustomRowset::Execute` funzione apre un file e legge le stringhe. Il consumer passa il nome del file al provider chiamando [ICommandText:: secommandtext](/previous-versions/windows/desktop/ms709757(v=vs.85)). Il provider riceve il nome del file e lo archivia nella variabile membro `m_strCommandText` . `Execute` legge il nome file da `m_strCommandText` . Se il nome file non è valido o il file non è disponibile, `Execute` restituisce un errore. In caso contrario, apre il file e chiama `fgets` per recuperare le stringhe. Per ogni set di stringhe letto, `Execute` Crea un'istanza del record utente (modificata `CCustomWindowsFile` dall'archiviazione delle [stringhe nel provider OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md)) e la inserisce in una matrice.
 
-Se il file non può essere aperto, `Execute` dovrà restituire DB_E_NOTABLE. Se viene restituito E_FAIL, il provider non funzionerà con molti utenti e non passa OLE DB [test di conformità](../../data/oledb/testing-your-provider.md).
+Se il file non può essere aperto, `Execute` deve restituire DB_E_NOTABLE. Se restituisce E_FAIL invece, il provider non funzionerà con molti consumer e non passerà i [test di conformità](../../data/oledb/testing-your-provider.md)del OLE DB.
 
 ## <a name="example"></a>Esempio
 
@@ -91,10 +92,10 @@ public:
 };
 ```
 
-Quando questa operazione viene eseguita, il provider deve essere pronto per compilare ed eseguire. Per testare il provider, è necessario un consumer con funzionalità di corrispondenza. [Implementazione di un Consumer semplice](../../data/oledb/implementing-a-simple-consumer.md) viene illustrato come creare un consumer di test. Eseguire il consumer di test con il provider e verificare che il consumer di test consente di recuperare le stringhe corrette dal provider.
+Al termine di questa operazione, il provider deve essere pronto per la compilazione e l'esecuzione. Per testare il provider, è necessario un consumer con funzionalità di corrispondenza. [L'implementazione di un consumer semplice](../../data/oledb/implementing-a-simple-consumer.md) Mostra come creare un utente di test di questo tipo. Eseguire il consumer di test con il provider e verificare che il consumer di test recuperi le stringhe corrette dal provider.
 
-Quando è stata testata il provider, si potrebbe voler migliorare la funzionalità mediante l'implementazione di interfacce aggiuntive. Un esempio è illustrato nella [miglioramento di un Provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md).
+Una volta testato correttamente il provider, è possibile migliorarne la funzionalità implementando interfacce aggiuntive. Per [migliorare il provider di Read-Only semplice](../../data/oledb/enhancing-the-simple-read-only-provider.md), viene illustrato un esempio.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Implementazione di un provider semplice in sola lettura](../../data/oledb/implementing-the-simple-read-only-provider.md)<br/>
+[Implementazione del provider di Read-Only semplice](../../data/oledb/implementing-the-simple-read-only-provider.md)<br/>

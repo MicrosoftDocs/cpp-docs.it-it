@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura: eseguire la migrazione a/CLR'
 title: 'Procedura: Eseguire la migrazione a -clr'
 ms.custom: get-started-article
 ms.date: 09/18/2018
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: 0c21fe585049ebce6383c5d8f673704e7362cd72
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 39853f755074a4999f39f9e04445234abfbe93b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225696"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286397"
 ---
 # <a name="how-to-migrate-to-clr"></a>Procedura: eseguire la migrazione a /clr
 
@@ -55,7 +56,7 @@ A partire da Visual Studio 2005, il codice scritto con Estensioni gestite per C+
 
 ## <a name="convert-c-code-to-c"></a>Converte il codice C in C++
 
-Sebbene Visual Studio compili i file C, è necessario convertirli in C++ per una compilazione **/CLR** . Non è necessario modificare il nome file effettivo; è possibile usare **/TP** (vedere [/TC,/TP,/TC,/TP (specifica il tipo di file di origine)](../build/reference/tc-tp-tc-tp-specify-source-file-type.md). Si noti che anche se per **/CLR**sono necessari file di codice sorgente C++, non è necessario eseguire il refactoring del codice per usare paradigmi orientati a oggetti.
+Sebbene Visual Studio compili i file C, è necessario convertirli in C++ per una compilazione **/CLR** . Non è necessario modificare il nome file effettivo; è possibile usare **/TP** (vedere [/TC,/TP,/TC,/TP (specifica il tipo di file di origine)](../build/reference/tc-tp-tc-tp-specify-source-file-type.md). Si noti che anche se per **/CLR** sono necessari file di codice sorgente C++, non è necessario eseguire il refactoring del codice per usare paradigmi orientati a oggetti.
 
 È molto probabile che il codice C richieda modifiche quando viene compilato come file C++. Le regole di indipendenza dai tipi C++ sono rigorose, pertanto le conversioni di tipi devono essere rese esplicite con i cast. Ad esempio, malloc restituisce un puntatore void, ma può essere assegnato a un puntatore a qualsiasi tipo in C con un cast:
 
@@ -100,7 +101,7 @@ Questo passaggio ha implicazioni diverse per i progetti che usano Makefile. In q
 > [!NOTE]
 > Quando si aggiorna una libreria gestita o un progetto di servizio Web da Visual Studio 2003, l'opzione del compilatore **/ZL** viene aggiunta alla pagina delle proprietà della **riga di comando** . Verrà generato LNK2001. Rimuovere **/ZL** dalla pagina delle proprietà della **riga di comando** per risolverlo. Per ulteriori informazioni, vedere [/Zl (omette il nome della libreria predefinita)](../build/reference/zl-omit-default-library-name.md) e [impostare le proprietà del compilatore e della compilazione](../build/working-with-project-properties.md) . In alternativa, aggiungere msvcrt. lib e msvcmrt. lib alla proprietà **dipendenze aggiuntive** del linker.
 
-Per i progetti compilati con makefile, le opzioni del compilatore incompatibili devono essere disabilitate manualmente una volta aggiunto **/CLR** . Per informazioni sulle opzioni del compilatore che non sono compatibili con **/CLR**, vedere le[restrizioni](../build/reference/clr-restrictions.md) relative a/CLR.
+Per i progetti compilati con makefile, le opzioni del compilatore incompatibili devono essere disabilitate manualmente una volta aggiunto **/CLR** . Per informazioni sulle opzioni del compilatore che non sono compatibili con **/CLR**, vedere le [restrizioni](../build/reference/clr-restrictions.md) relative a/CLR.
 
 ### <a name="precompiled-headers"></a>Intestazioni precompilate
 
@@ -132,7 +133,7 @@ I tipi nativi sono privati per impostazione predefinita. Questo può comportare 
 
 ### <a name="floating-point-and-alignment-issues"></a>Problemi relativi a virgola mobile e allineamento
 
-`__controlfp`non è supportato nella Common Language Runtime (vedere [_control87, _controlfp \_ _control87_2](../c-runtime-library/reference/control87-controlfp-control87-2.md) per ulteriori informazioni). CLR non rispetta inoltre l' [allineamento](../cpp/align-cpp.md).
+`__controlfp` non è supportato nella Common Language Runtime (vedere [_control87, _controlfp \_ _control87_2](../c-runtime-library/reference/control87-controlfp-control87-2.md) per ulteriori informazioni). CLR non rispetta inoltre l' [allineamento](../cpp/align-cpp.md).
 
 ### <a name="com-initialization"></a>Inizializzazione COM
 
@@ -162,6 +163,6 @@ Per informazioni sulla programmazione .NET in Visual C++ vedere:
 
 - [Estensioni componenti per le piattaforme runtime](../extensions/component-extensions-for-runtime-platforms.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Assembly misti (nativi e gestiti)](../dotnet/mixed-native-and-managed-assemblies.md)

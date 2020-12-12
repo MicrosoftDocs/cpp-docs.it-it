@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe IDBSchemaRowsetImpl'
 title: IDBSchemaRowsetImpl (classe)
 ms.date: 11/04/2016
 f1_keywords:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - GetRowset method
 - GetSchemas method
 ms.assetid: bd7bf0d7-a1c6-4afa-88e3-cfdbdf560703
-ms.openlocfilehash: d78aa23469cc0fa94498f93e9a6975e0a7c827e9
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 392f74793f363c203b740b14b00b605d8256bef5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509044"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287281"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl (classe)
 
@@ -67,7 +68,7 @@ La classe da cui `IDBSchemaRowsetImpl` viene ereditata. In genere, questa classe
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[CheckRestrictions](#checkrestrictions)|Controlla la validità delle restrizioni rispetto a un set di righe dello schema.|
 |[CreateSchemaRowset](#createschemarowset)|Implementa una funzione di creazione di oggetti COM per l'oggetto specificato dal parametro di modello.|
@@ -75,12 +76,12 @@ La classe da cui `IDBSchemaRowsetImpl` viene ereditata. In genere, questa classe
 
 ### <a name="interface-methods"></a>Metodi di interfaccia
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[GetRowset](#getrowset)|Restituisce un set di righe dello schema.|
 |[GetSchemas](#getschemas)|Restituisce un elenco di set di righe dello schema accessibili da [IDBSchemaRowsetImpl::GetRowset](#getrowset).|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questa classe implementa l'interfaccia [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) e la funzione di creazione di modelli [CreateSchemaRowset](#createschemarowset).
 
@@ -114,7 +115,7 @@ HRESULT CheckRestrictions(REFGUID rguidSchema,
 *rgRestrictions*<br/>
 [in] Una matrice di lunghezza *cRestrictions* di valori di restrizione da impostare. Per ulteriori informazioni, vedere la descrizione del parametro *rgRestrictions* in [serestrictions](#setrestrictions).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usa `CheckRestrictions` per controlla la validità delle restrizioni per un set di righe dello schema. Controlla le restrizioni per `DBSCHEMA_TABLES` i `DBSCHEMA_COLUMNS` set di `DBSCHEMA_PROVIDER_TYPES` righe dello schema, e. Chiamarlo per determinare se la chiamata di un consumer a `IDBSchemaRowset::GetRowset` è corretta. Se si desidera supportare set di righe dello schema diversi da quelli elencati sopra, creare una funzione personalizzata per eseguire questa operazione.
 
@@ -149,7 +150,7 @@ in [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) esterno durante l'ag
 [in] Il conteggio delle limitazioni applicate al set di righe dello schema.
 
 *rgRestrictions*<br/>
-[in] Una matrice di `cRestrictions`**VARIANT**da applicare al set di righe.
+[in] Una matrice di `cRestrictions`**VARIANT** da applicare al set di righe.
 
 *riid*<br/>
 in Interfaccia per [QueryInterface](../../atl/queryinterface.md) nell'output `IUnknown` .
@@ -170,7 +171,7 @@ out `IUnknown` In uscita richiesto da *riid*. Si `IUnknown` tratta di un'interfa
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione implementa un creatore generico per tutti i tipi di set di righe dello schema. Di solito l'utente non chiama questa funzione. Viene chiamata dall'implementazione della mappa dello schema.
 
@@ -197,7 +198,7 @@ in Il numero di restrizioni nella matrice *rgRestrictions* e il numero di GUID n
 *rgRestrictions*<br/>
 [in] Una matrice di lunghezza *cRestrictions* di valori di restrizione da impostare. Ogni elemento corrisponde alle restrizioni nel set di righe dello schema identificato dal GUID. Se il provider non supporta il set di righe dello schema, l'elemento è impostato su zero. In caso contrario, il valore **ULONG** contiene una maschera di bit che rappresenta le restrizioni supportate in tale set di righe dello schema. Per ulteriori informazioni sulle restrizioni che corrispondono a un particolare set di righe dello schema, consultare la tabella dei GUID del set di righe dello schema in [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) nella Guida di *riferimento per programmatori OLE DB* nel Windows SDK.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L' `IDBSchemaRowset` oggetto chiama `SetRestrictions` per determinare le restrizioni supportate su uno specifico set di righe dello schema (viene chiamato da [GetSchemas](#getschemas) tramite un puntatore di cui è stato eseguito il cast). Le restrizioni consentono agli utenti di recuperare solo le righe corrispondenti (ad esempio, trovare tutte le colonne nella tabella "MyTable"). Sono facoltative e, nel caso in cui nessuna sia supportata (impostazione predefinita), vengono restituiti sempre tutti i dati.
 
@@ -238,7 +239,7 @@ in Oggetto esterno `IUnknown` durante l'aggregazione; in caso contrario, null.
 [in] Conteggio delle limitazioni da applicare al set di righe.
 
 *rgRestrictions*<br/>
-[in] Matrice di `cRestrictions`**VARIANT**che rappresenta le restrizioni.
+[in] Matrice di `cRestrictions`**VARIANT** che rappresenta le restrizioni.
 
 *riid*<br/>
 [in] IID per richiedere il set di righe dello schema appena creato.
@@ -252,7 +253,7 @@ in Oggetto esterno `IUnknown` durante l'aggregazione; in caso contrario, null.
 *ppRowset*<br/>
 [out] Puntatore all'interfaccia richiesta nel set di righe dello schema appena creato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il metodo richiede che l'utente disponga di una mappa di schema nella classe di sessione. Utilizzando le informazioni sulla mappa dello schema, `GetRowset` Crea un oggetto set di righe specificato se il parametro *rguidSchema* è uguale a uno dei GUID delle voci della mappa. Per una descrizione della voce di mapping, vedere [SCHEMA_ENTRY](./macros-for-ole-db-provider-templates.md#schema_entry) .
 
@@ -279,15 +280,15 @@ STDMETHOD (GetSchema s )(ULONG * pcSchemas,
 [out] Un puntatore a una matrice di GUID compilata con un puntatore a una matrice di GUID del set di righe dello schema.
 
 *prgRest*<br/>
-[out] Un puntatore a una matrice di **ULONG**da compilare con la matrice di restrizioni.
+[out] Un puntatore a una matrice di **ULONG** da compilare con la matrice di restrizioni.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo restituisce una matrice di tutti i rowset dello schema supportati dal provider. Vedere [IDBSchemaRowset:: GetSchemas](/previous-versions/windows/desktop/ms719605(v=vs.85)) nella Windows SDK.
 
 L'implementazione di questa funzione richiede che l'utente di disporre di una mappa di schema nella classe di sessione. Usando le informazioni della mappa di schema, la funzione risponde con la matrice dei GUID per gli schemi nella mappa. Questa operazione rappresenta gli schemi supportati dal provider.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)<br/>
 [Supporto di set di righe dello schema](../../data/oledb/supporting-schema-rowsets.md)<br/>

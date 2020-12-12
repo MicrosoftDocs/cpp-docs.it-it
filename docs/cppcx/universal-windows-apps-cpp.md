@@ -1,14 +1,15 @@
 ---
+description: 'Altre informazioni su: app di Windows universale (C++)'
 title: App di Windows universale (C++)
 ms.date: 03/30/2018
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
 ms.topic: overview
-ms.openlocfilehash: 45d02a5ab923ee46da97d78a1e5ceb2f4313352a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ef107311ce2e8ec1b7c33bad42edfd3fbee358eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841674"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288145"
 ---
 # <a name="universal-windows-apps-c"></a>App di Windows universale (C++)
 
@@ -41,7 +42,7 @@ Viene descritto come usare DirectX e C++/CX per creare giochi.
 
 La libreria di modelli Windows Runtime C++ fornisce le interfacce COM di basso livello tramite cui il codice C++ ISO può accedere al Windows Runtime in un ambiente privo di eccezioni. Nella maggior parte dei casi, è consigliabile usare C++/WinRT o C++/CX anziché la libreria di modelli C++ Windows Runtime per lo sviluppo di app UWP. Per informazioni sulla libreria di modelli Windows Runtime C++, vedere la pagina relativa alla [libreria di modelli c++ Windows Runtime (WRL)](wrl/windows-runtime-cpp-template-library-wrl.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [C++ in Visual Studio](../overview/visual-cpp-in-visual-studio.md)<br/>
 [Panoramica della programmazione Windows in C++](../windows/overview-of-windows-programming-in-cpp.md)<br/>

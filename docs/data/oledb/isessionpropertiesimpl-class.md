@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe ISessionPropertiesImpl'
 title: Classe ISessionPropertiesImpl
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: d664f32226498326ffb092f1d3248fbdbf614d50
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 6b20331de5419de868d6739a010eb5df1548a94e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509769"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287034"
 ---
 # <a name="isessionpropertiesimpl-class"></a>Classe ISessionPropertiesImpl
 
@@ -48,12 +49,12 @@ Classe di proprietà definibile dall'utente che per impostazione predefinita è 
 
 ### <a name="interface-methods"></a>Metodi di interfaccia
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[GetProperties](#getproperties)|Restituisce l'elenco di proprietà nel gruppo di proprietà della sessione attualmente impostato per la sessione.|
 |[SetProperties](#setproperties)|Imposta le proprietà nel gruppo di proprietà della sessione.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Interfaccia obbligatoria sulle sessioni. Questa classe implementa le proprietà della sessione chiamando una funzione statica definita dalla [mappa del set di proprietà](./macros-for-ole-db-provider-templates.md#begin_propset_map). La mappa del set di proprietà deve essere specificata nella classe di sessione.
 
@@ -89,7 +90,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 Vedere [ISessionProperties:: seproperties](/previous-versions/windows/desktop/ms714405(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

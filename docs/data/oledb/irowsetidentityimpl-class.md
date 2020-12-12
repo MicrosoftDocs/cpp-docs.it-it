@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe IRowsetIdentityImpl'
 title: Classe IRowsetIdentityImpl
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - IRowsetIdentityImpl class
 - IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
-ms.openlocfilehash: 48ed687ff67208109b5a2acf400d98491b4c769a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4cba00d16671c3efd26bc3a9b20e93e1f80a1cc4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836143"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287203"
 ---
 # <a name="irowsetidentityimpl-class"></a>Classe IRowsetIdentityImpl
 
@@ -48,7 +49,7 @@ Unità di archiviazione per `HROW` .
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[IsSameRow](#issamerow)|Confronta due handle di riga per verificare se fanno riferimento alla stessa riga.|
 
@@ -67,11 +68,11 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
 
 Vedere [IRowsetIdentity:: IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per confrontare gli handle di riga, questo metodo esegue il cast degli `HROW` handle ai `RowClass` membri e chiama `memcmp` sui puntatori.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -1,15 +1,16 @@
 ---
+description: "Altre informazioni su: OLE DB problemi di progettazione dell'architettura"
 title: Problemi di progettazione dell'architettura OLE DB
 ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-ms.openlocfilehash: b481d9948d3055247bd284ca794a0fa65905e21b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2e6bd90b5d3c67fbdfb8cdfbb9c32af88ed106e6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311846"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286982"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Problemi di progettazione dell'architettura OLE DB
 
@@ -36,11 +37,11 @@ Se, ad esempio, se vuole aggiornare i dati in un set di righe, ma si è dimentic
 
 Considerate tutte le possibili combinazioni di tecnologie (ad esempio l'uso di componenti ADO con componenti OLE DB e la migrazione di codice ODBC a OLE DB), l'esame di tutti gli scenari non rientra nell'ambito della documentazione di Visual C++. Nei siti Web Microsoft seguenti sono tuttavia disponibili numerosi articoli che trattano diversi scenari:
 
-- [Guida e supporto tecnico Microsoft](https://support.microsoft.com/)
+- [Supporto Tecnico Microsoft](https://support.microsoft.com/)
 
 - [Microsoft Data Access Technical Articles Overview](/previous-versions/ms810811(v=msdn.10)) (Panoramica di articoli tecnici su Microsoft Data Access Components)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Programmazione con OLE DB](../../data/oledb/ole-db-programming.md)<br/>
-[Panoramica della programmazione con OLE DB](../../data/oledb/ole-db-programming-overview.md)
+[Programmazione OLE DB](../../data/oledb/ole-db-programming.md)<br/>
+[Panoramica della programmazione OLE DB](../../data/oledb/ole-db-programming-overview.md)

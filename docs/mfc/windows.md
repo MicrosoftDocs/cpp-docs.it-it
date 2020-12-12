@@ -1,5 +1,6 @@
 ---
-title: WINDOWS
+description: 'Altre informazioni su: Windows'
+title: Windows
 ms.date: 11/04/2016
 helpviewer_keywords:
 - objects [MFC], window
@@ -7,62 +8,62 @@ helpviewer_keywords:
 - MFC, windows
 - window objects [MFC], MFC Framework
 ms.assetid: dd92bf34-842e-40fe-8aea-3028b55314d5
-ms.openlocfilehash: ee5e6fef58b9ddfa2172b9024d414bdb03e93283
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c38dd8224fbd518fb0ebb2407ec4d03a43d90c63
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337999"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284928"
 ---
-# <a name="windows"></a>WINDOWS
+# <a name="windows"></a>Windows
 
-Questa serie di articoli illustra gli oggetti finestra nel framework MFC. Tutte le finestre MFC derivano dalla classe [CWnd](../mfc/reference/cwnd-class.md), tra cui finestre cornice, le visualizzazioni, finestre di dialogo e controlli.
+Questa famiglia di articoli illustra gli oggetti finestra nel framework MFC. Tutte le finestre MFC derivano dalla classe [CWnd](../mfc/reference/cwnd-class.md), incluse le finestre cornice, le visualizzazioni, le finestre di dialogo e i controlli.
 
-Il primo gruppo di articoli descrive [oggetti finestra](../mfc/window-objects.md) in generale. Fare riferimento a questo gruppo per informazioni generali sugli oggetti di finestra C++, sulle modalità di incapsulamento un `HWND`, e come si usarli quando si crea il proprio windows, ad esempio le finestre figlio.
+Il primo gruppo di articoli descrive in generale [gli oggetti finestra](../mfc/window-objects.md) . Fare riferimento a questo gruppo per informazioni generali sugli oggetti finestra C++, su come incapsulano `HWND` e su come usarli quando si creano finestre personalizzate, ad esempio le finestre figlio.
 
-Il secondo gruppo di articoli descrive [finestre cornice](../mfc/frame-windows.md), ovvero windows che un frame intorno al contenuto, in particolare. Fare riferimento a questo gruppo per informazioni sulle modalità di gestione di finestre cornice e il contenuto che essi frame, incluse le viste e le barre di controllo del framework MFC.
+Nel secondo gruppo di articoli viene descritta la [finestra cornice](../mfc/frame-windows.md), ovvero Windows che inserisce un frame intorno al contenuto, in particolare. Fare riferimento a questo gruppo per informazioni sul modo in cui il framework MFC gestisce le finestre cornice e il contenuto frame, incluse le barre di controllo e le visualizzazioni.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-*Argomenti sugli oggetti di Window in generale*
+*Argomenti sugli oggetti finestra in generale*
 
 - [Oggetti finestra](../mfc/window-objects.md)
 
-- [Relazione tra un C++ gestisce oggetti finestra e HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)
+- [Relazione tra un oggetto finestra C++ e handle HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)
 
-- [Classi di finestra derivate](../mfc/derived-window-classes.md)
+- [Classi di finestre derivate](../mfc/derived-window-classes.md)
 
 - [Creazione di oggetti finestra](../mfc/creating-windows.md)
 
 - [Eliminazione definitiva di oggetti finestra](../mfc/destroying-window-objects.md)
 
-- [Registrazione di "classi di finestra"](../mfc/registering-window-classes.md)
+- [Registrazione della finestra "classi"](../mfc/registering-window-classes.md)
 
 - [Uso di oggetti finestra](../mfc/working-with-window-objects.md)
 
-- [Contesti di dispositivo](../mfc/device-contexts.md): gli oggetti che rendono indipendenti dal dispositivo di disegno di Windows
+- [Contesti di dispositivo](../mfc/device-contexts.md): oggetti che rendono Windows disegno indipendente dal dispositivo
 
 - [Oggetti grafici](../mfc/graphic-objects.md): penne, pennelli, tipi di carattere, bitmap, tavolozze, aree
 
-*Argomenti sulle finestre cornice*
+*Argomenti della finestra cornice*
 
-- [Finestre cornice](../mfc/frame-windows.md): oggetti finestra che forniscono i frame
+- [Finestre cornice](../mfc/frame-windows.md): oggetti finestra che forniscono frame
 
 - [Finestre cornice e visualizzazioni](../mfc/frame-windows.md)
 
-- [Classi frame-window](../mfc/frame-window-classes.md)
+- [Classi di finestra cornice](../mfc/frame-window-classes.md)
 
-- [Stili frame-window](../mfc/frame-window-styles-cpp.md)
+- [Stili della finestra cornice](../mfc/frame-window-styles-cpp.md)
 
 - [Modifica degli stili di una finestra creata da MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)
 
-- [Operazioni di finestre cornice](../mfc/what-frame-windows-do.md)
+- [Funzione delle finestre cornice](../mfc/what-frame-windows-do.md)
 
-- [Utilizzo di finestre cornice](../mfc/using-frame-windows.md)
+- [Uso di finestre cornice](../mfc/using-frame-windows.md)
 
-- [Gestione delle finestre figlio (la finestra MDICLIENT)](../mfc/managing-mdi-child-windows.md)
+- [Gestione delle finestre MD/figlio (finestra MDICLIENT)](../mfc/managing-mdi-child-windows.md)
 
-- [Gestione dei menu, barre di controllo e tasti di scelta rapida](../mfc/managing-menus-control-bars-and-accelerators.md)
+- [Gestione di menu, barre di controllo e tasti di scelta rapida](../mfc/managing-menus-control-bars-and-accelerators.md)
 
 - [CFrameWnd](../mfc/reference/cframewnd-class.md)
 
@@ -72,42 +73,42 @@ Il secondo gruppo di articoli descrive [finestre cornice](../mfc/frame-windows.m
 
 - [Uso delle visualizzazioni](../mfc/using-views.md)
 
-- [Più tipi di documenti, visualizzazioni e Frame di Windows (finestre con separatore)](../mfc/multiple-document-types-views-and-frame-windows.md)
+- [Tipi di documenti multipli, visualizzazioni e finestre cornice (finestre con separatore)](../mfc/multiple-document-types-views-and-frame-windows.md)
 
-- [Messaggi (mappe e le funzioni del gestore)](../mfc/messages.md)
+- [Messaggi (mappe e funzioni del gestore)](../mfc/messages.md)
 
-*Creare e distruggere Windows*
+*Creare ed eliminare Windows*
 
-- [Sequenza generale di creazione finestre](../mfc/general-window-creation-sequence.md)
+- [Sequenza di creazione finestra generale](../mfc/general-window-creation-sequence.md)
 
-- [Eliminare definitivamente gli oggetti finestra](../mfc/destroying-window-objects.md)
+- [Elimina oggetti finestra](../mfc/destroying-window-objects.md)
 
-- [Creazione di finestre cornice documento](../mfc/creating-document-frame-windows.md)
+- [Creazione di finestre cornice di documento](../mfc/creating-document-frame-windows.md)
 
-- [Eliminazione di finestre cornice](../mfc/destroying-frame-windows.md)
+- [Distruggi finestre cornice](../mfc/destroying-frame-windows.md)
 
-*Creare una barra di divisione Windows*
+*Crea finestre con separatore*
 
-- [Creare le finestre con separatore](../mfc/multiple-document-types-views-and-frame-windows.md)
+- [Crea finestre con separatore](../mfc/multiple-document-types-views-and-frame-windows.md)
 
-*Gestire Windows figlio e la visualizzazione corrente*
+*Gestisci le finestre figlio e la visualizzazione corrente*
 
-- [Gestire le finestre figlio MDI](../mfc/managing-mdi-child-windows.md)
+- [Gestisci finestre figlio MDI](../mfc/managing-mdi-child-windows.md)
 
-- [Gestire la visualizzazione corrente](../mfc/managing-the-current-view.md)
+- [Gestione della visualizzazione corrente](../mfc/managing-the-current-view.md)
 
-- [Gestire i menu, barre di controllo e tasti di scelta rapida](../mfc/managing-menus-control-bars-and-accelerators.md)
+- [Gestione di menu, barre di controllo e tasti di scelta rapida](../mfc/managing-menus-control-bars-and-accelerators.md)
 
-*Usare contesti di dispositivo e gli stili di finestra*
+*Usare contesti di dispositivo e stili di finestra*
 
 - [Usare le penne e altri oggetti grafici in un contesto di dispositivo](../mfc/graphic-objects.md)
 
 - [Modificare gli stili di una finestra creata da MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Elementi dell'interfaccia utente](../mfc/user-interface-elements-mfc.md)<br/>
 [Finestre di dialogo](../mfc/dialog-boxes.md)<br/>
 [Barre degli strumenti](../mfc/toolbars.md)<br/>
 [Barre di stato](../mfc/status-bars.md)<br/>
-[Barre di finestra di dialogo](../mfc/dialog-bars.md)
+[Barre della finestra di dialogo](../mfc/dialog-bars.md)

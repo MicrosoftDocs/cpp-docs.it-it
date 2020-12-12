@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: classi e struct di valore (C++/CX)'
 title: Classi e struct di valore (C++/CX)
 ms.date: 12/30/2016
 helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-ms.openlocfilehash: 15d54d139f086ce5bb025aaeab145c71d33903c0
-ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
+ms.openlocfilehash: 25551d6215eebbdc328946bf5ba2524c875338ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94381597"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288048"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Classi e struct di valore (C++/CX)
 
@@ -147,7 +148,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Sistema di tipi (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
 [Riferimenti per il linguaggio C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>

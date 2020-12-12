@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe IDBCreateCommandImpl'
 title: Classe IDBCreateCommandImpl
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: b7b658b2b365eb84a39ae94cef7c77e18d7bd4a0
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: aaa9e84b66bd8bcb93fa418eed56a3cdadd31d6f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845549"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287346"
 ---
 # <a name="idbcreatecommandimpl-class"></a>Classe IDBCreateCommandImpl
 
@@ -46,11 +47,11 @@ Classe Command.
 
 ### <a name="interface-methods"></a>Metodi di interfaccia
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[CreateCommand](#createcommand)|Crea un nuovo comando.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Interfaccia facoltativa nell'oggetto Session per ottenere un nuovo comando.
 
@@ -76,7 +77,7 @@ Alcuni parametri corrispondono ai parametri di *riferimento di OLE DB Programmer
 |--------------------------------|------------------------------------------------|
 |*ppvCommand*|*ppCommand*|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

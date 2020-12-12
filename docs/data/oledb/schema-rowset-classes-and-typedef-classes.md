@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classi del set di righe dello schema e classi typedef'
 title: Classi Rowset dello schema e classi Typedef
 ms.date: 11/04/2016
 f1_keywords:
@@ -548,12 +549,12 @@ helpviewer_keywords:
 - TABLE_NAME
 - TABLE_SCHEMA
 ms.assetid: 4bd881b3-26ca-4bdb-9226-d67560864f29
-ms.openlocfilehash: 104f7a92cdb472fc889d44cff20982e51b955014
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5b51404642dbb6d9ad6c2236e7693137b4a949c0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509498"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286566"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Classi Rowset dello schema e classi Typedef
 
@@ -602,7 +603,7 @@ Nella tabella seguente vengono visualizzati tutti i set di righe dello schema OL
 
 Chiamare la classe typedef `CAssertions` per implementare la classe di parametri `CAssertionInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -623,7 +624,7 @@ Nella tabella seguente sono elencati i membri dati della classe per `CAssertionI
 
 Chiamare la classe typedef `CCatalogs` per implementare la classe di parametri `CCatalogInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -640,7 +641,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CCharacterSets` per implementare la classe di parametri `CCharacterSetInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -663,7 +664,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CCheckConstraints` per implementare la classe di parametri `CCheckConstraintInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -683,7 +684,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CCollations` per implementare la classe di parametri `CCollationInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -705,7 +706,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CColumnDomainUsage` per implementare la classe di parametri `CColumnDomainUsageInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -729,7 +730,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CColumnPrivileges` per implementare la classe di parametri `CColumnPrivilegeInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -754,7 +755,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CColumns` per implementare la classe di parametri `CColumnsInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -797,7 +798,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CConstraintColumnUsage` per implementare la classe di parametri `CConstraintColumnUsageInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -821,7 +822,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CConstraintTableUsage` per implementare la classe di parametri `CConstraintTableUsageInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -842,7 +843,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CForeignKeys` per implementare la classe di parametri `CForeignKeysInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -872,7 +873,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CIndexes` per implementare la classe di parametri `CIndexInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -911,7 +912,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CKeyColumns` per implementare la classe di parametri `CKeyColumnInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -936,7 +937,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CPrimaryKeys` per implementare la classe di parametri `CPrimaryKeyInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -958,7 +959,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CProcedureColumns` per implementare la classe di parametri `CProcedureColumnInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -989,7 +990,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CProcedureParameters` per implementare la classe di parametri `CProcedureParamInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -1019,7 +1020,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CProcedures` per implementare la classe di parametri `CProcedureInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -1040,7 +1041,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CProviderTypes` per implementare la classe di parametri `CProviderInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -1058,7 +1059,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 |m_szCreateParams|CREATE_PARAMS|
 |m_bIsNullable|IS_NULLABLE|
 |m_bCaseSensitive|CASE_SENSITIVE|
-|m_nSearchable|SEARCHABLE|
+|m_nSearchable|RICERCABILE|
 |m_bUnsignedAttribute|UNSIGNED_ATTRIBUTE|
 |m_bFixedPrecScale|FIXED_PREC_SCALE|
 |m_bAutoUniqueValue|AUTO_UNIQUE_VALUE|
@@ -1075,7 +1076,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CReferentialConstraints` per implementare la classe di parametri `CReferentialConstraintInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -1100,7 +1101,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CSchemata` per implementare la classe di parametri `CSchemataInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -1121,7 +1122,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CSQLLanguages` per implementare la classe di parametri `CSQLLanguageInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -1143,7 +1144,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CStatistics` per implementare la classe di parametri `CStatisticInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -1162,7 +1163,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CTableConstraints` per implementare la classe di parametri `CTableConstraintInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -1187,7 +1188,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CTablePrivileges` per implementare la classe di parametri `CTablePrivilegeInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -1209,7 +1210,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CTables` per implementare la classe di parametri `CTableInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -1230,7 +1231,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CTranslations` per implementare la classe di parametri `CTranslationInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -1254,7 +1255,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CUsagePrivileges` per implementare la classe di parametri `CUsagePrivilegeInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -1277,7 +1278,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CViewColumnUsage` per implementare la classe di parametri `CViewColumnInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -1301,7 +1302,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CViews` per implementare la classe di parametri `CViewInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -1323,7 +1324,7 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 Chiamare la classe typedef `CViewTableUsage` per implementare la classe di parametri `CViewTableInfo` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni sull'uso delle classi typedef [, vedere classi del set di righe dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
@@ -1344,6 +1345,6 @@ Nella tabella seguente sono elencati i membri dati della classe e le corrisponde
 
 **Intestazione:** Atldbsch. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CRestrictions](../../data/oledb/crestrictions-class.md)

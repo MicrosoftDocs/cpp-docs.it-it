@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: OLE DB pool di risorse e servizi'
 title: Servizi e pooling di risorse OLE DB
 ms.date: 10/29/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - OLE DB services [OLE DB]
 - OLE DB providers, resource pooling
 ms.assetid: 360c36e2-25ae-4caf-8ee7-d4a6b6898f68
-ms.openlocfilehash: 67eeffff2bf165a5ccbdbaa546ad5b9ca9a57914
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1a66a6a616ed67e70fb10fa1bf43dac634051325
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210028"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286787"
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>Servizi e pooling di risorse OLE DB
 
@@ -28,6 +29,6 @@ I provider che si connettono a un database remoto e possono rilevare se tale con
 
 Infine, l'integrazione automatica delle transazioni in genere non funziona a meno che non venga implementata allo stesso livello del pool. I provider che supportano l'integrazione automatica delle transazioni devono supportare la disabilitazione di questa integrazione esponendo la proprietà DBPROP_INIT_OLEDBSERVICES e disabilitando l'integrazione se il DBPROPVAL_OS_TXNENLISTMENT è deselezionato.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Tecniche avanzate del provider](../../data/oledb/advanced-provider-techniques.md)
+[Tecniche avanzate per i provider](../../data/oledb/advanced-provider-techniques.md)
