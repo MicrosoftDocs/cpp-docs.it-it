@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _InterlockedExchange funzioni intrinseche'
 title: Funzioni intrinseche _InterlockedExchange
 ms.date: 09/02/2019
 f1_keywords:
@@ -44,16 +45,16 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: 53c3545be5e74d802fe63f8e7c03d2a7a2b26110
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: de2f8a084cc5604051234fa9e01d5f5cc0974d74
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222002"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168046"
 ---
 # <a name="_interlockedexchange-intrinsic-functions"></a>Funzioni intrinseche _InterlockedExchange
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Genera un'istruzione atomica per impostare un valore specificato.
 
@@ -148,7 +149,7 @@ __int64 _InterlockedExchange64_rel(
 [in, out] Puntatore al valore da scambiare. La funzione imposta questa variabile su `Value` e restituisce il valore precedente.
 
 *Valore*\
-in Valore da scambiare con il valore a cui punta `Target`.
+in Valore da scambiare con il valore a cui punta `Target` .
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -156,17 +157,17 @@ Restituisce il valore iniziale a cui punta `Target`.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|Intestazione|
+|Intrinsic|Architettura|Intestazione|
 |---------------|------------------|------------|
 |`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`|x86, ARM, x64, ARM64|\<intrin.h>|
 |`_InterlockedExchange64`|ARM, x64, ARM64|\<intrin.h>|
 |`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM, ARM64|\<intrin.h>|
 |`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`|x86, x64|\<immintrin.h>|
-|`_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|X64|\<immintrin.h>|
+|`_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x64|\<immintrin.h>|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-`_InterlockedExchange`fornisce il supporto intrinseco del compilatore per la funzione Win32 Windows SDK [InterlockedExchange](/windows/win32/api/winnt/nf-winnt-interlockedexchange) .
+`_InterlockedExchange` fornisce il supporto intrinseco del compilatore per la funzione Win32 Windows SDK [InterlockedExchange](/windows/win32/api/winnt/nf-winnt-interlockedexchange) .
 
 Ci sono diverse varianti di `_InterlockedExchange` che variano in base ai tipi di dati interessati e all'uso della semantica di acquisizione o di rilascio specifica del processore.
 
@@ -180,12 +181,12 @@ Queste routine sono disponibili solo come funzioni intrinseche.
 
 ## <a name="example"></a>Esempio
 
-Per un esempio di come usare `_InterlockedExchange`, vedere [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
+Per un esempio di come usare `_InterlockedExchange` , vedere [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
-[Parole chiave](../cpp/keywords-cpp.md)\
+[Parole](../cpp/keywords-cpp.md)\
 [Conflitti con il compilatore x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

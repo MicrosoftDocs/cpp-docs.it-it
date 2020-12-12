@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __inword'
 title: __inword
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - in instruction
 - __inword intrinsic
 ms.assetid: 5c617edd-6709-40a1-aad2-40d5e39283c6
-ms.openlocfilehash: 7daaf1abd5089716061f118e30e9534e5c5c18ee
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8e2d698437cdb27a472872cfe24d7d0ab0a3c768
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79440969"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167877"
 ---
 # <a name="__inword"></a>__inword
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Legge i dati dalla porta specificata utilizzando l'istruzione `in`.
+Legge i dati dalla porta specificata utilizzando l' `in` istruzione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -31,7 +32,7 @@ unsigned short __inword(
 
 ### <a name="parameters"></a>Parametri
 
-\ *porta*
+*Porta*\
 in Porta da cui leggere.
 
 ## <a name="return-value"></a>Valore restituito
@@ -40,18 +41,18 @@ Parola di dati letti.
 
 ## <a name="requirements"></a>Requisiti
 
-|Intrinsic|Architecture|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`__inword`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questa routine è disponibile solo come funzione intrinseca.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

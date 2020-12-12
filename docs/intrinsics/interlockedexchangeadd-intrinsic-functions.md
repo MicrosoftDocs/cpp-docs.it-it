@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _InterlockedExchangeAdd funzioni intrinseche'
 title: Funzioni intrinseche _InterlockedExchangeAdd
 ms.date: 09/02/2019
 f1_keywords:
@@ -55,18 +56,18 @@ helpviewer_keywords:
 - _InterlockedExchangeAdd16_nf intrinsic
 - _InterlockedExchangeAdd64_rel intrinsic
 ms.assetid: 25809e1f-9c60-4492-9f7c-0fb59c8d13d2
-ms.openlocfilehash: a81439a4ee20e7251173fd0eb0e7ddf240a9341f
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: fa1403889aec15ba8cdaae135db2b7563636c21e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217660"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168020"
 ---
 # <a name="_interlockedexchangeadd-intrinsic-functions"></a>Funzioni intrinseche _InterlockedExchangeAdd
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Fornire il supporto intrinseco del compilatore per la funzione [_InterlockedExchangeAdd funzioni intrinseche](../intrinsics/interlockedexchangeadd-intrinsic-functions.md) Win32 Windows SDK.
+Fornire il supporto intrinseco del compilatore per la funzione di [funzioni intrinseche](../intrinsics/interlockedexchangeadd-intrinsic-functions.md) Win32 Windows SDK _InterlockedExchangeAdd.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -167,15 +168,15 @@ Il valore restituito è il valore iniziale della variabile a cui punta il parame
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|Intestazione|
+|Intrinsic|Architettura|Intestazione|
 |---------------|------------------|------------|
 |`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`|x86, ARM, x64, ARM64|\<intrin.h>|
 |`_InterlockedExchangeAdd64`|ARM, x64, ARM64|\<intrin.h>|
 |`_InterlockedExchangeAdd_acq`, `_InterlockedExchangeAdd_rel`, `_InterlockedExchangeAdd_nf`, `_InterlockedExchangeAdd8_acq`, `_InterlockedExchangeAdd8_rel`, `_InterlockedExchangeAdd8_nf`,`_InterlockedExchangeAdd16_acq`, `_InterlockedExchangeAdd16_rel`, `_InterlockedExchangeAdd16_nf`, `_InterlockedExchangeAdd64_acq`, `_InterlockedExchangeAdd64_rel`, `_InterlockedExchangeAdd64_nf`|ARM, ARM64|\<intrin.h>|
 |`_InterlockedExchangeAdd_HLEAcquire`, `_InterlockedExchangeAdd_HLERelease`|x86, x64|\<immintrin.h>|
-|`_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|X64|\<immintrin.h>|
+|`_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|x64|\<immintrin.h>|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Ci sono diverse varianti di `_InterlockedExchangeAdd` che variano in base ai tipi di dati interessati e all'uso della semantica di acquisizione o di rilascio specifica del processore.
 
@@ -189,12 +190,12 @@ Queste routine sono disponibili solo come funzioni intrinseche. Sono intrinseci 
 
 ## <a name="example"></a>Esempio
 
-Per un esempio di come usare `_InterlockedExchangeAdd`, vedere [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
+Per un esempio di come usare `_InterlockedExchangeAdd` , vedere [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
-[Parole chiave](../cpp/keywords-cpp.md)\
+[Parole](../cpp/keywords-cpp.md)\
 [Conflitti con il compilatore x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
