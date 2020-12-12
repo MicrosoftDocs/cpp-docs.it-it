@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CDBErrorInfo'
 title: Classe CDBErrorInfo
 ms.date: 11/04/2016
 f1_keywords:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - GetErrorParameters method
 - GetErrorRecords method
 ms.assetid: 9a5c18a2-ee3e-40f5-ab4c-581288d7f737
-ms.openlocfilehash: d8fa41b3a06acb8f28334658f2494295593b99be
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: fe57963e5964403c6b17b6b41dc7ae5f77063f50
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502519"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170854"
 ---
 # <a name="cdberrorinfo-class"></a>Classe CDBErrorInfo
 
@@ -63,7 +64,7 @@ class CDBErrorInfo
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[GetAllErrorInfo](#getallerrorinfo)|Restituisce tutte le informazioni sull'errore contenute in un record di errore.|
 |[GetBasicErrorInfo](#getbasicerrorinfo)|Chiama [IErrorRecords:: GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) per restituire informazioni di base sull'errore specificato.|
@@ -72,7 +73,7 @@ class CDBErrorInfo
 |[GetErrorParameters](#geterrorparameters)|Chiama [IErrorRecords:: GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) per restituire i parametri di errore.|
 |[GetErrorRecords](#geterrorrecords)|Ottiene i record di errore per l'oggetto specificato.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questa interfaccia restituisce uno o più record di errore all'utente. Chiamare prima [CDBErrorInfo:: GetErrorRecords](#geterrorrecords) per ottenere un conteggio dei record degli errori. Chiamare quindi una delle funzioni di accesso, ad esempio [CDBErrorInfo:: GetAllErrorInfo](#getallerrorinfo), per recuperare le informazioni sull'errore per ogni record.
 
@@ -118,7 +119,7 @@ out Puntatore a una stringa contenente il percorso del file della Guida in cui v
 
 S_OK, in caso di esito positivo. Per altri valori restituiti, vedere [IErrorRecords:: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore di output di *pbstrDescription* viene ottenuto internamente chiamando `IErrorInfo::GetDescription` , che imposta il valore su null se le impostazioni locali non sono supportate o se si verificano entrambe le condizioni seguenti:
 
@@ -231,11 +232,11 @@ out Puntatore al numero di record degli errori (in base uno).
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Utilizzare il primo form della funzione se si desidera controllare l'interfaccia da cui ottenere le informazioni sull'errore. In caso contrario, utilizzare il secondo formato.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

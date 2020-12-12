@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CEnumerator'
 title: Classe CEnumerator
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: dfc358c06179d50cbf6442863fd2ed2c533cd00a
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1d66afad29bd9fd785f5bc4e75a72605232af41c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498544"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170646"
 ---
 # <a name="cenumerator-class"></a>Classe CEnumerator
 
@@ -48,13 +49,13 @@ class CEnumerator :
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[Find](#find)|Esegue una ricerca attraverso i provider disponibili (origini dati) per cercare un elemento con il nome specificato.|
 |[GetMoniker](#getmoniker)|Recupera l'interfaccia `IMoniker` per il record corrente.|
 |[Apri](#open)|Apre l'enumeratore.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 È possibile recuperare i `ISourcesRowset` dati indirettamente da questa classe.
 
@@ -77,7 +78,7 @@ in Nome da cercare.
 
 **`true`** Se il nome è stato trovato. In caso contrario, **`false`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo nome esegue il mapping al `SOURCES_NAME` membro dell'interfaccia [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) .
 
@@ -135,7 +136,7 @@ in Riferimento a un enumeratore.
 
 Valore HRESULT standard.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

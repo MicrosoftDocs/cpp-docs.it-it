@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: compilazione di una casella di riepilogo da un secondo recordset (accesso ai dati MFC)'
 title: Compilazione di una casella di riepilogo da un secondo recordset (accesso ai dati MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - combo boxes [C++], filling from second recordset
 - CListCtrl class, filling from second recordset
 ms.assetid: 360c0834-da6b-4dc0-bcea-80e9acd611f0
-ms.openlocfilehash: 8664e98c6668568918cc0e6504a38119d2e71428
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b912511512b42e15e98a35836758ba37bf4cb989
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81336930"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170906"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>Compilazione di una casella di riepilogo da un secondo recordset (accesso ai dati MFC)
 
@@ -34,7 +35,7 @@ Il modello per questo argomento è costituito da un recordset primario che inser
 
 1. Eliminare eventuali dati già presenti nella casella combinata.
 
-1. Spostarsi tra tutti i record del recordset, chiamando [CComboBox::AddString](../mfc/reference/ccombobox-class.md#addstring) per ogni stringa dal record corrente che si desidera aggiungere alla casella combinata.
+1. Spostarsi tra tutti i record del recordset, chiamando [CComboBox:: AddString](../mfc/reference/ccombobox-class.md#addstring) per ogni stringa del record corrente che si desidera aggiungere alla casella combinata.
 
 1. Inizializzare la selezione nella casella combinata.
 
@@ -68,7 +69,7 @@ Questa funzione usa un secondo recordset denominato `m_courseSet`, che contiene 
 
 La funzione ottiene `m_courseSet` dal documento e lo apre. Elimina quindi il contenuto di `m_ctlCourseList` e scorre il contenuto di `m_courseSet`. Per ciascun record, la funzione chiama la funzione membro `AddString` della casella combinata per aggiungere l'ID del corso ottenuto dal record. Infine, il codice impostata la selezione della casella combinata.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Visualizzazioni di record (accesso ai dati MFC)](../data/record-views-mfc-data-access.md)<br/>
-[Elenco driver ODBC](../data/odbc/odbc-driver-list.md)
+[Elenco di driver ODBC](../data/odbc/odbc-driver-list.md)

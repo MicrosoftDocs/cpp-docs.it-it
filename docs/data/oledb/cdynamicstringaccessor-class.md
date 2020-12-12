@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Classe CDynamicStringAccessor'
 title: Classe CDynamicStringAccessor
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: 891c80a7c21fd046fba393b494ed6d84f731db6f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 89ad306242c5fa0a01b0f14673382fade8df128c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498673"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170711"
 ---
 # <a name="cdynamicstringaccessor-class"></a>Classe CDynamicStringAccessor
 
@@ -38,12 +39,12 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[GetString](#getstring)|Recupera i dati specificati di colonna come stringa.|
 |[SetString](#setstring)|Imposta i dati specificati di colonna come stringa.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Mentre [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) richiede i dati nel formato nativo segnalato dal provider, `CDynamicStringAccessor` richiede che il provider recuperi tutti i dati a cui si accede dall'archivio dati come dati di stringa. Questa operazione è particolarmente utile per le attività semplici che non richiedono il calcolo dei valori nell'archivio dati, ad esempio la visualizzazione o la stampa del contenuto dell'archivio dati.
 
@@ -81,7 +82,7 @@ in Puntatore a una stringa di caratteri che contiene il nome della colonna.
 
 Puntatore al valore stringa recuperato dalla colonna specificata. Il valore è di tipo `BaseType` , che sarà **char** o **WCHAR** a seconda che _UNICODE sia definito o meno. Restituisce NULL se la colonna specificata non viene trovata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il secondo modulo di sostituzione accetta il nome della colonna come stringa ANSI. Il terzo modulo di sostituzione accetta il nome della colonna come stringa Unicode.
 
@@ -117,13 +118,13 @@ in Puntatore ai dati stringa da scrivere nella colonna specificata.
 
 Puntatore al valore stringa in cui impostare la colonna specificata. Il valore è di tipo `BaseType` , che sarà **char** o **WCHAR** a seconda che _UNICODE sia definito o meno.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il secondo modulo di sostituzione accetta il nome della colonna come stringa ANSI e il terzo modulo di sostituzione accetta il nome della colonna come stringa Unicode.
 
 Se _SECURE_ATL è definito per avere un valore diverso da zero, verrà generato un errore di asserzione di runtime se la stringa di *dati* di input supera la lunghezza massima consentita della colonna di dati a cui si fa riferimento. In caso contrario, la stringa di input verrà troncata se supera la lunghezza massima consentita.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

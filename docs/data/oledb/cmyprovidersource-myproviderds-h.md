@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: CCustomSource (CustomDS. h)'
 title: CCustomSource (CustomDS.H)
 ms.date: 10/22/2018
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - CMyProviderSource class in MyProviderDS.H
 - CCustomSource class in CustomDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
-ms.openlocfilehash: 8e92c30e8d62ade095167880917ad70da8e59b36
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 6fbb9fe0676521b01caa3bba5f5bb2be03d0fe6f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742918"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170438"
 ---
 # <a name="ccustomsource-customdsh"></a>CCustomSource (CustomDS. h)
 
@@ -153,7 +154,7 @@ Se si desidera modificare il valore predefinito di una proprietà (si noti che u
 
 Se si desidera definire un set di proprietà personalizzato, è possibile aggiungerne uno creando una combinazione BEGIN_PROPSET_MAP/END_PROPSET_MAP aggiuntiva. Definire un GUID per il set di proprietà e quindi definire le proprie proprietà. Se si dispone di proprietà specifiche del provider, aggiungerle a un nuovo set di proprietà anziché utilizzarne una esistente. In questo modo si evitano problemi nelle versioni successive di OLE DB.
 
-## <a name="user-defined-property-sets"></a>Set di proprietà definiti dall'utente
+## <a name="user-defined-property-sets"></a>Set di proprietà User-Defined
 
 Visual C++ supporta i set di proprietà definiti dall'utente. Non è necessario eseguire l'override di `GetProperties` o `GetPropertyInfo` . Al contrario, i modelli rilevano qualsiasi set di proprietà definito dall'utente e lo aggiungono all'oggetto appropriato.
 
@@ -167,4 +168,4 @@ END_PROPERTY_SET_EX(DBPROPSET_MYPROPSET)
 
 ## <a name="see-also"></a>Vedere anche
 
-[File generati dalla procedura guidata del provider](../../data/oledb/provider-wizard-generated-files.md)<br/>
+[File di Wizard-Generated del provider](../../data/oledb/provider-wizard-generated-files.md)<br/>

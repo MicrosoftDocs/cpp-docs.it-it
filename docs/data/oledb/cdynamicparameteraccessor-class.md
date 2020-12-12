@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CDynamicParameterAccessor'
 title: CDynamicParameterAccessor (classe)
 ms.date: 02/14/2018
 f1_keywords:
@@ -90,12 +91,12 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-ms.openlocfilehash: 4596f5181dd197b16786ee4d4d16cf06721b13b6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5470ced8b4479124f0db3878fe2562a658547f9f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498651"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170776"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor (classe)
 
@@ -115,7 +116,7 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[CDynamicParameterAccessor](#cdynamicparameteraccessor)|Costruttore.|
 |[GetParam](#getparam)|Recupera i dati del parametro dal buffer.|
@@ -131,7 +132,7 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 |[SetParamStatus](#setparamstatus)|Imposta lo stato del parametro specificato archiviato nel buffer.|
 |[SetParamString](#setparamstring)|Imposta i dati string del parametro specificato archiviato nel buffer.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il provider deve supportare `ICommandWithParameters` in modo che il consumer usi questa classe.
 
@@ -161,7 +162,7 @@ Specifica il modo in cui devono essere gestiti i dati BLOB. Il valore predefinit
 *nBlobSize*<br/>
 Dimensioni massime del BLOB in byte; i dati della colonna su questo valore vengono considerati come un BLOB. Il valore predefinito è 8.000. Per informazioni dettagliate, vedere [CDynamicAccessor:: SetBlobSizeLimit](./cdynamicaccessor-class.md#setblobsizelimit) .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni sulla gestione dei BLOB, vedere il costruttore [CDynamicAccessor:: CDynamicAccessor](./cdynamicaccessor-class.md#cdynamicaccessor) .
 
@@ -271,7 +272,7 @@ DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
 *pLength*<br/>
 [out] Puntatore alla variabile contenente la lunghezza in byte del parametro specificato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo override restituisce **`true`** in caso di esito positivo o **`false`** negativo. Il secondo override punta alla memoria che contiene la lunghezza del parametro.
 
@@ -313,9 +314,9 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 [in] Numero di parametro (offset da 1). Il parametro 0 è riservato ai valori restituiti. Il numero di parametro è l'indice del parametro in base al relativo ordine nella chiamata SQL o nella chiamata della stored procedure. Per un esempio, vedere [separar](#setparam) .
 
 *pStatus*<br/>
-out Puntatore alla variabile che contiene lo stato DBSTATUS del parametro specificato. Per informazioni sui valori DBSTATUS, vedere [lo stato](/previous-versions/windows/desktop/ms722617(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*o cercare DBSTATUS in OLEDB. h.
+out Puntatore alla variabile che contiene lo stato DBSTATUS del parametro specificato. Per informazioni sui valori DBSTATUS, vedere [lo stato](/previous-versions/windows/desktop/ms722617(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* o cercare DBSTATUS in OLEDB. h.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo override restituisce **`true`** in caso di esito positivo o **`false`** negativo. Il secondo override punta alla memoria che contiene lo stato del parametro specificato.
 
@@ -357,7 +358,7 @@ out Puntatore ai dati stringa ANSI (**char**) o Unicode (**WCHAR**) del parametr
 *pMaxLen*<br/>
 out Puntatore alla dimensione del buffer a cui punta *pbuffer* (in caratteri, incluso il carattere null di terminazione).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Restituisce **`true`** in caso di esito positivo o **`false`** negativo.
 
@@ -425,7 +426,7 @@ in Nome del parametro.
 in Puntatore alla memoria contenente i dati da scrivere nel buffer.
 
 *Stato*<br/>
-in Stato della colonna DBSTATUS. Per informazioni sui valori DBSTATUS, vedere [lo stato](/previous-versions/windows/desktop/ms722617(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*o cercare DBSTATUS in OLEDB. h.
+in Stato della colonna DBSTATUS. Per informazioni sui valori DBSTATUS, vedere [lo stato](/previous-versions/windows/desktop/ms722617(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* o cercare DBSTATUS in OLEDB. h.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -452,7 +453,7 @@ bool SetParamLength(DBORDINAL nParam,
 *length*<br/>
 in Lunghezza in byte del parametro specificato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Restituisce **`true`** in caso di esito positivo o **`false`** negativo.
 
@@ -473,9 +474,9 @@ bool SetParamStatus(DBORDINAL nParam,
 [in] Numero di parametro (offset da 1). Il parametro 0 è riservato ai valori restituiti. Il numero di parametro è l'indice del parametro in base al relativo ordine nella chiamata SQL o nella chiamata della stored procedure. Per un esempio, vedere [separar](#setparam) .
 
 *Stato*<br/>
-in Stato DBSTATUS del parametro specificato. Per informazioni sui valori DBSTATUS, vedere [lo stato](/previous-versions/windows/desktop/ms722617(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*o cercare DBSTATUS in OLEDB. h.
+in Stato DBSTATUS del parametro specificato. Per informazioni sui valori DBSTATUS, vedere [lo stato](/previous-versions/windows/desktop/ms722617(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* o cercare DBSTATUS in OLEDB. h.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Restituisce **`true`** in caso di esito positivo o **`false`** negativo.
 
@@ -502,9 +503,9 @@ bool SetParamString(DBORDINAL nParam,
 in Puntatore ai dati stringa ANSI (**char**) o Unicode (**WCHAR**) del parametro specificato. Vedere DBSTATUS in OLEDB. h.
 
 *Stato*<br/>
-in Stato DBSTATUS del parametro specificato. Per informazioni sui valori DBSTATUS, vedere [lo stato](/previous-versions/windows/desktop/ms722617(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*o cercare DBSTATUS in OLEDB. h.
+in Stato DBSTATUS del parametro specificato. Per informazioni sui valori DBSTATUS, vedere [lo stato](/previous-versions/windows/desktop/ms722617(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* o cercare DBSTATUS in OLEDB. h.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Restituisce **`true`** in caso di esito positivo o **`false`** negativo.
 
@@ -512,7 +513,7 @@ Restituisce **`true`** in caso di esito positivo o **`false`** negativo.
 
 Utilizzare `SetParamString` per impostare i dati dei parametri di stringa nel buffer. Utilizzare [separator](#setparam) per impostare dati di parametri non stringa nel buffer.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

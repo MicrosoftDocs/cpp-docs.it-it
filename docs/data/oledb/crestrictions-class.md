@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CRestrictions'
 title: Classe CRestrictions
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: a380f1ba00dcc444099f186071b7d55c9db71291
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 28eee2ea8d7e3b28edaab745c48426c878cc2f2d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844964"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170282"
 ---
 # <a name="crestrictions-class"></a>Classe CRestrictions
 
@@ -51,7 +52,7 @@ Puntatore al GUID per lo schema.
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[Apri](#open)|Restituisce un set di risultati in base alle restrizioni fornite dall'utente.|
 
@@ -88,13 +89,13 @@ in Specifica se associare automaticamente la mappa delle colonne. Il valore pred
 
 Uno dei valori HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È possibile specificare un massimo di sette restrizioni per un set di righe dello schema.
 
 Per informazioni sulle restrizioni definite su ogni set di righe dello schema, vedere [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

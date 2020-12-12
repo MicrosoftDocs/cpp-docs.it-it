@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Classe CEnumeratorAccessor'
 title: Classe CEnumeratorAccessor
 ms.date: 11/04/2016
 f1_keywords:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - m_szName
 - m_szParseName
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-ms.openlocfilehash: 0b4baa4671a013699e51a9ab28c002a680dfcd61
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f37de34c508487f3ee54f47db1b0a64df8a97b25
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838139"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170568"
 ---
 # <a name="cenumeratoraccessor-class"></a>Classe CEnumeratorAccessor
 
@@ -60,7 +61,7 @@ class CEnumeratorAccessor
 
 ### <a name="data-members"></a>Membri dei dati
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[m_bIsParent](#bisparent)|Variabile che indica se l'enumeratore è un enumeratore padre, se la riga è un enumeratore.|
 |[m_nType](#ntype)|Variabile che indica se la riga descrive un'origine dati o un enumeratore.|
@@ -68,7 +69,7 @@ class CEnumeratorAccessor
 |[m_szName](#szname)|Nome dell'origine dati o dell'enumeratore.|
 |[m_szParseName](#szparsename)|Stringa da passare a [IParseDisplayName](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname) per ottenere un moniker per l'enumeratore o l'origine dati.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questo set di righe è costituito dalle origini dati e dagli enumeratori visibili dall'enumeratore corrente.
 
@@ -142,7 +143,7 @@ WCHAR m_szParseName[129];
 
 Per ulteriori informazioni, vedere [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

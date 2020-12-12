@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: CCustomRowset (Customers. H)'
 title: CCustomRowset (CustomRS.H)
 ms.date: 10/22/2018
 f1_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - CMyProviderRowset class in MyProviderRS.H
 - CCustomRowset class in CustomRS.H
 ms.assetid: 7ba1a124-3842-40eb-a36b-302190a1af3a
-ms.openlocfilehash: 8e90db287bc7ac8994914766045eb210446dfd48
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 87025be2a34f8c850bde2be53ab01519968654d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079787"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170464"
 ---
 # <a name="ccustomrowset-customrsh"></a>CCustomRowset (CustomRS.H)
 
-La procedura guidata genera una voce per l'oggetto set di righe. In questo caso, viene chiamato `CCustomRowset`. La classe `CCustomRowset` eredita da una classe di provider OLE DB denominata `CRowsetImpl`, che implementa tutte le interfacce necessarie per l'oggetto set di righe. Il codice seguente mostra la catena di ereditarietà per `CRowsetImpl`:
+La procedura guidata genera una voce per l'oggetto set di righe. In questo caso, viene chiamato `CCustomRowset` . La `CCustomRowset` classe eredita da una classe di provider OLE DB denominata `CRowsetImpl` , che implementa tutte le interfacce necessarie per l'oggetto set di righe. Il codice seguente mostra la catena di ereditarietà per `CRowsetImpl` :
 
 ```cpp
 template <class T, class Storage, class CreatorClass,
@@ -28,14 +29,14 @@ class CMyRowsetImpl:
       CSimpleRow, IRowsetLocateImpl< T >>
 ```
 
-`CRowsetImpl` usa anche le interfacce `IAccessor` e `IColumnsInfo`. Usa queste interfacce per i campi di output nelle tabelle. La classe fornisce anche un'implementazione per `IRowsetIdentity`, che consente al consumer di determinare se due righe sono uguali. L'interfaccia `IRowsetInfo` implementa le proprietà per l'oggetto set di righe. L'interfaccia `IConvertType` consente al provider di risolvere le differenze tra i tipi di dati richiesti dal consumer e quelli utilizzati dal provider.
+`CRowsetImpl` USA anche le `IAccessor` `IColumnsInfo` interfacce e. Usa queste interfacce per i campi di output nelle tabelle. La classe fornisce anche un'implementazione per `IRowsetIdentity` , che consente al consumer di determinare se due righe sono uguali. L' `IRowsetInfo` interfaccia implementa le proprietà per l'oggetto set di righe. L' `IConvertType` interfaccia consente al provider di risolvere le differenze tra i tipi di dati richiesti dal consumer e quelli utilizzati dal provider.
 
-L'interfaccia `IRowset` gestisce effettivamente il recupero dei dati. Il consumer chiama innanzitutto un metodo denominato `GetNextRows` per restituire un handle a una riga, noto come `HROW`. Il consumer chiama quindi `IRowset::GetData` con tale `HROW` per recuperare i dati richiesti.
+L' `IRowset` interfaccia gestisce effettivamente il recupero dei dati. Il consumer chiama innanzitutto un metodo chiamato `GetNextRows` per restituire un handle a una riga, noto come `HROW` . Il consumer chiama quindi `IRowset::GetData` con tale oggetto `HROW` per recuperare i dati richiesti.
 
-`CRowsetImpl` inoltre accetta diversi parametri di modello. Questi parametri consentono di determinare il modo in cui la classe `CRowsetImpl` gestisce i dati. L'argomento `ArrayType` consente di determinare il meccanismo di archiviazione utilizzato per archiviare i dati delle righe. Il parametro *RowClass* specifica la classe che contiene un `HROW`.
+`CRowsetImpl` accetta inoltre diversi parametri di modello. Questi parametri consentono di determinare il modo in cui la `CRowsetImpl` classe gestisce i dati. L' `ArrayType` argomento consente di determinare il meccanismo di archiviazione utilizzato per archiviare i dati delle righe. Il parametro *RowClass* specifica la classe che contiene un oggetto `HROW` .
 
-Il parametro *RowsetInterface* consente inoltre di utilizzare l'interfaccia `IRowsetLocate` o `IRowsetScroll`. Le interfacce `IRowsetLocate` e `IRowsetScroll` ereditano entrambe da `IRowset`. Pertanto, i modelli di provider OLE DB devono fornire una gestione speciale per queste interfacce. Se si desidera utilizzare una di queste interfacce, è necessario utilizzare questo parametro.
+Il parametro *RowsetInterface* consente anche di usare l' `IRowsetLocate` interfaccia o `IRowsetScroll` . Le `IRowsetLocate` `IRowsetScroll` interfacce e ereditano entrambe da `IRowset` . Pertanto, i modelli di provider OLE DB devono fornire una gestione speciale per queste interfacce. Se si desidera utilizzare una di queste interfacce, è necessario utilizzare questo parametro.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[File del provider generati tramite procedura guidata](../../data/oledb/provider-wizard-generated-files.md)<br/>
+[File di Wizard-Generated del provider](../../data/oledb/provider-wizard-generated-files.md)<br/>

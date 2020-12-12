@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CDynamicAccessor'
 title: Classe CDynamicAccessor
 ms.date: 11/04/2016
 f1_keywords:
@@ -124,12 +125,12 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: 31cc996b8beedadf9cba5a46b3b4da20e19268b0
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2cb5c23ef72bafc85b4300707eb6c5ffe33314f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498676"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170802"
 ---
 # <a name="cdynamicaccessor-class"></a>Classe CDynamicAccessor
 
@@ -149,7 +150,7 @@ class CDynamicAccessor : public CAccessorBase
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[AddBindEntry](#addbindentry)|Aggiunge una voce di binding alle colonne di output quando si esegue l'override della funzione di accesso predefinita.|
 |[CDynamicAccessor](#cdynamicaccessor)|Crea un'istanza dell'oggetto e lo inizializza `CDynamicAccessor` .|
@@ -172,7 +173,7 @@ class CDynamicAccessor : public CAccessorBase
 |[SetStatus](#setstatus)|Imposta lo stato di una colonna specificata.|
 |[SetValue](#setvalue)|Archivia i dati nel buffer.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Usare `CDynamicAccessor` i metodi per ottenere informazioni sulle colonne, ad esempio i nomi delle colonne, il numero di colonne, il tipo di dati e così via. Queste informazioni sulla colonna vengono quindi usate per creare una funzione di accesso dinamicamente in fase di esecuzione.
 
@@ -192,14 +193,14 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 
 #### <a name="parameters"></a>Parametri
 
-*informazioni*<br/>
+*info*<br/>
 in `DBCOLUMNINFO` Struttura che contiene le informazioni sulle colonne. Vedere "strutture DBCOLUMNINFO" in [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) nella Guida *di riferimento per programmatori OLE DB*.
 
 ### <a name="return-value"></a>Valore restituito
 
 Uno dei valori HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questo metodo quando si esegue l'override della funzione di accesso predefinita creata con `CDynamicAccessor` (vedere [come si recuperano i dati?](../../data/oledb/fetching-data.md)).
 
@@ -222,7 +223,7 @@ Specifica il modo in cui devono essere gestiti i dati BLOB (Binary Large Object)
 *nBlobSize*<br/>
 Dimensioni massime del BLOB in byte; i dati della colonna su questo valore vengono considerati come un BLOB. Il valore predefinito è 8.000. Per informazioni dettagliate, vedere [SetBlobSizeLimit](#setblobsizelimit) .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se si usa il costruttore per inizializzare l' `CDynamicAccessor` oggetto, è possibile specificare come verrà associato il BLOB. I BLOB possono contenere dati binari, ad esempio grafica, audio o codice compilato. Il comportamento predefinito consiste nel considerare le colonne più di 8.000 byte come BLOB e provare a associarle a un `ISequentialStream` oggetto. È tuttavia possibile specificare un valore diverso per la dimensione del BLOB.
 
@@ -285,7 +286,7 @@ out Puntatore all'oggetto [CBookmark](../../data/oledb/cbookmark-class.md) .
 
 Uno dei valori HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È necessario impostare `DBPROP_IRowsetLocate` su VARIANT_TRUE per recuperare un segnalibro.
 
@@ -326,7 +327,7 @@ out Puntatore a una maschera di maschera che descrive le caratteristiche della c
 
 Restituisce **`true`** se le caratteristiche della colonna vengono recuperate correttamente. In caso contrario, restituisce **`false`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il numero di colonna è offset rispetto a uno. La colonna zero è un caso speciale. è il segnalibro, se disponibile.
 
@@ -361,7 +362,7 @@ out Puntatore alla memoria in cui restituire un puntatore alla risorsa di archiv
 
 Uno dei valori HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per informazioni sui tipi di dati, e, vedere [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) nella Guida *di riferimento per i programmatori OLE DB* `DBORDINAL` `DBCOLUMNINFO` `OLECHAR` .
 
@@ -439,7 +440,7 @@ out Puntatore al valore integer contenente la lunghezza della colonna in byte.
 
 Restituisce **`true`** se viene trovata la colonna specificata. In caso contrario, questa funzione restituisce **`false`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo override accetta il numero di colonna e il secondo e il terzo override accettano rispettivamente il nome della colonna nel formato ANSI o Unicode.
 
@@ -544,7 +545,7 @@ Se si desidera passare dati stringa, utilizzare le versioni non basate su modell
 
 Per tutti gli altri tipi di dati, è più semplice usare le versioni basate su modelli di `GetValue` . Le versioni basate su modelli restituiscono **`true`** in caso di esito positivo o **`false`** negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare le versioni non basate su modelli per restituire le colonne che contengono stringhe e le versioni basate su modelli per le colonne che contengono altri tipi di dati.
 
@@ -571,7 +572,7 @@ Specifica il modo in cui devono essere gestiti i dati BLOB. I valori possibili s
 
 - DBBLOBHANDLING_SKIP: ignorare (non associare) le colonne che si qualificano come contenenti BLOB (la funzione di accesso non associa o Recupera il valore della colonna, ma recupererà comunque lo stato e la lunghezza della colonna).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È consigliabile chiamare `SetBlobHandling` prima di chiamare `Open`.
 
@@ -592,7 +593,7 @@ void SetBlobSizeLimit(DBLENGTH nBlobSize);
 *nBlobSize*<br/>
 Specifica il limite della dimensione del BLOB.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Imposta la dimensione massima in byte del BLOB. i dati di colonna maggiori di questo valore vengono considerati come un BLOB. Alcuni provider offrono dimensioni estremamente elevate per le colonne (ad esempio 2 GB). Invece di tentare di allocare memoria per una colonna di questa dimensione, in genere si tenterà di associare tali colonne come BLOB. In questo modo non è necessario allocare tutta la memoria, ma è comunque possibile leggere tutti i dati senza temere il troncamento. In alcuni casi, tuttavia, potrebbe essere necessario forzare `CDynamicAccessor` l'associazione di colonne di grandi dimensioni nei tipi di dati nativi. A tale scopo, chiamare `SetBlobSizeLimit` prima di chiamare `Open` .
 
@@ -705,7 +706,7 @@ Se si desidera impostare dati stringa, utilizzare le versioni non basate su mode
 
 Per tutti gli altri tipi di dati, è più semplice usare le versioni basate su modelli di `GetValue` . Le versioni basate su modelli restituiscono **`true`** in caso di esito positivo o **`false`** negativo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

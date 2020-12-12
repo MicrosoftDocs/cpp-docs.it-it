@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CManualAccessor'
 title: Classe CManualAccessor
 ms.date: 11/04/2016
 f1_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 24938812ea254fe0150cbabf58dd72bf45ebd0a1
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3d625a9a02431445cc1505c6a3f7e9673a04201d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504097"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170555"
 ---
 # <a name="cmanualaccessor-class"></a>Classe CManualAccessor
 
@@ -55,14 +56,14 @@ class CManualAccessor : public CAccessorBase
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[AddBindEntry](#addbindentry)|Aggiunge una voce di associazione alle colonne di output.|
 |[AddParameterEntry](#addparameterentry)|Aggiunge una voce di parametro alla funzione di accesso del parametro.|
 |[CreateAccessor](#createaccessor)|Alloca memoria per le strutture di associazione di colonna e inizializza i membri dati della colonna.|
 |[CreateParameterAccessor](#createparameteraccessor)|Alloca la memoria per le strutture di associazione dei parametri e inizializza i membri dati del parametro.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Utilizzando `CManualAccessor` è possibile specificare il parametro e l'associazione della colonna di output per le chiamate di funzione di run-time.
 
@@ -102,7 +103,7 @@ in Puntatore alla lunghezza del campo, se necessario.
 *pStatus*<br/>
 in Puntatore alla variabile da associare allo stato della colonna, se necessario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per usare questa funzione, è necessario chiamare prima [CreateAccessor](#createaccessor). Non è possibile aggiungere più voci rispetto al numero di colonne specificato in `CreateAccessor` .
 
@@ -146,7 +147,7 @@ in Puntatore alla variabile da associare allo stato della colonna, se necessario
 *eParamIO*<br/>
 in Specifica se il parametro a cui è associata l'associazione è un parametro di input, di input/output o di output.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per usare questa funzione, è necessario chiamare prima [CreateParameterAccessor](#createparameteraccessor).
 
@@ -177,7 +178,7 @@ in Dimensione del buffer in byte.
 
 Uno dei valori HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamare questa funzione prima di chiamare la `CManualAccessor::AddBindEntry` funzione.
 
@@ -208,11 +209,11 @@ in Dimensione del buffer in byte.
 
 Uno dei valori HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È necessario chiamare questa funzione prima di chiamare [AddParameterEntry](#addparameterentry).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
