@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 1) C4540'
 title: Avviso del compilatore (livello 1) C4540
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4540
 ms.assetid: 8085e748-5f4d-43c2-b06d-eaf794edbf72
-ms.openlocfilehash: 13935e7eebdf3e7b7e89fad8c55d410cf2788e4d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8bd65d09abf48fc3653f160ebdf109235f3e1471
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230649"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97212259"
 ---
 # <a name="compiler-warning-level-1-c4540"></a>Avviso del compilatore (livello 1) C4540
 

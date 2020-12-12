@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _pctype, _pwctype, _wctype, _mbctype _mbcasemap'
 title: _pctype, _pwctype, _wctype, _mbctype, _mbcasemap
 ms.date: 11/04/2016
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - mbctype function
 - _mbcasemap function
 ms.assetid: 7f5e1107-c43b-4b9b-b387-781e6d2373cb
-ms.openlocfilehash: 8ffb46dc410bc1397e3d592f68339b4a58dae86c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4122d282b3b205af3d6fb67f9755f9c13c4bb5e2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939972"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213455"
 ---
 # <a name="_pctype-_pwctype-_wctype-_mbctype-_mbcasemap"></a>_pctype, _pwctype, _wctype, _mbctype, _mbcasemap
 
@@ -67,7 +68,7 @@ extern unsigned char _mbctype[];
 extern unsigned char _mbcasemap[];
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Le informazioni in `_pctype`, `_pwctype` e `_wctype` sono usate internamente dalle funzioni [isupper, _isupper_l, iswupper, _iswupper_l](../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md), [islower, iswlower, _islower_l, _iswlower_l](../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md), [isdigit, iswdigit, _isdigit_l, _iswdigit_l](../c-runtime-library/reference/isdigit-iswdigit-isdigit-l-iswdigit-l.md), [isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l](../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md), [isspace, iswspace, _isspace_l, _iswspace_l](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md), [isalnum, iswalnum, _isalnum_l, _iswalnum_l](../c-runtime-library/reference/isalnum-iswalnum-isalnum-l-iswalnum-l.md), [ispunct, iswpunct, _ispunct_l, _iswpunct_l](../c-runtime-library/reference/ispunct-iswpunct-ispunct-l-iswpunct-l.md), [isgraph, iswgraph, _isgraph_l, _iswgraph_l](../c-runtime-library/reference/isgraph-iswgraph-isgraph-l-iswgraph-l.md), [iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l](../c-runtime-library/reference/iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md), [toupper, _toupper, towupper, _toupper_l, _towupper_l](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md), [tolower, _tolower, towlower, _tolower_l e _towlower_l](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md). Devono essere utilizzate queste funzioni anziché accedere a queste variabili globali.
 
@@ -77,7 +78,7 @@ Le informazioni in `_mbctype` e `_mbcasemap` sono usate internamente da [_ismbbk
 
 Non per uso pubblico.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Routine is, isw](../c-runtime-library/is-isw-routines.md)<br/>
+[is, ISW routines](../c-runtime-library/is-isw-routines.md)<br/>
 [__pctype_func](../c-runtime-library/pctype-func.md)

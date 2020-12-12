@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler'
 title: _get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - _get_thread_local_invalid_parameter_handler function
 - _get_invalid_parameter_handler function
 ms.assetid: a176da0e-38ca-4d99-92bb-b0e2b8072f53
-ms.openlocfilehash: 27e42c9f3f570b24df8fa2a26798b3dc3fa326b3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ecb39588ea2776d661f391596d3f482628eddd7a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909887"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213377"
 ---
 # <a name="_get_invalid_parameter_handler-_get_thread_local_invalid_parameter_handler"></a>_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler
 
@@ -54,7 +55,7 @@ _invalid_parameter_handler _get_thread_local_invalid_parameter_handler(void);
 
 Un puntatore alla funzione del gestore di parametri non validi o un puntatore Null se non è stata impostata.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_get_invalid_parameter_handler** ottiene il gestore di parametri non validi attualmente impostati. e restituisce un puntatore Null se non è stato impostato alcun gestore di parametri non validi globale. Analogamente, il **_get_thread_local_invalid_parameter_handler** ottiene il gestore di parametri non validi locale del thread corrente del thread su cui è stato chiamato o un puntatore null se non è stato impostato alcun gestore. Per informazioni su come impostare gestori di parametri non validi globali e thread-local, vedere [set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
 
@@ -78,11 +79,11 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**_get_invalid_parameter_handler**, **_get_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib > o \<STDLIB. h >|
+|**_get_invalid_parameter_handler**, **_get_thread_local_invalid_parameter_handler**|C \<stdlib.h><br /><br /> C++: \<cstdlib> o \<stdlib.h>|
 
 Le funzioni **_get_invalid_parameter_handler** e **_get_thread_local_invalid_parameter_handler** sono specifiche di Microsoft. Per informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)<br/>
 [Versioni con sicurezza avanzata delle funzioni CRT](../../c-runtime-library/security-enhanced-versions-of-crt-functions.md)<br/>

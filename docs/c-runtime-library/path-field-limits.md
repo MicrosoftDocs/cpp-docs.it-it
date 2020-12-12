@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: limiti dei campi percorso'
 title: Limiti dei campi percorso
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - MAX_DIR constant
 - MAX_EXT constant
 ms.assetid: 2b5d0e43-1347-45b4-8397-24a8a45c444e
-ms.openlocfilehash: 8db9961bd2d5b5b3ea9d3addad3c26737b4f5199
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 41698d946e45a78f9b89f40fdd3c7c58af5d4354
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171398"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213481"
 ---
 # <a name="path-field-limits"></a>Limiti dei campi percorso
 
@@ -50,6 +51,6 @@ Queste costanti definiscono la lunghezza massima del percorso e dei singoli camp
 > [!NOTE]
 > Runtime C supporta una lunghezza dei percorsi fino a 32768 caratteri di lunghezza, ma spetta al sistema operativo, in particolare al file system, supportare questi percorsi più lunghi. La somma dei campi non deve superare `_MAX_PATH` per una compatibilità completa con le versioni precedenti con i file system FAT32. Il file system NTFS di Windows supporta percorsi con un massimo di 32768 caratteri, ma solo quando si utilizzano le API Unicode. Quando si usano nomi lunghi per i percorsi, aggiungere al percorso il prefisso \\\\?\ e usare le versioni Unicode delle funzioni C Run-Time.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Global Constants](../c-runtime-library/global-constants.md) (Costanti globali)
+[Costanti globali](../c-runtime-library/global-constants.md)

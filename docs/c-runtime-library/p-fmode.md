@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __p__fmode'
 title: __p__fmode
 ms.date: 4/2/2020
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - __p__fmode
 ms.assetid: 1daa1394-81eb-43aa-a71b-4cc6acf3207b
-ms.openlocfilehash: dfd9962c49b03dbb30223d1d7403b791ed6dbec9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: da7cae9c881ebe042aa5d6003b50c09c65ea02d7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919879"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213520"
 ---
 # <a name="__p__fmode"></a>__p__fmode
 
@@ -45,7 +46,7 @@ int* __p__fmode(
 
 Puntatore alla variabile globale `_fmode`.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione `__p__fmode` è solo per uso interno e non deve essere chiamata dal codice utente.
 

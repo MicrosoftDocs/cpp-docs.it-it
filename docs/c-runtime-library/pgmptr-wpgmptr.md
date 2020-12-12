@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _pgmptr, _wpgmptr'
 title: _pgmptr, _wpgmptr
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - _pgmptr function
 - pgmptr function
 ms.assetid: 4d44b515-0eff-4136-8bc4-684195f218f5
-ms.openlocfilehash: beff0401d0aa2aa21819e58618ef4c02795d4393
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 70902be4f1c9686839a958439116fc3e28a2a315
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300157"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213442"
 ---
 # <a name="_pgmptr-_wpgmptr"></a>_pgmptr, _wpgmptr
 
@@ -30,7 +31,7 @@ extern char *_pgmptr;
 extern wchar_t *_wpgmptr;
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Quando un programma viene eseguito dall'interprete dei comandi (Cmd.exe), `_pgmptr` viene automaticamente inizializzato al percorso completo del file eseguibile. Ad esempio, se Hello.exe è in C:\BIN e C:\BIN nel percorso, `_pgmptr` è impostato su C:\BIN\Hello.exe quando si esegue:
 
@@ -48,9 +49,9 @@ Quando un programma non viene eseguito dalla riga di comando, `_pgmptr` potrebbe
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |`_tpgmptr`|`_pgmptr`|`_pgmptr`|`_wpgmptr`|
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
-|Variable|Intestazione obbligatoria|
+|Variabile|Intestazione obbligatoria|
 |--------------|---------------------|
 |`_pgmptr`, `_wpgmptr`|\<stdlib.h>|
 
@@ -75,6 +76,6 @@ int main( void )
 
 È possibile utilizzare `_wpgmptr` modificando `%Fs` in `%S` e `main` in `wmain`.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Variabili globali](../c-runtime-library/global-variables.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 4) C4337'
 title: Avviso del compilatore (livello 4) C4337
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4337
 ms.assetid: 70bc72d9-aac5-45cd-abd3-ebe42a05897b
-ms.openlocfilehash: 5080c600e37468d5c3617769ddb4596a31be47f0
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: f8d59093e92c17603b4f254d7a5cb26f1299e9e3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991225"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97212207"
 ---
 # <a name="compiler-warning-level-4-c4337"></a>Avviso del compilatore (livello 4) C4337
 
@@ -19,7 +20,7 @@ importazione automatica della libreria dei tipi ' typelib1' a cui viene fatto ri
 
 L'attributo auto_search della [direttiva #import](../../preprocessor/hash-import-directive-cpp.md) ha causato l'importazione implicita di una libreria dei tipi.
 
-Date due librerie dei tipi su disco create dai due file seguenti (compilati con MIDL. exe):
+Date due librerie dei tipi su disco create dai due file seguenti (compilati con midl.exe):
 
 ```
 // C4337a.idl
