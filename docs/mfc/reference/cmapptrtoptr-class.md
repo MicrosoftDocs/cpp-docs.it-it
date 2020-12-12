@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CMapPtrToPtr'
 title: Classe CMapPtrToPtr
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - CMapPtrToPtr [MFC], RemoveKey
 - CMapPtrToPtr [MFC], SetAt
 ms.assetid: 23cbbaec-9d64-48f2-92ae-5e24fa64b926
-ms.openlocfilehash: f8fc69007d35927daaa7128de1bc0ceb0b44c746
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3cc561f7420e9c3c7bc2b2f6460536a80d7ef7cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223044"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259539"
 ---
 # <a name="cmapptrtoptr-class"></a>Classe CMapPtrToPtr
 
@@ -51,7 +52,7 @@ Supporta mappe di puntatori void con chiave fornita da puntatori void.
 class CMapPtrToPtr : public CObject
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 Le funzioni membro di `CMapPtrToPtr` sono simili alle funzioni membro della classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CMapStringToOb`. Quando viene visualizzato un `CObject` puntatore come parametro di funzione o valore restituito, sostituire un puntatore a **`void`** . Ogni volta che si visualizza un oggetto `CString` o un **`const`** puntatore a **`char`** come un parametro di funzione o un valore restituito, sostituire un puntatore a **`void`** .
 
@@ -63,13 +64,13 @@ ad esempio, si converte in
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CMapPtrToPtr:: CMapPtrToPtr](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Costruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CMapPtrToPtr:: GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Restituisce il numero di elementi in questa mappa.|
 |[CMapPtrToPtr:: GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Determina il numero corrente di elementi nella tabella hash.|
@@ -87,13 +88,13 @@ ad esempio, si converte in
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[Operatore \[ CMapPtrToPtr::\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserisce un elemento nella mappa, ovvero la sostituzione dell'operatore per `SetAt` .|
+|[Operatore \[ CMapPtrToPtr:: \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserisce un elemento nella mappa, ovvero la sostituzione dell'operatore per `SetAt` .|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-`CMapPtrToPtr`incorpora la macro IMPLEMENT_DYNAMIC per supportare l'accesso ai tipi in fase di esecuzione e il dump a un `CDumpContext` oggetto. Se è necessario un dump di singoli elementi della mappa (valori di puntatore), è necessario impostare la profondità del contesto di dump su 1 o su un valore superiore.
+`CMapPtrToPtr` incorpora la macro IMPLEMENT_DYNAMIC per supportare l'accesso ai tipi in fase di esecuzione e il dump a un `CDumpContext` oggetto. Se è necessario un dump di singoli elementi della mappa (valori di puntatore), è necessario impostare la profondità del contesto di dump su 1 o su un valore superiore.
 
 Le mappe puntatore a puntatore non possono essere serializzate.
 
@@ -111,7 +112,7 @@ Per ulteriori informazioni su `CMapPtrToPtr` , vedere le [raccolte](../../mfc/co
 
 **Intestazione:** AFXCOLL. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)

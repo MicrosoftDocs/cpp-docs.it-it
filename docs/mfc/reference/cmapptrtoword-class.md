@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CMapPtrToWord'
 title: Classe CMapPtrToWord
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - CMapPtrToWord [MFC], RemoveKey
 - CMapPtrToWord [MFC], SetAt
 ms.assetid: 4631c6b6-d49f-49d9-adc0-1e0491e32d7b
-ms.openlocfilehash: 254659a9f00ff7c0c27174cfbea4c131993150f3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f1b9742b6693c07b27c22a77b8c45d5b20500bb8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223031"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259487"
 ---
 # <a name="cmapptrtoword-class"></a>Classe CMapPtrToWord
 
@@ -51,7 +52,7 @@ Supporta mappe di parole a 16 bit con chiave fornita da puntatori void.
 class CMapPtrToWord : public CObject
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 Le funzioni membro di `CMapPtrToWord` sono simili alle funzioni membro della classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CMapStringToOb`. Quando viene visualizzato un `CObject` puntatore come parametro di funzione o valore restituito, sostituire Word. Ogni volta che si visualizza un oggetto `CString` o un **`const`** puntatore a **`char`** come un parametro di funzione o un valore restituito, sostituire un puntatore a **`void`** .
 
@@ -63,13 +64,13 @@ ad esempio, si converte in
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CMapPtrToWord:: CMapPtrToWord](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Costruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CMapPtrToWord:: GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Restituisce il numero di elementi in questa mappa.|
 |[CMapPtrToWord:: GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Determina il numero corrente di elementi nella tabella hash.|
@@ -87,13 +88,13 @@ ad esempio, si converte in
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[Operatore \[ CMapPtrToWord::\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserisce un elemento nella mappa, ovvero la sostituzione dell'operatore per `SetAt` .|
+|[Operatore \[ CMapPtrToWord:: \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserisce un elemento nella mappa, ovvero la sostituzione dell'operatore per `SetAt` .|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-`CMapWordToPtr`incorpora la macro IMPLEMENT_DYNAMIC per supportare l'accesso ai tipi in fase di esecuzione e il dump a un `CDumpContext` oggetto. Se è necessario un dump di singoli elementi della mappa, è necessario impostare la profondità del contesto di dump su 1 o su un valore superiore.
+`CMapWordToPtr` incorpora la macro IMPLEMENT_DYNAMIC per supportare l'accesso ai tipi in fase di esecuzione e il dump a un `CDumpContext` oggetto. Se è necessario un dump di singoli elementi della mappa, è necessario impostare la profondità del contesto di dump su 1 o su un valore superiore.
 
 Non è possibile serializzare le mappe puntatore a Word.
 
@@ -111,7 +112,7 @@ Per ulteriori informazioni su `CMapPtrToWord` , vedere le [raccolte](../../mfc/c
 
 **Intestazione:** AFXCOLL. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)

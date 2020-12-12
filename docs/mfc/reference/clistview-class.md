@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CListView'
 title: Classe CListView
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - CListView [MFC], GetListCtrl
 - CListView [MFC], RemoveImageList
 ms.assetid: 7626bdb2-a1b8-4eab-b631-6743710a8432
-ms.openlocfilehash: d7f3b7c43d98c4f2c42d0c27c8e224f33e4b3301
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 5576a0997c84e8f5639911a1120a6645e720a7cf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749132"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259565"
 ---
 # <a name="clistview-class"></a>Classe CListView
 
-Semplifica l'utilizzo del controllo elenco e di [CListCtrl](../../mfc/reference/clistctrl-class.md), la classe che incapsula la funzionalità di controllo elenco, con l'architettura di visualizzazione documento di MFC.
+Semplifica l'utilizzo del controllo elenco e di [CListCtrl](../../mfc/reference/clistctrl-class.md), la classe che incapsula la funzionalità di controllo elenco, con l'architettura documento/visualizzazione di MFC.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -29,29 +30,29 @@ Semplifica l'utilizzo del controllo elenco e di [CListCtrl](../../mfc/reference/
 class CListView : public CCtrlView
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CListView::CListView](#clistview)|Costruisce un oggetto `CListView`.|
+|[CListView:: CListView](#clistview)|Costruisce un oggetto `CListView`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CListView::GetListCtrl](#getlistctrl)|Restituisce il controllo elenco associato alla visualizzazione.|
+|[CListView:: GetListCtrl](#getlistctrl)|Restituisce il controllo elenco associato alla visualizzazione.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CListView::RemoveImageList](#removeimagelist)|Rimuove l'elenco immagini specificato dalla visualizzazione elenco.|
+|[CListView:: RemoveImageList](#removeimagelist)|Rimuove l'elenco di immagini specificato dalla visualizzazione elenco.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Per altre informazioni su questa architettura, vedere i cenni preliminari per la classe [CView](../../mfc/reference/cview-class.md) e i riferimenti incrociati citati.
+Per ulteriori informazioni su questa architettura, vedere la panoramica della classe [CView](../../mfc/reference/cview-class.md) e i riferimenti incrociati citati.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -69,9 +70,9 @@ Per altre informazioni su questa architettura, vedere i cenni preliminari per la
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxcview.h
+**Intestazione:** Afxcview. h
 
-## <a name="clistviewclistview"></a><a name="clistview"></a>CListView::CListView
+## <a name="clistviewclistview"></a><a name="clistview"></a> CListView:: CListView
 
 Costruisce un oggetto `CListView`.
 
@@ -79,7 +80,7 @@ Costruisce un oggetto `CListView`.
 CListView();
 ```
 
-## <a name="clistviewgetlistctrl"></a><a name="getlistctrl"></a>CListView::GetListCtrl
+## <a name="clistviewgetlistctrl"></a><a name="getlistctrl"></a> CListView:: GetListCtrl
 
 Chiamare questa funzione membro per ottenere un riferimento al controllo elenco associato alla visualizzazione.
 
@@ -95,9 +96,9 @@ Riferimento al controllo elenco associato alla visualizzazione.
 
 [!code-cpp[NVC_MFCListView#7](../../atl/reference/codesnippet/cpp/clistview-class_1.cpp)]
 
-## <a name="clistviewremoveimagelist"></a><a name="removeimagelist"></a>CListView::RemoveImageList
+## <a name="clistviewremoveimagelist"></a><a name="removeimagelist"></a> CListView:: RemoveImageList
 
-Rimuove l'elenco immagini specificato dalla visualizzazione elenco.
+Rimuove l'elenco di immagini specificato dalla visualizzazione elenco.
 
 ```cpp
 void RemoveImageList(int nImageList);
@@ -105,12 +106,12 @@ void RemoveImageList(int nImageList);
 
 ### <a name="parameters"></a>Parametri
 
-*nImageList (elenco immagini)*<br/>
+*nImageList*<br/>
 Indice in base zero dell'immagine da rimuovere.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Esempio MFC ROWLIST](../../overview/visual-cpp-samples.md)<br/>
+[ROWLIST di esempio MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classe CCtrlView](../../mfc/reference/cctrlview-class.md)
