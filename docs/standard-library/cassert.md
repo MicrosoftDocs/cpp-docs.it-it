@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; cassert&gt;'
 title: '&lt;cassert&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - cassert header
 ms.assetid: 6ead15a3-ac45-4075-be8e-350bca995c26
-ms.openlocfilehash: b28f4554610d37b881494748f75499f46cd9e8d9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e2b515fe492e6847c4d0cc5841dc43a2d879dd99
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230233"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325356"
 ---
 # <a name="ltcassertgt"></a>&lt;cassert&gt;
 
 Include l'intestazione della libreria standard C \<assert.h> e aggiunge i nomi associati allo `std` spazio dei nomi. L'inclusione di questa intestazione garantisce che i nomi dichiarati utilizzando il collegamento esterno nell'intestazione della libreria standard C vengano dichiarati nello `std` spazio dei nomi.
 
 > [!NOTE]
-> \<assert.h>non definisce la **`static_assert`** macro.
+> \<assert.h> non definisce la **`static_assert`** macro.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -32,11 +33,11 @@ Include l'intestazione della libreria standard C \<assert.h> e aggiunge i nomi a
 #define assert(E)
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-`assert(E)`è costante, se NDEBUG è definito in cui `assert` è definito o ridefinito l'ultima volta oppure *e* convertito in bool restituisce **`true`** .
+`assert(E)` è costante, se NDEBUG è definito in cui `assert` è definito o ridefinito l'ultima volta oppure *e* convertito in bool restituisce **`true`** .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro ASSERT, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)\
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\

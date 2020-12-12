@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso di TCHAR. Tipi di dati H con codice _MBCS'
 title: Utilizzo dei tipi di dati di TCHAR.H con il codice _MBCS
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-ms.openlocfilehash: dd43c29d77c3351e8f597b474c4756ad3d45ef2b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4672ba210e0df0af1a4f4ee106d31cc978bdf2fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215361"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306586"
 ---
 # <a name="using-tcharh-data-types-with-_mbcs-code"></a>Utilizzo dei tipi di dati di TCHAR.H con il codice _MBCS
 
@@ -61,8 +62,8 @@ Di seguito sono riportate tre soluzioni che consentono di evitare questo conflit
     #define _tcschr _mbschr
     ```
 
-   Quando si esegue questo approccio, è necessario prestare attenzione per garantire l'utilizzo dei tipi di dati appropriati per gli argomenti stringa e i valori restituiti di stringa. Per garantire la corrispondenza corretta dei tipi, è possibile usare il cast dei tipi oppure il tipo di dati a testo generico `_TXCHAR`. `_TXCHAR`esegue il mapping al tipo **`char`** nel codice SBCS, ma esegue il mapping al tipo **`unsigned char`** nel codice MBCS. Per ulteriori informazioni sulle macro di testo generico, vedere [mapping di testo generico](../c-runtime-library/generic-text-mappings.md) in riferimenti alla *libreria di runtime*.
+   Quando si esegue questo approccio, è necessario prestare attenzione per garantire l'utilizzo dei tipi di dati appropriati per gli argomenti stringa e i valori restituiti di stringa. Per garantire la corrispondenza corretta dei tipi, è possibile usare il cast dei tipi oppure il tipo di dati a testo generico `_TXCHAR`. `_TXCHAR` esegue il mapping al tipo **`char`** nel codice SBCS, ma esegue il mapping al tipo **`unsigned char`** nel codice MBCS. Per ulteriori informazioni sulle macro di testo generico, vedere [mapping di testo generico](../c-runtime-library/generic-text-mappings.md) in riferimenti alla *libreria di runtime*.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Mapping di testo generico in TCHAR. h](../text/generic-text-mappings-in-tchar-h.md)

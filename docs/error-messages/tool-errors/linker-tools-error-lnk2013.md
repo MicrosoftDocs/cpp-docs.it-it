@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore degli strumenti del linker LNK2013'
 title: Errore degli strumenti del linker LNK2013
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2013
 ms.assetid: 21408e2d-3f56-4d1f-a031-00df70785ed4
-ms.openlocfilehash: 6ad3f40f06e64422b393edb457a0dcf419828b6f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 51b754e19656ad8ec7ef1686605086b6e4a41853
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80194746"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338457"
 ---
 # <a name="linker-tools-error-lnk2013"></a>Errore degli strumenti del linker LNK2013
 
@@ -27,4 +28,4 @@ Quando il nome del simbolo è un simbolo definito dall'utente (e non un simbolo 
 
 - Rinominare la sezione di codice che contiene la funzione statica in modo che corrisponda al chiamante.
 
-Usare `DUMPBIN /SYMBOLS`per verificare se una funzione è statica.
+Usare `DUMPBIN /SYMBOLS` per verificare se una funzione è statica.

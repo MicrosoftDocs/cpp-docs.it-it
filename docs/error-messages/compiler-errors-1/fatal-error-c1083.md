@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore irreversibile C1083'
 title: Errore irreversibile C1083
 ms.date: 09/01/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-ms.openlocfilehash: 57ae8f2d0b7f02732032151f86617498e5201c61
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5a2a0cb842b385963f4f4695a2289abc1c07a702
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509756"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189626"
 ---
 # <a name="fatal-error-c1083"></a>Errore irreversibile C1083
 
@@ -21,7 +22,7 @@ Il compilatore genera un errore C1083 quando non riesce a trovare un file necess
 
 ## <a name="the-specified-file-name-is-wrong"></a>Il nome file specificato non è corretto
 
-Nome di un file digitato in modo non corretto. Ad esempio,
+Nome di un file digitato in modo non corretto. ad esempio:
 
 `#include <algorithm.h>`
 
@@ -118,6 +119,6 @@ Nell'esempio seguente viene generato un errore C1083 quando il file `"test.h"` d
 
 Per informazioni su come compilare progetti C/C++ nell'IDE o sulla riga di comando e informazioni sull'impostazione delle variabili di ambiente, vedere [progetti e sistemi di compilazione](../../build/projects-and-build-systems-cpp.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Proprietà di MSBuild](/visualstudio/msbuild/msbuild-properties)

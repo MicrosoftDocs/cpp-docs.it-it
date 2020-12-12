@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3012'
 title: Errore del compilatore C3012
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3012
 ms.assetid: cc7040b1-b3fb-4da6-a474-877914d30332
-ms.openlocfilehash: 69f0544815804e9827631be81bf9735a95bd1a22
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fff986a984acb62f770d02ff2b7b08c40e8511e3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80176702"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286007"
 ---
 # <a name="compiler-error-c3012"></a>Errore del compilatore C3012
 

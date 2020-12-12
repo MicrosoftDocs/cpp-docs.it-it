@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore degli strumenti del linker LNK2001'
 title: Errore degli strumenti del linker LNK2001
 ms.date: 12/19/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-ms.openlocfilehash: 59915b3aa0ad25b5638a43a6d09dccc2b42825ab
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 790c75b290b49fe40362ad1bc4ee93e90cc2d018
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230571"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338526"
 ---
 # <a name="linker-tools-error-lnk2001"></a>Errore degli strumenti del linker LNK2001
 
@@ -21,13 +22,13 @@ Il codice compilato esegue un riferimento o una chiamata a *Symbol*. Il simbolo 
 
 Questo messaggio di errore è seguito da un errore irreversibile [LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md). Per correggere l'errore LNK1120, è necessario innanzitutto correggere tutti gli errori LNK2001 e LNK2019.
 
-Esistono diversi modi per ottenere gli errori di LNK2001. Tutti questi elementi coinvolgono un *riferimento* a una funzione o a una variabile che il linker non è in grado di *risolvere*o a cui viene trovata una definizione. Il compilatore è in grado di identificare quando il codice non *dichiara* un simbolo, ma non se ne *definisce* uno. Questo perché la definizione potrebbe trovarsi in un file di origine o in una raccolta diversa. Se il codice fa riferimento a un simbolo, ma non è mai definito, il linker genera un errore.
+Esistono diversi modi per ottenere gli errori di LNK2001. Tutti questi elementi coinvolgono un *riferimento* a una funzione o a una variabile che il linker non è in grado di *risolvere* o a cui viene trovata una definizione. Il compilatore è in grado di identificare quando il codice non *dichiara* un simbolo, ma non se ne *definisce* uno. Questo perché la definizione potrebbe trovarsi in un file di origine o in una raccolta diversa. Se il codice fa riferimento a un simbolo, ma non è mai definito, il linker genera un errore.
 
 ## <a name="what-is-an-unresolved-external-symbol"></a>Che cos'è un simbolo esterno non risolto?
 
 Un *simbolo* è il nome interno di una funzione o di una variabile globale. È il formato del nome usato o definito in una libreria o un file oggetto compilato. Una variabile globale viene definita nel file oggetto a cui è allocata l'archiviazione. Una funzione viene definita nel file oggetto in cui viene inserito il codice compilato per il corpo della funzione. Un *simbolo esterno* è un oggetto a cui si fa riferimento in un file oggetto, ma definito in un file di libreria o oggetto diverso. Un *simbolo esportato* è quello reso disponibile pubblicamente dal file oggetto o dalla libreria che la definisce.
 
-Per creare un'applicazione o una DLL, ogni simbolo usato deve avere una definizione. Il linker deve *risolvere*o trovare la definizione corrispondente per ogni simbolo esterno a cui fa riferimento ogni file oggetto. Il linker genera un errore quando non riesce a risolvere un simbolo esterno. Significa che il linker non è riuscito a trovare una definizione di simbolo esportata corrispondente in uno dei file collegati.
+Per creare un'applicazione o una DLL, ogni simbolo usato deve avere una definizione. Il linker deve *risolvere* o trovare la definizione corrispondente per ogni simbolo esterno a cui fa riferimento ogni file oggetto. Il linker genera un errore quando non riesce a risolvere un simbolo esterno. Significa che il linker non è riuscito a trovare una definizione di simbolo esportata corrispondente in uno dei file collegati.
 
 ## <a name="compilation-and-link-issues"></a>Problemi di compilazione e collegamento
 

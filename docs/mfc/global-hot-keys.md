@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: tasti di scelta rapida globali'
 title: Tasti di scelta rapida globali
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - access keys [MFC], hot keys
 - global hot keys [MFC]
 ms.assetid: e0b95d14-c571-4c9a-9cd1-e7fc1f0e278d
-ms.openlocfilehash: 5fdcfbef1db0d20126f8eac144f74f8b92410504
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 3d481c637ec20ed7b9ec3f45a916bd39470ffb5e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618745"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189275"
 ---
 # <a name="global-hot-keys"></a>Tasti di scelta rapida globali
 
@@ -22,7 +23,7 @@ Un tasto di scelta rapida globale è associato a una particolare finestra non fi
 
 Ogni volta che l'utente preme un tasto di scelta rapida globale, la finestra specificata riceve un messaggio di [WM_SYSCOMMAND](/windows/win32/menurc/wm-syscommand) che specifica **SC_HOTKEY** come tipo di comando. Questo messaggio attiva anche la finestra che lo riceve. Poiché questo messaggio non include informazioni sulla chiave esatta che è stata premuta, l'utilizzo di questo metodo non consente la distinzione tra tasti di scelta rapida diversi che possono essere collegati alla stessa finestra. Il tasto di scelta rimane valido fino a quando l'applicazione che ha inviato **WM_SETHOTKEY** non viene chiusa.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso di CHotKeyCtrl](using-chotkeyctrl.md)<br/>
+[Utilizzo di CHotKeyCtrl](using-chotkeyctrl.md)<br/>
 [Controlli](controls-mfc.md)

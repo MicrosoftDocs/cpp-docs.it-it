@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: dichiaratori e dichiarazioni di variabili'
 title: Dichiaratori e dichiarazioni di variabili
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - declarators, definition
 - declaring variables, declaration statements
 ms.assetid: 5fd67a6a-3a6a-4ec9-b257-3f7390a48d40
-ms.openlocfilehash: b20cde6982e99dedaff59518b71c041233a01dd8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 920c44e3345c6143489815de55ea81470e46d279
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226451"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306417"
 ---
 # <a name="declarators-and-variable-declarations"></a>Dichiaratori e dichiarazioni di variabili
 
 Nel resto di questa sezione viene descritto il formato e il significato delle dichiarazioni dei tipi di variabile contenuti in questo elenco. In particolare, nelle sezioni rimanenti viene illustrato come dichiarare i seguenti elementi:
 
-|Il tipo di variabile|Descrizione|
+|Il tipo di variabile|Description|
 |----------------------|-----------------|
 |[Variabili semplici](../c-language/simple-variable-declarations.md)|Le variabili contenenti un singolo valore con tipo integrale o a virgola mobile|
 |[Matrici](../c-language/array-declarations.md)|Le variabili composte di una raccolta di elementi con lo stesso tipo|
@@ -85,6 +86,6 @@ Il compilatore C Microsoft non limita il numero di dichiaratori che possono modi
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Dichiarazioni e tipi](../c-language/declarations-and-types.md)

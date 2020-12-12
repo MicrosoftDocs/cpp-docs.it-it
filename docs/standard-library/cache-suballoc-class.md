@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: cache_suballoc Class'
 title: Classe cache_suballoc
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: 410cdc7bd45c54c252ce33c7d8e3e2f883ac0eb4
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9df13155101a77d327c8bdee9da1fe03bfa00366
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560621"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325369"
 ---
 # <a name="cache_suballoc-class"></a>Classe cache_suballoc
 
@@ -33,7 +34,7 @@ class cache_suballoc
 *SZ*\
 Numero di elementi della matrice da allocare.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il modello di classe cache_suballoc archivia i blocchi di memoria deallocati in un elenco libero con lunghezza non vincolata, usando `freelist<sizeof(Type), max_unbounded>` e suballoca i blocchi di memoria da un blocco maggiore allocato con **operator new** quando l'elenco di disponibilità è vuoto.
 
@@ -75,7 +76,7 @@ Numero di elementi della matrice da allocare.
 
 Puntatore all'oggetto allocato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cache_suballoccache_suballoc"></a><a name="cache_suballoc"></a> cache_suballoc:: cache_suballoc
 
@@ -85,7 +86,7 @@ Costruisce un oggetto di tipo `cache_suballoc`.
 cache_suballoc();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cache_suballocdeallocate"></a><a name="deallocate"></a> cache_suballoc::d eallocate
 
@@ -103,7 +104,7 @@ Puntatore al primo oggetto che deve essere deallocato dall'archivio.
 *conteggio*\
 Numero di oggetti da deallocare dall'archivio.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="see-also"></a>Vedere anche
 

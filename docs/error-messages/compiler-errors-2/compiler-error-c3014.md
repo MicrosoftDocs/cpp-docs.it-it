@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3014'
 title: Errore del compilatore C3014
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3014
 ms.assetid: af1c5b0c-dbf9-4274-b06a-c6c2cdcf2a52
-ms.openlocfilehash: e62b5028f13b6a3e35a1cf75f38935cae5a43f81
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1e53e7b1cfd71e2fe58d029c8b4aa6074c0e0038
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232092"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97285890"
 ---
 # <a name="compiler-error-c3014"></a>Errore del compilatore C3014
 

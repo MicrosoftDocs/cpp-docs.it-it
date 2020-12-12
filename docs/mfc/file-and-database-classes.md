@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classi di file e database'
 title: Classi File e Database
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - database classes [MFC]
 - file classes [MFC]
 ms.assetid: 580b169c-e26e-4395-b128-5408d08c98fe
-ms.openlocfilehash: 8874b9f99d3a5756b4ce66e2f5732f856bdd7078
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ced377a1a23625f16ad3e42149859af220c7d7e6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622621"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189288"
 ---
 # <a name="file-and-database-classes"></a>Classi File e Database
 
@@ -27,6 +28,6 @@ Le categorie di classi seguenti supportano la persistenza dei dati.
 
 - [Classi ODBC](odbc-classes.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Cenni preliminari sulle classi](class-library-overview.md)

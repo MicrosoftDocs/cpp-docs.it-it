@@ -1,35 +1,36 @@
 ---
-title: attributo di importazione raw_dispinterfaces
+description: 'Altre informazioni su: raw_dispinterfaces attributo Import'
+title: raw_dispinterfaces attributo Import
 ms.date: 08/29/2019
 f1_keywords:
 - raw_dispinterfaces
 helpviewer_keywords:
 - raw_dispinterfaces attribute
 ms.assetid: f762864d-29bf-445b-825a-ba7b29a95409
-ms.openlocfilehash: 73c58b72b27de8dcf96e8ab9464d0fb6bce12b66
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 447f76bdee16d2719c02ad4a73883f8f176f2584
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216221"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202015"
 ---
-# <a name="raw_dispinterfaces-import-attribute"></a>attributo di importazione raw_dispinterfaces
+# <a name="raw_dispinterfaces-import-attribute"></a>raw_dispinterfaces attributo Import
 
-**C++Specifico**
+**Sezione specifica C++**
 
-Indica al compilatore di generare funzioni wrapper di basso livello per i metodi di interfaccia dispatch e per le `IDispatch::Invoke` proprietà che chiamano e restituiscono il codice di errore HRESULT.
+Indica al compilatore di generare funzioni wrapper di basso livello per i metodi di interfaccia dispatch e per le proprietà che chiamano `IDispatch::Invoke` e restituiscono il codice di errore HRESULT.
 
 ## <a name="syntax"></a>Sintassi
 
-> **#import** *libreria di tipi* **raw_dispinterfaces**
+> **#import** **raw_dispinterfaces** della *libreria di tipi*
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Se questo attributo non è specificato, vengono generati solo wrapper di alto livello che generano C++ eccezioni in caso di errore.
+Se questo attributo non è specificato, vengono generati solo wrapper di alto livello che generano eccezioni C++ in caso di errore.
 
-**Specifico C++ finale**
+**Fine sezione specifica C++**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [attributi di #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: cauchy_distribution Class'
 title: Classe cauchy_distribution
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: f8e35815a702878fde702e772edb21899608e7f7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bf87f28b49ffa6b13a60c8faf237d38175cd9464
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830800"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325329"
 ---
 # <a name="cauchy_distribution-class"></a>Classe cauchy_distribution
 
@@ -76,7 +77,7 @@ Il tipo di risultato a virgola mobile, il valore predefinito è **`double`** . P
 *GENERATORE URNG*\
 Motore di generazione di numeri casuali uniformi. Per i tipi possibili, vedere [\<random>](../standard-library/random.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il modello di classe descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente o di tipo **`double`** se non ne viene fornito alcuno, distribuiti in base alla distribuzione di Cauchy. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
@@ -258,7 +259,7 @@ Parametro di distribuzione `b`.
 *parm*\
 Struttura `param_type` usata per costruire la distribuzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:**`0.0 < b`
 
@@ -293,7 +294,7 @@ Parametro di distribuzione `b`.
 *Ok*\
 Oggetto `param_type` da confrontare con questo oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:**`0.0 < b`
 

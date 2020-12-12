@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CArrayRowset'
 title: Classe CArrayRowset
 ms.date: 11/04/2016
 f1_keywords:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: c5f12afa09bc1c62d3287bab93159e217721906f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 929f8744671cecc54e7c192d4f3ddc17e27287cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843248"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213182"
 ---
 # <a name="carrayrowset-class"></a>Classe CArrayRowset
 
@@ -75,20 +76,20 @@ Tipo di classe della funzione di accesso che si desidera venga utilizzata dal se
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |--|--|
 | [CArrayRowset](#carrayrowset) | Costruttore. |
 | [Snapshot](#snapshot) | Legge l'intero set di righe in memoria. |
 
 ### <a name="operators"></a>Operatori
 
-| Nome | Descrizione |
+| Nome | Description |
 |--|--|
 | [Operatore&#91;&#93;](#operator) | Accede a un elemento del set di righe. |
 
 ### <a name="data-members"></a>Membri dei dati
 
-| Nome | Descrizione |
+| Nome | Description |
 |--|--|
 | [CArrayRowset::m_nRowsRead](#nrowsread) | Numero di righe già lette. |
 
@@ -139,7 +140,7 @@ in Numero della riga (elemento della matrice) a cui si vuole accedere.
 
 Contenuto della riga richiesta.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se *nrow* supera il numero di righe nel set di righe, viene generata un'eccezione.
 

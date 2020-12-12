@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; ccomplex&gt;'
 title: '&lt;ccomplex&gt;'
 ms.date: 07/11/2019
 f1_keywords:
@@ -7,34 +8,34 @@ f1_keywords:
 helpviewer_keywords:
 - ccomplex header
 ms.assetid: a9fcb5f0-88e3-464b-a5fd-d1afb8cd7e6f
-ms.openlocfilehash: 5b5383b1eca4fda72f5f9e3a78637373acbcf7ab
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
+ms.openlocfilehash: d657d7b0b2a203bcbad93ff1c78f6b78eb4d7707
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68341135"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325315"
 ---
 # <a name="ltccomplexgt"></a>&lt;ccomplex&gt;
 
-Include l' C++ intestazione [ \<](complex.md)della libreria standard > complesse.
+Include l'intestazione della libreria standard C++ [\<complex>](complex.md) .
 
 > [!NOTE]
-> La \<libreria standard C Complex. h > intestazione non è inclusa \<da ccomplex >, perché è effettivamente sostituita dagli C++ overload in \<> complessi e \<cmath >. In questo modo \<l'intestazione ccomplex > ridondante. L' \<intestazione Complex. h > è deprecata in C++. L' \<intestazione di > ccomplex è deprecata in c++ 17 ed è stata rimossa nello standard bozza c++ 20.
+> L'intestazione della libreria standard C \<complex.h> non è inclusa \<ccomplex> in, perché viene sostituita in modo efficace dagli overload C++ in \<complex> e \<cmath> . Che rende \<ccomplex> ridondante l'intestazione. L' \<complex.h> intestazione è deprecata in C++. L' \<ccomplex> intestazione è deprecata in c++ 17 ed è stata rimossa nello standard bozza c++ 20.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<> ccomplex
+**Intestazione:**\<ccomplex>
 
 **Spazio dei nomi:** std
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Il nome `clog` \<, dichiarato in Complex. h > `std` , non è definito nello spazio dei nomi a causa di potenziali conflitti con `clog` il dichiarato in [ \<iostream >](iostream.md).
+Il nome `clog` , dichiarato in \<complex.h> , non è definito nello `std` spazio dei nomi a causa di potenziali conflitti con il `clog` dichiarato in [\<iostream>](iostream.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[\<> complesse](complex.md)\
+[\<complex>](complex.md)\
 [\<cmath>](cmath.md)\
 [Guida di riferimento ai file di intestazione](cpp-standard-library-header-files.md)\
-[C++Panoramica della libreria standard](cpp-standard-library-overview.md)\
-[Thread safety nella C++ libreria standard](thread-safety-in-the-cpp-standard-library.md)
+[Panoramica della libreria standard C++](cpp-standard-library-overview.md)\
+[Thread safety nella libreria standard C++](thread-safety-in-the-cpp-standard-library.md)

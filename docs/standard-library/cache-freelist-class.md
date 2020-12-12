@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: cache_freelist Class'
 title: Classe cache_freelist
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - stdext::cache_freelist [C++], allocate
 - stdext::cache_freelist [C++], deallocate
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
-ms.openlocfilehash: bbe0ff0f2297afcec99bd162ebe6a6d3e10f9bce
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9d5b3da272cff39b0c9d7d69df2c744d6952cd03
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560726"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325382"
 ---
 # <a name="cache_freelist-class"></a>Classe cache_freelist
 
@@ -36,7 +37,7 @@ Numero di elementi della matrice da allocare.
 *Max*\
 La classe max che rappresenta la dimensione massima dell'elenco di disponibilità. Può essere [max_none](../standard-library/max-fixed-size-class.md), [max_unbounded](../standard-library/max-none-class.md), [max_fixed_size](../standard-library/max-unbounded-class.md) o [max_variable_size](../standard-library/max-variable-size-class.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il modello di classe cache_freelist gestisce un elenco di blocchi di memoria di dimensioni *SZ*. Quando l'elenco di disponibilità è pieno, USA **operator delete** per deallocare i blocchi di memoria. Quando l'elenco di disponibilità è vuoto, USA **operator new** per allocare nuovi blocchi di memoria. La dimensione massima dell'elenco di disponibilità è determinata dalla classe max passata nel parametro *Max* .
 
@@ -78,7 +79,7 @@ Numero di elementi della matrice da allocare.
 
 Puntatore all'oggetto allocato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cache_freelistcache_freelist"></a><a name="cache_freelist"></a> cache_freelist:: cache_freelist
 
@@ -88,7 +89,7 @@ Costruisce un oggetto di tipo `cache_freelist`.
 cache_freelist();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cache_freelistdeallocate"></a><a name="deallocate"></a> cache_freelist::d eallocate
 
@@ -106,7 +107,7 @@ Puntatore al primo oggetto che deve essere deallocato dall'archivio.
 *conteggio*\
 Numero di oggetti da deallocare dall'archivio.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="see-also"></a>Vedere anche
 

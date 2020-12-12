@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: scambio di dati per le visualizzazioni di record (accesso ai dati MFC)'
 title: Scambio di dati per le visualizzazioni di record (accesso ai dati MFC)
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - DDX (dialog data exchange), record views
 - RFX (record field exchange)
 ms.assetid: abc52ca7-6997-47a7-98f3-f347f52b1f72
-ms.openlocfilehash: f9f460305b55a2313b64effdf4d1dbbfd9823def
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6ffb82e3fb1e035b1334e15d5b4d1d25634739c4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213472"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213208"
 ---
 # <a name="data-exchange-for-record-views---mfc-data-access"></a>Scambio di dati per le visualizzazioni di record (accesso ai dati MFC)
 
@@ -23,12 +24,12 @@ DDX per le visualizzazioni di record funziona insieme a [RFX](../data/odbc/recor
 
 Nella figura seguente viene illustrata la relazione tra DDX e RFX per le visualizzazioni di record.
 
-![Scambio&#45;di dati del dialogo&#45;e scambio di campi di record](../data/media/vc37xt1.gif "Scambio&#45;di dati del dialogo&#45;e scambio di campi di record")<br/>
+![Finestra di dialogo&#45;scambio di dati e record&#45;scambio di campi](../data/media/vc37xt1.gif "Finestra di dialogo&#45;scambio di dati e record&#45;scambio di campi")<br/>
 DDX (Dialog Data Exchange) e RFX (Record Field Exchange)
 
 Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../mfc/dialog-data-exchange-and-validation.md). Per ulteriori informazioni su RFX, vedere [trasferimento di campi di record (RFX)](../data/odbc/record-field-exchange-rfx.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Visualizzazioni di record (accesso ai dati MFC)](../data/record-views-mfc-data-access.md)<br/>
-[Elenco dei driver ODBC](../data/odbc/odbc-driver-list.md)
+[Elenco di driver ODBC](../data/odbc/odbc-driver-list.md)

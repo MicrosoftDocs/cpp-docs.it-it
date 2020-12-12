@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 4) C4256'
 title: Avviso del compilatore (livello 4) C4256
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4256
 ms.assetid: a755a32e-895a-4837-a2b5-4ea06b736798
-ms.openlocfilehash: 1ec3e64548cead53cea906cdf2abd3dd25ee06d4
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 3ccd8447f930f40df5e488714cdcfb52e54d9928
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991393"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189301"
 ---
 # <a name="compiler-warning-level-4-c4256"></a>Avviso del compilatore (livello 4) C4256
 
-' Function ': il costruttore per la classe con basi virtuali ha '.. .'; le chiamate potrebbero non essere compatibili con le versioni precedenti di VisualC++
+' Function ': il costruttore per la classe con basi virtuali ha '.. .'; le chiamate potrebbero non essere compatibili con le versioni precedenti di Visual C++
 
 Possibile incompatibilità.
 
-Si consideri il codice di esempio seguente: Se la definizione del costruttore S2:: S2 (int i,...) è stata compilata utilizzando una versione del compilatore C++ Microsoft precedente alla versione 7, ma l'esempio seguente viene compilato utilizzando la versione corrente, la chiamata al costruttore per S3 non funzionerà correttamente a causa di una modifica speciale della convenzione di chiamata. Utilizzando Visual C++ 6.0, in entrambi i casi la chiamata non funziona comunque, a meno che non venga passato alcun parametro per i puntini di sospensione.
+Osservare l'esempio di codice seguente. Se la definizione del costruttore S2:: S2 (int i,...) è stata compilata utilizzando una versione del compilatore Microsoft C++ precedente alla versione 7, ma l'esempio seguente viene compilato utilizzando la versione corrente, la chiamata al costruttore per S3 non funzionerà correttamente a causa di una modifica speciale della convenzione di chiamata. Utilizzando Visual C++ 6.0, in entrambi i casi la chiamata non funziona comunque, a meno che non venga passato alcun parametro per i puntini di sospensione.
 
 Per correggere il problema,
 

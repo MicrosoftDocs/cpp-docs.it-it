@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore degli strumenti del linker LNK2005'
 title: Errore degli strumenti del linker LNK2005
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2005
 ms.assetid: d9587adc-68be-425c-8a30-15dbc86717a4
-ms.openlocfilehash: 278f05b8338ac4238d6862fd7b9bd7744f6c8ee5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c6de300bc731104f51056911515d0cc7a95e05f8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225215"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338503"
 ---
 # <a name="linker-tools-error-lnk2005"></a>Errore degli strumenti del linker LNK2005
 
@@ -93,7 +94,7 @@ Di seguito sono riportate alcune cause comuni di questo errore.
 
 - Questo errore può verificarsi se si collega più di una versione della libreria standard o di CRT. Se, ad esempio, si tenta di collegare le librerie CRT di debug e finali, oppure entrambe le versioni statiche e dinamiche di una libreria o due versioni diverse di una libreria standard all'eseguibile, questo errore può essere segnalato più volte. Per risolvere questo problema, rimuovere tutte le copie tranne una per ogni libreria dal comando di collegamento. Nello stesso file eseguibile non è consigliabile combinare librerie di debug e di vendita al dettaglio o versioni diverse di una libreria.
 
-   Per indicare al linker di usare librerie diverse da quelle predefinite, nella riga di comando specificare le librerie da usare e usare l'opzione [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) per disabilitare le librerie predefinite. Nell'IDE aggiungere i riferimenti al progetto per specificare le librerie da usare e quindi aprire la finestra di dialogo **pagine delle proprietà** per il progetto e nella pagina del **linker**, **input** , impostare **Ignora tutte le librerie predefinite**o **Ignora proprietà specifiche delle librerie predefinite** per disabilitare le librerie predefinite.
+   Per indicare al linker di usare librerie diverse da quelle predefinite, nella riga di comando specificare le librerie da usare e usare l'opzione [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) per disabilitare le librerie predefinite. Nell'IDE aggiungere i riferimenti al progetto per specificare le librerie da usare e quindi aprire la finestra di dialogo **pagine delle proprietà** per il progetto e nella pagina del **linker**, **input** , impostare **Ignora tutte le librerie predefinite** o **Ignora proprietà specifiche delle librerie predefinite** per disabilitare le librerie predefinite.
 
 - Questo errore può verificarsi se si combina l'uso di librerie statiche e dinamiche quando si usa l'opzione [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) . Ad esempio, questo errore può verificarsi se si compila una DLL da usare nell'eseguibile che si collega alla libreria CRT statica. Per risolvere questo problema, usare solo librerie statiche o solo librerie dinamiche per l'intero eseguibile e per qualsiasi libreria compilata per l'uso nell'eseguibile.
 

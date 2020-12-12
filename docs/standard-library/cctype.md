@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; cctype&gt;'
 title: '&lt;cctype&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - cctype header
 ms.assetid: 3fd18bfd-c414-4def-bac1-c362e1fe8b71
-ms.openlocfilehash: d1d69b5fe125372c489965949b2b59c4012fdec9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a66c0b0f253ce034becf1845bb42f0c204414c34
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449851"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325342"
 ---
 # <a name="ltcctypegt"></a>&lt;cctype&gt;
 
-Include l'intestazione della libreria C standard \<ctype.h> e aggiunge i nomi associati allo spazio dei nomi `std`.
+Include l'intestazione della libreria C standard \<ctype.h> e aggiunge i nomi associati allo `std` spazio dei nomi.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<> cctype
+**Intestazione:**\<cctype>
 
 **Spazio dei nomi:** std
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 L'inclusione di questa intestazione garantisce che i nomi dichiarati usando il collegamento esterno nell'intestazione della libreria C standard vengano dichiarati nello spazio dei nomi `std`.
 
@@ -46,8 +47,8 @@ int tolower(int c);
 int toupper(int c);
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)\
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Panoramica della libreria standard C++](../standard-library/cpp-standard-library-overview.md)\
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

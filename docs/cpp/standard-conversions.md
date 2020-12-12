@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: conversioni standard'
 title: Conversioni standard
 ms.date: 10/02/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-ms.openlocfilehash: cb4960c2f981b99fbc798098357a0ac65e8ddaa6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cfebc861fca1ccf8119c6055b37f112df7d4dca0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232222"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318039"
 ---
 # <a name="standard-conversions"></a>Conversioni standard
 
@@ -57,7 +58,7 @@ Il risultato di una conversione è un l-value solo se genera un tipo di riferime
 
 Gli oggetti di un tipo integrale possono essere convertiti in un altro tipo integrale più ampio, ovvero un tipo che può rappresentare un set più ampio di valori. Questo tipo di conversione più ampio è denominato *promozione integrale*. Con la promozione integrale, è possibile usare i tipi seguenti in un'espressione ogni volta che è possibile usare un altro tipo integrale:
 
-- Oggetti, valori letterali e costanti di tipo **`char`** e**`short int`**
+- Oggetti, valori letterali e costanti di tipo **`char`** e **`short int`**
 
 - Tipi di enumerazione
 
@@ -69,11 +70,11 @@ Le promozioni C++ sono "con mantenimento del valore", come valore dopo che la pr
 
 Le promozioni a mantenimento del valore e le promozioni che mantengono il segno producono, in genere, gli stessi risultati. Tuttavia, possono produrre risultati diversi se l'oggetto promosso viene visualizzato come segue:
 
-- Operando di `/` , `%` , `/=` , `%=` , `<` , `<=` , `>` o`>=`
+- Operando di `/` , `%` , `/=` , `%=` , `<` , `<=` , `>` o `>=`
 
    Questi operatori si basano sul segno per determinare il risultato. Le promozioni con mantenimento del valore e mantenimento del segno producono risultati diversi quando vengono applicati a questi operandi.
 
-- Operando sinistro di `>>` o`>>=`
+- Operando sinistro di `>>` o `>>=`
 
    Questi operatori considerano le quantità firmate e senza segno in modo diverso in un'operazione di spostamento. Per le quantità con segno, un'operazione di spostamento a destra propaga il bit di segno nelle posizioni dei bit sgomberate, mentre le posizioni dei bit sgomberate sono riempite con zero in quantità senza segno.
 
@@ -127,7 +128,7 @@ Nell'esempio precedente, `u` è un **`unsigned short`** oggetto integrale che de
 
 Un oggetto di un tipo a virgola mobile può essere convertito in modo sicuro in un tipo a virgola mobile più preciso, senza che la conversione causi una perdita di significato. Ad esempio, le conversioni da **`float`** a **`double`** o da **`double`** a **`long double`** sono sicure e il valore è invariato.
 
-Un oggetto di un tipo a virgola mobile può anche essere convertito in un tipo meno preciso, se si trova in un intervallo rappresentabile da quel tipo. (Vedere i [limiti mobili](../cpp/floating-limits.md) per gli intervalli dei tipi a virgola mobile.) Se il valore originale non è rappresentabile con precisione, può essere convertito in un valore successivo o successivo più basso rappresentabile. Il risultato non è definito se non esiste alcun valore di questo tipo. Prendere in considerazione gli esempi seguenti:
+Un oggetto di un tipo a virgola mobile può anche essere convertito in un tipo meno preciso, se si trova in un intervallo rappresentabile da quel tipo. (Vedere i [limiti mobili](../cpp/floating-limits.md) per gli intervalli dei tipi a virgola mobile.) Se il valore originale non è rappresentabile con precisione, può essere convertito in un valore successivo o successivo più basso rappresentabile. Il risultato non è definito se non esiste alcun valore di questo tipo. Si consideri l'esempio seguente:
 
 ```cpp
 cout << (float)1E300 << endl;
@@ -139,7 +140,7 @@ Il valore massimo **`float`** rappresentabile per tipo è 3.402823466 E38, un nu
 
 Alcune espressioni possono causare la conversione degli oggetti di tipo a virgola mobile in tipi integrali o viceversa. Quando un oggetto di tipo integrale viene convertito in un tipo a virgola mobile e il valore originale non è rappresentabile esattamente, il risultato è il successivo valore più alto o successivo rappresentabile inferiore.
 
-Quando un oggetto di tipo a virgola mobile viene convertito in un tipo integrale, la parte frazionaria viene *troncata*o arrotondata verso lo zero. Un numero come 1,3 viene convertito in 1 e-1,3 viene convertito in-1. Se il valore troncato è superiore al valore rappresentabile più elevato o inferiore al valore rappresentabile più basso, il risultato è indefinito.
+Quando un oggetto di tipo a virgola mobile viene convertito in un tipo integrale, la parte frazionaria viene *troncata* o arrotondata verso lo zero. Un numero come 1,3 viene convertito in 1 e-1,3 viene convertito in-1. Se il valore troncato è superiore al valore rappresentabile più elevato o inferiore al valore rappresentabile più basso, il risultato è indefinito.
 
 ## <a name="arithmetic-conversions"></a>Conversioni aritmetiche
 
@@ -327,6 +328,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)
+[Riferimenti per il linguaggio C++](../cpp/cpp-language-reference.md)
