@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: pagina delle proprietà risorse gestite'
 title: pagina delle proprietà Risorse gestite
 ms.date: 08/28/2019
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - Managed Resources property page
 ms.assetid: 80b80384-ee55-494d-9f0e-907bb98cfc19
-ms.openlocfilehash: 14802996e63392bfb5fcc22096ef5f3d9db197c2
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: 42816e2b4625bc5ab4620f4caafb627f55bd9cd5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177520"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190718"
 ---
 # <a name="managed-resources-property-page"></a>pagina delle proprietà Risorse gestite
 
-Nella pagina **delle proprietà risorse gestite** sono esposte le seguenti proprietà per il compilatore di risorse gestite [Resgen. exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) quando si utilizzano risorse .NET nei C++programmi/CLI:
+Nella pagina **delle proprietà risorse gestite** sono esposte le seguenti proprietà per il compilatore di risorse gestite [resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) quando si utilizzano risorse .NET nei programmi C++/CLI:
 
 - **Nome logico risorsa**
 
@@ -31,10 +32,10 @@ Nella pagina **delle proprietà risorse gestite** sono esposte le seguenti propr
 
    Specifica se il file con estensione resx specificato contribuisce alle risorse predefinite o a una DLL satellite.
 
-Per informazioni su come accedere alla pagina **delle proprietà risorse gestite** , vedere [impostare C++ le proprietà del compilatore e della compilazione in Visual Studio](../working-with-project-properties.md).
+Per informazioni su come accedere alla pagina **delle proprietà risorse gestite** , vedere [impostare le proprietà di compilazione e compilatore C++ in Visual Studio](../working-with-project-properties.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Using RC (The RC Command Line)](/windows/win32/menurc/using-rc-the-rc-command-line-) (Uso di RC - Riga di comando RC)<br>
-[C++riferimento alla pagina delle proprietà del progetto](property-pages-visual-cpp.md)<br>
+[Riferimento alla pagina delle proprietà del progetto C++](property-pages-visual-cpp.md)<br>
 [/ASSEMBLYRESOURCE (incorpora una risorsa gestita)](assemblyresource-embed-a-managed-resource.md)

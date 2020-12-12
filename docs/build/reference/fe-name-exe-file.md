@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/Fe (nome file EXE)
 title: /Fe (Specifica file EXE)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - /Fe compiler option [C++]
 - Fe compiler option [C++]
 ms.assetid: 49f594fd-5e94-45fe-a1bf-7c9f2abb6437
-ms.openlocfilehash: 72eada34c6a64a8b4591afbee03b686f3da3ee11
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 551c6f54ba75c71d9229b5a60ff0fdb192dbf100
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685411"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192278"
 ---
 # <a name="fe-name-exe-file"></a>/Fe (Specifica file EXE)
 
@@ -31,7 +32,7 @@ Specifica un nome e una directory per il file exe o la DLL creata dal compilator
 *percorso*<br/>
 Il percorso relativo o assoluto e il nome del file di base, il percorso relativo o assoluto di una directory o il nome del file di base da usare per l'eseguibile generato.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'opzione **/Fe** consente di specificare la directory di output, il nome dell'eseguibile di output o entrambi per il file eseguibile generato. Se *il percorso termina* in un separatore di percorso (**&#92;**), si presuppone che specifichi solo la directory di output. In caso contrario, l'ultimo componente di *pathname* viene usato come nome di base del file di output e il resto del *percorso* specifica la directory di output. Se *pathname* non ha alcun separatore di percorso, si presuppone che specifichi il nome del file di output nella directory corrente. Il *percorso deve essere* racchiuso tra virgolette doppie (**"**) se contiene caratteri che non possono trovarsi in un percorso breve, ad esempio spazi, caratteri estesi o componenti di percorso di lunghezza superiore a otto caratteri.
 
@@ -43,7 +44,7 @@ Se si specifica l'opzione [/c (compila senza collegamento)](c-compile-without-li
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Aprire la **Configuration Properties**  >  pagina delle proprietà generale del**linker**proprietà di configurazione  >  **General** .
+1. Aprire la   >  pagina delle proprietà generale del **linker** proprietà di configurazione  >   .
 
 1. Modificare la proprietà **file di output** . Scegliere **OK** per salvare le modifiche.
 
@@ -51,7 +52,7 @@ Se si specifica l'opzione [/c (compila senza collegamento)](c-compile-without-li
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OutputFile%2A>.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 La riga di comando seguente compila e collega tutti i file di origine C nella directory corrente. Il file eseguibile risultante è denominato PROCESS.exe e viene creato nella directory "C:\Utenti\nome Name\repos\My Project\bin".
 
@@ -65,9 +66,9 @@ La riga di comando seguente crea un file eseguibile `C:\BIN` con lo stesso nome 
 CL /FeC:\BIN\ *.C
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del file di output (/F)](output-file-f-options.md)<br/>
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)<br/>
 [Specifica del percorso](specifying-the-pathname.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: scaricamento esplicito di una DLL di Delay-Loaded'
 title: Scaricamento esplicito di una DLL a caricamento ritardato
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - __FUnloadDelayLoadedDLL2
 - delayed loading of DLLs, unloading
 ms.assetid: 1c4c5172-fd06-45d3-9e4f-f12343176b3c
-ms.openlocfilehash: 9909a3e179aa6c0af3a622c7bf1b545326f90bbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03df08487acc1be05226021d6b7c1593eb0f031b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293459"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192382"
 ---
 # <a name="explicitly-unloading-a-delay-loaded-dll"></a>Scaricamento esplicito di una DLL a caricamento ritardato
 
-Il [/Delay](delay-delay-load-import-settings.md): l'opzione del linker unload consente di scaricare una DLL con caricata ritardato. Per impostazione predefinita, quando il codice Scarica la DLL (/Delay: unload di utilizzo e **FUnloadDelayLoadedDLL2**), le importazioni a caricamento ritardato restano nella tabella di indirizzi di importazione (IAT). Tuttavia, se si usa /delay: unload nella riga di comando del linker, la funzione helper supporterà anche lo scaricamento esplicito della DLL, reimpostare la tabella IAT nel formato originale; i puntatori di ora non valido verranno sovrascritto. La tabella IAT è un campo la [ImgDelayDescr](calling-conventions-parameters-and-return-type.md) che contiene l'indirizzo di una copia della tabella IAT originale (se presente).
+L'opzione del linker [/delay](delay-delay-load-import-settings.md): Unload consente di scaricare una dll che è stata caricata in ritardo. Per impostazione predefinita, quando il codice Scarica la DLL (usando/Delay: Unload e **__FUnloadDelayLoadedDLL2**), le importazioni a caricamento ritardato rimangono nella tabella di indirizzi di importazione (IAT). Tuttavia, se si usa/Delay: Unload nella riga di comando del linker, la funzione di supporto supporterà lo scaricamento esplicito della DLL, reimpostando la tabella IAT sul formato originale; i puntatori ora non validi verranno sovrascritti. La tabella IAT è un campo nel [ImgDelayDescr](calling-conventions-parameters-and-return-type.md) che contiene l'indirizzo di una copia della IAT originale (se esistente).
 
 ## <a name="example"></a>Esempio
 
@@ -49,14 +50,14 @@ int main()
 
 ### <a name="comments"></a>Commenti
 
-Note importanti relative allo scaricamento di una DLL a caricamento ritardato:
+Note importanti per lo scaricamento di una DLL a caricamento ritardato:
 
-- È possibile trovare l'implementazione del **FUnloadDelayLoadedDLL2** funzione nel file \VC7\INCLUDE\DELAYHLP. CPP.
+- È possibile trovare l'implementazione della funzione **__FUnloadDelayLoadedDLL2** nel file \VC7\INCLUDE\DELAYHLP. CPP.
 
-- Il parametro name del **FUnloadDelayLoadedDLL2** funzione deve corrispondere esattamente (tra cui caso) quali la libreria di importazione contiene (ovvero stringa anche nella tabella IAT nell'immagine). È possibile visualizzare il contenuto della libreria di importazione con [DUMPBIN /DEPENDENTS](dependents.md). Se si desidera usare una corrispondenza tra maiuscole e minuscole stringa, è possibile aggiornare **FUnloadDelayLoadedDLL2** usare una delle funzioni CRT stringa o una chiamata all'API di Windows.
+- Il parametro Name della funzione **__FUnloadDelayLoadedDLL2** deve corrispondere esattamente a quello contenuto nella libreria di importazione. tale stringa è anche inclusa nella tabella Import dell'immagine. È possibile visualizzare il contenuto della libreria di importazione con [DUMPBIN/DEPENDENTS](dependents.md). Se si desidera una corrispondenza di stringa senza distinzione tra maiuscole e minuscole, è possibile aggiornare **__FUnloadDelayLoadedDLL2** per usare una delle funzioni stringa CRT o una chiamata API Windows.
 
-Visualizzare [lo scaricamento di una DLL a caricamento ritardato](unloading-a-delay-loaded-dll.md) per altre informazioni.
+Per ulteriori informazioni, vedere [scaricamento di una DLL Delay-Loaded](unloading-a-delay-loaded-dll.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Supporto per le DLL a caricamento ritardato nel linker](linker-support-for-delay-loaded-dlls.md)
+[Supporto del linker per le DLL di Delay-Loaded](linker-support-for-delay-loaded-dlls.md)

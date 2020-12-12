@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/BIND
 title: /BIND
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - /BIND editbin option
 - import address table
 ms.assetid: 3772b330-1868-4c90-857d-c31faa867982
-ms.openlocfilehash: e8ba0a5f0235c8771567e4e43172bdf8c81c99a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87ea0265555991fca019760feec4395692c074ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295032"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187143"
 ---
 # <a name="bind"></a>/BIND
 
@@ -24,14 +25,14 @@ ms.locfileid: "62295032"
 /BIND[:PATH=path]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Questa opzione imposta gli indirizzi dei punti di ingresso nella tabella di indirizzi di importazione per un file eseguibile o DLL. Usare questa opzione per ridurre il tempo di caricamento di un programma.
+Questa opzione consente di impostare gli indirizzi dei punti di ingresso nella tabella degli indirizzi di importazione per un file eseguibile o una DLL. Usare questa opzione per ridurre il tempo di caricamento di un programma.
 
-Specificare il programma i file eseguibili e DLL nel *file* argomento nella riga di comando EDITBIN. L'opzione facoltativa *percorso* argomento /BIND. specifica il percorso della DLL utilizzate dai file specificati. Più directory separate con un punto e virgola (**;**). Se *percorso* non viene specificato, la ricerca verrà effettuata nelle directory specificate nella variabile di ambiente PATH. Se *percorso* viene specificato, la variabile di percorso verrà ignorata.
+Specificare il file eseguibile del programma e le dll nell'argomento *files* nella riga di comando di EDITBIN). L'argomento facoltativo *path* di/BIND specifica il percorso delle DLL utilizzate dai file specificati. Separare più directory con un punto e virgola (**;**). Se il *percorso* non è specificato, EDITBIN) Cerca nelle directory specificate nella variabile di ambiente Path. Se si specifica *path* , EDITBIN) ignora la variabile Path.
 
-Per impostazione predefinita, il caricatore di programma imposta gli indirizzi dei punti di ingresso durante il caricamento di un programma. La quantità di tempo di questo processo richiede varia a seconda del numero delle DLL e il numero di punti di ingresso del programma a cui fa riferimento. Se un programma è stato modificato con /BIND. e se gli indirizzi di base per il file eseguibile e le DLL non sono in conflitto con le DLL che sono già caricate, il sistema operativo non è necessario impostare questi indirizzi. In una situazione in cui si basano erroneamente i file, il sistema operativo consente di rilocare le DLL del programma e Ricalcola gli indirizzi di punto di ingresso, che aggiunge al tempo di caricamento del programma.
+Per impostazione predefinita, il caricatore del programma imposta gli indirizzi dei punti di ingresso quando carica un programma. La quantità di tempo impiegato da questo processo varia a seconda del numero di dll e del numero di punti di ingresso a cui fa riferimento il programma. Se un programma è stato modificato con/BIND e gli indirizzi di base per il file eseguibile e le relative dll non sono in conflitto con le dll già caricate, non è necessario che il sistema operativo imposti questi indirizzi. In una situazione in cui i file sono basati in modo errato, il sistema operativo riposiziona le dll del programma e Ricalcola gli indirizzi del punto di ingresso, che aggiunge al tempo di caricamento del programma.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Opzioni di EDITBIN](editbin-options.md)
+[Opzioni di EDITBIN)](editbin-options.md)

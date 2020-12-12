@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: estensioni Microsoft a C e C++'
 title: Estensioni Microsoft per C e C++
 ms.date: 06/14/2018
 helpviewer_keywords:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - extensions
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-ms.openlocfilehash: 77f2ed64a0c816d84e67f66b664141581a9fad51
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fac6edbdfd559f3cebd18dcdc3b8cfca2a9336dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231507"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190692"
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>Estensioni Microsoft per C e C++
 
@@ -57,7 +58,7 @@ class CMyClass  {
 const int CMyClass::max;   // out of class definition
 ```
 
-In **/ze**la definizione out-of-Class è facoltativa per i membri dati statici, const integrali e const enum. Solo gli integrali e gli enum che sono static e const possono disporre di inizializzatori in una classe. L'espressione che inizializza deve essere un'espressione const.
+In **/ze** la definizione out-of-Class è facoltativa per i membri dati statici, const integrali e const enum. Solo gli integrali e gli enum che sono static e const possono disporre di inizializzatori in una classe. L'espressione che inizializza deve essere un'espressione const.
 
 Per evitare errori quando viene fornita una definizione out-of-Class in un file di intestazione e il file di intestazione è incluso in più file di origine, usare [selectany](../../cpp/selectany.md). Ad esempio:
 
@@ -117,7 +118,7 @@ Il compilatore C supporta commenti a riga singola, introdotti usando due caratte
 // This is a single-line comment.
 ```
 
-## <a name="scope"></a>Scope
+## <a name="scope"></a>Ambito
 
 Il compilatore C supporta le seguenti funzionalità relative all'ambito.
 
@@ -260,7 +261,7 @@ void func ()
 
 ## <a name="iso646h-not-enabled"></a>ISO646. H non abilitato
 
-In **/ze**è necessario includere iso646. h se si desidera utilizzare i formati di testo degli operatori seguenti:
+In **/ze** è necessario includere iso646. h se si desidera utilizzare i formati di testo degli operatori seguenti:
 
 - && (and)
 
@@ -298,8 +299,8 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [/Za,/ze (Disabilita estensioni linguaggio)](za-ze-disable-language-extensions.md)
 - [Opzioni del compilatore MSVC](compiler-options.md)
-- [Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+- [Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

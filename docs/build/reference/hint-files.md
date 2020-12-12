@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: file di hint'
 title: File dei suggerimenti
 ms.date: 02/26/2019
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: 8037cb8025cc85a8479528490e1512531cbcc035
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b9dc4655bde832011afcf03aa7f9a5be34807420
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322318"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191654"
 ---
 # <a name="hint-files"></a>File dei suggerimenti
 
@@ -37,8 +38,8 @@ Un file dei suggerimenti contiene suggerimenti che possono essere personalizzati
 > [!IMPORTANT]
 > Se si modifica o aggiunge un file dei suggerimenti, è necessario eseguire altri passaggi per rendere effettive le modifiche:
 >
-> - Nelle versioni precedenti a Visual Studio 2017 versione 15.6: eliminare il file sdf e/o VC.db nella soluzione per tutte le modifiche.
-> - In Visual Studio 2017 versione 15.6 e successive: chiudere e riaprire la soluzione dopo l'aggiunta di nuovi file dei suggerimenti.
+> - Nelle versioni precedenti a Visual Studio 2017 versione 15,6: eliminare il file SDF e/o il file VC. DB nella soluzione per tutte le modifiche.
+> - In Visual Studio 2017 versione 15,6 e successive: chiudere e riaprire la soluzione dopo l'aggiunta di nuovi file hint.
 
 ## <a name="scenario"></a>Scenario
 
@@ -93,19 +94,19 @@ A partire da Visual Studio 2017 versione 15.8 sono disponibili numerose funziona
 
 - Azione rapida per la creazione di un file dei suggerimenti che includa la macro evidenziata oppure, se il file dei suggerimenti è già presente, per l'aggiunta della macro al file.
 
-![Macro evidenziata.](media/hint-squiggle-and-actions.png "Hint onquiggle e azioni rapide")
+![Macro evidenziata.](media/hint-squiggle-and-actions.png "Hint zigzag e azioni rapide")
 
 Dopo l'esecuzione di una delle azioni rapide, il parser analizza di nuovo i file interessati dal file dei suggerimenti.
 
 Per impostazione predefinita, la macro dannosa è evidenziata come un suggerimento. L'evidenziazione può essere modificata in un elemento maggiormente visibile, ad esempio una sottolineatura a zigzag rossa o verde. Usare l'opzione **Macro nelle aree di esplorazione ignorate** nella sezione **Controllo ortografia codice** in **Strumenti** > **Opzioni** > **Editor di testo** > **C/C++** > **Visualizza**.
 
-![Macro nell'opzione Opzioni opzioni Opzioni di esplorazione ignorate.](media/skipped-regions-squiggle-option.png "Opzione di gioco ondulato delle aree ignorate.")
+![Macro nell'opzione aree di esplorazione ignorate.](media/skipped-regions-squiggle-option.png "Opzione zigzag di Regions ignorata.")
 
 ## <a name="display-browsing-database-errors"></a>Visualizzare gli errori del database di esplorazione
 
-Il comando di menu**Errori database esplorazione visualizzazione** **progetto** > visualizza tutte le aree che non è stato possibile analizzare nell'Elenco **errori**. Il comando è progettato per semplificare la creazione del file dei suggerimenti iniziale. Tuttavia, poiché il parser non indica se la causa dell'errore è stato una macro dannosa, sarà necessario valutare ogni errore. Eseguire il comando **Visualizza errori del database di esplorazione** e passare a ogni errore per caricare il file interessato nell'editor. Dopo aver caricato il file, le macro presenti all'interno dell'area vengono evidenziate. È possibile richiamare le azioni rapide per aggiungerle a un file dei suggerimenti. Dopo l'aggiornamento del file dei suggerimenti, l'elenco errori viene aggiornato automaticamente. In alternativa, se si modifica manualmente il file dei suggerimenti è possibile usare il comando **Ripeti analisi soluzione** per attivare un aggiornamento.
+Il   >  comando di menu **Visualizza errori del database di esplorazione** Visualizza tutte le aree che non sono state analizzate nel **Elenco errori**. Il comando è progettato per semplificare la creazione del file dei suggerimenti iniziale. Tuttavia, poiché il parser non indica se la causa dell'errore è stato una macro dannosa, sarà necessario valutare ogni errore. Eseguire il comando **Visualizza errori del database di esplorazione** e passare a ogni errore per caricare il file interessato nell'editor. Dopo aver caricato il file, le macro presenti all'interno dell'area vengono evidenziate. È possibile richiamare le azioni rapide per aggiungerle a un file dei suggerimenti. Dopo l'aggiornamento del file dei suggerimenti, l'elenco errori viene aggiornato automaticamente. In alternativa, se si modifica manualmente il file dei suggerimenti è possibile usare il comando **Ripeti analisi soluzione** per attivare un aggiornamento.
 
-## <a name="architecture"></a>Architecture
+## <a name="architecture"></a>Architettura
 
 I file dei suggerimenti riguardano le directory fisiche, non le directory logiche visualizzate in **Esplora soluzioni**. Non è necessario aggiungere un file dei suggerimenti al progetto perché il file abbia effetto. Il sistema di analisi usa i file dei suggerimenti solo quando analizza i file di origine.
 
@@ -156,8 +157,8 @@ I suggerimenti usano questa sintassi:
 |`@=`|Un elemento *replacement-string* specifico del file dei suggerimenti che indica un elemento intermedio della mappa. Una mappa può contenere più elementi.|
 |`@>`|Un elemento *replacement-string* specifico del file dei suggerimenti che indica la fine di un set di elementi della mappa.|
 |`#undef` *hint-name*|La direttiva del preprocessore che elimina un suggerimento esistente. Il nome del suggerimento è specificato dall'identificatore *hint-name*.|
-|`//`*commento*|Commento a riga singola.|
-|`/*`*commento*`*/`|Un commento su più righe.|
+|`//`*Commento*|Commento a riga singola.|
+|`/*`*Commento*`*/`|Un commento su più righe.|
 
 ## <a name="example"></a>Esempio
 
@@ -167,7 +168,7 @@ La figura illustra alcune delle directory fisiche di un progetto Visual Studio C
 
 ### <a name="hint-file-directories"></a>Directory dei file dei suggerimenti
 
-![Comune e proietta&#45;directory specifiche dei file dei suggerimenti.](media/hintfile.png "File Hint")
+![Common e Project&#45;directory di file di hint specifici.](media/hintfile.png "HintFile")
 
 ### <a name="directories-and-hint-file-contents"></a>Directory e contenuto dei file dei suggerimenti
 
@@ -243,7 +244,7 @@ Le note seguenti si applicano all'elenco precedente:
 
 - Il suggerimento `#undef` nella directory `A2` ha rimosso i suggerimenti per `OBRACE` e `CBRACE` nel file dei suggerimenti della directory `Debug`.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Tipi di file creati per i progetti di Visual Studio C++](file-types-created-for-visual-cpp-projects.md)<br>
 [Direttiva #define (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>

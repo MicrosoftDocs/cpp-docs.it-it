@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: istruzioni di iterazione (C++)'
 title: Istruzioni di iterazione (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - iteration statements
 - loop structures, iteration statements
 ms.assetid: bf6d75f7-ead2-426a-9c47-33847f59b8c7
-ms.openlocfilehash: b4176e8265759ae569275bdae5304b0b10c29fc1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 71edf526ed641a5bcd7944c546486cf3d2fb5059
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227387"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190289"
 ---
 # <a name="iteration-statements-c"></a>Istruzioni di iterazione (C++)
 
@@ -20,7 +21,7 @@ In C++ sono disponibili quattro istruzioni di iterazione, [while](../cpp/while-s
 
 ### <a name="iteration-statements"></a>Istruzioni di iterazione
 
-|.|Valutato|Inizializzazione|Incremento valore Identity|
+|Istruzione|Valutato|Inizializzazione|Incremento valore Identity|
 |---------------|------------------|--------------------|---------------|
 |**`while`**|All'inizio del ciclo|No|No|
 |**`do`**|Alla fine del ciclo|No|No|
@@ -29,6 +30,6 @@ In C++ sono disponibili quattro istruzioni di iterazione, [while](../cpp/while-s
 
 La parte di istruzione di un'istruzione di iterazione non può essere una dichiarazione. Tuttavia, può essere un'istruzione composta che contiene una dichiarazione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Cenni preliminari sulle istruzioni C++](../cpp/overview-of-cpp-statements.md)

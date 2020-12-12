@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/GA (Ottimizza per applicazione Windows)
 title: /GA (Ottimizza per applicazione Windows)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - -GA compiler option [C++]
 - Optimize for Windows compiler options
 ms.assetid: be97323e-15a0-4836-862c-95980b51926a
-ms.openlocfilehash: 85efa03a3f3d267580cbb0442839afb18ac6c313
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f9d65dce26e80b585abc4d67e2eef55f10cb365b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492859"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191979"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA (Ottimizza per applicazione Windows)
 
@@ -27,9 +28,9 @@ Genera codice più efficiente per un file exe per l'accesso alle variabili di ar
 /GA
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-**/GA** consente di velocizzare l'accesso ai dati dichiarati con [_ _ declspec (thread)](../../cpp/declspec.md) in un programma basato su Windows. Quando questa opzione è impostata, si presuppone che la macro [__tls_index](/windows/win32/ProcThread/thread-local-storage) sia uguale a 0.
+**/GA** consente di velocizzare l'accesso ai dati dichiarati con [__declspec (thread)](../../cpp/declspec.md) in un programma basato su Windows. Quando questa opzione è impostata, si presuppone che la macro [__tls_index](/windows/win32/ProcThread/thread-local-storage) sia 0.
 
 L'uso di **/GA** per una dll può comportare la generazione di codice non valido.
 
@@ -47,7 +48,7 @@ L'uso di **/GA** per una dll può comportare la generazione di codice non valido
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

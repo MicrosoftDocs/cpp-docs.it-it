@@ -1,20 +1,21 @@
 ---
+description: 'Altre informazioni su: pulsante moduli'
 title: Moduli (pulsante)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Modules button
 ms.assetid: 51552765-865a-4acc-aeae-f78afb73289a
-ms.openlocfilehash: efe6859ead257201fea8577675a7b8e55b5f700e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92f127823e02b7fc1b44de392e043b017de5d6da
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321202"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190627"
 ---
 # <a name="modules-button"></a>Moduli (pulsante)
 
-Fare clic sui **moduli** pulsante per visualizzare i **moduli aggiuntivi per la ricerca di errori** finestra di dialogo. Immettere il nome del file EXE o DLL desiderato nella casella di modifica e fare clic su **Add** per includere i moduli nella ricerca dei messaggi di errore. Rimuovere un modulo dall'elenco selezionandolo e scegliendo il **rimuovere** pulsante.
+Fare clic sul pulsante **moduli** per visualizzare i **moduli aggiuntivi per** la finestra di dialogo di ricerca degli errori. Immettere il nome del file EXE o DLL desiderato nella casella di modifica e fare clic su **Aggiungi** per includere i moduli nella ricerca dei messaggi di errore. Rimuovere un modulo dall'elenco evidenziando il modulo e facendo clic sul pulsante **Rimuovi** .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Controllo Value Edit](value-edit-control.md)
+[Controllo modifica valore](value-edit-control.md)

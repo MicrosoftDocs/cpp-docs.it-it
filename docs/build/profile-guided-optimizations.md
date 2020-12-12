@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: ottimizzazioni PGO'
 title: Ottimizzazioni PGO (Profile Guided Optmization)
 ms.date: 04/23/2019
 helpviewer_keywords:
 - profile-guided optimizations
 - optimization, profile-guided [C++]
 ms.assetid: 2225c307-d3ae-42c1-8345-a5a959d132dc
-ms.openlocfilehash: efa4c35810f6272b89ff11cd1c890a7f535cfc1c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cd6a9627de72ef170e88493ef3e2147a0ccc2bc7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232729"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187325"
 ---
 # <a name="profile-guided-optimizations"></a>Ottimizzazioni PGO (Profile Guided Optmization)
 
@@ -19,7 +20,7 @@ L'ottimizzazione PGO (PGO) consente di ottimizzare un intero file eseguibile, in
 Le ottimizzazioni PGO sono disponibili solo per le destinazioni native x86 o x64. Le ottimizzazioni PGO non sono disponibili per i file eseguibili eseguiti nel Common Language Runtime. Anche se si produce un assembly con codice nativo e gestito misto (usando l'opzione del compilatore **/CLR** ), non è possibile usare l'ottimizzazione PGO solo sul codice nativo. Se si tenta di compilare un progetto con queste opzioni impostate nell'IDE, viene restituito un errore di compilazione.
 
 > [!NOTE]
-> Le informazioni raccolte dalle esecuzioni dei test di profilatura eseguono l'override delle ottimizzazioni che altrimenti sarebbero attive se si specifica **/ob**, **/OS**o **/OT**. Per altre informazioni, vedere [/OB (espansione funzione inline)](reference/ob-inline-function-expansion.md) e [/OS,/OT (Ottimizza per dimensione codice, ottimizza per velocità codice)](reference/os-ot-favor-small-code-favor-fast-code.md).
+> Le informazioni raccolte dalle esecuzioni dei test di profilatura eseguono l'override delle ottimizzazioni che altrimenti sarebbero attive se si specifica **/ob**, **/OS** o **/OT**. Per altre informazioni, vedere [/OB (espansione funzione inline)](reference/ob-inline-function-expansion.md) e [/OS,/OT (Ottimizza per dimensione codice, ottimizza per velocità codice)](reference/os-ot-favor-small-code-favor-fast-code.md).
 
 ## <a name="steps-to-optimize-your-app"></a>Passaggi per ottimizzare l'app
 
@@ -95,6 +96,6 @@ Utilità da riga di comando che aggiunge dati di profilo da uno o più `.pgc` fi
 [Procedura: Unire più profili PGO in un unico profilo](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)<br/>
 Esempi di utilizzo di **pgomgr** .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Strumenti di compilazione aggiuntivi MSVC](reference/c-cpp-build-tools.md)

@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/IGNORE (Ignora avvisi specifici)
 title: /IGNORE (ignorare determinati avvisi)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - /IGNORE linker option
 ms.assetid: 37e77387-8838-4697-898f-d376ac641124
-ms.openlocfilehash: 4ed87a1a12bea189f56545cf5256351a29977643
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 7098515a65981ffcdf60b5b517d2434d20e7c015
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040262"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191329"
 ---
 # <a name="ignore-ignore-specific-warnings"></a>/IGNORE (ignorare determinati avvisi)
 
@@ -30,7 +31,7 @@ Per impostazione predefinita, LINK segnala tutti gli avvisi. Specificare **/Igno
 
 Non è tuttavia possibile ignorare alcuni tipi di avviso. Questa tabella elenca gli avvisi che non vengono eliminati da **/Ignore**:
 
-| Avviso del linker | Messaggio |
+| Avviso del linker | Message |
 |--------------------|-|
 |LNK4017|istruzione `keyword` non supportata per la piattaforma di destinazione; verrà ignorata|
 |[LNK4044](../../error-messages/tool-errors/linker-tools-warning-lnk4044.md)|opzione '`option`' non riconosciuta; ignorata|

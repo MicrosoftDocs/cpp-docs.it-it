@@ -1,28 +1,29 @@
 ---
+description: 'Altre informazioni su: come BSCMAKE compila un. File BSC'
 title: Modalità di compilazione di un file bsc in BSCMAKE
 ms.date: 11/04/2016
 helpviewer_keywords:
 - browse information files (.bsc), building
 ms.assetid: 8512b33e-c856-44a2-87bd-01ab10b52a95
-ms.openlocfilehash: 6f721641e021396f112bfe4c075ca0f524100d1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d468f365f7f42be2eb393e53d72053b682ec65a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291158"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191381"
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>Modalità di compilazione di un file bsc in BSCMAKE
 
-BSCMAKE compila o ricompila un file BSC in modo più efficiente che possibile. Per evitare potenziali problemi, è importante comprendere il processo di compilazione.
+BSCMAKE compila o ricompila un file BSC nel modo più efficiente possibile. Per evitare potenziali problemi, è importante comprendere il processo di compilazione.
 
-Quando BSCMAKE compila un file di informazioni, ma verrà troncato i file SBR lunghezza zero. Durante una compilazione successive dello stesso file, un file SBR a lunghezza zero (o vuoto) non indica a BSCMAKE che il file SBR apportano contributi nuovo. Si indica BSCMAKE che non è richiesto un aggiornamento di tale parte del file e una compilazione incrementale sarà sufficiente. Durante ogni compilazione (a meno che non è specificata l'opzione /n), BSCMAKE innanzitutto tenta di aggiornare il file in modo incrementale usando solo i file sbr che sono stati modificati.
+Quando BSCMAKE compila un file di informazioni di visualizzazione, tronca i file SBR a lunghezza zero. Durante una compilazione successiva dello stesso file, un file SBR di lunghezza zero (o vuoto) indica a BSCMAKE che il file SBR non ha alcun nuovo contributo da apportare. Consente a BSCMAKE di tenere presente che non è necessario un aggiornamento della parte del file e che sarà sufficiente una compilazione incrementale. Durante ogni compilazione (a meno che non venga specificata l'opzione/n), BSCMAKE tenta prima di tutto di aggiornare il file in modo incrementale usando solo i file SBR che sono stati modificati.
 
-Ricerca un file BSC con il nome specificato con l'opzione /o BSCMAKE. Se non viene specificato /o, BSCMAKE Cerca un file con il nome base del primo file sbr e un'estensione bsc. Se il file esiste, viene eseguita una compilazione incrementale del file di informazioni di visualizzazione con i soli file SBR. Se il file non esiste, viene eseguita una compilazione completa usando tutti i file SBR. Le regole per le compilazioni sono come segue:
+BSCMAKE Cerca un file BSC con il nome specificato con l'opzione/o. Se/o non è specificato, BSCMAKE Cerca un file con il nome di base del primo file SBR e un'estensione BSC. Se il file esiste, BSCMAKE esegue una compilazione incrementale del file di informazioni di visualizzazione utilizzando solo i file SBR che contribuiscono. Se il file non esiste, BSCMAKE esegue una compilazione completa usando tutti i file SBR. Di seguito sono riportate le regole per le compilazioni:
 
-- Per una compilazione completa abbia esito positivo, tutti i file SBR specificati devono essere presente e non devono essere troncati. Se un file SBR troncati, è necessario ricompilare (per la ricompilazione o l'assemblaggio) prima di eseguire BSCMAKE.
+- Affinché una compilazione completa abbia esito positivo, tutti i file sbr specificati devono esistere e non devono essere troncati. Se un file SBR viene troncato, è necessario ricompilarlo (ricompilando o assemblando) prima di eseguire BSCMAKE.
 
-- Per una compilazione incrementale abbia esito positivo, il file con estensione bsc deve esistere. Tutti i file SBR partecipanti, anche i file vuoti, deve esistere e deve essere specificato nella riga di comando BSCMAKE. Se si omette un file SBR dalla riga di comando, il suo contributo BSCMAKE rimuove dal file.
+- Affinché una compilazione incrementale abbia esito positivo, è necessario che sia presente il file BSC. Tutti i file SBR che contribuiscono, anche file vuoti, devono esistere e devono essere specificati nella riga di comando di BSCMAKE. Se si omette un file SBR dalla riga di comando, BSCMAKE rimuove il proprio contributo dal file.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Compilazione di un file BSC](building-a-dot-bsc-file.md)
+[Compilazione di un oggetto. File BSC](building-a-dot-bsc-file.md)

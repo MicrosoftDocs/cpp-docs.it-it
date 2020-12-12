@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/GZ (abilitazione dello stack frame Run-Time controllo degli errori)
 title: /GZ (Attiva controllo errori in fase di esecuzione dello stack frame)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - GZ compiler option [C++]
 - debug builds, catch release-build errors
 ms.assetid: b3efeeff-d5e3-4057-91c9-f6fc73d0270c
-ms.openlocfilehash: 3e6ffce487cc8183e45f3a911e7060ea22b28216
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b0936037c265bf57413c458ffc0a831184cb074
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292057"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191693"
 ---
 # <a name="gz-enable-stack-frame-run-time-error-checking"></a>/GZ (Attiva controllo errori in fase di esecuzione dello stack frame)
 
-Esegue le stesse operazioni come la [/RTC (controlli di errore di Run-Time)](rtc-run-time-error-checks.md) opzione. Deprecato.
+Esegue le stesse operazioni dell'opzione [/RTC (verifiche degli errori di run-time)](rtc-run-time-error-checks.md) . Deprecato.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -27,15 +28,15 @@ Esegue le stesse operazioni come la [/RTC (controlli di errore di Run-Time)](rtc
 /GZ
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-**/GZ** è solo per l'uso in un PInvoke ([/Od (disabilita (Debug))](od-disable-debug.md)) di compilazione.
+**/GZ** viene usato solo in una compilazione non ottimizzata ([/od (Disable (debug)](od-disable-debug.md))).
 
-**/GZ** è deprecata a partire da Visual Studio 2005; usare [/RTC (controlli di errore di Run-Time)](rtc-run-time-error-checks.md) invece. Per un elenco di opzioni del compilatore deprecate, vedere **deprecate o rimosse le opzioni del compilatore** nelle [opzioni del compilatore elencate per categoria](compiler-options-listed-by-category.md).
+**/GZ** è deprecato a partire da Visual Studio 2005; usare invece [/RTC (controlli degli errori di run-time)](rtc-run-time-error-checks.md) . Per un elenco delle opzioni del compilatore deprecate, vedere Opzioni del compilatore **deprecate e rimosse** nelle [Opzioni del compilatore elencate per categoria](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -47,7 +48,7 @@ Esegue le stesse operazioni come la [/RTC (controlli di errore di Run-Time)](rtc
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/MANIFEST (Crea manifesto dell'assembly affiancato)
 title: /MANIFEST (Crea manifesto dell'assembly syde-by-side)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /MANIFEST linker option
 - MANIFEST linker option
 ms.assetid: 98c52e1e-712c-4f49-b149-4d0a3501b600
-ms.openlocfilehash: ea58b43accdd854665fad3b70d7aecbc9eaa0f9e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6ab5dd0c0ae04a6ac5377c1c9ee0015f8c64ad54
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492787"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190705"
 ---
 # <a name="manifest-create-side-by-side-assembly-manifest"></a>/MANIFEST (Crea manifesto dell'assembly syde-by-side)
 
@@ -21,7 +22,7 @@ ms.locfileid: "69492787"
 /MANIFEST[:{EMBED[,ID=#]|NO}]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 /MANIFEST specifica che il linker deve creare un file manifesto side-by-side. Per ulteriori informazioni sui file manifesto, vedere [riferimenti ai file manifesto](/windows/win32/SbsCs/manifest-files-reference).
 
@@ -43,7 +44,7 @@ Se si specifica /MANIFEST, il nome del file manifesto è lo stesso del nome del 
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare le proprietà del compilatore e di compilazione C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
 1. Espandere il nodo **Proprietà di configurazione**.
 
@@ -57,7 +58,7 @@ Se si specifica /MANIFEST, il nome del file manifesto è lo stesso del nome del 
 
 1. Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateManifest%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Informazioni di riferimento sul linker MSVC](linking.md)<br/>
 [Opzioni del linker MSVC](linker-options.md)

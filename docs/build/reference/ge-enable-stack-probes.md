@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/GE (Abilita Probe dello stack)
 title: /Ge (Attiva ricerche dello stack)
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - stack checking calls
 - Ge compiler option [C++]
 ms.assetid: 4b54deae-4e3c-4bfa-95f3-ba23590f7258
-ms.openlocfilehash: a785ec041370e0bcbb2ce8b698bfba89235a0a0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db996deb1c5b964661e5465fe72cfb0fab93df56
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292185"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192018"
 ---
 # <a name="ge-enable-stack-probes"></a>/Ge (Attiva ricerche dello stack)
 
-Attiva ricerche dello stack per ogni chiamata di funzione che richiede l'archiviazione per le variabili locali.
+Attiva i probe dello stack per ogni chiamata di funzione che richiede l'archiviazione per le variabili locali.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -29,17 +30,17 @@ Attiva ricerche dello stack per ogni chiamata di funzione che richiede l'archivi
 /Ge
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questo meccanismo è utile se si riscrive la funzionalità del probe dello stack. È consigliabile usare [/Gh (Abilita funzione Hook nella penter)](gh-enable-penter-hook-function.md) anziché i probe dello stack di riscrittura.
+Questo meccanismo è utile se si riscrive la funzionalità del probe dello stack. Si consiglia di usare [/GH (abilita _Penter funzione hook)](gh-enable-penter-hook-function.md) invece di riscrivere il probe dello stack.
 
-[/GS (controllo dello Stack verifica chiamate)](gs-control-stack-checking-calls.md) ha lo stesso effetto.
+[/GS (controlla le chiamate di controllo dello stack)](gs-control-stack-checking-calls.md) ha lo stesso effetto.
 
-**/Ge** è deprecato; a partire da Visual Studio 2005, il compilatore genera automaticamente il controllo dello stack. Per un elenco di opzioni del compilatore deprecate, vedere **deprecate o rimosse le opzioni del compilatore** nelle [opzioni del compilatore elencate per categoria](compiler-options-listed-by-category.md).
+**/GE** è deprecato; a partire da Visual Studio 2005, il compilatore genera automaticamente il controllo dello stack. Per un elenco delle opzioni del compilatore deprecate, vedere Opzioni del compilatore **deprecate e rimosse** nelle [Opzioni del compilatore elencate per categoria](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -51,7 +52,7 @@ Questo meccanismo è utile se si riscrive la funzionalità del probe dello stack
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

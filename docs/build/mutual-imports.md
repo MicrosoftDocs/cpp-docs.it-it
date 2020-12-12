@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: importazioni reciproche'
 title: Importazioni reciproche
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-ms.openlocfilehash: 771ce7506359178c1b8346598e93c30a20329fe8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0015dfe69237ff46ecfbef9ee1f1649fcb04d689
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229792"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187494"
 ---
 # <a name="mutual-imports"></a>Importazioni reciproche
 
@@ -75,7 +76,7 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ...
 ```
 
-Quando A.dll viene compilato, viene compilato con `/D A_IMPL` e quando B.dll viene compilato, viene compilato con `/D B_IMPL` . Utilizzando simboli distinti per ogni DLL, `CExampleB` viene esportato e `CExampleA` viene importato durante la compilazione di B.dll. `CExampleA`viene esportato durante la compilazione di A.dll e importato quando viene usato da B.dll (o un altro client).
+Quando A.dll viene compilato, viene compilato con `/D A_IMPL` e quando B.dll viene compilato, viene compilato con `/D B_IMPL` . Utilizzando simboli distinti per ogni DLL, `CExampleB` viene esportato e `CExampleA` viene importato durante la compilazione di B.dll. `CExampleA` viene esportato durante la compilazione di A.dll e importato quando viene usato da B.dll (o un altro client).
 
 Non è possibile eseguire questo tipo di sovrapposizione quando si usano i simboli predefiniti **AFX_EXT_CLASS** e del `_AFXEXT` preprocessore. La tecnica descritta sopra risolve questo problema in modo diverso dal meccanismo che MFC utilizza per la compilazione delle relative tecnologie attive, database e dll di estensione MFC di rete.
 
@@ -127,6 +128,6 @@ class CExampleA : public CObject
 
 - [L'utilità LIB e l'opzione/DEF](reference/lib-reference.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Importazione ed esportazione](importing-and-exporting.md)

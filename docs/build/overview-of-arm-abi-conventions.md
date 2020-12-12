@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: Panoramica delle convenzioni ABI di ARM32'
 title: Panoramica delle convenzioni ABI ARM
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: fc211b887b2b82f533c1e36bf95e6fd6b8e24728
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: de82fc6c3da085c3840af0ad48694c7472d687c3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229766"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187403"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Panoramica delle convenzioni ABI di ARM32
 
@@ -55,12 +56,12 @@ L'uso di istruzioni IT nel codice Thumb-2 non è consentito, se non in questi ca
 
    |Codici operativi a 16 bit|Classe|Restrizioni|
    |---------------------|-----------|------------------|
-   |MOV, MVN|Spostamento|Rm != PC, Rd != PC|
+   |MOV, MVN|Sposta|Rm != PC, Rd != PC|
    |LDR, LDR[S]B, LDR[S]H|Load from memory|Ma non formati letterali LDR|
    |STR, STRB, STRH|Store to memory||
    |ADD, ADC, RSB, SBC, SUB|Add or subtract|Ma non formati ADD/SUB SP, SP, imm7<br /><br /> Rm != PC, Rdn != PC, Rdm != PC|
    |CMP, CMN|Confronto|Rm != PC, Rn != PC|
-   |MUL|Moltiplica||
+   |MUL|Moltiplicazione||
    |ASR, LSL, LSR, ROR|Bit shift||
    |AND, BIC, EOR, ORR, TST|Bitwise arithmetic||
    |BX|Branch to register|Rm != PC|
@@ -75,7 +76,7 @@ L'uso delle istruzioni di divisione dei numeri interi SDIV e UDIV è completamen
 
 Il processore ARM supporta registri con 16 Integer:
 
-|Register|Volatile?|Ruolo|
+|Registrazione|Volatile?|Ruolo|
 |--------------|---------------|----------|
 |r0|Volatile|Parametro, risultato, registro temporaneo 1|
 |r1|Volatile|Parametro, risultato, registro temporaneo 2|
@@ -221,7 +222,7 @@ Per supportare un contatore di cicli, sono necessari processori ARM che eseguono
 
 Il contatore è un vero e proprio contatore di cicli, non un orologio, e quindi la frequenza del conteggio varia con la frequenza del processore. Per misurare il tempo trascorso, usare `QueryPerformanceCounter`.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Problemi comuni relativi alla migrazione di Visual C++ ARM](common-visual-cpp-arm-migration-issues.md)<br/>
 [Gestione delle eccezioni ARM](arm-exception-handling.md)

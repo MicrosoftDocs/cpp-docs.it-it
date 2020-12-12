@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/GS (controllo sicurezza buffer)
 title: /GS (Controllo sicurezza buffer)
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - buffers [C++], avoiding overruns
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
-ms.openlocfilehash: 92d296e8079a9ecd8d366c46bbdad8b2ee5dc313
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4d7fa3c2220260914c9ff931c2f2e7c76bf12ea1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439570"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191875"
 ---
 # <a name="gs-buffer-security-check"></a>/GS (Controllo sicurezza buffer)
 
@@ -32,7 +33,7 @@ Rileva alcuni sovraccarichi del buffer che sovrascrivono l'indirizzo restituito 
 
 ## <a name="remarks"></a>Osservazioni
 
-**/GS** è on per impostazione predefinita. Se si prevede che l'applicazione non disponga di alcuna esposizione alla sicurezza, utilizzare **/GS-** . Per ulteriori informazioni sull'eliminazione del rilevamento del sovraccarico del buffer, vedere [safebuffers](../../cpp/safebuffers.md).
+**/GS** è on per impostazione predefinita. Se si prevede che l'applicazione non disponga di alcuna esposizione alla sicurezza, utilizzare **/GS-**. Per ulteriori informazioni sull'eliminazione del rilevamento del sovraccarico del buffer, vedere [safebuffers](../../cpp/safebuffers.md).
 
 ## <a name="security-checks"></a>Controlli di sicurezza
 
@@ -87,7 +88,7 @@ In tutte le piattaforme, **/GS** tenta di rilevare i sovraccarichi del buffer ne
 
 In x86, se una funzione utilizza un gestore di eccezioni, il compilatore inserisce un cookie di sicurezza per proteggere l'indirizzo del gestore di eccezioni. Il cookie viene verificato durante la rimozione del frame.
 
-**/GS** protegge i *parametri vulnerabili* passati in una funzione. Un parametro vulnerabile è un puntatore, un C++ riferimento, una struttura C (C++ tipo POD) che contiene un puntatore o un buffer GS.
+**/GS** protegge i *parametri vulnerabili* passati in una funzione. Un parametro vulnerabile è un puntatore, un riferimento C++, una struttura C (tipo POD C++) che contiene un puntatore o un buffer GS.
 
 Un parametro vulnerabile viene allocato prima del cookie e delle variabili locali. Un sovraccarico del buffer può sovrascrivere questi parametri. E il codice nella funzione che usa questi parametri può causare un attacco prima che la funzione restituisca e viene eseguito il controllo di sicurezza. Per ridurre al minimo questo rischio, il compilatore crea una copia dei parametri vulnerabili durante il prologo della funzione e li inserisce sotto l'area di archiviazione per tutti i buffer.
 
@@ -113,11 +114,11 @@ Anche se si usa **/GS**, provare sempre a scrivere codice protetto privo di sovr
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Per impostare questa opzione del compilatore in Visual Studio
 
-1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto, quindi scegliere **Proprietà**.
+1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto, quindi scegliere **Proprietà**.
 
    Per altre informazioni, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Nella finestra di dialogo **pagine delle proprietà** fare clic sulla cartella **C/C++**  .
+1. Nella finestra di dialogo **pagine delle proprietà** fare clic sulla cartella **C/C++** .
 
 1. Fare clic sulla pagina delle proprietà **generazione codice** .
 
@@ -154,7 +155,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

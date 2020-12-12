@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: pagina delle proprietà avanzate'
 title: Pagina delle proprietà avanzate (progetto)
 ms.date: 08/10/2020
 f1_keywords:
 - VC.Project.VCConfiguration.VCToolsVersion
 ms.description: Use the Advanced property page in Visual Studio 2019 to set various properties for C++ projects.
-ms.openlocfilehash: 3b1e45f984cd40d6ea42ead25b045fc8688ad0a7
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 916c1f341d148a0f6b426ddf3c31e0d20c59a29c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924037"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187312"
 ---
 # <a name="advanced-property-page"></a>Pagina delle proprietà avanzate
 
@@ -31,7 +32,7 @@ La pagina delle proprietà avanzate è disponibile in Visual Studio 2019 e versi
 
 - **Estensioni da eliminare durante la pulitura**
 
-   L'opzione **Pulisci** (menu **Compila** ) elimina i file dalla directory intermedia quando viene compilata la configurazione di un progetto. I file con le estensioni specificate in questa proprietà vengono eliminati quando viene eseguita la **pulizia** o quando si ricompila. Il sistema di compilazione Elimina tutti i file con queste estensioni nella directory intermedia. Elimina anche eventuali output noti della compilazione, indipendentemente dalla posizione. Che include gli output intermedi, ad esempio *`.obj`* i file. È possibile specificare caratteri jolly in questa proprietà.
+   L'opzione **Pulisci** (menu **Compila**) elimina i file dalla directory intermedia quando viene compilata la configurazione di un progetto. I file con le estensioni specificate in questa proprietà vengono eliminati quando viene eseguita la **pulizia** o quando si ricompila. Il sistema di compilazione Elimina tutti i file con queste estensioni nella directory intermedia. Elimina anche eventuali output noti della compilazione, indipendentemente dalla posizione. Che include gli output intermedi, ad esempio *`.obj`* i file. È possibile specificare caratteri jolly in questa proprietà.
 
    Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.DeleteExtensionsOnClean%2A>.
 

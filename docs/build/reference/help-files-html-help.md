@@ -1,15 +1,16 @@
 ---
+description: 'Ulteriori informazioni su: file della guida (Guida HTML)'
 title: File della Guida (HTML)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], HTML Help files
 ms.assetid: d30a1b1b-318f-4a78-8b60-93da53a224a8
-ms.openlocfilehash: 2b856defdac51c978aa07cd13ef8df153c9c3f5f
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 0a2b92300683fcc4f0ced365a6750f6e73da10f8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707017"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191602"
 ---
 # <a name="help-files-html-help"></a>File della Guida (HTML)
 
@@ -25,6 +26,6 @@ I file seguenti vengono creati quando si aggiunge il tipo di Guida HTML del supp
 |Afxprint.htm|*Projname*\hlp|Argomenti della Guida HTML|Contiene gli argomenti della Guida per i comandi di stampa.|
 |*.jpg; \*.gif|*Projname*\hlp\Images|File di risorse|Contiene le immagini per i vari argomenti dei file della Guida generati.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Tipi di file creati per i progetti di Visual Studio C++](file-types-created-for-visual-cpp-projects.md)
