@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Vector (STL/CLR)'
 title: vector (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -91,12 +92,12 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 - vector member [STL/CLR]
 ms.assetid: f90060d5-097a-4e9d-9a26-a634b5b9c6c2
-ms.openlocfilehash: 9abecfa6e0bbdf74514e2b7162d1d22a84fa01b2
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5997a70fb6b6e37fd4b1ff19c34fdc15750bbe4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502407"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298734"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 
@@ -149,7 +150,7 @@ Tipo di un elemento nella sequenza controllata.
 |[vector::size_type (STL/CLR)](#size_type)|Tipo di una distanza Signed tra due elementi.|
 |[vector::value_type (STL/CLR)](#value_type)|Tipo di un elemento.|
 
-|Funzione membro|Descrizione|
+|Funzione membro|Description|
 |---------------------|-----------------|
 |[vector::assign (STL/CLR)](#assign)|Sostituisce tutti gli elementi.|
 |[vector::at (STL/CLR)](#at)|Accede a un elemento in una posizione specificata.|
@@ -201,7 +202,7 @@ Tipo di un elemento nella sequenza controllata.
 |<xref:System.Collections.Generic.IList%601>|Gestisce il gruppo ordinato di elementi tipizzati.|
 |Valore<IVector\>|Mantiene il contenitore generico.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'oggetto alloca e libera la memoria per la sequenza che controlla tramite una matrice archiviata di elementi *valore* , che aumenta su richiesta. La crescita si verifica in modo tale che il costo di Accodamento di un nuovo elemento venga ammortizzato in tempo costante. In altre parole, il costo dell'aggiunta di elementi alla fine non aumenta, in media, perché la lunghezza della sequenza controllata diventa più grande. Pertanto, un vettore è un buon candidato per il contenitore sottostante per lo stack di classi modello [(STL/CLR)](../dotnet/stack-stl-clr.md).
 
@@ -245,13 +246,13 @@ Enumerazione da inserire.
 *Val*<br/>
 Valore dell'elemento da inserire.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La prima funzione membro sostituisce la sequenza controllata con una ripetizione di elementi *count* del valore *Val*. Viene usato per riempire il contenitore con tutti gli elementi con lo stesso valore.
 
 Se `InIt` è un tipo Integer, la seconda funzione membro si comporta come `assign((size_type)first, (value_type)last)` . In caso contrario, sostituisce la sequenza controllata con la sequenza [ `first` , `last` ). Viene usato per fare in modo che la sequenza controllata copi un'altra sequenza.
 
-La terza funzione membro sostituisce la sequenza controllata con la sequenza designata dal *diritto*dell'enumeratore. Viene usato per rendere la sequenza controllata una copia di una sequenza descritta da un enumeratore.
+La terza funzione membro sostituisce la sequenza controllata con la sequenza designata dal *diritto* dell'enumeratore. Viene usato per rendere la sequenza controllata una copia di una sequenza descritta da un enumeratore.
 
 ### <a name="example"></a>Esempio
 
@@ -311,7 +312,7 @@ reference at(size_type pos);
 *pos*<br/>
 Posizione dell'elemento a cui accedere.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce un riferimento all'elemento della sequenza controllata nella posizione *pos*. Viene utilizzato per leggere o scrivere un elemento la cui posizione si conosce.
 
@@ -922,9 +923,9 @@ Fine dell'intervallo da cancellare.
 *where*<br/>
 Elemento da cancellare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-La prima funzione membro rimuove l'elemento della sequenza controllata a *cui*punta. Viene usato per rimuovere un singolo elemento.
+La prima funzione membro rimuove l'elemento della sequenza controllata a *cui* punta. Viene usato per rimuovere un singolo elemento.
 
 La seconda funzione membro rimuove gli elementi della sequenza controllata nell'intervallo [`first`, `last`). Viene usato per rimuovere zero o più elementi contigui.
 
@@ -1353,7 +1354,7 @@ Valore dell'elemento da inserire.
 *where*<br/>
 Posizione del contenitore da inserire prima.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Ogni funzione membro inserisce, prima dell'elemento a cui punta la *posizione* nella sequenza controllata, una sequenza specificata dagli operandi rimanenti.
 
@@ -1491,7 +1492,7 @@ vector<Value>% operator=(vector<Value>% right);
 *Ok*<br/>
 Contenitore da copiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operatore membro copia *right* nell'oggetto, quindi restituisce **`*this`** . Viene usato per sostituire la sequenza controllata con una copia della sequenza controllata a *destra*.
 
@@ -1544,7 +1545,7 @@ reference operator[](size_type pos);
 *pos*<br/>
 Posizione dell'elemento a cui accedere.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operatore membro restituisce un referene all'elemento alla posizione *pos*. Viene usato per accedere a un elemento di cui si conosce la posizione.
 
@@ -1849,7 +1850,7 @@ void reserve(size_type count);
 *count*<br/>
 Nuova capacità minima del contenitore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro garantisce che `capacity()` in questo momento venga restituito almeno *count*. Viene usato per garantire che il contenitore non debba riallocare lo spazio di archiviazione per la sequenza controllata fino a quando non è aumentato fino alla dimensione specificata.
 
@@ -1908,7 +1909,7 @@ Nuove dimensioni della sequenza controllata.
 *Val*<br/>
 Valore dell'elemento di riempimento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le funzioni membro assicurano che [vector:: size (STL/CLR)](#size) `()` restituisca *new_size*. Se la sequenza controllata deve essere più lunga, la prima funzione membro accoda elementi con valore `value_type()` , mentre la seconda funzione membro accoda gli elementi con il valore *Val*. Per rendere la sequenza controllata più breve, entrambe le funzioni membro cancellano in modo efficace l'ultimo elemento [vector:: size (STL/CLR)](#size) `() -` `new_size` . Viene usato per garantire che la sequenza controllata abbia dimensioni *new_size*, tagliando o riempiendo la sequenza controllata corrente.
 
@@ -2111,7 +2112,7 @@ void swap(vector<Value>% right);
 *Ok*<br/>
 Contenitore con cui scambiare il contenuto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro scambia le sequenze controllate tra **`*this`** e *right*. Esegue questa operazione in un tempo costante e non genera alcuna eccezione. Viene usato come modo rapido per scambiare il contenuto di due contenitori.
 
@@ -2221,7 +2222,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>Osservazioni
 
-Il tipo è un sinonimo del *valore*del parametro di modello.
+Il tipo è un sinonimo del *valore* del parametro di modello.
 
 ### <a name="example"></a>Esempio
 
@@ -2288,7 +2289,7 @@ Oggetto o un intervallo da inserire.
 *Val*<br/>
 Valore dell'elemento da inserire.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il costruttore:
 
@@ -2332,7 +2333,7 @@ Il costruttore:
 
 `vector(System::Collections::Generic::IEnumerable<Value>^ right);`
 
-Inizializza la sequenza controllata con la sequenza designata dal *diritto*dell'enumeratore. Viene usato per fare in modo che la sequenza controllata venga copiata da un'altra sequenza descritta da un enumeratore.
+Inizializza la sequenza controllata con la sequenza designata dal *diritto* dell'enumeratore. Viene usato per fare in modo che la sequenza controllata venga copiata da un'altra sequenza descritta da un enumeratore.
 
 ### <a name="example"></a>Esempio
 
@@ -2419,7 +2420,7 @@ Contenitore sinistro da confrontare.
 *Ok*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce `!(left == right)` . Viene usato per verificare se *Left* non è ordinato come *right* quando i due vettori vengono confrontati elemento per elemento.
 
@@ -2488,7 +2489,7 @@ Contenitore sinistro da confrontare.
 *Ok*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce true se, per la posizione più bassa `i` per la quale `!(right[i] < left[i])` è anche true `left[i] < right[i]` . In caso contrario, viene restituito `left->size() < right->size()` per verificare se *Left* viene ordinato prima del *diritto* quando i due vettori vengono confrontati elemento per elemento.
 
@@ -2557,7 +2558,7 @@ Contenitore sinistro da confrontare.
 *Ok*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce `!(right < left)` . Viene usato per verificare se *Left* non è ordinato dopo *right* quando i due vettori vengono confrontati elemento per elemento.
 
@@ -2626,7 +2627,7 @@ Contenitore sinistro da confrontare.
 *Ok*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce true solo se le sequenze controllate da *Left* e *right* hanno la stessa lunghezza e, per ogni posizione `i` , `left[i] ==` `right[i]` . Viene usato per verificare se *Left* è ordinato come *right* quando i due vettori vengono confrontati con l'elemento.
 
@@ -2695,7 +2696,7 @@ Contenitore sinistro da confrontare.
 *Ok*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce `right` `<` `left` . Viene usato per verificare se *Left* viene ordinato dopo *right* quando i due vettori vengono confrontati elemento per elemento.
 
@@ -2764,7 +2765,7 @@ Contenitore sinistro da confrontare.
 *Ok*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce `!(left < right)` . Viene usato per verificare se *Left* non è ordinato prima del *diritto* quando i due vettori vengono confrontati elemento per elemento.
 

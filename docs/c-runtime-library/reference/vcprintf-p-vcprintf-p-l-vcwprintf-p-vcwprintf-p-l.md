@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l'
 title: _vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
 ms.date: 11/04/2016
 api_name:
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - _vcwprintf_p_l function
 - _vtcprintf_p function
 ms.assetid: 611024cc-90e7-41db-8e85-145ca95012b1
-ms.openlocfilehash: a0cfcd5ff6c99ae521d1521c9467288daaf05913
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3fb9cf8ca2bb561da6d859a1bbeff487b6b2e801
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945737"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299254"
 ---
 # <a name="_vcprintf_p-_vcprintf_p_l-_vcwprintf_p-_vcwprintf_p_l"></a>_vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
 
@@ -98,20 +99,20 @@ Per altre informazioni, vedere [Sintassi per la specifica del formato: funzioni 
 
 Il numero di caratteri che vengono scritti o un valore negativo se si verifica un errore di output. Se *Format* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e viene restituito-1.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi usa la funzione **_putch** per formattare e scrivere i dati specificati nella console. ( **_vcwprintf_p** utilizza **_putwch** anziché **_putch**. **_vcwprintf_p** è la versione a caratteri wide di **_vcprintf_p**. Accetta una stringa di caratteri wide come argomento).
+Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi usa la funzione **_putch** per formattare e scrivere i dati specificati nella console. (**_vcwprintf_p** utilizza **_putwch** invece di **_putch**. **_vcwprintf_p** è la versione a caratteri wide di **_vcprintf_p**. Accetta una stringa di caratteri wide come argomento).
 
-Le versioni di queste funzioni che hanno il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti.
+Le versioni di queste funzioni che hanno il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti.
 
-Ogni *argomento* , se presente, viene convertito e viene restituito in base alla specifica di formato corrispondente nel *formato*. La specifica del formato supporta i parametri posizionali in modo da poter specificare l'ordine in cui gli argomenti vengono usati nella stringa di formato. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).
+Ogni *argomento* , se presente, viene convertito e viene restituito in base alla specifica di formato corrispondente nel *formato*. La specifica del formato supporta i parametri posizionali in modo da poter specificare l'ordine in cui gli argomenti vengono usati nella stringa di formato. Per altre informazioni, vedere [Parametri posizionali printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
 Queste funzioni non convertono i caratteri di avanzamento di riga in combinazioni di caratteri di ritorno a capo ed avanzamento di riga (CR e LF) quando vengono restituiti.
 
 > [!IMPORTANT]
 > Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Queste funzioni convalidano il puntatore di input e la stringa di formato. Se *Format* o *argument* è **null**o se la stringa di formato contiene caratteri di formattazione non validi, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono-1 e impostano **errno** su **EINVAL**.
+Queste funzioni convalidano il puntatore di input e la stringa di formato. Se *Format* o *argument* è **null** o se la stringa di formato contiene caratteri di formattazione non validi, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono-1 e impostano **errno** su **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -127,7 +128,7 @@ Queste funzioni convalidano il puntatore di input e la stringa di formato. Se *F
 |**_vcprintf_p**, **_vcprintf_p_l**|\<conio.h> e \<stdarg.h>|
 |**_vcwprintf_p**, **_vcwprintf_p_l**|\<conio.h> e \<stdarg.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -162,7 +163,7 @@ parameter 2 = 222; parameter 1 = one
 
 ## <a name="see-also"></a>Vedere anche
 
-[I/O su console e porta](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[I/O console e porta](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)<br/>
-[Parametri posizionali printf_p](../../c-runtime-library/printf-p-positional-parameters.md)<br/>
+[printf_p parametri posizionali](../../c-runtime-library/printf-p-positional-parameters.md)<br/>

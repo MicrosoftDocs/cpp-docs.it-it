@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: accesso a ODBC e SQL'
 title: Accesso a ODBC e SQL
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - SQL [C++], calling ODBC API functions
 - ODBC [C++], API functions
 ms.assetid: 5613d7dc-00b7-4646-99ae-1116c05c52b4
-ms.openlocfilehash: 0b590ce9309cbbe95285001cc5befe70a1d1961f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 507e3a8e2d88c253f193de41be1a28ae0c5cba87
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213330"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295146"
 ---
 # <a name="access-to-odbc-and-sql"></a>Accesso a ODBC e SQL
 
@@ -24,6 +25,6 @@ Analogamente, le classi di database proteggono dalla necessità di lavorare molt
 
 Per ulteriori informazioni, vedere [ODBC: chiamata di funzioni API ODBC direttamente](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) e [SQL: esecuzione di chiamate SQL dirette (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [ODBC e MFC](../../data/odbc/odbc-and-mfc.md)

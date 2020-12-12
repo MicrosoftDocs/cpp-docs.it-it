@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _heapmin'
 title: _heapmin
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - _heapmin function
 - heapmin function
 ms.assetid: c0bccdf6-2d14-4d7b-a7ff-d6a17bdb410f
-ms.openlocfilehash: 9a98dfffc784d05a93f65a51a5250c31fe1dd596
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 06ec2d7b0269927d8d67c9fe7431f2f550728aae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920117"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296446"
 ---
 # <a name="_heapmin"></a>_heapmin
 
@@ -55,7 +56,7 @@ Se ha esito positivo, **_heapmin** restituisce 0; in caso contrario, la funzione
 
 Per altre informazioni su questi e su altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_heapmin** riduce al minimo l'heap rilasciando la memoria heap inutilizzata al sistema operativo. Se il sistema operativo non supporta **_heapmin**(ad esempio, Windows 98), la funzione restituisce-1 e **errno** viene impostato su **ENOSYS**.
 
@@ -69,10 +70,10 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Allocazione della memoria](../../c-runtime-library/memory-allocation.md)<br/>
-[libero](free.md)<br/>
+[Allocazione di memoria](../../c-runtime-library/memory-allocation.md)<br/>
+[free](free.md)<br/>
 [_heapadd](../../c-runtime-library/heapadd.md)<br/>
 [_heapchk](heapchk.md)<br/>
 [_heapset](../../c-runtime-library/heapset.md)<br/>

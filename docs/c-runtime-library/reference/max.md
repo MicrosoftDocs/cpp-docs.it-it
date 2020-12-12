@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __max'
 title: __max
 ms.date: 04/05/2018
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-ms.openlocfilehash: 4cdfd99ec344cd357900d76dfc7f9400046e448a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 709bbb7aee48e65fdd3feb21eb1984135faae2f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170189"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299650"
 ---
 # <a name="__max"></a>__max
 
@@ -52,11 +53,11 @@ Valori di qualsiasi tipo numerico da confrontare.
 
 **__max** restituisce il più grande degli argomenti.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La macro **__max** Confronta due valori e restituisce il valore di quello più grande. Gli argomenti possono essere di qualsiasi tipo di dati numerico, con o senza segno. Il tipo di dati deve essere lo stesso per entrambi gli argomenti e il valore restituito.
 
-L'argomento restituito viene valutato due volte dalla macro. Questo può causare risultati imprevisti se l'argomento è un'espressione che modifica il valore quando viene valutato, ad esempio `*p++`.
+L'argomento restituito viene valutato due volte dalla macro. Questo può causare risultati imprevisti se l'argomento è un'espressione che modifica il valore quando viene valutato, ad esempio `*p++` .
 
 ## <a name="requirements"></a>Requisiti
 
@@ -68,7 +69,7 @@ L'argomento restituito viene valutato due volte dalla macro. Questo può causare
 
 Per altre informazioni, vedere l'esempio per [__min](min.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [__min](min.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: controlli ActiveX MFC: ottimizzazione'
 title: 'Controlli ActiveX MFC: ottimizzazione'
 ms.date: 09/12/2018
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], active/inactive state
 - optimizing performance, ActiveX controls
 ms.assetid: 8b11f26a-190d-469b-b594-5336094a0109
-ms.openlocfilehash: b4e12889ca1bb5f4bb423a1f1ede1c396f8d60b5
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: db7fc1f1bdcdc3a3ffbf3b14d1809806389f0862
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615394"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97294106"
 ---
 # <a name="mfc-activex-controls-optimization"></a>Controlli ActiveX MFC: ottimizzazione
 
@@ -38,14 +39,14 @@ Alcune ottimizzazioni non migliorano necessariamente le prestazioni quando il co
 
 ### <a name="mfc-activex-control-wizard-ole-optimization-options"></a>Opzioni di ottimizzazione OLE della creazione guidata controllo ActiveX MFC
 
-|Impostazione del controllo nella creazione guidata controllo ActiveX MFC|Azione|Altre informazioni|
+|Impostazione del controllo nella creazione guidata controllo ActiveX MFC|Azione|Ulteriori informazioni|
 |-------------------------------------------------------|------------|----------------------|
-|Casella di controllo **attiva quando visibile**|Clear|[Disattivazione dell'opzione attiva se visibile](turning-off-the-activate-when-visible-option.md)|
+|Casella di controllo **attiva quando visibile**|Cancella|[Disattivazione dell'opzione attiva se visibile](turning-off-the-activate-when-visible-option.md)|
 |Casella di controllo **attivazione senza finestra**|Select|[Attivazione senza finestra](providing-windowless-activation.md)|
-|Casella di controllo **contesto dispositivo non ritagliato**|Select|[Uso di un contesto di dispositivo integro](using-an-unclipped-device-context.md)|
-|Casella **di controllo attivazione senza sfarfallio**|Select|[Offrire l'attivazione senza sfarfallio](providing-flicker-free-activation.md)|
-|Casella di controllo **notifiche puntatore del mouse quando inattivo**|Select|[Inserimento di interazione del mouse in stato di inattività](providing-mouse-interaction-while-inactive.md)|
-|Casella di controllo **codice di disegno ottimizzato**|Select|[Ottimizzazione del disegno dei controlli](optimizing-control-drawing.md)|
+|Casella di controllo **contesto dispositivo non ritagliato**|Select|[Uso di un contesto di dispositivo non ritagliato](using-an-unclipped-device-context.md)|
+|Casella **di controllo attivazione senza sfarfallio**|Select|[Attivazione di Flicker-Free](providing-flicker-free-activation.md)|
+|Casella di controllo **notifiche puntatore del mouse quando inattivo**|Select|[Interazione del mouse quando inattivo](providing-mouse-interaction-while-inactive.md)|
+|Casella di controllo **codice di disegno ottimizzato**|Select|[Ottimizzazione del disegno del controllo](optimizing-control-drawing.md)|
 
 Per informazioni dettagliate sulle funzioni membro che implementano queste ottimizzazioni, vedere [COleControl](reference/colecontrol-class.md).
 
@@ -57,14 +58,14 @@ Per altre informazioni, vedere:
 
 - [Disattivazione dell'opzione attiva se visibile](turning-off-the-activate-when-visible-option.md)
 
-- [Inserimento di interazione del mouse in stato di inattività](providing-mouse-interaction-while-inactive.md)
+- [Interazione del mouse quando inattivo](providing-mouse-interaction-while-inactive.md)
 
-- [Offrire l'attivazione senza sfarfallio](providing-flicker-free-activation.md)
+- [Attivazione di Flicker-Free](providing-flicker-free-activation.md)
 
-- [Uso di un contesto di dispositivo integro](using-an-unclipped-device-context.md)
+- [Uso di un contesto di dispositivo non ritagliato](using-an-unclipped-device-context.md)
 
-- [Ottimizzazione del disegno dei controlli](optimizing-control-drawing.md)
+- [Ottimizzazione del disegno del controllo](optimizing-control-drawing.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli ActiveX MFC](mfc-activex-controls.md)

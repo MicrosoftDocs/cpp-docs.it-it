@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: va_arg, va_copy, va_end, va_start'
 title: va_arg, va_copy, va_end, va_start
 ms.date: 11/04/2016
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - va_alist macro
 - va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
-ms.openlocfilehash: d35cf3aea99b7e832afb7d2a8e0aaa9d008226fa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 368a08e3ceb78d09d11a9f661772c6b0abef471f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231286"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299280"
 ---
 # <a name="va_arg-va_copy-va_end-va_start"></a>va_arg, va_copy, va_end, va_start
 
@@ -95,9 +96,9 @@ Parametro che precede il primo argomento facoltativo.
 
 **va_arg** restituisce l'argomento corrente. **va_copy**, **va_start** e **va_end** non restituiscono valori.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Le macro **va_arg**, **va_copy**, **va_end**e **va_start** offrono un modo portabile per accedere agli argomenti a una funzione quando la funzione accetta un numero variabile di argomenti. Esistono due versioni delle macro: le macro definite in STDARG.H conformi allo standard ISO C99 e le macro definite in VARARGS.H che sono deprecate, ma vengono mantenute per compatibilità con le versioni precedenti del codice scritto prima dello standard ANSI C89.
+Le macro **va_arg**, **va_copy**, **va_end** e **va_start** offrono un modo portabile per accedere agli argomenti a una funzione quando la funzione accetta un numero variabile di argomenti. Esistono due versioni delle macro: le macro definite in STDARG.H conformi allo standard ISO C99 e le macro definite in VARARGS.H che sono deprecate, ma vengono mantenute per compatibilità con le versioni precedenti del codice scritto prima dello standard ANSI C89.
 
 Queste macro presuppongono che la funzione accetti un numero fisso di argomenti obbligatori, seguito da un numero variabile di argomenti facoltativi. Gli argomenti obbligatori vengono dichiarati come parametri comuni per la funzione e sono accessibili tramite i nomi dei parametri. Gli argomenti facoltativi sono accessibili tramite le macro in STDARG.H (o VARARGS.H per il codice scritto prima dello standard ANSI C89), che impostano un puntatore al primo argomento facoltativo nell'elenco di argomenti, recuperano gli argomenti dall'elenco e reimpostano il puntatore al termine dell'elaborazione degli argomenti.
 
@@ -105,7 +106,7 @@ Le macro standard C, definite in STDARG. H, vengono usate come segue:
 
 - **va_start** imposta *arg_ptr* sul primo argomento facoltativo nell'elenco di argomenti passati alla funzione. L'argomento *arg_ptr* deve avere il tipo di **va_list** . L'argomento *prev_param* è il nome del parametro obbligatorio che precede immediatamente il primo argomento facoltativo nell'elenco di argomenti. Se *prev_param* viene dichiarata con la classe di archiviazione register, il comportamento della macro non è definito. **va_start** necessario utilizzare prima di **va_arg** viene utilizzato per la prima volta.
 
-- **va_arg** recupera un valore di *tipo* dalla posizione fornita da *arg_ptr*e incrementa *arg_ptr* in modo che punti all'argomento successivo nell'elenco usando la dimensione del *tipo* per determinare dove inizia l'argomento successivo. **va_arg** possibile utilizzare un numero qualsiasi di volte nella funzione per recuperare gli argomenti dall'elenco.
+- **va_arg** recupera un valore di *tipo* dalla posizione fornita da *arg_ptr* e incrementa *arg_ptr* in modo che punti all'argomento successivo nell'elenco usando la dimensione del *tipo* per determinare dove inizia l'argomento successivo. **va_arg** possibile utilizzare un numero qualsiasi di volte nella funzione per recuperare gli argomenti dall'elenco.
 
 - **va_copy** crea una copia di un elenco di argomenti nello stato corrente. Il parametro *src* deve essere già inizializzato con **va_start**; potrebbe essere stato aggiornato con **va_arg** chiamate, ma non deve essere stato reimpostato con **va_end**. L'argomento successivo recuperato dal **va_arg** da *dest* è uguale all'argomento successivo recuperato da *src*.
 
@@ -156,7 +157,7 @@ Si noti che **TestIt** prevede che il secondo parametro sia un **`int`** o un **
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<stdio.h> e\<stdarg.h>
+**Intestazione:** \<stdio.h> e \<stdarg.h>
 
 **Intestazione deprecata:**\<varargs.h>
 

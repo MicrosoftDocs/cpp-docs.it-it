@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l'
 title: strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 ms.date: 4/2/2020
 api_name:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-ms.openlocfilehash: fbde746cba02605be7fa42e941a30bfa02d0561a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2dd5da437ef0b6f9f319f3ba7a9543f7922bfd9c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231312"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296251"
 ---
 # <a name="strpbrk-wcspbrk-_mbspbrk-_mbspbrk_l"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 
@@ -133,9 +134,9 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un puntatore alla prima occorrenza di qualsiasi carattere da *strCharSet* in *Str*o un puntatore null se i due argomenti di stringa non hanno caratteri in comune.
+Restituisce un puntatore alla prima occorrenza di qualsiasi carattere da *strCharSet* in *Str* o un puntatore null se i due argomenti di stringa non hanno caratteri in comune.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La `strpbrk` funzione restituisce un puntatore alla prima occorrenza di un carattere in *Str* che appartiene al set di caratteri in *strCharSet*. La ricerca non include il carattere Null di terminazione.
 
@@ -206,7 +207,7 @@ int main( void )
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Impostazioni locali](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strchr, wcschr, _mbschr, _mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>
 [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>

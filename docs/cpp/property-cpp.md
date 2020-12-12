@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Property (C++)'
 title: property (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - property __declspec keyword
 - __declspec keyword [C++], property
 ms.assetid: f3b850ba-bf48-4df7-a1d6-8259d97309ce
-ms.openlocfilehash: 03f71739698fd20a01fd72567ce5b9babc176327
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ed996ecadd16837af1e28b71bbedd9b4e3c1abaa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179302"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299163"
 ---
 # <a name="property-c"></a>property (C++)
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 L'attributo può essere applicato ai "membri dati virtuali" non statici in una definizione di classe o struttura. Il compilatore considera questi "membri dati virtuali" come membri dati modificando i riferimenti nelle chiamate di funzione.
 
@@ -30,7 +31,7 @@ L'attributo può essere applicato ai "membri dati virtuali" non statici in una d
 
 ## <a name="remarks"></a>Osservazioni
 
-Quando il compilatore rileva un membro dati dichiarato con questo attributo a destra di un operatore di selezione dei membri (" **.** " o " **->** "), converte l'operazione in una funzione `get` o `put`, a seconda che tale espressione sia un l-value o un r-value. In contesti più complessi, ad esempio "`+=`", viene eseguita una riscrittura eseguendo sia `get` che `put`.
+Quando il compilatore rileva un membro dati dichiarato con questo attributo a destra di un operatore di selezione dei membri ("**.**" o " **->** "), converte l'operazione in una `get` funzione o `put` , a seconda che tale espressione sia un l-value o un r-value. In contesti più complessi, ad esempio " `+=` ", una riscrittura viene eseguita eseguendo sia `get` che `put` .
 
 Questo attributo può anche essere utilizzato in una dichiarazione di una matrice vuota in una definizione di classe o struttura. Ad esempio:
 
@@ -40,7 +41,7 @@ __declspec(property(get=GetX, put=PutX)) int x[];
 
 L'istruzione sopra indica che `x[]` può essere utilizzato con uno o più indici di matrice. In questo caso, `i=p->x[a][b]` si trasformerà in `i=p->GetX(a, b)` e `p->x[a][b] = i` si trasformerà in `p->PutX(a, b, i);`
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
 ## <a name="example"></a>Esempio
 

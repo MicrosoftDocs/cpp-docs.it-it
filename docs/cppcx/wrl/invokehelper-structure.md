@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: struttura InvokeHelper'
 title: InvokeHelper (struttura)
 ms.date: 10/18/2018
 ms.topic: reference
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::Invoke method
 - Microsoft::WRL::Details::InvokeHelper, constructor
 ms.assetid: 555ad2bc-4dd6-4e65-a2e2-1242c395f0e5
-ms.openlocfilehash: 9cb4e166628a6b5e7671494446d467e73c9f8cc3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0b9bb8abb59cce5a3c25d795d0946ffbe88d0076
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371377"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299020"
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper (struttura)
 
@@ -109,38 +110,38 @@ Tipo di interfaccia del delegato.
 *TCallback*<br/>
 Tipo della funzione del gestore eventi.
 
-*argCount (conteggio arg)*<br/>
-Numero di argomenti `InvokeHelper` in una specializzazione.
+*argCount*<br/>
+Numero di argomenti in una `InvokeHelper` specializzazione.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Fornisce un'implementazione `Invoke()` del metodo in base al numero e al tipo di argomenti specificati.
+Fornisce un'implementazione del `Invoke()` metodo in base al numero e al tipo di argomenti specificati.
 
 ## <a name="members"></a>Membri
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-Nome     | Descrizione
+Nome     | Description
 -------- | -----------------------------------------------------------------------------
 `Traits` | Sinonimo della classe che definisce il tipo di ogni argomento del gestore eventi.
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-Nome                                        | Descrizione
+Nome                                        | Description
 ------------------------------------------- | -------------------------------------------------------
-[Richiamare::RichiamareInvokeHelper::InvokeHelper](#invokehelper) | Inizializza una nuova istanza della classe `InvokeHelper`.
+[InvokeHelper:: InvokeHelper](#invokehelper) | Inizializza una nuova istanza della classe `InvokeHelper`.
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-Nome                            | Descrizione
+Nome                            | Description
 ------------------------------- | -----------------------------------------------------------------------------------
-[Richiamare::Richiamare](#invoke) | Chiama il gestore eventi la cui firma contiene il numero specificato di argomenti.
+[InvokeHelper:: Invoke](#invoke) | Chiama il gestore eventi la cui firma contiene il numero specificato di argomenti.
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-Nome                                 | Descrizione
+Nome                                 | Description
 ------------------------------------ | ----------------------------------------------------------
-[Richiamare::callback_](#callback) | Rappresenta il gestore eventi da chiamare quando si verifica un evento.
+[InvokeHelper:: callback_](#callback) | Rappresenta il gestore eventi da chiamare quando si verifica un evento.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -148,11 +149,11 @@ Nome                                 | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** event.h
+**Intestazione:** Event. h
 
-**Spazio dei nomi:** Microsoft::WRL::Details
+**Spazio dei nomi:** Microsoft:: WRL::D etails
 
-## <a name="invokehelpercallback_"></a><a name="callback"></a>Richiamare::callback_
+## <a name="invokehelpercallback_"></a><a name="callback"></a> InvokeHelper:: callback_
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -160,13 +161,13 @@ Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codi
 TCallback callback_;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Rappresenta il gestore eventi da chiamare quando si verifica un evento.
 
-Il `TCallback` parametro template consente di specificare il tipo del gestore eventi.
+Il `TCallback` parametro di modello specifica il tipo del gestore eventi.
 
-## <a name="invokehelperinvoke"></a><a name="invoke"></a>Richiamare::Richiamare
+## <a name="invokehelperinvoke"></a><a name="invoke"></a> InvokeHelper:: Invoke
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -211,22 +212,22 @@ Argomento 1.
 *arg2*<br/>
 Argomento 2.
 
-*arg3 (informazioni in due)*<br/>
+*Arg3*<br/>
 Argomento 3.
 
-*arg4 (in questo modo)*<br/>
+*Arg4*<br/>
 Argomento 4.
 
-*arg5 (in questo modo)*<br/>
+*arg5*<br/>
 Argomento 5.
 
 *arg6*<br/>
 Argomento 6.
 
-*arg7 (in questo modo)*<br/>
+*arg7*<br/>
 Argomento 7.
 
-*arg8 (informazioni in due)*<br/>
+*arg8*<br/>
 Argomento 8.
 
 *arg9*<br/>
@@ -234,13 +235,13 @@ Argomento 9.
 
 ### <a name="return-value"></a>Valore restituito
 
-S_OK in caso di esito positivo; in caso contrario, un HRESULT che descrive l'errore.
+S_OK in caso di esito positivo; in caso contrario, HRESULT che descrive l'errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiama il gestore eventi la cui firma contiene il numero specificato di argomenti.
 
-## <a name="invokehelperinvokehelper"></a><a name="invokehelper"></a>Richiamare::RichiamareInvokeHelper::InvokeHelper
+## <a name="invokehelperinvokehelper"></a><a name="invokehelper"></a> InvokeHelper:: InvokeHelper
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -255,8 +256,8 @@ explicit InvokeHelper(
 *callback*<br/>
 Gestore eventi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Inizializza una nuova istanza della classe `InvokeHelper`.
 
-Il `TCallback` parametro template consente di specificare il tipo del gestore eventi.
+Il `TCallback` parametro di modello specifica il tipo del gestore eventi.

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _matherr'
 title: _matherr
 ms.date: 04/05/2018
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _matherr function
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
-ms.openlocfilehash: 340e3b8562e1f0f564810bc63cf6bd2e87ffdf63
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 406f9fe43ed64b24637f94cc5bf1ef01d4c94567
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952766"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299631"
 ---
 # <a name="_matherr"></a>_matherr
 
@@ -44,7 +45,7 @@ int _matherr( struct _exception * except );
 
 ### <a name="parameters"></a>Parametri
 
-*except*<br/>
+*ad eccezione*<br/>
 Puntatore alla struttura contenente le informazioni sull'errore.
 
 ## <a name="return-value"></a>Valore restituito
@@ -53,13 +54,13 @@ Puntatore alla struttura contenente le informazioni sull'errore.
 
 Per altre informazioni sui codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 La funzione **_matherr** elabora gli errori generati dalle funzioni a virgola mobile della libreria matematica. Queste funzioni chiamano **_matherr** quando viene rilevato un errore.
 
-Per una gestione speciale degli errori, è possibile fornire una definizione diversa di **_matherr**. Se si usa la versione collegata in modo dinamico della libreria di runtime del linguaggio C (CRT), è possibile sostituire la routine **_matherr** predefinita in un eseguibile client con una versione definita dall'utente. Tuttavia, non è possibile sostituire la routine **_matherr** predefinita in un client DLL della DLL CRT.
+Per una gestione speciale degli errori, è possibile fornire una definizione diversa di **_matherr**. Se si usa la versione collegata in modo dinamico della libreria di runtime del linguaggio C (CRT), è possibile sostituire la routine predefinita **_matherr** in un eseguibile client con una versione definita dall'utente. Tuttavia, non è possibile sostituire la routine predefinita **_matherr** in un client DLL della DLL CRT.
 
-Quando si verifica un errore in una routine matematica, **_matherr** viene chiamato con un puntatore a una struttura di tipo **_exception** ( \<definita in Math. h >) come argomento. La struttura **_exception** contiene gli elementi seguenti.
+Quando si verifica un errore in una routine matematica, **_matherr** viene chiamato con un puntatore a una struttura di tipo **_exception** (definita in \<math.h> ) come argomento. La struttura **_exception** contiene gli elementi seguenti.
 
 ```C
 struct _exception
@@ -72,7 +73,7 @@ struct _exception
 };
 ```
 
-Il membro del **tipo** specifica il tipo di errore matematico. È uno dei seguenti valori, definito in \<Math. h >:
+Il membro del **tipo** specifica il tipo di errore matematico. È uno dei valori seguenti, definito in \<math.h> :
 
 |Macro|Significato|
 |-|-|
@@ -93,7 +94,7 @@ Il valore restituito predefinito dell'errore specificato è **retval**. Se si mo
 |-------------|---------------------|
 |**_matherr**|\<math.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -159,4 +160,4 @@ Normal: log( 0.0 ) = -inf
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>

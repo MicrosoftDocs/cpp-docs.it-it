@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: struttura'
 title: IsSame (struttura)
 ms.date: 10/03/2018
 ms.topic: reference
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::IsSame structure
 - Microsoft::WRL::Details::IsSame::value constant
 ms.assetid: 1eddbc3f-3cc5-434f-8495-e4477e1f868e
-ms.openlocfilehash: 8c209d5a8d2a35f2643e90e5595d86f41519f30b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b00e85f55fc80af2dd00dc20f090a7b18678f579
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216557"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298929"
 ---
 # <a name="issame-structure"></a>IsSame (struttura)
 
@@ -38,7 +39,7 @@ Tipo.
 *T2*<br/>
 Un altro tipo.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Verifica se un tipo specificato è uguale a un altro tipo specificato.
 
@@ -46,7 +47,7 @@ Verifica se un tipo specificato è uguale a un altro tipo specificato.
 
 ### <a name="public-constants"></a>Costanti pubbliche
 
-Nome                    | Descrizione
+Nome                    | Description
 ----------------------- | --------------------------------------------------
 [Valore:: value](#value) | Indica se un tipo è uguale a un altro.
 
@@ -60,7 +61,7 @@ Nome                    | Descrizione
 
 **Spazio dei nomi:** Microsoft:: WRL::D etails
 
-## <a name="issamevalue"></a><a name="value"></a>Valore:: value
+## <a name="issamevalue"></a><a name="value"></a> Valore:: value
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -78,8 +79,8 @@ struct IsSame<T1, T1>
 };
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Indica se un tipo è uguale a un altro.
 
-`value`indica **`true`** se i parametri del modello sono uguali e **`false`** se i parametri del modello sono diversi.
+`value` indica **`true`** se i parametri del modello sono uguali e **`false`** se i parametri del modello sono diversi.

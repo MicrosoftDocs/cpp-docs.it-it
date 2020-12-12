@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _utime, _utime32, _utime64, _wutime, _wutime32, _wutime64'
 title: _utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 ms.date: 4/2/2020
 api_name:
@@ -66,12 +67,12 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-ms.openlocfilehash: dbff557cd116eb1df44f015b17716408c8dc54c2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7ec25f60c508464abf8232419f8867bc3f0a20fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912135"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299345"
 ---
 # <a name="_utime-_utime32-_utime64-_wutime-_wutime32-_wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 
@@ -111,7 +112,7 @@ int _wutime64(
 *filename*<br/>
 Puntatore a una stringa contenente il percorso o il nome del file.
 
-*volte*<br/>
+*numero di volte*<br/>
 Puntatore ai valori di ora archiviati.
 
 ## <a name="return-value"></a>Valore restituito
@@ -129,9 +130,9 @@ Per altre informazioni su questo e altri codici restituiti, vedere [_doserrno, e
 
 La data può essere modificata per un file, se la data di modifica è successiva alla mezzanotte del 1 gennaio 1970 e precedente alla data di fine della funzione usata. **_utime** e **_wutime** utilizzano un valore di ora a 64 bit, quindi la data di fine è 23:59:59, 31 dicembre 3000, UTC. Se **_USE_32BIT_TIME_T** viene definito per forzare il comportamento precedente, la data di fine è 23:59:59 del 18 gennaio 2038, UTC. **_utime32** o **_wutime32** utilizzano un tipo di ora a 32 bit, indipendentemente dal fatto che **_USE_32BIT_TIME_T** sia definito e che dispongano sempre della data di fine precedente. **_utime64** o **_wutime64** utilizzano sempre il tipo di ora a 64 bit, in modo che queste funzioni supportino sempre la data di fine successiva.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **_utime** imposta l'ora di modifica per il file specificato da *filename*. Il processo deve disporre dell'accesso in scrittura al file per poter modificare l'ora. Nel sistema operativo Windows è possibile modificare l'ora di accesso e l'ora di modifica nella struttura del **_utimbuf** . Se *Times* è un puntatore **null** , l'ora di modifica viene impostata sull'ora locale corrente. In caso contrario, gli *orari* devono puntare a una struttura di tipo **_utimbuf**, definita in SYS\UTIME. H.
+La funzione **_utime** imposta l'ora di modifica per il file specificato da *filename*. Il processo deve disporre dell'accesso in scrittura al file per poter modificare l'ora. Nel sistema operativo Windows è possibile modificare l'ora di accesso e l'ora di modifica nella struttura del **_utimbuf** . Se *Times* è un puntatore **null** , l'ora di modifica viene impostata sull'ora locale corrente. In caso contrario, gli *orari* devono puntare a una struttura di tipo **_utimbuf**, definita in SYS\UTIME.H.
 
 La struttura di **_utimbuf** archivia le ore di accesso e modifica dei file usate da **_utime** per modificare le date di modifica dei file. La struttura presenta i campi seguenti, entrambi di tipo **time_t**:
 
@@ -237,7 +238,7 @@ Directory of C:\test
                0 Dir(s)  20,742,955,008 bytes free
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione del tempo](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>

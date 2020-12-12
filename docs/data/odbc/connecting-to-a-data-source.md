@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: connessione a un'origine dati"
 title: Connessione a un'origine dei dati
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: ef6c8c98-5979-43a8-9fb5-5bb06fc59f36
-ms.openlocfilehash: 712910aca2622f2678b8b9d06b18a2fdbf9157e4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3bc5436a678d39682b89d82dd7f3ab90eb6f5bb5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213343"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295120"
 ---
 # <a name="connecting-to-a-data-source"></a>Connessione a un'origine dei dati
 
@@ -23,7 +24,7 @@ Un'origine dati ODBC è un set di dati specifico, le informazioni necessarie per
 
 Per accedere ai dati forniti da un'origine dati, il programma deve prima stabilire una connessione all'origine dati. Tutti gli accessi ai dati vengono gestiti tramite tale connessione.
 
-Le connessioni all'origine dati sono incapsulate dalla classe [CDatabase](../../mfc/reference/cdatabase-class.md). Quando un oggetto `CDatabase` è connesso a un'origine dati, è possibile:
+Le connessioni all'origine dati sono incapsulate dalla classe [CDatabase](../../mfc/reference/cdatabase-class.md). Quando un `CDatabase` oggetto è connesso a un'origine dati, è possibile:
 
 - Creare [Recordset](../../mfc/reference/crecordset-class.md), che selezionano i record da tabelle o query.
 
@@ -31,8 +32,8 @@ Le connessioni all'origine dati sono incapsulate dalla classe [CDatabase](../../
 
 - Eseguire direttamente istruzioni [SQL](../../data/odbc/sql.md) .
 
-Quando si termina l'utilizzo di una connessione all'origine dati, è possibile chiudere l'oggetto `CDatabase` ed eliminarlo o riutilizzarlo per una nuova connessione. Per ulteriori informazioni sulle connessioni all'origine dati, vedere [origine dati (ODBC)](../../data/odbc/data-source-odbc.md).
+Quando si termina l'utilizzo di una connessione all'origine dati, si chiude l' `CDatabase` oggetto ed è possibile eliminarlo o riutilizzarlo per una nuova connessione. Per ulteriori informazioni sulle connessioni all'origine dati, vedere [origine dati (ODBC)](../../data/odbc/data-source-odbc.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [ODBC e MFC](../../data/odbc/odbc-and-mfc.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: timespec_get, _timespec32_get, _timespec64_get'
 title: timespec_get, _timespec32_get, _timespec64_get1
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-ms.openlocfilehash: 7e3c56805b3af9bb5e739bd74d03bce015c65895
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c6fc7c84d21bdeb8394602565dfe83fe22b59cb2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233925"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299527"
 ---
 # <a name="timespec_get-_timespec32_get-_timespec64_get"></a>timespec_get, _timespec32_get, _timespec64_get
 
@@ -79,7 +80,7 @@ Un valore specifico dell'implementazione diverso da zero che specifica la base t
 
 Valore di *base* in caso di esito positivo; in caso contrario, restituisce zero.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le funzioni di **timespec_get** impostano l'ora corrente nello struct a cui punta l'argomento *time_spec* . Tutte le versioni di questo struct hanno due membri, **tv_sec** e **tv_nsec**. Il valore **tv_sec** è impostato sul numero intero di secondi e **tv_nsec** sul numero integrale di nanosecondi, arrotondato alla risoluzione del clock di sistema, dall'inizio del periodo specificato dalla *base*.
 
@@ -95,11 +96,11 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**timespec_get**, **_timespec32_get**, **_timespec64_get**|C: \<time.h> , C++: \<ctime> o\<time.h>|
+|**timespec_get**, **_timespec32_get**, **_timespec64_get**|C: \<time.h> , C++: \<ctime> o \<time.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione del tempo](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>

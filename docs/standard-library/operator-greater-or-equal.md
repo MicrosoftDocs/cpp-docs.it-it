@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: operatore&gt;='
 title: operator&gt;=
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,19 +14,19 @@ helpviewer_keywords:
 - operator >=
 - operator>=
 ms.assetid: 14fbebf5-8b75-4afa-a51b-3112d31c07cf
-ms.openlocfilehash: 08c73602d87cbfc31364148d9565071da7b732c4
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 1821647ebb281020cef1798cf056fbf816aa855c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687358"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97297070"
 ---
 # <a name="operatorgt"></a>operator&gt;=
 
 > [!NOTE]
-> Questo argomento è disponibile nella documentazione C++ di Microsoft come esempio non funzionale dei contenitori usati nella libreria C++ standard. Per altre informazioni, vedere [Contenitori della libreria standard C++](../standard-library/stl-containers.md).
+> Questo argomento è disponibile nella documentazione di Microsoft C++ come esempio non funzionale dei contenitori usati nella libreria standard C++. Per altre informazioni, vedere [C++ Standard Library Containers](../standard-library/stl-containers.md) (Contenitori della libreria standard C++).
 
-Consente di eseguire l'overload di **operator > =** per confrontare due oggetti del [contenitore](../standard-library/sample-container-class.md)di modelli di classe.
+Consente di eseguire l'overload di **operator>=** per confrontare due oggetti del [contenitore](../standard-library/sample-container-class.md)di modelli di classe.
 
 ## <a name="syntax"></a>Sintassi
 

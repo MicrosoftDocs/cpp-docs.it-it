@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: operazioni di Windows (C++/CLI)'
 title: Operazioni Windows (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - registry, writing to
 - Visual C++, writing to Windows Registry
 ms.assetid: b9a75cb4-0589-4d5b-92cb-5e8be42b4ac0
-ms.openlocfilehash: 3c4ef2a69c25313ff444e0fabaea6eef2feeeee2
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 95fff25cb5c921272972e343dd3a85d53f909c52
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91501653"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298721"
 ---
 # <a name="windows-operations-ccli"></a>Operazioni Windows (C++/CLI)
 
@@ -140,7 +141,7 @@ int main( )
 }
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La <xref:Microsoft.Win32.Registry> classe è semplicemente un contenitore per le istanze statiche di <xref:Microsoft.Win32.RegistryKey> . Ogni istanza rappresenta un nodo radice del registro di sistema. Le istanze sono <xref:Microsoft.Win32.Registry.ClassesRoot> ,,, <xref:Microsoft.Win32.Registry.CurrentConfig> <xref:Microsoft.Win32.Registry.CurrentUser> <xref:Microsoft.Win32.Registry.LocalMachine> e <xref:Microsoft.Win32.Registry.Users> .
 
@@ -501,7 +502,7 @@ int main()
 }
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È possibile utilizzare il .NET Framework per accedere al registro di sistema con le <xref:Microsoft.Win32.Registry> <xref:Microsoft.Win32.RegistryKey> classi e, che sono entrambe definite nello <xref:Microsoft.Win32> spazio dei nomi. La classe **Registry** è un contenitore per le istanze statiche della <xref:Microsoft.Win32.RegistryKey> classe. Ogni istanza rappresenta un nodo radice del registro di sistema. Le istanze sono <xref:Microsoft.Win32.Registry.ClassesRoot> ,,, <xref:Microsoft.Win32.Registry.CurrentConfig> <xref:Microsoft.Win32.Registry.CurrentUser> <xref:Microsoft.Win32.Registry.LocalMachine> e <xref:Microsoft.Win32.Registry.Users> .
 
@@ -509,6 +510,6 @@ int main()
 
 <xref:System.Environment>
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Programmazione .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

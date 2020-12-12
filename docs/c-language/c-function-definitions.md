@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: definizioni di funzioni C'
 title: Definizioni di funzioni C
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-ms.openlocfilehash: a26f95f8fef2b52dac36dd5d33f826c73fd84eee
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9e664224608a741897bf8ae6208a0d9011cdb3c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228011"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296927"
 ---
 # <a name="c-function-definitions"></a>Definizioni di funzioni C
 
@@ -29,7 +30,7 @@ Una definizione di funzione specifica il nome della funzione, i tipi e il numero
 &nbsp;&nbsp;&nbsp;&nbsp;*External-Declaration* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*
 
-*External-Declaration*:/ \* consentita solo in ambito esterno (file)\*/<br/>
+*External-Declaration*:/ \* consentita solo in ambito esterno (file) \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*definizione di funzione*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Dichiarazione*
 
@@ -52,13 +53,13 @@ I parametri del prototipo sono:
 *dichiaratore*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*puntatore*<sub>opz</sub> *Direct-declarator*
 
-*Direct-declarator*:/ \* dichiaratore di funzione\*/<br/>
+*Direct-declarator*:/ \* dichiaratore di funzione \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Direct-declarator***(***Parameter-Type-list***)**  / \* dichiaratore nuovo stile      \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Direct-declarator***(***Identifier-list*<sub>opt</sub> **)**  / \* dichiaratore di stile obsoleto    \*/
 
 L'elenco di parametri in una definizione utilizza questa sintassi:
 
-*Parameter-Type-list*:/ \* elenco di parametri\*/<br/>
+*Parameter-Type-list*:/ \* elenco di parametri \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*elenco di parametri* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*elenco di parametri* **,...**
 
@@ -72,7 +73,7 @@ L'elenco di parametri in una definizione utilizza questa sintassi:
 
 L'elenco di parametri in una definizione di funzione obsoleta utilizza questa sintassi:
 
-*Identifier-list*:/ \* usato nelle definizioni di funzione e nelle dichiarazioni in stile obsoleto\*/<br/>
+*Identifier-list*:/ \* usato nelle definizioni di funzione e nelle dichiarazioni in stile obsoleto \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identificatore*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Identifier-list* **,**  *identificatore*
 
@@ -93,6 +94,6 @@ Una *dichiarazione* in *declaration-list* nelle definizioni di funzione non può
 
 Le sezioni [Attributi di funzioni](../c-language/function-attributes.md), [Classi di archiviazione](../c-language/storage-class.md), [Tipo restituito](../c-language/return-type.md), [Parametri](../c-language/parameters.md) e [Corpo della funzione](../c-language/function-body.md) descrivono in dettaglio i componenti della definizione della funzione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Funzioni](../c-language/functions-c.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CBookmark'
 title: Classe CBookmark
 ms.date: 11/04/2016
 f1_keywords:
@@ -66,12 +67,12 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: 4013e40c364593676ebb099804304ffb2adb42c1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7c138776e282c287eb7e7e09b93196ac0792f7ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838477"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295068"
 ---
 # <a name="cbookmark-class"></a>Classe CBookmark
 
@@ -100,7 +101,7 @@ Dimensioni in byte del buffer dei segnalibri. Quando *nSize* è zero, il buffer 
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[CBookmark](#cbookmark)|Costruttore|
 |[GetBuffer](#getbuffer)|Recupera il puntatore al buffer.|
@@ -109,11 +110,11 @@ Dimensioni in byte del buffer dei segnalibri. Quando *nSize* è zero, il buffer 
 
 ### <a name="operators"></a>Operatori
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[operatore =](#operator)|Assegna una `CBookmark` classe a un'altra classe.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 `CBookmark<0>` è una specializzazione di modello di `CBookmark` . il buffer viene creato dinamicamente in fase di esecuzione.
 
@@ -133,9 +134,9 @@ CBookmark(DBLENGTH nSize);
 *nSize*<br/>
 in Dimensioni in byte del buffer dei segnalibri.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-La prima funzione imposta il buffer su NULL e la dimensione del buffer su 0. La seconda funzione imposta la dimensione del buffer su *nSize*e il buffer su una matrice di byte di *nSize* byte.
+La prima funzione imposta il buffer su NULL e la dimensione del buffer su 0. La seconda funzione imposta la dimensione del buffer su *nSize* e il buffer su una matrice di byte di *nSize* byte.
 
 > [!NOTE]
 > Questa funzione è disponibile solo in `CBookmark<0>` .
@@ -190,7 +191,7 @@ in Puntatore alla matrice di byte contenente il valore del segnalibro.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione è disponibile solo in `CBookmark<0>` .
 
@@ -208,7 +209,7 @@ CBookmark& operator =(const CBookmark& bookmark) throw();
 
 Questo operatore è necessario solo in `CBookmark<0>` .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

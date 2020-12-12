@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: file di origine e programmi di origine'
 title: File e programmi di origine
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - source files, specifying in compiler
 - source programs
 ms.assetid: 18bb2826-17da-48e5-92a2-10e649f1bc9f
-ms.openlocfilehash: ac906925be551c6ee4da08e200d4028047b3d041
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9fd389f74efac11288b805d95dc2d95d4ec6d2bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349882"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296901"
 ---
 # <a name="source-files-and-source-programs"></a>File e programmi di origine
 
@@ -39,6 +40,6 @@ Un programma di origine C è una raccolta di direttive, pragma, dichiarazioni, d
 
 I file di origine non devono contenere istruzioni eseguibili. Può essere ad esempio utile posizionare le definizioni di variabili in un file di origine e quindi dichiarare i riferimenti a tali variabili in altri file di origine che le utilizzano. Questa tecnica semplifica la ricerca e l'aggiornamento delle definizioni. Per lo stesso motivo, costanti e macro sono organizzate spesso in file distinti denominati file di inclusione o file di intestazione cui è possibile fare riferimento nei file di origine in base alle esigenze. Vedere *Riferimenti al preprocessore* per informazioni su [macro](../preprocessor/macros-c-cpp.md) e [file di inclusione](../preprocessor/hash-include-directive-c-cpp.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Struttura del programma](../c-language/program-structure.md)

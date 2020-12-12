@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: identificatori di Storage-Class per dichiarazioni di External-Level'
 title: Identificatori di classi di archiviazione per dichiarazioni di livello esterno
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -16,18 +17,18 @@ helpviewer_keywords:
 - visibility, variables
 - static storage class specifiers
 ms.assetid: b76b623a-80ec-4d5d-859b-6cef422657ee
-ms.openlocfilehash: 6c30b8a12c0bf26bc35905872fb6fa527b367ef4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a048ebcf6eea87c77cba23ed50ab117d014c95e9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229467"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296849"
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>Identificatori di classi di archiviazione per dichiarazioni di livello esterno
 
 Le variabili esterne sono variabili nell'ambito file. Sono definite all'esterno di qualsiasi funzione e sono potenzialmente disponibili in molte funzioni. Le funzioni possono essere definite solo a livello esterno e, pertanto, non possono essere annidate. Per impostazione predefinita, tutti i riferimenti a variabili esterne e funzioni con lo stesso nome sono riferimenti allo stesso oggetto, il che significa che hanno un *collegamento esterno*. **`static`** Per eseguire l'override di questo comportamento, è possibile usare la parola chiave.
 
-Le dichiarazioni di variabili a livello esterno sono definizioni di variabili (*dichiarazioni di definizione*) o riferimenti a variabili definite altrove (dichiarazioni di*riferimento*).
+Le dichiarazioni di variabili a livello esterno sono definizioni di variabili (*dichiarazioni di definizione*) o riferimenti a variabili definite altrove (dichiarazioni di *riferimento*).
 
 Una dichiarazione di variabile esterna che inizializza anche la variabile (in modo implicito o esplicito) è una dichiarazione di definizione di variabile. Una definizione a livello esterno può assumere varie forme:
 
@@ -125,6 +126,6 @@ Tutte e tre le funzioni, `main`, `next` e `other`, eseguono la stessa attività:
 
 Se la variabile `i` non fosse stata inizializzata, sarebbe stata impostata automaticamente su 0. In questo caso, sarebbero stati visualizzati i valori 1, 2 e 3. Per informazioni sull'inizializzazione delle variabili, vedere [Inizializzazione](../c-language/initialization.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classi di archiviazione C](../c-language/c-storage-classes.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _tell, _telli64'
 title: _tell, _telli64
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-ms.openlocfilehash: 27653f7b65acd1681cc96a99576a416a211fcd19
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d82b79a65edb7c88944336604ed329d67876094a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912251"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299553"
 ---
 # <a name="_tell-_telli64"></a>_tell, _telli64
 
@@ -70,7 +71,7 @@ Un valore restituito di-1L indica un errore. Se *handle* è un descrittore di fi
 
 Per ulteriori informazioni su questo e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_tell** ottiene la posizione corrente del puntatore del file (se presente) associato all'argomento dell' *handle* . La posizione viene espressa come numero di byte dall'inizio del file. Per la funzione **_telli64** , questo valore è espresso come intero a 64 bit.
 
@@ -130,8 +131,8 @@ Line two.
 Current file position is: 20
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[I/O a basso livello](../../c-runtime-library/low-level-i-o.md)<br/>
+[I/O di basso livello](../../c-runtime-library/low-level-i-o.md)<br/>
 [ftell, _ftelli64](ftell-ftelli64.md)<br/>
 [_lseek, _lseeki64](lseek-lseeki64.md)<br/>

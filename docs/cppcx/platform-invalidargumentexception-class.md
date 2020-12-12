@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe Platform:: InvalidArgumentException'
 title: Classe Platform::InvalidArgumentException
 ms.date: 12/30/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::InvalidArgumentException
 ms.assetid: 1a8d860b-3bcb-41a9-9346-6610616a0b46
-ms.openlocfilehash: 1cc4b87ded26807066c81e5da6935548d1a5ad26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04d20a1e119aa4ffab0da498a9532c9acd4433b3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384959"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295250"
 ---
 # <a name="platforminvalidargumentexception-class"></a>Classe Platform::InvalidArgumentException
 
@@ -25,7 +26,7 @@ Generata quando uno degli argomenti forniti a un metodo non è valido.
 public ref class InvalidArgumentException : COMException,    IException,    IPrintable,    IEquatable
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedi la classe [COMException](../cppcx/platform-comexception-class.md) .
 
@@ -35,10 +36,10 @@ Per ulteriori informazioni, vedi la classe [COMException](../cppcx/platform-come
 
 **Server minimo supportato:** Windows Server 2012
 
-**Spazio dei nomi:** Piattaforma
+**Spazio dei nomi:** Platform
 
-**Metadati:** platform.winmd
+**Metadati:** Platform. winmd
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Classe Platform::COMException](../cppcx/platform-comexception-class.md)
+[Classe Platform:: COMException](../cppcx/platform-comexception-class.md)

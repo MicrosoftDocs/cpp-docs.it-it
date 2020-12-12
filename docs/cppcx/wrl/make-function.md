@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: make Function'
 title: Funzione Make
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-ms.openlocfilehash: 0f2e81e3cd757214805817af2a355a93c1cfd096
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bb83c6c163440f911bc625a8646d1758442b25f6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220470"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298903"
 ---
 # <a name="make-function"></a>Funzione Make
 
@@ -225,7 +226,7 @@ Argomento 9 passato alla classe di runtime specificata.
 
 `ComPtr<T>`Oggetto in caso di esito positivo; in caso contrario, **`nullptr`** .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Vedere [procedura: creare un'istanza dei componenti WRL direttamente](how-to-instantiate-wrl-components-directly.md) per informazioni sulle differenze tra questa funzione e [Microsoft:: WRL::D etails:: MakeAndInitialize](makeandinitialize-function.md)e per un esempio.
 
@@ -235,6 +236,6 @@ Vedere [procedura: creare un'istanza dei componenti WRL direttamente](how-to-ins
 
 **Spazio dei nomi:** Microsoft::WRL
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Microsoft:: WRL](microsoft-wrl-namespace.md)

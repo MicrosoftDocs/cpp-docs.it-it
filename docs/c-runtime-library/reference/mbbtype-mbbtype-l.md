@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _mbbtype, _mbbtype_l'
 title: _mbbtype, _mbbtype_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - mbbtype function
 - mbbtype_l function
 ms.assetid: b8e34b40-842a-4298-aa39-0bd2d8e51c2a
-ms.openlocfilehash: dca59f2d31cc5ad843a48e9825ef6a617d46ae4a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6a646682144acb346827eaa78382915f026fa455
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919595"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299605"
 ---
 # <a name="_mbbtype-_mbbtype_l"></a>_mbbtype, _mbbtype_l
 
@@ -85,7 +86,7 @@ Impostazioni locali da usare.
 |1|Byte finale valido|**_MBC_TRAIL** (2)|Byte finale di caratteri multibyte (0x40-0x7E, 0x80-0xFC)|
 |1|Byte finale valido|**_MBC_ILLEGAL**<br /><br /> (-1)|Carattere non valido (qualsiasi valore, ad eccezione di 0x20-0x7E, 0xA1-0xDF, 0x81-0x9F, 0xE0-0xFC|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_mbbtype** determina il tipo di byte in un carattere multibyte. Se il valore di *tipo* è qualsiasi valore eccetto 1, **_mbbtype** verifica se è presente un byte iniziale o a byte singolo valido di un carattere multibyte. Se il valore di *tipo* è 1, **_mbbtype** testa un byte finale valido di un carattere multibyte.
 
@@ -106,6 +107,6 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Classificazione per byte](../../c-runtime-library/byte-classification.md)<br/>
+[Classificazione byte](../../c-runtime-library/byte-classification.md)<br/>

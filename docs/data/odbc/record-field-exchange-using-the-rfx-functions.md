@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: scambio di campi di record: utilizzo delle funzioni RFX'
 title: 'Trasferimento di campi di record: utilizzo delle funzioni RFX'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - RFX (ODBC) [C++], data types
 - function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
-ms.openlocfilehash: 4d621fbe2207114dd51845b819d309802a009690
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8b597a6ca8ae43922b6bba57b63ea2fc93fb82d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216531"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298760"
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>Trasferimento di campi di record: utilizzo delle funzioni RFX
 
@@ -26,7 +27,7 @@ In questo argomento viene illustrato come utilizzare le chiamate di funzione RFX
 
 Le funzioni globali RFX scambiano i dati tra le colonne nei membri dati del campo e dell'origine dati nel recordset. È possibile scrivere le chiamate di funzione RFX nella funzione membro [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) del recordset. Questo argomento descrive brevemente le funzioni e Mostra i tipi di dati per cui sono disponibili le funzioni RFX. [Nota tecnica 43](../../mfc/tn043-rfx-routines.md) descrive come scrivere funzioni RFX personalizzate per tipi di dati aggiuntivi.
 
-## <a name="rfx-function-syntax"></a><a name="_core_rfx_function_syntax"></a>Sintassi della funzione RFX
+## <a name="rfx-function-syntax"></a><a name="_core_rfx_function_syntax"></a> Sintassi della funzione RFX
 
 Ogni funzione RFX accetta tre parametri (e alcuni accettano un quarto o un quinto parametro facoltativo):
 
@@ -42,7 +43,7 @@ Ogni funzione RFX accetta tre parametri (e alcuni accettano un quarto o un quint
 
 Per ulteriori informazioni, vedere le funzioni RFX in [macro e Globals](../../mfc/reference/mfc-macros-and-globals.md) in *riferimenti alla libreria di classi*. Per un esempio di quando è possibile usare i parametri in modo speciale, vedere [Recordset: recupero di somme e altri risultati aggregati (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md).
 
-## <a name="rfx-data-types"></a><a name="_core_rfx_data_types"></a>Tipi di dati RFX
+## <a name="rfx-data-types"></a><a name="_core_rfx_data_types"></a> Tipi di dati RFX
 
 La libreria di classi fornisce funzioni RFX per il trasferimento di diversi tipi di dati tra l'origine dati e i recordset. Nell'elenco seguente vengono riepilogate le funzioni RFX per tipo di dati. Nei casi in cui è necessario scrivere chiamate di funzione RFX personalizzate, selezionare una di queste funzioni in base al tipo di dati.
 
@@ -61,7 +62,7 @@ La libreria di classi fornisce funzioni RFX per il trasferimento di diversi tipi
 
 Per ulteriori informazioni, vedere la documentazione della funzione RFX in [macro e Globals](../../mfc/reference/mfc-macros-and-globals.md) in *riferimenti alla libreria di classi*. Per informazioni sul mapping dei tipi di dati C++ ai tipi di dati SQL, vedere la tabella tipi di dati SQL ANSI mappati ai tipi di dati C++ in [SQL: tipi di dati SQL e c++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Trasferimento di campi di record (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [Trasferimento di campi di record: funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>

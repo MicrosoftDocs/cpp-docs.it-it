@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: tmpfile'
 title: tmpfile
 ms.date: 11/04/2016
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - tmpfile function
 - temporary files, creating
 ms.assetid: c4a4dc24-70da-438d-ae4e-98352d88e375
-ms.openlocfilehash: f58c23050fe89f84f283c3784a7c0cee72637bf2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 27760a7d1369a0292c6719667b8cb182ce7df815
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957548"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299514"
 ---
 # <a name="tmpfile"></a>tmpfile
 
@@ -47,13 +48,13 @@ FILE *tmpfile( void );
 
 Se ha esito positivo, **tmpfile** restituisce un puntatore di flusso. In caso contrario, restituisce un puntatore **null** .
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 La funzione **tmpfile** crea un file temporaneo e restituisce un puntatore a tale flusso. Il file temporaneo viene creato nella directory radice. Per creare un file temporaneo in una directory diversa dalla radice, usare [tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) o [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) in combinazione con [fopen](fopen-wfopen.md).
 
 Se il file non può essere aperto, **tmpfile** restituisce un puntatore **null** . Il file temporaneo viene eliminato automaticamente quando il file viene chiuso, quando il programma termina normalmente o quando viene chiamato **_rmtmp** , supponendo che la directory di lavoro corrente non venga modificata. Il file temporaneo viene aperto in modalità **w + b** (lettura/scrittura binaria).
 
-È possibile che si verifichi un errore se si tenta di eseguire più di TMP_MAX (vedere STDIO. H) chiama con **tmpfile**.
+Può verificarsi un errore se si tenta di eseguire più di TMP_MAX (vedere STDIO. H) chiama con **tmpfile**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -102,7 +103,7 @@ Temporary file 3 was created
 3 temporary files deleted
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
 [_rmtmp](rmtmp.md)<br/>

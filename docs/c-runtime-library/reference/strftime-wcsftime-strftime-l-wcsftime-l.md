@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: strftime, wcsftime, _strftime_l, _wcsftime_l'
 title: strftime, wcsftime, _strftime_l, _wcsftime_l
 ms.date: 4/2/2020
 api_name:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: 36a84c5de41f3358adbcba42010ed8e6f3c83939
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f6297af6ad7c0f6f9a0280cc47ea7a0caa6440af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846576"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299566"
 ---
 # <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -109,11 +110,11 @@ Se il numero totale di caratteri, incluso il carattere null di terminazione, è 
 
 Il numero di caratteri in *strDest* è uguale al numero di caratteri letterali nel *formato* e a tutti i caratteri che possono essere aggiunti al *formato* tramite codici di formattazione. La terminazione Null di una stringa non viene conteggiata nel valore restituito.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le funzioni **strftime** e **wcsftime** formattano il valore di ora **TM** in *timeptr* in base all'argomento di *formato* fornito e archiviano il risultato nel buffer *strDest*. Al massimo, i caratteri *MaxSize* vengono inseriti nella stringa. Per una descrizione dei campi nella struttura *timeptr* , vedere [asctime](asctime-wasctime.md). **wcsftime** è l'equivalente a caratteri wide di **strftime**; il relativo argomento puntatore di stringa punta a una stringa di caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
 
-Questa funzione convalida i relativi parametri. Se *strDest*, *Format*o *timeptr* è un puntatore null o se la struttura dei dati **TM** risolta da *timeptr* non è valida (ad esempio, se contiene valori non compresi nell'intervallo per l'ora o la data) o se la stringa di *formato* contiene un codice di formattazione non valido, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce 0 e **errno** viene impostato su **EINVAL**.
+Questa funzione convalida i relativi parametri. Se *strDest*, *Format* o *timeptr* è un puntatore null o se la struttura dei dati **TM** risolta da *timeptr* non è valida (ad esempio, se contiene valori non compresi nell'intervallo per l'ora o la data) o se la stringa di *formato* contiene un codice di formattazione non valido, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce 0 e **errno** viene impostato su **EINVAL**.
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -171,12 +172,12 @@ Come nella funzione **printf** , il **#** flag può precedere qualsiasi codice d
 
 |Codice formato|Significato|
 |-----------------|-------------|
-|**% #a**, **% #A**, **% #b**, **% #B**, **% #g**, **% #G**, **%**#h, **% #n**, **%#p**% #p, **%** **#t,% #u**, **%**#w, **%**#X, **% #z**, **% #Z**,**%#%**|**#** il flag viene ignorato.|
+|**% #a**, **% #A**, **% #b**, **% #B**, **% #g**, **% #G**, **%**#h, **% #n**, % #p, **%** **#t,% #u**, **%**#w, **%**#X, **% #z**, **% #Z**,**%#%**|**#** il flag viene ignorato.|
 |**% #c**|Rappresentazione di data e ora estesa, appropriata per le impostazioni locali. Ad esempio: "martedì 14 marzo 1995 12.41.29".|
 |**% #x**|Rappresentazione di data estesa, appropriata per le impostazioni locali. Ad esempio: "martedì 14 marzo 1995".|
 |**% #d**, **% #D**, **% #e**, **% #F**, **% #H**, **% #I**, **%**#j, **%**#m, **% #M**, **%**#r, **% #R**, **%**#S, **% #T**, **% #U**, **% #V,%** **#W,%** **#y**, **% #Y**|Rimuovere gli zeri iniziali o gli spazi (se presenti).|
 
-L'anno ISO 8601 della settimana e della settimana prodotto da **% V**, **% g**e **% g**usa una settimana che inizia il lunedì, dove la settimana 1 è la settimana che contiene il 4 gennaio, ovvero la prima settimana che include almeno quattro giorni dell'anno. Se il primo lunedì dell'anno è il secondo, il terzo o il 4, i giorni precedenti sono parte dell'ultima settimana dell'anno precedente. Per tali giorni, **% V** viene sostituito da 53 e i% **g** e **% g** vengono sostituiti dalle cifre dell'anno precedente.
+L'anno ISO 8601 della settimana e della settimana prodotto da **% V**, **% g** e **% g** usa una settimana che inizia il lunedì, dove la settimana 1 è la settimana che contiene il 4 gennaio, ovvero la prima settimana che include almeno quattro giorni dell'anno. Se il primo lunedì dell'anno è il secondo, il terzo o il 4, i giorni precedenti sono parte dell'ultima settimana dell'anno precedente. Per tali giorni, **% V** viene sostituito da 53 e i% **g** e **% g** vengono sostituiti dalle cifre dell'anno precedente.
 
 > [!NOTE]
 > Quando si utilizza una delle `strftime` funzioni con un `tm` puntatore restituito da `gmtime` , i valori stampati tramite `%Z` gli `%z` identificatori e non saranno accurati. Questo perché lo `tm` struct specificato dallo standard C non contiene le informazioni relative al nome del fuso orario né all'offset. Al contrario, le informazioni sul fuso orario vengono popolate tramite le variabili globali [ `_timezone` e `_dstbias` ](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
@@ -196,7 +197,7 @@ Le funzioni **_strftime_l** e **_wcsftime_l** sono specifiche di Microsoft. Per 
 
 Vedere l'esempio per [time](time-time32-time64.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Impostazioni locali](../../c-runtime-library/locale.md) <br/>
 [Gestione del tempo](../../c-runtime-library/time-management.md) <br/>
