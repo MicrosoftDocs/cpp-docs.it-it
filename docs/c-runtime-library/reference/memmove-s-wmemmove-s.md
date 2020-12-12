@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: memmove_s, wmemmove_s'
 title: memmove_s, wmemmove_s
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: 04f920543c4f6a3d433e6426a96d617a3608a270
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: faa68f073949c9c1bcd3d96bb48472484adc312c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914087"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171400"
 ---
 # <a name="memmove_s-wmemmove_s"></a>memmove_s, wmemmove_s
 
@@ -84,7 +85,7 @@ Zero in caso di esito positivo, un codice di errore in caso di esito negativo
 |any|any|**NULL**|**EINVAL**|non modificato|
 |any|< *conteggio*|any|**ERANGE**|non modificato|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Copia il *numero* di byte di caratteri da *src* a *dest*. Se alcune aree dell'area di origine e di destinazione si sovrappongono, **memmove_s** garantisce che i byte di origine originali nell'area sovrapposta vengano copiati prima di essere sovrascritti.
 
@@ -137,9 +138,9 @@ Before: 0123456789
 After: 0012345789
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Modifica del buffer](../../c-runtime-library/buffer-manipulation.md)<br/>
+[Manipolazione del buffer](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>
 [memcpy, wmemcpy](memcpy-wmemcpy.md)<br/>
 [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)<br/>

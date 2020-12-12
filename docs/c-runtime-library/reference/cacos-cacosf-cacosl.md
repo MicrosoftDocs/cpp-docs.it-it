@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Cacos, cacosf, cacosl'
 title: cacos, cacosf, cacosl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-ms.openlocfilehash: 5b0751703b9b9cdcdb50e265a6b5d3c929d89ae1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5d7a4fcc10da68d170d0cf3b2d9cce0d486b4318
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939392"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171596"
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos, cacosf, cacosl
 
@@ -66,7 +67,7 @@ Numero complesso che rappresenta un angolo, espresso in radianti.
 
 Arcoseno di *z*, in radianti. Il risultato è unbounded lungo l'asse immaginario e in nell'intervallo [0, π] lungo l'asse reale. Si verificherà un errore di dominio se *z* non è compreso nell'intervallo [-1, + 1].
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Poiché C++ consente l'overload, è possibile chiamare overload di **Cacos** che accettano e restituiscono valori **_Fcomplex** e **_Lcomplex** . In un programma C **Cacos** accetta e restituisce sempre un valore **_Dcomplex** .
 
@@ -74,11 +75,11 @@ Poiché C++ consente l'overload, è possibile chiamare overload di **Cacos** che
 
 |Routine|Intestazione C|Intestazione C++|
 |-------------|--------------|------------------|
-|**cacos**,               **cacosf**, **cacosl**|\<complex.h>|\<ccomplex>|
+|**Cacos**,               **cacosf**, **cacosl**|\<complex.h>|\<ccomplex>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
 [catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>

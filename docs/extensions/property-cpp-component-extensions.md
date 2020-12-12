@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: Property (C++/CLI e C++/CX)'
 title: property (C++/CLI e C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: fbec97a5bd30bb9bb76459ef2f7b0956ae6a264f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bc3a4e7bd55d82244195a4d9ecf0072a6c513b72
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225137"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172999"
 ---
 # <a name="property--ccli-and-ccx"></a>property (C++/CLI e C++/CX)
 
@@ -122,7 +123,7 @@ Parametri per il metodo raise; devono corrispondere alla firma del delegato.
 *index_list*<br/>
 Un elenco delimitato da virgole di uno o più indici, specificati tra parentesi quadrate (l'operatore di indice, ([])). Per ogni indice, specificare un tipo e, facoltativamente, un identificatore che può essere usato nel corpo del metodo di proprietà.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo esempio di sintassi mostra una *proprietà semplice*, che dichiara in modo esplicito entrambi i metodi `set` e `get`. Il compilatore crea automaticamente un campo privato per archiviare il valore della proprietà.
 
@@ -164,7 +165,7 @@ Quando un membro dati di proprietà viene dichiarato, il compilatore inserisce n
 
 Opzione del compilatore: `/clr`
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 Nell'esempio seguente vengono illustrati la dichiarazione e l'uso di un membro dati di proprietà e di un blocco di proprietà.  Viene inoltre illustrato che è possibile definire una funzione di accesso alla proprietà fuori dalla classe.
 
@@ -210,6 +211,6 @@ test
 21
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)

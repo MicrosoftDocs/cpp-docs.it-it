@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: algoritmi paralleli'
 title: Algoritmi paralleli
 ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
-ms.openlocfilehash: 2c9fd5bd51bfeeaa17ac6f1118798f51b93938d6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9e1762167277654334b3dcb4e26d3a5c8fbe1a5c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87194498"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172479"
 ---
 # <a name="parallel-algorithms"></a>Algoritmi paralleli
 
@@ -17,7 +18,7 @@ La libreria PPL (Parallel Patterns Library) fornisce algoritmi che eseguono simu
 
 Gli algoritmi paralleli sono costituiti da funzionalità esistenti nel runtime di concorrenza. Ad esempio, l'algoritmo [Concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) usa un oggetto [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) per eseguire le iterazioni del ciclo parallelo. Le `parallel_for` partizioni dell'algoritmo funzionano in modo ottimale in base al numero di risorse di calcolo disponibili.
 
-## <a name="sections"></a><a name="top"></a>Sezioni
+## <a name="sections"></a><a name="top"></a> Sezioni
 
 - [L'algoritmo parallel_for](#parallel_for)
 
@@ -39,7 +40,7 @@ Gli algoritmi paralleli sono costituiti da funzionalità esistenti nel runtime d
 
   - [Scelta di un algoritmo di ordinamento](#choose_sort)
 
-## <a name="the-parallel_for-algorithm"></a><a name="parallel_for"></a>Algoritmo di parallel_for
+## <a name="the-parallel_for-algorithm"></a><a name="parallel_for"></a> Algoritmo di parallel_for
 
 L'algoritmo [Concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) esegue ripetutamente la stessa attività in parallelo. Ognuna di queste attività è parametrizzata da un valore di iterazione. Questo algoritmo è utile quando si dispone di un corpo del ciclo che non condivide le risorse tra le iterazioni del ciclo.
 
@@ -82,7 +83,7 @@ Per un esempio completo in cui viene usato l' `parallel_for` algoritmo, vedere [
 
 [All'[inizio](#top)]
 
-## <a name="the-parallel_for_each-algorithm"></a><a name="parallel_for_each"></a>Algoritmo di parallel_for_each
+## <a name="the-parallel_for_each-algorithm"></a><a name="parallel_for_each"></a> Algoritmo di parallel_for_each
 
 L'algoritmo [Concurrency::p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) esegue attività in un contenitore iterativo, ad esempio quelli forniti dalla libreria standard C++, in parallelo. Usa la stessa logica di partizionamento usata dall' `parallel_for` algoritmo.
 
@@ -108,7 +109,7 @@ Per un esempio completo in cui viene usato l' `parallel_for_each` algoritmo, ved
 
 [All'[inizio](#top)]
 
-## <a name="the-parallel_invoke-algorithm"></a><a name="parallel_invoke"></a>Algoritmo di parallel_invoke
+## <a name="the-parallel_invoke-algorithm"></a><a name="parallel_invoke"></a> Algoritmo di parallel_invoke
 
 L'algoritmo [Concurrency::p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) esegue un set di attività in parallelo. Non viene restituito fino al termine di ogni attività. Questo algoritmo è utile quando si dispone di diverse attività indipendenti che si desidera eseguire contemporaneamente.
 
@@ -132,14 +133,14 @@ Per esempi completi che usano l' `parallel_invoke` algoritmo, vedere [procedura:
 
 [All'[inizio](#top)]
 
-## <a name="the-parallel_transform-and-parallel_reduce-algorithms"></a><a name="parallel_transform_reduce"></a>Algoritmi di parallel_transform e parallel_reduce
+## <a name="the-parallel_transform-and-parallel_reduce-algorithms"></a><a name="parallel_transform_reduce"></a> Algoritmi di parallel_transform e parallel_reduce
 
 Gli algoritmi di concorrenza: [:p arallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) e [concorrenza::p arallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) sono versioni parallele degli algoritmi di libreria standard C++ [std:: Transform](../../standard-library/algorithm-functions.md#transform) e [std:: accumulate](../../standard-library/numeric-functions.md#accumulate), rispettivamente. Le versioni runtime di concorrenza si comportano come le versioni della libreria standard C++, tranne per il fatto che l'ordine delle operazioni non è determinato perché vengono eseguite in parallelo. Sfruttare questi algoritmi quando si utilizza un set sufficientemente grande da ottenere vantaggi di scalabilità e di prestazioni dall'esecuzione in parallelo.
 
 > [!IMPORTANT]
 > Gli algoritmi `parallel_transform` e `parallel_reduce` supportano solo iteratori di accesso casuale, bidirezionale e di inoltro perché tramite questi iteratori vengono generati indirizzi di memoria stabili. Inoltre, questi iteratori devono produrre valori non- **`const`** l.
 
-### <a name="the-parallel_transform-algorithm"></a><a name="parallel_transform"></a>Algoritmo di parallel_transform
+### <a name="the-parallel_transform-algorithm"></a><a name="parallel_transform"></a> Algoritmo di parallel_transform
 
 È possibile utilizzare l'algoritmo `parallel transform` per eseguire molte operazioni di parallelizzazione dati. Ad esempio, è possibile:
 
@@ -163,7 +164,7 @@ Nell'algoritmo `parallel_transform` sono disponibili due overload. Il primo acce
 > [!IMPORTANT]
 > L'iteratore fornito per l'output di `parallel_transform` deve sovrapporsi completamente all'iteratore di input o non sovrapporsi affatto. Il comportamento di questo algoritmo non è specificato se gli iteratori di input e di output si sovrappongono parzialmente.
 
-### <a name="the-parallel_reduce-algorithm"></a><a name="parallel_reduce"></a>Algoritmo di parallel_reduce
+### <a name="the-parallel_reduce-algorithm"></a><a name="parallel_reduce"></a> Algoritmo di parallel_reduce
 
 L'algoritmo `parallel_reduce` è utile quando si dispone di una sequenza di operazioni che soddisfano la proprietà associativa; (Questo algoritmo non richiede la proprietà commutable). Di seguito sono riportate alcune delle operazioni che è possibile eseguire con `parallel_reduce` :
 
@@ -181,7 +182,7 @@ Nell'esempio di base seguente viene illustrato come utilizzare l'algoritmo `para
 
 In molti casi, è possibile pensare a `parallel_reduce` come a sintassi abbreviata per l'utilizzo dell' `parallel_for_each` algoritmo insieme alla classe [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) .
 
-### <a name="example-performing-map-and-reduce-in-parallel"></a><a name="map_reduce_example"></a>Esempio: esecuzione di mapping e riduzione in parallelo
+### <a name="example-performing-map-and-reduce-in-parallel"></a><a name="map_reduce_example"></a> Esempio: esecuzione di mapping e riduzione in parallelo
 
 Un'operazione di *mapping* applica una funzione a ogni valore in una sequenza. Un'operazione di *riduzione* combina gli elementi di una sequenza in un unico valore. Per eseguire operazioni di mapping e riduzione, è possibile usare le funzioni [std:: Transform](../../standard-library/algorithm-functions.md#transform) e [std:: accumulate](../../standard-library/numeric-functions.md#accumulate) della libreria standard C++. Tuttavia, per molti problemi, è possibile utilizzare l'algoritmo `parallel_transform` per eseguire l'operazione di mapping in parallelo e l'algoritmo `parallel_reduce` per eseguire l'operazione di riduzione in parallelo.
 
@@ -193,7 +194,7 @@ Per un altro esempio in cui viene eseguita un'operazione di mapping e riduzione 
 
 [All'[inizio](#top)]
 
-## <a name="partitioning-work"></a><a name="partitions"></a>Lavoro di partizionamento
+## <a name="partitioning-work"></a><a name="partitions"></a> Lavoro di partizionamento
 
 Per parallelizzare un'operazione in un'origine dati, un passaggio essenziale consiste nel *partizionare* l'origine in più sezioni a cui è possibile accedere simultaneamente da più thread. Tramite un partitioner viene specificato il modo in cui gli intervalli devono essere partizionati tra i thread mediante un algoritmo parallelo. Come illustrato in precedenza in questo documento, nella libreria PPL viene utilizzato un meccanismo di partizionamento predefinito tramite cui viene creato un carico di lavoro iniziale e, successivamente, utilizzato un algoritmo di acquisizione del lavoro e uno di acquisizione dell'intervallo per bilanciare queste partizioni quando i carichi di lavoro non lo sono. Ad esempio, quando tramite un'iterazione del ciclo viene completato un intervallo di iterazioni, il lavoro di altri thread viene ridistribuito a questo thread mediante il runtime. Tuttavia, per alcuni scenari, potrebbe essere necessario specificare un meccanismo di partizionamento differente, più adatto al problema.
 
@@ -229,7 +230,7 @@ Il modo migliore per stabilire se è opportuno utilizzare un partitioner in qual
 
 [All'[inizio](#top)]
 
-## <a name="parallel-sorting"></a><a name="parallel_sorting"></a>Ordinamento parallelo
+## <a name="parallel-sorting"></a><a name="parallel_sorting"></a> Ordinamento parallelo
 
 La libreria PPL fornisce tre algoritmi di ordinamento: [concorrenza::p arallel_sort](reference/concurrency-namespace-functions.md#parallel_sort), [concorrenza::p arallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort)e [concorrenza::p arallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort). Questi algoritmi sono utili quando si dispone di un set di dati per cui l'ordinamento in parallelo risulta vantaggioso. In particolare, l'ordinamento in parallelo è utile in caso di un set di dati di grandi dimensioni o quando, per ordinare i dati, si utilizza un'operazione di confronto dispendiosa dal punto di vista del calcolo. Ognuno di questi algoritmi consente l'ordinamento degli elementi sul posto.
 
@@ -276,7 +277,7 @@ In questo esempio viene utilizzata un'espressione lambda come funzione hash. È 
 
 La funzione hash deve restituire un tipo integrale ([std:: is_integral:: value](../../standard-library/is-integral-class.md) deve essere **`true`** ). Questo tipo integrale deve poter essere convertito nel tipo `size_t`.
 
-### <a name="choosing-a-sorting-algorithm"></a><a name="choose_sort"></a>Scelta di un algoritmo di ordinamento
+### <a name="choosing-a-sorting-algorithm"></a><a name="choose_sort"></a> Scelta di un algoritmo di ordinamento
 
 In molti casi, tramite `parallel_sort` viene fornito il migliore bilanciamento delle prestazioni di memoria e velocità. Tuttavia, quando si aumenta la dimensione del set di dati, il numero di processori disponibili o la complessità della funzione di confronto, `parallel_buffered_sort` o `parallel_radixsort` può risultare più efficace. Il modo migliore per stabilire quale algoritmo di ordinamento utilizzare in qualsiasi scenario specificato consiste nello sperimentare e misurare il tempo necessario per ordinare dati tipici con configurazioni di computer rappresentativi. Tenere presenti le linee guida seguenti quando si sceglie una strategia di ordinamento.
 
@@ -292,7 +293,7 @@ In molti casi, tramite `parallel_sort` viene fornito il migliore bilanciamento d
 
 Potrebbe non essere utile effettuare l'ordinamento di un piccolo set di dati in parallelo, anche quando si dispone di molte risorse di elaborazione o quando tramite la funzione hash o di confronto viene eseguita una quantità di lavoro relativamente grande. È possibile usare la funzione [std:: Sort](../../standard-library/algorithm-functions.md#sort) per ordinare i set di impostazioni di piccole dimensioni. ( `parallel_sort` e `parallel_buffered_sort` chiamano `sort` quando si specifica una dimensione del blocco maggiore del set di dati; tuttavia, `parallel_buffered_sort` avrebbe dovuto allocare o (N) spazio, il che potrebbe richiedere ulteriore tempo a causa di conflitti di blocco o di allocazione di memoria.
 
-Se è necessario ridurre l'utilizzo di memoria o se l'allocatore di memoria è soggetto ai conflitti di blocco, utilizzare `parallel_sort` per ordinare un set di dati di medie dimensioni. `parallel_sort`non richiede spazio aggiuntivo; per gli altri algoritmi è necessario lo spazio O (N).
+Se è necessario ridurre l'utilizzo di memoria o se l'allocatore di memoria è soggetto ai conflitti di blocco, utilizzare `parallel_sort` per ordinare un set di dati di medie dimensioni. `parallel_sort` non richiede spazio aggiuntivo; per gli altri algoritmi è necessario lo spazio O (N).
 
 Usare `parallel_buffered_sort` per ordinare i set di impostazioni di medie dimensioni e quando l'applicazione soddisfa il requisito aggiuntivo di O (N) spazio. `parallel_buffered_sort` può essere particolarmente utile quando si dispone di molte risorse di elaborazione oppure di una funzione hash o di confronto dispendiosa.
 
@@ -322,7 +323,7 @@ In questo esempio, in cui si presuppone che sia accettabile allocare O (N) spazi
 |[Annullamento nella libreria PPL](cancellation-in-the-ppl.md)|Viene illustrato il ruolo dell'annullamento nella libreria PPL, come annullare il lavoro parallelo e come determinare quando un gruppo di attività viene annullato.|
 |[Gestione delle eccezioni](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)|Viene illustrato il ruolo di gestione delle eccezioni nel runtime di concorrenza.|
 
-## <a name="reference"></a>Informazioni di riferimento
+## <a name="reference"></a>Riferimento
 
 [Funzione parallel_for](reference/concurrency-namespace-functions.md#parallel_for)
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: safe_cast (C++/CLI e C++/CX)'
 title: safe_cast (C++/CLI e C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-ms.openlocfilehash: 2eb09680ef6e7d1ee90b62eee8c8971fb4963212
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7753af357fd782a513ce941b42ad0433ca24b0dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225124"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172947"
 ---
 # <a name="safe_cast-ccli-and-ccx"></a>safe_cast (C++/CLI e C++/CX)
 
@@ -48,7 +49,7 @@ Tipo in cui convertire *expression*. Handle a un tipo riferimento o valore, un t
 *expression*<br/>
 Espressione che restituisce un handle a tipo riferimento o valore oppure un riferimento di rilevamento a un tipo riferimento o valore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **safe_cast** genera un'eccezione `InvalidCastException` se non è possibile convertire un' *espressione* nel tipo specificato da *Type-ID*. Per intercettare `InvalidCastException` , specificare l'opzione del compilatore [/eh (modello di gestione delle eccezioni)](../build/reference/eh-exception-handling-model.md) e usare un'istruzione **try/catch** .
 
@@ -56,7 +57,7 @@ Espressione che restituisce un handle a tipo riferimento o valore oppure un rife
 
 Opzione del compilatore: `/ZW`
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 L'esempio di codice seguente illustra come usare **safe_cast** con Windows Runtime.
 
@@ -108,9 +109,9 @@ Handle a un tipo riferimento o valore, un tipo valore oppure un riferimento di r
 *expression*<br/>
 Espressione che restituisce un handle a tipo riferimento o valore oppure un riferimento di rilevamento a un tipo riferimento o valore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-L'espressione `safe_cast<` *tipo-ID*espressione `>(` *expression* `)` converte l' *espressione* dell'operando in un oggetto di tipo *Type-ID*.
+L'espressione `safe_cast<` *tipo-ID* espressione `>(`  `)` converte l' *espressione* dell'operando in un oggetto di tipo *Type-ID*.
 
 Il compilatore accetta [static_cast](../cpp/static-cast-operator.md) nella maggior parte delle posizioni in cui accetta **safe_cast**.  Tuttavia, **safe_cast** è garantita la generazione di codice MSIL verificabile, dove **`static_cast`** può produrre codice MSIL non verificabile.  Vedere [Codice pure e verificabile (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md) e [Peverify.exe (strumento PEVerify)](/dotnet/framework/tools/peverify-exe-peverify-tool) per altre informazioni sul codice verificabile.
 
@@ -132,7 +133,7 @@ Per altre informazioni su **safe_cast**, vedere:
 
 Opzione del compilatore: `/clr`
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 Un esempio di dove il compilatore non accetterà un **`static_cast`** , ma accetterà un **safe_cast** è per i cast tra tipi di interfaccia non correlati.  Con **safe_cast**, il compilatore non genera un errore di conversione ed esegue un controllo in fase di runtime per verificare se è possibile eseguire il cast
 
@@ -164,6 +165,6 @@ int main() {
 Caught expected exception
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)

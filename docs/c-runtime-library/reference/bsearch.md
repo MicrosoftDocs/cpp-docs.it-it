@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: bCerca'
 title: bsearch
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: 3a6083f39e12182ae512f5327b5f7d8d89deb2a2
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 5afdd00576392b4e464880ec88772357e3ae2135
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039547"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171777"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -76,13 +77,13 @@ Funzione di callback che confronta due elementi. Il primo è un puntatore alla c
 
 La funzione **bCerca** esegue una ricerca binaria di una matrice ordinata di elementi *numerici* , ognuno con dimensioni di byte di *larghezza* . Il valore di *base* è un puntatore alla base della matrice in cui eseguire la ricerca e *Key* è il valore cercato. Il parametro *compare* è un puntatore a una routine fornita dall'utente che confronta la chiave richiesta con un elemento di matrice. Restituisce uno dei valori seguenti che specificano la relazione:
 
-|Valore restituito dalla routine di *confronto*|Descrizione|
+|Valore restituito dalla routine di *confronto*|Description|
 |-----------------------------------------|-----------------|
 |`< 0`|La chiave è minore dell'elemento della matrice.|
 |`0`|La chiave è uguale all'elemento della matrice.|
 |`> 0`|La chiave è maggiore dell'elemento della matrice.|
 
-Questa funzione convalida i relativi parametri. Se *compare*, *Key* o *Number* è **null**o se *base* è **null** e *Number* è diverso da zero oppure se *Width* è zero, la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su `EINVAL` e la funzione restituisce **null**.
+Questa funzione convalida i relativi parametri. Se *compare*, *Key* o *Number* è **null** o se *base* è **null** e *Number* è diverso da zero oppure se *Width* è zero, la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su `EINVAL` e la funzione restituisce **null**.
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 

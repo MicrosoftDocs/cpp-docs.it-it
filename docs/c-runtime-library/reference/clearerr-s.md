@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: clearerr_s'
 title: clearerr_s
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
-ms.openlocfilehash: 3e300562a52029fe835ebd4fe34e9a7ef247a76a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cbc9ac5122b5754b43f6fb93c4301afd6e449568
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917216"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171530"
 ---
 # <a name="clearerr_s"></a>clearerr_s
 
@@ -56,9 +57,9 @@ Puntatore alla struttura del **file**
 
 Zero in caso di esito positivo; **EINVAL** se il *flusso* è **null**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **clearerr_s** Reimposta l'indicatore di errore e l'indicatore di fine del file per il *flusso*. Gli indicatori di errore non vengono cancellati automaticamente. una volta impostato l'indicatore di errore per un flusso specificato, le operazioni su tale flusso continuano a restituire un valore di errore fino a quando non viene chiamato **clearerr_s**, **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**o [Rewind](rewind.md) .
+La funzione **clearerr_s** Reimposta l'indicatore di errore e l'indicatore di fine del file per il *flusso*. Gli indicatori di errore non vengono cancellati automaticamente. una volta impostato l'indicatore di errore per un flusso specificato, le operazioni su tale flusso continuano a restituire un valore di errore fino a quando non viene chiamato **clearerr_s**, **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos** o [Rewind](rewind.md) .
 
 Se il *flusso* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **EINVAL**.
 
@@ -127,7 +128,7 @@ Write error: Bad file descriptor
 Will input cause an error? n
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione degli errori](../../c-runtime-library/error-handling-crt.md)<br/>
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>

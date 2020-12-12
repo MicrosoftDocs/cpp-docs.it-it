@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l'
 title: strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 ms.date: 4/2/2020
 api_name:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: f7d890a753638112c4a1bb56cf6093a9510dbee2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c0ac9643593b509d4eeae1aca2d60aaa8269aa73
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910656"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171127"
 ---
 # <a name="strcat_s-wcscat_s-_mbscat_s-_mbscat_s_l"></a>strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 
@@ -130,7 +131,7 @@ Zero se con esito positivo; un codice di errore in caso di errore.
 |any|any|**NULL**|**EINVAL**|*strDestination*[0] impostato su 0|
 |any|0 o troppo piccolo|any|**ERANGE**|*strDestination*[0] impostato su 0|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **strcat_s** aggiunge *strSource* a *strDestination* e termina la stringa risultante con un carattere null. Il carattere iniziale di *strSource* sovrascrive il carattere null di terminazione di *strDestination*. Il comportamento di **strcat_s** non è definito se le stringhe di origine e di destinazione si sovrappongono.
 
@@ -175,7 +176,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 Vedere il codice di esempio in [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>

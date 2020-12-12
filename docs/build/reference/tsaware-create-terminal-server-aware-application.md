@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/TSAWARE (crea un'applicazione in grado di riconoscere Terminal Server)
 title: /TSAWARE (Crea un'applicazione con supporto Terminal Server)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: c2ec12b0b5fbe241d75acc4bb0d87837371a293e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6086bdcdf4aa41f116491a602286a0c8410bd61d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845731"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171972"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (Crea un'applicazione con supporto Terminal Server)
 
@@ -24,7 +25,7 @@ ms.locfileid: "88845731"
 /TSAWARE[:NO]
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'opzione/TSAWARE imposta un flag nel campo IMAGE_OPTIONAL_HEADER DllCharacteristics nell'intestazione facoltativa dell'immagine del programma. Quando questo flag viene impostato, Terminal Server non apporta determinate modifiche all'applicazione.
 
@@ -54,9 +55,9 @@ Se un'applicazione è stata collegata a/TSAWARE, DUMPBIN [/headers](headers.md) 
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TerminalServerAware%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Informazioni di riferimento sul linker MSVC](linking.md)<br/>
 [Opzioni del linker MSVC](linker-options.md)<br/>
-[Archiviazione di informazioni specifiche dell'utente](/windows/win32/TermServ/storing-user-specific-information)<br/>
+[Archiviazione di informazioni User-Specific](/windows/win32/TermServ/storing-user-specific-information)<br/>
 [Applicazioni legacy in un ambiente Servizi terminal](/previous-versions/aa382957(v=vs.85))

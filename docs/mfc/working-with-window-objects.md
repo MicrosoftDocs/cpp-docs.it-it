@@ -1,34 +1,35 @@
 ---
+description: 'Altre informazioni su: utilizzo di oggetti finestra'
 title: Utilizzo di oggetti finestra
 ms.date: 11/04/2016
 helpviewer_keywords:
 - child windows [MFC], working with
 - window objects [MFC], working with
 ms.assetid: f73aa254-90e3-46a9-8e9b-d78b7054a331
-ms.openlocfilehash: c696d880ffa69b0a0399c5282621546c5783ebe4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a8c6f2c40eadbfe53aa79683bea29847adf684f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399486"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172589"
 ---
 # <a name="working-with-window-objects"></a>Utilizzo di oggetti finestra
 
-Utilizzo di chiamate di windows per due tipi di attività:
+Utilizzo delle chiamate di Windows per due tipi di attività:
 
-- La gestione dei messaggi di Windows
+- Gestione dei messaggi di Windows
 
-- Nella finestra di disegno
+- Disegno nella finestra
 
-Per gestire i messaggi di Windows in qualsiasi finestra, incluse le proprie finestre figlio, vedere [Mapping di messaggi a funzioni](../mfc/reference/mapping-messages-to-functions.md) per eseguire il mapping di messaggi per la classe di finestra C++. Quindi scrivere gestore messaggi funzioni membro nella classe.
+Per gestire i messaggi di Windows in qualsiasi finestra, incluse le finestre figlio, vedere [mapping di messaggi a funzioni](../mfc/reference/mapping-messages-to-functions.md) per eseguire il mapping dei messaggi alla classe della finestra C++. Quindi scrivere funzioni membro del gestore di messaggi nella classe.
 
-La maggior parte di disegno in un'applicazione framework si verifica nella visualizzazione, il cui [OnDraw](../mfc/reference/cview-class.md#ondraw) funzione membro viene chiamata ogni volta che il contenuto della finestra deve essere disegnato. Se la finestra è un elemento figlio della visualizzazione, è possibile delegare alcuni di disegno della visualizzazione per la finestra figlio facendo in modo che `OnDraw` chiamare una delle funzioni membro della finestra.
+La maggior parte del disegno in un'applicazione Framework viene eseguita nella vista, la cui funzione membro [OnDraw](../mfc/reference/cview-class.md#ondraw) viene chiamata ogni volta che è necessario disegnare il contenuto della finestra. Se la finestra è un elemento figlio della visualizzazione, è possibile delegare parte del disegno della visualizzazione alla finestra figlio chiamando `OnDraw` una delle funzioni membro della finestra.
 
-In ogni caso, è necessario un contesto di dispositivo per il disegno. È possibile usare la penna azionario, pennello e altri oggetti grafici contenute nel contesto di dispositivo associato alla finestra. In alternativa, è possibile modificare tali oggetti per ottenere gli effetti di disegno che è necessario. Con il contesto di dispositivo impostato nel modo desiderato, chiamare funzioni membro di classe [CDC](../mfc/reference/cdc-class.md) (classe contesto di dispositivo) per disegnare linee, forme e testo; utilizzare colori; e per lavorare con un sistema di coordinate.
+In ogni caso, sarà necessario un contesto di dispositivo per il disegno. È possibile usare le penne predefinite, il pennello e altri oggetti grafici contenuti nel contesto di dispositivo associato alla finestra. In alternativa, è possibile modificare questi oggetti per ottenere gli effetti di disegno necessari. Con il contesto di dispositivo configurato, chiamare le funzioni membro della classe [CDC](../mfc/reference/cdc-class.md) (classe del contesto del dispositivo) per creare linee, forme e testo; per utilizzare i colori; e per lavorare con un sistema di coordinate.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-- [Gestione di messaggi e mapping](../mfc/message-handling-and-mapping.md)
+- [Gestione e mapping dei messaggi](../mfc/message-handling-and-mapping.md)
 
 - [Disegno in una visualizzazione](../mfc/drawing-in-a-view.md)
 
@@ -36,6 +37,6 @@ In ogni caso, è necessario un contesto di dispositivo per il disegno. È possib
 
 - [Oggetti grafici](../mfc/graphic-objects.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Oggetti finestra](../mfc/window-objects.md)

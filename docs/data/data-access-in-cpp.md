@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: accesso ai dati in Visual C++'
 title: Accesso ai dati in Visual C++
 ms.date: 03/28/2017
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: a5421ff05fdbad7d78066bb95410aafe69bfaa51
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d314deef66e5f523cffa3434f91b3e0297432b94
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836946"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170984"
 ---
 # <a name="data-access-in-visual-c"></a>Accesso ai dati in Visual C++
 
@@ -55,6 +56,6 @@ L'archiviazione BLOB di Azure è un servizio che archivia dati non strutturati n
 [Guida di riferimento per programmatori ODBC](/sql/odbc/reference/odbc-programmer-s-reference)<br/>
 L'interfaccia ODBC è progettata per essere usata con il linguaggio di programmazione C. L'uso dell'interfaccia ODBC si estende su tre aree: istruzioni SQL, chiamate di funzione ODBC e programmazione C.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [C++ in Visual Studio](../overview/visual-cpp-in-visual-studio.md)

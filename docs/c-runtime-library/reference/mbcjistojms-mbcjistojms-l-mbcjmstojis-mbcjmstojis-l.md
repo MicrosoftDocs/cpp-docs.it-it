@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l'
 title: _mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l
 ms.date: 4/2/2020
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - mbcjmstojis_l function
 - mbcjistojms_l function
 ms.assetid: dece5127-b337-40a4-aa10-53320a2c9432
-ms.openlocfilehash: fc4df04274c33fa14af0762dc62f20ed09f23cd9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6c7d19ce59c381d4f4a60fb2d1ddbed41fe43ba3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918430"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171517"
 ---
 # <a name="_mbcjistojms-_mbcjistojms_l-_mbcjmstojis-_mbcjmstojis_l"></a>_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l
 
@@ -91,7 +92,7 @@ Impostazioni locali da usare.
 
 Nelle impostazioni locali giapponesi queste funzioni restituiscono un carattere convertito o restituiscono 0 se non è possibile alcuna conversione. Nelle impostazioni locali non giapponesi queste funzioni restituiscono il carattere passato.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_mbcjistojms** converte un carattere standard del settore Giappone (JIS) in un carattere Microsoft Kanji (Shift JIS). Il carattere viene convertito solo se i byte iniziale e finale sono compresi nell'intervallo 0x21-0x7E. Se il lead o il byte di valutazione è esterno a questo intervallo, **errno** viene impostato su **EILSEQ**. Per altre informazioni su questo e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -116,7 +117,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
 [Routine di _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

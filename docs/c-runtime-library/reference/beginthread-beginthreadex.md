@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _beginthread, _beginthreadex'
 title: _beginthread, _beginthreadex
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: 5060c4b34005c1cc066e002d20ca70cbfea0fbef
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: f4357186a970914e70116650bd1c218521327f99
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684820"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171907"
 ---
 # <a name="_beginthread-_beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -88,7 +89,7 @@ Dimensione dello stack per un nuovo thread, oppure 0.
 *arglist*<br/>
 Elenco di argomenti da passare a un nuovo thread o **null**.
 
-*Sicurezza*<br/>
+*Security*<br/>
 Puntatore a una struttura [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) che determina se l'handle restituito può essere ereditato dai processi figlio. Se *Security* è **null**, l'handle non può essere ereditato. Deve essere **null** per le applicazioni Windows 95.
 
 *initflag*<br/>
@@ -107,13 +108,13 @@ Per altre informazioni su questi e altri codici restituiti, vedere [errno, _dose
 
 Per ulteriori informazioni su **uintptr_t**, vedere [tipi standard](../../c-runtime-library/standard-types.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_beginthread** crea un thread che inizia l'esecuzione di una routine in *start_address*. La routine in *start_address* deve usare la **`__cdecl`** convenzione di chiamata (per il codice nativo) o **__clrcall** (per il codice gestito) e non deve avere alcun valore restituito. Quando il thread viene restituito da quella routine, viene terminato automaticamente. Per altre informazioni sui thread, vedere [Supporto del multithreading per il codice precedente (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
 **_beginthreadex** è simile all'API Win32 [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) più di **_beginthread** . **_beginthreadex** differisce da **_beginthread** nei modi seguenti:
 
-- **_beginthreadex** presenta tre parametri aggiuntivi: *initflag*, *Security*e **threadaddr**. Il nuovo thread può essere creato in uno stato sospeso, con una sicurezza specificata ed è possibile accedervi usando *thrdaddr*, che è l'identificatore del thread.
+- **_beginthreadex** presenta tre parametri aggiuntivi: *initflag*, *Security* e **threadaddr**. Il nuovo thread può essere creato in uno stato sospeso, con una sicurezza specificata ed è possibile accedervi usando *thrdaddr*, che è l'identificatore del thread.
 
 - La routine in *start_address* passata a **_beginthreadex** deve usare la convenzione di **`__stdcall`** chiamata (per il codice nativo) o **__clrcall** (per il codice gestito) e deve restituire un codice di uscita del thread.
 
@@ -134,7 +135,7 @@ La funzione **_beginthreadex** offre un maggiore controllo sulla modalità di cr
 
 Il sistema operativo gestisce l'allocazione dello stack quando viene chiamato **_beginthread** o **_beginthreadex** ; non è necessario passare l'indirizzo dello stack di thread a una di queste funzioni. Inoltre, l'argomento *stack_size* può essere 0, nel qual caso il sistema operativo utilizza lo stesso valore dello stack specificato per il thread principale.
 
-*arglist* è un parametro da passare al thread appena creato. In genere è l'indirizzo di un elemento di dati, quale una stringa di caratteri. *arglist* può essere **null** se non è necessario, ma è necessario assegnare a **_beginthread** e **_beginthreadex** un valore da passare al nuovo thread. Tutti i thread vengono terminati se un thread chiama [Abort](abort.md), **Exit**, **_exit**o **ExitProcess**.
+*arglist* è un parametro da passare al thread appena creato. In genere è l'indirizzo di un elemento di dati, quale una stringa di caratteri. *arglist* può essere **null** se non è necessario, ma è necessario assegnare a **_beginthread** e **_beginthreadex** un valore da passare al nuovo thread. Tutti i thread vengono terminati se un thread chiama [Abort](abort.md), **Exit**, **_exit** o **ExitProcess**.
 
 Le impostazioni locali del nuovo thread vengono inizializzate utilizzando le informazioni sulle impostazioni locali globali per processo. Se le impostazioni locali per thread sono abilitate da una chiamata a [_configthreadlocale](configthreadlocale.md) (sia globalmente che solo per i nuovi thread), il thread può modificare le proprie impostazioni locali indipendentemente da altri thread chiamando **setlocale** o **_wsetlocale**. I thread per i quali non è impostato il flag delle impostazioni locali per thread possono influenzare le informazioni sulle impostazioni locali in tutti gli altri thread per i quali non è impostato il flag delle impostazioni locali per thread, nonché tutti i thread appena creati. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
@@ -157,7 +158,7 @@ Solo versioni multithread delle [librerie di runtime C](../../c-runtime-library/
 
 Per usare **_beginthread** o **_beginthreadex**, l'applicazione deve collegarsi a una delle librerie di runtime C multithread.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Nell'esempio seguente vengono utilizzati **_beginthread** e **_endthread**.
 
@@ -325,10 +326,10 @@ In second thread...
 Counter should be 1000000; it is-> 1000000
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)
 - [_endthread, _endthreadex](endthread-endthreadex.md)
-- [abort](abort.md)
+- [interruzione](abort.md)
 - [exit, _Exit, _exit](exit-exit-exit.md)
 - [GetExitCodeThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)

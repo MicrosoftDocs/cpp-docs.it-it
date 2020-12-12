@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: BITAND'
 title: bitand
 ms.date: 11/04/2016
 api_location:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - bitand function
 ms.assetid: 279cf9b5-fac1-49de-b329-f1a31b3481fe
-ms.openlocfilehash: 771631275ea03cc9d3a6105aa51cd428f1720763
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bf0c89395106efc36325ac5c64e892afcbf556e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171255"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171842"
 ---
 # <a name="bitand"></a>bitand
 
@@ -73,4 +74,4 @@ int main( )
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<iso646. h >
+**Intestazione:**\<iso646.h>

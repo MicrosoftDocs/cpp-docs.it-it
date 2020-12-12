@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: sscanf, _sscanf_l, swscanf, _swscanf_l'
 title: sscanf, _sscanf_l, swscanf, _swscanf_l
 ms.date: 08/29/2019
 api_name:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - sscanf_l function
 - stscanf_l function
 ms.assetid: c2dcf0d2-9798-499f-a4a8-06f7e2b9a80c
-ms.openlocfilehash: e3b453166278fff4c3230cb51895c487319e33d9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f5681e1f8e122c6f24151ae5e8d37186d8bd066e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958237"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171270"
 ---
 # <a name="sscanf-_sscanf_l-swscanf-_swscanf_l"></a>sscanf, _sscanf_l, swscanf, _swscanf_l
 
@@ -87,7 +88,7 @@ int _swscanf_l(
 Dati archiviati
 
 *format*<br/>
-Stringa di controllo del formato. Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
+Stringa di controllo del formato. Per altre informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
 *argument*<br/>
 Argomenti facoltativi
@@ -103,18 +104,18 @@ Se il *buffer* o il *formato* è un puntatore **null** , viene richiamato il ges
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 La funzione **sscanf** legge i dati dal *buffer* nella posizione specificata da ogni *argomento*. Ogni *argomento* deve essere un puntatore a una variabile con un tipo che corrisponde a un identificatore di tipo nel *formato*. L'argomento *Format* controlla l'interpretazione dei campi di input e ha lo stesso formato e la stessa funzione dell'argomento *Format* per la funzione **scanf** . Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
 Per informazioni sui caratteri di campo di tipo scanf, vedere [caratteri di campo di tipo scanf](../scanf-type-field-characters.md). Per informazioni sui campi di specifica del formato scanf, vedere [campi di specifica del formato](../format-specification-fields-scanf-and-wscanf-functions.md).
 
 > [!IMPORTANT]
-> Quando si legge una stringa con **sscanf**, specificare sempre una larghezza per il formato **% s** (ad esempio, **"% 32s"** invece di **"% s"** ); in caso contrario, l'input formattato in modo errato può facilmente causare un sovraccarico del buffer.
+> Quando si legge una stringa con **sscanf**, specificare sempre una larghezza per il formato **% s** (ad esempio, **"% 32s"** invece di **"% s"**); in caso contrario, l'input formattato in modo errato può facilmente causare un sovraccarico del buffer.
 
 **swscanf** è una versione a caratteri wide di **sscanf**; gli argomenti di **swscanf** sono stringhe a caratteri wide. **sscanf** non gestisce i caratteri esadecimali multibyte. **swscanf** non gestisce i caratteri esadecimali a larghezza intera Unicode o "zona di compatibilità". In caso contrario, **swscanf** e **sscanf** si comportano in modo identico.
 
-Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
+Le versioni di queste funzioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -178,5 +179,5 @@ Real:     = 15.000000
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)<br/>

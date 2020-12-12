@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso di un controllo struttura a schede'
 title: Utilizzo di un controllo Tab
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,26 +7,26 @@ helpviewer_keywords:
 - tab controls [MFC], working with
 - tab controls [MFC], using
 ms.assetid: 819488e3-4944-44b7-9483-195edb8e0aed
-ms.openlocfilehash: 1ff4d57f9968f79a964a57b26fc79d68245c1a3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e84f636019fa3b63c3e19b23ac639486c5f2353
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399512"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172610"
 ---
 # <a name="working-with-a-tab-control"></a>Utilizzo di un controllo Tab
 
-Il modo più semplice per usare un controllo struttura a schede ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) consiste nell'aggiungerlo a una risorsa modello di finestra di dialogo con l'editor finestre. È anche possibile usare un controllo struttura a schede da solo. MFC chiama `InitCommonControls` automaticamente. Come indicato di seguito sono riportate le attività principali:
+Il modo più semplice per usare un controllo struttura a schede ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) consiste nell'aggiungerlo a una risorsa modello di finestra di dialogo con l'editor finestre. È anche possibile usare un controllo struttura a schede. MFC chiama `InitCommonControls` per l'utente. Le attività principali sono le seguenti:
 
-- [Creazione del controllo tab](../mfc/creating-the-tab-control.md)
+- [Creazione del controllo scheda](../mfc/creating-the-tab-control.md)
 
-- [Aggiunta di schede a un controllo struttura a schede](../mfc/adding-tabs-to-a-tab-control.md)
+- [Aggiunta di schede a un controllo scheda](../mfc/adding-tabs-to-a-tab-control.md)
 
-- [Elaborazione dei messaggi di notifica controllo tab](../mfc/processing-tab-control-notification-messages.md)
+- [Elaborazione dei messaggi di notifica sui controlli scheda](../mfc/processing-tab-control-notification-messages.md)
 
-Se l'oggetto controllo scheda è incorporato in una classe di finestra di dialogo o visualizzazione padre, il controllo viene eliminato definitivamente quando viene eliminato definitivamente l'elemento padre.
+Se l'oggetto controllo struttura a schede è incorporato in una visualizzazione padre o in una classe di finestre di dialogo, il controllo viene eliminato definitivamente quando l'elemento padre viene eliminato definitivamente.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso di CTabCtrl](../mfc/using-ctabctrl.md)<br/>
+[Utilizzo di CTabCtrl](../mfc/using-ctabctrl.md)<br/>
 [Controlli](../mfc/controls-mfc.md)

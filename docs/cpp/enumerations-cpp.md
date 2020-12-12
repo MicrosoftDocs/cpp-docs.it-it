@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: enumerazioni (C++)'
 title: Enumerazioni (C++)
 ms.date: 06/01/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-ms.openlocfilehash: d4511ed7d09ff280d01214a2a177148956580ee5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c612628b141e60c02ac4d6d80506e77f7ef35761
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221614"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171062"
 ---
 # <a name="enumerations-c"></a>Enumerazioni (C++)
 
@@ -46,7 +47,7 @@ enum class C : short;  // ... may have any integral underlying type
 
 ## <a name="parameters"></a>Parametri
 
-*identificatore*<br/>
+*identifier*<br/>
 Nome del tipo assegnato all'enumerazione.
 
 *type*<br/>
@@ -143,7 +144,7 @@ namespace ScopedEnumConversions
 
 Notare che la riga `hand = account_num;` causa ancora l'errore che si verifica con le enumerazioni senza ambito, come illustrato in precedenza. È consentita con un cast esplicito. Tuttavia, con le enumerazioni con ambito, la conversione tentata nell'istruzione successiva, `account_num = Suit::Hearts;`, non è più consentita senza un cast esplicito.
 
-## <a name="enums-with-no-enumerators"></a><a name="no_enumerators"></a>Enumerazioni senza enumeratori
+## <a name="enums-with-no-enumerators"></a><a name="no_enumerators"></a> Enumerazioni senza enumeratori
 
 **Visual Studio 2017 versione 15,3 e successive** (disponibile con [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): definendo un'enumerazione (regolare o con ambito) con un tipo sottostante esplicito e senza enumeratori, è possibile introdurre un nuovo tipo integrale senza conversione implicita in un altro tipo. Utilizzando questo tipo anziché il tipo sottostante incorporato, è possibile eliminare il rischio di errori evidenti causati da conversioni implicite involontarie.
 
@@ -181,7 +182,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Dichiarazioni di enumerazioni C](../c-language/c-enumeration-declarations.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)

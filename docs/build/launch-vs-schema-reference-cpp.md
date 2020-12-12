@@ -1,14 +1,15 @@
 ---
+description: 'Altre informazioni su: launch.vs.jssu riferimento allo schema (C++)'
 title: launch.vs.jsper riferimento allo schema (C++)
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 1e235b5f1ff4d7573ddbe57ac4e3c7c9bdbc2eb8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: a7b18de57208017003717b3cda38fb214fad7f79
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505672"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172063"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>launch.vs.jsper riferimento allo schema (C++)
 
@@ -38,8 +39,8 @@ Usare il *launch.vs.jssu* file per configurare i parametri di debug. Per creare 
 |Proprietà|Type|Descrizione|
 |-|-|-|
 |`program`|string|Percorso completo dell'eseguibile del programma nel computer remoto. Quando si usa CMake, la macro `${debugInfo.fullTargetPath}` può essere usata come valore di questo campo.|
-|`processId`|numero intero|ID processo facoltativo a cui connettersi il debugger.|
-|`sourceFileMap`|object|Mapping dei file di origine facoltativi passati al motore di debug. Formato: `{ "\<Compiler source location>": "\<Editor source location>" }` o `{ "\<Compiler source location>": { "editorPath": "\<Editor source location>", "useForBreakpoints": true } }` . Esempio: `{ "/home/user/foo": "C:\\foo" }` o `{ "/home/user/foo": { "editorPath": "c:\\foo", "useForBreakpoints": true } }`. Vedere [Opzioni mappa file di origine](#source_file_map_options).|
+|`processId`|integer|ID processo facoltativo a cui connettersi il debugger.|
+|`sourceFileMap`|oggetto|Mapping dei file di origine facoltativi passati al motore di debug. Formato: `{ "\<Compiler source location>": "\<Editor source location>" }` o `{ "\<Compiler source location>": { "editorPath": "\<Editor source location>", "useForBreakpoints": true } }` . Esempio: `{ "/home/user/foo": "C:\\foo" }` o `{ "/home/user/foo": { "editorPath": "c:\\foo", "useForBreakpoints": true } }`. Vedere [Opzioni mappa file di origine](#source_file_map_options).|
 |`additionalProperties`|string|Uno degli sourceFileMapOptions. come illustrato più avanti.|
 |`MIMode`|string|Indica il tipo di debugger della console abilitato per MI a cui si connetterà MIDebugEngine. I valori consentiti sono "GDB", "LLDB".|
 |`args`|array|Argomenti della riga di comando passati al programma.|
@@ -81,7 +82,7 @@ Utilizzato con la `pipeTransport` proprietà:
 |`pipeProgram`|string|Comando pipe completo da eseguire.|
 |`pipeArgs`|array|Argomenti della riga di comando passati al programma pipe per configurare la connessione.|
 |`debuggerPath`|string|Percorso completo del debugger nel computer di destinazione, ad esempio/usr/bin/gdb.|
-|`pipeEnv`|object|Variabili di ambiente passate al programma pipe.|
+|`pipeEnv`|oggetto|Variabili di ambiente passate al programma pipe.|
 |`quoteArgs`|boolean|Se i singoli argomenti contengono caratteri (ad esempio spazi o tabulazioni), devono essere racchiusi tra virgolette? Se **`false`** , il comando del debugger non verrà più racchiuso tra virgolette. Il valore predefinito è **`true`** .|
 
 ## <a name="source-file-map-options"></a><a name="source_file_map_options"></a> Opzioni mapping file di origine

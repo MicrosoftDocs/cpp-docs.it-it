@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: procedura: usare un filtro di blocco messaggi'
 title: 'Procedura: Usare il filtro di blocco dei messaggi'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - message-block filters, using [Concurrency Runtime]
 - using message-block filters [Concurrency Runtime]
 ms.assetid: db6b99fb-288d-4477-96dc-b9751772ebb2
-ms.openlocfilehash: ac58ef2240d2ea6ba34b334106c08595e70b02e8
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 3c07aa7f12ed952d5256ba8fc7f53b619edefb7e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008642"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172590"
 ---
 # <a name="how-to-use-a-message-block-filter"></a>Procedura: Usare il filtro di blocco dei messaggi
 
@@ -63,7 +64,7 @@ bool (T const &)
 
 Per eliminare la copia dei dati non necessaria, utilizzare il secondo form quando si dispone di un tipo di aggregazione trasmesso per valore.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Procedura dettagliata: creazione di un agente del flusso di flussi](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>

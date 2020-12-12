@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: btowc'
 title: btowc
 ms.date: 4/2/2020
 api_name:
@@ -26,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - btowc function
 ms.assetid: 99a46e02-6f86-4569-af79-5feca012add8
-ms.openlocfilehash: cbeff70674a257217c66d39475a2c809c9bd9559
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bbd6121499e03c356e80e49cbcbe75929ca96c2a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913359"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171725"
 ---
 # <a name="btowc"></a>btowc
 
@@ -47,14 +48,14 @@ wint_t btowc(
 
 ### <a name="parameters"></a>Parametri
 
-*carattere*<br/>
+*character*<br/>
 Valore Integer da testare.
 
 ## <a name="return-value"></a>Valore restituito
 
 Restituisce la rappresentazione a caratteri wide del carattere se l'Integer rappresenta un carattere a byte singolo valido nello stato iniziale di spostamento. Restituisce WEOF se l'Integer è EOF o non è un carattere a byte singolo valido nello stato iniziale di spostamento. L'output di questa funzione è influenzato dalle impostazioni locali correnti del **LC_TYPE** .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -66,6 +67,6 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

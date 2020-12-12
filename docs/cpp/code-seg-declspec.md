@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: code_seg (__declspec)'
 title: code_seg (__declspec)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - code_seg __declspec keyword
 ms.assetid: ad3c1105-15d3-4e08-b7b9-e4bd9d7b6aa0
-ms.openlocfilehash: 22703e92b1a127378c965ce12bcc4e5475b3e452
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b382e0a758c28ffab297badda7670c1de3b08d32
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180836"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171094"
 ---
 # <a name="code_seg-__declspec"></a>code_seg (__declspec)
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 L'attributo di Dichiarazione **code_seg** assegna un nome a un segmento di testo eseguibile nel file con estensione obj in cui verrà archiviato il codice oggetto per la funzione o le funzioni membro della classe.
 
@@ -31,7 +32,7 @@ L'attributo `__declspec(code_seg(...))` consente il posizionamento del codice in
 
 Un *segmento* è un blocco di dati denominato in un file con estensione obj caricato in memoria come unità. Un *segmento di testo* è un segmento che contiene il codice eseguibile. Il termine *sezione* viene spesso usato in modo interscambiabile con il segmento.
 
-Il codice oggetto generato quando viene definito `declarator` viene inserito nel segmento di testo specificato da `segname`, ovvero un valore letterale stringa "narrow". Il nome `segname` non deve essere specificato in una [sezione](../preprocessor/section.md) pragma prima che possa essere utilizzato in una dichiarazione. Per impostazione predefinita, quando non viene specificato alcun `code_seg`, il codice oggetto viene inserito in un segmento denominato .text. Un attributo **code_seg** esegue l'override di qualsiasi direttiva [#pragma code_seg](../preprocessor/code-seg.md) esistente. Un attributo **code_seg** applicato a una funzione membro esegue l'override di qualsiasi attributo **code_seg** applicato alla classe che lo contiene.
+Il codice oggetto generato quando viene definito `declarator` viene inserito nel segmento di testo specificato da `segname`, ovvero un valore letterale stringa "narrow". Il nome non `segname` deve essere specificato in una [sezione](../preprocessor/section.md) pragma prima di poter essere usato in una dichiarazione. Per impostazione predefinita, quando non viene specificato alcun `code_seg`, il codice oggetto viene inserito in un segmento denominato .text. Un attributo **code_seg** esegue l'override di qualsiasi direttiva [#pragma code_seg](../preprocessor/code-seg.md) esistente. Un attributo **code_seg** applicato a una funzione membro esegue l'override di qualsiasi attributo **code_seg** applicato alla classe che lo contiene.
 
 Se un'entità dispone di un attributo **code_seg** , tutte le dichiarazioni e le definizioni della stessa entità devono avere attributi **code_seg** identici. Se una classe base dispone di un attributo **code_seg** , le classi derivate devono avere lo stesso attributo.
 
@@ -103,9 +104,9 @@ int main()
 }
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [__declspec](../cpp/declspec.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)

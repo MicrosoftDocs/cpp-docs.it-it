@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Partial (C++/CLI e C++/CX)'
 title: partial (C++/CLI e C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - partial
 - C++/CX, partial
 ms.assetid: 43adf1f5-10c5-44aa-a66f-7507e2bdabf8
-ms.openlocfilehash: 0f9de5dda1b0838a624431e579e6bc6b328d9013
-ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
+ms.openlocfilehash: 8e6506e0ae5af40f1783241b5783228cfc919862
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344696"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97173103"
 ---
 # <a name="partial--ccli-and-ccx"></a>partial (C++/CLI e C++/CX)
 
@@ -25,7 +26,7 @@ Questa funzionalità del linguaggio si applica solo a Windows Runtime.
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-Per una classe di riferimento con due definizioni parziali, la parola chiave **partial** viene applicata alla prima occorrenza della definizione e viene in genere eseguita dal codice generato automaticamente, in modo che un codificatore umano non usi la parola chiave molto spesso. Per tutte le definizioni parziali successive della classe, omettere il modificatore **partial** dalla parola chiave *class-key* e dall'identificatore di classe. Quando il compilatore rileva una classe di riferimento e un identificatore di classe definiti in precedenza ma non la parola chiave **partial** , combina internamente tutte le parti della definizione della classe di riferimento in una definizione.
+Per una classe di riferimento con due definizioni parziali, la parola chiave **partial** viene applicata alla prima occorrenza della definizione e viene in genere eseguita dal codice generato automaticamente, in modo che un codificatore umano non usi la parola chiave molto spesso. Per tutte le definizioni parziali successive della classe, omettere il modificatore **partial** dalla parola chiave *class-key* e dall'identificatore di classe. Quando il compilatore rileva una classe di riferimento e un identificatore di classe definiti in precedenza ma non la parola chiave **partial**, combina internamente tutte le parti della definizione della classe di riferimento in una definizione.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -44,7 +45,7 @@ class-key identifier {
 ### <a name="parameters"></a>Parametri
 
 *class-key*<br/>
-Parola chiave che dichiara una classe o uno struct supportato da Windows Runtime. Può trattarsi di una **classe di riferimento** , una **classe di valori** , uno **struct ref** o uno **struct di valori**.
+Parola chiave che dichiara una classe o uno struct supportato da Windows Runtime. Può trattarsi di una **classe di riferimento**, una **classe di valori**, uno **struct ref** o uno **struct di valori**.
 
 *identifier*<br/>
 Nome del tipo definito.
@@ -67,7 +68,7 @@ Modelli: una classe parziale non può essere un modello.
 
 Generics: una classe parziale può essere generica se la definizione completa potrebbe essere generica. Ogni classe parziale e completa deve tuttavia avere esattamente gli stessi parametri generici, compresi i nomi di parametri formali.
 
-Per altre informazioni su come usare la parola chiave **partial** , vedere [Classi parziali (C++/CX)](../cppcx/partial-classes-c-cx.md).
+Per altre informazioni su come usare la parola chiave **partial**, vedere [Classi parziali (C++/CX)](../cppcx/partial-classes-c-cx.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -77,6 +78,6 @@ Opzione del compilatore: `/ZW`
 
 Questa funzionalità del linguaggio non si applica a Common Language Runtime.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classi parziali (C++/CX)](../cppcx/partial-classes-c-cx.md)

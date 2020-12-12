@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: file di Zero-Length'
 title: File di lunghezza zero
 ms.date: 11/04/2016
 helpviewer_keywords:
 - files [C++], zero-length
 - zero-length files
 ms.assetid: f0725a4e-7a39-4b1e-ba23-58171250919e
-ms.openlocfilehash: fc4b0c8c850a8f45d3ca1e0191b79fc7f0d1ef22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d9c19bbe88a3be83515a344f29e06b720ad635e6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290651"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171920"
 ---
 # <a name="zero-length-files"></a>File di lunghezza zero
 
@@ -18,6 +19,6 @@ ms.locfileid: "62290651"
 
 I file con una lunghezza pari a zero sono consentiti.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Funzioni della libreria](../c-language/library-functions.md)

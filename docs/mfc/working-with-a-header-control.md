@@ -1,32 +1,33 @@
 ---
+description: 'Altre informazioni su: uso di un controllo Header'
 title: Utilizzo di un controllo Header
 ms.date: 11/04/2016
 helpviewer_keywords:
 - header controls [MFC], working with
 - header controls
 ms.assetid: af3afb5c-bf97-451b-8fee-3adcb8257210
-ms.openlocfilehash: db8f9d40bad116d7873bfd8ea9682c711d44e91f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cccd8b8296e27b0bbab3058d38fbacc068caeb1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399525"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172635"
 ---
 # <a name="working-with-a-header-control"></a>Utilizzo di un controllo Header
 
-Il modo più semplice usare un controllo header ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) è in combinazione con un controllo elenco, vedere [utilizzo di CListCtrl](../mfc/using-clistctrl.md) più avanti in questo gruppo di argomenti. È anche possibile usare un controllo di intestazione da solo. MFC chiama `InitCommonControls` automaticamente. Come indicato di seguito sono riportate le attività principali:
+Il modo più semplice per usare un controllo Header ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) è insieme a un controllo elenco; vedere [uso di CListCtrl](../mfc/using-clistctrl.md) più avanti in questa famiglia di argomenti. È anche possibile usare un controllo Header autonomamente. MFC chiama `InitCommonControls` per l'utente. Le attività principali sono le seguenti:
 
-- [Creazione del controllo header](../mfc/creating-the-header-control.md)
+- [Creazione del controllo intestazione](../mfc/creating-the-header-control.md)
 
-- [Aggiunta di elementi al controllo header](../mfc/adding-items-to-the-header-control.md)
+- [Aggiunta di elementi al controllo intestazione](../mfc/adding-items-to-the-header-control.md)
 
-- [Ordinamento degli elementi nel controllo header](../mfc/ordering-items-in-the-header-control.md)
+- [Ordinamento degli elementi nel controllo intestazione](../mfc/ordering-items-in-the-header-control.md)
 
-- [L'elaborazione delle notifice header-control](../mfc/processing-header-control-notifications.md)
+- [Elaborazione di notifiche dei controlli intestazione](../mfc/processing-header-control-notifications.md)
 
-Se l'oggetto di controllo di intestazione è incorporato in una classe di finestra di dialogo o visualizzazione padre, il controllo viene eliminato definitivamente quando viene eliminato definitivamente l'elemento padre.
+Se l'oggetto controllo intestazione è incorporato in una visualizzazione padre o in una classe di finestre di dialogo, il controllo viene eliminato definitivamente quando l'elemento padre viene eliminato definitivamente.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso di CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
+[Utilizzo di CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
 [Controlli](../mfc/controls-mfc.md)

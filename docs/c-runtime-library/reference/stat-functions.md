@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64 _wstat64i32'
 title: _stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 ms.date: 4/2/2020
 api_name:
@@ -118,12 +119,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-ms.openlocfilehash: bb9603b6a76e92561db6c28792e4644949e190d8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c0aa9c825821608aaf7f71bc9e3d8331efea8a82
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229337"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171257"
 ---
 # <a name="_stat-_stat32-_stat64-_stati64-_stat32i64-_stat64i32-_wstat-_wstat32-_wstat64-_wstati64-_wstat32i64-_wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 
@@ -198,7 +199,7 @@ Per ulteriori informazioni su questo e altri codici restituiti, vedere [_doserrn
 
 L'indicatore di data in un file può essere rappresentato se è successivo alla mezzanotte del 1 gennaio 1970 e prima del 23:59:59, 31 dicembre 3000, UTC, a meno che non si usi **_stat32** o **_wstat32**, oppure è stato definito **_USE_32BIT_TIME_T**, nel qual caso la data può essere rappresentata solo fino al 23:59:59 del 18 gennaio 2038, UTC.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_stat** ottiene informazioni sul file o sulla directory specificati da *path* e la archivia nella struttura a cui punta il *buffer*. **_stat** gestisce automaticamente gli argomenti della stringa di caratteri multibyte in base alle esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso.
 
@@ -206,7 +207,7 @@ La funzione **_stat** ottiene informazioni sul file o sulla directory specificat
 
 Le variazioni di queste funzioni supportano tipi time a 32 o 64 bit e lunghezze di file a 32 o a 64 bit. Il primo suffisso numerico (**32** o **64**) indica le dimensioni del tipo di tempo usato; il secondo suffisso è **i32** o **I64**, che indica se le dimensioni del file sono rappresentate come Integer a 32 bit o a 64 bit.
 
-**_stat** equivale a **_stat64i32**e **`struct`** **_stat** contiene un'ora a 64 bit. Questo vale a meno che non sia stato definito **_USE_32BIT_TIME_T** , nel qual caso è attivo il comportamento precedente; **_stat** usa un'ora a 32 bit e **`struct`** **_stat** contiene un'ora a 32 bit. Lo stesso vale per **_stati64**.
+**_stat** equivale a **_stat64i32** e **`struct`** **_stat** contiene un'ora a 64 bit. Questo vale a meno che non sia stato definito **_USE_32BIT_TIME_T** , nel qual caso è attivo il comportamento precedente; **_stat** usa un'ora a 32 bit e **`struct`** **_stat** contiene un'ora a 32 bit. Lo stesso vale per **_stati64**.
 
 > [!NOTE]
 > **_wstat** non funziona con i collegamenti simbolici di Windows Vista. In questi casi, **_wstat** segnala sempre una dimensione del file pari a 0. **_stat** funziona correttamente con i collegamenti simbolici.
@@ -254,14 +255,14 @@ Struttura di **_stat** , definita in SYS\STAT. H, include i campi seguenti.
 | **st_size** | Dimensioni del file in byte; intero a 64 bit per le varianti con il suffisso **I64** . |
 | **st_uid** | Identificatore numerico dell'utente proprietario del file (specifico di UNIX). Questo campo sarà sempre zero nei sistemi Windows. Un file reindirizzato viene classificato come file di Windows. |
 
-Se il *percorso* fa riferimento a un dispositivo, il **st_size**, vari campi di tempo, **st_dev**e campi di **st_rdev** nella struttura **_stat** sono privi di significato. Dal momento che STAT.H usa il tipo [dev_t](../../c-runtime-library/standard-types.md) definito in TYPES.H, è necessario includere TYPES.H prima di STAT.H nel codice.
+Se il *percorso* fa riferimento a un dispositivo, il **st_size**, vari campi di tempo, **st_dev** e campi di **st_rdev** nella struttura **_stat** sono privi di significato. Dal momento che STAT.H usa il tipo [dev_t](../../c-runtime-library/standard-types.md) definito in TYPES.H, è necessario includere TYPES.H prima di STAT.H nel codice.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|Intestazioni facoltative|
 |-------------|---------------------|----------------------|
-|**_stat**, **_stat32**, **_stat64**, **_stati64**, **_stat32i64**, **_stat64i32**|\<sys/types.h>seguito da\<sys/stat.h>|\<errno.h>|
-|**_wstat**, **_wstat32**, **_wstat64**, **_wstati64**, **_wstat32i64**, **_wstat64i32**|\<sys/types.h>seguito da \<sys/stat.h> o\<wchar.h>|\<errno.h>|
+|**_stat**, **_stat32**, **_stat64**, **_stati64**, **_stat32i64**, **_stat64i32**|\<sys/types.h> seguito da \<sys/stat.h>|\<errno.h>|
+|**_wstat**, **_wstat32**, **_wstat64**, **_wstati64**, **_wstat32i64**, **_wstat64i32**|\<sys/types.h> seguito da \<sys/stat.h> o \<wchar.h>|\<errno.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

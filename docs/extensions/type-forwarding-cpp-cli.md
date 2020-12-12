@@ -1,16 +1,17 @@
 ---
+description: "Altre informazioni su: l'invio del tipo (C++/CLI)"
 title: Inoltro del tipo (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - type forwarding, C++
 ms.assetid: ae730b69-0c27-41cc-84e1-3132783866ea
-ms.openlocfilehash: 0803ecc2ffb2da2748b1ef063481aa2571f27f50
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 360ca624103c8021c17300f897b1091c13e898a3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171931"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172882"
 ---
 # <a name="type-forwarding-ccli"></a>Inoltro del tipo (C++/CLI)
 
@@ -39,7 +40,7 @@ Assembly in cui si sta spostando la definizione del tipo.
 *type*<br/>
 Tipo la cui definizione si sta spostando in un altro assembly.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Dopo che un componente (assembly) viene fornito e usato dalle applicazioni client, è possibile usare l'inoltro del tipo per spostare un tipo dal componente (assembly) in un altro assembly e fornire il componente aggiornato (e qualsiasi assembly aggiuntivo richiesto) e le applicazioni client continueranno a funzionare senza necessità di ricompilazione.
 
@@ -59,7 +60,7 @@ Ecco alcuni tipi che è possibile inoltrare:
 
 - enum
 
-- interfacce
+- interfaces
 
 Non è possibile inoltrare i tipi seguenti:
 

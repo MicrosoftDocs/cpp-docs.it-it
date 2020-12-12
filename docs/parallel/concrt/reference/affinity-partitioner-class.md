@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: affinity_partitioner Class'
 title: Classe affinity_partitioner
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - affinity_partitioner class
 ms.assetid: 31bf7bb1-bd01-491c-9760-d9d60edfccad
-ms.openlocfilehash: 0ae6bbee49d1b8873190a7054e55f65b40b31b13
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 44aa693d5007507e33f062a673713d1ddbda3172
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142880"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172323"
 ---
 # <a name="affinity_partitioner-class"></a>Classe affinity_partitioner
 
@@ -29,10 +30,10 @@ class affinity_partitioner;
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[affinity_partitioner](#ctor)|Costruisce un oggetto `affinity_partitioner`.|
-|[Distruttore ~ affinity_partitioner](#dtor)|Elimina definitivamente un oggetto `affinity_partitioner`.|
+|[Distruttore ~ affinity_partitioner](#dtor)|Elimina definitivamente un `affinity_partitioner` oggetto.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -44,15 +45,15 @@ class affinity_partitioner;
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="dtor"></a>~ affinity_partitioner
+## <a name="affinity_partitioner"></a><a name="dtor"></a> ~ affinity_partitioner
 
-Elimina definitivamente un oggetto `affinity_partitioner`.
+Elimina definitivamente un `affinity_partitioner` oggetto.
 
 ```cpp
 ~affinity_partitioner();
 ```
 
-## <a name="ctor"></a>affinity_partitioner
+## <a name="affinity_partitioner"></a><a name="ctor"></a> affinity_partitioner
 
 Costruisce un oggetto `affinity_partitioner`.
 
@@ -60,6 +61,6 @@ Costruisce un oggetto `affinity_partitioner`.
 affinity_partitioner();
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)
+[Spazio dei nomi Concurrency](concurrency-namespace.md)

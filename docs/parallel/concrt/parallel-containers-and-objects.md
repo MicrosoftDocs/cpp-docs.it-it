@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: contenitori e oggetti paralleli'
 title: Contenitori e oggetti paralleli
 ms.date: 03/27/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-ms.openlocfilehash: 7387173378e79a4707008a11846eab19d7ae4341
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2d0b6b491fbe41ea74ad0e6c138cb270558f6e73
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831788"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172440"
 ---
 # <a name="parallel-containers-and-objects"></a>Contenitori e oggetti paralleli
 
@@ -61,7 +62,7 @@ Oggetti simultanei:
 
   - [Metodi e funzionalità](#combinable-features)
 
-  - [esempi](#combinable-examples)
+  - [Esempi](#combinable-examples)
 
 ## <a name="concurrent_vector-class"></a><a name="vector"></a> Classe concurrent_vector
 
@@ -87,7 +88,7 @@ La `concurrent_vector` classe è molto simile alla `vector` classe. La complessi
 
 - Il runtime non definisce una versione specializzata di `concurrent_vector` per il tipo **`bool`** .
 
-### <a name="concurrency-safe-operations"></a><a name="vector-safety"></a> Operazioni indipendenti dalla concorrenza
+### <a name="concurrency-safe-operations"></a><a name="vector-safety"></a> Operazioni di Concurrency-Safe
 
 Tutti i metodi che aggiungono o aumentano le dimensioni di un `concurrent_vector` oggetto o accedono a un elemento in un `concurrent_vector` oggetto sono indipendenti dalla concorrenza. In tal caso, i puntatori o gli iteratori sono sempre validi. Non si tratta di una garanzia di inizializzazione di elementi o di un ordine di attraversamento specifico. L'eccezione a questa regola è il `resize` metodo.
 
@@ -176,7 +177,7 @@ La `concurrent_queue` classe è molto simile alla `queue` classe. I punti seguen
 
 - La `concurrent_queue` classe fornisce il metodo [unsafe_size](reference/concurrent-queue-class.md#unsafe_size) anziché il `size` metodo. Il `unsafe_size` metodo non è indipendente dalla concorrenza.
 
-### <a name="concurrency-safe-operations"></a><a name="queue-safety"></a> Operazioni indipendenti dalla concorrenza
+### <a name="concurrency-safe-operations"></a><a name="queue-safety"></a> Operazioni di Concurrency-Safe
 
 Tutti i metodi che accodano o deaccodano da un `concurrent_queue` oggetto sono indipendenti dalla concorrenza. In tal caso, i puntatori o gli iteratori sono sempre validi. Non si tratta di una garanzia di inizializzazione di elementi o di un ordine di attraversamento specifico.
 
@@ -254,7 +255,7 @@ La `concurrent_unordered_map` classe è molto simile alla `unordered_map` classe
 
 Per evitare deadlock, nessun metodo di `concurrent_unordered_map` blocca un blocco quando chiama l'allocatore di memoria, le funzioni hash o altro codice definito dall'utente. Inoltre, è necessario assicurarsi che la funzione hash valuti sempre le chiavi uguali allo stesso valore. Le funzioni hash migliori distribuiscono le chiavi in modo uniforme nello spazio di codice hash.
 
-### <a name="concurrency-safe-operations"></a><a name="map-safety"></a> Operazioni indipendenti dalla concorrenza
+### <a name="concurrency-safe-operations"></a><a name="map-safety"></a> Operazioni di Concurrency-Safe
 
 La `concurrent_unordered_map` classe consente operazioni di inserimento e accesso agli elementi indipendenti dalla concorrenza. Le operazioni di inserimento non invalidano i puntatori o gli iteratori esistenti. Anche le operazioni di accesso e attraversamento degli iteratori sono sicure per la concorrenza. In tal caso, i puntatori o gli iteratori sono sempre validi. Non si tratta di una garanzia di inizializzazione di elementi o di un ordine di attraversamento specifico. La tabella seguente illustra i `concurrent_unordered_map` metodi e gli operatori comunemente usati che sono indipendenti dalla concorrenza.
 
@@ -391,7 +392,7 @@ Viene illustrato come utilizzare una `combine` funzione per unire set di dati lo
 [PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 Viene descritta la libreria PPL, che fornisce un modello di programmazione imperativo che promuove la scalabilità e la facilità di utilizzo per lo sviluppo di applicazioni simultanee.
 
-## <a name="reference"></a>Informazioni di riferimento
+## <a name="reference"></a>Riferimento
 
 [Classe concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)
 

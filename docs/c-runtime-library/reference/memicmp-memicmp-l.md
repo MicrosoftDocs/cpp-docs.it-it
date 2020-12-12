@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _memicmp, _memicmp_l'
 title: _memicmp, _memicmp_l
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-ms.openlocfilehash: 365b57dc300da5686895d66fa642e3870612c2ed
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 261c7b64cc7da58c201515697addc587c575a9ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915389"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171413"
 ---
 # <a name="_memicmp-_memicmp_l"></a>_memicmp, _memicmp_l
 
@@ -85,7 +86,7 @@ Il valore restituito indica la relazione tra i buffer.
 |> 0|*buffer1* maggiore di *buffer2*.|
 |**_NLSCMPERROR**|Si è verificato un errore.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_memicmp** Confronta i primi caratteri di *conteggio* dei due buffer *buffer1* e *buffer2* byte per byte. Nel confronto non viene fatta distinzione tra maiuscole e minuscole.
 
@@ -141,7 +142,7 @@ First is equal to second.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modifica del buffer](../../c-runtime-library/buffer-manipulation.md)<br/>
+[Manipolazione del buffer](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>
 [memchr, wmemchr](memchr-wmemchr.md)<br/>
 [memcmp, wmemcmp](memcmp-wmemcmp.md)<br/>

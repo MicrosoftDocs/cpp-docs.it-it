@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l'
 title: _mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 ms.date: 4/2/2020
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-ms.openlocfilehash: b5af94932fc90e6bcaee584e16f3056ee36dab51
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: aca32a81f1a7c74241be5d4574307a39731b1b6a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914383"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171491"
 ---
 # <a name="_mbctohira-_mbctohira_l-_mbctokata-_mbctokata_l"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 
@@ -91,7 +92,7 @@ Impostazioni locali da usare.
 
 Ognuna di queste funzioni restituisce il carattere convertito *c*, se possibile. In caso contrario, restituisce il carattere *c* non modificato.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le funzioni **_mbctohira** e **_mbctokata** testano un carattere *c* e, se possibile, applicano una delle seguenti conversioni.
 
@@ -117,7 +118,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
 [_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l](mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)<br/>

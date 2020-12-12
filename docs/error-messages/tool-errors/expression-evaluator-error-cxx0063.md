@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: errore dell'analizzatore di espressioni CXX0063"
 title: Errore dell‘analizzatore di espressioni CXX0063
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,17 +8,17 @@ helpviewer_keywords:
 - CXX0063
 - CAN0063
 ms.assetid: 2e131b7a-9c8f-4aa1-acac-8d87f602c24c
-ms.openlocfilehash: 53df00014bf6c864f6b0848a1c32fd9128293734
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8c2ceb400421e245b7795aa9037631b7ae9ae036
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80184476"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97173207"
 ---
 # <a name="expression-evaluator-error-cxx0063"></a>Errore dell‘analizzatore di espressioni CXX0063
 
 operatore di overload-> non supportato
 
-L'espressione ha utilizzato un operatore di accesso ai membri della classe di overload ( **->** ).
+L'espressione utilizza un operatore di accesso ai membri di classe di overload ( **->** ).
 
 Questo errore è identico a CAN0063.

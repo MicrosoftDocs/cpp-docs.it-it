@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: c16rtomb, c32rtomb'
 title: c16rtomb, c32rtomb
 ms.date: 10/22/2019
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-ms.openlocfilehash: 8f480d9b450b528275fea78ae878269fa6a4fa54
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: 35fb8f46693008cca9ee2a28e5b2656f009e4a6c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811072"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171673"
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb, c32rtomb
 
@@ -57,22 +58,22 @@ size_t c32rtomb(
 
 ### <a name="parameters"></a>Parametri
 
-\ *mbchar*
+*mbchar*\
 Puntatore a una matrice per archiviare il carattere multibyte UTF-8 convertito.
 
-\ *WCHAR*
+*WCHAR*\
 Carattere wide da convertire.
 
-\ di *stato*
+*stato*\
 Puntatore a un oggetto **mbstate_t** .
 
 ## <a name="return-value"></a>Valore restituito
 
-Numero di byte archiviati nell'oggetto matrice *mbchar*, incluse tutte le sequenze di spostamento. Se *WCHAR* non è un carattere wide valido, viene restituito il valore (**size_t**) (-1), **errno** viene impostato su **EILSEQ**e il valore di *state* non è specificato.
+Numero di byte archiviati nell'oggetto matrice *mbchar*, incluse tutte le sequenze di spostamento. Se *WCHAR* non è un carattere wide valido, viene restituito il valore (**size_t**) (-1), **errno** viene impostato su **EILSEQ** e il valore di *state* non è specificato.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-La funzione **c16rtomb** converte il carattere *WCHAR* UTF-16 le nella sequenza di caratteri multibyte UTF-8 equivalente. Se *mbchar* non è un puntatore null, la funzione Archivia la sequenza convertita nell'oggetto matrice a cui punta *mbchar*. Fino a **MB_CUR_MAX** byte vengono archiviati in *mbchar*e *lo stato* viene impostato sullo stato di spostamento multibyte risultante.
+La funzione **c16rtomb** converte il carattere *WCHAR* UTF-16 le nella sequenza di caratteri multibyte UTF-8 equivalente. Se *mbchar* non è un puntatore null, la funzione Archivia la sequenza convertita nell'oggetto matrice a cui punta *mbchar*. Fino a **MB_CUR_MAX** byte vengono archiviati in *mbchar* e lo *stato* viene impostato sullo stato di spostamento multibyte risultante.
 
 Se *WCHAR* è un carattere wide null, viene archiviata una sequenza necessaria per ripristinare lo stato di spostamento iniziale, se necessario, seguita dal carattere null. *lo stato è impostato* sullo stato di conversione iniziale. La funzione **c32rtomb** è identica, ma converte un carattere UTF-32.
 
@@ -90,10 +91,10 @@ Per convertire i caratteri UTF-16 in caratteri multibyte non UTF-8, usare le fun
 
 Per informazioni sulla compatibilità, vedere [Compatibilità](../compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-\ [conversione dati](../data-conversion.md)
-[Impostazioni locali](../locale.md)\
+[Conversione dei dati](../data-conversion.md)\
+[Locale](../locale.md)\
 [Interpretazione di sequenze di caratteri multibyte](../interpretation-of-multibyte-character-sequences.md)\
 [mbrtoc16, mbrtoc32](mbrtoc16-mbrtoc323.md)\
 [wcrtomb](wcrtomb.md)\

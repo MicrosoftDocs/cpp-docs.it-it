@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: funzioni di Bessel: _j0, _j1, _jn, _y0, _y1 _yn'
 title: 'Funzioni di Bessel: _j0, _j1, _jn, _y0, _y1, _yn'
 ms.date: 4/2/2020
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: ef914d542d058898cf9b16478fd40ef4b0725674
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8ada869b615e26d004e10ccc3355e83c9772888f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913471"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171868"
 ---
 # <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Funzioni di Bessel: _j0, _j1, _jn, _y0, _y1, _yn
 
@@ -94,17 +95,17 @@ Ordine Integer della funzione di Bessel.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine restituisce una funzione di Bessel *x*. Se *x* è negativo nelle funzioni **_y0**, **_y1**o **_Yn** , la routine imposta **errno** su **Edom**, stampa un messaggio di errore **_DOMAIN** in **stderr**e restituisce **_HUGE_VAL**. È possibile modificare la gestione degli errori utilizzando **_matherr**.
+Ognuna di queste routine restituisce una funzione di Bessel *x*. Se *x* è negativo nelle funzioni **_y0**, **_y1** o **_Yn** , la routine imposta **errno** su **Edom**, stampa un messaggio di errore **_DOMAIN** in **stderr** e restituisce **_HUGE_VAL**. È possibile modificare la gestione degli errori utilizzando **_matherr**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Le routine **_j0**, **_j1**e **_Jn** restituiscono funzioni di Bessel del primo tipo: ordini 0, 1 e n, rispettivamente.
+Le routine **_j0**, **_j1** e **_Jn** restituiscono funzioni di Bessel del primo tipo: ordini 0, 1 e n, rispettivamente.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
 |± **QNAN**, **IND**|**Non valido**|**_DOMAIN**|
 
-Le routine **_y0**, **_y1**e **_Yn** restituiscono funzioni di Bessel del secondo tipo: ordini 0, 1 e n, rispettivamente.
+Le routine **_y0**, **_y1** e **_Yn** restituiscono funzioni di Bessel del secondo tipo: ordini 0, 1 e n, rispettivamente.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
@@ -118,7 +119,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
+|**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath> (c++), \<math.h> (C, c++)|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
@@ -165,5 +166,5 @@ Bessel functions for x = 2.387000:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [_matherr](matherr.md)<br/>

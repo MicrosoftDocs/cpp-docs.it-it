@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: Parallel Strumenti di diagnostica (runtime di concorrenza)'
 title: Strumenti di diagnostica in parallelo (runtime di concorrenza)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-ms.openlocfilehash: 34b2421dfc53deeb35dcc659a8d555983e583737
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 44d885e8e6c7529bd15fa0aa2e7930773400361f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510507"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172427"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Strumenti di diagnostica in parallelo (runtime di concorrenza)
 
@@ -17,23 +18,23 @@ Visual Studio fornisce supporto completo per il debug e la profilatura di applic
 
 ## <a name="debugging"></a>Debug
 
-Il debugger di Visual Studio include la finestra **stack in parallelo** , la finestra **attività in parallelo** e la finestra espressioni di **controllo in parallelo** . Per altre informazioni, vedere [Procedura dettagliata: Debug di un'applicazione](/visualstudio/debugger/walkthrough-debugging-a-parallel-application) parallela e [procedura: Usare la finestra](/visualstudio/debugger/how-to-use-the-parallel-watch-window)espressione di controllo in parallelo.
+Il debugger di Visual Studio include la finestra **stack in parallelo** , la finestra **attività in parallelo** e la finestra espressioni di **controllo in parallelo** . Per altre informazioni, vedere [procedura dettagliata: debug di un'applicazione parallela](/visualstudio/debugger/walkthrough-debugging-a-parallel-application) e [procedura: usare la finestra espressione di controllo in parallelo](/visualstudio/debugger/how-to-use-the-parallel-watch-window).
 
 ## <a name="profiling"></a>Profilatura
 
-Gli strumenti di profilatura forniscono tre visualizzazioni dati che consentono di visualizzare informazioni grafiche, tabulari e numeriche sul modo in cui un'applicazione multithread interagisce con se stessa e con altri programmi. Le visualizzazioni consentono di identificare rapidamente le aree problematiche e di spostarsi tra i punti delle visualizzazioni grafiche per chiamare gli stack, i siti di chiamata e il codice sorgente. Per altre informazioni, vedere [Visualizzatore di concorrenza](/visualstudio/profiling/concurrency-visualizer).
+Tramite gli strumenti di profilatura vengono fornite tre visualizzazioni dati in cui sono incluse informazioni grafiche, tabulari e numeriche sulla modalità di interazione di un'applicazione multithreading con se stessa e con altri programmi. Le visualizzazioni consentono di identificare rapidamente le aree problematiche e di spostarsi tra i punti delle visualizzazioni grafiche per chiamare gli stack, i siti di chiamata e il codice sorgente. Per altre informazioni, vedere [Visualizzatore di concorrenza](/visualstudio/profiling/concurrency-visualizer).
 
-## <a name="event-tracing"></a>Traccia eventi
+## <a name="event-tracing"></a>Event Tracing
 
 Il runtime di concorrenza utilizza [Event Tracing for Windows](/windows/win32/ETW/event-tracing-portal) (ETW) per inviare notifiche agli strumenti di strumentazione, ad esempio i profiler, quando si verificano diversi eventi. Questi eventi includono quando un'utilità di pianificazione viene attivata o disattivata, quando un contesto inizia, termina, blocca, sblocca o produce e quando un algoritmo parallelo inizia o termina.
 
 Strumenti come il [Visualizzatore di concorrenza](/visualstudio/profiling/concurrency-visualizer) utilizzano questa funzionalità. di conseguenza, non è in genere necessario lavorare direttamente con questi eventi. Questi eventi risultano tuttavia utili quando si sviluppa un profiler personalizzato o quando si utilizzano strumenti di traccia eventi, ad esempio [Xperf](https://go.microsoft.com/fwlink/p/?linkid=160628).
 
-Il runtime di concorrenza genera questi eventi solo quando la traccia è abilitata. Chiamare la funzione [Concurrency:: EnableTracing](reference/concurrency-namespace-functions.md#enabletracing) per abilitare la traccia eventi e la funzione Concurrency [::D isabletracing](reference/concurrency-namespace-functions.md#disabletracing) per disabilitare la traccia.
+Il runtime di concorrenza genera questi eventi solo quando la traccia è abilitata. Chiamare la funzione [Concurrency:: EnableTracing](reference/concurrency-namespace-functions.md#enabletracing) per abilitare la traccia eventi e la funzione [concurrency::D isabletracing](reference/concurrency-namespace-functions.md#disabletracing) per disabilitare la traccia.
 
 Nella tabella seguente vengono descritti gli eventi che il runtime genera quando è abilitata la traccia eventi:
 
-|event|Descrizione|Value|
+|Event|Descrizione|Valore|
 |-----------|-----------------|-----------|
 |[concurrency::ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)|Identificatore del provider ETW per la runtime di concorrenza.|`f7b697a3-4db5-4d3b-be71-c4d284e6592f`|
 |[concurrency::ContextEventGuid](reference/concurrency-namespace-constants1.md#contexteventguid)|Contrassegna gli eventi correlati ai contesti.|`5727a00f-50be-4519-8256-f7699871fecb`|
@@ -55,14 +56,14 @@ Il runtime di concorrenza definisce, ma attualmente non genera, gli eventi segue
 
 - [concurrency::ResourceManagerEventGuid](reference/concurrency-namespace-constants1.md#resourcemanagereventguid)
 
-L'enumerazione [Concurrency:: ConcRT_EventType](reference/concurrency-namespace-enums.md#concrt_eventtype) specifica le operazioni possibili che un evento tiene traccia. Ad esempio, all'ingresso dell' `parallel_for` algoritmo, il runtime genera l' `PPLParallelForEventGuid` evento e fornisce `CONCRT_EVENT_START` come operazione. Prima che `parallel_for` l'algoritmo venga restituito, il runtime genera `PPLParallelForEventGuid` nuovamente l'evento `CONCRT_EVENT_END` e fornisce come operazione.
+L'enumerazione [Concurrency:: ConcRT_EventType](reference/concurrency-namespace-enums.md#concrt_eventtype) specifica le possibili operazioni tracciate da un evento. Ad esempio, all'ingresso dell' `parallel_for` algoritmo, il runtime genera l' `PPLParallelForEventGuid` evento e fornisce `CONCRT_EVENT_START` come operazione. Prima che l' `parallel_for` algoritmo venga restituito, il runtime genera nuovamente l' `PPLParallelForEventGuid` evento e fornisce `CONCRT_EVENT_END` come operazione.
 
-Nell'esempio seguente viene illustrato come abilitare la traccia per una chiamata a `parallel_for`. Il runtime non traccia la prima chiamata a `parallel_for` perché la traccia non è abilitata. La chiamata a `EnableTracing` consente al runtime di tracciare la seconda chiamata `parallel_for`a.
+Nell'esempio seguente viene illustrato come abilitare la traccia per una chiamata a `parallel_for` . Il runtime non traccia la prima chiamata a `parallel_for` perché la traccia non è abilitata. La chiamata a `EnableTracing` consente al runtime di tracciare la seconda chiamata a `parallel_for` .
 
 [!code-cpp[concrt-etw#1](../../parallel/concrt/codesnippet/cpp/parallel-diagnostic-tools-concurrency-runtime_1.cpp)]
 
-Il runtime tiene traccia del numero di volte in cui `EnableTracing` si `DisableTracing`chiamano e. Pertanto, se si chiama `EnableTracing` più volte, è necessario chiamare `DisableTracing` lo stesso numero di volte per disabilitare la traccia.
+Il runtime tiene traccia del numero di volte in cui si chiamano `EnableTracing` e `DisableTracing` . Pertanto, se si chiama `EnableTracing` più volte, è necessario chiamare `DisableTracing` lo stesso numero di volte per disabilitare la traccia.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Runtime di concorrenza](../../parallel/concrt/concurrency-runtime.md)

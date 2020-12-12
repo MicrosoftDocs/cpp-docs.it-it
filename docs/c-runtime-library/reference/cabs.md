@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _cabs'
 title: _cabs
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: 6e769d2caf65ef3c084bcb6add701f78b03a1b17
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 362121ab160e46ec0922b193ccedf77d5bf99468
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913346"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171634"
 ---
 # <a name="_cabs"></a>_cabs
 
@@ -57,9 +58,9 @@ Numero complesso.
 
 **_cabs** restituisce il valore assoluto dell'argomento in caso di esito positivo. In overflow, **_cabs** restituisce **HUGE_VAL** e imposta **errno** su **ERANGE**. È possibile modificare la gestione degli errori con [_matherr](matherr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **_cabs** calcola il valore assoluto di un numero complesso, che deve essere una struttura di tipo [_complex](../../c-runtime-library/standard-types.md). La struttura *z* è costituita da un componente reale *x* e da un componente immaginario *y*. Una chiamata a **_cabs** produce un valore equivalente a quello dell'espressione `sqrt( z.x * z.x + z.y * z.y )`.
+La funzione **_cabs** calcola il valore assoluto di un numero complesso, che deve essere una struttura di tipo [_complex](../../c-runtime-library/standard-types.md). La struttura *z* è costituita da un componente reale *x* e da un componente immaginario *y*. Una chiamata a **_cabs** produce un valore equivalente a quello dell'espressione `sqrt( z.x * z.x + z.y * z.y )` .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -98,6 +99,6 @@ The absolute value of 3.000000 + 4.000000i is 5.000000
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>
 [fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)

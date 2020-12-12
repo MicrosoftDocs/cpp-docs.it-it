@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: applicazioni desktop MFC'
 title: Applicazioni desktop MFC
 ms.date: 07/28/2019
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: 3811fdcf278129ee72872ea489b42f8389957761
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ac89ecfc603593a4328876bae061657fba26fed1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359349"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172791"
 ---
 # <a name="mfc-desktop-applications"></a>Applicazioni desktop MFC
 
-La libreria MFC (Microsoft Foundation Class) fornisce un wrapper orientato a oggetti su molte delle API Win32 e COM. Sebbene possa essere utilizzata anche per creare applicazioni desktop molto semplici, risulta maggiormente utile quando è necessario compilare interfacce utente più complesse che includono più controlli. È possibile usare MFC per creare applicazioni con interfacce utente in stile Office. Per la documentazione sulla piattaforma Windows stessa, vedere la [documentazione di Windows](/windows/index). Per informazioni sulla creazione di applicazioni Windows in C, senza MFC, consultate [Creare app di Windows desktop utilizzando l'API Win32.](/windows/win32/index)
+La libreria MFC (Microsoft Foundation Class) fornisce un wrapper orientato a oggetti su molte delle API Win32 e COM. Sebbene possa essere utilizzata anche per creare applicazioni desktop molto semplici, risulta maggiormente utile quando è necessario compilare interfacce utente più complesse che includono più controlli. È possibile usare MFC per creare applicazioni con interfacce utente in stile Office. Per la documentazione sulla piattaforma Windows, vedere la [documentazione di Windows](/windows/index). Per informazioni sulla compilazione di applicazioni Windows in C++ senza MFC, vedere [creare app desktop di Windows con l'API Win32](/windows/win32/index).
 
 In Informazioni di riferimento su MFC vengono descritte le classi, le funzioni globali, le variabili globali e le macro che costituiscono la libreria Microsoft Foundation Class.
 
@@ -30,7 +31,7 @@ I membri della classe pubblici e protetti sono documentati solo quando vengono u
 > [!IMPORTANT]
 > Le classi MFC e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nell'ambiente Windows Runtime.
 >
-> Le librerie MFC (DLL) per la codifica di caratteri multibyte (MBCS) non sono più inclusi in Visual Studio, ma sono disponibili come componente aggiuntivo di Visual Studio. Per ulteriori informazioni, vedere [MFC MBCS DLL Add-on](mfc-mbcs-dll-add-on.md).
+> Le librerie MFC (DLL) per la codifica di caratteri multibyte (MBCS) non sono più inclusi in Visual Studio, ma sono disponibili come componente aggiuntivo di Visual Studio. Per ulteriori informazioni, vedere [componente aggiuntivo DLL MBCS MFC](mfc-mbcs-dll-add-on.md).
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
@@ -64,7 +65,7 @@ Fornisce collegamenti alle macro e alle funzioni globali nella libreria MFC.
 [Strutture, stili, callback e mappe messaggi](reference/structures-styles-callbacks-and-message-maps.md)<br/>
 Fornisce collegamenti a strutture, stili, callback e mappe messaggi utilizzati dalla libreria MFC.
 
-[Finestre di dialogo e procedure guidate MFC](reference/mfc-wizards-and-dialog-boxes.md)<br/>
+[Procedure guidate e finestre di dialogo MFC](reference/mfc-wizards-and-dialog-boxes.md)<br/>
 Guida alle funzionalità di Visual Studio per la creazione di applicazioni MFC.
 
 [Uso di file di risorse](../windows/working-with-resource-files.md)<br/>
@@ -78,7 +79,7 @@ Descrive il grafico della gerarchia MFC per categoria.
 [Classi condivise ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 Fornisce collegamenti alle classi condivise da MFC e ATL.
 
-[Esempi MFC](../overview/visual-cpp-samples.md#mfc-samples)<br/>
+[Esempi di MFC](../overview/visual-cpp-samples.md#mfc-samples)<br/>
 Fornisce collegamenti a esempi che dimostrano come utilizzare MFC.
 
 [Riferimento alle librerie di Visual C++](../standard-library/cpp-standard-library-reference.md)<br/>
@@ -87,6 +88,6 @@ Vengono forniti collegamenti alle diverse librerie disponibili in Visual C++, ad
 [Debug in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)<br/>
 Vengono forniti collegamenti relativi all'utilizzo del debugger di Visual Studio per la correzione di errori logici nell'applicazione o nelle stored procedure.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [MFC e ATL](mfc-and-atl.md)

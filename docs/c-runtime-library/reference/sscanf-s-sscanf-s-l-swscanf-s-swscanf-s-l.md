@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l'
 title: sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - strings [C++], reading
 - _sscanf_s_l function
 ms.assetid: 956e65c8-00a5-43e8-a2f2-0f547ac9e56c
-ms.openlocfilehash: e92fc2544b6b137c64c388bed9013a6fdd5d3252
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3f61292932ea6b77b4694588726094d78b8405cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229350"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171309"
 ---
 # <a name="sscanf_s-_sscanf_s_l-swscanf_s-_swscanf_s_l"></a>sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
 
@@ -104,9 +105,9 @@ Se il *buffer* o il *formato* è un puntatore **null** , viene richiamato il ges
 
 Per informazioni su questi e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **sscanf_s** legge i dati dal *buffer* nella posizione specificata da ogni *argomento*. Gli argomenti dopo la stringa di formato specificano i puntatori alle variabili che hanno un tipo corrispondente a un identificatore di tipo nel *formato*. Diversamente dalla versione meno sicura [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md), è necessario un parametro di dimensione del buffer quando si usano i caratteri di campo di tipo **c**, **c**, **s**, **s**o i set di controllo stringa racchiusi tra **[]**. Le dimensioni del buffer in caratteri vengono passate come parametro aggiuntivo subito dopo ogni parametro del buffer che le richiede. Ad esempio, se si sta leggendo una stringa, le dimensioni del buffer per tale stringa vengono passate nel modo seguente:
+La funzione **sscanf_s** legge i dati dal *buffer* nella posizione specificata da ogni *argomento*. Gli argomenti dopo la stringa di formato specificano i puntatori alle variabili che hanno un tipo corrispondente a un identificatore di tipo nel *formato*. Diversamente dalla versione meno sicura [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md), è necessario un parametro di dimensione del buffer quando si usano i caratteri di campo di tipo **c**, **c**, **s**, **s** o i set di controllo stringa racchiusi tra **[]**. Le dimensioni del buffer in caratteri vengono passate come parametro aggiuntivo subito dopo ogni parametro del buffer che le richiede. Ad esempio, se si sta leggendo una stringa, le dimensioni del buffer per tale stringa vengono passate nel modo seguente:
 
 ```C
 wchar_t ws[10];

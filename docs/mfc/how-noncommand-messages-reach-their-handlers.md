@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: come i messaggi Noncommand raggiungono i relativi gestori'
 title: Come i messaggi Noncommand raggiungono i relativi gestori
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Windows messages [MFC], routing
 - message handling [MFC], noncommand messages
 ms.assetid: e7df8aef-9fae-41f4-9c11-881d8465f602
-ms.openlocfilehash: c7b2bf819c5305da4039fae172578298d3b4e609
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e337a62a731e7ed0832b6cd28d1f56024247c176
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618501"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172817"
 ---
 # <a name="how-noncommand-messages-reach-their-handlers"></a>Come i messaggi Noncommand raggiungono i relativi gestori
 
@@ -20,6 +21,6 @@ A differenza dei comandi, i messaggi Windows standard non vengono instradati tra
 
 In fase di esecuzione, ogni finestra di Windows è associata a un oggetto finestra (derivato direttamente o indirettamente da `CWnd` ) a cui sono associate le funzioni di gestione e mappa messaggi. Il Framework utilizza la mappa messaggi, come per un comando, per eseguire il mapping dei messaggi in ingresso ai gestori.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Chiamata di un gestore dal framework](how-the-framework-calls-a-handler.md)
+[Modalità di chiamata di un gestore da parte del Framework](how-the-framework-calls-a-handler.md)

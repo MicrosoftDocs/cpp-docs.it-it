@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: cancellation_token_source Class'
 title: Classe cancellation_token_source
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
-ms.openlocfilehash: 131c4155ad902221d14f90f750f89c31479e2067
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: e36d1097f43c22d8274bcd767f2b521ae5b5dba0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142222"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172128"
 ---
 # <a name="cancellation_token_source-class"></a>Classe cancellation_token_source
 
@@ -32,14 +33,14 @@ class cancellation_token_source;
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[cancellation_token_source](#ctor)|Di overload. Costruisce un nuovo `cancellation_token_source`. L'origine può essere utilizzata per contrassegnare l'annullamento di una determinata operazione annullabile.|
 |[distruttore ~ cancellation_token_source](#dtor)||
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[cancel](#cancel)|Annulla il token. Qualsiasi `task_group`, `structured_task_group` o `task` che utilizza il token viene annullato al momento della chiamata e genera un'eccezione nel punto di interruzione successivo.|
 |[create_linked_source](#create_linked_source)|Di overload. Crea un `cancellation_token_source` che viene annullato quando il token fornito viene annullato.|
@@ -47,11 +48,11 @@ class cancellation_token_source;
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[operator!=](#operator_neq)||
-|[operator=](#operator_eq)||
-|[operator==](#operator_eq_eq)||
+|[operatore! =](#operator_neq)||
+|[operatore =](#operator_eq)||
+|[operatore = =](#operator_eq_eq)||
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -63,13 +64,13 @@ class cancellation_token_source;
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="dtor"></a>~ cancellation_token_source
+## <a name="cancellation_token_source"></a><a name="dtor"></a> ~ cancellation_token_source
 
 ```cpp
 ~cancellation_token_source();
 ```
 
-## <a name="cancel"></a>Annulla
+## <a name="cancel"></a><a name="cancel"></a> Annulla
 
 Annulla il token. Qualsiasi `task_group`, `structured_task_group` o `task` che utilizza il token viene annullato al momento della chiamata e genera un'eccezione nel punto di interruzione successivo.
 
@@ -77,7 +78,7 @@ Annulla il token. Qualsiasi `task_group`, `structured_task_group` o `task` che u
 void cancel() const;
 ```
 
-## <a name="ctor"></a>cancellation_token_source
+## <a name="cancellation_token_source"></a><a name="ctor"></a> cancellation_token_source
 
 Costruisce un nuovo `cancellation_token_source`. L'origine può essere utilizzata per contrassegnare l'annullamento di una determinata operazione annullabile.
 
@@ -94,7 +95,7 @@ cancellation_token_source(cancellation_token_source&& _Src);
 *_Src*<br/>
 Oggetto da copiare o spostare.
 
-## <a name="create_linked_source"></a>create_linked_source
+## <a name="create_linked_source"></a><a name="create_linked_source"></a> create_linked_source
 
 Crea un `cancellation_token_source` che viene annullato quando il token fornito viene annullato.
 
@@ -115,16 +116,16 @@ Tipo di iteratore.
 Token il cui annullamento determina l'annullamento del token restituito. Si noti che l'origine del token restituita può anche essere annullata indipendentemente dall'origine contenuta nel parametro.
 
 *_Begin*<br/>
-Iteratore della libreria C++ standard che corrisponde all'inizio dell'intervallo dei token da ascoltare per l'annullamento.
+Iteratore della libreria standard C++ corrispondente all'inizio dell'intervallo dei token da ascoltare per l'annullamento.
 
 *_End*<br/>
-Iteratore della libreria C++ standard che corrisponde alla fine dell'intervallo dei token da ascoltare per l'annullamento di.
+Iteratore della libreria standard C++ che corrisponde alla fine dell'intervallo dei token da ascoltare per l'annullamento di.
 
 ### <a name="return-value"></a>Valore restituito
 
 `cancellation_token_source` che viene annullato quando il token fornito dal parametro `_Src` viene annullato.
 
-## <a name="get_token"></a>get_token
+## <a name="get_token"></a><a name="get_token"></a> get_token
 
 Restituisce un token di annullamento associato a questa origine. Il token restituito può essere sottoposto a polling per l'annullamento o fornire un callback se e quando si verifica l'annullamento.
 
@@ -136,7 +137,7 @@ cancellation_token get_token() const;
 
 Token di annullamento associato a questa origine.
 
-## <a name="operator_neq"></a>operatore! =
+## <a name="operator"></a><a name="operator_neq"></a> operatore! =
 
 ```cpp
 bool operator!= (const cancellation_token_source& _Src) const;
@@ -149,7 +150,7 @@ Operando.
 
 ### <a name="return-value"></a>Valore restituito
 
-## <a name="operator_eq"></a>operatore =
+## <a name="operator"></a><a name="operator_eq"></a> operatore =
 
 ```cpp
 cancellation_token_source& operator= (const cancellation_token_source& _Src);
@@ -164,7 +165,7 @@ Operando.
 
 ### <a name="return-value"></a>Valore restituito
 
-## <a name="operator_eq_eq"></a>operatore = =
+## <a name="operator"></a><a name="operator_eq_eq"></a> operatore = =
 
 ```cpp
 bool operator== (const cancellation_token_source& _Src) const;
@@ -177,6 +178,6 @@ Operando.
 
 ### <a name="return-value"></a>Valore restituito
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)
+[Spazio dei nomi Concurrency](concurrency-namespace.md)

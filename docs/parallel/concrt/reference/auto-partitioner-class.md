@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: auto_partitioner Class'
 title: Classe auto_partitioner
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto_partitioner class
 ms.assetid: 7cc08e5d-20b4-47a4-b4b5-c214a78f5a9e
-ms.openlocfilehash: 4d1d8f19069412240de8e9d69cdcfb34618f2796
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: d8e099c7a3132ce89f81df65d7e18a5c6c673697
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142870"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172258"
 ---
 # <a name="auto_partitioner-class"></a>Classe auto_partitioner
 
@@ -29,10 +30,10 @@ class auto_partitioner;
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[auto_partitioner](#ctor)|Costruisce un oggetto `auto_partitioner`.|
-|[Distruttore ~ auto_partitioner](#dtor)|Elimina un oggetto `auto_partitioner`.|
+|[Distruttore ~ auto_partitioner](#dtor)|Elimina un oggetto `auto_partitioner` .|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -44,15 +45,15 @@ class auto_partitioner;
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="dtor"></a>~ auto_partitioner
+## <a name="auto_partitioner"></a><a name="dtor"></a> ~ auto_partitioner
 
-Elimina un oggetto `auto_partitioner`.
+Elimina un oggetto `auto_partitioner` .
 
 ```cpp
 ~auto_partitioner();
 ```
 
-## <a name="ctor"></a>auto_partitioner
+## <a name="auto_partitioner"></a><a name="ctor"></a> auto_partitioner
 
 Costruisce un oggetto `auto_partitioner`.
 
@@ -60,6 +61,6 @@ Costruisce un oggetto `auto_partitioner`.
 auto_partitioner();
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)
+[Spazio dei nomi Concurrency](concurrency-namespace.md)
