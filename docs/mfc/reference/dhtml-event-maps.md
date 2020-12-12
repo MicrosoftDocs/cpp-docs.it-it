@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: mappe eventi DHTML'
 title: Mappe eventi DHTML
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - DHTML events [MFC], event map
 - DHTML events [MFC]
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
-ms.openlocfilehash: 099a08298357d99a3d09ed6fc1209d463f6a4526
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b9df8f1aa59472de033943efd28f5c688c61e706
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837424"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220123"
 ---
 # <a name="dhtml-event-maps"></a>Mappe eventi DHTML
 
@@ -25,7 +26,7 @@ Le macro seguenti possono essere utilizzate per gestire gli eventi DHTML.
 
 Le macro seguenti possono essere utilizzate per gestire gli eventi DHTML nelle classi derivate da [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md).
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[BEGIN_DHTML_EVENT_MAP](#begin_dhtml_event_map)|Contrassegna l'inizio della mappa eventi DHTML.|
 |[BEGIN_DHTML_EVENT_MAP_INLINE](#begin_dhtml_event_map_inline)|Contrassegna l'inizio della mappa eventi DHTML.|
@@ -68,7 +69,7 @@ Le macro seguenti possono essere utilizzate per gestire gli eventi DHTML nelle c
 
 Le macro seguenti possono essere utilizzate per gestire gli eventi DHTML nelle classi derivate da [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md).
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)|Contrassegna l'inizio della mappa eventi dell'URL e del DHTML a più pagine.|
 |[BEGIN_EMBED_DHTML_EVENT_MAP](#begin_embed_dhtml_event_map)|Contrassegna l'inizio di una mappa eventi DHTML incorporata.|
@@ -96,7 +97,7 @@ BEGIN_DHTML_EVENT_MAP(className)
 *className*<br/>
 Nome della classe che contiene la mappa eventi DHTML. Questa classe deve derivare direttamente o indirettamente da [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md) e includere la macro [DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map) all'interno della relativa definizione di classe.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Aggiungere una mappa eventi DHTML alla classe per fornire informazioni a `CDHtmlDialog` che possono essere usate per indirizzare gli eventi generati da elementi HTML o controlli ActiveX in una pagina Web per il gestore delle funzioni nella classe.
 
@@ -121,7 +122,7 @@ BEGIN_DHTML_EVENT_MAP_INLINE(className)
 *className*<br/>
 Nome della classe che contiene la mappa eventi DHTML. Questa classe deve derivare direttamente o indirettamente da [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md) e includere la macro [DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map) all'interno della relativa definizione di classe.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Aggiungere una mappa eventi DHTML alla classe per fornire informazioni a `CDHtmlDialog` che possono essere usate per indirizzare gli eventi generati da elementi HTML o controlli ActiveX in una pagina Web per il gestore delle funzioni nella classe.
 
@@ -141,7 +142,7 @@ Dichiara una mappa eventi DHTML in una definizione di classe.
 DECLARE_DHTML_EVENT_MAP()
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa macro deve essere utilizzata nella definizione di classi derivate da [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md).
 
@@ -174,7 +175,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento o N
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -201,7 +202,7 @@ Un LPCWSTR che contiene l'ID HTML del controllo che attiva l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -228,7 +229,7 @@ Oggetto LPCWSTR che contiene la classe CSS degli elementi HTML che forniscono l'
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -255,7 +256,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -283,7 +284,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -307,7 +308,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -331,7 +332,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -355,7 +356,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -379,7 +380,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -403,7 +404,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -427,7 +428,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -451,7 +452,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -475,7 +476,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -499,7 +500,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -523,7 +524,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -547,7 +548,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -571,7 +572,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -595,7 +596,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -619,7 +620,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -643,7 +644,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -667,7 +668,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -691,7 +692,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -715,7 +716,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -739,7 +740,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -763,7 +764,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -787,7 +788,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -811,7 +812,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -835,7 +836,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -859,7 +860,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -883,7 +884,7 @@ Oggetto LPCWSTR che contiene l'ID dell'elemento HTML che ha origine l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -910,7 +911,7 @@ Tag HTML degli elementi HTML che forniscono l'evento.
 *memberFxn*<br/>
 Funzione del gestore per l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per aggiungere una voce alla [mappa eventi DHTML](#begin_dhtml_event_map_inline) nella classe.
 
@@ -926,7 +927,7 @@ Contrassegna la fine della mappa eventi DHTML.
 END_DHTML_EVENT_MAP()
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Deve essere utilizzato insieme a [BEGIN_DHTML_EVENT_MAP](#begin_dhtml_event_map).
 
@@ -942,7 +943,7 @@ Avvia la definizione di una mappa eventi DHTML e URL in una finestra di dialogo 
 BEGIN_DHTML_URL_EVENT_MAP()
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Inserire BEGIN_DHTML_URL_EVENT_MAP nel file di implementazione della classe derivata da [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). Seguirla con le [mappe eventi DHTML incorporate](#begin_embed_dhtml_event_map) e le [voci URL](#begin_url_entries)e quindi chiuderla con [END_DHTML_URL_EVENT_MAP](#end_dhtml_url_event_map). Includere la macro [DECLARE_DHTML_URL_EVENT_MAP](#declare_dhtml_url_event_map) all'interno della definizione della classe.
 
@@ -970,7 +971,7 @@ Nome della classe che contiene la mappa dell'evento. Questa classe deve derivare
 *mapName*<br/>
 Specifica la pagina la cui mappa eventi è. Questo corrisponde a *mapname* nella macro [URL_EVENT_ENTRY](#url_event_entry) effettivamente la definizione dell'URL o della risorsa HTML.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Poiché una finestra di dialogo DHTML a più pagine è costituita da più pagine HTML, ciascuna delle quali può generare eventi DHTML, le mappe eventi incorporate vengono usate per eseguire il mapping degli eventi ai gestori in base a ogni pagina.
 
@@ -999,7 +1000,7 @@ BEGIN_URL_ENTRIES(className)
 *className*<br/>
 Nome della classe che contiene la mappa di voci di eventi URL. Questa classe deve derivare direttamente o indirettamente da [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). La mappa di voci dell'evento URL deve trovarsi all'interno di una [mappa eventi DHTML e URL](#begin_dhtml_url_event_map).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Poiché una finestra di dialogo DHTML a più pagine è costituita da più pagine HTML, le voci di eventi URL vengono usate per eseguire il mapping di URL o risorse HTML a [mappe eventi DHTML incorporate](#begin_embed_dhtml_event_map)corrispondenti. Inserire URL_EVENT_ENTRY macro tra BEGIN_URL_ENTRIES e [END_URL_ENTRIES](#end_url_entries) macro.
 
@@ -1019,7 +1020,7 @@ Dichiara una mappa eventi DHTML e URL in una definizione di classe.
 DECLARE_DHTML_URL_EVENT_MAP()
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa macro deve essere utilizzata nella definizione di classi derivate da [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md).
 
@@ -1101,7 +1102,7 @@ URL o risorsa HTML per la pagina.
 *mapName*<br/>
 Specifica la pagina il cui URL è *URL*. Corrisponde a *mapname* nella macro [BEGIN_EMBED_DHTML_EVENT_MAP](#begin_embed_dhtml_event_map) che esegue il mapping degli eventi da questa pagina.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se la pagina è una risorsa HTML, l' *URL* deve essere la rappresentazione di stringa del numero ID della risorsa (ovvero "123", non 123 o ID_HTMLRES1).
 
@@ -1133,6 +1134,6 @@ Deve essere utilizzato insieme a [BEGIN_DHTML_EVENT_MAP_INLINE](#begin_dhtml_eve
 
 **Intestazione:** afxdhtml. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro e funzioni globali](mfc-macros-and-globals.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: registra funzioni di scambio di campi'
 title: Funzioni di trasferimento di campi di record
 ms.date: 09/17/2019
 f1_keywords:
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-ms.openlocfilehash: 9bb1b7bcbce16bba8029fcfbbeea7552b1d4a0ba
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2ba3a83bdda21f91913d7eda435a845b0977e8a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843599"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218953"
 ---
 # <a name="record-field-exchange-functions"></a>Funzioni di trasferimento di campi di record
 
@@ -70,7 +71,7 @@ Per un esempio di funzioni RFX e RFX di massa come appaiono nelle `DoFieldExchan
 
 ### <a name="rfx-functions-odbc"></a>Funzioni RFX (ODBC)
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[RFX_Binary](#rfx_binary)|Trasferisce matrici di byte di tipo [CByteArray](cbytearray-class.md).|
 |[RFX_Bool](#rfx_bool)|Trasferisce dati Boolean.|
@@ -85,7 +86,7 @@ Per un esempio di funzioni RFX e RFX di massa come appaiono nelle `DoFieldExchan
 
 ### <a name="bulk-rfx-functions-odbc"></a>Funzioni RFX di massa (ODBC)
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[RFX_Binary_Bulk](#rfx_binary_bulk)|Trasferisce matrici di dati byte.|
 |[RFX_Bool_Bulk](#rfx_bool_bulk)|Trasferisce matrici di dati Boolean.|
@@ -99,7 +100,7 @@ Per un esempio di funzioni RFX e RFX di massa come appaiono nelle `DoFieldExchan
 
 ### <a name="dfx-functions-dao"></a>Funzioni DFX (DAO)
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[DFX_Binary](#dfx_binary)|Trasferisce matrici di byte di tipo [CByteArray](cbytearray-class.md).|
 |[DFX_Bool](#dfx_bool)|Trasferisce dati Boolean.|
@@ -143,7 +144,7 @@ Valore memorizzato nel membro dati indicato, il valore da trasferire. Per un tra
 *nMaxLength*<br/>
 Lunghezza massima consentita della stringa o della matrice da trasferire. Il valore predefinito di *nMaxLength* è 255. I valori validi sono compresi tra 1 e INT_MAX. Il framework alloca questa quantità di spazio per i dati. Per ottenere prestazioni ottimali, passare un valore sufficientemente grande da contenere l'elemento di dati più grande previsto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I dati nell'origine dati di questi tipi vengono mappati a e dal tipo `CByteArray` nel recordset.
 
@@ -257,7 +258,7 @@ La prima versione della funzione accetta un riferimento a un oggetto [CTime](../
 
 La seconda versione della funzione accetta un riferimento a una `TIMESTAMP_STRUCT` struttura. È necessario configurare questa struttura manualmente prima della chiamata. Per questa versione non è disponibile alcun supporto per lo scambio di dati (DDX) o la creazione guidata codice. La terza versione della funzione funziona in modo simile alla prima versione con la differenza che accetta un riferimento a un oggetto [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La `CTime` versione della funzione impone l'overhead di un'elaborazione intermedia e ha un intervallo leggermente limitato. Se uno di questi fattori è troppo limitato, utilizzare la seconda versione della funzione. Si noti, tuttavia, la mancata creazione guidata codice e il supporto DDX e il requisito di configurare manualmente la struttura.
 
@@ -466,7 +467,7 @@ Utilizzato principalmente per i parametri. Integer che indica il tipo di dati de
 *nScale*<br/>
 Specifica la scala per i valori di tipo ODBC SQL_DECIMAL o SQL_NUMERIC. *nScale* è utile solo quando si impostano i valori dei parametri. Per ulteriori informazioni, vedere l'argomento "precisione, scala, lunghezza e dimensioni di visualizzazione" nell'Appendice D di *ODBC SDK Programmer ' s Reference*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I dati nell'origine dati di tutti questi tipi vengono mappati a e da `CString` nel recordset.
 
@@ -528,7 +529,7 @@ Puntatore a una matrice di valori long integer. Questa matrice consente di archi
 *nMaxLength*<br/>
 Lunghezza massima consentita dei valori archiviati nella matrice a cui punta *prgByteVals*. Per assicurarsi che i dati non vengano troncati, passare un valore sufficientemente grande da contenere l'elemento di dati più grande previsto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La colonna dell'origine dati può avere un tipo ODBC di SQL_BINARY, SQL_VARBINARY o SQL_LONGVARBINARY. Il recordset deve definire un membro dati di campo di tipo pointer su BYTE.
 
@@ -575,7 +576,7 @@ Puntatore a una matrice di valori BOOL. In questa matrice verranno archiviati i 
 *prgLengths*<br/>
 Puntatore a una matrice di valori long integer. Questa matrice consente di archiviare la lunghezza in byte di ogni valore nella matrice a cui punta *prgBoolVals*. Si noti che il valore SQL_NULL_DATA verrà archiviato se l'elemento di dati corrispondente contiene un valore null. Per ulteriori informazioni, vedere la funzione API ODBC `SQLBindCol` in *ODBC SDK Programmer ' s Reference*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La colonna dell'origine dati deve disporre di un tipo di SQL_BIT ODBC. Il recordset deve definire un membro dati di campo di tipo puntatore a BOOL.
 
@@ -622,7 +623,7 @@ Puntatore a una matrice di valori di BYTE. In questa matrice verranno archiviati
 *prgLengths*<br/>
 Puntatore a una matrice di valori long integer. Questa matrice consente di archiviare la lunghezza in byte di ogni valore nella matrice a cui punta *prgByteVals*. Si noti che il valore SQL_NULL_DATA verrà archiviato se l'elemento di dati corrispondente contiene un valore null. Per ulteriori informazioni, vedere la funzione API ODBC `SQLBindCol` in *ODBC SDK Programmer ' s Reference*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La colonna dell'origine dati deve disporre di un tipo di SQL_TINYINT ODBC. Il recordset deve definire un membro dati di campo di tipo pointer su BYTE.
 
@@ -669,7 +670,7 @@ Puntatore a una matrice di valori TIMESTAMP_STRUCT. In questa matrice verranno a
 *prgLengths*<br/>
 Puntatore a una matrice di valori long integer. Questa matrice consente di archiviare la lunghezza in byte di ogni valore nella matrice a cui punta *prgTSVals*. Si noti che il valore SQL_NULL_DATA verrà archiviato se l'elemento di dati corrispondente contiene un valore null. Per ulteriori informazioni, vedere la funzione API ODBC `SQLBindCol` in *ODBC SDK Programmer ' s Reference*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La colonna dell'origine dati può avere un tipo ODBC di SQL_DATE, SQL_TIME o SQL_TIMESTAMP. Il recordset deve definire un membro dati di campo di tipo pointer per TIMESTAMP_STRUCT.
 
@@ -716,7 +717,7 @@ Puntatore a una matrice di **`double`** valori. In questa matrice verranno archi
 *prgLengths*<br/>
 Puntatore a una matrice di valori long integer. Questa matrice consente di archiviare la lunghezza in byte di ogni valore nella matrice a cui punta *prgDblVals*. Si noti che il valore SQL_NULL_DATA verrà archiviato se l'elemento di dati corrispondente contiene un valore null. Per ulteriori informazioni, vedere la funzione API ODBC `SQLBindCol` in *ODBC SDK Programmer ' s Reference*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La colonna dell'origine dati deve disporre di un tipo di SQL_DOUBLE ODBC. Il recordset deve definire un membro dati di campo di tipo puntatore a **`double`** .
 
@@ -795,7 +796,7 @@ Puntatore a una matrice di valori long integer. In questa matrice verranno archi
 *prgLengths*<br/>
 Puntatore a una matrice di valori long integer. Questa matrice consente di archiviare la lunghezza in byte di ogni valore nella matrice a cui punta *prgLongVals*. Si noti che il valore SQL_NULL_DATA verrà archiviato se l'elemento di dati corrispondente contiene un valore null. Per ulteriori informazioni, vedere la funzione API ODBC `SQLBindCol` in *ODBC SDK Programmer ' s Reference*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La colonna dell'origine dati deve disporre di un tipo di SQL_INTEGER ODBC. Il recordset deve definire un membro dati di campo di tipo puntatore a **`long`** .
 
@@ -842,7 +843,7 @@ Puntatore a una matrice di **`float`** valori. In questa matrice verranno archiv
 *prgLengths*<br/>
 Puntatore a una matrice di valori long integer. Questa matrice consente di archiviare la lunghezza in byte di ogni valore nella matrice a cui punta *prgFltVals*. Si noti che il valore SQL_NULL_DATA verrà archiviato se l'elemento di dati corrispondente contiene un valore null. Per ulteriori informazioni, vedere la funzione API ODBC `SQLBindCol` in *ODBC SDK Programmer ' s Reference*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La colonna dell'origine dati deve disporre di un tipo di SQL_REAL ODBC. Il recordset deve definire un membro dati di campo di tipo puntatore a **`float`** .
 
@@ -893,7 +894,7 @@ Puntatore a una matrice di valori long integer. Questa matrice consente di archi
 *nMaxLength*<br/>
 Lunghezza massima consentita dei valori archiviati nella matrice a cui punta *prgStrVals*, incluso il carattere di terminazione null. Per assicurarsi che i dati non vengano troncati, passare un valore sufficientemente grande da contenere l'elemento di dati più grande previsto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La colonna dell'origine dati può avere un tipo ODBC di SQL_LONGVARCHAR, SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL o SQL_NUMERIC. Il recordset deve definire un membro dati di campo di tipo LPSTR.
 
@@ -962,7 +963,7 @@ Opzione che consente di sfruttare il meccanismo del doppio buffer di MFC per ril
 > [!NOTE]
 > Per impostazione predefinita, è possibile controllare se i dati vengono memorizzati nel doppio per tutti i campi impostando [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Viene eseguito il mapping dei dati tra il tipo DAO_BYTES in DAO e il tipo [CByteArray](cbytearray-class.md) nel recordset.
 
@@ -1005,7 +1006,7 @@ Opzione che consente di sfruttare il meccanismo del doppio buffer di MFC per ril
 > [!NOTE]
 > È possibile controllare se i dati vengono memorizzati nel doppio buffer per impostazione predefinita impostando [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Viene eseguito il mapping dei dati tra il tipo DAO_BOOL in DAO e il tipo BOOL nel recordset.
 
@@ -1048,7 +1049,7 @@ Opzione che consente di sfruttare il meccanismo del doppio buffer di MFC per ril
 > [!NOTE]
 > È possibile controllare se i dati vengono memorizzati nel doppio buffer per impostazione predefinita impostando [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I dati vengono mappati tra il tipo DAO_BYTES in DAO e il tipo BYTE nel recordset.
 
@@ -1091,7 +1092,7 @@ Opzione che consente di sfruttare il meccanismo del doppio buffer di MFC per ril
 > [!NOTE]
 > È possibile controllare se i dati vengono memorizzati nel doppio buffer per impostazione predefinita impostando [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Viene eseguito il mapping dei dati tra il tipo DAO_CURRENCY in DAO e il tipo [COleCurrency](colecurrency-class.md) nel recordset.
 
@@ -1134,7 +1135,7 @@ Opzione che consente di sfruttare il meccanismo del doppio buffer di MFC per ril
 > [!NOTE]
 > È possibile controllare se i dati vengono memorizzati nel doppio buffer per impostazione predefinita impostando [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Viene eseguito il mapping dei dati tra il tipo DAO_DATE in DAO e il tipo [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) nel recordset.
 
@@ -1180,7 +1181,7 @@ Opzione che consente di sfruttare il meccanismo del doppio buffer di MFC per ril
 > [!NOTE]
 > È possibile controllare se i dati vengono memorizzati nel doppio buffer per impostazione predefinita impostando [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Viene eseguito il mapping dei dati tra il tipo DAO_R8 in DAO e il tipo **Double float** nel recordset.
 
@@ -1223,7 +1224,7 @@ Opzione che consente di sfruttare il meccanismo del doppio buffer di MFC per ril
 > [!NOTE]
 > È possibile controllare se i dati vengono memorizzati nel doppio buffer per impostazione predefinita impostando [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Viene eseguito il mapping dei dati tra il tipo DAO_I4 in DAO e **`long`** il tipo nel recordset.
 
@@ -1270,7 +1271,7 @@ Opzione che consente di sfruttare il meccanismo del doppio buffer di MFC per ril
 > [!NOTE]
 > È possibile controllare se i dati vengono memorizzati nel doppio buffer per impostazione predefinita impostando [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `DFX_LongBinary` viene fornito per la compatibilità con le classi ODBC MFC. La `DFX_LongBinary` funzione trasferisce dati BLOB (Binary Large Object) usando la classe `CLongBinary` tra i membri dati del campo di un oggetto [CDaoRecordset](cdaorecordset-class.md) e le colonne di un record nell'origine dati. Viene eseguito il mapping dei dati tra il tipo DAO_BYTES in DAO e il tipo [CLongBinary](clongbinary-class.md) nel recordset.
 
@@ -1313,7 +1314,7 @@ Opzione che consente di sfruttare il meccanismo del doppio buffer di MFC per ril
 > [!NOTE]
 > È possibile controllare se i dati vengono memorizzati nel doppio buffer per impostazione predefinita impostando [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Viene eseguito il mapping dei dati tra il tipo DAO_I2 in DAO e **`short`** il tipo nel recordset.
 
@@ -1359,7 +1360,7 @@ Opzione che consente di sfruttare il meccanismo del doppio buffer di MFC per ril
 > [!NOTE]
 > È possibile controllare se i dati vengono memorizzati nel doppio buffer per impostazione predefinita impostando [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Viene eseguito il mapping dei dati tra il tipo DAO_R4 in DAO e **`float`** il tipo nel recordset.
 
@@ -1406,7 +1407,7 @@ Opzione che consente di sfruttare il meccanismo del doppio buffer di MFC per ril
 > [!NOTE]
 > È possibile controllare se i dati vengono memorizzati nel doppio buffer per impostazione predefinita impostando [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Viene eseguito il mapping dei dati tra il tipo DAO_CHAR in DAO (o, se il simbolo _UNICODE è definito DAO_WCHAR) e il tipo [CString](../../atl-mfc-shared/reference/cstringt-class.md) nel recordset.  n
 
@@ -1434,7 +1435,7 @@ void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
 
 **Intestazione:** AFXDAO. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro e funzioni globali](mfc-macros-and-globals.md)<br/>
 [CRecordset::D oFieldExchange](crecordset-class.md#dofieldexchange)<br/>

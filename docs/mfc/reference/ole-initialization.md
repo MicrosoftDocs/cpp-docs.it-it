@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: inizializzazione OLE'
 title: Inizializzazione OLE
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE initialization
 ms.assetid: aa8a54a7-24c3-4344-b2c6-dbcf6084fa31
-ms.openlocfilehash: 13c267df492ab86606e893df4c13e5510e6e546a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0efed4fefe62b720852905b6eed44501d4369efa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843690"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218992"
 ---
 # <a name="ole-initialization"></a>Inizializzazione OLE
 
@@ -20,7 +21,7 @@ Prima che un'applicazione possa utilizzare i servizi di sistema OLE, è necessar
 
 ### <a name="ole-initialization"></a>Inizializzazione OLE
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[AfxOleInit](#afxoleinit)|Inizializza le librerie OLE.|
 |[AfxEnableControlContainer](#afxenablecontrolcontainer)|Chiamare questa funzione nella funzione dell'oggetto applicazione `InitInstance` per abilitare il supporto per l'indipendenza dei controlli OLE.|
@@ -55,7 +56,7 @@ BOOL AFXAPI AfxOleInit();
 
 Diverso da zero se ha esito positivo; 0 se l'inizializzazione ha esito negativo, probabilmente perché sono installate versioni non corrette delle DLL di sistema OLE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamare questa funzione per inizializzare il supporto OLE per un'applicazione MFC. Quando viene chiamata questa funzione, si verificano le azioni seguenti:
 
@@ -73,6 +74,6 @@ Chiamare questa funzione per inizializzare il supporto OLE per un'applicazione M
 
 **Intestazione:** afxdisp.h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)

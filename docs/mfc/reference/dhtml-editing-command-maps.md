@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: mappe dei comandi di modifica DHTML'
 title: Mappe comandi di modifica DHTML
 ms.date: 11/04/2016
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
-ms.openlocfilehash: f4bbfb500e8de9594bbaa334b4e227caeaa845da
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: da50d9b58e5294622da0685450e01ad0acabad3f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837411"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220110"
 ---
 # <a name="dhtml-editing-command-maps"></a>Mappe comandi di modifica DHTML
 
@@ -15,7 +16,7 @@ ms.locfileid: "88837411"
 
 ### <a name="dhtml-editing-command-map-macros"></a>Macro mappa comandi di modifica DHTML
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap)|Dichiara una mappa di comandi di modifica DHTML in una classe.|
 |[BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap)|Avvia la definizione di una mappa dei comandi di modifica DHTML all'interno di una classe.|
@@ -38,7 +39,7 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 *className*<br/>
 Nome della classe.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa macro deve essere utilizzata nella definizione di classi derivate da [CHtmlEditView](../../mfc/reference/chtmleditview-class.md).
 
@@ -65,7 +66,7 @@ BEGIN_DHTMLEDITING_CMDMAP(className)
 *className*<br/>
 Nome della classe che contiene la mappa dei comandi di modifica DHTML. Questa classe deve derivare direttamente o indirettamente da [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) e includere la macro [DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap) all'interno della relativa definizione di classe.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Aggiungere un mapping dei comandi di modifica DHTML alla classe per eseguire il mapping dei comandi dell'interfaccia utente ai comandi di modifica HTML.
 
@@ -83,7 +84,7 @@ Contrassegna la fine di una mappa dei comandi di modifica DHTML.
 END_DHTMLEDITING_CMDMAP()
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare insieme a [BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap).
 
@@ -203,6 +204,6 @@ Vedere l' [esempio HTMLEdit](../../overview/visual-cpp-samples.md).
 
   **Intestazione** afxhtml. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)

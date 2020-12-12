@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: persistenza dei controlli OLE'
 title: Persistenza di controlli OLE
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE controls [MFC], persistence
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
-ms.openlocfilehash: f3ef5a1f465cc478b429b9fa41d6478f22030a8a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8c0ee5b81ffd21953c3ed9bcbc21a9ae30979b49
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843612"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218979"
 ---
 # <a name="persistence-of-ole-controls"></a>Persistenza di controlli OLE
 
@@ -18,7 +19,7 @@ Una funzionalità dei controlli OLE è la persistenza della proprietà (o la ser
 
 ### <a name="persistence-of-ole-controls"></a>Persistenza di controlli OLE
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[PX_Blob](#px_blob)|Scambia una proprietà del controllo che archivia dati BLOB (Binary Large Object).|
 |[PX_Bool](#px_bool)|Scambia una proprietà del controllo di tipo **bool**.|
@@ -69,7 +70,7 @@ Valore predefinito per la proprietà.
 
 Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore della proprietà verrà letto o scritto nella variabile a cui fa riferimento *hBlob*, a seconda dei casi. Questa variabile deve essere inizializzata su NULL prima di chiamare inizialmente `PX_Blob` per la prima volta (in genere, è possibile eseguire questa operazione nel costruttore del controllo). Se *hBlobDefault* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene utilizzato se, per qualsiasi motivo, il processo di inizializzazione o di serializzazione del controllo ha esito negativo.
 
@@ -116,7 +117,7 @@ Valore predefinito per la proprietà.
 
 Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore della proprietà verrà letto o scritto nella variabile a cui fa riferimento *bValue*, a seconda dei casi. Se *bLivello predefinito* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene usato se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.
 
@@ -155,7 +156,7 @@ Valore predefinito per la proprietà, in base a quanto definito dallo sviluppato
 
 Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore della proprietà verrà letto o scritto nella variabile a cui fa riferimento *clrValue*, a seconda dei casi. Se *clrDefault* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene usato se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.
 
@@ -194,7 +195,7 @@ Valore predefinito per la proprietà.
 
 Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore della proprietà verrà letto o scritto nella variabile a cui fa riferimento *cyValue*, a seconda dei casi. Se *cyDefault* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene usato se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.
 
@@ -228,7 +229,7 @@ Riferimento alla variabile in cui è archiviata la proprietà (in genere una var
 
 Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le proprietà del percorso dati implementano le proprietà del controllo asincrono. Il valore della proprietà verrà letto o scritto nella variabile a cui fa riferimento *dataPathProperty*, a seconda dei casi.
 
@@ -267,7 +268,7 @@ Valore predefinito per la proprietà.
 
 Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore della proprietà viene letto o scritto nella variabile a cui fa riferimento *doubleValue*, a seconda dei casi. Se *doubleDefault* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene usato se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.
 
@@ -305,7 +306,7 @@ Puntatore all' `IFontDisp` interfaccia di un tipo di carattere da utilizzare per
 
 Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore della proprietà viene letto o scritto in `font` un `CFontHolder` riferimento, quando appropriato. Se vengono specificati *pFontDesc* e *pFontDispAmbient* , vengono usati per inizializzare il valore predefinito della proprietà, quando necessario. Questi valori vengono utilizzati se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo. In genere, viene passato NULL per *pFontDesc* e il valore di ambiente restituito da `COleControl::AmbientFont` per *pFontDispAmbient*. Si noti che l'oggetto Font restituito da `COleControl::AmbientFont` deve essere rilasciato da una chiamata alla `IFontDisp::Release` funzione membro.
 
@@ -344,7 +345,7 @@ Valore predefinito per la proprietà.
 
 Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore della proprietà viene letto o scritto nella variabile a cui fa riferimento *floatValue*, a seconda dei casi. Se *floatDefault* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene usato se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.
 
@@ -382,7 +383,7 @@ Valore predefinito per la proprietà.
 
 Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore della proprietà viene letto o scritto nella variabile a cui fa riferimento *punk*, a seconda dei casi. Se *pUnkDefault* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene usato se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.
 
@@ -421,7 +422,7 @@ Valore predefinito per la proprietà.
 
 Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore della proprietà viene letto o scritto nella variabile a cui fa riferimento *lvalue*, a seconda dei casi. Se *lDefault* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene usato se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.
 
@@ -460,7 +461,7 @@ Valore predefinito per la proprietà.
 
 Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore della proprietà viene letto o scritto nella variabile a cui fa riferimento *PICT*, a seconda dei casi. Se *pictDefault* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene usato se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.
 
@@ -499,7 +500,7 @@ Valore predefinito per la proprietà.
 
 Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore della proprietà viene letto o scritto nella variabile a cui fa riferimento *sValue*, a seconda dei casi. Se *sDefault* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene usato se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.
 
@@ -538,7 +539,7 @@ Valore predefinito per la proprietà.
 
 Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore della proprietà viene letto o scritto nella variabile a cui fa riferimento *ulValue*, a seconda dei casi. Se *ulDefault* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene usato se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.
 
@@ -577,7 +578,7 @@ Valore predefinito per la proprietà.
 
 Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore della proprietà viene letto o scritto nella variabile a cui fa riferimento *usValue*, a seconda dei casi. Se *usDefault* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene usato se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.
 
@@ -616,7 +617,7 @@ Valore predefinito per la proprietà.
 
 Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore della proprietà viene letto o scritto nella variabile a cui fa riferimento *strValue*, a seconda dei casi. Se *strDefault* è specificato, verrà usato come valore predefinito della proprietà. Questo valore viene usato se, per qualsiasi motivo, il processo di serializzazione del controllo ha esito negativo.
 
@@ -642,7 +643,7 @@ Proprietà del tipo di carattere del controllo OLE che conterrà le proprietà c
 
 Diverso da zero se lo scambio ha avuto esito positivo; 0 in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione deve essere utilizzata solo da un controllo OLE progettato come sostituzione diretta per un controllo VBX. Quando l'ambiente di sviluppo Visual Basic converte un form contenente un controllo VBX per l'uso del controllo OLE sostitutivo corrispondente, chiamerà la funzione del controllo `IDataObject::SetData` , passando un set di proprietà che contiene i dati della proprietà del controllo VBX. Questa operazione, a sua volta, determina la chiamata della funzione del controllo `DoPropExchange` . `DoPropExchange` può chiamare `PX_VBXFontConvert` per convertire le proprietà correlate al tipo di carattere del controllo VBX, ad esempio "fontname", "FontSize" e così via, nei componenti corrispondenti della proprietà del tipo di carattere del controllo OLE.
 
