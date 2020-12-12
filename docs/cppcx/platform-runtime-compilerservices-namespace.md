@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Platform:: Runtime:: CompilerServices Namespace'
 title: Platform::Runtime::CompilerServices (spazio dei nomi)
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Runtime::CompilerServices Namespace
 ms.assetid: 8613b6b3-b193-45d1-b956-881a4a700788
-ms.openlocfilehash: 88eac06eeb97fce26f321e8beb494b6b9e66be41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 273a218c0a53ff28188491277ffb6f7f0fe7f744
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183145"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308042"
 ---
 # <a name="platformruntimecompilerservices-namespace"></a>Platform::Runtime::CompilerServices (spazio dei nomi)
 
@@ -26,11 +27,11 @@ namespace Platform {
 }}
 ```
 
-### <a name="members"></a>Membri
+### <a name="members"></a>Members
 
 Sebbene questo spazio dei nomi sia solo per uso interno, tramite i browser è possibile visualizzarne i seguenti membri.
 
-|Nome|Nota|
+|Nome|Commento|
 |----------|------------|
 |CallConvCdecl||
 |CallConvFastcall||
@@ -56,10 +57,10 @@ Sebbene questo spazio dei nomi sia solo per uso interno, tramite i browser è po
 
 ### <a name="requirements"></a>Requisiti
 
-**Metadati:** platform.winmd
+**Metadati:** Platform. winmd
 
 **Spazio dei nomi:** Platform::CompilerServices
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Platform Namespace](platform-namespace-c-cx.md)
+[Spazio dei nomi Platform](platform-namespace-c-cx.md)

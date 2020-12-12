@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: spazio dei nomi Platform:: Metadata'
 title: Platform::Metadata (spazio dei nomi)
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Metadata Namespace
 ms.assetid: e3e114d8-a4b0-47f0-865a-9ce9d7212e86
-ms.openlocfilehash: 9626b3a9d28d28fd52a0d2295af8fda8855cd90c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5dd699c0136c4ee37462dd22f9ee27bec345e8b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387604"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308393"
 ---
 # <a name="platformmetadata-namespace"></a>Platform::Metadata (spazio dei nomi)
 
@@ -26,14 +27,14 @@ namespace Platform {
 }}
 ```
 
-### <a name="members"></a>Membri
+### <a name="members"></a>Members
 
 Sebbene questo spazio dei nomi sia solo per uso interno, tramite i browser è possibile visualizzarne i seguenti membri.
 
-|Nome|Nota|
+|Nome|Commento|
 |----------|------------|
 |Attributo|Classe di base per attributi.|
-|[Platform::Metadata::DefaultMemberAttribute (attributo)](../cppcx/platform-metadata-defaultmemberattribute-attribute.md)|Indica la funzione preferita da chiamare tra numerose funzioni in overload possibili.|
+|[Platform:: Metadata::D attributo efaultMemberAttribute](../cppcx/platform-metadata-defaultmemberattribute-attribute.md)|Indica la funzione preferita da chiamare tra numerose funzioni in overload possibili.|
 |[Attributo Platform::Metadata::FlagsAttribute](../cppcx/platform-metadata-flagsattribute-attribute.md)Flags|Dichiara un'enumerazione come enumerazione di campi di bit.<br /><br /> Nel esempio riportato di seguito viene illustrato come applicare l'attributo `Flags` a un'enumerazione.<br /><br /> `[Flags] enum class MyEnumeration { enumA = 1, enumB = 2, enumC = 3}`|
 |[Platform::Metadata::RuntimeClassNameAttribute](../cppcx/platform-metadata-runtimeclassname.md)|Assicura che una classe di riferimento privata abbia un nome di classe di runtime valido.|
 
@@ -43,10 +44,10 @@ Sebbene questo spazio dei nomi sia solo per uso interno, tramite i browser è po
 
 ### <a name="requirements"></a>Requisiti
 
-**Metadati:** platform.winmd
+**Metadati:** Platform. winmd
 
 **Spazio dei nomi:** Platform::Metadata
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Platform Namespace](platform-namespace-c-cx.md)
+[Spazio dei nomi Platform](platform-namespace-c-cx.md)

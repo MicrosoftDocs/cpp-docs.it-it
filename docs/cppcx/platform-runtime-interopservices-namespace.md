@@ -1,4 +1,5 @@
 ---
+description: 'Scopri di più su: spazio dei nomi Platform:: Runtime:: InteropServices'
 title: Platform::Runtime::InteropServices (spazio dei nomi)
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Runtime::InteropServices Namespace
 ms.assetid: 546b981a-a360-4a78-b89f-fdf0df848747
-ms.openlocfilehash: c527c642228d97d8b185e3b97ff38304b09d5769
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 710da76e27f8b1d6460a8f2c9809efff07ce132c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330193"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308029"
 ---
 # <a name="platformruntimeinteropservices-namespace"></a>Platform::Runtime::InteropServices (spazio dei nomi)
 
@@ -26,11 +27,11 @@ namespace Platform {
 }}
 ```
 
-### <a name="members"></a>Membri
+### <a name="members"></a>Members
 
 Sebbene questo spazio dei nomi sia solo per uso interno, tramite i browser è possibile visualizzarne i seguenti membri.
 
-|Nome|Nota|
+|Nome|Commento|
 |----------|------------|
 |ComInterfaceType|enumerazione|
 |InterfaceTypeAttribute||
@@ -45,10 +46,10 @@ Sebbene questo spazio dei nomi sia solo per uso interno, tramite i browser è po
 
 ### <a name="requirements"></a>Requisiti
 
-**Metadati:** platform.winmd
+**Metadati:** Platform. winmd
 
 **Spazio dei nomi:** Platform::InteropServices
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Platform Namespace](platform-namespace-c-cx.md)
+[Spazio dei nomi Platform](platform-namespace-c-cx.md)

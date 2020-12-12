@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe Platform:: Object'
 title: Classe Platform::Object
 ms.date: 12/30/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: dded4602eda9653f50d26ef1b4aae86af96a262b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a190d5a56bb27fb95ac2c2c8bd2ba0e0d0572427
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213034"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308250"
 ---
 # <a name="platformobject-class"></a>Classe Platform::Object
 
@@ -29,17 +30,17 @@ Fornisce il comportamento comune per le classi di riferimento e gli struct di ri
 public ref class Object : Object
 ```
 
-### <a name="members"></a>Membri
+### <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Object::Object](#ctor)|Inizializza una nuova istanza della classe Object.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Object::Equals](#equals)|Determina se l'oggetto specificato è uguale all'oggetto corrente.|
 |[Object::GetHashCode](#gethashcode)|Restituisce il codice hash per l'istanza.|
@@ -59,7 +60,7 @@ public ref class Object : Object
 
 **Spazio dei nomi:** Platform
 
-## <a name="objectequals-method"></a><a name="equals"></a>Metodo Object:: Equals
+## <a name="objectequals-method"></a><a name="equals"></a> Metodo Object:: Equals
 
 Determina se l'oggetto specificato è uguale all'oggetto corrente.
 
@@ -80,7 +81,7 @@ Oggetto da confrontare.
 
 **`true`** Se gli oggetti sono uguali; in caso contrario, **`false`** .
 
-## <a name="objectgethashcode-method"></a><a name="gethashcode"></a>Metodo Object:: GetHashCode
+## <a name="objectgethashcode-method"></a><a name="gethashcode"></a> Metodo Object:: GetHashCode
 
 Restituisce il valore di identità `IUnknown`* per questa istanza se è un oggetto COM, oppure un valore hash calcolato se non è un oggetto COM.
 
@@ -94,11 +95,11 @@ public:int GetHashCode();
 
 Valore numerico che identifica in modo univoco l'oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Puoi usare GetHashCode per creare chiavi per gli oggetti nella mappa. È possibile confrontare i codici hash usando [Object:: Equals](#equals). Se il percorso del codice è estremamente critico e `GetHashCode` e `Equals` non sono sufficientemente veloci, puoi passare al livello COM sottostante ed effettuare confronti tra puntatori `IUnknown` nativi.
 
-## <a name="objectgettype-method"></a><a name="gettype"></a>Metodo Object:: GetType
+## <a name="objectgettype-method"></a><a name="gettype"></a> Metodo Object:: GetType
 
 Restituisce un oggetto [Platform:: Type](../cppcx/platform-type-class.md) che descrive il tipo di runtime di un oggetto.
 
@@ -112,7 +113,7 @@ Object::GetType();
 
 Oggetto [Platform:: Type](../cppcx/platform-type-class.md) che descrive il tipo di runtime dell'oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il [tipo statico:: GetTypeCode](../cppcx/platform-type-class.md#gettypecode) può essere usato per ottenere un valore di [enumerazione Platform:: TypeCode](../cppcx/platform-typecode-enumeration.md) che rappresenta il tipo corrente. Questa funzionalità è particolarmente utile per i tipi predefiniti. Il codice del tipo per qualsiasi classe di riferimento oltre a [Platform:: String](../cppcx/platform-string-class.md) è Object (1).
 
@@ -124,7 +125,7 @@ Utilizzare l'operatore [typeid](../extensions/typeid-cpp-component-extensions.md
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ```
 
-## <a name="objectobject-constructor"></a><a name="ctor"></a>Costruttore Object:: Object
+## <a name="objectobject-constructor"></a><a name="ctor"></a> Costruttore Object:: Object
 
 Inizializza una nuova istanza della classe Object.
 
@@ -134,7 +135,7 @@ Inizializza una nuova istanza della classe Object.
 public:Object();
 ```
 
-## <a name="objectreferenceequals-method"></a><a name="referenceequals"></a>Metodo Object:: ReferenceEquals
+## <a name="objectreferenceequals-method"></a><a name="referenceequals"></a> Metodo Object:: ReferenceEquals
 
 Determina se le istanze di Object specificate rappresentano la stessa istanza.
 
@@ -156,7 +157,7 @@ Secondo oggetto da confrontare.
 
 **`true`** Se i due oggetti sono uguali. in caso contrario, **`false`** .
 
-## <a name="objecttostring-method-ccx"></a><a name="tostring"></a>Metodo Object:: ToString (C++/CX)
+## <a name="objecttostring-method-ccx"></a><a name="tostring"></a> Metodo Object:: ToString (C++/CX)
 
 Restituisce una stringa che rappresenta l'oggetto corrente.
 
@@ -183,7 +184,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Platform](platform-namespace-c-cx.md)<br/>
 [Classe Platform:: Type](platform-type-class.md)<br/>
