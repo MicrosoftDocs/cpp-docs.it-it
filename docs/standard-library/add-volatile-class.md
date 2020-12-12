@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: add_volatile Class'
 title: Classe add_volatile
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - add_volatile class
 - add_volatile
 ms.assetid: cde57277-d764-402d-841e-97611ebaab14
-ms.openlocfilehash: e8c213a116ff7a7d4218179f0e944ac4f84a75e5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6f138c9009d127efe2d640124d9af1e114eb0732
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230272"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319869"
 ---
 # <a name="add_volatile-class"></a>Classe add_volatile
 
@@ -33,7 +34,7 @@ using add_volatile_t = typename add_volatile<T>::type;
 *T*\
 Tipo da modificare.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un'istanza di `add_volatile<T>` dispone di un membro **`typedef`** `type` che è *t* se *t* è un riferimento, una funzione o un tipo qualificato volatile, in caso contrario **`volatile`** *t*. L'alias `add_volatile_t` è un collegamento per accedere al membro **`typedef`** `type` .
 
@@ -65,7 +66,7 @@ add_volatile<int> == int
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](type-traits.md)\
 [Classe remove_volatile](remove-volatile-class.md)

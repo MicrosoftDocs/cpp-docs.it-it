@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _CrtIsValidHeapPointer'
 title: _CrtIsValidHeapPointer
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _CrtIsValidHeapPointer function
 - CrtIsValidHeapPointer function
 ms.assetid: caf597ce-1b05-4764-9f37-0197a982bec5
-ms.openlocfilehash: 9a8746eb2da90ac5515d92113b977011a4647fe6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 71a281cdf63ad1c37162da1b1be099764085f739
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942390"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319703"
 ---
 # <a name="_crtisvalidheappointer"></a>_CrtIsValidHeapPointer
 
@@ -53,9 +54,9 @@ Puntatore all'inizio di un blocco di memoria allocata.
 
 **_CrtIsValidHeapPointer** restituisce true se il puntatore specificato si trova nell'heap condiviso da tutte le istanze della libreria CRT. Nelle versioni di CRT precedenti a Visual Studio 2010, restituisce TRUE se il puntatore specificato è nell'heap locale. In caso contrario, la funzione restituisce FALSE.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Non è consigliabile usare questa funzione. A partire dalla libreria CRT di Visual Studio 2010, tutte le librerie CRT condividono un heap del sistema operativo, ovvero l'*heap del processo*. La funzione **_CrtIsValidHeapPointer** segnala se il puntatore è stato allocato in un heap CRT, ma non è stato allocato dalla libreria CRT del chiamante. Ad esempio, si prenda in considerazione un blocco allocato usando la versione di Visual Studio 2010 della libreria CRT. Se la funzione **_CrtIsValidHeapPointer** esportata dalla versione di Visual Studio 2012 della libreria CRT verifica il puntatore, restituisce true. Non è più una verifica utile. Nelle versioni della libreria CRT precedenti a Visual Studio 2010, la funzione viene usata per assicurare che un indirizzo di memoria specifico sia presente nell'heap locale. L'heap locale fa riferimento all'heap creato e gestito tramite una determinata istanza della libreria di runtime del linguaggio C. Se una libreria a collegamento dinamico (DLL) contiene un collegamento statico alla libreria di runtime, dispone della propria istanza dell'heap di runtime e di conseguenza il proprio heap, indipendentemente dall'heap locale dell'applicazione. Quando _ [debug](../../c-runtime-library/debug.md) non è definito, le chiamate a **_CrtIsValidHeapPointer** vengono rimosse durante la pre-elaborazione.
+Non è consigliabile usare questa funzione. A partire dalla libreria CRT di Visual Studio 2010, tutte le librerie CRT condividono un heap del sistema operativo, ovvero l'*heap del processo*. La funzione **_CrtIsValidHeapPointer** segnala se il puntatore è stato allocato in un heap CRT, ma non è stato allocato dalla libreria CRT del chiamante. Ad esempio, si prenda in considerazione un blocco allocato usando la versione di Visual Studio 2010 della libreria CRT. Se la funzione **_CrtIsValidHeapPointer** esportata dalla versione Visual Studio 2012 della libreria CRT verifica il puntatore, restituisce true. Non è più una verifica utile. Nelle versioni della libreria CRT precedenti a Visual Studio 2010, la funzione viene usata per assicurare che un indirizzo di memoria specifico sia presente nell'heap locale. L'heap locale fa riferimento all'heap creato e gestito tramite una determinata istanza della libreria di runtime del linguaggio C.  Se una libreria a collegamento dinamico (DLL) contiene un collegamento statico alla libreria di runtime, dispone della propria istanza dell'heap di runtime e di conseguenza il proprio heap, indipendentemente dall'heap locale dell'applicazione. Quando [_DEBUG](../../c-runtime-library/debug.md) non è definito, le chiamate a **_CrtIsValidHeapPointer** vengono rimosse durante la pre-elaborazione.
 
 Dato che la funzione restituisce TRUE o FALSE, può essere passata a una delle macro [_ASSERT](assert-asserte-assert-expr-macros.md) per creare un semplice meccanismo di gestione degli errori di debug. Nel seguente esempio si verifica un errore di asserzione se l'indirizzo specificato non si trova all'interno dell'heap locale.
 
@@ -63,7 +64,7 @@ Dato che la funzione restituisce TRUE o FALSE, può essere passata a una delle m
 _ASSERTE( _CrtIsValidHeapPointer( userData ) );
 ```
 
-Per altre informazioni su come usare **_CrtIsValidHeapPointer** con altre funzioni di debug e macro, vedere [macro per la creazione di report](/visualstudio/debugger/macros-for-reporting). Per informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Per ulteriori informazioni sull'utilizzo di **_CrtIsValidHeapPointer** con altre funzioni di debug e macro, vedere [macro per la creazione di report](/visualstudio/debugger/macros-for-reporting). Per informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -71,7 +72,7 @@ Per altre informazioni su come usare **_CrtIsValidHeapPointer** con altre funzio
 |-------------|---------------------|
 |**_CrtIsValidHeapPointer**|\<crtdbg.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 
@@ -131,6 +132,6 @@ my_pointer has read and write accessibility.
 my_pointer is within the local heap.
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Routine di debug](../../c-runtime-library/debug-routines.md)<br/>

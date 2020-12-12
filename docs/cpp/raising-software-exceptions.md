@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: generazione di eccezioni software'
 title: Generazione di eccezioni software
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - software exceptions [C++]
 - formats [C++], exception codes
 ms.assetid: be1376c3-c46a-4f52-ad1d-c2362840746a
-ms.openlocfilehash: f50d84bd034cc6eeb00dc17cb3b7272a988b6731
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 737bec4af99ad7743a8f7740d57919f169c2b509
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179133"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319404"
 ---
 # <a name="raising-software-exceptions"></a>Generazione di eccezioni software
 
@@ -34,9 +35,9 @@ Per utilizzare la gestione delle eccezioni strutturata con errori:
 
 - Utilizzare i filtri per la gestione delle eccezioni per esegue il test del codice di eccezione definito.
 
-Il file di > \<Winerror. h Mostra il formato per i codici di eccezione. Per assicurarsi di non definire un codice che sia in conflitto con il codice di eccezione esistente, impostare il terzo bit più significativo su 1. I quattro bit più significativi dovrebbe essere impostati come illustrato nella tabella seguente.
+Il \<winerror.h> file Mostra il formato per i codici di eccezione. Per assicurarsi di non definire un codice che sia in conflitto con il codice di eccezione esistente, impostare il terzo bit più significativo su 1. I quattro bit più significativi dovrebbe essere impostati come illustrato nella tabella seguente.
 
-|BITS|Impostazione binaria consigliata|Descrizione|
+|BITS|Impostazione binaria consigliata|Description|
 |----------|--------------------------------|-----------------|
 |31-30|11|Questi due bit descrivono lo stato di base del codice: 11 = errore, 00 = esito positivo, 01 = messaggio informativo, 10 = avviso.|
 |29|1|Bit client. Impostare su 1 per i codici definiti dall'utente.|
@@ -51,7 +52,7 @@ Il codice di errore risultante dovrebbe quindi avere i quattro bit più elevati 
 #define STATUS_FILE_BAD_FORMAT        0xE0000002
 ```
 
-Dopo aver definito un codice di eccezione, è possibile utilizzarlo per generare un'eccezione. Il codice seguente, ad esempio, genera l'eccezione `STATUS_INSUFFICIENT_MEM` in risposta a un problema di allocazione della memoria:
+Dopo aver definito un codice di eccezione, è possibile utilizzarlo per generare un'eccezione. Il codice seguente, ad esempio, genera l' `STATUS_INSUFFICIENT_MEM` eccezione in risposta a un problema di allocazione della memoria:
 
 ```cpp
 lpstr = _malloc( nBufferSize );
@@ -74,4 +75,4 @@ __except (GetExceptionCode() == STATUS_INSUFFICIENT_MEM ||
 ## <a name="see-also"></a>Vedere anche
 
 [Scrittura di un gestore di eccezioni](../cpp/writing-an-exception-handler.md)<br/>
-[Gestione strutturata delle eccezioni (C++C/)](../cpp/structured-exception-handling-c-cpp.md)
+[Gestione strutturata delle eccezioni (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

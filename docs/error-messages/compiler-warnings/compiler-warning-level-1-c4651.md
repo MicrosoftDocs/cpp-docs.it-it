@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 1) C4651'
 title: Avviso del compilatore (livello 1) C4651
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4651
 ms.assetid: f1ea82aa-4dc1-4972-b55a-57fdb962f0dd
-ms.openlocfilehash: bc8131665c970c3b86bb1e84e39636ae8f93897b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 319d08799ed9494a5ef1d4d7b663fb8ec7b303e2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80199542"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318858"
 ---
 # <a name="compiler-warning-level-1-c4651"></a>Avviso del compilatore (livello 1) C4651
 

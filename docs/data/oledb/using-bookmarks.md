@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso dei segnalibri'
 title: Uso dei segnalibri
 ms.date: 10/24/2018
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - bookmarks, OLE DB
 - OLE DB providers, bookmark support
 ms.assetid: 7fa1d1a8-5063-4aa9-93ee-815bb9c98fae
-ms.openlocfilehash: 8caa33b3bafbaa9e537d9669aa7b60a9355475ef
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d0cf27a5f93b3e6b00fa6f8cbb69ae7414f4d819
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218299"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319157"
 ---
 # <a name="using-bookmarks"></a>Uso dei segnalibri
 
-Prima di aprire il set di righe, è necessario indicare al provider che si desidera utilizzare i segnalibri. A tale scopo, impostare la `DBPROP_BOOKMARKS` proprietà su **`true`** nel set di proprietà. Il provider recupera i segnalibri come colonna zero, quindi è necessario usare la macro speciale BOOKMARK_ENTRY e la `CBookmark` classe se si usa una funzione di accesso statica. `CBookmark`è una classe modello in cui l'argomento è la lunghezza in byte del buffer dei segnalibri. La lunghezza del buffer necessaria per un segnalibro dipende dal provider. Se si utilizza il provider ODBC OLE DB, come illustrato nell'esempio seguente, il buffer deve essere di 4 byte.
+Prima di aprire il set di righe, è necessario indicare al provider che si desidera utilizzare i segnalibri. A tale scopo, impostare la `DBPROP_BOOKMARKS` proprietà su **`true`** nel set di proprietà. Il provider recupera i segnalibri come colonna zero, quindi è necessario usare la macro speciale BOOKMARK_ENTRY e la `CBookmark` classe se si usa una funzione di accesso statica. `CBookmark` è una classe modello in cui l'argomento è la lunghezza in byte del buffer dei segnalibri. La lunghezza del buffer necessaria per un segnalibro dipende dal provider. Se si utilizza il provider ODBC OLE DB, come illustrato nell'esempio seguente, il buffer deve essere di 4 byte.
 
 ```cpp
 class CProducts
@@ -57,6 +58,6 @@ product.GetBookmark(&bookmark);
 
 Per informazioni sul supporto dei segnalibri nei provider, vedere [supporto del provider per i segnalibri](../../data/oledb/provider-support-for-bookmarks.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)

@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: uso delle funzioni di accesso dinamiche'
 title: Utilizzo delle funzioni di accesso dinamiche
 ms.date: 10/18/2018
 helpviewer_keywords:
 - accessors [C++], dynamic
 - dynamic accessors
 ms.assetid: e5d5bfa6-2b1d-49d0-8ced-914666422431
-ms.openlocfilehash: 4f42d6f20da819cf325cad06a04878b46e52352a
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 9cc1cbf1f4c408317802698c01b228b48a5614c0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008677"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319144"
 ---
 # <a name="using-dynamic-accessors"></a>Utilizzo delle funzioni di accesso dinamiche
 
@@ -156,7 +157,7 @@ Le informazioni di parametro vengono archiviate in un buffer creato e gestito da
 
 Per un esempio che illustra come usare questa classe per eseguire un SQL Server stored procedure e ottenere i valori dei parametri di output, vedere il codice di esempio [DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer) nel repository [Microsoft VCSamples](https://github.com/Microsoft/VCSamples) su GitHub.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)<br/>
 [Classe CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso di documenti e visualizzazioni'
 title: Gestione di documenti e visualizzazioni
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - views [C++], MFC
 - documents [C++], MFC
 ms.assetid: 349b142d-1c5a-4b99-9de4-241e41d3d2f1
-ms.openlocfilehash: 452fb010705e808aabd2ad42d1a0b6ba1c5921ce
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5e2842e9edd3dca566fa030579fae6cd743e3802
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212368"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319183"
 ---
 # <a name="working-with-documents-and-views"></a>Gestione di documenti e visualizzazioni
 
@@ -24,6 +25,6 @@ Per impostazione predefinita, la creazione guidata applicazione MFC crea un'appl
 
 È inoltre possibile utilizzare le classi di database senza utilizzare l'architettura documento/visualizzazione completa. Per ulteriori informazioni, vedere [MFC: utilizzo di classi di database senza documenti e visualizzazioni](../../data/mfc-using-database-classes-without-documents-and-views.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [ODBC e MFC](../../data/odbc/odbc-and-mfc.md)

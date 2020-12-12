@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: dichiaratore di riferimento rvalue: &amp;&amp;'
 title: 'Dichiaratore di riferimento rvalue: &amp;&amp;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: 953aafe79115ad32a172c878eb910dd06b81e3f4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6c88116c5834c027d72874d1377e79799faa80ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842039"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319378"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Dichiaratore di riferimento rvalue: &amp;&amp;
 
@@ -404,7 +405,7 @@ La deduzione dell'argomento di modello è un elemento importante dell'implementa
 
 I riferimenti rvalue distinguono gli lvalue dagli rvalue. Consentono di migliorare le prestazioni delle applicazioni eliminando la necessità di allocazioni di memoria e operazioni di copia non necessarie. Consentono inoltre di scrivere una versione di una funzione che accetta argomenti arbitrari e li inoltra a un'altra funzione come se l'altra funzione fosse stata chiamata direttamente.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Espressioni con operatori unari](../cpp/expressions-with-unary-operators.md)<br/>
 [Dichiaratore di riferimento lvalue: &](../cpp/lvalue-reference-declarator-amp.md)<br/>

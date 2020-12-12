@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: attributi in C++'
 title: Attributi in C++
 ms.date: 05/06/2019
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: efdc62e2343135aee483520f633bac99519455b4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2c22cacdede278114ed0e2242165280facbb492a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229207"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319547"
 ---
 # <a name="attributes-in-c"></a>Attributi in C++
 
@@ -35,9 +36,9 @@ void Foo(int);
 
 Gli attributi rappresentano un'alternativa standardizzata alle estensioni specifiche del fornitore, ad esempio direttive #pragma, __declspec () (Visual C++) o &#95;&#95;attribute&#95;&#95;  (GNU). Per la maggior parte degli scopi, tuttavia, sarà comunque necessario usare i costrutti specifici del fornitore. Attualmente, lo standard specifica gli attributi seguenti che devono essere riconosciuti da un compilatore conforme:
 
-- `[[noreturn]]`Specifica che una funzione non restituisce mai; in altre parole, genera sempre un'eccezione. Il compilatore può modificare le regole di compilazione per le `[[noreturn]]` entità.
+- `[[noreturn]]` Specifica che una funzione non restituisce mai; in altre parole, genera sempre un'eccezione. Il compilatore può modificare le regole di compilazione per le `[[noreturn]]` entità.
 
-- `[[carries_dependency]]`Specifica che la funzione propaga l'ordinamento delle dipendenze dei dati rispetto alla sincronizzazione dei thread. L'attributo può essere applicato a uno o più parametri, per specificare che l'argomento passato trasporta una dipendenza nel corpo della funzione. L'attributo può essere applicato alla funzione stessa, per specificare che il valore restituito trasporta una dipendenza dalla funzione. Il compilatore può utilizzare queste informazioni per generare codice più efficiente.
+- `[[carries_dependency]]` Specifica che la funzione propaga l'ordinamento delle dipendenze dei dati rispetto alla sincronizzazione dei thread. L'attributo può essere applicato a uno o più parametri, per specificare che l'argomento passato trasporta una dipendenza nel corpo della funzione. L'attributo può essere applicato alla funzione stessa, per specificare che il valore restituito trasporta una dipendenza dalla funzione. Il compilatore può utilizzare queste informazioni per generare codice più efficiente.
 
 - `[[deprecated]]`**Visual Studio 2015 e versioni successive:** Specifica che una funzione non deve essere utilizzata e potrebbe non esistere nelle versioni future di un'interfaccia di libreria. Il compilatore può utilizzare questo oggetto per generare un messaggio informativo quando il codice client tenta di chiamare la funzione. Può essere applicato alla dichiarazione di una classe, un nome di typedef, una variabile, un membro dati non statico, una funzione, uno spazio dei nomi, un'enumerazione, un enumeratore o una specializzazione del modello.
 
@@ -60,7 +61,7 @@ Gli attributi rappresentano un'alternativa standardizzata alle estensioni specif
 
 ## <a name="microsoft-specific-attributes"></a>Attributi specifici di Microsoft
 
-- `[[gsl::suppress(rules)]]`Questo attributo specifico di Microsoft viene utilizzato per l'eliminazione degli avvisi dai controlli che applicano le regole [GSL (Guidelines Support Library)](https://github.com/Microsoft/GSL) nel codice. Ad esempio, si consideri il frammento di codice seguente:
+- `[[gsl::suppress(rules)]]` Questo attributo specifico di Microsoft viene utilizzato per l'eliminazione degli avvisi dai controlli che applicano le regole [GSL (Guidelines Support Library)](https://github.com/Microsoft/GSL) nel codice. Ad esempio, si consideri il frammento di codice seguente:
 
     ```cpp
     int main()

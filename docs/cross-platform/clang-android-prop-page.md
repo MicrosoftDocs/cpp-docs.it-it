@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: proprietà del progetto Clang (Android C++)'
 title: Proprietà dei progetti Clang (Android C++)
 ms.date: 10/23/2017
 ms.assetid: 663140ea-a568-472b-a79a-dfea8818e06a
@@ -35,21 +36,21 @@ f1_keywords:
 - VC.Project.VCClangCompilerTool.ForcedIncludeFiles
 - VC.Project.VCClangCompilerTool.MultiProcessorCompilation
 - VC.Project.VCClangCompilerTool.AdditionalOptionsPage
-ms.openlocfilehash: 11e8a7f1ea264b26b9092d4834525541e098a5e1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 5f98181ddcbd47e97333a796843e81b50e6d5276
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444973"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319287"
 ---
 # <a name="clang-project-properties-android-c"></a>Proprietà dei progetti Clang (Android C++)
 
 | Proprietà | Descrizione | Opzioni |
 |--|--|--|
 | Directory di inclusione aggiuntive | Specifica una o più directory da aggiungere al percorso di inclusione. Usare il punto e virgola (;) come delimitatore per più percorsi. (*Percorso*). |
-| Formato informazioni di debug | Specifica il tipo di informazioni di debug generate dal compilatore. | **Nessuno**: non produce informazioni di debug, quindi la compilazione può risultare più veloce.<br>**Informazioni di debug complete (DWARF2)** : genera informazioni di debug DWARF2.<br>**Informazioni su numero di riga**: genera solo le informazioni sul numero riga.<br> |
+| Formato informazioni di debug | Specifica il tipo di informazioni di debug generate dal compilatore. | **Nessuno**: non produce informazioni di debug, quindi la compilazione può risultare più veloce.<br>**Informazioni di debug complete (DWARF2)**: genera informazioni di debug DWARF2.<br>**Informazioni su numero di riga**: genera solo le informazioni sul numero riga.<br> |
 | Nome file oggetto | Consente di specificare un nome usato per eseguire l'override del nome del file oggetto predefinito. Può essere un nome di file o di directory. (*Nome*/FO). |
-| Livello di avviso | Specifica il grado di severità del controllo effettuato dal compilatore per trovare gli errori del codice.  È possibile contrassegnare altre opzioni direttamente da Opzioni aggiuntive. (/w, /Weverything). | **Disattiva tutti gli avvisi**: disabilita tutti gli avvisi del compilatore.<br>**EnableAllWarnings** -Abilita tutti gli avvisi, inclusi quelli disabilitati per impostazione predefinita.<br> |
+| Livello avvisi | Specifica il grado di severità del controllo effettuato dal compilatore per trovare gli errori del codice.  È possibile contrassegnare altre opzioni direttamente da Opzioni aggiuntive. (/w, /Weverything). | **Disattiva tutti gli avvisi**: disabilita tutti gli avvisi del compilatore.<br>**EnableAllWarnings** -Abilita tutti gli avvisi, inclusi quelli disabilitati per impostazione predefinita.<br> |
 | Considera gli avvisi come errori | Considera tutti gli avvisi del compilatore come errori. Per un nuovo progetto, potrebbe essere preferibile usare /WX in tutte le compilazioni. La risoluzione degli avvisi garantirà il minor numero possibile di errori del codice di difficile individuazione. |
 | Abilita modalità dettagliata | Visualizza i comandi da eseguire e usa l'output dettagliato. |
 | Optimization | Specifica il livello di ottimizzazione per l'applicazione. | **Personalizzato**: consente di personalizzare l'ottimizzazione.<br>**Disabilitato**: disabilita l'ottimizzazione.<br>**Riduci dimensione**: ottimizza in base alla dimensione.<br>**Ottimizza velocità**: ottimizza in base alla velocità.<br>**Ottimizzazione completa**: ottimizzazioni onerose.<br> |
@@ -64,8 +65,8 @@ ms.locfileid: "79444973"
 | Codice indipendente dalla posizione | Genera codice indipendente dalla posizione per l'uso in una libreria condivisa. |
 | Usa enum brevi | Il tipo enum usa solo il numero di byte richiesti dall'insieme di possibili valori di input. |
 | Abilita informazioni sui tipi in fase di esecuzione | Aggiunge codice per il controllo dei tipi di oggetto C++ in fase di esecuzione (informazioni sui tipi in fase di esecuzione).     (frtti, fno-rtti) |
-| Standard del linguaggio C | Determina lo standard del linguaggio C. | **Default**<br>**C89**: standard del linguaggio C89.<br>**C99**: standard del linguaggio C99.<br>**C11**: standard del linguaggio C11.<br>**C99 (dialetto GNU)** : standard del linguaggio C99 (dialetto GNU).<br>**C11 (dialetto GNU)** : standard del linguaggio C11 (dialetto GNU).<br> |
-| Standard del linguaggio C++ | Determina lo standard del linguaggio C++. | **Default**<br>**C++03**: standard del linguaggio C++03.<br>**C++11**: standard del linguaggio C++11.<br>**C++14**: standard del linguaggio C++14.<br>**C++03 (dialetto GNU)** : standard del linguaggio C++03 (dialetto GNU).<br>**C++11 (dialetto GNU)** : standard del linguaggio C++11 (dialetto GNU).<br>**C++14 (dialetto GNU)** : standard del linguaggio C++14 (dialetto GNU).<br> |
+| Standard del linguaggio C | Determina lo standard del linguaggio C. | **Default**<br>**C89**: standard del linguaggio C89.<br>**C99**: standard del linguaggio C99.<br>**C11**: standard del linguaggio C11.<br>**C99 (dialetto GNU)**: standard del linguaggio C99 (dialetto GNU).<br>**C11 (dialetto GNU)** : standard del linguaggio C11 (dialetto GNU).<br> |
+| Standard del linguaggio C++ | Determina lo standard del linguaggio C++. | **Default**<br>**C++03**: standard del linguaggio C++03.<br>**C++ 11** -standard del linguaggio c++ 11.<br>**C++14**: standard del linguaggio C++14.<br>**C++03 (dialetto GNU)**: standard del linguaggio C++03 (dialetto GNU).<br>**C++11 (dialetto GNU)**: standard del linguaggio C++11 (dialetto GNU).<br>**C++14 (dialetto GNU)**: standard del linguaggio C++14 (dialetto GNU).<br> |
 | Definizioni del preprocessore | Definisce i simboli di pre-elaborazione per il file origine. (-D) |
 | Rimuovi definizioni per il preprocessore | Specifica uno o più undefines per il preprocessore.  ( *Macro*-U) |
 | Rimuovi tutte le definizioni per il preprocessore | Rimuove tutti i valori precedentemente definiti per il preprocessore.  (-undef) |
@@ -73,8 +74,8 @@ ms.locfileid: "79444973"
 | Intestazione precompilata | Crea/Usa intestazione precompilata: Abilita la creazione o l'uso di un'intestazione precompilata durante la compilazione. | **Usa**: usa un'intestazione precompilata.<br>**Senza intestazioni precompilate**: non usa le intestazioni precompilate.<br> |
 | File di intestazione precompilato | Specifica un nome di file di intestazione da usare come file di intestazione precompilato. Questo file viene aggiunto anche a' file di inclusione forzata ' durante la compilazione |
 | Directory del file di output intestazione precompilata | Specifica la directory per l'intestazione precompilato generato. Questa directory viene inoltre aggiunta a "directory di inclusione aggiuntive" durante la compilazione |
-| Compila intestazione precompilata come | Consente di selezionare il linguaggio di compilazione per il file di intestazione precompilato (-x c-header, -x c++-header). | **Compila come codice C**: consente di compilare come codice C.<br>**Compila come codice C++** : consente di compilare come codice C++.<br> |
-| Compila come | Selezionare l'opzione linguaggio di compilazione per *`.c`* e *`.cpp`* file.  ' Default ' rileverà in base all'estensione *`.c`* o *`.cpp`* . (-x c, -x c++) | **Predefinita**: impostazione predefinita.<br>**Compila come codice C**: consente di compilare come codice C.<br>**Compila come codice C++** : consente di compilare come codice C++.<br> |
+| Compila intestazione precompilata come | Consente di selezionare il linguaggio di compilazione per il file di intestazione precompilato (-x c-header, -x c++-header). | **Compila come codice C**: consente di compilare come codice C.<br>**Compila come codice c++** : Compila come codice c++.<br> |
+| Compila come | Selezionare l'opzione linguaggio di compilazione per *`.c`* *`.cpp`* i file e.  ' Default ' rileverà in base all' *`.c`* *`.cpp`* estensione o. (-x c, -x c++) | **Predefinita**: impostazione predefinita.<br>**Compila come codice C**: consente di compilare come codice C.<br>**Compila come codice c++** : Compila come codice c++.<br> |
 | File di inclusione forzati | Uno o più file di inclusione il cui uso è forzato.     (-include *nome*) |
 | Compilazione a più processori | Compilazione a più processori. |
 | Opzioni aggiuntive | Opzioni aggiuntive. |

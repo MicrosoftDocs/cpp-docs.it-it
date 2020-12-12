@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: safebuffers'
 title: safebuffers
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - __declspec keyword (C++), safebuffers
 - safebuffers __declspec keyword
 ms.assetid: 0b0dce14-4523-44d2-8070-5dd0fdabc618
-ms.openlocfilehash: 456e84cfba40a4219f44fe1549272621f79d09a2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8fefa12ffcbd81d58f4f5002e27751f03d7c1cb9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213242"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319352"
 ---
 # <a name="safebuffers"></a>safebuffers
 
@@ -74,7 +75,7 @@ int wmain() {
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [__declspec](../cpp/declspec.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)<br/>

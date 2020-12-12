@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: installare lo sviluppo di app per dispositivi mobili multipiattaforma con C++'
 title: Installare lo sviluppo di app per dispositivi mobili multipiattaforma con C++
 ms.date: 10/17/2019
 ms.assetid: aaea6b8d-55eb-4427-8185-c050f855c257
-ms.openlocfilehash: b9a6b78450969f5228ccf16cc7b0cff02a4d3b1e
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 45059cbadcd8e8c304c65262ffcb89bf767095e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92923995"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319222"
 ---
 # <a name="install-cross-platform-mobile-development-with-c"></a>Installare lo sviluppo di app per dispositivi mobili multipiattaforma con C++
 
@@ -64,13 +65,13 @@ Il Programma di installazione di Visual Studio include un carico di lavoro **svi
 
 ### <a name="install-the-mobile-development-with-c-workload"></a>Installare il carico di lavoro Sviluppo di applicazioni per dispositivi mobili con C++
 
-1. Eseguire il **programma di installazione di Visual Studio** dal menu **Start** .
+1. Eseguire il **programma di installazione di Visual Studio** dal menu **Start**.
 
 1. Se è già stato installato Visual Studio, scegliere il pulsante **Modifica** per la versione installata di Visual Studio che si vuole modificare. In caso contrario, scegliere **Installa** per installare Visual Studio.
 
-1. Con la scheda **Carichi di lavoro** selezionata, scorrere verso il basso e selezionare il carico di lavoro **Sviluppo di applicazioni per dispositivi mobili con C++** nel programma di installazione di Visual Studio. Quando questo carico di lavoro è selezionato, verranno selezionati anche altri componenti necessari per lo sviluppo C++. È anche possibile scegliere altri carichi di lavoro e singoli componenti da installare contemporaneamente. Per compilare codice multipiattaforma destinato anche a UWP, selezionare il carico di lavoro **Sviluppo di app per la piattaforma UWP (Universal Windows Platform)** .
+1. Con la scheda **Carichi di lavoro** selezionata, scorrere verso il basso e selezionare il carico di lavoro **Sviluppo di applicazioni per dispositivi mobili con C++** nel programma di installazione di Visual Studio. Quando questo carico di lavoro è selezionato, verranno selezionati anche altri componenti necessari per lo sviluppo C++. È anche possibile scegliere altri carichi di lavoro e singoli componenti da installare contemporaneamente. Per compilare codice multipiattaforma destinato anche a UWP, selezionare il carico di lavoro **Sviluppo di app per la piattaforma UWP (Universal Windows Platform)**.
 
-1. Nel riquadro **Dettagli di installazione** espandere **Sviluppo di applicazioni per dispositivi mobili con C++** . Nella sezione **Facoltativo** è possibile scegliere altre versioni di NDK, l'emulatore Android di Google, Intel Hardware Accelerated Execution Manager e lo strumento di accelerazione per le build IncrediBuild.
+1. Nel riquadro **Dettagli di installazione** espandere **Sviluppo di applicazioni per dispositivi mobili con C++**. Nella sezione **Facoltativo** è possibile scegliere altre versioni di NDK, l'emulatore Android di Google, Intel Hardware Accelerated Execution Manager e lo strumento di accelerazione per le build IncrediBuild.
 
 1. Per impostazione predefinita, nel carico di lavoro sono inclusi uno o più componenti di installazione di Android SDK. Sono disponibili altre versioni di Android SDK. Per aggiungerne una all'installazione, scegliere la scheda **Singoli componenti** e quindi scorrere verso il basso fino alla sezione **SDK, librerie e framework** per effettuare la selezione.
 
@@ -99,17 +100,17 @@ Nella maggior parte dei casi, Visual Studio è in grado di rilevare le configura
 
 ### <a name="to-set-the-paths-for-third-party-tools"></a>Per impostare i percorsi per gli strumenti di terze parti
 
-1. Sulla barra dei menu di Visual Studio selezionare **strumenti**  >  **Opzioni** .
+1. Sulla barra dei menu di Visual Studio selezionare **strumenti**  >  **Opzioni**.
 
-1. Nella finestra di dialogo **Opzioni** selezionare **Multipiattaforma** > **C++** > **Android** .
+1. Nella finestra di dialogo **Opzioni** selezionare **Multipiattaforma** > **C++** > **Android**.
 
    ![Opzioni di percorso dello strumento Android](../cross-platform/media/cppmdd-options-android.png "Opzioni di percorso dello strumento Android")
 
-1. Per modificare il percorso usato da uno strumento, selezionare la casella di controllo accanto al percorso e modificare il percorso della cartella nella casella di testo. È anche possibile usare il pulsante Sfoglia ( **...** ) per aprire una finestra di dialogo **Selezionare il percorso** in cui scegliere la cartella.
+1. Per modificare il percorso usato da uno strumento, selezionare la casella di controllo accanto al percorso e modificare il percorso della cartella nella casella di testo. È anche possibile usare il pulsante Sfoglia (**...**) per aprire una finestra di dialogo **Selezionare il percorso** in cui scegliere la cartella.
 
 1. Scegliere **OK** per salvare i percorsi personalizzati delle cartelle degli strumenti.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Installare e configurare gli strumenti per la compilazione con iOS](install-and-configure-tools-to-build-using-ios.md)\
 [Visual C++ per lo sviluppo di codice per dispositivi mobili multipiattaforma](https://visualstudio.microsoft.com/vs/features/cplusplus-mdd/)

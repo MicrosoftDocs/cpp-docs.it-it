@@ -1,16 +1,17 @@
 ---
+description: 'Ulteriori informazioni su: Recordset: dichiarazione di una classe per una tabella (ODBC)'
 title: 'Recordset: dichiarazione di una classe per una tabella (ODBC)'
 ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets, declaring class for tables
 - recordsets, declaring classes for tables
 ms.assetid: 3fe286c2-3f3d-493d-9d8c-762310939d08
-ms.openlocfilehash: ec5731e7e5058206e210c5a9a5bb1a189c940c91
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0785fbf684942748075729be630a6b309c183d06
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212940"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319209"
 ---
 # <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Recordset: dichiarazione di una classe per una tabella (ODBC)
 
@@ -27,7 +28,7 @@ Altri usi per i recordset comprendono:
 
 - Inclusione dei risultati di una query predefinita.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Recordset: creazione e chiusura di recordset (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>

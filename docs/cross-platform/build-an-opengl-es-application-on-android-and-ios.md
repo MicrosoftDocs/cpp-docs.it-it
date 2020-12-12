@@ -1,13 +1,14 @@
 ---
+description: "Altre informazioni su: compilare un'applicazione OpenGL ES in Android e iOS"
 title: Compilare un'applicazione OpenGL ES in Android e iOS
 ms.date: 10/09/2019
 ms.assetid: 76a67886-df57-4a81-accb-2e3c2eaf607b
-ms.openlocfilehash: 278fd66202332417f7663542f0d66a3ec545b715
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: c840e9bbfd450c412ff7c0646127c157a3af565a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924300"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319417"
 ---
 # <a name="build-an-opengl-es-application-on-android-and-ios"></a>Compilare un'applicazione OpenGL ES in Android e iOS
 
@@ -27,11 +28,11 @@ In questa esercitazione viene innanzitutto creato un nuovo progetto di applicazi
 
 ::: moniker range="msvc-150"
 
-1. In Visual Studio scegliere **File** > **Nuovo** > **Progetto** .
+1. In Visual Studio scegliere **File** > **Nuovo** > **Progetto**.
 
-1. Nella finestra di dialogo **Nuovo progetto** in **Modelli** scegliere **Visual C++** > **Multipiattaforma** , quindi scegliere il modello **Applicazione OpenGLES (Android, iOS)** .
+1. Nella finestra di dialogo **Nuovo progetto** in **Modelli** scegliere **Visual C++** > **Multipiattaforma**, quindi scegliere il modello **Applicazione OpenGLES (Android, iOS)**.
 
-1. Assegnare all'app un nome come *MyOpenGLESApp* , quindi scegliere **OK** .
+1. Assegnare all'app un nome come *MyOpenGLESApp*, quindi scegliere **OK**.
 
    ![Nuovo progetto applicazione OpenGLES](../cross-platform/media/cppmdd-opengles-newproj.png "Nuovo progetto applicazione OpenGLES")
 
@@ -43,11 +44,11 @@ In questa esercitazione viene innanzitutto creato un nuovo progetto di applicazi
 
 ::: moniker range=">=msvc-160"
 
-1. In Visual Studio scegliere **File** > **Nuovo** > **Progetto** .
+1. In Visual Studio scegliere **File** > **Nuovo** > **Progetto**.
 
-1. Nella finestra di dialogo **Crea un nuovo progetto** selezionare il modello **applicazione OpenGLES (Android, iOS)** , quindi fare clic su **Avanti** .
+1. Nella finestra di dialogo **Crea un nuovo progetto** selezionare il modello **applicazione OpenGLES (Android, iOS)** , quindi fare clic su **Avanti**.
 
-1. Nella finestra di dialogo **Configura nuovo progetto** immettere un nome, ad esempio *MyOpenGLESApp* , in **nome progetto** , quindi scegliere **Crea** .
+1. Nella finestra di dialogo **Configura nuovo progetto** immettere un nome, ad esempio *MyOpenGLESApp* , in **nome progetto**, quindi scegliere **Crea**.
 
    Visual Studio crea la nuova soluzione e apre Esplora soluzioni.
 
@@ -57,15 +58,15 @@ In questa esercitazione viene innanzitutto creato un nuovo progetto di applicazi
 
 La nuova soluzione di applicazione OpenGL ES include tre progetti di libreria e due progetti di applicazione. La cartella librerie include un progetto di codice condiviso. E, due progetti specifici per la piattaforma che fanno riferimento al codice condiviso:
 
-- `MyOpenGLESApp.Android.NativeActivity`, che contiene i riferimenti e il codice glue che implementa l'app come NativeActivity in Android. I punti di ingresso dal codice glue vengono implementati in *main.cpp* , che include il codice condiviso comune in `MyOpenGLESApp.Shared`. Le intestazioni precompilate sono in *pch.h* . Questo progetto di app NativeActivity viene compilato in un file di libreria condivisa (con estensione *so* ), selezionato dal progetto `MyOpenGLESApp.Android.Packaging`.
+- `MyOpenGLESApp.Android.NativeActivity`, che contiene i riferimenti e il codice glue che implementa l'app come NativeActivity in Android. I punti di ingresso dal codice glue vengono implementati in *main.cpp*, che include il codice condiviso comune in `MyOpenGLESApp.Shared`. Le intestazioni precompilate sono in *pch.h*. Questo progetto di app NativeActivity viene compilato in un file di libreria condivisa (con estensione *so*), selezionato dal progetto `MyOpenGLESApp.Android.Packaging`.
 
-- `MyOpenGLESApp.iOS.StaticLibrary` crea un file di libreria statica iOS (con estensione *a* ) contenente il codice condiviso in `MyOpenGLESApp.Shared`. È collegato all'app creata dal progetto `MyOpenGLESApp.iOS.Application`.
+- `MyOpenGLESApp.iOS.StaticLibrary` crea un file di libreria statica iOS (con estensione *a*) contenente il codice condiviso in `MyOpenGLESApp.Shared`. È collegato all'app creata dal progetto `MyOpenGLESApp.iOS.Application`.
 
 - `MyOpenGLESApp.Shared` contiene il codice condiviso multipiattaforma. Usa le macro del preprocessore per la compilazione condizionale del codice specifico per la piattaforma. Il codice condiviso viene selezionato per riferimento al progetto sia in `MyOpenGLESApp.Android.NativeActivity` che in `MyOpenGLESApp.iOS.StaticLibrary`.
 
 La soluzione contiene due progetti per compilare le app per le piattaforme Android e iOS:
 
-- `MyOpenGLESApp.Android.Packaging`, che crea il file con estensione *apk* per la distribuzione nei dispositivi o negli emulatori Android. Questo file contiene le risorse e il file AndroidManifest.xml in cui sono state impostate le proprietà del manifesto. Contiene anche il file *build.xml* , che controlla il processo di compilazione Ant. Per impostazione predefinita, è impostato come progetto di avvio in modo che possa essere distribuito ed eseguito direttamente da Visual Studio.
+- `MyOpenGLESApp.Android.Packaging`, che crea il file con estensione *apk* per la distribuzione nei dispositivi o negli emulatori Android. Questo file contiene le risorse e il file AndroidManifest.xml in cui sono state impostate le proprietà del manifesto. Contiene anche il file *build.xml*, che controlla il processo di compilazione Ant. Per impostazione predefinita, è impostato come progetto di avvio in modo che possa essere distribuito ed eseguito direttamente da Visual Studio.
 
 - `MyOpenGLESApp.iOS.Application` contiene le risorse e il codice Glue Objective-C per creare un'app iOS che si collega al codice della libreria statica C++ in `MyOpenGLESApp.iOS.StaticLibrary` . Questo progetto crea un pacchetto di compilazione che viene trasferito al Mac da Visual Studio e dall'agente remoto. Quando si compila questo progetto, Visual Studio invia i file e i comandi per compilare e distribuire l'app nel Mac.
 
@@ -75,13 +76,13 @@ La soluzione creata dal modello imposta l'app Android come progetto predefinito.
 
 ### <a name="to-build-and-run-the-android-native-activity-app"></a>Per compilare ed eseguire l'app NativeActivity di Android
 
-1. Se non è ancora selezionato, scegliere **x86** dall'elenco a discesa **Piattaforme soluzione** .
+1. Se non è ancora selezionato, scegliere **x86** dall'elenco a discesa **Piattaforme soluzione**.
 
    ![Impostare la piattaforma della soluzione su x86](../cross-platform/media/cppmdd-opengles-solutionplat.png "Impostare la piattaforma della soluzione su x86")
 
    Usare x86 per fare riferimento all'emulatore. Per impostare un dispositivo come destinazione, scegliere la piattaforma soluzione basata sul processore del dispositivo. Se l'elenco **Piattaforme soluzione** non è visualizzato, scegliere **Piattaforme soluzione** dall'elenco **Aggiungi o rimuovi pulsanti** e quindi scegliere la piattaforma.
 
-1. In **Esplora soluzioni** aprire il menu di scelta rapida del progetto `MyOpenGLESApp.Android.Packaging` e scegliere **Compila** .
+1. In **Esplora soluzioni** aprire il menu di scelta rapida del progetto `MyOpenGLESApp.Android.Packaging` e scegliere **Compila**.
 
    ![Compilazione del progetto di pacchetti Android](../cross-platform/media/cppmdd-opengles-andbuild.png "Compilazione del progetto di pacchetti Android")
 
@@ -147,11 +148,11 @@ Per distribuire l'app in un dispositivo iOS, configurare prima di tutto la firma
 
 1. Collegare un dispositivo iOS al Mac. Quando si collega il dispositivo a un computer per la prima volta, un avviso richiede si considera attendibile il computer per l'accesso al dispositivo. Consentire al dispositivo di considerare attendibile il computer Mac.
 
-1. In Visual Studio, se non è già selezionata, scegliere la piattaforma della soluzione nell'elenco a discesa **Piattaforme soluzione** in base al processore del dispositivo. In questo esempio si tratta di un processore **ARM64** .
+1. In Visual Studio, se non è già selezionata, scegliere la piattaforma della soluzione nell'elenco a discesa **Piattaforme soluzione** in base al processore del dispositivo. In questo esempio si tratta di un processore **ARM64**.
 
    ![Impostare la piattaforma della soluzione su ARM64](../cross-platform/media/cppmdd-opengles-pickplatformarm64.png "Impostare la piattaforma della soluzione su ARM64")
 
-1. In Esplora soluzioni aprire il menu di scelta rapida per il progetto MyOpenGLESApp.iOS.Application e scegliere **Scarica progetto** .
+1. In Esplora soluzioni aprire il menu di scelta rapida per il progetto MyOpenGLESApp.iOS.Application e scegliere **Scarica progetto**.
 
 1. Anche in questo caso, aprire il menu di scelta rapida per il progetto MyOpenGLESApp.iOS.Application scaricato e scegliere **Modifica project.pbxproj** per modificare il file di progetto. Nel file `project.pbxproj` cercare l'attributo `buildSettings` e aggiungere `DEVELOPMENT_TEAM` usando l'ID Apple del team. Lo screenshot seguente mostra il valore di esempio `123456ABC` per l'ID Apple del team. È possibile trovare il valore dell'ID Apple del team da Xcode. Passare a **Build Settings** (Impostazioni compilazione) e passare il mouse sul nome del team di sviluppo per visualizzare una descrizione comando. La descrizione comando indica l'ID del team.
 
@@ -159,7 +160,7 @@ Per distribuire l'app in un dispositivo iOS, configurare prima di tutto la firma
 
 1. Chiudere il file `project.pbxproj`, quindi aprire il menu di scelta rapida per il progetto MyOpenGLESApp.iOS.Application scaricato e scegliere **Ricarica progetto** per ricaricare il progetto.
 
-1. A questo punto compilare il progetto MyOpenGLESApp.iOS.Application aprendo il menu di scelta rapida per il progetto e scegliendo **Compila** .
+1. A questo punto compilare il progetto MyOpenGLESApp.iOS.Application aprendo il menu di scelta rapida per il progetto e scegliendo **Compila**.
 
    ![Compilazione di un progetto applicazione iOS](../cross-platform/media/cppmdd-opengles-iosbuild.png "Compilazione di un progetto applicazione iOS")
 
@@ -177,7 +178,7 @@ Per distribuire l'app in un dispositivo iOS, configurare prima di tutto la firma
 
 1. Premere **MAIUSC** + **F5** per arrestare il debug.
 
-   I progetti della libreria e dell'app iOS generati inseriscono il codice C++ in una libreria statica che implementa solo il codice condiviso. La maggior parte del codice dell'applicazione si trova nel progetto `Application`. Le chiamate al codice della libreria condivisa in questo progetto di modello vengono eseguite nel file *GameViewController.m* . Per compilare l'app iOS, Visual Studio usa il set di strumenti della piattaforma Xcode, che richiede la comunicazione con un client remoto in esecuzione in un Mac.
+   I progetti della libreria e dell'app iOS generati inseriscono il codice C++ in una libreria statica che implementa solo il codice condiviso. La maggior parte del codice dell'applicazione si trova nel progetto `Application`. Le chiamate al codice della libreria condivisa in questo progetto di modello vengono eseguite nel file *GameViewController.m*. Per compilare l'app iOS, Visual Studio usa il set di strumenti della piattaforma Xcode, che richiede la comunicazione con un client remoto in esecuzione in un Mac.
 
    Visual Studio trasferisce i file di progetto al client remoto. Invia quindi i comandi per compilare l'app con Xcode. Il client remoto invia a sua volta le informazioni sullo stato della compilazione a Visual Studio. Quando l'app viene compilata correttamente, Visual Studio può inviare comandi per l'esecuzione e il debug dell'app. Il debugger di Visual Studio controlla l'esecuzione dell'app nel dispositivo iOS collegato al Mac. Visual Studio esegue il mapping delle proprietà del progetto alle opzioni usate per compilare, collegare ed eseguire il debug nella piattaforma iOS di destinazione. Per dettagli sull'opzione della riga di comando del compilatore, aprire la pagina **Pagine delle proprietà** per il progetto MyOpenGLESApp.iOS.StaticLibrary.
 

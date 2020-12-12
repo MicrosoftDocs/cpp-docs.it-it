@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: assegnazione'
 title: Assegnazione
 ms.date: 11/04/2016
 helpviewer_keywords:
 - operators [C++], assignment
 - assignment operators [C++], overloaded
 ms.assetid: d87e4f89-f8f5-42c1-9d3c-184bca9d0e15
-ms.openlocfilehash: f1697a8de3dff6c46de01db6bbff5447c03b6282
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 696706202e70e8baf50dda34ac98ff9bca5dcda2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190703"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319488"
 ---
 # <a name="assignment"></a>Assegnazione
 
@@ -68,7 +69,7 @@ Point pt4(pt1); // Copy constructor call.
 > [!NOTE]
 > È consigliabile seguire la [regola di tre](https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)) che una classe che definisce un operatore di assegnazione di copia deve anche definire in modo esplicito il costruttore di copia, il distruttore e, a partire da c++ 11, costruttore di spostamento e operatore di assegnazione di spostamento.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Overload degli operatori](../cpp/operator-overloading.md)
 - [Costruttori di copia e operatori di assegnazione di copia (C++)](../cpp/copy-constructors-and-copy-assignment-operators-cpp.md)

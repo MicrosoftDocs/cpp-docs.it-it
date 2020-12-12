@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _CrtGetReportHook'
 title: _CrtGetReportHook
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - CrtGetReportHook function
 - _CrtGetReportHook function
 ms.assetid: 922758ed-7edd-4359-9c92-0535192dc11a
-ms.openlocfilehash: bc005dda435b5e11d6c3c886de180ed85b9c2a04
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9c950341e3f1b0231620449d983fcfe5bc0f5f12
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942395"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319739"
 ---
 # <a name="_crtgetreporthook"></a>_CrtGetReportHook
 
@@ -46,7 +47,7 @@ _CRT_REPORT_HOOK _CrtGetReportHook( void );
 
 Restituisce la funzione per la creazione di report corrente definita dal client.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 **_CrtGetReportHook** consente a un'applicazione di recuperare la funzione di creazione di report corrente per il processo di creazione di report della libreria di debug del runtime C.
 
@@ -58,7 +59,7 @@ Per informazioni sull'uso di altre funzioni di runtime capaci di eseguire l'hook
 |-------------|---------------------|
 |**_CrtGetReportHook**|\<crtdbg.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 
@@ -66,9 +67,9 @@ Solo le versioni di debug delle [librerie di runtime di C](../../c-runtime-libra
 
 ## <a name="example"></a>Esempio
 
-Per un esempio di come usare **_CrtSetReportHook**, vedere [report](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/report).
+Per un esempio di come utilizzare **_CrtSetReportHook**, vedere [report](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/report).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Routine di debug](../../c-runtime-library/debug-routines.md)<br/>
 [_CrtSetReportHook](crtsetreporthook.md)<br/>

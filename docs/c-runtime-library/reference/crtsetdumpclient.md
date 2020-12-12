@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _CrtSetDumpClient'
 title: _CrtSetDumpClient
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _CrtSetDumpClient function
 - CrtSetDumpClient function
 ms.assetid: f3dd06d0-c331-4a12-b68d-25378d112033
-ms.openlocfilehash: fd2b037ce10f708ab133f31a20636438b0d04b93
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 89a2648aae62fc7f62b04519eacce4e0f67002f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234263"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319534"
 ---
 # <a name="_crtsetdumpclient"></a>_CrtSetDumpClient
 
@@ -51,7 +52,7 @@ Nuova funzione del dump di memoria definita dal client da associare al processo 
 
 Restituisce la funzione del dump di blocco definita precedentemente dal client.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_CrtSetDumpClient** consente all'applicazione di associare la propria funzione per eseguire il dump di oggetti archiviati in **_CLIENT_BLOCK** blocchi di memoria nel processo di dump della memoria di debug del runtime del linguaggio C. Di conseguenza, ogni volta che una funzione di dump del debug, ad esempio [_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md) o [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) esegue il dump di un blocco di memoria **_CLIENT_BLOCK** , viene chiamata anche la funzione di dump dell'applicazione. **_CrtSetDumpClient** fornisce un'applicazione con un metodo semplice per rilevare le perdite di memoria e convalidare o segnalare il contenuto dei dati archiviati nei blocchi di **_CLIENT_BLOCK** . Quando [_DEBUG](../../c-runtime-library/debug.md) non è definito, le chiamate a **_CrtSetDumpClient** vengono rimosse durante la pre-elaborazione.
 
@@ -81,7 +82,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runt
 
 Solo le versioni di debug delle [librerie di runtime di C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Routine di debug](../../c-runtime-library/debug-routines.md)<br/>
 [_CrtReportBlockType](crtreportblocktype.md)<br/>

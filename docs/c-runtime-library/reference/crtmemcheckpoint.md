@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _CrtMemCheckpoint'
 title: _CrtMemCheckpoint
 ms.date: 11/04/2016
 api_name:
@@ -26,16 +27,16 @@ helpviewer_keywords:
 - CrtMemCheckpoint function
 - _CrtMemCheckpoint function
 ms.assetid: f1bacbaa-5a0c-498a-ac7a-b6131d83dfbc
-ms.openlocfilehash: edf91cd8c76fd080326e2e5eeac98f7f81ab90cf
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f7a88e63c99c063999f3de0d01e019fecd10496f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942375"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319677"
 ---
 # <a name="_crtmemcheckpoint"></a>_CrtMemCheckpoint
 
-Ottiene lo stato corrente dell'heap di debug e archivia in una struttura **_CrtMemState** fornita dall'applicazione (solo versione di debug).
+Ottiene lo stato corrente dell'heap di debug e archivia in una struttura di **_CrtMemState** fornita dall'applicazione (solo versione di debug).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -48,17 +49,17 @@ void _CrtMemCheckpoint(
 ### <a name="parameters"></a>Parametri
 
 *state*<br/>
-Puntatore alla struttura **_CrtMemState** da riempire con il Checkpoint di memoria.
+Puntatore a **_CrtMemState** struttura da riempire con il Checkpoint di memoria.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-La funzione **CrtMemCheckpoint** crea uno snapshot dello stato corrente dell'heap di debug in un determinato momento. Questo snapshot potrà essere usato da altre funzioni dello stato dell'heap come [_CrtMemDifference](crtmemdifference.md) per aiutare a rilevare perdite di memoria e altri problemi. Quando _ [debug](../../c-runtime-library/debug.md) non è definito, le chiamate a **_CrtMemState** vengono rimosse durante la pre-elaborazione.
+La funzione **_CrtMemCheckpoint** crea uno snapshot dello stato corrente dell'heap di debug in un determinato momento. Questo snapshot potrà essere usato da altre funzioni dello stato dell'heap come [_CrtMemDifference](crtmemdifference.md) per aiutare a rilevare perdite di memoria e altri problemi. Quando [_DEBUG](../../c-runtime-library/debug.md) non è definito, le chiamate a **_CrtMemState** vengono rimosse durante la pre-elaborazione.
 
-L'applicazione deve passare un puntatore a un'istanza precedentemente allocata della struttura **_CrtMemState** , definita in CRTDBG. h, nel parametro *state* . Se **CrtMemCheckpoint** rileva un errore durante la creazione del checkpoint, la funzione genera un report di debug **_CRT_WARN** che descrive il problema.
+L'applicazione deve passare un puntatore a un'istanza precedentemente allocata della struttura di **_CrtMemState** , definita in CRTDBG. h, nel parametro *state* . Se **_CrtMemCheckpoint** rileva un errore durante la creazione del checkpoint, la funzione genera un report di **_CRT_WARN** debug che descrive il problema.
 
 Per ulteriori informazioni sulle funzioni dello stato dell'heap e sulla struttura **_CrtMemState** , vedere [funzioni di creazione di report sullo stato dell'heap](/visualstudio/debugger/crt-debug-heap-details). Per altre informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
-Se *lo stato* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, [errno, doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) viene impostato su **EINVAL** e la funzione restituisce.
+Se *lo stato* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) è impostato su **EINVAL** e la funzione restituisce.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -66,11 +67,11 @@ Se *lo stato* è **null**, viene richiamato il gestore di parametri non validi, 
 |-------------|---------------------|
 |**_CrtMemCheckpoint**|\<crtdbg.h>, \<errno.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-**Librerie** Solo versioni di debug di UCRT.
+**Librerie:** solo versioni di debug di UCRT.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Routine di debug](../../c-runtime-library/debug-routines.md)<br/>
 [_CrtMemDifference](crtmemdifference.md)<br/>

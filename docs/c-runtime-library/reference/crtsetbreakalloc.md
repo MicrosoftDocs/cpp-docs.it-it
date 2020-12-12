@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _CrtSetBreakAlloc'
 title: _CrtSetBreakAlloc
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - CrtSetBreakAlloc function
 - _CrtSetBreakAlloc function
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
-ms.openlocfilehash: e13c908c1efd1af9196885dee6e3b0f45845946b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 07db47aa23fe95e86b3341813137643b81f57fbc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942308"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319599"
 ---
 # <a name="_crtsetbreakalloc"></a>_CrtSetBreakAlloc
 
@@ -53,11 +54,11 @@ Numero di ordine di allocazione per il quale impostare il punto di interruzione.
 
 Restituisce il precedente numero di ordine di allocazione dell'oggetto che presentava un punto di interruzione impostato.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-**_CrtSetBreakAlloc** consente a un'applicazione di eseguire il rilevamento delle perdite di memoria suddividendo in un punto specifico dell'allocazione di memoria e risalendo all'origine della richiesta. La funzione usa il numero di ordine di allocazione dell'oggetto assegnato al blocco di memoria al momento dell'allocazione nell'heap. Quando _ [debug](../../c-runtime-library/debug.md) non è definito, le chiamate a **_CrtSetBreakAlloc** vengono rimosse durante la pre-elaborazione.
+**_CrtSetBreakAlloc** consente a un'applicazione di eseguire il rilevamento delle perdite di memoria suddividendo in un punto specifico dell'allocazione di memoria e risalendo all'origine della richiesta. La funzione usa il numero di ordine di allocazione dell'oggetto assegnato al blocco di memoria al momento dell'allocazione nell'heap. Quando [_DEBUG](../../c-runtime-library/debug.md) non è definito, le chiamate a **_CrtSetBreakAlloc** vengono rimosse durante la pre-elaborazione.
 
-Il numero di ordine di allocazione dell'oggetto è archiviato nel campo *lRequest* della struttura **_CrtMemBlockHeader**, definito in Crtdbg.h. Quando le informazioni relative a un blocco di memoria vengono restituite da una delle funzioni di dump del debug, questo numero è racchiuso {36}tra parentesi graffe, ad esempio.
+Il numero di ordine di allocazione dell'oggetto è archiviato nel campo *lRequest* della struttura **_CrtMemBlockHeader**, definito in Crtdbg.h. Quando le informazioni relative a un blocco di memoria vengono restituite da una delle funzioni di dump del debug, questo numero è racchiuso tra parentesi graffe, ad esempio {36} .
 
 Per altre informazioni su come usare **_CrtSetBreakAlloc** con altre funzioni di gestione della memoria, vedere [rilevamento delle richieste di allocazione dell'heap](/visualstudio/debugger/crt-debug-heap-details). Per altre informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
@@ -67,7 +68,7 @@ Per altre informazioni su come usare **_CrtSetBreakAlloc** con altre funzioni di
 |-------------|---------------------|
 |**_CrtSetBreakAlloc**|\<crtdbg.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 

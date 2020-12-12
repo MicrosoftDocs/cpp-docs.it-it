@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: visualizzazioni di record (accesso ai dati MFC)'
 title: Visualizzazioni di record (accesso ai dati MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - record views [C++]
 - forms [C++], data access tasks
 ms.assetid: 562122d9-01d8-4284-acf6-ea109ab0408d
-ms.openlocfilehash: 31dbd92219f263c625050524279b97ef38ba9ba1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 098a45c0bff0dfaf1aba83f12dddad9a5f943638
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209131"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319053"
 ---
 # <a name="record-views--mfc-data-access"></a>Visualizzazioni di record (accesso ai dati MFC)
 
@@ -41,13 +42,13 @@ Gli argomenti includono:
 
 - [Scambio di dati per le visualizzazioni di record](../data/data-exchange-for-record-views-mfc-data-access.md)
 
-- [Ruolo dell'utente nell'uso di una visualizzazione di record](../data/your-role-in-working-with-a-record-view-mfc-data-access.md)
+- [Ruolo del programmatore nell'uso di una visualizzazione di record](../data/your-role-in-working-with-a-record-view-mfc-data-access.md)
 
 - [Progettazione e creazione di una visualizzazione di record](../data/designing-and-creating-a-record-view-mfc-data-access.md)
 
 - [Uso di una visualizzazione di record](../data/using-a-record-view-mfc-data-access.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Programmazione dell'accesso ai dati (MFC/ATL)](../data/data-access-programming-mfc-atl.md)<br/>
-[Elenco dei driver ODBC](../data/odbc/odbc-driver-list.md)
+[Elenco di driver ODBC](../data/odbc/odbc-driver-list.md)

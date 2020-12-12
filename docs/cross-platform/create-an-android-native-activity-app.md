@@ -1,13 +1,14 @@
 ---
+description: "Altre informazioni su: creare un'app per Android Native Activity"
 title: Creare un'app NativeActivity di Android
 ms.date: 10/17/2019
 ms.assetid: 884014b1-5208-45ec-b0da-ad0070d2c24d
-ms.openlocfilehash: 664729a920076839f5f9b4440768fe3adb846803
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: d8ccccde40c89553d12fd98645cda2877e581273
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924191"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319326"
 ---
 # <a name="create-an-android-native-activity-app"></a>Creare un'app NativeActivity di Android
 
@@ -23,11 +24,11 @@ In questa esercitazione verrà innanzitutto creato un nuovo progetto Android Nat
 
 ::: moniker range="msvc-150"
 
-1. In Visual Studio scegliere **File** > **Nuovo** > **Progetto** .
+1. In Visual Studio scegliere **File** > **Nuovo** > **Progetto**.
 
-1. Nella finestra di dialogo **Nuovo progetto** , in **Modelli** , scegliere **Visual C++** > **Multipiattaforma** e quindi scegliere il modello **Applicazione NativeActivity (Android)** .
+1. Nella finestra di dialogo **Nuovo progetto**, in **Modelli**, scegliere **Visual C++** > **Multipiattaforma** e quindi scegliere il modello **Applicazione NativeActivity (Android)**.
 
-1. Assegnare all'app un nome come *MyAndroidApp* , quindi scegliere **OK** .
+1. Assegnare all'app un nome come *MyAndroidApp*, quindi scegliere **OK**.
 
    ![Creazione di un progetto NativeActivity](../cross-platform/media/cppmdd-newproject.png "Creazione di un progetto NativeActivity")
 
@@ -39,11 +40,11 @@ In questa esercitazione verrà innanzitutto creato un nuovo progetto Android Nat
 
 ::: moniker range=">=msvc-160"
 
-1. In Visual Studio scegliere **File** > **Nuovo** > **Progetto** .
+1. In Visual Studio scegliere **File** > **Nuovo** > **Progetto**.
 
-1. Nella finestra di dialogo **Crea un nuovo progetto** selezionare il modello **applicazione nativa (Android)** , quindi scegliere **Avanti** .
+1. Nella finestra di dialogo **Crea un nuovo progetto** selezionare il modello **applicazione nativa (Android)** , quindi scegliere **Avanti**.
 
-1. Nella finestra di dialogo **Configura nuovo progetto** immettere un nome, ad esempio *MyAndroidApp* , in **nome progetto** , quindi scegliere **Crea** .
+1. Nella finestra di dialogo **Configura nuovo progetto** immettere un nome, ad esempio *MyAndroidApp* , in **nome progetto**, quindi scegliere **Crea**.
 
    Visual Studio crea la nuova soluzione e apre Esplora soluzioni.
 
@@ -51,9 +52,9 @@ In questa esercitazione verrà innanzitutto creato un nuovo progetto Android Nat
 
 La nuova soluzione per app NativeActivity di Android include due progetti:
 
-- `MyAndroidApp.NativeActivity`, che contiene i riferimenti e il codice glue per l'app da eseguire come NativeActivity in Android. L'implementazione dei punti di ingresso dal codice glue si trova nel file *main.cpp* . Le intestazioni precompilate sono in *pch.h* . Questo progetto di app NativeActivity viene compilato in un file di libreria condivisa con estensione *so* che viene selezionato dal progetto Packaging.
+- `MyAndroidApp.NativeActivity`, che contiene i riferimenti e il codice glue per l'app da eseguire come NativeActivity in Android. L'implementazione dei punti di ingresso dal codice glue si trova nel file *main.cpp*. Le intestazioni precompilate sono in *pch.h*. Questo progetto di app NativeActivity viene compilato in un file di libreria condivisa con estensione *so* che viene selezionato dal progetto Packaging.
 
-- `MyAndroidApp.Packaging`, che crea il file con estensione *apk* per la distribuzione nei dispositivi o negli emulatori Android. Questo progetto contiene le risorse e il file *AndroidManifest.xml* in cui sono state impostate le proprietà del manifesto. Contiene anche il file *build.xml* , che controlla il processo di compilazione Ant. Per impostazione predefinita, è impostato come progetto di avvio in modo che possa essere distribuito ed eseguito direttamente da Visual Studio.
+- `MyAndroidApp.Packaging`, che crea il file con estensione *apk* per la distribuzione nei dispositivi o negli emulatori Android. Questo progetto contiene le risorse e il file *AndroidManifest.xml* in cui sono state impostate le proprietà del manifesto. Contiene anche il file *build.xml*, che controlla il processo di compilazione Ant. Per impostazione predefinita, è impostato come progetto di avvio in modo che possa essere distribuito ed eseguito direttamente da Visual Studio.
 
 ## <a name="build-and-run-the-default-android-native-activity-app"></a>Compilare ed eseguire l'app NativeActivity predefinita per Android
 
@@ -67,7 +68,7 @@ Compilare ed eseguire l'app generata dal modello per verificare l'installazione 
 
      Se l'elenco **Piattaforme soluzione** non è visualizzato, scegliere **Piattaforme soluzione** dall'elenco a discesa **Aggiungi o rimuovi pulsanti** e scegliere la piattaforma.
 
-1. Sulla barra dei menu scegliere **Compila**  >  **Compila soluzione** .
+1. Sulla barra dei menu scegliere **Compila**  >  **Compila soluzione**.
 
      La finestra di output visualizza l'output del processo di compilazione per i due progetti della soluzione.
 
