@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _findclose'
 title: _findclose
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - _findclose function
 - findclose function
 ms.assetid: 9216c573-0878-444c-b5d7-cdaf16fb9163
-ms.openlocfilehash: dffe2ff71f1eecaec78c75867ebb7e34a963ee3a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 389a8aaf55605a1d9e3193c86ce500bf313fd631
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911802"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329194"
 ---
 # <a name="_findclose"></a>_findclose
 
@@ -56,19 +57,19 @@ Handle di ricerca restituito da una chiamata precedente a **_findfirst**.
 
 Se ha esito positivo, **_findclose** restituisce 0. In caso contrario, viene restituito-1 e **errno** viene impostato su **ENOENT**, a indicare che non sono stati trovati altri file corrispondenti.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**_findclose**|\<io.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[System Calls](../../c-runtime-library/system-calls.md) (Chiamate di sistema)<br/>
-[Funzioni di ricerca dei nomi file](../../c-runtime-library/filename-search-functions.md)<br/>
+[Chiamate di sistema](../../c-runtime-library/system-calls.md)<br/>
+[Funzioni di ricerca filename](../../c-runtime-library/filename-search-functions.md)<br/>

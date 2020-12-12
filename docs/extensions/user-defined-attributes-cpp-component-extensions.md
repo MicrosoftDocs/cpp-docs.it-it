@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: attributi User-Defined (C++/CLI e C++/CX)'
 title: Attributi definiti dall'utente (C++/CLI e C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - metadata, extending
 - custom attributes, extending metadata
 ms.assetid: 98b29048-a3ea-4698-8441-f149cdaec9fb
-ms.openlocfilehash: aed36ac7fed7eb1f16f8648f7bcd7efb37f43a75
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2fab2cc1317522b43cd4bddbb56ae174907607d7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171892"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327894"
 ---
 # <a name="user-defined-attributes--ccli-and-ccx"></a>Attributi definiti dall'utente (C++/CLI e C++/CX)
 
@@ -35,7 +36,7 @@ Per altre informazioni, vedere:
 
 - [Destinazioni degli attributi](attribute-targets-cpp-component-extensions.md)
 
-- [Tipi di parametri degli attributi](attribute-parameter-types-cpp-component-extensions.md)
+- [Tipi di parametro di attributo](attribute-parameter-types-cpp-component-extensions.md)
 
 Per informazioni sulla firma degli assembly in Visual C++, vedere [Assembly con nome sicuro (firma degli assembly) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
@@ -43,7 +44,7 @@ Per informazioni sulla firma degli assembly in Visual C++, vedere [Assembly con 
 
 Opzione del compilatore: `/clr`
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 L'esempio seguente mostra come definire un attributo personalizzato.
 
@@ -192,6 +193,6 @@ ref struct A : Attribute {
 ref struct B {};
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Estensioni componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)

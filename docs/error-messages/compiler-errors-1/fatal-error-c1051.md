@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore irreversibile C1051'
 title: Errore irreversibile C1051
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1051
 ms.assetid: 87dcbd3b-0952-499a-bd42-64f9e8de2605
-ms.openlocfilehash: fa897d6e7f4d1d5d6bdd06dba33d0eeb1c238049
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 995286b6b4f0b98f216b5535227f46058309120b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80204503"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330741"
 ---
 # <a name="fatal-error-c1051"></a>Errore irreversibile C1051
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: wcrtomb'
 title: wcrtomb
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 717f1b21-2705-4b7f-b6d0-82adc5224340
-ms.openlocfilehash: 4107ae6cb6366fa8ad80251ce94ee35ca59501bd
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: effa442cee4aa0924fa976ee9138f40b22217375
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910649"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331052"
 ---
 # <a name="wcrtomb"></a>wcrtomb
 
@@ -61,7 +62,7 @@ size_t wcrtomb(
 *mbchar*<br/>
 Carattere multibyte convertito risultante.
 
-*WCHAR*<br/>
+*wchar*<br/>
 Carattere wide da convertire.
 
 *mbstate*<br/>
@@ -71,13 +72,13 @@ Puntatore a un oggetto **mbstate_t** .
 
 Restituisce il numero di byte necessari per rappresentare il carattere multibyte convertito. In caso contrario restituisce -1 se si verifica un errore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **wcrtomb** converte un carattere wide, a partire dallo stato di conversione specificato contenuto in *mbstate*, dal valore contenuto in *WCHAR*, nell'indirizzo rappresentato da *mbchar*. Il valore restituito è il numero di byte necessari per rappresentare il carattere multibyte corrispondente, ma non restituisce più di **MB_CUR_MAX** byte.
 
 Se *mbstate* è null, viene utilizzato l'oggetto **mbstate_t** interno contenente lo stato di conversione di *mbchar* . Se la sequenza di caratteri *WCHAR* non presenta una rappresentazione di caratteri multibyte corrispondente, viene restituito-1 e **errno** viene impostato su **EILSEQ**.
 
-La funzione **wcrtomb** differisce da [wctomb _wctomb_l](wctomb-wctomb-l.md) dalla relativa riavviabilità. Lo stato di conversione viene archiviato in *mbstate* per le chiamate successive alle stesse o ad altre funzioni riavviabili. I risultati non sono definiti quando si usano insieme funzioni riavviabili e non riavviabili. Ad esempio, un'applicazione utilizzerebbe **wcsrlen** anziché **wcsnlen**se veniva utilizzata una chiamata successiva a **wcsrtombs** anziché **wcstombs**.
+La funzione **wcrtomb** differisce da [wctomb _wctomb_l](wctomb-wctomb-l.md) dalla relativa riavviabilità. Lo stato di conversione viene archiviato in *mbstate* per le chiamate successive alle stesse o ad altre funzioni riavviabili. I risultati non sono definiti quando si usano insieme funzioni riavviabili e non riavviabili. Ad esempio, un'applicazione utilizzerebbe **wcsrlen** anziché **wcsnlen** se veniva utilizzata una chiamata successiva a **wcsrtombs** anziché **wcstombs**.
 
 In C++, per questa funzione è disponibile un overload del modello che richiama le relative controparti sicure più recenti. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
@@ -136,9 +137,9 @@ The corresponding wide character "Q" was converted to the "Q" multibyte characte
 |-------------|---------------------|
 |**wcrtomb**|\<wchar.h>|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbsinit](mbsinit.md)<br/>

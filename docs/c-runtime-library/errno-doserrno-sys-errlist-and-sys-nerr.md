@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errno, _doserrno, _sys_errlist e _sys_nerr'
 title: errno, _doserrno, _sys_errlist, and _sys_nerr
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - _sys_nerr global variable
 - sys_nerr global variable
 ms.assetid: adbec641-6d91-4e19-8398-9a34046bd369
-ms.openlocfilehash: 5b10d98dab41151290d4e44e031f659108b0c73c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b15091ebfffec891b09f5024b14a8ca7fe0d02e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944561"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331164"
 ---
 # <a name="errno-_doserrno-_sys_errlist-and-_sys_nerr"></a>errno, _doserrno, _sys_errlist, and _sys_nerr
 
@@ -44,7 +45,7 @@ Macro globali che contengono i codici di errore impostati durante l'esecuzione d
 #define _sys_nerr (*__sys_nerr())
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Entrambe le parole chiave `errno` e `_doserrno` vengono impostate su 0 dal runtime durante l'avvio del programma. `errno` è impostato su un errore in una chiamata a livello di sistema. Poiché `errno` contiene il valore dell'ultima chiamata che l'ha impostata, questo valore può essere modificato dalle chiamate successive. Le chiamate della libreria di runtime che impostano `errno` su un errore non cancellano `errno` in caso di operazione riuscita. Cancellare sempre `errno` chiamando `_set_errno(0)` immediatamente prima di una chiamata che potrebbe impostarla e verificarla immediatamente dopo la chiamata.
 
@@ -56,16 +57,16 @@ Ogni valore `errno` è associato a un messaggio di errore in `_sys_errlist` che 
 |------------------|----------------------------|
 |`_doserrno`|[_get_doserrno](../c-runtime-library/reference/get-doserrno.md), [_set_doserrno](../c-runtime-library/reference/set-doserrno.md)|
 |`errno`|[_get_errno](../c-runtime-library/reference/get-errno.md), [_set_errno](../c-runtime-library/reference/set-errno.md)|
-|`_sys_errlist`, `_sys_nerr`|[strerror_s, _strerror_s, _wcserror_s, \__wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)|
+|`_sys_errlist`, `_sys_nerr`|[strerror_s, _strerror_s, _wcserror_s, \_ _wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)|
 
 Le routine matematiche della libreria impostano `errno` chiamando [_matherr](../c-runtime-library/reference/matherr.md). Per gestire gli errori matematici in modo diverso, scrivere una routine in base alla descrizione di riferimento di `_matherr` e assegnare ad essa il nome `_matherr`.
 
-Tutti i valori `errno` nella tabella di seguito sono costanti predefinite in \<errno.h> e sono compatibili con UNIX. Solo `ERANGE`, `EILSEQ` e `EDOM` sono specificate nello standard ISO C99.
+Tutti `errno` i valori nella tabella seguente sono costanti predefinite in \<errno.h> e sono compatibili con UNIX. Solo `ERANGE`, `EILSEQ` e `EDOM` sono specificate nello standard ISO C99.
 
-|Costante|Messaggio di errore di sistema|Value|
+|Costante|Messaggio di errore di sistema|Valore|
 |--------------|--------------------------|-----------|
 |`EPERM`|Operazione non consentita|1|
-|`ENOENT`|Nessun file o directory di questo tipo|2|
+|`ENOENT`|No such file or directory (Causa: il file o la directory non esiste)|2|
 |`ESRCH`|Nessun processo di questo tipo|3|
 |`EINTR`|Funzione interrotta|4|
 |`EIO`|Errore di I/O|5|
@@ -79,7 +80,7 @@ Tutti i valori `errno` nella tabella di seguito sono costanti predefinite in \<e
 |`EACCES`|Autorizzazione negata|13|
 |`EFAULT`|Indirizzo errato|14|
 |`EBUSY`|Dispositivo o risorsa occupata|16|
-|`EEXIST`|Il file esiste|17|
+|`EEXIST`|File esistente|17|
 |`EXDEV`|Collegamento incrociato dispositivo|18|
 |`ENODEV`|Nessun dispositivo di questo tipo|19|
 |`ENOTDIR`|Non è una directory|20|
@@ -109,18 +110,18 @@ Tutti i valori `errno` nella tabella di seguito sono costanti predefinite in \<e
 
 |Macro globale|Intestazione obbligatoria|Intestazione facoltativa|
 |------------------|---------------------|---------------------|
-|`errno`|\<errno.h> or \<stdlib.h>, \<cerrno> o \<cstdlib> (C++)||
+|`errno`|\<errno.h> o \<stdlib.h> o \<cerrno> \<cstdlib> (C++)||
 |`_doserrno`, `_sys_errlist`, `_sys_nerr`|\<stdlib.h>, \<cstdlib> (C++)|\<errno.h>, \<cerrno> (C++)|
 
-Le macro `_doserrno`, `_sys_errlist` e `_sys_nerr` sono estensioni Microsoft. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../c-runtime-library/compatibility.md).
+Le macro `_doserrno`, `_sys_errlist` e `_sys_nerr` sono estensioni Microsoft. Per altre informazioni sulla compatibilità, vedere [Compatibility](../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Variabili globali](../c-runtime-library/global-variables.md)<br/>
 [Costanti errno](../c-runtime-library/errno-constants.md)<br/>
 [perror, _wperror](../c-runtime-library/reference/perror-wperror.md)<br/>
-[strerror, _strerror, _wcserror, \__wcserror](../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md)<br/>
-[strerror_s, _strerror_s, _wcserror_s, \__wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)<br/>
+[strerror, _strerror, _wcserror, \_ _wcserror](../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md)<br/>
+[strerror_s, _strerror_s, _wcserror_s, \_ _wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)<br/>
 [_get_doserrno](../c-runtime-library/reference/get-doserrno.md)<br/>
 [_set_doserrno](../c-runtime-library/reference/set-doserrno.md)<br/>
 [_get_errno](../c-runtime-library/reference/get-errno.md)<br/>

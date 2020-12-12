@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l'
 title: _strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
 ms.date: 4/2/2020
 api_name:
@@ -67,12 +68,12 @@ helpviewer_keywords:
 - fstrset function
 - _tcsset_l function
 ms.assetid: c42ded42-2ed9-4f06-a0a9-247ba305473a
-ms.openlocfilehash: 99cf969714115effcfd7f8f82b2247556d5dd110
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4f8c3e0d9f6cb9cdb372ad5eac9a0f5d2c6d8cd8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234003"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329166"
 ---
 # <a name="_strset-_strset_l-_wcsset-_wcsset_l-_mbsset-_mbsset_l"></a>_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
 
@@ -128,9 +129,9 @@ Impostazioni locali da usare.
 
 Restituisce un puntatore alla stringa modificata.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **_strset** imposta tutti i caratteri, ad eccezione del carattere null di terminazione, da *Str* a *c*, convertiti in **`char`** . **_wcsset** e **_mbsset_l** sono versioni a caratteri wide e a caratteri multibyte di **_strset**e i tipi di dati degli argomenti e dei valori restituiti variano di conseguenza. A parte ciò, queste funzioni si comportano in modo identico.
+La funzione **_strset** imposta tutti i caratteri, ad eccezione del carattere null di terminazione, da *Str* a *c*, convertiti in **`char`** . **_wcsset** e **_mbsset_l** sono versioni a caratteri wide e a caratteri multibyte di **_strset** e i tipi di dati degli argomenti e dei valori restituiti variano di conseguenza. A parte ciò, queste funzioni si comportano in modo identico.
 
 **_mbsset** convalida i relativi parametri. Se *Str* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **_mbsset** restituisce **null** e imposta **errno** su **EINVAL**. **_strset** e **_wcsset** non convalidano i relativi parametri.
 
@@ -188,7 +189,7 @@ After:  *******************************
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Impostazioni locali](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
 [memset, wmemset](memset-wmemset.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>

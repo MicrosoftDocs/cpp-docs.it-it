@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: facoltativo (C++)'
 title: facoltativo (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - optional attribute
 ms.assetid: 86656a66-8e11-4589-8e30-9b0f34eeed03
-ms.openlocfilehash: 31e2dbac988cdbac8aca2d01a70177825d764a5b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 70ae49854a496aad35edc87bdd1ac5facb899448
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842169"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329726"
 ---
 # <a name="optional-c"></a>optional (C++)
 
@@ -55,7 +56,7 @@ __interface IFireTabCtrl : IDispatch
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi del parametro](parameter-attributes.md)

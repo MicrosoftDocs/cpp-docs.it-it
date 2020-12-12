@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: costanti di autorizzazione file'
 title: Costanti di autorizzazione file
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - _S_IWRITE constant
 - _S_IREAD constant
 ms.assetid: 593cad33-31d1-44d2-8941-8af7d210c88c
-ms.openlocfilehash: 9f6126b867e29ca37468c6ff383224a483639c78
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a220ec404202b1f962a4c0bf51d20b7eea2720ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443283"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331076"
 ---
 # <a name="file-permission-constants"></a>Costanti di autorizzazione file
 
@@ -44,10 +45,10 @@ Una volta utilizzato come argomento `pmode` per `_umask`, la costante manifesto 
 |`_S_IWRITE`|Lettura non consentita (file di sola scrittura)|
 |`_S_IREAD` &#124; `_S_IWRITE`|Lettura e scrittura non consentite|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [_open, _wopen](../c-runtime-library/reference/open-wopen.md)<br/>
 [_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>
 [_umask](../c-runtime-library/reference/umask.md)<br/>
 [Tipi standard](../c-runtime-library/standard-types.md)<br/>
-[Global Constants](../c-runtime-library/global-constants.md) (Costanti globali)
+[Costanti globali](../c-runtime-library/global-constants.md)

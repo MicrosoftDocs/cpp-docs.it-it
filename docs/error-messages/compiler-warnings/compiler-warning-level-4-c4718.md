@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 4) C4718'
 title: Avviso del compilatore (livello 4) C4718
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4718
 ms.assetid: 29507f8a-b024-42c1-a3b8-f35d1f2641f3
-ms.openlocfilehash: 48452ed53b93d7cd89daadd3f7ab3a69b453e1a1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9c0a24bbec0ae0cf902d905cc2dcecc492efc44b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198159"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330543"
 ---
 # <a name="compiler-warning-level-4-c4718"></a>Avviso del compilatore (livello 4) C4718
 

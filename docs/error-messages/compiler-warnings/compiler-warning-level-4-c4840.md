@@ -1,22 +1,23 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 4) C4840'
 title: Avviso del compilatore (livello 4) C4840
 ms.date: 09/13/2018
 f1_keywords:
 - C4840
 helpviewer_keywords:
 - C4840
-ms.openlocfilehash: 649083d66d0c7a0ef11c742e56cbfb70e2e9b75f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a365dc38aff1ab9811407924f7f6e554d91c6f1e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185204"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330472"
 ---
 # <a name="compiler-warning-level-4-c4840"></a>Avviso del compilatore (livello 4) C4840
 
 > uso non portabile della classe '*Type*' come argomento di una funzione Variadic
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le classi o gli struct passati a una funzione Variadic devono essere facilmente copiabili. Quando si passano tali oggetti il compilatore si limita a creare una copia bit per bit e non chiama il costruttore o distruttore.
 
@@ -49,7 +50,7 @@ int main()
 }
 ```
 
-Per le stringhe compilate e gestite con `CStringW`, è consigliabile usare il `operator LPCWSTR()` fornito per eseguire il cast di un oggetto `CStringW` al puntatore di stringa di tipo C previsto dalla stringa di formato:
+Per le stringhe compilate e gestite mediante `CStringW` , `operator LPCWSTR()` è necessario utilizzare l'oggetto fornito per eseguire il cast di un `CStringW` oggetto al puntatore di stringa di tipo C previsto dalla stringa di formato:
 
 ```cpp
     CStringW str1;

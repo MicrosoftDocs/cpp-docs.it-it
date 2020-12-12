@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Atollo, _atoll_l, _wtoll, _wtoll_l'
 title: atoll, _atoll_l, _wtoll, _wtoll_l
 ms.date: 4/2/2020
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: f18fb618909b2dfd4bcd1b4d759fe7a895724896
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d9476588e937dba3b6452d1c51a1ada518ff0459
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218715"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331020"
 ---
 # <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 
@@ -83,11 +84,11 @@ Impostazioni locali da usare.
 
 Ogni funzione restituisce il **`long long`** valore che viene prodotto interpretando i caratteri di input come numero. Il valore restituito per **Atoll** è 0 se l'input non può essere convertito in un valore di tale tipo.
 
-Per l'overflow con valori integrali positivi di grandi dimensioni, **Atoll** restituisce **LLONG_MAX**e per l'overflow con valori integrali negativi di grandi dimensioni restituisce **LLONG_MIN**.
+Per l'overflow con valori integrali positivi di grandi dimensioni, **Atoll** restituisce **LLONG_MAX** e per l'overflow con valori integrali negativi di grandi dimensioni restituisce **LLONG_MIN**.
 
 In tutti i casi fuori intervallo, **errno** viene impostato su **ERANGE**. Se il parametro passato è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono 0.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Queste funzioni convertono una stringa di caratteri in un **`long long`** valore integer.
 
@@ -170,7 +171,7 @@ Function: atoll("3336402735171707160320") = 9223372036854775807
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
 [Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>

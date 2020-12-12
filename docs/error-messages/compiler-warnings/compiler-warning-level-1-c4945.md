@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 1) C4945'
 title: Avviso del compilatore (livello 1) C4945
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4945
 ms.assetid: 6d2079ea-dc59-4611-bc68-9a22c06f7587
-ms.openlocfilehash: 15a78877dbe70a7f95674092984546219e6a1c78
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: df05b0882b672f22428e9ddef0b195043cca7d2e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80199125"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327988"
 ---
 # <a name="compiler-warning-level-1-c4945"></a>Avviso del compilatore (livello 1) C4945
 

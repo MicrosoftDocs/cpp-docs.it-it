@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura: creare una raccolta di Type-Safe'
 title: 'Procedura: creazione di una raccolta indipendente dai tipi'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: 7e6b0a4181607feaf6e92f5d92d95cb055761aa4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6c4e474979a6ea5e17a771e2340df71782a59bab
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228622"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330182"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Procedura: creazione di una raccolta indipendente dai tipi
 
@@ -29,7 +30,7 @@ Questo articolo illustra come creare raccolte indipendenti dai tipi per i tipi d
 
 Il libreria Microsoft Foundation Class fornisce raccolte predefinite indipendenti dai tipi basate sui modelli C++. Poiché si tratta di modelli, queste classi consentono di garantire l'indipendenza dai tipi e la semplicità di utilizzo senza il cast dei tipi e altre operazioni aggiuntive necessarie per l'utilizzo di una classe non modello a questo scopo. Nell'esempio MFC [Collect](../overview/visual-cpp-samples.md) viene illustrato l'utilizzo delle classi Collection basate su modello in un'applicazione MFC. In generale, usare queste classi ogni volta che si scrive il codice di nuove raccolte.
 
-## <a name="using-template-based-classes-for-type-safety"></a><a name="_core_using_template.2d.based_classes_for_type_safety"></a>Utilizzo di classi basate su modello per l'indipendenza dai tipi
+## <a name="using-template-based-classes-for-type-safety"></a><a name="_core_using_template.2d.based_classes_for_type_safety"></a> Utilizzo di classi Template-Based per l'indipendenza dai tipi
 
 #### <a name="to-use-template-based-classes"></a>Per usare classi basate su modello
 
@@ -45,11 +46,11 @@ Il libreria Microsoft Foundation Class fornisce raccolte predefinite indipendent
 
 In questo esempio viene illustrata la dichiarazione di un elenco di numeri interi. Il primo parametro nel passaggio 1 è il tipo di dati archiviati come elementi dell'elenco. Il secondo parametro specifica il modo in cui i dati devono essere passati e restituiti dalle funzioni membro della classe Collection, ad esempio `Add` e `GetAt` .
 
-## <a name="implementing-helper-functions"></a><a name="_core_implementing_helper_functions"></a>Implementazione di funzioni helper
+## <a name="implementing-helper-functions"></a><a name="_core_implementing_helper_functions"></a> Implementazione di funzioni helper
 
 Le classi di raccolta basate su modello `CArray` , `CList` e `CMap` usano cinque funzioni helper globali che è possibile personalizzare in base alle esigenze per la classe della raccolta derivata. Per informazioni su queste funzioni helper, vedere la pagina relativa agli [helper della classe Collection](reference/collection-class-helpers.md) in *riferimenti a MFC*. L'implementazione della funzione di serializzazione è necessaria per la maggior parte degli utilizzi delle classi di raccolta basate su modello.
 
-### <a name="serializing-elements"></a><a name="_core_serializing_elements"></a>Serializzazione di elementi
+### <a name="serializing-elements"></a><a name="_core_serializing_elements"></a> Serializzazione di elementi
 
 Le `CArray` `CList` classi, e `CMap` chiamano `SerializeElements` per archiviare o leggere gli elementi della raccolta da un archivio.
 
@@ -61,7 +62,7 @@ Se la raccolta Archivia oggetti derivati da `CObject` e si usa la `IMPLEMENT_SER
 
 Gli operatori di inserimento di overload per la `CArchive` chiamata `CObject::Serialize` (o un override della funzione) per ogni `CPerson` oggetto.
 
-## <a name="using-nontemplate-collection-classes"></a><a name="_core_using_nontemplate_collection_classes"></a>Utilizzo di classi Collection non basate su modelli
+## <a name="using-nontemplate-collection-classes"></a><a name="_core_using_nontemplate_collection_classes"></a> Utilizzo di classi Collection non basate su modelli
 
 MFC supporta inoltre le classi di raccolta introdotte con MFC versione 1,0. Queste classi non sono basate su modelli. Possono essere utilizzati per contenere i dati dei tipi supportati `CObject*` ,, `UINT` `DWORD` e `CString` . È possibile utilizzare queste raccolte predefinite, ad esempio, `CObList` per conservare raccolte di tutti gli oggetti derivati da `CObject` . MFC fornisce anche altre raccolte predefinite per mantenere i tipi primitivi, ad esempio `UINT` e i puntatori void ( **`void*`** ). In generale, tuttavia, è spesso utile definire raccolte indipendenti dai tipi per mantenere gli oggetti di una classe più specifica e i relativi derivati. Si noti che questa operazione con le classi di raccolta non basate su modelli è più lavoro rispetto all'uso delle classi basate su modello.
 
@@ -97,6 +98,6 @@ Esistono due modi per creare raccolte indipendenti dai tipi con le raccolte non 
 
    È anche possibile aggiungere nuove funzionalità definendo nuove funzioni che estendono le funzionalità della raccolta anziché semplicemente racchiudere le funzionalità esistenti nei wrapper indipendenti dai tipi. L'articolo [eliminazione di tutti gli oggetti in una raccolta CObject](deleting-all-objects-in-a-cobject-collection.md) , ad esempio, descrive una funzione per l'eliminazione di tutti gli oggetti contenuti in un elenco. Questa funzione può essere aggiunta alla classe derivata come funzione membro.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [raccolte](collections.md)

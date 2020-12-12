@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 1) C4964'
 title: Avviso del compilatore (livello 1) C4964
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4964
 ms.assetid: b89c9274-8a92-4b7c-aa30-3fbb1b68ac73
-ms.openlocfilehash: 7852340bc056e126238a2d9c7493887ef3caf93e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 102c04332bd40f6f1ae95cbd025c7400fc77dbf4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80174492"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327923"
 ---
 # <a name="compiler-warning-level-1-c4964"></a>Avviso del compilatore (livello 1) C4964
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: switch_is'
 title: switch_is (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-ms.openlocfilehash: b017ba6dd2bbdfab7bfb5fa2dbf19e613e14772b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 88489a9722e79da6629dfc2b39bfbe7f6ab39932
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840539"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329572"
 ---
 # <a name="switch_is"></a>switch_is
 
@@ -42,7 +43,7 @@ Vedere l'esempio di [caso](case-cpp.md) per un uso di esempio di **switch_is**.
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)<br/>

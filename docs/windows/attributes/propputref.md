@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: propputref'
 title: propputref (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - propputref attribute
 ms.assetid: 9b0aed74-fdc7-4e59-9117-949bea4f86dd
-ms.openlocfilehash: dbb5d5966fc82f69be0ed7d2fa0a66ad558a7915
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5f09d742ef0df75df03e4f4d740181cfcaaa8f2d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839907"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329676"
 ---
 # <a name="propputref"></a>propputref
 
@@ -42,7 +43,7 @@ Vedere l'esempio per [associabile](bindable.md) per un esempio di uso di **propp
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di metodo](method-attributes.md)<br/>

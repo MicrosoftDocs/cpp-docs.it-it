@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _mkdir, _wmkdir'
 title: _mkdir, _wmkdir
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-ms.openlocfilehash: f4714e3e763b827772a7d2eb61ae2e14f0aece02
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 75be13432a5ba0cdc2aa47d2c0e8cbb35e8f982e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919153"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330977"
 ---
 # <a name="_mkdir-_wmkdir"></a>_mkdir, _wmkdir
 
@@ -77,7 +78,7 @@ Ognuna di queste funzioni restituisce il valore 0 se la nuova directory è stata
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_mkdir** crea una nuova directory con il *dirname specificato.* **_mkdir** possibile creare solo una nuova directory per chiamata, quindi solo l'ultimo componente di *dirname* può denominare una nuova directory. **_mkdir** non converte i delimitatori di percorso. In Windows NT, sia la barra rovesciata (\\) che la barra (/) sono delimitatori validi di percorso nelle stringhe di caratteri delle routine di runtime.
 
@@ -145,8 +146,8 @@ Directory of C:\testtmp
 Directory '\testtmp' was successfully removed
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Controllo delle directory](../../c-runtime-library/directory-control.md)<br/>
+[Controllo Directory](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>
 [_rmdir, _wrmdir](rmdir-wrmdir.md)<br/>

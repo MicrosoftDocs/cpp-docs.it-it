@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: non esplorabili'
 title: nonbrowsable (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - nonbrowsable attribute
 ms.assetid: e71a98e7-4b65-454a-9829-342b9f2a84be
-ms.openlocfilehash: 561622cc30573ace606eccb6aa7b5f2dfd188dfe
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 943458ff989a3f00d2ce33a4f5681a8bd29a76ca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836104"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329768"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 
@@ -54,7 +55,7 @@ __interface IMyI
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di metodo](method-attributes.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura: creare una finestra di dialogo (C++)'
 title: 'Procedura: creare una finestra di dialogo (C++)'
 ms.date: 02/15/2019
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: 0d5e4836933f1ce32f28c7fd03c81be5b7d09fd9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8c02d0d85d20b51c867b3f3ba0e5f945595ed130
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222082"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329483"
 ---
 # <a name="how-to-create-a-dialog-box-c"></a>Procedura: creare una finestra di dialogo (C++)
 
@@ -100,7 +101,7 @@ Durante la verifica di una finestra di dialogo, la posizione in cui quest'ultima
 
 Win32
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Editor finestre](../windows/dialog-editor.md)<br/>
 [Procedura: gestire i controlli della finestra di dialogo](../windows/controls-in-dialog-boxes.md)<br/>

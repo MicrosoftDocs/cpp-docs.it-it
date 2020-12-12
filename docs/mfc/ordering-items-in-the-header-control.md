@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: ordinamento degli elementi nel controllo Header'
 title: Ordinamento degli elementi nel controllo Header
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - SetOrderArray method [MFC]
 - header controls [MFC], ordering items
 ms.assetid: 5aaef872-75b5-49c5-8fed-6f9a81fca812
-ms.openlocfilehash: c4b4711729c6c3a4b63d4ad05252a5c49df98a0c
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 6f6db7b134121c4084d9406ad537bf0ce5dc12cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622131"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330115"
 ---
 # <a name="ordering-items-in-the-header-control"></a>Ordinamento degli elementi nel controllo Header
 
@@ -33,6 +34,6 @@ Una volta [aggiunti elementi a un controllo intestazione](adding-items-to-the-he
 
 Oltre alle funzioni membro precedenti, lo stile HDS_DRAGDROP consente all'utente di trascinare e rilasciare elementi di intestazione all'interno del controllo intestazione. Per altre informazioni, vedere [supporto del trascinamento della selezione per gli elementi di intestazione](providing-drag-and-drop-support-for-header-items.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso di CHeaderCtrl](using-cheaderctrl.md)
+[Utilizzo di CHeaderCtrl](using-cheaderctrl.md)

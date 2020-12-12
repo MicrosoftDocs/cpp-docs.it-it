@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 4) C4754'
 title: Avviso del compilatore (livello 4) C4754
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-ms.openlocfilehash: 85c99feee72d94f50ec19394cf8aec7a3c9811bc
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: b997f81a7d922837ff3f1ea2e5d015e5267428dc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684980"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330526"
 ---
 # <a name="compiler-warning-level-4-c4754"></a>Avviso del compilatore (livello 4) C4754
 
@@ -21,7 +22,7 @@ Dal momento che il risultato del confronto è sempre lo stesso viene generato l'
 
 Le regole di conversione degli Integer sono complesse ed esistono molte insidie sottili. In alternativa alla correzione di ogni avviso C4754, è possibile aggiornare il codice per usare la [libreria SafeInt](../../safeint/safeint-library.md).
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Questo esempio genera C4754:
 

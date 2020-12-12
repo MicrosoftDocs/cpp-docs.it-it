@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe combinable'
 title: Classe combinable
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-ms.openlocfilehash: d445b8ac1d2a8487e9e1ec4f21f63cf5ef071e91
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 117441be8ff7a54543adb419a1cb908d2eb9bec7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224968"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331330"
 ---
 # <a name="combinable-class"></a>Classe combinable
 
@@ -39,14 +40,14 @@ Tipo di dati del risultato Unito finale. Il tipo deve avere un costruttore di co
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[combinabile](#ctor)|Di overload. Costruisce un oggetto `combinable` nuovo.|
 |[~ distruttore combinabile](#dtor)|Elimina un oggetto `combinable` .|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[deselezionare](#clear)|Cancella tutti i risultati di calcolo intermedi da un utilizzo precedente.|
 |[combinare](#combine)|Calcola un valore finale dal set di sottocalcoli locali del thread chiamando il functor combinato fornito.|
@@ -55,11 +56,11 @@ Tipo di dati del risultato Unito finale. Il tipo deve avere un costruttore di co
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[operatore =](#operator_eq)|Assegna a un `combinable` oggetto da un altro `combinable` oggetto.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per altre informazioni, vedere [contenitori e oggetti paralleli](../../../parallel/concrt/parallel-containers-and-objects.md).
 
@@ -73,7 +74,7 @@ Per altre informazioni, vedere [contenitori e oggetti paralleli](../../../parall
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="clear"></a><a name="clear"></a>deselezionare
+## <a name="clear"></a><a name="clear"></a> deselezionare
 
 Cancella tutti i risultati di calcolo intermedi da un utilizzo precedente.
 
@@ -81,7 +82,7 @@ Cancella tutti i risultati di calcolo intermedi da un utilizzo precedente.
 void clear();
 ```
 
-## <a name="combinable"></a><a name="ctor"></a>combinable
+## <a name="combinable"></a><a name="ctor"></a> combinable
 
 Costruisce un oggetto `combinable` nuovo.
 
@@ -105,7 +106,7 @@ Funzione che verrà chiamata per inizializzare ciascun nuovo valore thread-priva
 *_Copy*<br/>
 Oggetto esistente `combinable` da copiare in questo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo costruttore inizializza nuovi elementi con il costruttore predefinito per il tipo `T` .
 
@@ -113,7 +114,7 @@ Il secondo costruttore inizializza nuovi elementi utilizzando il functor di iniz
 
 Il terzo costruttore è il costruttore di copia.
 
-## <a name="combinable"></a><a name="dtor"></a>~ combinable
+## <a name="combinable"></a><a name="dtor"></a> ~ combinable
 
 Elimina un oggetto `combinable` .
 
@@ -121,7 +122,7 @@ Elimina un oggetto `combinable` .
 ~combinable();
 ```
 
-## <a name="combine"></a><a name="combine"></a>combinare
+## <a name="combine"></a><a name="combine"></a> combinare
 
 Calcola un valore finale dal set di sottocalcoli locali del thread chiamando il functor combinato fornito.
 
@@ -142,7 +143,7 @@ Functor usato per combinare i sottocalcoli. La firma è `T (T, T)` o `T (const T
 
 Risultato finale della combinazione di tutti i calcoli secondari thread-privati.
 
-## <a name="combine_each"></a><a name="combine_each"></a>combine_each
+## <a name="combine_each"></a><a name="combine_each"></a> combine_each
 
 Calcola un valore finale dal set di sottocalcoli locali del thread chiamando il functor di combinazione fornito una volta per ogni sottocalcolo locale del thread. Il risultato finale viene accumulato dall'oggetto funzione.
 
@@ -159,7 +160,7 @@ Tipo dell'oggetto funzione che verrà richiamato per combinare un sottocalcolo l
 *_FnCombine*<br/>
 Il functor usato per combinare un calcolo secondario. La firma è `void (T)` o `void (const T&)` e deve essere associativa e commutativa.
 
-## <a name="local"></a><a name="local"></a>locale
+## <a name="local"></a><a name="local"></a> locale
 
 Restituisce un riferimento al sottocalcolo thread-privato.
 
@@ -178,7 +179,7 @@ Riferimento a un valore booleano. Il valore booleano a cui fa riferimento questo
 
 Riferimento al sottocalcolo thread-privato.
 
-## <a name="operator"></a><a name="operator_eq"></a>operatore =
+## <a name="operator"></a><a name="operator_eq"></a> operatore =
 
 Assegna a un `combinable` oggetto da un altro `combinable` oggetto.
 
@@ -195,6 +196,6 @@ Oggetto esistente `combinable` da copiare in questo.
 
 Riferimento a questo `combinable` oggetto.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Concurrency](concurrency-namespace.md)

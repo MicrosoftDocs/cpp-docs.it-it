@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: derivazione di controlli da un controllo standard'
 title: Derivazione di controlli da un controllo standard
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Windows common controls [MFC], deriving from
 - standard controls
 ms.assetid: a6f84315-7007-4e0e-8576-78be81254802
-ms.openlocfilehash: 54e43c8445bb6b8db4c6a7a4b28890e81be52d6c
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 80e63464a7ad6d869582c66d5047a255e303a6a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616962"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327877"
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>Derivazione di controlli da un controllo standard
 
@@ -36,13 +37,13 @@ L'utilizzo di un controllo derivato in una finestra di dialogo richiede un lavor
 
 1. Eseguire l'override della `OnInitDialog` funzione membro nella classe della finestra di dialogo per chiamare la `SubclassDlgItem` funzione membro per il controllo derivato.
 
-`SubclassDlgItem`"sottoclassi dinamiche" un controllo creato da un modello di finestra di dialogo. Quando un controllo viene sottoclassato dinamicamente, si esegue l'hook in Windows, si elaborano alcuni messaggi all'interno dell'applicazione, quindi si passano i messaggi rimanenti a Windows. Per ulteriori informazioni, vedere la funzione membro [SubclassDlgItem](reference/cwnd-class.md#subclassdlgitem) della classe `CWnd` nelle informazioni di *riferimento su MFC*. Nell'esempio seguente viene illustrato come è possibile scrivere un override di `OnInitDialog` per chiamare `SubclassDlgItem` :
+`SubclassDlgItem` "sottoclassi dinamiche" un controllo creato da un modello di finestra di dialogo. Quando un controllo viene sottoclassato dinamicamente, si esegue l'hook in Windows, si elaborano alcuni messaggi all'interno dell'applicazione, quindi si passano i messaggi rimanenti a Windows. Per ulteriori informazioni, vedere la funzione membro [SubclassDlgItem](reference/cwnd-class.md#subclassdlgitem) della classe `CWnd` nelle informazioni di *riferimento su MFC*. Nell'esempio seguente viene illustrato come è possibile scrivere un override di `OnInitDialog` per chiamare `SubclassDlgItem` :
 
 [!code-cpp[NVC_MFCControlLadenDialog#3](codesnippet/cpp/deriving-controls-from-a-standard-control_1.cpp)]
 
 Poiché il controllo derivato è incorporato nella classe della finestra di dialogo, verrà creato quando la finestra di dialogo viene costruita e verrà distrutta quando la finestra di dialogo viene distrutta. Confrontare questo codice con l'esempio nell' [aggiunta manuale di controlli](adding-controls-by-hand.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Creazione e utilizzo di controlli](making-and-using-controls.md)<br/>
 [Controlli](controls-mfc.md)

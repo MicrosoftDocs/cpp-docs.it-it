@@ -1,19 +1,20 @@
 ---
-title: Errore irreversibile U1064 di NMAKE
+description: 'Altre informazioni su: errore irreversibile U1064 di NMAKE'
+title: 'Errore irreversibile U1064 di NMAKE '
 ms.date: 11/04/2016
 f1_keywords:
 - U1064
 helpviewer_keywords:
 - U1064
 ms.assetid: 7141e66e-cde6-4173-84df-a391f3ebcdd1
-ms.openlocfilehash: bfc42c458c1932287f17f367d09c4b23c2c201a4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 881c93eca4efad064dff633bbde34dc88e71345e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182825"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330361"
 ---
-# <a name="nmake-fatal-error-u1064"></a>Errore irreversibile U1064 di NMAKE
+# <a name="nmake-fatal-error-u1064"></a>Errore irreversibile U1064 di NMAKE 
 
 MAKEFILE non trovato e nessuna destinazione specificata
 

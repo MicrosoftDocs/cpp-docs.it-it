@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: out_of_memory Class'
 title: out_of_memory (classe)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - out_of_memory class
 ms.assetid: 3aa7e682-8f13-4ae6-9188-31fb423956e4
-ms.openlocfilehash: e716d4952bdb9634cc0d195285d3a65c5c06b0a1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bb7ba1db5be5921111b1fba2e12ea5cf6a5bea1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81336809"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329918"
 ---
 # <a name="out_of_memory-class"></a>out_of_memory (classe)
 
-Eccezione generata quando un metodo non riesce a causa della mancanza di memoria del sistema o del dispositivo.
+Eccezione generata quando un metodo ha esito negativo a causa della mancanza di memoria del sistema o del dispositivo.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,13 +26,13 @@ Eccezione generata quando un metodo non riesce a causa della mancanza di memoria
 class out_of_memory : public runtime_exception;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[Out_of_memory Costruttore](#ctor)|Inizializza una nuova istanza della classe `out_of_memory`.|
+|[Costruttore out_of_memory](#ctor)|Inizializza una nuova istanza della classe `out_of_memory`.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -43,11 +44,11 @@ class out_of_memory : public runtime_exception;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** amprt.h
+**Intestazione:** amprt. h
 
 **Spazio dei nomi:** Concorrenza
 
-## <a name="out_of_memory"></a><a name="ctor"></a>out_of_memory
+## <a name="out_of_memory"></a><a name="ctor"></a> out_of_memory
 
 Inizializza una nuova istanza della classe.
 
@@ -69,6 +70,6 @@ Descrizione dell'errore.
 
 Nuova istanza della classe `out_of_memory`.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi Concurrency (AMP)](concurrency-namespace-cpp-amp.md)
+[Spazio dei nomi Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

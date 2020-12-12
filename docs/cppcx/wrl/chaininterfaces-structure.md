@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: struttura ChainInterfaces'
 title: ChainInterfaces (struttura)
 ms.date: 10/03/2018
 ms.topic: reference
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ChainInterfaces::IidCount constant
 - Microsoft::WRL::ChainInterfaces::Verify method
 ms.assetid: d7415b59-5468-4bef-a3fd-8d82b12f0e9c
-ms.openlocfilehash: 48b663f2042ff0095466d83fe872ef6196112f76
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cc943b16d587a3b542e49d72e6bdc24ba2546e16
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211541"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328876"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces (struttura)
 
@@ -113,7 +114,7 @@ Valore booleano che **`true`** , se, significa che non è possibile usare una st
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-Nome                                                   | Descrizione
+Nome                                                   | Description
 ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 [ChainInterfaces:: CanCastTo](#cancastto)               | Indica se è possibile eseguire il cast dell'ID di interfaccia specificato a ognuna delle specializzazioni definite dai `ChainInterface` parametri del modello.
 [ChainInterfaces:: CastToUnknown](#casttounknown)       | Esegue il cast del puntatore a interfaccia del tipo definito dal parametro di modello *I0* a un puntatore a `IUnknown` .
@@ -122,7 +123,7 @@ Nome                                                   | Descrizione
 
 ### <a name="protected-constants"></a>Costanti protette
 
-Nome                                   | Descrizione
+Nome                                   | Description
 -------------------------------------- | -----------------------------------------------------------------------------------------------------------------
 [ChainInterfaces:: IidCount](#iidcount) | Numero totale di ID di interfaccia contenuti nelle interfacce specificate dai parametri del modello *I0* tramite *i9*.
 
@@ -138,7 +139,7 @@ Nome                                   | Descrizione
 
 **Spazio dei nomi:** Microsoft::WRL
 
-## <a name="chaininterfacescancastto"></a><a name="cancastto"></a>ChainInterfaces:: CanCastTo
+## <a name="chaininterfacescancastto"></a><a name="cancastto"></a> ChainInterfaces:: CanCastTo
 
 Indica se è possibile eseguire il cast dell'ID di interfaccia specificato a ognuna delle specializzazioni definite dai parametri di modello non predefiniti.
 
@@ -161,7 +162,7 @@ Puntatore all'ultimo ID di interfaccia di cui è stato eseguito il cast.
 
 **`true`** Se tutte le operazioni cast sono state completate correttamente; in caso contrario, **`false`** .
 
-## <a name="chaininterfacescasttounknown"></a><a name="casttounknown"></a>ChainInterfaces:: CastToUnknown
+## <a name="chaininterfacescasttounknown"></a><a name="casttounknown"></a> ChainInterfaces:: CastToUnknown
 
 Esegue il cast del puntatore a interfaccia del tipo definito dal parametro di modello *I0* a un puntatore a `IUnknown` .
 
@@ -173,7 +174,7 @@ __forceinline IUnknown* CastToUnknown();
 
 Puntatore a `IUnknown`.
 
-## <a name="chaininterfacesfillarraywithiid"></a><a name="fillarraywithiid"></a>ChainInterfaces:: FillArrayWithIid
+## <a name="chaininterfacesfillarraywithiid"></a><a name="fillarraywithiid"></a> ChainInterfaces:: FillArrayWithIid
 
 Archivia l'ID di interfaccia definito dal parametro di modello *I0* in una posizione specificata in una matrice specificata di ID di interfaccia.
 
@@ -186,13 +187,13 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parametri
 
-*Indice*<br/>
+*index*<br/>
 Puntatore a un valore di indice nella matrice *IID* .
 
 *IID*<br/>
 Matrice di ID di interfaccia.
 
-## <a name="chaininterfacesiidcount"></a><a name="iidcount"></a>ChainInterfaces:: IidCount
+## <a name="chaininterfacesiidcount"></a><a name="iidcount"></a> ChainInterfaces:: IidCount
 
 Numero totale di ID di interfaccia contenuti nelle interfacce specificate dai parametri del modello *I0* tramite *i9*.
 
@@ -204,11 +205,11 @@ static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + D
 
 Numero totale di ID di interfaccia.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I parametri di modello *I0* e *I1* sono obbligatori e i parametri *I2* tramite *i9* sono facoltativi. Il numero di IID di ogni interfaccia è in genere pari a 1.
 
-## <a name="chaininterfacesverify"></a><a name="verify"></a>ChainInterfaces:: Verify
+## <a name="chaininterfacesverify"></a><a name="verify"></a> ChainInterfaces:: Verify
 
 Verifica che ogni interfaccia definita dai parametri del modello *I0* tramite *i9* erediti da `IUnknown` e/o `IInspectable` e che *I0* erediti da *I1* a *i9*.
 
@@ -216,7 +217,7 @@ Verifica che ogni interfaccia definita dai parametri del modello *I0* tramite *i
 WRL_NOTHROW __forceinline static void Verify();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se l'operazione di verifica ha esito negativo, un oggetto **`static_assert`** genera un messaggio di errore che descrive l'errore.
 

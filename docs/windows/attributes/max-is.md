@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: max_is'
 title: max_is (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: 409211bc59d9df8a82a9f452efeff6b6db0fde39
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 305acba3a2831448cf677eb16810c567b3561b3b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837112"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329804"
 ---
 # <a name="max_is"></a>max_is
 
@@ -28,7 +29,7 @@ Definisce il valore massimo per un indice di matrice valido.
 *expression*<br/>
 Una o più espressioni del linguaggio C. Sono consentiti slot di argomento vuoti.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'attributo **max_is** C++ ha la stessa funzionalità dell'attributo [max_is](/windows/win32/Midl/max-is) MIDL.
 
@@ -47,7 +48,7 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 
 Vedere [first_is](first-is.md) per un esempio di come specificare una sezione di una matrice.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)<br/>

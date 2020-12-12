@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Classe CDataConnection'
 title: Classe CDataConnection
 ms.date: 03/27/2019
 f1_keywords:
@@ -61,12 +62,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: c456f4bf5891f550fcd9523fa376333d66e079a6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 7cdcb681c40d1ef4e93baee5dc4e4395e6ea9c5e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509101"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328813"
 ---
 # <a name="cdataconnection-class"></a>Classe CDataConnection
 
@@ -86,7 +87,7 @@ class CDataConnection
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[CDataConnection](#cdataconnection)|Costruttore. Crea un'istanza e Inizializza un `CDataConnection` oggetto.|
 |[Copia](#copy)|Crea una copia di una connessione dati esistente.|
@@ -95,7 +96,7 @@ class CDataConnection
 
 ### <a name="operators"></a>Operatori
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[operatore BOOL](#op_bool)|Determina se la sessione corrente è aperta o meno.|
 |[operatore bool](#op_bool_ole)|Determina se la sessione corrente è aperta o meno.|
@@ -104,7 +105,7 @@ class CDataConnection
 |[operatore CSession&](#op_csession_amp)|Restituisce un riferimento all'oggetto contenuto `CSession` .|
 |[operatore CSession*](#op_csession_star)|Restituisce un puntatore all'oggetto `CSession` contenuto.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 `CDataConnection` è una classe utile per la creazione di client perché incapsula gli oggetti necessari (origine dati e sessione) e alcune delle operazioni che è necessario eseguire quando ci si connette a un'origine dati
 
@@ -131,7 +132,7 @@ CDataConnection(const CDataConnection &ds);
 *DS*<br/>
 in Riferimento a una connessione dati esistente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo override crea un nuovo `CDataConnection` oggetto con le impostazioni predefinite.
 
@@ -186,7 +187,7 @@ HRESULT OpenNewSession(CSession & session) throw();
 *sessione*<br/>
 [in/out] Riferimento al nuovo oggetto sessione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La nuova sessione utilizza l'oggetto origine dati contenuto dell'oggetto connessione corrente come padre e può accedere a tutte le stesse informazioni dell'origine dati.
 
@@ -300,7 +301,7 @@ Questo operatore restituisce un puntatore all'oggetto `CSession` contenuto, cons
 
 Vedere [operator CSession&](#op_csession_amp) per un esempio di utilizzo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

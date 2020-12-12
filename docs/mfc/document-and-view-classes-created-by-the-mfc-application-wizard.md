@@ -1,4 +1,5 @@
 ---
+description: Ulteriori informazioni sulle classi di documento e visualizzazione create dalla creazione guidata applicazione MFC
 title: Classi documento e visualizzazione create dalla Creazione guidata applicazione MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - application wizards [MFC], document/view classes created
 - view classes [MFC], created by application wizards
 ms.assetid: 70c34a60-2701-4981-acea-c08a5787d8e6
-ms.openlocfilehash: 766fe4efb37c199c5babb75ce2cb08ebf676cca6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f182278ebdd971364e3e35e15e51b6ea5e7aaf68
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616048"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330311"
 ---
 # <a name="document-and-view-classes-created-by-the-mfc-application-wizard"></a>Classi documento e visualizzazione create dalla Creazione guidata applicazione MFC
 
@@ -22,6 +23,6 @@ La classe Document creata mediante la creazione guidata applicazione MFC deriva 
 
 Per alcune applicazioni potrebbe essere necessaria più di una classe di documento, una classe di visualizzazione o una classe della finestra cornice. Per altre informazioni, vedere [tipi di documenti multipli, visualizzazioni e finestre cornice](multiple-document-types-views-and-frame-windows.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Architettura documento/visualizzazione](document-view-architecture.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CMFCDesktopAlertWndButton'
 title: Classe CMFCDesktopAlertWndButton
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndButton [MFC], IsCaptionButton
 - CMFCDesktopAlertWndButton [MFC], IsCloseButton
 ms.assetid: df39a0c8-0c39-4ab0-8c64-78c5b2c4ecaf
-ms.openlocfilehash: 6d296966001dcbc2279a298bdd1d9c21195d61fd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0c645f4ec79aaa58364cfa9688d19915ece205bb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840779"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330082"
 ---
 # <a name="cmfcdesktopalertwndbutton-class"></a>Classe CMFCDesktopAlertWndButton
 
@@ -27,30 +28,30 @@ Consente di aggiungere i pulsanti a una finestra di dialogo di avviso del deskto
 class CMFCDesktopAlertWndButton : public CMFCButton
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |`CMFCDesktopAlertWndButton::CMFCDesktopAlertWndButton`|Costruttore predefinito.|
 |`CMFCDesktopAlertWndButton::~CMFCDesktopAlertWndButton`|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[CMFCDesktopAlertWndButton:: IsCaptionButton](#iscaptionbutton)|Determina se il pulsante è visualizzato nell'area didascalia della finestra di dialogo avviso.|
 |[CMFCDesktopAlertWndButton:: IsCloseButton](#isclosebutton)|Determina se il pulsante chiude la finestra di dialogo di avviso.|
 
 ### <a name="data-members"></a>Membri dei dati
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |`CMFCDesktopAlertWndButton::m_bIsCaptionButton`|Valore booleano che specifica se il pulsante è visualizzato nell'area didascalia della finestra di dialogo di avviso.|
 |`CMFCDesktopAlertWndButton::m_bIsCloseButton`|Valore booleano che specifica se il pulsante chiude la finestra di dialogo di avviso.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, il costruttore imposta `m_bIsCaptionButton` i `m_bIsCloseButton` membri dati e su false. L' `CMFCDesktopAlertDialog` oggetto padre imposta `m_bIsCaptionButton` su true se il pulsante è posizionato nell'area didascalia della finestra di dialogo avviso. La `CMFCDesktopAlertDialog` classe crea un `CMFCDesktopAlertWndButton` oggetto che funge da pulsante che chiude la finestra di dialogo di avviso e imposta `m_bIsCloseButton` su true.
 
@@ -105,7 +106,7 @@ BOOL IsCloseButton() const;
 
 Diverso da zero se il pulsante chiude la finestra di dialogo avviso; in caso contrario, 0.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>

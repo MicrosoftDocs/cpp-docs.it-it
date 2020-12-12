@@ -1,5 +1,6 @@
 ---
-title: Modelli di documento e processo di creazione della visualizzazione documento
+description: 'Altre informazioni su: modelli di documento e processo di creazione documento/visualizzazione'
+title: Modelli di documento e processo di creazione Document-View
 ms.date: 11/19/2018
 helpviewer_keywords:
 - icons, for multiple document templates
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - CDocTemplate class [MFC]
 - templates [MFC], document templates
 ms.assetid: 311ce4cd-fbdf-4ea1-a51b-5bb043abbcee
-ms.openlocfilehash: b96a11926927e89890ca268dcff7d347079b25fb
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 324d46df1027c03e7f41564691742c5c065cf85c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615782"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330254"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>Modelli di documenti e processo di creazione documento/visualizzazione
 
@@ -35,10 +36,10 @@ Viene registrata un'icona per ogni modello di documento in base alla posizione n
 
 Ad esempio, un modello di documento è il terzo di tre per l'applicazione. Se esiste una risorsa Icona nell'applicazione in corrispondenza dell'indice 3, tale icona viene utilizzata per il modello di documento. In caso contrario, viene utilizzata come predefinita l'icona in corrispondenza dell'indice 0.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Argomenti MFC generali](general-mfc-topics.md)<br/>
 [Creazione di modelli di documento](document-template-creation.md)<br/>
-[Creazione di documenti/visualizzazioni](document-view-creation.md)<br/>
+[Creazione documento/visualizzazione](document-view-creation.md)<br/>
 [Relazioni tra oggetti MFC](relationships-among-mfc-objects.md)<br/>
 [Creazione di nuovi documenti, finestre e visualizzazioni](creating-new-documents-windows-and-views.md)

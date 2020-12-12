@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3809'
 title: Errore del compilatore C3809
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3809
 ms.assetid: 37eca584-c20c-464e-8e45-a987214b7ce4
-ms.openlocfilehash: 889d9a108ab0dfb0101fb9ec9c367db9378b1128
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 62e7ff06e6ed5bf34861fdbae3f823e19ad5aad4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757137"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328206"
 ---
 # <a name="compiler-error-c3809"></a>Errore del compilatore C3809
 

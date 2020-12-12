@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: controlli elenco virtuale'
 title: Controlli List virtuali
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - list controls [MFC], List view
 - virtual list controls
 ms.assetid: 319f841f-e426-423a-8276-d93f965b0b45
-ms.openlocfilehash: 12200697af90a3c83fea3df676bd4d2488598d45
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1d441fc74ab6b1ae395ce0b23bcba08c1703213f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215920"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331348"
 ---
 # <a name="virtual-list-controls"></a>Controlli List virtuali
 
@@ -21,7 +22,7 @@ Un controllo elenco virtuale è un controllo di visualizzazione elenco con stile
 > [!NOTE]
 > Oltre a fornire la funzionalità elenco virtuale in `CListCtrl` , MFC fornisce anche la stessa funzionalità della classe [CListView](../mfc/reference/clistview-class.md) .
 
-Quando si sviluppano controlli elenco virtuali, è necessario tenere presenti alcuni problemi di compatibilità. Per ulteriori informazioni, vedere la sezione problemi di compatibilità nell'argomento controlli elenco-visualizzazione nella Windows SDK.
+Quando si sviluppano controlli elenco virtuali, è necessario tenere presenti alcuni problemi di compatibilità. Per ulteriori informazioni, vedere la sezione problemi di compatibilità nell'argomento controlli List-View nell'Windows SDK.
 
 ## <a name="handling-the-lvn_getdispinfo-notification"></a>Gestione della notifica LVN_GETDISPINFO
 
@@ -31,15 +32,15 @@ I controlli elenco virtuale conservano informazioni molto piccole sull'elemento.
 
 Nel gestore per il messaggio di notifica di LVN_GETDISPINFO, è necessario controllare per verificare il tipo di informazioni richieste. I valori possibili sono:
 
-- `LVIF_TEXT`Il membro *pszText* deve essere compilato.
+- `LVIF_TEXT` Il membro *pszText* deve essere compilato.
 
-- `LVIF_IMAGE`Il membro *IImage* deve essere compilato.
+- `LVIF_IMAGE` Il membro *IImage* deve essere compilato.
 
-- `LVIF_INDENT`Il membro *iIndent* deve essere compilato.
+- `LVIF_INDENT` Il membro *iIndent* deve essere compilato.
 
-- `LVIF_PARAM`È necessario compilare il membro *lParam* . (Non presente per gli elementi secondari).
+- `LVIF_PARAM` È necessario compilare il membro *lParam* . (Non presente per gli elementi secondari).
 
-- `LVIF_STATE`È necessario compilare il membro *state* .
+- `LVIF_STATE` È necessario compilare il membro *state* .
 
 È quindi necessario fornire tutte le informazioni richieste al Framework.
 
@@ -55,7 +56,7 @@ Nell'esempio seguente viene aggiornata la cache con l'intervallo passato alla fu
 
 [!code-cpp[NVC_MFCControlLadenDialog#25](../mfc/codesnippet/cpp/virtual-list-controls_3.cpp)]
 
-Per ulteriori informazioni sulla preparazione e la gestione di una cache, vedere la sezione relativa alla gestione della cache nell'argomento controlli elenco-visualizzazione nella Windows SDK.
+Per ulteriori informazioni sulla preparazione e la gestione di una cache, vedere la sezione relativa alla gestione della cache nell'argomento controlli List-View nell'Windows SDK.
 
 ## <a name="finding-specific-items"></a>Ricerca di elementi specifici
 
@@ -63,7 +64,7 @@ Il messaggio di notifica LVN_ODFINDITEM viene inviato dal controllo elenco virtu
 
 È necessario essere pronti per cercare un elemento che corrisponda alle informazioni fornite dal controllo di visualizzazione elenco. È necessario restituire l'indice dell'elemento in caso di esito positivo oppure-1 se non viene trovato alcun elemento corrispondente.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Utilizzo di CListCtrl](../mfc/using-clistctrl.md)<br/>
 [Controlli](../mfc/controls-mfc.md)

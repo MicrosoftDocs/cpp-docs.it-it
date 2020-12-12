@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: override espliciti (C++/CLI e C++/CX)'
 title: Override espliciti (C++/CLI e C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-ms.openlocfilehash: c199301794daaa140ede2fd99b0ae755cea70f97
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a24460f8135ff5379f14533dbaff83bde8918e4c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172373"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330334"
 ---
 # <a name="explicit-overrides--ccli-and-ccx"></a>Override espliciti (C++/CLI e C++/CX)
 
@@ -39,7 +40,7 @@ Elenco delimitato da virgole di uno o più nomi di funzione di cui eseguire l'ov
 *overriding-function-definition*<br/>
 Istruzioni del corpo della funzione che definiscono la funzione di override.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Utilizzare override espliciti per creare un alias per una firma del metodo o per fornire implementazioni diverse per i metodi con la stessa firma.
 
@@ -53,7 +54,7 @@ Opzione del compilatore: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per informazioni sugli override espliciti in codice nativo o codice compilato con `/clr:oldSyntax`, vedere [Override espliciti](../cpp/explicit-overrides-cpp.md).
 
@@ -61,7 +62,7 @@ Per informazioni sugli override espliciti in codice nativo o codice compilato co
 
 Opzione del compilatore: `/clr`
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 L'esempio di codice seguente mostra un semplice override implicito e l'implementazione di un membro in un'interfaccia di base, senza usare override espliciti.
 
@@ -172,6 +173,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Estensioni componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)

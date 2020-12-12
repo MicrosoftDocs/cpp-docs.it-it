@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: concetti relativi alla distribuzione'
 title: Concetti principali della distribuzione
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - deploying applications [C++], about deploying applications
 - libraries [C++], application deployment issues
 ms.assetid: ebd7f246-ab54-40e8-87fa-dac02c0047b3
-ms.openlocfilehash: ac3565b4ec465ec60672d2238fbe81b71613a6c1
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 441e067a541f375029cdb55321a8ad75d1f03c67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449037"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329433"
 ---
 # <a name="deployment-concepts"></a>Concetti principali della distribuzione
 
@@ -21,7 +22,7 @@ Questa sezione illustra le considerazioni principali da tenere presenti per la d
 
 ## <a name="windows-installer-deployment-in-c"></a>Distribuzione con Windows Installer in C+++
 
-Visual Studio C++ progetti usano in genere il programma di installazione tradizionale di Windows Installer per la distribuzione. Per preparare una distribuzione con Windows Installer, si include l'applicazione in un file setup.exe e si distribuisce tale file insieme a un pacchetto di installazione (con estensione msi). Gli utenti eseguono quindi setup.exe per installare l'applicazione.
+I progetti C++ di Visual Studio usano in genere l'installazione di Windows Installer tradizionale per la distribuzione. Per preparare una distribuzione con Windows Installer, si include l'applicazione in un file setup.exe e si distribuisce tale file insieme a un pacchetto di installazione (con estensione msi). Gli utenti eseguono quindi setup.exe per installare l'applicazione.
 
 Per creare il pacchetto dell'applicazione, si aggiunge un progetto di installazione alla soluzione. Dopo la compilazione, vengono creati i file del programma di installazione e del relativo pacchetto da distribuire agli utenti. Per altre informazioni, vedere [Scelta di un metodo di distribuzione](choosing-a-deployment-method.md).
 
@@ -35,11 +36,11 @@ Le librerie di Visual C++ vengono incluse nei pacchetti sotto forma di DLL e tut
 
 Per altre informazioni sulla creazione di pacchetti e la ridistribuzione, vedere gli argomenti seguenti:
 
-- [Determinazione delle DLL da ridistribuire](determining-which-dlls-to-redistribute.md).
+- [Determinazione delle dll da ridistribuire](determining-which-dlls-to-redistribute.md).
 
 - [Scelta di un metodo di distribuzione](choosing-a-deployment-method.md).
 
-- [Distribuzione di Universal CRT](universal-crt-deployment.md).
+- [Distribuzione Universal CRT](universal-crt-deployment.md).
 
 Per esempi di distribuzione e suggerimenti per la risoluzione dei problemi, vedere:
 
@@ -47,7 +48,7 @@ Per esempi di distribuzione e suggerimenti per la risoluzione dei problemi, vede
 
 - [Risoluzione dei problemi relativi alle applicazioni isolate C/C++ e agli assembly side-by-side](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Distribuzione di applicazioni desktop](deploying-native-desktop-applications-visual-cpp.md)
 - [Informazioni sulle dipendenze di un'applicazione Visual C++](understanding-the-dependencies-of-a-visual-cpp-application.md)

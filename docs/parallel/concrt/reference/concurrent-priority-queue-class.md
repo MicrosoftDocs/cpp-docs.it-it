@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: concurrent_priority_queue Class'
 title: Classe concurrent_priority_queue
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-ms.openlocfilehash: 024bd2a100b8a0b871d98a5e6001858b55977565
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6097e8f3bdb56ed792509460349bba8f9aef25a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230363"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329866"
 ---
 # <a name="concurrent_priority_queue-class"></a>Classe concurrent_priority_queue
 
@@ -51,7 +52,7 @@ Tipo che rappresenta l'oggetto allocatore archiviato in cui sono inclusi i detta
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`allocator_type`|Tipo che rappresenta la classe dell'allocatore per la coda di priorità simultanea.|
 |`const_reference`|Tipo che rappresenta un riferimento const a un elemento del tipo archiviato in una coda di priorità simultanea.|
@@ -61,13 +62,13 @@ Tipo che rappresenta l'oggetto allocatore archiviato in cui sono inclusi i detta
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[concurrent_priority_queue](#ctor)|Di overload. Costruisce una coda di priorità simultanea.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[deselezionare](#clear)|Cancella tutti gli elementi nella coda di priorità simultanea. Questo metodo non è indipendente dalla concorrenza.|
 |[empty](#empty)|Testa se la coda di priorità simultanea è vuota nel momento in cui questo metodo viene chiamato. Questo metodo è indipendente dalla concorrenza.|
@@ -79,11 +80,11 @@ Tipo che rappresenta l'oggetto allocatore archiviato in cui sono inclusi i detta
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[operatore =](#operator_eq)|Di overload. Assegna il contenuto di un altro `concurrent_priority_queue` oggetto a quello corrente. Questo metodo non è indipendente dalla concorrenza.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per informazioni dettagliate sulla `concurrent_priority_queue` classe, vedere [contenitori e oggetti paralleli](../../../parallel/concrt/parallel-containers-and-objects.md).
 
@@ -97,7 +98,7 @@ Per informazioni dettagliate sulla `concurrent_priority_queue` classe, vedere [c
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="clear"></a><a name="clear"></a>deselezionare
+## <a name="clear"></a><a name="clear"></a> deselezionare
 
 Cancella tutti gli elementi nella coda di priorità simultanea. Questo metodo non è indipendente dalla concorrenza.
 
@@ -105,11 +106,11 @@ Cancella tutti gli elementi nella coda di priorità simultanea. Questo metodo no
 void clear();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-`clear`non è indipendente dalla concorrenza. Quando si chiama questo metodo, è necessario assicurarsi che nessun altro thread richiami metodi nella coda di priorità simultanea. `clear`non libera la memoria.
+`clear` non è indipendente dalla concorrenza. Quando si chiama questo metodo, è necessario assicurarsi che nessun altro thread richiami metodi nella coda di priorità simultanea. `clear` non libera la memoria.
 
-## <a name="concurrent_priority_queue"></a><a name="ctor"></a>concurrent_priority_queue
+## <a name="concurrent_priority_queue"></a><a name="ctor"></a> concurrent_priority_queue
 
 Costruisce una coda di priorità simultanea.
 
@@ -161,7 +162,7 @@ Posizione del primo elemento oltre l'intervallo di elementi da copiare.
 *_Src*<br/>
 Oggetto `concurrent_priority_queue` di origine da cui copiare o spostare elementi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Tutti i costruttori archiviano un oggetto allocatore `_Al` e inizializzano la coda di priorità.
 
@@ -175,7 +176,7 @@ Il quarto e il quinto costruttore specificano una copia della coda di priorità 
 
 Il sesto e il settimo costruttore specificano uno spostamento della coda di priorità `_Src` .
 
-## <a name="empty"></a><a name="empty"></a>vuoto
+## <a name="empty"></a><a name="empty"></a> vuoto
 
 Testa se la coda di priorità simultanea è vuota nel momento in cui questo metodo viene chiamato. Questo metodo è indipendente dalla concorrenza.
 
@@ -187,7 +188,7 @@ bool empty() const;
 
 **`true`** Se la coda di priorità è vuota nel momento in cui la funzione è stata chiamata; **`false`** in caso contrario,.
 
-## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a> get_allocator
 
 Restituisce una copia dell'allocatore utilizzato per costruire la coda di priorità simultanea. Questo metodo è indipendente dalla concorrenza.
 
@@ -199,7 +200,7 @@ allocator_type get_allocator() const;
 
 Copia dell'allocatore utilizzato per costruire l' `concurrent_priority_queue` oggetto.
 
-## <a name="operator"></a><a name="operator_eq"></a>operatore =
+## <a name="operator"></a><a name="operator_eq"></a> operatore =
 
 Assegna il contenuto di un altro `concurrent_priority_queue` oggetto a quello corrente. Questo metodo non è indipendente dalla concorrenza.
 
@@ -218,7 +219,7 @@ Oggetto `concurrent_priority_queue` di origine.
 
 Riferimento a questo `concurrent_priority_queue` oggetto.
 
-## <a name="push"></a><a name="push"></a>spingere
+## <a name="push"></a><a name="push"></a> spingere
 
 Aggiunge un elemento alla coda di priorità simultanea. Questo metodo è indipendente dalla concorrenza.
 
@@ -233,7 +234,7 @@ void push(value_type&& _Elem);
 *_Elem*<br/>
 Elemento da aggiungere alla coda di priorità simultanea.
 
-## <a name="size"></a><a name="size"></a>dimensioni
+## <a name="size"></a><a name="size"></a> dimensioni
 
 Restituisce il numero di elementi presenti nella coda di priorità simultanea. Questo metodo è indipendente dalla concorrenza.
 
@@ -245,11 +246,11 @@ size_type size() const;
 
 Numero di elementi in questo `concurrent_priority_queue` oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Alla dimensione restituita è garantita l'inclusione di tutti gli elementi aggiunti dalle chiamate alla funzione `push` . Tuttavia, potrebbe non riflettere i risultati delle operazioni simultanee in sospeso.
 
-## <a name="swap"></a><a name="swap"></a>scambio
+## <a name="swap"></a><a name="swap"></a> scambio
 
 Scambia il contenuto di due code di priorità simultanee. Questo metodo non è indipendente dalla concorrenza.
 
@@ -262,7 +263,7 @@ void swap(concurrent_priority_queue& _Queue);
 *_Queue*<br/>
 Oggetto `concurrent_priority_queue` i cui contenuti devono venire scambiati.
 
-## <a name="try_pop"></a><a name="try_pop"></a>try_pop
+## <a name="try_pop"></a><a name="try_pop"></a> try_pop
 
 Rimuove e restituisce l'elemento con la priorità più elevata dalla coda se quest'ultima non è vuota. Questo metodo è indipendente dalla concorrenza.
 
@@ -279,7 +280,7 @@ Riferimento a una variabile che verrà popolata con l'elemento con la priorità 
 
 **`true`** Se è stato estratto un valore; **`false`** in caso contrario,.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Concurrency](concurrency-namespace.md)<br/>
 [Contenitori e oggetti paralleli](../../../parallel/concrt/parallel-containers-and-objects.md)

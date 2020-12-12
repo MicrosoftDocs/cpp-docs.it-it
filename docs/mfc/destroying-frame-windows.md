@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: distruzione di finestre cornice'
 title: Distruzione di finestre cornice
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - OnClose method [MFC]
 - PostNcDestroy method [MFC]
 ms.assetid: 5affca77-1999-4507-a2b2-9aa226611b4b
-ms.openlocfilehash: 20eefa2be6d0e0df4585834bae5c37cd258610a7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 192b1b21881f4a9f94a4fb1d6c7b18b4a91ac579
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214139"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327863"
 ---
 # <a name="destroying-frame-windows"></a>Distruzione di finestre cornice
 
@@ -34,6 +35,6 @@ Quando la finestra principale si chiude, l'applicazione viene chiusa. Se sono st
 
 - [Creazione di finestre cornice di documenti](creating-document-frame-windows.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Uso di finestre cornice](using-frame-windows.md)

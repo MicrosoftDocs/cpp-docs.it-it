@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: come WinInet semplifica la creazione di applicazioni client Internet'
 title: Come WinInet agevola la creazione di applicazioni client Internet
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - WinInet classes [MFC], vs. WinSock
 - WinInet classes [MFC], Internet client applications
 ms.assetid: dc0f9f47-3184-4e7a-8074-2c63e0359885
-ms.openlocfilehash: 54f63da7451dfef39a33e6b437be938cb1652326
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: efee0b201a165fab8aaf838eedb2ba83b9a5b946
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624578"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330136"
 ---
 # <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>Come WinInet agevola la creazione di applicazioni client Internet
 
@@ -45,7 +46,7 @@ Per tutti e tre i protocolli si stabilisce una connessione, si effettuano richie
 
 Molte operazioni che possono essere eseguite dal computer come client ad altri computer su Internet possono richiedere molto tempo. La velocità di queste operazioni è in genere limitata dalla velocità della connessione di rete, ma può anche essere interessata da altro traffico di rete e dalla complessità dell'operazione. Per la connessione a un server FTP remoto, ad esempio, è necessario che il computer cerchi prima di tutto il nome del server per trovarne l'indirizzo. L'applicazione tenterà quindi di connettersi al server in corrispondenza di tale indirizzo. Una volta aperta la connessione, il computer in uso e il server remoto avvierà una conversazione con il protocollo di trasferimento file prima di poter effettivamente utilizzare la connessione per recuperare i file.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Estensioni Internet Win32 (WinInet)](win32-internet-extensions-wininet.md)<br/>
-[Come MFC agevola la creazione di applicazioni Client Internet](how-mfc-makes-it-easier-to-create-internet-client-applications.md)
+[In che modo MFC semplifica la creazione di applicazioni client Internet](how-mfc-makes-it-easier-to-create-internet-client-applications.md)

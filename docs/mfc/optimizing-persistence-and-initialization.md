@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: ottimizzazione di persistenza e inizializzazione'
 title: Ottimizzazione di persistenza e inizializzazione
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - optimization, ActiveX controls
 - optimizing performance, ActiveX controls
 ms.assetid: e821e19e-b9eb-49ab-b719-0743420ba80b
-ms.openlocfilehash: 57b98f7e2e4f9e23175b8b01c2e37ff49c499949
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 440239daa0ecfc4a5955a0ccbecb33bf801da7ca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624003"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330158"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>Ottimizzazione di persistenza e inizializzazione
 
@@ -44,6 +45,6 @@ Per lo stesso controllo, è possibile ottimizzare l'inizializzazione del control
 
 Sebbene `Serialize` e `OnResetState` siano stati sottoposti a override, la `DoPropExchange` funzione deve essere mantenuta intatta perché è ancora usata per la persistenza nel formato del contenitore delle proprietà. È importante mantenere tutte e tre queste funzioni per garantire che il controllo gestisca le proprietà in modo coerente, indipendentemente dal meccanismo di persistenza utilizzato dal contenitore.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli ActiveX MFC: ottimizzazione](mfc-activex-controls-optimization.md)

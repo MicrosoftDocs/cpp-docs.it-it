@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: int_3 Class'
 title: Classe int_3
 ms.date: 11/04/2016
 f1_keywords:
@@ -72,12 +73,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_3::xz
 - amp_short_vectors/Concurrency::graphics::int_3::set_yz
 ms.assetid: d4af182f-30f1-455c-b16d-aa99cd314038
-ms.openlocfilehash: bc35562466ee33585be03739695d24da043415c2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: fbdbb436e503bc00239875b92b2b1065956af23c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127816"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330012"
 ---
 # <a name="int_3-class"></a>Classe int_3
 
@@ -93,117 +94,117 @@ class int_3;
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Costruttore int_3](#ctor)|Di overload. Costruttore predefinito, Inizializza tutti gli elementi con 0.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|int_3::get_x||
-|int_3::get_xy||
-|int_3::get_xyz||
-|int_3::get_xz||
-|int_3::get_xzy||
-|int_3::get_y||
-|int_3::get_yx||
-|int_3::get_yxz||
-|int_3::get_yz||
-|int_3::get_yzx||
-|int_3::get_z||
-|int_3::get_zx||
-|int_3::get_zxy||
-|int_3::get_zy||
-|int_3::get_zyx||
-|int_3::ref_b||
-|int_3::ref_g||
-|int_3::ref_r||
-|int_3::ref_x||
-|int_3::ref_y||
-|int_3::ref_z||
-|int_3::set_x||
-|int_3::set_xy||
-|int_3::set_xyz||
-|int_3::set_xz||
-|int_3::set_xzy||
-|int_3::set_y||
-|int_3::set_yx||
-|int_3::set_yxz||
-|int_3::set_yz||
-|int_3::set_yzx||
-|int_3::set_z||
-|int_3::set_zx||
-|int_3::set_zxy||
-|int_3::set_zy||
-|int_3::set_zyx||
+|int_3:: get_x||
+|int_3:: get_xy||
+|int_3:: get_xyz||
+|int_3:: get_xz||
+|int_3:: get_xzy||
+|int_3:: get_y||
+|int_3:: get_yx||
+|int_3:: get_yxz||
+|int_3:: get_yz||
+|int_3:: get_yzx||
+|int_3:: get_z||
+|int_3:: get_zx||
+|int_3:: get_zxy||
+|int_3:: get_zy||
+|int_3:: get_zyx||
+|int_3:: ref_b||
+|int_3:: ref_g||
+|int_3:: ref_r||
+|int_3:: ref_x||
+|int_3:: ref_y||
+|int_3:: ref_z||
+|int_3:: set_x||
+|int_3:: set_xy||
+|int_3:: set_xyz||
+|int_3:: set_xz||
+|int_3:: set_xzy||
+|int_3:: set_y||
+|int_3:: set_yx||
+|int_3:: set_yxz||
+|int_3:: set_yz||
+|int_3:: set_yzx||
+|int_3:: set_z||
+|int_3:: set_zx||
+|int_3:: set_zxy||
+|int_3:: set_zy||
+|int_3:: set_zyx||
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|int_3::operator-||
-|int_3::operator--||
-|int_3::operator%=||
-|int_3::operator&=||
-|int_3::operator*=||
-|int_3::operator/=||
-|int_3::operator^=||
-|int_3::operator&#124;=||
-|int_3::operator~||
-|int_3::operator++||
-|int_3::operator+=||
-|int_3:: operator <\<=||
-|int_3::operator=||
-|int_3::operator-=||
-|int_3::operator>>=||
+|int_3:: operator-||
+|int_3:: operator--||
+|int_3:: operator% =||
+|int_3:: operator&=||
+|int_3:: operator * =||
+|int_3:: operator/=||
+|int_3:: operator ^ =||
+|int_3:: operator&#124;=||
+|int_3:: operator ~||
+|int_3:: operator + +||
+|int_3:: operator + =||
+|int_3:: operator<\<=||
+|int_3:: operator =||
+|int_3:: operator-=||
+|int_3:: operator>>=||
 
 ### <a name="public-constants"></a>Costanti pubbliche
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[dimensioni costanti](#size)||
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|int_3::b||
-|int_3::bg||
-|int_3::bgr||
-|int_3::br||
-|int_3::brg||
-|int_3::g||
-|int_3::gb||
-|int_3::gbr||
-|int_3::gr||
-|int_3::grb||
-|int_3::r||
-|int_3::rb||
-|int_3::rbg||
-|int_3::rg||
-|int_3::rgb||
-|int_3::x||
-|int_3::xy||
-|int_3::xyz||
-|int_3::xz||
-|int_3::xzy||
-|int_3::y||
-|int_3::yx||
-|int_3::yxz||
-|int_3::yz||
-|int_3::yzx||
-|int_3::z||
-|int_3::zx||
-|int_3::zxy||
-|int_3::zy||
-|int_3::zyx||
+|int_3:: b||
+|int_3:: BG||
+|int_3:: BGR||
+|int_3:: BR||
+|int_3:: BRG||
+|int_3:: g||
+|int_3:: GB||
+|int_3:: GBR||
+|int_3:: gr||
+|int_3:: GRB||
+|int_3:: r||
+|int_3:: RB||
+|int_3:: RBG||
+|int_3:: RG||
+|int_3:: RGB||
+|int_3:: x||
+|int_3:: XY||
+|int_3:: XYZ||
+|int_3:: XZ||
+|int_3:: xzy||
+|int_3:: y||
+|int_3:: YX||
+|int_3:: YXZ||
+|int_3:: YZ||
+|int_3:: yzx||
+|int_3:: z||
+|int_3:: ZX||
+|int_3:: zxy||
+|int_3:: il||
+|int_3:: ZYX||
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -215,7 +216,7 @@ class int_3;
 
 **Spazio dei nomi:** Concurrency:: graphics
 
-## <a name="ctor"></a>int_3
+## <a name="int_3"></a><a name="ctor"></a> int_3
 
 Costruttore predefinito, Inizializza tutti gli elementi con 0.
 
@@ -268,7 +269,7 @@ Valore per l'inizializzazione.
 *_Other*<br/>
 Oggetto utilizzato per inizializzare.
 
-## <a name="size"></a>dimensioni
+## <a name="size"></a><a name="size"></a> dimensioni
 
 ### <a name="syntax"></a>Sintassi
 

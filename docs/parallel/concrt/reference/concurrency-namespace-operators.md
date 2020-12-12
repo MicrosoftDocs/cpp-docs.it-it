@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: operatori dello spazio dei nomi di concorrenza'
 title: Operatori dello spazio dei nomi concurrency
 ms.date: 11/04/2016
 f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-ms.openlocfilehash: 97553276a7c4ff687dd8bea4627f943d5666b2e9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c268f823ed0cef9999cfde3eadcbd514614b3d17
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836011"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331276"
 ---
 # <a name="concurrency-namespace-operators"></a>Operatori dello spazio dei nomi concurrency
 
@@ -73,7 +74,7 @@ La seconda attività da combinare nell'attività risultante.
 
 Attività che viene completata correttamente quando una delle attività di input è stata completata correttamente. Se le attività di input sono di tipo `T`, l'output di questa funzione sarà `task<std::vector<T>`. Se le attività di input sono di tipo **`void`** , anche l'attività di output sarà un oggetto `task<void>` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se entrambe le attività vengono annullate o se vengono generate eccezioni, lo stato dell'attività restituita sarà impostato su annullato e una delle eventuali eccezioni verrà generata quando si chiama `get()` o `wait()` sull'attività in questione.
 
@@ -122,7 +123,7 @@ La seconda attività da combinare nell'attività risultante.
 
 Attività che viene completata correttamente quando entrambe le attività di input sono state completate. Se le attività di input sono di tipo `T`, l'output di questa funzione sarà `task<std::vector<T>>`. Se le attività di input sono di tipo **`void`** , anche l'attività di output sarà un oggetto `task<void>` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se una delle attività viene annullata o viene generata un'eccezione, l'attività restituita verrà completata in anticipo, nello stato annullato, e l'eccezione, se presente, verrà generata se si chiama `get()` o `wait()` su tale attività.
 
@@ -158,7 +159,7 @@ Oggetto di tipo `concurrent_vector`.
 
 **`true`** Se il vettore simultaneo sul lato sinistro dell'operatore è uguale al vettore simultaneo a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Due vettori simultanei sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -196,7 +197,7 @@ Oggetto di tipo `concurrent_vector`.
 
 **`true`** Se i vettori simultanei non sono uguali. **`false`** se i vettori simultanei sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Due vettori simultanei sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -234,7 +235,7 @@ Oggetto di tipo `concurrent_vector`.
 
 **`true`** Se il vettore simultaneo sul lato sinistro dell'operatore è minore del vettore simultaneo a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il comportamento di questo operatore è identico all'operatore equivalente per la `vector` classe nello `std` spazio dei nomi.
 
@@ -272,7 +273,7 @@ Oggetto di tipo `concurrent_vector`.
 
 **`true`** Se il vettore simultaneo sul lato sinistro dell'operatore è minore o uguale al vettore simultaneo a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il comportamento di questo operatore è identico all'operatore equivalente per la `vector` classe nello `std` spazio dei nomi.
 
@@ -310,7 +311,7 @@ Oggetto di tipo `concurrent_vector`.
 
 **`true`** Se il vettore simultaneo sul lato sinistro dell'operatore è maggiore del vettore simultaneo a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il comportamento di questo operatore è identico all'operatore equivalente per la `vector` classe nello `std` spazio dei nomi.
 
@@ -348,12 +349,12 @@ Oggetto di tipo `concurrent_vector`.
 
 **`true`** Se il vettore simultaneo sul lato sinistro dell'operatore è maggiore o uguale al vettore simultaneo a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il comportamento di questo operatore è identico all'operatore equivalente per la `vector` classe nello `std` spazio dei nomi.
 
 Questo metodo non è indipendente dalla concorrenza rispetto ad altri metodi che possono modificare uno dei vettori simultanei `_A` o `_B` .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Concurrency](concurrency-namespace.md)

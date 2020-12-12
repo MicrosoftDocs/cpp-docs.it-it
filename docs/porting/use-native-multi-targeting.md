@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: usare il multitargeting nativo in Visual Studio per compilare progetti precedenti'
 title: Usare multitargeting nativo in Visual Studio per compilare progetti precedenti
 ms.date: 10/25/2019
 helpviewer_keywords:
 - C++ native multi-targeting
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
-ms.openlocfilehash: 14100a70fa3bb883d257017eaf9174c5340317b4
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: d7f7ea617ac5f895a6fb9b04f89caebbb6130e43
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404808"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331190"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Usare multitargeting nativo in Visual Studio per compilare progetti precedenti
 
@@ -67,7 +68,7 @@ Per i download attualmente disponibili, vedere [Download delle versioni preceden
 
 Quando questi prodotti sono installati, il menu a discesa della proprietà **Set strumenti della piattaforma** nella finestra di dialogo **Pagine delle proprietà** viene automaticamente aggiornato per visualizzare i set di strumenti disponibili. È ora possibile usare la versione più recente di Visual Studio per compilare progetti per tali versioni meno recenti del set di strumenti senza convertirle o aggiornarle.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Aggiornamento di progetti da versioni precedenti di Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Miglioramenti della conformità di C++ in Visual Studio 2017](../overview/cpp-conformance-improvements.md)

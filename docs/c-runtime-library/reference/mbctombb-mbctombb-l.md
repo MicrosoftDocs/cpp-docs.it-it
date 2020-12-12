@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _mbctombb, _mbctombb_l'
 title: _mbctombb, _mbctombb_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - mbctombb function
 - _mbctombb_l function
 ms.assetid: d90970b8-71ff-4586-b6a2-f9ceb811f776
-ms.openlocfilehash: d5fcae2a0e403d75383e2998b1ea127dd6f2ef89
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 326ef50ae447594b347086bbbee9493cfe37e546
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914275"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330994"
 ---
 # <a name="_mbctombb-_mbctombb_l"></a>_mbctombb, _mbctombb_l
 
@@ -72,7 +73,7 @@ Impostazioni locali da usare.
 
 In caso di esito positivo, **_mbctombb** e **_mbctombb_l** restituisce il carattere a byte singolo che corrisponde a *c*; in caso contrario, restituisce *c*.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le funzioni **_mbctombb** e **_mbctombb_l** convertono un carattere multibyte specificato in un carattere multibyte a byte singolo corrispondente. I caratteri devono corrispondere a caratteri a byte singolo compresi nell'intervallo 0x20-0x7E o 0xA1-0xDF da convertire.
 
@@ -91,7 +92,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
 [_mbbtombc, _mbbtombc_l](mbbtombc-mbbtombc-l.md)<br/>

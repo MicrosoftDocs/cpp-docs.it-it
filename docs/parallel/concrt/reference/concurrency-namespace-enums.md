@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni: enumerazioni dello spazio dei nomi di concorrenza'
 title: Enumerazioni dello spazio dei nomi concurrency
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-ms.openlocfilehash: 8b9aec0a3464b921ca80f731ac4a3c26e72ef34e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9d4f5e2fcdb2beb19d65f96687b53e52ba03ed8c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832243"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331294"
 ---
 # <a name="concurrency-namespace-enums"></a>Enumerazioni dello spazio dei nomi concurrency
 
@@ -54,7 +55,7 @@ enum agent_status;
 
 ### <a name="values"></a>Valori
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`agent_canceled`|Il parametro `agent` è stato annullato.|
 |`agent_created`|L'oggetto `agent` è stato creato ma non è stato avviato.|
@@ -62,7 +63,7 @@ enum agent_status;
 |`agent_runnable`|`agent`È stato avviato, ma non è stato immesso il relativo `run` metodo.|
 |`agent_started`|L'oggetto `agent` è stato avviato.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni, vedere [Asynchronous Agents](../../../parallel/concrt/asynchronous-agents.md).
 
@@ -80,7 +81,7 @@ enum Agents_EventType;
 
 ### <a name="values"></a>Valori
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`AGENTS_EVENT_CREATE`|Tipo di evento che rappresenta la creazione di un oggetto|
 |`AGENTS_EVENT_DESTROY`|Tipo di evento che rappresenta l'eliminazione di un oggetto|
@@ -105,7 +106,7 @@ enum ConcRT_EventType;
 
 ### <a name="values"></a>Valori
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`CONCRT_EVENT_ATTACH`|Tipo di evento che rappresenta l'atto di una connessione a un'utilità di pianificazione.|
 |`CONCRT_EVENT_BLOCK`|Tipo di evento che rappresenta l'atto di un blocco del contesto.|
@@ -131,7 +132,7 @@ enum Concrt_TraceFlags;
 
 ### <a name="values"></a>Valori
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`AgentEventFlag`||
 |`AllEventsFlag`||
@@ -155,7 +156,7 @@ enum CriticalRegionType;
 
 ### <a name="values"></a>Valori
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`InsideCriticalRegion`|Indica che il contesto si trova all'interno di un'area critica. Quando si trova all'interno di un'area critica, le sospensioni asincrone sono nascoste dall'utilità di pianificazione. Se si verifica questa sospensione, il Gestione risorse attenderà che il thread diventi eseguibile ed è sufficiente riprenderlo anziché richiamare l'utilità di pianificazione. Tutti i blocchi acquisiti all'interno di tale area devono essere presi con estrema cautela.|
 |`InsideHyperCriticalRegion`|Indica che il contesto si trova all'interno di un'area ipercritica. All'interno di un'area ipercritica, le sospensioni sincrone e asincrone sono nascoste dall'utilità di pianificazione. Se si verifica una sospensione o un blocco, il gestore di risorse attenderà che il thread diventi eseguibile ed è sufficiente riprenderlo anziché richiamare l'utilità di pianificazione. I blocchi eseguiti all'interno di tale area non devono mai essere condivisi con il codice in esecuzione all'esterno di tale area. Questa operazione provocherà un deadlock imprevedibile.|
@@ -175,7 +176,7 @@ enum DynamicProgressFeedbackType;
 
 ### <a name="values"></a>Valori
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`ProgressFeedbackDisabled`|L'utilità di pianificazione non raccoglie informazioni sullo stato di avanzamento. Il ribilanciamento viene eseguito esclusivamente in base al livello di sottoscrizione del thread hardware sottostante. Per ulteriori informazioni sui livelli di sottoscrizione, vedere [IExecutionResource:: CurrentSubscriptionLevel](IExecutionResource-structure.md).<br /><br /> Questo valore è riservato per l'utilizzo da parte del runtime.|
 |`ProgressFeedbackEnabled`|L'utilità di pianificazione raccoglie informazioni sullo stato di avanzamento e le passa a Resource Manager. Resource Manager utilizzerà queste informazioni statistiche per ribilanciare le risorse per conto dell'utilità di pianificazione, oltre al livello di sottoscrizione del thread hardware sottostante. Per ulteriori informazioni sui livelli di sottoscrizione, vedere [IExecutionResource:: CurrentSubscriptionLevel](IExecutionResource-structure.md).|
@@ -190,7 +191,7 @@ enum join_type;
 
 ### <a name="values"></a>Valori
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`greedy`|I `join` blocchi di messaggistica greedy accettano immediatamente un messaggio dopo la propagazione. Questa operazione è più efficiente, ma ha la possibilità di blocco Live, a seconda della configurazione di rete.|
 |`non_greedy`|I blocchi di messaggistica non greedy `join` rimandano i messaggi e li provano e li usano dopo l'arrivo di tutti. Il lavoro è garantito, ma più lento.|
@@ -209,7 +210,7 @@ enum message_status;
 
 ### <a name="values"></a>Valori
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`accepted`|Il messaggio è stato accettato dalla destinazione.|
 |`declined`|Il messaggio non è stato accettato dalla destinazione.|
@@ -230,7 +231,7 @@ enum PolicyElementKey;
 
 ### <a name="values"></a>Valori
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`ContextPriority`|Priorità del thread del sistema operativo di ogni contesto nell'utilità di pianificazione. Se questa chiave è impostata sul valore `INHERIT_THREAD_PRIORITY` , i contesti nell'utilità di pianificazione erediteranno la priorità del thread che ha creato l'utilità di pianificazione.<br /><br /> Valori validi: uno dei valori validi per la funzione di Windows `SetThreadPriority` e il valore speciale `INHERIT_THREAD_PRIORITY`<br /><br /> Valore predefinito: `THREAD_PRIORITY_NORMAL`|
 |`ContextStackSize`|Dimensione dello stack riservata di ogni contesto nell'utilità di pianificazione, espressa in kilobyte.<br /><br /> Valori validi: numeri interi positivi<br /><br /> Valore predefinito: `0` , che indica che verrà utilizzato il valore predefinito del processo per le dimensioni dello stack.|
@@ -258,7 +259,7 @@ enum SchedulerType;
 
 ### <a name="values"></a>Valori
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`ThreadScheduler`|Indica una richiesta esplicita di thread Win32 normali.|
 |`UmsThreadDefault`|I thread pianificabili in modalità utente (UMS) non sono supportati nella runtime di concorrenza Visual Studio 2013. Utilizzando `UmsThreadDefault` come valore per i criteri `SchedulerType` non verrà generato un errore. Tuttavia, un'utilità di pianificazione creata con questi criteri viene impostata per l'utilizzo di thread Win32.|
@@ -277,7 +278,7 @@ enum SchedulingProtocolType;
 
 ### <a name="values"></a>Valori
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`EnhanceForwardProgress`|L'utilità di pianificazione preferisce l'esecuzione Round Robin tramite i gruppi di pianificazione dopo l'esecuzione di ogni attività. I contesti sbloccati sono in genere pianificati in modalità FIFO (First-in-First-out). I processori virtuali non memorizzano nella cache i contesti sbloccati.|
 |`EnhanceScheduleGroupLocality`|L'utilità di pianificazione preferisce continuare a lavorare sulle attività all'interno del gruppo di pianificazione corrente prima di passare a un altro gruppo di pianificazione. I contesti sbloccati vengono memorizzati nella cache per ogni processore virtuale e sono in genere pianificati in modo LIFO (Last in First out) dal processore virtuale che li ha sbloccati.|
@@ -296,13 +297,13 @@ enum SwitchingProxyState;
 
 ### <a name="values"></a>Valori
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`Blocking`|Indica che il thread chiamante è bloccato in modo cooperativo e deve essere esclusivamente di proprietà del chiamante fino a quando non viene eseguito nuovamente ed esegue altre azioni.|
 |`Idle`|Indica che il thread chiamante non è più necessario per l'utilità di pianificazione e viene restituito al Gestione risorse. Il contesto che è stato inviato non può più essere utilizzato dal Gestione risorse.|
 |`Nesting`|Indica che il thread chiamante sta annidando un'utilità di pianificazione figlio ed è richiesta dal chiamante per connettersi a un'utilità di pianificazione diversa.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un parametro di tipo `SwitchingProxyState` viene passato al metodo `IThreadProxy::SwitchTo` per indicare all'gestione risorse come trattare il proxy del thread che effettua la chiamata.
 
@@ -318,7 +319,7 @@ enum task_group_status;
 
 ### <a name="values"></a>Valori
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`canceled`|L'oggetto `task_group` o `structured_task_group` è stato annullato. È possibile che una o più attività non siano state eseguite.|
 |`completed`|Le attività in coda all'oggetto `task_group` o `structured_task_group` sono state completate.|
@@ -338,7 +339,7 @@ enum WinRTInitializationType;
 
 ### <a name="values"></a>Valori
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`DoNotInitializeWinRT`|Quando l'applicazione viene eseguita nei sistemi operativi con la versione Windows 8 o successiva, tramite i thread all'interno dell'utilità di pianificazione non verrà inizializzato Windows Runtime.|
 |`InitializeWinRTAsMTA`|Quando l'applicazione viene eseguita nei sistemi operativi con la versione Windows 8 o successiva, tramite ogni thread all'interno dell'utilità di pianificazione verrà inizializzato Windows Runtime e verrà dichiarato che fa parte dell'apartment a thread multipli.|
@@ -347,6 +348,6 @@ enum WinRTInitializationType;
 
 **Intestazione:** concrt. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Concurrency](concurrency-namespace.md)

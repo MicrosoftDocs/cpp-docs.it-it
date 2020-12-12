@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: procedura: personalizzare la barra di accesso rapido'
 title: 'Procedura: personalizzare la barra di accesso rapido'
 ms.date: 09/07/2019
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-ms.openlocfilehash: 5d168fc395e27eea3705fc8e69c88569ecb0f7ee
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cb7935f9e340734f8af0e7ec9197e139c30af894
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620024"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330239"
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>Procedura: personalizzare la barra di accesso rapido
 
@@ -21,9 +22,9 @@ Per personalizzare la barra di accesso rapido, aprirla nella finestra **Propriet
 
 ### <a name="to-open-the-quick-access-toolbar-in-the-properties-window"></a>Per aprire la barra di accesso rapido nella finestra Proprietà
 
-1. In Visual Studio scegliere **visualizzazione risorse**dal menu **Visualizza** .
+1. In Visual Studio scegliere **visualizzazione risorse** dal menu **Visualizza** .
 
-1. In **visualizzazione risorse**fare doppio clic sulla risorsa barra multifunzione per visualizzarla nell'area di progettazione.
+1. In **visualizzazione risorse** fare doppio clic sulla risorsa barra multifunzione per visualizzarla nell'area di progettazione.
 
 1. Nell'area di progettazione fare clic con il pulsante destro del mouse sul menu della barra di accesso rapido, quindi scegliere **Proprietà**.
 
@@ -50,8 +51,8 @@ I comandi della barra di accesso rapido non vengono visualizzati nell'area di pr
 
 #### <a name="to-preview-the-ribbon-control"></a>Per visualizzare in anteprima il controllo Ribbon
 
-- Sulla **barra degli strumenti Editor della barra multifunzione**fare clic su **test barra multifunzione**.
+- Sulla **barra degli strumenti Editor della barra multifunzione** fare clic su **test barra multifunzione**.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Finestra di progettazione della barra multifunzione (MFC)](ribbon-designer-mfc.md)

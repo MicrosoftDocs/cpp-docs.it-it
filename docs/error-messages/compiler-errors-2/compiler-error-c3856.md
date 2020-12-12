@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3856'
 title: Errore del compilatore C3856
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3856
 ms.assetid: 242d9322-c325-4f20-be58-b2be6da56d60
-ms.openlocfilehash: 6079eb0a2b453c3eef159ed8a0d8536a0ad667b0
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f15dbb4029a8eb0c8571e11dda71b3352a834117
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74754836"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328117"
 ---
 # <a name="compiler-error-c3856"></a>Errore del compilatore C3856
 

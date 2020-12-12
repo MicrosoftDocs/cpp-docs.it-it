@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: procedura: implementare il rilevamento nel codice'
 title: 'Procedura: implementare il rilevamento nel codice'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: baaeca2c-5114-485f-bf58-8807db1bc973
-ms.openlocfilehash: 3d71543261021c7e20041d317401b7b7b8d0616e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 1b9211978c6ba5169a2d55e272b7e3ddf0678fd6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621662"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330206"
 ---
 # <a name="how-to-implement-tracking-in-your-code"></a>Procedura: implementare il rilevamento nel codice
 
@@ -53,6 +54,6 @@ La `CRectTracker` classe fornisce diverse forme cursore utilizzate per indicare 
 
 [!code-cpp[NVC_MFCOClient#5](codesnippet/cpp/how-to-implement-tracking-in-your-code_5.cpp)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Tracker: implementazione di tracker nell'applicazione OLE](trackers-implementing-trackers-in-your-ole-application.md)

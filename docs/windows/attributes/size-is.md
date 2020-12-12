@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: size_is'
 title: size_is (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: dd0ec8622dfffdf9a0578c86d75d313042cc3c01
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f61124dc286de1c8893f093454c921b4d6e46037
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841766"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329603"
 ---
 # <a name="size_is"></a>size_is
 
@@ -28,7 +29,7 @@ Specificare le dimensioni della memoria allocata per i puntatori dimensionati, i
 *expression*<br/>
 Dimensione della memoria allocata per i puntatori di dimensione.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'attributo **size_is** C++ ha la stessa funzionalità dell'attributo [size_is](/windows/win32/Midl/size-is) MIDL.
 
@@ -47,7 +48,7 @@ Vedere l'esempio per [first_is](first-is.md) per un esempio di come specificare 
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)<br/>

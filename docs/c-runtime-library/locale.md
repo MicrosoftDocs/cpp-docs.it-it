@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: impostazioni locali'
 title: Impostazioni locali
 ms.date: 04/11/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - setlocale function
 - locale routines
 ms.assetid: 442f8112-9288-44d7-be3c-15d22652093a
-ms.openlocfilehash: a747c60994afbf4293aca8e4a3290d20b4bc18a3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 660a4fb0103de8c1ac06272c711e02fcd6d12289
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87189584"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331064"
 ---
 # <a name="locale"></a>Impostazioni locali
 
@@ -29,7 +30,7 @@ Sono disponibili più versioni sicure delle funzioni presenti nella seguente tab
 
 ## <a name="locale-dependent-routines"></a>Routine dipendenti dalle impostazioni locali
 
-|Routine|Uso|Dipendenza dell'impostazione di categoria **setlocale**|
+|Routine|Usa|Dipendenza dell'impostazione di categoria **setlocale**|
 |-------------|---------|---------------------------------------------|
 |[atof, _atof_l, _wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Convertire un carattere in un valore a virgola mobile|**LC_NUMERIC**|
 |[atoi, _atoi_l, _wtoi, _wtoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|Convertire un carattere in un Integer|**LC_NUMERIC**|
@@ -69,7 +70,7 @@ Sono disponibili più versioni sicure delle funzioni presenti nella seguente tab
 > [!NOTE]
 > Per le routine multibyte, la tabella codici multibyte deve essere equivalente alle impostazioni locali impostate con [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). [_setmbcp](../c-runtime-library/reference/setmbcp.md), con un argomento di **_MB_CP_LOCALE**, rende la tabella codici multibyte la stessa della tabella codici **setlocale**.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Internazionalizzazione](../c-runtime-library/internationalization.md)<br/>
 [Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>

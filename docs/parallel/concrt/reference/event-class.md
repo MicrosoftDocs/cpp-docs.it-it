@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: classe di evento'
 title: Classe event
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-ms.openlocfilehash: 3f2ec71083f7a7905bad5cda014baba914e31e79
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3c33096795d1980ea78cbce8c38fa9305ee45cd0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215803"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331242"
 ---
 # <a name="event-class"></a>Classe event
 
@@ -28,17 +29,17 @@ Un evento di reimpostazione manuale che tiene conto in modo esplicito del runtim
 class event;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[~ distruttore eventi](#dtor)|Elimina definitivamente un evento.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[reset](#reset)|Reimposta l'evento su uno stato non segnalato.|
 |[set](#set)|Segnala l'evento.|
@@ -47,11 +48,11 @@ class event;
 
 ### <a name="public-constants"></a>Costanti pubbliche
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[timeout_infinite](#timeout_infinite)|Valore indicante un'attesa che non deve terminare mai.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per altre informazioni, vedere [Synchronization Data Structures](../../../parallel/concrt/synchronization-data-structures.md).
 
@@ -73,9 +74,9 @@ Costruisce un nuovo evento.
 _CRTIMP event();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="event"></a><a name="dtor"></a>evento ~
+## <a name="event"></a><a name="dtor"></a> evento ~
 
 Elimina definitivamente un evento.
 
@@ -83,11 +84,11 @@ Elimina definitivamente un evento.
 ~event();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si prevede che non siano presenti thread in attesa dell'evento durante l'esecuzione del distruttore. Se si consente all'evento di eseguire la distruzione quando i thread sono ancora in attesa si verificherà un comportamento non definito.
 
-## <a name="reset"></a><a name="reset"></a>reimpostazione
+## <a name="reset"></a><a name="reset"></a> reimpostazione
 
 Reimposta l'evento su uno stato non segnalato.
 
@@ -95,7 +96,7 @@ Reimposta l'evento su uno stato non segnalato.
 void reset();
 ```
 
-## <a name="set"></a><a name="set"></a>set
+## <a name="set"></a><a name="set"></a> set
 
 Segnala l'evento.
 
@@ -103,11 +104,11 @@ Segnala l'evento.
 void set();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Segnalare l'evento potrebbe causare un numero arbitrario di contesti in attesa che l'evento diventi eseguibile.
 
-## <a name="timeout_infinite"></a><a name="timeout_infinite"></a>timeout_infinite
+## <a name="timeout_infinite"></a><a name="timeout_infinite"></a> timeout_infinite
 
 Valore indicante un'attesa che non deve terminare mai.
 
@@ -115,7 +116,7 @@ Valore indicante un'attesa che non deve terminare mai.
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```
 
-## <a name="wait"></a><a name="wait"></a>attendere
+## <a name="wait"></a><a name="wait"></a> attendere
 
 Attende che l'evento venga segnalato.
 
@@ -135,7 +136,7 @@ Se l'attesa è stata soddisfatta, `0` viene restituito il valore; in caso contra
 > [!IMPORTANT]
 > In un'app piattaforma UWP (Universal Windows Platform) (UWP) non chiamare `wait` sul thread asta perché questa chiamata può bloccare il thread corrente e può causare la mancata risposta dell'app.
 
-## <a name="wait_for_multiple"></a><a name="wait_for_multiple"></a>wait_for_multiple
+## <a name="wait_for_multiple"></a><a name="wait_for_multiple"></a> wait_for_multiple
 
 Attende che vengano segnalati più eventi.
 
@@ -165,13 +166,13 @@ Indica il numero di millisecondi prima del timeout di attesa. Il valore `COOPERA
 
 Se l'attesa è stata soddisfatta, l'indice all'interno della matrice specificata nel `_PPEvents` parametro che soddisfa la condizione di attesa; in caso contrario, il valore `COOPERATIVE_WAIT_TIMEOUT` per indicare che si è verificato il timeout dell'attesa senza che la condizione venga soddisfatta.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il parametro `_FWaitAll` è impostato sul valore **`true`** per indicare che tutti gli eventi devono essere segnalati per soddisfare l'attesa, l'indice restituito dalla funzione non ha un significato particolare, ad eccezione del fatto che non è il valore `COOPERATIVE_WAIT_TIMEOUT` .
 
 > [!IMPORTANT]
 > In un'app piattaforma UWP (Universal Windows Platform) (UWP) non chiamare `wait_for_multiple` sul thread asta perché questa chiamata può bloccare il thread corrente e può causare la mancata risposta dell'app.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Concurrency](concurrency-namespace.md)
