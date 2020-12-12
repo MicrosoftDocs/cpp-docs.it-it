@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: ottiene, _getws'
 title: gets, _getws
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - gets function
 - standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
-ms.openlocfilehash: 1c60cf14334a0dcc0492b23da10a36c3219bb699
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cb2bf89bfcec8e10e05fa479cd7c9d78d9c6d80e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919908"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97181722"
 ---
 # <a name="gets-_getws"></a>gets, _getws
 
@@ -79,7 +80,7 @@ Percorso di archiviazione per la stringa di input.
 
 Restituisce il relativo argomento se l'operazione ha esito positivo. Un puntatore **NULL** indica una condizione di errore o di fine file. Usare [ferror](../c-runtime-library/reference/ferror.md) o [feof](../c-runtime-library/reference/feof.md) per determinare quella che si è verificata. Se `buffer` è **NULL**, queste funzioni richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **NULL** e impostano errno su `EINVAL`.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione `gets` legge una riga dal flusso di input standard `stdin` e la archivia in `buffer`. La riga è costituita da tutti i caratteri, incluso il primo carattere di nuova riga ('\n'). `gets` sostituisce quindi il carattere di nuova riga con un carattere Null ('\0') prima di restituire la riga. Al contrario, la funzione `fgets` mantiene il carattere di nuova riga. `_getws` è una versione a caratteri wide di `gets`il cui argomento e il cui valore restituito sono stringhe a caratteri wide.
 
@@ -130,7 +131,7 @@ Notare che se l'input contiene più di 20 caratteri, si verificherà un sovracca
 Hello there!The line entered was: Hello there!
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [I/O di flusso](../c-runtime-library/stream-i-o.md)<br/>
 [fgets, fgetws](../c-runtime-library/reference/fgets-fgetws.md)<br/>

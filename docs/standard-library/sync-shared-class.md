@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: sync_shared Class'
 title: Classe sync_shared
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - stdext::sync_shared [C++], deallocate
 - stdext::sync_shared [C++], equals
 ms.assetid: cab3af9e-3d1a-4f2c-8580-0f89e5687d8e
-ms.openlocfilehash: 8b516762f0ae2f6d25c4d5109cbc9870f1254b89
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 4093b85ce6f10552cba462074aee2a448cc5ce3e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562077"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183282"
 ---
 # <a name="sync_shared-class"></a>Classe sync_shared
 
@@ -66,7 +67,7 @@ Numero di elementi della matrice da allocare.
 
 Puntatore all'oggetto allocato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro blocca il mutex, chiama `cache.allocate(count)`, sblocca il mutex e restituisce il risultato della precedente chiamata a `cache.allocate(count)`. `cache` rappresenta l'oggetto cache corrente.
 
@@ -86,7 +87,7 @@ Puntatore al primo oggetto che deve essere deallocato dall'archivio.
 *conteggio*\
 Numero di oggetti da deallocare dall'archivio.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro blocca il mutex, chiama `cache.deallocate(ptr, count)`, dove `cache` rappresenta l'oggetto cache, e quindi sblocca il mutex.
 
@@ -110,7 +111,7 @@ Cache da confrontare per verificarne l'uguaglianza.
 
 **`true`** Se il risultato di `cache.equals(Other.cache)` , dove `cache` rappresenta l'oggetto cache, è **`true`** ; in caso contrario, **`false`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="see-also"></a>Vedere anche
 

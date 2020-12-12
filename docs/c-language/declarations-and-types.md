@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: dichiarazioni e tipi'
 title: Dichiarazioni e tipi
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - declarations [C++], C
 - declarations [C++], types
 ms.assetid: 432a2286-cf42-42ce-8baf-c908ffb57ca8
-ms.openlocfilehash: 75ffbeda8b120b9a1bb9f1bb28c570695ed2c8c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c2b277b49c08964d62b21570589cfd14ae9550a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234590"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182164"
 ---
 # <a name="declarations-and-types"></a>Dichiarazioni e tipi
 
@@ -24,15 +25,15 @@ In questa sezione viene illustrata la dichiarazione e l'inizializzazione delle v
 
 - [Identificatori di tipi](../c-language/c-type-specifiers.md)
 
-- [Qualificatori del tipo](../c-language/type-qualifiers.md)
+- [Qualificatori di tipo](../c-language/type-qualifiers.md)
 
-- [Dichiaratori e dichiarazioni di variabili](../c-language/declarators-and-variable-declarations.md)
+- [Dichiaratori e dichiarazioni delle variabili](../c-language/declarators-and-variable-declarations.md)
 
 - [Interpretazione di più dichiaratori complessi](../c-language/interpreting-more-complex-declarators.md)
 
 - [Inizializzazione](../c-language/initialization.md)
 
-- [Archiviazione di tipi di base](../c-language/storage-of-basic-types.md)
+- [Archiviazione dei tipi di base](../c-language/storage-of-basic-types.md)
 
 - [Tipi incompleti](../c-language/incomplete-types.md)
 
@@ -40,6 +41,6 @@ In questa sezione viene illustrata la dichiarazione e l'inizializzazione delle v
 
 - [Attributi di classi di archiviazione estesi](../c-language/c-extended-storage-class-attributes.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimenti per il linguaggio C](../c-language/c-language-reference.md)

@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: identificatori nelle espressioni primarie'
 title: Identificatori in espressioni primarie
 ms.date: 11/04/2016
 helpviewer_keywords:
 - identifiers, designating objects
 ms.assetid: d4602fe6-e7e6-40cc-9823-3b1ebf5d3d38
-ms.openlocfilehash: a6ad5a47230c6ba4bb2c0d636e50779b65483875
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 63fbadeb786edda232282a5073dd85b22f487e9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229662"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182177"
 ---
 # <a name="identifiers-in-primary-expressions"></a>Identificatori in espressioni primarie
 
@@ -19,6 +20,6 @@ Il valore di puntatore rappresentato da un identificatore di matrice non è una 
 
 Un identificatore dichiarato come funzione rappresenta un puntatore il cui valore è l'indirizzo della funzione. Il puntatore fa riferimento a una funzione che restituisce un valore di un tipo specificato. Pertanto, gli identificatori di funzione non possono anche essere l-value nelle operazioni di assegnazione. Per altre informazioni, vedere [Identificatori](../c-language/c-identifiers.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Espressioni primarie C](../c-language/c-primary-expressions.md)

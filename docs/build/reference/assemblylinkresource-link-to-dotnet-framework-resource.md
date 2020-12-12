@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/ASSEMBLYLINKRESOURCE (collegamento alla risorsa .NET Framework)
 title: /ASSEMBLYLINKRESOURCE (Collegamento a risorse .NET Framework)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - ASSEMBLYLINKRESOURCE linker option
 - /ASSEMBLYLINKRESOURCE linker option
 ms.assetid: 8b6ad184-1b33-47a4-8513-4803cf915b64
-ms.openlocfilehash: fb707a2721ed40ee3ec37d01b2bbcfcc51f05c38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32761cb16e8428d5e3c18330dffb49a50a42903c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295162"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183009"
 ---
 # <a name="assemblylinkresource-link-to-net-framework-resource"></a>/ASSEMBLYLINKRESOURCE (Collegamento a risorse .NET Framework)
 
@@ -27,19 +28,19 @@ ms.locfileid: "62295162"
 *filename*<br/>
 File di risorse .NET Framework a cui si vuole stabilire un collegamento dall'assembly.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-L'opzione /ASSEMBLYLINKRESOURCE crea un collegamento a una risorsa di .NET Framework nel file di output. il file di risorse non viene inserito nel file di output. [/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md) incorpora un file di risorse nel file di output.
+L'opzione/ASSEMBLYLINKRESOURCE crea un collegamento a una risorsa .NET Framework nel file di output. il file di risorse non viene inserito nel file di output. [/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md) incorpora un file di risorse nel file di output.
 
-Le risorse collegate sono pubbliche nell'assembly quando viene creato con il linker.
+Le risorse collegate sono pubbliche nell'assembly quando vengono create con il linker.
 
-/ASSEMBLYLINKRESOURCE richiede che la compilazione includa [/clr](clr-common-language-runtime-compilation.md); [/LN](ln-create-msil-module.md) oppure [/NOASSEMBLY](noassembly-create-a-msil-module.md) non è consentita con /ASSEMBLYLINKRESOURCE.
+/ASSEMBLYLINKRESOURCE richiede che la compilazione includa [/CLR](clr-common-language-runtime-compilation.md). [/LN](ln-create-msil-module.md) o [/NOASSEMBLY](noassembly-create-a-msil-module.md) non è consentito con/ASSEMBLYLINKRESOURCE.
 
-Se *nomefile* è un file di risorse .NET Framework creato ad esempio, dal [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri di **System. Resources** dello spazio dei nomi. Per altre informazioni, vedere [System.Resources.ResourceManager](/dotnet/api/system.resources.resourcemanager). Per tutte le altre risorse, usare il **GetManifestResource** \* metodi nel **System** classe per accedere alla risorsa in fase di esecuzione.
+Se *filename* è un file di risorse .NET Framework creato, ad esempio [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) o nell'ambiente di sviluppo, è possibile accedervi con membri nello spazio dei nomi **System. resources** . Per altre informazioni, vedere [System. resources. ResourceManager](/dotnet/api/system.resources.resourcemanager). Per tutte le altre risorse, usare i metodi **GetManifestResource** della \* classe **System. Reflection. assembly** per accedere alla risorsa in fase di esecuzione.
 
-*nome del file* può avere qualsiasi formato di file. Ad esempio, è possibile apportare una DLL nativa parte dell'assembly, per cui può essere installato nella Global Assembly Cache e accedervi dal codice gestito nell'assembly.
+*filename* può essere qualsiasi formato di file. È possibile, ad esempio, creare una parte DLL nativa dell'assembly, in modo che possa essere installata nella global assembly cache e accessibile dal codice gestito nell'assembly.
 
-Altre opzioni del linker che influiscono sulla generazione dell'assembly sono:
+Altre opzioni del linker che influiscono sulla generazione degli assembly sono:
 
 - [/ASSEMBLYDEBUG](assemblydebug-add-debuggableattribute.md)
 
@@ -57,19 +58,19 @@ Altre opzioni del linker che influiscono sulla generazione dell'assembly sono:
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Scegliere il **Linker** cartella.
+1. Fare clic sulla cartella **Linker**.
 
 1. Fare clic sulla pagina delle proprietà **Riga di comando** .
 
-1. Digitare l'opzione nel **opzioni aggiuntive** casella.
+1. Digitare l'opzione nella casella **Opzioni aggiuntive** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Informazioni di riferimento sul linker MSVC](linking.md)<br/>
 [Opzioni del linker MSVC](linker-options.md)

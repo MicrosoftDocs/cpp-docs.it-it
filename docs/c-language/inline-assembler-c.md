@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: assembler inline (C)'
 title: Assembler inline (C)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - __asm keyword [C]
 - inline assembler [C]
 ms.assetid: 821acc77-60b1-434c-ba54-2ba930a25ab4
-ms.openlocfilehash: f6bff3bfef64b45c8a02bb9ad69d2731ba778525
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8c5dc8ecc713968786b05eca6ab38e4752ea48c4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229610"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97181852"
 ---
 # <a name="inline-assembler-c"></a>Assembler inline (C)
 
@@ -49,6 +50,6 @@ __asm push ebp   __asm mov  ebp, esp   __asm sub  esp, __LOCAL_SIZE
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi di funzione](../c-language/function-attributes.md)

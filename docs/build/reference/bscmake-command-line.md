@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: riga di comando di BSCMAKE'
 title: Riga di comando di BSCMAKE
 ms.date: 11/04/2016
 helpviewer_keywords:
 - BSCMAKE, command line
 ms.assetid: 8006e8cf-8bfe-4c23-868a-b0a25e6bbf0f
-ms.openlocfilehash: 61035ce0f211e6a474bb83fc7de7d95b4a29cf3d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0d6cb81fb207c30cd89fbfe3a988380a865a399
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272910"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182658"
 ---
 # <a name="bscmake-command-line"></a>Riga di comando di BSCMAKE
 
@@ -22,22 +23,22 @@ Per eseguire BSCMAKE, usare la sintassi della riga di comando seguente:
 BSCMAKE [options] sbrfiles
 ```
 
-Le opzioni possono essere visualizzati solo nel `options` campo nella riga di comando.
+Le opzioni possono essere visualizzate solo nel `options` campo nella riga di comando.
 
-Il *sbrfiles è possibile* campo specifica uno o più file SBR creati da un compilatore o l'assembler. Separare i nomi dei file sbr con spazi o tabulazioni. È necessario specificare l'estensione. non prevede alcun valore predefinito. È possibile specificare un percorso con il nome del file e si possono usare caratteri jolly del sistema operativo (\* e?).
+Il campo *sbrfiles* specifica uno o più file SBR creati da un compilatore o un assembler. Separare i nomi dei file SBR con spazi o tabulazioni. È necessario specificare l'estensione. non esiste alcun valore predefinito. È possibile specificare un percorso con il nome del file ed è possibile usare i caratteri jolly del sistema operativo ( \* e?).
 
-Durante una compilazione incrementale, è possibile specificare nuovi file sbr che non facevano parte della compilazione originale. Se si desidera che tutti i contributi di rimanere nel file di informazioni di visualizzazione, è necessario specificare tutti i file SBR (tra cui file troncati) che sono stati utilizzati originariamente per creare il file BSC. Se si omette un file sbr, i relativi contributi per il file di informazioni viene rimosso.
+Durante una compilazione incrementale, è possibile specificare nuovi file SBR che non facevano parte della compilazione originale. Se si desidera che tutti i contributi rimangano nel file di informazioni di visualizzazione, è necessario specificare tutti i file SBR (inclusi i file troncati) usati originariamente per creare il file BSC. Se si omette un file SBR, il contributo del file al file di informazioni di visualizzazione verrà rimosso.
 
-Non si specifica un file SBR troncati per una compilazione completa. Una build completa richiede i contributi di tutti i file SBR specificato. Prima di eseguire una build completa, ricompilare il progetto e creare un nuovo file sbr per ogni file vuoto.
+Non specificare un file SBR troncato per una compilazione completa. Una compilazione completa richiede contributi da tutti i file sbr specificati. Prima di eseguire una compilazione completa, ricompilare il progetto e creare un nuovo file SBR per ogni file vuoto.
 
-Il comando seguente esegue BSCMAKE per compilare un file denominato Main. BSC dai tre file SBR:
+Il comando seguente esegue BSCMAKE per compilare un file denominato MAIN. BSC da tre file SBR:
 
 ```
 BSCMAKE main.sbr file1.sbr file2.sbr
 ```
 
-Per informazioni correlate, vedere [File di comando di BSCMAKE](bscmake-command-file-response-file.md) e [opzioni di BSCMAKE](bscmake-options.md).
+Per informazioni correlate, vedere [file di comando BSCMAKE](bscmake-command-file-response-file.md) e [Opzioni BSCMAKE](bscmake-options.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento a BSCMAKE](bscmake-reference.md)

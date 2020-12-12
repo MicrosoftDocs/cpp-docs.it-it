@@ -1,19 +1,20 @@
 ---
+description: 'Altre informazioni su: commenti in un makefile'
 title: Commenti in un makefile
 ms.date: 11/04/2016
 helpviewer_keywords:
 - makefiles, comments
 ms.assetid: 76fd9e3d-5966-47f4-a091-c9e80b232b49
-ms.openlocfilehash: c66819210d2112f9a68243ed4d3b34f491caae9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9edee594c0299d8e93928c1284b7244af71f61e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294356"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182294"
 ---
 # <a name="comments-in-a-makefile"></a>Commenti in un makefile
 
-Anteporre un commento con un simbolo di cancelletto (#). NMAKE ignora il testo compreso il simbolo di cancelletto e il successivo carattere di nuova riga. Esempi:
+Precede un commento con un simbolo di cancelletto (#). NMAKE ignora il testo dal simbolo di cancelletto al successivo carattere di nuova riga. Esempi:
 
 ```
 # Comment on line by itself
@@ -33,12 +34,12 @@ my.exe : my.obj ; link my.obj  # Err: cannot comment this
 .obj.exe: ; link $<  # Error: cannot comment this
 ```
 
-Per specificare un valore letterale cancelletto, anteporvi un accento circonflesso (**^**), come indicato di seguito:
+Per specificare un segno di cancelletto letterale, precederlo con un accento circonflesso ( **^** ), come indicato di seguito:
 
 ```
 DEF = ^#define  #Macro for a C preprocessing directive
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Contenuto di un makefile](contents-of-a-makefile.md)

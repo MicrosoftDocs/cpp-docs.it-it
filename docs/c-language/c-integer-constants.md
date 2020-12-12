@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: costanti Integer C'
 title: Costanti Integer C
 ms.date: 02/27/2018
 helpviewer_keywords:
 - integer constants
 ms.assetid: fcf6b83c-2038-49ec-91ca-3d5ca1f83037
-ms.openlocfilehash: 48561599896bb8a6f9ee159630ff15df6c0454be
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 1dbc22a2d4351dbd6d09f555a95380a1fd94619b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400520"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182190"
 ---
 # <a name="c-integer-constants"></a>Costanti Integer C
 
@@ -70,7 +71,7 @@ Una *costante Integer* è un numero decimale (base 10), ottale (base 8) o esadec
 
 I suffissi **i64** e **I64** sono specifici di Microsoft.
 
-Le costanti integer sono positive a meno che non siano precedute da un segno**-** meno (). Il segno meno viene interpretato come operatore di negazione aritmetico unario. Per informazioni su questo operatore, vedere [Operatori aritmetici unari](../c-language/unary-arithmetic-operators.md).
+Le costanti integer sono positive a meno che non siano precedute da un segno meno ( **-** ). Il segno meno viene interpretato come operatore di negazione aritmetico unario. Per informazioni su questo operatore, vedere [Operatori aritmetici unari](../c-language/unary-arithmetic-operators.md).
 
 Se una costante Integer inizia con **0x** o **0X**, è esadecimale. Se inizia con la cifra **0**, è ottale. In caso contrario, si presume che sia decimale.
 
@@ -116,6 +117,6 @@ Nessuno spazio vuoto può separare le cifre di una costante Integer. Questi esem
     unsigned __int64    hex_ui64   = 0x8a44000000000040Ui64;
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Costanti C](../c-language/c-constants.md)<br/>

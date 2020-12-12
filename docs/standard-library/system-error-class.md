@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: system_error Class'
 title: Classe system_error
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - system_error class
 ms.assetid: 2eeaacbb-8a4a-4ad7-943a-997901a77f32
-ms.openlocfilehash: 7a18d2f9f229a62a539be072870e38a990677636
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 51e629e9fffca6ec82e06521d1d81174da5ff1f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076370"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183165"
 ---
 # <a name="system_error-class"></a>Classe system_error
 

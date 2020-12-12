@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/bigobj (aumenta il numero di sezioni in. File obj)
 title: /bigobj (Aumenta il numero di sezioni nel file obj)
 ms.date: 03/26/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /bigobj compiler option [C++]
 - bigobj compiler option [C++]
 ms.assetid: ba94d602-4015-4a8d-86ec-49241ab74c12
-ms.openlocfilehash: 30c02c72496e3bb91da3b39e1870f1dc5a2c040a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4e820211ec46ad2a2d125552f95fb8a82c6f57ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493105"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182697"
 ---
 # <a name="bigobj-increase-number-of-sections-in-obj-file"></a>/bigobj (Aumenta il numero di sezioni nel file obj)
 
@@ -23,7 +24,7 @@ ms.locfileid: "69493105"
 
 > **/bigobj**
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, un file oggetto può avere fino a 65.279 sezioni indirizzabili (quasi 2 ^ 16). Questo limite si applica indipendentemente dalla piattaforma di destinazione specificata. **/bigobj** aumenta la capacità dell'indirizzo a 4.294.967.296 (2 ^ 32).
 
@@ -33,9 +34,9 @@ Per informazioni sul formato di file dell'oggetto PE-COFF, vedere [formato PE](/
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare le proprietà del compilatore e di compilazione C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la pagina delle proprietà **Proprietà di configurazione** > **C/C++**  > **Riga di comando**.
+1. Selezionare la pagina delle proprietà di **configurazione** proprietà della riga di comando di  >  **c/C++**  >   .
 
 1. Immettere l'opzione del compilatore **/bigobj** nella casella **Opzioni aggiuntive** .
 
@@ -43,7 +44,7 @@ Per informazioni sul formato di file dell'oggetto PE-COFF, vedere [formato PE](/
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

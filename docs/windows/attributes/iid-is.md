@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: iid_is'
 title: iid_is (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-ms.openlocfilehash: 6a8fe8c7481cd251baff65293607733573f46ea6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9de6d636fbb189ece9aedec95cb9460c2ccbb5a1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832217"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183100"
 ---
 # <a name="iid_is"></a>iid_is
 
@@ -28,7 +29,7 @@ Specifica l'IID dell'interfaccia COM a cui fa riferimento un puntatore a interfa
 *expression*<br/>
 Espressione del linguaggio C che specifica un IID di un'interfaccia COM a cui fa riferimento un puntatore a interfaccia.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'attributo **iid_is** C++ ha la stessa funzionalità dell'attributo [iid_is](/windows/win32/Midl/iid-is) MIDL.
 
@@ -62,7 +63,7 @@ __interface IFireTabCtrl : IDispatch
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi del parametro](parameter-attributes.md)

@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/CLRUNMANAGEDCODECHECK (Rimuovi SuppressUnmanagedCodeSecurityAttribute)
 title: /CLRUNMANAGEDCODECHECK (rimuove SuppressUnmanagedCodeSecurityAttribute)
 ms.date: 05/16/2019
 ms.topic: reference
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 73abc426-dab0-45e2-be85-0f9a14206cc2
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: ecc560673a8e98752289ef0e0f89d3abfc1938e4
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: e08b7b4b18a463122316b041ad81d6ddd2598bca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837247"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182398"
 ---
 # <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (rimuove SuppressUnmanagedCodeSecurityAttribute)
 
@@ -25,7 +26,7 @@ ms.locfileid: "65837247"
 
 > **/CLRUNMANAGEDCODECHECK**[**:NO**]
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, il linker applica **SuppressUnmanagedCodeSecurityAttribute** alle chiamate `PInvoke` generate dal linker. Quando **/CLRUNMANAGEDCODECHECK** è attivo, **SuppressUnmanagedCodeSecurityAttribute** viene rimosso. Per applicare in modo esplicito **SuppressUnmanagedCodeSecurityAttribute** alle chiamate `PInvoke` generate dal linker, è possibile usare **/CLRUNMANAGEDCODECHECK:NO**.
 
@@ -39,7 +40,7 @@ Vedere [Linee guida per la creazione di codice sicuro applicabili al codice non 
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare le proprietà del compilatore e di compilazione C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
 1. Espandere il nodo **Proprietà di configurazione**.
 
@@ -53,7 +54,7 @@ Vedere [Linee guida per la creazione di codice sicuro applicabili al codice non 
 
 1. Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRUnmanagedCodeCheck%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Informazioni di riferimento sul linker MSVC](linking.md)
 - [Opzioni del linker MSVC](linker-options.md)

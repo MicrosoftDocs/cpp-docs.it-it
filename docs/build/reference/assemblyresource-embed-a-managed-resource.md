@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/ASSEMBLYRESOURCE (incorpora una risorsa gestita)
 title: /ASSEMBLYRESOURCE (Incorpora una risorsa gestita)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - assemblies [C++], linking resource files
 - /ASSEMBLYRESOURCE linker option
 ms.assetid: 0ce6e1fb-921b-4b1b-a59c-d35388d789f2
-ms.openlocfilehash: 1eac489ffd01f6bd79fc8c5bbda23adb751c9486
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f79cc177df72bb83288a0a229fdf47adb0e7fc0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295071"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182918"
 ---
 # <a name="assemblyresource-embed-a-managed-resource"></a>/ASSEMBLYRESOURCE (Incorpora una risorsa gestita)
 
@@ -27,22 +28,22 @@ ms.locfileid: "62295071"
 ## <a name="parameters"></a>Parametri
 
 *filename*<br/>
-La risorsa gestita da incorporare nell'assembly.
+Risorsa gestita da incorporare nell'assembly.
 
-*name*<br/>
-Facoltativo. Il nome logico della risorsa nome utilizzato per caricare la risorsa. L'impostazione predefinita corrisponde al nome del file.
+*nome*<br/>
+facoltativo. Nome logico della risorsa. nome usato per caricare la risorsa. L'impostazione predefinita corrisponde al nome del file.
 
-Facoltativamente, è possibile specificare se il file deve essere privato nel manifesto dell'assembly. Per impostazione predefinita *nome* è pubblico nell'assembly.
+Facoltativamente, è possibile specificare se il file deve essere privato nel manifesto dell'assembly. Per impostazione predefinita, il *nome* è pubblico nell'assembly.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Usare l'opzione /ASSEMBLYRESOURCE. per incorporare una risorsa in un assembly.
+Usare l'opzione/ASSEMBLYRESOURCE per incorporare una risorsa in un assembly.
 
-Le risorse sono pubbliche nell'assembly quando viene creato con il linker. Il linker non consente di rinominare la risorsa nell'assembly.
+Le risorse sono pubbliche nell'assembly quando vengono create con il linker. Il linker non consente di rinominare la risorsa nell'assembly.
 
-Se *nomefile* è un file di risorse (con estensione resources) di .NET Framework creato ad esempio, dalle [Resource File Generator Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri di **System. Resources** dello spazio dei nomi (vedere [System.Resources.ResourceManager](/dotnet/api/system.resources.resourcemanager) per altre informazioni). Per tutte le altre risorse, usare il **GetManifestResource** \* metodi **System** classe per accedere alla risorsa in fase di esecuzione.
+Se *filename* è un file di risorse .NET Framework (con estensione resources) creato, ad esempio dal [Generatore di file di risorse (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator) o dall'ambiente di sviluppo, è possibile accedervi con i membri dello spazio dei nomi **System. resources** . per altre informazioni, vedere [System. resources. ResourceManager](/dotnet/api/system.resources.resourcemanager) . Per tutte le altre risorse, usare i metodi **GetManifestResource** \* della classe **System. Reflection. assembly** per accedere alla risorsa in fase di esecuzione.
 
-Altre opzioni del linker che influiscono sulla generazione dell'assembly sono:
+Altre opzioni del linker che influiscono sulla generazione degli assembly sono:
 
 - [/ASSEMBLYDEBUG](assemblydebug-add-debuggableattribute.md)
 
@@ -60,19 +61,19 @@ Altre opzioni del linker che influiscono sulla generazione dell'assembly sono:
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Scegliere il **Linker** cartella.
+1. Fare clic sulla cartella **Linker**.
 
-1. Scegliere il **Input** pagina delle proprietà.
+1. Fare clic sulla pagina delle proprietà **input** .
 
-1. Modificare il **incorpora File di risorse gestite** proprietà.
+1. Modificare la proprietà **Incorpora file di risorse gestite** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
 
 1. Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EmbedManagedResourceFile%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Informazioni di riferimento sul linker MSVC](linking.md)<br/>
 [Opzioni del linker MSVC](linker-options.md)

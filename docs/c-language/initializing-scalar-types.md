@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: inizializzazione di tipi scalari'
 title: Inizializzazione di tipi scalari
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - automatic storage class
 - types [C], initializing
 ms.assetid: 73c516f5-c3ad-4d56-ab3b-f2a82b621104
-ms.openlocfilehash: 063761abcbb1541893b9cbab463e3d121684d00a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a9294f04f39e6984a2068c5c8f79e48641834236
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211827"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97181826"
 ---
 # <a name="initializing-scalar-types"></a>Inizializzazione di tipi scalari
 
@@ -56,7 +57,7 @@ Quando si inizializzano i tipi scalari, il valore di *`assignment-expression`* v
 
 - Se la dichiarazione di un identificatore presenta un ambito del blocco e l'identificatore presenta un collegamento esterno, la dichiarazione non può avere un'inizializzazione.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Negli esempi riportati di seguito vengono illustrate le inizializzazioni:
 
@@ -104,6 +105,6 @@ int function( void )
 
 La variabile globale `GLOBAL` viene dichiarata a livello esterno, quindi ha una durata globale. La variabile locale `LOCAL` ha **`auto`** una classe di archiviazione e ha un indirizzo solo durante l'esecuzione della funzione in cui è dichiarata. Pertanto, il tentativo di inizializzare la **`static`** variabile puntatore `lp` con l'indirizzo di `LOCAL` non è consentito. La **`static`** variabile puntatore `gp` può essere inizializzata nell'indirizzo di `GLOBAL` perché tale indirizzo è sempre lo stesso. Analogamente, `*rp` può essere inizializzato in quanto `rp` è una variabile locale e può disporre di un inizializzatore non costante. Ogni volta che viene attivato il blocco, `LOCAL` presenta un nuovo indirizzo, che viene quindi assegnato a `rp`.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Inizializzazione](../c-language/initialization.md)

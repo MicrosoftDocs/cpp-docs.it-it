@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: idl_module'
 title: idl_module (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: 651d2e133d7ef08fce48feded1b7a5aff458adb1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 01fbb6cb04f31d9df4466e148a89fccb012835e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845224"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183139"
 ---
 # <a name="idl_module"></a>idl_module
 
@@ -32,7 +33,7 @@ Nome definito dall'utente per il blocco di codice che verrà visualizzato nel fi
 *DllName*<br/>
 Opzionale Il file con estensione dll che contiene l'esportazione.
 
-*uuid*<br/>
+*UUID*<br/>
 Opzionale ID univoco.
 
 *helpstring*<br/>
@@ -53,7 +54,7 @@ Opzionale I membri della libreria non possono essere chiamati in modo arbitrario
 *Dichiarazione di funzione*<br/>
 Funzione che si vuole definire.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'attributo **idl_module** C++ consente di specificare il punto di ingresso in un file con estensione dll, che consente di importare da un file con estensione dll.
 
@@ -87,7 +88,7 @@ void FuncName(int i);
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi autonomi](stand-alone-attributes.md)<br/>

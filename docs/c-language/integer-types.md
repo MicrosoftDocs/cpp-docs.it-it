@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: tipi Integer'
 title: Tipi Integer
 ms.date: 07/22/2020
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - integer types
 - integers, types
 ms.assetid: c8926a5e-0e98-4e37-9b05-ce97961379bd
-ms.openlocfilehash: 61ed64c613bc88ed5bf62999ba77fa4090c1ec4a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0142a6c9394851bc65df0150db40eb2228dd0fe3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211801"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97181839"
 ---
 # <a name="integer-types"></a>Tipi Integer
 
@@ -48,6 +49,6 @@ Il tipo assegnato a una costante dipende dal valore che la costante rappresenta.
 
 - Il tipo assegnato alle costanti con un oggetto **`u`** o **`U`** e un **`l`** **`L`** suffisso o è **`unsigned long int`** .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Costanti Integer C](../c-language/c-integer-constants.md)

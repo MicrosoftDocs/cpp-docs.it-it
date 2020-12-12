@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: istruzione if (C)'
 title: Istruzione if (C)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - if keyword [C], if statement syntax
 - nested statements
 ms.assetid: d7fc16a0-fdbc-4f39-b596-76e1ca4ad4a5
-ms.openlocfilehash: 6fe92d3f2927cd6c5b3df16850e2925fc42055d0
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 07d350329d047e35948ed9819de640e98c5bc13b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684144"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182138"
 ---
 # <a name="if-statement-c"></a>Istruzione if (C)
 
@@ -26,7 +27,7 @@ L' **`if`** istruzione controlla la diramazione condizionale. Il corpo di un' **
 
 *selection-statement*:*istruzione* **if (***Expression***)**      
 
-**)***statement*istruzione **if (***Expression*) **`else`** *statement*          
+istruzione **if (***Expression*) **`else`**           
 
 In entrambi i formati dell' **`if`** istruzione, le espressioni, che possono avere qualsiasi valore tranne una struttura, vengono valutate, inclusi tutti gli effetti collaterali.
 
@@ -70,6 +71,6 @@ else
 
 Le parentesi graffe che racchiudono l' **`if`** istruzione interna in questo esempio fanno **`else`** parte della clausola dell' **`if`** istruzione esterna. Se `i` è minore o uguale a 0, `i` viene assegnato a `x`.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Istruzione if-else (C++)](../cpp/if-else-statement-cpp.md)

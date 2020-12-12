@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: sync_per_thread Class'
 title: Classe sync_per_thread
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - stdext::sync_per_thread [C++], deallocate
 - stdext::sync_per_thread [C++], equals
 ms.assetid: 47bf75f8-5b02-4760-b1d3-3099d08fe14c
-ms.openlocfilehash: 24c5463dc9fb80703361e374efb99fae9e103e7c
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: dbce0441e32c97907bdf2cc5831a94c9af125453
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562090"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183295"
 ---
 # <a name="sync_per_thread-class"></a>Classe sync_per_thread
 
@@ -35,7 +36,7 @@ class sync_per_thread
 *Cache*\
 Tipo di cache associato al filtro di sincronizzazione. Può essere [`cache_chunklist`](../standard-library/cache-chunklist-class.md) , [`cache_freelist`](../standard-library/cache-freelist-class.md) o [`cache_suballoc`](../standard-library/cache-suballoc-class.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Gli allocatori che usano `sync_per_thread` possono risultare uguali anche se i blocchi allocati in un thread non possono essere deallocati da un altro thread. Quando si usa uno di questi allocatori, i blocchi di memoria allocati in un thread non devono essere resi visibili agli altri thread. In pratica, questo significa che un contenitore che usa uno di questi allocatori deve risultare accessibile a un singolo thread.
 
@@ -66,7 +67,7 @@ void *allocate(std::size_t count);
 *conteggio*\
 Numero di elementi della matrice da allocare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce il risultato di una chiamata a `cache::allocate(count)` sull'oggetto cache appartenente al thread corrente. Se per il thread corrente non è stato allocato alcun oggetto cache, la funzione ne alloca subito uno.
 
@@ -86,7 +87,7 @@ Puntatore al primo oggetto che deve essere deallocato dall'archivio.
 *conteggio*\
 Numero di oggetti da deallocare dall'archivio.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro chiama `deallocate` sull'oggetto cache appartenente al thread corrente. Se per il thread corrente non è stato allocato alcun oggetto cache, la funzione ne alloca subito uno.
 
@@ -110,7 +111,7 @@ Oggetto cache da confrontare per verificarne l'uguaglianza.
 
 **`false`** Se non è stato allocato alcun oggetto cache per questo oggetto o per un *altro* oggetto nel thread corrente. In caso contrario, restituisce il risultato dell'applicazione di `operator==` ai due oggetti cache.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="see-also"></a>Vedere anche
 
