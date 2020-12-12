@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classi Array, List e map'
 title: Classi Array, List e Map
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - map classes [MFC]
 - collection classes [MFC], lists
 ms.assetid: 81a13a7f-0c2c-4efd-b6bb-b4e624a0743d
-ms.openlocfilehash: 9583d8263901c4a135a3ba1f560856b2a8915168
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 4b35aa879aa7f73f34c35232356cbc9e049f4ced
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626111"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176704"
 ---
 # <a name="array-list-and-map-classes"></a>Classi Array, List e Map
 
@@ -25,6 +26,6 @@ Gli elenchi sono simili a matrici ma sono archiviati in modo molto diverso. Ogni
 
 Le mappe correlano un valore di chiave a un valore di dati. Ad esempio, la chiave di una mappa può essere una stringa e i dati un puntatore in un elenco. Si chiede alla mappa di fornire il puntatore associato a una determinata stringa. Le ricerche con mapping sono veloci perché le mappe usano tabelle hash per le ricerche chiave. Anche l'aggiunta e l'eliminazione di elementi è veloce. Le mappe vengono spesso usate con altre strutture di dati come indici ausiliari. MFC utilizza un tipo speciale di mapping denominato [mappa messaggi](mapping-messages.md) per eseguire il mapping dei messaggi di Windows a un puntatore alla funzione del gestore per quel messaggio.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Cenni preliminari sulle classi](class-library-overview.md)

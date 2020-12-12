@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: struttura ArgTraits'
 title: ArgTraits (struttura)
 ms.date: 10/03/2018
 ms.topic: reference
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ArgTraits structure
 - Microsoft::WRL::Details::ArgTraits::args constant
 ms.assetid: 58ae4115-c1bc-48c8-b01b-e60554841c30
-ms.openlocfilehash: 16c44d861ebbbc98fa1bffb62a00d1989c0c803c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b44cd1ff8d5aa4355385629cc08321dfe353e24c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377168"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97175911"
 ---
 # <a name="argtraits-structure"></a>ArgTraits (struttura)
 
@@ -129,64 +130,64 @@ struct ArgTraits<
 
 ### <a name="parameters"></a>Parametri
 
-*Funzione TMember*<br/>
-Parametro Typename per una struttura ArgTraits che non può corrispondere ad alcuna `Invoke` firma del metodo.
+*TMemberFunction*<br/>
+Parametro TypeName per una struttura ArgTraits che non può corrispondere a una `Invoke` firma del metodo.
 
 *TDelegateInterface*<br/>
-Interfaccia di delegato.
+Interfaccia del delegato.
 
 *TArg1*<br/>
-Tipo del primo argomento `Invoke` del metodo.
+Tipo del primo argomento del `Invoke` metodo.
 
 *TArg2*<br/>
-Tipo del secondo argomento `Invoke` del metodo.
+Tipo del secondo argomento del `Invoke` metodo.
 
-*Targ3*<br/>
-Tipo del terzo argomento `Invoke` del metodo.
+*TArg3*<br/>
+Tipo del terzo argomento del `Invoke` metodo.
 
 *TArg4*<br/>
-Tipo del quarto argomento `Invoke` del metodo.
+Tipo del quarto argomento del `Invoke` metodo.
 
 *TArg5*<br/>
-Tipo del quinto argomento `Invoke` del metodo.
+Tipo del quinto argomento del `Invoke` metodo.
 
 *TArg6*<br/>
-Tipo del sesto `Invoke` argomento del metodo.
+Tipo del sesto argomento del `Invoke` metodo.
 
-*Targ7*<br/>
-Tipo del settimo argomento `Invoke` del metodo.
+*TArg7*<br/>
+Tipo del settimo argomento del `Invoke` metodo.
 
 *TArg8*<br/>
-Tipo dell'ottavo argomento `Invoke` del metodo.
+Tipo dell'ottavo argomento del `Invoke` metodo.
 
 *TArg9*<br/>
-Tipo del nono argomento `Invoke` del metodo.
+Tipo del nono argomento del `Invoke` metodo.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La `ArgTraits` struttura dichiara un'interfaccia di delegato specificata e una funzione membro anonima con un numero specificato di parametri.
+La `ArgTraits` struttura dichiara un'interfaccia del delegato specificata e una funzione membro anonima con un numero specificato di parametri.
 
 ## <a name="members"></a>Membri
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-Nome       | Descrizione
+Nome       | Description
 ---------- | ----------------------
-`Arg1Type` | Il typedef per TArg1.
-`Arg2Type` | Il typedef per TArg2.
-`Arg3Type` | Il typedef per TArg3.
-`Arg4Type` | Il typedef per TArg4.
-`Arg5Type` | Il typedef per TArg5.
-`Arg6Type` | Il typedef per TArg6.
-`Arg7Type` | Il typedef per TArg7.
-`Arg8Type` | Il typedef per TArg8.
-`Arg9Type` | Il typedef per TArg9.
+`Arg1Type` | Typedef per TArg1.
+`Arg2Type` | Typedef per TArg2.
+`Arg3Type` | Typedef per TArg3.
+`Arg4Type` | Typedef per TArg4.
+`Arg5Type` | Typedef per TArg5.
+`Arg6Type` | Typedef per TArg6.
+`Arg7Type` | Typedef per TArg7.
+`Arg8Type` | Typedef per TArg8.
+`Arg9Type` | Typedef per TArg9.
 
 ### <a name="public-constants"></a>Costanti pubbliche
 
-Nome                     | Descrizione
+Nome                     | Description
 ------------------------ | ---------------------------------------------------------------------------------------
-[ArgTraits::args](#args) | Mantiene il conteggio del numero `Invoke` di parametri nel metodo di un'interfaccia di delegato.
+[ArgTraits:: args](#args) | Mantiene il conteggio del numero di parametri nel `Invoke` metodo di un'interfaccia del delegato.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -194,11 +195,11 @@ Nome                     | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** event.h
+**Intestazione:** Event. h
 
-**Spazio dei nomi:** Microsoft::WRL::Details
+**Spazio dei nomi:** Microsoft:: WRL::D etails
 
-## <a name="argtraitsargs"></a><a name="args"></a>ArgTraits::args
+## <a name="argtraitsargs"></a><a name="args"></a> ArgTraits:: args
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -206,6 +207,6 @@ Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codi
 static const int args = -1;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Mantiene il conteggio del numero `Invoke` di parametri nel metodo di un'interfaccia di delegato. Quando `args` è uguale a -1, `Invoke` non può essere presente alcuna corrispondenza per la firma del metodo.
+Mantiene il conteggio del numero di parametri nel `Invoke` metodo di un'interfaccia del delegato. Se `args` è uguale a-1, non è possibile trovare corrispondenze per la `Invoke` firma del metodo.

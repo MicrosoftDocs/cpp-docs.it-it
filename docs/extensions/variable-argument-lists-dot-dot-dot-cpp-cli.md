@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: elenchi di argomenti variabili (...) (C++/CLI)'
 title: Elenchi di argomenti variabili (...) (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -6,19 +7,19 @@ helpviewer_keywords:
 - variable argument lists
 - parameter arrays
 ms.assetid: db1a27f4-02a8-4318-8690-1f2893f52b38
-ms.openlocfilehash: 8ea4d71bf9a22fc96c794a92ba43bed6548cf5d1
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: fec05a2ce397a0991a4bfd0a5aeb6a8b16d986ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032304"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176847"
 ---
 # <a name="variable-argument-lists--ccli"></a>Elenchi di argomenti variabili (...) (C++/CLI)
 
 Questo esempio illustra come usare la sintassi `...` in C++/CLI per implementare funzioni che hanno un numero variabile di argomenti.
 
 > [!NOTE]
-> Questo argomento si riferisce a C++/CLI. Per informazioni sull'utilizzo di `...` ISO Standard C, vedere [Ellissi e modelli variadici](../cpp/ellipses-and-variadic-templates.md) e ellissi e argomenti predefiniti nelle espressioni [Postfix](../cpp/postfix-expressions.md).
+> Questo argomento si riferisce a C++/CLI. Per informazioni sull'utilizzo `...` di in C++ standard ISO, vedere i [puntini di sospensione e i modelli variadic](../cpp/ellipses-and-variadic-templates.md) e i puntini di sospensione e gli argomenti predefiniti nelle [espressioni suffisse](../cpp/postfix-expressions.md).
 
 Il parametro che usa `...` deve essere l'ultimo parametro nell'elenco di parametri.
 
@@ -101,6 +102,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Matrici](arrays-cpp-component-extensions.md)

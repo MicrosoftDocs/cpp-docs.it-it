@@ -1,19 +1,20 @@
 ---
+description: 'Altre informazioni su: generazione di manifesti in Visual Studio'
 title: Generazione di manifesti in Visual Studio
 ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-ms.openlocfilehash: f055e3d16dfc0ea4320883210458ae10daebdc45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88d6cac19e7a0c24a28252edda5ac22ca3cadd64
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273360"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176444"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Generazione di manifesti in Visual Studio
 
-La generazione di un file manifesto per un progetto specifico può essere controllata nella finestra di dialogo **pagine delle proprietà** del progetto. Nella scheda **proprietà di configurazione** fare clic **su linker**, quindi su **file manifesto**e quindi su **Genera manifesto**. Per impostazione predefinita, le proprietà del progetto dei nuovi progetti sono impostate per generare un file manifesto. È tuttavia possibile disabilitare la generazione del manifesto per un progetto utilizzando la proprietà **Genera manifesto** del progetto. Quando questa proprietà è impostata su **Sì**, viene generato il manifesto per questo progetto. In caso contrario, il linker ignorerà le informazioni sull'assembly durante la risoluzione delle dipendenze del codice dell'applicazione e non genererà il manifesto.
+La generazione di un file manifesto per un progetto specifico può essere controllata nella finestra di dialogo **pagine delle proprietà** del progetto. Nella scheda **proprietà di configurazione** fare clic **su linker**, quindi su **file manifesto** e quindi su **Genera manifesto**. Per impostazione predefinita, le proprietà del progetto dei nuovi progetti sono impostate per generare un file manifesto. È tuttavia possibile disabilitare la generazione del manifesto per un progetto utilizzando la proprietà **Genera manifesto** del progetto. Quando questa proprietà è impostata su **Sì**, viene generato il manifesto per questo progetto. In caso contrario, il linker ignorerà le informazioni sull'assembly durante la risoluzione delle dipendenze del codice dell'applicazione e non genererà il manifesto.
 
 Il sistema di compilazione in Visual Studio consente di incorporare il manifesto nel file di applicazione binario finale o di essere generato come file esterno. Questo comportamento è controllato dall'opzione **Incorpora manifesto** nella finestra di dialogo delle **proprietà del progetto** . Per impostare questa proprietà, aprire il nodo **strumento Manifesto** , quindi selezionare **input e output**. Se il manifesto non è incorporato, viene generato come file esterno e salvato nella stessa directory del file binario finale. Se il manifesto è incorporato, Visual Studio incorpora i manifesti finali usando il processo seguente:
 
@@ -29,6 +30,6 @@ Il sistema di compilazione in Visual Studio consente di incorporare il manifesto
 
 Il manifesto è incorporato nel file binario finale come risorsa di testo e può essere visualizzato aprendo il file binario finale come file in Visual Studio. Per assicurarsi che il manifesto punti alle librerie corrette, seguire i passaggi descritti in [informazioni sulle dipendenze di un'applicazione Visual C++](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md) o seguire i suggerimenti descritti nella sezione sulla [risoluzione dei problemi](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Informazioni sulla generazione di manifesti per i programmi C/C++](understanding-manifest-generation-for-c-cpp-programs.md)

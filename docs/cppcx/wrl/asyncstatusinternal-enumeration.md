@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Enumerazione AsyncStatusInternal'
 title: AsyncStatusInternal (enumerazione)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - AsyncStatusInternal enumeration
 ms.assetid: b783923f-3f1c-4487-9384-be572cbc62d7
-ms.openlocfilehash: 0eadd1e3a287feecd36b00b231b42c31218352c1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3227699a0e7b8933dc5839e65fb3489328d3b1f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214149"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97175794"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal (enumerazione)
 
@@ -26,9 +27,9 @@ enum AsyncStatusInternal;
 
 ## <a name="remarks"></a>Osservazioni
 
-Specifica un mapping tra enumerazioni interne per lo stato delle operazioni asincrone e l'enumerazione `Windows::Foundation::AsyncStatus`.
+Specifica un mapping tra enumerazioni interne per lo stato delle operazioni asincrone e dell' `Windows::Foundation::AsyncStatus` enumerazione.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 `_Created`<br/>
 Equivalente a `::Windows::Foundation::AsyncStatus::Created`
@@ -51,6 +52,6 @@ Equivalente a `::Windows::Foundation::AsyncStatus::Error`
 
 **Spazio dei nomi:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi Microsoft::WRL::Details](microsoft-wrl-details-namespace.md)
+[Spazio dei nomi Microsoft:: WRL::D etails](microsoft-wrl-details-namespace.md)

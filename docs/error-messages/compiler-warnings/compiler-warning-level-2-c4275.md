@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 2) C4275'
 title: Avviso del compilatore (livello 2) C4275
 ms.date: 02/08/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4275
 ms.assetid: 18de967a-0a44-4dbc-a2e8-fc4c067ba909
-ms.openlocfilehash: ad12c1c27006a57c8339e9dad82e4d8e1a239a6e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0dd212d7439b73c28a5426574b72ff8150abe93c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161997"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97173649"
 ---
 # <a name="compiler-warning-level-2-c4275"></a>Avviso del compilatore (livello 2) C4275
 
@@ -33,7 +34,7 @@ Per ridurre al minimo la possibilità di danneggiamento dei dati quando si espor
 
 È possibile evitare di esportare classi definendo una DLL che definisce una classe con funzioni virtuali e funzioni che è possibile chiamare per creare un'istanza ed eliminare oggetti del tipo.  È quindi possibile chiamare semplicemente funzioni virtuali sul tipo.
 
-C4275 può essere ignorato in Visual C++ se si deriva da un tipo nella libreria C++ standard, si compila una versione di debug ( **/MTD**) e il messaggio di errore del compilatore fa riferimento a `_Container_base`.
+C4275 può essere ignorato in Visual C++ se si deriva da un tipo nella libreria standard C++, si compila una versione di debug (**/MTD**) e si fa riferimento al messaggio di errore del compilatore `_Container_base` .
 
 ```cpp
 // C4275.cpp

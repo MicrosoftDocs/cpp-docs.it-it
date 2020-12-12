@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: procedura: definire e usare delegati (C++/CLI)'
 title: 'Procedura: definire e utilizzare delegati (C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
-ms.openlocfilehash: 495ceea6afb222d13953b3a25b7a1c836b299de6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4229af2015db3a9a77722e9e4cc24b80aa05a49b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216401"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97175755"
 ---
 # <a name="how-to-define-and-use-delegates-ccli"></a>Procedura: definire e utilizzare delegati (C++/CLI)
 
@@ -271,7 +272,7 @@ Di seguito viene illustrato come dichiarare, creare un'istanza e chiamare delega
 |------------|---------------------|-----------------------|
 |Declare|La firma del delegato deve corrispondere alla firma della funzione che si desidera chiamare tramite il delegato.|Il primo parametro della firma del delegato è il tipo di **`this`** per l'oggetto che si desidera chiamare.<br /><br /> Dopo il primo parametro, la firma del delegato deve corrispondere alla firma della funzione che si desidera chiamare tramite il delegato.|
 |Creare|Quando si crea un'istanza di un delegato associato, è possibile specificare una funzione di istanza o una funzione membro globale o statica.<br /><br /> Per specificare una funzione di istanza, il primo parametro è un'istanza del tipo la cui funzione membro si desidera chiamare e il secondo parametro è l'indirizzo della funzione che si desidera chiamare.<br /><br /> Se si vuole chiamare una funzione membro globale o statica, è sufficiente passare il nome di una funzione globale o il nome della funzione membro statica.|Quando si crea un'istanza di un delegato non associato, è sufficiente passare l'indirizzo della funzione che si vuole chiamare.|
-|Chiamata|Quando si chiama un delegato associato, è sufficiente passare i parametri necessari per la firma del delegato.|Uguale a un delegato associato, ma tenere presente che il primo parametro deve essere un'istanza dell'oggetto che contiene la funzione che si vuole chiamare.|
+|Call|Quando si chiama un delegato associato, è sufficiente passare i parametri necessari per la firma del delegato.|Uguale a un delegato associato, ma tenere presente che il primo parametro deve essere un'istanza dell'oggetto che contiene la funzione che si vuole chiamare.|
 
 Questo esempio illustra come dichiarare, creare un'istanza e chiamare delegati non associati:
 
@@ -502,6 +503,6 @@ int main() {
 14
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [delegato (Estensioni del componente C++)](../extensions/delegate-cpp-component-extensions.md)

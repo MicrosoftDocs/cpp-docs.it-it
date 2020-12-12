@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura: eseguire il data binding DDX/DDV con Windows Forms'
 title: 'Procedura: Eseguire data binding DDX-DDV con Windows Form'
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: b2957370-cf1f-4779-94ac-228cd393686c
-ms.openlocfilehash: a0759eba1c55e72f2c0a99964b0b2d254df82a25
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 55dfdaac595b6de0369d7db555c40b8cd38d6c01
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008320"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97175651"
 ---
 # <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>Procedura: eseguire data binding DDX/DDV con Windows Form
 
@@ -82,7 +83,7 @@ m_MyControl.GetControl()->textBox1->Text = "hello";
 
 È ora possibile compilare ed eseguire l'applicazione. Si noti che qualsiasi testo presente nella casella di testo verrà visualizzato in una finestra di messaggio popup al termine della chiusura dell'applicazione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CWinFormsControl](../mfc/reference/cwinformscontrol-class.md)<br/>
 [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)<br/>

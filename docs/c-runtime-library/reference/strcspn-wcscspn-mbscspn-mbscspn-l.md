@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: strcspn, wcscspn, _mbscspn, _mbscspn_l'
 title: strcspn, wcscspn, _mbscspn, _mbscspn_l
 ms.date: 4/2/2020
 api_name:
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - mbscspn function
 - _tcscspn function
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
-ms.openlocfilehash: 8fb3e0fe7590dac9fc3ce107b3c1b2a5800c867b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a453d14541bb6e74b63d869c4d9dcc5d6d4f49e2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915245"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176158"
 ---
 # <a name="strcspn-wcscspn-_mbscspn-_mbscspn_l"></a>strcspn, wcscspn, _mbscspn, _mbscspn_l
 
@@ -83,7 +84,7 @@ size_t _mbscspn_l(
 
 ### <a name="parameters"></a>Parametri
 
-*Str*<br/>
+*str*<br/>
 Stringa cercata con terminazione Null.
 
 *strCharSet*<br/>
@@ -98,7 +99,7 @@ Queste funzioni restituiscono l'indice del primo carattere in *Str* che si trova
 
 Nessun valore restituito è riservato per indicare un errore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 **wcscspn** e **_mbscspn** sono versioni a caratteri wide e a caratteri multibyte di **strcspn**. Gli argomenti di **wcscspn** sono stringhe a caratteri wide. i **_mbscspn** sono stringhe di caratteri multibyte.
 
@@ -162,8 +163,8 @@ strcspn( "", "" ) = 0
 ## <a name="see-also"></a>Vedere anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>

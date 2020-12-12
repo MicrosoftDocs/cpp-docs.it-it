@@ -1,19 +1,20 @@
 ---
+description: 'Altre informazioni su: Rinomina attributo Import'
 title: Rinomina attributo importazione
 ms.date: 08/29/2019
 helpviewer_keywords:
 - rename attribute
 ms.assetid: 5c5c6153-1087-4b7b-87fb-fc59b90b9975
-ms.openlocfilehash: 520369f0308078fead2947e27a512f25a3ad3fab
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 3003300887dadbab5cf05396ff3fa38b6dd29026
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447491"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176600"
 ---
 # <a name="rename-import-attribute"></a>Rinomina attributo importazione
 
-**C++Specifico**
+**Sezione specifica C++**
 
 Risolve i problemi di conflitto di nomi.
 
@@ -23,13 +24,13 @@ Risolve i problemi di conflitto di nomi.
 
 ### <a name="parameters"></a>Parametri
 
-\ *OldName*
+*OldName*\
 Nome precedente nella libreria di tipi.
 
-\ *newname*
+*NewName*\
 Nome da utilizzare al posto del nome precedente.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Quando si specifica l'attributo **Rename** , il compilatore sostituisce tutte le occorrenze di *OldName* nella *libreria dei tipi* con il *newname* fornito dall'utente nei file di intestazione risultanti.
 
@@ -38,7 +39,7 @@ L'attributo **Rename** può essere utilizzato quando un nome nella libreria dei 
 > [!NOTE]
 > La sostituzione riguarda un nome utilizzato nella libreria di tipi, non un nome utilizzato nel file di intestazione risultante.
 
-Ad esempio, si supponga che una proprietà denominata `MyParent` esiste in una libreria di tipi e che una macro `GetMyParent` è definita in un file di intestazione e viene utilizzata prima di `#import`. Poiché `GetMyParent` è il nome predefinito di una funzione wrapper per la proprietà `get` di gestione degli errori, si verificherà un conflitto di nomi. Per ovviare al problema, utilizzare il seguente attributo nell'istruzione `#import` :
+Ad esempio, si supponga che una proprietà denominata `MyParent` esiste in una libreria di tipi e che una macro `GetMyParent` è definita in un file di intestazione e viene utilizzata prima di `#import`. Poiché `GetMyParent` è il nome predefinito di una funzione wrapper per la proprietà di gestione degli errori `get` , si verificherà un conflitto di nomi. Per ovviare al problema, utilizzare il seguente attributo nell'istruzione `#import` :
 
 ```cpp
 #import MyTypeLib.tlb rename("MyParent","MyParentX")
@@ -52,9 +53,9 @@ il quale rinomina il nome `MyParent` nella libreria di tipi. Il tentativo di rin
 
 Poiché il nome `GetMyParent` si verifica solo nel file di intestazione della libreria dei tipi risultante.
 
-**Specifico C++ finale**
+**Fine sezione specifica C++**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [attributi di #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

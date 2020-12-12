@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: estensioni componenti per .NET e UWP'
 title: Estensioni componenti per .NET e UWP
 ms.date: 10/12/2018
 ms.topic: overview
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: 887fa14153e728735937604d531782a9ae7535bb
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5ba82479db4229db5f6b962955641f75e3b42e00
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509712"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176912"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Estensioni componenti per .NET e UWP
 
@@ -37,7 +38,7 @@ Le estensioni includono anche parole chiave *sensibili al contesto*. Una parola 
 
 Nella tabella seguente sono elencate le parole chiave nell'estensione del linguaggio C++.
 
-|Parola chiave|Sensibile al contesto|Scopo|Informazioni di riferimento|
+|Parola chiave|Sensibile al contesto|Scopo|Riferimento|
 |-------------|-----------------------|-------------|---------------|
 |**ref class**<br /><br /> **ref struct**|No|Dichiara una classe.|[Classi e struct](classes-and-structs-cpp-component-extensions.md)|
 |**value class**<br /><br /> **value struct**|No|Dichiara una classe di valori.|[Classi e struct](classes-and-structs-cpp-component-extensions.md)|
@@ -51,7 +52,7 @@ Nella tabella seguente sono elencate le parole chiave nell'estensione del lingua
 
 È possibile usare le parole chiave seguenti per qualificare il comportamento di override per la derivazione. Sebbene la **`new`** parola chiave non sia un'estensione di C++, è elencata qui perché può essere usata in un contesto aggiuntivo. Alcuni identificatori sono validi anche per la programmazione nativa. Per altre informazioni, vedere [procedura: dichiarare gli identificatori di override nelle compilazioni native (C++/CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
-|Parola chiave|Sensibile al contesto|Scopo|Informazioni di riferimento|
+|Parola chiave|Sensibile al contesto|Scopo|Riferimento|
 |-------------|-----------------------|-------------|---------------|
 |**astratta**|Sì|Indica che le funzioni o classi sono astratte.|[astratta](abstract-cpp-component-extensions.md)|
 |**`new`**|No|Indica che una funzione non è un override di una versione della classe di base.|[new (nuovo slot in vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)|
@@ -71,7 +72,7 @@ Le parole chiave seguenti sono state aggiunte per supportare tipi generici. Per 
 
 Le parole chiave seguenti sono state aggiunte alle estensioni di C++.
 
-|Parola chiave|Sensibile al contesto|Scopo|Informazioni di riferimento|
+|Parola chiave|Sensibile al contesto|Scopo|Riferimento|
 |-------------|-----------------------|-------------|---------------|
 |**Infine**|Sì|Indica il comportamento di gestione delle eccezioni predefinito.|[Gestione delle eccezioni](exception-handling-cpp-component-extensions.md)|
 |**for each, in**|No|Enumera gli elementi di una raccolta.|[for each, in](../dotnet/for-each-in.md)|
@@ -85,7 +86,7 @@ Le parole chiave seguenti sono state aggiunte alle estensioni di C++.
 
 I seguenti costrutti di linguaggio vengono implementati come modelli, anziché come parole chiave. Se si specifica l'opzione del compilatore `/ZW`, sono definiti nello spazio dei nomi `lang`. Se si specifica l'opzione del compilatore `/clr`, sono definiti nello spazio dei nomi `cli`.
 
-|Parola chiave|Scopo|Informazioni di riferimento|
+|Parola chiave|Scopo|Riferimento|
 |-------------|-------------|---------------|
 |**array**|Dichiara una matrice.|[Matrici](arrays-cpp-component-extensions.md)|
 |**interior_ptr**|(Solo CLR) Punta ai dati in un tipo riferimento.|[interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)|
@@ -97,7 +98,7 @@ I seguenti costrutti di linguaggio vengono implementati come modelli, anziché c
 
 I dichiaratori di tipo seguenti indicano al runtime di gestire automaticamente la durata e l'eliminazione degli oggetti allocati.
 
-|Operatore|Scopo|Informazioni di riferimento|
+|Operatore|Scopo|Riferimento|
 |--------------|-------------|---------------|
 |`^`|Dichiara un handle a un oggetto, ovvero un puntatore a un oggetto Windows Runtime o CLR che viene automaticamente eliminato quando non è più utilizzabile.|[Operatore handle a oggetto (^)](handle-to-object-operator-hat-cpp-component-extensions.md)|
 |`%`|Dichiara un riferimento di rilevamento, ovvero un riferimento a un oggetto Windows Runtime o CLR che viene automaticamente eliminato quando non è più utilizzabile.|[Operatore di riferimento di rilevamento](tracking-reference-operator-cpp-component-extensions.md)|
@@ -106,7 +107,7 @@ I dichiaratori di tipo seguenti indicano al runtime di gestire automaticamente l
 
 In questa sezione vengono elencati i costrutti di programmazione aggiuntivi e gli argomenti relativi a CLR.
 
-|Argomento|Descrizione|
+|Argomento|Description|
 |-----------|-----------------|
 |[__identifier (C++/CLI)](identifier-cpp-cli.md)|(Windows Runtime e CLR) Permette di usare parole chiave come identificatori.|
 |[Elenchi di argomenti variabili (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Windows Runtime e CLR) Permette ad alcune funzioni di accettare un numero variabile di argomenti.|
@@ -130,7 +131,7 @@ In questa sezione vengono elencati i costrutti di programmazione aggiuntivi e gl
 |[#using (direttiva)](../preprocessor/hash-using-directive-cpp.md)|Importa gli assembly esterni.|
 |[Documentazione XML](../build/reference/xml-documentation-visual-cpp.md)|Presenta la documentazione del codice basato su XML tramite [/doc (elaborazione dei commenti per la documentazione) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md)|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Programmazione .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 [Interoperabilità .NET e nativa](../dotnet/native-and-dotnet-interoperability.md)

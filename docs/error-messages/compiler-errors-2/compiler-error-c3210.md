@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3210'
 title: Errore del compilatore C3210
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3210
 ms.assetid: c6e9d309-fabc-4e7d-b526-be20d9fe3f6a
-ms.openlocfilehash: 513f08d4dddc37d36a240ee0d72b24383f951cdf
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 5349a7ea8677a8a55511f514e74251375a262fb7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755122"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97173909"
 ---
 # <a name="compiler-error-c3210"></a>Errore del compilatore C3210
 

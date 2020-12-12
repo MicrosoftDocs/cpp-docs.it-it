@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Struttura ArgTraitsHelper'
 title: ArgTraitsHelper (struttura)
 ms.date: 09/21/2018
 ms.topic: reference
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ArgTraitsHelper structure
 - Microsoft::WRL::Details::ArgTraitsHelper::args constant
 ms.assetid: e3f798da-0aef-4a57-95d3-d38c34c47d72
-ms.openlocfilehash: 4acbd9fa660f29bbaf209282ff0e90f43621574d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a749c48c72c837eb0898d32ddd08410b87918871
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360776"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97175859"
 ---
 # <a name="argtraitshelper-structure"></a>ArgTraitsHelper (struttura)
 
@@ -30,9 +31,9 @@ struct ArgTraitsHelper;
 ### <a name="parameters"></a>Parametri
 
 *TDelegateInterface*<br/>
-Interfaccia di delegato.
+Interfaccia del delegato.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Consente di definire le caratteristiche comuni degli argomenti del delegato.
 
@@ -40,16 +41,16 @@ Consente di definire le caratteristiche comuni degli argomenti del delegato.
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-Nome         | Descrizione
+Nome         | Description
 ------------ | ------------------------------------------------------
 `methodType` | Sinonimo di `decltype(&TDelegateInterface::Invoke)`.
 `Traits`     | Sinonimo di `ArgTraits<methodType>`.
 
 ### <a name="public-constants"></a>Costanti pubbliche
 
-Nome                           | Descrizione
+Nome                           | Description
 ------------------------------ | ---------------------------------------------------------------------------------------------------------------------
-[ArgTraitsHelper::args](#args) | Aiuta [ArgTraits::args](#args) mantenere il conteggio del `Invoke` numero di parametri sul metodo di un'interfaccia delegato.
+[ArgTraitsHelper:: args](#args) | Helps [ArgTraits:: args](#args) mantiene il conteggio del numero di parametri nel `Invoke` metodo di un'interfaccia del delegato.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -57,11 +58,11 @@ Nome                           | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** event.h
+**Intestazione:** Event. h
 
-**Spazio dei nomi:** Microsoft::WRL::Details
+**Spazio dei nomi:** Microsoft:: WRL::D etails
 
-## <a name="argtraitshelperargs"></a><a name="args"></a>ArgTraitsHelper::args
+## <a name="argtraitshelperargs"></a><a name="args"></a> ArgTraitsHelper:: args
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -69,6 +70,6 @@ Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codi
 static const int args = Traits::args;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Consente `ArgTraitsHelper::args` di mantenere il conteggio `Invoke` del numero di parametri nel metodo di un'interfaccia di delegato.
+Consente di `ArgTraitsHelper::args` gestire il conteggio del numero di parametri nel `Invoke` metodo di un'interfaccia del delegato.

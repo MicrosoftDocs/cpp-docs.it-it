@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 2) C4948'
 title: Avviso del compilatore (livello 2) C4948
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - C4948
 ms.assetid: d006cb17-754a-4c70-ba7f-c3200e2cd8fa
-ms.openlocfilehash: f5d701a621e0ac1439ef718ab2f8679dc46e5ea6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e99ee3989f536aa48d601561e0e6dd610f63958c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402385"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97173428"
 ---
 # <a name="compiler-warning-level-2-c4948"></a>Avviso del compilatore (livello 2) C4948
 
-tipo restituito di 'accessor' non corrisponde al tipo dell'ultimo parametro del metodo set corrispondente
+il tipo restituito di ' funzione di accesso ' non corrisponde all'ultimo tipo di parametro del setter corrispondente
 
-Il compilatore ha trovato una mancata corrispondenza tra il tipo di dati è in corso di ottenere e imposta per una proprietà indicizzata.
+Il compilatore ha rilevato una mancata corrispondenza tra il tipo di dati Get e il set per una proprietà indicizzata.
 
-È raggiungibile tramite l'opzione del compilatore obsolete solo C4948 **/CLR: oldSyntax**.
+C4948 è raggiungibile solo usando l'opzione del compilatore obsolete **/CLR: oldSyntax**.

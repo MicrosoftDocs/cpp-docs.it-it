@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: condivisione delle costanti'
 title: Condivisione costanti
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - _SH_DENYNO constant
 - SH_COMPAT constant
 ms.assetid: 95fadc3a-55dc-473d-98b5-e8211900465d
-ms.openlocfilehash: dc27b3af0d430aedb8159b4591004f46d197ccd5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 7cda55d16a9b59c30e9fdbce47c565552839e792
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751544"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176171"
 ---
 # <a name="sharing-constants"></a>Condivisione costanti
 
@@ -51,7 +52,7 @@ Nella tabella seguente sono elencate le costanti e i relativi significati:
 |`_SH_DENYNO`|Consente l'accesso in lettura e scrittura|
 |`_SH_SECURE`|Imposta la modalità protetta (accesso in lettura condivisa e scrittura esclusiva).|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>
 [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)<br/>

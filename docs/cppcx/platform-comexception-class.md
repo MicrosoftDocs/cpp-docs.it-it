@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe Platform:: COMException'
 title: Platform::COMException (classe)
 ms.date: 12/30/2016
 ms.topic: reference
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: 1d0d36ec16303d6bdaa5f2344cd5d48fba03c8bf
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 71f6c3fa6d29a884627f2bf5aae07fbc0349ec9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444303"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176119"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException (classe)
 
@@ -55,7 +56,7 @@ La classe COMException presenta le proprietà seguenti:
 
 Le seguenti eccezioni predefinite sono derivate da COMException. Differiscono da COMException solo nel nome, nel nome del costruttore e nel valore di HRESULT sottostante.
 
-|Nome|HRESULT sottostante|Descrizione|
+|Nome|HRESULT sottostante|Description|
 |----------|------------------------|-----------------|
 |COMException|*HRESULT definito dall'utente*|Generata quando viene restituito un HRESULT non riconosciuto da una chiamata a un metodo COM.|
 |AccessDeniedException|E_ACCESSDENIED|Generata quando viene negato l'accesso a una risorsa o a una funzionalità.|
@@ -79,9 +80,9 @@ Le seguenti eccezioni predefinite sono derivate da COMException. Differiscono da
 
 **Spazio dei nomi:** Platform
 
-**Metadati:** platform.winmd
+**Metadati:** Platform. winmd
 
-## <a name="ctor"></a>COMException:: COMException (costruttore)
+## <a name="comexceptioncomexception-constructor"></a><a name="ctor"></a> COMException:: COMException (costruttore)
 
 Inizializza una nuova istanza della classe COMException.
 
@@ -93,10 +94,10 @@ COMException( int hresult )
 
 ### <a name="parameters"></a>Parametri
 
-*hresult*<br/>
+*HRESULT*<br/>
 Errore HRESULT rappresentato dall'eccezione.
 
-## <a name="hresult"></a>COMException:: HResult (proprietà)
+## <a name="comexceptionhresult-property"></a><a name="hresult"></a> COMException:: HResult (proprietà)
 
 Valore HRESULT corrispondente all'eccezione.
 
@@ -107,15 +108,15 @@ public:
     property int HResult { int get();}
 ```
 
-## <a name="property-value"></a>Valore proprietà
+## <a name="property-value"></a>Valore della proprietà
 
 Valore HRESULT che specifica l'errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni su come interpretare il valore HRESULT, vedere la pagina relativa alla [struttura dei codici di errore com](/windows/win32/com/structure-of-com-error-codes).
 
-## <a name="message"></a>COMException:: Message (proprietà)
+## <a name="comexceptionmessage-property"></a><a name="message"></a> COMException:: Message (proprietà)
 
 Messaggio in cui viene descritta l'eccezione.
 
@@ -125,10 +126,10 @@ Messaggio in cui viene descritta l'eccezione.
 public:property String^ Message {    String^ get();}
 ```
 
-### <a name="property-value"></a>Valore proprietà
+### <a name="property-value"></a>Valore della proprietà
 
 Descrizione dell'eccezione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Platform](../cppcx/platform-namespace-c-cx.md)

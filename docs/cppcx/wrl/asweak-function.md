@@ -1,5 +1,6 @@
 ---
-title: Funzione AsWeak
+description: 'Altre informazioni su: funzione AsWeak'
+title: AsWeak (funzione)
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - AsWeak function
 ms.assetid: a6f10cfc-c1d6-4761-adb9-1a119cc99913
-ms.openlocfilehash: d11f55d57f4053fd6d46b727a8ed91b340d1764b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a02776f06aab4d7505b38fbb1120c36a82e97368
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214175"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97175846"
 ---
-# <a name="asweak-function"></a>Funzione AsWeak
+# <a name="asweak-function"></a>AsWeak (funzione)
 
 Recupera un riferimento debole a un'istanza specificata.
 
@@ -49,6 +50,6 @@ S_OK, se l'operazione ha esito positivo; in caso contrario, viene generato un er
 
 **Spazio dei nomi:** Microsoft::WRL
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi Microsoft::WRL](microsoft-wrl-namespace.md)
+[Spazio dei nomi Microsoft:: WRL](microsoft-wrl-namespace.md)

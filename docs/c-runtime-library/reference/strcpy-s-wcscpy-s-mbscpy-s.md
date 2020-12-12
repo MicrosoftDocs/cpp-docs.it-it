@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l'
 title: strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 ms.date: 5/28/2020
 api_name:
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: b2957490dbf045b9a3258a72b6bda0aaf1a38c0f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a20f16971ccc7d1f85fe92c5d2d14386e7e55022
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229298"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176197"
 ---
 # <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 
@@ -136,11 +137,11 @@ Zero in caso di esito positivo; in caso contrario un errore.
 |any|any|**NULL**|**EINVAL**|*dest*[0] impostato su 0|
 |any|0 o troppo piccolo|any|**ERANGE**|*dest*[0] impostato su 0|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **strcpy_s** copia il contenuto nell'indirizzo di *src*, incluso il carattere null di terminazione, nel percorso specificato da *dest*. La stringa di destinazione deve essere sufficientemente grande da contenere la stringa di origine e il relativo carattere Null di terminazione. Il comportamento di **strcpy_s** non è definito se le stringhe di origine e di destinazione si sovrappongono.
 
-**wcscpy_s** è la versione a caratteri wide di **strcpy_s**e **_mbscpy_s** è la versione a caratteri multibyte. Gli argomenti di **wcscpy_s** sono stringhe a caratteri wide. i **_mbscpy_s** e **_mbscpy_s_l** sono stringhe di caratteri multibyte. A parte ciò, queste funzioni si comportano in modo identico. **_mbscpy_s_l** è identico a **_mbscpy_s** ad eccezione del fatto che usa il parametro delle impostazioni locali passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**wcscpy_s** è la versione a caratteri wide di **strcpy_s** e **_mbscpy_s** è la versione a caratteri multibyte. Gli argomenti di **wcscpy_s** sono stringhe a caratteri wide. i **_mbscpy_s** e **_mbscpy_s_l** sono stringhe di caratteri multibyte. A parte ciò, queste funzioni si comportano in modo identico. **_mbscpy_s_l** è identico a **_mbscpy_s** ad eccezione del fatto che usa il parametro delle impostazioni locali passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 Se *dest* o *src* è un puntatore null o se la dimensione della stringa di destinazione *Dest_size* è troppo piccola, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EINVAL** e impostano **errno** su **EINVAL** quando *dest* o *src* è un puntatore null e restituiscono **ERANGE** e imposta **errno** su **ERANGE** quando la stringa di destinazione è troppo piccola.
 
@@ -231,7 +232,7 @@ int main(void)
 String = Hello world from wcscpy_s and wcscat_s!
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [strcat, wcscat, _mbscat, _mbscat_l](strcat-wcscat-mbscat.md) <br/>

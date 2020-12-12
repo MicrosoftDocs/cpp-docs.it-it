@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Panoramica della libreria di classi'
 title: Cenni preliminari sulla libreria di classi
 ms.date: 09/17/2019
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - class libraries, MFC
 - class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
-ms.openlocfilehash: bf30f1b0aa83ef002337b76601f04c7103963441
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 458fc06aa8e13a2f2f7024c11a822496bccefbea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620738"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176691"
 ---
 # <a name="class-library-overview"></a>Cenni preliminari sulla libreria di classi
 
@@ -23,17 +24,17 @@ In questa panoramica vengono categorizzate e descritte le classi nella libreria 
 
 Le classi della libreria sono presentate nelle categorie seguenti:
 
-- [Classe Root: CObject](root-class-cobject.md)
+- [Classe root: CObject](root-class-cobject.md)
 
-- [Classi architettura dell'applicazione MFC](mfc-application-architecture-classes.md)
+- [Classi di architettura delle applicazioni MFC](mfc-application-architecture-classes.md)
 
   - [Classi di supporto per applicazioni e thread](application-and-thread-support-classes.md)
 
-  - [Classi di routing dei comandi](command-routing-classes.md)
+  - [Classi di routing del comando](command-routing-classes.md)
 
   - [Classi documento](document-classes.md)
 
-  - [Classi visualizzazione (architettura)](view-classes-architecture.md)
+  - [Classi di visualizzazione (architettura)](view-classes-architecture.md)
 
   - [Classi di finestre cornice (architettura)](frame-window-classes-architecture.md)
 
@@ -43,33 +44,33 @@ Le classi della libreria sono presentate nelle categorie seguenti:
 
   - [Classi di finestre cornice (Windows)](frame-window-classes-windows.md)
 
-  - [Classi visualizzazione (Windows)](view-classes-windows.md)
+  - [Classi di visualizzazione (Windows)](view-classes-windows.md)
 
-  - [Classi di finestre di dialogo](dialog-box-classes.md)
+  - [Classi della finestra di dialogo](dialog-box-classes.md)
 
-  - [Classi dei controlli](control-classes.md)
+  - [Classi di controlli](control-classes.md)
 
-  - [Classi di barre di controllo](control-bar-classes.md)
+  - [Classi della barra di controllo](control-bar-classes.md)
 
-- [Disegno e stampa di classi](drawing-and-printing-classes.md)
+- [Creazione e stampa di classi](drawing-and-printing-classes.md)
 
-  - [Classi Output (contesto del dispositivo)](output-device-context-classes.md)
+  - [Classi output (contesto del dispositivo)](output-device-context-classes.md)
 
-  - [Disegno di classi strumento](drawing-tool-classes.md)
+  - [Classi dello strumento di disegno](drawing-tool-classes.md)
 
-- [Classi del tipo di dati semplice](simple-data-type-classes.md)
+- [Classi di tipi di dati semplici](simple-data-type-classes.md)
 
-- [Classi Array, List e Map](array-list-and-map-classes.md)
+- [Classi Array, List e map](array-list-and-map-classes.md)
 
   - [Classi modello per matrici, elenchi e mappe](template-classes-for-arrays-lists-and-maps.md)
 
-  - [Classi Array pronte all'uso](ready-to-use-array-classes.md)
+  - [Classi di matrici pronte per l'uso](ready-to-use-array-classes.md)
 
-  - [Classi List pronte all'uso](ready-to-use-list-classes.md)
+  - [Classi List pronte per l'uso](ready-to-use-list-classes.md)
 
-  - [Classi Map pronte all'uso](ready-to-use-map-classes.md)
+  - [Classi map pronte per l'uso](ready-to-use-map-classes.md)
 
-- [Classi File e Database](file-and-database-classes.md)
+- [Classi di file e database](file-and-database-classes.md)
 
   - [Classi I/O di file](file-i-o-classes.md)
 
@@ -79,7 +80,7 @@ Le classi della libreria sono presentate nelle categorie seguenti:
 
   - [Classi OLE DB](ole-db-classes.md)
 
-- [Classi di rete e Internet](internet-and-networking-classes.md)
+- [Classi Internet e di rete](internet-and-networking-classes.md)
 
   - [Classi Windows Sockets](windows-sockets-classes.md)
 
@@ -91,7 +92,7 @@ Le classi della libreria sono presentate nelle categorie seguenti:
 
   - [Classi server OLE](ole-server-classes.md)
 
-  - [Classi di trasferimento dati e trascinamento della selezione OLE](ole-drag-and-drop-and-data-transfer-classes.md)
+  - [Classi di trascinamento della selezione OLE e Trasferimento dati](ole-drag-and-drop-and-data-transfer-classes.md)
 
   - [Classi di finestre di dialogo comuni OLE](ole-common-dialog-classes.md)
 
@@ -105,9 +106,9 @@ Le classi della libreria sono presentate nelle categorie seguenti:
 
 - [Classi di eccezioni e debug](debugging-and-exception-classes.md)
 
-  - [Debug di classi di supporto](debugging-support-classes.md)
+  - [Classi di supporto per il debug](debugging-support-classes.md)
 
-  - [Classi di eccezioni](exception-classes.md)
+  - [Classi di eccezione](exception-classes.md)
 
 La sezione [filosofia di progettazione delle classi generali](general-class-design-philosophy.md) spiega come è stata progettata la libreria MFC.
 
@@ -117,6 +118,6 @@ Per visualizzare l'ereditarietà di una classe, utilizzare il [grafico della ger
 
 Oltre alle classi elencate in questa panoramica, la libreria MFC contiene una serie di funzioni globali, variabili globali e macro. Sono disponibili una panoramica e un elenco dettagliato di questi elementi nell'argomento [macro e globali MFC](reference/mfc-macros-and-globals.md), che seguono il riferimento alfabetico alle classi MFC.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Applicazioni desktop MFC](mfc-desktop-applications.md)

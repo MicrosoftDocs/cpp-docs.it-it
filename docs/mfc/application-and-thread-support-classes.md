@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classi di supporto per applicazioni e thread'
 title: Classi di supporto per applicazioni e thread
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - synchronization classes [MFC], multithreading
 - application support classes [MFC]
 ms.assetid: 3c1d14fd-c35c-48f1-86ce-1e0f9a32c36d
-ms.openlocfilehash: 7e64cc50a121f457b7e32e0ed549db2fa9950843
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 89ab6e324a777c272dcbcfabc746c03cb6731589
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619442"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176743"
 ---
 # <a name="application-and-thread-support-classes"></a>Classi di supporto per applicazioni e thread
 
@@ -24,7 +25,7 @@ Ogni applicazione dispone di un solo oggetto applicazione. Questo oggetto coordi
 
 La libreria MFC (Microsoft Foundation Class) supporta più thread di esecuzione all'interno di un'applicazione. Tutte le applicazioni devono avere almeno un thread. il thread usato dall' `CWinApp` oggetto è il thread principale.
 
-`CWinThread`Incapsula una parte delle funzionalità di threading del sistema operativo. Per semplificare l'uso di più thread, MFC fornisce anche le classi di oggetti di sincronizzazione per fornire un'interfaccia C++ agli oggetti di sincronizzazione Win32.
+`CWinThread` Incapsula una parte delle funzionalità di threading del sistema operativo. Per semplificare l'uso di più thread, MFC fornisce anche le classi di oggetti di sincronizzazione per fornire un'interfaccia C++ agli oggetti di sincronizzazione Win32.
 
 ## <a name="application-and-thread-classes"></a>Classi dell'applicazione e del thread
 
@@ -71,6 +72,6 @@ Gestisce l'archiviazione persistente dei dati dello stato di ancoraggio per le b
 [CRecentFileList](reference/crecentfilelist-class.md)<br/>
 Gestisce l'elenco dei file utilizzati più di recente (MRU).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Cenni preliminari sulle classi](class-library-overview.md)

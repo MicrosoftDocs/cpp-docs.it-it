@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2041'
 title: Errore del compilatore C2041
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2041
 ms.assetid: c9a33bb1-f9cf-47d6-bd21-7d867a8c37d5
-ms.openlocfilehash: 7e148ced19e34a57172e3d606c6efdb2f5d012d6
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 5c980b6783b4b14e4878278699e5b4f7618ff0f8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74740455"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97175261"
 ---
 # <a name="compiler-error-c2041"></a>Errore del compilatore C2041
 

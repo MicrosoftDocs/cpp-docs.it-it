@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: operator &lt; ( &lt; Sample Container &gt; )'
 title: operator&lt; (&lt;sample container&gt;)
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,19 +15,19 @@ helpviewer_keywords:
 - < operator
 - operator <, valarrays
 ms.assetid: 31027dd6-53be-428b-b950-1dcb25393597
-ms.openlocfilehash: 6ef43fb762c4da71062fc846048f21c0112bfafc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e7bba9be33a2dc4dea6257b159966c867bb33929
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215267"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176483"
 ---
 # <a name="operatorlt-ltsample-containergt"></a>operator&lt; (&lt;sample container&gt;)
 
 > [!NOTE]
-> Questo argomento è disponibile nella documentazione C++ di Microsoft come esempio non funzionale dei contenitori usati nella libreria C++ standard. Per altre informazioni, vedere [Contenitori della libreria standard C++](../standard-library/stl-containers.md).
+> Questo argomento è disponibile nella documentazione di Microsoft C++ come esempio non funzionale dei contenitori usati nella libreria standard C++. Per altre informazioni, vedere [C++ Standard Library Containers](../standard-library/stl-containers.md) (Contenitori della libreria standard C++).
 
-Consente di eseguire l'overload dell' **operatore <** per confrontare due oggetti del [contenitore](../standard-library/sample-container-class.md)di modelli di classe.
+Consente di eseguire l'overload dell' **operatore<** per confrontare due oggetti del [contenitore](../standard-library/sample-container-class.md)di modelli di classe.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -41,8 +42,8 @@ bool operator<(
 
 Restituisce `lexicographical_compare(left.begin, left.end, right.begin, right.end)`.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [\<sample container>](../standard-library/sample-container.md)\
-[inizia](../standard-library/container-class-begin.md)\
+[iniziare](../standard-library/container-class-begin.md)\
 [end](../standard-library/container-class-end.md)
