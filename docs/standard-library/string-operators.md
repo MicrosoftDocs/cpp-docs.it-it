@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; operatori di stringa &gt;'
 title: Operatori &lt;string&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: e031eb4421906e35a96a862855a140218f233778
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9a23b4539fbb84533de83a541458deddbd13615e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832542"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183711"
 ---
 # <a name="ltstringgt-operators"></a>Operatori &lt;string&gt;
 
@@ -117,7 +118,7 @@ Una stringa di tipo C o un oggetto di tipo `basic_string` da concatenare.
 
 La stringa che rappresenta la concatenazione delle stringhe di input.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le funzioni di ogni overload `operator+` per concatenare due oggetti della classe modello [basic_string classe](../standard-library/basic-string-class.md). Tutti effettivamente restituiscono `basic_string< CharType, Traits, Allocator>(Left).append(right)` . Per ulteriori informazioni, vedere [Append](../standard-library/basic-string-class.md#append).
 
@@ -206,7 +207,7 @@ Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 **`true`** Se l'oggetto stringa a sinistra dell'operatore non è lessicografico uguale all'oggetto stringa a destra; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti stringa è basato su un confronto lessicografico a coppie dei relativi caratteri. Due stringhe sono uguali se contengono lo stesso numero di caratteri e se i rispettivi caratteri hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -297,7 +298,7 @@ Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 **`true`** Se l'oggetto stringa a sinistra dell'operatore è lessicografico uguale all'oggetto stringa a destra; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti stringa è basato su un confronto lessicografico a coppie dei relativi caratteri. Due stringhe sono uguali se contengono lo stesso numero di caratteri e se i rispettivi caratteri hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -388,7 +389,7 @@ Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 **`true`** Se l'oggetto stringa a sinistra dell'operatore è lessicografico minore dell'oggetto stringa a destra; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un confronto lessicografico tra stringhe le confronta carattere per carattere fino a quando:
 
@@ -484,7 +485,7 @@ Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 **`true`** Se l'oggetto stringa a sinistra dell'operatore è lessicografico minore o uguale all'oggetto stringa a destra; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un confronto lessicografico tra stringhe le confronta carattere per carattere fino a quando:
 
@@ -577,9 +578,9 @@ Stringa da immettere nel flusso di output.
 
 Scrive il valore della stringa specificata nel flusso di output *_Ostr*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-La funzione di modello consente di eseguire l'overload dell' **operatore<<** per inserire un oggetto *Str* della classe template [basic_string](../standard-library/basic-string-class.md) nel flusso * \_ OSTR*. La funzione restituisce effettivamente `_Ostr.write( str.c_str, str.size )` .
+La funzione di modello consente di eseguire l'overload dell' **operatore<<** per inserire un oggetto *Str* della classe template [basic_string](../standard-library/basic-string-class.md) nel flusso *\_ OSTR*. La funzione restituisce effettivamente `_Ostr.write( str.c_str, str.size )` .
 
 ## <a name="operatorgt"></a><a name="op_gt"></a> operatore&gt;
 
@@ -614,7 +615,7 @@ Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 **`true`** Se l'oggetto stringa a sinistra dell'operatore è lessicografico maggiore dell'oggetto stringa a destra; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un confronto lessicografico tra stringhe le confronta carattere per carattere fino a quando:
 
@@ -717,7 +718,7 @@ Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 **`true`** Se l'oggetto stringa a sinistra dell'operatore è lessicografico maggiore o uguale all'oggetto stringa a destra; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un confronto lessicografico tra stringhe le confronta carattere per carattere fino a quando:
 
@@ -810,7 +811,7 @@ Stringa da estrarre dal flusso di input.
 
 Legge il valore della stringa specificata da *_Istr* e lo restituisce a *destra*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operatore ignora gli spazi iniziali a meno che il flag `skipws` non sia impostato. Legge tutti i caratteri successivi fino a quando incontra uno spazio vuoto o arriva alla fine del file.
 

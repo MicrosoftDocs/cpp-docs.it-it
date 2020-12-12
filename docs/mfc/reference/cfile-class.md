@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: classe CFile'
 title: Classe CFile
 ms.date: 06/12/2018
 f1_keywords:
@@ -60,12 +61,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: 5be6a578fdd1d4e329c5b55d307d924a6c539e3d
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: edccd571edf3594d36679a6c4ed6e52df878a705
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042082"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184543"
 ---
 # <a name="cfile-class"></a>Classe CFile
 
@@ -81,13 +82,13 @@ class CFile : public CObject
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CFile:: CFile](#cfile)|Costruisce un `CFile` oggetto da un percorso o un handle di file.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CFile:: Abort](#abort)|Chiude un file ignorando tutti gli avvisi e gli errori.|
 |[CFile:: Close](#close)|Chiude un file ed Elimina l'oggetto.|
@@ -115,20 +116,20 @@ class CFile : public CObject
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[HANDLE CFile:: operator](#operator_handle)|Handle per un `CFile` oggetto.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CFile:: hFileNull](#hfilenull)|Determina se l' `CFile` oggetto ha un handle valido.|
 |[CFile:: m_hFile](#m_hfile)|Contiene in genere l'handle di file del sistema operativo.|
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CFile:: m_pTM](#m_ptm)|Puntatore all'oggetto `CAtlTransactionManager`.|
 
@@ -213,7 +214,7 @@ Nelle cinque tabelle seguenti sono elencate le opzioni possibili per il parametr
 
 Scegliere una sola delle seguenti opzioni relative alla modalità di accesso al file. La modalità predefinita è `CFile::modeRead`, che prevede la sola lettura.
 
-|Valore|Descrizione|
+|Valore|Description|
 |-----------|-----------------|
 |`CFile::modeRead`|Richiede l'accesso in sola lettura.|
 |`CFile::modeWrite`|Richiede l'accesso in sola scrittura.|
@@ -221,7 +222,7 @@ Scegliere una sola delle seguenti opzioni relative alla modalità di accesso al 
 
 Scegliere una delle opzioni seguenti relative alla modalità carattere.
 
-|Valore|Descrizione|
+|Valore|Description|
 |-----------|-----------------|
 |`CFile::typeBinary`|Imposta la modalità binaria (solo per le classi derivate).|
 |`CFile::typeText`|Imposta la modalità testo con elaborazione speciale per le coppie ritorno a capo/avanzamento riga (utilizzate solo nelle classi derivate).|
@@ -229,7 +230,7 @@ Scegliere una delle opzioni seguenti relative alla modalità carattere.
 
 Scegliere una sola delle seguenti opzioni relative alla modalità di condivisione del file. La modalità di condivisione file predefinita è `CFile::shareExclusive`, che è esclusiva.
 
-|Valore|Descrizione|
+|Valore|Description|
 |-----------|-----------------|
 |`CFile::shareDenyNone`|Nessuna restrizione alla condivisione.|
 |`CFile::shareDenyRead`|Nega l'accesso in lettura a tutti gli altri utenti.|
@@ -238,14 +239,14 @@ Scegliere una sola delle seguenti opzioni relative alla modalità di condivision
 
 Scegliere la prima delle seguenti opzioni relative alla modalità di creazione del file oppure entrambe. La modalità di creazione predefinita è `CFile::modeNoTruncate`, che prevede l'apertura di un file esistente.
 
-|Valore|Descrizione|
+|Valore|Description|
 |-----------|-----------------|
 |`CFile::modeCreate`|Crea un nuovo file se non esiste alcun file. Se il file esiste già, viene sovrascritto e inizialmente impostato su una lunghezza pari a zero.|
 |`CFile::modeNoTruncate`|Crea un nuovo file se non esiste alcun file; in caso contrario, se il file esiste già, viene collegato all' `CFile` oggetto.|
 
 Scegliere le opzioni di memorizzazione nella cache del file come descritto. Per impostazione predefinita, il sistema usa uno schema di memorizzazione nella cache di uso generico che non è disponibile come opzione.
 
-|Valore|Descrizione|
+|Valore|Description|
 |-----------|-----------------|
 |`CFile::osNoBuffer`|Il sistema non usa una cache intermedia per il file. Questa opzione annulla le due opzioni seguenti.|
 |`CFile::osRandomAccess`|La cache dei file viene ottimizzata per l'accesso casuale. Non usare questa opzione e l'opzione di analisi sequenziale.|
@@ -254,7 +255,7 @@ Scegliere le opzioni di memorizzazione nella cache del file come descritto. Per 
 
 Scegliere l'opzione di sicurezza seguente per evitare che l'handle di file venga ereditato. Per impostazione predefinita, l'handle di file può essere usato da tutti i nuovi processi figlio.
 
-|Valore|Descrizione|
+|Valore|Description|
 |-----------|-----------------|
 |`CFile::modeNoInherit`|Evita l'uso dell'handle di file da parte di qualsiasi processo figlio.|
 
@@ -602,8 +603,8 @@ Nella tabella seguente vengono descritti i possibili risultati di `Open` .
 |--|--|--|--|
 | NULL | No | true | n/d |
 | PTR per `CFileException` | No | true | non modificato |
-| NULL | Sì | false | n/d |
-| PTR per `CFileException` | Sì | false | inizializzato per descrivere l'errore |
+| NULL | Sì | FALSE | n/d |
+| PTR per `CFileException` | Sì | FALSE | inizializzato per descrivere l'errore |
 
 ### <a name="example"></a>Esempio
 
@@ -731,7 +732,7 @@ Posizione del puntatore del file se il metodo ha avuto esito positivo; in caso c
 
 Nella tabella seguente sono elencati i valori possibili per il parametro *NDA* .
 
-|Valore|Descrizione|
+|Valore|Description|
 |-----------|-----------------|
 |`CFile::begin`|Ricerca dall'inizio del file.|
 |`CFile::current`|Cerca dalla posizione corrente del puntatore del file.|

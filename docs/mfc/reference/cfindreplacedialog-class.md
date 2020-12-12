@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CFindReplaceDialog.'
 title: Classe CFindReplaceDialog.
 ms.date: 11/04/2016
 f1_keywords:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - CFindReplaceDialog [MFC], SearchDown
 - CFindReplaceDialog [MFC], m_fr
 ms.assetid: 610f0b5d-b398-4ef6-8c05-e9d6641e50a8
-ms.openlocfilehash: 92429bc17301d6615c87de958f38a717528e9544
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3deeb485a9048ba986f548ed66329b66bd039c08
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212436"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184478"
 ---
 # <a name="cfindreplacedialog-class"></a>Classe CFindReplaceDialog.
 
@@ -49,17 +50,17 @@ Consente di implementare le finestre di dialogo Trova/Sostituisci stringa standa
 class CFindReplaceDialog : public CCommonDialog
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CFindReplaceDialog.:: CFindReplaceDialog.](#cfindreplacedialog)|Chiamare questa funzione per costruire un `CFindReplaceDialog` oggetto.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CFindReplaceDialog.:: create](#create)|Crea e visualizza una finestra di `CFindReplaceDialog` dialogo.|
 |[CFindReplaceDialog.:: TrovaSuccessivo](#findnext)|Chiamare questa funzione per determinare se l'utente desidera trovare l'occorrenza successiva della stringa di ricerca.|
@@ -75,11 +76,11 @@ class CFindReplaceDialog : public CCommonDialog
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CFindReplaceDialog.:: m_fr](#m_fr)|Struttura utilizzata per personalizzare un `CFindReplaceDialog` oggetto.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Diversamente dalle altre finestre di dialogo comuni di Windows, `CFindReplaceDialog` gli oggetti non sono modali, consentendo agli utenti di interagire con altre finestre mentre sono sullo schermo. Sono disponibili due tipi di `CFindReplaceDialog` oggetti: trova finestre di dialogo e finestre di dialogo Trova/Sostituisci. Sebbene le finestre di dialogo consentano all'utente di immettere le stringhe di ricerca e ricerca/sostituzione, non eseguono alcuna delle funzioni di ricerca o sostituzione. È necessario aggiungerli all'applicazione.
 
@@ -93,7 +94,7 @@ Per ricevere una notifica delle richieste di ricerca/sostituzione della finestra
 
 È possibile determinare se l'utente ha deciso di terminare la finestra di dialogo con la `IsTerminating` funzione membro.
 
-`CFindReplaceDialog`si basa sul file di COMMDLG.DLL fornito con le versioni di Windows 3,1 e successive.
+`CFindReplaceDialog` si basa sul file di COMMDLG.DLL fornito con le versioni di Windows 3,1 e successive.
 
 Per personalizzare la finestra di dialogo, derivare una classe da `CFindReplaceDialog` , fornire un modello di finestra di dialogo personalizzato e aggiungere una mappa messaggi per elaborare i messaggi di notifica dai controlli estesi. Tutti i messaggi non elaborati devono essere passati alla classe di base.
 
@@ -119,7 +120,7 @@ Per ulteriori informazioni sull'utilizzo di `CFindReplaceDialog` , vedere [Commo
 
 **Intestazione:** afxdlgs. h
 
-## <a name="cfindreplacedialogcfindreplacedialog"></a><a name="cfindreplacedialog"></a>CFindReplaceDialog.:: CFindReplaceDialog.
+## <a name="cfindreplacedialogcfindreplacedialog"></a><a name="cfindreplacedialog"></a> CFindReplaceDialog.:: CFindReplaceDialog.
 
 Costruisce un oggetto `CFindReplaceDialog`.
 
@@ -127,7 +128,7 @@ Costruisce un oggetto `CFindReplaceDialog`.
 CFindReplaceDialog();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Poiché l' `CFindReplaceDialog` oggetto è una finestra di dialogo non modale, è necessario costruirlo nell'heap usando l' **`new`** operatore.
 
@@ -139,7 +140,7 @@ Per ulteriori informazioni sulla costruzione di `CFindReplaceDialog` oggetti, ve
 
 [!code-cpp[NVC_MFCDocView#170](../../mfc/codesnippet/cpp/cfindreplacedialog-class_1.cpp)]
 
-## <a name="cfindreplacedialogcreate"></a><a name="create"></a>CFindReplaceDialog.:: create
+## <a name="cfindreplacedialogcreate"></a><a name="create"></a> CFindReplaceDialog.:: create
 
 Crea e visualizza un oggetto della finestra di dialogo Trova o Trova/Sostituisci, a seconda del valore di `bFindDialogOnly` .
 
@@ -173,7 +174,7 @@ Puntatore alla finestra padre o proprietaria della finestra di dialogo. Si tratt
 
 Diverso da zero se l'oggetto finestra di dialogo è stato creato correttamente; in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ricevere una notifica delle richieste di ricerca/sostituzione della finestra padre, è necessario utilizzare la funzione [RegisterWindowMessage](/windows/win32/api/winuser/nf-winuser-registerwindowmessagew) di Windows il cui valore restituito è un numero di messaggio univoco per l'istanza dell'applicazione. La finestra cornice deve contenere una voce della mappa messaggi che dichiara la funzione di callback ( `OnFindReplace` nell'esempio seguente) che gestisce questo messaggio registrato. Il frammento di codice seguente è un esempio di come eseguire questa operazione per una classe della finestra cornice denominata `CMyRichEditView` :
 
@@ -189,7 +190,7 @@ All'interno della `OnFindReplace` funzione è possibile interpretare le intenzio
 
   Vedere l'esempio per [CFindReplaceDialog.:: CFindReplaceDialog.](#cfindreplacedialog).
 
-## <a name="cfindreplacedialogfindnext"></a><a name="findnext"></a>CFindReplaceDialog.:: TrovaSuccessivo
+## <a name="cfindreplacedialogfindnext"></a><a name="findnext"></a> CFindReplaceDialog.:: TrovaSuccessivo
 
 Chiamare questa funzione dalla funzione di callback per determinare se l'utente vuole trovare l'occorrenza successiva della stringa di ricerca.
 
@@ -201,7 +202,7 @@ BOOL FindNext() const;
 
 Diverso da zero se l'utente desidera trovare l'occorrenza successiva della stringa di ricerca; in caso contrario, 0.
 
-## <a name="cfindreplacedialoggetfindstring"></a><a name="getfindstring"></a>CFindReplaceDialog.:: GetFindString
+## <a name="cfindreplacedialoggetfindstring"></a><a name="getfindstring"></a> CFindReplaceDialog.:: GetFindString
 
 Chiamare questa funzione dalla funzione di callback per recuperare la stringa predefinita da trovare.
 
@@ -217,7 +218,7 @@ Stringa predefinita da trovare.
 
 [!code-cpp[NVC_MFCDocView#69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]
 
-## <a name="cfindreplacedialoggetnotifier"></a><a name="getnotifier"></a>CFindReplaceDialog.:: getnotifier
+## <a name="cfindreplacedialoggetnotifier"></a><a name="getnotifier"></a> CFindReplaceDialog.:: getnotifier
 
 Chiamare questa funzione per recuperare un puntatore alla finestra di dialogo Trova sostituzione corrente.
 
@@ -234,7 +235,7 @@ Valore *lParam* passato alla funzione membro della finestra cornice `OnFindRepla
 
 Puntatore alla finestra di dialogo corrente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Deve essere usato all'interno della funzione di callback per accedere alla finestra di dialogo corrente, chiamare le relative funzioni membro e accedere alla `m_fr` struttura.
 
@@ -244,7 +245,7 @@ Vedere [CFindReplaceDialog.:: create](#create) per un esempio di come registrare
 
 [!code-cpp[NVC_MFCDocView#69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]
 
-## <a name="cfindreplacedialoggetreplacestring"></a><a name="getreplacestring"></a>CFindReplaceDialog.:: GetReplaceString
+## <a name="cfindreplacedialoggetreplacestring"></a><a name="getreplacestring"></a> CFindReplaceDialog.:: GetReplaceString
 
 Chiamare questa funzione per recuperare la stringa di sostituzione corrente.
 
@@ -260,7 +261,7 @@ Stringa predefinita con cui sostituire le stringhe trovate.
 
   Vedere l'esempio per [CFindReplaceDialog.:: GetFindString](#getfindstring).
 
-## <a name="cfindreplacedialogisterminating"></a><a name="isterminating"></a>CFindReplaceDialog.:: terminazione
+## <a name="cfindreplacedialogisterminating"></a><a name="isterminating"></a> CFindReplaceDialog.:: terminazione
 
 Chiamare questa funzione all'interno della funzione di callback per determinare se l'utente ha deciso di terminare la finestra di dialogo.
 
@@ -272,7 +273,7 @@ BOOL IsTerminating() const;
 
 Diverso da zero se l'utente ha deciso di terminare la finestra di dialogo; in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se questa funzione restituisce un valore diverso da zero, è necessario chiamare la `DestroyWindow` funzione membro della finestra di dialogo corrente e impostare qualsiasi variabile del puntatore della finestra di dialogo su null. Facoltativamente, è anche possibile archiviare il testo Trova/Sostituisci per ultimo immesso e utilizzarlo per inizializzare la finestra di dialogo Trova/Sostituisci successiva.
 
@@ -280,7 +281,7 @@ Se questa funzione restituisce un valore diverso da zero, è necessario chiamare
 
   Vedere l'esempio per [CFindReplaceDialog.:: GetFindString](#getfindstring).
 
-## <a name="cfindreplacedialogm_fr"></a><a name="m_fr"></a>CFindReplaceDialog.:: m_fr
+## <a name="cfindreplacedialogm_fr"></a><a name="m_fr"></a> CFindReplaceDialog.:: m_fr
 
 Utilizzato per personalizzare un `CFindReplaceDialog` oggetto.
 
@@ -288,9 +289,9 @@ Utilizzato per personalizzare un `CFindReplaceDialog` oggetto.
 FINDREPLACE m_fr;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-`m_fr`è una struttura di tipo [FindReplace](/windows/win32/api/commdlg/ns-commdlg-findreplacew). I membri archivia le caratteristiche dell'oggetto finestra di dialogo. Dopo la costruzione di un `CFindReplaceDialog` oggetto, è possibile utilizzare `m_fr` per modificare diversi valori nella finestra di dialogo.
+`m_fr` è una struttura di tipo [FindReplace](/windows/win32/api/commdlg/ns-commdlg-findreplacew). I membri archivia le caratteristiche dell'oggetto finestra di dialogo. Dopo la costruzione di un `CFindReplaceDialog` oggetto, è possibile utilizzare `m_fr` per modificare diversi valori nella finestra di dialogo.
 
 Per ulteriori informazioni su questa struttura, vedere la `FINDREPLACE` struttura nella Windows SDK.
 
@@ -298,7 +299,7 @@ Per ulteriori informazioni su questa struttura, vedere la `FINDREPLACE` struttur
 
   Vedere l'esempio per [CFindReplaceDialog.:: CFindReplaceDialog.](#cfindreplacedialog).
 
-## <a name="cfindreplacedialogmatchcase"></a><a name="matchcase"></a>CFindReplaceDialog.:: MatchCase
+## <a name="cfindreplacedialogmatchcase"></a><a name="matchcase"></a> CFindReplaceDialog.:: MatchCase
 
 Chiamare questa funzione per determinare se l'utente desidera corrispondere esattamente al case della stringa di ricerca.
 
@@ -310,7 +311,7 @@ BOOL MatchCase() const;
 
 Diverso da zero se l'utente desidera trovare le occorrenze della stringa di ricerca che corrispondano esattamente al case della stringa di ricerca; in caso contrario, 0.
 
-## <a name="cfindreplacedialogmatchwholeword"></a><a name="matchwholeword"></a>CFindReplaceDialog.:: MatchWholeWord
+## <a name="cfindreplacedialogmatchwholeword"></a><a name="matchwholeword"></a> CFindReplaceDialog.:: MatchWholeWord
 
 Chiamare questa funzione per determinare se l'utente desidera trovare solo parole intere.
 
@@ -322,7 +323,7 @@ BOOL MatchWholeWord() const;
 
 Diverso da zero se l'utente desidera trovare una corrispondenza solo per le parole intere della stringa di ricerca; in caso contrario, 0.
 
-## <a name="cfindreplacedialogreplaceall"></a><a name="replaceall"></a>CFindReplaceDialog.:: ReplaceAll
+## <a name="cfindreplacedialogreplaceall"></a><a name="replaceall"></a> CFindReplaceDialog.:: ReplaceAll
 
 Chiamare questa funzione per determinare se l'utente desidera che vengano sostituite tutte le occorrenze della stringa.
 
@@ -334,7 +335,7 @@ BOOL ReplaceAll() const;
 
 Diverso da zero se l'utente ha richiesto la sostituzione di tutte le stringhe che corrispondono alla stringa di sostituzione. in caso contrario, 0.
 
-## <a name="cfindreplacedialogreplacecurrent"></a><a name="replacecurrent"></a>CFindReplaceDialog.:: ReplaceCurrent
+## <a name="cfindreplacedialogreplacecurrent"></a><a name="replacecurrent"></a> CFindReplaceDialog.:: ReplaceCurrent
 
 Chiamare questa funzione per determinare se l'utente desidera che la parola corrente venga sostituita.
 
@@ -346,7 +347,7 @@ BOOL ReplaceCurrent() const;
 
 Diverso da zero se l'utente ha richiesto la sostituzione della stringa attualmente selezionata con la stringa di sostituzione. in caso contrario, 0.
 
-## <a name="cfindreplacedialogsearchdown"></a><a name="searchdown"></a>CFindReplaceDialog.:: SearchDown
+## <a name="cfindreplacedialogsearchdown"></a><a name="searchdown"></a> CFindReplaceDialog.:: SearchDown
 
 Chiamare questa funzione per determinare se l'utente desidera che la ricerca proceda in direzione verso il basso.
 
@@ -358,7 +359,7 @@ BOOL SearchDown() const;
 
 Diverso da zero se l'utente desidera che la ricerca proceda in direzione verso il basso; 0 se l'utente desidera che la ricerca continui a una direzione verso l'alto.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)

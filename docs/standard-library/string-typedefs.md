@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; typedef di stringa &gt;'
 title: Typedefs &lt;string&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 - string/std::u32string
 - string/std::wstring
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
-ms.openlocfilehash: 083209f0121ac38d8adf81975577257e4e23a393
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 129d1105defaf06031333b7b06265f8d1bad4a98
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845432"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183698"
 ---
 # <a name="ltstringgt-typedefs"></a>Typedefs &lt;string&gt;
 
@@ -31,7 +32,7 @@ Altri typedef che specializzano `basic_string` sono [wstring](../standard-librar
 typedef basic_string<char, char_traits<char>, allocator<char>> string;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le dichiarazioni seguenti sono equivalenti:
 
@@ -53,7 +54,7 @@ Altri typedef che specializzano `basic_string` sono [wstring](../standard-librar
 typedef basic_string<char16_t, char_traits<char16_t>, allocator<char16_t>> u16string;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per un elenco di costruttori di stringhe, vedere [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
@@ -67,7 +68,7 @@ Altri typedef che specializzano `basic_string` sono [string](../standard-library
 typedef basic_string<char32_t, char_traits<char32_t>, allocator<char32_t>> u32string;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per un elenco di costruttori di stringhe, vedere [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
@@ -81,7 +82,7 @@ Altri typedef che specializzano `basic_string` sono [string](../standard-library
 typedef basic_string<wchar_t, char_traits<wchar_t>, allocator<wchar_t>> wstring;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le dichiarazioni seguenti sono equivalenti:
 

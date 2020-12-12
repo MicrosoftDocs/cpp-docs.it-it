@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: student_t_distribution Class'
 title: Classe student_t_distribution
 ms.date: 11/04/2016
 f1_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: 23ded8704e1e29dabddadfdc0a1ced3644374ad9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 24740a5fa15d9d77cb966184fe27e37956b3412e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840960"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183451"
 ---
 # <a name="student_t_distribution-class"></a>Classe student_t_distribution
 
@@ -67,9 +68,9 @@ public:
 *RealType*\
 Il tipo di risultato a virgola mobile, il valore predefinito è **`double`** . Per i tipi possibili, vedere [\<random>](../standard-library/random.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Il modello di classe descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo **`double`** se non ne viene fornito alcuno, distribuiti in base alla distribuzione *t*di Student. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+Il modello di classe descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo **`double`** se non ne viene fornito alcuno, distribuiti in base alla distribuzione *t* di Student. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 [student_t_distribution](#student_t_distribution)\
 [param_type](#param_type)
@@ -178,7 +179,7 @@ Parametro di distribuzione `n`.
 *parm*\
 Pacchetto di parametri usato per costruire la distribuzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:**`0.0 < n`
 
@@ -209,7 +210,7 @@ Parametro di distribuzione `n`.
 *Ok*\
 Oggetto `param_type` da confrontare con questo oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:**`0.0 < n`
 

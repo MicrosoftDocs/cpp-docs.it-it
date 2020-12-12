@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: sync_none Class'
 title: Classe sync_none
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - stdext::sync_none [C++], deallocate
 - stdext::sync_none [C++], equals
 ms.assetid: f7473cee-14f3-4fe1-88bc-68cd085e59e1
-ms.openlocfilehash: dac4dc1182de32af485d37a00ff96370ea8d8943
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 34c4f42962b1dc8b8dc58f07cd54384e049789a6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562116"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183347"
 ---
 # <a name="sync_none-class"></a>Classe sync_none
 
@@ -62,7 +63,7 @@ void *allocate(std::size_t count);
 *conteggio*\
 Numero di elementi della matrice da allocare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce `cache.allocate(count)`, dove `cache` è l'oggetto cache.
 
@@ -82,7 +83,7 @@ Puntatore al primo oggetto che deve essere deallocato dall'archivio.
 *conteggio*\
 Numero di oggetti da deallocare dall'archivio.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro chiama `cache.deallocate(ptr, count)`, dove `cache` rappresenta l'oggetto cache.
 
@@ -106,7 +107,7 @@ Oggetto cache da confrontare per verificarne l'uguaglianza.
 
 La funzione membro restituisce sempre **`true`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="see-also"></a>Vedere anche
 

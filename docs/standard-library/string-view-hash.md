@@ -1,18 +1,19 @@
 ---
-title: '&gt; specializzazione string_view hash&lt;'
+description: 'Altre informazioni su: &lt; &gt; specializzazione hash string_view'
+title: '&lt; &gt; specializzazione hash string_view'
 ms.date: 04/19/2019
 f1_keywords:
 - xstring/basic_string_view::hash
 helpviewer_keywords:
 - std::basic_string_view::hash
-ms.openlocfilehash: c7bddd5fcf9008b958854fd4d7b72ea2e94cba47
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cf4012752bbd8b3531920e78d612e78479de4b3d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214955"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183685"
 ---
-# <a name="hashltstring_viewgt-specialization"></a>&gt; specializzazione string_view hash&lt;
+# <a name="hashltstring_viewgt-specialization"></a>&lt; &gt; specializzazione hash string_view
 
 Una specializzazione di modello che produce un valore hash dato un string_view.
 
@@ -28,7 +29,7 @@ struct hash<basic_string_view<CharType, Traits>>
 };
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'hash di un string_view è uguale all'hash dell'oggetto stringa sottostante.
 

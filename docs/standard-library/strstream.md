@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; strstream&gt;'
 title: '&lt;strstream&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - strstream header
 ms.assetid: eaa9d0d4-d217-4f28-8a68-9b9ad7b1c0f5
-ms.openlocfilehash: 13eea1101abca0f79f0d7c15405ceb3118707b67
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e99a07df2a63b991232440f8dad0eb299d0e00b4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845653"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183555"
 ---
 # <a name="ltstrstreamgt"></a>&lt;strstream&gt;
 
@@ -23,7 +24,7 @@ Definisce diverse classi che supportano operazioni iostreams su sequenze archivi
 
 **Spazio dei nomi:** std
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Gli oggetti di tipo `strstream` funzionano con **`char`** *, che sono stringhe C. Utilizzare [\<sstream>](../standard-library/sstream.md) per utilizzare oggetti di tipo [basic_string](../standard-library/basic-string-class.md).
 
@@ -34,7 +35,7 @@ Gli oggetti di tipo `strstream` funzionano con **`char`** *, che sono stringhe C
 
 ### <a name="classes"></a>Classi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[Classe strstreambuf](../standard-library/strstreambuf-class.md)|La classe descrive un buffer del flusso che controlla la trasmissione di elementi da e verso una sequenza di elementi archiviati in un **`char`** oggetto matrice.|
 |[Classe istrstream](../standard-library/istrstream-class.md)|La classe descrive un oggetto che controlla l'estrazione di elementi e oggetti codificati da un buffer del flusso della classe [strstreambuf](../standard-library/strstreambuf-class.md).|
@@ -49,7 +50,7 @@ char* str();
 int pcount();
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [\<strstream>](../standard-library/strstream.md)\
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\

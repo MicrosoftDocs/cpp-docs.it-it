@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CGopherFile'
 title: Classe CGopherFile
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CGopherFile [MFC], CGopherFile
 ms.assetid: 3ca9898f-8cdb-4495-bbde-46d40100feda
-ms.openlocfilehash: e157a4509fe30b814a1834690a675906ac82afe7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8f511bdaf3ae6417972ea19465c0392832a2b408
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373699"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184075"
 ---
 # <a name="cgopherfile-class"></a>Classe CGopherFile
 
 Fornisce la funzionalità per individuare e leggere file in un server gopher.
 
 > [!NOTE]
-> Le `CGopherConnection`classi `CGopherFile` `CGopherFileFind`, `CGopherLocator` , e i relativi membri sono stati deprecati perché non funzionano sulla piattaforma Windows XP, ma continueranno a lavorare su piattaforme precedenti.
+> Le classi `CGopherConnection` , `CGopherFile` , `CGopherFileFind` `CGopherLocator` e i relativi membri sono state deprecate perché non funzionano sulla piattaforma Windows XP, ma continueranno a funzionare su piattaforme precedenti.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -28,19 +29,19 @@ Fornisce la funzionalità per individuare e leggere file in un server gopher.
 class CGopherFile : public CInternetFile
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="protected-constructors"></a>Costruttori protetti
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[FileCGopherFile::CGopherFile](#cgopherfile)|Costruisce un oggetto `CGopherFile`.|
+|[CGopherFile:: CGopherFile](#cgopherfile)|Costruisce un oggetto `CGopherFile`.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Il servizio gopher non consente agli utenti di scrivere dati in un file gopher perché questo servizio funziona principalmente come interfaccia basata su menu per la ricerca di informazioni. Le `CGopherFile` funzioni `Write` `WriteString`membro `Flush` , e `CGopherFile`non vengono implementate per . La chiamata di `CGopherFile` queste funzioni su un oggetto restituisce [un'eccezione CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).
+Il servizio Gopher non consente agli utenti di scrivere dati in un file Gopher perché questo servizio funziona principalmente come interfaccia basata su menu per la ricerca di informazioni. Le `CGopherFile` funzioni membro `Write` , `WriteString` e `Flush` non sono implementate per `CGopherFile` . Chiamando queste funzioni su un `CGopherFile` oggetto, restituisce un [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).
 
-Per ulteriori informazioni `CGopherFile` sul funzionamento con le altre classi Internet MFC, vedere l'articolo [Programmazione Internet con WinInet](../../mfc/win32-internet-extensions-wininet.md).
+Per ulteriori informazioni sul `CGopherFile` funzionamento con le altre classi Internet MFC, vedere l'articolo [programmazione Internet con WinInet](../../mfc/win32-internet-extensions-wininet.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -56,11 +57,11 @@ Per ulteriori informazioni `CGopherFile` sul funzionamento con le altre classi I
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxinet.h
+**Intestazione:** AFXINET. h
 
-## <a name="cgopherfilecgopherfile"></a><a name="cgopherfile"></a>FileCGopherFile::CGopherFile
+## <a name="cgopherfilecgopherfile"></a><a name="cgopherfile"></a> CGopherFile:: CGopherFile
 
-Questa funzione membro viene `CGopherFile` chiamata per costruire un oggetto.
+Questa funzione membro viene chiamata per costruire un `CGopherFile` oggetto.
 
 ```
 CGopherFile(
@@ -78,34 +79,34 @@ CGopherFile(
 
 ### <a name="parameters"></a>Parametri
 
-*hFile (File)*<br/>
+*hFile*<br/>
 Handle per un file HINTERNET.
 
-*refLocator (individuazione e commato*<br/>
-Riferimento a un oggetto [CGopherLocator.](../../mfc/reference/cgopherlocator-class.md)
+*refLocator*<br/>
+Riferimento a un oggetto [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) .
 
 *pConnection*<br/>
-Puntatore a un oggetto [CGopherConnection.](../../mfc/reference/cgopherconnection-class.md)
+Puntatore a un oggetto [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) .
 
-*hSessione*<br/>
+*hSession*<br/>
 Handle per la sessione Internet corrente.
 
-*pstrLocator (informazioni in base al pstrLocator*<br/>
-Puntatore a una stringa utilizzata per individuare il server gopher. Per ulteriori informazioni sui localizzatori Gopher, vedere [Gopher Sessions.](cgopherlocator-class.md)
+*pstrLocator*<br/>
+Puntatore a una stringa utilizzata per individuare il server gopher. Per ulteriori informazioni sui localizzatori Gopher, vedere [sessioni Gopher](cgopherlocator-class.md) .
 
 *dwLocLen*<br/>
 Valore DWORD contenente il numero di byte in *pstrLocator*.
 
 *dwContext*<br/>
-Puntatore all'identificatore di contesto del file aperto.
+Puntatore all'identificatore di contesto del file da aprire.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-È necessario `CGopherFile` un oggetto per leggere da un file durante una sessione Internet gopher.
+È necessario un `CGopherFile` oggetto per la lettura da un file durante una sessione Internet Gopher.
 
-Non si `CGopherFile` crea mai direttamente un oggetto. Chiamare invece [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) per aprire un file su un server gopher.
+Non è mai possibile creare `CGopherFile` direttamente un oggetto. In alternativa, chiamare [CGopherConnection:: OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) per aprire un file in un server gopher.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CInternetFile](../../mfc/reference/cinternetfile-class.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>

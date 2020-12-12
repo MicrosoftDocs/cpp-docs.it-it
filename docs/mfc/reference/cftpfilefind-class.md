@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CFtpFileFind'
 title: Classe CFtpFileFind
 ms.date: 05/28/2020
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], FindNextFile
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
-ms.openlocfilehash: e53e16f738f0436cbd02074c10ca24dbcc9d0fd8
-ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
+ms.openlocfilehash: 89d8a8232558c3afe9cf2f3a23d02226d8539aaf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206232"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184231"
 ---
 # <a name="cftpfilefind-class"></a>Classe CFtpFileFind
 
@@ -31,17 +32,17 @@ Facilita le ricerche di file su Internet dei server FTP.
 class CFtpFileFind : public CFileFind
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CFtpFileFind:: CFtpFileFind](#cftpfilefind)|Costruisce un oggetto `CFtpFileFind`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CFtpFileFind:: FindFile](#findfile)|Trova un file in un server FTP.|
 |[CFtpFileFind:: FindNextFile](#findnextfile)|Continua una ricerca di file da una chiamata precedente a [FindFile](#findfile).|
@@ -49,7 +50,7 @@ class CFtpFileFind : public CFileFind
 
 ## <a name="remarks"></a>Commenti
 
-`CFtpFileFind`include funzioni membro che iniziano una ricerca, individuano un file e restituiscono l'URL o altre informazioni descrittive sul file.
+`CFtpFileFind` include funzioni membro che iniziano una ricerca, individuano un file e restituiscono l'URL o altre informazioni descrittive sul file.
 
 Altre classi MFC progettate per Internet e la ricerca di file locali includono [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) e [CFileFind](../../mfc/reference/cfilefind-class.md). Insieme a `CFtpFileFind` , queste classi forniscono un meccanismo trasparente che consente al client di trovare file specifici, indipendentemente dal protocollo server o dal tipo di file (un computer locale o un server remoto). Non esiste alcuna classe MFC per la ricerca nei server HTTP perché HTTP non supporta la manipolazione diretta dei file necessari per le ricerche.
 
@@ -73,7 +74,7 @@ Nel codice seguente viene illustrato come enumerare tutti i file nella directory
 
 **Intestazione:** AFXINET. h
 
-## <a name="cftpfilefindcftpfilefind"></a><a name="cftpfilefind"></a>CFtpFileFind:: CFtpFileFind
+## <a name="cftpfilefindcftpfilefind"></a><a name="cftpfilefind"></a> CFtpFileFind:: CFtpFileFind
 
 Questa funzione membro viene chiamata per costruire un `CFtpFileFind` oggetto.
 
@@ -89,7 +90,7 @@ explicit CFtpFileFind(
 Puntatore a un oggetto `CFtpConnection`. È possibile ottenere una connessione FTP chiamando [CInternetSession:: GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection).
 
 *dwContext*<br/>
-Identificatore di contesto per l' `CFtpFileFind` oggetto. Per ulteriori informazioni, vedere la **sezione**seguente.
+Identificatore di contesto per l' `CFtpFileFind` oggetto. Per ulteriori informazioni, vedere la **sezione** seguente.
 
 ### <a name="remarks"></a>Commenti
 
@@ -99,7 +100,7 @@ Il valore predefinito per *dwContext* viene inviato da MFC all' `CFtpFileFind` o
 
   Vedere l'esempio nella panoramica della classe riportata in precedenza in questo argomento.
 
-## <a name="cftpfilefindfindfile"></a><a name="findfile"></a>CFtpFileFind:: FindFile
+## <a name="cftpfilefindfindfile"></a><a name="findfile"></a> CFtpFileFind:: FindFile
 
 Chiamare questa funzione membro per trovare un file FTP.
 
@@ -117,15 +118,15 @@ Puntatore a una stringa che contiene il nome del file da trovare. Se è NULL, la
 *dwFlags*<br/>
 Flag che descrivono come gestire questa sessione. Questi flag possono essere combinati con l'operatore OR bit per bit (&#124;) e sono i seguenti:
 
-- `INTERNET_FLAG_RELOAD`Ottenere i dati dalla rete anche se sono memorizzati localmente nella cache. Si tratta del flag predefinito.
+- `INTERNET_FLAG_RELOAD`   Ottenere i dati dalla rete anche se sono memorizzati localmente nella cache. Si tratta del flag predefinito.
 
-- `INTERNET_FLAG_DONT_CACHE`Non memorizzare nella cache i dati, in locale o in qualsiasi gateway.
+- `INTERNET_FLAG_DONT_CACHE`   Non memorizzare nella cache i dati, in locale o in qualsiasi gateway.
 
-- `INTERNET_FLAG_RAW_DATA`Eseguire l'override dell'impostazione predefinita per restituire i dati non elaborati ( [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) strutture per FTP).
+- `INTERNET_FLAG_RAW_DATA`   Eseguire l'override dell'impostazione predefinita per restituire i dati non elaborati ( [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) strutture per FTP).
 
-- `INTERNET_FLAG_SECURE`Protegge le transazioni in transito con Secure Sockets Layer o PCT. Questo flag è valido solo per le richieste HTTP.
+- `INTERNET_FLAG_SECURE`   Protegge le transazioni in transito con Secure Sockets Layer o PCT. Questo flag è valido solo per le richieste HTTP.
 
-- `INTERNET_FLAG_EXISTING_CONNECT`Se possibile, riutilizzare le connessioni esistenti al server per le nuove `FindFile` richieste anziché creare una nuova sessione per ogni richiesta.
+- `INTERNET_FLAG_EXISTING_CONNECT`   Se possibile, riutilizzare le connessioni esistenti al server per le nuove `FindFile` richieste anziché creare una nuova sessione per ogni richiesta.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -139,7 +140,7 @@ Dopo aver chiamato `FindFile` per recuperare il primo file FTP, è possibile chi
 
   Vedere l'esempio precedente in questo argomento.
 
-## <a name="cftpfilefindfindnextfile"></a><a name="findnextfile"></a>CFtpFileFind:: FindNextFile
+## <a name="cftpfilefindfindnextfile"></a><a name="findnextfile"></a> CFtpFileFind:: FindNextFile
 
 Chiamare questa funzione membro per continuare una ricerca di file iniziata con una chiamata alla funzione membro [FindFile](#findfile) .
 
@@ -155,13 +156,13 @@ Diverso da zero se sono presenti più file; zero se il file trovato è l'ultimo 
 
 È necessario chiamare questa funzione almeno una volta prima di chiamare qualsiasi funzione Attribute (vedere [CFileFind:: FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile)).
 
-`FindNextFile`esegue il wrapping della funzione Win32 [FindNextFile](/windows/win32/api/fileapi/nf-fileapi-findnextfilew).
+`FindNextFile` esegue il wrapping della funzione Win32 [FindNextFile](/windows/win32/api/fileapi/nf-fileapi-findnextfilew).
 
 ### <a name="example"></a>Esempio
 
   Vedere l'esempio precedente in questo argomento.
 
-## <a name="cftpfilefindgetfileurl"></a><a name="getfileurl"></a>CFtpFileFind:: GetFileURL
+## <a name="cftpfilefindgetfileurl"></a><a name="getfileurl"></a> CFtpFileFind:: GetFileURL
 
 Chiamare questa funzione membro per ottenere l'URL del file specificato.
 
@@ -175,9 +176,9 @@ Il file e il percorso dell'URL (Universal Resource Locator).
 
 ### <a name="remarks"></a>Commenti
 
-`GetFileURL`è simile alla funzione membro [CFileFind:: FilePath](../../mfc/reference/cfilefind-class.md#getfilepath) , ad eccezione del fatto che fornisce il risultato in formato URL. Come per `CFileFind::GetFilePath` , il risultato non include il nome del file. Ad esempio, `file1.txt` si trova in `//moose/dir/file1.txt:` Returns `ftp://moose/dir/` .
+`GetFileURL` è simile alla funzione membro [CFileFind:: FilePath](../../mfc/reference/cfilefind-class.md#getfilepath) , ad eccezione del fatto che fornisce il risultato in formato URL. Come per `CFileFind::GetFilePath` , il risultato non include il nome del file. Ad esempio, `file1.txt` si trova in `//moose/dir/file1.txt:` Returns `ftp://moose/dir/` .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CFileFind](../../mfc/reference/cfilefind-class.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>

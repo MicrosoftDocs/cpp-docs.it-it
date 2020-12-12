@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: sub_match Class'
 title: Classe sub_match
 ms.date: 09/10/2018
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: 57aa4ec366588f71f41a747a2dc5127f87ea2e2e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 683b0bc6cf73a44ce426d5dcab3cdf13221be66b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222199"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183399"
 ---
 # <a name="sub_match-class"></a>Classe sub_match
 
@@ -44,7 +45,7 @@ class sub_match
 *BidIt*\
 Tipo di iteratore per le sottocorrispondenze.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il modello di classe descrive un oggetto che designa una sequenza di caratteri corrispondente a un gruppo Capture in una chiamata a [regex_match](../standard-library/regex-functions.md#regex_match) o a [regex_search](../standard-library/regex-functions.md#regex_search). Oggetti di tipo [classe match_results](../standard-library/match-results-class.md) contengono una matrice di questi oggetti, una per ogni gruppo Capture nell'espressione regolare usata nella ricerca.
 
@@ -58,7 +59,7 @@ Una corrispondenza zero si può verificare quando un gruppo Capture è costituit
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome tipo|Descrizione|
+|Nome tipo|Description|
 |-|-|
 |[difference_type](#difference_type)|Tipo di differenza iteratore.|
 |[iteratore](#iterator)|Tipo di iteratore.|
@@ -137,7 +138,7 @@ compare(sub) == 0
 
 **Spazio dei nomi:** std
 
-## <a name="sub_matchcompare"></a><a name="compare"></a>sub_match:: compare
+## <a name="sub_matchcompare"></a><a name="compare"></a> sub_match:: compare
 
 Confronta una sottocorrispondenza rispetto a una sequenza.
 
@@ -158,7 +159,7 @@ Stringa da confrontare.
 *PTR*\
 Sequenza con terminazione null da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La prima funzione membro confronta la sequenza corrispondente `[first, second)` con la sequenza corrispondente `[right.first, right.second)`. La seconda funzione membro confronta la sequenza corrispondente `[first, second)` con la sequenza di caratteri `[right.begin(), right.end())`. La terza funzione membro confronta la sequenza corrispondente `[first, second)` con la sequenza di caratteri `[right, right + std::char_traits<value_type>::length(right))`.
 
@@ -170,7 +171,7 @@ Zero se le due sequenze risultano uguali elemento per elemento e hanno la stessa
 
 Un valore positivo in caso contrario
 
-## <a name="sub_matchdifference_type"></a><a name="difference_type"></a>sub_match::d ifference_type
+## <a name="sub_matchdifference_type"></a><a name="difference_type"></a> sub_match::d ifference_type
 
 Tipo di differenza iteratore.
 
@@ -178,11 +179,11 @@ Tipo di differenza iteratore.
 typedef typename iterator_traits<BidIt>::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 typedef è sinonimo di `iterator_traits<BidIt>::difference_type`.
 
-## <a name="sub_matchiterator"></a><a name="iterator"></a>sub_match:: iterator
+## <a name="sub_matchiterator"></a><a name="iterator"></a> sub_match:: iterator
 
 Tipo di iteratore.
 
@@ -190,11 +191,11 @@ Tipo di iteratore.
 typedef BidIt iterator;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Typedef è un sinonimo dell'argomento di tipo modello `Bidit`.
 
-## <a name="sub_matchlength"></a><a name="length"></a>sub_match:: length
+## <a name="sub_matchlength"></a><a name="length"></a> sub_match:: length
 
 Restituisce la lunghezza di una sottocorrispondenza.
 
@@ -202,11 +203,11 @@ Restituisce la lunghezza di una sottocorrispondenza.
 difference_type length() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce la lunghezza della sequenza corrispondente oppure zero se non era presente alcuna sequenza corrispondente.
 
-## <a name="sub_matchmatched"></a><a name="matched"></a>sub_match:: matched
+## <a name="sub_matchmatched"></a><a name="matched"></a> sub_match:: matched
 
 Indica se la corrispondenza ha avuto esito positivo.
 
@@ -214,11 +215,11 @@ Indica se la corrispondenza ha avuto esito positivo.
 bool matched;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il membro include **`true`** solo se il gruppo Capture associato a **`*this`** fa parte della corrispondenza di espressione regolare.
 
-## <a name="sub_matchoperator-basic_stringltvalue_typegt"></a><a name="op_basic_string_lt_value_type_gt"></a>sub_match:: operator basic_string &lt; value_type&gt;
+## <a name="sub_matchoperator-basic_stringltvalue_typegt"></a><a name="op_basic_string_lt_value_type_gt"></a> sub_match:: operator basic_string &lt; value_type&gt;
 
 Esegue il cast di una sottocorrispondenza a una stringa.
 
@@ -226,11 +227,11 @@ Esegue il cast di una sottocorrispondenza a una stringa.
 operator basic_string<value_type>() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operatore membro restituisce `str()`.
 
-## <a name="sub_matchstr"></a><a name="str"></a>sub_match:: Str
+## <a name="sub_matchstr"></a><a name="str"></a> sub_match:: Str
 
 Converte una sottocorrispondenza in una stringa.
 
@@ -238,11 +239,11 @@ Converte una sottocorrispondenza in una stringa.
 basic_string<value_type> str() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce`basic_string<value_type>(first, second)`.
 
-## <a name="sub_matchvalue_type"></a><a name="value_type"></a>sub_match:: value_type
+## <a name="sub_matchvalue_type"></a><a name="value_type"></a> sub_match:: value_type
 
 Tipo di un elemento.
 
@@ -250,11 +251,11 @@ Tipo di un elemento.
 typedef typename iterator_traits<BidIt>::value_type value_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 typedef è sinonimo di `iterator_traits<BidIt>::value_type`.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [\<regex>](../standard-library/regex.md)\
 [sub_match](../standard-library/sub-match-class.md)
