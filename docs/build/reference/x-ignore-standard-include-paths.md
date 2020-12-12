@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: `/X` (Ignora percorsi di inclusione standard)'
 title: /X (Ignora percorso di inclusione standard)
 ms.date: 07/31/2020
 f1_keywords:
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - X compiler option
 - Ignore Standard Include Paths compiler option
 ms.assetid: 16bdf2cc-c8dc-46e4-bdcc-f3caeba5e1ef
-ms.openlocfilehash: 652feeb200b7106aaca1ed7264f1e25c088a3dab
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 69936b80893de2c45622ec9973a218a94e8029a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520408"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261008"
 ---
-# <a name="x-ignore-standard-include-paths"></a>`/X`(Ignora percorsi di inclusione standard)
+# <a name="x-ignore-standard-include-paths"></a>`/X` (Ignora percorsi di inclusione standard)
 
 Impedisce al compilatore di cercare i file di inclusione nelle directory specificate nelle variabili di ambiente PATH e INCLUDE.
 
@@ -37,7 +38,7 @@ Impedisce al compilatore di cercare i file di inclusione nelle directory specifi
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la pagina delle proprietà di **configurazione**  >  proprietà del preprocessore**C/C++**  >  **Preprocessor** .
+1. Selezionare la pagina delle proprietà di **configurazione**  >  proprietà del preprocessore **C/C++**  >   .
 
 1. Modificare la proprietà **Ignora percorso di inclusione standard** .
 
@@ -53,7 +54,7 @@ Nel comando seguente **`/X`** indica al compilatore di ignorare i percorsi speci
 CL /X /I \ALT\INCLUDE MAIN.C
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
 [Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

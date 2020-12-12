@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CHtmlEditView'
 title: Classe CHtmlEditView
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - CHtmlEditView [MFC], GetDHtmlDocument
 - CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
-ms.openlocfilehash: 20d4586c1ae45e5f3f56c0adbb1ecb1757084fd7
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 9ab998ca16a26fd4ef7a23e4dc58c6542ec330b3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752328"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261320"
 ---
 # <a name="chtmleditview-class"></a>Classe CHtmlEditView
 
@@ -31,21 +32,21 @@ Fornisce la funzionalità della piattaforma di modifica WebBrowser nel contesto 
 class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CHtmlEditView::CHtmlEditView](#chtmleditview)|Costruisce un oggetto `CHtmlEditView`.|
+|[CHtmlEditView:: CHtmlEditView](#chtmleditview)|Costruisce un oggetto `CHtmlEditView`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CHtmlEditView::Create](#create)|Crea un nuovo oggetto finestra.|
-|[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|Restituisce `IHTMLDocument2` l'interfaccia nel documento corrente.|
-|[CHtmlEditView::GetStartDocument](#getstartdocument)|Recupera il nome del documento predefinito per questa visualizzazione.|
+|[CHtmlEditView:: create](#create)|Crea un nuovo oggetto finestra.|
+|[CHtmlEditView:: GetDHtmlDocument](#getdhtmldocument)|Restituisce l' `IHTMLDocument2` interfaccia del documento corrente.|
+|[CHtmlEditView:: GetStartDocument](#getstartdocument)|Recupera il nome del documento predefinito per questa visualizzazione.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -63,7 +64,7 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 
 [CHtmlEditCtrlBase](../../mfc/reference/chtmleditctrlbase-class.md)
 
-[Chtmlview](../../mfc/reference/chtmlview-class.md)
+[CHtmlView](../../mfc/reference/chtmlview-class.md)
 
 `CHtmlEditView`
 
@@ -71,7 +72,7 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 
 **Intestazione:** afxhtml.h
 
-## <a name="chtmleditviewchtmleditview"></a><a name="chtmleditview"></a>CHtmlEditView::CHtmlEditView
+## <a name="chtmleditviewchtmleditview"></a><a name="chtmleditview"></a> CHtmlEditView:: CHtmlEditView
 
 Costruisce un oggetto `CHtmlEditView`.
 
@@ -79,7 +80,7 @@ Costruisce un oggetto `CHtmlEditView`.
 CHtmlEditView();
 ```
 
-## <a name="chtmleditviewcreate"></a><a name="create"></a>CHtmlEditView::Create
+## <a name="chtmleditviewcreate"></a><a name="create"></a> CHtmlEditView:: create
 
 Crea un nuovo oggetto finestra.
 
@@ -96,34 +97,34 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszClassName (nome di classe)*<br/>
-Punta a una stringa di caratteri con terminazione null che denomina la classe Windows. Il nome della classe può essere qualsiasi nome registrato con `RegisterClass` la funzione globale [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) o la funzione di Windows. Se NULL, utilizza gli attributi predefiniti [CFrameWnd.](../../mfc/reference/cframewnd-class.md)
+*lpszClassName*<br/>
+Punta a una stringa di caratteri con terminazione null che denomina la classe Windows. Il nome della classe può essere qualsiasi nome registrato con la funzione globale [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) o con la `RegisterClass` funzione di Windows. Se è NULL, USA gli attributi [CFrameWnd](../../mfc/reference/cframewnd-class.md) predefiniti predefiniti.
 
-*lpszNomefinestraNome*<br/>
+*lpszWindowName*<br/>
 Punta a una stringa di caratteri con terminazione null che rappresenta il nome della finestra.
 
-*DwStyle (in stile dwStyle)*<br/>
-Specifica gli attributi di stile della finestra. Per impostazione predefinita, vengono impostati gli stili WS_VISIBLE e WS_CHILD di Windows.
+*dwStyle*<br/>
+Specifica gli attributi di stile della finestra. Per impostazione predefinita, gli stili WS_VISIBLE e WS_CHILD Windows sono impostati.
 
 *Rect*<br/>
-Riferimento a una struttura [RECT](/windows/win32/api/windef/ns-windef-rect) che specifica le dimensioni e la posizione della finestra. Il valore *rectDefault* consente a Windows di specificare le dimensioni e la posizione della nuova finestra.
+Riferimento a una struttura [Rect](/windows/win32/api/windef/ns-windef-rect) che specifica le dimensioni e la posizione della finestra. Il valore *rectDefault Windows* consente a Windows di specificare le dimensioni e la posizione della nuova finestra.
 
-*pParentWnd (informazioni in due)*<br/>
+*pParentWnd*<br/>
 Puntatore alla finestra padre del controllo.
 
 *nID*<br/>
 Numero ID della visualizzazione. Per impostazione predefinita, impostare su AFX_IDW_PANE_FIRST.
 
 *pContext*<br/>
-Puntatore a un [oggetto CCreateContext.](../../mfc/reference/ccreatecontext-structure.md) NULL per impostazione predefinita.
+Puntatore a un [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). NULL per impostazione predefinita.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Questo metodo chiamerà anche il `Navigate` metodo del controllo WebBrowser contenuto per caricare un documento predefinito (vedere [CHtmlEditView::GetStartDocument](#getstartdocument)).
+Questo metodo chiamerà anche il metodo del WebBrowser contenuto `Navigate` per caricare un documento predefinito (vedere [CHtmlEditView:: GetStartDocument](#getstartdocument)).
 
-## <a name="chtmleditviewgetdhtmldocument"></a><a name="getdhtmldocument"></a>CHtmlEditView::GetDHtmlDocument
+## <a name="chtmleditviewgetdhtmldocument"></a><a name="getdhtmldocument"></a> CHtmlEditView:: GetDHtmlDocument
 
-Restituisce `IHTMLDocument2` l'interfaccia nel documento corrente.
+Restituisce l' `IHTMLDocument2` interfaccia del documento corrente.
 
 ```
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
@@ -131,10 +132,10 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 
 ### <a name="parameters"></a>Parametri
 
-*PpDocument (documento pp)*<br/>
-Interfaccia [IHTMLDocument2.](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\))
+*ppDocument*<br/>
+Interfaccia [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) .
 
-## <a name="chtmleditviewgetstartdocument"></a><a name="getstartdocument"></a>CHtmlEditView::GetStartDocument
+## <a name="chtmleditviewgetstartdocument"></a><a name="getstartdocument"></a> CHtmlEditView:: GetStartDocument
 
 Recupera il nome del documento predefinito per questa visualizzazione.
 
@@ -142,7 +143,7 @@ Recupera il nome del documento predefinito per questa visualizzazione.
 virtual LPCTSTR GetStartDocument();
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Esempio HTMLEdit](../../overview/visual-cpp-samples.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)

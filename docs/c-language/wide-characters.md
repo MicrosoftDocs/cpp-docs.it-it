@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: caratteri wide'
 title: Caratteri Wide
 ms.date: 11/04/2016
 helpviewer_keywords:
 - wide characters
 ms.assetid: 165c4a12-8ab9-45fb-9964-c55e9956194c
-ms.openlocfilehash: 868acf0abd26a1f4b5533bb997fb9ea09a27954b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64b175402f98c1e687f453a897c8e240fd176e0d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291002"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260826"
 ---
 # <a name="wide-characters"></a>Caratteri Wide
 
@@ -19,6 +20,6 @@ La costante carattere normale 'ab' ha l'Integer (int)0x6162. Quando sono present
 
 La costante carattere multibyte viene letta come descritto in precedenza e viene convertita in una costante carattere "wide" mediante la funzione di runtime `mbtowc`. Se il risultato non è una costante carattere "wide" valida, viene generato un errore. In ogni caso, il numero di byte esaminato dalla funzione `mbtowc` è limitato al valore di `MB_CUR_MAX`.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Caratteri](../c-language/characters.md)

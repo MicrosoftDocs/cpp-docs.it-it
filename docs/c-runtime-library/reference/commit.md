@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _commit'
 title: _commit
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-ms.openlocfilehash: 217bccbc4ebc937b89bca5cc127de72b7118481c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9ec0a6dad2e1dc7531d99e386adf41e4c444b8d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918524"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260683"
 ---
 # <a name="_commit"></a>_commit
 
@@ -59,7 +60,7 @@ Il descrittore del file che fa riferimento al file aperto.
 
 **_commit** restituisce 0 se il file è stato scaricato correttamente sul disco. Un valore restituito di-1 indica un errore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_commit** impone al sistema operativo di scrivere il file associato a *FD* su disco. Questa chiamata assicura che il file specificato venga scaricato immediatamente, non a discrezione del sistema operativo.
 
@@ -75,9 +76,9 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[I/O a basso livello](../../c-runtime-library/low-level-i-o.md)<br/>
+[I/O di basso livello](../../c-runtime-library/low-level-i-o.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>
 [_read](read.md)<br/>

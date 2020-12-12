@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _close'
 title: _close
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-ms.openlocfilehash: c642820bf1bc2e2afbd14e17832fb3fdb6f865b8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d65d65cea5d379cad11e45e63efc725ee056ea91
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919847"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260735"
 ---
 # <a name="_close"></a>_close
 
@@ -56,7 +57,7 @@ Il descrittore del file che fa riferimento al file aperto.
 
 **_close** restituisce 0 se il file è stato chiuso correttamente. Un valore restituito di-1 indica un errore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_close** chiude il file associato a *FD*.
 
@@ -78,9 +79,9 @@ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runt
 
 Vedere l'esempio per [_open](open-wopen.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[I/O a basso livello](../../c-runtime-library/low-level-i-o.md)<br/>
+[I/O di basso livello](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chsize](chsize.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [_dup, _dup2](dup-dup2.md)<br/>

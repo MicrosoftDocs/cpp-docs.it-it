@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: asctime, _wasctime'
 title: asctime, _wasctime
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-ms.openlocfilehash: 00c6be8ee409d76b80d323102950f8c1d6420ba3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3ae075481b364af01bfa75f1cc29423de9fcdbf1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909430"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260800"
 ---
 # <a name="asctime-_wasctime"></a>asctime, _wasctime
 
@@ -67,13 +68,13 @@ Struttura di data e ora.
 
 **asctime** restituisce un puntatore al risultato della stringa di caratteri; **_wasctime** restituisce un puntatore al risultato della stringa di caratteri wide. Non vengono restituiti valori di errore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Sono disponibili versioni più sicure di queste funzioni. Vedere [asctime_s, _wasctime_s](asctime-s-wasctime-s.md).
 
-La funzione **asctime** converte un'ora archiviata come una struttura in una stringa di caratteri. Il valore *timeptr* viene in genere ottenuto da una chiamata a **gmtime** o **localtime**, che entrambi restituiscono un puntatore a una struttura **TM** , definito nel tempo. H.
+La funzione **asctime** converte un'ora archiviata come una struttura in una stringa di caratteri. Il valore *timeptr* viene in genere ottenuto da una chiamata a **gmtime** o **localtime**, che restituiscono entrambi un puntatore a una struttura **TM** , definita in time. H.
 
-|membro timeptr|Value|
+|membro timeptr|Valore|
 |--------------------|-----------|
 |**tm_hour**|Ore dalla mezzanotte (0-23)|
 |**tm_isdst**|Positivo se è in vigore l'ora legale. 0 se l'ora legale non è in vigore. Negativo se lo stato dell'ora legale è sconosciuto. La libreria di runtime C presuppone le regole relative agli Stati Uniti per implementare il calcolo dell'ora legale (DST).|
@@ -87,7 +88,7 @@ La funzione **asctime** converte un'ora archiviata come una struttura in una str
 
 La stringa di caratteri convertita viene anche regolata in base alle impostazioni di fuso orario locale. Vedere le funzioni [time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md) e [localtime](localtime-localtime32-localtime64.md) per informazioni sulla configurazione dell'ora locale e la funzione [_tzset](tzset.md) per informazioni sulla definizione delle variabili di ambiente e globali del fuso orario.
 
-Il risultato della stringa prodotto da **asctime** contiene esattamente 26 caratteri e ha il `Wed Jan 02 02:03:55 1980\n\0`formato. Viene usato un formato 24 ore. Tutti i campi hanno una larghezza costante. Il carattere di nuova riga e il carattere null occupano le ultime due posizioni della stringa. **asctime** usa un singolo buffer allocato in modo statico per memorizzare la stringa restituita. Ogni chiamata a questa funzione elimina definitivamente il risultato della chiamata precedente.
+Il risultato della stringa prodotto da **asctime** contiene esattamente 26 caratteri e ha il formato `Wed Jan 02 02:03:55 1980\n\0` . Viene usato un formato 24 ore. Tutti i campi hanno una larghezza costante. Il carattere di nuova riga e il carattere null occupano le ultime due posizioni della stringa. **asctime** usa un singolo buffer allocato in modo statico per memorizzare la stringa restituita. Ogni chiamata a questa funzione elimina definitivamente il risultato della chiamata precedente.
 
 **_wasctime** è una versione a caratteri wide di **asctime**. **_wasctime** e **asctime** si comportano in modo identico.
 
@@ -106,7 +107,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
 |**asctime**|\<time.h>|
-|**_wasctime**|\<time.h> or \<wchar.h>|
+|**_wasctime**|\<time.h> o \<wchar.h>|
 
 ## <a name="example"></a>Esempio
 
@@ -140,7 +141,7 @@ int main( void )
 Current date and time: Sun Feb 03 11:38:58 2002
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione del tempo](../../c-runtime-library/time-management.md)<br/>
 [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>

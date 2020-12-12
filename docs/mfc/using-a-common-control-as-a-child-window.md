@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso di un controllo comune come finestra figlio'
 title: Utilizzo di un controllo comune come finestra figlio
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,28 +9,28 @@ helpviewer_keywords:
 - common controls [MFC], child windows
 - Windows common controls [MFC], child windows
 ms.assetid: 608f7d47-7854-4fce-bde9-856c51e76753
-ms.openlocfilehash: 827690f273852dee8f9461aa9af51f1cf7f4ce6e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a5fda2cbf8d0bf16ccb17f2766b31d24e5c0c67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180570"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263556"
 ---
 # <a name="using-a-common-control-as-a-child-window"></a>Utilizzo di un controllo comune come finestra figlio
 
-Uno qualsiasi dei controlli comuni di Windows può essere utilizzato come finestra figlio di un'altra finestra. La procedura seguente descrive come creare un controllo comune in modo dinamico e quindi utilizzarli.
+Uno dei controlli comuni di Windows può essere utilizzato come finestra figlio di qualsiasi altra finestra. Nella procedura seguente viene descritto come creare un controllo comune in modo dinamico e quindi come utilizzarlo.
 
-### <a name="to-use-a-common-control-as-a-child-window"></a>Usare un controllo comune come finestra figlio
+### <a name="to-use-a-common-control-as-a-child-window"></a>Per utilizzare un controllo comune come finestra figlio
 
-1. Definire il controllo nella classe correlata o del gestore.
+1. Definire il controllo nella classe o nel gestore correlato.
 
-1. Usare l'override del metodo di [CWnd:: Create](../mfc/reference/cwnd-class.md#create) metodo per creare il controllo di Windows.
+1. Usare l'override del controllo del metodo [CWnd:: create](../mfc/reference/cwnd-class.md#create) per creare il controllo di Windows.
 
-1. Dopo aver creato il controllo (fin il `OnCreate` gestore se si crea una sottoclasse del controllo), è possibile modificare il controllo tramite le funzioni membro. Vedere le descrizioni dei singoli controlli [controlli](../mfc/controls-mfc.md) per informazioni dettagliate sui metodi.
+1. Dopo che il controllo è stato creato (prima del `OnCreate` gestore se si crea una sottoclasse del controllo), è possibile modificare il controllo usando le funzioni membro. Vedere le descrizioni dei singoli controlli nei [controlli](../mfc/controls-mfc.md) per informazioni dettagliate sui metodi.
 
-1. Quando si è terminato con il controllo, usare [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) da eliminare definitivamente il controllo.
+1. Al termine del controllo, utilizzare [CWnd::D estroywindow](../mfc/reference/cwnd-class.md#destroywindow) per eliminare definitivamente il controllo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Creazione e uso di controlli](../mfc/making-and-using-controls.md)<br/>
+[Creazione e utilizzo di controlli](../mfc/making-and-using-controls.md)<br/>
 [Controlli](../mfc/controls-mfc.md)

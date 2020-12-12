@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: fp_contract pragma'
 title: Pragma fp_contract
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pragmas, fp_contract
 - fp_contract pragma
 ms.assetid: 15b97338-6680-4287-ba2a-2dccc5b2ccf5
-ms.openlocfilehash: 833d8e7f4b8c9da18901610e52afed619468c5c3
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: cefcf0519f08b3fd68a0f8b464938ea7cdbda6d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218559"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261177"
 ---
 # <a name="fp_contract-pragma"></a>Pragma fp_contract
 
@@ -21,13 +22,13 @@ Determina se si verifica la contrazione a virgola mobile. Una contrazione a virg
 
 ## <a name="syntax"></a>Sintassi
 
-> **#pragma fp_contract (** { **on** | **off** } **)**
+> **#pragma fp_contract (** { **on**  |  **off** } **)**
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, **fp_contract** è **on**. Ciò indica al compilatore di usare le istruzioni di contratto a virgola mobile laddove possibile. Impostare **fp_contract** su **off** per mantenere le singole istruzioni a virgola mobile.
 
-Per ulteriori informazioni sul comportamento della virgola mobile, vedere [/FP (specifica il comportamento](../build/reference/fp-specify-floating-point-behavior.md)della virgola mobile).
+Per ulteriori informazioni sul comportamento della virgola mobile, vedere [/FP (specifica il comportamento di Floating-Point)](../build/reference/fp-specify-floating-point-behavior.md).
 
 Altri pragma a virgola mobile sono i seguenti:
 
@@ -37,7 +38,7 @@ Altri pragma a virgola mobile sono i seguenti:
 
 ## <a name="example"></a>Esempio
 
-Il codice generato da questo esempio non usa un'istruzione di aggiunta-moltiplicazione con fusione anche quando è disponibile nel processore di destinazione. Se si imposta come `#pragma fp_contract (off)`commento, il codice generato può utilizzare un'istruzione di moltiplicazione (aggiunta) fusa se disponibile.
+Il codice generato da questo esempio non usa un'istruzione di aggiunta-moltiplicazione con fusione anche quando è disponibile nel processore di destinazione. Se si `#pragma fp_contract (off)` Imposta come commento, il codice generato può utilizzare un'istruzione di moltiplicazione (aggiunta) fusa se disponibile.
 
 ```cpp
 // pragma_directive_fp_contract.cpp
@@ -75,6 +76,6 @@ out = 3.629600000000000e+03
 out = 4.587525000000000e+03
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

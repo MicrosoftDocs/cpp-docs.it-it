@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: documentazione XML (Visual C++)'
 title: Documentazione XML (Visual C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - comments, C++ source code files
 - /// delimiter for C++ documentation
 ms.assetid: a1aec1c5-b2d1-4c74-83ae-1dbbbb76b506
-ms.openlocfilehash: c25c54e81bb9c10fc871a2abc178f57e661ae4e6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 762380d08483292866cb96b34be4d85f7a2f510a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335725"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260943"
 ---
 # <a name="xml-documentation-visual-c"></a>Documentazione XML (Visual C++)
 
@@ -42,6 +43,6 @@ Per informazioni dettagliate sulla creazione di un file XML con i commenti della
 
 Se è necessario inserire i caratteri speciali XML nel testo di un commento della documentazione, è necessario usare le entità XML o una sezione CDATA.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Estensioni componenti per le piattaforme runtime](../../extensions/component-extensions-for-runtime-platforms.md)

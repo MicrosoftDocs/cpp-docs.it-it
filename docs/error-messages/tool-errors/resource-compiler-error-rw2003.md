@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore di risorse risorse RW2003'
 title: Errore del compilatore di risorse RW2003
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - RW2003
 ms.assetid: 9dc0ba70-6776-4aef-b316-5f1711d8e42e
-ms.openlocfilehash: 60e813fff46ebc015f281dfed99d2916ca0eb4bb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 545168aae1c483c358c55dfc90ce320aafac3ca2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190612"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259682"
 ---
 # <a name="resource-compiler-error-rw2003"></a>Errore del compilatore di risorse RW2003
 
 Errore di generazione
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolvere il problema, verificare le seguenti cause possibili:
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili
 
 1. **Errore: la risorsa del file bitmap non è in formato 3,00**
 
@@ -37,11 +38,11 @@ Errore di generazione
 
 1. **Impossibile inizializzare le informazioni sui simboli**
 
-   Questo errore si verifica solo in C++Visual. È probabile che si disponga di un numero eccessivo di file aperti oppure che non sia possibile aprire o scrivere nei file di dati C++ necessari affinché l'oggetto visivo possa importare i simboli nello script. L' C++ oggetto visivo tenta di creare questi file nella directory specificata dalla variabile di ambiente **tmp** o nella directory corrente se non è specificato alcun valore.
+   Questo errore si verifica solo in Visual C++. È probabile che si disponga di un numero eccessivo di file aperti oppure che non sia possibile aprire o scrivere nei file di dati necessari per Visual C++ importare i simboli nello script. Visual C++ tenta di creare questi file nella directory specificata dalla variabile di ambiente **tmp** o nella directory corrente se non è specificato alcun valore.
 
 1. **Non è possibile salvare le informazioni sui simboli**
 
-   Questo errore si verifica solo in C++Visual. È probabile che si disponga di un numero eccessivo di file aperti oppure che non sia possibile chiudere o scrivere nei file di dati C++ necessari affinché Visual importi i simboli nello script. L' C++ oggetto visivo tenta di usare questi file nella directory specificata dalla variabile di ambiente **tmp** o nella directory corrente se non è specificato alcun valore.
+   Questo errore si verifica solo in Visual C++. È probabile che si disponga di un numero eccessivo di file aperti oppure che non sia possibile chiudere o scrivere nei file di dati necessari per Visual C++ importare i simboli nello script. Visual C++ tenta di usare questi file nella directory specificata dalla variabile di ambiente **tmp** o nella directory corrente se non è specificato alcun valore.
 
 1. **Il file di risorse del file bitmap non è in formato 2,03**
 
@@ -49,7 +50,7 @@ Errore di generazione
 
 1. **Risorsa troppo grande**
 
-   Per Windows 3,1 una risorsa non può superare approssimativamente 65000 byte. Se la risorsa esegue questa operazione, non sarà possibile compilarla con Visual C++ o il compilatore di risorse della riga di comando. Questo limite non si applica a cursori, icone, bitmap o altre risorse basate su file.
+   Per Windows 3,1 una risorsa non può superare approssimativamente 65000 byte. Se la risorsa viene eseguita, non sarà possibile compilarla con Visual C++ o il compilatore di risorse della riga di comando. Questo limite non si applica a cursori, icone, bitmap o altre risorse basate su file.
 
 1. **Il file di risorse non è in formato 3,00**
 

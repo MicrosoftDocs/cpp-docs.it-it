@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/Y-(ignora le opzioni di intestazione precompilata)
 title: /Y- (Ignora le opzioni dell'intestazione precompilata)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - -Y- compiler option [C++]
 - /Y- compiler option [C++]
 ms.assetid: cfaecb36-58db-46b8-b04d-cca6072b1b7a
-ms.openlocfilehash: c56c25d587d84e599718d2e1a74d469def3501f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3d1eb6d404e0463ee547c1905f792b485bf65f6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316184"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260839"
 ---
 # <a name="y--ignore-precompiled-header-options"></a>/Y- (Ignora le opzioni dell'intestazione precompilata)
 
-Tutte le altre cause `/Y` compilatore opzioni deve essere ignorata (e non è possibile stesso essere sottoposto a override).
+Consente di ignorare tutte le altre `/Y` Opzioni del compilatore (e non è possibile eseguirne l'override).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,9 +26,9 @@ Tutte le altre cause `/Y` compilatore opzioni deve essere ignorata (e non è pos
 /Y-
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Per altre informazioni sulle intestazioni precompilate, vedere:
+Per ulteriori informazioni sulle intestazioni precompilate, vedere:
 
 - [/Y (intestazioni precompilate)](y-precompiled-headers.md)
 
@@ -35,7 +36,7 @@ Per altre informazioni sulle intestazioni precompilate, vedere:
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -47,7 +48,7 @@ Per altre informazioni sulle intestazioni precompilate, vedere:
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

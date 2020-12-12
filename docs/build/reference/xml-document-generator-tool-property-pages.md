@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: pagine delle proprietà dello strumento generatore di documenti XML'
 title: Pagina delle proprietà dello strumento generatore di documenti XML
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.OutputDocumentFile
 - VC.Project.VCXDCMakeTool.AdditionalDocumentFiles
 ms.assetid: 645912b5-197a-4c36-ba58-64df09444ca0
-ms.openlocfilehash: d17913909532c5bebcac712937af00be3ad98712
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e344d8ef796a5c3455c88851a1fc410801b991bd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335763"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260969"
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>Pagina delle proprietà dello strumento generatore di documenti XML
 
@@ -34,12 +35,12 @@ La pagina delle proprietà Strumento Generatore di documenti XML espone la funzi
 
 - **File di documento di output**
 
-   Nome e percorso della directory che contiene il file di output con estensione xml. Per informazioni sull'utilizzo delle macro per specificare i percorsi delle directory, vedere [Macro comuni per comandi e proprietà](common-macros-for-build-commands-and-properties.md) di compilazione.
+   Nome e percorso della directory che contiene il file di output con estensione xml. Per informazioni sull'uso delle macro per specificare i percorsi di directory, vedere [macro comuni per i comandi e le proprietà di compilazione](common-macros-for-build-commands-and-properties.md) .
 
 - **Dipendenze raccolte documenti**
 
    Se il progetto dipende da un progetto con estensione lib nella soluzione, è possibile elaborare file con estensione xdc dal progetto lib nei file con estensione xml per il progetto corrente.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Informazioni di riferimento sulla pagina delle proprietà del progetto In C](property-pages-visual-cpp.md)
+[Riferimento alla pagina delle proprietà del progetto C++](property-pages-visual-cpp.md)

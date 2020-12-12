@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe Array (libreria standard C++)'
 title: Classe array (libreria standard C++)| Microsoft Docs
 ms.date: 11/13/2019
 f1_keywords:
@@ -96,12 +97,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: f826bb679d3391855d0a0dbc7c4355a735b9c529
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 058d1a6f3ad49392271f553fe381cc31624be360
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562571"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261125"
 ---
 # <a name="array-class-c-standard-library"></a>Classe array (libreria standard C++)
 
@@ -138,7 +139,7 @@ Numero di elementi.
 |[size_type](#size_type)|Tipo di una distanza Unsigned tra due elementi.|
 |[value_type](#value_type)|Tipo di un elemento.|
 
-|Funzione membro|Descrizione|
+|Funzione membro|Description|
 |-|-|
 |[array](#array)|Costruisce un oggetto di matrice.|
 |[assign](#assign)|Obsoleto. Usare `fill` .) Sostituisce tutti gli elementi.|
@@ -151,7 +152,7 @@ Numero di elementi.
 |[crend](#crend)|Restituisce un iteratore const alla fine di una matrice invertita.|
 |[data](#data)|Ottiene l'indirizzo del primo elemento.|
 |[empty](#empty)|Verifica se sono presenti elementi.|
-|[fine](#end)|Designa la fine della sequenza controllata.|
+|[end](#end)|Designa la fine della sequenza controllata.|
 |[riempimento](#fill)|Sostituisce tutti gli elementi con un valore specificato.|
 |[fronte](#front)|Accede al primo elemento.|
 |[max_size](#max_size)|Conta il numero di elementi.|
@@ -165,9 +166,9 @@ Numero di elementi.
 |[array:: operator =](#op_eq)|Sostituisce la sequenza controllata.|
 |[Operatore array::\[\]](#op_at)|Accede a un elemento in una posizione specificata.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Il tipo ha un costruttore predefinito `array()` e un operatore di assegnazione predefinito `operator=` e soddisfa i requisiti per un `aggregate`. Pertanto, gli oggetti di tipo `array<Ty, N>` possono essere inizializzati usando un inizializzatore di aggregazione. Ad esempio,
+Il tipo ha un costruttore predefinito `array()` e un operatore di assegnazione predefinito `operator=` e soddisfa i requisiti per un `aggregate`. Pertanto, gli oggetti di tipo `array<Ty, N>` possono essere inizializzati usando un inizializzatore di aggregazione. ad esempio:
 
 ```cpp
 array<int, 4> ai = { 1, 2, 3 };
@@ -196,7 +197,7 @@ array(const array& right);
 *Ok*\
 Oggetto o un intervallo da inserire.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il costruttore predefinito `array()` lascia la sequenza controllata non inizializzata (o inizializzata per impostazione predefinita). Viene usato per specificare una sequenza controllata non inizializzata.
 
@@ -259,7 +260,7 @@ constexpr const_reference at(size_type off) const;
 *off*\
 Posizione dell'elemento a cui accedere.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le funzioni membro restituiscono un riferimento all'elemento della sequenza controllata nella posizione *off*. Se tale posizione non è valida, la funzione genera un oggetto della classe `out_of_range`.
 
@@ -300,7 +301,7 @@ reference back();
 constexpr const_reference back() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le funzioni membro restituiscono un riferimento all'ultimo elemento della sequenza controllata, che non deve essere vuoto.
 
@@ -344,7 +345,7 @@ iterator begin() noexcept;
 const_iterator begin() const noexcept;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le funzioni membro restituiscono un iteratore di accesso casuale che punta al primo elemento della sequenza (o appena oltre la fine di una sequenza vuota).
 
@@ -392,7 +393,7 @@ const_iterator cbegin() const noexcept;
 
 **`const`** Iteratore ad accesso casuale che punta al primo elemento dell'intervallo o alla posizione oltre la fine di un intervallo vuoto (per un intervallo vuoto, `cbegin() == cend()` ).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Con il valore restituito di `cbegin`, gli elementi dell'intervallo non possono essere modificati.
 
@@ -418,7 +419,7 @@ const_iterator cend() const noexcept;
 
 Iteratore ad accesso casuale che punta oltre la fine dell'intervallo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `cend` viene utilizzato per verificare se un iteratore ha superato la fine del relativo intervallo.
 
@@ -442,7 +443,7 @@ Tipo di un iteratore costante per la sequenza controllata.
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo descrive un oggetto che può essere usato come iteratore ad accesso casuale costante per la sequenza controllata.
 
@@ -490,7 +491,7 @@ Tipo di un puntatore costante a un elemento.
 typedef const Ty *const_pointer;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo descrive un oggetto che può essere usato come puntatore costante a elementi della sequenza.
 
@@ -534,7 +535,7 @@ Tipo di un riferimento costante a un elemento.
 typedef const Ty& const_reference;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo descrive un oggetto che può essere usato come riferimento costante a un elemento della sequenza controllata.
 
@@ -578,7 +579,7 @@ Tipo di un iteratore inverso costante per la sequenza controllata.
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo descrive un oggetto che può essere usato come iteratore inverso costante per la sequenza controllata.
 
@@ -626,7 +627,7 @@ const_reverse_iterator crbegin() const;
 
 Iteratore inverso const ad accesso casuale che punta al primo elemento di una matrice invertita (o che punta a quello che era stato l'ultimo elemento nella matrice non invertita).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Con il valore restituito di `crbegin`, l'oggetto matrice non può essere modificato.
 
@@ -670,7 +671,7 @@ const_reverse_iterator crend() const noexcept;
 
 Iteratore ad accesso casuale const inverso che punta alla posizione successiva all'ultimo elemento in una matrice invertita, ossia la posizione che precedeva il primo elemento nella matrice non invertita.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `crend` viene usato con una matrice inversa proprio come [array::cend](#cend) viene usato con una matrice.
 
@@ -712,7 +713,7 @@ Ty *data();
 const Ty *data() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le funzioni membro restituiscono l'indirizzo del primo elemento nella sequenza controllata.
 
@@ -756,7 +757,7 @@ Tipo di una distanza Signed tra due elementi.
 typedef std::ptrdiff_t difference_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo di valore integer con segno descrive un oggetto che può rappresentare la differenza tra gli indirizzi di due elementi qualsiasi della sequenza controllata. È un sinonimo del tipo `std::ptrdiff_t`.
 
@@ -800,7 +801,7 @@ Verifica se sono presenti o meno degli elementi.
 constexpr bool empty() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce true solo se `N == 0`
 
@@ -852,7 +853,7 @@ reference end();
 const_reference end() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le funzioni membro restituiscono un iteratore di accesso casuale che punta appena oltre la fine della sequenza.
 
@@ -901,7 +902,7 @@ void fill(const Type& val);
 *Val*\
 Valore dell'elemento inserito nella matrice.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `fill` sostituisce ogni elemento della matrice con il valore specificato.
 
@@ -943,7 +944,7 @@ reference front();
 constexpr const_reference front() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le funzioni membro restituiscono un riferimento al primo elemento della sequenza controllata, che non deve essere vuoto.
 
@@ -986,7 +987,7 @@ Tipo di un iteratore per la sequenza controllata.
 typedef implementation-defined iterator;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo descrive un oggetto che può essere usato come iteratore ad accesso casuale per la sequenza controllata.
 
@@ -1035,7 +1036,7 @@ Conta il numero di elementi.
 constexpr size_type max_size() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce`N`.
 
@@ -1085,7 +1086,7 @@ constexpr const_reference operator[](size_type off) const;
 *off*\
 Posizione dell'elemento a cui accedere.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le funzioni membro restituiscono un riferimento all'elemento della sequenza controllata nella posizione *off*. Se tale posizione non è valida, il comportamento è indefinito.
 
@@ -1136,7 +1137,7 @@ array<Value> operator=(array<Value> right);
 *Ok*\
 Contenitore da copiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operatore membro assegna ogni elemento di *right* all'elemento corrispondente della sequenza controllata, quindi restituisce **`*this`** . Viene usato per sostituire la sequenza controllata con una copia della sequenza controllata a *destra*.
 
@@ -1186,7 +1187,7 @@ Tipo di un puntatore a un elemento.
 typedef Ty *pointer;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo descrive un oggetto che può essere usato come puntatore a elementi della sequenza.
 
@@ -1231,7 +1232,7 @@ reverse_iterator rbegin()noexcept;
 const_reverse_iterator rbegin() const noexcept;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le funzioni membro restituiscono un iteratore inverso che punta poco oltre la fine della sequenza controllata. Di conseguenza, indica l'inizio della sequenza inversa.
 
@@ -1275,7 +1276,7 @@ Tipo di un riferimento a un elemento.
 typedef Ty& reference;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo descrive un oggetto che può essere usato come riferimento a un elemento della sequenza controllata.
 
@@ -1320,7 +1321,7 @@ reverse_iterator rend()noexcept;
 const_reverse_iterator rend() const noexcept;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le funzioni membro restituiscono un iteratore inverso che punta al primo elemento della sequenza (o oltre la fine di una sequenza vuota). Di conseguenza, indica la fine della sequenza inversa.
 
@@ -1364,7 +1365,7 @@ Tipo di un iteratore inverso della sequenza controllata.
 typedef std::reverse_iterator<iterator> reverse_iterator;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo descrive un oggetto che può essere usato come iteratore inverso per la sequenza controllata.
 
@@ -1408,7 +1409,7 @@ Conta il numero di elementi.
 constexpr size_type size() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce`N`.
 
@@ -1451,7 +1452,7 @@ Tipo di distanza senza segno tra due elementi.
 typedef std::size_t size_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo Unsigned Integer descrive un oggetto che può rappresentare la lunghezza di una sequenza controllata. È un sinonimo del tipo `std::size_t`.
 
@@ -1500,7 +1501,7 @@ void swap(array& right);
 *Ok*\
 Matrice con cui scambiare il contenuto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro scambia le sequenze controllate tra **`*this`** e *right*. Esegue una serie di assegnazioni di elementi e chiamate ai costruttori proporzionale a `N`.
 
@@ -1561,7 +1562,7 @@ Tipo di un elemento.
 typedef Ty value_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del parametro di modello `Ty`.
 

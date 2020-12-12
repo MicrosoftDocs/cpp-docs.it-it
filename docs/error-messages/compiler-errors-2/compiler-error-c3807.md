@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3807'
 title: Errore del compilatore C3807
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3807
 ms.assetid: 7e2b0aab-8c61-4e71-b9c1-fcaeb6a1b5ea
-ms.openlocfilehash: a4b33782c0a1e5abb811210c9e7a28da7040c805
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ffa8b52b13ae7245b62cd5aa8d7fec9285754b73
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755265"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260098"
 ---
 # <a name="compiler-error-c3807"></a>Errore del compilatore C3807
 
 ' type ': una classe con l'attributo ComImport non può derivare da' tipo2', ma è consentita solo l'implementazione dell'interfaccia
 
-Un tipo derivato da <xref:System.Runtime.InteropServices.ComImportAttribute> può implementare solo un'interfaccia.
+Un tipo che deriva da <xref:System.Runtime.InteropServices.ComImportAttribute> può implementare solo un'interfaccia.
 
 ## <a name="example"></a>Esempio
 

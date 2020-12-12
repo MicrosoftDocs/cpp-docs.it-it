@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso di una barra di finestra di dialogo con un controllo Rebar'
 title: Utilizzo di una barra di finestra di dialogo con un controllo Rebar
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - rebar controls [MFC], dialog bars
 - dialog bars [MFC], using with rebar bands
 ms.assetid: e528cea0-6b81-4bdf-9643-7c03b6176590
-ms.openlocfilehash: e4e786d3670ec74b734739e29aa7e3e33b5af384
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 97fb8ca5c356d91fa4b4ba44753fbdc9bf298435
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302367"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263530"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>Utilizzo di una barra di finestra di dialogo con un controllo Rebar
 
@@ -23,7 +24,7 @@ Nella procedura riportata di seguito vengono illustrati i passaggi necessari per
 
 ### <a name="to-implement-a-transparent-dialog-bar-in-a-rebar-band"></a>Per implementare una barra di dialogo trasparente in una banda Rebar
 
-1. Utilizzando la finestra di [dialogo Aggiungi classe](../mfc/reference/adding-an-mfc-class.md), aggiungere una nuova classe, ad esempio `CMyDlgBar`, che implementi l'oggetto della barra della finestra di dialogo.
+1. Utilizzando la finestra di [dialogo Aggiungi classe](../mfc/reference/adding-an-mfc-class.md), aggiungere una nuova classe, ad esempio, `CMyDlgBar` che implementi l'oggetto della barra della finestra di dialogo.
 
 1. Aggiungere un gestore per il messaggio di WM_ERASEBKGND.
 
@@ -39,7 +40,7 @@ Nella procedura riportata di seguito vengono illustrati i passaggi necessari per
 
 I nuovi gestori simulano la trasparenza della barra della finestra di dialogo inviando il messaggio di WM_ERASEBKGND alla finestra padre e forzando un ridisegno ogni volta che l'oggetto barra della finestra di dialogo viene spostato.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso di CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
+[Utilizzo di CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
 [Controlli](../mfc/controls-mfc.md)

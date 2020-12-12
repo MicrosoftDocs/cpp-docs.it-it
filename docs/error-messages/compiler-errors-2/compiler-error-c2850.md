@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2850'
 title: Errore del compilatore C2850
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2850
 ms.assetid: f3efe86c-4168-4e76-a133-3f8314c69f51
-ms.openlocfilehash: 0a87767bb9194a0a9858dd1734abbe516ffcfac0
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 820aa0e12db5ffe7e6d7b7bf0e87282f53e8477c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758502"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260163"
 ---
 # <a name="compiler-error-c2850"></a>Errore del compilatore C2850
 

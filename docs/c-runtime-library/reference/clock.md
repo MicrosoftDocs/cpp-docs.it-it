@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: clock'
 title: clock
 ms.date: 11/04/2016
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - processor time used
 - calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
-ms.openlocfilehash: 03d1a9ece92dbedfdceb89488e5d0440dc64f7ae
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7a766a34518d7658768f3ea390eb4d87076b1d01
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220730"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260748"
 ---
 # <a name="clock"></a>clock
 
@@ -49,7 +50,7 @@ clock_t clock( void );
 
 Tempo trascorso dall'inizializzazione CRT all'inizio del processo, misurato in unità **CLOCKS_PER_SEC** al secondo. Se il tempo trascorso non è disponibile o ha superato il tempo massimo positivo che può essere registrato come tipo di **clock_t** , la funzione restituisce il valore `(clock_t)(-1)` .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **Clock** indica la quantità di tempo trascorso dall'inizializzazione CRT durante l'avvio del processo. Si noti che questa funzione non è strettamente conforme a ISO C, che specifica il tempo di CPU net come valore restituito. Per ottenere i tempi di CPU, usare la funzione [GetProcessTimes](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes) di Win32. Per determinare il tempo trascorso in secondi, dividere il valore restituito dalla funzione **Clock** dalla macro **CLOCKS_PER_SEC**.
 
@@ -59,7 +60,7 @@ Dato un tempo sufficiente, il valore restituito da **Clock** può superare il va
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**clock**|\<time.h>|
+|**orologio**|\<time.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CSliderCtrl'
 title: Classe CSliderCtrl
 ms.date: 11/04/2016
 f1_keywords:
@@ -74,12 +75,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 8dfdcf34474027180708045131a19bf6f7e14512
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 556366f429b39344f4ae2f20acd3c20fd9760552
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562532"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264544"
 ---
 # <a name="csliderctrl-class"></a>Classe CSliderCtrl
 
@@ -91,17 +92,17 @@ Fornisce la funzionalità del controllo dispositivo di scorrimento comune di Win
 class CSliderCtrl : public CWnd
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CSliderCtrl:: CSliderCtrl](#csliderctrl)|Costruisce un oggetto `CSliderCtrl`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CSliderCtrl:: ClearSel](#clearsel)|Cancella la selezione corrente in un controllo dispositivo di scorrimento.|
 |[CSliderCtrl:: ClearTics](#cleartics)|Rimuove i segni di graduazione correnti da un controllo dispositivo di scorrimento.|
@@ -137,7 +138,7 @@ class CSliderCtrl : public CWnd
 |[CSliderCtrl:: SetTipSide](#settipside)|Posiziona un controllo ToolTip utilizzato da un controllo TrackBar.|
 |[CSliderCtrl:: setooltips](#settooltips)|Assegna un controllo ToolTip a un controllo dispositivo di scorrimento.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un "controllo dispositivo di scorrimento" (noto anche come TrackBar) è una finestra contenente un dispositivo di scorrimento e segni di graduazione facoltativi. Quando l'utente sposta il dispositivo di scorrimento usando il mouse o i tasti di direzione, il controllo Invia messaggi di notifica per indicare la modifica.
 
@@ -221,7 +222,7 @@ Specifica l'ID del controllo dispositivo di scorrimento.
 
 Diverso da zero se l'inizializzazione ha esito positivo; in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si costruisce un `CSliderCtrl` in due passaggi. In primo luogo, chiamare il costruttore, quindi chiamare `Create` , che crea il controllo dispositivo di scorrimento e lo collega all' `CSliderCtrl` oggetto.
 
@@ -263,7 +264,7 @@ ID della finestra figlio del controllo.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare `CreateEx` anziché [create](#create) per applicare gli stili estesi di Windows, specificati dall'introduzione allo stile esteso di Windows **WS_EX_**.
 
@@ -294,9 +295,9 @@ Valore booleano che indica quale dei due handle della finestra di Buddy recupera
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore a un oggetto [CWnd](../../mfc/reference/cwnd-class.md) che corrisponde alla finestra di Buddy nella posizione specificata da *fLocation*oppure null se non esiste alcuna finestra di Buddy in quel percorso.
+Puntatore a un oggetto [CWnd](../../mfc/reference/cwnd-class.md) che corrisponde alla finestra di Buddy nella posizione specificata da *fLocation* oppure null se non esiste alcuna finestra di Buddy in quel percorso.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TBM_GETBUDDY](/windows/win32/Controls/tbm-getbuddy)del messaggio Win32, come descritto nel Windows SDK. Per una descrizione degli stili del controllo Slider, vedere gli [stili dei controlli TrackBar](/windows/win32/Controls/trackbar-control-styles) nel Windows SDK.
 
@@ -313,7 +314,7 @@ void GetChannelRect(LPRECT lprc) const;
 *LPRC*<br/>
 Puntatore a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) che contiene le dimensioni e la posizione del rettangolo di delimitazione del canale quando la funzione restituisce un valore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il canale è l'area in cui viene spostato il dispositivo di scorrimento e che contiene l'evidenziazione quando viene selezionato un intervallo.
 
@@ -329,7 +330,7 @@ int GetLineSize() const;
 
 Dimensioni di una linea per il controllo dispositivo di scorrimento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le dimensioni della riga influiscono sul modo in cui viene spostato il dispositivo di scorrimento per le notifiche TB_LINEUP e TB_LINEDOWN. L'impostazione predefinita per le dimensioni della riga è 1.
 
@@ -357,7 +358,7 @@ int GetPageSize() const;
 
 Dimensioni di una pagina per il controllo dispositivo di scorrimento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le dimensioni della pagina influiscono sul modo in cui viene spostato il dispositivo di scorrimento per le notifiche TB_PAGEUP e TB_PAGEDOWN.
 
@@ -391,7 +392,7 @@ Riferimento a un intero che riceve la posizione minima.
 *nMax*<br/>
 Riferimento a un Integer che riceve la posizione massima.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione copia i valori negli Integer a cui fa riferimento *nmin* e *nmax*.
 
@@ -449,7 +450,7 @@ int GetThumbLength() const;
 
 Lunghezza del dispositivo di scorrimento, in pixel.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [TBM_GETTHUMBLENGTH](/windows/win32/Controls/tbm-getthumblength) , descritto nel Windows SDK.
 
@@ -524,7 +525,7 @@ CToolTipCtrl* GetToolTips() const;
 
 Puntatore a un oggetto [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) o null se le descrizioni comandi non sono in uso. Se il controllo dispositivo di scorrimento non usa lo stile TBS_TOOLTIPS, il valore restituito è NULL.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TBM_GETTOOLTIPS](/windows/win32/Controls/tbm-gettooltips)del messaggio Win32, come descritto nel Windows SDK. Si noti che questa funzione membro restituisce un `CToolTipCtrl` oggetto invece di un handle a un controllo.
 
@@ -556,7 +557,7 @@ Valore che specifica la posizione in cui visualizzare la finestra di Buddy. I va
 
 Puntatore a un oggetto [CWnd](../../mfc/reference/cwnd-class.md) assegnato in precedenza al controllo Slider in tale posizione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TBM_SETBUDDY](/windows/win32/Controls/tbm-setbuddy)del messaggio Win32, come descritto nel Windows SDK. Si noti che questa funzione membro utilizza i puntatori agli `CWnd` oggetti, anziché gli handle di finestra sia per il valore restituito che per il parametro.
 
@@ -579,7 +580,7 @@ Nuova dimensione della riga del controllo dispositivo di scorrimento.
 
 Dimensioni della riga precedente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le dimensioni della riga influiscono sul modo in cui viene spostato il dispositivo di scorrimento per le notifiche TB_LINEUP e TB_LINEDOWN.
 
@@ -600,7 +601,7 @@ Nuova dimensione della pagina del controllo dispositivo di scorrimento.
 
 Dimensioni di pagina precedenti.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le dimensioni della pagina influiscono sul modo in cui viene spostato il dispositivo di scorrimento per le notifiche TB_PAGEUP e TB_PAGEDOWN.
 
@@ -706,7 +707,7 @@ void SetThumbLength(int nLength);
 *nLength*\
 in Lunghezza del dispositivo di scorrimento, in pixel.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo richiede che il controllo TrackBar sia impostato su [TBS_FIXEDLENGTH](/windows/win32/Controls/trackbar-control-styles) stile.
 
@@ -754,7 +755,7 @@ void SetTicFreq(int nFreq);
 *nFreq*<br/>
 Frequenza dei segni di graduazione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se, ad esempio, la frequenza è impostata su 2, viene visualizzato un segno di graduazione per ogni altro incremento nell'intervallo del dispositivo di scorrimento. L'impostazione predefinita per la frequenza è 1 (ovvero ogni incremento dell'intervallo è associato a un segno di graduazione).
 
@@ -777,7 +778,7 @@ Valore che rappresenta la posizione in cui visualizzare il controllo ToolTip. Pe
 
 Valore che rappresenta la posizione precedente del controllo ToolTip. Il valore restituito è uguale a uno dei valori possibili per *nPosizione*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del TBM_SETTIPSIDE del messaggio Win32, come descritto nel Windows SDK. Dispositivi di scorrimento che usano lo stile TBS_TOOLTIPS Visualizza le descrizioni comandi. Per una descrizione degli stili del controllo Slider, vedere gli [stili dei controlli TrackBar](/windows/win32/Controls/trackbar-control-styles) nel Windows SDK.
 
@@ -794,7 +795,7 @@ void SetToolTips(CToolTipCtrl* pWndTip);
 *pWndTip*<br/>
 Puntatore a un oggetto [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) contenente le descrizioni comandi da usare con il controllo dispositivo di scorrimento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TBM_SETTOOLTIPS](/windows/win32/Controls/tbm-settooltips)del messaggio Win32, come descritto nel Windows SDK. Quando viene creato un controllo dispositivo di scorrimento con lo stile TBS_TOOLTIPS, viene creato un controllo ToolTip predefinito visualizzato accanto al dispositivo di scorrimento, che visualizza la posizione corrente del dispositivo di scorrimento. Per una descrizione degli stili del controllo Slider, vedere gli [stili dei controlli TrackBar](/windows/win32/Controls/trackbar-control-styles) nel Windows SDK.
 

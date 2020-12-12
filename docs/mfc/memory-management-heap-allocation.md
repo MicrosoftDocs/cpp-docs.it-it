@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: gestione della memoria: allocazione di heap'
 title: 'Gestione della memoria: allocazione di heap'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - heap allocation [MFC]
 - detecting memory leaks [MFC]
 ms.assetid: a5d949c6-1b79-476e-9c66-513a558203d9
-ms.openlocfilehash: ecf60fbdd11f540d12c1bfab047bbb80a3cb83e8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bb9035d1346f1d3bbff53a03da9b4cf1d946a7ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228596"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259656"
 ---
 # <a name="memory-management-heap-allocation"></a>Gestione della memoria: allocazione di heap
 
@@ -26,6 +27,6 @@ Quando si usano **`new`** e **`delete`** invece di **malloc** e **Free**, è pos
 
 Si noti che la dimensione totale degli oggetti allocati nell'heap è limitata solo dalla memoria virtuale disponibile del sistema.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione della memoria](memory-management.md)

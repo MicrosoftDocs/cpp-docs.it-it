@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _mbsnbcmp, _mbsnbcmp_l'
 title: _mbsnbcmp, _mbsnbcmp_l
 ms.date: 4/2/2020
 api_name:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - _tcsncmp function
 - _mbsnbcmp function
 ms.assetid: dbc99e50-cf85-4e57-a13f-067591f18ac8
-ms.openlocfilehash: edba674a0873b1f0a5f37457235c0dc1a8210ded
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b382843f9b9519cef0589d22f33afa971bb88c20
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911968"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260618"
 ---
 # <a name="_mbsnbcmp-_mbsnbcmp_l"></a>_mbsnbcmp, _mbsnbcmp_l
 
@@ -82,15 +83,15 @@ Impostazioni locali da usare.
 
 Il valore restituito indica la relazione ordinale tra le sottostringhe di *String1* e *string2*.
 
-|Valore restituito|Description|
+|Valore restituito|Descrizione|
 |------------------|-----------------|
 |< 0|la sottostringa *String1* è minore di *string2* substring.|
 |0|la sottostringa *String1* è identica alla sottostringa *string2* .|
 |> 0|la sottostringa *String1* è maggiore di *string2* substring.|
 
-In un errore di convalida dei parametri, **_mbsnbcmp** e **_mbsnbcmp_l** restituire **_NLSCMPERROR**, definito in \<string. h> e \<mbstring. h>.
+In un errore di convalida dei parametri, **_mbsnbcmp** e **_mbsnbcmp_l** restituire **_NLSCMPERROR**, definito in \<string.h> e \<mbstring.h> .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le funzioni **_mbsnbcmp** confrontano al massimo i primi byte *count* in *String1* e *string2* e restituiscono un valore che indica la relazione tra le sottostringhe. **_mbsnbcmp** è una versione con distinzione tra maiuscole e minuscole di **_mbsnbicmp**. A differenza di **_mbsnbcoll**, **_mbsnbcmp** non è influenzato dall'ordine delle regole di confronto delle impostazioni locali. **_mbsnbcmp** riconosce le sequenze di caratteri multibyte in base alla tabella [codici](../../c-runtime-library/code-pages.md)multibyte corrente.
 
@@ -169,12 +170,12 @@ Function: _mbsnicmp _mbsnicmp (first 10 characters only)
 Result:   String 1 is equal to string 2
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_mbsnbicmp, _mbsnbicmp_l](mbsnbicmp-mbsnbicmp-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

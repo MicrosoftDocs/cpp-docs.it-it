@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CAutoHideDockSite'
 title: Classe CAutoHideDockSite
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-ms.openlocfilehash: 14db8d93ea7706b3a4daad2ba751f8410974f6cb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 00ac5224d559f84378bd87bd9abe56756a6f4d97
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841636"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261281"
 ---
 # <a name="cautohidedocksite-class"></a>Classe CAutoHideDockSite
 
@@ -39,21 +40,21 @@ ms.locfileid: "88841636"
 class CAutoHideDockSite : public CDockSite
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
-|Nome|Descrizione|
+|Nome|Description|
 |`CAutoHideDockSite::CAutoHideDockSite`|Costruisce un oggetto `CAutoHideDockSite`.|
 |`CAutoHideDockSite::~CAutoHideDockSite`|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
-|Nome|Descrizione|
+|Nome|Description|
 |`CAutoHideDockSite::AllowShowOnPaneMenu`|Indica se l'oggetto `CAutoHideDockSite` viene visualizzato nel menu del riquadro.|
 |[CAutoHideDockSite:: CanAcceptPane](#canacceptpane)|Determina se un oggetto del riquadro di base è derivato dalla [classe CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md).|
 |[CAutoHideDockSite::D ockPane](#dockpane)|Ancora un riquadro a questo `CAuotHideDockSite` oggetto.|
@@ -65,12 +66,12 @@ class CAutoHideDockSite : public CDockSite
 
 ### <a name="data-members"></a>Membri dei dati
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
-|Nome|Descrizione|
+|Nome|Description|
 |[CAutoHideDockSite:: m_nExtraSpace](#m_nextraspace)|Definisce la dimensione dello spazio tra le barre degli strumenti e il bordo della barra di ancoraggio. Questo spazio viene misurato dal bordo sinistro o dal bordo superiore, a seconda dell'allineamento dello spazio di ancoraggio.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Quando si chiama [CFrameWndEx:: EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes), il Framework crea automaticamente un `CAutoHideDockSite` oggetto. Nella maggior parte dei casi, non è necessario creare un'istanza o utilizzare direttamente questa classe.
 
@@ -115,7 +116,7 @@ in Riquadro di base testato dal Framework.
 
 TRUE se *pBar* è derivato da `CMFCAutoHideBar` ; In caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se un oggetto del riquadro di base è derivato da `CMFCAutoHideBar` , può contenere `CAutoHideDockSite` .
 
@@ -141,7 +142,7 @@ in Opzioni di ancoraggio per il riquadro.
 *lpRect*\
 in Rettangolo che specifica i limiti per il riquadro ancorato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione predefinita non usa il parametro *dockMethod*, che viene fornito per un uso futuro.
 
@@ -160,7 +161,7 @@ void GetAlignRect(CRect& rect) const;
 *Rect*\
 in Riferimento a un rettangolo. Il metodo archivia le dimensioni del sito dock in questo rettangolo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il rettangolo viene regolato per i margini di offset in modo che non siano inclusi.
 
@@ -172,7 +173,7 @@ Dimensioni dello spazio tra i bordi della [classe CAutoHideDockSite](../../mfc/r
 static int m_nExtraSpace;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando un oggetto `CMFCAutoHideBar` è ancorato a `CAutoHideDockSite` , non deve occupare l'intero sito di ancoraggio. Questa variabile globale controlla lo spazio aggiuntivo tra il bordo sinistro o superiore di `CMFCAutoHideBar` e il bordo corrispondente `CAutoHideDockSite` . Indica se il bordo superiore o sinistro viene utilizzato dipende dall'allineamento corrente.
 
@@ -189,7 +190,7 @@ void SetOffsetLeft(int nOffset);
 *nOffset*<br/>
 in Nuovo offset.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli oggetti [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) vengono posizionati in modo statico nell' `CAutoHideDockSite` oggetto. Ciò significa che l'utente non può modificare manualmente la posizione degli `CMFCAutoHideBar` oggetti. Il `SetOffsetLeft` metodo controlla la spaziatura tra il lato sinistro `CMFCAutoHideBar` e il lato sinistro dell'oggetto `CAutoHideDockSite` .
 
@@ -206,7 +207,7 @@ void SetOffsetRight(int nOffset);
 *nOffset*<br/>
 in Nuovo offset.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli oggetti [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) vengono posizionati in modo statico nell' `CAutoHideDockSite` oggetto. Ciò significa che l'utente non può modificare manualmente la posizione degli `CMFCAutoHideBar` oggetti. Il `SetOffsetRight` metodo controlla la spaziatura tra il lato destro del `CMFCAutoHideBar` lato destro e destro di `CAutoHideDockSite` .
 
@@ -223,7 +224,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 *rectNewClientArea*\
 in Valore riservato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione predefinita non utilizza *rectNewClientArea*. Ridisegnato i riquadri con i margini e la spaziatura dei pulsanti della barra degli strumenti globali.
 
@@ -240,11 +241,11 @@ void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 *pAutoHideToolbar*\
 in Puntatore a un riquadro oggetto [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) che si trova in `CAutoHideDockSite` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo cerca la riga che contiene *pAutoHideToolbar*. Chiama `CMFCAutoHideBar.UnSetAutoHideMode` tutti gli `CMFCAutoHideBar` oggetti in tale riga. Se *pAutoHideToolbar* non viene trovato o è null, questo metodo chiama `CMFCAutoHideBar.UnSetAutoHideMode` per tutti gli `CMFCAutoHideBar` oggetti in `CAutoHideDockSite` .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
