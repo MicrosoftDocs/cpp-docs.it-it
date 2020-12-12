@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CWinFormsView'
 title: Classe CWinFormsView
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - CWinFormsView [MFC], CWinFormsView
 - CWinFormsView [MFC], GetControl
 ms.assetid: d597e397-6529-469b-88f5-7f65a6b9e895
-ms.openlocfilehash: 3c247babd2ec1057f1e24b8132ed81727a0fd402
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 09dad434ebe0e0011fef5836196fd15e25390536
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040652"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318429"
 ---
 # <a name="cwinformsview-class"></a>Classe CWinFormsView
 
@@ -31,19 +32,19 @@ class CWinFormsView : public CView;
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CWinFormsView:: CWinFormsView](#cwinformsview)|Costruisce un oggetto `CWinFormsView`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CWinFormsView:: GetControl](#getcontrol)|Recupera un puntatore al controllo Windows Forms.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-|
 |[CWinFormsView:: operator (controllo) ^](#operator_control)|Esegue il cast di un tipo come puntatore a un controllo Windows Forms.|
 

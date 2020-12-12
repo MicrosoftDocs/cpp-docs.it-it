@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura dettagliata: debug di un progetto (C++)'
 title: 'Procedura dettagliata: debug di un progetto (C++)'
 ms.date: 04/25/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: 61433213619c16caf67de905a6da93c7360db298
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 99e5af935c1d5985b8c472fc807b1afbe61d66b2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219677"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318676"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>Procedura dettagliata: debug di un progetto (C++)
 
@@ -56,7 +57,7 @@ In questa procedura dettagliata si modifica il programma per risolvere il proble
 **Precedente:** [Procedura dettagliata: verifica di un progetto (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
 **Successivo:** [Procedura dettagliata: distribuzione di un programma (C++)](../ide/walkthrough-deploying-your-program-cpp.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimenti per il linguaggio C++](../cpp/cpp-language-reference.md)<br/>
 [Progetti e sistemi di compilazione](../build/projects-and-build-systems-cpp.md)<br/>

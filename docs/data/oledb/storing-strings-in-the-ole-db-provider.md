@@ -1,22 +1,23 @@
 ---
+description: 'Altre informazioni su: archiviazione di stringhe nel provider di OLE DB'
 title: Memorizzazione di stringhe in un provider OLE DB
 ms.date: 05/09/2019
 helpviewer_keywords:
 - user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-ms.openlocfilehash: 1d6d2b73495d5ca6e275b13ed3c430f8169179d4
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: d5a0fc7160f09d1a8b385b83481cc6fa9009f582
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079102"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316700"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>Memorizzazione di stringhe in un provider OLE DB
 
 > [!NOTE]
 > La Creazione guidata provider OLE DB ATL non è disponibile in Visual Studio 2019 e versioni successive.
 
-In *Custom*RS.h la **Creazione guidata provider OLE DB ATL** crea un record utente predefinito denominato `CWindowsFile`. Per gestire le due stringhe, modificare `CWindowsFile` come illustrato nel codice seguente:
+In *Custom* RS.h la **Creazione guidata provider OLE DB ATL** crea un record utente predefinito denominato `CWindowsFile`. Per gestire le due stringhe, modificare `CWindowsFile` come illustrato nel codice seguente:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -55,6 +56,6 @@ I membri dati `szCommand` e `szText` rappresentano le due stringhe, con `szComma
 
 Al termine di questa operazione, è possibile aggiungere la funzionalità di [Lettura di stringhe in un provider OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Implementazione di un provider semplice in sola lettura](../../data/oledb/implementing-the-simple-read-only-provider.md)<br/>
+[Implementazione del provider di Read-Only semplice](../../data/oledb/implementing-the-simple-read-only-provider.md)<br/>

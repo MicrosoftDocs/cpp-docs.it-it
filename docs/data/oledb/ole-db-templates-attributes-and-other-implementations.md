@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: OLE DB modelli, attributi e altre implementazioni'
 title: Modelli, attributi e altre implementazioni OLE DB
 ms.date: 10/22/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - OLE DB templates, about OLE DB templates
 - OLE DB templates
 ms.assetid: 0c780c1b-9bba-4788-8c33-8552d9f120ac
-ms.openlocfilehash: 217db304c7d0b5723b7af383e07290f160cc9465
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 87f839fe39f2d2c9dcd61fd6628666f4ac8f5809
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500913"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316960"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>Modelli, attributi e altre implementazioni OLE DB
 
@@ -51,7 +52,7 @@ La libreria MFC include una classe, [COleDBRecordView](../../mfc/reference/coled
 
 Nei casi in cui i modelli di OLE DB non supportano la funzionalità OLE DB, è necessario usare le interfacce di OLE DB. Per ulteriori informazioni, vedere [OLE DB riferimento per programmatori](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming) nella Windows SDK.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Programmazione OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Panoramica della programmazione OLE DB](../../data/oledb/ole-db-programming-overview.md)

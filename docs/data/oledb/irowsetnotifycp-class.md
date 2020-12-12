@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Classe IRowsetNotifyCP'
 title: Classe IRowsetNotifyCP
 ms.date: 11/04/2016
 f1_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - Fire_OnRowChange method
 - Fire_OnRowsetChange method
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
-ms.openlocfilehash: 2f8c80570e4771d1b0e713083f64bc982ddb9009
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 70e759ed19c366f7e85511170439c24f319c5cd3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840284"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317272"
 ---
 # <a name="irowsetnotifycp-class"></a>Classe IRowsetNotifyCP
 
@@ -69,13 +70,13 @@ Matrice di tipo [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-cl
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[Fire_OnFieldChange](#onfieldchange)|Notifica al consumer di una modifica al valore di una colonna.|
 |[Fire_OnRowChange](#onrowchange)|Notifica al consumer una modifica che influisce sulle righe.|
 |[Fire_OnRowsetChange](#onrowsetchange)|Notifica al consumer una modifica che influisce sull'intero set di righe.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 `IRowsetNotifyCP` implementa funzioni broadcast per consigliare i listener sul punto di connessione `IID_IRowsetNotify` delle modifiche al contenuto del set di righe.
 
@@ -139,7 +140,7 @@ HRESULT Fire_OnRowsetChange(IRowset* pRowset,
 
 Vedere [IRowsetNotify:: OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

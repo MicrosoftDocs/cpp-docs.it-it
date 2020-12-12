@@ -1,16 +1,17 @@
 ---
+description: 'Scopri di più su: Panoramica della programmazione OLE DB'
 title: Cenni preliminari sulla programmazione con OLE DB
 ms.date: 10/22/2018
 helpviewer_keywords:
 - Universal Data Access
 - OLE DB, about OLE DB
 ms.assetid: a5a69730-2793-4277-a67d-6f3c8edab6df
-ms.openlocfilehash: 2b855e0917ba9cdbdaa38a92473d7bddb4279101
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1976d8717704fbacec4f9d249b8ca3664c2eeb56
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210069"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317103"
 ---
 # <a name="ole-db-programming-overview"></a>Cenni preliminari sulla programmazione con OLE DB
 
@@ -24,9 +25,9 @@ Questo è il punto in cui è incluso COM. OLE DB è un set di interfacce COM. Ac
 
 In base alla specifica COM, OLE DB definisce una raccolta estendibile e gestibile di interfacce che determinano e incapsulano parti coerenti e riutilizzabili delle funzionalità DBMS. Queste interfacce definiscono i limiti dei componenti DBMS, ad esempio i contenitori di righe, i processori di query e i coordinatori delle transazioni, che consentono un accesso transazionale uniforme a diverse origini informazioni.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Programmazione con OLE DB](../../data/oledb/ole-db-programming.md)<br/>
+[Programmazione OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Modelli OLE DB](../../data/oledb/ole-db-templates.md)
+[Modelli di OLE DB](../../data/oledb/ole-db-templates.md)

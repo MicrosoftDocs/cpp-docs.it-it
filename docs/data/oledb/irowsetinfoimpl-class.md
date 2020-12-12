@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe IRowsetInfoImpl'
 title: Classe IRowsetInfoImpl
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: 7ceaf30318c176b13cb6f81c8401501863b988a4
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: cc51a32b6bee62ef7343bf134b3f1bc4099b8562
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504047"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317363"
 ---
 # <a name="irowsetinfoimpl-class"></a>Classe IRowsetInfoImpl
 
@@ -61,13 +62,13 @@ Classe di proprietà definibile dall'utente che per impostazione predefinita è 
 
 ### <a name="interface-methods"></a>Metodi di interfaccia
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[GetProperties](#getproperties)|Restituisce le impostazioni correnti di tutte le proprietà supportate dal rowset.|
 |[GetReferencedRowset](#getreferencedrowset)|Restituisce un puntatore a interfaccia al set di righe a cui si applica un segnalibro.|
 |[GetSpecification](#getspecification)|Restituisce un puntatore a un'interfaccia sull'oggetto (comando o sessione) che crea questo rowset.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Interfaccia obbligatoria nei set di righe. Questa classe implementa le proprietà del set di righe tramite la [mappa del set di proprietà](./macros-for-ole-db-provider-templates.md#begin_propset_map) definita nella classe Command. Anche se la classe del set di righe sembra usare i set di proprietà della classe Command, il set di righe viene fornito con la relativa copia delle proprietà della fase di esecuzione, quando viene creato da un oggetto Command o Session.
 
@@ -119,11 +120,11 @@ STDMETHOD (GetSpecification )(REFIID riid,
 
 Vedere [IRowsetInfo:: GetSpecification](/previous-versions/windows/desktop/ms716746(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Utilizzare questo metodo con [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) per recuperare le proprietà dall'oggetto origine dati.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -1,16 +1,17 @@
 ---
+description: 'Ulteriori informazioni su: classi ODBC'
 title: Classi ODBC
 ms.date: 11/04/2016
 helpviewer_keywords:
 - database classes [MFC], ODBC
 - ODBC classes [MFC]
 ms.assetid: 6c40fca8-3033-4873-9abe-7f51725de0e0
-ms.openlocfilehash: 18b6e3a0ea20dbd352a61c4faab52c35b852dcb3
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ac03543a6dfd9cf85320f9ff051730c102f2e0bd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622186"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318689"
 ---
 # <a name="odbc-classes"></a>Classi ODBC
 
@@ -36,11 +37,11 @@ Fornisce informazioni sul contesto per supportare il servizio RFX (record Field 
 ## <a name="related-classes"></a>Classi correlate
 
 [CLongBinary](reference/clongbinary-class.md)<br/>
-Incapsula un handle per l'archiviazione per un oggetto binario di grandi dimensioni (BLOB), ad esempio una bitmap. `CLongBinary`gli oggetti vengono utilizzati per gestire oggetti dati di grandi dimensioni archiviati nelle tabelle di database.
+Incapsula un handle per l'archiviazione per un oggetto binario di grandi dimensioni (BLOB), ad esempio una bitmap. `CLongBinary` gli oggetti vengono utilizzati per gestire oggetti dati di grandi dimensioni archiviati nelle tabelle di database.
 
 [CDBVariant](reference/cdbvariant-class.md)<br/>
-Consente di archiviare un valore senza doversi preoccupare del tipo di dati del valore. `CDBVariant`tiene traccia del tipo di dati del valore corrente, memorizzato in un'Unione.
+Consente di archiviare un valore senza doversi preoccupare del tipo di dati del valore. `CDBVariant` tiene traccia del tipo di dati del valore corrente, memorizzato in un'Unione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Cenni preliminari sulle classi](class-library-overview.md)

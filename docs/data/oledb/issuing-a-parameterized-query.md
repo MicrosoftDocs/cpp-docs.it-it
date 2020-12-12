@@ -1,19 +1,20 @@
 ---
+description: 'Altre informazioni su: emissione di una query con parametri'
 title: Esecuzione di una query con parametri
 ms.date: 10/19/2018
 helpviewer_keywords:
 - parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-ms.openlocfilehash: bb8b879d08595150b2db61f4840131e3ccc500a2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2d3f03a359fe3ce079239fdcb9603b2d30299c33
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210171"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317233"
 ---
 # <a name="issuing-a-parameterized-query"></a>Esecuzione di una query con parametri
 
-Nell'esempio seguente viene eseguita una query con parametri semplice che recupera i record con un campo Age (maggiore di 30) da una tabella di un database di Microsoft Access. Per supportare il parametro, è necessario che il record utente disponga di una mappa aggiuntiva. Il codice seguente, in un progetto ATL, usa la classe `CCommand` anziché la classe `CTable` usata nell'esempio precedente, [attraversando un semplice set di righe](../../data/oledb/traversing-a-simple-rowset.md).
+Nell'esempio seguente viene eseguita una query con parametri semplice che recupera i record con un campo Age (maggiore di 30) da una tabella di un database di Microsoft Access. Per supportare il parametro, è necessario che il record utente disponga di una mappa aggiuntiva. Il codice seguente, in un progetto ATL, usa la `CCommand` classe anziché la `CTable` classe usata nell'esempio precedente, [attraversando un semplice set di righe](../../data/oledb/traversing-a-simple-rowset.md).
 
 ```cpp
 #include <atldbcli.h>
@@ -51,7 +52,7 @@ int main()
 }
 ```
 
-Il record utente, `CArtists`, ha un aspetto simile a questo esempio:
+Il record utente, `CArtists` , ha un aspetto simile all'esempio seguente:
 
 ```cpp
 class CArtists
@@ -77,6 +78,6 @@ END_PARAM_MAP()
 };
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Uso dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

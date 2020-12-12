@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: macro per i modelli di provider OLE DB'
 title: Macro per i modelli di provider OLE DB
 ms.date: 02/11/2019
 f1_keywords:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: e72204102bfa47a9dd162499030a38c07bbfe46c
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5e1e1137f49060273c60c73fc89c24c75fd2604d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504009"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317168"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Macro per i modelli di provider OLE DB
 
@@ -63,7 +64,7 @@ Le macro del provider di modelli OLE DB offrono funzionalità nelle categorie se
 
 ## <a name="property-set-map-macros"></a>Macro della mappa del set di proprietà
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[BEGIN_PROPERTY_SET](#begin_property_set)|Contrassegna l'inizio di un set di proprietà.|
 |[BEGIN_PROPERTY_SET_EX](#begin_property_set_ex)|Contrassegna l'inizio di un set di proprietà.|
@@ -77,7 +78,7 @@ Le macro del provider di modelli OLE DB offrono funzionalità nelle categorie se
 
 ## <a name="column-map-macros"></a>Macro della mappa colonne
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map)|Contrassegna l'inizio delle voci della mappa delle colonne del provider.|
 |[END_PROVIDER_COLUMN_MAP](#end_provider_column_map)|Contrassegna la fine delle voci della mappa delle colonne del provider.|
@@ -91,7 +92,7 @@ Le macro del provider di modelli OLE DB offrono funzionalità nelle categorie se
 
 ## <a name="schema-rowset-macros"></a>Macro set di righe dello schema
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[BEGIN_SCHEMA_MAP](#begin_schema_map)|Contrassegna l'inizio di una mappa dello schema.|
 |[END_SCHEMA_MAP](#end_schema_map)|Contrassegna la fine di una mappa dello schema.|
@@ -184,7 +185,7 @@ CHAIN_PROPERTY_SET(ChainClass)
 *ChainClass*<br/>
 in Nome della classe per cui concatenare le proprietà. Si tratta di una classe generata dalla creazione guidata progetto ATL che contiene già una mappa, ad esempio una sessione, un comando o una classe di oggetti origine dati.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 È possibile concatenare un set di proprietà da un'altra classe alla propria classe, quindi accedere alle proprietà direttamente dalla classe.
 
@@ -239,7 +240,7 @@ PROPERTY_INFO_ENTRY(dwPropID)
 *dwPropID*<br/>
 [in] Un valore [DBPROPID](/previous-versions/windows/desktop/ms723882(v=vs.85)) che può essere usato unitamente all'insieme di proprietà GUID per identificare una proprietà.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 La macro imposta il valore della proprietà di tipo `DWORD` su un valore predefinito definito in ATLDB. H. Per impostare la proprietà su un valore di propria scelta, usare [PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value). Per impostare `VARTYPE` contemporaneamente e [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) per la proprietà, utilizzare [PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex).
 
@@ -274,7 +275,7 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
 *options*<br/>
 DBPROPOPTIONS_REQUIRED o DBPROPOPTIONS_SETIFCHEAP. In genere, non è necessario che un provider imposti le *Opzioni* perché è impostato dal consumer.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Con questa macro è possibile specificare direttamente il valore della proprietà di tipo `DWORD` nonché le opzioni e i flag. Per impostare semplicemente una proprietà sul valore predefinito indicato in ATLDB.H, usare [PROPERTY_INFO_ENTRY](#property_info_entry). Per impostare una proprietà su un valore a scelta, senza impostare opzioni o flag, usare [PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value).
 
@@ -300,7 +301,7 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 *value*<br/>
 [in] Il valore della proprietà di tipo `DWORD`.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Con questa macro è possibile specificare direttamente il valore della proprietà di tipo `DWORD` . Per impostare la proprietà su un valore predefinito definito in ATLDB. H, utilizzare [PROPERTY_INFO_ENTRY](#property_info_entry). Per impostare il valore, i flag e le opzioni per la proprietà, utilizzare [PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex).
 
@@ -388,7 +389,7 @@ in Tipo di dati in [DbType](/previous-versions/windows/desktop/ms711251(v=vs.85)
 *membro*<br/>
 in Variabile membro in `dataClass` che archivia i dati.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Consente di specificare il tipo di dati della colonna.
 
@@ -432,7 +433,7 @@ in Indica la scala da utilizzare quando si recuperano dati se dbType è DBTYPE_N
 *guid*<br/>
 GUID del set di righe dello schema. Per un elenco di set di righe dello schema e dei relativi GUID, vedere [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) nella documentazione di *riferimento per programmatori OLE DB* .
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Consente di specificare le dimensioni, il tipo di dati, la precisione, la scala e il GUID del set di righe dello schema della colonna.
 
@@ -460,7 +461,7 @@ in Dimensione della colonna in byte.
 *membro*<br/>
 in Variabile membro in `dataClass` che archivia i dati della colonna.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Consente di specificare le dimensioni della colonna.
 
@@ -489,7 +490,7 @@ in Nome della colonna.
 *membro*<br/>
 in Variabile membro nella classe di dati che archivia i dati.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Utilizzare questa macro quando si presuppone che i dati della colonna siano [DBTYPE_STR](/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
@@ -524,7 +525,7 @@ in Dimensione della colonna in byte.
 *membro*<br/>
 in Variabile membro nella classe di dati che archivia i dati.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Analogo a [PROVIDER_COLUMN_ENTRY_LENGTH](#provider_column_entry_length) ma consente inoltre di specificare il tipo di dati della colonna e le dimensioni.
 
@@ -549,7 +550,7 @@ in Nome della colonna.
 *membro*<br/>
 in Variabile membro nella classe di dati che archivia i dati.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Utilizzare questa macro quando i dati della colonna sono stringhe di caratteri Unicode con terminazione null, [DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
@@ -568,7 +569,7 @@ BEGIN_SCHEMA_MAP(SchemaClass);
 *SchemaClass*<br/>
 Classe che contiene la mappa. Si tratta in genere della classe Session.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni sui set di righe dello schema, vedere [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) nel Windows SDK.
 
@@ -605,7 +606,7 @@ GUID del set di righe dello schema. Per un elenco di set di righe dello schema e
 *rowsetClass*<br/>
 Classe che verrà creata per rappresentare il set di righe dello schema.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) può quindi eseguire una query sulla mappa per un elenco di GUID oppure può creare un set di righe se viene assegnato un GUID. Il set di righe dello schema `IDBSchemaRowsetImpl` viene creato in modo analogo a una `CRowsetImpl` classe derivata standard, ad eccezione del fatto che deve fornire un `Execute` metodo con la firma seguente:
 
@@ -625,7 +626,7 @@ Questa `Execute` funzione popola i dati del set di righe. La creazione guidata p
 
 La procedura guidata aggiunge anche tre voci corrispondenti nella mappa dello schema. Per ulteriori informazioni sull'utilizzo della procedura guidata per la creazione di un provider, vedere [creazione di un provider di modelli OLE DB](../../data/oledb/creating-an-ole-db-provider.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

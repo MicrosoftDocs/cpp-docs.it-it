@@ -1,15 +1,16 @@
 ---
-title: Rinomina
+description: 'Altre informazioni su: Rinomina'
+title: Rinominare
 ms.date: 11/16/2016
 ms.assetid: 64b42a88-3bd9-4399-8b96-75bceffc353b
-ms.openlocfilehash: a747784f46341f130d1271fd0f15475b63d7b6d8
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
-ms.translationtype: HT
+ms.openlocfilehash: 21bd5b817e51c29f4103b3ea105217ae743bdb4f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692541"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318728"
 ---
-# <a name="rename"></a>Rinomina
+# <a name="rename"></a>Rinominare
 
 **Cosa:** consente di rinominare gli identificatori per i simboli del codice, ad esempio campi, variabili locali, metodi, spazi dei nomi, proprietà e tipi.
 
@@ -17,7 +18,7 @@ ms.locfileid: "51692541"
 
 **Perché:** è probabile che copiare e incollare il nuovo nome in un intero progetto causi errori.  Questo strumento di refactoring eseguirà in modo accurato l'azione di ridenominazione.
 
-**Come:**
+**Come**
 
 1. Evidenziare o posizionare il cursore del testo all'interno dell'elemento da rinominare:
 

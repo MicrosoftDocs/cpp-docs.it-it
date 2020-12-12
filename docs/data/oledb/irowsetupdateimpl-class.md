@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe IRowsetUpdateImpl'
 title: Classe IRowsetUpdateImpl
 ms.date: 11/04/2016
 f1_keywords:
@@ -49,12 +50,12 @@ helpviewer_keywords:
 - IsUpdateAllowed method
 - m_mapCachedData
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-ms.openlocfilehash: 88ee9257655c96195339ded79f2dd4d3b7c7caf5
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: f040ed902b867059636a16bf635dc5c526b8ba1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509780"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317246"
 ---
 # <a name="irowsetupdateimpl-class"></a>Classe IRowsetUpdateImpl
 
@@ -84,7 +85,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 *T*<br/>
 Classe derivata da `IRowsetUpdateImpl` .
 
-*Archiviazione*<br/>
+*Storage*<br/>
 Record utente.
 
 *UpdateArray*<br/>
@@ -104,13 +105,13 @@ Unità di archiviazione per tutti gli handle di riga utilizzati dal provider.
 
 ### <a name="interface-methods-used-with-irowsetchange"></a>Metodi di interfaccia (utilizzati con IRowsetChange)
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[SetData](#setdata)|Imposta i valori dei dati in una o più colonne.|
 
 ### <a name="interface-methods-used-with-irowsetupdate"></a>Metodi di interfaccia (utilizzati con IRowsetUpdate)
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[GetOriginalData](#getoriginaldata)|Ottiene i dati trasmessi o ottenuti di recente dall'origine dati, ignorando le modifiche in sospeso.|
 |[GetPendingRows](#getpendingrows)|Restituisce un elenco di righe con modifiche in sospeso.|
@@ -120,17 +121,17 @@ Unità di archiviazione per tutti gli handle di riga utilizzati dal provider.
 
 ### <a name="implementation-methods-callback"></a>Metodi di implementazione (callback)
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[IsUpdateAllowed](#isupdateallowed)|Utilizzato per verificare la sicurezza, l'integrità e così via prima di consentire gli aggiornamenti.|
 
 ### <a name="data-members"></a>Membri dei dati
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[m_mapCachedData](#mapcacheddata)|Contiene i dati originali per l'operazione posticipata.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Prima di tutto, è necessario leggere e comprendere la documentazione relativa a [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)), perché tutto ciò che viene descritto qui è valido. È inoltre consigliabile leggere il capitolo 6 della Guida di *riferimento per programmatori OLE DB* sull'impostazione dei dati.
 
@@ -161,7 +162,7 @@ STDMETHOD (SetData )(HROW hRow,
 
 Vedere [IRowsetChange:: SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo esegue l'override del metodo [IRowsetChangeImpl:: SetData](./irowsetchangeimpl-class.md#setdata) , ma include la memorizzazione nella cache dei dati originali per consentire l'elaborazione immediata o posticipata dell'operazione.
 
@@ -202,7 +203,7 @@ in Corrisponde al parametro *hChapter* in [IRowsetUpdate:: GetPendingRows](/prev
 
 Per altri parametri, vedere [IRowsetUpdate:: GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni, vedere [IRowsetUpdate:: GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
@@ -276,7 +277,7 @@ in Corrisponde al parametro *hChapter* in [IRowsetUpdate:: Update](/previous-ver
 
 Per altri parametri, vedere [IRowsetUpdate:: Update](/previous-versions/windows/desktop/ms719709(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le modifiche vengono trasmesse chiamando [IRowsetChangeImpl:: FlushData](./irowsetchangeimpl-class.md#flushdata). Per rendere effettive le modifiche, il consumer deve chiamare [CRowset:: Update](./crowset-class.md#update) . Impostare *prgRowStatus* su un valore appropriato come descritto in [Stati di riga](/previous-versions/windows/desktop/ms722752(v=vs.85)) nella Guida di *riferimento per programmatori OLE DB*.
 
@@ -303,7 +304,7 @@ in Handle per le righe che l'utente vuole aggiornare.
 *pRowStatus*<br/>
 out Stato restituito all'utente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se si determina che un aggiornamento deve essere consentito, restituisce S_OK; in caso contrario, restituisce E_FAIL. Se si consente un aggiornamento, è necessario impostare anche `DBROWSTATUS` in [IRowsetUpdateImpl:: Update](#update) su uno [stato di riga](/previous-versions/windows/desktop/ms722752(v=vs.85))appropriato.
 
@@ -329,7 +330,7 @@ Handle per le righe per i dati.
 *pData*<br/>
 Puntatore ai dati da memorizzare nella cache. I dati sono di tipo *archiviazione* (la classe di record utente). Vedere l'argomento del modello di *archiviazione* nella [classe IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

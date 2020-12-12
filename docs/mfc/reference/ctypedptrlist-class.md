@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CTypedPtrList'
 title: Classe CTypedPtrList
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-ms.openlocfilehash: 9f4899d4470903a4145cc171579e4b251b984f95
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 353e9af00b1366b260ce3cb3689018a8e4e370c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81747194"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318533"
 ---
 # <a name="ctypedptrlist-class"></a>Classe CTypedPtrList
 
@@ -47,45 +48,45 @@ class CTypedPtrList : public BASE_CLASS
 #### <a name="parameters"></a>Parametri
 
 *BASE_CLASS*<br/>
-Classe base della classe elenco di puntatori tipizzata; deve essere una classe `CObList` `CPtrList`elenco di puntatori ( o ).
+Classe di base della classe elenco di puntatori tipizzati; deve essere una classe di elenco di puntatori ( `CObList` o `CPtrList` ).
 
-*TIPO*<br/>
-Tipo degli elementi archiviati nell'elenco della classe base.
+*TYPE*<br/>
+Tipo degli elementi archiviati nell'elenco delle classi base.
 
 ## <a name="members"></a>Membri
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CTypedPtrList::AddHead](#addhead)|Aggiunge un elemento (o tutti gli elementi in un altro elenco) all'intestazione dell'elenco (fa una nuova testa).|
-|[CTypedPtrList::AddTail](#addtail)|Aggiunge un elemento (o tutti gli elementi in un altro elenco) alla coda dell'elenco (crea una nuova coda).|
-|[CTypedPtrList::GetAt](#getat)|Ottiene l'elemento in una posizione specificata.|
-|[CTypedPtrList::GetHead](#gethead)|Restituisce l'elemento head dell'elenco (non può essere vuoto).|
-|[CTypedPtrList::GetNext](#getnext)|Ottiene l'elemento successivo per l'iterazione.|
-|[CTypedPtrList::GetPrev](#getprev)|Ottiene l'elemento precedente per l'iterazione.|
-|[CTypedPtrList::GetTail](#gettail)|Restituisce l'elemento tail dell'elenco (non può essere vuoto).|
-|[CTypedPtrList::RemoveHead](#removehead)|Rimuove l'elemento dall'intestazione dell'elenco.|
-|[CTypedPtrList::RemoveTail](#removetail)|Rimuove l'elemento dalla coda dell'elenco.|
-|[CTypedPtrList::SetAt](#setat)|Imposta l'elemento in una posizione specificata.|
+|[CTypedPtrList:: AddHead](#addhead)|Aggiunge un elemento (o tutti gli elementi di un altro elenco) all'inizio dell'elenco (crea una nuova intestazione).|
+|[CTypedPtrList:: AddTail](#addtail)|Aggiunge un elemento (o tutti gli elementi di un altro elenco) alla parte finale dell'elenco (crea una nuova coda).|
+|[CTypedPtrList:: GetA](#getat)|Ottiene l'elemento in una posizione specificata.|
+|[CTypedPtrList:: GetHead](#gethead)|Restituisce l'elemento Head dell'elenco (non può essere vuoto).|
+|[CTypedPtrList:: GetNext](#getnext)|Ottiene l'elemento successivo per l'iterazione.|
+|[CTypedPtrList:: GetPrev](#getprev)|Ottiene l'elemento precedente per l'iterazione.|
+|[CTypedPtrList:: GetTail](#gettail)|Restituisce l'elemento tail dell'elenco (non può essere vuoto).|
+|[CTypedPtrList:: RemoveHead](#removehead)|Rimuove l'elemento dall'inizio dell'elenco.|
+|[CTypedPtrList:: RemoveTail](#removetail)|Rimuove l'elemento dalla parte finale dell'elenco.|
+|[CTypedPtrList:: SetAt](#setat)|Imposta l'elemento in una posizione specificata.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Quando si `CTypedPtrList` utilizza `CObList` `CPtrList`invece o , la funzionalità di controllo dei tipi di C, consente di eliminare gli errori causati da tipi di puntatore non corrispondenti.
+Quando si usa `CTypedPtrList` invece di `CObList` o `CPtrList` , la funzionalità di controllo dei tipi C++ consente di eliminare gli errori causati da tipi di puntatore non corrispondenti.
 
-Inoltre, il `CTypedPtrList` wrapper esegue gran parte del cast `CObList` che `CPtrList`sarebbe necessario se si utilizzasse o .
+Inoltre, il `CTypedPtrList` wrapper esegue gran parte del cast che sarebbe necessario se fosse stato usato `CObList` o `CPtrList` .
 
-Poiché `CTypedPtrList` tutte le funzioni sono inline, l'utilizzo di questo modello non influisce in modo significativo sulle dimensioni o sulla velocità del codice.
+Poiché tutte le `CTypedPtrList` funzioni sono inline, l'uso di questo modello non influisce in modo significativo sulle dimensioni o sulla velocità del codice.
 
-Gli elenchi `CObList` derivati da possono essere `CPtrList` serializzati, ma quelli derivati da non possono.
+Gli elenchi derivati da `CObList` possono essere serializzati, ma quelli derivati da `CPtrList` non possono.
 
 Quando un oggetto `CTypedPtrList` viene eliminato oppure quando gli elementi vengono rimossi, vengono eliminati solo i puntatori e non le entità che referenziano.
 
-Per ulteriori informazioni `CTypedPtrList`sull'utilizzo di , vedere gli articoli [Raccolte](../../mfc/collections.md) e [classi basate su modelli](../../mfc/template-based-classes.md).
+Per ulteriori informazioni sull'utilizzo di `CTypedPtrList` , vedere gli articoli [raccolte](../../mfc/collections.md) e [classi basate su modello](../../mfc/template-based-classes.md).
 
 ## <a name="example"></a>Esempio
 
-In questo esempio `CTypedPtrList`viene creata un'istanza di , viene aggiunto un oggetto, l'elenco viene serializzato su disco e quindi viene eliminato l'oggetto:
+In questo esempio viene creata un'istanza di `CTypedPtrList` , viene aggiunto un oggetto, viene serializzato l'elenco su disco e quindi viene eliminato l'oggetto:
 
 [!code-cpp[NVC_MFCCollections#110](../../mfc/codesnippet/cpp/ctypedptrlist-class_1.cpp)]
 
@@ -103,9 +104,9 @@ In questo esempio `CTypedPtrList`viene creata un'istanza di , viene aggiunto un 
 
 **Intestazione:** afxtempl.h
 
-## <a name="ctypedptrlistaddhead"></a><a name="addhead"></a>CTypedPtrList::AddHead
+## <a name="ctypedptrlistaddhead"></a><a name="addhead"></a> CTypedPtrList:: AddHead
 
-Questa funzione `BASE_CLASS`membro chiama **::AddHead**.
+Questa funzione membro chiama `BASE_CLASS` **:: AddHead**.
 
 ```
 POSITION AddHead(TYPE newElement);
@@ -114,29 +115,29 @@ void AddHead(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 
 ### <a name="parameters"></a>Parametri
 
-*TIPO*<br/>
-Tipo degli elementi archiviati nell'elenco della classe base.
+*TYPE*<br/>
+Tipo degli elementi archiviati nell'elenco delle classi base.
 
-*nuovoElemento*<br/>
-Puntatore all'oggetto da aggiungere a questo elenco. È consentito un valore NULL.
+*newElement*<br/>
+Puntatore all'oggetto da aggiungere all'elenco. È consentito un valore NULL.
 
 *BASE_CLASS*<br/>
-Classe base della classe elenco di puntatori tipizzata; deve essere una classe di elenco di puntatori ( [CObList](../../mfc/reference/coblist-class.md) o [CPtrList](../../mfc/reference/cptrlist-class.md)).
+Classe di base della classe elenco di puntatori tipizzati; deve essere una classe elenco di puntatori ( [CObList](../../mfc/reference/coblist-class.md) o [CPtrList](../../mfc/reference/cptrlist-class.md)).
 
-*pNewList (in questo elenco)*<br/>
-Puntatore a un altro [oggetto CTypedPtrList.](../../mfc/reference/ctypedptrlist-class.md) Gli elementi in *pNewList* verranno aggiunti a questo elenco.
+*pNewList*<br/>
+Puntatore a un altro oggetto [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) . Gli elementi in *pNewList* verranno aggiunti a questo elenco.
 
 ### <a name="return-value"></a>Valore restituito
 
-La prima versione restituisce il valore POSITION dell'elemento appena inserito.
+La prima versione restituisce il valore di posizione dell'elemento appena inserito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-La prima versione aggiunge un nuovo elemento prima dell'intestazione dell'elenco. La seconda versione aggiunge un altro elenco di elementi prima della testa.
+La prima versione aggiunge un nuovo elemento prima dell'inizio dell'elenco. La seconda versione aggiunge un altro elenco di elementi prima dell'intestazione.
 
-## <a name="ctypedptrlistaddtail"></a><a name="addtail"></a>CTypedPtrList::AddTail
+## <a name="ctypedptrlistaddtail"></a><a name="addtail"></a> CTypedPtrList:: AddTail
 
-Questa funzione `BASE_CLASS`membro chiama **::AddTail**.
+Questa funzione membro chiama `BASE_CLASS` **:: AddTail**.
 
 ```
 POSITION AddTail(TYPE newElement);
@@ -145,27 +146,27 @@ void AddTail(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 
 ### <a name="parameters"></a>Parametri
 
-*TIPO*<br/>
-Tipo degli elementi archiviati nell'elenco della classe base.
+*TYPE*<br/>
+Tipo degli elementi archiviati nell'elenco delle classi base.
 
-*nuovoElemento*<br/>
-Puntatore all'oggetto da aggiungere a questo elenco. È consentito un valore NULL.
+*newElement*<br/>
+Puntatore all'oggetto da aggiungere all'elenco. È consentito un valore NULL.
 
 *BASE_CLASS*<br/>
-Classe base della classe elenco di puntatori tipizzata; deve essere una classe di elenco di puntatori ( [CObList](../../mfc/reference/coblist-class.md) o [CPtrList](../../mfc/reference/cptrlist-class.md)).
+Classe di base della classe elenco di puntatori tipizzati; deve essere una classe elenco di puntatori ( [CObList](../../mfc/reference/coblist-class.md) o [CPtrList](../../mfc/reference/cptrlist-class.md)).
 
-*pNewList (in questo elenco)*<br/>
-Puntatore a un altro [oggetto CTypedPtrList.](../../mfc/reference/ctypedptrlist-class.md) Gli elementi in *pNewList* verranno aggiunti a questo elenco.
+*pNewList*<br/>
+Puntatore a un altro oggetto [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) . Gli elementi in *pNewList* verranno aggiunti a questo elenco.
 
 ### <a name="return-value"></a>Valore restituito
 
-La prima versione restituisce il valore POSITION dell'elemento appena inserito.
+La prima versione restituisce il valore di posizione dell'elemento appena inserito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-La prima versione aggiunge un nuovo elemento dopo la coda dell'elenco. La seconda versione aggiunge un altro elenco di elementi dopo la coda dell'elenco.
+La prima versione aggiunge un nuovo elemento dopo la parte finale dell'elenco. La seconda versione aggiunge un altro elenco di elementi dopo la parte finale dell'elenco.
 
-## <a name="ctypedptrlistgetat"></a><a name="getat"></a>CTypedPtrList::GetAt
+## <a name="ctypedptrlistgetat"></a><a name="getat"></a> CTypedPtrList:: GetA
 
 Una variabile di tipo POSITION è una chiave per l'elenco.
 
@@ -176,29 +177,29 @@ TYPE GetAt(POSITION position) const;
 
 ### <a name="parameters"></a>Parametri
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parametro di modello che specifica il tipo di elementi archiviati nell'elenco.
 
-*Posizione*<br/>
-Valore POSITION restituito da `GetHeadPosition` una `Find` chiamata di funzione membro o precedente.
+*position*<br/>
+Valore di posizione restituito da una `GetHeadPosition` chiamata di `Find` funzione membro o precedente.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se si accede all'elenco `const CTypedPtrList`tramite `GetAt` un puntatore a un oggetto , verrà restituito un puntatore del tipo specificato dal parametro di modello *TYPE*. In questo modo la funzione può essere utilizzata solo sul lato destro di un'istruzione di assegnazione e quindi protegge l'elenco dalla modifica.
+Se è possibile accedere all'elenco tramite un puntatore a un oggetto `const CTypedPtrList` , `GetAt` restituisce un puntatore del tipo specificato dal *tipo* di parametro di modello. In questo modo la funzione può essere utilizzata solo sul lato destro di un'istruzione di assegnazione e pertanto protegge l'elenco dalla modifica.
 
-Se si accede all'elenco direttamente `CTypedPtrList`o `GetAt` tramite un puntatore a un oggetto , verrà restituito un riferimento a un puntatore del tipo specificato dal parametro di modello *TYPE*. In questo modo la funzione può essere utilizzata su entrambi i lati di un'istruzione di assegnazione e pertanto consente di modificare le voci dell'elenco.
+Se è possibile accedere all'elenco direttamente o tramite un puntatore a un oggetto `CTypedPtrList` , `GetAt` restituisce un riferimento a un puntatore del tipo specificato dal *tipo* di parametro del modello. Ciò consente di usare la funzione su entrambi i lati di un'istruzione di assegnazione e quindi di modificare le voci dell'elenco.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Non è uguale a un indice e non è possibile operare su un valore POSITION manualmente. `GetAt`recupera il `CObject` puntatore associato a una posizione specificata.
+Non è uguale a un indice e non è possibile operare su un valore di posizione autonomamente. `GetAt` Recupera il `CObject` puntatore associato a una posizione specificata.
 
-È necessario assicurarsi che il valore POSITION rappresenti una posizione valida nell'elenco. Se non è valido, la versione di debug della libreria Microsoft Foundation Class asserisce.
+È necessario assicurarsi che il valore di posizione rappresenti una posizione valida nell'elenco. Se non è valido, la versione di debug dell'libreria Microsoft Foundation Class asserisce.
 
-Questa funzione inline chiama `BASE_CLASS` **::GetAt**.
+Questa funzione inline chiama `BASE_CLASS` **:: Geta**.
 
-## <a name="ctypedptrlistgethead"></a><a name="gethead"></a>CTypedPtrList::GetHead
+## <a name="ctypedptrlistgethead"></a><a name="gethead"></a> CTypedPtrList:: GetHead
 
-Ottiene il puntatore che rappresenta l'elemento head di questo elenco.
+Ottiene il puntatore che rappresenta l'elemento Head dell'elenco.
 
 ```
 TYPE& GetHead();
@@ -207,22 +208,22 @@ TYPE GetHead() const;
 
 ### <a name="parameters"></a>Parametri
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parametro di modello che specifica il tipo di elementi archiviati nell'elenco.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se si accede all'elenco `const CTypedPtrList`tramite `GetHead` un puntatore a un oggetto , verrà restituito un puntatore del tipo specificato dal parametro di modello *TYPE*. In questo modo la funzione può essere utilizzata solo sul lato destro di un'istruzione di assegnazione e quindi protegge l'elenco dalla modifica.
+Se è possibile accedere all'elenco tramite un puntatore a un oggetto `const CTypedPtrList` , `GetHead` restituisce un puntatore del tipo specificato dal *tipo* di parametro di modello. In questo modo la funzione può essere utilizzata solo sul lato destro di un'istruzione di assegnazione e pertanto protegge l'elenco dalla modifica.
 
-Se si accede all'elenco direttamente `CTypedPtrList`o `GetHead` tramite un puntatore a un oggetto , verrà restituito un riferimento a un puntatore del tipo specificato dal parametro di modello *TYPE*. In questo modo la funzione può essere utilizzata su entrambi i lati di un'istruzione di assegnazione e pertanto consente di modificare le voci dell'elenco.
+Se è possibile accedere all'elenco direttamente o tramite un puntatore a un oggetto `CTypedPtrList` , `GetHead` restituisce un riferimento a un puntatore del tipo specificato dal *tipo* di parametro del modello. Ciò consente di usare la funzione su entrambi i lati di un'istruzione di assegnazione e quindi di modificare le voci dell'elenco.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-È necessario assicurarsi che l'elenco non sia vuoto prima di chiamare `GetHead`. Se l'elenco è vuoto, la versione di debug della libreria Microsoft Foundation Class asserisce. Utilizzare [IsEmpty](../../mfc/reference/coblist-class.md#isempty) per verificare che l'elenco contenga elementi.
+Prima di chiamare, è necessario assicurarsi che l'elenco non sia vuoto `GetHead` . Se l'elenco è vuoto, la versione di debug del libreria Microsoft Foundation Class dichiara. Utilizzare [IsEmpty](../../mfc/reference/coblist-class.md#isempty) per verificare che l'elenco contenga elementi.
 
-## <a name="ctypedptrlistgetnext"></a><a name="getnext"></a>CTypedPtrList::GetNext
+## <a name="ctypedptrlistgetnext"></a><a name="getnext"></a> CTypedPtrList:: GetNext
 
-Ottiene l'elemento dell'elenco identificato da *rPosition*, quindi imposta *rPosition* sul valore POSITION della voce successiva nell'elenco.
+Ottiene l'elemento di elenco identificato da *rPosition*, quindi imposta *rPosition* sul valore di posizione della voce successiva nell'elenco.
 
 ```
 TYPE& GetNext(POSITION& rPosition);
@@ -231,31 +232,31 @@ TYPE GetNext(POSITION& rPosition) const;
 
 ### <a name="parameters"></a>Parametri
 
-*TIPO*<br/>
-Parametro di modello che specifica il tipo di elementi contenuti in questo elenco.
+*TYPE*<br/>
+Parametro di modello che specifica il tipo di elementi contenuti nell'elenco.
 
-*rPosizione*<br/>
-Riferimento a un valore POSITION restituito `GetNext` `GetHeadPosition`da una chiamata a funzione membro precedente , , o da un'altra chiamata a funzione membro.
+*rPosition*<br/>
+Riferimento a un valore di posizione restituito da un' `GetNext` `GetHeadPosition` altra chiamata di funzione membro, o.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se si accede all'elenco `const CTypedPtrList`tramite `GetNext` un puntatore a un oggetto , verrà restituito un puntatore del tipo specificato dal parametro di modello *TYPE*. In questo modo la funzione può essere utilizzata solo sul lato destro di un'istruzione di assegnazione e quindi protegge l'elenco dalla modifica.
+Se è possibile accedere all'elenco tramite un puntatore a un oggetto `const CTypedPtrList` , `GetNext` restituisce un puntatore del tipo specificato dal *tipo* di parametro di modello. In questo modo la funzione può essere utilizzata solo sul lato destro di un'istruzione di assegnazione e pertanto protegge l'elenco dalla modifica.
 
-Se si accede all'elenco direttamente `CTypedPtrList`o `GetNext` tramite un puntatore a un oggetto , verrà restituito un riferimento a un puntatore del tipo specificato dal parametro di modello *TYPE*. In questo modo la funzione può essere utilizzata su entrambi i lati di un'istruzione di assegnazione e pertanto consente di modificare le voci dell'elenco.
+Se è possibile accedere all'elenco direttamente o tramite un puntatore a un oggetto `CTypedPtrList` , `GetNext` restituisce un riferimento a un puntatore del tipo specificato dal *tipo* di parametro del modello. Ciò consente di usare la funzione su entrambi i lati di un'istruzione di assegnazione e quindi di modificare le voci dell'elenco.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-È possibile `GetNext` utilizzare in un ciclo di iterazione in `GetHeadPosition` avanti se si stabilisce la posizione iniziale con una chiamata a o [CPtrList::Find](../../mfc/reference/coblist-class.md#find).
+È possibile usare `GetNext` in un ciclo di iterazione in diretta se si stabilisce la posizione iniziale con una chiamata a `GetHeadPosition` o [CPtrList:: find](../../mfc/reference/coblist-class.md#find).
 
-È necessario assicurarsi che il valore POSITION rappresenti una posizione valida nell'elenco. Se non è valido, la versione di debug della libreria Microsoft Foundation Class asserisce.
+È necessario assicurarsi che il valore di posizione rappresenti una posizione valida nell'elenco. Se non è valido, la versione di debug dell'libreria Microsoft Foundation Class asserisce.
 
-Se l'elemento recuperato è l'ultimo nell'elenco, il nuovo valore di *rPosition* è impostato su NULL.
+Se l'elemento recuperato è l'ultimo nell'elenco, il nuovo valore di *rPosition* viene impostato su null.
 
-È possibile rimuovere un elemento durante un'iterazione. Vedere l'esempio per [CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat).
+È possibile rimuovere un elemento durante un'iterazione. Vedere l'esempio per [CObList:: RemoveAt](../../mfc/reference/coblist-class.md#removeat).
 
-## <a name="ctypedptrlistgetprev"></a><a name="getprev"></a>CTypedPtrList::GetPrev
+## <a name="ctypedptrlistgetprev"></a><a name="getprev"></a> CTypedPtrList:: GetPrev
 
-Ottiene l'elemento dell'elenco identificato da *rPosition*, quindi imposta *rPosition* sul valore POSITION della voce precedente nell'elenco.
+Ottiene l'elemento dell'elenco identificato da *rPosition*, quindi imposta *rPosition* sul valore di posizione della voce precedente nell'elenco.
 
 ```
 TYPE& GetPrev(POSITION& rPosition);
@@ -264,29 +265,29 @@ TYPE GetPrev(POSITION& rPosition) const;
 
 ### <a name="parameters"></a>Parametri
 
-*TIPO*<br/>
-Parametro di modello che specifica il tipo di elementi contenuti in questo elenco.
+*TYPE*<br/>
+Parametro di modello che specifica il tipo di elementi contenuti nell'elenco.
 
-*rPosizione*<br/>
-Riferimento a un valore POSITION restituito `GetPrev` da una chiamata di funzione membro precedente o da un'altra chiamata.
+*rPosition*<br/>
+Riferimento a un valore di posizione restituito da una `GetPrev` chiamata di funzione membro precedente o successiva.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se si accede all'elenco `const CTypedPtrList`tramite `GetPrev` un puntatore a un oggetto , verrà restituito un puntatore del tipo specificato dal parametro di modello *TYPE*. In questo modo la funzione può essere utilizzata solo sul lato destro di un'istruzione di assegnazione e quindi protegge l'elenco dalla modifica.
+Se è possibile accedere all'elenco tramite un puntatore a un oggetto `const CTypedPtrList` , `GetPrev` restituisce un puntatore del tipo specificato dal *tipo* di parametro di modello. In questo modo la funzione può essere utilizzata solo sul lato destro di un'istruzione di assegnazione e pertanto protegge l'elenco dalla modifica.
 
-Se si accede all'elenco direttamente `CTypedPtrList`o `GetPrev` tramite un puntatore a un oggetto , verrà restituito un riferimento a un puntatore del tipo specificato dal parametro di modello *TYPE*. In questo modo la funzione può essere utilizzata su entrambi i lati di un'istruzione di assegnazione e pertanto consente di modificare le voci dell'elenco.
+Se è possibile accedere all'elenco direttamente o tramite un puntatore a un oggetto `CTypedPtrList` , `GetPrev` restituisce un riferimento a un puntatore del tipo specificato dal *tipo* di parametro del modello. Ciò consente di usare la funzione su entrambi i lati di un'istruzione di assegnazione e quindi di modificare le voci dell'elenco.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-È possibile `GetPrev` utilizzare in un ciclo di iterazione inverso se si stabilisce la posizione iniziale con una chiamata a `GetTailPosition` o `Find`.
+È possibile usare `GetPrev` in un ciclo di iterazione inversa se si stabilisce la posizione iniziale con una chiamata a `GetTailPosition` o `Find` .
 
-È necessario assicurarsi che il valore POSITION rappresenti una posizione valida nell'elenco. Se non è valido, la versione di debug della libreria Microsoft Foundation Class asserisce.
+È necessario assicurarsi che il valore di posizione rappresenti una posizione valida nell'elenco. Se non è valido, la versione di debug dell'libreria Microsoft Foundation Class asserisce.
 
-Se l'elemento recuperato è il primo nell'elenco, il nuovo valore di *rPosition* è impostato su NULL.
+Se l'elemento recuperato è il primo nell'elenco, il nuovo valore di *rPosition* viene impostato su null.
 
-## <a name="ctypedptrlistgettail"></a><a name="gettail"></a>CTypedPtrList::GetTail
+## <a name="ctypedptrlistgettail"></a><a name="gettail"></a> CTypedPtrList:: GetTail
 
-Ottiene il puntatore che rappresenta l'elemento head di questo elenco.
+Ottiene il puntatore che rappresenta l'elemento Head dell'elenco.
 
 ```
 TYPE& GetTail();
@@ -295,22 +296,22 @@ TYPE GetTail() const;
 
 ### <a name="parameters"></a>Parametri
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parametro di modello che specifica il tipo di elementi archiviati nell'elenco.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se si accede all'elenco `const CTypedPtrList`tramite `GetTail` un puntatore a un oggetto , verrà restituito un puntatore del tipo specificato dal parametro di modello *TYPE*. In questo modo la funzione può essere utilizzata solo sul lato destro di un'istruzione di assegnazione e quindi protegge l'elenco dalla modifica.
+Se è possibile accedere all'elenco tramite un puntatore a un oggetto `const CTypedPtrList` , `GetTail` restituisce un puntatore del tipo specificato dal *tipo* di parametro di modello. In questo modo la funzione può essere utilizzata solo sul lato destro di un'istruzione di assegnazione e pertanto protegge l'elenco dalla modifica.
 
-Se si accede all'elenco direttamente `CTypedPtrList`o `GetTail` tramite un puntatore a un oggetto , verrà restituito un riferimento a un puntatore del tipo specificato dal parametro di modello *TYPE*. In questo modo la funzione può essere utilizzata su entrambi i lati di un'istruzione di assegnazione e pertanto consente di modificare le voci dell'elenco.
+Se è possibile accedere all'elenco direttamente o tramite un puntatore a un oggetto `CTypedPtrList` , `GetTail` restituisce un riferimento a un puntatore del tipo specificato dal *tipo* di parametro del modello. Ciò consente di usare la funzione su entrambi i lati di un'istruzione di assegnazione e quindi di modificare le voci dell'elenco.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-È necessario assicurarsi che l'elenco non sia vuoto prima di chiamare `GetTail`. Se l'elenco è vuoto, la versione di debug della libreria Microsoft Foundation Class asserisce. Utilizzare [IsEmpty](../../mfc/reference/coblist-class.md#isempty) per verificare che l'elenco contenga elementi.
+Prima di chiamare, è necessario assicurarsi che l'elenco non sia vuoto `GetTail` . Se l'elenco è vuoto, la versione di debug del libreria Microsoft Foundation Class dichiara. Utilizzare [IsEmpty](../../mfc/reference/coblist-class.md#isempty) per verificare che l'elenco contenga elementi.
 
-## <a name="ctypedptrlistremovehead"></a><a name="removehead"></a>CTypedPtrList::RemoveHead
+## <a name="ctypedptrlistremovehead"></a><a name="removehead"></a> CTypedPtrList:: RemoveHead
 
-Rimuove l'elemento dall'intestazione dell'elenco e lo restituisce.
+Rimuove l'elemento dall'inizio dell'elenco e lo restituisce.
 
 ```
 TYPE RemoveHead();
@@ -318,20 +319,20 @@ TYPE RemoveHead();
 
 ### <a name="parameters"></a>Parametri
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parametro di modello che specifica il tipo di elementi archiviati nell'elenco.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il puntatore in precedenza all'intestazione dell'elenco. Questo puntatore è del tipo specificato dal parametro di modello *TYPE*.
+Puntatore precedente all'inizio dell'elenco. Questo puntatore è del tipo specificato dal *tipo* di parametro del modello.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-È necessario assicurarsi che l'elenco non sia vuoto prima di chiamare `RemoveHead`. Se l'elenco è vuoto, la versione di debug della libreria Microsoft Foundation Class asserisce. Utilizzare [IsEmpty](../../mfc/reference/coblist-class.md#isempty) per verificare che l'elenco contenga elementi.
+Prima di chiamare, è necessario assicurarsi che l'elenco non sia vuoto `RemoveHead` . Se l'elenco è vuoto, la versione di debug del libreria Microsoft Foundation Class dichiara. Utilizzare [IsEmpty](../../mfc/reference/coblist-class.md#isempty) per verificare che l'elenco contenga elementi.
 
-## <a name="ctypedptrlistremovetail"></a><a name="removetail"></a>CTypedPtrList::RemoveTail
+## <a name="ctypedptrlistremovetail"></a><a name="removetail"></a> CTypedPtrList:: RemoveTail
 
-Rimuove l'elemento dalla coda dell'elenco e lo restituisce.
+Rimuove l'elemento dalla parte finale dell'elenco e lo restituisce.
 
 ```
 TYPE RemoveTail();
@@ -339,20 +340,20 @@ TYPE RemoveTail();
 
 ### <a name="parameters"></a>Parametri
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parametro di modello che specifica il tipo di elementi archiviati nell'elenco.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il puntatore in precedenza alla fine dell'elenco. Questo puntatore è del tipo specificato dal parametro di modello *TYPE*.
+Puntatore precedente alla parte finale dell'elenco. Questo puntatore è del tipo specificato dal *tipo* di parametro del modello.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-È necessario assicurarsi che l'elenco non sia vuoto prima di chiamare `RemoveTail`. Se l'elenco è vuoto, la versione di debug della libreria Microsoft Foundation Class asserisce. Utilizzare [IsEmpty](../../mfc/reference/coblist-class.md#isempty) per verificare che l'elenco contenga elementi.
+Prima di chiamare, è necessario assicurarsi che l'elenco non sia vuoto `RemoveTail` . Se l'elenco è vuoto, la versione di debug del libreria Microsoft Foundation Class dichiara. Utilizzare [IsEmpty](../../mfc/reference/coblist-class.md#isempty) per verificare che l'elenco contenga elementi.
 
-## <a name="ctypedptrlistsetat"></a><a name="setat"></a>CTypedPtrList::SetAt
+## <a name="ctypedptrlistsetat"></a><a name="setat"></a> CTypedPtrList:: SetAt
 
-Questa funzione `BASE_CLASS`membro chiama **::SetAt**.
+Questa funzione membro chiama `BASE_CLASS` **:: SetAt**.
 
 ```cpp
 void SetAt(POSITION pos, TYPE newElement);
@@ -360,26 +361,26 @@ void SetAt(POSITION pos, TYPE newElement);
 
 ### <a name="parameters"></a>Parametri
 
-*Pos*<br/>
+*pos*<br/>
 POSIZIONE dell'elemento da impostare.
 
-*TIPO*<br/>
-Tipo degli elementi archiviati nell'elenco della classe base.
+*TYPE*<br/>
+Tipo degli elementi archiviati nell'elenco delle classi base.
 
-*nuovoElemento*<br/>
+*newElement*<br/>
 Puntatore all'oggetto da scrivere nell'elenco.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Una variabile di tipo POSITION è una chiave per l'elenco. Non è uguale a un indice e non è possibile operare su un valore POSITION manualmente. `SetAt`scrive il puntatore all'oggetto nella posizione specificata nell'elenco.
+Una variabile di tipo POSITION è una chiave per l'elenco. Non è uguale a un indice e non è possibile operare su un valore di posizione autonomamente. `SetAt` scrive il puntatore all'oggetto nella posizione specificata nell'elenco.
 
-È necessario assicurarsi che il valore POSITION rappresenti una posizione valida nell'elenco. Se non è valido, la versione di debug della libreria Microsoft Foundation Class asserisce.
+È necessario assicurarsi che il valore di posizione rappresenti una posizione valida nell'elenco. Se non è valido, la versione di debug dell'libreria Microsoft Foundation Class asserisce.
 
-Per osservazioni più dettagliate, vedere [CObList::SetAt](../../mfc/reference/coblist-class.md#setat).
+Per osservazioni più dettagliate, vedere [CObList:: SetAt](../../mfc/reference/coblist-class.md#setat).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Raccolta di campioni MFC](../../overview/visual-cpp-samples.md)<br/>
+[Esempio di raccolta MFC](../../overview/visual-cpp-samples.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classe CPtrList](../../mfc/reference/cptrlist-class.md)<br/>
 [Classe CObList](../../mfc/reference/coblist-class.md)

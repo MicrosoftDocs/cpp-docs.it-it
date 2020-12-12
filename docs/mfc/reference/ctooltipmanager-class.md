@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CTooltipManager'
 title: Classe CTooltipManager
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-ms.openlocfilehash: 4e721740fc100a34ea08dd7ff5f9291eea2d9b36
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 0ec6d691abbceb7026fe9656c17ff899f1d07759
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752174"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318546"
 ---
 # <a name="ctooltipmanager-class"></a>Classe CTooltipManager
 
@@ -33,11 +34,11 @@ Gestisce informazioni di runtime sulle descrizioni comandi. L'istanza della clas
 class CTooltipManager : public CObject
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CTooltipManager::CreateToolTip](#createtooltip)|Crea un controllo ToolTip per i tipi di controllo di Windows specificati.|
 |[CTooltipManager::DeleteToolTip](#deletetooltip)|Elimina un controllo ToolTip.|
@@ -45,9 +46,9 @@ class CTooltipManager : public CObject
 |[CTooltipManager::SetTooltipText](#settooltiptext)|Imposta il testo e la descrizione per un controllo ToolTip.|
 |[CTooltipManager::UpdateTooltips](#updatetooltips)||
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Utilizzare [CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md) `CMFCToolTipInfo`Class `CTooltipManager` , e insieme per implementare descrizioni comandi personalizzate nell'applicazione. Per un esempio di come utilizzare queste classi di descrizione comandi, vedere il [CMFCToolTipCtrl classe](../../mfc/reference/cmfctooltipctrl-class.md) argomento.
+Usare la [classe CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md), `CMFCToolTipInfo` e `CTooltipManager` insieme per implementare descrizioni comandi personalizzate nell'applicazione. Per un esempio di come usare queste classi ToolTip, vedere l'argomento relativo alla [classe CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md) .
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -57,11 +58,11 @@ Utilizzare [CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md) `CMFC
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxtooltipmanager.h
+**Intestazione:** afxtooltipmanager. h
 
-## <a name="ctooltipmanagercreatetooltip"></a><a name="createtooltip"></a>Suggerimento Per CTooltipManager::CreateTool
+## <a name="ctooltipmanagercreatetooltip"></a><a name="createtooltip"></a> CTooltipManager:: CreateToolTip
 
-Crea un controllo descrizione comando.
+Crea un controllo ToolTip.
 
 ```
 static BOOL CreateToolTip(
@@ -72,42 +73,42 @@ static BOOL CreateToolTip(
 
 ### <a name="parameters"></a>Parametri
 
-*pToolTip (Suggerimento per strumenti)*<br/>
-[fuori] Un riferimento a un puntatore della descrizione comando. È impostato in modo che punti alla descrizione comando appena creata quando la funzione restituisce.
+*pToolTip*<br/>
+out Riferimento a un puntatore a descrizione comando. Viene impostato in modo da puntare alla descrizione comando appena creata quando la funzione restituisce.
 
-*pWndParent (padre di pWndParent)*<br/>
-[in] Elemento padre della descrizione comando.
+*pWndParent*<br/>
+in Elemento padre della descrizione comando.
 
 *nType*<br/>
-[in] Tipo di descrizione comando.
+in Tipo della descrizione comando.
 
 ### <a name="return-value"></a>Valore restituito
 
 Diverso da zero se una descrizione comando è stata creata correttamente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-È necessario chiamare [CTooltipManager::DeleteToolTip](#deletetooltip) per eliminare il controllo descrizione comando passato in *pToolTip*.
+È necessario chiamare [CTooltipManager::D eletetooltip](#deletetooltip) per eliminare il controllo ToolTip restituito in *pToolTip*.
 
-Il [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) imposta i parametri di visualizzazione di ogni descrizione comando che crea in base al tipo di descrizione comando specificato *da nType.* Per modificare i parametri per uno o più tipi di descrizione comando, chiamare [CTooltipManager::SetTooltipParams](#settooltipparams).
+[CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) imposta i parametri di visualizzazione visivi di ogni descrizione comando creata in base al tipo di descrizione comando specificato da *nType* . Per modificare i parametri per uno o più tipi di descrizione comando, chiamare [CTooltipManager:: SetTooltipParams](#settooltipparams).
 
-I tipi di descrizione comandi validi sono elencati nella tabella seguente:Valid tooltip types are listed in the following table:
+I tipi di descrizione comando validi sono elencati nella tabella seguente:
 
 |Tipo di descrizione comando|Categoria di controllo|Tipi di esempio|
 |------------------|----------------------|-------------------|
 |AFX_TOOLTIP_TYPE_BUTTON|Un pulsante.|CMFCButton|
-|AFX_TOOLTIP_TYPE_CAPTIONBAR|Una barra del titolo.|CMFCCaptionBar|
-|AFX_TOOLTIP_TYPE_DEFAULT|Qualsiasi controllo che non rientra in un'altra categoria.|No.|
+|AFX_TOOLTIP_TYPE_CAPTIONBAR|Barra del titolo.|CMFCCaptionBar|
+|AFX_TOOLTIP_TYPE_DEFAULT|Qualsiasi controllo che non si adatta a un'altra categoria.|Nessuno.|
 |AFX_TOOLTIP_TYPE_DOCKBAR|Un riquadro ancorabile.|CDockablePane|
-|AFX_TOOLTIP_TYPE_EDIT|Casella di testo.|No.|
-|AFX_TOOLTIP_TYPE_MINIFRAME|Un miniframe.|CPaneFrameWnd|
-|AFX_TOOLTIP_TYPE_PLANNER|Un pianificatore.|No.|
-|AFX_TOOLTIP_TYPE_RIBBON|Una barra multifunzione.|CMFCRibbonBar, CMFCRibbonPanelMenuBar|
-|AFX_TOOLTIP_TYPE_TAB|Controllo struttura a schede.|CMFCTabCtrl|
-|AFX_TOOLTIP_TYPE_TOOLBAR|Una barra degli strumenti.|CMFCToolBar, CMFCPopupMenuBar|
-|AFX_TOOLTIP_TYPE_TOOLBOX|Una casella degli strumenti.|No.|
+|AFX_TOOLTIP_TYPE_EDIT|Casella di testo.|Nessuno.|
+|AFX_TOOLTIP_TYPE_MINIFRAME|Sta mobile.|CPaneFrameWnd|
+|AFX_TOOLTIP_TYPE_PLANNER|Un pianificatore.|Nessuno.|
+|AFX_TOOLTIP_TYPE_RIBBON|Barra multifunzione.|CMFCRibbonBar, CMFCRibbonPanelMenuBar|
+|AFX_TOOLTIP_TYPE_TAB|Controllo struttura A schede.|CMFCTabCtrl|
+|AFX_TOOLTIP_TYPE_TOOLBAR|Barra degli strumenti.|CMFCToolBar, CMFCPopupMenuBar|
+|AFX_TOOLTIP_TYPE_TOOLBOX|Casella degli strumenti.|Nessuno.|
 
-## <a name="ctooltipmanagerdeletetooltip"></a><a name="deletetooltip"></a>CTooltipManager::DeleteToolTip
+## <a name="ctooltipmanagerdeletetooltip"></a><a name="deletetooltip"></a> CTooltipManager::D eleteToolTip
 
 Elimina un controllo ToolTip.
 
@@ -117,16 +118,16 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 
 ### <a name="parameters"></a>Parametri
 
-*pToolTip (Suggerimento per strumenti)*<br/>
-[in, out] Riferimento a un puntatore a una descrizione comandi da eliminare.
+*pToolTip*<br/>
+[in, out] Riferimento a un puntatore a una descrizione comando da eliminare definitivamente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Chiamare questo metodo per ogni [classe CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) creata da [CTooltipManager::CreateToolTip](#createtooltip). Il controllo padre deve chiamare `OnDestroy` questo metodo dal relativo gestore. Questa operazione è necessaria per rimuovere correttamente la descrizione comando dal framework. Questo metodo imposta *pToolTip* su NULL prima che venga restituito.
+Chiamare questo metodo per ogni [classe CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) creata da [CTooltipManager:: CreateToolTip](#createtooltip). Il controllo padre deve chiamare questo metodo dal relativo `OnDestroy` gestore. Questa operazione è necessaria per rimuovere correttamente la descrizione comando dal Framework. Questo metodo imposta *pToolTip* su null prima che venga restituito.
 
-## <a name="ctooltipmanagersettooltipparams"></a><a name="settooltipparams"></a>CTooltipManager::SetTooltipParams
+## <a name="ctooltipmanagersettooltipparams"></a><a name="settooltipparams"></a> CTooltipManager:: SetTooltipParams
 
-Personalizza l'aspetto del controllo descrizione comandi per i tipi di controllo di Windows specificati.
+Personalizza l'aspetto del controllo ToolTip per i tipi di controllo di Windows specificati.
 
 ```cpp
 void SetTooltipParams(
@@ -137,30 +138,30 @@ void SetTooltipParams(
 
 ### <a name="parameters"></a>Parametri
 
-*nTipi*<br/>
-[in] Specifica i tipi di controllo.
+*nTypes*<br/>
+in Specifica i tipi di controllo.
 
 *pRTC*<br/>
-[in] Classe di runtime della descrizione comandi personalizzata.
+in Classe di runtime della descrizione comando personalizzata.
 
-*paramedrici*<br/>
-[in] Parametri della descrizione comando.
+*pParams*<br/>
+in Parametri della descrizione comando.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Questo metodo imposta la classe di runtime e i parametri iniziali che il [CToolTipManager](../../mfc/reference/ctooltipmanager-class.md) utilizza quando crea le descrizioni comandi. Quando un controllo chiama [CTooltipManager::CreateToolTip](#createtooltip) e passa un tipo di descrizione comando che è uno dei tipi indicati da *nTypes*, il gestore della descrizione comando crea un controllo descrizione comando che è un'istanza della classe di runtime specificata da *pRTC* e passa i parametri specificati da *pParams* alla nuova descrizione comando.
+Questo metodo imposta la classe di runtime e i parametri iniziali utilizzati da [CToolTipManager](../../mfc/reference/ctooltipmanager-class.md) durante la creazione di descrizioni comandi. Quando un controllo chiama [CTooltipManager:: CreateToolTip](#createtooltip) e passa un tipo di descrizione comando che corrisponde a uno dei tipi indicati da *nTypes*, il gestore della descrizione comando crea un controllo ToolTip che è un'istanza della classe di runtime specificata da *PRTC* e passa i parametri specificati da *pParams* alla nuova descrizione comando.
 
-Quando si chiama questo metodo, tutti i proprietari di descrizioni comandi esistenti ricevono il messaggio AFX_WM_UPDATETOOLTIPS e devono ricreare le descrizioni comandi utilizzando [CTooltipManager::CreateToolTip](#createtooltip).
+Quando si chiama questo metodo, tutti i proprietari della descrizione comando esistenti ricevono il messaggio di AFX_WM_UPDATETOOLTIPS e devono ricreare le descrizioni comandi usando [CTooltipManager:: CreateToolTip](#createtooltip).
 
-*nTypes* può essere qualsiasi combinazione dei tipi di descrizione comandi validi utilizzati da [CTooltipManager::CreateToolTip](#createtooltip) oppure può essere AFX_TOOLTIP_TYPE_ALL. Se si passa AFX_TOOLTIP_TYPE_ALL, tutti i tipi di descrizione comando sono interessati.
+*nTypes* può essere qualsiasi combinazione dei tipi di descrizione comando validi usati da [CTooltipManager:: CreateToolTip](#createtooltip) oppure può essere AFX_TOOLTIP_TYPE_ALL. Se si passa AFX_TOOLTIP_TYPE_ALL, vengono interessati tutti i tipi di descrizione comando.
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio riportato di `SetTooltipParams` seguito `CTooltipManager` viene illustrato come utilizzare il metodo della classe . Questo frammento di codice fa parte dell' [esempio Draw Client](../../overview/visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come utilizzare il `SetTooltipParams` metodo della `CTooltipManager` classe. Questo frammento di codice fa parte dell' [esempio Draw Client](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#11](../../mfc/reference/codesnippet/cpp/ctooltipmanager-class_1.cpp)]
 
-## <a name="ctooltipmanagersettooltiptext"></a><a name="settooltiptext"></a>CTooltipManager::SetTooltipText
+## <a name="ctooltipmanagersettooltiptext"></a><a name="settooltiptext"></a> CTooltipManager:: SetTooltipText
 
 Imposta il testo e la descrizione di una descrizione comando.
 
@@ -175,38 +176,38 @@ static void SetTooltipText(
 
 ### <a name="parameters"></a>Parametri
 
-*Pti*<br/>
-[in] Puntatore a un oggetto TOOLINFO.
+*pTI*<br/>
+in Puntatore a un oggetto TOOLINFO.
 
-*pToolTip (Suggerimento per strumenti)*<br/>
-[in, out] Puntatore al controllo descrizione comandi per il quale impostare il testo e la descrizione.
+*pToolTip*<br/>
+[in, out] Puntatore al controllo ToolTip per il quale impostare il testo e la descrizione.
 
 *nType*<br/>
-[in] Specifica il tipo di controllo a cui è associata questa descrizione comando.
+in Specifica il tipo di controllo a cui è associata questa descrizione comando.
 
-*strText (testo str)*<br/>
-[in] Testo da impostare come testo della descrizione comando.
+*strText*<br/>
+in Testo da impostare come testo della descrizione comando.
 
 *lpszDescr*<br/>
-[in] Puntatore alla descrizione comando. Può essere NULL.
+in Puntatore alla descrizione della descrizione comando. Può essere NULL.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Il valore di *nType* deve essere lo stesso valore del parametro *nType* di [CTooltipManager::CreateToolTip](#createtooltip) quando è stata creata la descrizione comandi.
+Il valore di *nType* deve essere uguale al parametro *nType* di [CTooltipManager:: CreateToolTip](#createtooltip) al momento della creazione della descrizione comando.
 
-## <a name="ctooltipmanagerupdatetooltips"></a><a name="updatetooltips"></a>CTooltipManager::UpdateTooltips
+## <a name="ctooltipmanagerupdatetooltips"></a><a name="updatetooltips"></a> CTooltipManager:: UpdateTooltips
 
-Per ulteriori dettagli, vedere il codice sorgente che si trova nella cartella **\\\\mfc di VC atlmfc\\** dell'installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella **cartella \\ \\ \\ MFC atlmfc src di VC** per l'installazione di Visual Studio.
 
 ```cpp
 void UpdateTooltips();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCToolTipCtrl (classe)](../../mfc/reference/cmfctooltipctrl-class.md)<br/>
-[CMFCToolTipInfo (classe)](../../mfc/reference/cmfctooltipinfo-class.md)
+[Classe CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md)<br/>
+[Classe CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)

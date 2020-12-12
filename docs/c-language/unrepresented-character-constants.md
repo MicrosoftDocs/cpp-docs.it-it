@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: costanti carattere non rappresentate'
 title: Costanti carattere non rappresentati
 ms.date: 11/04/2016
 ms.assetid: 5a710a1c-dba1-49b4-a183-ed94a00a5358
-ms.openlocfilehash: 41275c226f80faffefd773ff8bb45cd8f2d390d3
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f2870cd4d691b15ff67aa0fc232a0cff7a587a0e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343086"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318390"
 ---
 # <a name="unrepresented-character-constants"></a>Costanti carattere non rappresentati
 
@@ -15,6 +16,6 @@ ms.locfileid: "64343086"
 
 Tutti le costanti carattere o le sequenze di escape possono essere rappresentate nel set di caratteri esteso.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Caratteri](../c-language/characters.md)

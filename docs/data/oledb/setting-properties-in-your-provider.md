@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: impostazione delle proprietà nel provider'
 title: Impostazione di proprietà nel provider
 ms.date: 10/29/2018
 helpviewer_keywords:
 - OLE DB providers, properties
 - properties [C++], OLE DB provider
 ms.assetid: 26a8b493-7ec4-4686-96d0-9ad5d2bca5ac
-ms.openlocfilehash: 3717282d284990b1b8038f6954ee971938cf7921
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: e85fddfb741fe89869d18531bb172201eaa14753
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509478"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316687"
 ---
 # <a name="setting-properties-in-your-provider"></a>Impostazione di proprietà nel provider
 
@@ -47,6 +48,6 @@ I provider Microsoft OLE DB ignorano le proprietà OLE DB seguenti:
 
 - `DBPROP_CANHOLDROWS` viene ignorato; il provider specifica il proprio limite.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Uso dei modelli di provider di OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

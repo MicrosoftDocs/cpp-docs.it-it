@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CToolBarCtrl'
 title: Classe CToolBarCtrl
 ms.date: 11/04/2016
 f1_keywords:
@@ -182,12 +183,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: e62d1a6773e1b65eaa1d2f0a8050873c673b5039
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 769403be6e4015df1de04d41fcb0a1b2721ee434
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561856"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318559"
 ---
 # <a name="ctoolbarctrl-class"></a>Classe CToolBarCtrl
 
@@ -199,17 +200,17 @@ Fornisce la funzionalità del controllo barra degli strumenti comune di Windows.
 class CToolBarCtrl : public CWnd
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CToolBarCtrl:: CToolBarCtrl](#ctoolbarctrl)|Costruisce un oggetto `CToolBarCtrl`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CToolBarCtrl:: AddBitmap](#addbitmap)|Aggiunge una o più immagini dei pulsanti bitmap all'elenco di immagini dei pulsanti disponibili per un controllo Toolbar.|
 |[CToolBarCtrl:: AddButtons](#addbuttons)|Aggiunge uno o più pulsanti a un controllo Toolbar.|
@@ -299,7 +300,7 @@ class CToolBarCtrl : public CWnd
 |[CToolBarCtrl:: setooltips](#settooltips)|Associa un controllo descrizione comando al controllo Toolbar.|
 |[CToolBarCtrl:: SetWindowTheme](#setwindowtheme)|Imposta lo stile di visualizzazione di un controllo Toolbar.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questo controllo (e pertanto la `CToolBarCtrl` classe) è disponibile solo per i programmi in esecuzione in windows 95/98 e Windows NT versione 3,51 e successive.
 
@@ -382,7 +383,7 @@ Puntatore all' `CBitmap` oggetto che contiene l'immagine o le immagini del pulsa
 
 Indice in base zero della prima nuova immagine, se ha esito positivo; in caso contrario,-1.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È possibile utilizzare l'API Windows [CreateMappedBitmap](/windows/win32/api/commctrl/nf-commctrl-createmappedbitmap) per eseguire il mapping dei colori prima di aggiungere la bitmap alla barra degli strumenti. Se si passa un puntatore a un `CBitMap` oggetto, è necessario assicurarsi che la bitmap non venga eliminata definitivamente finché la barra degli strumenti non viene distrutta.
 
@@ -408,7 +409,7 @@ Indirizzo di una matrice di `TBBUTTON` strutture che contiene informazioni sui p
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il puntatore *lpButtons* punta a una matrice di `TBBUTTON` strutture. Ogni `TBBUTTON` struttura associa il pulsante aggiunto con lo stile, l'immagine e/o la stringa del pulsante, l'ID comando, lo stato e i dati definiti dall'utente:
 
@@ -507,7 +508,7 @@ Indirizzo di un buffer che contiene una o più stringhe con terminazione null da
 
 Indice in base zero della prima nuova stringa aggiunta in caso di esito positivo; in caso contrario,-1.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le stringhe nel buffer devono essere separate da un carattere null. È necessario assicurarsi che l'ultima stringa includa due terminatori null. Per formattare correttamente una stringa costante, è possibile scriverla come segue:
 
@@ -527,7 +528,7 @@ Ridimensiona l'intero controllo Toolbar.
 void AutoSize();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È necessario chiamare questa funzione quando viene modificata la dimensione della finestra padre o quando viene modificata la dimensione della barra degli strumenti, ad esempio quando si impostano le dimensioni del pulsante o della bitmap oppure si aggiungono stringhe.
 
@@ -553,7 +554,7 @@ in Indice in base zero di un'immagine nell'elenco immagini del controllo toolbar
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se questo metodo ha esito positivo, il sistema Visualizza l'immagine specificata nel pulsante specificato.
 
@@ -587,7 +588,7 @@ TRUE per selezionare il pulsante FALSE per cancellarlo.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando un pulsante è stato selezionato, sembra che sia stato premuto. Se si desidera modificare più di uno stato di un pulsante, provare a chiamare [sestate](#setstate) .
 
@@ -608,7 +609,7 @@ ID di comando di cui si desidera trovare l'indice del pulsante.
 
 Indice in base zero per il pulsante associato all'ID di comando.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="ctoolbarctrlcreate"></a><a name="create"></a> CToolBarCtrl:: create
 
@@ -640,7 +641,7 @@ Specifica l'ID del controllo Toolbar.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si costruisce un `CToolBarCtrl` in due passaggi. Chiamare innanzitutto il costruttore, quindi chiamare `Create` , che crea il controllo Toolbar e lo collega all' `CToolBarCtrl` oggetto. Applicare gli stili della finestra seguenti a un controllo Toolbar.
 
@@ -694,7 +695,7 @@ ID della finestra figlio del controllo.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare `CreateEx` anziché [create](#create) per applicare gli stili estesi di Windows, specificati dall'introduzione allo stile esteso di Windows **WS_EX_**. `CreateEx` Crea il controllo con gli stili Windows estesi specificati da *dwExStyle*. Impostare gli stili estesi specifici di un controllo usando [SetExtendedStyle](#setextendedstyle). Utilizzare, ad esempio, `CreateEx` per impostare tali stili come WS_EX_CONTEXTHELP, ma utilizzare `SetExtendedStyle` per impostare tali stili come TBSTYLE_EX_DRAWDDARROWS. Per ulteriori informazioni, vedere gli stili descritti in [stili estesi della barra degli strumenti](/windows/win32/Controls/toolbar-extended-styles) nel Windows SDK.
 
@@ -706,7 +707,7 @@ Costruisce un oggetto `CToolBarCtrl`.
 CToolBarCtrl();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È necessario chiamare [create](#create) per rendere utilizzabile la barra degli strumenti.
 
@@ -718,7 +719,7 @@ Consente di visualizzare la finestra di dialogo Personalizza barra degli strumen
 void Customize();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa finestra di dialogo consente all'utente di personalizzare la barra degli strumenti aggiungendo ed eliminando pulsanti. Per supportare la personalizzazione, la finestra padre della barra degli strumenti deve gestire i messaggi di notifica di personalizzazione, come descritto in [gestione delle notifiche di personalizzazione](../../mfc/handling-customization-notifications.md). La barra degli strumenti deve anche essere stata creata con lo stile CCS_ADJUSTABLE, come descritto in [CToolBarCtrl:: create](#create).
 
@@ -739,7 +740,7 @@ Indice in base zero del pulsante da eliminare.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="ctoolbarctrlenablebutton"></a><a name="enablebutton"></a> CToolBarCtrl:: EnableButton
 
@@ -763,7 +764,7 @@ TRUE per abilitare il pulsante; FALSE per disabilitare il pulsante.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando un pulsante è stato abilitato, è possibile premerlo e selezionarlo. Se si desidera modificare più di uno stato di un pulsante, provare a chiamare [sestate](#setstate) .
 
@@ -779,7 +780,7 @@ BOOL GetAnchorHighlight() const;
 
 Se diverso da zero, è abilitata l'evidenziazione di ancoraggio. Se è zero, l'evidenziazione dell'ancoraggio è disabilitata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_GETANCHORHIGHLIGHT](/windows/win32/Controls/tb-getanchorhighlight)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -800,7 +801,7 @@ Identificatore di comando del pulsante di cui deve essere recuperato l'indice bi
 
 Restituisce l'indice della bitmap, se ha esito positivo, oppure zero in caso contrario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Implementa la funzionalità di [TB_GETBITMAP](/windows/win32/Controls/tb-getbitmap) nell'Windows SDK.
 
@@ -816,7 +817,7 @@ UINT GetBitmapFlags() const;
 
 Oggetto UINT con il flag di TBBF_LARGE impostato se la visualizzazione può supportare bitmap di grandi dimensioni della barra degli strumenti; in caso contrario, deselezionare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È necessario chiamarla dopo la creazione della barra degli strumenti, ma prima di aggiungere bitmap alla barra degli strumenti. Il valore restituito indica se la visualizzazione supporta o meno bitmap di grandi dimensioni. Se la visualizzazione supporta bitmap di grandi dimensioni e se si sceglie di utilizzarle, chiamare [SetBitmapSize](#setbitmapsize) e [SetButtonSize](#setbuttonsize) prima di aggiungere la bitmap di grandi dimensioni tramite [AddBitmap](#addbitmap).
 
@@ -876,7 +877,7 @@ Puntatore a una struttura [TBBUTTONINFO](/windows/win32/api/commctrl/ns-commctrl
 
 Indice in base zero del pulsante, se ha esito positivo; in caso contrario,-1.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_GETBUTTONINFO](/windows/win32/Controls/tb-getbuttoninfo)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -909,7 +910,7 @@ in Identificatore del pulsante il cui testo visualizzato viene recuperato.
 
 Oggetto [CString](../../atl-mfc-shared/using-cstring.md) che contiene il testo visualizzato del pulsante specificato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [TB_GETBUTTONTEXT](/windows/win32/Controls/tb-getbuttontext) , descritto nel Windows SDK.
 
@@ -930,7 +931,7 @@ out Puntatore a una struttura [ColorScheme](/windows/win32/api/commctrl/ns-commc
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [TB_GETCOLORSCHEME](/windows/win32/Controls/tb-getcolorscheme) , descritto nel Windows SDK.
 
@@ -946,7 +947,7 @@ CImageList* GetDisabledImageList() const;
 
 Puntatore a un oggetto [CImageList](../../mfc/reference/cimagelist-class.md) o null se non è impostato alcun elenco di immagini disabilitato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_GETDISABLEDIMAGELIST](/windows/win32/Controls/tb-getdisabledimagelist)del messaggio Win32, come descritto nel Windows SDK. L'implementazione MFC di `GetDisabledImageList` Usa un `CImageList` oggetto contenente le immagini dei pulsanti del controllo Toolbar, anziché un handle per un elenco di immagini.
 
@@ -967,7 +968,7 @@ Puntatore a un puntatore di interfaccia [IDropTarget](/windows/win32/api/oleidl/
 
 Restituisce un valore HRESULT che indica l'esito positivo o negativo dell'operazione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_GETOBJECT](/windows/win32/Controls/tb-getobject)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -983,7 +984,7 @@ DWORD GetExtendedStyle() const;
 
 Valore DWORD che rappresenta gli stili estesi attualmente in uso per il controllo Toolbar. Per un elenco di stili, vedere [stili estesi della barra degli strumenti](/windows/win32/Controls/toolbar-extended-styles)nel Windows SDK.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_GETEXTENDEDSTYLE](/windows/win32/Controls/tb-getextendedstyle)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -999,7 +1000,7 @@ CImageList* GetHotImageList() const;
 
 Puntatore a un oggetto [CImageList](../../mfc/reference/cimagelist-class.md) o null se non è impostato alcun elenco di immagini disabilitato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_GETHOTIMAGELIST](/windows/win32/Controls/tb-gethotimagelist)del messaggio Win32, come descritto nel Windows SDK. Un pulsante attivo appare evidenziato quando il puntatore del mouse si trova sopra di esso.
 
@@ -1015,7 +1016,7 @@ int GetHotItem() const;
 
 Indice in base zero dell'elemento attivo in una barra degli strumenti.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_GETHOTITEM](/windows/win32/Controls/tb-gethotitem)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -1031,7 +1032,7 @@ CImageList* GetImageList() const;
 
 Puntatore a un oggetto [CImageList](../../mfc/reference/cimagelist-class.md) o null se non è impostato alcun elenco di immagini.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_GETIMAGELIST](/windows/win32/Controls/tb-getimagelist)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -1048,7 +1049,7 @@ void GetInsertMark(TBINSERTMARK* ptbim) const;
 *ptbim*<br/>
 Puntatore a una struttura [TBINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark) che riceve il segno di inserimento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_GETINSERTMARK](/windows/win32/Controls/tb-getinsertmark)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -1064,7 +1065,7 @@ COLORREF GetInsertMarkColor() const;
 
 Valore COLORREF che contiene il colore del segno di inserimento corrente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_GETINSERTMARKCOLOR](/windows/win32/Controls/tb-getinsertmarkcolor)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -1090,7 +1091,7 @@ Indirizzo di una struttura [Rect](/windows/win32/api/windef/ns-windef-rect) o di
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione non recupera il rettangolo di delimitazione per i pulsanti il cui stato è impostato su TBSTATE_HIDDEN.
 
@@ -1111,7 +1112,7 @@ Puntatore a una struttura di [dimensioni](/windows/win32/api/windef/ns-windef-si
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_GETMAXSIZE](/windows/win32/Controls/tb-getmaxsize)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -1140,7 +1141,7 @@ void GetMetrics(LPTBMETRICS ptbm) const;
 *ptbm*<br/>
 Puntatore alla struttura [TBMETRICS](/windows/win32/api/commctrl/ns-commctrl-tbmetrics) dell' `CToolBarCtrl` oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [TB_GETMETRICS](/windows/win32/Controls/tb-getmetrics) , come descritto nel Windows SDK.
 
@@ -1166,7 +1167,7 @@ out Intero che riceve la spaziatura interna verticale del controllo della barra 
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [TB_GETPADDING](/windows/win32/Controls/tb-getpadding) , descritto nel Windows SDK.
 
@@ -1182,7 +1183,7 @@ CImageList* GetPressedImageList();
 
 Puntatore a un [CImageList](../../mfc/reference/cimagelist-class.md) che contiene l'elenco di immagini per il controllo corrente o null se non è impostato alcun elenco di immagini di questo tipo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [TB_GETPRESSEDIMAGELIST](/windows/win32/Controls/tb-getpressedimagelist) , descritto nel Windows SDK.
 
@@ -1208,7 +1209,7 @@ Puntatore a una struttura [Rect](/windows/win32/api/windef/ns-windef-rect) per r
 
 TRUE se l'operazione riesce; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_GETRECT](/windows/win32/Controls/tb-getrect)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -1224,7 +1225,7 @@ int GetRows() const;
 
 Numero di righe di pulsanti attualmente visualizzate sulla barra degli strumenti.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si noti che il numero di righe sarà sempre uno, a meno che la barra degli strumenti non sia stata creata con lo stile TBSTYLE_WRAPABLE.
 
@@ -1245,7 +1246,7 @@ Identificatore di comando del pulsante per il quale recuperare le informazioni.
 
 Informazioni sullo stato dei pulsanti in caso di esito positivo o-1 in caso contrario. Le informazioni sullo stato del pulsante possono essere una combinazione dei valori elencati in [CToolBarCtrl:: AddButtons](#addbuttons).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione è particolarmente utile se si desidera recuperare più di uno degli Stati dei pulsanti. Per recuperare solo uno stato, usare una delle funzioni membro seguenti: [IsButtonEnabled](#isbuttonenabled), [IsButtonChecked](#isbuttonchecked), [IsButtonPressed](#isbuttonpressed), [IsButtonHidden](#isbuttonhidden)o [IsButtonIndeterminate](#isbuttonindeterminate). Tuttavia, la `GetState` funzione membro è l'unico modo per rilevare lo stato del pulsante TBSTATE_WRAP.
 
@@ -1275,14 +1276,14 @@ Puntatore a un buffer utilizzato per restituire la stringa.
 *cchMaxLen*<br/>
 Lunghezza del buffer in byte.
 
-*Str*<br/>
+*str*<br/>
 Stringa.
 
 ### <a name="return-value"></a>Valore restituito
 
 Lunghezza della stringa in caso di esito positivo,-1 in caso contrario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_GETSTRING](/windows/win32/Controls/tb-getstring)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -1310,7 +1311,7 @@ CToolTipCtrl* GetToolTips() const;
 
 Puntatore all'oggetto [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) associato a questa barra degli strumenti o null se alla barra degli strumenti non è associato alcun controllo ToolTip.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Poiché il controllo Toolbar normalmente crea e gestisce il proprio controllo ToolTip, la maggior parte dei programmi non deve chiamare questa funzione.
 
@@ -1333,7 +1334,7 @@ Valore intero che indica la posizione di un punto su una barra degli strumenti. 
 
 Se il valore restituito è negativo, il punto non si trova all'interno di un pulsante. Il valore assoluto del valore restituito è l'indice di un elemento separatore o l'elemento non separatore più vicino.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_HITTEST](/windows/win32/Controls/tb-hittest)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -1359,7 +1360,7 @@ TRUE per nascondere il pulsante, FALSE per visualizzarlo.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se si desidera modificare più di uno stato di un pulsante, provare a chiamare [sestate](#setstate) .
 
@@ -1385,7 +1386,7 @@ TRUE per impostare lo stato indeterminato per il pulsante specificato, FALSE per
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I pulsanti indeterminati vengono visualizzati in grigio, ad esempio la modalità di ricerca del pulsante grassetto sulla barra degli strumenti di un elaboratore di testo quando il testo selezionato contiene caratteri in grassetto e normali. Se si desidera modificare più di uno stato di un pulsante, provare a chiamare [sestate](#setstate) .
 
@@ -1411,7 +1412,7 @@ Indirizzo di una `TBBUTTON` struttura contenente informazioni sul pulsante da in
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'immagine e/o la stringa il cui indice è stato fornito devono essere stati aggiunti in precedenza all'elenco del controllo Toolbar usando [AddBitmap](#addbitmap), [AddString](#addstring)e/o [AddStrings](#addstrings).
 
@@ -1437,7 +1438,7 @@ Puntatore a una struttura [TBINSERTMARK](/windows/win32/api/commctrl/ns-commctrl
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_INSERTMARKHITTEST](/windows/win32/Controls/tb-insertmarkhittest)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -1458,7 +1459,7 @@ Identificatore del comando del pulsante sulla barra degli strumenti.
 
 Diverso da zero se il pulsante è selezionato; in caso contrario, zero.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Prendere in considerazione la chiamata a [GetState](#getstate) se si desidera recuperare più di uno stato del pulsante.
 
@@ -1479,7 +1480,7 @@ Identificatore del comando del pulsante sulla barra degli strumenti.
 
 Diverso da zero se il pulsante è abilitato; in caso contrario, zero.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Prendere in considerazione la chiamata a [GetState](#getstate) se si desidera recuperare più di uno stato del pulsante.
 
@@ -1500,7 +1501,7 @@ Identificatore del comando del pulsante sulla barra degli strumenti.
 
 Diverso da zero se il pulsante è nascosto; in caso contrario, zero.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Prendere in considerazione la chiamata a [GetState](#getstate) se si desidera recuperare più di uno stato del pulsante.
 
@@ -1538,7 +1539,7 @@ in Identificatore del comando del pulsante sulla barra degli strumenti.
 
 Numero intero positivo se il pulsante è indeterminato, zero se il pulsante non è indeterminato, oppure-1 se si verifica un errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I pulsanti indeterminati vengono visualizzati in grigio, ad esempio la modalità di visualizzazione del pulsante in grassetto sulla barra degli strumenti di un elaboratore di testo quando il testo selezionato contiene caratteri in grassetto e normali. Prendere in considerazione la chiamata a [GetState](#getstate) se si desidera recuperare più di uno stato del pulsante.
 
@@ -1559,7 +1560,7 @@ Identificatore del comando del pulsante sulla barra degli strumenti.
 
 Diverso da zero se il pulsante è premuto; in caso contrario, zero.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Prendere in considerazione la chiamata a [GetState](#getstate) se si desidera recuperare più di uno stato del pulsante.
 
@@ -1578,7 +1579,7 @@ void LoadImages(
 *iBitmapID*<br/>
 ID di una bitmap contenente le immagini da caricare. Per specificare una risorsa bitmap personalizzata, impostare questo parametro sull'ID di una risorsa bitmap e impostare *hInst* su null. La risorsa bitmap verrà aggiunta all'elenco di immagini come una singola immagine. È possibile aggiungere bitmap standard definite dal sistema impostando *hInst* su HINST_COMMCTRL e impostando questo parametro su uno degli ID seguenti:
 
-|ID bitmap|Descrizione|
+|ID bitmap|Description|
 |---------------|-----------------|
 |IDB_HIST_LARGE_COLOR|Bitmap di Esplora risorse di grandi dimensioni|
 |IDB_HIST_SMALL_COLOR|Bitmap di Esplora risorse di piccole dimensioni|
@@ -1590,7 +1591,7 @@ ID di una bitmap contenente le immagini da caricare. Per specificare una risorsa
 *hInst*<br/>
 Handle dell'istanza di programma per l'applicazione chiamante. Questo parametro può essere HINST_COMMCTRL per caricare un elenco di immagini standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_LOADIMAGES](/windows/win32/Controls/tb-loadimages)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -1616,7 +1617,7 @@ Puntatore a un UINT che riceve l'identificatore di comando del pulsante che corr
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_MAPACCELERATOR](/windows/win32/Controls/tb-mapaccelerator)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -1642,7 +1643,7 @@ Specifica lo stato di evidenziazione da impostare. Per impostazione predefinita,
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_MARKBUTTON](/windows/win32/Controls/tb-markbutton)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -1668,7 +1669,7 @@ Indice in base zero della destinazione del pulsante.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_MOVEBUTTON](/windows/win32/Controls/tb-movebutton)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -1692,7 +1693,7 @@ in TRUE per premere il pulsante specificato; FALSE per rilasciare il pulsante sp
 
 TRUE se il metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se si desidera modificare più di uno stato di un pulsante, provare a chiamare [sestate](#setstate) .
 
@@ -1715,7 +1716,7 @@ in Puntatore a una struttura [TBREPLACEBITMAP](/windows/win32/api/commctrl/ns-co
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [TB_REPLACEBITMAP](/windows/win32/Controls/tb-replacebitmap) , descritto nel Windows SDK.
 
@@ -1802,7 +1803,7 @@ in Specifica se l'evidenziazione dell'ancoraggio è abilitata o disabilitata. Se
 
 Impostazione di ancoraggio precedente. Se è stata abilitata l'evidenziazione, questo valore è diverso da zero. Se l'evidenziazione non è abilitata, questo valore è zero.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo implementa il comportamento del [TB_SETANCHORHIGHLIGHT](/windows/win32/Controls/tb-setanchorhighlight)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -1823,7 +1824,7 @@ Larghezza e altezza, in pixel, delle immagini bitmap.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione deve essere chiamata solo prima di aggiungere bitmap alla barra degli strumenti. Se l'applicazione non imposta in modo esplicito le dimensioni della bitmap, il valore predefinito è 16 per 15 pixel.
 
@@ -1849,7 +1850,7 @@ Puntatore a una struttura [TBBUTTONINFO](/windows/win32/api/commctrl/ns-commctrl
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro implementa il comportamento del messaggio Win32 [TB_SETBUTTONINFO](/windows/win32/Controls/tb-setbuttoninfo), come descritto nel Windows SDK.
 
@@ -1870,7 +1871,7 @@ Larghezza e altezza, in pixel, dei pulsanti.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È necessario che le dimensioni del pulsante siano sempre almeno pari alle dimensioni della bitmap che racchiude. Questa funzione deve essere chiamata solo prima di aggiungere bitmap alla barra degli strumenti. Se l'applicazione non imposta in modo esplicito le dimensioni del pulsante, il valore predefinito è 24 per 22 pixel.
 
@@ -1891,7 +1892,7 @@ void SetButtonStructSize(int nSize);
 *nSize*<br/>
 Dimensione, in byte, della `TBBUTTON` struttura.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se si desidera archiviare dati aggiuntivi nella `TBBUTTON` struttura, è possibile derivare una nuova struttura da `TBBUTTON` , aggiungere i membri necessari o creare una nuova struttura contenente una `TBBUTTON` struttura come primo membro. Si chiamerà quindi questa funzione per indicare alla barra degli strumenti di controllare le dimensioni della nuova struttura.
 
@@ -1919,7 +1920,7 @@ Larghezza massima del pulsante, in pixel. Se il testo del pulsante è troppo amp
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_SETBUTTONWIDTH](/windows/win32/Controls/tb-setbuttonwidth)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -1958,7 +1959,7 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
 *lpColorScheme*\
 in Puntatore a una struttura [ColorScheme](/windows/win32/api/commctrl/ns-commctrl-colorscheme) che descrive il colore di evidenziazione e il colore dell'ombreggiatura del controllo Toolbar.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo non ha effetto se è impostato un tema visivo di Windows Vista.
 
@@ -1987,7 +1988,7 @@ Puntatore a un `CImageList` oggetto contenente le immagini che devono essere uti
 
 Puntatore a un oggetto [CImageList](../../mfc/reference/cimagelist-class.md) usato in precedenza dal controllo Toolbar per visualizzare le immagini dei pulsanti disabilitati.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_SETDISABLEDIMAGELIST](/windows/win32/Controls/tb-setdisabledimagelist)del messaggio Win32, come descritto nel Windows SDK. L'implementazione MFC di `SetDisabledImageList` Usa un `CImageList` oggetto contenente le immagini dei pulsanti disabilitati del controllo Toolbar, anziché un handle per un elenco di immagini.
 
@@ -2013,7 +2014,7 @@ Combinazione di uno o più flag di DT_, specificati nella funzione Win32 `DrawTe
 
 Valore DWORD contenente i flag di disegno del testo precedenti.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_SETDRAWTEXTFLAGS](/windows/win32/Controls/tb-setdrawtextflags)del messaggio Win32, come descritto nel Windows SDK. Questa funzione membro imposta i flag nella funzione Win32 `DrawText` , che disegna il testo nel rettangolo specificato, formattato in base alla modalità di impostazione dei flag.
 
@@ -2034,7 +2035,7 @@ Valore che specifica i nuovi stili estesi. Questo parametro può essere una comb
 
 DWORD che rappresenta gli stili estesi precedenti. Per un elenco di stili, vedere [stili estesi della barra degli strumenti](/windows/win32/Controls/toolbar-extended-styles)nel Windows SDK.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_SETEXTENDEDSTYLE](/windows/win32/Controls/tb-setextendedstyle)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -2055,7 +2056,7 @@ Puntatore a un `CImageList` oggetto contenente le immagini che devono essere uti
 
 Puntatore a un oggetto [CImageList](../../mfc/reference/cimagelist-class.md) usato in precedenza dal controllo Toolbar per visualizzare le immagini dei pulsanti di scelta rapida.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_SETHOTIMAGELIST](/windows/win32/Controls/tb-sethotimagelist)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -2078,7 +2079,7 @@ Numero di indice in base zero dell'elemento che verrà reso attivo. Se questo va
 
 Indice dell'elemento attivo precedente, oppure-1 se non è presente alcun elemento attivo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_SETHOTITEM](/windows/win32/Controls/tb-sethotitem)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -2099,7 +2100,7 @@ Puntatore a un `CImageList` oggetto contenente le immagini che devono essere uti
 
 Puntatore a un oggetto [CImageList](../../mfc/reference/cimagelist-class.md) usato in precedenza dal controllo Toolbar per visualizzare le immagini dei pulsanti nello stato predefinito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_SETIMAGELIST](/windows/win32/Controls/tb-setimagelist)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -2135,7 +2136,7 @@ void SetInsertMark(TBINSERTMARK* ptbim);
 *ptbim*<br/>
 Puntatore alla struttura [TBINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark) che contiene il segno di inserimento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_SETINSERTMARK](/windows/win32/Controls/tb-setinsertmark)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -2156,7 +2157,7 @@ Valore COLORREF che contiene il nuovo colore del segno di inserimento.
 
 Valore COLORREF che contiene il colore del segno di inserimento precedente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TB_SETINSERTMARKCOLOR](/windows/win32/Controls/tb-setinsertmarkcolor)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -2190,7 +2191,7 @@ void SetMetrics(LPTBMETRICS ptbm);
 *ptbm*<br/>
 Puntatore alla struttura [TBMETRICS](/windows/win32/api/commctrl/ns-commctrl-tbmetrics) dell' `CToolBarCtrl` oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [TB_SETMETRICS](/windows/win32/Controls/tb-setmetrics) , come descritto nel Windows SDK.
 
@@ -2207,7 +2208,7 @@ void SetOwner(CWnd* pWnd);
 *pWnd*<br/>
 Puntatore all' `CWnd` `CWnd` oggetto derivato da o che sarà la nuova finestra proprietaria per il controllo Toolbar.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La finestra proprietaria è la finestra che riceve le notifiche dalla barra degli strumenti.
 
@@ -2233,7 +2234,7 @@ in Specifica la spaziatura verticale del controllo barra degli strumenti, in pix
 
 DWORD la cui parola bassa contiene il valore di riempimento orizzontale precedente e la cui parola alta contiene il valore di riempimento verticale precedente. I valori di spaziatura interna sono misurati in pixel.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [TB_SETPADDING](/windows/win32/Controls/tb-setpadding) , descritto nel Windows SDK.
 
@@ -2265,7 +2266,7 @@ in Puntatore a un [CImageList](../../mfc/reference/cimagelist-class.md) che cont
 
 Puntatore a un [CImageList](../../mfc/reference/cimagelist-class.md) che contiene l'elenco di immagini precedente per il controllo corrente o null se non è stato impostato alcun elenco di immagini di questo tipo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [TB_SETPRESSEDIMAGELIST](/windows/win32/Controls/tb-setpressedimagelist) , descritto nel Windows SDK.
 
@@ -2297,7 +2298,7 @@ Indica se utilizzare più righe o meno righe se la barra degli strumenti non pu�
 *lpRect*<br/>
 Punta all'oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) o alla struttura [Rect](/windows/win32/api/windef/ns-windef-rect) che riceverà il nuovo rettangolo di delimitazione della barra degli strumenti.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se la barra degli strumenti non può essere ridimensionata al numero o alle righe richieste, verrà ridimensionata in base alla successiva dimensione valida più grande o successiva, a seconda del valore di *bLarger*. Se *bLarger* è true, il nuovo numero di righe sarà maggiore del numero richiesto. Se *bLarger* è false, il nuovo numero di righe sarà inferiore al numero richiesto.
 
@@ -2333,7 +2334,7 @@ Flag di stato. Può essere una combinazione dei valori elencati per gli Stati de
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione è particolarmente utile se si desidera impostare più di uno degli Stati dei pulsanti. Per impostare solo uno stato, utilizzare una delle funzioni membro seguenti: [EnableButton](#enablebutton), [CheckButton](#checkbutton), [HideButton](#hidebutton), [Indeterminate](#indeterminate)o [PressButton](#pressbutton).
 
@@ -2380,7 +2381,7 @@ Puntatore a una stringa Unicode che contiene lo stile di visualizzazione della b
 
 Il valore restituito non viene utilizzato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [TB_SETWINDOWTHEME](/windows/win32/Controls/tb-setwindowtheme) , come descritto nel Windows SDK.
 

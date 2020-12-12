@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CTable'
 title: Classe CTable
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: a967ef8fa2832afd56442ae4f988ba080d0b2872
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 62808080a68bbd5de00b39c43661e06617ba53f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845640"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317727"
 ---
 # <a name="ctable-class"></a>Classe CTable
 
@@ -49,11 +50,11 @@ Classe del set di righe.
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[Apri](#open)|Consente di aprire la tabella.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Vedere [CCommand](../../data/oledb/ccommand-class.md) per informazioni su come eseguire un comando per accedere a un set di righe.
 
@@ -104,11 +105,11 @@ in Numero di strutture [DBPROPSET](/previous-versions/windows/desktop/ms714367(v
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni, vedere [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -1,5 +1,6 @@
 ---
-title: Interfacce dell'oggetto Rowset
+description: 'Altre informazioni su: interfacce oggetto set di righe'
+title: Interfacce per oggetti Rowset
 ms.date: 10/24/2018
 helpviewer_keywords:
 - interfaces, OLE DB
@@ -8,24 +9,24 @@ helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 - interfaces, list of
 ms.assetid: 0d7a5d48-2fe4-434f-a84b-157c1fdc3494
-ms.openlocfilehash: d9c2c61714a98d9de09d8657352a14f296e35a58
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: fc7cbb0ee7c15cc7414144334018afc93888da01
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311918"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316856"
 ---
-# <a name="rowset-object-interfaces"></a>Interfacce dell'oggetto Rowset
+# <a name="rowset-object-interfaces"></a>Interfacce per oggetti Rowset
 
 Nella tabella seguente vengono illustrate le interfacce obbligatorie e facoltative definite da OLE DB per un oggetto set di righe.
 
-|Interfaccia|Obbligatorio?|Implementato da modelli di OLE DB?|
+|Interfaccia|Necessaria?|Implementato da modelli di OLE DB?|
 |---------------|---------------|--------------------------------------|
-|[IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85))|Mandatory|Yes|
-|[IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))|Mandatory|Sì|
-|[IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85))|Mandatory|Yes|
-|[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))|Mandatory|Sì|
-|[IRowsetInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))|Mandatory|Sì|
+|[IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85))|Obbligatorio|Sì|
+|[IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))|Obbligatorio|Sì|
+|[IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85))|Obbligatorio|Sì|
+|[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))|Obbligatorio|Sì|
+|[IRowsetInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))|Obbligatorio|Sì|
 |[IChapteredRowset](/previous-versions/windows/desktop/ms718180(v=vs.85))|Facoltativo|No|
 |[IColumnsInfo2](/previous-versions/windows/desktop/ms712953(v=vs.85))|Facoltativo|No|
 |[IColumnsRowset](/previous-versions/windows/desktop/ms722657(v=vs.85))|Facoltativo|No|
@@ -46,8 +47,8 @@ Nella tabella seguente vengono illustrate le interfacce obbligatorie e facoltati
 |[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816(v=vs.85))|Facoltativo|Sì|
 |[IRowsetBookmark](/previous-versions/windows/desktop/ms714246(v=vs.85))|Facoltativo|No|
 
-L'oggetto set di righe generato dalla `IAccessor`procedura `IRowset`guidata implementa `IRowsetInfo` , e tramite l'ereditarietà. Associa `IAccessorImpl` entrambe le colonne di output. L' `IRowset` interfaccia gestisce il recupero di righe e dati. L' `IRowsetInfo` interfaccia gestisce le proprietà del set di righe.
+L'oggetto set di righe generato dalla procedura guidata implementa `IAccessor` , `IRowset` e `IRowsetInfo` tramite l'ereditarietà. `IAccessorImpl`Associa entrambe le colonne di output. L' `IRowset` interfaccia gestisce il recupero di righe e dati. L' `IRowsetInfo` interfaccia gestisce le proprietà del set di righe.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

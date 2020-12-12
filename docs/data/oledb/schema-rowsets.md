@@ -1,15 +1,16 @@
 ---
+description: 'Ulteriori informazioni su: set di righe dello schema'
 title: Set di righe dello schema
 ms.date: 10/22/2018
 helpviewer_keywords:
 - schema rowsets, defined
 ms.assetid: 0716a065-230c-4c20-bb53-98870e79ea29
-ms.openlocfilehash: 41bce0b75a947dca64a135ab1ed462ae45f7c46d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 589a0d75bff05e9fd0cf02bfacddc60d148c83c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209586"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316778"
 ---
 # <a name="schema-rowsets"></a>Set di righe dello schema
 
@@ -17,6 +18,6 @@ Lo schema o i metadati sono informazioni sulla struttura o sull'organizzazione d
 
 Per informazioni sull'utilizzo dei set di righe dello schema, vedere [recupero di metadati con set di righe dello schema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

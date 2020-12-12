@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: sposta definizione percorso'
 title: Percorso definizione spostamento
 ms.date: 11/16/2016
 ms.assetid: c6d507ac-c61e-4da2-95c8-d504b42e2520
-ms.openlocfilehash: 7957e18732dfae92b7b3ae9cf7ecea441fc3a6b4
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
-ms.translationtype: HT
+ms.openlocfilehash: 5c0ae4ed5e14a50f4d54226fb298c34099c8aec7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693205"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318715"
 ---
 # <a name="move-definition-location"></a>Percorso definizione spostamento
 
@@ -17,7 +18,7 @@ ms.locfileid: "51693205"
 
 **Perché:** la funzione può essere spostata manualmente, ma questa funzionalità la sposterà automaticamente, creando il file di intestazione, se necessario.
 
-**Come:**
+**Come**
 
 1. Posizionare il cursore del testo o del mouse sulla funzione da spostare.
 
@@ -25,7 +26,7 @@ ms.locfileid: "51693205"
 
 1. Eseguire quindi una delle operazioni seguenti:
    * **Tastiera**
-     * Premere **CTRL+.** per attivare il menu **Azioni rapide e refactoring** e selezionare **Percorso definizione spostamento** dal menu di scelta rapida.
+     * Premere **CTRL +.** per attivare il menu **Azioni rapide e refactoring** e selezionare **Percorso definizione spostamento** dal menu di scelta rapida.
    * **Mouse**
      * Fare clic con il pulsante destro del mouse, selezionare il menu **Azioni rapide e refactoring** e selezionare **Percorso definizione spostamento** dal menu di scelta rapida.
 

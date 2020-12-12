@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: OLE DB modelli di consumer (C++)'
 title: Modelli consumer OLE DB (C++)
 ms.date: 10/22/2018
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - OLE DB consumer templates [C++]
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
-ms.openlocfilehash: d2697c955d2063bb075e06536b083c0b138aa4ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6aaf935234b8ec3396c97345ca7e38a0f8d806bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284046"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317155"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Modelli consumer OLE DB (C++)
 
-I modelli consumer OLE DB supportano la specifica di OLE DB versione 2.6. (I modelli Consumer OLE DB vengono testati con OLE DB 2.6 ma non supportano tutte le interfacce nella specifica). I modelli consumer consentono di ridurre notevolmente la quantità di codice da scrivere per implementare un consumer OLE DB. I vantaggi connessi al loro uso sono i seguenti:
+I modelli consumer OLE DB supportano la specifica di OLE DB versione 2.6. I modelli consumer OLE DB vengono testati rispetto OLE DB 2,6, ma non supportano tutte le interfacce nella specifica. I modelli consumer riducono al minimo la quantità di codice che è necessario scrivere per implementare un consumer OLE DB. I vantaggi connessi al loro uso sono i seguenti:
 
 - Facilità di accesso alle funzionalità di OLE DB e semplicità di integrazione con ATL e MFC.
 
@@ -24,7 +25,7 @@ I modelli consumer OLE DB supportano la specifica di OLE DB versione 2.6. (I mod
 
 - Tipi di dati C/C++ nativi per la programmazione con OLE DB.
 
-Per usare i modelli OLE DB è necessario avere una certa familiarità con i modelli C++, COM e le interfacce OLE DB. Se non si conosce sufficientemente OLE DB, vedere [Driver Microsoft OLE DB per SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server).
+Per usare i modelli OLE DB è necessario avere una certa familiarità con i modelli C++, COM e le interfacce OLE DB. Se non si ha familiarità con OLE DB, vedere [la pagina relativa al driver Microsoft OLE DB per SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server).
 
 I modelli OLE DB supportano il modello a oggetti OLE DB esistente anziché aggiungere un nuovo modello a oggetti. Le classi di primo livello dei modelli consumer OLE DB corrispondono ai componenti definiti nella specifica OLE DB. La struttura dei modelli consumer OLE DB comprende funzionalità avanzate, quali l'uso di più funzioni di accesso su un rowset. L'uso dei modelli e dell'ereditarietà multipla rende la libreria di piccole dimensioni e flessibile.
 
@@ -34,7 +35,7 @@ I consumer usano diversi tipi di oggetto, descritti negli argomenti elencati di 
 
 - [Origini dati e sessioni](../../data/oledb/data-sources-and-sessions.md)
 
-- [Funzioni di accesso e rowset](../../data/oledb/accessors-and-rowsets.md)
+- [Funzioni di accesso e set di righe](../../data/oledb/accessors-and-rowsets.md)
 
 - [Comandi e tabelle](../../data/oledb/commands-and-tables.md)
 
@@ -52,13 +53,13 @@ Un punto importante da tenere presente quando si usano i consumer è che in ognu
 
 Per altre informazioni, vedere i seguenti argomenti:
 
-- [Creazione di un consumer OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)
+- [Creazione di un consumer di OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)
 
 - [Scenari di consumer OLE DB comuni (esempi)](../../data/oledb/working-with-ole-db-consumer-templates.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Programmazione con OLE DB](../../data/oledb/ole-db-programming.md)<br/>
+[Programmazione OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Accesso ai dati](../data-access-in-cpp.md)<br/>
 [Documentazione di OLE DB SDK](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
 [Driver Microsoft OLE DB per SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)

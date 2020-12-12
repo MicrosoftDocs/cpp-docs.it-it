@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: miglioramento del provider di Read-Only semplice'
 title: Miglioramento di un provider semplice in sola lettura
 ms.date: 10/26/2018
 helpviewer_keywords:
@@ -7,25 +8,25 @@ helpviewer_keywords:
 - IRowsetLocate class, adding to OLE DB template providers
 - simple read-only poviders [C++]
 ms.assetid: cba0e09f-44c1-41c1-9456-332aa13dc158
-ms.openlocfilehash: d61f24a9a9abffe836a7f11bd5d1517fddf97fe7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00a0ea4fb9b759447026353ba0d78c7c856b15ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175355"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317636"
 ---
 # <a name="enhancing-the-simple-read-only-provider"></a>Miglioramento di un provider semplice in sola lettura
 
-In questa sezione viene illustrato come migliorare il [provider semplice in sola lettura](../../data/oledb/implementing-the-simple-read-only-provider.md) creato nella sezione precedente. `IRowsetLocateImpl` Crea un'implementazione per il `IRowsetLocate` interfaccia e aggiunge il supporto dei segnalibri.
+Questa sezione illustra come migliorare il provider di sola [lettura semplice](../../data/oledb/implementing-the-simple-read-only-provider.md) creato nella sezione precedente. `IRowsetLocateImpl` Crea un'implementazione per l' `IRowsetLocate` interfaccia e aggiunge il supporto dei segnalibri.
 
-Quando si dispone di un provider di lavoro, è possibile migliorare in modo da rendere l'aggiornamento del provider, gestire le transazioni o migliorare le prestazioni dell'algoritmo di recupero di righe. La maggior parte dei miglioramenti apportati ai provider implicare l'aggiunta di un'interfaccia a un oggetto COM esistente.
+Quando si dispone di un provider funzionante, potrebbe essere necessario ottimizzarlo per rendere l'aggiornamento del provider, gestire le transazioni o migliorare le prestazioni dell'algoritmo di recupero delle righe. La maggior parte dei miglioramenti del provider implica l'aggiunta di un'interfaccia a un oggetto COM esistente.
 
-L'esempio negli argomenti seguenti migliora il meccanismo di recupero di righe mediante l'aggiunta di `IRowsetLocate` interfacciarsi per `CAgentRowset`. Gli argomenti illustrano come a:
+Nell'esempio negli argomenti seguenti viene migliorato il meccanismo di recupero delle righe aggiungendo l' `IRowsetLocate` interfaccia a `CAgentRowset` . Gli argomenti illustrano come:
 
-- [Rendere RCustomRowset ereditare IRowsetLocate](../../data/oledb/modifying-the-inheritance-of-rmyproviderrowset.md).
+- [Rendere RCustomRowset ereditare da IRowsetLocate](../../data/oledb/modifying-the-inheritance-of-rmyproviderrowset.md).
 
-- [Determinazione dinamica delle colonne restituite al consumer](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).
+- [Determinare in modo dinamico le colonne restituite al consumer](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Creazione di un provider semplice in sola lettura](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>
+[Creazione di un provider di Read-Only semplice](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>

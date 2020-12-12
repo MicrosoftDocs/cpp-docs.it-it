@@ -1,16 +1,17 @@
 ---
+description: "Altre informazioni su: uso dell'IDE di Visual Studio per lo sviluppo di applicazioni desktop C++"
 title: Utilizzo dell'ambiente di sviluppo di Visual Studio per lo sviluppo di applicazioni desktop C++
 ms.date: 04/25/2019
 helpviewer_keywords:
 - IDE [C++]
 - Visual Studio IDE [C++]
 ms.assetid: d985c230-8e81-49d6-92be-2db9cac8d023
-ms.openlocfilehash: 082aa353d3046d9c9b20669e075e200c96017bce
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d82b3717525758810720121f1319c763e3de8f43
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371755"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318702"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>Utilizzo dell'ambiente di sviluppo di Visual Studio per lo sviluppo di applicazioni desktop C++
 
@@ -30,7 +31,7 @@ Se Visual Studio non è stato installato, procedere subito. In generale, è cons
 
 **Installazione di Visual Studio 2017**
 
-È possibile scaricare Visual Studio 2017 da [Download delle versioni precedenti di Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Quando si installa Visual Studio, assicurarsi di includere gli strumenti di sviluppo C++ perché non sono installati per impostazione predefinita. Per altre informazioni su come installare Visual Studio, vedere [Installare Visual Studio](/visualstudio/install/install-visual-studio). Per visualizzare le istruzioni per Visual Studio 2017, impostare il controllo del selettore Versione di Visual Studio su Visual Studio 2017.To see the instructions for Visual Studio 2017, set the Visual Studio **Version** selector control to Visual Studio 2017. Si trova nella parte superiore del sommario della pagina.
+È possibile scaricare Visual Studio 2017 da [Download delle versioni precedenti di Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Quando si installa Visual Studio, assicurarsi di includere gli strumenti di sviluppo C++ perché non sono installati per impostazione predefinita. Per altre informazioni su come installare Visual Studio, vedere [Installare Visual Studio](/visualstudio/install/install-visual-studio). Per visualizzare le istruzioni per Visual Studio 2017, impostare il controllo selezione **versione** di Visual Studio su visual studio 2017. Si trova nella parte superiore del sommario nella pagina.
 
 **Installazione di Visual Studio 2015**
 
@@ -56,6 +57,6 @@ Per iniziare a usare l'IDE di Visual Studio per compilare app C++, studiare ognu
 
 Dopo aver completato queste procedure dettagliate, si è pronti per iniziare a creare i progetti. Per altre informazioni e risorse relative allo sviluppo in C++, vedere [Visual C++ in Visual Studio](../overview/visual-cpp-in-visual-studio.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Introduzione allo sviluppo con Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio)

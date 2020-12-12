@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 1) C4657'
 title: Avviso del compilatore (livello 1) C4657
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4657
 ms.assetid: eb750050-cea6-4ead-b80c-d5dcd4971cfc
-ms.openlocfilehash: 6cc049d99339a6f19ca86cd5c7a10f062a1451a9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b0a1af53c145495e4daacfa09247ea8cc6fb5697
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80199499"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318788"
 ---
 # <a name="compiler-warning-level-1-c4657"></a>Avviso del compilatore (livello 1) C4657
 

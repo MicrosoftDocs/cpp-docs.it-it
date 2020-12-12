@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Classe IConvertTypeImpl'
 title: Classe IConvertTypeImpl
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - IConvertTypeImpl class
 - CanConvert method
 ms.assetid: 7f81e79e-7d3f-4cbe-b93c-d632a94b15f6
-ms.openlocfilehash: b4309e794a83e6c13dcf0051791cd1762a6d5012
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5ac0e70432dbb81bd3f8aa30fd2adb9cb9e3fc30
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845562"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317564"
 ---
 # <a name="iconverttypeimpl-class"></a>Classe IConvertTypeImpl
 
@@ -46,11 +47,11 @@ Classe derivata da `IConvertTypeImpl` .
 
 ### <a name="interface-methods"></a>Metodi di interfaccia
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[CanConvert](#canconvert)|Fornisce informazioni sulla disponibilità di conversioni di tipi in un comando o in un set di righe.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questa interfaccia è obbligatoria per i comandi, i set di righe e i set di righe dell'indice. `IConvertTypeImpl` implementa l'interfaccia delegando l'oggetto di conversione fornito da OLE DB.
 
@@ -70,11 +71,11 @@ STDMETHOD(CanConvert)(DBTYPE wFromType,
 
 Vedere [IConvertType:: CanConvert](/previous-versions/windows/desktop/ms711224(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 USA OLE DB conversione dei dati in `MSADC.DLL` .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

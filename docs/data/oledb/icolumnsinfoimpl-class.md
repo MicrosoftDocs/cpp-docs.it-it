@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe IColumnsInfoImpl'
 title: Classe IColumnsInfoImpl
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - GetColumnInfo method
 - MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-ms.openlocfilehash: 05e902e09c51012bd456751fb701ce2508a2fc16
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9f6586f4d0315904ea16baf5aa1837bc43107602
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845601"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317623"
 ---
 # <a name="icolumnsinfoimpl-class"></a>Classe IColumnsInfoImpl
 
@@ -59,12 +60,12 @@ Classe derivata da `IColumnsInfoImpl` .
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[GetColumnInfo](#getcolumninfo)|Restituisce i metadati della colonna necessari per la maggior parte degli utenti.|
 |[MapColumnIDs](#mapcolumnids)|Restituisce una matrice di ordinali delle colonne in un rowset, identificati dagli ID di colonna specificati.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Interfaccia obbligatoria nei set di righe e nei comandi. Per modificare il comportamento dell'implementazione del provider `IColumnsInfo` , è necessario modificare la mappa delle colonne del provider.
 
@@ -100,7 +101,7 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 
 Vedere [IColumnsInfo:: MapColumnIDs](/previous-versions/windows/desktop/ms714200(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

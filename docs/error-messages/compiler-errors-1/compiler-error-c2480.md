@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2480'
 title: Errore del compilatore C2480
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2480
 ms.assetid: 1a58d1c2-971b-4084-96fa-f94aa51c02f1
-ms.openlocfilehash: 3e495a8019405a558511637467133877dae1183e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 0c7f73b7e1aa205d38577602b93907309935b216
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74743523"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316544"
 ---
 # <a name="compiler-error-c2480"></a>Errore del compilatore C2480
 
 ' Identifier ':' thread ' è valido solo per gli elementi di dati con estensione statica
 
-Non è possibile usare l'attributo `thread` con una variabile automatica, un membro dati non statico, un parametro di funzione o dichiarazioni o definizioni di funzione.
+Non è possibile usare l' `thread` attributo con una variabile automatica, un membro dati non statico, un parametro di funzione o una dichiarazione di funzione o definizioni.
 
-Usare l'attributo `thread` per variabili globali, membri dati statici e solo variabili statiche locali.
+Usare l' `thread` attributo per variabili globali, membri dati statici e solo variabili statiche locali.
 
 L'esempio seguente genera l'C2480:
 

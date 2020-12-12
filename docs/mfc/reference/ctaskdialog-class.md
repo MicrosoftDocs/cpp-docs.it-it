@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CTaskDialog'
 title: CTaskDialog Class
 ms.date: 11/19/2018
 f1_keywords:
@@ -116,12 +117,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: 3fd67eed7e80a2e594710df8ae8bc6fd13f0e96c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 91cd3caec703f8e81116fccd75c0457abb69a3e9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837671"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318585"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -133,17 +134,17 @@ Finestra di dialogo popup che funziona come finestra di messaggio, ma che può v
 class CTaskDialog : public CObject
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="constructors"></a>Costruttori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[CTaskDialog:: CTaskDialog](#ctaskdialog)|Costruisce un oggetto `CTaskDialog`.|
 
 ### <a name="methods"></a>Metodi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[CTaskDialog:: AddCommandControl](#addcommandcontrol)|Aggiunge un controllo pulsante di comando a `CTaskDialog` .|
 |[CTaskDialog:: AddRadioButton](#addradiobutton)|Aggiunge un pulsante di opzione a `CTaskDialog` .|
@@ -202,7 +203,7 @@ class CTaskDialog : public CObject
 
 ### <a name="data-members"></a>Membri dei dati
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |`m_aButtons`|Matrice di controlli dei pulsanti di comando per l'oggetto `CTaskDialog` .|
 |`m_aRadioButtons`|Matrice di controlli pulsante di opzione per l'oggetto `CTaskDialog` .|
@@ -232,7 +233,7 @@ class CTaskDialog : public CObject
 |`m_strTitle`|Titolo della classe `CTaskDialog`.|
 |`m_strVerification`|Stringa `CTaskDialog` visualizzata a destra della casella di controllo della verifica.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La `CTaskDialog` classe sostituisce la finestra di messaggio standard di Windows e include funzionalità aggiuntive, ad esempio nuovi controlli, per raccogliere informazioni dall'utente. Questa classe si trova nella libreria MFC in Visual Studio 2010 e versioni successive. `CTaskDialog`È disponibile a partire da Windows Vista. Nelle versioni precedenti di Windows non è possibile visualizzare l' `CTaskDialog` oggetto. Usare `CTaskDialog::IsSupported` per determinare in fase di esecuzione se l'utente corrente può visualizzare la finestra di dialogo attività. La finestra di messaggio standard di Windows è ancora supportata.
 
@@ -277,7 +278,7 @@ in Parametro booleano che indica se il pulsante nuovo è abilitato o disabilitat
 *bRequiresElevation*<br/>
 in Parametro booleano che indica se un comando richiede l'elevazione dei privilegi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `CTaskDialog Class`Può visualizzare un numero illimitato di controlli del pulsante di comando. Tuttavia, se in un oggetto `CTaskDialog` vengono visualizzati i controlli dei pulsanti di comando, è possibile visualizzare un massimo di sei pulsanti. Se un oggetto `CTaskDialog` non dispone di alcun controllo del pulsante di comando, può visualizzare un numero illimitato di pulsanti.
 
@@ -309,7 +310,7 @@ in Stringa `CTaskDialog` visualizzata accanto al pulsante di opzione.
 *bEnabled*<br/>
 in Parametro booleano che indica se il pulsante di opzione è abilitato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I pulsanti di opzione per la [classe CTaskDialog](../../mfc/reference/ctaskdialog-class.md) consentono di raccogliere informazioni dall'utente. Usare la funzione [CTaskDialog:: GetSelectedRadioButtonID](#getselectedradiobuttonid) per determinare il pulsante di opzione selezionato.
 
@@ -333,7 +334,7 @@ void ClickCommandControl(int nCommandControlID) const;
 *nCommandControlID*<br/>
 in ID di comando del controllo su cui fare clic.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo genera il messaggio di Windows TDM_CLICK_BUTTON.
 
@@ -351,7 +352,7 @@ void ClickRadioButton(int nRadioButtonID) const;
 *nRadioButtonID*<br/>
 in ID del pulsante di opzione da fare clic.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo genera il messaggio di Windows TDM_CLICK_RADIO_BUTTON.
 
@@ -405,7 +406,7 @@ in ID stringa del primo comando.
 *nIDCommandControlsLast*<br/>
 in ID di stringa dell'ultimo comando.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È possibile aggiungere un oggetto `CTaskDialog` all'applicazione in due modi. Il primo modo consiste nell'usare uno dei costruttori per creare un oggetto `CTaskDialog` e visualizzarlo usando [CTaskDialog::D omodal](#domodal). Il secondo modo consiste nell'usare la funzione statica [CTaskDialog:: ShowDialog](#showdialog), che consente di visualizzare un `CTaskDialog` oggetto senza creare in modo esplicito un `CTaskDialog` oggetto.
 
@@ -434,7 +435,7 @@ in Finestra padre per l'oggetto `CTaskDialog` .
 
 Intero che corrisponde alla selezione effettuata dall'utente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Visualizza questa istanza di [CTaskDialog](../../mfc/reference/ctaskdialog-class.md). L'applicazione attende quindi che l'utente chiuda la finestra di dialogo.
 
@@ -456,7 +457,7 @@ int GetCommonButtonCount() const;
 
 Il numero di pulsanti comuni disponibili.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I pulsanti comuni sono i pulsanti predefiniti che vengono forniti a [CTaskDialog:: CTaskDialog](#ctaskdialog). La [classe CTaskDialog](../../mfc/reference/ctaskdialog-class.md) Visualizza i pulsanti nella parte inferiore della finestra di dialogo.
 
@@ -508,7 +509,7 @@ int GetOptions() const;
 
 Flag per l'oggetto `CTaskDialog` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni sulle opzioni disponibili per la [classe CTaskDialog](../../mfc/reference/ctaskdialog-class.md), vedere [CTaskDialog:: SetOptions](#setoptions).
 
@@ -528,7 +529,7 @@ int GetSelectedCommandControlID() const;
 
 ID del controllo del pulsante di comando attualmente selezionato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Non è necessario usare questo metodo per recuperare l'ID del pulsante di comando selezionato dall'utente. Tale ID viene restituito da [CTaskDialog::D omodal](#domodal) o [CTaskDialog:: ShowDialog](#showdialog).
 
@@ -548,7 +549,7 @@ int GetSelectedRadioButtonID() const;
 
 ID del pulsante di opzione selezionato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È possibile utilizzare questo metodo dopo che l'utente chiude la finestra di dialogo per recuperare il pulsante di opzione selezionato.
 
@@ -589,7 +590,7 @@ in ID del controllo o del pulsante del pulsante di comando da verificare.
 
 TRUE se il controllo è abilitato; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È possibile utilizzare questo metodo per determinare la disponibilità di entrambi i controlli pulsante di comando e i pulsanti comuni della `CTaskDialog` classe *.
 
@@ -616,7 +617,7 @@ in ID del pulsante di opzione da testare.
 
 TRUE se il pulsante di opzione è abilitato; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se *nRadioButtonID* non è un identificatore valido per un pulsante di opzione, questo metodo genera un'eccezione.
 
@@ -636,7 +637,7 @@ static BOOL IsSupported();
 
 TRUE se il computer supporta `CTaskDialog` ; In caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa funzione per determinare in fase di esecuzione se il computer che esegue l'applicazione supporta la `CTaskDialog` classe. Se il computer non supporta `CTaskDialog` , è necessario fornire un altro metodo per comunicare le informazioni all'utente. L'applicazione verrà arrestata in modo anomalo se tenta di utilizzare un `CTaskDialog` in un computer che non supporta la `CTaskDialog` classe.
 
@@ -662,7 +663,7 @@ in ID stringa del primo comando.
 *nIDCommandControlsLast*<br/>
 in ID di stringa dell'ultimo comando.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo crea i controlli dei pulsanti di comando usando i dati del file di risorse dell'applicazione. La tabella delle stringhe nel file di risorse contiene diverse stringhe con ID di stringa associati. I nuovi controlli dei pulsanti di comando aggiunti utilizzando questo metodo utilizzano la stringa per la didascalia del controllo e l'ID di stringa per l'ID del controllo. L'intervallo di stringhe selezionato viene fornito da *nIDCommandControlsFirst* e *nCommandControlsLast*, inclusi. Se è presente una voce vuota nell'intervallo, il metodo non aggiunge un controllo pulsante di comando per tale voce.
 
@@ -690,7 +691,7 @@ in ID stringa del primo pulsante di opzione.
 *nIDRadioButtonsLast*<br/>
 in ID di stringa dell'ultimo pulsante di opzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo crea pulsanti di opzione usando i dati del file di risorse dell'applicazione. La tabella delle stringhe nel file di risorse contiene diverse stringhe con ID di stringa associati. I nuovi pulsanti di opzione aggiunti utilizzando questo metodo utilizzano la stringa per la didascalia del pulsante di opzione e l'ID di stringa per l'ID del pulsante di opzione. L'intervallo di stringhe selezionato viene fornito da *nIDRadioButtonsFirst* e *nRadioButtonsLast*, inclusi. Se è presente una voce vuota nell'intervallo, il metodo non aggiunge un pulsante di opzione per tale voce.
 
@@ -714,7 +715,7 @@ void NavigateTo(CTaskDialog& oTaskDialog) const;
 *oTaskDialog*<br/>
 in Oggetto `CTaskDialog` che riceve lo stato attivo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo nasconde l'oggetto corrente `CTaskDialog` quando Visualizza *oTaskDialog*. *OTaskDialog* viene visualizzato nella stessa posizione dell'oggetto corrente `CTaskDialog` .
 
@@ -735,7 +736,7 @@ in ID del controllo del pulsante di comando selezionato dall'utente.
 
 L'implementazione predefinita restituisce S_OK.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Eseguire l'override di questo metodo in una classe derivata per implementare il comportamento personalizzato.
 
@@ -751,7 +752,7 @@ virtual HRESULT OnCreate();
 
 L'implementazione predefinita restituisce S_OK.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Eseguire l'override di questo metodo in una classe derivata per implementare il comportamento personalizzato.
 
@@ -767,7 +768,7 @@ virtual HRESULT OnDestroy();
 
 L'implementazione predefinita restituisce S_OK.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Eseguire l'override di questo metodo in una classe derivata per implementare il comportamento personalizzato.
 
@@ -788,7 +789,7 @@ in Un valore diverso da zero indica che vengono visualizzate le informazioni agg
 
 L'implementazione predefinita restituisce S_OK.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Eseguire l'override di questo metodo in una classe derivata per implementare il comportamento personalizzato.
 
@@ -804,7 +805,7 @@ virtual HRESULT OnHelp();
 
 L'implementazione predefinita restituisce S_OK.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Eseguire l'override di questo metodo in una classe derivata per implementare il comportamento personalizzato.
 
@@ -825,7 +826,7 @@ in Stringa che rappresenta il collegamento ipertestuale.
 
 L'implementazione predefinita restituisce S_OK.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo chiama [ShellExecute](/windows/win32/api/shellapi/nf-shellapi-shellexecutew) prima che venga restituito S_OK.
 
@@ -843,7 +844,7 @@ virtual HRESULT OnInit();
 
 L'implementazione predefinita restituisce S_OK.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Eseguire l'override di questo metodo in una classe derivata per implementare il comportamento personalizzato.
 
@@ -859,7 +860,7 @@ virtual HRESULT OnNavigatePage();
 
 L'implementazione predefinita restituisce S_OK.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Eseguire l'override di questo metodo in una classe derivata per implementare il comportamento personalizzato.
 
@@ -880,7 +881,7 @@ in ID del controllo pulsante di opzione su cui l'utente ha fatto clic.
 
 L'implementazione predefinita restituisce S_OK.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Eseguire l'override di questo metodo in una classe derivata per implementare il comportamento personalizzato.
 
@@ -901,7 +902,7 @@ in Tempo in millisecondi da quando `CTaskDialog` è stato creato o è stato reim
 
 L'implementazione predefinita restituisce S_OK.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Eseguire l'override di questo metodo in una classe derivata per implementare il comportamento personalizzato.
 
@@ -922,7 +923,7 @@ in TRUE indica che la casella di controllo verifica è selezionata. FALSE indica
 
 L'implementazione predefinita restituisce S_OK.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Eseguire l'override di questo metodo in una classe derivata per implementare il comportamento personalizzato.
 
@@ -972,7 +973,7 @@ in Parametro booleano che indica se il controllo del pulsante di comando specifi
 *bRequiresElevation*<br/>
 in Parametro booleano che indica se il controllo del pulsante di comando specificato richiede l'elevazione dei privilegi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Utilizzare questo metodo per modificare se un controllo pulsante di comando è abilitato o richiede l'elevazione dopo che è stato aggiunto alla `CTaskDialog` classe.
 
@@ -998,7 +999,7 @@ in Maschera per i pulsanti comuni da disabilitare.
 *nElevationButtonMask*<br/>
 in Maschera per i pulsanti comuni che richiedono l'elevazione dei privilegi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È possibile impostare i pulsanti comuni disponibili per un'istanza della [classe CTaskDialog](../../mfc/reference/ctaskdialog-class.md) usando il costruttore [CTaskDialog:: CTaskDialog](#ctaskdialog) e il metodo [CTaskDialog:: SetCommonButtons](#setcommonbuttons). `CTaskDialog::SetCommonButtonOptions` non supporta l'aggiunta di nuovi pulsanti comuni.
 
@@ -1032,7 +1033,7 @@ in Maschera dei pulsanti da disabilitare.
 *nElevationButtonMask*<br/>
 in Maschera dei pulsanti che richiedono l'elevazione dei privilegi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Non è possibile chiamare questo metodo dopo la creazione della finestra di visualizzazione per questa istanza della `CTaskDialog` classe. In tal caso, questo metodo genera un'eccezione.
 
@@ -1059,7 +1060,7 @@ void SetContent(const CString& strContent);
 *strContent*<br/>
 in Stringa da visualizzare all'utente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il contenuto della `CTaskDialog` classe è il testo visualizzato all'utente nella sezione principale della finestra di dialogo.
 
@@ -1080,7 +1081,7 @@ void SetDefaultCommandControl(int nCommandControlID);
 *nCommandControlID*<br/>
 in ID del controllo del pulsante di comando come valore predefinito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il controllo pulsante di comando predefinito è il controllo selezionato quando l'oggetto `CTaskDialog` viene visualizzato per la prima volta all'utente.
 
@@ -1103,11 +1104,11 @@ void SetDefaultRadioButton(int nRadioButtonID);
 *nRadioButtonID*<br/>
 in ID del pulsante di opzione come valore predefinito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il pulsante di opzione predefinito è il pulsante selezionato quando l'oggetto `CTaskDialog` viene visualizzato per la prima volta all'utente.
 
-Questo metodo genera un'eccezione se il pulsante di opzione specificato da *nRadioButtonID*non è stato trovato.
+Questo metodo genera un'eccezione se il pulsante di opzione specificato da *nRadioButtonID* non è stato trovato.
 
 ### <a name="example"></a>Esempio
 
@@ -1126,7 +1127,7 @@ void SetDialogWidth(int nWidth = 0);
 *nWidth*<br/>
 in Larghezza, in pixel, della finestra di dialogo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il parametro *nWidth* deve essere maggiore o uguale a 0. In caso contrario, questo metodo genera un'eccezione.
 
@@ -1158,7 +1159,7 @@ in Stringa `CTaskDialog` visualizzata accanto al pulsante di espansione quando l
 *strExpandedLabel*<br/>
 in Stringa `CTaskDialog` visualizzata accanto al pulsante di espansione quando viene visualizzata l'area espansa.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'area di espansione della `CTaskDialog` classe consente di fornire informazioni aggiuntive all'utente. L'area di espansione si trova nella parte principale di `CTaskDialog` , che si trova immediatamente sotto il titolo e la stringa di contenuto.
 
@@ -1185,7 +1186,7 @@ in Nuova icona per l'oggetto `CTaskDialog` .
 *lpszFooterIcon*<br/>
 in Nuova icona per l'oggetto `CTaskDialog` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'icona del piè di pagina viene visualizzata nella parte inferiore della [classe CTaskDialog](../../mfc/reference/ctaskdialog-class.md). Il testo del piè di pagina può essere associato. È possibile modificare il testo del piè di pagina con [CTaskDialog:: SetFooterText](#setfootertext).
 
@@ -1210,7 +1211,7 @@ void SetFooterText(const CString& strFooterText);
 *strFooterText*<br/>
 in Nuovo testo per il piè di pagina.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'icona piè di pagina viene visualizzata accanto al testo del piè di pagina nella parte inferiore di `CTaskDialog` . È possibile modificare l'icona del piè di pagina con [CTaskDialog:: SetFooterIcon](#setfootericon).
 
@@ -1235,7 +1236,7 @@ in Nuova icona.
 *lpszMainIcon*<br/>
 in Nuova icona.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo genera un'eccezione con la macro [verificare](diagnostic-services.md#ensure) se `CTaskDialog` è visualizzato o se il parametro di input è null.
 
@@ -1258,7 +1259,7 @@ void SetMainInstruction(const CString& strInstructions);
 *strInstructions*<br/>
 in Nuova istruzione principale.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'istruzione principale della `CTaskDialog` classe è il testo visualizzato all'utente in un tipo di carattere in grassetto. Si trova nella finestra di dialogo sotto la barra del titolo.
 
@@ -1279,13 +1280,13 @@ void SetOptions(int nOptionFlag);
 *nOptionFlag*<br/>
 in Set di flag da utilizzare per l'oggetto `CTaskDialog` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo cancella tutte le opzioni correnti per l'oggetto `CTaskDialog` . Per mantenere le opzioni correnti, è necessario recuperarle prima con [CTaskDialog:: GetOptions](#getoptions) e combinarle con le opzioni che si desidera impostare.
 
 Nella tabella seguente sono elencate tutte le opzioni valide.
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |TDF_ENABLE_HYPERLINKS|Abilita i collegamenti ipertestuali nell'oggetto `CTaskDialog` .|
 |TDF_USE_HICON_MAIN|Configura l'oggetto `CTaskDialog` per l'utilizzo di un oggetto `HICON` per l'icona principale. L'alternativa consiste nell'usare un oggetto `LPCWSTR` .|
@@ -1326,7 +1327,7 @@ in TRUE per abilitare la barra di selezione; FALSE per disabilitare la barra di 
 *nMarqueeSpeed*<br/>
 in Intero che indica la velocità della barra di selezione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La barra di selezione viene visualizzata sotto il testo principale della `CTaskDialog` classe.
 
@@ -1351,7 +1352,7 @@ void SetProgressBarPosition(int nProgressPos);
 *nProgressPos*<br/>
 in Posizione per l'indicatore di stato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo genera un'eccezione con la macro di [Verifica](diagnostic-services.md#ensure) se *nProgressPos* non è presente nell'intervallo della barra di stato. È possibile modificare l'intervallo dell'indicatore di stato con [CTaskDialog:: SetProgressBarRange](#setprogressbarrange).
 
@@ -1377,7 +1378,7 @@ in Limite inferiore dell'indicatore di stato.
 *nRangeMax*<br/>
 in Limite superiore dell'indicatore di stato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La posizione dell'indicatore di stato è relativa a *nRangeMin* e *nRangeMax*. Ad esempio, se *nRangeMin* è 50 e *nRangeMax* è 100, la posizione 75 si trova a metà nell'indicatore di stato. Usare [CTaskDialog:: SetProgressBarPosition](#setprogressbarposition) per impostare la posizione dell'indicatore di stato.
 
@@ -1402,13 +1403,13 @@ void SetProgressBarState(int nState = PBST_NORMAL);
 *nState*<br/>
 in Stato dell'indicatore di stato. Per i valori possibili, vedere la sezione Osservazioni.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo genera un'eccezione con la macro di [Verifica](diagnostic-services.md#ensure) se `CTaskDialog` è già visualizzato e dispone di un indicatore di stato Marquee.
 
 Nella tabella seguente sono elencati i valori possibili per *nState*. In tutti questi casi, l'indicatore di stato verrà riempito con il colore normale fino a raggiungere la posizione di arresto designata. A questo punto, cambierà il colore in base allo stato.
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |PBST_NORMAL|Quando l'indicatore di stato si riempie, non `CTaskDialog` modifica il colore della barra. Per impostazione predefinita, il colore normale è verde.|
 |PBST_ERROR|Al termine del riempimento dell'indicatore di stato, il `CTaskDialog` colore della barra viene modificato in un colore di errore. Per impostazione predefinita, si tratta di un rosso.|
@@ -1438,7 +1439,7 @@ in ID del controllo pulsante di opzione.
 *bEnabled*<br/>
 in TRUE per abilitare il pulsante di opzione; FALSE per disabilitare il pulsante di opzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo genera un'eccezione con la macro di [Verifica](diagnostic-services.md#ensure) se *nRadioButtonID* non è un ID valido per un pulsante di opzione.
 
@@ -1476,7 +1477,7 @@ void SetVerificationCheckboxText(CString& strVerificationText);
 *strVerificationText*<br/>
 in Testo visualizzato da questo metodo accanto alla casella di controllo verifica.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo genera un'eccezione con la macro [assicurarsi](diagnostic-services.md#ensure) se questa istanza della `CTaskDialog` classe è già visualizzata.
 
@@ -1497,7 +1498,7 @@ void SetWindowTitle(CString& strWindowTitle);
 *strWindowTitle*<br/>
 in Nuovo titolo per l'oggetto `CTaskDialog` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ### <a name="example"></a>Esempio
 
@@ -1549,7 +1550,7 @@ in Stringa da utilizzare come piè di pagina.
 
 Intero che corrisponde alla selezione effettuata dall'utente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo statico consente di creare un'istanza della `CTaskDialog` classe senza creare in modo esplicito un `CTaskDialog` oggetto nel codice. Poiché non esiste alcun `CTaskDialog` oggetto, non è possibile chiamare altri metodi di `CTaskDialog` se si utilizza questo metodo per visualizzare un oggetto `CTaskDialog` all'utente.
 
@@ -1598,7 +1599,7 @@ in Puntatore all' `CTaskDialog` oggetto a cui si applica il messaggio di callbac
 
 Dipende dal codice di notifica specifico. Per altre informazioni, vedere la sezione Osservazioni.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione predefinita di `TaskDialogCallback` gestisce il messaggio specifico e quindi chiama il metodo appropriato per la [classe CTaskDialog](../../mfc/reference/ctaskdialog-class.md). Ad esempio, in risposta al messaggio di TDN_BUTTON_CLICKED, `TaskDialogCallback` chiama [CTaskDialog:: OnCommandControlClick](#oncommandcontrolclick).
 
@@ -1618,7 +1619,7 @@ I valori per *wParam* e *lParam* dipendono dal messaggio generato specifico. È 
 |TDN_HELP|Non usato.|Non usato.|
 |TDN_EXPANDO_BUTTON_CLICKED|0 se l'area di espansione è compressa; diverso da zero se viene visualizzato il testo di espansione.|Non usato.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>

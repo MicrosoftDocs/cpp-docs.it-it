@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: OLE DB consumer e provider'
 title: Consumer e provider OLE DB
 ms.date: 10/22/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - OLE DB consumers
 - OLE DB, data model
 ms.assetid: 886cb39d-652b-4557-93f0-4b1b0754d8bc
-ms.openlocfilehash: d57ded9d084971c3562fc7f22e6a1a12a4e3368d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: dedcbe7837cf7fad5bc9db8832e34edd3859a02b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210078"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317142"
 ---
 # <a name="ole-db-consumers-and-providers"></a>Consumer e provider OLE DB
 
@@ -25,7 +26,7 @@ Per i ruoli, un consumer chiama i metodi sulle interfacce OLE DB; un provider OL
 
 OLE DB evita i termini client e server perché questi ruoli non hanno sempre senso, soprattutto in una situazione a più livelli. Poiché un consumer può essere un componente di un livello che funge da altro componente, per chiamarlo un componente client potrebbe creare confusione. Inoltre, un provider a volte agisce in modo più simile a un driver di database rispetto a un server.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Programmazione con OLE DB](../../data/oledb/ole-db-programming.md)<br/>
-[Panoramica della programmazione con OLE DB](../../data/oledb/ole-db-programming-overview.md)
+[Programmazione OLE DB](../../data/oledb/ole-db-programming.md)<br/>
+[Panoramica della programmazione OLE DB](../../data/oledb/ole-db-programming-overview.md)

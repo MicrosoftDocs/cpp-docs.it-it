@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Classe ICommandPropertiesImpl'
 title: Classe ICommandPropertiesImpl
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: bd4dd73c79085a2c2d85a5dbacbfd20bc920108e
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: bf6a6f9a3ddd43a61671a85a791d63958f63c3e3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91501756"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317565"
 ---
 # <a name="icommandpropertiesimpl-class"></a>Classe ICommandPropertiesImpl
 
@@ -49,12 +50,12 @@ Classe Properties.
 
 ### <a name="interface-methods"></a>Metodi di interfaccia
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[GetProperties](#getproperties)|Restituisce l'elenco di proprietà nel gruppo di proprietà del set di righe attualmente richiesto per il set di righe.|
 |[SetProperties](#setproperties)|Imposta le proprietà nel gruppo di proprietà del set di righe.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questa operazione è obbligatoria nei comandi. L'implementazione viene fornita da una funzione statica definita dalla [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map) macro.
 
@@ -75,7 +76,7 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 
 Vedere [ICommandProperties:: GetProperties](/previous-versions/windows/desktop/ms723119(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Vedere [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map).
 
@@ -94,7 +95,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 Vedere [ICommandProperties:: seproperties](/previous-versions/windows/desktop/ms711497(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
