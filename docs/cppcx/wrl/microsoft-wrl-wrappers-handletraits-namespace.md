@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: spazio dei nomi Microsoft:: WRL:: Wrappers:: HandleTraits'
 title: Spazio dei nomi Microsoft::WRL::Wrappers::HandleTraits
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - HandleTraits namespace
 ms.assetid: 2fb5c6d1-bfc2-4e09-91eb-31705064ffb3
-ms.openlocfilehash: b19cc426fc7c1b4fc6ec0638730d59998f8c108a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4bbc970a6d3445e8acda752be1a2030ee99759a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213733"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178056"
 ---
 # <a name="microsoftwrlwrappershandletraits-namespace"></a>Spazio dei nomi Microsoft::WRL::Wrappers::HandleTraits
 
@@ -28,17 +29,17 @@ namespace Microsoft::WRL::Wrappers::HandleTraits;
 
 ### <a name="structures"></a>Strutture
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[Struttura CriticalSectionTraits](criticalsectiontraits-structure.md)|Specializza un oggetto `CriticalSection` per supportare una sezione critica non valida o una funzione per rilasciare una sezione critica.|
-|[Struttura EventTraits](eventtraits-structure.md)|Definisce le caratteristiche di un handle di classe `Event`.|
-|[Struttura FileHandleTraits](filehandletraits-structure.md)|Definisce le caratteristiche di un handle di file.|
-|[Struttura HANDLENullTraits](handlenulltraits-structure.md)|Definisce le caratteristiche comuni di un handle non inizializzato.|
-|[Struttura HANDLETraits](handletraits-structure.md)|Definisce le caratteristiche comuni di un handle.|
-|[Struttura MutexTraits](mutextraits-structure.md)|Definisce le caratteristiche comuni della classe [mutex](mutex-class.md) .|
-|[Struttura SemaphoreTraits](semaphoretraits-structure.md)|Definisce le caratteristiche comuni di un oggetto semaforo.|
-|[Struttura SRWLockExclusiveTraits](srwlockexclusivetraits-structure.md)|Descrive le caratteristiche comuni della classe `SRWLock` in modalità di blocco esclusivo.|
-|[Struttura SRWLockSharedTraits](srwlocksharedtraits-structure.md)|Descrive le caratteristiche comuni della classe `SRWLock` in modalità di blocco condiviso.|
+|[CriticalSectionTraits (struttura)](criticalsectiontraits-structure.md)|Specializza un `CriticalSection` oggetto per supportare una sezione critica non valida o una funzione per rilasciare una sezione critica.|
+|[EventTraits (struttura)](eventtraits-structure.md)|Definisce le caratteristiche di un `Event` handle di classe.|
+|[FileHandleTraits (struttura)](filehandletraits-structure.md)|Definisce le caratteristiche di un handle di file.|
+|[HANDLENullTraits (struttura)](handlenulltraits-structure.md)|Definisce le caratteristiche comuni di un handle non inizializzato.|
+|[HANDLETraits (struttura)](handletraits-structure.md)|Definisce le caratteristiche comuni di un handle.|
+|[MutexTraits (struttura)](mutextraits-structure.md)|Definisce le caratteristiche comuni della classe [mutex](mutex-class.md) .|
+|[SemaphoreTraits (struttura)](semaphoretraits-structure.md)|Definisce le caratteristiche comuni di un oggetto semaforo.|
+|[SRWLockExclusiveTraits (Struttura)](srwlockexclusivetraits-structure.md)|Descrive le caratteristiche comuni della `SRWLock` classe in modalità di blocco esclusivo.|
+|[SRWLockSharedTraits (struttura)](srwlocksharedtraits-structure.md)|Descrive le caratteristiche comuni della `SRWLock` classe in modalità di blocco condiviso.|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -46,6 +47,6 @@ namespace Microsoft::WRL::Wrappers::HandleTraits;
 
 **Spazio dei nomi:** Microsoft:: WRL:: Wrappers
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi Microsoft::WRL::Wrappers](microsoft-wrl-wrappers-namespace.md)
+[Spazio dei nomi Microsoft:: WRL:: Wrappers](microsoft-wrl-wrappers-namespace.md)

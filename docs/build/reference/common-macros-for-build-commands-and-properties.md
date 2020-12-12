@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: macro comuni per i comandi e le proprietà di MSBuild'
 title: Macro comuni per i comandi e le proprietà di MSBuild
 ms.date: 08/02/2019
 helpviewer_keywords:
@@ -90,12 +91,12 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: 5038416a8df3282b426d3298c73520f78e962766
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 3911e3285ca09fefce51f0522690943b1f8b2c27
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79440176"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179109"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>Macro comuni per i comandi e le proprietà di MSBuild
 
@@ -103,7 +104,7 @@ A seconda delle opzioni di installazione, Visual Studio può rendere disponibili
 
 ## <a name="view-the-current-properties-and-macros"></a>Visualizzare le proprietà e le macro correnti
 
-Per visualizzare tutte le macro attualmente disponibili, nella finestra di dialogo **pagine delle proprietà** , in directory di **VC + +** , scegliere la freccia a discesa alla fine di una riga di proprietà. Fare clic su **modifica** e quindi nella finestra di dialogo Modifica scegliere il pulsante **macro** . Viene visualizzato il set corrente di proprietà e macro visibili in Visual Studio insieme al valore corrente di ciascuna. Per ulteriori informazioni, vedere la sezione **specifica dei valori definiti dall'utente** nel [ C++ riferimento alla pagina delle proprietà del progetto](property-pages-visual-cpp.md).
+Per visualizzare tutte le macro attualmente disponibili, nella finestra di dialogo **pagine delle proprietà** , in directory di **VC + +**, scegliere la freccia a discesa alla fine di una riga di proprietà. Fare clic su **modifica** e quindi nella finestra di dialogo Modifica scegliere il pulsante **macro** . Viene visualizzato il set corrente di proprietà e macro visibili in Visual Studio insieme al valore corrente di ciascuna. Per ulteriori informazioni, vedere la sezione **specifica dei valori User-Defined** del [riferimento della pagina delle proprietà del progetto C++](property-pages-visual-cpp.md).
 
 ![Pulsante macro di VC + +](../media/vcppdir_libdir_macros.png "Menu macro")
 
@@ -111,59 +112,59 @@ Per visualizzare tutte le macro attualmente disponibili, nella finestra di dialo
 
 Questa tabella descrive un subset di uso comune delle macro disponibili. molti altri non sono elencati qui. Passare alla finestra di dialogo **macro** per visualizzare tutte le proprietà e i relativi valori correnti nel progetto. Per informazioni dettagliate su come le definizioni delle proprietà di MSBuild vengono create e usate come macro nei file PROPS, TARGETS e VCXPROJ, vedere [Proprietà di MSBuild](/visualstudio/msbuild/msbuild-properties).
 
-|Macro|Descrizione|
+|Macro|Description|
 |-----------|-----------------|
-|**$(Configuration)**|Nome della configurazione di progetto corrente, ad esempio "Debug".|
+|**$ (Configurazione)**|Nome della configurazione di progetto corrente, ad esempio "Debug".|
 |**$(DevEnvDir)**|Directory di installazione di Visual Studio (definita come unità + percorso); include la barra rovesciata finale '\\'.|
 |**$(FrameworkDir)**|Directory nella quale è stato installato .NET Framework.|
 |**$(FrameworkSDKDir)**|Directory nella quale è stato installato .NET Framework. .NET Framework potrebbe essere stato installato come parte di Visual Studio oppure separatamente.|
-|**$(FrameworkVersion)**|Versione di .NET Framework usata da Visual Studio. Combinata con **$(FrameworkDir)** , il percorso completo della versione di .NET Framework usata da Visual Studio.|
+|**$ (FrameworkVersion)**|Versione di .NET Framework usata da Visual Studio. Combinata con **$(FrameworkDir)**, il percorso completo della versione di .NET Framework usata da Visual Studio.|
 |**$(FxCopDir)**|Percorso del file fxcop.cmd. Il file FxCop. cmd non è installato con tutte le edizioni di Visual Studio.|
 |**$(IntDir)**|Percorso della directory specificata dei file intermedi. Se si tratta di un percorso relativo, i file intermedi passano a questo percorso accodato alla directory del progetto. Questo percorso deve includere una barra finale. Viene risolto nel valore della proprietà della **directory intermedia** . Non usare **$ (OutDir)** per definire questa proprietà.|
-|**$(OutDir)**|Percorso della directory dei file di output. Se si tratta di un percorso relativo, i file di output vengono inviati a questo percorso accodato alla directory del progetto. Questo percorso deve includere una barra finale. Viene risolto nel valore per la proprietà directory di **output** . Non usare **$ (IntDir)** per definire questa proprietà.|
-|**$(Platform)**|Nome della piattaforma del progetto corrente, ad esempio "Win32".|
+|**$ (OutDir)**|Percorso della directory dei file di output. Se si tratta di un percorso relativo, i file di output vengono inviati a questo percorso accodato alla directory del progetto. Questo percorso deve includere una barra finale. Viene risolto nel valore per la proprietà directory di **output** . Non usare **$ (IntDir)** per definire questa proprietà.|
+|**$ (Piattaforma)**|Nome della piattaforma del progetto corrente, ad esempio "Win32".|
 |**$ (PlatformShortName)**|Nome breve dell'architettura corrente, ad esempio "x86" o "x64".|
 |**$(ProjectDir)**|Directory del progetto (definita come unità + percorso); include la barra rovesciata finale "\\".|
 |**$(ProjectExt)**|Estensione di file del progetto. È incluso il punto '.' prima dell'estensione.|
 |**$(ProjectFileName)**|Nome file del progetto (definito da nome di base + estensione di file).|
-|**$(ProjectName)**|Nome base del progetto.|
+|**$ (NomeProgetto)**|Nome base del progetto.|
 |**$(ProjectPath)**|Nome del percorso assoluto del progetto (definito da unità + percorso + nome di base + estensione di file).|
-|**$ (PublishDir)**|Percorso di output per la destinazione di pubblicazione. include la barra rovesciata finale '\\'. Il valore predefinito è la cartella **$ (OutDir) app. publish\\** .|
+|**$ (PublishDir)**|Percorso di output per la destinazione di pubblicazione. include la barra rovesciata finale ' \\ '. Il valore predefinito è la cartella **app. Publish \\ $ (OutDir)** .|
 |**$(RemoteMachine)**|Impostare sul valore della proprietà **Remote Machine** nella pagina delle proprietà Debug. Per altre informazioni, vedere [Modifica delle impostazioni del progetto per una configurazione di debug C/C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration) .|
-|**$(RootNameSpace)**|Eventuale spazio dei nomi contenente l'applicazione.|
+|**$ (RootNameSpace)**|Eventuale spazio dei nomi contenente l'applicazione.|
 |**$(SolutionDir)**|Directory della soluzione (definita come unità + percorso); include la barra rovesciata finale "\\". Definita solo quando si compila una soluzione nell'IDE.|
 |**$(SolutionExt)**|Estensione di file della soluzione. È incluso il punto '.' prima dell'estensione. Definita solo quando si compila una soluzione nell'IDE.|
 |**$(SolutionFileName)**|Nome file della soluzione (definito da nome di base + estensione di file). Definita solo quando si compila una soluzione nell'IDE.|
-|**$(SolutionName)**|Nome base della soluzione. Definita solo quando si compila una soluzione nell'IDE.|
+|**$ (SolutionName)**|Nome base della soluzione. Definita solo quando si compila una soluzione nell'IDE.|
 |**$(SolutionPath)**|Nome del percorso assoluto della soluzione (definito da unità + percorso + nome di base + estensione di file). Definita solo quando si compila una soluzione nell'IDE.|
 |**$(TargetDir)**|Directory del file di output principale per la compilazione (definita come unità + percorso). Include la barra rovesciata "\\" finale.|
 |**$(TargetExt)**|Estensione di file del file di output principale per la compilazione. È incluso il punto '.' prima dell'estensione.|
 |**$(TargetFileName)**|Nome file del file di output principale per la compilazione (definito da nome di base + estensione di file).|
 |**$(TargetName)**|Nome di base del file di output principale per la compilazione.|
 |**$(TargetPath)**|Nome del percorso assoluto del file di output principale per la compilazione (definito come unità + percorso + nome di base + estensione di file).|
-|**$(VCInstallDir)**|Directory che contiene il contenuto C++ dell'installazione di Visual Studio. Questa proprietà contiene la versione del set di strumenti C++ Microsoft (MSVC) di destinazione, che potrebbe essere diversa da quella dell'host Visual Studio. Ad esempio, quando si compila con `$(PlatformToolset) = v140`, **$ (VCInstallDir)** contiene il percorso dell'installazione di Visual Studio 2015.|
+|**$(VCInstallDir)**|Directory che contiene il contenuto C++ dell'installazione di Visual Studio. Questa proprietà contiene la versione del set di strumenti di Microsoft C++ (MSVC) di destinazione, che potrebbe essere diversa da quella dell'host Visual Studio. Ad esempio, durante la compilazione con `$(PlatformToolset) = v140` , **$ (VCInstallDir)** contiene il percorso dell'installazione di Visual Studio 2015.|
 |**$(VSInstallDir)**|Directory nella quale è stato installato Visual Studio. Questa proprietà contiene la versione del set di strumenti Visual Studio di destinazione che potrebbe essere diversa dalla versione dell'host di Visual Studio. Ad esempio, in caso di compilazione con `$(PlatformToolset) = v110`, **$(VSInstallDir)** contiene il percorso dell'installazione di Visual Studio 2012.|
 |**$(WebDeployPath)**|Percorso relativo dalla radice di distribuzione Web alla posizione degli output del progetto.|
 |**$(WebDeployRoot)**|Percorso assoluto della posizione di **\<localhost>** . Ad esempio, c:\inetpub\wwwroot.|
 
 ## <a name="obsolete-macros"></a>Macro obsolete
 
-Il sistema di compilazione per C++ è stato modificato in modo significativo dalla versione Visual Studio 2008 alla versione Visual Studio 2010. Numerose macro usate nei tipi di progetto precedenti sono state sostituite da nuove macro. Queste macro non vengono più usate o sono state sostituite da una o più proprietà equivalenti o valori di [macro di metadati di elementi](/visualstudio/msbuild/itemmetadata-element-msbuild) ( **%(** _nome_ **)** ). Le macro contrassegnate con "Migrazione eseguita" possono essere aggiornate tramite lo strumento di migrazione del progetto. Se per il progetto che contiene la macro viene eseguita la migrazione da Visual Studio 2008 o versioni precedenti a Visual Studio 2010, Visual Studio converte la macro nella macro corrente equivalente. Le versioni più recenti di Visual Studio non eseguono la conversione dei progetti di Visual Studio 2008 e versioni precedenti nel nuovo tipo di progetto. È necessario convertire i progetti eseguendo due passaggi: eseguire prima la conversione in Visual Studio 2010 e quindi convertire il risultato nella versione più recente di Visual Studio. Per altre informazioni, vedere la [panoramica sui potenziali problemi di aggiornamento](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md).
+Il sistema di compilazione per C++ è stato modificato in modo significativo dalla versione Visual Studio 2008 alla versione Visual Studio 2010. Numerose macro usate nei tipi di progetto precedenti sono state sostituite da nuove macro. Queste macro non vengono più usate o sono state sostituite da una o più proprietà equivalenti o valori di [macro di metadati di elementi](/visualstudio/msbuild/itemmetadata-element-msbuild) (**%(**_nome_**)**). Le macro contrassegnate con "Migrazione eseguita" possono essere aggiornate tramite lo strumento di migrazione del progetto. Se per il progetto che contiene la macro viene eseguita la migrazione da Visual Studio 2008 o versioni precedenti a Visual Studio 2010, Visual Studio converte la macro nella macro corrente equivalente. Le versioni più recenti di Visual Studio non eseguono la conversione dei progetti di Visual Studio 2008 e versioni precedenti nel nuovo tipo di progetto. È necessario convertire i progetti eseguendo due passaggi: eseguire prima la conversione in Visual Studio 2010 e quindi convertire il risultato nella versione più recente di Visual Studio. Per altre informazioni, vedere la [panoramica sui potenziali problemi di aggiornamento](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md).
 
-|Macro|Descrizione|
+|Macro|Description|
 |-----------|-----------------|
-|**$(InputDir)**|(Migrato). Directory del file di input (definita come unità + percorso); include la barra rovesciata finale '\\'. Se il progetto costituisce l'input, questa macro equivale a **$(ProjectDir)** .|
-|**$(InputExt)**|(Migrato). Estensione di file del file di input. È incluso il punto '.' prima dell'estensione. Se il progetto costituisce l'input, questa macro equivale a **$(ProjectExt)** . Per i file di origine, **%(Extension)** .|
-|**$(InputFileName)**|(Migrato). Nome file del file di input (definito come nome di base + estensione di file). Se il progetto costituisce l'input, questa macro equivale a **$(ProjectFileName)** . Per i file di origine, **%(Identity)** .|
-|**$(InputName)**|(Migrato). Nome di base del file di input. Se il progetto costituisce l'input, questa macro equivale a **$(ProjectName)** . Per i file di origine, **%(Filename)** .|
-|**$(InputPath)**|(Migrato). Nome del percorso assoluto del file di input (definito come unità + percorso + nome di base + estensione di file). Se il progetto costituisce l'input, questa macro equivale a **$(ProjectPath)** . Per i file di origine, **%(FullPath)** .|
-|**$(ParentName)**|Nome dell'elemento contenente questo elemento del progetto. Sarà il nome della cartella padre o il nome del progetto.|
+|**$ (InputDir)**|(Migrato). Directory del file di input (definita come unità + percorso); include la barra rovesciata finale ' \\ '. Se il progetto costituisce l'input, questa macro equivale a **$(ProjectDir)**.|
+|**$(InputExt)**|(Migrato). Estensione di file del file di input. È incluso il punto '.' prima dell'estensione. Se il progetto costituisce l'input, questa macro equivale a **$(ProjectExt)**. Per i file di origine, **%(Extension)**.|
+|**$ (InputFileName)**|(Migrato). Nome file del file di input (definito come nome di base + estensione di file). Se il progetto costituisce l'input, questa macro equivale a **$(ProjectFileName)**. Per i file di origine, **%(Identity)**.|
+|**$ (InputName)**|(Migrato). Nome di base del file di input. Se il progetto costituisce l'input, questa macro equivale a **$(ProjectName)**. Per i file di origine, **%(Filename)**.|
+|**$(InputPath)**|(Migrato). Nome del percorso assoluto del file di input (definito come unità + percorso + nome di base + estensione di file). Se il progetto costituisce l'input, questa macro equivale a **$(ProjectPath)**. Per i file di origine, **%(FullPath)**.|
+|**$ (ParentName)**|Nome dell'elemento contenente questo elemento del progetto. Sarà il nome della cartella padre o il nome del progetto.|
 |**$(SafeInputName)**|Nome file come nome di classe valido, meno l'estensione di file. Per questa proprietà non è disponibile un equivalente esatto.|
 |**$(SafeParentName)**|Nome del padre diretto in un formato di nome valido. Ad esempio, un modulo è l'elemento padre di un file RESX. Per questa proprietà non è disponibile un equivalente esatto.|
 |**$(SafeRootNamespace)**|Nome dello spazio dei nomi in cui le creazioni guidate progetto aggiungono il codice. Questo spazio dei nomi contiene solo caratteri che sarebbero consentiti in un identificatore C++ valido. Per questa proprietà non è disponibile un equivalente esatto.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Progetti di Visual Studio C++ -](../creating-and-managing-visual-cpp-projects.md)\
-[Guida C++ all'aggiornamento e alla portabilità visiva](../../porting/visual-cpp-porting-and-upgrading-guide.md)\
+[Progetti di Visual Studio-C++](../creating-and-managing-visual-cpp-projects.md)\
+[Guida al porting e aggiornamento di Visual C++](../../porting/visual-cpp-porting-and-upgrading-guide.md)\
 [Panoramica dei potenziali problemi di aggiornamento](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md)

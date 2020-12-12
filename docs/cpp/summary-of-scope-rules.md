@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: riepilogo delle regole di ambito'
 title: Riepilogo delle regole di ambito
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - names [C++], class
 - scope [C++], class names
 ms.assetid: 47e26482-0111-466f-b857-598c15d05105
-ms.openlocfilehash: 024a61419129f669485944a427379dd41c385404
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cbb5fdc448039e2e7ac998fa8dc5754ef7026d8c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231065"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178160"
 ---
 # <a name="summary-of-scope-rules"></a>Riepilogo delle regole di ambito
 
@@ -71,6 +72,6 @@ I nomi dei parametri delle funzioni nelle dichiarazioni di funzione (prototipi) 
 
 I parametri predefiniti sono inclusi nell'ambito del parametro per il quale costituiscono l'impostazione predefinita, come descritto nei due paragrafi precedenti. Tuttavia, non possono accedere alle variabili locali o ai membri di classe non statici. I parametri predefiniti vengono valutati al momento della chiamata di funzione, ma vengono valutati nell'ambito originale della dichiarazione di funzione. Di conseguenza, i parametri predefiniti per le funzioni membro vengono sempre valutati nell'ambito della classe.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Ereditarietà](../cpp/inheritance-cpp.md)
