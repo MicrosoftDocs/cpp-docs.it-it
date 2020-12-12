@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: execlp'
 title: execlp
 ms.date: 12/16/2019
 api_name:
@@ -23,16 +24,16 @@ f1_keywords:
 helpviewer_keywords:
 - execlp function
 ms.assetid: 68b19143-e7b1-49c6-89b5-084d0d66de9c
-ms.openlocfilehash: 1abcbb2c67820a8d56f5cb3a532cc2efadeda7cb
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 4b7a6e142333e64d8225ce8afe18e44c16dbbffb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299741"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304805"
 ---
 # <a name="execlp"></a>execlp
 
-Il nome della funzione POSIX implementato da Microsoft `execlp` è un alias deprecato per la funzione di [_execlp](execlp-wexeclp.md) . Per impostazione predefinita, viene generato un [Avviso del compilatore (livello 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Il nome è deprecato perché non segue le regole C standard per i nomi specifici dell'implementazione. Tuttavia, la funzione è ancora supportata.
+Il nome della funzione POSIX implementato `execlp` da Microsoft è un alias deprecato per la funzione [_execlp](execlp-wexeclp.md) . Per impostazione predefinita, viene generato un [Avviso del compilatore (livello 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Il nome è deprecato perché non segue le regole C standard per i nomi specifici dell'implementazione. Tuttavia, la funzione è ancora supportata.
 
 Si consiglia di usare invece [_execlp](execlp-wexeclp.md) . In alternativa, è possibile continuare a usare il nome della funzione e disabilitare l'avviso. Per altre informazioni, vedere [disabilitare i](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) [nomi di funzione](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)di avviso e POSIX.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: memcpy_s, wmemcpy_s'
 title: memcpy_s, wmemcpy_s
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: 7b3df3542974f99009285c8df652cff1fd4fa173
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 77c71e594d9a3853438987e85e43700d1f467718
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915401"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304740"
 ---
 # <a name="memcpy_s-wmemcpy_s"></a>memcpy_s, wmemcpy_s
 
@@ -86,7 +87,7 @@ Zero se con esito positivo; un codice di errore in caso di errore.
 |any|any|**NULL**|non zero|**EINVAL**|*dest* è azzerato|
 |any|< *conteggio*|any|non zero|**ERANGE**|*dest* è azzerato|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 **memcpy_s** copia i byte del *conteggio* da *src* a *dest*; **wmemcpy_s** copia il *conteggio* di caratteri wide (due byte). Se l'origine e la destinazione si sovrappongono, il comportamento di **memcpy_s** non è definito. Utilizzare **memmove_s** per gestire le aree sovrapposte.
 
@@ -145,7 +146,7 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modifica del buffer](../../c-runtime-library/buffer-manipulation.md)<br/>
+[Manipolazione del buffer](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>
 [memchr, wmemchr](memchr-wmemchr.md)<br/>
 [memcmp, wmemcmp](memcmp-wmemcmp.md)<br/>

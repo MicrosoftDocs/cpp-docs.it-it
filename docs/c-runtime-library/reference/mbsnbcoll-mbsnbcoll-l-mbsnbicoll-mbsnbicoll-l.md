@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l'
 title: _mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
 ms.date: 4/2/2020
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - _tcsncoll_l function
 - _tcsnicoll_l function
 ms.assetid: d139ed63-ccba-4458-baa2-61cbcef03e94
-ms.openlocfilehash: 491a652f19e9e1895aa62092c5c890923008f6e1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 97dc0c8664b16b775529184c93b155f8746b3d7c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911903"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304714"
 ---
 # <a name="_mbsnbcoll-_mbsnbcoll_l-_mbsnbicoll-_mbsnbicoll_l"></a>_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
 
@@ -102,7 +103,7 @@ Impostazioni locali da usare.
 
 Il valore restituito indica la relazione delle sottostringhe di *String1* e *string2*.
 
-|Valore restituito|Description|
+|Valore restituito|Descrizione|
 |------------------|-----------------|
 |< 0|sottostringa *String1* minore della sottostringa *string2* .|
 |0|sottostringa *String1* identica alla sottostringa *string2* .|
@@ -110,7 +111,7 @@ Il valore restituito indica la relazione delle sottostringhe di *String1* e *str
 
 Se *String1* o *string2* è **null** o *count* è maggiore di **INT_MAX**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **_NLSCMPERROR** e impostano **errno** su **EINVAL**. Per utilizzare **_NLSCMPERROR**, includere String. h o mbstring. h.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Ognuna di queste funzioni raccoglie, al massimo, i primi byte di *conteggio* in *String1* e *string2* e restituisce un valore che indica la relazione tra le sottostringhe risultanti di *String1* e *string2*. Se il byte finale nella sottostringa di *String1* o *string2* è un byte iniziale, non viene incluso nel confronto. Queste funzioni confrontano solo i caratteri completi nelle sottostringhe. **_mbsnbicoll** è una versione senza distinzione tra maiuscole e minuscole di **_mbsnbcoll**. Analogamente [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) e [_mbsnbicmp](mbsnbicmp-mbsnbicmp-l.md), **_mbsnbcoll** e **_mbsnbicoll** consentono di confrontare le due stringhe di caratteri multibyte in base all'ordine lessicografico specificato dalla tabella [codici](../../c-runtime-library/code-pages.md) multibyte attualmente in uso.
 
@@ -142,7 +143,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

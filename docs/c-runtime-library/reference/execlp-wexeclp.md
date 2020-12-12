@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _execlp, _wexeclp'
 title: _execlp, _wexeclp
 ms.date: 11/04/2016
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - _wexeclp function
 - wexeclp function
 ms.assetid: 7b179163-4bcd-4d6a-8baf-68f886791928
-ms.openlocfilehash: 6ae1805dd00428aee0acca4bcb3ee221bce1d271
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c1ef70975f5488c66928bb26e7eac4f4dcf3b0ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937193"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304831"
 ---
 # <a name="_execlp-_wexeclp"></a>_execlp, _wexeclp
 
@@ -66,14 +67,14 @@ intptr_t _wexeclp(
 *cmdname*<br/>
 Percorso del file da eseguire.
 
-*arg0*, ... *argn*<br/>
+*arg0*,... *argN*<br/>
 Elenco di puntatori ai parametri.
 
 ## <a name="return-value"></a>Valore restituito
 
 Se l'operazione riesce, le funzioni non ritornano al processo chiamante. Il valore restituito-1 indica un errore, nel qual caso è impostata la variabile globale **errno** .
 
-|**errno** (valore)|Descrizione|
+|**errno** (valore)|Description|
 |-------------------|-----------------|
 |**E2BIG**|Lo spazio necessario per gli argomenti e le impostazioni di ambiente supera 32 KB.|
 |**EACCES**|Il file specificato dispone di una violazione di blocco o di condivisione.|
@@ -83,9 +84,9 @@ Se l'operazione riesce, le funzioni non ritornano al processo chiamante. Il valo
 |**ENOEXEC**|Il file specificato non è eseguibile o il formato del file eseguibile non è valido.|
 |**ENOMEM**|Memoria insufficiente per eseguire il nuovo processo; la memoria disponibile è stata danneggiata; o esiste un blocco non valido che indica che il processo chiamante non è stato allocato correttamente.|
 
-Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Ognuna di queste funzioni carica ed esegue un nuovo processo, passando ogni argomento della riga di comando come parametro separato e usando la variabile di ambiente **path** per trovare il file da eseguire.
 
@@ -98,19 +99,19 @@ Le funzioni **_execlp** convalidano i relativi parametri. Se *CmdName* o *arg0* 
 |**_execlp**|\<process.h>|\<errno.h>|
 |**_wexeclp**|\<process.h> o \<wchar.h>|\<errno.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
 Vedere l'esempio in [Funzioni _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
-[Funzioni _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
-[abort](abort.md)<br/>
+[Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[_exec, funzioni _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[interruzione](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](onexit-onexit-m.md)<br/>
-[Funzioni _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, funzioni _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system, _wsystem](system-wsystem.md)<br/>
