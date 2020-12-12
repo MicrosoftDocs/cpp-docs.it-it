@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: membri dati modificabili (C++)'
 title: Membri dati modificabili (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - mutable keyword [C++]
 ms.assetid: ebe89746-3d36-43a8-8d69-f426af23f551
-ms.openlocfilehash: 9370952f503850fbc296c3df912d4a0fafe163f0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a288b382b456fa313c49832bd2d13aaceb269be9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227348"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313814"
 ---
 # <a name="mutable-data-members-c"></a>Membri dati modificabili (C++)
 
@@ -47,6 +48,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Parole chiave](../cpp/keywords-cpp.md)

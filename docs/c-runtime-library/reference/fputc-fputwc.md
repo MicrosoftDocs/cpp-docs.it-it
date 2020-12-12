@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: fputc, fputwc'
 title: fputc, fputwc
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - fputwc function
 - fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
-ms.openlocfilehash: 90091bff6a8ee3ced050c359ed540f45afe74f6b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 85958ce10bd70a13d246be70890d552b7ffdcd3a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910200"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314178"
 ---
 # <a name="fputc-fputwc"></a>fputc, fputwc
 
@@ -72,7 +73,7 @@ Ognuna di queste funzioni restituisce il carattere scritto. Per **fputc**, un va
 
 Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Ognuna di queste funzioni scrive il carattere singolo *c* in un file nella posizione indicata dall'indicatore di posizione del file associato (se definito) e sposta in avanti l'indicatore come appropriato. Nel caso di **fputc** e **fputwc**, il file è associato a *Stream*. Se il file non è in grado di supportare le richieste di posizionamento o è stato aperto in modalità Append, il carattere viene aggiunto alla fine del flusso.
 
@@ -82,7 +83,7 @@ Le versioni con suffisso **_nolock** sono identiche, ad eccezione del fatto che 
 
 Seguono note specifiche per le routine.
 
-|Routine|Osservazioni|
+|Routine|Commenti|
 |-------------|-------------|
 |**fputc**|Equivale a **putc**, ma implementata solo come funzione, anziché come funzione e come macro.|
 |**fputwc**|Versione a caratteri wide di **fputc**. Scrive *c* come carattere multibyte o Wide a seconda che il *flusso* venga aperto in modalità testo o in modalità binaria.|
@@ -97,12 +98,12 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**fputc**|\<stdio.h>|
 |**fputwc**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, ovvero**stdin**, **stdout**e **stderr**, devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, ovvero **stdin**, **stdout** e **stderr**, devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

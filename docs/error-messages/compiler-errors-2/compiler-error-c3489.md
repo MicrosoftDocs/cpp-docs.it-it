@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3489'
 title: Errore del compilatore C3489
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3489
 ms.assetid: 47b58d69-459d-4499-abc7-5f0b9303d773
-ms.openlocfilehash: 3b192a14a39b7c0c9d264bda8073c54f0f395924
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 658fc83476a9fe6f0db3ac27f44a05e1cb1d0c28
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685766"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97315646"
 ---
 # <a name="compiler-error-c3489"></a>Errore del compilatore C3489
 
@@ -29,7 +30,7 @@ Quando si specifica che la modalità di acquisizione predefinita per un'espressi
 
 - Passare la variabile per riferimento alla clausola di acquisizione. In questo modo il comportamento dell'espressione lambda potrebbe cambiare.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 L'esempio seguente genera l'errore C3489 perché la variabile `n` viene visualizzata per valore nella clausola di acquisizione di un'espressione lambda la cui modalità predefinita è per valore:
 
@@ -70,6 +71,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Espressioni lambda](../../cpp/lambda-expressions-in-cpp.md)

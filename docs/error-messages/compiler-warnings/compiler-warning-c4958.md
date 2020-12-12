@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore C4958'
 title: Avviso del compilatore C4958
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4958
 ms.assetid: e79b9e9c-d572-4a3a-a3b6-60962b70864a
-ms.openlocfilehash: 63371d91367902c1eab539cb370e55440fcbf917
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1a6260a441b619923e8c2ddf8c7a5d891a3c3844
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80164885"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314802"
 ---
 # <a name="compiler-warning-c4958"></a>Avviso del compilatore C4958
 
 > '*Operation*': aritmetica dei puntatori non verificabile
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'uso dell'aritmetica dei puntatori produrrà un'immagine non verificabile.
 
-Per ulteriori informazioni, vedere [codice pure e verificabile (C++/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Per altre informazioni, vedere [codice pure e verificabile (C++/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
 L'opzione del compilatore **/CLR: safe** è deprecata in visual studio 2015 e non è supportata in visual studio 2017.
 

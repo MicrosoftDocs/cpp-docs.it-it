@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _set_new_mode'
 title: _set_new_mode
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _set_new_mode function
 - set_new_mode function
 ms.assetid: 4d14039a-e54e-4689-8c70-74a4b9834768
-ms.openlocfilehash: aa21854f6a8c4b58a510b16e824449a53b91f329
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 233ab9cd4c74eaeb413d7c299620c29a52c41298
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218533"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313996"
 ---
 # <a name="_set_new_mode"></a>_set_new_mode
 
@@ -55,7 +56,7 @@ Nuova modalità di gestione per **malloc**; il valore valido è 0 o 1.
 
 Restituisce la modalità del gestore precedente impostata per **malloc**. Il valore restituito 1 indica che, in caso di errore di allocazione della memoria, **malloc** ha precedentemente chiamato la routine del nuovo gestore; il valore restituito 0 indica che non è stato fatto. Se l'argomento *newhandlermode* non è uguale a 0 o 1, restituisce-1.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione C++ **_set_new_mode** imposta la nuova modalità del gestore per [malloc](malloc.md). La nuova modalità del gestore indica se, in caso di errore, **malloc** deve chiamare la routine del nuovo gestore come impostato da [_set_new_handler](set-new-handler.md). Per impostazione predefinita, **malloc** non chiama la routine del nuovo gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando **malloc** non riesce ad allocare memoria, **malloc** chiama la routine del nuovo gestore nello stesso modo in cui l' **`new`** operatore esegue quando si verifica un errore per lo stesso motivo. Per altre informazioni, vedere le informazioni sugli operatori [new](../../cpp/new-operator-cpp.md) e [delete](../../cpp/delete-operator-cpp.md) in *Riferimenti al linguaggio C++*. Per eseguire l'override del comportamento predefinito, chiamare:
 
@@ -77,11 +78,11 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Allocazione di memoria](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[libero](free.md)<br/>
+[free](free.md)<br/>
 [realloc](realloc.md)<br/>
 [_query_new_handler](query-new-handler.md)<br/>
 [_query_new_mode](query-new-mode.md)<br/>

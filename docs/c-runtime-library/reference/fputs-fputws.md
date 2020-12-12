@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: fputs, fputws'
 title: fputs, fputws
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - fputs function
 - fputts function
 ms.assetid: d48c82b8-aa17-4830-8c7d-30442ddbb326
-ms.openlocfilehash: 718bcd227e5821c85517ff7c0a1f195bd24d230b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bba51a6001d9ec27f39b590b2246a50409f5e47d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912746"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314113"
 ---
 # <a name="fputs-fputws"></a>fputs, fputws
 
@@ -60,7 +61,7 @@ int fputws(
 
 ### <a name="parameters"></a>Parametri
 
-*Str*<br/>
+*str*<br/>
 Stringa di output.
 
 *flusso*<br/>
@@ -68,11 +69,11 @@ Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce un valore non negativo se ha esito positivo. In un errore, **fputs** e **fputws** restituiscono **EOF**. Se *Str* o *Stream* è un puntatore null, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** , quindi **fputs** restituisce **EOF**e **fputws** restituisce **WEOF**.
+Ognuna di queste funzioni restituisce un valore non negativo se ha esito positivo. In un errore, **fputs** e **fputws** restituiscono **EOF**. Se *Str* o *Stream* è un puntatore null, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** , quindi **fputs** restituisce **EOF** e **fputws** restituisce **WEOF**.
 
 Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Ognuna di queste funzioni copia *Str* nel *flusso* di output nella posizione corrente. **fputws** copia l'argomento a caratteri wide *Str* in *Stream* come stringa di caratteri multibyte o una stringa di caratteri wide, a seconda che il *flusso* sia aperto in modalità testo o in modalità binaria, rispettivamente. Nessuna delle funzioni copia il carattere Null di terminazione.
 
@@ -88,12 +89,12 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**fputs**|\<stdio.h>|
 |**fputws**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, ovvero**stdin**, **stdout**e **stderr**, devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, ovvero **stdin**, **stdout** e **stderr**, devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -118,5 +119,5 @@ Hello world from fputs.
 
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
 [fgets, fgetws](fgets-fgetws.md)<br/>
-[Ottiene, _getws](../../c-runtime-library/gets-getws.md)<br/>
+[gets, _getws](../../c-runtime-library/gets-getws.md)<br/>
 [puts, _putws](puts-putws.md)<br/>

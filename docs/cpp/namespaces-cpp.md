@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: spazi dei nomi (C++)'
 title: Spazi dei nomi (C++)
 ms.date: 08/30/2017
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - namespaces [C++]
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
-ms.openlocfilehash: 234df334a8c385859440175cb9a1aab5b2e26ead
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5a655b5e772d16df34e64c5e4808ce68de64f49f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227296"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313762"
 ---
 # <a name="namespaces-c"></a>Spazi dei nomi (C++)
 
@@ -58,7 +59,7 @@ mgr.DoSomething();
 Func(mgr);
 ```
 
-## <a name="using-directives"></a><a id="using_directives"></a>direttive using
+## <a name="using-directives"></a><a id="using_directives"></a> direttive using
 
 La **`using`** direttiva consente a tutti i nomi in un oggetto **`namespace`** di essere utilizzati senza il *nome dello spazio dei nomi* come qualificatore esplicito. Usare una direttiva using in un file di implementazione (ad esempio *. cpp) se si usano più identificatori diversi in uno spazio dei nomi. Se si usano solo uno o due identificatori, prendere in considerazione una dichiarazione using per portare solo gli identificatori nell'ambito e non tutti gli identificatori nello spazio dei nomi. Se una variabile locale ha lo stesso nome di una variabile dello spazio dei nomi, quest'ultima è nascosta. Se una variabile dello spazio dei nomi ha lo stesso nome di una variabile globale, viene generato un errore.
 
@@ -241,7 +242,7 @@ namespace Contoso
 }
 ```
 
-## <a name="namespace-aliases"></a><a id="namespace_aliases"></a>Alias degli spazi dei nomi
+## <a name="namespace-aliases"></a><a id="namespace_aliases"></a> Alias degli spazi dei nomi
 
 I nomi degli spazi dei nomi devono essere univoci e ciò significa che spesso non sono molto brevi. Se la lunghezza di un nome rende il codice difficile da leggere oppure è noioso da digitare in un file di intestazione in cui non è possibile usare le direttive using, è possibile creare un alias dello spazio dei nomi che funge da abbreviazione per il nome effettivo. Ad esempio:
 
@@ -264,6 +265,6 @@ namespace
 
 Si tratta di uno spazio dei nomi senza nome o anonimo ed è utile quando si desidera rendere invisibili le dichiarazioni di variabili al codice in altri file, ad esempio dare loro un collegamento interno, senza dover creare uno spazio dei nomi denominato. Tutto il codice nello stesso file può vedere gli identificatori in uno spazio dei nomi senza nome, ma gli identificatori, insieme allo spazio dei nomi stesso, non sono visibili all'esterno di tale file o, più precisamente, all'esterno dell'unità di conversione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Dichiarazioni e definizioni](declarations-and-definitions-cpp.md)

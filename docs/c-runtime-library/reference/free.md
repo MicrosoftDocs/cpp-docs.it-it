@@ -1,5 +1,6 @@
 ---
-title: libero
+description: 'Altre informazioni su: gratuito'
+title: free
 ms.date: 4/2/2020
 api_name:
 - free
@@ -27,14 +28,14 @@ helpviewer_keywords:
 - memory blocks, deallocating
 - free function
 ms.assetid: 74ded9cf-1863-432e-9306-327a42080bb8
-ms.openlocfilehash: 0e0a53dd9d24634442c8dd456e4f9d38f742e292
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 731bd1ea6cf3bfe56bf71ee762fb3477346ddf13
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920428"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314022"
 ---
-# <a name="free"></a>libero
+# <a name="free"></a>free
 
 Dealloca o libera un blocco di memoria.
 
@@ -51,9 +52,9 @@ void free(
 *memblock*<br/>
 Blocco di memoria precedentemente allocata da liberare.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **Free** consente di deallocare un blocco di memoria (*memblock*) precedentemente allocato da una chiamata a **calloc**, **malloc**o **realloc**. Il numero di byte liberati è equivalente al numero di byte richiesti quando il blocco è stato allocato (o riallocato, nel caso di **realloc**). Se *memblock* è **null**, il puntatore viene ignorato e **Free** restituisce immediatamente un risultato. Il tentativo di liberare un puntatore non valido (un puntatore a un blocco di memoria non allocato da **calloc**, **malloc**o **realloc**) può influire sulle richieste di allocazione successive e causare errori.
+La funzione **Free** consente di deallocare un blocco di memoria (*memblock*) precedentemente allocato da una chiamata a **calloc**, **malloc** o **realloc**. Il numero di byte liberati è equivalente al numero di byte richiesti quando il blocco è stato allocato (o riallocato, nel caso di **realloc**). Se *memblock* è **null**, il puntatore viene ignorato e **Free** restituisce immediatamente un risultato. Il tentativo di liberare un puntatore non valido (un puntatore a un blocco di memoria non allocato da **calloc**, **malloc** o **realloc**) può influire sulle richieste di allocazione successive e causare errori.
 
 Se si verifica un errore durante la liberazione della memoria, **errno** viene impostato con le informazioni del sistema operativo sulla natura dell'errore. Per altre informazioni vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -61,7 +62,7 @@ Dopo che un blocco di memoria è stato liberato, [_heapmin](heapmin.md) riduce l
 
 Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime del linguaggio C **, viene** risolto in [_free_dbg](free-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).
 
-**Free** è contrassegnato `__declspec(noalias)`, pertanto la funzione non modifica le variabili globali. Per altre informazioni, vedere [noalias](../../cpp/noalias.md).
+**Free** è contrassegnato `__declspec(noalias)` , pertanto la funzione non modifica le variabili globali. Per altre informazioni, vedere [noalias](../../cpp/noalias.md).
 
 Per liberare la memoria allocata con [_malloca](malloca.md), usare [_freea](freea.md).
 
@@ -69,9 +70,9 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
-|**libero**|\<stdlib.h> e \<malloc.h>|
+|**free**|\<stdlib.h> e \<malloc.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
@@ -79,9 +80,9 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 Vedere l'esempio per [malloc](malloc.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Allocazione della memoria](../../c-runtime-library/memory-allocation.md)<br/>
+[Allocazione di memoria](../../c-runtime-library/memory-allocation.md)<br/>
 [_alloca](alloca.md)<br/>
 [calloc](calloc.md)<br/>
 [malloc](malloc.md)<br/>

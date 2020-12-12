@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _fputc_nolock, _fputwc_nolock'
 title: _fputc_nolock, _fputwc_nolock
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _fputtc_nolock function
 - _fputwc_nolock function
 ms.assetid: c63eb3ad-58fa-46d0-9249-9c25f815eab9
-ms.openlocfilehash: e25539bf6c6d590a787615e091ec68753cd1c93e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c9070f641fce2acbd584ef75f6209464f3e90130
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920131"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314159"
 ---
 # <a name="_fputc_nolock-_fputwc_nolock"></a>_fputc_nolock, _fputwc_nolock
 
@@ -75,7 +76,7 @@ Puntatore alla struttura **FILE**.
 
 Ognuna di queste funzioni restituisce il carattere scritto. Per informazioni sugli errori, vedere [fputc, fputwc](fputc-fputwc.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 **_fputc_nolock** e **_fputwc_nolock** sono identici rispettivamente a **fputc** e **fputwc**, ad eccezione del fatto che non sono protette da interferenze da parte di altri thread. Potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
 
@@ -91,12 +92,12 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**_fputc_nolock**|\<stdio.h>|
 |**_fputwc_nolock**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, ovvero**stdin**, **stdout**e **stderr**, devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, ovvero **stdin**, **stdout** e **stderr**, devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

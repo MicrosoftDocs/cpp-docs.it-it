@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore C4950'
 title: Avviso del compilatore C4950
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4950
 ms.assetid: 50226a5c-c664-4d09-ac59-e9e874ca244f
-ms.openlocfilehash: 52c4de94dfe087b4dcf407295e556c9350b2cb8b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e1bb05501fcac6c836bfd4aa89f72807b625c292
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80164989"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314880"
 ---
 # <a name="compiler-warning-c4950"></a>Avviso del compilatore C4950
 
 'type_or_member': contrassegnato come obsoleto
 
-Un membro o un tipo è stato contrassegnato come obsoleto con l'attributo <xref:System.ObsoleteAttribute>.
+Un membro o un tipo è stato contrassegnato come obsoleto con l' <xref:System.ObsoleteAttribute> attributo.
 
 C4950 viene sempre generato come errore. È possibile disattivare questo avviso utilizzando la direttiva pragma [warning](../../preprocessor/warning.md) o l'opzione del compilatore [/WD.](../../build/reference/compiler-option-warning-level.md) .
 

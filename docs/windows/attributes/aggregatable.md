@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: aggregabile'
 title: aggregable (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-ms.openlocfilehash: 6782b1ca28eb07b3f726bd85cd7fffa9b1f1bad2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0ba6c96f1b12deb2db91c20f0558961ef1ed6f61
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836374"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314256"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -30,11 +31,11 @@ Opzionale Parametro per indicare quando l'oggetto COM può essere aggregato:
 
 - `never` Impossibile aggregare l'oggetto COM.
 
-- `allowed` L'oggetto COM può essere creato direttamente oppure può essere aggregato. Questa è l'impostazione predefinita.
+- `allowed` L'oggetto COM può essere creato direttamente oppure può essere aggregato. Questo è il valore predefinito.
 
 - `always` L'oggetto COM non può essere creato direttamente e può essere aggregato. Quando si chiama `CoCreateInstance` per questo oggetto, è necessario specificare l'interfaccia dell'oggetto di aggregazione `IUnknown` (controllo `IUnknown` ).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'attributo C++ **aggregabile** ha la stessa funzionalità dell'attributo MIDL [aggregabile](/windows/win32/Midl/aggregatable) . Questo significa che il compilatore passerà l'attributo **aggregabile** attraverso al file IDL generato.
 
@@ -77,7 +78,7 @@ class CMyClass {};
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)<br/>

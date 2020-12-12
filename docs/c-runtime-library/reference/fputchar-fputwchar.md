@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _fputchar, _fputwchar'
 title: _fputchar, _fputwchar
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-ms.openlocfilehash: 08997730e0ef80072e29de5bc5e7c106cb6cb9e0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f682f134c3435392176155865f4808a6178ce35a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912010"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314191"
 ---
 # <a name="_fputchar-_fputwchar"></a>_fputchar, _fputwchar
 
@@ -71,9 +72,9 @@ Ognuna di queste funzioni restituisce il carattere scritto. Per **_fputchar**, u
 
 Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Entrambe queste funzioni scrivono il carattere singolo *c* in **stdout** e spostano l'indicatore in modo appropriato. **_fputchar** è equivalente a `fputc( stdout )`. È anche equivalente a **putchar**, ma implementata solo come funzione, anziché come funzione e macro. A differenza di **fputc** e **putchar**, queste funzioni non sono compatibili con lo standard ANSI.
+Entrambe queste funzioni scrivono il carattere singolo *c* in **stdout** e spostano l'indicatore in modo appropriato. **_fputchar** è equivalente a `fputc( stdout )` . È anche equivalente a **putchar**, ma implementata solo come funzione, anziché come funzione e macro. A differenza di **fputc** e **putchar**, queste funzioni non sono compatibili con lo standard ANSI.
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -85,12 +86,12 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**_fputchar**|\<stdio.h>|
 |**_fputwchar**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, ovvero**stdin**, **stdout**e **stderr**, devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, ovvero **stdin**, **stdout** e **stderr**, devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

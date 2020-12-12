@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: operatori di moltiplicazione e operatore modulo'
 title: Operatori di moltiplicazione e operatori modulo
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - multiplicative operators [C++]
 - division operator
 ms.assetid: b53ea5da-d0b4-40dc-98f3-0aa52d548293
-ms.openlocfilehash: c277c93640201de69a4cb29060bc5191aa91629c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e3e3e3823abb255922bf31be90b4a116fb100efe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227361"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313866"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Operatori di moltiplicazione e operatori modulo
 
@@ -72,7 +73,7 @@ In Microsoft C++, il risultato di un'espressione di modulo è sempre uguale al s
 
 Se la divisione calcolata di due interi non è esatta e un solo operando è negativo, il risultato è l'intero più grande (in termini di grandezza, non considerando il segno) che è minore del valore esatto che produrrebbe l'operazione di divisione. Ad esempio, il valore calcolato di-11/3 è-3,666666666. Il risultato della divisione integrale è-3.
 
-La relazione tra gli operatori di moltiplicazione è determinata dall'identità (*E1*  /  *E2*) \* *E2*  +  *E1*  %  *E2*  ==  *e1*.
+La relazione tra gli operatori di moltiplicazione è determinata dall'identità (*E1*  /  *E2*) \* *E2*  +  *E1*  %  *E2*  ==  .
 
 ## <a name="example"></a>Esempio
 
@@ -92,7 +93,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Espressioni con operatori binari](../cpp/expressions-with-binary-operators.md)<br/>
 [Operatori C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

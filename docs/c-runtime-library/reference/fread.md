@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: fread'
 title: fread
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-ms.openlocfilehash: ec5af25070e253f6c04d1aab13404306251ed716
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 131dacd296d4e710ea1b91d9a8578ef06b76a341
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912704"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314048"
 ---
 # <a name="fread"></a>fread
 
@@ -69,13 +70,13 @@ Puntatore alla struttura **FILE**.
 
 **fread** restituisce il numero di elementi completi effettivamente letti, che può essere minore di *count* se si verifica un errore o se viene rilevata la fine del file prima di raggiungere il *conteggio*. Usare la funzione **feof** o **ferretor** per distinguere un errore di lettura da una condizione di fine del file. Se *size* o *count* è 0, **fread** restituisce 0 e il contenuto del buffer non viene modificato. Se il *flusso* o il *buffer* è un puntatore null, **fread** richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce 0.
 
-Per ulteriori informazioni su questi codici di errore, vedere [ \_doserrno, errno, \_sys\_errlist e \_sys\_Nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
+Per ulteriori informazioni su questi codici di errore, vedere [ \_ doserrno, errno, \_ sys \_ errlist e \_ sys \_ Nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **fread** legge fino a *contare* gli elementi di *dimensioni* byte dal *flusso* di input e li archivia nel *buffer*. Il puntatore del file associato al *flusso* (se ne esiste uno) viene incrementato del numero di byte effettivamente letti. Se il flusso specificato viene aperto in [modalità testo](../../c-runtime-library/text-and-binary-mode-file-i-o.md), le nuove righe dello stile di Windows vengono convertite in nuove righe di tipo UNIX. Ovvero, le coppie ritorno a capo/avanzamento riga (CRLF) vengono sostituite da caratteri di avanzamento riga singolo (LF). La sostituzione non ha effetto sul puntatore del file o sul valore restituito. La posizione del puntatore del file è indeterminata se si verifica un errore. Non è possibile determinare il valore di un elemento letto parzialmente.
 
-Se usato in un flusso in modalità testo, se la quantità di dati richiesti (ovvero il *size* \* *numero*di dimensioni) è maggiore o uguale alla dimensione del buffer di **file** \* interno (per impostazione predefinita, si tratta di 4096 byte, configurabile tramite [setvbuf](../../c-runtime-library/reference/setvbuf.md)), i dati del flusso vengono copiati direttamente nel buffer fornito dall'utente e la conversione di nuova riga viene eseguita in tale buffer. Poiché i dati convertiti possono essere più brevi rispetto ai dati del flusso copiati nel buffer, i dati*RETURN_VALUE* \* *dimensione*del *buffer*\[precedente] (dove *RETURN_VALUE* è il valore restituito da **fread**) possono contenere dati non convertiti dal file. Per questo motivo, è consigliabile terminare con null i dati di tipo carattere in *buffer*\[*RETURN_VALUE* \* *size*] se lo scopo del buffer è fungere da stringa di tipo C. Per informazioni dettagliate sugli effetti della modalità testo e della modalità binaria, vedere [fopen](fopen-wfopen.md) .
+Se usato in un flusso in modalità testo, se la quantità di dati richiesti (ovvero il  \* *numero* di dimensioni) è maggiore o uguale alla dimensione del buffer di **file** interno \* (per impostazione predefinita, si tratta di 4096 byte, configurabile tramite [setvbuf](../../c-runtime-library/reference/setvbuf.md)), i dati del flusso vengono copiati direttamente nel buffer fornito dall'utente e la conversione di nuova riga viene eseguita in tale buffer. Poiché i dati convertiti possono essere più brevi rispetto ai dati del flusso copiati nel buffer, i dati RETURN_VALUE dimensione del *buffer* precedente \[  \* ] (dove *RETURN_VALUE* è il valore restituito da **fread**) possono contenere dati non convertiti dal file. Per questo motivo, è consigliabile terminare con null i dati di tipo carattere in *buffer* \[ *RETURN_VALUE* \* *size*] se lo scopo del buffer è fungere da stringa di tipo C. Per informazioni dettagliate sugli effetti della modalità testo e della modalità binaria, vedere [fopen](fopen-wfopen.md) .
 
 Questa funzione blocca gli altri thread. Se è necessaria una versione senza blocco, utilizzare **_fread_nolock**.
 
@@ -83,7 +84,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**fread**|\<stdio.h>|
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3491'
 title: Errore del compilatore C3491
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3491
 ms.assetid: 7f0e71b2-46a0-4d25-bd09-6158a280f509
-ms.openlocfilehash: 8e59dd44b81846d48dc5bf7172ce17444f75e6ef
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 8bd01c47e05d7cf266a22dfc713ae28bffe08e49
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685710"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97315635"
 ---
 # <a name="compiler-error-c3491"></a>Errore del compilatore C3491
 
@@ -25,7 +26,7 @@ Un'espressione lambda non modificabile non può modificare il valore di una vari
 
 - Passare la variabile mediante riferimento all'elenco di acquisizione dell'espressione lambda.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 L'esempio seguente genera l'errore C3491 perché il corpo di un'espressione lambda non modificabile modifica la variabile di acquisizione `m`:
 
@@ -51,6 +52,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Espressioni lambda](../../cpp/lambda-expressions-in-cpp.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: freopen_s, _wfreopen_s'
 title: freopen_s, _wfreopen_s
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - wfreopen_s function
 - freopen_s function
 ms.assetid: ad25a4da-6ad4-476b-a86d-660b221ca84d
-ms.openlocfilehash: 9ccd2f52f8d746c3e555c9ad04fc6ae07c53a665
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cbb10582128073501433a1a12c59e195bec011d5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915828"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314009"
 ---
 # <a name="freopen_s-_wfreopen_s"></a>freopen_s, _wfreopen_s
 
@@ -81,11 +82,11 @@ Puntatore alla struttura **FILE**.
 
 Ognuna di queste funzioni restituisce un codice di errore. Se si verifica un errore, il file originale viene chiuso.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **freopen_s** chiude il file attualmente associato a *Stream* e riassegna il *flusso* al file specificato da *path*. **_wfreopen_s** è una versione a caratteri wide di **_freopen_s**; gli argomenti *path* e *mode* per **_wfreopen_s** sono stringhe a caratteri wide. **_wfreopen_s** e **_freopen_s** si comportano in modo identico.
 
-Se uno dei *Pfile*, il *percorso*, la *modalità*o il *flusso* è **null**o se *path* è una stringa vuota, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono **EINVAL**.
+Se uno dei *Pfile*, il *percorso*, la *modalità* o il *flusso* è **null** o se *path* è una stringa vuota, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono **EINVAL**.
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -95,9 +96,9 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tfreopen_s**|**freopen_s**|**freopen_s**|**_wfreopen_s**|
 
-**freopen_s** viene in genere usato per reindirizzare i file già aperti **stdin**, **stdout**e **stderr** ai file specificati dall'utente. Il nuovo file associato al *flusso* viene aperto con la *modalità*, ovvero una stringa di caratteri che specifica il tipo di accesso richiesto per il file, come indicato di seguito:
+**freopen_s** viene in genere usato per reindirizzare i file già aperti **stdin**, **stdout** e **stderr** ai file specificati dall'utente. Il nuovo file associato al *flusso* viene aperto con la *modalità*, ovvero una stringa di caratteri che specifica il tipo di accesso richiesto per il file, come indicato di seguito:
 
-|*mode*|Accesso|
+|*mode*|Access|
 |-|-|
 | **r** | Viene aperto per la lettura. Se il file non esiste o non viene trovato, la chiamata **freopen_s** ha esito negativo. |
 | **w** | Apre un file vuoto per la scrittura. Se il file specificato esiste, il contenuto viene eliminato in modo permanente. |
@@ -127,12 +128,12 @@ Per una discussione sulle modalità testo e binaria, vedere [I/O file modalità 
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**freopen_s**|\<stdio.h>|
 |**_wfreopen_s**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout**e **stderr**devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout** e **stderr** devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

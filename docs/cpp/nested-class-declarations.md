@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: dichiarazioni di classe annidate'
 title: Dichiarazioni di classi annidate
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-ms.openlocfilehash: 672156e65e223be45c91558ed91065859566a8b9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8247a969be59cb35752f141ea281a271de24f87b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227283"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313684"
 ---
 # <a name="nested-class-declarations"></a>Dichiarazioni di classi annidate
 
@@ -54,7 +55,7 @@ int main()
 }
 ```
 
-`BufferedIO::BufferedInput`e `BufferedIO::BufferedOutput` sono dichiarati all'interno di `BufferedIO` . Questi nomi di classe non sono visibili al di fuori l'ambito della classe `BufferedIO`. Tuttavia, un oggetto di tipo `BufferedIO` non contiene alcun oggetto dei tipi `BufferedInput` o `BufferedOutput`.
+`BufferedIO::BufferedInput` e `BufferedIO::BufferedOutput` sono dichiarati all'interno di `BufferedIO` . Questi nomi di classe non sono visibili al di fuori l'ambito della classe `BufferedIO`. Tuttavia, un oggetto di tipo `BufferedIO` non contiene alcun oggetto dei tipi `BufferedInput` o `BufferedOutput`.
 
 Le classi annidate possono utilizzare direttamente nomi, nomi dei tipi, nomi dei membri statici ed enumeratori solo dalla classe contenitore. Per utilizzare i nomi degli altri membri della classe, è necessario utilizzare puntatori, riferimenti o nomi di oggetto.
 
@@ -206,6 +207,6 @@ int GetExtendedErrorStatus( char *message )
 
 Con l'interfaccia precedente, numerose classi possono usare i servizi di questa funzione, passando una posizione di memoria in cui desiderano che il messaggio di errore sia copiato.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classi e struct](../cpp/classes-and-structs-cpp.md)

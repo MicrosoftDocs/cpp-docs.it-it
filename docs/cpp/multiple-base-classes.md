@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: più classi base'
 title: Più classi base
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-ms.openlocfilehash: 0e663f33213a5fd57f2adbdcc53233c6af29954e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6e9e839e5906fba4a45e4e2edd4965817816a298
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227374"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314100"
 ---
 # <a name="multiple-base-classes"></a>Più classi base
 
@@ -213,6 +214,6 @@ Derivazione virtuale e non virtuale
 
 Nella figura l'accesso a qualsiasi membro della classe `A` tramite le classi base non virtuali causa ambiguità; il compilatore non dispone di informazioni che spieghino se utilizzare l'oggetto secondario associato a `B` o l'oggetto secondario associato a `C`. Tuttavia, quando `A` è specificato come classe base virtuale, non esiste alcuna ambiguità sull'oggetto secondario a cui viene eseguito l'accesso.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Ereditarietà](../cpp/inheritance-cpp.md)

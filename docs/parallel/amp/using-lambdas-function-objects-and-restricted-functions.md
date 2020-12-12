@@ -1,17 +1,18 @@
 ---
+description: 'Altre informazioni su: uso di espressioni lambda, oggetti funzione e funzioni con restrizioni'
 title: Utilizzo di espressioni lambda, oggetti funzione e funzioni con restrizioni
 ms.date: 11/04/2016
 ms.assetid: 25346cc9-869d-4ada-aad3-e2228cad3d6c
-ms.openlocfilehash: 0c72ae6f600fe73405481e34ab05b60f163e44d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bef02f30b5d5b5f11b8051c7a596ac0a141eef0a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405326"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314451"
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>Utilizzo di espressioni lambda, oggetti funzione e funzioni con restrizioni
 
-Il C++ codice AMP che si desidera eseguire sull'acceleratore viene specificato come argomento in una chiamata per il [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) metodo. È possibile specificare un'espressione lambda o un oggetto funzione (functor) come argomento. Inoltre, la lambda espressione o l'oggetto funzione può chiamare una funzione con limitazioni AMP C++. In questo argomento Usa un algoritmo di somma di matrice per illustrare le espressioni lambda, oggetti funzione e funzioni con restrizioni. Nell'esempio seguente viene illustrato l'algoritmo senza codice C++ AMP. Vengono create due matrici 1-dimensionale di uguale lunghezza. Gli elementi integer corrispondenti vengono aggiunti e archiviati in una terza matrice dimensionale-1. C++ AMP non viene utilizzato.
+Il codice C++ AMP che si vuole eseguire sull'acceleratore viene specificato come argomento in una chiamata al metodo [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) . È possibile specificare un'espressione lambda o un oggetto funzione (functor) come argomento. Inoltre, l'espressione lambda o l'oggetto funzione può chiamare una funzione con restrizioni C++ AMP. In questo argomento viene utilizzato un algoritmo di aggiunta della matrice per illustrare espressioni lambda, oggetti funzione e funzioni limitate. Nell'esempio seguente viene illustrato l'algoritmo senza C++ AMP codice. Vengono create matrici 2 1-dimensionali di uguale lunghezza. Gli elementi integer corrispondenti vengono aggiunti e archiviati in una terza matrice unidimensionale. C++ AMP non viene utilizzato.
 
 ```cpp
 void CpuMethod() {
@@ -34,7 +35,7 @@ void CpuMethod() {
 
 ## <a name="lambda-expression"></a>Espressione lambda
 
-Utilizzo di un'espressione lambda è il modo più diretto per utilizzare C++ AMP per riscrivere il codice.
+L'utilizzo di un'espressione lambda rappresenta il modo più diretto per utilizzare C++ AMP per riscrivere il codice.
 
 ```cpp
 void AddArraysWithLambda() {
@@ -63,11 +64,11 @@ void AddArraysWithLambda() {
 }
 ```
 
-L'espressione lambda deve includere un parametro indicizzante e deve includere `restrict(amp)`. Nell'esempio, il [array_view](../../parallel/amp/reference/array-view-class.md) `sum` oggetto ha un rango pari a 1. Pertanto, il parametro verso la lambda espressione è un' [indice](../../parallel/amp/reference/index-class.md) oggetto con rango 1. In fase di esecuzione, l'espressione lambda viene eseguita una sola volta per ogni elemento di [array_view](../../parallel/amp/reference/array-view-class.md) oggetto. Per altre informazioni, vedere [sintassi delle espressioni Lambda](../../cpp/lambda-expression-syntax.md).
+L'espressione lambda deve includere un parametro di indicizzazione e deve includere `restrict(amp)` . Nell'esempio, l'oggetto [array_view](../../parallel/amp/reference/array-view-class.md) `sum` ha un rango pari a 1. Pertanto, il parametro per l'istruzione lambda è un oggetto [Indice](../../parallel/amp/reference/index-class.md) con rango 1. In fase di esecuzione, l'espressione lambda viene eseguita una volta per ogni elemento nell'oggetto [array_view](../../parallel/amp/reference/array-view-class.md) . Per altre informazioni, vedere [sintassi delle espressioni lambda](../../cpp/lambda-expression-syntax.md).
 
 ## <a name="function-object"></a>Oggetto Function
 
-È possibile scomporre il codice dell'acceleratore in un oggetto funzione.
+È possibile fattorizzare il codice dell'acceleratore in un oggetto funzione.
 
 ```cpp
 class AdditionFunctionObject
@@ -114,11 +115,11 @@ void AddArraysWithFunctionObject() {
 }
 ```
 
-L'oggetto della funzione deve includere un costruttore e deve includere un overload dell'operatore di chiamata di funzione. L'operatore di chiamata di funzione deve includere un parametro indicizzante. Un'istanza dell'oggetto funzione viene passata come secondo argomento per il [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) (metodo). In questo esempio, tre [array_view](../../parallel/amp/reference/array-view-class.md) gli oggetti vengono passati al costruttore dell'oggetto funzione. Il [array_view](../../parallel/amp/reference/array-view-class.md) oggetto `sum` ha rango uguale a 1. Pertanto, il parametro per l'operatore di chiamata di funzione è un [indice](../../parallel/amp/reference/index-class.md) oggetto con rango 1. In fase di esecuzione, la funzione viene eseguita una sola volta per ogni elemento di [array_view](../../parallel/amp/reference/array-view-class.md) oggetto. Per altre informazioni, vedere [chiamata di funzione](../../cpp/function-call-cpp.md) e [oggetti funzione della libreria Standard C++](../../standard-library/function-objects-in-the-stl.md).
+L'oggetto funzione deve includere un costruttore e deve includere un overload dell'operatore di chiamata di funzione. L'operatore di chiamata di funzione deve includere un parametro di indicizzazione. Un'istanza dell'oggetto funzione viene passata come secondo argomento al metodo [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) . In questo esempio tre oggetti [array_view](../../parallel/amp/reference/array-view-class.md) vengono passati al costruttore dell'oggetto funzione. Il valore di [array_view](../../parallel/amp/reference/array-view-class.md) dell'oggetto `sum` è 1. Pertanto, il parametro per l'operatore di chiamata di funzione è un oggetto [Indice](../../parallel/amp/reference/index-class.md) con rango 1. In fase di esecuzione, la funzione viene eseguita una volta per ogni elemento nell'oggetto [array_view](../../parallel/amp/reference/array-view-class.md) . Per ulteriori informazioni, vedere la pagina relativa alla [chiamata di funzione](../../cpp/function-call-cpp.md) e [agli oggetti funzione nella libreria standard C++](../../standard-library/function-objects-in-the-stl.md).
 
-## <a name="c-amp-restricted-function"></a>Funzione con limitazioni AMP C++
+## <a name="c-amp-restricted-function"></a>Funzione AMP-Restricted C++
 
-È possibile scomporre ulteriormente il codice dell'acceleratore creando una funzione limitata e chiamandola da una lambda espressione o un oggetto funzione. Esempio di codice seguente viene illustrato come chiamare una funzione limitata da un'espressione lambda.
+È possibile fattorizzare ulteriormente il codice dell'acceleratore creando una funzione con restrizioni e chiamandola da un'espressione lambda o un oggetto funzione. Nell'esempio di codice seguente viene illustrato come chiamare una funzione con restrizioni da un'espressione lambda.
 
 ```cpp
 void AddElementsWithRestrictedFunction(index<1> idx, array_view<int, 1> sum, array_view<int, 1> a, array_view<int, 1> b) restrict(amp)
@@ -153,12 +154,12 @@ void AddArraysWithFunction() {
 }
 ```
 
-La funzione limitata deve includere `restrict(amp)` e devono essere conformi alle restrizioni descritte in [limitare (C++ AMP)](../../cpp/restrict-cpp-amp.md).
+La funzione con restrizioni deve includere `restrict(amp)` e conformarsi alle restrizioni descritte in [restrict (C++ amp)](../../cpp/restrict-cpp-amp.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Sintassi delle espressioni lambda](../../cpp/lambda-expression-syntax.md)<br/>
 [Chiamata di funzione](../../cpp/function-call-cpp.md)<br/>
-[Oggetti funzione della libreria standard C++](../../standard-library/function-objects-in-the-stl.md)<br/>
+[Oggetti funzione nella libreria standard C++](../../standard-library/function-objects-in-the-stl.md)<br/>
 [restrict (C++ AMP)](../../cpp/restrict-cpp-amp.md)

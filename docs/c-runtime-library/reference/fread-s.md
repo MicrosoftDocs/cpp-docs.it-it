@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: fread_s'
 title: fread_s
 ms.date: 4/2/2020
 api_name:
@@ -25,12 +26,12 @@ f1_keywords:
 - fread_s
 - stdio/fread_s
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-ms.openlocfilehash: 340d8188deb34166b1bea58cfc4fe7985cdc5e05
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 311184fc871e138675e2447b3f3ccdf2f7529325
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919455"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314074"
 ---
 # <a name="fread_s"></a>fread_s
 
@@ -71,7 +72,7 @@ Puntatore alla struttura **FILE**.
 
 Per altre informazioni sui codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **fread_s** legge fino a *contare* gli elementi di *ElementSize* byte dal *flusso* di input e li archivia nel *buffer*.  Il puntatore del file associato al *flusso* (se ne è presente uno) viene aumentato in base al numero di byte effettivamente letti. Se il flusso specificato viene aperto in modalità testo, le coppie ritorno a capo e avanzamento riga vengono sostituite con caratteri di avanzamento riga singoli. La sostituzione non ha effetto sul puntatore del file o sul valore restituito. La posizione del puntatore del file è indeterminata se si verifica un errore. Non è possibile determinare il valore di un elemento letto parzialmente.
 
@@ -81,7 +82,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**fread_s**|\<stdio.h>|
 

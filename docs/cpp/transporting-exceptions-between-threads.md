@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: trasporto delle eccezioni tra thread'
 title: Trasporto delle eccezioni tra thread
 ms.date: 05/07/2019
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-ms.openlocfilehash: c3ba61062421462dea8f4280575be9f00ac3931a
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 8b62937c95c755304ab5766185168fad618a53aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561362"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313671"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Trasporto delle eccezioni tra thread
 
@@ -58,7 +59,7 @@ La funzione `current_exception` restituisce un oggetto `exception_ptr` che fa ri
 
 La `make_exception_ptr` funzione restituisce un `exception_ptr` oggetto che fa riferimento all'eccezione specificata dal parametro *e* .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 ### <a name="scenario"></a>Scenario
 
@@ -68,7 +69,7 @@ Tuttavia, se un thread secondario genera un'eccezione, quest'ultima dovrà esser
 
 ### <a name="solution"></a>Soluzione
 
-Per gestire lo scenario precedente, il linguaggio C++ standard supporta il trasferimento di un'eccezione tra thread. Se un thread secondario genera un'eccezione, tale eccezione diventa l' *eccezione corrente*. In modo analogo al mondo reale, si dice che l'eccezione corrente è *in*corso. L'eccezione corrente è in corso dal momento in cui viene generata fino a quando il gestore non la rileva e non la restituisce.
+Per gestire lo scenario precedente, il linguaggio C++ standard supporta il trasferimento di un'eccezione tra thread. Se un thread secondario genera un'eccezione, tale eccezione diventa l' *eccezione corrente*. In modo analogo al mondo reale, si dice che l'eccezione corrente è *in* corso. L'eccezione corrente è in corso dal momento in cui viene generata fino a quando il gestore non la rileva e non la restituisce.
 
 Il thread secondario può intercettare l'eccezione corrente in un **`catch`** blocco, quindi chiamare la `current_exception` funzione per archiviare l'eccezione in un `exception_ptr` oggetto. L'oggetto `exception_ptr` deve essere disponibile al thread secondario e al thread principale. Ad esempio, l'oggetto `exception_ptr` può essere una variabile globale il cui accesso è controllato da un elemento mutex. Il termine *trasporto un'eccezione* significa che un'eccezione in un thread può essere convertita in un modulo a cui è possibile accedere da un altro thread.
 
@@ -88,14 +89,14 @@ Solo la seguente combinazione di opzioni del compilatore e di istruzioni di prog
 
 - L'opzione del compilatore **/EHA** e l' **`catch`** istruzione possono trasportare eccezioni SEH e C++.
 
-- Le opzioni del compilatore **/EHA**, **/EHS**e **/EHsc** e l' **`catch`** istruzione possono trasportare le eccezioni C++.
+- Le opzioni del compilatore **/EHA**, **/EHS** e **/EHsc** e l' **`catch`** istruzione possono trasportare le eccezioni C++.
 
 - L'opzione del compilatore **/CLR** e l' **`catch`** istruzione possono trasportare eccezioni C++. L'opzione del compilatore **/CLR** implica la specifica dell'opzione **/EHA** . Si noti che il compilatore non supporta il trasferimento delle eccezioni gestite. Ciò è dovuto al fatto che le eccezioni gestite, derivate dalla [classe System. Exception](../standard-library/exception-class.md), sono già oggetti che è possibile spostare tra i thread usando le funzionalità del Runtime Language comune.
 
    > [!IMPORTANT]
    > È consigliabile specificare l'opzione del compilatore **/EHsc** e intercettare solo le eccezioni C++. Se si usa l'opzione del compilatore **/EHA** o **/CLR** e un' **`catch`** istruzione con una *dichiarazione di eccezione* con i puntini di sospensione (), si espone a una minaccia per la sicurezza `catch(...)` . Probabilmente si intende utilizzare l' **`catch`** istruzione per acquisire alcune eccezioni specifiche. L'istruzione `catch(...)`, tuttavia, acquisisce tutte le eccezioni C++ e SEH, incluse quelle impreviste che potrebbero essere irreversibili. Se si ignora o si gestisce in modo non corretto un'eccezione imprevista, del codice dannoso potrebbe sfruttare questa opportunità per compromettere la sicurezza del programma.
 
-## <a name="usage"></a>Uso
+## <a name="usage"></a>Utilizzo
 
 Le sezioni seguenti descrivono come trasferire le eccezioni usando il `exception_ptr` tipo e le `current_exception` funzioni, `rethrow_exception` e `make_exception_ptr` .
 
@@ -259,7 +260,7 @@ exception_ptr 1: Caught a  myException exception.
 
 **Intestazione:**\<exception>
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione delle eccezioni](../cpp/exception-handling-in-visual-cpp.md)<br/>
 [/EH (modello di gestione delle eccezioni)](../build/reference/eh-exception-handling-model.md)<br/>
