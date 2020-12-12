@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe Platform:: ClassNotRegisteredException'
 title: Classe Platform::ClassNotRegisteredException
 ms.date: 12/30/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ClassNotRegisteredException
 ms.assetid: 8f8871d8-51b9-46e8-902e-ae023c9f1de9
-ms.openlocfilehash: 9276561b4291ac25c1d623bc308b7fae40b9ab81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eafb6c85ced76021bb71728b5bfedcc192582e74
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161784"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284018"
 ---
 # <a name="platformclassnotregisteredexception-class"></a>Classe Platform::ClassNotRegisteredException
 
@@ -25,7 +26,7 @@ Generata quando una classe COM non è stata registrata.
 public ref class ClassNotRegisteredException : COMException,    IException,    IPrintable,    IEquatable
 ```
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedi la classe [COMException](../cppcx/platform-comexception-class.md) .
 
@@ -35,10 +36,10 @@ Per ulteriori informazioni, vedi la classe [COMException](../cppcx/platform-come
 
 **Server minimo supportato:** Windows Server 2012
 
-**Spazio dei nomi:** Piattaforma
+**Spazio dei nomi:** Platform
 
-**Metadati:** platform.winmd
+**Metadati:** Platform. winmd
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Classe Platform::COMException](../cppcx/platform-comexception-class.md)
+[Classe Platform:: COMException](../cppcx/platform-comexception-class.md)

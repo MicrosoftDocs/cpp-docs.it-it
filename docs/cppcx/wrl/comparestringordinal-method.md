@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: Metodo CompareStringOrdinal'
 title: Metodo CompareStringOrdinal
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Details::CompareStringOrdinal
 ms.assetid: ffa997fd-8cd7-40a5-b9e7-f55d40b072f4
-ms.openlocfilehash: 1291084395b02602b7a3de9013df6720d2e237fc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1994d0f3ec4104e27094de10255194a911ae2945
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214097"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282848"
 ---
 # <a name="comparestringordinal-method"></a>Metodo CompareStringOrdinal
 
@@ -34,13 +35,13 @@ Secondo HSTRING da confrontare.
 
 ## <a name="return-value"></a>Valore restituito
 
-|valore|Condizione|
+|Valore|Condizione|
 |-----------|---------------|
 |-1|*LHS* è minore di *RHS*.|
 |0|*LHS* equivale a *RHS*.|
 |1|*LHS* è maggiore di *RHS*.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Confronta due oggetti HSTRING specificati e restituisce un intero che ne indica la posizione relativa in un ordinamento.
 
@@ -50,6 +51,6 @@ Confronta due oggetti HSTRING specificati e restituisce un intero che ne indica 
 
 **Spazio dei nomi:** Microsoft:: WRL:: Wrappers::D etails
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi Microsoft::WRL::Wrappers::Details](microsoft-wrl-wrappers-details-namespace.md)
+[Microsoft:: WRL:: Wrappers: spazio dei nomi:D etails](microsoft-wrl-wrappers-details-namespace.md)

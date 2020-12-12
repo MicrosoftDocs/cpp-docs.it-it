@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2491'
 title: Errore del compilatore C2491
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2491
 ms.assetid: 4e5a8f81-124e-402c-a5ec-d35a89b5469e
-ms.openlocfilehash: 7ee7fb6e66ca9d5e09ad0eb445262c5f87d2060e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4fd12e30672d7045aa4a7506b35b845e8cd018c9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757072"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283704"
 ---
 # <a name="compiler-error-c2491"></a>Errore del compilatore C2491
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe Platform:: ArrayReference'
 title: Platform::ArrayReference (classe)
 ms.date: 10/16/2019
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
-ms.openlocfilehash: e9dd16ad6c3f53c5562b0419197a582c06fbc642
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d883dd369b4b439bd02a337017e8c13731999d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354797"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284083"
 ---
 # <a name="platformarrayreference-class"></a>Platform::ArrayReference (classe)
 
@@ -24,19 +25,19 @@ ms.locfileid: "81354797"
 class ArrayReference
 ```
 
-### <a name="members"></a>Membri
+### <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[ArrayReference::ArrayReference](#ctor)|Inizializza una nuova istanza della classe `ArrayReference`.|
+|[ArrayReference:: ArrayReference](#ctor)|Inizializza una nuova istanza della classe `ArrayReference`.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[Operatore ArrayReference::operator()](#operator-call)|Converte questo oggetto `ArrayReference` in `Platform::Array<T>^*`.|
+|[Operatore ArrayReference:: operator ()](#operator-call)|Converte questo oggetto `ArrayReference` in `Platform::Array<T>^*`.|
 |[Operatore ArrayReference::operator=](#operator-assign)|Assegna il contenuto di un altro oggetto `ArrayReference` a questa istanza.|
 
 ## <a name="exceptions"></a>Eccezioni
@@ -47,17 +48,17 @@ Utilizzando `ArrayReference` per compilare una matrice di tipo C, puoi evitare l
 
 ### <a name="requirements"></a>Requisiti
 
-**Client minimo supportato:** Windows 8 (informazioni in due)
+**Client minimo supportato:** Windows 8
 
-**Server minimo supportato:** Windows Server 2012 (informazioni in due)
+**Server minimo supportato:** Windows Server 2012
 
 **Spazio dei nomi:** Platform
 
 **Intestazione:** vccorlib.h
 
-## <a name="arrayreferencearrayreference-constructor"></a><a name="ctor"></a>Costruttore ArrayReference::ArrayReference
+## <a name="arrayreferencearrayreference-constructor"></a><a name="ctor"></a> Costruttore ArrayReference:: ArrayReference
 
-Inizializza una nuova istanza della classe [Platform::ArrayReference.](../cppcx/platform-arrayreference-class.md)
+Inizializza una nuova istanza della classe [Platform:: ArrayReference](../cppcx/platform-arrayreference-class.md) .
 
 ### <a name="syntax"></a>Sintassi
 
@@ -68,7 +69,7 @@ ArrayReference(ArrayReference&& otherArg)
 
 ### <a name="parameters"></a>Parametri
 
-*dataArg (Argogo dati)*<br/>
+*dataArg*<br/>
 Puntatore alla matrice di dati.
 
 *sizeArg*<br/>
@@ -77,11 +78,11 @@ Numero di elementi nella matrice di origine.
 *otherArg*<br/>
 Oggetto `ArrayReference` i cui dati verranno spostati per inizializzare la nuova istanza.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="arrayreferenceoperator-operator"></a><a name="operator-assign"></a>Operatore ArrayReference::operator
+## <a name="arrayreferenceoperator-operator"></a><a name="operator-assign"></a> Operatore ArrayReference:: operator =
 
-Assegna l'oggetto specificato all'oggetto [corrente Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) oggetto utilizzando la semantica di spostamento.
+Assegna l'oggetto specificato all'oggetto [Platform:: ArrayReference](../cppcx/platform-arrayreference-class.md) corrente usando la semantica di spostamento.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -98,13 +99,13 @@ Oggetto spostato nell'oggetto `ArrayReference` corrente.
 
 Riferimento a un oggetto di tipo `ArrayReference`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `Platform::ArrayReference` è un modello di classe C++ standard, non una classe di riferimento.
 
-## <a name="arrayreferenceoperator-operator"></a><a name="operator-call"></a>Operatore ArrayReference::operator()
+## <a name="arrayreferenceoperator-operator"></a><a name="operator-call"></a> Operatore ArrayReference:: operator ()
 
-Converte l'oggetto [Corrente Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) in una classe [Platform::Array.](../cppcx/platform-array-class.md)
+Converte di nuovo l'oggetto [Platform:: ArrayReference](../cppcx/platform-arrayreference-class.md) corrente in una classe [Platform:: Array](../cppcx/platform-array-class.md) .
 
 ### <a name="syntax"></a>Sintassi
 
@@ -116,10 +117,10 @@ Array<TArg>^ operator ();
 
 Handle a oggetto di tipo `Array<TArg>^`
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-[Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) è un modello di classe standard di C, e [Platform::Array](../cppcx/platform-array-class.md) è una classe di riferimento.
+[Platform:: ArrayReference](../cppcx/platform-arrayreference-class.md) è un modello di classe C++ standard e [Platform:: Array](../cppcx/platform-array-class.md) è una classe di riferimento.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Platform](../cppcx/platform-namespace-c-cx.md)

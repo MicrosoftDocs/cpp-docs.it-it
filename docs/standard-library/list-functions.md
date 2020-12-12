@@ -1,20 +1,21 @@
 ---
-title: '&lt;elenco&gt; funzioni | Microsoft Docs'
+description: 'Altre informazioni su: &lt; elencare le &gt; funzioni'
+title: '&lt;&gt;funzioni elenco | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - list/std::swap
-ms.openlocfilehash: 04f00a9274018432cd03917ae5485f2d395649e4
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6a94fcc916db08a510a968b66b0a0dc0cfa9b8e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420064"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284707"
 ---
-# <a name="ltlistgt-functions"></a>&lt;elenco&gt; funzioni
+# <a name="ltlistgt-functions"></a>&lt;&gt;funzioni elenco
 
-## <a name="swap"></a>scambio
+## <a name="swap"></a><a name="swap"></a> scambio
 
 Scambia gli elementi di due elenchi.
 
@@ -25,12 +26,12 @@ template <class T, class Allocator>
 
 ### <a name="parameters"></a>Parametri
 
-\ a *sinistra*
+*sinistra*\
 Oggetto di tipo `list`.
 
-\ a *destra*
+*Ok*\
 Oggetto di tipo `list`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione modello esegue `left.swap(right)`.

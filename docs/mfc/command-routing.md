@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: routing dei comandi'
 title: comandi (routing)
 ms.date: 09/06/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-ms.openlocfilehash: e47ffd38b342301da32abae9690738ef83c0426b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 4004f74413f236599c5cdd14f6593bc5d2bd26b8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620686"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283446"
 ---
 # <a name="command-routing"></a>comandi (routing)
 
@@ -35,14 +36,14 @@ Quanto è costoso questo meccanismo di routing rispetto a ciò che il gestore es
 
 |Quando un oggetto di questo tipo riceve un comando . . .|Concede a se stesso e ad altri oggetti destinazione comando l'opportunità di gestire il comando in questo ordine:|
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-|Finestra cornice MDI (`CMDIFrameWnd`)|1. attivo`CMDIChildWnd`<br />2. questa finestra cornice<br />3. applicazione ( `CWinApp` oggetto)|
+|Finestra cornice MDI (`CMDIFrameWnd`)|1. attivo `CMDIChildWnd`<br />2. questa finestra cornice<br />3. applicazione ( `CWinApp` oggetto)|
 |Finestre cornice del documento (`CFrameWnd`, `CMDIChildWnd`)|1. visualizzazione attiva<br />2. questa finestra cornice<br />3. applicazione ( `CWinApp` oggetto)|
 |Visualizzazione|1. questa visualizzazione<br />2. documento collegato alla visualizzazione|
-|Document|1. questo documento<br />2. modello di documento collegato al documento|
+|Documento|1. questo documento<br />2. modello di documento collegato al documento|
 |Finestra di dialogo|1. questa finestra di dialogo<br />2. finestra proprietaria della finestra di dialogo<br />3. applicazione ( `CWinApp` oggetto)|
 
 Nei casi in cui le voci numerate nella seconda colonna della tabella precedente menzionano altri oggetti, come un documento, vedere l'elemento corrispondente nella prima colonna. Ad esempio, quando si legge nella seconda colonna che la visualizzazione inoltra un comando al suo documento, vedere la voce "Documento" nella prima colonna per continuare a seguire il routing.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Chiamata di un gestore dal framework](how-the-framework-calls-a-handler.md)
+[Modalità di chiamata di un gestore da parte del Framework](how-the-framework-calls-a-handler.md)

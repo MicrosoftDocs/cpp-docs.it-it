@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: classe Platform:: box'
 title: Classe Platform::Box
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Box
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-ms.openlocfilehash: 6afc12dbc3f6980bb7fd42d7f0a8fdc9e6d0e284
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cbfe8ec70f2ef4c58bf2c9459f2d0c4722817810
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232170"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284057"
 ---
 # <a name="platformbox-class"></a>Classe Platform::Box
 
@@ -38,9 +39,9 @@ ref class Box abstract;
 |[Casella operatore &lt; T&gt;^](#box-t) | Consente conversioni boxing da una classe di valori `T` a `Box<T>`. |
 |[operatore &lt; T volatile box&gt;^](#box-volatile-t) | Consente le conversioni boxing da una **`volatile`** classe `T` di valori o **`enum`** da un tipo `T` a `Box<T>` . |
 |[Operatore Box:: T](#t) | Consente le conversioni boxing da una classe `T` di valori o **`enum`** da una classe `T` a `Box<T>` . |
-|[Proprietà Value](#value) | Restituisce il valore incapsulato nell'oggetto `Box`. |
+|[Value (proprietà)](#value) | Restituisce il valore incapsulato nell'oggetto `Box`. |
 
-## <a name="boxbox-constructor"></a><a name="ctor"></a>Costruttore box:: box
+## <a name="boxbox-constructor"></a><a name="ctor"></a> Costruttore box:: box
 
 Crea un oggetto `Box` che può incapsulare un valore del tipo specificato.
 
@@ -55,7 +56,7 @@ Box(T valueArg);
 *valueArg*<br/>
 Tipo di valore da boxed, ad esempio,,, **`int`** **`bool`** `float64` `DateTime` .
 
-## <a name="boxoperator-boxltconst-tgt-operator"></a><a name="box-const-t"></a>Operatore Box:: operator Box &lt; const T &gt; ^
+## <a name="boxoperator-boxltconst-tgt-operator"></a><a name="box-const-t"></a> Operatore Box:: operator Box &lt; const T &gt; ^
 
 Consente le conversioni boxing da una classe **`const`** `T` di valori o da una **`enum`** classe `T` a `Box<T>` .
 
@@ -74,7 +75,7 @@ Qualsiasi classe di valore, struct di valore o tipo enum. Include i tipi incorpo
 
 `Platform::Box<T>^`Istanza che rappresenta il valore originale boxed in una classe di riferimento.
 
-## <a name="boxoperator-boxltconst-volatile-tgt-operator"></a><a name="box-const-volatile-t"></a>Operatore Box:: operator Box &lt; const volatile T &gt; ^
+## <a name="boxoperator-boxltconst-volatile-tgt-operator"></a><a name="box-const-volatile-t"></a> Operatore Box:: operator Box &lt; const volatile T &gt; ^
 
 Consente le conversioni boxing da una **`const volatile`** classe `T` di valori o **`enum`** da un tipo `T` a `Box<T>` .
 
@@ -93,7 +94,7 @@ Qualsiasi tipo enum, classe di valori o struct di valori. Include i tipi incorpo
 
 `Platform::Box<T>^`Istanza che rappresenta il valore originale boxed in una classe di riferimento.
 
-## <a name="boxoperator-boxlttgt-operator"></a><a name="box-t"></a>Operatore Box:: operator Box &lt; T &gt; ^
+## <a name="boxoperator-boxlttgt-operator"></a><a name="box-t"></a> Operatore Box:: operator Box &lt; T &gt; ^
 
 Consente conversioni boxing da una classe di valori `T` a `Box<T>`.
 
@@ -112,7 +113,7 @@ Qualsiasi tipo enum, classe di valori o struct di valori. Include i tipi incorpo
 
 `Platform::Box<T>^`Istanza che rappresenta il valore originale boxed in una classe di riferimento.
 
-## <a name="boxoperator-boxltvolatile-tgt-operator"></a><a name="box-volatile-t"></a>Operatore Box:: operator Box &lt; volatile T &gt; ^
+## <a name="boxoperator-boxltvolatile-tgt-operator"></a><a name="box-volatile-t"></a> Operatore Box:: operator Box &lt; volatile T &gt; ^
 
 Consente le conversioni boxing da una **`volatile`** classe `T` di valori o **`enum`** da un tipo `T` a `Box<T>` .
 
@@ -131,7 +132,7 @@ Qualsiasi tipo enum, classe di valori o struct di valori. Include i tipi incorpo
 
 `Platform::Box<T>^`Istanza che rappresenta il valore originale boxed in una classe di riferimento.
 
-## <a name="boxoperator-t-operator"></a><a name="t"></a>Operatore Box:: operator T
+## <a name="boxoperator-t-operator"></a><a name="t"></a> Operatore Box:: operator T
 
 Consente le conversioni boxing da una classe `T` di valori o **`enum`** da una classe `T` a `Box<T>` .
 
@@ -150,7 +151,7 @@ Qualsiasi tipo enum, classe di valori o struct di valori. Include i tipi incorpo
 
 `Platform::Box<T>^`Istanza che rappresenta il valore originale boxed in una classe di riferimento.
 
-## <a name="boxvalue-property"></a><a name="value"></a>Proprietà box:: value
+## <a name="boxvalue-property"></a><a name="value"></a> Proprietà box:: value
 
 Restituisce il valore incapsulato nell'oggetto `Box`.
 
@@ -166,7 +167,7 @@ virtual property T Value{
 
 Restituisce il valore boxed con lo stesso tipo presente in origine prima di essere sottoposto a boxing.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Platform](../cppcx/platform-namespace-c-cx.md)<br/>
 [Boxing](../cppcx/boxing-c-cx.md)

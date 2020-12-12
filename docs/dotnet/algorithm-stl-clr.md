@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: algoritmo (STL/CLR)'
 title: algorithm (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -141,12 +142,12 @@ helpviewer_keywords:
 - unique_copy function [STL/CLR]
 - upper_bound function [STL/CLR]
 ms.assetid: ee2718dc-a98d-40b8-8341-593fe7d2ac15
-ms.openlocfilehash: 4abd7eaa640bb89fd97c1787bf2fd692610212fb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 450a4afdf5c5d697d722e92132c5c59e74064f5d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208951"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282835"
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 
@@ -160,7 +161,7 @@ Definisce le funzioni del modello di contenitore STL/CLR che eseguono algoritmi.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<cliext/algoritmo >
+**Intestazione:**\<cliext/algorithm>
 
 **Spazio dei nomi:** cliext
 
@@ -198,14 +199,14 @@ Definisce le funzioni del modello di contenitore STL/CLR che eseguono algoritmi.
 |[min_element (STL/CLR)](#min_element)|Trova l'elemento più piccolo in una sequenza specificata di valori.|
 |[mismatch (STL/CLR)](#mismatch)|Confronta due intervalli elemento per elemento e restituisce la prima posizione in cui si verifica una differenza.|
 |[next_permutation (STL/CLR)](#next_permutation)|Riordina gli elementi in un intervallo in modo che l'ordine originale venga sostituito da lessicografico successiva permutazione più grande, se esistente.|
-|[nth_element (STL/CLR)](#nth_element)|Esegue il partizionamento di una sequenza di elementi, individuando correttamente l'`n`l'elemento della sequenza in modo che tutti gli elementi che lo precedono siano minori o uguali a esso e che tutti gli elementi che lo seguono siano maggiori o uguali.|
+|[nth_element (STL/CLR)](#nth_element)|Suddivide una sequenza di elementi, individuando correttamente l' `n` elemento th della sequenza in modo che tutti gli elementi che lo precedono siano minori o uguali a esso e che tutti gli elementi che lo seguono siano maggiori o uguali.|
 |[partial_sort (STL/CLR)](#partial_sort)|Dispone un numero specificato di elementi più piccoli di un intervallo in un ordine non decrescente.|
 |[partial_sort_copy (STL/CLR)](#partial_sort_copy)|Copia gli elementi di un intervallo di origine in un intervallo di destinazione in modo che gli elementi dell'intervallo di origine siano ordinati.|
 |[partition (STL/CLR)](#partition)|Dispone gli elementi in un intervallo in modo che gli elementi che soddisfano un predicato unario precedano quelli che non lo soddisfano.|
 |[pop_heap (STL/CLR)](#pop_heap)|Sposta l'elemento più grande dall'inizio di un heap alla fine e quindi crea un nuovo heap dagli elementi rimanenti.|
 |[prev_permutation (STL/CLR)](#prev_permutation)|Riordina una sequenza di elementi in modo che l'ordine originale venga sostituito dalla permutazione lessicografico precedente, se esistente.|
 |[push_heap (STL/CLR)](#push_heap)|Aggiunge un elemento che si trova alla fine di un intervallo a un heap esistente costituito dagli elementi precedenti dell'intervallo.|
-|[random_shuffle (STL/CLR)](#random_shuffle)|Ridispone una sequenza di `N` elementi di un intervallo in una delle `N`. possibili disposizioni selezionate in modo casuale.|
+|[random_shuffle (STL/CLR)](#random_shuffle)|Riorganizza una sequenza di `N` elementi di un intervallo in uno dei `N` . possibili disposizioni selezionate in modo casuale.|
 |[remove (STL/CLR)](#remove)|Elimina un valore specificato da un intervallo specificato senza compromettere l'ordine degli elementi rimanenti e restituisce la fine di un nuovo intervallo senza il valore specificato.|
 |[remove_copy (STL/CLR)](#remove_copy)|Copia gli elementi di un intervallo di origine in un intervallo di destinazione, ad eccezione del fatto che gli elementi di un valore specificato non vengono copiati, senza compromettere l'ordine degli elementi rimanenti.|
 |[remove_copy_if (STL/CLR)](#remove_copy_if)|Copia gli elementi di un intervallo di origine in un intervallo di destinazione, ad eccezione di quelli che soddisfano un predicato, senza alterare l'ordine degli elementi rimanenti.|
@@ -235,9 +236,9 @@ Definisce le funzioni del modello di contenitore STL/CLR che eseguono algoritmi.
 |[unique_copy (STL/CLR)](#unique_copy)|Copia gli elementi di un intervallo di origine in un intervallo di destinazione ad eccezione degli elementi duplicati adiacenti l'uno rispetto all'altro.|
 |[upper_bound (STL/CLR)](#upper_bound)|Trova la posizione del primo elemento in un intervallo ordinato con un valore maggiore di un valore specificato, in cui il criterio di ordinamento può essere specificato da un predicato binario.|
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
-## <a name="adjacent_find-stlclr"></a><a name="adjacent_find"></a>adjacent_find (STL/CLR)
+## <a name="adjacent_find-stlclr"></a><a name="adjacent_find"></a> adjacent_find (STL/CLR)
 
 Cerca due elementi adiacenti uguali o che soddisfano una condizione specificata.
 
@@ -252,9 +253,9 @@ template<class _FwdIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `adjacent_find`. Per ulteriori informazioni, vedere [adjacent_find](../standard-library/algorithm-functions.md#adjacent_find).
+Questa funzione si comporta come la funzione della libreria standard C++ `adjacent_find` . Per ulteriori informazioni, vedere [adjacent_find](../standard-library/algorithm-functions.md#adjacent_find).
 
-## <a name="binary_search-stlclr"></a><a name="binary_search"></a>binary_search (STL/CLR)
+## <a name="binary_search-stlclr"></a><a name="binary_search"></a> binary_search (STL/CLR)
 
 Verifica se in un intervallo ordinato è presente un elemento uguale a un valore specificato o equivalente a tale valore nel senso specificato da un predicato binario.
 
@@ -270,9 +271,9 @@ template<class _FwdIt, class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `binary_search`. Per ulteriori informazioni, vedere [binary_search](../standard-library/algorithm-functions.md#binary_search).
+Questa funzione si comporta come la funzione della libreria standard C++ `binary_search` . Per ulteriori informazioni, vedere [binary_search](../standard-library/algorithm-functions.md#binary_search).
 
-## <a name="copy-stlclr"></a><a name="copy"></a>Copy (STL/CLR)
+## <a name="copy-stlclr"></a><a name="copy"></a> Copy (STL/CLR)
 
 Assegna i valori degli elementi di un intervallo di origine a un intervallo di destinazione, scorrendo la sequenza di origine degli elementi e assegnando loro nuove posizioni in avanti.
 
@@ -285,9 +286,9 @@ template<class _InIt, class _OutIt> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `copy`. Per ulteriori informazioni, vedere [Copy](../standard-library/algorithm-functions.md#copy).
+Questa funzione si comporta come la funzione della libreria standard C++ `copy` . Per ulteriori informazioni, vedere [Copy](../standard-library/algorithm-functions.md#copy).
 
-## <a name="copy_backward-stlclr"></a><a name="copy_backward"></a>copy_backward (STL/CLR)
+## <a name="copy_backward-stlclr"></a><a name="copy_backward"></a> copy_backward (STL/CLR)
 
 Assegna i valori degli elementi di un intervallo di origine a un intervallo di destinazione, scorrendo la sequenza di origine degli elementi e assegnando loro nuove posizioni in indietro.
 
@@ -301,9 +302,9 @@ template<class _BidIt1, class _BidIt2> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `copy_backward`. Per ulteriori informazioni, vedere [copy_backward](../standard-library/algorithm-functions.md#copy_backward).
+Questa funzione si comporta come la funzione della libreria standard C++ `copy_backward` . Per ulteriori informazioni, vedere [copy_backward](../standard-library/algorithm-functions.md#copy_backward).
 
-## <a name="count-stlclr"></a><a name="count"></a>conteggio (STL/CLR)
+## <a name="count-stlclr"></a><a name="count"></a> conteggio (STL/CLR)
 
 Restituisce il numero di elementi di un intervallo i cui valori corrispondono a un valore specificato.
 
@@ -317,9 +318,9 @@ template<class _InIt, class _Ty> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `count`. Per ulteriori informazioni, vedere [count](../standard-library/algorithm-functions.md#count).
+Questa funzione si comporta come la funzione della libreria standard C++ `count` . Per ulteriori informazioni, vedere [count](../standard-library/algorithm-functions.md#count).
 
-## <a name="count_if-stlclr"></a><a name="count_if"></a>count_if (STL/CLR)
+## <a name="count_if-stlclr"></a><a name="count_if"></a> count_if (STL/CLR)
 
 Restituisce il numero di elementi di un intervallo i cui valori corrispondono a una condizione specificata.
 
@@ -333,9 +334,9 @@ template<class _InIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `count_if`. Per ulteriori informazioni, vedere [count_if](../standard-library/algorithm-functions.md#count_if).
+Questa funzione si comporta come la funzione della libreria standard C++ `count_if` . Per ulteriori informazioni, vedere [count_if](../standard-library/algorithm-functions.md#count_if).
 
-## <a name="equal-stlclr"></a><a name="equal"></a>uguale (STL/CLR)
+## <a name="equal-stlclr"></a><a name="equal"></a> uguale (STL/CLR)
 
 Confronta due intervalli elemento per elemento per verificarne l'uguaglianza o l'equivalenza nel senso specificato da un predicato binario.
 
@@ -351,9 +352,9 @@ template<class _InIt1, class _InIt2, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `equal`. Per ulteriori informazioni, vedere [Equal](../standard-library/algorithm-functions.md#equal).
+Questa funzione si comporta come la funzione della libreria standard C++ `equal` . Per ulteriori informazioni, vedere [Equal](../standard-library/algorithm-functions.md#equal).
 
-## <a name="equal_range-stlclr"></a><a name="equal_range"></a>equal_range (STL/CLR)
+## <a name="equal_range-stlclr"></a><a name="equal_range"></a> equal_range (STL/CLR)
 
 Trova una coppia di posizioni in un intervallo ordinato, la prima inferiore o equivalente alla posizione di un elemento specificato e la seconda maggiore della posizione di tale elemento, in cui il senso dell'equivalenza o dell'ordinamento usato per stabilire le posizioni nella sequenza può essere specificato da un predicato binario.
 
@@ -370,9 +371,9 @@ template<class _FwdIt, class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `equal_range`. Per ulteriori informazioni, vedere [equal_range](../standard-library/algorithm-functions.md#equal_range).
+Questa funzione si comporta come la funzione della libreria standard C++ `equal_range` . Per ulteriori informazioni, vedere [equal_range](../standard-library/algorithm-functions.md#equal_range).
 
-## <a name="fill-stlclr"></a><a name="fill"></a>Fill (STL/CLR)
+## <a name="fill-stlclr"></a><a name="fill"></a> Fill (STL/CLR)
 
 Assegna lo stesso nuovo valore a ogni elemento di un intervallo specificato.
 
@@ -385,9 +386,9 @@ template<class _FwdIt, class _Ty> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `fill`. Per ulteriori informazioni, vedere [Fill](../standard-library/algorithm-functions.md#fill).
+Questa funzione si comporta come la funzione della libreria standard C++ `fill` . Per ulteriori informazioni, vedere [Fill](../standard-library/algorithm-functions.md#fill).
 
-## <a name="fill_n-stlclr"></a><a name="fill_n"></a>fill_n (STL/CLR)
+## <a name="fill_n-stlclr"></a><a name="fill_n"></a> fill_n (STL/CLR)
 
 Assegna un nuovo valore a un numero specificato di elementi di un intervallo che inizia con un determinato elemento.
 
@@ -400,9 +401,9 @@ template<class _OutIt, class _Diff, class _Ty> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `fill_n`. Per ulteriori informazioni, vedere [fill_n](../standard-library/algorithm-functions.md#fill_n).
+Questa funzione si comporta come la funzione della libreria standard C++ `fill_n` . Per ulteriori informazioni, vedere [fill_n](../standard-library/algorithm-functions.md#fill_n).
 
-## <a name="find-stlclr"></a><a name="find"></a>Find (STL/CLR)
+## <a name="find-stlclr"></a><a name="find"></a> Find (STL/CLR)
 
 Individua la posizione della prima occorrenza di un elemento in un intervallo con un valore specificato.
 
@@ -415,9 +416,9 @@ template<class _InIt, class _Ty> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `find`. Per ulteriori informazioni, vedere [Find](../standard-library/algorithm-functions.md#find).
+Questa funzione si comporta come la funzione della libreria standard C++ `find` . Per ulteriori informazioni, vedere [Find](../standard-library/algorithm-functions.md#find).
 
-## <a name="find_end-stlclr"></a><a name="find_end"></a>find_end (STL/CLR)
+## <a name="find_end-stlclr"></a><a name="find_end"></a> find_end (STL/CLR)
 
 Ricerca in un intervallo l'ultima sottosequenza identica a una sequenza specificata o equivalente nel senso specificato da un predicato binario.
 
@@ -434,9 +435,9 @@ template<class _FwdIt1, class _FwdIt2, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `find_end`. Per ulteriori informazioni, vedere [find_end](../standard-library/algorithm-functions.md#find_end).
+Questa funzione si comporta come la funzione della libreria standard C++ `find_end` . Per ulteriori informazioni, vedere [find_end](../standard-library/algorithm-functions.md#find_end).
 
-## <a name="find_first_of-stlclr"></a><a name="find_first_of"></a>find_first_of (STL/CLR)
+## <a name="find_first_of-stlclr"></a><a name="find_first_of"></a> find_first_of (STL/CLR)
 
 Ricerca la prima occorrenza di uno dei diversi valori all'interno di un intervallo di destinazione o la prima occorrenza di uno dei diversi elementi equivalenti nel senso specificato da un predicato binario in un set specificato di elementi.
 
@@ -453,9 +454,9 @@ template<class _FwdIt1, class _FwdIt2, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `find_first_of`. Per ulteriori informazioni, vedere [find_first_of](../standard-library/algorithm-functions.md#find_first_of).
+Questa funzione si comporta come la funzione della libreria standard C++ `find_first_of` . Per ulteriori informazioni, vedere [find_first_of](../standard-library/algorithm-functions.md#find_first_of).
 
-## <a name="find_if-stlclr"></a><a name="find_if"></a>find_if (STL/CLR)
+## <a name="find_if-stlclr"></a><a name="find_if"></a> find_if (STL/CLR)
 
 Individua la posizione della prima occorrenza di un elemento in un intervallo che soddisfa una condizione specificata.
 
@@ -468,9 +469,9 @@ template<class _InIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `find_if`. Per ulteriori informazioni, vedere [find_if](../standard-library/algorithm-functions.md#find_if).
+Questa funzione si comporta come la funzione della libreria standard C++ `find_if` . Per ulteriori informazioni, vedere [find_if](../standard-library/algorithm-functions.md#find_if).
 
-## <a name="for_each-stlclr"></a><a name="for_each"></a>for_each (STL/CLR)
+## <a name="for_each-stlclr"></a><a name="for_each"></a> for_each (STL/CLR)
 
 Applica un oggetto funzione specificato a ogni elemento ordinato in avanti all'interno di un intervallo e restituisce l'oggetto funzione.
 
@@ -483,9 +484,9 @@ template<class _InIt, class _Fn1> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `for_each`. Per ulteriori informazioni, vedere [for_each](../standard-library/algorithm-functions.md#for_each).
+Questa funzione si comporta come la funzione della libreria standard C++ `for_each` . Per ulteriori informazioni, vedere [for_each](../standard-library/algorithm-functions.md#for_each).
 
-## <a name="generate-stlclr"></a><a name="generate"></a>genera (STL/CLR)
+## <a name="generate-stlclr"></a><a name="generate"></a> genera (STL/CLR)
 
 Assegna i valori generati da un oggetto funzione a ogni elemento di un intervallo.
 
@@ -498,9 +499,9 @@ template<class _FwdIt, class _Fn0> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `generate`. Per ulteriori informazioni, vedere [generate](../standard-library/algorithm-functions.md#generate).
+Questa funzione si comporta come la funzione della libreria standard C++ `generate` . Per ulteriori informazioni, vedere [generate](../standard-library/algorithm-functions.md#generate).
 
-## <a name="generate_n-stlclr"></a><a name="generate_n"></a>generate_n (STL/CLR)
+## <a name="generate_n-stlclr"></a><a name="generate_n"></a> generate_n (STL/CLR)
 
 Assegna i valori generati da un oggetto funzione a un numero specificato di elementi di un intervallo e torna alla posizione immediatamente successiva all'ultimo valore assegnato.
 
@@ -513,9 +514,9 @@ template<class _OutIt, class _Diff, class _Fn0> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `generate_n`. Per ulteriori informazioni, vedere [generate_n](../standard-library/algorithm-functions.md#generate_n).
+Questa funzione si comporta come la funzione della libreria standard C++ `generate_n` . Per ulteriori informazioni, vedere [generate_n](../standard-library/algorithm-functions.md#generate_n).
 
-## <a name="includes-stlclr"></a><a name="includes"></a>include (STL/CLR)
+## <a name="includes-stlclr"></a><a name="includes"></a> include (STL/CLR)
 
 Verifica se un intervallo ordinato contiene tutti gli elementi contenuti in un secondo intervallo ordinato, in cui il criterio di ordinamento o di equivalenza tra gli elementi può essere specificato da un predicato binario.
 
@@ -532,9 +533,9 @@ template<class _InIt1, class _InIt2, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `includes`. Per ulteriori informazioni, vedere [inclusioni](../standard-library/algorithm-functions.md#includes).
+Questa funzione si comporta come la funzione della libreria standard C++ `includes` . Per ulteriori informazioni, vedere [inclusioni](../standard-library/algorithm-functions.md#includes).
 
-## <a name="inplace_merge-stlclr"></a><a name="inplace_merge"></a>inplace_merge (STL/CLR)
+## <a name="inplace_merge-stlclr"></a><a name="inplace_merge"></a> inplace_merge (STL/CLR)
 
 Combina gli elementi di due intervalli ordinati consecutivi in un unico intervallo ordinato, in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -550,9 +551,9 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `inplace_merge` per ulteriori informazioni, vedere [inplace_merge](../standard-library/algorithm-functions.md#inplace_merge).
+Questa funzione si comporta come la funzione della libreria standard C++ `inplace_merge` per ulteriori informazioni, vedere [inplace_merge](../standard-library/algorithm-functions.md#inplace_merge).
 
-## <a name="iter_swap-stlclr"></a><a name="iter_swap"></a>iter_swap (STL/CLR)
+## <a name="iter_swap-stlclr"></a><a name="iter_swap"></a> iter_swap (STL/CLR)
 
 Scambia due valori a cui viene fatto riferimento da una coppia di iteratori specificati.
 
@@ -565,9 +566,9 @@ template<class _FwdIt1, class _FwdIt2> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `iter_swap`. Per ulteriori informazioni, vedere [iter_swap](../standard-library/algorithm-functions.md#iter_swap).
+Questa funzione si comporta come la funzione della libreria standard C++ `iter_swap` . Per ulteriori informazioni, vedere [iter_swap](../standard-library/algorithm-functions.md#iter_swap).
 
-## <a name="lexicographical_compare-stlclr"></a><a name="lexicographical_compare"></a>lexicographical_compare (STL/CLR)
+## <a name="lexicographical_compare-stlclr"></a><a name="lexicographical_compare"></a> lexicographical_compare (STL/CLR)
 
 Confronta due sequenze elemento per elemento per determinare quale delle due è minore.
 
@@ -584,9 +585,9 @@ template<class _InIt1, class _InIt2, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `lexicographical_compare`. Per ulteriori informazioni, vedere [lexicographical_compare](../standard-library/algorithm-functions.md#lexicographical_compare).
+Questa funzione si comporta come la funzione della libreria standard C++ `lexicographical_compare` . Per ulteriori informazioni, vedere [lexicographical_compare](../standard-library/algorithm-functions.md#lexicographical_compare).
 
-## <a name="lower_bound-stlclr"></a><a name="lower_bound"></a>lower_bound (STL/CLR)
+## <a name="lower_bound-stlclr"></a><a name="lower_bound"></a> lower_bound (STL/CLR)
 
 Trova la posizione del primo elemento in un intervallo ordinato con un valore minore di o equivalente a un valore specificato, in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -602,9 +603,9 @@ template<class _FwdIt, class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `lower_bound`. Per ulteriori informazioni, vedere [lower_bound](../standard-library/algorithm-functions.md#lower_bound).
+Questa funzione si comporta come la funzione della libreria standard C++ `lower_bound` . Per ulteriori informazioni, vedere [lower_bound](../standard-library/algorithm-functions.md#lower_bound).
 
-## <a name="make_heap-stlclr"></a><a name="make_heap"></a>make_heap (STL/CLR)
+## <a name="make_heap-stlclr"></a><a name="make_heap"></a> make_heap (STL/CLR)
 
 Converte gli elementi di un intervallo specificato in un heap in cui il primo elemento è il più grande e per il quale un criterio di ordinamento può essere specificato con un predicato binario.
 
@@ -619,9 +620,9 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `make_heap`. Per ulteriori informazioni, vedere [make_heap](../standard-library/algorithm-functions.md#make_heap).
+Questa funzione si comporta come la funzione della libreria standard C++ `make_heap` . Per ulteriori informazioni, vedere [make_heap](../standard-library/algorithm-functions.md#make_heap).
 
-## <a name="max-stlclr"></a><a name="max"></a>Max (STL/CLR)
+## <a name="max-stlclr"></a><a name="max"></a> Max (STL/CLR)
 
 Confronta due oggetti e restituisce il maggiore dei due in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -636,9 +637,9 @@ template<class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `max`. Per ulteriori informazioni, vedere [Max](../standard-library/algorithm-functions.md#max).
+Questa funzione si comporta come la funzione della libreria standard C++ `max` . Per ulteriori informazioni, vedere [Max](../standard-library/algorithm-functions.md#max).
 
-## <a name="max_element-stlclr"></a><a name="max_element"></a>max_element (STL/CLR)
+## <a name="max_element-stlclr"></a><a name="max_element"></a> max_element (STL/CLR)
 
 Trova la prima occorrenza dell'elemento più grande in un intervallo specificato in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -653,9 +654,9 @@ template<class _FwdIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `max_element`. Per ulteriori informazioni, vedere [max_element](../standard-library/algorithm-functions.md#max_element).
+Questa funzione si comporta come la funzione della libreria standard C++ `max_element` . Per ulteriori informazioni, vedere [max_element](../standard-library/algorithm-functions.md#max_element).
 
-## <a name="merge-stlclr"></a><a name="merge"></a>merge (STL/CLR)
+## <a name="merge-stlclr"></a><a name="merge"></a> merge (STL/CLR)
 
 Combina tutti gli elementi di due intervalli di origine ordinati in un unico intervallo di destinazione ordinato, in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -672,9 +673,9 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `merge`. Per ulteriori informazioni, vedere [merge](../standard-library/algorithm-functions.md#merge).
+Questa funzione si comporta come la funzione della libreria standard C++ `merge` . Per ulteriori informazioni, vedere [merge](../standard-library/algorithm-functions.md#merge).
 
-## <a name="min-stlclr"></a><a name="min"></a>min (STL/CLR)
+## <a name="min-stlclr"></a><a name="min"></a> min (STL/CLR)
 
 Confronta due oggetti e restituisce il minore dei due in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -689,9 +690,9 @@ template<class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `min`. Per ulteriori informazioni, vedere [min](../standard-library/algorithm-functions.md#min).
+Questa funzione si comporta come la funzione della libreria standard C++ `min` . Per ulteriori informazioni, vedere [min](../standard-library/algorithm-functions.md#min).
 
-## <a name="min_element-stlclr"></a><a name="min_element"></a>min_element (STL/CLR)
+## <a name="min_element-stlclr"></a><a name="min_element"></a> min_element (STL/CLR)
 
 Trova la prima occorrenza dell'elemento più piccolo in un intervallo specificato in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -706,9 +707,9 @@ template<class _FwdIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `min_element`. Per ulteriori informazioni, vedere [min_element](../standard-library/algorithm-functions.md#min_element).
+Questa funzione si comporta come la funzione della libreria standard C++ `min_element` . Per ulteriori informazioni, vedere [min_element](../standard-library/algorithm-functions.md#min_element).
 
-## <a name="mismatch-stlclr"></a><a name="mismatch"></a>mancata corrispondenza (STL/CLR)
+## <a name="mismatch-stlclr"></a><a name="mismatch"></a> mancata corrispondenza (STL/CLR)
 
 Confronta due intervalli elemento per elemento per verificarne l'uguaglianza o l'equivalenza nel senso specificato da un predicato binario e individua la prima posizione in cui viene riscontrata una differenza.
 
@@ -726,9 +727,9 @@ template<class _InIt1, class _InIt2, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `mismatch`. Per ulteriori informazioni, vedere la [mancata corrispondenza](../standard-library/algorithm-functions.md#mismatch).
+Questa funzione si comporta come la funzione della libreria standard C++ `mismatch` . Per ulteriori informazioni, vedere la [mancata corrispondenza](../standard-library/algorithm-functions.md#mismatch).
 
-## <a name="next_permutation-stlclr"></a><a name="next_permutation"></a>next_permutation (STL/CLR)
+## <a name="next_permutation-stlclr"></a><a name="next_permutation"></a> next_permutation (STL/CLR)
 
 Riordina gli elementi in un intervallo in modo che l'ordine originale venga sostituito dalla maggior permutazione a livello lessicografico successiva, se esiste, dove il senso di successivo può essere specificato con un predicato binario.
 
@@ -743,11 +744,11 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `next_permutation`. Per ulteriori informazioni, vedere [next_permutation](../standard-library/algorithm-functions.md#next_permutation).
+Questa funzione si comporta come la funzione della libreria standard C++ `next_permutation` . Per ulteriori informazioni, vedere [next_permutation](../standard-library/algorithm-functions.md#next_permutation).
 
-## <a name="nth_element-stlclr"></a><a name="nth_element"></a>nth_element (STL/CLR)
+## <a name="nth_element-stlclr"></a><a name="nth_element"></a> nth_element (STL/CLR)
 
-Esegue il partizionamento di un intervallo di elementi, individuando correttamente il `n`l'elemento della sequenza nell'intervallo in modo che tutti gli elementi in primo piano siano minori o uguali a esso e che tutti gli elementi che lo seguono nella sequenza siano maggiori o uguali.
+Suddivide un intervallo di elementi, individuando correttamente l' `n` elemento th della sequenza nell'intervallo in modo che tutti gli elementi che lo precedono siano minori o uguali a esso e che tutti gli elementi che lo seguono nella sequenza siano maggiori o uguali.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -761,9 +762,9 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `nth_element`. Per ulteriori informazioni, vedere [nth_element](../standard-library/algorithm-functions.md#nth_element).
+Questa funzione si comporta come la funzione della libreria standard C++ `nth_element` . Per ulteriori informazioni, vedere [nth_element](../standard-library/algorithm-functions.md#nth_element).
 
-## <a name="partial_sort-stlclr"></a><a name="partial_sort"></a>partial_sort (STL/CLR)
+## <a name="partial_sort-stlclr"></a><a name="partial_sort"></a> partial_sort (STL/CLR)
 
 Dispone un numero specificato di elementi più piccoli di un intervallo in un ordine non decrescente o secondo un criterio di ordinamento specificato da un predicato binario.
 
@@ -779,9 +780,9 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `partial_sort`. Per ulteriori informazioni, vedere [partial_sort](../standard-library/algorithm-functions.md#partial_sort).
+Questa funzione si comporta come la funzione della libreria standard C++ `partial_sort` . Per ulteriori informazioni, vedere [partial_sort](../standard-library/algorithm-functions.md#partial_sort).
 
-## <a name="partial_sort_copy-stlclr"></a><a name="partial_sort_copy"></a>partial_sort_copy (STL/CLR)
+## <a name="partial_sort_copy-stlclr"></a><a name="partial_sort_copy"></a> partial_sort_copy (STL/CLR)
 
 Copia gli elementi di un intervallo di origine in un intervallo di destinazione in cui gli elementi di origine sono ordinati in base al predicato binario relativo al valore inferiore o a un altro predicato binario specificato.
 
@@ -798,9 +799,9 @@ template<class _InIt, class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `partial_sort_copy`. Per ulteriori informazioni, vedere [partial_sort_copy](../standard-library/algorithm-functions.md#partial_sort_copy).
+Questa funzione si comporta come la funzione della libreria standard C++ `partial_sort_copy` . Per ulteriori informazioni, vedere [partial_sort_copy](../standard-library/algorithm-functions.md#partial_sort_copy).
 
-## <a name="partition-stlclr"></a><a name="partition"></a>Partition (STL/CLR)
+## <a name="partition-stlclr"></a><a name="partition"></a> Partition (STL/CLR)
 
 Classifica gli elementi di un intervallo in due set non contigui, con gli elementi che soddisfano il predicato unario che precedono quelli che non lo soddisfano.
 
@@ -813,9 +814,9 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `partition`. Per ulteriori informazioni, vedere [Partition](../standard-library/algorithm-functions.md#partition).
+Questa funzione si comporta come la funzione della libreria standard C++ `partition` . Per ulteriori informazioni, vedere [Partition](../standard-library/algorithm-functions.md#partition).
 
-## <a name="pop_heap-stlclr"></a><a name="pop_heap"></a>pop_heap (STL/CLR)
+## <a name="pop_heap-stlclr"></a><a name="pop_heap"></a> pop_heap (STL/CLR)
 
 Rimuove l'elemento più grande dall'inizio di un heap alla penultima posizione nell'intervallo e costituisce un nuovo heap con gli elementi rimanenti.
 
@@ -830,9 +831,9 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `pop_heap`. Per ulteriori informazioni, vedere [pop_heap](../standard-library/algorithm-functions.md#pop_heap).
+Questa funzione si comporta come la funzione della libreria standard C++ `pop_heap` . Per ulteriori informazioni, vedere [pop_heap](../standard-library/algorithm-functions.md#pop_heap).
 
-## <a name="prev_permutation-stlclr"></a><a name="prev_permutation"></a>prev_permutation (STL/CLR)
+## <a name="prev_permutation-stlclr"></a><a name="prev_permutation"></a> prev_permutation (STL/CLR)
 
 Riordina gli elementi in un intervallo in modo che l'ordine originale venga sostituito dalla maggior permutazione a livello lessicografico successiva, se esiste, dove il senso di successivo può essere specificato con un predicato binario.
 
@@ -847,9 +848,9 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `prev_permutation`. Per ulteriori informazioni, vedere [prev_permutation](../standard-library/algorithm-functions.md#prev_permutation).
+Questa funzione si comporta come la funzione della libreria standard C++ `prev_permutation` . Per ulteriori informazioni, vedere [prev_permutation](../standard-library/algorithm-functions.md#prev_permutation).
 
-## <a name="push_heap-stlclr"></a><a name="push_heap"></a>push_heap (STL/CLR)
+## <a name="push_heap-stlclr"></a><a name="push_heap"></a> push_heap (STL/CLR)
 
 Aggiunge un elemento che si trova alla fine di un intervallo a un heap esistente costituito dagli elementi precedenti dell'intervallo.
 
@@ -864,11 +865,11 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `push_heap`. Per ulteriori informazioni, vedere [push_heap](../standard-library/algorithm-functions.md#push_heap).
+Questa funzione si comporta come la funzione della libreria standard C++ `push_heap` . Per ulteriori informazioni, vedere [push_heap](../standard-library/algorithm-functions.md#push_heap).
 
-## <a name="random_shuffle-stlclr"></a><a name="random_shuffle"></a>random_shuffle (STL/CLR)
+## <a name="random_shuffle-stlclr"></a><a name="random_shuffle"></a> random_shuffle (STL/CLR)
 
-Ridispone una sequenza di `N` elementi di un intervallo in una delle `N`. possibili disposizioni selezionate in modo casuale.
+Riorganizza una sequenza di `N` elementi di un intervallo in uno dei `N` . possibili disposizioni selezionate in modo casuale.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -881,9 +882,9 @@ template<class _RanIt, class _Fn1> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `random_shuffle`. Per ulteriori informazioni, vedere [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle).
+Questa funzione si comporta come la funzione della libreria standard C++ `random_shuffle` . Per ulteriori informazioni, vedere [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle).
 
-## <a name="remove-stlclr"></a><a name="remove"></a>Rimuovi (STL/CLR)
+## <a name="remove-stlclr"></a><a name="remove"></a> Rimuovi (STL/CLR)
 
 Elimina un valore specificato da un intervallo specificato senza alterare l'ordine degli elementi rimanenti e restituendo la fine di un nuovo intervallo senza il valore specificato.
 
@@ -896,9 +897,9 @@ template<class _FwdIt, class _Ty> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `remove`. Per ulteriori informazioni, vedere [Remove](../standard-library/algorithm-functions.md#remove).
+Questa funzione si comporta come la funzione della libreria standard C++ `remove` . Per ulteriori informazioni, vedere [Remove](../standard-library/algorithm-functions.md#remove).
 
-## <a name="remove_copy-stlclr"></a><a name="remove_copy"></a>remove_copy (STL/CLR)
+## <a name="remove_copy-stlclr"></a><a name="remove_copy"></a> remove_copy (STL/CLR)
 
 Copia gli elementi di un intervallo di origine in un intervallo di destinazione, ad eccezione degli elementi di un determinato valore, senza alterare l'ordine degli elementi rimanenti e restituendo la fine di un nuovo intervallo di destinazione.
 
@@ -912,9 +913,9 @@ template<class _InIt, class _OutIt, class _Ty> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `remove_copy`. Per ulteriori informazioni, vedere [remove_copy](../standard-library/algorithm-functions.md#remove_copy).
+Questa funzione si comporta come la funzione della libreria standard C++ `remove_copy` . Per ulteriori informazioni, vedere [remove_copy](../standard-library/algorithm-functions.md#remove_copy).
 
-## <a name="remove_copy_if-stlclr"></a><a name="remove_copy_if"></a>remove_copy_if (STL/CLR)
+## <a name="remove_copy_if-stlclr"></a><a name="remove_copy_if"></a> remove_copy_if (STL/CLR)
 
 Copia gli elementi di un intervallo di origine in un intervallo di destinazione, ad eccezione degli elementi che soddisfano un predicato, senza alterare l'ordine degli elementi rimanenti e restituendo la fine di un nuovo intervallo di destinazione.
 
@@ -928,9 +929,9 @@ template<class _InIt, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `remove_copy_if`. Per ulteriori informazioni, vedere [remove_copy_if](../standard-library/algorithm-functions.md#remove_copy_if).
+Questa funzione si comporta come la funzione della libreria standard C++ `remove_copy_if` . Per ulteriori informazioni, vedere [remove_copy_if](../standard-library/algorithm-functions.md#remove_copy_if).
 
-## <a name="remove_if-stlclr"></a><a name="remove_if"></a>remove_if (STL/CLR)
+## <a name="remove_if-stlclr"></a><a name="remove_if"></a> remove_if (STL/CLR)
 
 Elimina gli elementi che soddisfano un predicato da un intervallo specificato senza alterare l'ordine degli elementi rimanenti e restituendo la fine di un nuovo intervallo senza il valore specificato.
 
@@ -943,9 +944,9 @@ template<class _FwdIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `remove_if`. Per ulteriori informazioni, vedere [remove_if](../standard-library/algorithm-functions.md#remove_if).
+Questa funzione si comporta come la funzione della libreria standard C++ `remove_if` . Per ulteriori informazioni, vedere [remove_if](../standard-library/algorithm-functions.md#remove_if).
 
-## <a name="replace-stlclr"></a><a name="replace"></a>Replace (STL/CLR)
+## <a name="replace-stlclr"></a><a name="replace"></a> Replace (STL/CLR)
 
 Esamina ogni elemento di un intervallo e lo sostituisce se corrisponde a un valore specificato.
 
@@ -959,9 +960,9 @@ template<class _FwdIt, class _Ty> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `replace`. Per ulteriori informazioni, vedere [Replace](../standard-library/algorithm-functions.md#replace).
+Questa funzione si comporta come la funzione della libreria standard C++ `replace` . Per ulteriori informazioni, vedere [Replace](../standard-library/algorithm-functions.md#replace).
 
-## <a name="replace_copy-stlclr"></a><a name="replace_copy"></a>replace_copy (STL/CLR)
+## <a name="replace_copy-stlclr"></a><a name="replace_copy"></a> replace_copy (STL/CLR)
 
 Esamina ogni elemento di un intervallo di origine e lo sostituisce se corrisponde a un valore specificato copiando nel contempo il risultato in un nuovo intervallo di destinazione.
 
@@ -975,9 +976,9 @@ template<class _InIt, class _OutIt, class _Ty> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `replace_copy`. Per ulteriori informazioni, vedere [replace_copy](../standard-library/algorithm-functions.md#replace_copy).
+Questa funzione si comporta come la funzione della libreria standard C++ `replace_copy` . Per ulteriori informazioni, vedere [replace_copy](../standard-library/algorithm-functions.md#replace_copy).
 
-## <a name="replace_copy_if-stlclr"></a><a name="replace_copy_if"></a>replace_copy_if (STL/CLR)
+## <a name="replace_copy_if-stlclr"></a><a name="replace_copy_if"></a> replace_copy_if (STL/CLR)
 
 Esamina ogni elemento di un intervallo di origine e lo sostituisce se soddisfa un predicato specificato copiando nel contempo il risultato in un nuovo intervallo di destinazione.
 
@@ -991,9 +992,9 @@ template<class _InIt, class _OutIt, class _Pr, class _Ty> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `replace_copy_if`. Per ulteriori informazioni, vedere [replace_copy_if](../standard-library/algorithm-functions.md#replace_copy_if).
+Questa funzione si comporta come la funzione della libreria standard C++ `replace_copy_if` . Per ulteriori informazioni, vedere [replace_copy_if](../standard-library/algorithm-functions.md#replace_copy_if).
 
-## <a name="replace_if-stlclr"></a><a name="replace_if"></a>replace_if (STL/CLR)
+## <a name="replace_if-stlclr"></a><a name="replace_if"></a> replace_if (STL/CLR)
 
 Esamina ogni elemento di un intervallo e lo sostituisce se soddisfa un predicato specificato.
 
@@ -1007,9 +1008,9 @@ template<class _FwdIt, class _Pr, class _Ty> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `replace_if`. Per ulteriori informazioni, vedere [replace_if](../standard-library/algorithm-functions.md#replace_if).
+Questa funzione si comporta come la funzione della libreria standard C++ `replace_if` . Per ulteriori informazioni, vedere [replace_if](../standard-library/algorithm-functions.md#replace_if).
 
-## <a name="reverse-stlclr"></a><a name="reverse"></a>Inverti (STL/CLR)
+## <a name="reverse-stlclr"></a><a name="reverse"></a> Inverti (STL/CLR)
 
 Inverte l'ordine degli elementi all'interno di un intervallo.
 
@@ -1022,9 +1023,9 @@ template<class _BidIt> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `reverse`. Per ulteriori informazioni, vedere [inverso](../standard-library/algorithm-functions.md#reverse).
+Questa funzione si comporta come la funzione della libreria standard C++ `reverse` . Per ulteriori informazioni, vedere [inverso](../standard-library/algorithm-functions.md#reverse).
 
-## <a name="reverse_copy-stlclr"></a><a name="reverse_copy"></a>reverse_copy (STL/CLR)
+## <a name="reverse_copy-stlclr"></a><a name="reverse_copy"></a> reverse_copy (STL/CLR)
 
 Inverte l'ordine degli elementi all'interno di un intervallo di origine mentre li copia in un intervallo di destinazione.
 
@@ -1037,9 +1038,9 @@ template<class _BidIt, class _OutIt> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `reverse_copy`. Per ulteriori informazioni, vedere [reverse_copy](../standard-library/algorithm-functions.md#reverse_copy).
+Questa funzione si comporta come la funzione della libreria standard C++ `reverse_copy` . Per ulteriori informazioni, vedere [reverse_copy](../standard-library/algorithm-functions.md#reverse_copy).
 
-## <a name="rotate-stlclr"></a><a name="rotate"></a>rotazione (STL/CLR)
+## <a name="rotate-stlclr"></a><a name="rotate"></a> rotazione (STL/CLR)
 
 Scambia gli elementi di due intervalli adiacenti.
 
@@ -1052,9 +1053,9 @@ template<class _FwdIt> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `rotate`. Per ulteriori informazioni, vedere [rotazione](../standard-library/algorithm-functions.md#rotate).
+Questa funzione si comporta come la funzione della libreria standard C++ `rotate` . Per ulteriori informazioni, vedere [rotazione](../standard-library/algorithm-functions.md#rotate).
 
-## <a name="rotate_copy-stlclr"></a><a name="rotate_copy"></a>rotate_copy (STL/CLR)
+## <a name="rotate_copy-stlclr"></a><a name="rotate_copy"></a> rotate_copy (STL/CLR)
 
 Scambia gli elementi di due intervalli adiacenti all'interno di un intervallo di origine e copia il risultato in un intervallo di destinazione.
 
@@ -1068,9 +1069,9 @@ template<class _FwdIt, class _OutIt> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `rotate_copy`. Per ulteriori informazioni, vedere [rotate_copy](../standard-library/algorithm-functions.md#rotate_copy).
+Questa funzione si comporta come la funzione della libreria standard C++ `rotate_copy` . Per ulteriori informazioni, vedere [rotate_copy](../standard-library/algorithm-functions.md#rotate_copy).
 
-## <a name="search-stlclr"></a><a name="search_"></a>ricerca (STL/CLR)
+## <a name="search-stlclr"></a><a name="search_"></a> ricerca (STL/CLR)
 
 Cerca la prima occorrenza di una sequenza all'interno di un intervallo di destinazione i cui elementi sono uguali a quelli di una sequenza specificata di elementi oppure i cui elementi sono equivalenti nel senso specificato da un predicato binario agli elementi della sequenza specificata.
 
@@ -1087,9 +1088,9 @@ template<class _FwdIt1, class _FwdIt2, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `search`. Per ulteriori informazioni, vedere [Search](../standard-library/algorithm-functions.md#search).
+Questa funzione si comporta come la funzione della libreria standard C++ `search` . Per ulteriori informazioni, vedere [Search](../standard-library/algorithm-functions.md#search).
 
-## <a name="search_n-stlclr"></a><a name="search_n"></a>search_n (STL/CLR)
+## <a name="search_n-stlclr"></a><a name="search_n"></a> search_n (STL/CLR)
 
 Cerca la prima sottosequenza di un intervallo di un numero specificato di elementi che dispongono di un valore specifico o di una relazione con tale valore come specificato da un predicato binario.
 
@@ -1106,9 +1107,9 @@ template<class _FwdIt1, class _Diff2, class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `search_n`. Per ulteriori informazioni, vedere [search_n](../standard-library/algorithm-functions.md#search_n).
+Questa funzione si comporta come la funzione della libreria standard C++ `search_n` . Per ulteriori informazioni, vedere [search_n](../standard-library/algorithm-functions.md#search_n).
 
-## <a name="set_difference-stlclr"></a><a name="set_difference"></a>set_difference (STL/CLR)
+## <a name="set_difference-stlclr"></a><a name="set_difference"></a> set_difference (STL/CLR)
 
 Unisce tutti gli elementi appartenenti a un intervallo di origine ordinato, ma non a un secondo intervallo di origine ordinato, in un unico intervallo di destinazione ordinato in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -1125,9 +1126,9 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `set_difference`. Per ulteriori informazioni, vedere [set_difference](../standard-library/algorithm-functions.md#set_difference).
+Questa funzione si comporta come la funzione della libreria standard C++ `set_difference` . Per ulteriori informazioni, vedere [set_difference](../standard-library/algorithm-functions.md#set_difference).
 
-## <a name="set_intersection-stlclr"></a><a name="set_intersection"></a>set_intersection (STL/CLR)
+## <a name="set_intersection-stlclr"></a><a name="set_intersection"></a> set_intersection (STL/CLR)
 
 Unisce tutti gli elementi appartenenti a entrambi gli intervalli di origine ordinati in un unico intervallo di destinazione ordinato in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -1144,9 +1145,9 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `set_intersection`. Per ulteriori informazioni, vedere [set_intersection](../standard-library/algorithm-functions.md#set_intersection).
+Questa funzione si comporta come la funzione della libreria standard C++ `set_intersection` . Per ulteriori informazioni, vedere [set_intersection](../standard-library/algorithm-functions.md#set_intersection).
 
-## <a name="set_symmetric_difference-stlclr"></a><a name="set_symmetric_difference"></a>set_symmetric_difference (STL/CLR)
+## <a name="set_symmetric_difference-stlclr"></a><a name="set_symmetric_difference"></a> set_symmetric_difference (STL/CLR)
 
 Unisce tutti gli elementi appartenenti a uno degli intervalli di origine ordinati, ma non ad entrambi, in un unico intervallo di destinazione ordinato in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -1163,9 +1164,9 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `set_symmetric_difference`. Per ulteriori informazioni, vedere [set_symmetric_difference](../standard-library/algorithm-functions.md#set_symmetric_difference).
+Questa funzione si comporta come la funzione della libreria standard C++ `set_symmetric_difference` . Per ulteriori informazioni, vedere [set_symmetric_difference](../standard-library/algorithm-functions.md#set_symmetric_difference).
 
-## <a name="set_union-stlclr"></a><a name="set_union"></a>set_union (STL/CLR)
+## <a name="set_union-stlclr"></a><a name="set_union"></a> set_union (STL/CLR)
 
 Unisce tutti gli elementi appartenenti almeno a uno dei due intervalli di origine ordinati in un unico intervallo di destinazione ordinato in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -1182,9 +1183,9 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `set_union`. Per ulteriori informazioni, vedere [set_union](../standard-library/algorithm-functions.md#set_union).
+Questa funzione si comporta come la funzione della libreria standard C++ `set_union` . Per ulteriori informazioni, vedere [set_union](../standard-library/algorithm-functions.md#set_union).
 
-## <a name="sort-stlclr"></a><a name="sort"></a>Sort (STL/CLR)
+## <a name="sort-stlclr"></a><a name="sort"></a> Sort (STL/CLR)
 
 Dispone gli elementi di un intervallo specificato in un ordine non decrescente o secondo un criterio di ordinamento specificato da un predicato binario.
 
@@ -1199,9 +1200,9 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `sort`. Per ulteriori informazioni, vedere [Sort](../mfc/reference/cmfclistctrl-class.md#sort).
+Questa funzione si comporta come la funzione della libreria standard C++ `sort` . Per ulteriori informazioni, vedere [Sort](../mfc/reference/cmfclistctrl-class.md#sort).
 
-## <a name="sort_heap-stlclr"></a><a name="sort_heap"></a>sort_heap (STL/CLR)
+## <a name="sort_heap-stlclr"></a><a name="sort_heap"></a> sort_heap (STL/CLR)
 
 Converte un heap in un intervallo ordinato.
 
@@ -1216,9 +1217,9 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `sort_heap`. Per ulteriori informazioni, vedere [sort_heap](../standard-library/algorithm-functions.md#sort_heap).
+Questa funzione si comporta come la funzione della libreria standard C++ `sort_heap` . Per ulteriori informazioni, vedere [sort_heap](../standard-library/algorithm-functions.md#sort_heap).
 
-## <a name="stable_partition-stlclr"></a><a name="stable_partition"></a>stable_partition (STL/CLR)
+## <a name="stable_partition-stlclr"></a><a name="stable_partition"></a> stable_partition (STL/CLR)
 
 Classifica gli elementi di un intervallo in due set non contigui, con gli elementi che soddisfano un predicato unario che precedono quelli che non lo soddisfano, mantenendo l'ordine relativo degli elementi equivalenti.
 
@@ -1231,9 +1232,9 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `stable_partition`. Per ulteriori informazioni, vedere [stable_partition](../standard-library/algorithm-functions.md#stable_partition).
+Questa funzione si comporta come la funzione della libreria standard C++ `stable_partition` . Per ulteriori informazioni, vedere [stable_partition](../standard-library/algorithm-functions.md#stable_partition).
 
-## <a name="stable_sort-stlclr"></a><a name="stable_sort"></a>stable_sort (STL/CLR)
+## <a name="stable_sort-stlclr"></a><a name="stable_sort"></a> stable_sort (STL/CLR)
 
 Dispone gli elementi di un intervallo specificato in un ordine non decrescente o secondo un criterio di ordinamento specificato da un predicato binario e mantiene l'ordinamento relativo degli elementi equivalenti.
 
@@ -1248,9 +1249,9 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `stable_sort`. Per ulteriori informazioni, vedere [stable_sort](../standard-library/algorithm-functions.md#stable_sort).
+Questa funzione si comporta come la funzione della libreria standard C++ `stable_sort` . Per ulteriori informazioni, vedere [stable_sort](../standard-library/algorithm-functions.md#stable_sort).
 
-## <a name="swap-stlclr"></a><a name="swap"></a>swap (STL/CLR)
+## <a name="swap-stlclr"></a><a name="swap"></a> swap (STL/CLR)
 
 Scambia i valori degli elementi tra due tipi di oggetti, assegnando il contenuto del primo oggetto al secondo oggetto e il contenuto del secondo al primo.
 
@@ -1263,9 +1264,9 @@ Scambia i valori degli elementi tra due tipi di oggetti, assegnando il contenuto
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `swap`. Per ulteriori informazioni, vedere [swap](../standard-library/algorithm-functions.md#swap).
+Questa funzione si comporta come la funzione della libreria standard C++ `swap` . Per ulteriori informazioni, vedere [swap](../standard-library/algorithm-functions.md#swap).
 
-## <a name="swap_ranges-stlclr"></a><a name="swap_ranges"></a>swap_ranges (STL/CLR)
+## <a name="swap_ranges-stlclr"></a><a name="swap_ranges"></a> swap_ranges (STL/CLR)
 
 Scambia gli elementi di un intervallo con gli elementi di un altro intervallo di uguali dimensioni.
 
@@ -1279,9 +1280,9 @@ template<class _FwdIt1, class _FwdIt2> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `swap_ranges`. Per ulteriori informazioni, vedere [swap_ranges](../standard-library/algorithm-functions.md#swap_ranges).
+Questa funzione si comporta come la funzione della libreria standard C++ `swap_ranges` . Per ulteriori informazioni, vedere [swap_ranges](../standard-library/algorithm-functions.md#swap_ranges).
 
-## <a name="transform-stlclr"></a><a name="transform"></a>Transform (STL/CLR)
+## <a name="transform-stlclr"></a><a name="transform"></a> Transform (STL/CLR)
 
 Applica un oggetto funzione ad ogni elemento di un intervallo di origine o a una coppia di elementi di due intervalli di origine e copia i valori restituiti dell'oggetto funzione in un intervallo di destinazione.
 
@@ -1298,9 +1299,9 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Fn2> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `transform`. Per ulteriori informazioni, vedere [Transform](../standard-library/algorithm-functions.md#transform).
+Questa funzione si comporta come la funzione della libreria standard C++ `transform` . Per ulteriori informazioni, vedere [Transform](../standard-library/algorithm-functions.md#transform).
 
-## <a name="unique-stlclr"></a><a name="unique"></a>Unique (STL/CLR)
+## <a name="unique-stlclr"></a><a name="unique"></a> Unique (STL/CLR)
 
 Rimuove gli elementi duplicati adiacenti l'uno rispetto all'altro in un intervallo specificato.
 
@@ -1315,9 +1316,9 @@ template<class _FwdIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `unique`. Per ulteriori informazioni, vedere [Unique](../standard-library/algorithm-functions.md#unique).
+Questa funzione si comporta come la funzione della libreria standard C++ `unique` . Per ulteriori informazioni, vedere [Unique](../standard-library/algorithm-functions.md#unique).
 
-## <a name="unique_copy-stlclr"></a><a name="unique_copy"></a>unique_copy (STL/CLR)
+## <a name="unique_copy-stlclr"></a><a name="unique_copy"></a> unique_copy (STL/CLR)
 
 Copia gli elementi di un intervallo di origine in un intervallo di destinazione ad eccezione degli elementi duplicati adiacenti l'uno rispetto all'altro.
 
@@ -1333,9 +1334,9 @@ template<class _InIt, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `unique_copy`. Per ulteriori informazioni, vedere [unique_copy](../standard-library/algorithm-functions.md#unique_copy).
+Questa funzione si comporta come la funzione della libreria standard C++ `unique_copy` . Per ulteriori informazioni, vedere [unique_copy](../standard-library/algorithm-functions.md#unique_copy).
 
-## <a name="upper_bound-stlclr"></a><a name="upper_bound"></a>upper_bound (STL/CLR)
+## <a name="upper_bound-stlclr"></a><a name="upper_bound"></a> upper_bound (STL/CLR)
 
 Trova la posizione del primo elemento in un intervallo ordinato con un valore maggiore di un valore specificato, in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -1351,4 +1352,4 @@ template<class _FwdIt, class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>Osservazioni
 
-Questa funzione si comporta come la C++ funzione della libreria standard `upper_bound`. Per ulteriori informazioni, vedere [upper_bound](../standard-library/algorithm-functions.md#upper_bound).
+Questa funzione si comporta come la funzione della libreria standard C++ `upper_bound` . Per ulteriori informazioni, vedere [upper_bound](../standard-library/algorithm-functions.md#upper_bound).

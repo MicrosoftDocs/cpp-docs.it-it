@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; funzioni locali &gt;'
 title: Funzioni &lt;locale&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: 91d0b40de557eb2414d6ee685795796c3290177c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6bad3cab6886fcee34fba06e88ce54e216db4649
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833244"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284616"
 ---
 # <a name="ltlocalegt-functions"></a>Funzioni &lt;locale&gt;
 
@@ -77,7 +78,7 @@ Impostazioni locali in cui verificare l'eventuale presenza di un facet.
 
 **`true`** Se le impostazioni locali hanno il facet testato per; in **`false`** caso contrario,
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione modello è utile per verificare, prima della chiamata a `use_facet`, se i facet non obbligatori sono elencati nelle impostazioni locali, in modo da evitare l'eccezione che verrebbe generata se non fossero presenti.
 
@@ -190,7 +191,7 @@ Impostazioni locali contenenti l'elemento alfabetico da verificare.
 
 **`true`** Se l'elemento testato è alfabetico; in **`false`** caso contrario,
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello restituisce [use_facet](../standard-library/locale-functions.md#use_facet) <  [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc` ). [è](../standard-library/ctype-class.md#is)( **CType** \< **CharType**> :: **Alpha**, `Ch` ).
 
@@ -255,7 +256,7 @@ Impostazioni locali contenenti l'elemento da verificare.
 
 **`true`** Se l'elemento testato è un carattere di controllo; in **`false`** caso contrario,
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello restituisce [use_facet](../standard-library/locale-functions.md#use_facet) <  [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc` ). [è](../standard-library/ctype-class.md#is)( **CType** \< **CharType**> :: **tasti CTRL**, `Ch` ).
 
@@ -320,7 +321,7 @@ Impostazioni locali contenenti l'elemento da verificare.
 
 **`true`** Se l'elemento testato è un carattere numerico; in **`false`** caso contrario,
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello restituisce [use_facet](../standard-library/locale-functions.md#use_facet) <  [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc` ). [è](../standard-library/ctype-class.md#is)( **CType** \< **CharType**> :: **digit**, `Ch` ).
 
@@ -385,7 +386,7 @@ Impostazioni locali contenenti l'elemento da verificare.
 
 **`true`** Se l'elemento testato è un carattere alfanumerico o di punteggiatura; in **`false`** caso contrario,
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello restituisce [use_facet](../standard-library/locale-functions.md#use_facet) <  [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc` ). [è](../standard-library/ctype-class.md#is)( **CType** \< **CharType**> :: **Graph**, `Ch` ).
 
@@ -450,7 +451,7 @@ Impostazioni locali contenenti l'elemento da verificare.
 
 **`true`** Se l'elemento testato è un carattere minuscolo; in **`false`** caso contrario,
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello restituisce [use_facet](../standard-library/locale-functions.md#use_facet) <  [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc` ). [è](../standard-library/ctype-class.md#is)( **CType** \< **CharType**> :: **Lower**, `Ch` ).
 
@@ -515,7 +516,7 @@ Impostazioni locali contenenti l'elemento da verificare.
 
 **`true`** Se l'elemento testato è stampabile; in **`false`** caso contrario,
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello restituisce [use_facet](../standard-library/locale-functions.md#use_facet) <  [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc` ). [è](../standard-library/ctype-class.md#is)( **CType** \< **CharType**> :: **Print**, `Ch` ).
 
@@ -579,7 +580,7 @@ Impostazioni locali contenenti l'elemento da verificare.
 
 **`true`** Se l'elemento testato è un carattere di punteggiatura; in **`false`** caso contrario,
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello restituisce [use_facet](../standard-library/locale-functions.md#use_facet) `<` [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc` ). [è](../standard-library/ctype-class.md#is)( **CType** \< **CharType**> :: **punct**, `Ch` ).
 
@@ -644,7 +645,7 @@ Impostazioni locali contenenti l'elemento da verificare.
 
 **`true`** Se l'elemento testato è uno spazio vuoto; in **`false`** caso contrario,
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello restituisce [use_facet](../standard-library/locale-functions.md#use_facet) <  [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc` ). [è](../standard-library/ctype-class.md#is)( **CType** \< **CharType**> :: **Space**, `Ch` ).
 
@@ -709,7 +710,7 @@ Impostazioni locali contenenti l'elemento da verificare.
 
 **`true`** Se l'elemento testato è un carattere maiuscolo; in **`false`** caso contrario,
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello restituisce [use_facet](../standard-library/locale-functions.md#use_facet) <  [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc` ). [è](../standard-library/ctype-class.md#is)( **CType** \< **CharType**> :: **Upper**, `Ch` ).
 
@@ -774,7 +775,7 @@ Impostazioni locali contenenti l'elemento da verificare.
 
 **`true`** Se l'elemento testato è un carattere utilizzato per rappresentare un numero esadecimale; in **`false`** caso contrario,
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello restituisce [use_facet](../standard-library/locale-functions.md#use_facet) <  [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc` ). [è](../standard-library/ctype-class.md#is)( **CType** \< **CharType**> :: **xdigit**, `Ch` ).
 
@@ -841,7 +842,7 @@ Impostazioni locali contenenti il carattere da convertire.
 
 Carattere convertito in minuscolo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello restituisce [use_facet](../standard-library/locale-functions.md#use_facet) <  [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc` ). [ToLower](../standard-library/ctype-class.md#tolower)( `Ch` ).
 
@@ -890,7 +891,7 @@ Impostazioni locali contenenti il carattere da convertire.
 
 Carattere convertito in maiuscolo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello restituisce [use_facet](../standard-library/locale-functions.md#use_facet) <  [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc` ). [ToUpper](../standard-library/ctype-class.md#toupper)( `Ch` ).
 
@@ -936,7 +937,7 @@ Impostazioni locali const contenenti il tipo di facet a cui viene fatto riferime
 
 Riferimento al facet della classe `Facet` contenuto nelle impostazioni locali dell'argomento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il riferimento al facet restituito dalla funzione modello rimane valido a condizione che esista una copia delle impostazioni locali che contengono il facet. Se nelle impostazioni locali dell'argomento non è elencato alcun oggetto facet delle classe `Facet`, la funzione genera un'eccezione `bad_cast`.
 

@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: differenze di programmazione Windows Forms/MFC'
 title: Differenze di programmazione Windows Forms-MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], Windows Forms support
 - Windows Forms [C++], compared to MFC
 ms.assetid: f3bfcf45-cfd4-45a4-8cde-5f4dbb18ee51
-ms.openlocfilehash: 136549bb457cc17293d4c7201c9836d9094eea94
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: a48b4f54e44145abab33990e20ca76ed654659e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965547"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283940"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Differenze tra la programmazione con Windows Form e quella con MFC
 
@@ -18,7 +19,7 @@ Negli argomenti relativi all' [utilizzo di un controllo utente Windows Form in M
 
 Windows Forms per la creazione di applicazioni Microsoft Windows nel .NET Framework. Questo Framework fornisce un set di classi moderno, orientato a oggetti e estendibile che consente di sviluppare applicazioni complete basate su Windows. Con Windows Forms, è possibile creare un'applicazione rich client in grado di accedere a un'ampia gamma di origini dati e fornire funzionalità di visualizzazione dei dati e di modifica dei dati tramite Windows Forms controlli.
 
-Tuttavia, se si è abituati a MFC, è possibile usare la creazione di determinati tipi di applicazioni che non sono ancora supportate in modo esplicito in Windows Forms. Windows Forms le applicazioni sono equivalenti alle applicazioni della finestra di dialogo MFC. Tuttavia, non offrono l'infrastruttura necessaria per supportare direttamente altri tipi di applicazioni MFC, ad esempio il server/contenitore del documento OLE, i documenti ActiveX, il supporto per documenti/visualizzazioni per l'interfaccia a documento singolo (SDI), l'interfaccia a documenti multipli (MDI) e interfaccia più di primo livello (MTI). È possibile scrivere la propria logica per creare queste applicazioni.
+Tuttavia, se si è abituati a MFC, è possibile usare la creazione di determinati tipi di applicazioni che non sono ancora supportate in modo esplicito in Windows Forms. Windows Forms le applicazioni sono equivalenti alle applicazioni della finestra di dialogo MFC. Tuttavia, non offrono l'infrastruttura necessaria per supportare direttamente altri tipi di applicazioni MFC, ad esempio il server/contenitore del documento OLE, i documenti ActiveX, il supporto per documenti/visualizzazioni per l'interfaccia a documento singolo (SDI), l'interfaccia a documenti multipli (MDI) e l'interfaccia di livello più alto (MTI). È possibile scrivere la propria logica per creare queste applicazioni.
 
 Per ulteriori informazioni sulle applicazioni Windows Forms, vedere [Introduzione a Windows Forms](/dotnet/framework/winforms/windows-forms-overview).
 
@@ -54,6 +55,6 @@ Le funzionalità seguenti per la visualizzazione MFC o il routing di documenti e
 
    MFC dispone di un meccanismo di aggiornamento del comando. Pertanto, la visualizzazione o il documento attivo è responsabile dello stato degli elementi dell'interfaccia utente (ad esempio, abilitazione o disabilitazione di una voce di menu o di un pulsante dello strumento e degli stati selezionati). Windows Forms non è equivalente a un meccanismo di aggiornamento dei comandi.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Uso di un controllo utente Windows Form in MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)

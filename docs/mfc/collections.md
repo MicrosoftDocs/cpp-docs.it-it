@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: raccolte'
 title: Raccolte
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-ms.openlocfilehash: f2cd03afbb09dff38298454658c3d3dc2dfa6a8a
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 63bc61b73a9ba654fd22ecf3a238f8ef89734221
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619354"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283472"
 ---
 # <a name="collections"></a>Raccolte
 
@@ -35,7 +36,7 @@ La libreria MFC fornisce classi Collection per la gestione di gruppi di oggetti.
 > [!NOTE]
 > Se nel codice vengono già utilizzate le classi Collection non create da modelli, è possibile continuare a utilizzarle. Se si scrivono nuove classi di raccolta indipendenti dai tipi per i tipi di dati personalizzati, si consiglia di utilizzare le classi basate su modelli, che sono più recenti.
 
-## <a name="collection-shapes"></a><a name="_core_collection_shapes"></a>Forme raccolta
+## <a name="collection-shapes"></a><a name="_core_collection_shapes"></a> Forme raccolta
 
 Una classe di raccolta è caratterizzata dalla "forma" e dai tipi dei relativi elementi. La forma fa riferimento al modo in cui gli oggetti sono organizzati e archiviati dalla raccolta. MFC offre tre forme base di raccolta: elenchi, matrici e mappe (denominate anche dizionari). È possibile selezionare la forma di raccolta più appropriata al problema di programmazione specifico.
 
@@ -53,7 +54,7 @@ Più avanti in questo argomento viene descritta brevemente ciascuna delle forme 
 
    Una mappa è una raccolta che associa un oggetto chiave a un oggetto valore.
 
-## <a name="the-template-based-collection-classes"></a><a name="_core_the_template_based_collection_classes"></a>Classi Collection basate su modello
+## <a name="the-template-based-collection-classes"></a><a name="_core_the_template_based_collection_classes"></a> Classi della raccolta Template-Based
 
 Il modo più semplice per implementare una raccolta indipendente dai tipi che contiene oggetti di qualsiasi tipo consiste nell'utilizzare una delle classi MFC basate su modelli. Per esempi di queste classi, vedere l'esempio MFC [Collect](../overview/visual-cpp-samples.md).
 
@@ -66,7 +67,7 @@ Nella tabella seguente vengono elencate le classi Collection MFC basate su model
 |Raccolte di oggetti di qualsiasi tipo|`CArray`|`CList`|`CMap`|
 |Raccolte di puntatori a oggetti di qualsiasi tipo|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|
 
-## <a name="the-collection-classes-not-based-on-templates"></a><a name="_core_the_collection_classes_not_based_on_templates"></a>Classi Collection non basate su modelli
+## <a name="the-collection-classes-not-based-on-templates"></a><a name="_core_the_collection_classes_not_based_on_templates"></a> Classi Collection non basate su modelli
 
 Se nell'applicazione vengono utilizzate già le classi di raccolta MFC non create da modelli, è possibile continuare a utilizzarle. Tuttavia, per le nuove raccolte, si consiglia di utilizzare le classi basate su modelli. Nella tabella seguente sono elencate le classi Collection MFC che non sono basate su modelli.
 
@@ -98,9 +99,9 @@ Le caratteristiche della tabella delle classi di raccolta MFC in [raccomandazion
 
 - [Suggerimenti per la scelta di una classe Collection](recommendations-for-choosing-a-collection-class.md)
 
-- [Procedura: Creare una raccolta indipendente dai tipi](how-to-make-a-type-safe-collection.md)
+- [Procedura: creare una raccolta di Type-Safe](how-to-make-a-type-safe-collection.md)
 
-- [Creazione di raccolta Stack e Code](creating-stack-and-queue-collections.md)
+- [Creazione di raccolte di stack e code](creating-stack-and-queue-collections.md)
 
 - [CArray:: Add](reference/carray-class.md#add)
 
@@ -114,7 +115,7 @@ Le caratteristiche della tabella delle classi di raccolta MFC in [raccomandazion
 
 - [Eliminazione di tutti gli oggetti in una raccolta CObject](deleting-all-objects-in-a-cobject-collection.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Concetti](mfc-concepts.md)<br/>
 [Argomenti MFC generali](general-mfc-topics.md)

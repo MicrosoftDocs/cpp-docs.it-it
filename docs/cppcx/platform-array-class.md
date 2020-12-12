@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe Platform:: Array'
 title: Classe Platform::Array
 ms.date: 12/30/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 4903c18f981c87c418a6ab08595816ce22a7413c
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 76e8329cdc324bc7a8de338725d48188b79ac9f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742944"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284200"
 ---
 # <a name="platformarray-class"></a>Classe Platform::Array
 
@@ -34,7 +35,7 @@ Platform:: Array eredita tutti i relativi metodi dalla [Classe Platform:: WriteO
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Costruttori Array](#ctor)|Inizializza una matrice modificabile unidimensionale di tipi specificati dal parametro di modello di classe, *T*.|
 
@@ -44,11 +45,11 @@ Vedere [Classe Platform:: WriteOnlyArray](../cppcx/platform-writeonlyarray-class
 
 ### <a name="properties"></a>Proprietà
 
-| Nome | Descrizione |
+| Nome | Description |
 |--|--|
 | [Array:: value](#value) | Recupera un handle alla matrice corrente. |
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La classe Array è sealed e non può essere ereditata.
 
@@ -84,7 +85,7 @@ Numero di elementi nella matrice.
 *data*<br/>
 Puntatore a una matrice di dati di tipo `T` utilizzato per inizializzare l'oggetto Array.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni sulla creazione di istanze di Platform:: Array, vedere [Array e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
@@ -121,7 +122,7 @@ property Array^ Value;
 
 Handle alla matrice corrente.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Platform](../cppcx/platform-namespace-c-cx.md)<br/>
 [Array e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

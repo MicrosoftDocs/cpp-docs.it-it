@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe locale'
 title: Classe locale
 ms.date: 07/20/2020
 f1_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 55aeaf27b1c31ef0dba68d0ead3633590777cbdf
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: e934a2e892f0b68926369c8e4a4128162345dd83
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040601"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284629"
 ---
 # <a name="locale-class"></a>Classe locale
 
@@ -146,7 +147,7 @@ Le regole di formattazione numerica per gli inserimenti successivi a `cout` rima
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome tipo|Descrizione|
+|Nome tipo|Description|
 |-|-|
 |[category](#category)|Tipo Integer che fornisce i valori della maschera di bit per indicare le famiglie di facet standard.|
 
@@ -159,7 +160,7 @@ Le regole di formattazione numerica per gli inserimenti successivi a `cout` rima
 
 ### <a name="static-functions"></a>Funzioni statiche
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[classico](#classic)|La funzione membro statica restituisce un oggetto delle impostazioni locali che rappresenta le impostazioni locali C classiche.|
 |[globale](#global)|Reimposta le impostazioni locali predefinite per il programma.|
@@ -297,7 +298,7 @@ Impostazioni locali contenenti il facet da inserire nelle impostazioni locali di
 
 ### <a name="return-value"></a>Valore restituito
 
-La funzione membro restituisce un ** \* oggetto delle impostazioni** locali che sostituisce o aggiunge al facet `Facet` elencato in *source_locale*.
+La funzione membro restituisce un **\* oggetto delle impostazioni** locali che sostituisce o aggiunge al facet `Facet` elencato in *source_locale*.
 
 ### <a name="example"></a>Esempio
 
@@ -468,7 +469,7 @@ sostituisce `locale(locale_name, all)` i facet corrispondenti a una categoria *r
 
 `template<class Facet> locale(const locale& from_locale, Facet* new_facet);`
 
-sostituisce in (o aggiunge a) *from_locale* facet *new_facet*se *new_facet* non è un puntatore null.
+sostituisce in (o aggiunge a) *from_locale* facet *new_facet* se *new_facet* non è un puntatore null.
 
 Se il nome delle impostazioni locali *locale_name* è un puntatore null o altrimenti non valido, la funzione genera [runtime_error](../standard-library/runtime-error-class.md).
 

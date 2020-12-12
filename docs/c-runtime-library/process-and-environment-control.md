@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: controllo del processo e dell'ambiente"
 title: Controllo processo e ambiente
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - environment control routines
 - process control routines
 ms.assetid: 7fde74c3-c2a6-4d15-84b8-092160d60c3e
-ms.openlocfilehash: ed8d15181a171b4b6a436a3e410a99b48232bc6e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7ba9c81aff87f6cfdf253da6a5d4504bcc59dce5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217025"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284564"
 ---
 # <a name="process-and-environment-control"></a>Controllo processo e ambiente
 
@@ -24,9 +25,9 @@ Le routine di controllo dei processi consentono di avviare, arrestare e gestire 
 
 ## <a name="process-and-environment-control-functions"></a>Funzioni di controllo dei processi e dell'ambiente
 
-|Routine|Uso|
+|Routine|Usa|
 |-------------|---------|
-|[abort](../c-runtime-library/reference/abort.md)|Interrompe il processo senza scaricare i buffer né chiamare funzioni registrate da **atexit** e **_onexit**|
+|[interruzione](../c-runtime-library/reference/abort.md)|Interrompe il processo senza scaricare i buffer né chiamare funzioni registrate da **atexit** e **_onexit**|
 |[Assert](../c-runtime-library/reference/assert-macro-assert-wassert.md)|Verifica la presenza di errori logici|
 |Macro [_ASSERT, _ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)|Simile ad **assert**, ma disponibile solo nelle versioni di debug delle librerie di runtime|
 |[atexit](../c-runtime-library/reference/atexit.md)|Routine di pianificazione per l'esecuzione alla chiusura del programma|
@@ -47,7 +48,7 @@ Le routine di controllo dei processi consentono di avviare, arrestare e gestire 
 |[_exit](../c-runtime-library/reference/exit-exit-exit.md)|Termina il processo immediatamente, senza chiamare **atexit** o **_onexit** e senza scaricare il buffer|
 |[getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md), [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|Ottiene il valore della variabile di ambiente|
 |[_getpid](../c-runtime-library/reference/getpid.md)|Ottiene il numero dell'ID del processo|
-|[longjmp](../c-runtime-library/reference/longjmp.md)|Ripristinare l'ambiente dello stack salvato; utilizzarlo per eseguire un non locale**`goto`**|
+|[longjmp](../c-runtime-library/reference/longjmp.md)|Ripristinare l'ambiente dello stack salvato; utilizzarlo per eseguire un non locale **`goto`**|
 |[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|Pianifica le routine per l'esecuzione alla chiusura del programma; usarla per assicurare la compatibilità con Microsoft C/C++ 7.0 e versioni precedenti|
 |[_pclose](../c-runtime-library/reference/pclose.md)|Attende un nuovo processore dei comandi e chiude il flusso sulla pipe collegata|
 |[perror, _wperror](../c-runtime-library/reference/perror-wperror.md)|Stampa un messaggio di errore|
@@ -55,7 +56,7 @@ Le routine di controllo dei processi consentono di avviare, arrestare e gestire 
 |[_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md)|Crea una pipe ed esegue il comando|
 |[_putenv, _wputenv](../c-runtime-library/reference/putenv-wputenv.md), [_putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md)|Aggiunge o modifica il valore della variabile di ambiente|
 |[raise](../c-runtime-library/reference/raise.md)|Invia un segnale al processo chiamante|
-|[setjmp](../c-runtime-library/reference/setjmp.md)|Salva l'ambiente dello stack; utilizzare per eseguire non locale**`goto`**|
+|[setjmp](../c-runtime-library/reference/setjmp.md)|Salva l'ambiente dello stack; utilizzare per eseguire non locale **`goto`**|
 |[signal](../c-runtime-library/reference/signal.md)|Gestisce un segnale di interruzione|
 |[_spawnl, _wspawnl](../c-runtime-library/reference/spawnl-wspawnl.md)|Crea ed esegue il nuovo processo con l'elenco di argomenti specificato|
 |[_spawnle, _wspawnle](../c-runtime-library/reference/spawnle-wspawnle.md)|Crea ed esegue il nuovo processo con l'elenco di argomenti e l'ambiente specificati|
@@ -86,6 +87,6 @@ Le differenze tra le funzioni della famiglia **_exec**, come tra quelle della fa
 |**_execve**, **_spawnve**|No|Array|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|
 |**_execvp**, **_spawnvp**|Sì|Array|Ereditate dal processo chiamante|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>

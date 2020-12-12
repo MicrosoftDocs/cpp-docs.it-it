@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: auto_handle Class'
 title: Classe auto_handle
 ms.date: 01/16/2019
 ms.topic: reference
@@ -15,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::auto_handle class
 ms.assetid: a65604d1-ecbb-44fd-ae2f-696ddeeed9d6
-ms.openlocfilehash: 975710fb47bdcf3195330402acd869aba17234e6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9ac93d6b141f24a430aceb97f82fc90046622866
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230935"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282653"
 ---
 # <a name="auto_handle-class"></a>Classe auto_handle
 
@@ -38,18 +39,18 @@ ref class auto_handle;
 *_element_type*<br/>
 Tipo gestito da incorporare.
 
-## <a name="members"></a><a name="members"></a>Membri
+## <a name="members"></a><a name="members"></a> Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici  
 
-|Nome|Descrizione|  
+|Nome|Description|  
 |---------|-----------|  
 |[auto_handle::auto_handle](#auto-handle)|`auto_handle`Costruttore.|  
 |[auto_handle:: ~ auto_handle](#tilde-auto-handle)|`auto_handle`Distruttore.|  
 
 ### <a name="public-methods"></a>Metodi pubblici  
 
-|Nome|Descrizione|  
+|Nome|Description|  
 |---------|-----------|  
 |[auto_handle::get](#get)|Ottiene l'oggetto contenuto.|  
 |[auto_handle::release](#release)|Rilascia l'oggetto dalla `auto_handle` gestione.|
@@ -58,7 +59,7 @@ Tipo gestito da incorporare.
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|  
+|Nome|Description|  
 |---------|-----------|
 |[auto_handle:: operator-&gt;](#operator-arrow)|Operatore di accesso ai membri.|
 |[auto_handle::operator=](#operator-assign)|Operatore di assegnazione.|
@@ -72,7 +73,7 @@ Tipo gestito da incorporare.
 
 **Spazio dei nomi** msclr
 
-## <a name="auto_handleauto_handle"></a><a name="auto-handle"></a>auto_handle:: auto_handle
+## <a name="auto_handleauto_handle"></a><a name="auto-handle"></a> auto_handle:: auto_handle
 
 `auto_handle`Costruttore.
 
@@ -163,7 +164,7 @@ in RefClassA destructor: second
 done
 ```
 
-## <a name="auto_handleauto_handle"></a><a name="tilde-auto-handle"></a>auto_handle:: ~ auto_handle
+## <a name="auto_handleauto_handle"></a><a name="tilde-auto-handle"></a> auto_handle:: ~ auto_handle
 
 `auto_handle`Distruttore.
 
@@ -171,7 +172,7 @@ done
 ~auto_handle();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il distruttore distrugge anche l'oggetto di proprietà.
 
@@ -210,7 +211,7 @@ ClassA destructor
 done
 ```
 
-## <a name="auto_handleget"></a><a name="get"></a>auto_handle:: Get
+## <a name="auto_handleget"></a><a name="get"></a> auto_handle:: Get
 
 Ottiene l'oggetto contenuto.
 
@@ -270,7 +271,7 @@ Hello from first A!
 in ClassA destructor:first
 ```
 
-## <a name="auto_handlerelease"></a><a name="release"></a>auto_handle:: versione
+## <a name="auto_handlerelease"></a><a name="release"></a> auto_handle:: versione
 
 Rilascia l'oggetto dalla `auto_handle` gestione.
 
@@ -333,7 +334,7 @@ Hello from first A!
 done
 ```
 
-## <a name="auto_handlereset"></a><a name="reset"></a>auto_handle:: Reset
+## <a name="auto_handlereset"></a><a name="reset"></a> auto_handle:: Reset
 
 Elimina definitivamente l'oggetto di proprietà corrente e, facoltativamente, prende il possesso di un nuovo oggetto.
 
@@ -399,7 +400,7 @@ ClassA destructor: second
 done
 ```
 
-## <a name="auto_handleswap"></a><a name="swap"></a>auto_handle:: swap
+## <a name="auto_handleswap"></a><a name="swap"></a> auto_handle:: swap
 
 Scambia oggetti con un altro `auto_handle` .
 
@@ -441,7 +442,7 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'
 ```
 
-## <a name="auto_handleoperator-gt"></a><a name="operator-arrow"></a>auto_handle:: operator-&gt;
+## <a name="auto_handleoperator-gt"></a><a name="operator-arrow"></a> auto_handle:: operator-&gt;
 
 Operatore di accesso ai membri.
 
@@ -490,7 +491,7 @@ Hello from first A!
 a->m_i = 5
 ```
 
-## <a name="auto_handleoperator"></a><a name="operator-assign"></a>auto_handle:: operator =
+## <a name="auto_handleoperator"></a><a name="operator-assign"></a> auto_handle:: operator =
 
 Operatore di assegnazione.
 
@@ -574,7 +575,7 @@ done
 in ClassA destructor: second
 ```
 
-## <a name="auto_handleoperator-auto_handle"></a><a name="operator-auto-handle"></a>auto_handle:: operator auto_handle
+## <a name="auto_handleoperator-auto_handle"></a><a name="operator-auto-handle"></a> auto_handle:: operator auto_handle
 
 Operatore di cast di tipo tra `auto_handle` e tipi compatibili.
 
@@ -629,7 +630,7 @@ Hello from first B!
 Hello from first A!
 ```
 
-## <a name="auto_handleoperator-bool"></a><a name="operator-bool"></a>auto_handle:: operator bool
+## <a name="auto_handleoperator-bool"></a><a name="operator-bool"></a> auto_handle:: operator bool
 
 Operatore per `auto_handle` l'utilizzo di in un'espressione condizionale.
 
@@ -641,7 +642,7 @@ operator bool();
 
 **`true`** Se l'oggetto wrapped è valido; **`false`** in caso contrario,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo operatore esegue la conversione in `_detail_class::_safe_bool` , che è più sicuro di **`bool`** perché non può essere convertito in un tipo integrale.
 
@@ -674,7 +675,7 @@ s2 is valid
 s2 is now invalid
 ```
 
-## <a name="auto_handleoperator"></a><a name="operator-logical-not"></a>auto_handle:: operator!
+## <a name="auto_handleoperator"></a><a name="operator-logical-not"></a> auto_handle:: operator!
 
 Operatore per `auto_handle` l'utilizzo di in un'espressione condizionale.
 

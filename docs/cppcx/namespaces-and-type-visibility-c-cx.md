@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: spazi dei nomi e visibilità del tipo (C++/CX)'
 title: Spazi dei nomi e visibilità del tipo (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-ms.openlocfilehash: 78d5f5af761cef985ec43cf448251b4dc3c70bc2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 014791ef322538c824c68409681d7fb856e1c837
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837801"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282900"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Spazi dei nomi e visibilità del tipo (C++/CX)
 
@@ -39,7 +40,7 @@ Utilizza i modificatori di accesso riportati di seguito per controllare sia la v
 
 ## <a name="windows-runtime-namespaces"></a>Spazi dei nomi Windows Runtime
 
-L'API Windows è costituita da tipi dichiarati in Windows:: \* namespaces. Questi spazi dei nomi sono riservati a Windows e non è possibile aggiungere ad essi altri tipi. Il **Visualizzatore oggetti**ti consente di visualizzare questi spazi dei nomi nel file windows.winmd. Per la documentazione sugli spazi dei nomi, vedere l'articolo sulle [API di Windows](/uwp/api/).
+L'API Windows è costituita da tipi dichiarati in Windows:: \* namespaces. Questi spazi dei nomi sono riservati a Windows e non è possibile aggiungere ad essi altri tipi. Il **Visualizzatore oggetti** ti consente di visualizzare questi spazi dei nomi nel file windows.winmd. Per la documentazione sugli spazi dei nomi, vedere l'articolo sulle [API di Windows](/uwp/api/).
 
 ## <a name="ccx-namespaces"></a>spazi dei nomi C++/CX
 
@@ -52,6 +53,6 @@ I/CX C++ definiscono determinati tipi in questi spazi dei nomi come parte della 
 | `Platform::Collections` | Contiene le classi di raccolta concrete che implementano le interfacce di raccolta Windows Runtime `IVector` , `IMap` e così via. Questi tipi sono definiti nel file di intestazione collection.h, non in platform.winmd. |
 | `Platform::Details` | Contiene i tipi utilizzati dal compilatore e che non sono per uso pubblico. |
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Sistema di tipi (C++/CX)](../cppcx/type-system-c-cx.md)

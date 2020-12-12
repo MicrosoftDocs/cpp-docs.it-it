@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: freopen, _wfreopen'
 title: freopen, _wfreopen
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - tfreopen function
 - wfreopen function
 ms.assetid: de4b73f8-1043-4d62-98ee-30d2022da885
-ms.openlocfilehash: 435211b246f9943588aeef2005e501a9eac59c6b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: be2355ef49ee9a4a3e966de9077ee236dae03648
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916336"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282978"
 ---
 # <a name="freopen-_wfreopen"></a>freopen, _wfreopen
 
@@ -74,11 +75,11 @@ Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce un puntatore al nuovo file aperto. Se si verifica un errore, il file originale viene chiuso e la funzione restituisce un valore di puntatore **null** . Se il *percorso*, la *modalità*o il *flusso* è un puntatore null o se *filename* è una stringa vuota, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono **null**.
+Ognuna di queste funzioni restituisce un puntatore al nuovo file aperto. Se si verifica un errore, il file originale viene chiuso e la funzione restituisce un valore di puntatore **null** . Se il *percorso*, la *modalità* o il *flusso* è un puntatore null o se *filename* è una stringa vuota, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono **null**.
 
 Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Sono disponibili versioni più sicure di queste funzioni, vedere [freopen_s, _wfreopen_s](freopen-s-wfreopen-s.md).
 
@@ -92,9 +93,9 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tfreopen**|**freopen**|**freopen**|**_wfreopen**|
 
-**freopen** viene in genere usato per reindirizzare i file già aperti **stdin**, **stdout**e **stderr** ai file specificati dall'utente. Il nuovo file associato al *flusso* viene aperto con la *modalità*, ovvero una stringa di caratteri che specifica il tipo di accesso richiesto per il file, come indicato di seguito:
+**freopen** viene in genere usato per reindirizzare i file già aperti **stdin**, **stdout** e **stderr** ai file specificati dall'utente. Il nuovo file associato al *flusso* viene aperto con la *modalità*, ovvero una stringa di caratteri che specifica il tipo di accesso richiesto per il file, come indicato di seguito:
 
-|*mode*|Accesso|
+|*mode*|Access|
 |-|-|
 | **r** | Viene aperto per la lettura. Se il file non esiste o non viene trovato, la chiamata a **freopen** ha esito negativo. |
 | **w** | Apre un file vuoto per la scrittura. Se il file specificato esiste, il contenuto viene eliminato in modo permanente. |
@@ -124,12 +125,12 @@ Per una discussione sulle modalità testo e binaria, vedere [I/O file modalità 
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**freopen**|\<stdio.h>|
 |**_wfreopen**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout**e **stderr**devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout** e **stderr** devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

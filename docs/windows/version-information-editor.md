@@ -1,5 +1,6 @@
 ---
-title: Editor delle informazioni sullaC++versione ()
+description: 'Ulteriori informazioni su: editor di informazioni sulla versione (C++)'
+title: Editor delle informazioni sulla versione (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.version.F1
@@ -23,14 +24,14 @@ helpviewer_keywords:
 - GetFileVersionInfo
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-ms.openlocfilehash: b083ed27b6b1f471dbec9b96e7be7a6165f8d125
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e639db4fd0ec8ac6291be452c000a23246bac662
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214370"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283225"
 ---
-# <a name="version-information-editor-c"></a>Editor delle informazioni sullaC++versione ()
+# <a name="version-information-editor-c"></a>Editor delle informazioni sulla versione (C++)
 
 Le informazioni sulla versione sono costituite dall'identificazione del prodotto e della società, da un numero di versione del prodotto e dalla notifica relativa al copyright e al marchio. Con l' **editor di informazioni sulla versione**, è possibile creare e gestire questi dati, archiviati nella risorsa di informazioni sulla versione. La risorsa di informazioni sulla versione non è richiesta da un'applicazione, ma è una posizione utile per raccogliere informazioni che identificano l'applicazione. Le informazioni sulla versione vengono usate anche dalle API di installazione.
 
@@ -50,11 +51,11 @@ L' **editor di informazioni sulla versione** consente di:
 
 Selezionare l'elemento una volta per sceglierlo, quindi di nuovo per iniziare a modificarlo. Apportare modifiche direttamente nella tabella **informazioni sulla versione** o nella [finestra Proprietà](/visualstudio/ide/reference/properties-window). Le modifiche verranno riflesse in entrambe le posizioni.
 
-Quando si modifica la chiave di `FILEFLAGS` nell' **Editor delle informazioni sulla versione**, si noti che non è possibile impostare le proprietà **debug**, **private build**o **Special Build** nella finestra **Proprietà** per i file RC:
+Quando si modifica la `FILEFLAGS` chiave nell' **Editor delle informazioni sulla versione**, si noti che non è possibile impostare le proprietà **debug**, **private build** o **Special Build** nella finestra **Proprietà** per i file RC:
 
-- L' **editor di informazioni sulla versione** imposta la proprietà **Debug** con un `#ifdef` nello script di risorsa, in base al flag di compilazione `_DEBUG`.
+- L' **editor di informazioni sulla versione** imposta la proprietà **debug** con un oggetto `#ifdef` nello script di risorsa, in base al `_DEBUG` flag di compilazione.
 
-- Se la chiave di `Private Build` dispone di un **valore** impostato nella tabella delle **informazioni sulla versione** , la proprietà di **compilazione privata** corrispondente nella finestra **Proprietà** relativa alla chiave `FILEFLAGS` sarà **true**. Se il **valore** è vuoto, la proprietà sarà **false**. Analogamente, la chiave di **compilazione speciale** nella tabella delle **informazioni sulla versione** è associata alla proprietà di **compilazione speciale** per la chiave `FILEFLAGS`.
+- Se la `Private Build` chiave ha un **valore** impostato nella tabella delle **informazioni sulla versione** , la proprietà di **compilazione privata** corrispondente nella finestra **Proprietà** della `FILEFLAGS` chiave sarà **true**. Se il **valore** è vuoto, la proprietà sarà **false**. Analogamente, la chiave di **compilazione speciale** nella tabella delle **informazioni sulla versione** è associata alla proprietà di **compilazione speciale** per la `FILEFLAGS` chiave.
 
 È possibile ordinare la sequenza di informazioni del blocco di stringhe selezionando le intestazioni di colonna **chiave** o **valore** . Queste intestazioni riordinano automaticamente le informazioni nella sequenza selezionata.
 
@@ -84,7 +85,7 @@ Per accedere alle informazioni sulla versione dal programma, usare le funzioni [
 
 Win32
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Editor di risorse](../windows/resource-editors.md)<br/>
 [Menu e altre risorse](/windows/win32/menurc/resources)<br/>

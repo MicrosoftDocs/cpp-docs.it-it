@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura: usare uno strumento di disegno'
 title: 'Procedura: usare uno strumento di disegno'
 ms.date: 02/15/2019
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - graphics [C++], custom brushes
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-ms.openlocfilehash: 46ba1f1057484f2b5b1e1286482d80fd96312caf
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 9415b81eb520b626186fe321184bd1d7d7391b61
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502936"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283264"
 ---
 # <a name="how-to-use-a-drawing-tool"></a>Procedura: usare uno strumento di disegno
 
@@ -73,7 +74,7 @@ Le linee vengono disegnate in una larghezza determinata dalla selezione corrente
 
 ### <a name="to-draw-a-line"></a>Per creare una linea
 
-1. Utilizzare la [barra degli](./image-editor-for-icons.md) strumenti dell'editor di immagini o passare a **Image** >  **strumenti** immagine menu e scegliere lo strumento **linea** .
+1. Utilizzare la [barra degli](./image-editor-for-icons.md) strumenti dell'editor di immagini o passare a  >  **strumenti** immagine menu e scegliere lo strumento **linea** .
 
 1. Se necessario, selezionare colori e un pennello:
 
@@ -87,7 +88,7 @@ Le linee vengono disegnate in una larghezza determinata dalla selezione corrente
 
 ### <a name="to-draw-a-closed-figure"></a>Per creare una figura chiusa
 
-1. Utilizzare la barra degli strumenti dell' **editor di immagini** o passare a **Image**  >  **strumenti** immagine menu e selezionare uno strumento di **disegno di figure chiuse** .
+1. Utilizzare la barra degli strumenti dell' **editor di immagini** o passare a   >  **strumenti** immagine menu e selezionare uno strumento di **disegno di figure chiuse** .
 
    Gli strumenti di disegno delle figure **chiuse** creano figure come indicato sui rispettivi pulsanti.
 
@@ -138,7 +139,7 @@ Premere **ESC** o scegliere un altro strumento di disegno.
 
 Nessuno
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Editor di immagini per le icone](../windows/image-editor-for-icons.md)<br/>
 [Procedura: creare un'icona o un'altra immagine](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
