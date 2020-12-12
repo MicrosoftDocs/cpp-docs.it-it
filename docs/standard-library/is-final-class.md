@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: is_final Class'
 title: Classe is_final
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_final
 ms.assetid: 9dbad82f-6685-4909-94e8-98e4a93994b9
-ms.openlocfilehash: 14efbeb33193cc674c6e766b880e89d9b76d140a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 04660309205689e14200cb5d214ce5dc80efb88f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452659"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323741"
 ---
-# <a name="isfinal-class"></a>Classe is_final
+# <a name="is_final-class"></a>Classe is_final
 
 Verifica se il tipo è un tipo di classe contrassegnato come `final`.
 
@@ -29,17 +30,17 @@ struct is_final;
 *T*\
 Tipo su cui eseguire una query.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Un'istanza del predicato di tipo include true se il tipo *T* è un tipo `final`di classe contrassegnato; in caso contrario, include false. Se *T* è un tipo di classe, deve essere un tipo completo.
+Un'istanza del predicato di tipo include true se il tipo *T* è un tipo di classe contrassegnato `final` ; in caso contrario, include false. Se *T* è un tipo di classe, deve essere un tipo completo.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)\
-[Identificatore final](../cpp/final-specifier.md)
+[Identificatore finale](../cpp/final-specifier.md)

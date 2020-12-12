@@ -1,19 +1,20 @@
 ---
-title: Errore irreversibile U1055 di NMAKE
+description: 'Altre informazioni su: errore irreversibile U1055 di NMAKE'
+title: 'Errore irreversibile U1055 di NMAKE '
 ms.date: 11/04/2016
 f1_keywords:
 - U1055
 helpviewer_keywords:
 - U1055
 ms.assetid: 1d453922-ba7e-497f-a795-d8d959c40555
-ms.openlocfilehash: 9abd437ec2fd0c0ab020ba95dac1104d497a4879
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 88602389d45de92b4514f4680e025d807506b527
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182929"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322882"
 ---
-# <a name="nmake-fatal-error-u1055"></a>Errore irreversibile U1055 di NMAKE
+# <a name="nmake-fatal-error-u1055"></a>Errore irreversibile U1055 di NMAKE 
 
 spazio all'esterno dell'ambiente
 

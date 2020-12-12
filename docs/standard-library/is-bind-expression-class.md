@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: is_bind_expression Class'
 title: Classe is_bind_expression
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_bind_expression class
 ms.assetid: 0715f9e9-2239-4778-a1cf-2c21f49dfd47
-ms.openlocfilehash: 9d83ff978ccbaec5e66509ac94f22cf29bc20866
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 1430beefd1c046b2910c562385f26d2788c88865
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77258082"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323846"
 ---
 # <a name="is_bind_expression-class"></a>Classe is_bind_expression
 

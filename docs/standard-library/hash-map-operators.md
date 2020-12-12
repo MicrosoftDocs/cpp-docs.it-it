@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: &lt; &gt; operatori hash_map'
 title: Operatori &lt;hash_map&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - hash_map/std::operator!=
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
-ms.openlocfilehash: b0884cacb11299f96d539c8c83a1fc9fa2840d16
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f3374ee86a989a90add86e85d6a9bf15959e26b4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844392"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324122"
 ---
 # <a name="lthash_mapgt-operators"></a>Operatori &lt;hash_map&gt;
 
@@ -42,7 +43,7 @@ Oggetto di tipo `hash_map`.
 
 **`true`** Se il hash_maps non è uguale. **`false`** se hash_maps sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti hash_map si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_map sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -111,7 +112,7 @@ Oggetto di tipo `hash_map`.
 
 **`true`** Se il hash_map sul lato sinistro dell'operatore è uguale all'hash_map a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti hash_map si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_map sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -178,7 +179,7 @@ Oggetto di tipo `hash_multimap`.
 
 **`true`** Se il hash_multimaps non è uguale. **`false`** se hash_multimaps sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti hash_multimap si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_multimap sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -245,7 +246,7 @@ Oggetto di tipo `hash_multimap`.
 
 **`true`** Se il hash_multimap sul lato sinistro dell'operatore è uguale all'hash_multimap a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti hash_multimap si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_multimap sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 

@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: &lt; future&gt;'
 title: '&lt;future&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <future>
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
-ms.openlocfilehash: b5f18de772ea2221ecbd4098b94e0b4f14c0484c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 67c204f636ee9249e9c714df87a02ff6c6ff3149
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220925"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324200"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
@@ -46,7 +47,7 @@ I modelli di classe `future` e `shared_future` non vengono mai bloccati nei rela
 
 ### <a name="classes"></a>Classi
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Classe futura](../standard-library/future-class.md)|Descrive un oggetto restituito asincrono.|
 |[Classe future_error](../standard-library/future-error-class.md)|Descrive un oggetto eccezione che può essere generato dai metodi dei tipi che gestiscono gli oggetti `future`.|
@@ -56,16 +57,16 @@ I modelli di classe `future` e `shared_future` non vengono mai bloccati nei rela
 
 ### <a name="structures"></a>Strutture
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Struttura is_error_code_enum](../standard-library/is-error-code-enum-structure.md)|Specializzazione che indica che `future_errc` è adatto per l'archiviazione di un oggetto `error_code`.|
 |[Struttura uses_allocator](../standard-library/uses-allocator-structure.md)|Specializzazione che restituisce sempre true.|
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[Async](../standard-library/future-functions.md#async)|Rappresenta un provider asincrono.|
+|[async](../standard-library/future-functions.md#async)|Rappresenta un provider asincrono.|
 |[future_category](../standard-library/future-functions.md#future_category)|Restituisce un riferimento all'oggetto `error_category` che caratterizza gli errori associati agli oggetti `future`.|
 |[make_error_code](../standard-library/future-functions.md#make_error_code)|Crea un oggetto `error_code` che dispone dell'oggetto `error_category` che caratterizza gli errori `future`.|
 |[make_error_condition](../standard-library/future-functions.md#make_error_condition)|Crea un oggetto `error_condition` che dispone dell'oggetto `error_category` che caratterizza gli errori `future`.|
@@ -73,12 +74,12 @@ I modelli di classe `future` e `shared_future` non vengono mai bloccati nei rela
 
 ### <a name="enumerations"></a>Enumerazioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[future_errc](../standard-library/future-enums.md#future_errc)|Fornisce i nomi simbolici per tutti gli errori segnalati dalla classe `future_error`.|
 |[future_status](../standard-library/future-enums.md#future_status)|Fornisce i nomi simbolici per i motivi che una funzione di attesa temporizzata può restituire.|
-|[avviare](../standard-library/future-enums.md#launch)|Rappresenta un tipo di maschera di bit che descrive le possibili modalità per la funzione modello `async`.|
+|[avvio](../standard-library/future-enums.md#launch)|Rappresenta un tipo di maschera di bit che descrive le possibili modalità per la funzione modello `async`.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)

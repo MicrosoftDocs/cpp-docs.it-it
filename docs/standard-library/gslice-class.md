@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe gslice'
 title: Classe gslice
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,26 +13,26 @@ helpviewer_keywords:
 - std::gslice [C++], start
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
-ms.openlocfilehash: 07c987fb08a213bb66da628bec3021a3bf9ba24a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 92bb8d56df40a7d59c5414aca3e0d5846401e805
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370628"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324148"
 ---
 # <a name="gslice-class"></a>Classe gslice
 
 Classe di utilità per valarray usata per definire subset multidimensionali di valarray. Se valarray viene considerato come matrice multidimensionale con tutti gli elementi in una matrice, la sezione estrae un vettore dalla matrice multidimensionale.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La classe archivia i parametri che caratterizzano un oggetto di tipo [gslice_array](../standard-library/gslice-array-class.md). Il subset di un oggetto valarray viene costruito indirettamente quando un oggetto della classe gslice viene visualizzato come argomento per un oggetto della classe [valarray](../standard-library/valarray-class.md#op_at)**\<Type>**. I valori archiviati che specificano il subset selezionato da valarray padre includono:
+La classe archivia i parametri che caratterizzano un oggetto di tipo [gslice_array](../standard-library/gslice-array-class.md). Il subset di un oggetto valarray viene costruito indirettamente quando un oggetto della classe gslice viene visualizzato come argomento per un oggetto della classe [valarray](../standard-library/valarray-class.md#op_at) **\<Type>** . I valori archiviati che specificano il subset selezionato da valarray padre includono:
 
 - Indice iniziale.
 
-- Vettore di `valarray<size_t>`lunghezza della classe .
+- Vettore di lunghezza della classe `valarray<size_t>` .
 
-- Vettore passo della `valarray<size_t>`classe .
+- Vettore stride della classe `valarray<size_t>` .
 
 I due vettori devono avere la stessa lunghezza.
 
@@ -49,17 +50,17 @@ Le operazioni sui valarray sono consentite solo se i subset di origine e di dest
 
 |Funzione membro|Descrizione|
 |-|-|
-|[Dimensione](#size)|Trova i valori della matrice che specificano il numero di elementi in una sezione generale di un `valarray`.|
-|[Iniziare](#start)|Trova l'indice iniziale di una sezione generale di un `valarray`.|
-|[Passo](#stride)|Trova la distanza tra gli elementi in una sezione generale di un `valarray`.|
+|[size](#size)|Trova i valori della matrice che specificano il numero di elementi in una sezione generale di un `valarray`.|
+|[start](#start)|Trova l'indice iniziale di una sezione generale di un `valarray`.|
+|[stride](#stride)|Trova la distanza tra gli elementi in una sezione generale di un `valarray`.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<valarray>
+**Intestazione:**\<valarray>
 
 **Spazio dei nomi:** std
 
-## <a name="gslicegslice"></a><a name="gslice"></a>gslice::gslice
+## <a name="gslicegslice"></a><a name="gslice"></a> gslice:: gslice
 
 Classe di utilità per l'oggetto valarray usato per definire sezioni multidimensionali di un oggetto valarray.
 
@@ -85,11 +86,11 @@ Matrice che specifica lo stride in ogni sezione.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il costruttore predefinito archivia zero per l'indice iniziale e vettori di lunghezza zero per i vettori di lunghezza e stride. Il secondo costruttore archivia *_StartIndex* per l'indice iniziale, *_LenArray* per la matrice di lunghezza e *_IncArray* per la matrice stride.
+Il costruttore predefinito archivia zero per l'indice iniziale e vettori di lunghezza zero per i vettori di lunghezza e stride. Il secondo costruttore archivia *_StartIndex* per l'indice iniziale, *_LenArray* per la matrice di lunghezza e *_IncArray* per la matrice di stride.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-**gslice** definisce un subset di un oggetto valarray costituito da più sezioni di tale oggetto, ognuna delle quali inizia in corrispondenza dello stesso elemento specificato. La possibilità di usare matrici per definire più sezioni costituisce l'unica differenza tra `gslice` e [slice::slice](../standard-library/slice-class.md#slice). La prima sezione ha un primo elemento con un indice di *_StartIndex*, un numero di elementi specificati dal primo elemento di *_LenArray*e un passo dato dal primo elemento di *_IncArray*. Nel successivo set di sezioni ortogonali i primi elementi vengono forniti dalla prima sezione. Il secondo elemento di *_LenArray* specifica il numero di elementi. Il passo è dato dal secondo elemento di *_IncArray*. Una terza dimensione delle sezioni usa gli elementi della matrice bidimensionale come elementi iniziali e procede in modo analogo.
+**gslice** definisce un subset di un oggetto valarray costituito da più sezioni di tale oggetto, ognuna delle quali inizia in corrispondenza dello stesso elemento specificato. La possibilità di usare matrici per definire più sezioni costituisce l'unica differenza tra `gslice` e [slice::slice](../standard-library/slice-class.md#slice). La prima sezione ha un primo elemento con un indice di *_StartIndex*, un numero di elementi specificato dal primo elemento di *_LenArray* e uno stride fornito dal primo elemento di *_IncArray*. Nel successivo set di sezioni ortogonali i primi elementi vengono forniti dalla prima sezione. Il secondo elemento di *_LenArray* specifica il numero di elementi. Lo stride viene fornito dal secondo elemento di *_IncArray*. Una terza dimensione delle sezioni usa gli elementi della matrice bidimensionale come elementi iniziali e procede in modo analogo.
 
 ### <a name="example"></a>Esempio
 
@@ -138,7 +139,7 @@ The valarray for vaGSlice is vaResult:
 va[vaGSlice] = ( 0 4 8 12 7 11 15 19)
 ```
 
-## <a name="gslicesize"></a><a name="size"></a>gslice::dimensione
+## <a name="gslicesize"></a><a name="size"></a> gslice:: size
 
 Trova i valori della matrice che specificano il numero di elementi in una sezione generale di un oggetto valarray.
 
@@ -150,7 +151,7 @@ valarray<size_t> size() const;
 
 Oggetto valarray che specifica il numero di elementi in ogni sezione di una sezione generale di un oggetto valarray.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce le lunghezze archiviate delle sezioni.
 
@@ -216,7 +217,7 @@ The size of vaResult is:
 vaGSlice.size ( ) = ( 4 4 ).
 ```
 
-## <a name="gslicestart"></a><a name="start"></a>gslice::start
+## <a name="gslicestart"></a><a name="start"></a> gslice:: Start
 
 Trova l'indice iniziale di una sezione generale di un oggetto valarray.
 
@@ -279,7 +280,7 @@ va[vaGSlice] = ( 0 4 8 12 7 11 15 19 ).
 The index of the first element of vaResult is: 0.
 ```
 
-## <a name="gslicestride"></a><a name="stride"></a>gslice::stride
+## <a name="gslicestride"></a><a name="stride"></a> gslice:: stride
 
 Trova la distanza tra gli elementi in una sezione generale di un oggetto valarray.
 
@@ -349,4 +350,4 @@ vaGSlice.stride ( ) = ( 7 4 ).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Sicurezza dei filettatura nella libreria standard di C](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

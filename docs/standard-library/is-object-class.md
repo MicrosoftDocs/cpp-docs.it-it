@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: is_object Class'
 title: Classe is_object
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_object class
 - is_object
 ms.assetid: b452ceea-5676-488f-925b-ab881126c387
-ms.openlocfilehash: 521c3fe1053f53e5d30edf39a41cb840522575a2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0f361d58676527e25887ad71097943a8b2b6c93a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455858"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323564"
 ---
-# <a name="isobject-class"></a>Classe is_object
+# <a name="is_object-class"></a>Classe is_object
 
 Verifica se il tipo è un tipo di oggetto.
 
@@ -30,9 +31,9 @@ struct is_object;
 *Ty*\
 Tipo su cui eseguire una query.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Un'istanza del predicato di tipo include false se il tipo *Ty* è un tipo di riferimento, un tipo di funzione, o `cv-qualified` void, o un form di uno di essi; in caso contrario, è true.
+Un'istanza del predicato di tipo include false se il tipo *Ty* è un tipo di riferimento, un tipo di funzione, o void, o un `cv-qualified` form di uno di essi; in caso contrario, è true.
 
 ## <a name="example"></a>Esempio
 
@@ -79,11 +80,11 @@ is_object<void> == false
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Classe is_function](../standard-library/is-function-class.md)

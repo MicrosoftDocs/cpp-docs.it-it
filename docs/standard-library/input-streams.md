@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: flussi di input'
 title: Flussi di input
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - input streams
 - input stream objects
 ms.assetid: f14d8954-8f8c-4c3c-8b99-14ddb3683f94
-ms.openlocfilehash: 5dc3fa0af76f73897fe1181d944eb34c8d05bc64
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f7e6d41b904b2d28893637681e3c751d24aef441
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449332"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323962"
 ---
 # <a name="input-streams"></a>Flussi di input
 
@@ -24,11 +25,11 @@ La classe `ifstream` supporta l'input da file su disco. Se è necessario un file
 
 Analogamente alla funzione di libreria `sscanf_s`, la classe `istringstream` supporta l'input da stringhe in memoria. Per estrarre dati da una matrice di caratteri che ha una terminazione null, allocare e inizializzare la stringa e quindi costruire un oggetto della classe `istringstream`.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Costruzione di oggetti di flusso di input](../standard-library/constructing-input-stream-objects.md)
 
-[Uso degli operatori di estrazione](../standard-library/using-extraction-operators.md)
+[Utilizzo degli operatori di estrazione](../standard-library/using-extraction-operators.md)
 
 [Verifica degli errori di estrazione](../standard-library/testing-for-extraction-errors.md)
 
@@ -38,6 +39,6 @@ Analogamente alla funzione di libreria `sscanf_s`, la classe `istringstream` sup
 
 [Overload dell'operatore >> per classi personalizzate](../standard-library/overloading-the-input-operator-for-your-own-classes.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Programmazione iostream](../standard-library/iostream-programming.md)
+[Programmazione di iostream](../standard-library/iostream-programming.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: impostazioni applicazione, creazione guidata controllo ActiveX MFC'
 title: Impostazioni applicazione, Creazione guidata controllo ActiveX MFC
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, application settings
 ms.assetid: 48475194-cc63-467f-8499-f142269a4c1c
-ms.openlocfilehash: 55f202ffabe945e55589ab1fc771a1757e23ca2f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dac370f7ba3461534f2fd4782869e7ddcb50336a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372472"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322811"
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>Impostazioni applicazione, Creazione guidata controllo ActiveX MFC
 
@@ -38,8 +39,8 @@ Questa schermata della Creazione guidata controllo ActiveX MFC può essere usata
 
   - Il progetto include la directory HLP contenente i file bitmap della Guida del progetto e il file degli argomenti della Guida (*projname.rtf*), che comprende gli argomenti standard per le proprietà, gli eventi e i metodi comuni supportati da numerosi controlli ActiveX. Il file RTF può essere modificato allo scopo di aggiungere o rimuovere determinati argomenti della Guida.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Creazione guidata controllo ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
-[Nomi controllo, Creazione guidata controllo ActiveX MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)<br/>
-[Impostazioni controllo, Creazione guidata controllo ActiveX MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)
+[Nomi dei controlli, creazione guidata controllo ActiveX MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)<br/>
+[Impostazioni controllo, creazione guidata controllo ActiveX MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)

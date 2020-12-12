@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: geometric_distribution Class'
 title: Classe geometric_distribution
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: 98ecbc96d104a900d222c660de7f16563f566a9c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c5d4d2e3a00043506e1870095768647d19c81c92
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837879"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324187"
 ---
 # <a name="geometric_distribution-class"></a>Classe geometric_distribution
 
@@ -72,7 +73,7 @@ Il tipo di risultato Integer, il valore predefinito è **`int`** . Per i tipi po
 *GENERATORE URNG*\
 Motore di generazione di numeri casuali uniformi. Per i tipi possibili, vedere [\<random>](../standard-library/random.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il modello di classe descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente con una distribuzione geometrica. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
@@ -224,7 +225,7 @@ Parametro di distribuzione `p`.
 *parm*\
 Struttura di parametri usata per costruire la distribuzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:**`0.0 < p && p < 1.0`
 
@@ -255,7 +256,7 @@ Parametro di distribuzione `p`.
 *Ok*\
 Istanza `param_type` con cui eseguire il confronto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:**`0.0 < p && p < 1.0`
 

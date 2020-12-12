@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: &lt; &gt; operatori hash_set'
 title: Operatori &lt;hash_set&gt;
 ms.date: 03/27/2019
 f1_keywords:
 - hash_set/std::operator!=
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 04b662ea260ca650fc51b17c804594fe25434f61
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a52c749df2bdd690fcd936c9a361251728696ccd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845794"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324083"
 ---
 # <a name="lthash_setgt-operators"></a>Operatori &lt;hash_set&gt;
 
@@ -42,7 +43,7 @@ Oggetto di tipo `hash_set`.
 
 **`true`** Se il hash_sets non è uguale. **`false`** se hash_sets sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti hash_set si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_set sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -110,7 +111,7 @@ Oggetto di tipo `hash_set`.
 
 **`true`** Se il hash_set sul lato sinistro dell'operatore è uguale all'hash_set a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti hash_set si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_set sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -176,7 +177,7 @@ Oggetto di tipo `hash_multiset`.
 
 **`true`** Se il hash_multisets non è uguale. **`false`** se hash_multisets sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti hash_multiset si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_multiset sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -242,7 +243,7 @@ Oggetto di tipo `hash_multiset`.
 
 **`true`** Se il hash_multiset sul lato sinistro dell'operatore è uguale all'hash_multiset a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti hash_multiset si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_multiset sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 

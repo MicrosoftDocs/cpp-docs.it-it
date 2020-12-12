@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: CLOCKS_PER_SEC, CLK_TCK'
 title: CLOCKS_PER_SEC, CLK_TCK
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - CLOCKS_PER_SEC
 - CLK_TCK constant
 ms.assetid: bc285106-383d-44cb-91bf-276ad7de57bf
-ms.openlocfilehash: eef065ac4fcedf13f3a5d54d4df0563fd04ef965
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 43c59932a3026919435516fc0bfe88ef1e1e45ad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750676"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322672"
 ---
-# <a name="clockspersec-clktck"></a>CLOCKS_PER_SEC, CLK_TCK
+# <a name="clocks_per_sec-clk_tck"></a>CLOCKS_PER_SEC, CLK_TCK
 
 ## <a name="syntax"></a>Sintassi
 
@@ -27,7 +28,7 @@ ms.locfileid: "57750676"
 
 Il tempo in secondi è il valore restituito dalla funzione `clock`, diviso da `CLOCKS_PER_SEC`. `CLK_TCK` è equivalente, ma considerato obsoleto.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[clock](../c-runtime-library/reference/clock.md)<br/>
+[orologio](../c-runtime-library/reference/clock.md)<br/>
 [Costanti globali](../c-runtime-library/global-constants.md)

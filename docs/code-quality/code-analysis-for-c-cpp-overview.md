@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: analisi del codice per C/C++ Panoramica'
 title: Cenni preliminari sull'analisi del codice per C/C++
 ms.date: 04/28/2018
 ms.topic: conceptual
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - '#pragma directives, code analysis'
 - C, code analysis
 ms.assetid: 81f0c9e8-f471-4de5-aac4-99db336a8809
-ms.openlocfilehash: f128c9722138f453c72ca97b09cc1a69a737dbf6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4d018185e74926c880f8a174eb81cea344167782
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504190"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323301"
 ---
 # <a name="code-analysis-for-cc-overview"></a>Cenni preliminari sull'analisi del codice per C/C++
 
@@ -53,13 +54,13 @@ Le annotazioni rendono più precisa l'analisi del codice, in quanto offrono info
 
 ## <a name="run-analysis-tool-as-part-of-check-in-policy"></a>Eseguire lo strumento di analisi come parte dei criteri di archiviazione
 
-È possibile che tutte le archiviazioni del codice sorgente debbano soddisfare determinati criteri, in particolare, assicurarsi che l'analisi sia stata eseguita come parte del processo di compilazione locale più recente. Per ulteriori informazioni sull'abilitazione di criteri di archiviazione dell'analisi del codice, vedere [creazione e utilizzo di criteri di archiviazione dell'analisi del codice](/visualstudio/code-quality/how-to-create-or-update-standard-code-analysis-check-in-policies).
+È possibile che tutte le archiviazioni del codice sorgente debbano soddisfare determinati criteri, in particolare, assicurarsi che l'analisi sia stata eseguita come parte del processo di compilazione locale più recente. Per ulteriori informazioni sull'abilitazione di criteri di archiviazione dell'analisi del codice, vedere [creazione e utilizzo](/visualstudio/code-quality/how-to-create-or-update-standard-code-analysis-check-in-policies)di criteri di analisi del codice Check-In.
 
 ## <a name="team-build-integration"></a>Integrazione Team Build
 
 È possibile usare le funzionalità integrate del sistema di compilazione per eseguire lo strumento di analisi del codice come passaggio del processo di compilazione di Azure DevOps. Per altre informazioni, vedere [Azure Pipelines](/azure/devops/pipelines/index).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Guida introduttiva: Analisi codice per C/C++](quick-start-code-analysis-for-c-cpp.md)
 - [Procedura dettagliata: analizzare il codice C/C++ per i difetti](walkthrough-analyzing-c-cpp-code-for-defects.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; iomanip &gt; Functions'
 title: Funzioni &lt;iomanip&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: f540b311cafd59935a9cf1e521d3dbd558f59673
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d9ddcea6b524c0413bc1c68c2b75ec910b529d22
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845757"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323928"
 ---
 # <a name="ltiomanipgt-functions"></a>Funzioni &lt;iomanip&gt;
 
@@ -64,7 +65,7 @@ Valore monetario estratto.
 *use_intl*\
 Se **`true`** , utilizzare il formato internazionale. Il valore predefinito è **`false`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il manipolatore restituisce un oggetto che, se estratto dal flusso `str` , si comporta come un oggetto `formatted input function` che chiama la funzione membro `get` per il facet delle impostazioni locali `money_get` associato a `str` , usando *use_intl* per indicare il formato internazionale. In caso di esito positivo, la chiamata archivia il valore monetario estratto in *quantità* . Il manipolatore restituisce quindi `str`.
 
@@ -87,7 +88,7 @@ Ora nella forma di una struttura temporale.
 *time_format*\
 Formato desiderato da usare per ottenere il valore di ora.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il manipolatore restituisce un oggetto che, se estratto dal flusso `str`, si comporta come un oggetto `formatted input function` che chiama la funzione membro `get` per il facet delle impostazioni locali `time_get` associato a `str`, usando `tptr` per indicare la struttura temporale e `fmt` per indicare l'inizio di una stringa di formato con terminazione Null. Se ha esito positivo, la chiamata archivia nella struttura temporale i valori associati ai campi ora estratti. Il manipolatore restituisce quindi `str`.
 
@@ -112,7 +113,7 @@ Impostare su **`true`** se il manipolatore deve usare il formato internazionale,
 
 Restituisce `str`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il manipolatore restituisce un oggetto che, se inserito nel flusso `str`, si comporta come una funzione di output formattata che chiama la funzione membro `put` per il facet delle impostazioni locali `money_put` associato a `str`. Se ha esito positivo, la chiamata inserisce `amount` in modo appropriato, usando *use_intl* per indicare il formato internazionale e `str.fill()` come elemento Fill. Il manipolatore restituisce quindi `str`.
 
@@ -135,7 +136,7 @@ Valore di ora da scrivere nel flusso, fornito in una struttura temporale.
 *time_format*\
 Formato in cui scrivere il valore di ora.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il manipolatore restituisce un oggetto che, se inserito nel flusso `str`, si comporta come un oggetto `formatted output function`. La funzione di output chiama la funzione membro `put` per il facet delle impostazioni locali `time_put` associato a `str`. La funzione output USA *time_ptr* per indicare la struttura temporale e *time_format* per indicare l'inizio di una stringa di formato con terminazione null. Se ha esito positivo, la chiamata inserisce testo letterale ottenuto dalla stringa di formato e i valori convertiti dalla struttura temporale. Il manipolatore restituisce quindi `str`.
 
@@ -161,7 +162,7 @@ Carattere specificato dall'utente o carattere wide da usare come delimitatore pe
 *fuga*\
 Carattere specificato dall'utente o carattere wide da usare come carattere di escape per le sequenze di escape all'interno della stringa.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Vedere [Uso degli operatori di inserimento e controllo del formato](../standard-library/using-insertion-operators-and-controlling-format.md).
 
@@ -437,7 +438,7 @@ Larghezza del campo di visualizzazione.
 
 Il manipolatore restituisce un oggetto che, se estratto o inserito nel flusso `str` , chiama `str.` [Width](../standard-library/ios-base-class.md#width) `(Wide)` , quindi restituisce `str` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 setw imposta la larghezza solo per l'elemento successivo nel flusso e deve essere inserito prima di ogni elemento di cui si vuole specificare la larghezza.
 

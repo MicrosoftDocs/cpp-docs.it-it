@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso delle classi per la scrittura di applicazioni per Windows'
 title: Utilizzo delle classi per la creazione di applicazioni per Windows
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,40 +10,40 @@ helpviewer_keywords:
 - OLE applications [MFC], MFC application framework
 - database applications [MFC], creating
 ms.assetid: 73f63470-857d-43dd-9a54-b38b7be0f1b7
-ms.openlocfilehash: c8b3d7061c0ef06063d9c6993f24d23fc2e1f92e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b94155b565872b614efa291699cecbaf4770fdaa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411474"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322712"
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>Utilizzo delle classi per la creazione di applicazioni per Windows
 
-Le classi nella libreria di classi MFC (Microsoft Foundation) nel loro insieme, costituiscono un "applicazione framework" in cui si compila un'applicazione per il sistema operativo Windows. A livello generale, il framework definisce lo scheletro di un'applicazione e fornisce le implementazioni dell'interfaccia utente standard che possono essere inserite in tale struttura. Il compito del programmatore consiste nel compilare il resto della struttura, che sono tutte le operazioni che sono specifiche dell'applicazione. Tramite la creazione guidata applicazione MFC per creare i file per un'applicazione molto approfondita starter, è possibile ottenere un punto di partenza. Utilizzare l'editor di risorse Microsoft Visual C++ per progettare visivamente gli elementi dell'interfaccia utente comandi di visualizzazione classi per connettere tali elementi al codice e la libreria di classi per implementare la logica specifica dell'applicazione.
+Insieme, le classi nella libreria MFC (Microsoft Foundation Class) costituiscono un "Framework applicazione", in cui viene creata un'applicazione per il sistema operativo Windows. A un livello generale, il Framework definisce lo scheletro di un'applicazione e fornisce implementazioni standard dell'interfaccia utente che possono essere inserite nello scheletro. Il tuo lavoro come programmatore consiste nel compilare il resto dello scheletro, che sono le cose specifiche per l'applicazione. È possibile iniziare utilizzando la creazione guidata applicazione MFC per creare i file per un'applicazione iniziale molto completa. Usare gli editor di risorse Microsoft Visual C++ per progettare visivamente gli elementi dell'interfaccia utente, Visualizzazione classi comandi per connettere tali elementi al codice e la libreria di classi per implementare la logica specifica dell'applicazione.
 
-Versione 3.0 e versioni successive del framework MFC supporta la programmazione per le piattaforme Win32, tra cui Microsoft Windows 95 e versioni successive e Windows NT versione 3.51 e successive. Il supporto di Win32 MFC include il multithreading. Usare la versione 1.5*x* se è necessario eseguire la programmazione a 16 bit.
+La versione 3,0 e successive del framework MFC supporta la programmazione per le piattaforme Win32, tra cui Microsoft Windows 95 e versioni successive e Windows NT versione 3,51 e successive. Il supporto Win32 per MFC include il multithreading. Se è necessario eseguire la programmazione a 16 bit, utilizzare la versione 1,5 *x* .
 
-Questa serie di articoli vengono fornite informazioni generali del framework dell'applicazione. Vengono inoltre descritti gli oggetti principali che costituiscono l'applicazione e come vengono creati. Tra gli argomenti trattati in questi articoli sono i seguenti:
+Questa famiglia di articoli presenta una panoramica generale del Framework applicazione. Vengono inoltre esaminati gli oggetti principali che costituiscono l'applicazione e il modo in cui vengono creati. Gli argomenti trattati in questi articoli sono i seguenti:
 
-- [Il framework](../mfc/framework-mfc.md).
+- [Framework](../mfc/framework-mfc.md).
 
-- Divisione del lavoro tra framework e il codice, come descritto in [compilazione nel Framework](../mfc/building-on-the-framework.md).
+- Divisione del lavoro tra il Framework e il codice, come descritto in [compilazione del Framework](../mfc/building-on-the-framework.md).
 
-- [La classe dell'applicazione](../mfc/cwinapp-the-application-class.md), che incapsula la funzionalità a livello di applicazione.
+- [Classe dell'applicazione](../mfc/cwinapp-the-application-class.md), che incapsula la funzionalità a livello di applicazione.
 
-- La modalità [modelli di documento](../mfc/document-templates-and-the-document-view-creation-process.md) creare e gestire documenti e le visualizzazioni associate e finestre cornice.
+- Il modo in cui i [modelli di documento](../mfc/document-templates-and-the-document-view-creation-process.md) creano e gestiscono documenti e le relative visualizzazioni e finestre cornice.
 
-- Classe [CWnd](../mfc/window-objects.md), la classe di base di radice di tutte le finestre.
+- Classe [CWnd](../mfc/window-objects.md), la classe base radice di tutte le finestre.
 
 - [Oggetti grafici](../mfc/graphic-objects.md), ad esempio penne e pennelli.
 
-Altre parti del framework includono:
+Altre parti del Framework includono:
 
-- [Oggetti finestra: panoramica](../mfc/window-objects.md)
+- [Oggetti finestra: Panoramica](../mfc/window-objects.md)
 
-- [Gestione di messaggi e mapping](../mfc/message-handling-and-mapping.md)
+- [Gestione e mapping dei messaggi](../mfc/message-handling-and-mapping.md)
 
-- [CObject, la classe di Base di radice in MFC](../mfc/using-cobject.md)
+- [CObject, la classe base radice in MFC](../mfc/using-cobject.md)
 
 - [Architettura documento/visualizzazione](../mfc/document-view-architecture.md)
 
@@ -56,20 +57,20 @@ Altre parti del framework includono:
 
 - [Gestione della memoria](../mfc/memory-management.md)
 
-   Oltre a offrirti un vantaggio nella scrittura di applicazioni per il sistema operativo Windows, MFC anche rende molto più semplice scrivere applicazioni che usano in modo specifico collegamento e incorporamento tecnologia OLE. È possibile apportare all'applicazione un oggetto OLE visual modifica contenitore, un server di modifica visual OLE o entrambi, e in modo che altre applicazioni possono usare gli oggetti dell'applicazione o persino unità in modalità remota, è possibile aggiungere automazione.
+   Oltre a offrire un vantaggio per la scrittura di applicazioni per il sistema operativo Windows, MFC rende molto più semplice scrivere applicazioni che utilizzano in modo specifico la tecnologia di collegamento e incorporamento OLE. È possibile rendere l'applicazione un contenitore di modifica visiva OLE, un server di modifica visiva OLE o entrambi, ed è possibile aggiungere l'automazione in modo che altre applicazioni possano usare oggetti dell'applicazione o persino indirizzarli in modalità remota.
 
 - [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)
 
-   Il kit di sviluppo di controllo OLE (CDK) è ora completamente integrato con il framework. Questa serie di articoli fornisce una panoramica di sviluppo di controlli ActiveX con MFC. (I controlli ActiveX sono state precedentemente noto come controlli OLE).
+   OLE Control Development Kit (CDK) è ora completamente integrato con il Framework. Questa famiglia di articoli fornisce una panoramica dello sviluppo di controlli ActiveX con MFC. I controlli ActiveX erano noti in precedenza come controlli OLE.
 
 - [Programmazione di database](../data/data-access-programming-mfc-atl.md)
 
-   MFC fornisce anche due set di classi di database che semplificano l'accesso ai dati la scrittura delle applicazioni. Usa le classi di database ODBC, è possibile connettersi ai database tramite un driver Open Database Connectivity (ODBC), selezionare record da tabelle e visualizzare informazioni sui record in un modulo sullo schermo. Usa le classi di oggetto DAO (Data Access), per lavorare con i database tramite il motore di database Microsoft Jet o origini di dati esterno (non-Jet), tra cui origini dati ODBC.
+   MFC fornisce inoltre due set di classi di database che semplificano la scrittura di applicazioni di accesso ai dati. Utilizzando le classi di database ODBC, è possibile connettersi ai database tramite un driver Open Database Connectivity (ODBC), selezionare i record dalle tabelle e visualizzare le informazioni sui record in un form sullo schermo. Utilizzando le classi DAO (Data Access Object), è possibile utilizzare i database di tramite il motore di database di Microsoft Jet o origini dati esterne (non Jet), incluse le origini dati ODBC.
 
-   Inoltre, MFC sono completamente abilitati per la scrittura di applicazioni che utilizzano Unicode e imposta di caratteri multibyte (MBCS), in particolare double-byte character set (DBCS).
+   MFC è inoltre completamente abilitato per la scrittura di applicazioni che utilizzano i set di caratteri Unicode e multibyte (MBCS), in particolare DBCS (Double-byte character set).
 
-Per una Guida generale alla documentazione MFC, vedere [argomenti MFC generali](../mfc/general-mfc-topics.md).
+Per una guida generale alla documentazione di MFC, vedere gli [argomenti generali di MFC](../mfc/general-mfc-topics.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Argomenti MFC generali](../mfc/general-mfc-topics.md)

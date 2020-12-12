@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: comandi e tabelle'
 title: Comandi e tabelle
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - tables [C++], OLE DB Consumer Templates
 - OLE DB consumer templates, command support
 ms.assetid: 4bd3787b-6d26-40a9-be0c-083080537c12
-ms.openlocfilehash: f65bd0f90832039d453d84ab9765781c30750318
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 767077af7b44b4727272fefc1c2af2f717baddd8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507376"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323340"
 ---
 # <a name="commands-and-tables"></a>Comandi e tabelle
 
@@ -35,6 +36,6 @@ La [creazione guidata consumer OLE DB ATL](../../atl/reference/atl-ole-db-consum
 
    `CCommand` dispone di tre argomenti di modello: un tipo di funzione di accesso, un tipo di set di righe e un tipo di risultato ( `CNoMultipleResults` , per impostazione predefinita, o `CMultipleResults` ). Se si specifica `CMultipleResults` , la `CCommand` classe supporta l' `IMultipleResults` interfaccia e gestisce più set di righe. Nell'esempio [DBVIEWER](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer) viene illustrato come gestire i diversi risultati.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: Guida al porting: MFC Scribble'
 title: 'Guida al porting: MFC Scribble'
 ms.date: 10/23/2019
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: 789d29effeea76045a4a10fbca19f20d06778f7c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 46fac5ceaeadd803ff30f2fa3f8e7723d7d6f6f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076971"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322699"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Guida al porting: MFC Scribble
 
@@ -19,7 +20,7 @@ Ogni versione di Visual Studio introduce possibili incompatibilità che possono 
 
 MFC Scribble è un noto esempio incluso in numerose versioni diverse di Visual C++. Si tratta di una semplice applicazione di disegno che illustra alcune funzionalità di base di MFC. Ne esistono varie versioni, sia in codice nativo che in codice gestito. Per questo esempio è stata usata una versione precedente di Scribble in codice nativo di Visual Studio 2005, aperta in Visual Studio 2017.
 
-Prima di provare a eseguire l'aggiornamento, verificare che sia installato il carico di lavoro Desktop di Windows. Aprire il programma di installazione di Visual Studio (vs_installer.exe). Un metodo per aprire il programma di installazione consiste nello scegliere **File** > **Nuovo progetto** e scorrere alla fine dell'elenco dei modelli installati, fino a vedere **Apri il programma di installazione di Visual Studio**. Dopo l'apertura del programma di installazione vengono visualizzati tutti i carichi di lavoro disponibili. Se la casella del carico di lavoro **Desktop di Windows** non è selezionata, selezionarla e fare clic sul pulsante **Modifica** nella parte inferiore della finestra.
+Prima di provare a eseguire l'aggiornamento, verificare che sia installato il carico di lavoro Desktop di Windows. Aprire il programma di installazione di Visual Studio (vs_installer.exe). Un modo per aprire il programma di installazione consiste nel scegliere **file**  >  **nuovo progetto** e scorrere fino alla fine dell'elenco dei modelli installati fino a quando non viene visualizzato **Apri programma di installazione di Visual Studio**. Dopo l'apertura del programma di installazione vengono visualizzati tutti i carichi di lavoro disponibili. Se la casella per il carico di lavoro **desktop di Windows** non è selezionata, selezionarla e fare clic sul pulsante **modifica** nella parte inferiore della finestra.
 
 Quindi eseguire il backup dell'intera soluzione e di tutto il contenuto.
 
@@ -31,7 +32,7 @@ Tenere presente che invece di aggiornare i progetti con la procedura guidata, è
 
 Quando si apre un vecchio file di progetto in Visual Studio, Visual Studio offre la conversione del file di progetto nella versione più recente, che è stata accettata. viene visualizzata la finestra di dialogo seguente:
 
-![Verifica modifiche a progetti e soluzioni](../porting/media/scribbleprojectupgrade.PNG "Revisione modifiche a progetti e soluzioni")
+![Revisione modifiche a progetti e soluzioni](../porting/media/scribbleprojectupgrade.PNG "Revisione modifiche a progetti e soluzioni")
 
 Si è verificato un errore e viene visualizzato un messaggio per informare che la destinazione Itanium non è disponibile e la conversione non verrà eseguita.
 
@@ -43,7 +44,7 @@ All'epoca in cui è stato creato il progetto Scribble precedente, Itanium era un
 
 Visual Studio visualizza quindi un report di migrazione che elenca tutti i problemi riscontrati nel vecchio file di progetto.
 
-![Report aggiornamento](../porting/media/scribblemigrationreport.PNG "Report di aggiornamento")
+![Report di aggiornamento](../porting/media/scribblemigrationreport.PNG "Report di aggiornamento")
 
 In questo caso, i problemi erano tutti avvisi e Visual Studio ha apportato le modifiche appropriate nel file di progetto. La grande differenza per quanto riguarda il progetto è che lo strumento di compilazione è cambiato da vcbuild a msbuild. Questa modifica è stata introdotta in Visual Studio 2010. Altre modifiche includono una riorganizzazione della sequenza di elementi nel file di progetto. Per questo progetto semplice nessuno dei problemi ha richiesto ulteriore attenzione.
 
@@ -85,7 +86,7 @@ A questo punto, dopo aver eseguito la migrazione a Visual Studio 2017, è possib
 
 Scribble è un'applicazione desktop Windows piccola e semplice, che non è stato difficile convertire. Sono molte le app semplici e di piccole dimensioni facilmente convertibili alla nuova versione.  L'aggiornamento richiederà più tempo nel caso di applicazioni più complesse, contenenti molte più righe di codice, codice legacy meno recente che potrebbe non essere al passo con i moderni standard di progettazione, più progetti e librerie, istruzioni di compilazione personalizzate o compilazioni complesse automatizzate tramite script. Continuare con l'[esempio successivo](../porting/porting-guide-com-spy.md), l'applicazione ATL/COM denominata COM Spy.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Porting e aggiornamento: esempi e case study](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Esempio successivo: COM Spy](../porting/porting-guide-com-spy.md)

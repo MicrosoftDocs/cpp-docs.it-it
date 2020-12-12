@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: integer_sequence Class'
 title: Classe integer_sequence
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-ms.openlocfilehash: 4d927be4fdd41ab75ca78a0e0e7ab0282e4fbf6a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 321e41c2c3bfaa1f89c05f799dedc4f4250f0a2d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843872"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323975"
 ---
 # <a name="integer_sequence-class"></a>Classe integer_sequence
 
@@ -42,12 +43,12 @@ Un pacchetto di parametri non di tipo che rappresenta una sequenza di valori di 
 
 ## <a name="members"></a>Membri
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |`static size_t size() noexcept`|Numero di elementi nella sequenza.|
 |`typedef T value_type`|Tipo di ciascun elemento nella sequenza. Deve essere un tipo integrale.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un pacchetto di parametri che viene passato direttamente a una funzione può essere decompresso senza supporti di librerie speciali. Quando un pacchetto di parametro fa parte di un tipo che viene passato a una funzione, è sono necessari gli indici per accedere agli elementi, il modo più semplice per decomprimerlo consiste nell'usare `integer_sequence` e i rispettivi alias del tipo `make_integer_sequence`, `index_sequence`, `make_index_sequence` e `index_sequence_for`.
 
@@ -123,6 +124,6 @@ Intestazione: \<type_traits\>
 
 Spazio dei nomi: std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Puntini di sospensione e modelli variadic](../cpp/ellipses-and-variadic-templates.md)

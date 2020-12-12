@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: funzioni di callback utilizzate da MFC'
 title: Funzioni di callback utilizzate da MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-ms.openlocfilehash: 553e87320828590c9e1e9204b54622f2f1ca6d80
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 40c9fc15d6f7bc09aa991270d2f95ea5a7b2700d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040886"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322772"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funzioni di callback utilizzate da MFC
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; iostream&gt;'
 title: '&lt;iostream&gt;'
 ms.date: 09/20/2017
 f1_keywords:
@@ -14,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
-ms.openlocfilehash: 5805d441b4fc2fc2927b57f4d94ba8b8ccecb22a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 882b7de8add9339a0580efeac18740205cc175aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845471"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323901"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
@@ -34,7 +35,7 @@ Dichiara gli oggetti che controllano la lettura e la scrittura nei flussi standa
 > [!NOTE]
 > La \<iostream> libreria usa le `#include <ios>` `#include <streambuf>` istruzioni,, `#include <istream>` e `#include <ostream>` .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Gli oggetti rientrano in due gruppi:
 
@@ -50,7 +51,7 @@ Questa garanzia non è tuttavia universale. Un costruttore statico potrebbe chia
 
 ### <a name="global-stream-objects"></a>Oggetti dei flussi globali
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[cerr](#cerr)|Specifica il flusso globale `cerr`.|
 |[Cin](#cin)|Specifica il flusso globale `cin`.|
@@ -73,7 +74,7 @@ extern ostream cerr;
 
 Oggetto [ostream](../standard-library/ostream-typedefs.md#ostream).
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 L'oggetto controlla eventuali inserimenti senza buffer nell'output di errore standard come un flusso di byte. Al termine della creazione dell'oggetto, l'espressione `cerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) è diversa da zero e `cerr.tie() == &cout`.
 
@@ -119,7 +120,7 @@ extern istream cin;
 
 Un oggetto [istream](../standard-library/istream-typedefs.md#istream).
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 L'oggetto controlla eventuali estrazioni dall'input standard come un flusso di byte. Al termine della creazione dell'oggetto, la chiamata `cin.`[tie](../standard-library/basic-ios-class.md#tie) restituisce `&`[cout](#cout).
 
@@ -170,7 +171,7 @@ extern ostream clog;
 
 Oggetto [ostream](../standard-library/ostream-typedefs.md#ostream).
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 L'oggetto controlla eventuali inserimenti con buffer nell'output di errore standard come un flusso di byte.
 
@@ -190,7 +191,7 @@ extern ostream cout;
 
 Oggetto [ostream](../standard-library/ostream-typedefs.md#ostream).
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 L'oggetto controlla eventuali inserimenti nell'output standard come un flusso di byte.
 
@@ -210,7 +211,7 @@ extern wostream wcerr;
 
 Oggetto [wostream](../standard-library/ostream-typedefs.md#wostream).
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 L'oggetto controlla gli inserimenti senza buffer nell'output di errore standard come un flusso wide. Al termine della creazione dell'oggetto, l'espressione `wcerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) è diversa da zero.
 
@@ -230,7 +231,7 @@ extern wistream wcin;
 
 Oggetto [wistream](../standard-library/istream-typedefs.md#wistream).
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 L'oggetto controlla eventuali estrazioni dall'input standard come un flusso wide. Al termine della creazione dell'oggetto, la chiamata `wcin.`[tie](../standard-library/basic-ios-class.md#tie) restituisce `&`[wcout](#wcout).
 
@@ -250,7 +251,7 @@ extern wostream wclog;
 
 Oggetto [wostream](../standard-library/ostream-typedefs.md#wostream).
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 L'oggetto controlla eventuali inserimenti con buffer nell'output di errore standard come un flusso wide.
 
@@ -270,7 +271,7 @@ extern wostream wcout;
 
 Oggetto [wostream](../standard-library/ostream-typedefs.md#wostream).
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 L'oggetto controlla gli inserimenti nell'output standard come flusso wide.
 
@@ -288,7 +289,7 @@ wcout <<(const wchar_t*) cs <<endl;
 
 Per altre informazioni, vedere [Operazioni CString di base](../atl-mfc-shared/basic-cstring-operations.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: is_arithmetic Class'
 title: Classe is_arithmetic
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_arithmetic class
 - is_arithmetic
 ms.assetid: ea427b7e-0141-4a04-848f-561054c53001
-ms.openlocfilehash: e2c148b7cb58cf38e5f73d4e3d2297eac099ef7e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 75673950a162b34815db297a3012fa7152e61375
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456680"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323873"
 ---
-# <a name="isarithmetic-class"></a>Classe is_arithmetic
+# <a name="is_arithmetic-class"></a>Classe is_arithmetic
 
 Verifica se il tipo è aritmetico.
 
@@ -30,9 +31,9 @@ struct is_arithmetic;
 *Ty*\
 Tipo su cui eseguire una query.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Un'istanza del predicato di tipo include true se il tipo *Ty* è un tipo aritmetico, ovvero un tipo integrale o un tipo a virgola mobile `cv-qualified` o un form di uno di essi; in caso contrario, include false.
+Un'istanza del predicato di tipo include true se il tipo *Ty* è un tipo aritmetico, ovvero un tipo integrale o un tipo a virgola mobile o un `cv-qualified` form di uno di essi; in caso contrario, include false.
 
 ## <a name="example"></a>Esempio
 
@@ -68,11 +69,11 @@ is_arithmetic<float> == true
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Classe is_floating_point](../standard-library/is-floating-point-class.md)\

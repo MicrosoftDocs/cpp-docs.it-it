@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: is_nothrow_copy_constructible Class'
 title: Classe is_nothrow_copy_constructible
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_copy_constructible
 ms.assetid: f13a0bea-63b1-492a-9a45-d445df35c282
-ms.openlocfilehash: ff88eacc8b692436bc5c7dfa3a01340527862809
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b238b86a5780d12dd6c1e62e0b2d79b9fbc139dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222355"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323602"
 ---
 # <a name="is_nothrow_copy_constructible-class"></a>Classe is_nothrow_copy_constructible
 
@@ -29,7 +30,7 @@ struct is_nothrow_copy_constructible;
 *Ty*\
 Tipo su cui eseguire una query.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un'istanza del predicato di tipo contiene true se il tipo *Ty* ha un costruttore di copia nothrow; in caso contrario, contiene false.
 
@@ -39,6 +40,6 @@ Un'istanza del predicato di tipo contiene true se il tipo *Ty* ha un costruttore
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)

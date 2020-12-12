@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: linear_congruential_engine Class'
 title: Classe linear_congruential_engine
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
-ms.openlocfilehash: 8701570787275e853543e723f6461b8ad460f96f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b2171623190180cabc46dd760debabdefb9afd77
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845445"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323538"
 ---
 # <a name="linear_congruential_engine-class"></a>Classe linear_congruential_engine
 
@@ -70,7 +71,7 @@ Tipo di risultato Unsigned Integer. Per i tipi possibili, vedere [\<random>](../
 
 Per ulteriori informazioni sui membri del motore, vedere [\<random>](../standard-library/random.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il `linear_congruential_engine` modello di classe è il motore generatore più semplice, ma non la qualità più veloce o più elevata. Un miglioramento rispetto a questo motore è rappresentato da [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md). Nessuno di questi motori può tuttavia eguagliare la rapidità e la qualità dei risultati offerte da [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
 
