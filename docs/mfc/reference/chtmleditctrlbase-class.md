@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CHtmlEditCtrlBase'
 title: Classe CHtmlEditCtrlBase
 ms.date: 11/04/2016
 f1_keywords:
@@ -220,12 +221,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: 74df35a82342bad59e9065ef593581add6d3d734
-ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
+ms.openlocfilehash: 2dfe61dfce86230f87f7e4883f6800e897c3770b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344735"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97115417"
 ---
 # <a name="chtmleditctrlbase-class"></a>Classe CHtmlEditCtrlBase
 
@@ -241,7 +242,7 @@ template <class T> class CHtmlEditCtrlBase
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CHtmlEditCtrlBase::AddToGlyphTable](#addtoglyphtable)|Aggiunge una voce alla tabella Glyph, che specifica le immagini da visualizzare per i tag specifici in modalità progettazione.|
 |[CHtmlEditCtrlBase:: Bold](#bold)|Consente di impostare lo stato di grassetto del testo selezionato.|
@@ -2562,7 +2563,7 @@ Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito 
 
 Questo metodo invia il [IDM_UNORDERLIST ID del comando](/previous-versions/aa769987\(v=vs.85\)) al controllo WebBrowser.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Esempio HTMLEdit](../../overview/visual-cpp-samples.md)

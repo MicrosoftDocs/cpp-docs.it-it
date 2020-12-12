@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: Concurrency:: fast_math spazio dei nomi'
 title: Spazio dei nomi Concurrency::fast_math
 ms.date: 11/04/2016
 f1_keywords:
 - amp_math/Concurrency::fast_math
 ms.assetid: 54fed939-9902-49db-9f29-e98fd9821508
-ms.openlocfilehash: 6ed8dcfa2faff49e8811769b76aad9df15b2fe7b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 99638e3d8b0a452774d1e92d408ce3edddfa861c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226750"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122369"
 ---
 # <a name="concurrencyfast_math-namespace"></a>Spazio dei nomi Concurrency::fast_math
 
@@ -21,11 +22,11 @@ Le funzioni nello `fast_math` spazio dei nomi hanno una precisione inferiore, su
 namespace fast_math;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[cos](concurrency-fast-math-namespace-functions.md#cos)|Calcola l'arcoseno dell'argomento|
 |[cosf](concurrency-fast-math-namespace-functions.md#cosf)|Calcola l'arcoseno dell'argomento|
@@ -99,6 +100,6 @@ namespace fast_math;
 
 **Spazio dei nomi:** Concurrency:: fast_math
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Concurrency:: graphics::d funzioni dello spazio dei nomi irect3d'
 title: Funzioni dello spazio dei nomi Concurrency::graphics::direct3d
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::make_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_texture
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
-ms.openlocfilehash: 66db1d348c6c58a9226322b51662ef7a4ef75b3d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 52556835c843744e03661b3ef5b718c884765c08
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841297"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122356"
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Funzioni dello spazio dei nomi Concurrency::graphics::direct3d
 
@@ -180,6 +181,6 @@ Restituisce un vettore di 4 somme. Ogni somma corrisponde alla somma mascherata 
 
 **Spazio dei nomi:** Concurrency:: graphics::d irect3d
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Concurrency:: graphics::d spazio dei nomi irect3d](concurrency-graphics-direct3d-namespace.md)
