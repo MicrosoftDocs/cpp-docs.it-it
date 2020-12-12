@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: caratteri'
 title: Caratteri
 ms.date: 11/04/2016
 ms.assetid: 4f42680f-42fd-4356-adae-735dc18c6727
-ms.openlocfilehash: 9b74a6cbc2e808751fa3972e1f6eae81f4dd6f22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8c51951fbd43aea6ab1035ccc6469dedb1e4bb2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312602"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293430"
 ---
 # <a name="characters"></a>Caratteri
 
@@ -25,8 +26,8 @@ ms.locfileid: "62312602"
 
 - [Conversione di caratteri multibyte](../c-language/converting-multibyte-characters.md)
 
-- [Intervallo di valori char](../c-language/range-of-char-values.md)
+- [Intervallo di valori Char](../c-language/range-of-char-values.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Comportamento definito in fase di implementazione](../c-language/implementation-defined-behavior.md)
+[Comportamento definito dall'implementazione](../c-language/implementation-defined-behavior.md)

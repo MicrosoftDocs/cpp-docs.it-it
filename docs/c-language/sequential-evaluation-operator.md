@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: operatore Sequential-Evaluation'
 title: Operatore di valutazione sequenziale
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - sequential-evaluation operator
 - comma operator
 ms.assetid: 587514f4-c8e2-44e9-81a8-7a553ce1453a
-ms.openlocfilehash: ec2c866b512bc0b398375041b03c0ea697d3a0d2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7bbe9bd6f70f32bd51e46df28f6e072edf9b6c15
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227777"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292793"
 ---
 # <a name="sequential-evaluation-operator"></a>Operatore di valutazione sequenziale
 
@@ -46,6 +47,6 @@ func_two( (x--, y + 2), z );
 
 Nella chiamata di funzione a `func_one`, vengono passati tre argomenti, separati da virgole: `x`, `y + 2` e `z`. Nella chiamata di funzione a `func_two`, le parentesi forzano il compilatore a interpretare la prima virgola come operatore di valutazione sequenziale. Questa chiamata di funzione passa due argomenti a `func_two`. Il primo argomento è il risultato dell'operazione di valutazione sequenziale `(x--, y + 2)` che ha il valore e il tipo dell'espressione `y + 2`; il secondo argomento è `z`.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Operatore virgola:,](../cpp/comma-operator.md)

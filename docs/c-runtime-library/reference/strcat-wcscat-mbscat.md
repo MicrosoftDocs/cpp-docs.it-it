@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: strcat, wcscat, _mbscat'
 title: strcat, wcscat, _mbscat
 ms.date: 11/04/2016
 api_name:
@@ -43,19 +44,19 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-ms.openlocfilehash: 973c54c18e941b29526cb3e9b1cadb98f6582c4a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 12ec6f6e0e9f940ef72d0aec742137843238c534
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958268"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292156"
 ---
 # <a name="strcat-wcscat-_mbscat"></a>strcat, wcscat, _mbscat
 
 Aggiunge una stringa. Sono disponibili versioni più sicure di queste funzioni. Vedere [strcat_s, wcscat_s, _mbscat_s](strcat-s-wcscat-s-mbscat-s.md).
 
 > [!IMPORTANT]
-> non è possibile usare **questa API** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> non è possibile usare **_mbscat_s** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -101,16 +102,16 @@ Stringa di origine con terminazione null.
 
 Ognuna di queste funzioni restituisce la stringa di destinazione (*strDestination*). Nessun valore restituito è riservato per indicare un errore.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 La funzione **strcat** aggiunge *strSource* a *strDestination* e termina la stringa risultante con un carattere null. Il carattere iniziale di *strSource* sovrascrive il carattere null di terminazione di *strDestination*. Il comportamento di **strcat** non è definito se le stringhe di origine e di destinazione si sovrappongono.
 
 > [!IMPORTANT]
 > Poiché **strcat** non verifica la presenza di spazio sufficiente in *strDestination* prima di aggiungere *strSource*, è possibile che si verifichino sovraccarichi del buffer. In alternativa, considerare l'uso di [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md).
 
-**wcscat** e **_mbscat** sono versioni a caratteri wide e a caratteri multibyte di **strcat**. Gli argomenti e il valore restituito di **wcscat** sono stringhe a caratteri wide. quelli di **_mbscat** sono stringhe di caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
+**wcscat** e **_mbscat** sono versioni a caratteri wide e a caratteri multibyte di **strcat**. Gli argomenti e il valore restituito di **wcscat** sono stringhe a caratteri wide. i **_mbscat** sono stringhe di caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
 
-In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -132,9 +133,9 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 Vedere l'esempio per [strcpy](strcpy-wcscpy-mbscpy.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>

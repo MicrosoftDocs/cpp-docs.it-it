@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: considerazioni sulla scrittura di codice di prologo/epilogo'
 title: Considerazioni sulla scrittura di codice di prologo ed epilogo
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - __LOCAL_SIZE constant
 - stack, stack frame layout
 ms.assetid: 3b8addec-e809-48e4-b1d0-5bad133bd4b8
-ms.openlocfilehash: e1559c75808a72cd3f9674399bec036cf392b44f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 65416e915afa95a27658e2c7517da8f2868dfef9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334587"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293287"
 ---
 # <a name="considerations-when-writing-prologepilog-code"></a>Considerazioni sulla scrittura di codice di prologo/epilogo
 
@@ -20,7 +21,7 @@ ms.locfileid: "81334587"
 
 Prima di scrivere le proprie sequenze di codice di prologo ed epilogo, è importante comprendere in che modo il stack frame è disposto. È inoltre utile saper utilizzare la **__LOCAL_SIZE** costante predefinita.
 
-## <a name="cstack-frame-layout"></a><a name="_clang_c_stack_frame_layout"></a>Layout del frame CStack
+## <a name="cstack-frame-layout"></a><a name="_clang_c_stack_frame_layout"></a> Layout del frame CStack
 
 In questo esempio viene illustrato il codice standard di prologo che potrebbe essere visualizzato in una funzione a 32 bit:
 
@@ -81,6 +82,6 @@ __declspec ( naked ) func()
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Funzioni naked](../c-language/naked-functions.md)

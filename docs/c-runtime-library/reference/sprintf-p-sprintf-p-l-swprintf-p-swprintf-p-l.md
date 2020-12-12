@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l'
 title: _sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 ms.date: 11/04/2016
 api_name:
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-ms.openlocfilehash: c694567aa7554319d5821678a18c3b5392f89965
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 84702c0ab04027f350978c511ee8f871af753bb9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008844"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292299"
 ---
 # <a name="_sprintf_p-_sprintf_p_l-_swprintf_p-_swprintf_p_l"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 
@@ -114,7 +115,7 @@ Numero di caratteri scritti oppure-1 se si è verificato un errore.
 
 La funzione **_sprintf_p** formatta e archivia una serie di caratteri e valori nel *buffer*. Ogni argomento nell' *argument_list* , se presente, viene convertito e restituito in base alla specifica di formato corrispondente nel *formato*. L'argomento *Format* usa la [sintassi per la specifica del formato per le funzioni printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Un carattere Null viene aggiunto dopo l'ultimo carattere scritto. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito. La differenza tra **_sprintf_p** e **sprintf_s** è che **_sprintf_p** supporta i parametri posizionali, che consente di specificare l'ordine in cui gli argomenti vengono utilizzati nella stringa di formato. Per altre informazioni, vedere [Parametri posizionali printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**_swprintf_p** è una versione a caratteri wide di **_sprintf_p**; gli argomenti del puntatore per **_swprintf_p** sono stringhe a caratteri wide. Il rilevamento degli errori di codifica in **_swprintf_p** può essere diverso da quello **_sprintf_p**. **_swprintf_p** e **fwprintf_p** si comportano in modo identico, ad eccezione del fatto che **_swprintf_p** scrive l'output in una stringa anziché in una destinazione di tipo **file**e **_swprintf_p** richiede il parametro *count* per specificare il numero massimo di caratteri da scrivere. Le versioni di queste funzioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
+**_swprintf_p** è una versione a caratteri wide di **_sprintf_p**; gli argomenti del puntatore per **_swprintf_p** sono stringhe a caratteri wide. Il rilevamento degli errori di codifica in **_swprintf_p** può essere diverso da quello **_sprintf_p**. **_swprintf_p** e **fwprintf_p** si comportano in modo identico, ad eccezione del fatto che **_swprintf_p** scrive l'output in una stringa anziché in una destinazione di tipo **file** e **_swprintf_p** richiede il parametro *count* per specificare il numero massimo di caratteri da scrivere. Le versioni di queste funzioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
 
 **_sprintf_p** restituisce il numero di byte archiviati nel *buffer*, senza contare il carattere null di terminazione. **_swprintf_p** restituisce il numero di caratteri wide archiviati nel *buffer*, senza contare il carattere wide null di terminazione. Se *buffer* o *Format* è un puntatore null o se la stringa di formato contiene caratteri di formattazione non validi, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono-1 e impostano **errno** su **EINVAL**.
 
@@ -209,7 +210,7 @@ Wrote 24 characters
 Wrote -1 characters
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
 [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>

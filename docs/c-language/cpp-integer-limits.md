@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: limiti di interi C e C++'
 title: Limiti di interi C e C++
 ms.date: 10/21/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - limits, integer constants
 - integer limits
 ms.assetid: 0c23cbd6-29fb-4d9c-b689-5984e19748de
-ms.openlocfilehash: 1484b43719696578be437909351e24a550ec9869
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c9d15e5366acb482f688e1c5020c43ee83e4e802
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217116"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292975"
 ---
 # <a name="c-and-c-integer-limits"></a>Limiti di interi C e C++
 
@@ -23,7 +24,7 @@ Microsoft C consente inoltre la dichiarazione di variabili Integer ridimensionat
 
 ## <a name="limits-on-integer-constants"></a>Limiti su costanti Integer
 
-|**Constant**|Significato|valore|
+|**Constant**|Significato|Valore|
 |------------------|-------------|-----------|
 |**CHAR_BIT**|Numero di bit nella variabile minore che non sia un campo di bit.|8|
 |**SCHAR_MIN**|Valore minimo per una variabile di tipo **`signed char`** .|-128|
@@ -49,6 +50,6 @@ Se un valore è superiore al massimo valore rappresentabile con il tipo Integer,
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Costanti Integer C](../c-language/c-integer-constants.md)

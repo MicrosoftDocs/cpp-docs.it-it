@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: istruzione continue (C)'
 title: Istruzione continue (C)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - loop structures, continue keyword
 - continue keyword [C]
 ms.assetid: 969f293a-45fe-48a7-b4c6-287ba27a631d
-ms.openlocfilehash: 27d1d0aa0e49c5c46e4ea4e010635ca0057c3f85
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 03e6493310655f20e61156d26b88ae2b08a40cdc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684833"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293248"
 ---
 # <a name="continue-statement-c"></a>Istruzione continue (C)
 
@@ -43,6 +44,6 @@ while ( i-- > 0 )
 
 In questo esempio, il corpo dell'istruzione viene eseguito finché `i` è maggiore di 0. `f(i)`Il primo viene assegnato a `x` ; quindi, se `x` è uguale a 1, l' **`continue`** istruzione viene eseguita. Le restanti istruzioni presenti nel corpo vengono ignorate e l'esecuzione riprende dall'inizio del ciclo con la valutazione del test del ciclo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Istruzione continue](../cpp/continue-statement-cpp.md)

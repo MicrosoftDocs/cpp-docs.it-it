@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _splitpath, _wsplitpath'
 title: _splitpath, _wsplitpath
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - path names
 - _tsplitpath function
 ms.assetid: 32bd76b5-1385-4ee8-a64c-abcb541cd2e4
-ms.openlocfilehash: 1d24565a912d74060e60024dcfd90b8018cae32d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d270cf15c00c42f350dafe0cd45dddbb2f6594c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920276"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292312"
 ---
 # <a name="_splitpath-_wsplitpath"></a>_splitpath, _wsplitpath
 
@@ -78,7 +79,7 @@ Percorso completo.
 Lettera di unità, seguita da due punti (**:**). È possibile passare **null** per questo parametro se non è necessaria la lettera di unità.
 
 *dir*<br/>
-Percorso di directory, inclusa la barra finale. È possibile utilizzare le **/** barre (), le barre **\\** rovesciate () o entrambe. È possibile passare **null** per questo parametro se non è necessario il percorso della directory.
+Percorso di directory, inclusa la barra finale. **/** È possibile utilizzare le barre (), le barre rovesciate ( **\\** ) o entrambe. È possibile passare **null** per questo parametro se non è necessario il percorso della directory.
 
 *fname*<br/>
 Nome di file di base (senza estensione). È possibile passare **null** per questo parametro se non è necessario il nome file.
@@ -86,7 +87,7 @@ Nome di file di base (senza estensione). È possibile passare **null** per quest
 *EXT*<br/>
 Estensione del nome file, incluso il punto principale (**.**). È possibile passare **null** per questo parametro se non è necessaria l'estensione del nome file.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_splitpath** suddivide un percorso nei quattro componenti. **_splitpath** gestisce automaticamente gli argomenti della stringa di caratteri multibyte in base alle esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso. **_wsplitpath** è una versione a caratteri wide di **_splitpath**; gli argomenti da **_wsplitpath** sono stringhe a caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
 
@@ -100,13 +101,13 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath**|**_splitpath**|**_splitpath**|**_wsplitpath**|
 
-Ogni componente del percorso completo è archiviato in un buffer separato. le costanti manifeste **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**e **_MAX_EXT** (definite in STDLIB. H) specificare le dimensioni massime per ogni componente del file. I componenti del file più grandi delle costanti manifeste corrispondenti causano il danneggiamento dell'heap.
+Ogni componente del percorso completo è archiviato in un buffer separato. le costanti manifeste **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME** e **_MAX_EXT** (definite in STDLIB. H) specificare le dimensioni massime per ogni componente del file. I componenti del file più grandi delle costanti manifeste corrispondenti causano il danneggiamento dell'heap.
 
 Ogni buffer deve essere di dimensioni pari alla costante manifesta corrispondente per evitare potenziali sovraccarichi del buffer.
 
 La tabella seguente elenca i valori delle costanti manifeste.
 
-|Nome|valore|
+|Nome|Valore|
 |----------|-----------|
 |**_MAX_DRIVE**|3|
 |**_MAX_DIR**|256|
@@ -132,9 +133,9 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 Vedere l'esempio per [_makepath](makepath-wmakepath.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Gestione dei file](../../c-runtime-library/file-handling.md)<br/>
+[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
 [_fullpath, _wfullpath](fullpath-wfullpath.md)<br/>
 [_getmbcp](getmbcp.md)<br/>
 [_makepath, _wmakepath](makepath-wmakepath.md)<br/>

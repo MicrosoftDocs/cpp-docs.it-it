@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CMFCDropDownFrame'
 title: Classe CMFCDropDownFrame
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], RecalcLayout
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
-ms.openlocfilehash: 62bab0fbde364406f35edb959abb6e55a9125504
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9ab5cbaf600fe7970bdff229b43d34fd04c8fbb9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840739"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97294041"
 ---
 # <a name="cmfcdropdownframe-class"></a>Classe CMFCDropDownFrame
 
@@ -33,18 +34,18 @@ Fornisce la funzionalità della finestra cornice a discesa per le barre degli st
 class CMFCDropDownFrame : public CMiniFrameWnd
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |`CMFCDropDownFrame::CMFCDropDownFrame`|Costruttore predefinito.|
 |`CMFCDropDownFrame::~CMFCDropDownFrame`|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[CMFCDropDownFrame:: create](#create)|Crea un oggetto `CMFCDropDownFrame`.|
 |`CMFCDropDownFrame::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|
@@ -54,7 +55,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 |[CMFCDropDownFrame:: RecalcLayout](#recalclayout)|Riposiziona il frame a discesa.|
 |[CMFCDropDownFrame:: SetAutoDestroy](#setautodestroy)|Imposta un valore che indica se la finestra della barra degli strumenti a discesa figlio viene distrutta automaticamente.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa classe non è destinata a essere utilizzata direttamente dal codice.
 
@@ -114,7 +115,7 @@ in Barra degli strumenti che contiene i pulsanti a discesa utilizzati da questo 
 
 TRUE se il frame a discesa è stato creato correttamente; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo chiama il metodo [CMiniFrameWnd:: CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) di base per creare la finestra cornice a discesa con lo stile WS_POPUP. La finestra cornice a discesa viene visualizzata in corrispondenza delle coordinate dello schermo specificate. Questo metodo ha esito negativo se il metodo [CMiniFrameWnd:: CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) restituisce false.
 
@@ -132,7 +133,7 @@ CMFCMenuBar* GetParentMenuBar() const;
 
 Puntatore alla barra dei menu padre del frame a discesa oppure NULL se il frame non ha un elemento padre.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo recupera la barra dei menu padre dal pulsante padre. Questo metodo restituisce NULL se il frame a discesa non dispone di un pulsante padre o se il pulsante padre non dispone di una barra dei menu padre.
 
@@ -148,7 +149,7 @@ CMFCDropDownFrame* GetParentPopupMenu() const;
 
 Puntatore al menu a discesa padre del frame a discesa oppure NULL se il frame non ha un elemento padre.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo recupera il menu padre dal pulsante padre. Questo metodo restituisce NULL se il frame a discesa non dispone di un pulsante padre o se il pulsante padre non dispone di un menu padre.
 
@@ -165,7 +166,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 *bNotify*\
 [in] Non utilizzato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il Framework chiama questo metodo quando viene creato il frame a discesa oppure la finestra padre viene ridimensionata. Questo metodo calcola la posizione e le dimensioni del frame a discesa utilizzando la posizione e le dimensioni della finestra padre.
 
@@ -182,11 +183,11 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 *bAutoDestroy*<br/>
 in TRUE per eliminare automaticamente la finestra della barra degli strumenti a discesa associata; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se *bAutoDestroy* è true, il `CMFCDropDownFrame` distruttore Elimina la finestra della barra degli strumenti a discesa associata. Il valore predefinito è TRUE.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>

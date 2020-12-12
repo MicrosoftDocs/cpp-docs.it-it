@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l'
 title: sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 ms.date: 06/23/2020
 api_name:
@@ -49,12 +50,12 @@ helpviewer_keywords:
 - sprintf_l function
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-ms.openlocfilehash: da3c5b3660b481fd3a7140adbc236f44cd51f37e
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 12c7560a57c126e2e35cf78b0d11b1262c14a9e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008816"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292208"
 ---
 # <a name="sprintf-_sprintf_l-swprintf-_swprintf_l-__swprintf_l"></a>sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 
@@ -140,7 +141,7 @@ La funzione **sprintf** formatta e archivia una serie di caratteri e valori nel 
 > [!IMPORTANT]
 > Se si usa **sprintf**, non esiste alcun modo per limitare il numero di caratteri scritti, il che significa che il codice che usa **sprintf** è soggetto a sovraccarichi del buffer. Provare a usare la funzione related [_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md), che specifica un numero massimo di caratteri da scrivere nel *buffer*, oppure usare [_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md) per determinare la dimensione di un buffer necessario. Assicurarsi inoltre che *Format* non sia una stringa definita dall'utente.
 
-**swprintf** è una versione a caratteri wide di **sprintf**; gli argomenti del puntatore a **swprintf** sono stringhe a caratteri wide. Il rilevamento degli errori di codifica in **swprintf** potrebbe differire da **sprintf**. **swprintf** e **fwprintf** si comportano in modo identico, ad eccezione di **swprintf** scrive l'output in una stringa anziché in una destinazione di tipo **file**e **swprintf** richiede il parametro *count* per specificare il numero massimo di caratteri da scrivere. Le versioni di queste funzioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
+**swprintf** è una versione a caratteri wide di **sprintf**; gli argomenti del puntatore a **swprintf** sono stringhe a caratteri wide. Il rilevamento degli errori di codifica in **swprintf** potrebbe differire da **sprintf**. **swprintf** e **fwprintf** si comportano in modo identico, ad eccezione di **swprintf** scrive l'output in una stringa anziché in una destinazione di tipo **file** e **swprintf** richiede il parametro *count* per specificare il numero massimo di caratteri da scrivere. Le versioni di queste funzioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
 
 **swprintf** è conforme allo standard ISO C, che richiede il secondo parametro, *count*, di tipo **size_t**. Per forzare il comportamento non standard precedente, definire **_CRT_NON_CONFORMING_SWPRINTFS**. In una versione futura, il comportamento precedente potrebbe venire rimosso, quindi il codice dovrebbe essere modificato per usare il nuovo comportamento conforme.
 
@@ -223,7 +224,7 @@ wrote 11 characters
 wrote -1 characters
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: ambito e visibilità'
 title: Ambito e visibilità
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - visibility
 - file scope [C++]
 ms.assetid: a019eb7c-66ed-46a7-bc9f-89a963930a56
-ms.openlocfilehash: 354b354a72b5a96a190ce2322eb160b7d6bff1c2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 188fbedad87e370e8b5b1e7dabc475e301ca3f4f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87199399"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292829"
 ---
 # <a name="scope-and-visibility"></a>Ambito e visibilità
 
@@ -29,6 +30,6 @@ Ambito di tipo prototipo di funzione - Il dichiaratore, o identificatore di tipo
 
 Le dichiarazioni appropriate per rendere le variabili visibili in altri file di origine sono descritte in [Classi di archiviazione](../c-language/c-storage-classes.md). Tuttavia, le variabili e le funzioni dichiarate a livello esterno con l' **`static`** identificatore di classi di archiviazione sono visibili solo all'interno del file di origine in cui sono definite. Tutte le altre funzioni sono visibili a livello globale.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Durata, ambito, visibilità e collegamento](../c-language/lifetime-scope-visibility-and-linkage.md)

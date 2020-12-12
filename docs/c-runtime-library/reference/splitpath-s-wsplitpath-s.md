@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _splitpath_s, _wsplitpath_s'
 title: _splitpath_s, _wsplitpath_s
 ms.date: 4/2/2020
 api_name:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: 984b55737e575656670f561c45f528265800f214
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f14ea8a31d241abae3a214067cae1e4d34e97861
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920291"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292344"
 ---
 # <a name="_splitpath_s-_wsplitpath_s"></a>_splitpath_s, _wsplitpath_s
 
@@ -103,7 +104,7 @@ Lettera di unità, seguita da due punti (**:**). È possibile passare **null** p
 Dimensioni del buffer dell' *unità* in caratteri a byte singolo o Wide. Se l' *unità* è **null**, questo valore deve essere 0.
 
 *dir*<br/>
-Percorso di directory, inclusa la barra finale. È possibile utilizzare le **/** barre (), le barre **\\** rovesciate () o entrambe. È possibile passare **null** per questo parametro se non è necessario il percorso della directory.
+Percorso di directory, inclusa la barra finale. **/** È possibile utilizzare le barre (), le barre rovesciate ( **\\** ) o entrambe. È possibile passare **null** per questo parametro se non è necessario il percorso della directory.
 
 *dirNumberOfElements*<br/>
 Dimensioni del buffer *dir* in caratteri a byte singolo o Wide. Se *dir* è **null**, questo valore deve essere 0.
@@ -130,19 +131,19 @@ Zero se con esito positivo; un codice di errore in caso di errore.
 |---------------|------------------|
 |il *percorso* è **null**|**EINVAL**|
 |l' *unità* è **null**, *driveNumberOfElements* è diverso da zero|**EINVAL**|
-|l' *unità* non è**null**, *driveNumberOfElements* è zero|**EINVAL**|
+|l' *unità* non è **null**, *driveNumberOfElements* è zero|**EINVAL**|
 |*dir* è **null**, *dirNumberOfElements* è diverso da zero|**EINVAL**|
-|*dir* è diverso da**null**, *dirNumberOfElements* è zero|**EINVAL**|
+|*dir* è diverso da **null**, *dirNumberOfElements* è zero|**EINVAL**|
 |*fname* è **null**, *nameNumberOfElements* è diverso da zero|**EINVAL**|
-|*fname* è diverso da**null**, *nameNumberOfElements* è zero|**EINVAL**|
+|*fname* è diverso da **null**, *nameNumberOfElements* è zero|**EINVAL**|
 |*ext* è **null**, *extNumberOfElements* è diverso da zero|**EINVAL**|
-|*ext* è diverso da**null**, *extNumberOfElements* è zero|**EINVAL**|
+|*ext* è diverso da **null**, *extNumberOfElements* è zero|**EINVAL**|
 
 Se si verifica una delle condizioni precedenti, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono **EINVAL**.
 
-Se uno dei buffer è troppo breve per conservare il risultato, queste funzioni cancellano tutti i buffer in stringhe vuote, imposta **errno** su **ERANGE**e restituisce **ERANGE**.
+Se uno dei buffer è troppo breve per conservare il risultato, queste funzioni cancellano tutti i buffer in stringhe vuote, imposta **errno** su **ERANGE** e restituisce **ERANGE**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_splitpath_s** suddivide un percorso nei quattro componenti. **_splitpath_s** gestisce automaticamente gli argomenti della stringa di caratteri multibyte in base alle esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso. **_wsplitpath_s** è una versione a caratteri wide di **_splitpath_s**; gli argomenti da **_wsplitpath_s** sono stringhe a caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
 
@@ -154,11 +155,11 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath_s**|**_splitpath_s**|**_splitpath_s**|**_wsplitpath_s**|
 
-Ogni componente del percorso completo è archiviato in un buffer separato. le costanti manifeste **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**e **_MAX_EXT** (definite in STDLIB. H) specificare la dimensione massima consentita per ogni componente del file. I componenti del file più grandi delle costanti manifeste corrispondenti causano il danneggiamento dell'heap.
+Ogni componente del percorso completo è archiviato in un buffer separato. le costanti manifeste **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME** e **_MAX_EXT** (definite in STDLIB. H) specificare la dimensione massima consentita per ogni componente del file. I componenti del file più grandi delle costanti manifeste corrispondenti causano il danneggiamento dell'heap.
 
 La tabella seguente elenca i valori delle costanti manifeste.
 
-|Nome|valore|
+|Nome|Valore|
 |----------|-----------|
 |_MAX_DRIVE|3|
 |_MAX_DIR|256|
@@ -184,9 +185,9 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 See the example for [_makepath_s, _wmakepath_s](makepath-s-wmakepath-s.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Gestione dei file](../../c-runtime-library/file-handling.md)<br/>
+[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
 [_splitpath, _wsplitpath](splitpath-wsplitpath.md)<br/>
 [_fullpath, _wfullpath](fullpath-wfullpath.md)<br/>
 [_getmbcp](getmbcp.md)<br/>

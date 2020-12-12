@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: conversioni da e verso tipi di puntatore'
 title: Conversioni da e verso tipi di puntatore
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - type casts, involving pointers
 - void pointers
 ms.assetid: 3facc56f-06d3-4570-b1a2-7d4927b83086
-ms.openlocfilehash: 6358216e72f054becf33d18aadb6a3a51bab8363
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8eb987358cb3e8375e62b9d03cd21a5e02b9f5c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218897"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293092"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>Conversioni da e verso tipi di puntatore
 
@@ -36,6 +37,6 @@ Al contrario, un tipo integrale può essere convertito in un tipo di puntatore i
 
 Un'espressione costante integrale con valore 0 o un cast di un'espressione di questo tipo **`void`** <strong>\*</strong> può essere convertita da un cast di tipo, dall'assegnazione o dal confronto con un puntatore di qualsiasi tipo. Questa operazione produce un puntatore null equivalente a un altro puntatore null dello stesso tipo, ma questo puntatore null non corrisponde a nessun puntatore a una funzione o un oggetto. I numeri interi diversi dalla costante 0 possono essere convertiti in un tipo di puntatore, ma il risultato non è portabile.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Conversioni di assegnazione](../c-language/assignment-conversions.md)

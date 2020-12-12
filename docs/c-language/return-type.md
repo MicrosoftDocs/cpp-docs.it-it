@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: tipo restituito'
 title: Tipo restituito
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - return keyword [C++], function return types
 - functions [C++], return types
 ms.assetid: 3e5b8a97-b341-48c5-8be8-8986980ef586
-ms.openlocfilehash: 1d905e02be02784b562b9d1a8f72a9bfa4057b9b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5f4c3c59dd5d89a3c9083eb177bb72e4049ab454
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226327"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293027"
 ---
 # <a name="return-type"></a>Tipo restituito
 
@@ -38,10 +39,10 @@ Il tipo restituito di una funzione determina la dimensione e il tipo del valore 
 &nbsp;&nbsp;&nbsp;&nbsp;**`char`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`short`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`int`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`__int8`** /\*Specifiche di Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`__int16`** /\*Specifiche di Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`__int32`** /\*Specifiche di Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`__int64`** /\*Specifiche di Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__int8`** /\* Specifiche di Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__int16`** /\* Specifiche di Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__int32`** /\* Specifiche di Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__int64`** /\* Specifiche di Microsoft \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`long`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`float`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`double`**<br/>
@@ -97,6 +98,6 @@ Nell'esempio seguente viene definita una funzione che restituisce un puntatore a
 
 Non è necessario dichiarare le funzioni con **`int`** il tipo restituito prima di chiamarle, sebbene i prototipi siano consigliati in modo da abilitare il controllo del tipo corretto per gli argomenti e i valori restituiti.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Definizioni di funzioni C](../c-language/c-function-definitions.md)

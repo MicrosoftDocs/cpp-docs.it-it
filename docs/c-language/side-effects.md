@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: effetti collaterali'
 title: Effetti collaterali
 ms.date: 11/04/2016
 helpviewer_keywords:
 - expression evaluation, side effects
 - side effects in expression evaluation
 ms.assetid: d9b3004a-830e-43a0-bea5-8989d501d670
-ms.openlocfilehash: de5e398afd8b95cfe5596f487a36b6a2d27e3287
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78a08cb2c6290a3cb9c0c61a714cb2bcfe61a4cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158473"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292780"
 ---
 # <a name="side-effects"></a>Effetti collaterali
 
@@ -31,6 +32,6 @@ In questo esempio, il valore di `x` che viene modificato è imprevedibile. Il va
 
 Poiché il linguaggio C non definisce l'ordine di valutazione degli effetti collaterali, entrambi i metodi di valutazione illustrati in precedenza sono corretti ed entrambi possono essere implementati. Per assicurarsi che il codice sia portabile e chiaro, evitare le istruzioni che dipendono da un particolare ordine di valutazione per gli effetti collaterali.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Valutazione delle espressioni](../c-language/expression-evaluation-c.md)

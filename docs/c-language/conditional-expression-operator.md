@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: operatore Conditional-Expression'
 title: Operatore di espressione condizionale
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - operators [C++], conditional
 - expressions [C++], conditional
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
-ms.openlocfilehash: 03f9673da109151bd2146daf7539841f1cac07c6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4b11b0f3ed132459f4e1608922e111c3b5bf2a98
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217129"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293313"
 ---
 # <a name="conditional-expression-operator"></a>Operatore di espressione condizionale
 
@@ -45,7 +46,7 @@ Il tipo del risultato di un'operazione condizionale dipende dal tipo dell'operan
 
 Nel confronto dei tipi per i puntatori, qualsiasi qualificatore di tipo ( **`const`** o **`volatile`** ) nel tipo a cui punta il puntatore non è significativo, ma il tipo di risultato eredita i qualificatori da entrambi i componenti dell'oggetto condizionale.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Negli esempi seguenti vengono illustrati gli utilizzi dell'operatore condizionale.
 
@@ -68,6 +69,6 @@ int y;
 
 In questo esempio le due funzioni `f1` e `f2` e le due variabili `x` e `y` vengono dichiarate. Più avanti nel programma, se le due variabili presentano lo stesso valore, viene chiamata la funzione `f1`. In caso contrario, viene chiamato `f2`.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Operatore condizionale: ? :](../cpp/conditional-operator-q.md)

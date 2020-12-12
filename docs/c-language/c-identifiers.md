@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: identificatori C'
 title: Identificatori C
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - identifiers, case sensitivity
 - symbols, case sensitivity
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
-ms.openlocfilehash: d68eb690a19f57555d9d757a2f058692ea1a40c3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 926af854e9c6a84e84cac6e063a2b8db710c26b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223746"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293547"
 ---
 # <a name="c-identifiers"></a>Identificatori C
 
@@ -96,6 +97,6 @@ Il "set di caratteri di origine" è il set di caratteri validi che possono esser
 
 Un identificatore ha un "ambito", che rappresenta l'area del programma in cui è noto, e un "collegamento", che determina se lo stesso nome in un altro ambito si riferisce allo stesso identificatore. Questi argomenti sono descritti in [Durata, ambito, visibilità e collegamento](../c-language/lifetime-scope-visibility-and-linkage.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Elementi di C](../c-language/elements-of-c.md)

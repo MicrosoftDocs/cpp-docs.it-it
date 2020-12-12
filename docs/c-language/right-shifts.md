@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: spostamenti a destra'
 title: Spostamenti a destra
 ms.date: 11/04/2016
 ms.assetid: c878e97d-ea3c-4c6b-90a8-b1b24b2d5b19
-ms.openlocfilehash: 4b83aa231e6e7904fe5682b32a861ffe301b9747
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5bc359357e8a3a2e00d0c75012e0e6044d8055f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87199412"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292923"
 ---
 # <a name="right-shifts"></a>Spostamenti a destra
 
@@ -19,6 +20,6 @@ Spostamenti a destra mantengono il bit del segno di tipi integrali con segno. Qu
 
 Quando un intero senza segno scorre a destra, il bit più significativo viene cancellato. Ad esempio, se 0xF000 è senza segno, il risultato è 0x7800. Lo spostamento di un oggetto o di un **`unsigned`** **`int`** diritto positivo 32 volte produce 0x00000000.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Interi](../c-language/integers.md)
+[Integer](../c-language/integers.md)
