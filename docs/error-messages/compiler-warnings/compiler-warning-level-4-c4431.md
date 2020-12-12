@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 4) C4431'
 title: Avviso del compilatore (livello 4) C4431
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4431
 ms.assetid: 58434ab6-dd8d-427b-953a-602fb7453ae6
-ms.openlocfilehash: d4d803ef003f2c8367c750cf6d6aef07e4032140
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 47e83f5e49ec8a4e54f4cda62267d01bd42f1ce7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185360"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97251492"
 ---
 # <a name="compiler-warning-level-4-c4431"></a>Avviso del compilatore (livello 4) C4431
 

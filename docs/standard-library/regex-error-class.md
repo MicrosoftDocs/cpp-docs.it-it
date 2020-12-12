@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: regex_error Class'
 title: Classe regex_error
 ms.date: 09/10/2018
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - regex_error class
 ms.assetid: 3333a1a3-ca6f-4612-84b2-1b4c7e3db5a4
-ms.openlocfilehash: f8f3c88c1b203ed7fcea148843fa99590e27b888
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a6e2ace44c7463cbe43d000d3dabb9cf9f7d6676
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331861"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250504"
 ---
 # <a name="regex_error-class"></a>Classe regex_error
 
@@ -39,11 +40,11 @@ La classe descrive un oggetto eccezione generato per segnalare un errore nella c
 
 |Funzione membro|Descrizione|
 |-|-|
-|[Codice](#code)|Restituisce il codice di errore.|
+|[code](#code)|Restituisce il codice di errore.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<regex>
+**Intestazione:**\<regex>
 
 **Spazio dei nomi:** std
 
@@ -82,7 +83,7 @@ int main()
 regex error: unbalanced parentheses
 ```
 
-## <a name="regex_errorcode"></a><a name="code"></a>regex_error::codice
+## <a name="regex_errorcode"></a><a name="code"></a> regex_error:: code
 
 Restituisce il codice di errore.
 
@@ -90,11 +91,11 @@ Restituisce il codice di errore.
 regex_constants::error_code code() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce il valore passato al costruttore dell'oggetto.
 
-## <a name="regex_errorregex_error"></a><a name="regex_error"></a>regex_error::regex_error
+## <a name="regex_errorregex_error"></a><a name="regex_error"></a> regex_error:: regex_error
 
 Costruisce l'oggetto.
 
@@ -104,20 +105,20 @@ regex_error(regex_constants::error_code error);
 
 ### <a name="parameters"></a>Parametri
 
-*Errore*\
+*errore*\
 Codice di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Il costruttore costruisce un oggetto che contiene il valore *error*.
+Il costruttore crea un oggetto che include l' *errore* del valore.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[\<>regex](../standard-library/regex.md)\
+[\<regex>](../standard-library/regex.md)\
 [Classe regex_constants](../standard-library/regex-constants-class.md)\
-[\<funzioni di> regex](../standard-library/regex-functions.md)\
+[\<regex> funzioni](../standard-library/regex-functions.md)\
 [Classe regex_iterator](../standard-library/regex-iterator-class.md)\
-[\<operatori di> regex](../standard-library/regex-operators.md)\
-[regex_token_iterator classe](../standard-library/regex-token-iterator-class.md)\
+[\<regex> operatori](../standard-library/regex-operators.md)\
+[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
 [Classe regex_traits](../standard-library/regex-traits-class.md)\
 [\<regex> typedef](../standard-library/regex-typedefs.md)

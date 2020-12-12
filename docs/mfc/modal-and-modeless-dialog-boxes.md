@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: finestre di dialogo modali e non modali'
 title: Finestre di dialogo modali e non modali
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], modal
 - modal dialog boxes [MFC]
 ms.assetid: e83df336-5994-4b8f-8233-7942f997315b
-ms.openlocfilehash: d3497a19ab14dcc9f14dc0419eb65ea033135b6e
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 11320c2efcb323fe839afecb6165409285f442aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508854"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97251141"
 ---
 # <a name="modal-and-modeless-dialog-boxes"></a>Finestre di dialogo modali e non modali
 
@@ -34,7 +35,7 @@ Per creare una finestra di dialogo per il programma, è necessario eseguire le o
 
 1. Aggiungere i membri dati associati ai controlli della finestra di dialogo e specificare le [convalide dei](dialog-data-validation.md) dati della finestra di dialogo e dello [scambio di dati](dialog-data-exchange.md) per i controlli.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Finestre di dialogo](dialog-boxes.md)<br/>
 [Utilizzo delle finestre di dialogo in MFC](life-cycle-of-a-dialog-box.md)

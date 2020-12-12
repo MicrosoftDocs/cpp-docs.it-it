@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: operatore reinterpret_cast'
 title: Operatore reinterpret_cast
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - reinterpret_cast keyword [C++]
 ms.assetid: eb3283c7-7f88-467e-affd-407d37b46d6c
-ms.openlocfilehash: 33da7427adeb0a0cade2a369664d7fbd34790681
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 71b7067321c5af1e81311f7ce036c735c96193d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233600"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252441"
 ---
 # <a name="reinterpret_cast-operator"></a>Operatore reinterpret_cast
 
@@ -79,7 +80,7 @@ Output:
 
 **`reinterpret_cast`** Consente di trattare il puntatore come tipo integrale. Il risultato viene quindi spostato su bit e XORed con se stesso per creare un indice univoco (univoco a un livello elevato di probabilità). L'indice viene quindi troncato da un cast di tipo C standard al tipo restituito della funzione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Operatori di cast](../cpp/casting-operators.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)

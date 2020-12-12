@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: spazio dei nomi regex_constants'
 title: Classe regex_constants
 ms.date: 09/10/2018
 f1_keywords:
@@ -82,12 +83,12 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-ms.openlocfilehash: 422d29f16220ae2c2db93c9f84410316bf08f5e7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d33f9d45023453281714e5585ab6ab33ee1f7857
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845055"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250517"
 ---
 # <a name="regex_constants-namespace"></a>Spazio dei nomi regex_constants
 
@@ -107,7 +108,7 @@ namespace regex_constants {
 
 Lo spazio dei nomi `regex_constants` incapsula molti tipi di flag e i valori dei relativi flag associati.
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[error_type](#error_type)|Indicatori per segnalare errori di sintassi di espressione regolare.|
 |[match_flag_type](#match_flag_type)|Flag per opzioni di corrispondenza delle espressioni regolari.|
@@ -144,7 +145,7 @@ enum error_type
     };
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un tipo enumerato che descrive un oggetto che può contenere flag di errore. I valori flag distinti sono:
 
@@ -204,7 +205,7 @@ enum match_flag_type
     };
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un tipo di maschera di bit che descrive le opzioni da usare quando esiste una corrispondenza tra una sequenza di testo e un'espressione regolare e i flag di formato da usare quando si sostituisce il testo. Le opzioni possono essere usate in combinazione con `|`.
 
@@ -260,7 +261,7 @@ enum syntax_option_type
     };
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un tipo di maschera di bit che descrive gli identificatori di lingua e i modificatori di sintassi da usare durante la compilazione di un'espressione regolare. Le opzioni possono essere usate in combinazione con `|`. Non deve essere usato più di un identificatore di lingua per volta.
 
@@ -288,7 +289,7 @@ I modificatori di sintassi sono:
 
 `collate` -- rendere le corrispondenze collegate alle impostazioni locali
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [\<regex>](../standard-library/regex.md)\
 [Classe regex_error](../standard-library/regex-error-class.md)\

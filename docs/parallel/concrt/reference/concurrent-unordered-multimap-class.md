@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: concurrent_unordered_multimap Class'
 title: Classe concurrent_unordered_multimap
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_multimap class
 ms.assetid: 4dada5d7-15df-4382-b9c9-348e75b2f3c1
-ms.openlocfilehash: fb03d368b7c9cced8961dbd77f22ab6bec40bc0d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0b8b8b0ee51494e75dc6cfc592ede8b4528d5492
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230324"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250595"
 ---
 # <a name="concurrent_unordered_multimap-class"></a>Classe concurrent_unordered_multimap
 
@@ -66,7 +67,7 @@ Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli re
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`allocator_type`|Tipo di un allocatore per gestire l'archiviazione.|
 |`const_iterator`|Tipo di un iteratore costante per la sequenza controllata.|
@@ -87,13 +88,13 @@ Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli re
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[concurrent_unordered_multimap](#ctor)|Di overload. Costruisce un multimap non ordinato simultaneo.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[hash_function](#hash_function)|Restituisce l'oggetto della funzione hash archiviato.|
 |[insert](#insert)|Di overload. Aggiunge elementi all' `concurrent_unordered_multimap` oggetto.|
@@ -103,11 +104,11 @@ Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli re
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[operatore =](#operator_eq)|Di overload. Assegna il contenuto di un altro `concurrent_unordered_multimap` oggetto a quello corrente. Questo metodo non è indipendente dalla concorrenza.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per informazioni dettagliate sulla `concurrent_unordered_multimap` classe, vedere [contenitori e oggetti paralleli](../../../parallel/concrt/parallel-containers-and-objects.md).
 
@@ -125,7 +126,7 @@ Per informazioni dettagliate sulla `concurrent_unordered_multimap` classe, veder
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="begin"></a><a name="begin"></a>iniziare
+## <a name="begin"></a><a name="begin"></a> iniziare
 
 Restituisce un iteratore che punta al primo elemento nel contenitore simultaneo. Questo metodo è sicuro per la concorrenza.
 
@@ -139,7 +140,7 @@ const_iterator begin() const;
 
 Iteratore per il primo elemento nel contenitore simultaneo.
 
-## <a name="cbegin"></a><a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a> cbegin
 
 Restituisce un iteratore const che punta al primo elemento nel contenitore simultaneo. Questo metodo è sicuro per la concorrenza.
 
@@ -151,7 +152,7 @@ const_iterator cbegin() const;
 
 Iteratore const al primo elemento nel contenitore simultaneo.
 
-## <a name="cend"></a><a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a> cend
 
 Restituisce un iteratore const che punta alla posizione successiva all'ultimo elemento nel contenitore simultaneo. Questo metodo è sicuro per la concorrenza.
 
@@ -163,7 +164,7 @@ const_iterator cend() const;
 
 Iteratore const alla posizione successiva all'ultimo elemento nel contenitore simultaneo.
 
-## <a name="clear"></a><a name="clear"></a>deselezionare
+## <a name="clear"></a><a name="clear"></a> deselezionare
 
 Cancella tutti gli elementi nel contenitore simultaneo. Questa funzione non è sicura per la concorrenza.
 
@@ -171,7 +172,7 @@ Cancella tutti gli elementi nel contenitore simultaneo. Questa funzione non è s
 void clear();
 ```
 
-## <a name="concurrent_unordered_multimap"></a><a name="ctor"></a>concurrent_unordered_multimap
+## <a name="concurrent_unordered_multimap"></a><a name="ctor"></a> concurrent_unordered_multimap
 
 Costruisce un multimap non ordinato simultaneo.
 
@@ -230,7 +231,7 @@ Posizione del primo elemento oltre l'intervallo di elementi da copiare.
 *_Umap*<br/>
 `concurrent_unordered_multimap`Oggetto di origine da cui copiare gli elementi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Tramite tutti i costruttori viene archiviato un oggetto allocatore `_Allocator` e viene inizializzato il multimap non ordinato.
 
@@ -244,7 +245,7 @@ Tramite il quarto e il quinto costruttore viene specificata una copia del multim
 
 Tramite l'ultimo costruttore viene specificato uno spostamento del multimap non ordinato simultaneo `_Umap`.
 
-## <a name="count"></a><a name="count"></a>conteggio
+## <a name="count"></a><a name="count"></a> conteggio
 
 Conta il numero di elementi corrispondenti a una chiave specificata. Questa funzione è sicura per la concorrenza.
 
@@ -261,7 +262,7 @@ Chiave da ricercare.
 
 Il numero di volte in cui la chiave viene visualizzata nel contenitore.
 
-## <a name="empty"></a><a name="empty"></a>vuoto
+## <a name="empty"></a><a name="empty"></a> vuoto
 
 Verifica se sono presenti o meno degli elementi. Questo metodo è sicuro per la concorrenza.
 
@@ -273,11 +274,11 @@ bool empty() const;
 
 **`true`** Se il contenitore simultaneo è vuoto; **`false`** in caso contrario,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 In presenza di inserimenti simultanei, se il contenitore simultaneo è vuoto può cambiare immediatamente dopo la chiamata a questa funzione, prima che venga letto anche il valore restituito.
 
-## <a name="end"></a><a name="end"></a>fine
+## <a name="end"></a><a name="end"></a> fine
 
 Restituisce un iteratore che punta alla posizione successiva all'ultimo elemento nel contenitore simultaneo. Questo metodo è sicuro per la concorrenza.
 
@@ -291,7 +292,7 @@ const_iterator end() const;
 
 Un iteratore alla posizione successiva all'ultimo elemento nel contenitore simultaneo.
 
-## <a name="equal_range"></a><a name="equal_range"></a>equal_range
+## <a name="equal_range"></a><a name="equal_range"></a> equal_range
 
 Trova un intervallo che corrisponde a una chiave specificata. Questa funzione è sicura per la concorrenza.
 
@@ -314,11 +315,11 @@ Valore chiave da cercare.
 
 Una [coppia](../../../standard-library/pair-structure.md) in cui il primo elemento è un iteratore all'inizio e il secondo elemento è un iteratore alla fine dell'intervallo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È possibile che gli inserimenti simultanei causino l'inserimento di chiavi aggiuntive dopo l'iteratore Begin e prima dell'iteratore finale.
 
-## <a name="find"></a><a name="find"></a>trovare
+## <a name="find"></a><a name="find"></a> trovare
 
 Trova un elemento che corrisponde a una chiave specificata. Questa funzione è sicura per la concorrenza.
 
@@ -337,7 +338,7 @@ Valore chiave da cercare.
 
 Iteratore che punta alla posizione del primo elemento che corrisponde alla chiave specificata o all'iteratore `end()` se tale elemento non esiste.
 
-## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a> get_allocator
 
 Restituisce l'oggetto allocatore archiviato per il contenitore simultaneo. Questo metodo è sicuro per la concorrenza.
 
@@ -349,7 +350,7 @@ allocator_type get_allocator() const;
 
 Oggetto allocatore archiviato per il contenitore simultaneo.
 
-## <a name="hash_function"></a><a name="hash_function"></a>hash_function
+## <a name="hash_function"></a><a name="hash_function"></a> hash_function
 
 Restituisce l'oggetto della funzione hash archiviato.
 
@@ -361,7 +362,7 @@ hasher hash_function() const;
 
 Oggetto della funzione hash archiviato.
 
-## <a name="insert"></a><a name="insert"></a>inserire
+## <a name="insert"></a><a name="insert"></a> inserire
 
 Aggiunge elementi all' `concurrent_unordered_multimap` oggetto.
 
@@ -413,7 +414,7 @@ Fine dell'intervallo da inserire.
 
 Iteratore che punta alla posizione di inserimento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Tramite la prima funzione membro l'elemento `value` viene inserito nella sequenza controllata, quindi viene restituito l'iteratore mediante cui viene definito l'elemento inserito.
 
@@ -423,7 +424,7 @@ La terza funzione membro inserisce la sequenza di valori di elemento dall'interv
 
 Il comportamento delle ultime due funzioni membro è uguale a quello delle prime due, con la differenza che `value` viene utilizzato per costruire il valore inserito.
 
-## <a name="key_eq"></a><a name="key_eq"></a>key_eq
+## <a name="key_eq"></a><a name="key_eq"></a> key_eq
 
 Restituisce l'oggetto della funzione di confronto di uguaglianza archiviato.
 
@@ -435,7 +436,7 @@ key_equal key_eq() const;
 
 Oggetto della funzione di confronto di uguaglianza archiviato.
 
-## <a name="load_factor"></a><a name="load_factor"></a>load_factor
+## <a name="load_factor"></a><a name="load_factor"></a> load_factor
 
 Calcola e restituisce il fattore di carico corrente del contenitore. Il fattore di carico è il numero di elementi nel contenitore diviso per il numero di bucket.
 
@@ -447,7 +448,7 @@ float load_factor() const;
 
 Il fattore di carico per il contenitore.
 
-## <a name="max_load_factor"></a><a name="max_load_factor"></a>max_load_factor
+## <a name="max_load_factor"></a><a name="max_load_factor"></a> max_load_factor
 
 Ottiene o imposta il fattore di carico massimo del contenitore. Il fattore di carico massimo è il maggior numero di elementi che possono essere presenti in qualsiasi bucket prima che il contenitore cresca la tabella interna.
 
@@ -465,7 +466,7 @@ void max_load_factor(float _Newmax);
 
 La prima funzione membro restituisce il fattore di carico massimo archiviato. La seconda funzione membro non restituisce un valore, ma genera un'eccezione [out_of_range](../../../standard-library/out-of-range-class.md) se il fattore di carico fornito non è valido.
 
-## <a name="max_size"></a><a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a> max_size
 
 Restituisce la dimensione massima del contenitore simultaneo, determinato dall'allocatore. Questo metodo è sicuro per la concorrenza.
 
@@ -477,11 +478,11 @@ size_type max_size() const;
 
 Numero massimo di elementi che possono essere inseriti in questo contenitore simultaneo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo valore limite superiore può essere effettivamente superiore rispetto a quello che il contenitore può effettivamente contenere.
 
-## <a name="operator"></a><a name="operator_eq"></a>operatore =
+## <a name="operator"></a><a name="operator_eq"></a> operatore =
 
 Assegna il contenuto di un altro `concurrent_unordered_multimap` oggetto a quello corrente. Questo metodo non è indipendente dalla concorrenza.
 
@@ -500,11 +501,11 @@ Oggetto `concurrent_unordered_multimap` di origine.
 
 Riferimento a questo `concurrent_unordered_multimap` oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Dopo l'eliminazione di tutti gli elementi esistenti in un multimap non ordinato simultaneo, tramite `operator=` il contenuto di `_Umap` viene copiato o spostato nel multimap non ordinato simultaneo.
 
-## <a name="rehash"></a><a name="rehash"></a>rehash
+## <a name="rehash"></a><a name="rehash"></a> rehash
 
 Ricompila la tabella hash.
 
@@ -517,13 +518,13 @@ void rehash(size_type _Buckets);
 *_Buckets*<br/>
 Numero desiderato di bucket.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro modifica il numero di bucket in modo da essere almeno pari a `_Buckets` e ricompila la tabella hash in base alle esigenze. Il numero di bucket deve essere una potenza di 2. Se non è una potenza di 2, verrà arrotondata per eccesso alla successiva potenza di 2.
 
 Genera un'eccezione [out_of_range](../../../standard-library/out-of-range-class.md) se il numero di bucket non è valido (0 o maggiore del numero massimo di bucket).
 
-## <a name="size"></a><a name="size"></a>dimensioni
+## <a name="size"></a><a name="size"></a> dimensioni
 
 Restituisce il numero di elementi in questo contenitore simultaneo. Questo metodo è sicuro per la concorrenza.
 
@@ -535,11 +536,11 @@ size_type size() const;
 
 Numero di elementi presenti nel contenitore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 In presenza di operazioni di inserimento simultanee, il numero di elementi presenti nel contenitore simultaneo potrebbe cambiare immediatamente dopo la chiamata a questa funzione, prima che il valore restituito venga letto.
 
-## <a name="swap"></a><a name="swap"></a>scambio
+## <a name="swap"></a><a name="swap"></a> scambio
 
 Scambia il contenuto di due oggetti `concurrent_unordered_multimap`. Questo metodo non è indipendente dalla concorrenza.
 
@@ -552,7 +553,7 @@ void swap(concurrent_unordered_multimap& _Umap);
 *_Umap*<br/>
 Oggetto `concurrent_unordered_multimap` con cui eseguire lo scambio.
 
-## <a name="unsafe_begin"></a><a name="unsafe_begin"></a>unsafe_begin
+## <a name="unsafe_begin"></a><a name="unsafe_begin"></a> unsafe_begin
 
 Restituisce un iteratore al primo elemento in questo contenitore per un bucket specifico.
 
@@ -571,7 +572,7 @@ Indice del bucket.
 
 Iteratore che punta all'inizio del bucket.
 
-## <a name="unsafe_bucket"></a><a name="unsafe_bucket"></a>unsafe_bucket
+## <a name="unsafe_bucket"></a><a name="unsafe_bucket"></a> unsafe_bucket
 
 Restituisce l'indice del bucket a cui viene mappata una chiave specifica in questo contenitore.
 
@@ -588,7 +589,7 @@ Chiave dell'elemento cercata.
 
 Indice del bucket per la chiave in questo contenitore.
 
-## <a name="unsafe_bucket_count"></a><a name="unsafe_bucket_count"></a>unsafe_bucket_count
+## <a name="unsafe_bucket_count"></a><a name="unsafe_bucket_count"></a> unsafe_bucket_count
 
 Restituisce il numero corrente di bucket in questo contenitore.
 
@@ -600,7 +601,7 @@ size_type unsafe_bucket_count() const;
 
 Numero corrente di bucket in questo contenitore.
 
-## <a name="unsafe_bucket_size"></a><a name="unsafe_bucket_size"></a>unsafe_bucket_size
+## <a name="unsafe_bucket_size"></a><a name="unsafe_bucket_size"></a> unsafe_bucket_size
 
 Restituisce il numero di elementi in un bucket specifico di questo contenitore.
 
@@ -617,7 +618,7 @@ Bucket da ricercare.
 
 Numero corrente di bucket in questo contenitore.
 
-## <a name="unsafe_cbegin"></a><a name="unsafe_cbegin"></a>unsafe_cbegin
+## <a name="unsafe_cbegin"></a><a name="unsafe_cbegin"></a> unsafe_cbegin
 
 Restituisce un iteratore al primo elemento in questo contenitore per un bucket specifico.
 
@@ -634,7 +635,7 @@ Indice del bucket.
 
 Iteratore che punta all'inizio del bucket.
 
-## <a name="unsafe_cend"></a><a name="unsafe_cend"></a>unsafe_cend
+## <a name="unsafe_cend"></a><a name="unsafe_cend"></a> unsafe_cend
 
 Restituisce un iteratore alla posizione successiva all'ultimo elemento in un bucket specifico.
 
@@ -651,7 +652,7 @@ Indice del bucket.
 
 Iteratore che punta all'inizio del bucket.
 
-## <a name="unsafe_end"></a><a name="unsafe_end"></a>unsafe_end
+## <a name="unsafe_end"></a><a name="unsafe_end"></a> unsafe_end
 
 Restituisce un iteratore all'ultimo elemento in questo contenitore per un bucket specifico.
 
@@ -670,7 +671,7 @@ Indice del bucket.
 
 Iteratore che punta alla fine del bucket.
 
-## <a name="unsafe_erase"></a><a name="unsafe_erase"></a>unsafe_erase
+## <a name="unsafe_erase"></a><a name="unsafe_erase"></a> unsafe_erase
 
 Rimuove gli elementi dalla `concurrent_unordered_multimap` posizione specificata. Questo metodo non è indipendente dalla concorrenza.
 
@@ -702,13 +703,13 @@ Iteratori.
 
 Le prime due funzioni membro restituiscono un iteratore che definisce il primo elemento rimanente oltre gli eventuali elementi rimossi o `concurrent_unordered_multimap::end` () se tale elemento non esiste. La terza funzione membro restituisce il numero di elementi che rimuove.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Tramite la prima funzione membro viene rimosso l'elemento della sequenza controllata puntata da `_Where`. La seconda funzione membro rimuove gli elementi compresi nell'intervallo [ `_Begin` , `_End` ).
 
 La terza funzione membro rimuove gli elementi nell'intervallo delimitato da `concurrent_unordered_multimap::equal_range` (KVal).
 
-## <a name="unsafe_max_bucket_count"></a><a name="unsafe_max_bucket_count"></a>unsafe_max_bucket_count
+## <a name="unsafe_max_bucket_count"></a><a name="unsafe_max_bucket_count"></a> unsafe_max_bucket_count
 
 Restituisce il numero massimo di bucket in questo contenitore.
 
@@ -720,7 +721,7 @@ size_type unsafe_max_bucket_count() const;
 
 Numero massimo di bucket in questo contenitore.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Concurrency](concurrency-namespace.md)<br/>
 [Contenitori e oggetti paralleli](../../../parallel/concrt/parallel-containers-and-objects.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: operazioni sugli appunti nei controlli Rich Edit'
 title: Operazioni sugli Appunti nei controlli Rich Edit
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Clipboard, operations in CRichEditCtrl
 - rich edit controls [MFC], Clipboard operations
 ms.assetid: 15ce66bc-2636-4a35-a2ae-d52285dc1af6
-ms.openlocfilehash: 3dea112ed32ae618991f6ff5f05823bd5be001b6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9a9fda9aebe3a749359776c1bc0d41e75deaef76
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624851"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97251206"
 ---
 # <a name="clipboard-operations-in-rich-edit-controls"></a>Operazioni sugli Appunti nei controlli Rich Edit
 
@@ -29,7 +30,7 @@ Per incollare un formato degli Appunti specifico, è possibile usare la funzione
 
 I controlli Rich Edit registrano due formati degli Appunti: il formato Rich Text Format e un formato denominato RichEdit testo e oggetti. Un'applicazione può registrare questi formati usando la funzione [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) , specificando i valori **CF_RTF** e **CF_RETEXTOBJ** .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso di CRichEditCtrl](using-cricheditctrl.md)<br/>
+[Utilizzo di CRichEditCtrl](using-cricheditctrl.md)<br/>
 [Controlli](controls-mfc.md)

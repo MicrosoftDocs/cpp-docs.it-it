@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CMFCDisableMenuAnimation'
 title: Classe CMFCDisableMenuAnimation
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCDisableMenuAnimation [MFC], Restore
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
-ms.openlocfilehash: 97a93e000b3e12d8ec4824100059581216b1b8d9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fc869570865d8b99d29e0248afeeb133e657a908
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840765"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250699"
 ---
 # <a name="cmfcdisablemenuanimation-class"></a>Classe CMFCDisableMenuAnimation
 
@@ -25,28 +26,28 @@ Disabilita l'animazione del menu popup.
 class CMFCDisableMenuAnimation
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |`CMFCDisableMenuAnimation::CMFCDisableMenuAnimation`|Costruisce un oggetto `CMFCDisableMenuAnimation`.|
 |`CMFCDisableMenuAnimation::~CMFCDisableMenuAnimation`|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[CMFCDisableMenuAnimation:: Restore](#restore)|Ripristina l'animazione precedente utilizzata dal Framework per visualizzare un menu di scelta rapida.|
 
 ### <a name="data-members"></a>Membri dei dati
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |`CMFCDisableMenuAnimation::m_animType`|Archivia il tipo di animazione del menu popup precedente.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa classe helper per disabilitare temporaneamente l'animazione del menu popup, ad esempio quando si elaborano i comandi del mouse o della tastiera.
 
@@ -76,11 +77,11 @@ Ripristina l'animazione precedente utilizzata dal Framework per visualizzare un 
 void Restore ();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo viene chiamato dal `CMFCDisableMenuAnimation` distruttore per ripristinare l'animazione precedente utilizzata dal Framework per visualizzare un menu di scelta rapida.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>

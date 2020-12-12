@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: doppio thunk (C++)'
 title: Doppio thunk (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-ms.openlocfilehash: 3f0fc5567baaa0c4f3fea410770963adf51e8366
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 7c09e60ce534dd10567b93ece0eb6cb4bf8cc24a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414009"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252181"
 ---
 # <a name="double-thunking-c"></a>Doppio thunk (C++)
 
 Il doppio thunk si riferisce alla perdita di prestazioni che è possibile riscontrare quando una chiamata di funzione in un contesto gestito chiama una funzione gestita Visual C++ e dove l'esecuzione del programma chiama il punto di ingresso nativo della funzione per chiamare la funzione gestita. In questo argomento viene illustrato dove si verifica il doppio thunk e come è possibile evitarlo per migliorare le prestazioni.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, quando si esegue la compilazione con **/CLR**, la definizione di una funzione gestita fa in modo che il compilatore generi un punto di ingresso gestito e un punto di ingresso nativo. Ciò consente la chiamata della funzione gestita da siti di chiamata nativi e gestiti. Tuttavia, quando esiste un punto di ingresso nativo, può essere il punto di ingresso per tutte le chiamate alla funzione. Se viene gestita una funzione chiamante, il punto di ingresso nativo chiamerà il punto di ingresso gestito. In effetti, per richiamare la funzione sono necessarie due chiamate, quindi il doppio thunk. Ad esempio, le funzioni virtuali vengono sempre chiamate tramite un punto di ingresso nativo.
 
@@ -31,7 +32,7 @@ Il compilatore è stato aggiornato per ridurre il doppio thunk non necessario. O
 
 ## <a name="example-double-thunking"></a>Esempio: doppio thunk
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
 Nell'esempio seguente viene illustrato il doppio thunk. Quando viene compilato native (senza **/CLR**), la chiamata alla funzione virtuale in `main` genera una chiamata al `T` costruttore di copia di e una chiamata al distruttore. Si otterrà un comportamento simile quando la funzione virtuale viene dichiarata con **/CLR** e `__clrcall` . Tuttavia, quando viene appena compilato con **/CLR**, la chiamata di funzione genera una chiamata al costruttore di copia, ma esiste un'altra chiamata al costruttore di copia a causa del thunk nativo a gestito.
 
@@ -89,7 +90,7 @@ __thiscall T::~T(void)
 
 ## <a name="example-effect-of-double-thunking"></a>Esempio: effetto del doppio thunk
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
 Nell'esempio precedente è stata illustrata l'esistenza del doppio thunk. Questo esempio mostra l'effetto. Il **`for`** ciclo chiama la funzione virtuale e il programma segnala il tempo di esecuzione. Il tempo più lento viene segnalato quando il programma viene compilato con **/CLR**. Quando si esegue la compilazione senza **/CLR** o se la funzione virtuale viene dichiarata con, vengono segnalate le ore più veloci `__clrcall` .
 
@@ -137,6 +138,6 @@ int main() {
 after calling struct S
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Assembly misti (nativi e gestiti)](../dotnet/mixed-native-and-managed-assemblies.md)

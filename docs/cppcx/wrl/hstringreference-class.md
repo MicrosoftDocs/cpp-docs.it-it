@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe HStringReference'
 title: Classe HStringReference
 ms.date: 07/15/2019
 ms.topic: reference
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HStringReference::operator!= operator
 - Microsoft::WRL::Wrappers::HStringReference::operator< operator
 ms.assetid: 9bf823b1-17eb-4ac4-8c5d-27d27c7a4150
-ms.openlocfilehash: 871696f4a970b1ef9d1f5d36d2e17184b93c9e8b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d1a45eadd258ba6e17c26cc86aa362011d08ab8f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212982"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97249841"
 ---
 # <a name="hstringreference-class"></a>Classe HStringReference
 
@@ -47,7 +48,7 @@ La durata del buffer di supporto nel nuovo HSTRING non è gestita dal Windows Ru
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-Nome                                                    | Descrizione
+Nome                                                    | Description
 ------------------------------------------------------- | -----------------------------------------------------------
 [HStringReference:: HStringReference](#hstringreference) | Inizializza una nuova istanza della classe `HStringReference`.
 
@@ -61,7 +62,7 @@ Membro                              | Descrizione
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-Nome                                                  | Descrizione
+Nome                                                  | Description
 ----------------------------------------------------- | ----------------------------------------------------------------------------------------------
 [HStringReference:: operator =](#operator-assign)       | Sposta il valore di un altro `HStringReference` oggetto nell' `HStringReference` oggetto corrente.
 [HStringReference:: operator = =](#operator-equality)    | Indica se i due parametri sono uguali.
@@ -78,7 +79,7 @@ Nome                                                  | Descrizione
 
 **Spazio dei nomi:** Microsoft:: WRL:: Wrappers
 
-## <a name="hstringreferencecopyto"></a><a name="copyto"></a>HStringReference:: CopyTo
+## <a name="hstringreferencecopyto"></a><a name="copyto"></a> HStringReference:: CopyTo
 
 Copia l' `HStringReference` oggetto corrente in un oggetto HString.
 
@@ -93,11 +94,11 @@ HRESULT CopyTo(
 *str*<br/>
 HSTRING che riceve la copia.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo chiama la funzione [WindowsDuplicateString](/windows/win32/api/winstring/nf-winstring-windowsduplicatestring) .
 
-## <a name="hstringreferenceget"></a><a name="get"></a>HStringReference:: Get
+## <a name="hstringreferenceget"></a><a name="get"></a> HStringReference:: Get
 
 Recupera il valore dell'handle HSTRING sottostante.
 
@@ -109,7 +110,7 @@ HSTRING Get() const throw()
 
 Valore dell'handle HSTRING sottostante.
 
-## <a name="hstringreferencegetrawbuffer"></a><a name="getrawbuffer"></a>HStringReference:: GetRawBuffer
+## <a name="hstringreferencegetrawbuffer"></a><a name="getrawbuffer"></a> HStringReference:: GetRawBuffer
 
 Recupera un puntatore ai dati di stringa sottostanti.
 
@@ -125,7 +126,7 @@ const wchar_t* GetRawBuffer(unsigned int* length) const;
 
 **`const`** Puntatore ai dati di stringa sottostanti.
 
-## <a name="hstringreferencehstringreference"></a><a name="hstringreference"></a>HStringReference:: HStringReference
+## <a name="hstringreferencehstringreference"></a><a name="hstringreference"></a> HStringReference:: HStringReference
 
 Inizializza una nuova istanza della classe `HStringReference`.
 
@@ -148,13 +149,13 @@ Parametro di modello che specifica la dimensione del buffer di destinazione `HSt
 *str*<br/>
 Riferimento a una stringa di caratteri wide.
 
-*Len*<br/>
+*len*<br/>
 Lunghezza massima del buffer del parametro *Str* da usare in questa operazione. Se il parametro *Len* non è specificato, viene usato l'intero parametro *Str* . Se *Len* è maggiore di *sized*, *Len* viene impostato su *sized*-1.
 
 *altri*<br/>
 Un altro `HStringReference` oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo costruttore inizializza un nuovo `HStringReference` oggetto con le stesse dimensioni del parametro *Str*.
 
@@ -162,7 +163,7 @@ Il secondo costruttore inizializza un nuovo `HStringReference` oggetto la cui di
 
 Il terzo costruttore inizializza un nuovo `HStringReference` oggetto sul valore dell' *altro* parametro, quindi Elimina l' *altro* parametro.
 
-## <a name="hstringreferenceoperator"></a><a name="operator-assign"></a>HStringReference:: operator =
+## <a name="hstringreferenceoperator"></a><a name="operator-assign"></a> HStringReference:: operator =
 
 Sposta il valore di un altro `HStringReference` oggetto nell' `HStringReference` oggetto corrente.
 
@@ -175,11 +176,11 @@ HStringReference& operator=(HStringReference&& other) throw()
 *altri*<br/>
 Oggetto `HStringReference` esistente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore dell' *altro* oggetto esistente viene copiato nell' `HStringReference` oggetto corrente, quindi l' *altro* oggetto viene eliminato definitivamente.
 
-## <a name="hstringreferenceoperator"></a><a name="operator-equality"></a>HStringReference:: operator = =
+## <a name="hstringreferenceoperator"></a><a name="operator-equality"></a> HStringReference:: operator = =
 
 Indica se i due parametri sono uguali.
 
@@ -209,7 +210,7 @@ Secondo parametro da confrontare.  *RHS* può essere un `HStringReference` ogget
 
 **`true`** Se i parametri *LHS* e *RHS* sono uguali; in caso contrario, **`false`** .
 
-## <a name="hstringreferenceoperator"></a><a name="operator-inequality"></a>HStringReference:: operator! =
+## <a name="hstringreferenceoperator"></a><a name="operator-inequality"></a> HStringReference:: operator! =
 
 Indica se i due parametri non sono uguali.
 
@@ -239,7 +240,7 @@ Secondo parametro da confrontare.  *RHS* può essere un `HStringReference` ogget
 
 **`true`** Se i parametri *LHS* e *RHS* non sono uguali. in caso contrario, **`false`** .
 
-## <a name="hstringreferenceoperatorlt"></a><a name="operator-less-than"></a>Operatore HStringReference::&lt;
+## <a name="hstringreferenceoperatorlt"></a><a name="operator-less-than"></a> Operatore HStringReference::&lt;
 
 Indica se il primo parametro è minore del secondo parametro.
 
