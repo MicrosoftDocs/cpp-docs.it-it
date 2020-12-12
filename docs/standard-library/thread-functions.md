@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; &gt; funzioni thread'
 title: Funzioni &lt;thread&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: 64a62180243d77f361c243b2a89de56b0a14920e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 37e1f745b66c45f5e3ad6bd4be2a2837042b8433
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845042"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207436"
 ---
 # <a name="ltthreadgt-functions"></a>Funzioni &lt;thread&gt;
 
@@ -56,7 +57,7 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 *Rel_time*\
 Oggetto [duration](../standard-library/duration-class.md) che specifica un intervallo di tempo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione blocca il thread chiamante per almeno il tempo specificato da *Rel_time*. Questa funzione non genera eccezioni.
 
@@ -76,7 +77,7 @@ void sleep_until(const xtime *Abs_time);
 *Abs_time*\
 Rappresenta un punto nel tempo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione non genera eccezioni.
 
@@ -96,7 +97,7 @@ L'oggetto `thread` a sinistra.
 *Ok*\
 L'oggetto `thread` corretto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione chiama `Left.swap(Right)`.
 

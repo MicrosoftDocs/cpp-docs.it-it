@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: conversioni di User-Defined (C++/CLI)'
 title: Conversioni definite dall'utente (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined conversions [C++]
 ms.assetid: 8010fd59-2775-4e9a-a6ed-58055032d66f
-ms.openlocfilehash: bb7a30382bc586f4d324d47ef6e6757fac83f5ae
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 0b07ab3201bfd379a17922f020486d0b17a59558
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988384"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204264"
 ---
 # <a name="user-defined-conversions-ccli"></a>Conversioni definite dall'utente (C++/CLI)
 
@@ -80,7 +81,7 @@ in N::N
 
 Gli operatori Convert-from creano un oggetto della classe in cui l'operatore viene definito da un oggetto di un'altra classe.
 
-Standard C++ non supporta gli operatori Convert-from; standard C++ utilizza costruttori a questo scopo. Tuttavia, quando si usano i tipi CLR C++ , Visual fornisce supporto sintattico per chiamare gli operatori Convert-from.
+Il linguaggio C++ standard non supporta gli operatori Convert-from; il linguaggio C++ standard utilizza costruttori a questo scopo. Tuttavia, quando si usano i tipi CLR, Visual C++ fornire supporto sintattico per chiamare gli operatori Convert-from.
 
 Per interoperare correttamente con altri linguaggi conformi a CLS, è possibile eseguire il wrapping di ogni costruttore unario definito dall'utente per una determinata classe con un operatore Convert-from corrispondente.
 
@@ -319,6 +320,6 @@ int main() {
 2000
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classi e struct](../extensions/classes-and-structs-cpp-component-extensions.md)

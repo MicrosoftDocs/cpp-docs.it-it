@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: aggregazioni'
 title: aggregazioni (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - aggregate objects [C++], aggregates attribute
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-ms.openlocfilehash: e745cae5710bbf8df1314ec20a4a0b72545c0591
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c108b18f957047a6a5dbb33538a23de6c3469783
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836361"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205473"
 ---
 # <a name="aggregates"></a>aggregati
 
@@ -28,13 +29,13 @@ Indica che l'oggetto aggrega l'oggetto specificato dal CLSID.
 
 ### <a name="parameters"></a>Parametri
 
-*clsid*<br/>
+*CLSID*<br/>
 Specifica il CLSID dell'oggetto aggregabile.
 
 *variable_name*<br/>
 Nome della variabile da inserire. Questa variabile contiene l' `IUnknown` oggetto dell'oggetto da aggregare.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Quando è applicato a un oggetto, l'attributo **aggregates** di C++ implementa un wrapper esterno per l'oggetto da aggregare (specificato da `clsid`).
 
@@ -88,7 +89,7 @@ struct CObject : IObject
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi COM](com-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)<br/>

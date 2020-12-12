@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: classe AgileActivationFactory'
 title: Classe AgileActivationFactory
 ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::AgileActivationFactory
 ms.assetid: fab98f32-bb93-4c0f-badb-49fbddb194b0
-ms.openlocfilehash: d4f437f87861293cb6048ed6acb05428c466b3f3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 598821f3d84abd8e8ece4666a95db1d75d902125
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214201"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204628"
 ---
 # <a name="agileactivationfactory-class"></a>Classe AgileActivationFactory
 
@@ -40,7 +41,7 @@ class AgileActivationFactory :
 
 **Spazio dei nomi:** Microsoft::WRL
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi Microsoft::WRL](microsoft-wrl-namespace.md)<br/>
+[Spazio dei nomi Microsoft:: WRL](microsoft-wrl-namespace.md)<br/>
 [Classe ActivationFactory](activationfactory-class.md)

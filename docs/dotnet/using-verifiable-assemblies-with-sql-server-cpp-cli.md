@@ -1,30 +1,31 @@
 ---
+description: 'Altre informazioni su: uso degli assembly verificabili con SQL Server (C++/CLI)'
 title: Utilizzo di assembly verificabili con SQL Server (C++/CLI)
 ms.date: 10/17/2018
 helpviewer_keywords:
 - verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-ms.openlocfilehash: 27dec67cc0932a784cdd041ba346bb8c635b280d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b155fb0360fb373f5931f51de3af557d06858a71
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384413"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204199"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Utilizzo di assembly verificabili con SQL Server (C++/CLI)
 
-Stored procedure estese, incluso nel pacchetto come librerie a collegamento dinamico (DLL), consentono di estendere le funzionalità di SQL Server tramite le funzioni sviluppate con Visual C++. Le stored procedure estese vengono implementate come funzioni nelle DLL. Oltre alle funzioni, stored procedure estese possono inoltre definire [tipi definiti dall'utente](../cpp/classes-and-structs-cpp.md) e aggregazione di funzioni (ad esempio SUM o AVG).
+Le stored procedure estese, assemblate come librerie a collegamento dinamico (dll), consentono di estendere SQL Server funzionalità tramite funzioni sviluppate con Visual C++. Le stored procedure estese vengono implementate come funzioni all'interno di dll. Oltre alle funzioni, le stored procedure estese possono definire anche [tipi definiti dall'utente](../cpp/classes-and-structs-cpp.md) e funzioni di aggregazione, ad esempio Sum o AVG.
 
-Quando un client esegue una stored procedure estesa, le ricerche di SQL Server per la DLL associati con la stored procedure estesa e carica la DLL. SQL Server chiama la stored procedure estesa richiesta ed eseguita in un contesto di sicurezza specificato. La stored procedure estesa e set di risultati passate e restituisce parametri al server.
+Quando un client esegue una stored procedure estesa, SQL Server cerca la DLL associata al stored procedure esteso e carica la DLL. SQL Server chiama la stored procedure estesa richiesta e la esegue in un contesto di sicurezza specificato. Il stored procedure esteso passa quindi i set di risultati e restituisce i parametri al server.
 
-SQL Server fornisce le estensioni di Transact-SQL (T-SQL) per consentire l'installazione di assembly verificabili in SQL Server. Il set di autorizzazioni di SQL Server consente di specificare il contesto di sicurezza, con i livelli di sicurezza seguenti:
+SQL Server fornisce estensioni a Transact-SQL (T-SQL) per consentire l'installazione di assembly verificabili in SQL Server. Il set di autorizzazioni SQL Server specifica il contesto di sicurezza, con i livelli di sicurezza seguenti:
 
-- Modalità di senza restrizioni: Eseguire il codice a proprio rischio; codice non deve essere indipendente dai tipi verificabile.
+- Modalità senza restrizioni: esecuzione del codice a proprio rischio. non è necessario che il codice sia indipendente dai tipi verificabile.
 
-- Modalità sicura: Eseguire effettivamente il codice indipendente dai tipi. compilato con /CLR: safe.
+- Modalità provvisoria: eseguire codice indipendente dai tipi verificabile; compilato con/CLR: safe.
 
 > [!IMPORTANT]
-> Deprecato di Visual Studio 2015 e Visual Studio 2017 non supporta il **/clr: pure** e **/CLR: safe** la creazione di progetti verificabile. Se è necessario codice verificabile, è consigliabile che si tradurre il codice in c#.
+> Visual Studio 2015 deprecato e Visual Studio 2017 non supporta la creazione di progetti verificabili **/CLR: pure** e **/CLR: safe** . Se è necessario codice verificabile, è consigliabile convertire il codice in C#.
 
 Per creare e caricare un assembly verificabile in SQL Server, usare i comandi Transact-SQL CREATE ASSEMBLY e DROP ASSEMBLY come indicato di seguito:
 
@@ -34,9 +35,9 @@ CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH
 DROP ASSEMBLY <assemblyName>
 ```
 
-Il comando si specifica PERMISSION_SET specifica il contesto di sicurezza e può avere i valori senza restrizioni, SAFE o esteso.
+Tramite il comando PERMISSION_SET viene specificato il contesto di sicurezza e i valori possono essere Unrestricted, SAFE o EXTENDed.
 
-Inoltre, è possibile usare il comando CREATE FUNCTION per associare ai nomi di metodo in una classe:
+Inoltre, è possibile usare il comando CREATE FUNCTION per associare i nomi dei metodi in una classe:
 
 ```sql
 CREATE FUNCTION <FunctionName>(<FunctionParams>)
@@ -46,7 +47,7 @@ RETURNS returnType
 
 ## <a name="example"></a>Esempio
 
-Il seguente script SQL (ad esempio, denominato "MyScript. SQL") consente di caricare un assembly in SQL Server e rende disponibile un metodo di una classe:
+Lo script SQL seguente (ad esempio, denominato "script. SQL") carica un assembly in SQL Server e rende disponibile un metodo di una classe:
 
 ```sql
 -- Create assembly without external access
@@ -70,12 +71,12 @@ select dbo.GetQuoteNoEA('MSFT')
 go
 ```
 
-Gli script SQL possono essere eseguiti in modo interattivo in SQL Query Analyzer o dalla riga di comando con l'utilità sqlcmd.exe. La seguente riga di comando si connette al server MyServer, utilizza il database predefinito, utilizza una connessione trusted, Myscript e MyResult.
+Gli script SQL possono essere eseguiti in modo interattivo in SQL Query Analyzer o dalla riga di comando con l'utilità sqlcmd.exe. La seguente riga di comando si connette a MyServer, utilizza il database predefinito, utilizza una connessione trusted, immette script. SQL e restituisce MyResult.txt.
 
 ```cmd
 sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classi e struct](../cpp/classes-and-structs-cpp.md)

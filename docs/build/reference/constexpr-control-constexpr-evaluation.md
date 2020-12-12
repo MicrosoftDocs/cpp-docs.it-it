@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/constExpr (controlla la valutazione di constExpr)
 title: /constexpr (Controlla la valutazione di constexpr)
 ms.date: 08/15/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -constexpr control constexpr evaluation [C++]
 - constexpr control constexpr evaluation [C++]
 ms.assetid: 76d56784-f5ad-401d-841d-09d1059e8b8c
-ms.openlocfilehash: 7b3ae1cd732fe1ec234e2734ea4c6fa86db9d5af
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a9274321933fb0fbcf965943b0168db85c8a8d5c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223863"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205343"
 ---
 # <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (Controlla la valutazione di constexpr)
 
@@ -34,7 +35,7 @@ Usare le opzioni del compilatore **/constExpr** per controllare i parametri per 
 
 i **passaggi**<em>n</em> terminano la **`constexpr`** valutazione dopo *N* passaggi. Il valore predefinito è 100.000.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le opzioni del compilatore **/constExpr** controllano la valutazione in fase di compilazione delle **`constexpr`** espressioni. I passaggi di valutazione, i livelli di ricorsione e la profondità del backtrace sono controllati per evitare che il compilatore spenda troppo tempo per la **`constexpr`** valutazione. Per ulteriori informazioni sull' **`constexpr`** elemento del linguaggio, vedere [constExpr (C++)](../../cpp/constexpr-cpp.md).
 
@@ -44,7 +45,7 @@ Le opzioni **/constExpr** sono disponibili a partire da Visual Studio 2015.
 
 1. Aprire la finestra di dialogo **pagine delle proprietà** del progetto.
 
-2. In **proprietà di configurazione**espandere la cartella **C/C++** e scegliere la pagina delle proprietà **riga di comando** .
+2. In **proprietà di configurazione** espandere la cartella **C/C++** e scegliere la pagina delle proprietà **riga di comando** .
 
 3. Immettere le opzioni del compilatore **/constExpr** nella casella **Opzioni aggiuntive** . Scegliere **OK** o **applica** per salvare le modifiche.
 
@@ -52,7 +53,7 @@ Le opzioni **/constExpr** sono disponibili a partire da Visual Studio 2015.
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

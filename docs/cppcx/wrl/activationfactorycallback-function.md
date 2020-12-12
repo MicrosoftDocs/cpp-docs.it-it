@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Funzione ActivationFactoryCallback'
 title: ActivationFactoryCallback (funzione)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ActivationFactoryCallback function
 ms.assetid: dd40c79b-1273-4f2a-8c24-ae9926fb4fd9
-ms.openlocfilehash: 0be4bebcc561cdf1df3f2502c8cc1927bdc65564
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9398b3f681e32c7a73b46de549ce7c41a3af6196
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214214"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204615"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback (funzione)
 
@@ -39,7 +40,7 @@ Al termine di questa operazione, una factory di attivazione che corrisponde al p
 
 S_OK se riesce; in caso contrario, HRESULT che descrive l'errore. Gli HRESULT di errore probabili sono CLASS_E_CLASSNOTAVAILABLE e E_INVALIDARG.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Ottiene la factory di attivazione per l'ID di attivazione specificato.
 
@@ -51,6 +52,6 @@ Il Windows Runtime chiama questa funzione di callback per richiedere un oggetto 
 
 **Spazio dei nomi:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi Microsoft::WRL::Details](microsoft-wrl-details-namespace.md)
+[Spazio dei nomi Microsoft:: WRL::D etails](microsoft-wrl-details-namespace.md)

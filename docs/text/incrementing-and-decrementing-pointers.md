@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: incrementare e decrementare i puntatori'
 title: Incremento e decremento dei puntatori
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,56 +8,56 @@ helpviewer_keywords:
 - pointers [C++], multibyte characters
 - decrementing pointers
 ms.assetid: 0872b4a0-e2bd-4004-8319-070efb76f2fd
-ms.openlocfilehash: cdaee3d13a8ceab47f62100953a0eb6e51bfc255
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c333c11c5a0b68bf013dbd374eb1cc4e5f00abc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410655"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207319"
 ---
 # <a name="incrementing-and-decrementing-pointers"></a>Incremento e decremento dei puntatori
 
 Usare i suggerimenti seguenti:
 
-- Fare riferimento a byte iniziali, finale non byte. Non è in genere sicuro a un puntatore a un byte finale. È in genere più sicuro analizzare una stringa in avanti anziché in ordine inverso.
+- Posizionare il puntatore del mouse su lead bytes, not trail bytes. In genere non è sicuro avere un puntatore a un byte finale. È in genere più sicuro eseguire l'analisi di una stringa in un oggetto anziché in senso inverso.
 
-- Esistono puntatore incrementare o decrementare funzioni e macro disponibili per lo spostamento di un intero carattere:
+- Sono disponibili funzioni di incremento/decremento del puntatore e macro disponibili che si spostano su un carattere intero:
 
     ```cpp
     sz1++;
     ```
 
-   diventa:
+    diventa:
 
     ```cpp
     sz1 = _mbsinc( sz1 );
     ```
 
-   Il `_mbsinc` e `_mbsdec` funzioni correttamente incrementano e decrementano `character` unità, indipendentemente dalle dimensioni del carattere.
+   Le `_mbsinc` `_mbsdec` funzioni e incrementano e decrementano correttamente le `character` unità, indipendentemente dalle dimensioni del carattere.
 
-- Per decrementi, è necessario un puntatore all'inizio della stringa, come illustrato di seguito:
+- Per i decrementi, è necessario un puntatore all'inizio della stringa, come nell'esempio seguente:
 
     ```cpp
     sz2--;
     ```
 
-   diventa:
+    diventa:
 
     ```cpp
     sz2 = _mbsdec( sz2Head, sz2 );
     ```
 
-   In alternativa, potrebbe essere il puntatore iniziale a un carattere valido nella stringa, in modo che:
+   In alternativa, il puntatore Head potrebbe essere un carattere valido nella stringa, in modo che:
 
     ```cpp
     sz2Head < sz2
     ```
 
-   È necessario disporre di un puntatore a un byte iniziale valido noto.
+   È necessario disporre di un puntatore a un byte di apertura valido noto.
 
-- Si potrebbe voler mantenere un puntatore al carattere precedente per chiamate più rapide a `_mbsdec`.
+- Potrebbe essere necessario mantenere un puntatore al carattere precedente per chiamate più veloci a `_mbsdec` .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Suggerimenti sulla programmazione MBCS](../text/mbcs-programming-tips.md)<br/>
+[Suggerimenti per la programmazione MBCS](../text/mbcs-programming-tips.md)<br/>
 [Indici di byte](../text/byte-indices.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _get_heap_handle'
 title: _get_heap_handle
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - _get_heap_handle function
 - get_heap_handle function
 ms.assetid: a4d05049-8528-494a-8281-a470d1e1115c
-ms.openlocfilehash: 895814a1a44910ef65a826cba330a3edd70b85a9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: dacf90e981233c92534a2667ad31462e9bf5992c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916306"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205213"
 ---
 # <a name="_get_heap_handle"></a>_get_heap_handle
 
@@ -51,7 +52,7 @@ intptr_t _get_heap_handle( void );
 
 Restituisce l'handle dell'heap Win32 che viene usato dal sistema di runtime del linguaggio C.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Usare questa funzione se si vuole chiamare [HeapSetInformation](/windows/win32/api/heapapi/nf-heapapi-heapsetinformation) e abilitare Low Fragmentation Heap sull'heap CRT.
 
@@ -88,6 +89,6 @@ int main(void)
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Allocazione della memoria](../../c-runtime-library/memory-allocation.md)<br/>
+[Allocazione di memoria](../../c-runtime-library/memory-allocation.md)<br/>

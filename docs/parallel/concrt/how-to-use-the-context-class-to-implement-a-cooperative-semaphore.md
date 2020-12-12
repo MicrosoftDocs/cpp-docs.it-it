@@ -1,22 +1,23 @@
 ---
+description: 'Altre informazioni su: procedura: usare la classe Context per implementare un semaforo cooperativo'
 title: 'Procedura: utilizzare la classe Context per implementare una classe semaforo di cooperazione'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - cooperative semaphore implementing
 - context class
 ms.assetid: 22f4b9c0-ca22-4a68-90ba-39e99ea76696
-ms.openlocfilehash: 77cf33288761c75d056649ebe27f9d74c6fa62dc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d80d364a9dcd27ee7012da5f710d38208c7a9e1c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230389"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205655"
 ---
 # <a name="how-to-use-the-context-class-to-implement-a-cooperative-semaphore"></a>Procedura: utilizzare la classe Context per implementare una classe semaforo di cooperazione
 
 In questo argomento viene illustrato come utilizzare la classe Concurrency:: Context per implementare una classe Semaphore cooperativa.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La `Context` classe consente di bloccare o produrre il contesto di esecuzione corrente. Il blocco o il cedimento del contesto corrente è utile quando il contesto corrente non può continuare perché una risorsa non è disponibile. Un *semaforo* è un esempio di una situazione in cui il contesto di esecuzione corrente deve attendere che una risorsa diventi disponibile. Un semaforo, ad esempio un oggetto sezione critica, è un oggetto di sincronizzazione che consente al codice in un contesto di accedere in modo esclusivo a una risorsa. Tuttavia, a differenza di un oggetto sezione critica, un semaforo consente a più di un contesto di accedere alla risorsa simultaneamente. Se il numero massimo di contesti utilizza un blocco semaforo, ogni contesto aggiuntivo deve attendere che un altro contesto rilasci il blocco.
 
@@ -88,7 +89,7 @@ Nell'esempio seguente viene modificato il corpo della funzione lavoro che viene 
 
 [!code-cpp[concrt-cooperative-semaphore#8](../../parallel/concrt/codesnippet/cpp/how-to-use-the-context-class-to-implement-a-cooperative-semaphore_8.cpp)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Contesti](../../parallel/concrt/contexts.md)<br/>
 [Contenitori e oggetti paralleli](../../parallel/concrt/parallel-containers-and-objects.md)

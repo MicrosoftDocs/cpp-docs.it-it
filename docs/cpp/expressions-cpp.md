@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: espressioni (C++)'
 title: Espressioni (C++)
 ms.custom: index-page
 ms.date: 11/04/2016
 helpviewer_keywords:
 - expressions [C++]
 ms.assetid: aaa1f250-7185-4113-b682-3f5e995943d1
-ms.openlocfilehash: 908a0f2dd304a5b5f9d3b70e80fafbfe3574ece1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0576a2e76925bb6808a57dc9eee54231e5a06677
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179939"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204732"
 ---
 # <a name="expressions-c"></a>Espressioni (C++)
 
@@ -44,7 +45,7 @@ In C++, è possibile sottoporre a overload gli operatori e fare assumere loro si
 
 Argomenti sugli operatori presenti in altre sezioni:
 
-- [Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+- [Operatori C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
 
 - [Operatori di overload](../cpp/operator-overloading.md)
 
@@ -53,6 +54,6 @@ Argomenti sugli operatori presenti in altre sezioni:
     > [!NOTE]
     >  Gli operatori dei tipi incorporati non possono essere sottoposti a overload; il loro comportamento è predefinito.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)
+[Riferimenti per il linguaggio C++](../cpp/cpp-language-reference.md)

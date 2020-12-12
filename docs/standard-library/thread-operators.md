@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; operatori di thread &gt;'
 title: Operatori &lt;thread&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: 26ed8157685502618fe6fb82fbf9c9ad4c47cba3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3992dccf051622bcf854c1843f1bdeb15d227731
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845029"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207423"
 ---
 # <a name="ltthreadgt-operators"></a>Operatori &lt;thread&gt;
 
@@ -57,7 +58,7 @@ L'oggetto `thread::id` corretto.
 
 `!(Left < Right)`
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione non genera eccezioni.
 
@@ -83,7 +84,7 @@ L'oggetto `thread::id` corretto.
 
 `Right < Left`
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione non genera eccezioni.
 
@@ -109,7 +110,7 @@ L'oggetto `thread::id` corretto.
 
 `!(Right < Left)`
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione non genera eccezioni.
 
@@ -135,7 +136,7 @@ L'oggetto `thread::id` corretto.
 
 **`true`** Se *Left* precede *direttamente* nell'ordine totale; in caso contrario, **`false`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operatore definisce un ordinamento totale per tutti gli oggetti `thread::id`. Questi oggetti possono essere usati come chiavi in contenitori associativi.
 
@@ -163,7 +164,7 @@ L'oggetto `thread::id` corretto.
 
 `!(Left == Right)`
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione non genera eccezioni.
 
@@ -189,7 +190,7 @@ L'oggetto `thread::id` corretto.
 
 **`true`** Se i due oggetti rappresentano lo stesso thread di esecuzione o se nessun oggetto rappresenta un thread di esecuzione; in caso contrario, **`false`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione non genera eccezioni.
 
@@ -215,7 +216,7 @@ Un oggetto `thread::id`.
 
 *OSTR*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione inserisce l' *ID* in *OSTR*.
 

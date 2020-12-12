@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: Recordset: esecuzione di un join (ODBC)'
 title: 'Recordset: esecuzione di un join (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - ODBC recordsets [C++], joins
 - recordsets [C++], joining tables
 ms.assetid: ca720900-a156-4780-bf01-4293633bea64
-ms.openlocfilehash: 7e8d42f2b96911cd57aca7c132b53ed7c10162be
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1c7aa7bfb6925d9f7e916ddb6cd60061667d7859
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212797"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204511"
 ---
 # <a name="recordset-performing-a-join-odbc"></a>Recordset: esecuzione di un join (ODBC)
 
@@ -35,9 +36,9 @@ Per selezionare record contenenti colonne da tabelle unite in join, sono necessa
 
 È possibile unire in join più di due tabelle in modo analogo, equivalenti a più coppie di colonne, ciascuna coppia unita dalla parola chiave SQL **e**.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Recordset: dichiarazione di una classe per una query predefinita (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
 [Recordset: dichiarazione di una classe per una tabella (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
-[Recordset: ripetizione di una query in un recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+[Recordset: esecuzione di una query in un recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)

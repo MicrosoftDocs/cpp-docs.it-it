@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: valori letterali stringa C'
 title: Valori letterali stringa C
 ms.date: 08/31/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - strings [C++], string literals
 - literal strings, C
 ms.assetid: 4b05523e-49a2-4900-b21a-754350af3328
-ms.openlocfilehash: 0df7126efe5a5b2caa3a4fee51465d0dbe892e89
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: c18a13dcc44203399aa6518f53031d29b00a5a4c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400579"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207085"
 ---
 # <a name="c-string-literals"></a>Valori letterali stringa C
 
@@ -33,7 +34,7 @@ Un valore "letterale stringa" è una sequenza di caratteri dal set di caratteri 
 
 &nbsp;&nbsp;&nbsp;&nbsp;*sequenza di escape*
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Nell'esempio seguente viene riportato un valore letterale stringa semplice:
 
@@ -41,8 +42,8 @@ Nell'esempio seguente viene riportato un valore letterale stringa semplice:
 char *amessage = "This is a string literal.";
 ```
 
-Tutti i codici di escape elencati nella tabella [Sequenze di escape](../c-language/escape-sequences.md) sono validi nei valori letterali stringa. Per rappresentare le virgolette doppie in un valore letterale stringa, utilizzare la ** \\**sequenza di escape ". La virgoletta singola (**'**) può essere rappresentata senza una sequenza di escape. La barra rovesciata (**\\**) deve essere seguita da una seconda**\\**barra rovesciata () quando viene visualizzata all'interno di una stringa. Quando viene visualizzato un carattere di barra rovesciata alla fine di una riga, viene sempre interpretato come un carattere di continuazione di riga.
+Tutti i codici di escape elencati nella tabella [Sequenze di escape](../c-language/escape-sequences.md) sono validi nei valori letterali stringa. Per rappresentare le virgolette doppie in un valore letterale stringa, utilizzare la sequenza di escape **\\ "**. La virgoletta singola (**'**) può essere rappresentata senza una sequenza di escape. La barra rovesciata ( **\\** ) deve essere seguita da una seconda barra rovesciata ( **\\\\** ) quando viene visualizzata all'interno di una stringa. Quando viene visualizzato un carattere di barra rovesciata alla fine di una riga, viene sempre interpretato come un carattere di continuazione di riga.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Elementi di C](../c-language/elements-of-c.md)

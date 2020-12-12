@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _unlink, _wunlink'
 title: _unlink, _wunlink
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-ms.openlocfilehash: af6fd6c7065529b43f5e275ce1d745d0031ddfb7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 742df45211b6e19314a3b3f89880d7f2cd83fb2f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909282"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205148"
 ---
 # <a name="_unlink-_wunlink"></a>_unlink, _wunlink
 
@@ -71,7 +72,7 @@ Ognuna di queste funzioni restituisce 0 in caso di esito positivo. In caso contr
 
 Per altre informazioni su questo e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_unlink** Elimina il file specificato da *filename*. **_wunlink** è una versione a caratteri wide di **_unlink**; l'argomento *filename* per **_wunlink** è una stringa di caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
 
@@ -122,8 +123,8 @@ This file will be deleted.
 Deleted 'CRT_UNLINK.TXT'
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Gestione dei file](../../c-runtime-library/file-handling.md)<br/>
+[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
 [_close](close.md)<br/>
 [remove, _wremove](remove-wremove.md)<br/>

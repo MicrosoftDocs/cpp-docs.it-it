@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: punti di sequenza C'
 title: Punti di sequenza C
 ms.date: 11/04/2016
 helpviewer_keywords:
 - sequence points
 ms.assetid: c84885a5-4336-4eba-a643-058df4249903
-ms.openlocfilehash: 0147f51063127cb26ce8caf70bc46eadc87b8d3e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7ba46978271cafbdc6b06fd01d69673dbf905d33
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226516"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207111"
 ---
 # <a name="c-sequence-points"></a>Punti di sequenza C
 
@@ -37,6 +38,6 @@ Il valore di un oggetto può essere modificato una sola volta da un'espressione 
 
 - Espressione in un' **`return`** istruzione. L'espressione viene valutata completamente e tutti gli effetti collaterali vengono completati prima che il controllo torni alla funzione chiamante.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Valutazione delle espressioni](../c-language/expression-evaluation-c.md)

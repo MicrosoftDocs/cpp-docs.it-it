@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura: eseguire la conversione tra diversi tipi di stringa'
 title: 'Procedura: convertire vari tipi di stringhe'
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-ms.openlocfilehash: 068665c594f2fbeb531be21ded7ef16f3f5c1ef3
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 47a7107e8e776c0d9be584fd0cc166f48c90326c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414516"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207345"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Procedura: convertire vari tipi di stringhe
 
@@ -20,7 +21,7 @@ In questo argomento viene illustrato come convertire diversi tipi di stringa di 
 
 ## <a name="example-convert-from-char-"></a>Esempio: conversione da char *
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
 In questo esempio viene illustrato come eseguire la conversione da un oggetto `char *` agli altri tipi di stringa sopra elencati. Una `char *` stringa, nota anche come stringa di tipo C, usa un carattere null per indicare la fine della stringa. Le stringhe di tipo C richiedono in genere un byte per carattere, ma possono anche usare due byte. Negli esempi seguenti `char *` le stringhe vengono talvolta definite stringhe di caratteri multibyte a causa dei dati di tipo stringa risultante dalla conversione dalle stringhe Unicode. Le funzioni a byte singolo e a caratteri multibyte ( `MBCS` ) possono operare sulle `char *` stringhe.
 
@@ -119,7 +120,7 @@ Hello, World! (System::String)
 
 ## <a name="example-convert-from-wchar_t-"></a>Esempio: conversione da wchar_t *
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
 In questo esempio viene illustrato come eseguire la conversione da un oggetto `wchar_t *` agli altri tipi di stringa sopra elencati. Diversi tipi di stringa, tra cui `wchar_t *` , implementano i formati di caratteri wide. Per convertire una stringa tra un formato multibyte e un carattere wide, è possibile usare una singola chiamata di funzione, `mbstowcs_s` ad esempio o una chiamata del costruttore per una classe come `CStringA` .
 
@@ -241,7 +242,7 @@ Hello, World! (System::String)
 
 ## <a name="example-convert-from-_bstr_t"></a>Esempio: conversione da _bstr_t
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
 In questo esempio viene illustrato come eseguire la conversione da un oggetto `_bstr_t` agli altri tipi di stringa sopra elencati. L' `_bstr_t` oggetto è un modo per incapsulare stringhe di caratteri wide `BSTR` . Una stringa BSTR ha un valore di lunghezza e non usa un carattere null per terminare la stringa, ma il tipo di stringa in cui si esegue la conversione potrebbe richiedere un valore null di terminazione.
 
@@ -339,7 +340,7 @@ Hello, World! (System::String)
 
 ## <a name="example-convert-from-ccombstr"></a>Esempio: conversione da CComBSTR
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
 In questo esempio viene illustrato come eseguire la conversione da un oggetto `CComBSTR` agli altri tipi di stringa sopra elencati. Analogamente a _bstr_t, un `CComBSTR` oggetto è un modo per incapsulare stringhe di caratteri wide BSTR. Una stringa BSTR ha un valore di lunghezza e non usa un carattere null per terminare la stringa, ma il tipo di stringa in cui si esegue la conversione potrebbe richiedere un valore null di terminazione.
 
@@ -447,7 +448,7 @@ Hello, World! (System::String)
 
 ## <a name="example-convert-from-cstring"></a>Esempio: conversione da CString
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
 In questo esempio viene illustrato come eseguire la conversione da un oggetto `CString` agli altri tipi di stringa sopra elencati. `CString` è basato sul tipo di dati TCHAR, che a sua volta dipende dall'eventuale definizione del simbolo `_UNICODE` . Se `_UNICODE` non è definito, `TCHAR` viene definito come carattere e `CString` contiene una stringa di caratteri multibyte; se `_UNICODE` è definito, `TCHAR` viene definito come **`wchar_t`** e `CString` contiene una stringa di caratteri wide.
 
@@ -589,7 +590,7 @@ Hello, World! (System::String)
 
 ## <a name="example-convert-from-basic_string"></a>Esempio: conversione da basic_string
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
 In questo esempio viene illustrato come eseguire la conversione da un oggetto `basic_string` agli altri tipi di stringa sopra elencati.
 
@@ -683,7 +684,7 @@ Hello, World! (System::String)
 
 ## <a name="example-convert-from-systemstring"></a>Esempio: conversione da System:: String
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
 Questo esempio illustra come eseguire la conversione da un carattere wide (Unicode) [System:: String](/dotnet/api/system.string) agli altri tipi di stringa elencati in precedenza.
 
@@ -786,7 +787,7 @@ Hello, World! (CStringW)
 Hello, World! (basic_string)
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro di conversione di stringhe ATL e MFC](../atl/reference/string-conversion-macros.md)<br/>
 [Operazioni di CString relative alle stringhe di tipo C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>

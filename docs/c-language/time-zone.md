@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: fuso orario'
 title: Fuso orario
 ms.date: 11/04/2016
 helpviewer_keywords:
 - time zones
 ms.assetid: ed46f7f2-1e76-493f-bb2f-58b9e6ccce85
-ms.openlocfilehash: 8b30b0216c8fab4db16f1a2152f054bfe59e4006
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10b846b90c24b0309898bd1c8bc46c4392303cd9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344980"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207033"
 ---
 # <a name="time-zone"></a>Fuso orario
 
@@ -17,6 +18,6 @@ ms.locfileid: "62344980"
 
 Il fuso orario locale è l'ora solare del Pacifico. Microsoft C supporta l'ora legale.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Funzioni della libreria](../c-language/library-functions.md)

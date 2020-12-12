@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: archiviazione di unioni'
 title: Archiviazione di unioni
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - union keyword [C], storage
 - union keyword [C]
 ms.assetid: b33d246a-8d20-41c4-89b2-ab05f1428792
-ms.openlocfilehash: 64e8b5184eeccd4de6d196e40ec464807bec93e7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bd95f1c1955049299192d0b4dbd333c86aecce25
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211658"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205278"
 ---
 # <a name="storage-of-unions"></a>Archiviazione di unioni
 
@@ -27,6 +28,6 @@ union         /* Defines a union named x */
 
 I membri dell' `x` Unione sono, nell'ordine di dichiarazione, un puntatore a un **`char`** valore, un **`char`** valore e una matrice di **`float`** valori. Lo spazio di archiviazione allocato per `x` è lo spazio di archiviazione necessario per la matrice `f`di 20 elementi, poiché `f` è il membro più lungo dell'unione. Poiché nessun tag è associato all'unione, il tipo è senza nome o "anonimo".
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Dichiarazioni di Unione](../c-language/union-declarations.md)

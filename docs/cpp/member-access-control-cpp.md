@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: controllo di accesso membri (C++)'
 title: Controllo di accesso dei membri [C++]
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: de775c511701cd0b7cf923f47e33723b30a966e1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2cce7cb98e76098f3c20a6c2404f91ccf40db1cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186971"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206877"
 ---
 # <a name="member-access-control-c"></a>Controllo di accesso dei membri [C++]
 
@@ -42,8 +43,8 @@ L'accesso predefinito si trova **`private`** in una classe e **`public`** in uno
 |Tipo di accesso|Significato|
 |--------------------|-------------|
 |[privata](../cpp/private-cpp.md)|I membri della classe dichiarati come **`private`** possono essere usati solo dalle funzioni membro e dagli elementi Friend (classi o funzioni) della classe.|
-|[protetto](../cpp/protected-cpp.md)|I membri della classe dichiarati come **`protected`** possono essere utilizzati dalle funzioni membro e dagli elementi Friend (classi o funzioni) della classe. Inoltre, possono essere usati dalle classi derivate dalla classe.|
-|[pubblico](../cpp/public-cpp.md)|I membri della classe dichiarati come **`public`** possono essere utilizzati da qualsiasi funzione.|
+|[protected](../cpp/protected-cpp.md)|I membri della classe dichiarati come **`protected`** possono essere utilizzati dalle funzioni membro e dagli elementi Friend (classi o funzioni) della classe. Inoltre, possono essere usati dalle classi derivate dalla classe.|
+|[public](../cpp/public-cpp.md)|I membri della classe dichiarati come **`public`** possono essere utilizzati da qualsiasi funzione.|
 
 Il controllo di accesso consente di impedire l'uso di oggetti secondo modalità di uso non previsto. Questa protezione viene persa quando vengono eseguite conversioni esplicite (di tipo cast).
 
@@ -153,7 +154,7 @@ Un **`union`** tipo non può avere una classe base.
 
 ## <a name="access-control-and-static-members"></a>Controllo di accesso e membri statici
 
-Quando si specifica una classe base come **`private`** , ha effetto solo sui membri non statici. I membri statici pubblici sono ancora accessibili nelle classi derivate. Tuttavia, l'accesso ai membri della classe base usando i puntatori, i riferimenti o gli oggetti può richiedere una conversione, momento in cui viene nuovamente applicato il controllo di accesso. Prendere in considerazione gli esempi seguenti:
+Quando si specifica una classe base come **`private`** , ha effetto solo sui membri non statici. I membri statici pubblici sono ancora accessibili nelle classi derivate. Tuttavia, l'accesso ai membri della classe base usando i puntatori, i riferimenti o gli oggetti può richiedere una conversione, momento in cui viene nuovamente applicato il controllo di accesso. Si consideri l'esempio seguente:
 
 ```cpp
 // access_control.cpp
@@ -239,6 +240,6 @@ Rappresentazione grafica dell'accesso ai percorsi di un'ereditarietà
 
 Nella figura un nome dichiarato nella classe `VBase` viene sempre raggiunto tramite la classe `RightPath`. Il percorso corretto è più accessibile perché `RightPath` dichiara `VBase` come classe base pubblica, mentre `LeftPath` dichiara `VBase` come privata.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimenti per il linguaggio C++](../cpp/cpp-language-reference.md)

@@ -1,21 +1,22 @@
 ---
-title: Languages
+description: 'Altre informazioni su: linguaggi'
+title: Linguaggi
 ms.date: 03/29/2019
 helpviewer_keywords:
 - C lanugage
 - C++ Language
 - Assembly Language
 - Compiler Intrinsics
-ms.openlocfilehash: aa16d86d3a2588e8e073d40088b61a0a2aa7c74e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b75a335a469d2e047a53f3688f6c468abdf38a4f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "66182421"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207631"
 ---
-# <a name="languages"></a>Languages
+# <a name="languages"></a>Linguaggi
 
 [Linguaggio C](../c-language/c-language-reference.md)<br/>
-[Lingua di C](../cpp/cpp-language-reference.md)<br/>
-[Preprocessore C/C](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
-[Intrinseci del compilatore e linguaggio assemblyCompiler Intrinsics and Assembly Language](../intrinsics/compiler-intrinsics-and-assembly-language.md)
+[Linguaggio C++](../cpp/cpp-language-reference.md)<br/>
+[Preprocessore C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
+[Intrinseci del compilatore e linguaggio dell'assembly](../intrinsics/compiler-intrinsics-and-assembly-language.md)

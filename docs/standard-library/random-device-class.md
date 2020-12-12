@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: random_device Class'
 title: Classe random_device
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::random_device [C++], entropy
 - std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
-ms.openlocfilehash: b2176ce7dcdefdcf4fc0846cd18b1b01d4de2916
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 29f7f9d1359e488bbe15811193c034a0be12219b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843547"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207475"
 ---
 # <a name="random_device-class"></a>Classe random_device
 
@@ -49,13 +50,13 @@ public:
    };
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 [random_device](#random_device)\
 [entropia](#entropy)\
 [random_device::operator()](#op_call)
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La classe descrive un'origine di numeri casuali e può, ma non deve, essere non deterministica o crittograficamente sicura in base allo standard C++ ISO. Nell'implementazione di Visual Studio i valori prodotti sono non deterministici e crittograficamente sicuri, ma l'esecuzione risulta più lenta rispetto ai generatori creati da motori e adattatori del motore, ad esempio [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md), il motore veloce e di qualità elevata scelto per la maggior parte delle applicazioni.
 
@@ -115,7 +116,7 @@ Costruisce il generatore.
 random_device(const std::string& = "");
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il costruttore inizializza il generatore in base alle esigenze, ignorando il parametro di stringa. Se non è stato possibile inizializzare `random_device`, genera un valore di un tipo definito dall'implementazione derivato dall'oggetto [exception](../standard-library/exception-class.md).
 
@@ -127,7 +128,7 @@ Stima la casualità dell'origine.
 double entropy() const noexcept;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce una stima della casualità dell'origine, misurata in bit.
 
@@ -139,7 +140,7 @@ Restituisce un valore casuale.
 result_type operator()();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Restituisce valori distribuiti in modo uniforme nell'intervallo chiuso [ `min, max`], in base a quanto determinato dalle funzioni membro `min()` e `max()`. Se non è stato possibile ottenere un numero casuale, genera un valore di un tipo definito dall'implementazione derivato dall'oggetto [exception](../standard-library/exception-class.md).
 

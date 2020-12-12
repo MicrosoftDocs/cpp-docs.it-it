@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: unary_negate Class'
 title: Classe unary_negate
 ms.date: 02/21/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
-ms.openlocfilehash: 2d9f0bedd9e541e65f04ac20375f16f41413cf03
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 33907bce7e03005488d23b3ac39666b6310b0e43
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684438"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207410"
 ---
 # <a name="unary_negate-class"></a>Classe unary_negate
 
-Modello di classe che fornisce una funzione membro che nega il valore restituito di una funzione unaria specificata. Deprecato in C++ 17 a favore di [not_fn](functional-functions.md#not_fn).
+Modello di classe che fornisce una funzione membro che nega il valore restituito di una funzione unaria specificata. Deprecato in C++ 17 a favore del [not_fn](functional-functions.md#not_fn).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -31,21 +32,21 @@ class unary_negate
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *Func*
+*Func*\
 La funzione unaria da negare.
 
-\ a *sinistra*
+*sinistra*\
 Operando della funzione unaria da negare.
 
 ## <a name="return-value"></a>Valore restituito
 
 Negazione della funzione unaria.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Il modello di classe archivia una copia di un oggetto funzione unaria *\_Func*. Definisce la funzione membro `operator()` come restituito `!_Func(left)`.
+Il modello di classe archivia una copia di un oggetto funzione unaria *\_ Func*. Definisce la relativa funzione membro `operator()` che restituisce `!_Func(left)` .
 
-Il costruttore di `unary_negate` viene usato di rado in modo diretto. La funzione di supporto [not1](../standard-library/functional-functions.md#not1) costituisce un modo più semplice per dichiarare e usare il predicato adattatore **binary_negator**.
+Il costruttore di `unary_negate` viene usato raramente in modo diretto. La funzione di supporto [not1](../standard-library/functional-functions.md#not1) costituisce un modo più semplice per dichiarare e usare il predicato adattatore **binary_negator**.
 
 ## <a name="example"></a>Esempio
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _ecvt_s'
 title: _ecvt_s
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-ms.openlocfilehash: e76ebd065d323a9ae501ce6a7a5790389c7d5dad
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: abda39ce5c33a5f6b6cca0757411e16c4171cd97
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234211"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206942"
 ---
 # <a name="_ecvt_s"></a>_ecvt_s
 
@@ -101,7 +102,7 @@ Se uno parametro non è valido, come elencato nella tabella seguente, questa fun
 
 **_ecvt_s** potrebbe generare una violazione di accesso se il *buffer* non punta alla memoria valida e non è **null**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_ecvt_s** converte un numero a virgola mobile in una stringa di caratteri. Il *_Value* parametro è il numero a virgola mobile da convertire. Questa funzione Archivia fino a *conteggiare* le cifre di *_Value* come stringa e aggiunge un carattere null (' \ 0'). Se il numero di cifre in *_Value* supera *_Count*, la cifra di ordine inferiore viene arrotondata. Se sono presenti meno di un *numero* di cifre, la stringa viene riempita con zeri.
 

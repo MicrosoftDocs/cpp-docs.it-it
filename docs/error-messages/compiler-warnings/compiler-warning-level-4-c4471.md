@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 4) C4471'
 title: Avviso del compilatore (livello 4) C4471
 ms.date: 04/24/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4471
 ms.assetid: ccfd8bd5-bc1b-4be7-a6ea-0e3a7add6607
-ms.openlocfilehash: 5b8c3ef419a4c6eaf9a674827cd5545a1f1b2bfe
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: cef492bf8aab33f46b3f590a13ffa5462a7ca41d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685502"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203497"
 ---
 # <a name="compiler-warning-level-4-c4471"></a>Avviso del compilatore (livello 4) C4471
 
@@ -19,9 +20,9 @@ ms.locfileid: "90685502"
 
 È stata trovata una dichiarazione con stato di un'enumerazione senza ambito senza un identificatore per il tipo sottostante. Per impostazione predefinita, Visual C++ presuppone che **`int`** sia il tipo sottostante per un'enumerazione. Ciò può causare problemi se nella definizione di enumerazione viene utilizzato un tipo diverso, ad esempio se viene specificato un tipo esplicito diverso o se un tipo diverso viene impostato in modo implicito da un inizializzatore. È anche possibile che si verifichino problemi di portabilità; altri compilatori non presumono **`int`** è il tipo sottostante di un'enumerazione.
 
-Questo avviso è disattivato per impostazione predefinita; è possibile usare/Wall o/w*N*4471 per abilitarlo nella riga di comando o usare #pragma [avviso](../../preprocessor/warning.md) nel file di origine.
+Questo avviso è disattivato per impostazione predefinita; è possibile usare/Wall o/w *N* 4471 per abilitarlo nella riga di comando o usare #pragma [avviso](../../preprocessor/warning.md) nel file di origine.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 In alcuni casi, questo avviso è false. Se una dichiarazione con il valore di un'enumerazione viene visualizzata dopo la definizione, è possibile che venga generato questo avviso. Questo codice, ad esempio, è valido anche se può causare C4471:
 

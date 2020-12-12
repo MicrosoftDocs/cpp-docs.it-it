@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura: usare parallel_invoke per scrivere una routine di ordinamento in parallelo'
 title: 'Procedura: Usare parallel_invoke per scrivere una routine di ordinamento in parallelo'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - structured_task_group class, example
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
-ms.openlocfilehash: 9d84cdbecb7cc6d39cb30077780c558db85888c0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4146bed939e265f611d79c465681c10ef28a1ebe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222719"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205668"
 ---
 # <a name="how-to-use-parallel_invoke-to-write-a-parallel-sort-routine"></a>Procedura: Usare parallel_invoke per scrivere una routine di ordinamento in parallelo
 
@@ -24,7 +25,7 @@ Sebbene l'ordinamento bitonic sia un esempio di una *rete di ordinamento* che or
 > [!NOTE]
 > In questo esempio viene utilizzata, a scopo illustrativo, una routine di ordinamento in parallelo. È inoltre possibile utilizzare gli algoritmi di ordinamento predefiniti che la libreria PPL fornisce: [concorrenza::p arallel_sort](reference/concurrency-namespace-functions.md#parallel_sort), [concorrenza::p arallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort)e [concorrenza::p arallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort). Per ulteriori informazioni, vedere [algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md).
 
-## <a name="sections"></a><a name="top"></a>Sezioni
+## <a name="sections"></a><a name="top"></a> Sezioni
 
 In questo documento vengono descritte le attività seguenti:
 
@@ -32,7 +33,7 @@ In questo documento vengono descritte le attività seguenti:
 
 - [Uso di parallel_invoke per eseguire l'ordinamento bitonic in parallelo](#parallel)
 
-## <a name="performing-bitonic-sort-serially"></a><a name="serial"></a>Esecuzione seriale di un ordinamento bitonic
+## <a name="performing-bitonic-sort-serially"></a><a name="serial"></a> Esecuzione seriale di un ordinamento bitonic
 
 Nell'esempio seguente viene illustrata la versione seriale dell'algoritmo di ordinamento bitonico. La `bitonic_sort` funzione divide la sequenza in due partizioni, Ordina le partizioni in direzioni opposte, quindi unisce i risultati. Questa funzione chiama se stessa due volte in modo ricorsivo per ordinare ogni partizione.
 
@@ -40,7 +41,7 @@ Nell'esempio seguente viene illustrata la versione seriale dell'algoritmo di ord
 
 [All'[inizio](#top)]
 
-## <a name="using-parallel_invoke-to-perform-bitonic-sort-in-parallel"></a><a name="parallel"></a>Uso di parallel_invoke per eseguire l'ordinamento bitonic in parallelo
+## <a name="using-parallel_invoke-to-perform-bitonic-sort-in-parallel"></a><a name="parallel"></a> Uso di parallel_invoke per eseguire l'ordinamento bitonic in parallelo
 
 In questa sezione viene descritto come utilizzare l' `parallel_invoke` algoritmo per eseguire l'algoritmo di ordinamento bitonico in parallelo.
 
@@ -99,7 +100,7 @@ Le versioni parallele di alcuni algoritmi sono migliori solo quando è necessari
 
 Come per qualsiasi algoritmo parallelo, è consigliabile profilare e ottimizzare il codice nel modo appropriato.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [Funzione parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)

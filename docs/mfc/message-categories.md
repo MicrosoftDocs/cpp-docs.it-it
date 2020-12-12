@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: categorie di messaggi'
 title: Categorie di messaggi
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - messages [MFC], Windows
 - message handling [MFC], message types
 ms.assetid: 68e1db75-9da6-4a4d-b2c2-dc4d59f8d87b
-ms.openlocfilehash: 3875a6931b4380f0531e4c1786de6dddfccb76ca
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 66635101a8727e560d21d44546e2e12ace6f33ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625461"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203380"
 ---
 # <a name="message-categories"></a>Categorie di messaggi
 
@@ -35,14 +36,14 @@ Quali tipi di messaggi si scrivono i gestori per la presenza di tre categorie pr
 
    Sono inclusi WM_COMMAND messaggi di notifica da oggetti dell'interfaccia utente: menu, pulsanti della barra degli strumenti e tasti di scelta rapida. Il Framework elabora i comandi in modo diverso rispetto ad altri messaggi e può essere gestito da più tipi di oggetti, come illustrato nelle [destinazioni dei comandi](command-targets.md).
 
-## <a name="windows-messages-and-control-notification-messages"></a><a name="_core_windows_messages_and_control.2d.notification_messages"></a>Messaggi di Windows e messaggi di notifica di controllo
+## <a name="windows-messages-and-control-notification-messages"></a><a name="_core_windows_messages_and_control.2d.notification_messages"></a> Messaggi di Windows e messaggi di Control-Notification
 
 I messaggi nelle categorie 1 e 2, ovvero messaggi di Windows e notifiche di controllo, sono gestiti da Windows: oggetti delle classi derivate dalla classe `CWnd` . Sono incluse `CFrameWnd` , `CMDIFrameWnd` , `CMDIChildWnd` , `CView` , `CDialog` e le classi derivate da queste classi di base. Tali oggetti incapsulano un oggetto `HWND` , un handle per una finestra di Windows.
 
-## <a name="command-messages"></a><a name="_core_command_messages"></a>Messaggi di comando
+## <a name="command-messages"></a><a name="_core_command_messages"></a> Messaggi di comando
 
 I messaggi nella categoria 3, ovvero i comandi, possono essere gestiti da una varietà più ampia di oggetti: documenti, modelli di documento e oggetto applicazione, oltre a finestre e visualizzazioni. Quando un comando interessa direttamente un determinato oggetto, è opportuno che l'oggetto gestisca il comando. Ad esempio, il comando Apri nel menu file viene associato logicamente all'applicazione: l'applicazione apre un documento specificato al momento della ricezione del comando. Il gestore per il comando Open è quindi una funzione membro della classe dell'applicazione. Per ulteriori informazioni sui comandi e sul modo in cui vengono instradati agli oggetti, vedere [come il Framework chiama un gestore](how-the-framework-calls-a-handler.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Messaggi e comandi nel framework](messages-and-commands-in-the-framework.md)
+[Messaggi e comandi nel Framework](messages-and-commands-in-the-framework.md)

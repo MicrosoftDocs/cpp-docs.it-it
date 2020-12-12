@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Abilitazione internazionale'
 title: Abilitazione di risorse internazionali
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-ms.openlocfilehash: ff0fb4102a0453b900b5b406739492a9420a5b07
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 15db7e27b65f4225917945820c936e572fc5da94
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228089"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207267"
 ---
 # <a name="international-enabling"></a>Abilitazione di risorse internazionali
 
@@ -38,7 +39,7 @@ La maggior parte del codice C e C++ tradizionale si basa sui presupposti relativ
 > [!NOTE]
 > I set di caratteri europei e MBCS hanno alcuni caratteri, ad esempio lettere accentate, con codici di caratteri maggiori di 0x80. Poiché la maggior parte del codice usa caratteri firmati, questi caratteri superiori a 0x80 vengono estesi con segno quando vengono convertiti in **`int`** . Si tratta di un problema per l'indicizzazione delle matrici perché i caratteri estesi del segno, che sono negativi, indici al di fuori della matrice. Sono inoltre univoche le lingue che utilizzano MBCS, ad esempio il giapponese. Poiché un carattere può essere costituito da 1 o 2 byte, è sempre necessario modificare entrambi i byte nello stesso momento.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Unicode e MBCS](../text/unicode-and-mbcs.md)<br/>
 [Strategie di internazionalizzazione](../text/internationalization-strategies.md)
