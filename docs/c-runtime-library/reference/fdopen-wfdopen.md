@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _fdopen, _wfdopen'
 title: _fdopen, _wfdopen
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _tfdopen function
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
-ms.openlocfilehash: 227f9e31c689b0259c429e2ffd9fce074903bd71
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e7b255017f0c4de060a91307bc816eb46af03d20
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920170"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322621"
 ---
 # <a name="_fdopen-_wfdopen"></a>_fdopen, _wfdopen
 
@@ -77,23 +78,23 @@ Ognuna di queste funzioni restituisce un puntatore al flusso aperto. Un valore d
 
 Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **_fdopen** associa un flusso di i/o al file identificato da *FD*e consente quindi a un file aperto per l'i/o di basso livello di essere memorizzato nel buffer e formattato. **_wfdopen** è una versione a caratteri wide di **_fdopen**; l'argomento *mode* per **_wfdopen** è una stringa di caratteri wide. **_wfdopen** e **_fdopen** altrimenti si comportano in modo identico.
+La funzione **_fdopen** associa un flusso di i/o al file identificato da *FD* e consente quindi a un file aperto per l'i/o di basso livello di essere memorizzato nel buffer e formattato. **_wfdopen** è una versione a caratteri wide di **_fdopen**; l'argomento *mode* per **_wfdopen** è una stringa di caratteri wide. **_wfdopen** e **_fdopen** altrimenti si comportano in modo identico.
 
-I descrittori di file passati in **_fdopen** sono di proprietà del **file &#42;** flusso restituito. Se **_fdopen** ha esito positivo, non chiamare [ \_Close](close.md) sul descrittore del file. La chiamata di [fclose](fclose-fcloseall.md) sul **file restituito &#42;** chiude anche il descrittore del file.
+I descrittori di file passati in **_fdopen** sono di proprietà del **file &#42;** flusso restituito. Se **_fdopen** ha esito positivo, non chiamare [ \_ Close](close.md) sul descrittore del file. La chiamata di [fclose](fclose-fcloseall.md) sul **file restituito &#42;** chiude anche il descrittore del file.
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
-|Routine Tchar.h|\_UNICODE e \_MBCS non definiti|\_MBCS definito|\_Definito UNICODE|
+|Routine Tchar.h|\_UNICODE e \_ MBCS non definiti|\_MBCS definito|\_Definito UNICODE|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tfdopen**|**_fdopen**|**_fdopen**|**_wfdopen**|
 
 La stringa di caratteri *mode* specifica il tipo di accesso ai file richiesto per il file:
 
-| *mode* | Accesso |
+| *mode* | Access |
 |--------|--------|
 | **r** | Viene aperto per la lettura. Se il file non esiste o non viene trovato, la chiamata di **fopen** ha esito negativo. |
 | **w** | Apre un file vuoto per la scrittura. Se il file specificato esiste, il contenuto viene eliminato in modo permanente. |
@@ -111,30 +112,30 @@ Oltre ai valori precedenti, è anche possibile includere i caratteri seguenti in
 | **t** | Aprire in modalità testo (convertita). In questa modalità, le combinazioni di ritorno a capo-avanzamento di riga (CR-LF) vengono convertite in un avanzamento riga (LF) al momento dell'input e i caratteri di avanzamento riga vengono convertiti in combinazioni di ritorno a capo-avanzamento di riga (CR-LF) al momento dell'output. Inoltre, CTRL+Z viene interpretato nell'input come carattere di fine file. |
 | **b** | Aprire in modalità binaria (non convertita). Tutte le traduzioni dalla modalità **t** vengono evitate. |
 | **c** | Abilitare il flag commit per il *nome file* associato, in modo che il contenuto del buffer di file venga scritto direttamente su disco se viene chiamato **fflush** o **_flushall** . |
-| **n** | Reimpostare il flag di commit per il *nome file* associato su "no-commit". Questa è la modalità predefinita. Esegue inoltre l'override del flag commit globale se il programma viene collegato a commode. obj. Il valore predefinito del flag commit globale è "no-commit", a meno che il programma non venga collegato in modo esplicito a commode. obj. |
+| **n** | Reimpostare il flag di commit per il *nome file* associato su "no-commit". Questo è il valore predefinito. Esegue inoltre l'override del flag commit globale se il programma viene collegato a commode. obj. Il valore predefinito del flag commit globale è "no-commit", a meno che il programma non venga collegato in modo esplicito a commode. obj. |
 
-Le opzioni della *modalità* **t**, **c**e **n** sono estensioni Microsoft per **fopen** e **_fdopen**. Non usarle se si desidera mantenere la portabilità ANSI.
+Le opzioni della *modalità* **t**, **c** e **n** sono estensioni Microsoft per **fopen** e **_fdopen**. Non usarle se si desidera mantenere la portabilità ANSI.
 
-Se **t** o **b** non è specificato in *modalità*, la modalità di conversione predefinita è definita dalla variabile [ \_globale fmode](../../c-runtime-library/fmode.md). Se **t** o **b** è preceduto dall'argomento, la funzione ha esito negativo e restituisce null. Per una discussione sulle modalità testo e binaria, vedere [I/O file modalità testo e binaria](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
+Se **t** o **b** non è specificato in *modalità*, la modalità di conversione predefinita è definita dalla variabile globale [ \_ fmode](../../c-runtime-library/fmode.md). Se **t** o **b** è preceduto dall'argomento, la funzione ha esito negativo e restituisce null. Per una discussione sulle modalità testo e binaria, vedere [I/O file modalità testo e binaria](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
-I caratteri validi per la stringa della *modalità* utilizzata in **fopen** e **_fdopen** corrispondono agli argomenti *Oflag* usati in [ \_Open](open-wopen.md) e [ \_sopen](sopen-wsopen.md), come illustrato nella tabella seguente:
+I caratteri validi per la stringa della *modalità* utilizzata in **fopen** e **_fdopen** corrispondono agli argomenti *Oflag* usati in [ \_ Open](open-wopen.md) e [ \_ sopen](sopen-wsopen.md), come illustrato nella tabella seguente:
 
 |Caratteri nella stringa della *modalità*|Valore *Oflag* equivalente per **_open** e **_sopen**|
 |---------------------------------|---------------------------------------------------|
-|**un**|**\_O\_WRONLY &#124; \_o\_Append** (in genere ** \_\_o WRONLY \_&#124;\_o crea \_&#124;\_o Append**)|
-|**a +**|**\_O\_RDWR &#124; \_o\_Append** (in genere ** \_\_o RDWR \_&#124;\_o Append \_&#124;\_o create** )|
-|**r**|**\_O\_RDONLY**|
-|**r +**|**\_O\_RDWR**|
-|**w**|**\_O\_WRONLY** (in ** \_genere\_o WRONLY \_&#124;\_o crea \_&#124;\_o tronca**)|
-|**w +**|**\_O\_RDWR** (in ** \_genere\_o RDWR \_&#124;\_o crea \_&#124;\_o tronca**)|
-|**b**|**\_binario\_O**|
-|**t**|**\_testo\_O**|
+|**un**|**\_ O \_ WRONLY &#124; \_ o \_ Append** (in genere **\_ o \_ WRONLY &#124; \_ o \_ Crea &#124; \_ o \_ Append**)|
+|**a +**|**\_ O \_ RDWR &#124; \_ o \_ Append** (in genere **\_ o \_ RDWR &#124; \_ o \_ Append &#124; \_ o \_ create** )|
+|**r**|**\_O \_ RDONLY**|
+|**r +**|**\_O \_ RDWR**|
+|**w**|**\_ O \_ WRONLY** (in genere **\_ o \_ WRONLY &#124; \_ o \_ Crea &#124; \_ o \_ Tronca**)|
+|**w +**|**\_ O \_ RDWR** (in genere **\_ o \_ RDWR &#124; \_ o \_ Crea &#124; \_ o \_ Tronca**)|
+|**b**|**\_\_binario O**|
+|**t**|**\_\_Testo O**|
 |**c**|Nessuno|
 |**n**|Nessuno|
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**_fdopen**|\<stdio.h>|
 |**_wfdopen**|\<stdio.h> o \<wchar.h>|
@@ -191,11 +192,11 @@ Line two
 Lines in file: 2
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
-[\_duplicato \_, dup2](dup-dup2.md)<br/>
-[fclose, \_fcloseall](fclose-fcloseall.md)<br/>
-[fopen, \_wfopen](fopen-wfopen.md)<br/>
-[freopen, \_wfreopen](freopen-wfreopen.md)<br/>
-[\_Apri, \_wopen](open-wopen.md)<br/>
+[\_duplicato, \_ dup2](dup-dup2.md)<br/>
+[fclose, \_ fcloseall](fclose-fcloseall.md)<br/>
+[fopen, \_ wfopen](fopen-wfopen.md)<br/>
+[freopen, \_ wfreopen](freopen-wfreopen.md)<br/>
+[\_Apri, \_ wopen](open-wopen.md)<br/>

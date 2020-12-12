@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: record utente'
 title: Record utente
 ms.date: 05/09/2019
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-ms.openlocfilehash: 2de4cc9227da9d4ad8a012dacd85500ab698c4ae
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1d31ef93bb1b06925306c84d436d7a7837a08431
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509431"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322325"
 ---
 # <a name="user-records"></a>Record utente
 
@@ -88,6 +89,6 @@ END_ACCESSOR_MAP()
 };
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

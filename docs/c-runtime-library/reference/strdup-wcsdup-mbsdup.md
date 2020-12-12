@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _strdup, _wcsdup, _mbsdup'
 title: _strdup, _wcsdup, _mbsdup
 ms.date: 4/2/2020
 api_name:
@@ -48,19 +49,19 @@ helpviewer_keywords:
 - tcsdup function
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
-ms.openlocfilehash: 42b4a890c1c7f350b83bb92a548d716ee6d9ebfc
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b080f614f46aabc63e798c16113cffe45008047d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914463"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322446"
 ---
 # <a name="_strdup-_wcsdup-_mbsdup"></a>_strdup, _wcsdup, _mbsdup
 
 Duplica le stringhe.
 
 > [!IMPORTANT]
-> non è possibile usare **_mbsdup** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [funzioni CRT non supportate nelle app piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> non è possibile usare **_mbsdup** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere                  [funzioni CRT non supportate nelle app piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -85,7 +86,7 @@ Stringa di origine con terminazione null.
 
 Ognuna di queste funzioni restituisce un puntatore al percorso di archiviazione per la stringa copiata o **null** se non è possibile allocare l'archiviazione.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_strdup** chiama [malloc](malloc.md) per allocare spazio di archiviazione per una copia di *strSource* e quindi copia *strSource* nello spazio allocato.
 

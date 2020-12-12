@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: &lt; &gt; operatori unordered_map'
 title: Operatori &lt;unordered_map&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: 2c09fa0070151f7cdd502e8f5583645110e91c5b
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: b7bf3712a7068b3af2d8316249d169854401b93e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90741957"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321478"
 ---
 # <a name="ltunordered_mapgt-operators"></a>Operatori &lt;unordered_map&gt;
 
@@ -39,7 +40,7 @@ Oggetto di tipo `unordered_map`.
 
 **`true`** Se il unordered_maps non è uguale. **`false`** se sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra oggetti unordered_map non è influenzato dall'ordine arbitrario in cui vengono archiviati gli elementi. Due oggetti unordered_map sono uguali se hanno lo stesso numero di elementi e gli elementi di un contenitore sono la permutazione degli elementi dell'altro contenitore. In caso contrario, non sono uguali.
 
@@ -101,7 +102,7 @@ Oggetto di tipo `unordered_map`.
 
 **`true`** Se la unordered_maps è uguale; **`false`** se non sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra oggetti unordered_map non è influenzato dall'ordine arbitrario in cui vengono archiviati gli elementi. Due oggetti unordered_map sono uguali se hanno lo stesso numero di elementi e gli elementi di un contenitore sono la permutazione degli elementi dell'altro contenitore. In caso contrario, non sono uguali.
 
@@ -163,7 +164,7 @@ Oggetto di tipo `unordered_multimap`.
 
 **`true`** Se il unordered_multimaps non è uguale. **`false`** se sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra oggetti unordered_multimap non è influenzato dall'ordine arbitrario in cui vengono archiviati gli elementi. Due oggetti unordered_multimap sono uguali se hanno lo stesso numero di elementi e gli elementi di un contenitore sono la permutazione degli elementi dell'altro contenitore. In caso contrario, non sono uguali.
 
@@ -226,7 +227,7 @@ Oggetto di tipo `unordered_multimap`.
 
 **`true`** Se la unordered_multimaps è uguale; **`false`** se non sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra oggetti unordered_multimap non è influenzato dall'ordine arbitrario in cui vengono archiviati gli elementi. Due oggetti unordered_multimap sono uguali se hanno lo stesso numero di elementi e gli elementi di un contenitore sono la permutazione degli elementi dell'altro contenitore. In caso contrario, non sono uguali.
 

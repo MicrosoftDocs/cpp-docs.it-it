@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: espressioni lambda in C++'
 title: Espressioni lambda in C++
 ms.date: 05/07/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: 6fcc26c3ed86c86264773a70ac16501c102e1861
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5e65279fa8740876ad8824803ec459ced154f952
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213333"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321041"
 ---
 # <a name="lambda-expressions-in-c"></a>Espressioni lambda in C++
 
@@ -149,7 +150,7 @@ auto y = [] (auto first, auto second)
 
 Un'espressione lambda può accettare un'altra espressione lambda come argomento. Per ulteriori informazioni, vedere "espressioni lambda di ordine superiore" nell'argomento [esempi di espressioni lambda](../cpp/examples-of-lambda-expressions.md).
 
-Poiché un elenco di parametri è facoltativo, è possibile omettere le parentesi vuote se non si passano argomenti all'espressione lambda e il relativo dichiaratore lambda non contiene la *specifica dell'eccezione*, il *tipo restituito finale*o **`mutable`** .
+Poiché un elenco di parametri è facoltativo, è possibile omettere le parentesi vuote se non si passano argomenti all'espressione lambda e il relativo dichiaratore lambda non contiene la *specifica dell'eccezione*, il *tipo restituito finale* o **`mutable`** .
 
 ### <a name="mutable-specification"></a>Specifica modificabile
 
@@ -322,7 +323,7 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
 
 Per ulteriori informazioni, vedere [generate_n](../standard-library/algorithm-functions.md#generate_n).
 
-## <a name="constexpr-lambda-expressions"></a>`constexpr`espressioni lambda
+## <a name="constexpr-lambda-expressions"></a>`constexpr` espressioni lambda
 
 **Visual Studio 2017 versione 15,3 e successive** (disponibile con [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) ): un'espressione lambda può essere dichiarata come **`constexpr`** o usata in un'espressione costante quando l'inizializzazione di ogni membro dati acquisito o introdotto è consentita all'interno di un'espressione costante.
 
@@ -376,7 +377,7 @@ Per determinare se un modificatore è supportato dalle espressioni lambda, veder
 
 Oltre alla funzionalità lambda standard C++ 11, Visual Studio supporta le espressioni lambda senza stato, che sono Omni-convertibili in puntatori a funzione che usano convenzioni di chiamata arbitrarie.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimenti per il linguaggio C++](../cpp/cpp-language-reference.md)<br/>
 [Oggetti funzione nella libreria standard C++](../standard-library/function-objects-in-the-stl.md)<br/>

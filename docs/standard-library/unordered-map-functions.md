@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; &gt; funzioni unordered_map'
 title: Funzioni &lt;unordered_map&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 ms.assetid: cf2e4115-f205-4a0e-90be-a143ffcc1f44
 helpviewer_keywords:
 - std::swap (unordered_map/multimap)
-ms.openlocfilehash: 9e572e4ba8cb4c6cb15329342a7947c35ece7270
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2a1374935fa8116a3cb7e5447a659235acc0ebaf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844262"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321501"
 ---
 # <a name="ltunordered_mapgt-functions"></a>Funzioni &lt;unordered_map&gt;
 
@@ -54,7 +55,7 @@ Primo contenitore da scambiare.
 *Ok*\
 Secondo contenitore da scambiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione modello esegue `left.` [unordered_map:: swap](../standard-library/unordered-map-class.md#swap) `(right)` .
 
@@ -147,7 +148,7 @@ Primo contenitore da scambiare.
 *Ok*\
 Secondo contenitore da scambiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione modello esegue `left.` [unordered_multimap:: swap](../standard-library/unordered-multimap-class.md#swap) `(right)` .
 

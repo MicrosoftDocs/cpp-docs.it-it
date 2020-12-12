@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: feholdexcept'
 title: feholdexcept
 ms.date: 04/05/2018
 api_name:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - feholdexcept function
 ms.assetid: 88e512ae-b5d8-452c-afe9-c824cd3ef1d8
-ms.openlocfilehash: bd55a4ed627d731f7246d589d4b74b4173e31d4e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 89ccf9bedb05752202152f6bd862b11b2f765322
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941194"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322524"
 ---
 # <a name="feholdexcept"></a>feholdexcept
 
@@ -53,9 +54,9 @@ Puntatore a un oggetto **fenv_t** per contenere una copia dell'ambiente a virgol
 
 Restituisce zero se e solo se la funzione è in grado di attivare correttamente la gestione delle eccezioni a virgola mobile senza interruzioni.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-La funzione **feholdexcept** viene usata per archiviare lo stato dell'ambiente a virgola mobile corrente nell'oggetto **fenv_t** a cui punta *penv*e per impostare l'ambiente in modo da non interrompere l'esecuzione sulle eccezioni a virgola mobile. Questa attività è nota come modalità senza interruzioni.  Questa modalità continua fino a quando l'ambiente viene ripristinato tramite [fesetenv](fesetenv1.md) o [feupdateenv](feupdateenv.md).
+La funzione **feholdexcept** viene usata per archiviare lo stato dell'ambiente a virgola mobile corrente nell'oggetto **fenv_t** a cui punta *penv* e per impostare l'ambiente in modo da non interrompere l'esecuzione sulle eccezioni a virgola mobile. Questa attività è nota come modalità senza interruzioni.  Questa modalità continua fino a quando l'ambiente viene ripristinato tramite [fesetenv](fesetenv1.md) o [feupdateenv](feupdateenv.md).
 
 È possibile usare questa funzione all'inizio di una subroutine che deve nascondere uno o più eccezioni a virgola mobile dal chiamante. Per segnalare un'eccezione, è possibile cancellare semplicemente le eccezioni indesiderate tramite [feclearexcept](feclearexcept1.md) e quindi terminare la modalità non di arresto con una chiamata a **feupdateenv**.
 
@@ -69,7 +70,7 @@ Per usare questa funzione, è necessario disattivare le ottimizzazioni a virgola
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
 [feclearexcept](feclearexcept1.md)<br/>

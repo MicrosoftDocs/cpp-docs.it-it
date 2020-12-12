@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CMFCRibbonSeparator'
 title: Classe CMFCRibbonSeparator
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-ms.openlocfilehash: f435dc5ae8821a6d5626af2f93710a1672fd374c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: db8e7f92089d1e6332fdb2ad057398c465c72f97
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831801"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321748"
 ---
 # <a name="cmfcribbonseparator-class"></a>Classe CMFCRibbonSeparator
 
@@ -39,17 +40,17 @@ Implementa il separatore della barra multifunzione.
 class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[CMFCRibbonSeparator::CMFCRibbonSeparator](#cmfcribbonseparator)|Costruisce un oggetto `CMFCRibbonSeparator`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|Aggiunge un separatore all'elenco dei **comandi** nella finestra di dialogo **Personalizza** . Esegue l'override di [CMFCRibbonBaseElement:: AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox).|
 |`CMFCRibbonSeparator::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|
@@ -57,7 +58,7 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[CMFCRibbonSeparator:: CopyFrom](#copyfrom)|Metodo Copy che imposta le variabili membro di un separatore da un altro oggetto.|
 |[CMFCRibbonSeparator:: GetRegularSize](#getregularsize)|Restituisce la dimensione di un separatore.|
@@ -66,7 +67,7 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 |[CMFCRibbonSeparator:: onpare](#ondraw)|Chiamata eseguita dal sistema per creare il separatore sulla barra multifunzione o sulla barra di accesso rapido.|
 |[CMFCRibbonSeparator::OnDrawOnList](#ondrawonlist)|Chiamato dal sistema per creare il separatore nell'elenco dei **comandi** .|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un separatore della barra multifunzione è una linea verticale o orizzontale che separa logicamente gli elementi della barra multifunzione. È possibile disegnare un separatore sul controllo Ribbon, sul menu principale dell'applicazione, sulla barra di stato della barra di stato e sulla barra di accesso rapido.
 
@@ -130,7 +131,7 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 *bIsHoriz*<br/>
 in Se TRUE, il separatore è orizzontale; Se FALSE, il separatore è verticale.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I separatori orizzontali vengono utilizzati nei menu applicazione. I separatori verticali vengono utilizzati nelle barre degli strumenti.
 
@@ -194,7 +195,7 @@ virtual BOOL IsTabStop() const;
 
 Sempre FALSE per questa classe.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un separatore della barra multifunzione non è una tabulazione.
 
@@ -245,7 +246,7 @@ in Ignorato.
 *bHighlighted*\
 in Ignorato.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)

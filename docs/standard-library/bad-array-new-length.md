@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: bad_array_new_length Class'
 title: Classe bad_array_new_length
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - bad_alloc class
 ms.assetid: 6429a8e6-5a49-4907-8d56-f4a4ec8131d0
-ms.openlocfilehash: c4f4f58f7b28960bbacf695a675fbe4f20a54192
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e9de10b6fee215651ac8ff6ce2fce4af55ce6c82
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443698"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321640"
 ---
 # <a name="bad_array_new_length-class"></a>Classe bad_array_new_length
 
@@ -32,9 +33,9 @@ Il valore restituito da `what` è una stringa C definita dall'implementazione. N
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<nuova >
+**Intestazione:**\<new>
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[classe exception](../standard-library/exception-class.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Sicurezza dei thread nella libreria standard C++)
+[Classe Exception](../standard-library/exception-class.md)\
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: controllo Directory'
 title: Controllo directory
 ms.date: 11/04/2016
 helpviewer_keywords:
 - controls [C++], directory
 - directory control routines
 ms.assetid: a72dcf6f-f366-4d20-8850-0e19cc53ca18
-ms.openlocfilehash: 640ce8a8665936b604c6e8e6270e358a200c880a
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a4115fc127292916f6f5b013f75104ed5771e5ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438550"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321235"
 ---
 # <a name="directory-control"></a>Controllo directory
 
@@ -18,7 +19,7 @@ Queste routine accedono, modificano e ottengono le informazioni sulla struttura 
 
 ## <a name="directory-control-routines"></a>Routine di controllo directory
 
-|Routine|Uso|
+|Routine|Usa|
 |-------------|---------|
 |[_chdir, _wchdir](../c-runtime-library/reference/chdir-wchdir.md)|Cambia la cartella di lavoro corrente|
 |[_chdrive](../c-runtime-library/reference/chdrive.md)|Cambia l'unità corrente|
@@ -31,7 +32,7 @@ Queste routine accedono, modificano e ottengono le informazioni sulla struttura 
 |[_rmdir, _wrmdir](../c-runtime-library/reference/rmdir-wrmdir.md)|Rimuove la directory|
 |[_searchenv, _wsearchenv](../c-runtime-library/reference/searchenv-wsearchenv.md), [_searchenv_s, _wsearchenv_s](../c-runtime-library/reference/searchenv-s-wsearchenv-s.md)|Cerca un file specificato nei percorsi indicati|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
 [Gestione di file](../c-runtime-library/file-handling.md)<br/>

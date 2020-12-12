@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: Guida al porting: COM Spy'
 title: 'Guida al porting: COM Spy'
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-ms.openlocfilehash: c21049a2faa8bb34ecd1ba75a5beda1db119f0fc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 69a97a04d255e64fdde0d863e637d72dfb238967
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230285"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322635"
 ---
 # <a name="porting-guide-com-spy"></a>Guida al porting: COM Spy
 
@@ -168,7 +169,7 @@ private void button1_Click(object sender, EventArgs e)
 
 Il codice è stato eseguito senza problemi e, con COM Spy in esecuzione e configurato per il monitoraggio del componente `Dog`, sono apparsi numerosi dati relativi all'attività.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Porting e aggiornamento: esempi e case study](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Esempio successivo: Spy++](../porting/porting-guide-spy-increment.md)<br/>

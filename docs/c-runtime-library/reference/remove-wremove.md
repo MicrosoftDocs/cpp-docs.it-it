@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Remove, _wremove'
 title: remove, _wremove
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: bf3eedaa9c24e7385686e2343857e69171e43090
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c17215803e03e1e59df86b6049249a824d5615c9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917832"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322511"
 ---
 # <a name="remove-_wremove"></a>remove, _wremove
 
@@ -69,7 +70,7 @@ Ognuna di queste funzioni restituisce 0 se il file viene eliminato correttamente
 
 Per ulteriori informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **remove** elimina il file specificato da *path*. **_wremove** è una versione a caratteri wide di **_remove**; l'argomento *path* per **_wremove** è una stringa di caratteri wide. **_wremove** e **_remove** si comportano in modo identico. Tutti gli handle in un file devono essere chiusi prima che possano essere eliminati.
 
@@ -79,13 +80,13 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tremove**|**rimozione**|**rimozione**|**_wremove**|
+|**_tremove**|**remove**|**remove**|**_wremove**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**rimozione**|\<stdio.h> o \<io.h>|
+|**remove**|\<stdio.h> o \<io.h>|
 |**_wremove**|\<stdio.h> o \<wchar.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
@@ -123,7 +124,7 @@ This file will be deleted.
 Deleted 'CRT_REMOVE.TXT'
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Gestione dei file](../../c-runtime-library/file-handling.md)<br/>
+[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
 [_unlink, _wunlink](unlink-wunlink.md)<br/>

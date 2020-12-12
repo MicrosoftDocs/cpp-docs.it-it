@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: importazione'
 title: Import (attributo COM C++)
 ms.date: 10/03/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - import attribute
 ms.assetid: ebf07cae-39fb-4047-8b57-54af0a9a83de
-ms.openlocfilehash: 6b146bdad7d870b534c371a4396993202cc83a4b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a3ebb7aa625c0a422197662973985275647a049f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842312"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321402"
 ---
 # <a name="import"></a>importazione
 
@@ -30,7 +31,7 @@ Specifica un altro file con estensione IDL, FAD o di intestazione contenente le 
 *idl_file*<br/>
 Nome di un file con estensione IDL che si desidera importare nella libreria dei tipi del progetto corrente.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'attributo **Import** C++ fa sì `#import` che un'istruzione venga posizionata sotto l' `import "docobj.idl"` istruzione nel file con estensione IDL generato. L'attributo **Import** ha la stessa funzionalità dell'attributo MIDL [Import](/windows/win32/Midl/import) .
 
@@ -71,7 +72,7 @@ library MyLib {
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi autonomi](stand-alone-attributes.md)<br/>

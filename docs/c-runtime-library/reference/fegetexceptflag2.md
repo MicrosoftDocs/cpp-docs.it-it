@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: fegetexceptflag'
 title: fegetexceptflag
 ms.date: 04/05/2018
 api_name:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - fegetexceptflag function
 ms.assetid: 2d28f0ca-70c9-4cff-be8b-3d876eacde71
-ms.openlocfilehash: b840408ce704ad5519fbf233de41c8d5422006ad
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: 9690263168c9eef46b5a8b684fa00dfd9d6f8715
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972185"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322563"
 ---
 # <a name="fegetexceptflag"></a>fegetexceptflag
 
@@ -50,18 +51,18 @@ int fegetexceptflag(
 *pstatus*<br/>
 Puntatore a un oggetto **fexcept_t** per contenere i valori correnti dei flag di eccezione specificati da *excepts*.
 
-*excepts*<br/>
+*eccetto*<br/>
 Flag di eccezione a virgola mobile da archiviare in *pStatus*.
 
 ## <a name="return-value"></a>Valore restituito
 
 Se ha esito positivo, restituisce 0. In caso contrario, viene restituito un valore diverso da zero.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-La funzione **fegetexceptflag** archivia lo stato corrente dei flag di stato delle eccezioni a virgola mobile specificati da *excepts* nell'oggetto **fexcept_t** a cui fa riferimento *pStatus*.  *pStatus* deve puntare a un oggetto **fexcept_t** valido oppure il comportamento successivo non è definito. La funzione **fegetexceptflag** supporta queste macro di eccezioni, definite in \<fenv. h >:
+La funzione **fegetexceptflag** archivia lo stato corrente dei flag di stato delle eccezioni a virgola mobile specificati da *excepts* nell'oggetto **fexcept_t** a cui fa riferimento *pStatus*.  *pStatus* deve puntare a un oggetto **fexcept_t** valido oppure il comportamento successivo non è definito. La funzione **fegetexceptflag** supporta queste macro di eccezioni, definite in \<fenv.h> :
 
-|Macro di eccezioni|Descrizione|
+|Macro di eccezioni|Description|
 |---------------------|-----------------|
 |FE_DIVBYZERO|Si è verificato un errore di singolarità o polo in un'operazione precedente a virgola mobile. È stato creato un valore di infinità.|
 |FE_INEXACT|La funzione è stata forzata ad arrotondare il risultato archiviato di un'operazione precedente a virgola mobile.|
@@ -74,7 +75,7 @@ L'argomento *excepts* può essere zero, una delle macro di eccezioni a virgola m
 
 Per usare questa funzione, è necessario disattivare le ottimizzazioni a virgola mobile che potrebbero impedire l'accesso tramite la direttiva `#pragma fenv_access(on)` prima della chiamata. Per altre informazioni, vedere [fenv_access](../../preprocessor/fenv-access.md).
 
-## <a name="requirements"></a>Requisiti di
+## <a name="requirements"></a>Requisiti
 
 |Funzione|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
@@ -82,7 +83,7 @@ Per usare questa funzione, è necessario disattivare le ottimizzazioni a virgola
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Alphabetical Function Reference](crt-alphabetical-function-reference.md) (Riferimento alfabetico alle funzioni)<br/>
+[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
 [fesetexceptflag](fesetexceptflag2.md)<br/>

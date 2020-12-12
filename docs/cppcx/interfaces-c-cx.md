@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: interfacce (C++/CX)'
 title: Interfacce (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-ms.openlocfilehash: df010468d5e90fe61ac2cf57c754ac5ed01b1c0f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 590b1b80ada186f90bfd38ed9dcdc8a35c34020f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230987"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97320933"
 ---
 # <a name="interfaces-ccx"></a>Interfacce (C++/CX)
 
@@ -89,13 +90,13 @@ Ecco come è possibile usare i tipi di Windows Runtime per creare un'interfaccia
 
 - Un'interfaccia generica chiusa dispone di un UUID generato in modo implicito. Un utente non può specificare l'UUID.
 
-- Nell'interfaccia, si presuppone che qualsiasi riferimento all'interfaccia corrente, in un parametro di metodo, un valore restituito o una proprietà, faccia riferimento all'istanza corrente. Ad esempio, *IMyIntf* indica *IMyIntf \<T> *.
+- Nell'interfaccia, si presuppone che qualsiasi riferimento all'interfaccia corrente, in un parametro di metodo, un valore restituito o una proprietà, faccia riferimento all'istanza corrente. Ad esempio, *IMyIntf* indica *IMyIntf \<T>*.
 
 - Quando il tipo di un parametro di metodo è un parametro di tipo, la dichiarazione di tale parametro o variabile contiene il nome del parametro di tipo senza dichiaratori di puntatore, riferimento nativo o handle. In altre parole, non si scrive mai "T^".
 
 - Le classi di riferimento basate su modelli devono essere private, Possono implementare interfacce generiche e passare il parametro di modello *t* all'argomento generico *t*. Ogni creazione di istanza di una classe di riferimento basata su modelli è a sua volta una classe di riferimento.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Sistema di tipi](../cppcx/type-system-c-cx.md)<br/>
 [Riferimenti per il linguaggio C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>

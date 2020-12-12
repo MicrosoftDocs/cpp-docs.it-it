@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: routine di debug'
 title: Routine di debug
 ms.date: 04/10/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - debug macros
 - debugging [CRT], runtime routines
 ms.assetid: cb4d2664-10f3-42f7-a516-595558075471
-ms.openlocfilehash: 59e705947856ba9fe9477e88328b1fb2344abb7c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 60857549cbbb0871da208708e9acd812444b3274
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842494"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321284"
 ---
 # <a name="debug-routines"></a>Routine di debug
 
@@ -33,7 +34,7 @@ La versione di debug della libreria di runtime C offre numerosi servizi di diagn
 
 Per usare queste routine, il flag [_DEBUG](../c-runtime-library/debug.md) deve essere definito. Tutte queste routine non eseguono alcuna operazione nella versione finale di un'applicazione. Per altre informazioni sull'uso delle nuove routine di debug, vedere [Tecniche di debug CRT](/visualstudio/debugger/crt-debugging-techniques).
 
-| Routine | Uso |
+| Routine | Usa |
 |--|--|
 | [`_ASSERT`](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) | Valutare un'espressione e generare un report di debug quando il risultato è FALSE |
 | [`_ASSERTE`](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) | Simile a **`_ASSERT`** , ma include l'espressione non riuscita nel report generato |
@@ -154,7 +155,7 @@ Alcuni operatori C++ e funzioni di runtime C si comportano in modo diverso quand
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
 [Controllo degli errori di run-time](../c-runtime-library/run-time-error-checking.md)<br/>

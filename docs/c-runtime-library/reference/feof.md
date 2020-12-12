@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: feof'
 title: feof
 ms.date: 4/2/2020
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-ms.openlocfilehash: 2b3a8d35491272409ecf911fe2f98ca60b2b2b38
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6bfa0382878cef2843f3a6a6e2ba6e6d8c5bed8a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920160"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322537"
 ---
 # <a name="feof"></a>feof
 
@@ -57,7 +58,7 @@ La funzione **feof** restituisce un valore diverso da zero se un'operazione di l
 
 Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La routine **feof** (implementata sia come funzione che come macro) determina se è stata passata la fine del *flusso* . Quando viene passata la fine del file, le operazioni di lettura restituiscono un indicatore di fine file fino a quando il flusso non viene chiuso o fino a quando non viene chiamato [Rewind](rewind.md), **fsetpos**, [fseek](fseek-fseeki64.md)o **clearerr** .
 
@@ -67,7 +68,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**feof**|\<stdio.h>|
 
@@ -126,7 +127,7 @@ Line two.
 Number of bytes read = 19
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione degli errori](../../c-runtime-library/error-handling-crt.md)<br/>
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>

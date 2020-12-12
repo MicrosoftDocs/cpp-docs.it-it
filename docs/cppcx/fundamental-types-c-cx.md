@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: tipi fondamentali (C++/CX)'
 title: Tipi fondamentali (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
-ms.openlocfilehash: 3d484d9490a0a5b2ee2e7f92381528124b47701c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 40e0a849d0b838f53ddaea26c8993dcfe625ed5d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231000"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321005"
 ---
 # <a name="fundamental-types-ccx"></a>Tipi fondamentali (C++/CX)
 
@@ -19,7 +20,7 @@ La tabella seguente elenca i tipi char e booleani e i relativi equivalenti C++ s
 
 |Spazio dei nomi|Nome C++/CX|Definizione|Nome in C++ standard|Intervallo di valori|
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
-|Piattaforma|Boolean|Valore booleano a 8 bit.|bool|**`true`**(diverso da zero) e **`false`** (zero)|
+|Piattaforma|Boolean|Valore booleano a 8 bit.|bool|**`true`** (diverso da zero) e **`false`** (zero)|
 |default|char16|Valore non numerico a 16 bit che rappresenta un punto di codice Unicode (UTF-16).|wchar_t<br /><br /> -oppure-<br /><br /> L'c'|(Specificato dallo standard Unicode)|
 
 ## <a name="numeric-types"></a>Tipi numerici
@@ -46,7 +47,7 @@ La tabella seguente elenca alcuni tipi aggiuntivi definiti dall'architettura Win
 |Nome|Definizione|
 |----------|----------------|
 |Oggetto|Rappresenta qualsiasi tipo di Windows Runtime.|
-|Stringa|Serie di caratteri che rappresenta un testo.|
+|string|Serie di caratteri che rappresenta un testo.|
 |Rect|Set di quattro numeri a virgola mobile che rappresentano la posizione e le dimensioni di un rettangolo.|
 |SizeT|Coppia ordinata di numeri a virgola mobile che specificano un'altezza e una larghezza.|
 |Point|Coppia ordinata di coordinate x e y a virgola mobile, che definiscono un punto su un piano bidimensionale.|
@@ -54,6 +55,6 @@ La tabella seguente elenca alcuni tipi aggiuntivi definiti dall'architettura Win
 |UIntPtr|(Solo per uso interno). Valore senza segno a 64 bit utilizzato come puntatore.|
 |IntPtr|(Solo per uso interno).  Valore con segno a 64 bit utilizzato come puntatore.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Sistema di tipi](../cppcx/type-system-c-cx.md)

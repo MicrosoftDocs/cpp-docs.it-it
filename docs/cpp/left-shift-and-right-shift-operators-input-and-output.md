@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: operatori Left Shift e Right Shift ( &gt; &gt; e &lt; &lt; )'
 title: Operatori Left Shift e Right Shift ( &gt; &gt; e &lt; &lt; )
 ms.date: 08/13/2018
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: 4cdb353c950313396b331dc7ba01b3ea392ed0f8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e13333d178fdfbb44631b9a2aced9ed2a48ad871
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186958"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321018"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operatori Left Shift e Right Shift ( &gt; &gt; e &lt; &lt; )
 
@@ -29,7 +30,7 @@ Gli operatori di spostamento bit per bit sono l'operatore di spostamento a destr
 > *Shift-espressione* `<<` *additive-espressione*\
 > *shift-expression* `>>` *additive-expression*
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 > [!IMPORTANT]
 > Le descrizioni e gli esempi seguenti sono validi in Windows per le architetture x86 e x64. L'implementazione degli operatori di spostamento a sinistra e a destra è significativamente diversa in Windows per i dispositivi ARM. Per ulteriori informazioni, vedere la sezione "operatori shift" del post di Blog [Hello ARM](https://devblogs.microsoft.com/cppblog/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c/) .
@@ -174,7 +175,7 @@ int main() {
 
 ## <a name="shifts-and-promotions"></a>Spostamenti e promozioni
 
-Le espressioni su entrambi i lati di un operatore di spostamento devono essere tipi integrali. Le promozioni integrali vengono eseguite in base alle regole descritte in [conversioni standard](standard-conversions.md). Il tipo del risultato corrisponde al tipo dell' *espressione Shift*promossa.
+Le espressioni su entrambi i lati di un operatore di spostamento devono essere tipi integrali. Le promozioni integrali vengono eseguite in base alle regole descritte in [conversioni standard](standard-conversions.md). Il tipo del risultato corrisponde al tipo dell' *espressione Shift* promossa.
 
 Nell'esempio seguente una variabile di tipo **`char`** viene promossa a **`int`** .
 
@@ -228,7 +229,7 @@ Il valore di `E1 << E2` è `E1` spostato a sinistra di `E2` posizioni di bit. I 
 
 Il valore di `E1 >> E2` è `E1` spostato a destra di `E2` posizioni di bit. Se `E1` ha un tipo senza segno o se `E1` ha un tipo con segno e un valore non negativo, il valore del risultato è la parte integrale del quoziente di **E1/2**<sup>**E2**</sup>. Se `E1` dispone di un tipo signed e di un valore negativo, il valore risultante sarà definito dall'implementazione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Espressioni con operatori binari](../cpp/expressions-with-binary-operators.md)<br/>
 [Operatori C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

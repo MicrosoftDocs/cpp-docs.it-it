@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2810'
 title: Errore del compilatore C2810
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2810
 ms.assetid: f63e8f24-d7f6-42ac-904f-72ff49592ba6
-ms.openlocfilehash: 2c598065fb6d5965f92504019275a921d12acb27
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 609a1ccd89619ddb66b42a81cf9a769480670508
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760582"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97320587"
 ---
 # <a name="compiler-error-c2810"></a>Errore del compilatore C2810
 

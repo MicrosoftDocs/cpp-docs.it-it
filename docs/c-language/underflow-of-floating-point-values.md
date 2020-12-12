@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: underflow dei valori di Floating-Point'
 title: Underflow dei valori a virgola mobile
 ms.date: 11/04/2016
 ms.assetid: 78af8016-643c-47db-b4f1-7f06cb4b243e
-ms.openlocfilehash: 93230b50b81ede44a9c55406db1566df2660c1ba
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 3d8ddd665aa33e1c47f9f187f759058501bc5484
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344056"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321297"
 ---
 # <a name="underflow-of-floating-point-values"></a>Underflow dei valori a virgola mobile
 
@@ -15,6 +16,6 @@ ms.locfileid: "64344056"
 
 Un underflow a virgola mobile non imposta l'espressione `errno` su `ERANGE`. Quando un valore si avvicina allo zero e restituisce infine un underflow, tale valore viene impostato su zero.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Funzioni della libreria](../c-language/library-functions.md)

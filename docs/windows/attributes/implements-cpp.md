@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: implementa (C++)'
 title: implementa (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: 946972a9a7c3041c75e82865acb35feb4a97254a
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 601d1c99a9f59af8354d98e930a3e21c45255401
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686743"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321389"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -32,7 +33,7 @@ Elenco delimitato da virgole delle interfacce che saranno un membro della coclas
 *dispinterfaces*<br/>
 Elenco delimitato da virgole dell'interfaccia dispatch che sarà un membro della coclasse IDL. Viene implementato un metodo a sintassi abbreviata per specificare una singola interfaccia dispatch **(dispinterfaces =** *dispinterface_name* **)**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, `coclass` nella coclasse IDL vengono aggiunte solo le interfacce com che sono classi di base di. **implementazioni** consente di forzare altre interfacce come `coclass` membri IDL.
 
@@ -42,12 +43,12 @@ Per impostazione predefinita, `coclass` nella coclasse IDL vengono aggiunte solo
 |-|-|
 |**Si applica a**|**`class`**, **`struct`**|
 |**Ripetibile**|Sì|
-|**Attributi richiesti**|nessuno|
-|**Attributi non validi**|nessuno|
+|**Attributi richiesti**|Nessuno|
+|**Attributi non validi**|Nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 L'esempio seguente è in tre parti: un file con estensione IDL e il file con estensione h associato e un file C++.
 
@@ -478,7 +479,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi del compilatore](compiler-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)

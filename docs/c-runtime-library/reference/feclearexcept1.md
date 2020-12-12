@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: feclearexcept'
 title: feclearexcept1
 ms.date: 04/05/2018
 api_name:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - feclearexcept function
 ms.assetid: ef419da3-c248-4432-b53c-8e7a475d9533
-ms.openlocfilehash: 9899d7068a289e7d5f71cb42a8373869d60c3070
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 09eb34ddb781a40418152ec8cc6893074c58a617
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941264"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322589"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
@@ -46,18 +47,18 @@ int feclearexcept(
 
 ### <a name="parameters"></a>Parametri
 
-*excepts*<br/>
+*eccetto*<br/>
 Flag di stato delle eccezioni da cancellare.
 
 ## <a name="return-value"></a>Valore restituito
 
 Restituisce zero se *excepts* è zero o se tutte le eccezioni specificate sono state cancellate correttamente. In caso contrario, viene restituito un valore diverso da zero.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 La funzione **feclearexcept** tenta di cancellare i flag di stato delle eccezioni a virgola mobile specificati da *excepts*. La funzione supporta queste macro di eccezioni, definite in fenv.h:
 
-|Macro di eccezioni|Descrizione|
+|Macro di eccezioni|Description|
 |---------------------|-----------------|
 |FE_DIVBYZERO|Si è verificato un errore di singolarità o polo in un'operazione precedente a virgola mobile. È stato creato un valore di infinità.|
 |FE_INEXACT|La funzione è stata forzata ad arrotondare il risultato archiviato di un'operazione precedente a virgola mobile.|
@@ -76,7 +77,7 @@ L'argomento *excepts* può essere zero o l'operatore OR bit per bit di una o pi�
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
 [fetestexcept](fetestexcept1.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: costanti di commit su disco'
 title: Costanti di commit su disco
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - commit-to-disk constants
 ms.assetid: 0b903b23-b4fa-431e-a937-51d95f695ecf
-ms.openlocfilehash: c02b18e5a4a731957a7c74cc45e6e181fe23fad8
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 416729f4b3b7bfdfdcb0ba11193f6c2a52691e6e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750611"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322646"
 ---
 # <a name="commit-to-disk-constants"></a>Costanti di commit su disco
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -38,7 +39,7 @@ Le modalità di commit su disco sono le seguenti:
    Scrive il contenuto non scritto del buffer specificato nei buffer del sistema operativo. Il sistema operativo può memorizzare i dati nella cache e quindi determinare il momento ottimale per la scrittura su disco. In molti casi questo comportamento determina un funzionamento efficiente dei programmi. Se tuttavia la conservazione dei dati (quali transazioni bancarie o dati di biglietti aerei) è della massima importanza, considerare l'uso dell'opzione **c**. La modalità **n** è quella predefinita.
 
 > [!NOTE]
-> Le opzioni**c** e **n**non fanno parte dello standard ANSI per `fopen` ma sono estensioni Microsoft e non devono essere usate quando è richiesta la portabilità ANSI.
+> Le opzioni **c** e **n** non fanno parte dello standard ANSI per `fopen` ma sono estensioni Microsoft e non devono essere usate quando è richiesta la portabilità ANSI.
 
 ## <a name="using-the-commit-to-disk-feature-with-existing-code"></a>Uso della funzionalità di commit su disco con il codice esistente
 
@@ -46,9 +47,9 @@ Per impostazione predefinita le chiamate delle funzioni della libreria [fflush](
 
 Nel file eseguibile risultante le chiamate a `fflush` scrivono il contenuto del buffer direttamente su disco e le chiamate a `_flushall` scrivono il contenuto di tutti i buffer su disco. Queste due funzioni sono le uniche sulle quali agisce COMMODE.OBJ.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [I/O di flusso](../c-runtime-library/stream-i-o.md)<br/>
 [_fdopen, _wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: fegetround, fesetround'
 title: fegetround, fesetround
 ms.date: 04/05/2018
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - fegetround function
 - fesetround function
 ms.assetid: 596af00b-be2f-4f57-b2f5-460485f9ff0b
-ms.openlocfilehash: b210dbce3104820f667d4ad0b4421277567b279f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f3c112efc1c380ac4ce4495f4365e2a47a1d8fd2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941202"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322550"
 ---
 # <a name="fegetround-fesetround"></a>fegetround, fesetround
 
@@ -61,11 +62,11 @@ Se l'operazione riesce, **fegetround** restituisce la modalità di arrotondament
 
 Se l'operazione riesce, **fesetround** restituisce 0. In caso contrario, viene restituito un valore diverso da zero.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Le operazioni a virgola mobile possono usare una delle diverse modalità di arrotondamento. Queste modalità controllano la direzione verso cui vengono arrotondati i risultati delle operazioni a virgola mobile durante l'archiviazione. Questi sono i nomi e i comportamenti delle macro di arrotondamento a virgola mobile definite in \<fenv.h>:
+Le operazioni a virgola mobile possono usare una delle diverse modalità di arrotondamento. Queste modalità controllano la direzione verso cui vengono arrotondati i risultati delle operazioni a virgola mobile durante l'archiviazione. Questi sono i nomi e i comportamenti delle macro di arrotondamento a virgola mobile definite in \<fenv.h> :
 
-|Macro|Descrizione|
+|Macro|Description|
 |-----------|-----------------|
 |FE_DOWNWARD|Arrotonda verso l'infinito negativo.|
 |FE_TONEAREST|Arrotonda verso il valore più vicino.|
@@ -86,7 +87,7 @@ La modalità di arrotondamento corrente influisce su queste operazioni:
 
 La modalità di arrotondamento corrente non influisce su queste operazioni:
 
-- Funzioni della libreria **Tronca**, lround, **floor**e .
+- Funzioni della libreria  **Tronca**, lround, **floor** e  .
 
 - Conversioni e cast impliciti da virgola mobile a tipo integer, arrotondati sempre per difetto.
 
@@ -102,7 +103,7 @@ Per usare queste funzioni, è necessario disattivare le ottimizzazioni a virgola
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
 [nearbyint, nearbyintf, nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)<br/>

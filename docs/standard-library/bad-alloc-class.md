@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: bad_alloc Class'
 title: Classe bad_alloc
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - bad_alloc class
 ms.assetid: 6429a8e6-5a49-4907-8d56-f4a4ec8131d0
-ms.openlocfilehash: 9d1d81e393b4a3eb27ea08bc53634bfcbc119240
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1096157e5c69633ee8d4e1c34d98c65775391aca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243984"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321653"
 ---
-# <a name="badalloc-class"></a>Classe bad_alloc
+# <a name="bad_alloc-class"></a>Classe bad_alloc
 
 La classe descrive un'eccezione generata per indicare che una richiesta di allocazione ha avuto esito negativo.
 
@@ -29,7 +30,7 @@ class bad_alloc : public exception {
 };
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Il valore restituito da `what` è una stringa C definita dall'implementazione. Nessuna delle funzioni membro genera eccezioni.
 

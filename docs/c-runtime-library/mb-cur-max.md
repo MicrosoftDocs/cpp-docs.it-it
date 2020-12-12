@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: MB_CUR_MAX'
 title: MB_CUR_MAX
 ms.date: 10/18/2017
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - MB_CUR_MAX constant
 ms.assetid: fab22609-c14d-4c19-991c-bd09ff30e604
-ms.openlocfilehash: 8f89d06f11d5da14389c849814e06b56586b3c69
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 539b1bd658c1aac0c8998351b2676513c8cf5607
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746448"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321149"
 ---
-# <a name="mbcurmax"></a>MB_CUR_MAX
+# <a name="mb_cur_max"></a>MB_CUR_MAX
 
 Macro indicante il numero massimo di byte in un carattere multibyte per le impostazioni locali correnti.
 
@@ -29,7 +30,7 @@ Contesto: funzioni di conversione dei caratteri wide e multibyte ANSI
 
 Il valore di `MB_CUR_MAX` è il numero massimo di byte in un carattere multibyte per le impostazioni locali correnti.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [_mbclen, mblen, _mblen_l](../c-runtime-library/reference/mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)<br/>

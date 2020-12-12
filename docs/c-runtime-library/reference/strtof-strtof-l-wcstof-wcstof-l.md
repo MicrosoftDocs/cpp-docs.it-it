@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: strtof, _strtof_l, wcstof, _wcstof_l'
 title: strtof, _strtof_l, wcstof, _wcstof_l
 ms.date: 4/2/2020
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - _tcstof_l function
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
-ms.openlocfilehash: d99b895076025aa50028bb4cd21df9e13c98197f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7a73df80fefb8d86431027650be2ecd236135dfd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233964"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322420"
 ---
 # <a name="strtof-_strtof_l-wcstof-_wcstof_l"></a>strtof, _strtof_l, wcstof, _wcstof_l
 
@@ -99,7 +100,7 @@ Impostazioni locali da usare.
 
 Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Ogni funzione converte la stringa di input *strSource* in un oggetto **`float`** . La funzione **strtof** converte *strSource* in un valore a precisione singola. **strtof** interrompe la lettura della stringa *strSource* al primo carattere che non riconosce come parte di un numero. Questo può essere il carattere Null di terminazione. **wcstof** è una versione a caratteri wide di **strtof**; il relativo argomento *strSource* è una stringa di caratteri wide. In caso contrario, il comportamento di queste funzioni è identico.
 
@@ -128,8 +129,8 @@ Le versioni UCRT di queste funzioni non supportano la conversione di lettere esp
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**strtof**, **_strtof_l**|C: \<stdlib.h> C++: &lt; cstdlib> o\<stdlib.h>|
-|**wcstof**, **_wcstof_l**|C: \<stdlib.h> o \<wchar.h> C++: &lt; cstdlib> \<stdlib.h> o\<wchar.h>|
+|**strtof**, **_strtof_l**|C: \<stdlib.h> C++: &lt; cstdlib> o \<stdlib.h>|
+|**wcstof**, **_wcstof_l**|C: \<stdlib.h> o \<wchar.h> C++: &lt; cstdlib> \<stdlib.h> o \<wchar.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
@@ -167,7 +168,7 @@ string = 3.14159This stopped it
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
 [Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [Funzioni da stringa a valore numerico](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
