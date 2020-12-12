@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 1) C4079'
 title: Avviso del compilatore (livello 1) C4079
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4079
 ms.assetid: 549759f0-e168-47e9-8c9a-de93ac843689
-ms.openlocfilehash: 29363ba0467d28d7cdfb4d0cb0be504213b1c86d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d666d6d1272c1a131af5aa6b4e9248398e270758
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200290"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97228664"
 ---
 # <a name="compiler-warning-level-1-c4079"></a>Avviso del compilatore (livello 1) C4079
 

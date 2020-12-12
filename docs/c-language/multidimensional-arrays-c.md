@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: matrici multidimensionali (C)'
 title: Matrici multidimensionali (C)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - multidimensional arrays
 - subscript expressions
 ms.assetid: 4ba5c360-1f17-4575-b370-45f62e1f2bc2
-ms.openlocfilehash: f94cdff03763f689edbdedffad4ac56abec5ee53
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e940ccdd61aa6c2c4b3b5f85b355b80f86c8a165
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218832"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243367"
 ---
 # <a name="multidimensional-arrays-c"></a>Matrici multidimensionali (C)
 
@@ -25,7 +26,7 @@ Le espressioni di indice sono associate da sinistra a destra. L'espressione di i
 
 Le espressioni con più indici fanno riferimento agli elementi di "matrici multidimensionali". Una matrice multidimensionale è una matrice i cui elementi sono matrici. Ad esempio, il primo elemento di una matrice tridimensionale è una matrice con due dimensioni.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Per gli esempi seguenti, una matrice denominata `prop` viene dichiarata con tre elementi, ognuno dei quali è una matrice di valori 4 per 6 **`int`** .
 
@@ -68,6 +69,6 @@ Nella prima di queste istruzioni, l'espressione `prop[2][1]` è un riferimento v
 
 Analogamente, il risultato dell'espressione `prop[2]` nella seconda istruzione `ipp = prop[2];` è un valore del puntatore che indirizza una matrice bidimensionale.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Operatore di indice:](../cpp/subscript-operator.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: caratteri multibyte e Wide'
 title: Caratteri multibyte e wide
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - character codes [C++], wide
 - character codes [C++], multibyte
 ms.assetid: 1943c469-200d-4724-b18f-781d70520f9e
-ms.openlocfilehash: 8e27a1832284c109cc2d8a4655f6d093bf7a2d99
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 48063824b66df42d41b51ca491b0eec5f7679274
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87199659"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243392"
 ---
 # <a name="multibyte-and-wide-characters"></a>Caratteri multibyte e wide
 
@@ -35,6 +36,6 @@ Il valore letterale stringa a caratteri wide `L"hello"` diventa una matrice di s
 
 La specifica Unicode è una specifica per caratteri "wide". Le routine di libreria di runtime per la conversione tra caratteri multibyte e "wide" includono `mbstowcs`, `mbtowc`, `wcstombs` e `wctomb`.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Identificatori C](../c-language/c-identifiers.md)

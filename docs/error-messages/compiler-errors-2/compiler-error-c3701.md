@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3701'
 title: Errore del compilatore C3701
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3701
 ms.assetid: a7faaa87-d2f5-4d6a-9a2f-5cab2d24a648
-ms.openlocfilehash: c15cd9ce841d79787b3be9829c76038803b54d4d
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 8ebc8ac41091770a59876fb829d86997d7f5709c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508062"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97228690"
 ---
 # <a name="compiler-error-c3701"></a>Errore del compilatore C3701
 

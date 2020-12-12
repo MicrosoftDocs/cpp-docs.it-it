@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; &gt; operatori complessi'
 title: Operatori &lt;complex&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: 325e194e9cc5b597ae010477ecbe313be11b179a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 88930dbf0b96d42c5c643305b56121cec8a1bacd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222589"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325010"
 ---
 # <a name="ltcomplexgt-operators"></a>Operatori &lt;complex&gt;
 
-## <a name="operator"></a><a name="op_neq"></a>operatore! =
+## <a name="operator"></a><a name="op_neq"></a> operatore! =
 
 Verifica la disuguaglianza tra due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.
 
@@ -57,7 +58,7 @@ Numero complesso o oggetto del relativo tipo di parametro di cui verificarne la 
 
 **`true`** Se i numeri non sono uguali. **`false`** se i numeri sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Due numeri complessi sono uguali solo se le relative parti reali e parti immaginarie sono uguali. In caso contrario, non sono uguali.
 
@@ -163,7 +164,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="operator"></a><a name="op_star"></a>operatore\*
+## <a name="operator"></a><a name="op_star"></a> operatore\*
 
 Moltiplica due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.
 
@@ -196,7 +197,7 @@ Secondo di due numeri complessi o numero del tipo di parametro per un numero com
 
 Numero complesso risultante dalla moltiplicazione dei due numeri, il cui valore e tipo vengono specificati dagli input dei parametri.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operazione viene sottoposta a overload in modo da poter eseguire semplici operazioni aritmetiche senza convertire i dati in un formato particolare.
 
@@ -260,7 +261,7 @@ int main( )
 }
 ```
 
-## <a name="operator"></a><a name="op_add"></a>operatore +
+## <a name="operator"></a><a name="op_add"></a> operatore +
 
 Aggiunge due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.
 
@@ -296,7 +297,7 @@ Secondo di due numeri complessi o numero del tipo di parametro per un numero com
 
 Numero complesso risultante dall'aggiunta dei due numeri, il cui valore e tipo vengono specificati dagli input dei parametri.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operazione viene sottoposta a overload in modo da poter eseguire semplici operazioni aritmetiche senza convertire i dati in un formato particolare. L'operatore unario restituisce *Left*.
 
@@ -400,7 +401,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-"></a><a name="operator-"></a>operatore
+## <a name="operator-"></a><a name="operator-"></a> operatore
 
 Sottrae due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.
 
@@ -436,7 +437,7 @@ Secondo di due numeri complessi o numero del tipo parametro per un numero comple
 
 Numero complesso risultante dalla sottrazione di *right* da *sinistra*, ovvero i due numeri i cui valori sono specificati dagli input dei parametri.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operazione viene sottoposta a overload in modo da poter eseguire semplici operazioni aritmetiche senza convertire i dati in un formato particolare.
 
@@ -542,7 +543,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.
 ```
 
-## <a name="operator"></a><a name="op_div"></a>operatore
+## <a name="operator"></a><a name="op_div"></a> operatore
 
 Divide due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.
 
@@ -575,7 +576,7 @@ Numero complesso o numero del tipo parametro per un numero complesso che rappres
 
 Numero complesso risultante dalla divisione del numeratore per il denominatore, i cui valori vengono specificati dagli input dei parametri.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operazione viene sottoposta a overload in modo da poter eseguire semplici operazioni aritmetiche senza convertire i dati in un formato particolare.
 
@@ -662,7 +663,7 @@ The modulus of cs3 is: 1.66667
 The argument of cs3 is: -0.523599 radians, which is -30 degrees.
 ```
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>operatore&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> operatore&lt;&lt;
 
 Inserisce un numero complesso specificato nel flusso di output.
 
@@ -685,7 +686,7 @@ Numero complesso da immettere nel flusso di output
 
 Scrive il valore del numero complesso specificato in *OSTR* in formato cartesiano: (parte *reale, parte immaginaria* ).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il flusso di output viene sottoposto a overload in modo che sia accettato qualsiasi formato di numero complesso. Il formato di output predefinito è il formato cartesiano.
 
@@ -724,7 +725,7 @@ The modulus of c2 is: 2
 The argument of c2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operatore = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operatore = =
 
 Verifica l'uguaglianza tra due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.
 
@@ -757,7 +758,7 @@ Numero complesso o oggetto del relativo tipo di parametro di cui verificarne la 
 
 **`true`** Se i numeri sono uguali; **`false`** se i numeri non sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Due numeri complessi sono uguali solo se le relative parti reali e parti immaginarie sono uguali. In caso contrario, non sono uguali.
 
@@ -863,7 +864,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>operatore&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a> operatore&gt;&gt;
 
 Estrae un valore complesso dal flusso di input.
 
@@ -886,7 +887,7 @@ Numero complesso da estrarre dal flusso di input.
 
 Legge il valore del numero complesso specificato da *istr* e lo restituisce a *destra*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I formati di input validi sono i seguenti:
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore di risorse risorse RC2001'
 title: Errore del compilatore di risorse RC2001
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - RC2001
 ms.assetid: 92bfb4c0-1879-4606-bb9f-ef7368707b4a
-ms.openlocfilehash: 35042687b798b53857becdedba57861bd4f41a05
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 101ebb260bcfd24fb74368ca66e1e9d318418367
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80191723"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206344"
 ---
 # <a name="resource-compiler-error-rc2001"></a>Errore del compilatore di risorse RC2001
 
 nuova riga nella costante
 
-Una costante di stringa è stata continua in una seconda riga senza una barra rovesciata ( **\\** ) o con virgolette doppie ( **"** ).
+Una costante di stringa è stata continua su una seconda riga senza una barra rovesciata ( **\\** ) o con virgolette doppie (**"**).
 
 Per suddividere una costante di stringa che si trova su due righe nel file di origine, eseguire una delle operazioni seguenti:
 

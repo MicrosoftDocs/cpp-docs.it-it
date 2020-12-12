@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; nuove &gt; funzioni'
 title: Funzioni &lt;new&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,26 +7,26 @@ f1_keywords:
 - new/std::nothrow
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
-ms.openlocfilehash: 6b51a5bcbb9c90370cef1391d4020862d2e2cefd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b46a21223fcee4f1e208f97e087e47445d5526c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212176"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338186"
 ---
 # <a name="ltnewgt-functions"></a>Funzioni &lt;new&gt;
 
-## <a name="get_new_handler"></a><a name="get_new_handler"></a>get_new_handler
+## <a name="get_new_handler"></a><a name="get_new_handler"></a> get_new_handler
 
 ```cpp
 new_handler get_new_handler() noexcept;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Restituisce l'oggetto corrente `new_handler` .
 
-## <a name="launder"></a><a name="launder"></a>riciclare
+## <a name="launder"></a><a name="launder"></a> riciclare
 
 ```cpp
 template <class T>
@@ -39,9 +40,9 @@ Indirizzo di un byte in memoria che include un oggetto il cui tipo è simile a *
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore di tipo *T \* * che punta a X.
+Valore di tipo *T \** che punta a X.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Definito anche barriera di ottimizzazione del puntatore.
 
@@ -59,7 +60,7 @@ const int b = p->n; // undefined behavior
 const int c = std::launder(p)->n; // OK
 ```
 
-## <a name="nothrow"></a><a name="nothrow"></a>nothrow
+## <a name="nothrow"></a><a name="nothrow"></a> nothrow
 
 Fornisce un oggetto da usare come argomento per le **`nothrow`** versioni di **`new`** e **`delete`** .
 
@@ -67,7 +68,7 @@ Fornisce un oggetto da usare come argomento per le **`nothrow`** versioni di **`
 extern const std::nothrow_t nothrow;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'oggetto viene usato come argomento di funzione in modo da stabilire una corrispondenza con il tipo di parametro [std::nothrow_t](../standard-library/nothrow-t-structure.md).
 
@@ -75,7 +76,7 @@ L'oggetto viene usato come argomento di funzione in modo da stabilire una corris
 
 Vedere [operator new](../standard-library/new-operators.md#op_new) e [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) per esempi relativi all'uso di `std::nothrow_t` come parametro di funzione.
 
-## <a name="set_new_handler"></a><a name="set_new_handler"></a>set_new_handler
+## <a name="set_new_handler"></a><a name="set_new_handler"></a> set_new_handler
 
 Installa una funzione utente che deve essere chiamata quando l' **operatore New** non riesce nel tentativo di allocare memoria.
 
@@ -92,7 +93,7 @@ Oggetto `new_handler` da installare.
 
 0 nella prima chiamata e oggetto `new_handler` precedente nelle chiamate successive.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione Archivia *Pnew* in un puntatore a un [nuovo gestore](../standard-library/new-typedefs.md#new_handler) statico che gestisce, quindi restituisce il valore archiviato in precedenza nel puntatore. Il nuovo gestore viene usato da [operator new](../standard-library/new-operators.md#op_new)(**size_t**).
 

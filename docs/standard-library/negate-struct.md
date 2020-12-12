@@ -1,5 +1,6 @@
 ---
-title: negate (struct)
+description: 'Altre informazioni su: negate struct'
+title: Struct negate
 ms.date: 11/04/2016
 f1_keywords:
 - functional/std::negate
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - negate struct
 - negate class
 ms.assetid: 8a372686-786e-4262-b37c-ca13dc11e62f
-ms.openlocfilehash: cb45f61323a407e90c2a455460a4d2cdd7b6720a
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: fccc583d38b797a856ed4e0915e5e0255bb9eaee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240559"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338237"
 ---
-# <a name="negate-struct"></a>negate (struct)
+# <a name="negate-struct"></a>Struct negate
 
 Oggetto funzione predefinito che esegue l'operazione di negazione aritmetica (`operator-` unario) sul relativo argomento.
 
@@ -42,12 +43,12 @@ struct negate<void>
 *Tipo*\
 Tipo che supporta un `operator-` che accetta un operando del tipo specificato o dedotto.
 
-*A sinistra*\
-Operando da negare. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *tipo*.
+*Sinistra*\
+Operando da negare. Il modello specializzato esegue l'avanzamento perfetto degli argomenti di riferimento lvalue e rvalue del *tipo* dedotto.
 
 ## <a name="return-value"></a>Valore restituito
 
-Risultato di `-Left`. Il modello specializzato esegue un inoltro del risultato, con il tipo restituito da unario perfetto `operator-`.
+Risultato di `-Left`. Il modello specializzato esegue l'avanzamento perfetto del risultato, con il tipo restituito da unario `operator-` .
 
 ## <a name="example"></a>Esempio
 

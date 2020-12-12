@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: oggetti dati e origini dati: creazione e distruzione'
 title: 'Oggetti dati e origini dati (OLE): creazione e distruzione'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - destruction [MFC], data objects
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
-ms.openlocfilehash: 8d4edc93594bf453c61e03dca7e3117aefaa6c42
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a19c7c2125c7d591bc4df4b3f01553a54de6a18b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620493"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206188"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Oggetti dati e origini dati (OLE): creazione e distruzione
 
@@ -34,7 +35,7 @@ Come illustrato nell'articolo [oggetti dati e origini dati (OLE)](data-objects-a
 
 - [Eliminazione definitiva di origini dati](#_core_destroying_data_sources)
 
-## <a name="creating-data-objects"></a><a name="_core_creating_data_objects"></a>Creazione di oggetti dati
+## <a name="creating-data-objects"></a><a name="_core_creating_data_objects"></a> Creazione di oggetti dati
 
 Gli oggetti dati vengono usati dall'applicazione di destinazione, ovvero il client o il server. Un oggetto dati nell'applicazione di destinazione è un'estremità di una connessione tra l'applicazione di origine e quella di destinazione. Un oggetto dati nell'applicazione di destinazione viene usato per accedere ai dati nell'origine dati e per interagirvi.
 
@@ -44,13 +45,13 @@ In una situazione che prevede il trascinamento della selezione non è necessario
 
 Se l'applicazione esegue un'operazione Incolla o Incolla speciale, è consigliabile creare un oggetto `COleDataObject` e chiamarne la funzione membro `AttachClipboard`. In questo modo, l'oggetto dati viene associato ai dati negli Appunti. È quindi possibile usare questo oggetto dati nella funzione Incolla.
 
-## <a name="destroying-data-objects"></a><a name="_core_destroying_data_objects"></a>Eliminazione definitiva di oggetti dati
+## <a name="destroying-data-objects"></a><a name="_core_destroying_data_objects"></a> Eliminazione definitiva di oggetti dati
 
 Se si segue lo schema descritto in [creazione di oggetti dati](#_core_creating_data_objects), l'eliminazione definitiva di oggetti dati è un aspetto semplice dei trasferimenti di dati. L'oggetto dati creato nella funzione Incolla verrà eliminato definitivamente da MFC quando viene restituita la funzione Incolla.
 
 Se si segue un altro metodo per gestire le operazioni Incolla, assicurarsi che l'oggetto dati venga eliminato al termine dell'operazione Incolla. Fino a quando l'oggetto dati non viene eliminato definitivamente, sarà impossibile per qualsiasi applicazione copiare correttamente dati negli Appunti.
 
-## <a name="creating-data-sources"></a><a name="_core_creating_data_sources"></a>Creazione di origini dati
+## <a name="creating-data-sources"></a><a name="_core_creating_data_sources"></a> Creazione di origini dati
 
 Le origini dati vengono usate dall'origine del trasferimento dei dati, che può essere il lato client o il lato server del trasferimento. Un'origine dati nell'applicazione di origine è un'estremità di una connessione tra l'applicazione di origine e quella di destinazione. Un oggetto dati nell'applicazione di destinazione viene usato per interagire con i dati nell'origine dati.
 
@@ -72,7 +73,7 @@ Questo scenario viene implementato dagli esempi OLE MFC [OCLIENT](../overview/vi
 
 Un'altra situazione in cui si potrebbe voler creare un oggetto `COleDataSource` si verifica quando si modifica il comportamento predefinito di un'operazione di trascinamento e rilascio. Per ulteriori informazioni, vedere l'articolo relativo al trascinamento della [selezione OLE: personalizzare](drag-and-drop-ole.md#customize-drag-and-drop) .
 
-## <a name="destroying-data-sources"></a><a name="_core_destroying_data_sources"></a>Eliminazione definitiva di origini dati
+## <a name="destroying-data-sources"></a><a name="_core_destroying_data_sources"></a> Eliminazione definitiva di origini dati
 
 Le origini dati devono essere eliminate definitivamente dall'applicazione che ne è attualmente responsabile. Nelle situazioni in cui si passa l'origine dati a OLE, ad esempio chiamando [COleDataSource::D odragdrop](reference/coledatasource-class.md#dodragdrop), è necessario chiamare `pDataSrc->InternalRelease` . Ad esempio:
 
@@ -82,7 +83,7 @@ Se l'origine dati non è stata passata a OLE, si è responsabili della sua elimi
 
 Per ulteriori informazioni, vedere [trascinamento della selezione](drag-and-drop-ole.md), [Appunti](clipboard.md)e [modifica di oggetti dati e origini dati](data-objects-and-data-sources-manipulation.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Oggetti dati e origini dati (OLE)](data-objects-and-data-sources-ole.md)<br/>
 [Classe COleDataObject](reference/coledataobject-class.md)<br/>

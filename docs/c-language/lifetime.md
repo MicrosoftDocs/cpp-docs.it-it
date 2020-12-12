@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: durata'
 title: Durata
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - lifetime
 - global variables, lifetime
 ms.assetid: ff0b42cb-3f0f-49a3-a94f-d1d825d8ddfe
-ms.openlocfilehash: 752230db54727516e0c48c0621eaadc59486e2e4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 11db85cb6df76de320b78f274061499d838151da
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218845"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243523"
 ---
 # <a name="lifetime"></a>Durata
 
@@ -42,6 +43,6 @@ Sebbene un identificatore con una durata globale esista durante l'esecuzione del
 
 La memoria può essere allocata in base alle esigenze (dinamica) se creata tramite l'utilizzo delle routine di libreria speciali come `malloc`. Poiché l'allocazione di memoria dinamica utilizza routine di libreria, non viene considerata parte del linguaggio. Vedere la funzione [malloc](../c-runtime-library/reference/malloc.md) in *Riferimenti alla libreria di runtime*.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Durata, ambito, visibilità e collegamento](../c-language/lifetime-scope-visibility-and-linkage.md)

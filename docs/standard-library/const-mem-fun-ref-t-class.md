@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: const_mem_fun_ref_t Class'
 title: Classe const_mem_fun_ref_t
 ms.date: 02/21/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun_ref_t class
 ms.assetid: 316ddbaa-9f46-4931-8eba-ea4ca66360ef
-ms.openlocfilehash: 09d8569253dbeb1a873f4fc7b64b55658511d18e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 484416676b7957e3be08ddf03544d2679f1fbf18
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228362"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324958"
 ---
 # <a name="const_mem_fun_ref_t-class"></a>Classe const_mem_fun_ref_t
 
@@ -41,7 +42,7 @@ Oggetto su cui viene chiamata la funzione membro *PM* .
 
 Funzione unaria adattabile.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il modello di classe archivia una copia di *PM*, che deve essere un puntatore a una funzione membro della classe `Type` , in un oggetto membro privato. Definisce la relativa funzione membro `operator()` che restituisce (**Left** \* `Pm` ). () **`const`**.
 

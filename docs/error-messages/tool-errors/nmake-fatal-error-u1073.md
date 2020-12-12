@@ -1,19 +1,20 @@
 ---
-title: Errore irreversibile U1073 di NMAKE
+description: 'Altre informazioni su: errore irreversibile U1073 di NMAKE'
+title: 'Errore irreversibile U1073 di NMAKE '
 ms.date: 11/04/2016
 f1_keywords:
 - U1073
 helpviewer_keywords:
 - U1073
 ms.assetid: d46bf2dd-400a-4802-9db2-f832e1c97f02
-ms.openlocfilehash: 97d44594540d18bf008757506a9e36e6d16d2cd7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bd622f37720cf5e992a1d82ea97ca1ff50344c0c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182695"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345446"
 ---
-# <a name="nmake-fatal-error-u1073"></a>Errore irreversibile U1073 di NMAKE
+# <a name="nmake-fatal-error-u1073"></a>Errore irreversibile U1073 di NMAKE 
 
 non si sa come creare ' TargetName '
 

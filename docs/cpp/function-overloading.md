@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: overload di funzioni'
 title: Overload di funzioni
 ms.date: 03/27/2019
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-ms.openlocfilehash: 0eaaf5c8fd18d4d00652107a5a2071b2f5774d7c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 59fb43c849518251170b6f84a74cd8cbc2e2ed22
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232313"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345550"
 ---
 # <a name="function-overloading"></a>Overload di funzioni
 
 C++ consente la specifica di più funzioni con lo stesso nome nello stesso ambito. Queste funzioni sono denominate funzioni in *Overload* . Le funzioni in overload consentono di fornire semantica diversa per una funzione, a seconda dei tipi e del numero di argomenti.
 
-Ad esempio, una `print` funzione che accetta un `std::string` argomento può eseguire attività molto diverse rispetto a una che accetta un argomento di tipo **`double`** . L'overload evita di dover usare nomi quali `print_string` o `print_double` . In fase di compilazione, il compilatore sceglie l'overload da usare in base al tipo di argomenti passati dal chiamante.  Se si chiama `print(42.0)` , la `void print(double d)` funzione verrà richiamata. Se si chiama `print("hello world")` , l' `void print(std::string)` Overload verrà richiamato.
+Ad esempio, una `print` funzione che accetta un `std::string`  argomento può eseguire attività molto diverse rispetto a una che accetta un argomento di tipo **`double`** . L'overload evita di dover usare nomi quali `print_string` o `print_double` . In fase di compilazione, il compilatore sceglie l'overload da usare in base al tipo di argomenti passati dal chiamante.  Se si chiama `print(42.0)` , la `void print(double d)` funzione verrà richiamata. Se si chiama `print("hello world")` , l' `void print(std::string)` Overload verrà richiamato.
 
 È possibile eseguire l'overload di funzioni membro e funzioni non membro. Nella tabella seguente sono illustrate quali parti di una dichiarazione di funzione C++ vengono utilizzate per distinguere tra gruppi di funzioni con lo stesso nome nello stesso ambito.
 
@@ -31,7 +32,7 @@ Ad esempio, una `print` funzione che accetta un `std::string` argomento può ese
 |Presenza o assenza di puntini di sospensione|Sì|
 |Uso dei **`typedef`** nomi|No|
 |Limiti di matrice non specificati|No|
-|**`const`** o**`volatile`**|Sì, quando applicato all'intera funzione|
+|**`const`** o **`volatile`**|Sì, quando applicato all'intera funzione|
 |[Qualificatori di riferimento](#ref-qualifiers)|Sì|
 
 ## <a name="example"></a>Esempio
@@ -155,7 +156,7 @@ F1 = Add( F2, 23 );
 
 Con l'istruzione precedente vengono compilati due set:
 
-|Set 1: Funzioni candidate con il primo argomento della frazione di tipo|Set 2: funzioni candidate il cui secondo argomento può essere convertito nel tipo**`int`**|
+|Set 1: Funzioni candidate con il primo argomento della frazione di tipo|Set 2: funzioni candidate il cui secondo argomento può essere convertito nel tipo **`int`**|
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 |Variante 1|Variante 1 ( **`int`** può essere convertito in **`long`** utilizzando una conversione standard)|
 |Variante 3||
@@ -170,7 +171,7 @@ F1 = Add( 3, 6 );
 
 Con la chiamata di funzione precedente vengono compilati i seguenti set:
 
-|Set 1: funzioni candidate che hanno il primo argomento di tipo**`int`**|Set 2: funzioni candidate che hanno un secondo argomento di tipo**`int`**|
+|Set 1: funzioni candidate che hanno il primo argomento di tipo **`int`**|Set 2: funzioni candidate che hanno un secondo argomento di tipo **`int`**|
 |---------------------------------------------------------------------|----------------------------------------------------------------------|
 |Variante 2 ( **`int`** può essere convertito in **`long`** utilizzando una conversione standard)|Variante 1 ( **`int`** può essere convertito in **`long`** utilizzando una conversione standard)|
 
@@ -398,7 +399,7 @@ obj.name
 
 L'operando sinistro degli operatori `->*` e `.*` (puntatore a membro) vengono considerati nello stesso modo degli operatori `.` e `->` (selezione dei membri) in relazione alla corrispondenza dell'argomento.
 
-## <a name="ref-qualifiers-on-member-functions"></a><a name="ref-qualifiers"></a>Ref-Qualifiers su funzioni membro
+## <a name="ref-qualifiers-on-member-functions"></a><a name="ref-qualifiers"></a> Ref-Qualifiers su funzioni membro
 
 I qualificatori di riferimento consentono di eseguire l'overload di una funzione membro sulla base del fatto che l'oggetto a cui **`this`** fa riferimento sia un rvalue o un lvalue.  Questa funzionalità può essere usata per evitare operazioni di copia non necessarie negli scenari in cui si sceglie di non fornire l'accesso ai dati ai puntatori. Si supponga, ad esempio, che la classe `C` Inizializza alcuni dati nel relativo costruttore e restituisce una copia di tali dati nella funzione membro `get_data()` . Se un oggetto di tipo `C` è un rvalue che sta per essere eliminato definitivamente, il compilatore sceglierà l' `get_data() &&` Overload che sposta i dati anziché copiarli.
 
@@ -462,7 +463,7 @@ Un set di funzioni in overload accettabile è regolato da numerose restrizioni:
     void Print( PSTR szToPrint );
     ```
 
-   Le due funzioni precedenti hanno elenchi di argomenti identici. `PSTR`è un sinonimo del tipo `char *` . Nell'ambito del membro, questo codice genera un errore.
+   Le due funzioni precedenti hanno elenchi di argomenti identici. `PSTR` è un sinonimo del tipo `char *` . Nell'ambito del membro, questo codice genera un errore.
 
 - I tipi enumerati sono tipi distinti e possono essere utilizzati per distinguere le funzioni in overload.
 
@@ -569,6 +570,6 @@ double Account::Deposit( double dAmount, char *szPassword )
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Funzioni (C++)](../cpp/functions-cpp.md)

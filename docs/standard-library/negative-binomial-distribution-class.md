@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: negative_binomial_distribution Class'
 title: Classe negative_binomial_distribution
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: fd5153a8eb0652aed7d963fb1dbdb1277e4f6718
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 59b13cce627faed54427a08acf71de3546aca96e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836452"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338224"
 ---
 # <a name="negative_binomial_distribution-class"></a>Classe negative_binomial_distribution
 
@@ -74,7 +75,7 @@ public:
 *IntType*\
 Il tipo di risultato Integer, il valore predefinito è **`int`** . Per i tipi possibili, vedere [\<random>](../standard-library/random.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il modello di classe descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo **`int`** se non ne viene fornito alcuno, distribuiti in base alla funzione di probabilità discreta di distribuzione binomiale negativa. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
@@ -239,7 +240,7 @@ Parametro di distribuzione `p`.
 *parm*\
 Struttura di parametri usata per costruire la distribuzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:** `0.0 < k` e `0.0 < p ≤ 1.0`
 
@@ -266,7 +267,7 @@ Parametro di distribuzione `p`.
 *Ok*\
 Struttura `param_type` usata per il confronto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:** `0.0 < k` e `0.0 < p ≤ 1.0`
 

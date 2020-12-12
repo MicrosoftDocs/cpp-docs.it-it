@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: String (C++/CLI e C++/CX)'
 title: String (C++/CLI e C++/CX)
 ms.date: 10/08/2018
 ms.topic: reference
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - string support with /clr
 - /clr compiler option [C++], string support
 ms.assetid: c695f965-9be0-4e20-9661-373bfee6557e
-ms.openlocfilehash: b9da900ffbfff34dc596d8981095d8285bf37208
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a47842713d1e7349717eaaeddcd4f3cba86fbbea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171944"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206331"
 ---
 # <a name="string--ccli-and-ccx"></a>String (C++/CLI e C++/CX)
 
@@ -63,7 +64,7 @@ Per altre informazioni, vedere [Valori letterali stringa e carattere](../cpp/str
 
 Opzione del compilatore: **/clr**
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 L'esempio di codice seguente illustra la concatenazione e il confronto di stringhe.
 
@@ -259,8 +260,8 @@ System.SByte*
 System.String
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Estensioni componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
+[Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
 [Stringa e valori letterali carattere](../cpp/string-and-character-literals-cpp.md)<br/>
-[/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)
+[/CLR (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)

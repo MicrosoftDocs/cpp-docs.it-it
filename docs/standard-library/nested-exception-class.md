@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: nested_exception Class'
 title: Classe nested_exception
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - nested_exception class
 ms.assetid: 5ae2c4ef-c7ad-4469-8a9e-a773e86bb000
-ms.openlocfilehash: 4ab48f714e8b4de1a47674f1af8fe25467279f94
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fd2a0d5b62eb0ec9ae1e70233984fe7457127414
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836439"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338199"
 ---
 # <a name="nested_exception-class"></a>Classe nested_exception
 
@@ -28,17 +29,17 @@ class nested_exception {
 };
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[operatore =](#op_as)|Operatore di assegnazione.|
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[rethrow_nested](#rethrow_nested)|Genera l'eccezione archiviata.|
 |[nested_ptr](#nested_ptr)|Restituisce l'eccezione archiviata.|
@@ -65,7 +66,7 @@ Eccezione archiviata acquisita da questo `nested_exception` oggetto.
 [[noreturn]] void rethrow_nested() const;
 ```
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Se `nested_ptr()` restituisce un puntatore null, la funzione chiama `std::terminate()` . In caso contrario, genera l'eccezione archiviata acquisita da **`*this`** .
 
@@ -75,7 +76,7 @@ Se `nested_ptr()` restituisce un puntatore null, la funzione chiama `std::termin
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe Exception](../standard-library/exception-class.md)\
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
