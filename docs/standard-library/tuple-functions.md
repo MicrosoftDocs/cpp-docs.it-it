@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; funzioni di tupla &gt;'
 title: Funzioni &lt;tuple&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: 46c386ecffb8fbbf7c07d40b334afd91d261ebcf
-ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
+ms.openlocfilehash: cf58cab5f222594a935156cf7e7f2e886639da2b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92274516"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168956"
 ---
 # <a name="lttuplegt-functions"></a>Funzioni &lt;tuple&gt;
 
@@ -28,7 +29,7 @@ ms.locfileid: "92274516"
 template <class F, class Tuple> constexpr decltype(auto) apply(F&& f, Tuple&& t);
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiama la funzione *F* con una tupla *t*.
 
@@ -41,9 +42,9 @@ template <class... TTypes>
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisca il valore `tuple<TTypes&&...>(std::forward<TTypes>(t)...)`.
+Restituisce `tuple<TTypes&&...>(std::forward<TTypes>(t)...)`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Costruisce una tupla di riferimenti agli argomenti in *t* idonei per l'invio come argomenti a una funzione.
 
@@ -93,9 +94,9 @@ Il tipo di elemento da visualizzare.
 *Tupla*\
 Oggetto `std::tuple` che contiene un numero qualsiasi di elementi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Le funzioni modello restituiscono un riferimento al valore in corrispondenza dell' *Indice*index o di tipo *T* nell' `tuple` oggetto.
+Le funzioni modello restituiscono un riferimento al valore in corrispondenza dell' *Indice* index o di tipo *T* nell' `tuple` oggetto.
 
 La chiamata `get<T>(Tuple)` genera un errore del compilatore, nel caso in cui la tupla contenga più di un elemento o non contenga elementi di tipo T.
 
@@ -134,7 +135,7 @@ int main() {
 template <class T, class Tuple> constexpr T make_from_tuple(Tuple&& t);
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Uguale a `return make_from_tuple_impl<T>(forward<Tuple>(t), make_index_sequence<tuple_size_v<decay_t<Tuple>>>{})`.
 
@@ -155,7 +156,7 @@ Tipo del parametro di funzione Nth.
 *tN*\
 Valore del parametro di funzione Nth.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello restituisce `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)` , dove ogni tipo `Vi` è `X&` quando il tipo corrispondente `Ti` è `cv` `reference_wrapper<X>` . in caso contrario, è `Ti` .
 
@@ -217,7 +218,7 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 *TN*\
 Tipo di base dell'ennesimo elemento tupla.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione modello restituisce `tuple<T1&, T2&, ..., TN&>(t1, t2, ..., tN)`.
 

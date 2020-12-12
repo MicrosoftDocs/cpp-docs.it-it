@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe tupla'
 title: Classe tuple
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 04fd3ec6ce3363d118174025823279a80dd00f0b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9beb3f263fa516d7d4096c404c135deffde6fc31
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215543"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169022"
 ---
 # <a name="tuple-class"></a>Classe tuple
 
@@ -44,7 +45,7 @@ class tuple {
 *TN*\
 Tipo dell'ennesimo elemento tupla.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il modello di classe descrive un oggetto che archivia N oggetti di tipo `T1` , `T2` ,..., rispettivamente, `TN` dove `0 <= N <= Nmax` . L'extent di un'istanza di tupla `tuple<T1, T2, ..., TN>` è il numero `N` dei relativi argomenti di modello. L'indice dell'argomento di modello `Ti` e del valore archiviato corrispondente di quel tipo è `i - 1` . Pertanto, mentre i tipi sono numerati da 1 a N in questa documentazione, i valori di indice corrispondenti variano da 0 a N-1.
 
@@ -116,7 +117,7 @@ The tuples in the vector are
 ( 3, 0.033, three ).
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operatore =
+## <a name="operator"></a><a name="op_eq"></a> operatore =
 
 Assegna un oggetto `tuple`.
 
@@ -143,7 +144,7 @@ Il tipo dell'ennesimo elemento tupla copiato.
 *Ok*\
 Tupla da cui eseguire la copia.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I primi due operatori membro assegnano gli elementi di *right* agli elementi corrispondenti di **`*this`** . Il terzo operatore membro assegna `right.first` all'elemento in corrispondenza dell'indice 0 di **`*this`** e `right.second` all'elemento in corrispondenza dell'indice 1. Tutti e tre gli operatori membro restituiscono **`*this`** .
 
@@ -198,7 +199,7 @@ int main()
 x 4
 ```
 
-## <a name="swap"></a><a name="tuple_swap"></a>scambio
+## <a name="swap"></a><a name="tuple_swap"></a> scambio
 
 Scambia gli elementi di due tuple.
 
@@ -215,11 +216,11 @@ Tupla i cui elementi devono essere scambiati con quelli della tupla a *destra*.
 *Ok*\
 Tupla i cui elementi devono essere scambiati con quelli della tupla a *sinistra*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione esegue `left.swap(right)`.
 
-## <a name="tuple"></a><a name="tuple"></a>tupla
+## <a name="tuple"></a><a name="tuple"></a> tupla
 
 Costruisce un oggetto `tuple`.
 
@@ -252,7 +253,7 @@ Il tipo dell'ennesimo elemento tupla copiato.
 *Ok*\
 Tupla da cui eseguire la copia.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo costruttore crea un oggetto i cui elementi sono costruiti per impostazione predefinita.
 

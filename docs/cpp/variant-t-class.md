@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _variant_t Class'
 title: Classe _variant_t
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - VARIANT object
 - VARIANT object [C++], COM encapsulation
 ms.assetid: 6a3cbd4e-0ae8-425e-b4cf-ca0df894c93f
-ms.openlocfilehash: 3873452afca0159cba815a2cb290ebb6e62aff07
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e720d78e6f7fd22fc369d4b39804260892e235c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842559"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116613"
 ---
 # <a name="_variant_t-class"></a>Classe _variant_t
 
@@ -25,13 +26,13 @@ Un oggetto **_variant_t** incapsula il `VARIANT` tipo di dati. La classe gestisc
 
 ### <a name="construction"></a>Edilizia
 
-| Nome | Descrizione |
+| Nome | Description |
 |--|--|
 | [_variant_t](../cpp/variant-t-variant-t.md) | Costruisce un oggetto **_variant_t** . |
 
 ### <a name="operations"></a>Gestione operativa
 
-| Nome | Descrizione |
+| Nome | Description |
 |--|--|
 | [Attach](../cpp/variant-t-attach.md) | Connette un `VARIANT` oggetto all'oggetto **_variant_t** . |
 | [Cancella](../cpp/variant-t-clear.md) | Cancella l'oggetto incapsulato `VARIANT` . |
@@ -41,7 +42,7 @@ Un oggetto **_variant_t** incapsula il `VARIANT` tipo di dati. La classe gestisc
 
 ### <a name="operators"></a>Operatori
 
-| Nome | Descrizione |
+| Nome | Description |
 |--|--|
 | [Operatore =](../cpp/variant-t-operator-equal.md) | Assegna un nuovo valore a un oggetto **_variant_t** esistente. |
 | [operatore = =,! =](../cpp/variant-t-relational-operators.md) | Confrontare due oggetti **_variant_t** per verificarne l'uguaglianza o la disuguaglianza. |
@@ -55,6 +56,6 @@ Un oggetto **_variant_t** incapsula il `VARIANT` tipo di dati. La classe gestisc
 
 **Lib:** comsuppw. lib o comsuppwd. lib (vedere [/Zc: wchar_t (wchar_t è di tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) per ulteriori informazioni.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classi di supporto COM del compilatore](../cpp/compiler-com-support-classes.md)

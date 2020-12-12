@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; valarray&gt;'
 title: '&lt;valarray&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: 9d2f3097637b3708c16f3048a34dd32b7f6fd80b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7cc902a60a68f9cb667530dac76812d4a8e082be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840141"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168774"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -26,7 +27,7 @@ Definisce il modello di classe valarray e numerose funzioni e modelli di classe 
 > [!NOTE]
 > La \<valarray> libreria usa l'istruzione ' #include <initializer_list>'.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questi modelli e funzioni di classe sono consentiti a una latitudine insolita per migliorare le prestazioni. In particolare, qualsiasi funzione che restituisce il tipo `valarray<T1>` può restituire un oggetto di un altro tipo T2. In tal caso, qualsiasi funzione che accetta uno o più argomenti di tipo `valarray<T2>` deve avere overload che accettano combinazioni arbitrarie di questi argomenti, ognuno sostituito da un argomento di tipo T2.
 
@@ -34,7 +35,7 @@ Questi modelli e funzioni di classe sono consentiti a una latitudine insolita pe
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[ABS](../standard-library/valarray-functions.md#abs)|Opera sugli elementi di un oggetto valarray di input, restituendo un oggetto valarray i cui elementi sono uguali al valore assoluto degli elementi dell'oggetto valarray di input.|
 |[Acos](../standard-library/valarray-functions.md#acos)|Opera sugli elementi di un oggetto valarray di input, restituendo un oggetto valarray i cui elementi sono uguali all'arcocoseno degli elementi dell'oggetto valarray di input.|
@@ -44,7 +45,7 @@ Questi modelli e funzioni di classe sono consentiti a una latitudine insolita pe
 |[iniziare](../standard-library/valarray-functions.md#begin)||
 |[cos](../standard-library/valarray-functions.md#cos)|Opera sugli elementi di un oggetto valarray di input, restituendo un oggetto valarray i cui elementi sono uguali al coseno degli elementi dell'oggetto valarray di input.|
 |[cosh](../standard-library/valarray-functions.md#cosh)|Opera sugli elementi di un oggetto valarray di input, restituendo un oggetto valarray i cui elementi sono uguali al coseno iperbolico degli elementi dell'oggetto valarray di input.|
-|[fine](../standard-library/valarray-functions.md#end)||
+|[end](../standard-library/valarray-functions.md#end)||
 |[exp](../standard-library/valarray-functions.md#exp)|Opera sugli elementi di un oggetto valarray di input, restituendo un oggetto valarray i cui elementi sono uguali al valore esponenziale naturale degli elementi dell'oggetto valarray di input.|
 |[log](../standard-library/valarray-functions.md#log)|Opera sugli elementi di un oggetto valarray di input, restituendo un oggetto valarray i cui elementi sono uguali al logaritmo naturale degli elementi dell'oggetto valarray di input.|
 |[log10](../standard-library/valarray-functions.md#log10)|Opera sugli elementi di un oggetto valarray di input, restituendo un oggetto valarray i cui elementi sono uguali al logaritmo in base 10 o comune degli elementi dell'oggetto valarray di input.|
@@ -58,7 +59,7 @@ Questi modelli e funzioni di classe sono consentiti a una latitudine insolita pe
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[operatore! =](../standard-library/valarray-operators.md#op_neq)|Verifica se gli elementi corrispondenti di due oggetti valarray di dimensioni equivalenti sono diversi o se tutti gli elementi di un oggetto valarray sono diversi da un valore specificato del tipo di elemento dell'oggetto valarray.|
 |[operatore](../standard-library/valarray-operators.md#op_mod)|Ottiene il resto della divisione degli elementi corrispondenti di due oggetti valarray di dimensioni equivalenti, della divisione di un oggetto valarray per un valore specificato del tipo di elemento dell'oggetto valarray oppure della divisione di un valore specificato per un oggetto valarray.|
@@ -81,7 +82,7 @@ Questi modelli e funzioni di classe sono consentiti a una latitudine insolita pe
 
 ### <a name="classes"></a>Classi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[Classe gslice](../standard-library/gslice-class.md)|Classe di utilità per l'oggetto valarray usato per definire sezioni multidimensionali di un oggetto valarray.|
 |[Classe gslice_array](../standard-library/gslice-array-class.md)|Modello di classe ausiliario interno che supporta oggetti sezione generale fornendo operazioni tra matrici di subset definite dalla sezione generale di un oggetto valarray.|
@@ -93,11 +94,11 @@ Questi modelli e funzioni di classe sono consentiti a una latitudine insolita pe
 
 ### <a name="specializations"></a>Specializzazioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[valarray ( \<bool> classe)](../standard-library/valarray-bool-class.md)|Versione specializzata del modello di classe valarray \<**Type**> per gli elementi di tipo **`bool`** .|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

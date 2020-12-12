@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: ProgID'
 title: ProgID (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - progid attribute
 ms.assetid: afcf559c-e432-481f-aa9a-bd3bb72c02a8
-ms.openlocfilehash: 136c651ec92c78339c2f701804a6a409523dd30f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ed829d1ec20ae06fae8604e35ccc260013f59e3d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839998"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114936"
 ---
 # <a name="progid"></a>progid
 
@@ -30,7 +31,7 @@ ProgID che rappresenta l'oggetto.
 
 I ProgID presentano una versione leggibile dell'identificatore di classe (CLSID) utilizzato per identificare gli oggetti COM/ActiveX.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L' `progid` attributo C++ consente di specificare il ProgID per un oggetto com. Un ProgID ha il formato *name1. name2. Version*. Se non si specifica una *versione* per un ProgID, la versione predefinita è 1. Se non si specifica *name1. name2*, il nome predefinito è *NomeClasse. NomeClasse*. Se non si specifica `progid` e si specifica `vi_progid` , *name1. name2* viene ricavato da `vi_progid` e la versione (numero sequenziale successivo) viene accodata.
 
@@ -57,7 +58,7 @@ Vedere l'esempio per [coclass](coclass.md) per un esempio di utilizzo di `progid
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)<br/>

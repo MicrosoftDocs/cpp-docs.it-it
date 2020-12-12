@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _variant_t:: Connetti'
 title: _variant_t::Attach
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - VARIANT object [C++], attach
 - VARIANT object
 ms.assetid: 2f02bd08-2306-4477-aa88-d2a5dee2b859
-ms.openlocfilehash: d0822dfc730cbbb64f8364e6fa8fe8bc7207f9f9
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: de13b1e8138eb24971e52165ee84fc92d97ca3d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81750736"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116652"
 ---
 # <a name="_variant_tattach"></a>_variant_t::Attach
 
 **Specifico di Microsoft**
 
-Associa un `VARIANT` oggetto all'oggetto **_variant_t.**
+Connette un `VARIANT` oggetto all'oggetto **_variant_t** .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -31,14 +32,14 @@ void Attach(VARIANT& varSrc);
 #### <a name="parameters"></a>Parametri
 
 *varSrc*<br/>
-Oggetto `VARIANT` da associare a questo **_variant_t** oggetto.
+`VARIANT`Oggetto da associare a questo oggetto **_variant_t** .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Assume la `VARIANT` proprietà di l'oggetto incapsulandolo. Questa funzione membro rilascia `VARIANT`qualsiasi file incapsulato `VARIANT`esistente, `VARTYPE` quindi copia l'oggetto fornito e ne imposta la proprietà su VT_EMPTY per assicurarsi che le relative risorse possano essere rilasciate solo dal distruttore **_variant_t.**
+Acquisisce la proprietà di `VARIANT` mediante l'incapsulamento. Questa funzione membro rilascia tutti gli incapsulati esistenti `VARIANT` , quindi copia l'oggetto fornito `VARIANT` e imposta la proprietà `VARTYPE` su VT_EMPTY per assicurarsi che le risorse possano essere rilasciate solo dal distruttore **_variant_t** .
 
-**FINE Specifico di Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe _variant_t](../cpp/variant-t-class.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: accesso al controllo calendario mensile incorporato'
 title: Accesso al controllo calendario mensile incorporato
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - month calendar controls [MFC], changing the font
 - DateTimePicker control [MFC]
 ms.assetid: 355e97ed-cf81-4df3-a2f8-9ddbbde93227
-ms.openlocfilehash: 66a9ef7fd49ea81ddac4779aa6d1c3f12fbe4c55
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 35c715cdd84bd7921883db530c8cf36e8e5cf07e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617370"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169450"
 ---
 # <a name="accessing-the-embedded-month-calendar-control"></a>Accesso al controllo calendario mensile incorporato
 
@@ -37,7 +38,7 @@ Come indicato in precedenza, tutte le modifiche alle proprietà del controllo ca
 
 Una volta modificato il tipo di carattere, con una chiamata a `CDateTimeCtrl::SetMonthCalFont`, il nuovo tipo di carattere viene archiviato e utilizzato la volta successiva in cui deve essere visualizzato un calendario mensile.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Utilizzo di CDateTimeCtrl](using-cdatetimectrl.md)<br/>
 [Controlli](controls-mfc.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3705'
 title: Errore del compilatore C3705
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3705
 ms.assetid: 8361017d-5782-4214-a9d7-e9825fd29bc8
-ms.openlocfilehash: c4f77457be95ae22b2a67214207d361ca105811d
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 50030c47ae629607110c6820d863f5aa1358e8f7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757930"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168371"
 ---
 # <a name="compiler-error-c3705"></a>Errore del compilatore C3705
 
 ' Function ': Impossibile trovare l'interfaccia di eventi
 
-Per utilizzare gli eventi COM, è necessario definire un'interfaccia eventi. Si noti che le righe `#include` dei file di intestazione ATL mostrati nell'esempio seguente sono necessarie per l'utilizzo di eventi COM. Per correggere l'errore, rimuovere il commento dalla definizione dell'interfaccia `IEvents` nel codice di esempio.
+Per utilizzare gli eventi COM, è necessario definire un'interfaccia eventi. Si noti che le `#include` righe dei file di intestazione ATL mostrati nell'esempio seguente sono necessarie per l'utilizzo di eventi com. Per correggere l'errore, rimuovere il commento dalla definizione dell' `IEvents` interfaccia nel codice di esempio.
 
 L'esempio seguente genera l'C3705:
 

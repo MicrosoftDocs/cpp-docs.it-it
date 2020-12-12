@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: errore dell'analizzatore di espressioni CXX0005"
 title: Errore dell‘analizzatore di espressioni CXX0005
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - CXX0005
 - CAN0005
 ms.assetid: b88e83e4-10aa-4e9c-94d3-92aa8c688748
-ms.openlocfilehash: 0eee011d543c9aa998100fa162281be3f914e744
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c003ba6769305c5802485f112d196774f1e8e6d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80196313"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119447"
 ---
 # <a name="expression-evaluator-error-cxx0005"></a>Errore dell‘analizzatore di espressioni CXX0005
 

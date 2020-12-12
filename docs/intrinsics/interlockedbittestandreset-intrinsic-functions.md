@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _interlockedbittestandreset funzioni intrinseche'
 title: funzioni intrinseche _interlockedbittestandreset
 ms.date: 09/02/2019
 f1_keywords:
@@ -21,18 +22,18 @@ helpviewer_keywords:
 - _interlockedbittestandreset64 intrinsic
 - _interlockedbittestandreset intrinsic
 ms.assetid: 9bbb1442-f2e9-4dc2-b0da-97f3de3493b9
-ms.openlocfilehash: 419d7f800d603a8beca5c8ccb0f9c8f8b3bfcfdb
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 10bd636fb25d0f4025530f0bd7a8c3f877cc1556
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222065"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168215"
 ---
 # <a name="_interlockedbittestandreset-intrinsic-functions"></a>funzioni intrinseche _interlockedbittestandreset
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Genera un'istruzione per impostare un `b` bit dell'indirizzo `a` su zero e restituire il valore originale.
+Genera un'istruzione per impostare un bit `b` dell'indirizzo `a` su zero e restituire il valore originale.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -101,16 +102,16 @@ Valore originale del bit nella posizione specificata da `b`.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|Intestazione|
+|Intrinsic|Architettura|Intestazione|
 |---------------|------------------|------------|
 |`_interlockedbittestandreset`|x86, ARM, x64, ARM64|\<intrin.h>|
 |`_interlockedbittestandreset_acq`, `_interlockedbittestandreset_nf`, `_interlockedbittestandreset_rel`|ARM, ARM64|\<intrin.h>|
 |`_interlockedbittestandreset64_acq`, `_interlockedbittestandreset64_nf`, `_interlockedbittestandreset64_rel`|ARM64|\<intrin.h>|
 |`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86, x64|\<immintrin.h>|
 |`_interlockedbittestandreset64`|x64, ARM64|\<intrin.h>|
-|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|X64|\<immintrin.h>|
+|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|x64|\<immintrin.h>|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Nei processori x86 e x64 queste funzioni intrinseche usano l' `lock btr` istruzione, che legge e imposta il bit specificato su zero in un'operazione atomica.
 
@@ -120,9 +121,9 @@ Nei processori Intel che supportano le istruzioni HLE (Hardware Lock Elision), l
 
 Queste routine sono disponibili solo come funzioni intrinseche.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
 [Conflitti con il compilatore x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

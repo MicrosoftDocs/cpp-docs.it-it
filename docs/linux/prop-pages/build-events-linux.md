@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: Proprietà evento di compilazione (Linux C++)'
 title: Eventi di compilazione remota (Linux C++)
 ms.date: 06/07/2019
 ms.assetid: 165d3690-5bd8-4b0b-bc66-8b699d85a61b
-ms.openlocfilehash: a337c1e83976f06ebb09ac92fd077c18cc8543fd
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: f134a882202881b1b89230459cc21c1b9757f6db
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924575"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169814"
 ---
 # <a name="build-event-properties-linux-c"></a>Proprietà di un evento di compilazione (Linux C++)
 
@@ -24,7 +25,7 @@ Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
 | Proprietà | Descrizione |
 |--|--|
 | Riga di comando | Specifica una riga di comando per l'esecuzione dello strumento Evento di pre-compilazione. |
-| Descrizione | Consente di specificare una descrizione che verrà visualizzata dallo strumento Evento di pre-compilazione. |
+| Description | Consente di specificare una descrizione che verrà visualizzata dallo strumento Evento di pre-compilazione. |
 | Usa in compilazione | Consente di specificare se questo evento di compilazione è escluso dalla compilazione per la configurazione corrente. |
 | Altri file da copiare | Consente di specificare i file aggiuntivi da copiare nel sistema remoto. Facoltativamente, specificare le coppie di mapping da locale a remoto usando una sintassi simile alla seguente: a percorsolocalecompleto1: = percorsoremotocompleto1; percorsolocalecompleto2: = percorsoremotocompleto2, in cui è possibile copiare un file locale nel percorso remoto specificato nel sistema remoto. |
 
@@ -33,7 +34,7 @@ Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
 | Proprietà | Descrizione |
 |--|--|
 | Riga di comando | Specifica una riga di comando per l'esecuzione dello strumento Evento di pre-collegamento. |
-| Descrizione | Specifica una descrizione che verrà visualizzata dallo strumento Evento di pre-collegamento. |
+| Description | Specifica una descrizione che verrà visualizzata dallo strumento Evento di pre-collegamento. |
 | Usa in compilazione | Consente di specificare se questo evento di compilazione è escluso dalla compilazione per la configurazione corrente. |
 | Altri file da copiare | Consente di specificare i file aggiuntivi da copiare nel sistema remoto. Facoltativamente, specificare le coppie di mapping da locale a remoto usando una sintassi simile alla seguente: a percorsolocalecompleto1: = percorsoremotocompleto1; percorsolocalecompleto2: = percorsoremotocompleto2, in cui è possibile copiare un file locale nel percorso remoto specificato nel sistema remoto. |
 
@@ -42,7 +43,7 @@ Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
 | Proprietà | Descrizione |
 |--|--|
 | Riga di comando | Specifica una riga di comando per l'esecuzione dello strumento Evento di post-compilazione. |
-| Descrizione | Specifica una descrizione che verrà visualizzata dallo strumento Evento di post-compilazione. |
+| Description | Specifica una descrizione che verrà visualizzata dallo strumento Evento di post-compilazione. |
 | Usa in compilazione | Consente di specificare se questo evento di compilazione è escluso dalla compilazione per la configurazione corrente. |
 | Altri file da copiare | Consente di specificare i file aggiuntivi da copiare nel sistema remoto. Facoltativamente, specificare le coppie di mapping da locale a remoto usando una sintassi simile alla seguente: a percorsolocalecompleto1: = percorsoremotocompleto1; percorsolocalecompleto2: = percorsoremotocompleto2, in cui è possibile copiare un file locale nel percorso remoto specificato nel sistema remoto. |
 
@@ -51,7 +52,7 @@ Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
 | Proprietà | Descrizione |
 |--|--|
 | Riga di comando | Consente di specificare una riga di comando per lo strumento Evento di pre-compilazione da eseguire nel sistema remoto. |
-| Descrizione | Consente di specificare una descrizione che verrà visualizzata dallo strumento Evento di pre-compilazione. |
+| Description | Consente di specificare una descrizione che verrà visualizzata dallo strumento Evento di pre-compilazione. |
 | Usa in compilazione | Consente di specificare se questo evento di compilazione è escluso dalla compilazione per la configurazione corrente. |
 | Altri file da copiare | Consente di specificare i file aggiuntivi da copiare dal sistema remoto. Facoltativamente, specificare le coppie di mapping da remoto a locale usando una sintassi simile alla seguente: percorsoremotocompleto1: = a percorsolocalecompleto1; percorsoremotocompleto2: = percorsolocalecompleto2, in cui è possibile copiare un file remoto nel percorso specificato nel computer locale. |
 
@@ -60,7 +61,7 @@ Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
 | Proprietà | Descrizione |
 |--|--|
 | Riga di comando | Consente di specificare una riga di comando per lo strumento Evento di pre-collegamento da eseguire nel sistema remoto. |
-| Descrizione | Specifica una descrizione che verrà visualizzata dallo strumento Evento di pre-collegamento. |
+| Description | Specifica una descrizione che verrà visualizzata dallo strumento Evento di pre-collegamento. |
 | Usa in compilazione | Consente di specificare se questo evento di compilazione è escluso dalla compilazione per la configurazione corrente. |
 | Altri file da copiare | Consente di specificare i file aggiuntivi da copiare dal sistema remoto. Facoltativamente, specificare le coppie di mapping da remoto a locale usando una sintassi simile alla seguente: percorsoremotocompleto1: = a percorsolocalecompleto1; percorsoremotocompleto2: = percorsolocalecompleto2, in cui è possibile copiare un file remoto nel percorso specificato nel computer locale. |
 
@@ -69,7 +70,7 @@ Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
 | Proprietà | Descrizione |
 |--|--|
 | Riga di comando | Consente di specificare una riga di comando per lo strumento Evento di post-compilazione da eseguire nel sistema remoto. |
-| Descrizione | Specifica una descrizione che verrà visualizzata dallo strumento Evento di post-compilazione. |
+| Description | Specifica una descrizione che verrà visualizzata dallo strumento Evento di post-compilazione. |
 | Usa in compilazione | Consente di specificare se questo evento di compilazione è escluso dalla compilazione per la configurazione corrente. |
 | Altri file da copiare | Consente di specificare i file aggiuntivi da copiare dal sistema remoto. Facoltativamente, specificare le coppie di mapping da remoto a locale usando una sintassi simile alla seguente: percorsoremotocompleto1: = a percorsolocalecompleto1; percorsoremotocompleto2: = percorsolocalecompleto2, in cui è possibile copiare un file remoto nel percorso specificato nel computer locale. |
 

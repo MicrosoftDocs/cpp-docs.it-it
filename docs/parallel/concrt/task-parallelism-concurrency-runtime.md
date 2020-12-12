@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: parallelismo delle attività (runtime di concorrenza)'
 title: Parallelismo delle attività (runtime di concorrenza)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-ms.openlocfilehash: 09c6153a1440684156226acbda909ca8b0398989
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 22dc275d70a84c37fa5250c4798a01cbfe2c4c78
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224929"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169294"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Parallelismo delle attività (runtime di concorrenza)
 
@@ -68,7 +69,7 @@ Usare le attività quando si scrive codice asincrono e si vuole che alcune opera
 
 - [Programmazione efficiente](#robust)
 
-## <a name="using-lambda-expressions"></a><a name="lambdas"></a>Uso di espressioni lambda
+## <a name="using-lambda-expressions"></a><a name="lambdas"></a> Uso di espressioni lambda
 
 Poiché presentano una sintassi concisa, le espressioni lambda sono comunemente usate per definire il lavoro eseguito da attività e gruppi di attività. Ecco alcuni suggerimenti sull'utilizzo:
 
@@ -86,11 +87,11 @@ Per risolvere questo problema, usare un puntatore intelligente, ad esempio [std:
 
 Per ulteriori informazioni sulle espressioni lambda, vedere [espressioni lambda](../../cpp/lambda-expressions-in-cpp.md).
 
-## <a name="the-task-class"></a><a name="task-class"></a>Classe Task
+## <a name="the-task-class"></a><a name="task-class"></a> Classe Task
 
-È possibile utilizzare la classe [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) per comporre le attività in un set di operazioni dipendenti. Questo modello di composizione è supportato dalla nozione di *continuazioni*. Una continuazione consente di eseguire il codice quando l'attività precedente o *antecedente*viene completata. Il risultato dell'attività precedente viene passato come input a una o più attività di continuazione. Quando viene completata un'attività antecedente, viene pianificata l'esecuzione di tutte le attività di continuazione in attesa. Ogni attività di continuazione riceve una copia del risultato dell'attività precedente. A loro volta, tali attività di continuazione possono essere attività antecedenti per altre continuazioni e creano, pertanto, una catena di attività. Le continuazioni consentono di creare catene di lunghezza arbitraria delle attività che presentano dipendenze specifiche tra di esse. Inoltre, un'attività può partecipare all'annullamento prima dell'avvio di un'attività o in modo cooperativo mentre è in esecuzione. Per ulteriori informazioni su questo modello di annullamento, vedere [annullamento nella libreria PPL](cancellation-in-the-ppl.md).
+È possibile utilizzare la classe [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) per comporre le attività in un set di operazioni dipendenti. Questo modello di composizione è supportato dalla nozione di *continuazioni*. Una continuazione consente di eseguire il codice quando l'attività precedente o *antecedente* viene completata. Il risultato dell'attività precedente viene passato come input a una o più attività di continuazione. Quando viene completata un'attività antecedente, viene pianificata l'esecuzione di tutte le attività di continuazione in attesa. Ogni attività di continuazione riceve una copia del risultato dell'attività precedente. A loro volta, tali attività di continuazione possono essere attività antecedenti per altre continuazioni e creano, pertanto, una catena di attività. Le continuazioni consentono di creare catene di lunghezza arbitraria delle attività che presentano dipendenze specifiche tra di esse. Inoltre, un'attività può partecipare all'annullamento prima dell'avvio di un'attività o in modo cooperativo mentre è in esecuzione. Per ulteriori informazioni su questo modello di annullamento, vedere [annullamento nella libreria PPL](cancellation-in-the-ppl.md).
 
-`task` task è una classe modello. Il parametro di tipo `T` è il tipo del risultato prodotto dall'attività. Questo tipo può essere **`void`** se l'attività non restituisce un valore. `T`Impossibile utilizzare il **`const`** modificatore.
+`task` task è una classe modello. Il parametro di tipo `T` è il tipo del risultato prodotto dall'attività. Questo tipo può essere **`void`** se l'attività non restituisce un valore. `T` Impossibile utilizzare il **`const`** modificatore.
 
 Quando si crea un'attività, si fornisce una *funzione lavoro* che esegue il corpo dell'attività. Questa funzione di lavoro ha il formato di una funzione lambda, di un puntatore a funzione o di un oggetto funzione. Per attendere il completamento di un'attività senza ottenere il risultato, chiamare il metodo [Concurrency:: Task:: wait](reference/task-class.md#wait) . Il `task::wait` metodo restituisce un valore [Concurrency:: task_status](reference/concurrency-namespace-enums.md#task_group_status) che descrive se l'attività è stata completata o annullata. Per ottenere il risultato dell'attività, chiamare il metodo [Concurrency:: Task:: Get](reference/task-class.md#get) . Questo metodo chiama `task::wait` per attendere il completamento dell'attività e quindi blocca l'esecuzione del thread corrente finché non è disponibile il risultato.
 
@@ -113,7 +114,7 @@ Per un esempio di utilizzo di `task` , [Concurrency:: task_completion_event](../
 > [!TIP]
 > Per informazioni dettagliate specifiche per le attività nelle app UWP, vedere [programmazione asincrona in c++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) e [creazione di operazioni asincrone in C++ per app UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).
 
-## <a name="continuation-tasks"></a><a name="continuations"></a>Attività di continuazione
+## <a name="continuation-tasks"></a><a name="continuations"></a> Attività di continuazione
 
 Nella programmazione asincrona è molto comune che un'operazione asincrona, al completamento, richiami una seconda operazione e vi passi i dati. A tale scopo, si usano in genere i metodi di callback. Nella runtime di concorrenza la stessa funzionalità viene fornita dalle attività di *continuazione*. Un'attività di continuazione, nota anche semplicemente come continuazione, è un'attività asincrona richiamata da un'altra attività, nota come *precedente*, al completamento dell'attività precedente. Usando le continuazioni è possibile:
 
@@ -150,15 +151,15 @@ Una continuazione può restituire anche un'altra attività. Se non è specificat
 > [!IMPORTANT]
 > Quando una continuazione di un'attività restituisce un'attività annidata di tipo `N`, l'attività risultante ha il tipo `N`, non `task<N>`, e viene completata al completamento dell'attività annidata. In altre parole, la continuazione annulla il wrapping dell'attività annidata.
 
-## <a name="value-based-versus-task-based-continuations"></a><a name="value-versus-task"></a>Continuazioni basate su valore e continuazioni basate su attività
+## <a name="value-based-versus-task-based-continuations"></a><a name="value-versus-task"></a> Continuazione di Value-Based rispetto Task-Based
 
 Dato un oggetto `task` il cui tipo restituito è `T`, è possibile specificare un valore di tipo `T` o `task<T>` alle relative attività di continuazione. Una continuazione che accetta il tipo `T` è nota come *continuazione basata sul valore*. Una continuazione basata su valore viene programmata per essere eseguita quando l'attività antecedente viene completata senza errori e non viene annullata. Una continuazione che accetta `task<T>` il tipo come parametro è nota come *continuazione basata su attività*. Una continuazione basata sulle attività è sempre pianificata per l'esecuzione quando l'attività precedente viene completata, anche quando l'attività precedente viene annullata o genera un'eccezione. È quindi possibile chiamare `task::get` per ottenere il risultato dell'attività precedente. Se l'attività precedente è stata annullata, `task::get` genera [Concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md). Se l'attività precedente ha generato un'eccezione, `task::get` genera nuovamente tale eccezione. Una continuazione basata sulle attività non è contrassegnata come annullata quando la relativa attività precedente viene annullata.
 
-## <a name="composing-tasks"></a><a name="composing-tasks"></a>Composizione di attività
+## <a name="composing-tasks"></a><a name="composing-tasks"></a> Composizione di attività
 
 In questa sezione vengono descritte le funzioni [Concurrency:: when_all](reference/concurrency-namespace-functions.md#when_all) e [Concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all) , che consentono di comporre più attività per implementare modelli comuni.
 
-### <a name="the-when_all-function"></a><a name="when-all"></a>Funzione when_all
+### <a name="the-when_all-function"></a><a name="when-all"></a> Funzione when_all
 
 La funzione `when_all` crea un'attività che viene completata dopo il completamento di un set di attività. Questa funzione restituisce un oggetto std::[vector](../../standard-library/vector-class.md) che contiene il risultato di ogni attività nel set. Nell'esempio di base riportato di seguito viene usato `when_all` per creare un'attività che rappresenta il completamento di altre tre attività.
 
@@ -206,7 +207,7 @@ Si consideri un'app UWP che usa C++ e XAML e scrive un set di file su disco. Nel
 > [!TIP]
 > `when_all` è una funzione non bloccante che produce `task` come risultato. A differenza di [Task:: wait](reference/task-class.md#wait), è possibile chiamare questa funzione in un'app UWP nel thread asta (Application sta).
 
-### <a name="the-when_any-function"></a><a name="when-any"></a>Funzione when_any
+### <a name="the-when_any-function"></a><a name="when-any"></a> Funzione when_any
 
 La funzione `when_any` crea un'attività che viene completata al completamento della prima attività di un set di attività. Questa funzione restituisce un oggetto [std::p aria](../../standard-library/pair-structure.md) che contiene il risultato dell'attività completata e l'indice di tale attività nel set.
 
@@ -236,17 +237,17 @@ In questo esempio, è inoltre possibile specificare `task<pair<int, size_t>>` pe
 > [!TIP]
 > Come con `when_all` , `when_any` non è bloccante ed è sicuro da chiamare in un'app UWP sul thread asta.
 
-## <a name="delayed-task-execution"></a><a name="delayed-tasks"></a>Esecuzione ritardata dell'attività
+## <a name="delayed-task-execution"></a><a name="delayed-tasks"></a> Esecuzione ritardata dell'attività
 
 A volte è necessario ritardare l'esecuzione di un'attività fino a soddisfare una condizione oppure avviare un'attività in risposta a un evento esterno. Ad esempio, nella programmazione asincrona potrebbe essere necessario avviare un'attività in risposta a un evento di completamento I/O.
 
 Per eseguire questa operazione, è possibile utilizzare una continuazione o avviare un'attività e attendere un evento nella funzione lavoro dell'attività. In alcuni casi, tuttavia, non è possibile usare una di queste tecniche. Ad esempio, per creare una continuazione, è necessario avere l'attività antecedente. Tuttavia, se non si dispone dell'attività precedente, è possibile creare un *evento di completamento dell'attività* e concatenare tale evento di completamento all'attività precedente quando diventa disponibile. Inoltre, poiché un'attività in attesa blocca anche un thread, è possibile usare eventi di completamento di attività per eseguire il lavoro quando un'operazione asincrona viene completata e quindi libera un thread.
 
-La classe [Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) aiuta a semplificare tale composizione di attività. Analogamente ala classe `task`, il parametro di tipo `T` è il tipo del risultato prodotto dall'attività. Questo tipo può essere **`void`** se l'attività non restituisce un valore. `T`Impossibile utilizzare il **`const`** modificatore. In genere, un oggetto `task_completion_event` viene fornito a un thread o a un'attività che lo segnalerà se diventa disponibile il valore per l'oggetto. Contemporaneamente, una o più attività vengono impostate come listener di tale evento. Quando viene impostato l'evento, le attività del listener vengono completate e viene pianificata l'esecuzione delle loro continuazioni.
+La classe [Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) aiuta a semplificare tale composizione di attività. Analogamente ala classe `task`, il parametro di tipo `T` è il tipo del risultato prodotto dall'attività. Questo tipo può essere **`void`** se l'attività non restituisce un valore. `T` Impossibile utilizzare il **`const`** modificatore. In genere, un oggetto `task_completion_event` viene fornito a un thread o a un'attività che lo segnalerà se diventa disponibile il valore per l'oggetto. Contemporaneamente, una o più attività vengono impostate come listener di tale evento. Quando viene impostato l'evento, le attività del listener vengono completate e viene pianificata l'esecuzione delle loro continuazioni.
 
 Per un esempio che usa `task_completion_event` per implementare un'attività che viene completata dopo un ritardo, vedere [procedura: creare un'attività che viene completata dopo un ritardo](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md).
 
-## <a name="task-groups"></a><a name="task-groups"></a>Gruppi di attività
+## <a name="task-groups"></a><a name="task-groups"></a> Gruppi di attività
 
 Un *gruppo di attività* organizza una raccolta di attività. I gruppi di attività inseriscono le attività in una coda di acquisizione del lavoro. L'utilità di pianificazione rimuove le attività da questa coda eseguendole nelle risorse di elaborazione disponibili. Dopo avere aggiunto le attività a un gruppo di attività, è possibile attendere il completamento di tutte le attività o l'annullamento delle attività che non sono ancora state avviate.
 
@@ -263,7 +264,7 @@ I gruppi di attività supportano il concetto di annullamento. L'annullamento con
 
 Il runtime fornisce inoltre un modello di gestione delle eccezioni che consente di generare un'eccezione da un'attività e di gestire tale eccezione durante l'attesa del completamento del gruppo di attività associato. Per ulteriori informazioni su questo modello di gestione delle eccezioni, vedere [gestione delle eccezioni](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 
-## <a name="comparing-task_group-to-structured_task_group"></a><a name="comparing-groups"></a>Confronto tra task_group e structured_task_group
+## <a name="comparing-task_group-to-structured_task_group"></a><a name="comparing-groups"></a> Confronto tra task_group e structured_task_group
 
 Sebbene sia consigliabile usare `task_group` o `parallel_invoke` anziché la classe `structured_task_group`, in alcuni casi può essere opportuno usare `structured_task_group`, ad esempio quando si scrive un algoritmo parallelo che esegue un numero variabile di attività o che richiede il supporto per l'annullamento. In questa sezione vengono illustrate le differenze tra le classi `task_group` e `structured_task_group`.
 
@@ -301,7 +302,7 @@ Poiché l'algoritmo `parallel_invoke` esegue le attività contemporaneamente, l'
 
 Per esempi completi che illustrano come usare l' `parallel_invoke` algoritmo, vedere [procedura: usare parallel_invoke per scrivere una routine di ordinamento in parallelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) e [procedura: usare parallel_invoke per eseguire operazioni parallele](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). Per un esempio completo in cui viene usata la `task_group` classe per implementare future asincrone, vedere [procedura dettagliata: implementazione di future](../../parallel/concrt/walkthrough-implementing-futures.md).
 
-## <a name="robust-programming"></a><a name="robust"></a>Programmazione affidabile
+## <a name="robust-programming"></a><a name="robust"></a> Programmazione affidabile
 
 Prima di usare le attività, i gruppi di attività e gli algoritmi paralleli, assicurarsi di aver compreso il ruolo dell'annullamento e della gestione delle eccezioni. Ad esempio, in un albero di lavoro parallelo l'annullamento di un'attività impedisce l'esecuzione delle attività figlio. Ciò può comportare problemi se una delle attività figlio esegue un'operazione importante per l'applicazione, ad esempio liberare una risorsa. Inoltre, se un'attività figlio genera un'eccezione, questa può propagarsi tramite un distruttore di oggetti e causare un comportamento indefinito nell'applicazione. Per un esempio in cui vengono illustrati questi punti, vedere la sezione comprendere il modo in cui l' [annullamento e la gestione delle eccezioni influiscono sull'eliminazione degli oggetti](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction) nelle procedure consigliate del documento libreria Parallel Patterns. Per ulteriori informazioni sui modelli di annullamento e di gestione delle eccezioni nella libreria PPL, vedere [annullamento](../../parallel/concrt/cancellation-in-the-ppl.md) e [gestione delle eccezioni](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 
@@ -315,7 +316,7 @@ Prima di usare le attività, i gruppi di attività e gli algoritmi paralleli, as
 |[Procedura dettagliata: implementazione di future](../../parallel/concrt/walkthrough-implementing-futures.md)|Viene illustrato come combinare le funzionalità esistenti del runtime di concorrenza con funzionalità ancora più avanzate.|
 |[PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Viene descritta la libreria PPL che fornisce un modello di programmazione imperativa per lo sviluppo di applicazioni simultanee.|
 
-## <a name="reference"></a>Informazioni di riferimento
+## <a name="reference"></a>Riferimento
 
 [Classe Task (runtime di concorrenza)](../../parallel/concrt/reference/task-class.md)
 

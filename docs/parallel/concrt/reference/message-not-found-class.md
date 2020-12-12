@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: message_not_found Class'
 title: Classe message_not_found
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - message_not_found class
 ms.assetid: a96b9995-5ad7-4600-83c8-c15e329ff10e
-ms.openlocfilehash: 63b921e47b01e3be7dfc060cbb41e5fd9016d04f
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: c0b098a530768617b2fa2cf52dfe374dc44a2c12
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139578"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169385"
 ---
 # <a name="message_not_found-class"></a>Classe message_not_found
 
@@ -29,7 +30,7 @@ class message_not_found : public std::exception;
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[message_not_found](#ctor)|Di overload. Costruisce un oggetto `message_not_found`.|
 
@@ -45,7 +46,7 @@ class message_not_found : public std::exception;
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="ctor"></a>message_not_found
+## <a name="message_not_found"></a><a name="ctor"></a> message_not_found
 
 Costruisce un oggetto `message_not_found`.
 
@@ -60,7 +61,7 @@ message_not_found() throw();
 *_Message*<br/>
 Messaggio descrittivo dell'errore.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)<br/>
-[Blocchi dei messaggi asincroni](../../../parallel/concrt/asynchronous-message-blocks.md)
+[Spazio dei nomi Concurrency](concurrency-namespace.md)<br/>
+[Blocchi di messaggi asincroni](../../../parallel/concrt/asynchronous-message-blocks.md)

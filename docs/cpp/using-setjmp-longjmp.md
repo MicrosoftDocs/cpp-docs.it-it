@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso di setjmp e longjmp'
 title: Uso di setjmp e longjmp
 ms.date: 08/14/2018
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - setjmp function
 - setjmp function, C++ programs
 ms.assetid: 96be8816-f6f4-4567-9a9c-0c3c720e37c5
-ms.openlocfilehash: 6adbe22eb684c9a1dda080f6d35a99c55d6c3d30
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5d0f62eeed8b2401309f339a59872c7dd0ac3107
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226997"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116743"
 ---
 # <a name="using-setjmp-and-longjmp"></a>Uso di setjmp e longjmp
 
@@ -36,6 +37,6 @@ Nel codice portabile, quando `longjmp` viene eseguita una chiamata, la distruzio
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Combinazione di eccezioni C (strutturate) e C++](../cpp/mixing-c-structured-and-cpp-exceptions.md)

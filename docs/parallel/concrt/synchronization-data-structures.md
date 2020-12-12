@@ -1,21 +1,22 @@
 ---
+description: 'Altre informazioni su: strutture di dati di sincronizzazione'
 title: Strutture di dati di sincronizzazione
 ms.date: 11/04/2016
 helpviewer_keywords:
 - synchronization data structures
 ms.assetid: d612757d-e4b7-4019-a627-f853af085b8b
-ms.openlocfilehash: 244aaac9bd40c83d0bbec3c360bdf7351da54baf
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d5e2e9e6d79f1e71a8f18f98d69fb794597d0ccb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231663"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169346"
 ---
 # <a name="synchronization-data-structures"></a>Strutture di dati di sincronizzazione
 
 Il runtime di concorrenza fornisce diverse strutture di dati che consentono di sincronizzare l'accesso ai dati condivisi da più thread. Queste strutture di dati sono utili quando si condividono dati modificati raramente. Un oggetto di sincronizzazione, ad esempio una sezione critica, causa l'attesa di altri thread finché la risorsa condivisa non è disponibile. Se pertanto si utilizza tale oggetto per sincronizzare l'accesso ai dati utilizzati di frequente, è possibile perdere la scalabilità nell'applicazione. La [libreria PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md) fornisce la classe [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) , che consente di condividere una risorsa tra più thread o attività senza la necessità di eseguire la sincronizzazione. Per ulteriori informazioni sulla `combinable` classe, vedere [contenitori e oggetti paralleli](../../parallel/concrt/parallel-containers-and-objects.md).
 
-## <a name="sections"></a><a name="top"></a>Sezioni
+## <a name="sections"></a><a name="top"></a> Sezioni
 
 In questo argomento vengono descritti in dettaglio i tipi di blocchi di messaggi asincroni seguenti:
 
@@ -27,7 +28,7 @@ In questo argomento vengono descritti in dettaglio i tipi di blocchi di messaggi
 
 - [event](#event)
 
-## <a name="critical_section"></a><a name="critical_section"></a>critical_section
+## <a name="critical_section"></a><a name="critical_section"></a> critical_section
 
 La classe [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) rappresenta un oggetto cooperativa di esclusione reciproca che restituisce ad altre attività invece di annullarne la precedenza. Le sezioni critiche sono utili quando più thread richiedono l'accesso in lettura e scrittura esclusivo ai dati condivisi.
 
@@ -45,7 +46,7 @@ Nella tabella seguente vengono illustrati i metodi importanti definiti dalla `cr
 
 [All'[inizio](#top)]
 
-## <a name="reader_writer_lock"></a><a name="reader_writer_lock"></a>reader_writer_lock
+## <a name="reader_writer_lock"></a><a name="reader_writer_lock"></a> reader_writer_lock
 
 La classe [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) fornisce operazioni di lettura/scrittura thread-safe ai dati condivisi. Usare i blocchi reader/writer quando più thread richiedono l'accesso in lettura simultaneo a una risorsa condivisa, ma raramente scrivono in tale risorsa condivisa. Questa classe fornisce un solo accesso in scrittura thread a un oggetto in qualsiasi momento.
 
@@ -74,7 +75,7 @@ Nella tabella seguente vengono illustrati i metodi importanti definiti dalla `re
 
 [All'[inizio](#top)]
 
-## <a name="scoped_lock-and-scoped_lock_read"></a><a name="scoped_lock"></a>scoped_lock e scoped_lock_read
+## <a name="scoped_lock-and-scoped_lock_read"></a><a name="scoped_lock"></a> scoped_lock e scoped_lock_read
 
 Le `critical_section` `reader_writer_lock` classi e forniscono classi helper annidate che semplificano la modalità di utilizzo degli oggetti di esclusione reciproca. Queste classi helper sono note come *blocchi con ambito*.
 

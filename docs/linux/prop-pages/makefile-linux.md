@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: proprietà del progetto makefile (Linux C++)'
 title: Proprietà generali (progetto makefile di Linux C++) | Microsoft Docs
 ms.date: 06/07/2019
 ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
-ms.openlocfilehash: dd92d77069024456020a09b22de3596b8192c5af
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: e64c49a3dc09deae31ce37a8db85887ce46e11e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924658"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169723"
 ---
 # <a name="makefile-project-properties-linux-c"></a>Proprietà di un progetto makefile (Linux C++)
 
@@ -28,7 +29,7 @@ Questo è un elenco parziale delle proprietà disponibili in un progetto makefil
 | Directory di output | Specifica un percorso relativo della directory dei file di output. Può includere variabili di ambiente. |
 | Directory intermedia | Specifica un percorso relativo della directory dei file intermedi. Può includere variabili di ambiente. |
 | File del log di compilazione | Specifica il file del log di compilazione in cui scrivere quando è abilitata la funzione di log di compilazione. |
-| Tipo configurazione | Specifica il tipo di output generato da questa configurazione. | **Libreria dinamica (so)** : libreria dinamica (so)<br>**Libreria statica (. a)** -libreria statica (. a)<br>**Applicazione (.out)** : applicazione (out)<br>**Makefile** : makefile<br> |
+| Tipo configurazione | Specifica il tipo di output generato da questa configurazione. | **Libreria dinamica (so)**: libreria dinamica (so)<br>**Libreria statica (. a)** -libreria statica (. a)<br>**Applicazione (.out)**: applicazione (out)<br>**Makefile**: makefile<br> |
 | Computer di compilazione remota | Computer o dispositivo di destinazione da usare per operazioni di compilazione, distribuzione e debug in remoto. |
 | Directory radice di compilazione remota | Consente di specificare un percorso di una directory nel computer remoto o nel dispositivo. |
 | Directory del progetto di compilazione remota | Consente di specificare un percorso di una directory nel computer remoto o nel dispositivo per il progetto. |
@@ -48,7 +49,7 @@ Vedere [Proprietà di un progetto Copia origini (Linux C++)](copy-sources-projec
 | Proprietà | Descrizione |
 |--|--|
 | Riga di comando | Specifica una riga di comando per l'esecuzione dello strumento Evento di pre-compilazione. |
-| Descrizione | Consente di specificare una descrizione che verrà visualizzata dallo strumento Evento di pre-compilazione. |
+| Description | Consente di specificare una descrizione che verrà visualizzata dallo strumento Evento di pre-compilazione. |
 | Usa in compilazione | Consente di specificare se questo evento di compilazione è escluso dalla compilazione per la configurazione corrente. |
 | Altri file da copiare | Consente di specificare i file aggiuntivi da copiare nel sistema remoto. Facoltativamente è possibile specificare l'elenco come coppie di mapping da percorso locale a percorso remoto usando una sintassi simile a percorsolocalecompleto1:=percorsoremotocompleto1;percorsolocalecompleto2:=percorsoremotocompleto2, che consente di copiare un file locale nel percorso remoto specificato nel sistema remoto. |
 
@@ -57,7 +58,7 @@ Vedere [Proprietà di un progetto Copia origini (Linux C++)](copy-sources-projec
 | Proprietà | Descrizione |
 |--|--|
 | Riga di comando | Specifica una riga di comando per l'esecuzione dello strumento Evento di post-compilazione. |
-| Descrizione | Specifica una descrizione che verrà visualizzata dallo strumento Evento di post-compilazione. |
+| Description | Specifica una descrizione che verrà visualizzata dallo strumento Evento di post-compilazione. |
 | Usa in compilazione | Consente di specificare se questo evento di compilazione è escluso dalla compilazione per la configurazione corrente. |
 | Altri file da copiare | Consente di specificare i file aggiuntivi da copiare nel sistema remoto. Facoltativamente è possibile specificare l'elenco come coppie di mapping da percorso locale a percorso remoto usando una sintassi simile a percorsolocalecompleto1:=percorsoremotocompleto1;percorsolocalecompleto2:=percorsoremotocompleto2, che consente di copiare un file locale nel percorso remoto specificato nel sistema remoto. |
 
@@ -66,7 +67,7 @@ Vedere [Proprietà di un progetto Copia origini (Linux C++)](copy-sources-projec
 | Proprietà | Descrizione |
 |--|--|
 | Riga di comando | Consente di specificare una riga di comando per lo strumento Evento di pre-compilazione da eseguire nel sistema remoto. |
-| Descrizione | Consente di specificare una descrizione che verrà visualizzata dallo strumento Evento di pre-compilazione. |
+| Description | Consente di specificare una descrizione che verrà visualizzata dallo strumento Evento di pre-compilazione. |
 | Usa in compilazione | Consente di specificare se questo evento di compilazione è escluso dalla compilazione per la configurazione corrente. |
 | Altri file da copiare | Consente di specificare i file aggiuntivi da copiare dal sistema remoto. Facoltativamente è possibile specificare l'elenco come coppie di mapping da percorso remoto a percorso locale usando una sintassi simile a percorsoremotocompleto1:=percorsolocalecompleto1;percorsoremotocompleto2:=percorsolocalecompleto2, che consente di copiare un file remoto nel percorso specificato nel computer locale. |
 
@@ -75,7 +76,7 @@ Vedere [Proprietà di un progetto Copia origini (Linux C++)](copy-sources-projec
 | Proprietà | Descrizione |
 |--|--|
 | Riga di comando | Consente di specificare una riga di comando per lo strumento Evento di post-compilazione da eseguire nel sistema remoto. |
-| Descrizione | Specifica una descrizione che verrà visualizzata dallo strumento Evento di post-compilazione. |
+| Description | Specifica una descrizione che verrà visualizzata dallo strumento Evento di post-compilazione. |
 | Usa in compilazione | Consente di specificare se questo evento di compilazione è escluso dalla compilazione per la configurazione corrente. |
 | Altri file da copiare | Consente di specificare i file aggiuntivi da copiare dal sistema remoto. Facoltativamente è possibile specificare l'elenco come coppie di mapping da percorso remoto a percorso locale usando una sintassi simile a percorsoremotocompleto1:=percorsolocalecompleto1;percorsoremotocompleto2:=percorsolocalecompleto2, che consente di copiare un file remoto nel percorso specificato nel computer locale. |
 
@@ -93,7 +94,7 @@ Le proprietà di IntelliSense possono essere impostate a livello di progetto o d
 | Rimuovi definizioni per il preprocessore | Rimuove una o più definizioni per il preprocessore.     (/U[macro]) |
 | Opzioni aggiuntive | Specifica le opzioni aggiuntive del compilatore che IntelliSense deve usare durante l'analisi dei file C++. |
 
-### <a name="build"></a>Compilare
+### <a name="build"></a>Compilazione
 
 | Proprietà | Descrizione |
 |--|--|

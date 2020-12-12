@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: tuple_size Class;'
 title: Classe tuple_size
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_size
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
-ms.openlocfilehash: 361545bee020d6c3624d1d45743abcb9c2b4ac85
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e825acc02e27a8d0c1ae29e5bfcf4ac1e0a708b8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688859"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168878"
 ---
 # <a name="tuple_size-class"></a>Classe tuple_size
 
@@ -60,27 +61,27 @@ template <class T> inline constexpr size_t tuple_size_v = tuple_size<T>::value;
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *tupla*
+*Tupla*\
 Tipo della tupla.
 
-*Elem* \
+*Elem*\
 Tipo degli elementi della matrice.
 
-*Dimensioni* \
+*Dimensioni*\
 Dimensione della matrice.
 
-@No__t_1 *T1*
+*T1*\
 Tipo del primo membro della coppia.
 
-@No__t_1 *T2*
+*T2*\
 Tipo del secondo membro della coppia.
 
 *Tipi*\
 Tipo degli elementi della tupla.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Il modello di classe dispone di un membro `value` che è un'espressione costante integrale il cui valore è l'extent della *tupla del tipo di*tupla.
+Il modello di classe dispone di un membro `value` che è un'espressione costante integrale il cui valore è l'extent della *tupla* del tipo di tupla.
 
 La specializzazione del modello per le matrici ha un membro `value` che è un'espressione costante integrale il cui valore è *size*, che corrisponde alla dimensione della matrice.
 
@@ -117,10 +118,10 @@ int main()
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<tuple>
+**Intestazione:**\<tuple>
 
-**Intestazione:** \<array> (per la specializzazione di matrice)
+**Intestazione:** \<array> (per la specializzazione di matrici)
 
-**Intestazione:** \<utility> (per la specializzazione di coppia)
+**Intestazione:** \<utility> (per la specializzazione delle coppie)
 
 **Spazio dei nomi:** std

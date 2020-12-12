@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: struttura try_to_lock_t'
 title: Struttura try_to_lock_t
 ms.date: 11/04/2016
 f1_keywords:
 - mutex/std::try_to_lock_t
 ms.assetid: 3e48d632-0387-4871-8257-34efef5d6b83
-ms.openlocfilehash: 877f1e006e47a73bf199b29fe5ae1fac68a1600b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4bab9805c895fa41cfe71b17d3ad9a8e6cd3dd70
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215556"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169047"
 ---
 # <a name="try_to_lock_t-structure"></a>Struttura try_to_lock_t
 
@@ -27,7 +28,7 @@ struct try_to_lock_t;
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [\<mutex>](../standard-library/mutex.md)

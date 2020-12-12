@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: classi DAO'
 title: Classi DAO
 ms.date: 09/17/2019
 helpviewer_keywords:
 - database classes [MFC], DAO
 - DAO [MFC], classes
 ms.assetid: b15d0cd6-328b-4288-9c19-d037a795db57
-ms.openlocfilehash: 51abd29ef4de5d70f4a5b2b6b14b53510e7876a1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: bf30a4d985947ca435c53391ce9529caf9ec2c81
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615938"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169411"
 ---
 # <a name="dao-classes"></a>Classi DAO
 
@@ -50,17 +51,17 @@ Supporta le routine DFX DAO (record field exchange) utilizzate dalle classi di d
 ## <a name="related-classes"></a>Classi correlate
 
 [CLongBinary](reference/clongbinary-class.md)<br/>
-Incapsula un handle per l'archiviazione per un oggetto binario di grandi dimensioni (BLOB), ad esempio una bitmap. `CLongBinary`gli oggetti vengono utilizzati per gestire oggetti dati di grandi dimensioni archiviati nelle tabelle di database.
+Incapsula un handle per l'archiviazione per un oggetto binario di grandi dimensioni (BLOB), ad esempio una bitmap. `CLongBinary` gli oggetti vengono utilizzati per gestire oggetti dati di grandi dimensioni archiviati nelle tabelle di database.
 
 [COleCurrency](reference/colecurrency-class.md)<br/>
-Wrapper per la **valuta**del tipo di automazione OLE, un tipo aritmetico a virgola fissa, con 15 cifre prima del separatore decimale e 4 cifre dopo.
+Wrapper per la **valuta** del tipo di automazione OLE, un tipo aritmetico a virgola fissa, con 15 cifre prima del separatore decimale e 4 cifre dopo.
 
 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)<br/>
-Wrapper per la **Data**del tipo di automazione OLE. Rappresenta valori di data e ora.
+Wrapper per la **Data** del tipo di automazione OLE. Rappresenta valori di data e ora.
 
 [COleVariant](reference/colevariant-class.md)<br/>
-Wrapper per la **variante**del tipo di automazione OLE. I dati nei **Variant**possono essere archiviati in molti formati.
+Wrapper per la **variante** del tipo di automazione OLE. I dati nei **Variant** possono essere archiviati in molti formati.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Cenni preliminari sulle classi](class-library-overview.md)

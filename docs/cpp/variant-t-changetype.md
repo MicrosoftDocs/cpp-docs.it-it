@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _variant_t:: ChangeType'
 title: _variant_t::ChangeType
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - VARIANT object [C++], ChangeType
 - VARIANT object
 ms.assetid: 829d2eeb-3338-4a88-9dce-0ca145f47aac
-ms.openlocfilehash: c2283158856a6781ab2e12c51f4e2ad0e4f1d531
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 32ce43f1d9afb388c97e5271927113c71d31bb92
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81750723"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116626"
 ---
 # <a name="_variant_tchangetype"></a>_variant_t::ChangeType
 
 **Specifico di Microsoft**
 
-Modifica il tipo `_variant_t` dell'oggetto `VARTYPE`in base al file .
+Imposta il tipo dell' `_variant_t` oggetto sull'oggetto indicato `VARTYPE` .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -33,18 +34,18 @@ void ChangeType(
 
 #### <a name="parameters"></a>Parametri
 
-*Vartype*<br/>
-Oggetto `VARTYPE` per `_variant_t` questo oggetto.
+*VarType*<br/>
+`VARTYPE`Oggetto per questo `_variant_t` oggetto.
 
 *pSrc*<br/>
 Puntatore all'oggetto `_variant_t` da convertire. Se questo valore è NULL, la conversione viene eseguita sul posto.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Questa funzione membro `_variant_t` converte un `VARTYPE`oggetto nell'oggetto indicato. Se *pSrc* è NULL, la conversione `_variant_t` viene eseguita sul posto, altrimenti questo oggetto viene copiato da *pSrc* e quindi convertito.
+Questa funzione membro converte un `_variant_t` oggetto nell'oggetto indicato `VARTYPE` . Se *pSrc* è null, la conversione viene eseguita sul posto; in caso contrario, l' `_variant_t` oggetto viene copiato da *pSrc* e quindi convertito.
 
-**FINE Specifico di Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe _variant_t](../cpp/variant-t-class.md)

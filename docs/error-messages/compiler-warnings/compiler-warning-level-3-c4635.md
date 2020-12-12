@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 3) C4635'
 title: Avviso del compilatore (livello 3) C4635
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4635
 ms.assetid: b2ba90de-c093-4a76-8076-b65878467574
-ms.openlocfilehash: fd3bf6c1b14c6dae8e2fa95a54e2d4fbc4f295c5
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: e885c501e4f10719618bb552c153dc13a481332d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991847"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168332"
 ---
 # <a name="compiler-warning-level-3-c4635"></a>Avviso del compilatore (livello 3) C4635
 
@@ -33,6 +34,6 @@ L'esempio seguente genera l'errore C4635:
 public ref class Test {};
 ```
 
-L'output relativo a questo esempio è: **Il tag finale 'member' non corrisponde al tag iniziale 'summary'** .
+L'output relativo a questo esempio è: **Il tag finale 'member' non corrisponde al tag iniziale 'summary'**.
 
-Il problema di questo esempio è che il tag di fine per \<> di riepilogo non è stato formattato correttamente e che il compilatore non lo riconosce come \<di riepilogo > tag di fine.  Il \<membro > Tag è incorporato nel file con estensione xdc dal compilatore in ogni compilazione/doc.  Il problema in questo caso è che il tag di fine \</member >, non corrisponde al tag di inizio precedente elaborato dal compilatore (\<> di riepilogo.
+Il problema di questo esempio è che il tag di fine per \<summary> non è formattato correttamente e il compilatore non lo riconosce come \<summary> tag di fine.  Il \<member> tag viene incorporato nel file con estensione xdc dal compilatore in ogni compilazione di/doc.  Il problema in questo caso è che il tag di fine \</member> non corrisponde al precedente tag di inizio elaborato dal compilatore ( \<summary> .

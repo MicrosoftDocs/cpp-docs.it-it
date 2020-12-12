@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _InterlockedCompareExchange funzioni intrinseche'
 title: Funzioni intrinseche _InterlockedCompareExchange
 ms.date: 09/02/2019
 f1_keywords:
@@ -48,16 +49,16 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 26dff1c902fff495d5efe45d8da10b1c5da72878
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 10788b5b4e8c8f7ee139dd8810149a49e8978f3c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222049"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168189"
 ---
 # <a name="_interlockedcompareexchange-intrinsic-functions"></a>Funzioni intrinseche _InterlockedCompareExchange
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Esegue un confronto e uno scambio Interlocked.
 
@@ -193,20 +194,20 @@ Il valore restituito è il valore iniziale del puntatore `Destination`.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|Intestazione|
+|Intrinsic|Architettura|Intestazione|
 |---------------|------------------|------------|
 |`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86, ARM, x64, ARM64|\<intrin.h>|
 |`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM, ARM64|\<intrin.h>|
-|`_InterlockedCompareExchange_np`, `_InterlockedCompareExchange16_np`, `_InterlockedCompareExchange64_np`|X64|\<intrin.h>|
+|`_InterlockedCompareExchange_np`, `_InterlockedCompareExchange16_np`, `_InterlockedCompareExchange64_np`|x64|\<intrin.h>|
 |`_InterlockedCompareExchange_HLEAcquire`, `_InterlockedCompareExchange_HLERelease`, `_InterlockedCompareExchange64_HLEAcquire`, `_InterlockedCompareExchange64_HLERelease`|x86, x64|\<immintrin.h>|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-`_InterlockedCompareExchange`esegue un confronto atomico del `Destination` valore con il `Comparand` valore. Se il valore `Destination` è uguale al valore `Comparand`, il valore `Exchange` viene archiviato nell'indirizzo specificato da `Destination`. In caso contrario, non esegue alcuna operazione.
+`_InterlockedCompareExchange` esegue un confronto atomico del `Destination` valore con il `Comparand` valore. Se il valore `Destination` è uguale al valore `Comparand`, il valore `Exchange` viene archiviato nell'indirizzo specificato da `Destination`. In caso contrario, non esegue alcuna operazione.
 
-`_InterlockedCompareExchange`fornisce il supporto intrinseco del compilatore per la funzione Win32 Windows SDK [InterlockedCompareExchange](/windows/win32/api/winnt/nf-winnt-interlockedcompareexchange) .
+`_InterlockedCompareExchange` fornisce il supporto intrinseco del compilatore per la funzione Win32 Windows SDK [InterlockedCompareExchange](/windows/win32/api/winnt/nf-winnt-interlockedcompareexchange) .
 
-Esistono diverse varianti in che `_InterlockedCompareExchange` variano in base ai tipi di dati che coinvolgono e se vengono usate la semantica di acquisizione o di rilascio specifica del processore.
+Esistono diverse varianti in `_InterlockedCompareExchange` che variano in base ai tipi di dati che coinvolgono e se vengono usate la semantica di acquisizione o di rilascio specifica del processore.
 
 Mentre la `_InterlockedCompareExchange` funzione opera su valori Long Integer, `_InterlockedCompareExchange8` opera su valori integer a 8 bit, `_InterlockedCompareExchange16` opera su valori integer brevi e `_InterlockedCompareExchange64` opera su valori integer a 64 bit.
 
@@ -430,12 +431,12 @@ int main(
 <29
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)\
 [Funzioni intrinseche _InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)\
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
-[Parole chiave](../cpp/keywords-cpp.md)\
+[Parole](../cpp/keywords-cpp.md)\
 [Conflitti con il compilatore x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

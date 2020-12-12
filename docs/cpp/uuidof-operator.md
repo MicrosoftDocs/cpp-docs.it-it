@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: `__uuidof` operatore'
 title: Operatore __uuidof
 ms.date: 10/10/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - __uuidof keyword [C++]
 - __LIBID_ keyword [C++]
 ms.assetid: badfe709-809b-4b66-ad48-ee35039d25c6
-ms.openlocfilehash: f7564270408d14f58d1528c1f41c0afd2dbe219c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e6c14ac6f00b5e6314e1e4d844aea479fa714984
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226971"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116717"
 ---
 # <a name="__uuidof-operator"></a>Operatore `__uuidof`
 
@@ -27,7 +28,7 @@ Recupera il GUID collegato all'espressione.
 
 > **`__uuidof (`***espressione***`)`**
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L' *espressione* può essere un nome di tipo, un puntatore, un riferimento o una matrice di quel tipo, un modello specializzato su questi tipi o una variabile di questi tipi. L'argomento è valido finché il compilatore può utilizzarlo per trovare il GUID collegato.
 
@@ -79,7 +80,7 @@ StringFromCLSID(__LIBID_, &lpolestr);
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Espressioni con operatori unari](../cpp/expressions-with-unary-operators.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)

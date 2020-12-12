@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: allinea'
 title: ALIGN (MASM)
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ALIGN directive
 ms.assetid: 1c386b23-439f-4ec3-a6de-74427b25e47f
-ms.openlocfilehash: 700721768deaf92e88b32a97e68c6e017219d19d
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: d13fce5d70d96e4e88a3f1044f633be0145a3fc7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75316590"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97121771"
 ---
 # <a name="align"></a>ALIGN
 
@@ -21,7 +22,7 @@ La direttiva **align** allinea l'elemento dati successivo o l'istruzione su un i
 
 > **Align** ⟦*constantExpression*⟧
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 La direttiva **align** consente di specificare l'offset iniziale di un elemento dati o di un'istruzione. I dati allineati possono migliorare le prestazioni, a scapito dello spazio sprecato tra gli elementi dati. I miglioramenti delle prestazioni di grandi dimensioni possono verificarsi quando gli accessi ai dati si trovano sui limiti che rientrano nelle righe della cache. L'accesso ai limiti naturali per i tipi nativi comporta un minor tempo impiegato nel microcodice interno di riallineamento hardware.
 
@@ -29,8 +30,8 @@ La necessità di istruzioni allineate è rara nei processori moderni che usano u
 
 Quando i dati sono allineati, lo spazio ignorato viene riempito con zeri. Quando le istruzioni sono allineate, lo spazio ignorato viene riempito con le istruzioni NOP di dimensioni appropriate.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Anche](even.md)\
-[Riferimento alle direttive](directives-reference.md)\
+[ANCHE](even.md)\
+[Guida di riferimento alle direttive](directives-reference.md)\
 [Grammatica BNF di MASM](masm-bnf-grammar.md)

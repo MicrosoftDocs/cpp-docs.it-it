@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; sstream&gt;'
 title: '&lt;sstream&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sstream header
 ms.assetid: 56f55bc5-549d-4e7f-aaad-99e0ffa49c9e
-ms.openlocfilehash: 31a445fcc7deb5e5bade5437058cb36e28dacd40
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5f0c5307073c2296f20df0adb663bce9b4b97d59
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844327"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169099"
 ---
 # <a name="ltsstreamgt"></a>&lt;sstream&gt;
 
@@ -76,13 +77,13 @@ Riferimento a un oggetto `sstream`.
 *Ok*\
 Riferimento a un oggetto `sstream`.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Gli oggetti di tipo `char *` possono usare la funzionalità in [\<strstream>](../standard-library/strstream.md) per il flusso. Tuttavia, \<strstream> è deprecato ed è preferibile l'uso di \<sstream>.
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome tipo|Descrizione|
+|Nome tipo|Description|
 |-|-|
 |[istringstream](../standard-library/sstream-typedefs.md#istringstream)|Crea un tipo `basic_istringstream` specializzato in un **`char`** parametro di modello.|
 |[ostringstream](../standard-library/sstream-typedefs.md#ostringstream)|Crea un tipo `basic_ostringstream` specializzato in un **`char`** parametro di modello.|
@@ -95,7 +96,7 @@ Gli oggetti di tipo `char *` possono usare la funzionalità in [\<strstream>](..
 
 ### <a name="manipulators"></a>Manipolatori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[scambio](../standard-library/sstream-functions.md#sstream_swap)|Scambia i valori tra due oggetti `sstream`.|
 
@@ -114,7 +115,7 @@ Gli oggetti di tipo `char *` possono usare la funzionalità in [\<strstream>](..
 
 - **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

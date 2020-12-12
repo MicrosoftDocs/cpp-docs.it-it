@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore di compilazione progetto progetto PRJ0003'
 title: Errore di compilazione progetto PRJ0003
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-ms.openlocfilehash: 59028c6d886630ef7db115a2ea93327669b2fcfd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cefd56e1d11da77f288333fb0e1f9c10ef684d12
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80192926"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119408"
 ---
 # <a name="project-build-error-prj0003"></a>Errore di compilazione progetto PRJ0003
 
@@ -31,6 +32,6 @@ Le possibili cause di questo errore sono le seguenti:
 
 - Per i progetti makefile, manca un comando da eseguire nella riga di comando di **compilazione** o nella **riga di comando di ricompilazione**.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Errori e avvisi relativi alla compilazione di progetti (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)
+[Errori e avvisi di compilazione progetto (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)

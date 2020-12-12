@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _InterlockedAnd funzioni intrinseche'
 title: Funzioni intrinseche _InterlockedAnd
 ms.date: 09/02/2019
 f1_keywords:
@@ -56,16 +57,16 @@ helpviewer_keywords:
 - _InterlockedAnd8 intrinsic
 - _InterlockedAnd_HLEAcquire intrinsic
 ms.assetid: ad271dc3-42cd-47d0-9f65-30d5cfeb66fc
-ms.openlocfilehash: e22b463a5229de4745f71aaa0240374a5c057508
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: f5e00b997eced482a8adc8881e9a1b6a3231bb72
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217768"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168254"
 ---
 # <a name="_interlockedand-intrinsic-functions"></a>Funzioni intrinseche _InterlockedAnd
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Usato per eseguire un'operazione atomica con AND bit per bit su una variabile condivisa da più thread.
 
@@ -172,7 +173,7 @@ __int64 _InterlockedAnd64_rel(
 
 ### <a name="parameters"></a>Parametri
 
-*value*\
+*valore*\
 [in, out] Puntatore al primo operando, che deve essere sostituito dal risultato.
 
 *maschera*\
@@ -184,19 +185,19 @@ Valore originale del primo operando.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|Intestazione|
+|Intrinsic|Architettura|Intestazione|
 |---------------|------------------|------------|
 |`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`|x86, ARM, x64, ARM64|\<intrin.h>|
 |`_InterlockedAnd64`|ARM, x64, ARM64|\<intrin.h>|
 |`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM, ARM64|\<intrin.h>|
-|`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|X64|\<intrin.h>|
+|`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|x64|\<intrin.h>|
 |`_InterlockedAnd_HLEAcquire`, `_InterlockedAnd_HLERelease`, `_InterlockedAnd64_HLEAcquire`, `_InterlockedAnd64_HLERelease`|x86, x64|\<immintrin.h>|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Il numero nel nome di ogni funzione specifica la dimensione in bit degli argomenti.
 
-Sulle piattaforme ARM e ARM64, usare le funzioni intrinseche `_acq` con `_rel` i suffissi e per la semantica di acquisizione e rilascio, ad esempio all'inizio e alla fine di una sezione critica. Le funzioni intrinseche con suffisso `_nf` ("nessun limite") non fungono da barriera di memoria.
+Sulle piattaforme ARM e ARM64, usare le funzioni intrinseche con i `_acq` `_rel` suffissi e per la semantica di acquisizione e rilascio, ad esempio all'inizio e alla fine di una sezione critica. Le funzioni intrinseche con suffisso `_nf` ("nessun limite") non fungono da barriera di memoria.
 
 Le funzioni intrinseche con suffisso `_np` ("nessuna prelettura") impediscono l'inserimento di una possibile operazione di prelettura da parte del compilatore.
 
@@ -226,9 +227,9 @@ int main()
 0xff00 0xffff00 0xff00ff00
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
 [Conflitti con il compilatore x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

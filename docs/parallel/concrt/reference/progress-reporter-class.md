@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: progress_reporter Class'
 title: Classe progress_reporter
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - progress_reporter class
 ms.assetid: b836efab-2d05-4649-b6fa-d15236f1f813
-ms.openlocfilehash: bd8f50a8c9829ff9de3e2412b89aa4de88d90db6
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 40ae3dba0c804381478d8c32da4425b20a9825d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77138764"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169359"
 ---
 # <a name="progress_reporter-class"></a>Classe progress_reporter
 
@@ -32,21 +33,21 @@ class progress_reporter;
 *_ProgressType*<br/>
 Il tipo di payload di ogni notifica dello stato di avanzamento segnalato tramite il reporter dello stato di avanzamento.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[progress_reporter](#ctor)||
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[relazione](#report)|Invia un rapporto di stato all'operazione asincrona o all'operazione a cui è associato questo reporter dello stato di avanzamento.|
+|[report](#report)|Invia un rapporto di stato all'operazione asincrona o all'operazione a cui è associato questo reporter dello stato di avanzamento.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questo tipo è disponibile solo per le app Windows Runtime.
 
@@ -60,13 +61,13 @@ Questo tipo è disponibile solo per le app Windows Runtime.
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="ctor"></a>progress_reporter
+## <a name="progress_reporter"></a><a name="ctor"></a> progress_reporter
 
 ```cpp
 progress_reporter();
 ```
 
-## <a name="report"></a>relazione
+## <a name="report"></a><a name="report"></a> relazione
 
 Invia un rapporto di stato all'operazione asincrona o all'operazione a cui è associato questo reporter dello stato di avanzamento.
 
@@ -76,9 +77,9 @@ void report(const _ProgressType& val) const;
 
 ### <a name="parameters"></a>Parametri
 
-*val*<br/>
+*Val*<br/>
 Payload da segnalare tramite una notifica di stato.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)
+[Spazio dei nomi Concurrency](concurrency-namespace.md)

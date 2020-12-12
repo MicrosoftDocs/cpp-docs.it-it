@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: accesso a tutti i membri di una raccolta'
 title: Accesso a tutti i membri di una raccolta
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
-ms.openlocfilehash: cc058e6e4bf0058adb13f83e7ea071ebb4570ec4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0207c082f17cf1a02da1829d5e04ea3eccae3b40
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214178"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169580"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Accesso a tutti i membri di una raccolta
 
@@ -34,7 +35,7 @@ Le procedure seguenti mostrano come eseguire un'iterazione sui tre tipi principa
 
 - [Iterazione su una mappa](#_core_to_iterate_a_map)
 
-### <a name="to-iterate-an-array"></a><a name="_core_to_iterate_an_array"></a>Per eseguire l'iterazione di una matrice
+### <a name="to-iterate-an-array"></a><a name="_core_to_iterate_an_array"></a> Per eseguire l'iterazione di una matrice
 
 1. Usare numeri di indice sequenziali con la funzione membro `GetAt` :
 
@@ -73,6 +74,6 @@ Le procedure seguenti mostrano come eseguire un'iterazione sui tre tipi principa
 
 Per altre informazioni vedere [Eliminazione di tutti gli oggetti in una raccolta CObject](deleting-all-objects-in-a-cobject-collection.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [raccolte](collections.md)
