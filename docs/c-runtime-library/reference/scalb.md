@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _scalb, _scalbf'
 title: _scalb, _scalbf
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - _scalbf function
 - scalb function
 ms.assetid: 148cf5a8-b405-44bf-a1f0-7487adba2421
-ms.openlocfilehash: debb617afea26437df16150592e631461d82c6b8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d118fc19c4635f0f0b6d93b1528308e9b31ee45a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918228"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268912"
 ---
 # <a name="_scalb-_scalbf"></a>_scalb, _scalbf
 
@@ -70,9 +71,9 @@ Restituisce un valore esponenziale se ha esito positivo. In caso di overflow (a 
 
 Per altre informazioni su questi e su altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **_scalb** calcola il valore di *x* \* 2<sup>*Exp*</sup>.
+La funzione **_scalb** calcola il valore di *x* \* 2 <sup>*Exp*</sup>.
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -84,7 +85,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [ldexp](ldexp.md)<br/>

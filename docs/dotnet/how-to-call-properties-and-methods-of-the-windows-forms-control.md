@@ -1,5 +1,6 @@
 ---
-title: 'Procedura: Controllano la chiamata di proprietà e metodi di moduli di Windows'
+description: 'Altre informazioni su: procedura: chiamare proprietà e metodi del controllo Windows Forms'
+title: 'Procedura: chiamare proprietà e metodi del controllo Windows Form'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,30 +11,30 @@ helpviewer_keywords:
 - calling properties
 - Windows Forms controls [C++], properties
 ms.assetid: 6e647d8a-fdaa-4aa1-b3fe-04f15cff8eb3
-ms.openlocfilehash: 61b565839b3f3c24670819fdcf2dde558e3461ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a797084a28eefec27699814a09c8521da7460bc7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152813"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268405"
 ---
-# <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>Procedura: Controllano la chiamata di proprietà e metodi di moduli di Windows
+# <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>Procedura: chiamare proprietà e metodi del controllo Windows Form
 
-In quanto [GetControl](../mfc/reference/cwinformsview-class.md#getcontrol) restituisce un puntatore a <xref:System.Windows.Forms.Control?displayProperty=fullName>e non un puntatore al `WindowsControlLibrary1::UserControl1`, è consigliabile aggiungere un membro del tipo di controllo utente e inizializzarla in [IView::OnInitialUpdate ](../mfc/reference/iview-interface.md#oninitialupdate). A questo punto è possibile chiamare metodi e proprietà usando `m_ViewControl`.
+Poiché [CWinFormsView:: GetControl](../mfc/reference/cwinformsview-class.md#getcontrol) restituisce un puntatore a <xref:System.Windows.Forms.Control?displayProperty=fullName> e non un puntatore a `WindowsControlLibrary1::UserControl1` , è consigliabile aggiungere un membro del tipo di controllo utente e inizializzarlo in [iView:: OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate). A questo punto è possibile chiamare metodi e proprietà usando `m_ViewControl` .
 
-In questo argomento si presuppone che è stata completata [come: Creare il controllo utente e inserirlo in una finestra di dialogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) e [come: Creare il controllo utente e inserirlo nella visualizzazione MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
+In questo argomento si presuppone che sia stata completata la [procedura: creare il controllo utente e l'host in una](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) finestra di dialogo e [procedura: creare il controllo utente e la visualizzazione MDI host](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
 
 ### <a name="to-create-the-mfc-host-application"></a>Per creare l'applicazione host MFC
 
-1. Aprire l'applicazione MFC creata in [come: Creare il controllo utente e inserirlo nella visualizzazione MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
+1. Aprire l'applicazione MFC creata in [procedura: creare il controllo utente e la visualizzazione MDI host](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
 
-1. Aggiungere la riga seguente alla sezione delle sostituzioni pubblica il `CMFC02View` in MFC02View.h dichiarazione di classe.
+1. Aggiungere la riga seguente alla sezione Public Overrides della `CMFC02View` dichiarazione di classe in MFC02View. h.
 
    `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`
 
 1. Aggiungere una sostituzione per OnInitialupdate.
 
-   Visualizzare il **proprietà** finestra (F4). Nelle **Visualizzazione classi** (CTRL + MAIUSC + C), selezionare CMFC02View classe. Nel **proprietà** finestra, selezionare l'icona per le sostituzioni. Scoll verso il basso nell'elenco per OnInitialUpdate. Fare clic sull'elenco a discesa elenco e selezionare \<Aggiungi >. In MFC02View.cpp in modo da. Verificare che il corpo della funzione OnInitialUpdate è come segue:
+   Visualizzare la finestra **Proprietà** (F4). In **Visualizzazione classi** (CTRL + MAIUSC + C) selezionare classe CMFC02View. Nella finestra **Proprietà** selezionare l'icona per sostituzioni. Scoll l'elenco in OnInitialUpdate. Fare clic sull'elenco a discesa e selezionare \<Add> . In MFC02View. cpp. Verificare che il corpo della funzione OnInitialUpdate sia il seguente:
 
     ```
     CWinFormsView::OnInitialUpdate();
@@ -43,12 +44,12 @@ In questo argomento si presuppone che è stata completata [come: Creare il contr
 
 1. Compilare ed eseguire il progetto.
 
-   Scegliere **Compila soluzione** dal menu **Compila**.
+   Nel menu **Compila** scegliere **Compila soluzione**.
 
-   Nel **Debug** menu, fare clic su **Avvia senza eseguire debug**.
+   Scegliere **Avvia senza eseguire debug** dal menu **debug** .
 
-   Si noti che la casella di testo viene inizializzata.
+   Si noti che la casella di testo è stata inizializzata.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Hosting di un controllo utente Windows Form come visualizzazione MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)

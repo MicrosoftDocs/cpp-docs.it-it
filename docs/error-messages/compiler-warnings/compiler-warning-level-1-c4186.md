@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 1) C4186'
 title: Avviso del compilatore (livello 1) C4186
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4186
 ms.assetid: caf3f7d8-f305-426b-8d4e-2b96f5c269ea
-ms.openlocfilehash: 6772e384b5908cbe81f85758f86eabe4c8240e6a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 08ab6c490c404d9dabef1d5222cd388b5db7a891
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163323"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97266611"
 ---
 # <a name="compiler-warning-level-1-c4186"></a>Avviso del compilatore (livello 1) C4186
 
-\#attributo Import ' attribute ' richiede argomenti count; ignorato
+\#per l'attributo di importazione ' attribute ' sono necessari gli argomenti count; ignorato
 
 Un attributo `#import` ha un numero di argomenti errato.
 

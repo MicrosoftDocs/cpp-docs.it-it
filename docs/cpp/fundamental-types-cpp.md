@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: tipi incorporati (C++)'
 title: Tipi incorporati (C++)
 ms.date: 07/22/2020
 f1_keywords:
@@ -46,16 +47,16 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: 73486dd4d81fc91007f078ec5c509bcb963d2706
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 601bd0742002506272ec3da7af448a4bdba96065
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232274"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268743"
 ---
 # <a name="built-in-types-c"></a>Tipi incorporati (C++)
 
-I tipi incorporati (detti anche *tipi fondamentali*) sono specificati dallo standard del linguaggio C++ e sono incorporati nel compilatore. I tipi incorporati non sono definiti in alcun file di intestazione. I tipi incorporati sono divisi in tre categorie principali: *integrale*, a *virgola mobile*e *void*. I tipi integrali rappresentano numeri interi. I tipi a virgola mobile possono specificare valori che possono avere parti frazionarie. La maggior parte dei tipi incorporati vengono considerati tipi distinti dal compilatore. Tuttavia, alcuni tipi sono *sinonimi*o considerati tipi equivalenti dal compilatore.
+I tipi incorporati (detti anche *tipi fondamentali*) sono specificati dallo standard del linguaggio C++ e sono incorporati nel compilatore. I tipi incorporati non sono definiti in alcun file di intestazione. I tipi incorporati sono divisi in tre categorie principali: *integrale*, a *virgola mobile* e *void*. I tipi integrali rappresentano numeri interi. I tipi a virgola mobile possono specificare valori che possono avere parti frazionarie. La maggior parte dei tipi incorporati vengono considerati tipi distinti dal compilatore. Tuttavia, alcuni tipi sono *sinonimi* o considerati tipi equivalenti dal compilatore.
 
 ## <a name="void-type"></a>Tipo void
 
@@ -85,7 +86,7 @@ Una variabile di tipo **`wchar_t`** è un tipo di carattere wide o multibyte. Us
 
 **Specifico di Microsoft**: per impostazione predefinita, **`wchar_t`** è un tipo nativo, ma è possibile usare [`/Zc:wchar_t-`](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) per creare **`wchar_t`** un typedef per **`unsigned short`** . Il **`__wchar_t`** tipo è un sinonimo specifico di Microsoft per il **`wchar_t`** tipo nativo.
 
-Il **`char8_t`** tipo viene usato per la rappresentazione in caratteri UTF-8. Ha la stessa rappresentazione **`unsigned char`** di, ma viene considerato come un tipo distinto dal compilatore. Il **`char8_t`** tipo è nuovo in c++ 20. **Specifico di Microsoft**: l'utilizzo di **`char8_t`** richiede l' [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) opzione del compilatore.
+Il **`char8_t`** tipo viene usato per la rappresentazione in caratteri UTF-8. Ha la stessa rappresentazione **`unsigned char`** di, ma viene considerato come un tipo distinto dal compilatore. Il **`char8_t`** tipo è nuovo in c++ 20. **Specifico di Microsoft**: l'utilizzo di **`char8_t`**  richiede l' [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) opzione del compilatore.
 
 Il **`char16_t`** tipo viene usato per la rappresentazione in caratteri UTF-16. Deve essere sufficientemente grande da rappresentare qualsiasi unità di codice UTF-16. Viene considerato come un tipo distinto dal compilatore.
 
@@ -95,7 +96,7 @@ Il **`char32_t`** tipo viene usato per la rappresentazione in caratteri UTF-32. 
 
 I tipi a virgola mobile usano una rappresentazione IEEE-754 per fornire un'approssimazione di valori frazionari in un'ampia gamma di grandezze. Nella tabella seguente sono elencati i tipi a virgola mobile in C++ e le restrizioni comparative sulle dimensioni dei tipi a virgola mobile. Queste restrizioni sono obbligatorie dallo standard C++ e sono indipendenti dall'implementazione Microsoft. La dimensione assoluta dei tipi a virgola mobile incorporati non è specificata nello standard.
 
-| Type | Contenuto |
+| Tipo | Contenuto |
 |--|--|
 | **`float`** | **`float`** Il tipo è il tipo a virgola mobile più piccolo in C++. |
 | **`double`** | **`double`** Il tipo è un tipo a virgola mobile che è maggiore o uguale al tipo **`float`** , ma minore o uguale alla dimensione del tipo **`long double`** . |
@@ -143,7 +144,7 @@ I tipi integer **specifici di Microsoft** includono i tipi di larghezza,, **`__i
 
 Per la maggior parte dei tipi incorporati sono disponibili dimensioni definite dall'implementazione. La tabella seguente elenca la quantità di spazio di archiviazione necessaria per i tipi incorporati in Microsoft C++. In particolare, **`long`** è pari a 4 byte anche nei sistemi operativi a 64 bit.
 
-| Type | Dimensione |
+| Tipo | Dimensione |
 |--|--|
 | **`bool`**, **`char`**, **`char8_t`**, **`unsigned char`**, **`signed char`**, **`__int8`** | 1 byte |
 | **`char16_t`**, **`__int16`**, **`short`**, **`unsigned short`**, **`wchar_t`**, **`__wchar_t`** | 2 byte |
@@ -154,6 +155,6 @@ Per un riepilogo dell'intervallo di valori di ogni tipo, vedere [intervalli dei 
 
 Per ulteriori informazioni sulla conversione dei tipi, vedere [conversioni standard](standard-conversions.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intervalli dei tipi di dati](data-type-ranges.md)

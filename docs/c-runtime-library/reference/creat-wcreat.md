@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _creat, _wcreat'
 title: _creat, _wcreat
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - creat function
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
-ms.openlocfilehash: 379a4adbf17755341fed6a48c649afe29e150fe5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 716f0d11af408ba30cb91744fd770300272dc26b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912122"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97269042"
 ---
 # <a name="_creat-_wcreat"></a>_creat, _wcreat
 
@@ -84,7 +85,7 @@ Se *filename* è **null**, queste funzioni richiamano il gestore di parametri no
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_creat** crea un nuovo file o lo apre e ne tronca uno esistente. **_wcreat** è una versione a caratteri wide di **_creat**; l'argomento *filename* per **_wcreat** è una stringa di caratteri wide. **_wcreat** e **_creat** si comportano in modo identico.
 
@@ -98,13 +99,13 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Se il file specificato da *filename* non esiste, viene creato un nuovo file con l'impostazione di autorizzazione specificata e viene aperto per la scrittura. Se il file esiste già e l'impostazione di autorizzazione consente la scrittura, **_creat** tronca il file alla lunghezza 0, eliminando il contenuto precedente e lo apre per la scrittura. L'impostazione di autorizzazione, *pmode*, si applica solo ai file appena creati. Il nuovo file riceve l'impostazione di autorizzazione specificata dopo averlo chiuso per la prima volta. L'espressione integer *pmode* contiene una o entrambe le costanti manifeste **_S_IWRITE** e **_S_IREAD**, definite in SYS\Stat.h. Quando vengono specificate entrambe le costanti, queste vengono unite con l'operatore OR bit per bit ( **&#124;** ). Il parametro *pmode* è impostato su uno dei valori seguenti.
 
-|Value|Definizione|
+|valore|Definizione|
 |-----------|----------------|
 |**_S_IWRITE**|Scrittura consentita.|
 |**_S_IREAD**|Lettura consentita.|
 |**_S_IREAD** &#124; **_S_IWRITE**|Lettura e scrittura consentite.|
 
-Se non viene concessa l'autorizzazione in scrittura, il file è di sola lettura. Tutti i file sono sempre leggibili. Non è possibile concedere l'autorizzazione di sola scrittura. Le modalità **_S_IWRITE** e **_S_IREAD** | **_S_IWRITE** sono quindi equivalenti. I file aperti con **_creat** vengono sempre aperti in modalità di compatibilità (vedere [_sopen](sopen-wsopen.md)) con **_SH_DENYNO**.
+Se non viene concessa l'autorizzazione in scrittura, il file è di sola lettura. Tutti i file sono sempre leggibili. Non è possibile concedere l'autorizzazione di sola scrittura. Le modalità **_S_IWRITE** e **_S_IREAD**  |  **_S_IWRITE** sono quindi equivalenti. I file aperti con **_creat** vengono sempre aperti in modalità di compatibilità (vedere [_sopen](sopen-wsopen.md)) con **_SH_DENYNO**.
 
 **_creat** applica la maschera di autorizzazione file corrente a *pmode* prima di impostare le autorizzazioni (vedere [_umask](umask.md)). **_creat** viene fornito principalmente per la compatibilità con le librerie precedenti. Una chiamata a **_open** con **_O_CREAT** e **_O_TRUNC** nel parametro *Oflag* è equivalente a **_creat** ed è preferibile per il nuovo codice.
 
@@ -154,7 +155,7 @@ Created data file.
 
 ## <a name="see-also"></a>Vedere anche
 
-[I/O a basso livello](../../c-runtime-library/low-level-i-o.md)<br/>
+[I/O di basso livello](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_chsize](chsize.md)<br/>
 [_close](close.md)<br/>

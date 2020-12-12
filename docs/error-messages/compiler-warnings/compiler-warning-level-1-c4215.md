@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 1) C4215'
 title: Avviso del compilatore (livello 1) C4215
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4215
 ms.assetid: f2aab64d-1bab-4f75-95ee-89e1263047b1
-ms.openlocfilehash: aeab5a90647015a8848d7c2af62f7d7fc6932900
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4d2e4d170b31c483f216fa85369c05ada38c30d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223278"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97266559"
 ---
 # <a name="compiler-warning-level-1-c4215"></a>Avviso del compilatore (livello 1) C4215
 

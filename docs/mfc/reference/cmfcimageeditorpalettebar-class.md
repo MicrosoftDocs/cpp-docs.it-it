@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CMFCImageEditorPaletteBar'
 title: Classe CMFCImageEditorPaletteBar
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - CMFCImageEditorPaletteBar [MFC], GetRowHeight
 - CMFCImageEditorPaletteBar [MFC], IsButtonExtraSizeAvailable
 ms.assetid: 3fb7ba8e-f254-4d56-b913-9941b4ed8138
-ms.openlocfilehash: 007fa94269a6a42bf076d2d75a18860896503aa1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 19d023776c66559e8d639eb71ebc266f992af4c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831164"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97265363"
 ---
 # <a name="cmfcimageeditorpalettebar-class"></a>Classe CMFCImageEditorPaletteBar
 
@@ -27,16 +28,16 @@ Fornisce la funzionalità della barra tavolozza a una finestra di dialogo dell'e
 class CMFCImageEditorPaletteBar : public CMFCToolBar
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[CMFCImageEditorPaletteBar:: GetRowHeight](#getrowheight)|Restituisce l'altezza dei pulsanti della barra degli strumenti. Esegue l'override di [CMFCToolBar:: getRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).|
 |[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Determina se la barra degli strumenti può visualizzare i pulsanti con bordi estesi. Esegue l'override di [CMFCToolBar:: IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa classe non è destinata a essere utilizzata direttamente dal codice.
 
@@ -88,7 +89,7 @@ virtual BOOL IsButtonExtraSizeAvailable() const;
 
 Questo metodo restituisce FALSE.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>

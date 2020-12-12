@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CSession'
 title: Classe CSession
 ms.date: 11/04/2016
 f1_keywords:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: f507ed432e107f586d34bb6b08fa9d3f7dc509d8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 41ebf1c9d93e1443504f92b052e770c251324633
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507241"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268431"
 ---
 # <a name="csession-class"></a>Classe CSession
 
@@ -65,7 +66,7 @@ class CSession
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[Interruzione](#abort)|Annulla (termina) la transazione.|
 |[Close](#close)|Chiude la sessione.|
@@ -74,7 +75,7 @@ class CSession
 |[Apri](#open)|Apre una nuova sessione per l'oggetto origine dati.|
 |[StartTransaction](#starttransaction)|Inizia una nuova transazione per questa sessione.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Una o più sessioni possono essere associate a ogni connessione del provider (origine dati), rappresentata da un oggetto [CDataSource](../../data/oledb/cdatasource-class.md) . Per creare un nuovo oggetto `CSession` per un oggetto `CDataSource` , chiamare [CSession:: Open](#open). Per iniziare una transazione di database, `CSession` fornisce il `StartTransaction` metodo. Una volta avviata una transazione, è possibile eseguirne il commit utilizzando il `Commit` metodo oppure annullarla utilizzando il `Abort` metodo.
 
@@ -132,7 +133,7 @@ Vedere [ITransaction:: commit](/previous-versions/windows/desktop/ms713008(v=vs.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni, vedere [ITransaction:: commit](/previous-versions/windows/desktop/ms713008(v=vs.85)).
 
@@ -154,7 +155,7 @@ Vedere [ITransaction:: GetTransactionInfo](/previous-versions/windows/desktop/ms
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni, vedere [ITransaction:: GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
@@ -185,7 +186,7 @@ in Numero di strutture [DBPROPSET](/previous-versions/windows/desktop/ms714367(v
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È necessario aprire l'oggetto origine dati utilizzando [CDataSource:: Open](./cdatasource-class.md#open) prima di passarlo a `CSession::Open` .
 
@@ -210,11 +211,11 @@ Vedere [ITransactionLocal:: StartTransaction](/previous-versions/windows/desktop
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni, vedere [ITransactionLocal:: StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [CatDB](../../overview/visual-cpp-samples.md)<br/>
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe Enumerazione CMFCImagePaintArea'
 title: Classe Enumerazione CMFCImagePaintArea
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - CMFCImagePaintArea [MFC], SetColor
 - CMFCImagePaintArea [MFC], SetMode
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
-ms.openlocfilehash: ee960b27651489ac1c196789d41a6c5ee396b260
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c12a85c05686dcde24560b5ecc69cc68de07aa48
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831151"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97265350"
 ---
 # <a name="cmfcimagepaintarea-class"></a>Classe Enumerazione CMFCImagePaintArea
 
@@ -33,25 +34,25 @@ Fornisce l'area immagine utilizzata per modificare un'immagine in una finestra d
 class CMFCImagePaintArea : public CButton
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[Enumerazione CMFCImagePaintArea:: Enumerazione CMFCImagePaintArea](#cmfcimagepaintarea)|Costruisce un oggetto `CMFCImagePaintArea`.|
 |`CMFCImagePaintArea::~CMFCImagePaintArea`|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[Enumerazione CMFCImagePaintArea:: GetMode](#getmode)|Recupera la modalità di disegno corrente.|
 |[Enumerazione CMFCImagePaintArea:: sebitmap](#setbitmap)|Imposta l'immagine bitmap per l'area dell'immagine.|
 |[Enumerazione CMFCImagePaintArea:: ToColor](#setcolor)|Imposta il colore del disegno corrente.|
 |[Enumerazione CMFCImagePaintArea:: semode](#setmode)|Imposta la modalità di disegno corrente.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa classe non è destinata a essere utilizzata direttamente dal codice.
 
@@ -117,7 +118,7 @@ void SetBitmap(CBitmap* pBitmap);
 *pBitmap*\
 in Nuova immagine bitmap da visualizzare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se *pBitmap* è null, questo metodo imposta la dimensione dell'area di disegno modificabile su zero. In caso contrario, imposta la dimensione dell'area di disegno modificabile sulla dimensione dell'immagine bitmap fornita.
 
@@ -134,7 +135,7 @@ void SetColor(COLORREF color);
 *Colore*\
 in Nuovo colore del disegno.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando si seleziona un colore dalla barra della tavolozza dell'editor di immagini o dalla selezione colori, il Framework chiama questo metodo per aggiornare il colore del disegno corrente. Il colore iniziale del disegno è nero (il valore COLORREF è 0).
 
@@ -153,7 +154,7 @@ void SetMode(IMAGE_EDIT_MODE mode);
 *modalità*\
 in Valore [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) che specifica la modalità di disegno corrente.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>

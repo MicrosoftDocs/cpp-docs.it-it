@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: funzioni (C++)'
 title: Funzioni (C++)
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-ms.openlocfilehash: 5beadbbf283a64f12dab7f0ee39a267ec1797861
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: da338e0fcc6c30f0f1482cb900803c0a98f854ea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213437"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268925"
 ---
 # <a name="functions-c"></a>Funzioni (C++)
 
@@ -26,7 +27,7 @@ int sum(int a, int b)
 }
 ```
 
-La funzione può essere richiamata o *chiamata*da un numero qualsiasi di posizioni nel programma. I valori passati alla funzione sono gli *argomenti*, i cui tipi devono essere compatibili con i tipi di parametro nella definizione della funzione.
+La funzione può essere richiamata o *chiamata* da un numero qualsiasi di posizioni nel programma. I valori passati alla funzione sono gli *argomenti*, i cui tipi devono essere compatibili con i tipi di parametro nella definizione della funzione.
 
 ```cpp
 int main()
@@ -239,7 +240,7 @@ Per ulteriori informazioni, vedere [argomenti predefiniti](../cpp/default-argume
 
 ## <a name="function-return-types"></a>Tipi restituiti di funzione
 
-Una funzione non può restituire un'altra funzione o una matrice incorporata; Tuttavia, può restituire puntatori a questi tipi o a un' *espressione lambda*che produce un oggetto funzione. Ad eccezione di questi casi, una funzione può restituire un valore di qualsiasi tipo nell'ambito o potrebbe non restituire alcun valore, nel qual caso il tipo restituito è **`void`** .
+Una funzione non può restituire un'altra funzione o una matrice incorporata; Tuttavia, può restituire puntatori a questi tipi o a un' *espressione lambda* che produce un oggetto funzione. Ad eccezione di questi casi, una funzione può restituire un valore di qualsiasi tipo nell'ambito o potrebbe non restituire alcun valore, nel qual caso il tipo restituito è **`void`** .
 
 ### <a name="trailing-return-types"></a>Tipi restituiti finali
 
@@ -261,7 +262,7 @@ Una variabile dichiarata all'interno di un corpo della funzione viene chiamata *
 
 In C++ una variabile locale può essere dichiarata come statica. La variabile è visibile solo all'interno del corpo della funzione, ma esiste una singola copia della variabile per tutte le istanze della funzione. Gli oggetti statici locali vengono eliminati definitivamente durante la chiusura specificata da `atexit`. Se un oggetto statico non è stato costruito perché il flusso di controllo del programma ne ha ignorato la dichiarazione, non viene eseguito alcun tentativo di eliminare tale oggetto.
 
-## <a name="type-deduction-in-return-types-c14"></a><a name="type_deduction"></a>Deduzione del tipo nei tipi restituiti (C++ 14)
+## <a name="type-deduction-in-return-types-c14"></a><a name="type_deduction"></a> Deduzione del tipo nei tipi restituiti (C++ 14)
 
 In C++ 14 è possibile usare **`auto`** per indicare al compilatore di dedurre il tipo restituito dal corpo della funzione senza dover fornire un tipo restituito finale. Si noti che **`auto`** deduce sempre un valore restituito per valore. Usare `auto&&` per indicare al compilatore di dedurre un riferimento.
 
@@ -295,7 +296,7 @@ template<typename F, typename Tuple = tuple<T...>,
 }
 ```
 
-## <a name="returning-multiple-values-from-a-function"></a><a name="multi_val"></a>Restituzione di più valori da una funzione
+## <a name="returning-multiple-values-from-a-function"></a><a name="multi_val"></a> Restituzione di più valori da una funzione
 
 Esistono diversi modi per restituire più di un valore da una funzione:
 
@@ -423,7 +424,7 @@ int (*myFunction(char* s))(int);
 
 La dichiarazione precedente è equivalente alla dichiarazione utilizzata **`typedef`** sopra.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Overload di funzioni](../cpp/function-overloading.md)<br/>
 [Funzioni con elenchi di argomenti variabili](../cpp/functions-with-variable-argument-lists-cpp.md)<br/>

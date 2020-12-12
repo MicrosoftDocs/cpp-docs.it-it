@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Put, _putws'
 title: puts, _putws
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - putts function
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
-ms.openlocfilehash: 2e581237c7b839af87df7bc88369f21751b855d2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9b48be23b02301f79b942371fbd273a14bab3800
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916102"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268951"
 ---
 # <a name="puts-_putws"></a>puts, _putws
 
@@ -60,7 +61,7 @@ int _putws(
 
 ### <a name="parameters"></a>Parametri
 
-*Str*<br/>
+*str*<br/>
 Stringa di output.
 
 ## <a name="return-value"></a>Valore restituito
@@ -69,7 +70,7 @@ Restituisce un valore non negativo se ha esito positivo. Se il **put** ha esito 
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **put** scrive la *Str* nel flusso di output standard **stdout**, sostituendo il carattere null di terminazione della stringa (' \ 0') con un carattere di nuova riga (' \n ') nel flusso di output.
 
@@ -92,7 +93,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |**puts**|\<stdio.h>|
 |**_putws**|\<stdio.h>|
 
-La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout**e **stderr**devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout** e **stderr** devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 
@@ -118,7 +119,7 @@ int main( void )
 Hello world from puts!
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
 [fputs, fputws](fputs-fputws.md)<br/>

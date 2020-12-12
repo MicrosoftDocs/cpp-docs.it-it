@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: enumerazione Enumerazione CMFCImagePaintArea:: IMAGE_EDIT_MODE'
 title: Enumerazione CMFCImagePaintArea::IMAGE_EDIT_MODE
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - IMAGE_EDIT_MODE Enumeration method [MFC]
 ms.assetid: e51db66a-fa1c-4766-9dac-a25b595f871a
-ms.openlocfilehash: 37c877cc8562a9479535d9c6132e49e7c9b7e82f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f28880d108be8fb4f2b14ede1a3cbd3c7dac9f2e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831138"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97265324"
 ---
 # <a name="cmfcimagepaintareaimage_edit_mode-enumeration"></a>Enumerazione CMFCImagePaintArea::IMAGE_EDIT_MODE
 
@@ -31,9 +32,9 @@ enum IMAGE_EDIT_MODE
 };
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |IMAGE_EDIT_MODE_PEN|Utilizzato per creare singoli pixel.|
 |IMAGE_EDIT_MODE_FILL|Utilizzato per riempire tutte le aree adiacenti che contengono il colore in corrispondenza della posizione corrente del cursore.|
@@ -42,7 +43,7 @@ enum IMAGE_EDIT_MODE
 |IMAGE_EDIT_MODE_ELLIPSE|Utilizzato per creare un'ellisse.|
 |IMAGE_EDIT_MODE_COLOR|Utilizzato per impostare il colore corrente sul colore in corrispondenza della posizione corrente del cursore.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le `CMFCImagePaintArea` `CMFCImageEditorDialog` classi e usano questa enumerazione per impostare la modalità di disegno corrente. La modalità di disegno e il colore corrente vengono utilizzati per modificare l'area dell'immagine in una finestra di dialogo dell'editor di immagini. Per ulteriori informazioni su `CMFCImagePaintArea` e `CMFCImageEditorDialog` , vedere [classe Enumerazione CMFCImagePaintArea](../../mfc/reference/cmfcimagepaintarea-class.md) e [classe CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md).
 
@@ -52,7 +53,7 @@ Quando si seleziona un colore da un'immagine usando la modalità di disegno IMAG
 
 **Intestazione:** afximagepaintarea. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>

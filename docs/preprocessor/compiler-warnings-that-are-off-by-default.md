@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: avvisi del compilatore disattivati per impostazione predefinita'
 title: Avvisi del compilatore disattivati per impostazione predefinita
 ms.date: 08/29/2019
 helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: 3727777c6abd3ae5ba19f147e2b6fbe559251813
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5bc482d12026bb8358d773be6a0c8b32cc2317fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836609"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97269380"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avvisi del compilatore disattivati per impostazione predefinita
 
@@ -40,7 +41,7 @@ Il compilatore supporta gli avvisi che sono disattivati per impostazione predefi
 
 Gli avvisi seguenti sono disattivati per impostazione predefinita in Visual Studio 2015 e versioni successive:
 
-|Avviso|Messaggio|
+|Avviso|Message|
 |-|-|
 |[C4061](../error-messages/compiler-warnings/compiler-warning-level-4-c4061.md) (livello 4)|l'enumeratore '*Identifier*' in un'opzione dell'*enumerazione ' Enumeration*' non viene gestito in modo esplicito da un'etichetta case|
 |[C4062](../error-messages/compiler-warnings/compiler-warning-level-4-c4062.md) (livello 4)|l'enumeratore '*Identifier*' in un'opzione dell'*enumerazione ' Enumeration*' non viene gestito|
@@ -91,7 +92,7 @@ Gli avvisi seguenti sono disattivati per impostazione predefinita in Visual Stud
 |[C4596](../error-messages/compiler-warnings/c4596.md) (livello 4)|'*Identifier*': nome completo non valido nella dichiarazione del membro <sup>14,3</sup> <sup>Perm</sup>|
 |C4598 (livello 1 e livello 3)|' #include '*intestazione*"': numero di intestazione *. il numero* nell'intestazione precompilata non corrisponde alla compilazione corrente nella posizione <sup>14,3</sup>|
 |C4599 (livello 3)|'*Option* *path*': il numero di argomenti della riga di *comando non corrisponde* all'intestazione precompilata <sup>14,3</sup>|
-|C4605 (livello 1)|'/D*macro*' specificato nella riga di comando corrente, ma non è stato specificato quando è stata compilata l'intestazione precompilata|
+|C4605 (livello 1)|'/D *macro*' specificato nella riga di comando corrente, ma non è stato specificato quando è stata compilata l'intestazione precompilata|
 |[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md) (livello 3)|'*union_member*' è già stato inizializzato da un altro membro dell'Unione nell'elenco degli inizializzatori, <sup>Perm</sup> '*union_member*'|
 |[C4619](../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md) (livello 3)|avviso #pragma: nessun numero di avviso '*Number*'|
 |[C4623](../error-messages/compiler-warnings/compiler-warning-level-4-c4623.md) (livello 4)|'classe derivata': impossibile generare il costruttore predefinito poiché un costruttore predefinito della classe base è inaccessibile|
@@ -128,7 +129,7 @@ Gli avvisi seguenti sono disattivati per impostazione predefinita in Visual Stud
 |[C4917](../error-messages/compiler-warnings/compiler-warning-level-1-c4917.md) (livello 1)|'*dichiaratore*': un GUID può essere associato solo a una classe, un'interfaccia o uno spazio dei nomi|
 |[C4928](../error-messages/compiler-warnings/compiler-warning-level-1-c4928.md) (livello 1)|inizializzazione di copia non valida; sono state implicitamente applicate più conversioni definite dall'utente|
 |[C4931](../error-messages/compiler-warnings/compiler-warning-level-4-c4931.md) (livello 4)|si suppone che la libreria dei tipi sia stata compilata per puntatori a numero bit|
-|[C4946](../error-messages/compiler-warnings/compiler-warning-level-1-c4946.md) (livello 1)|reinterpret_cast usato tra le classi correlate:'*Class1*' è*Class2*'|
+|[C4946](../error-messages/compiler-warnings/compiler-warning-level-1-c4946.md) (livello 1)|reinterpret_cast usato tra le classi correlate:'*Class1*' è *Class2*'|
 |C4962|'*Function*': ottimizzazioni PGO disabilitate perché le ottimizzazioni provocano l'incoerenza dei dati di profilo|
 |[C4986](../error-messages/compiler-warnings/compiler-warning-c4986.md) (livello 4)|'*Symbol*': la specifica dell'eccezione non corrisponde alla dichiarazione precedente|
 |C4987 (livello 4)|utilizzata estensione non standard: 'throw (...)'|
@@ -163,7 +164,7 @@ Gli avvisi seguenti sono disattivati per impostazione predefinita in Visual Stud
 
 Questi avvisi erano disattivati per impostazione predefinita nelle versioni del compilatore precedenti a Visual Studio 2015:
 
-|Avviso|Messaggio|
+|Avviso|Message|
 |-|-|
 |[C4302](../error-messages/compiler-warnings/compiler-warning-level-2-c4302.md) (livello 2)|'*conversion*': troncamento da'*tipo1*' a'*tipo2*'|
 |[C4311](../error-messages/compiler-warnings/compiler-warning-level-1-c4311.md) (livello 1)|'*Variable*': troncamento puntatore da'*Type*' a'*Type*'|
@@ -172,10 +173,10 @@ Questi avvisi erano disattivati per impostazione predefinita nelle versioni del 
 
 Questo avviso è disattivato per impostazione predefinita nelle versioni del compilatore precedenti a Visual Studio 2012:
 
-|Avviso|Messaggio|
+|Avviso|Message|
 |-|-|
 |[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) (livello 4)|identificatore di tipo mancante, verrà utilizzato int. Nota: default-int non è più supportato in C++|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [warning](../preprocessor/warning.md)

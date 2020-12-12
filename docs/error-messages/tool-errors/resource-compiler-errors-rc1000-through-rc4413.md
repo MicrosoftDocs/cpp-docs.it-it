@@ -1,17 +1,18 @@
 ---
+description: 'Altre informazioni su: errori e avvisi del compilatore di risorse (RCxxxx, RWxxxx)'
 title: Errori e avvisi del compilatore di risorse
 ms.date: 04/17/2019
 ms.assetid: 0819f955-0561-491d-af3d-2453f4e2d035
-ms.openlocfilehash: dec141723e911c09fc63d7868a2783fb399e6fc3
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 328a64cfba23ef4904f9591c90168fab3a1b08ca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509961"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97265753"
 ---
 # <a name="resource-compiler-errors-and-warnings-rcxxxx-rwxxxx"></a>Errori e avvisi del compilatore di risorse (RCxxxx, RWxxxx)
 
-Questa sezione è un riferimento agli errori generati dal compilatore di risorse. Gli errori e gli avvisi del compilatore di risorse hanno il formato RC*xxxx* o RW*xxxx*, dove *xxxx* è un numero a quattro cifre.
+Questa sezione è un riferimento agli errori generati dal compilatore di risorse. Gli errori e gli avvisi del compilatore di risorse hanno il formato RC *xxxx* o RW *xxxx*, dove *xxxx* è un numero a quattro cifre.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -97,7 +98,7 @@ Questa sezione è un riferimento agli errori generati dal compilatore di risorse
 [Avviso del compilatore di risorse risorse RW4003](resource-compiler-warning-rw4003.md) \
 [Avviso del compilatore di risorse RW4004](resource-compiler-warning-rw4004.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Compilatore di C/C++ ed errori e avvisi di strumenti di compilazione](../compiler-errors-1/c-cpp-build-errors.md)
-[Compilatore di risorse](/windows/win32/menurc/resource-compiler)
+[Errori e avvisi degli strumenti di compilazione e compilatore C/C++](../compiler-errors-1/c-cpp-build-errors.md) 
+ [Compilatore di risorse](/windows/win32/menurc/resource-compiler)

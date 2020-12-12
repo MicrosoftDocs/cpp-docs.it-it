@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: primitive a virgola mobile'
 title: Primitive a virgola mobile
 ms.date: 4/2/2020
 api_name:
@@ -157,12 +158,12 @@ helpviewer_keywords:
 - _dsin
 - _ldsin
 - _fdsin
-ms.openlocfilehash: e28c873206d8f050dbde2afc9ebfe3540b6642ff
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 05422620a4da907820ed86a61d4e8dc16b37d3f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218683"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268964"
 ---
 # <a name="floating-point-primitives"></a>Primitive a virgola mobile
 
@@ -185,11 +186,11 @@ short __cdecl _fdclass(float x);
 *x*<br/>
 Argomento della funzione a virgola mobile.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Queste primitive a virgola mobile implementano le versioni C della macro CRT [fpclassify](fpclassify.md) per i tipi a virgola mobile. La classificazione dell'argomento *x* viene restituita come una di queste costanti, definita in Math. h:
 
-|valore|Descrizione|
+|Valore|Description|
 |-----------|-----------------|
 | **FP_NAN** | NaN silenzioso, segnalatore o indeterminato |
 | **FP_INFINITE** | Infinito positivo o negativo |
@@ -214,9 +215,9 @@ int __cdecl _fdsign(float x);
 *x*<br/>
 Argomento della funzione a virgola mobile.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Queste primitive a virgola mobile implementano la macro o la funzione [signbit](signbit.md) in CRT. Restituiscono un valore diverso da zero se il bit di segno è impostato in separatore (mantissa) dell'argomento *x*e 0 se il bit di segno non è impostato.
+Queste primitive a virgola mobile implementano la macro o la funzione [signbit](signbit.md) in CRT. Restituiscono un valore diverso da zero se il bit di segno è impostato in separatore (mantissa) dell'argomento *x* e 0 se il bit di segno non è impostato.
 
 ## <a name="_dpcomp-_ldpcomp-_fdpcomp"></a>_dpcomp, _ldpcomp, _fdpcomp
 
@@ -233,11 +234,11 @@ int __cdecl _fdpcomp(float x, float y);
 *x*, *y*<br/>
 Argomenti della funzione a virgola mobile.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Queste primitive a virgola mobile accettano due argomenti, *x* e *y*, e restituiscono un valore che mostra la relazione di ordinamento, espresso come or bit per bit di queste costanti, definito in Math. h:
 
-| valore | Descrizione |
+| Valore | Description |
 |------------|-----------------|
 | **_FP_LT** | *x* può essere considerato minore di *y* |
 | **_FP_EQ** | *x* può essere considerato uguale a *y* |
@@ -260,11 +261,11 @@ short __cdecl _fdtest(float* px);
 *px*<br/>
 Puntatore a un argomento a virgola mobile.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Queste primitive a virgola mobile implementano le versioni C++ della funzione CRT [fpclassify](fpclassify.md) per i tipi a virgola mobile. L'argomento *x* viene valutato e la classificazione viene restituita come una di queste costanti, definita in Math. h:
 
-|valore|Descrizione|
+|Valore|Description|
 |-----------|-----------------|
 | **FP_NAN** | NaN silenzioso, segnalatore o indeterminato |
 | **FP_INFINITE** | Infinito positivo o negativo |
@@ -292,9 +293,9 @@ Puntatore a un argomento a virgola mobile.
 *exp*<br/>
 Esponente come tipo integrale.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Queste primitive a virgola mobile accettano un puntatore a un valore a virgola mobile *px* e un valore dell'esponente *Exp*e rimuovono la parte frazionaria del valore a virgola mobile al di sotto dell'esponente specificato, se possibile. Il valore restituito è il risultato di **fpclassify** sul valore di input in *px* se è NaN o infinito e in caso contrario sul valore di output in *px* .
+Queste primitive a virgola mobile accettano un puntatore a un valore a virgola mobile *px* e un valore dell'esponente *Exp* e rimuovono la parte frazionaria del valore a virgola mobile al di sotto dell'esponente specificato, se possibile. Il valore restituito è il risultato di **fpclassify** sul valore di input in *px* se è NaN o infinito e in caso contrario sul valore di output in *px* .
 
 ## <a name="_dscale-_ldscale-_fdscale"></a>_dscale, _ldscale, _fdscale
 
@@ -314,9 +315,9 @@ Puntatore a un argomento a virgola mobile.
 *exp*<br/>
 Esponente come tipo integrale.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Queste primitive a virgola mobile accettano un puntatore a un valore a virgola mobile *px* e un valore dell'esponente *Exp*e ridimensionano il valore in *px* di 2<sup>*Exp*</sup>, se possibile. Il valore restituito è il risultato di **fpclassify** sul valore di input in *px* se è NaN o infinito e in caso contrario sul valore di output in *px* . Per la portabilità, preferire le funzioni [ldexp, ldexpf e ldexpl](ldexp.md) .
+Queste primitive a virgola mobile accettano un puntatore a un valore a virgola mobile *px* e un valore dell'esponente *Exp* e ridimensionano il valore in *px* di 2 <sup>*Exp*</sup>, se possibile. Il valore restituito è il risultato di **fpclassify** sul valore di input in *px* se è NaN o infinito e in caso contrario sul valore di output in *px* . Per la portabilità, preferire le funzioni [ldexp, ldexpf e ldexpl](ldexp.md) .
 
 ## <a name="_dunscale-_ldunscale-_fdunscale"></a>_dunscale, _ldunscale, _fdunscale
 
@@ -336,9 +337,9 @@ Puntatore a un esponente come tipo integrale.
 *px*<br/>
 Puntatore a un argomento a virgola mobile.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Queste primitive a virgola mobile suddividono il valore a virgola mobile a cui punta *px* in un separatore (mantissa) e un esponente, se possibile. Il separatore viene ridimensionato in modo che il valore assoluto sia maggiore o uguale a 0,5 e minore di 1,0. L'esponente è il valore *n*, in cui il valore a virgola mobile originale è uguale al valore di separatore in scala 2<sup>*n*</sup>. Questo esponente integer *n* viene archiviato nella posizione a cui punta *pExp*. Il valore restituito è il risultato di **fpclassify** sul valore di input in *px* se è NaN o infinito e in caso contrario sul valore di output. Per la portabilità, preferire le funzioni [frexp, frexpf, frexpl](frexp.md) .
+Queste primitive a virgola mobile suddividono il valore a virgola mobile a cui punta *px* in un separatore (mantissa) e un esponente, se possibile. Il separatore viene ridimensionato in modo che il valore assoluto sia maggiore o uguale a 0,5 e minore di 1,0. L'esponente è il valore *n*, in cui il valore a virgola mobile originale è uguale al valore di separatore in scala 2 <sup>*n*</sup>. Questo esponente integer *n* viene archiviato nella posizione a cui punta *pExp*. Il valore restituito è il risultato di **fpclassify** sul valore di input in *px* se è NaN o infinito e in caso contrario sul valore di output. Per la portabilità, preferire le funzioni [frexp, frexpf, frexpl](frexp.md) .
 
 ## <a name="_dexp-_ldexp-_fdexp"></a>_dexp, _ldexp, _fdexp
 
@@ -361,9 +362,9 @@ Puntatore a un argomento a virgola mobile.
 *exp*<br/>
 Esponente come tipo integrale.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Queste primitive a virgola mobile costruiscono un valore a virgola mobile nella posizione a cui punta *px* uguale a *y* * 2<sup>*Exp*</sup>. Il valore restituito è il risultato di **fpclassify** sul valore di input in *y* se è NaN o infinito e in caso contrario sul valore di output in *px* . Per la portabilità, preferire le funzioni [ldexp, ldexpf e ldexpl](ldexp.md) .
+Queste primitive a virgola mobile costruiscono un valore a virgola mobile nella posizione a cui punta *px* uguale a *y* * 2 <sup>*Exp*</sup>. Il valore restituito è il risultato di **fpclassify** sul valore di input in *y* se è NaN o infinito e in caso contrario sul valore di output in *px* . Per la portabilità, preferire le funzioni [ldexp, ldexpf e ldexpl](ldexp.md) .
 
 ## <a name="_dnorm-_fdnorm"></a>_dnorm, _fdnorm
 
@@ -376,10 +377,10 @@ short __cdecl _fdnorm(unsigned short* ps);
 
 ### <a name="parameters"></a>Parametri
 
-*PS*<br/>
+*ps*<br/>
 Puntatore alla rappresentazione bit per bit di un valore a virgola mobile espresso come matrice di **`unsigned short`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Queste primitive a virgola mobile normalizzano la parte frazionaria di un valore a virgola mobile con propagazione e regolano la corrispondenza tra la *caratteristica*, o l'esponente distorta. Il valore viene passato come rappresentazione bit per bit del tipo a virgola mobile convertito in una matrice di **`unsigned short`** tramite `_double_val` il `_ldouble_val` tipo, `_float_val` o: crostacei Union dichiarata in Math. h. Il valore restituito è il risultato di **fpclassify** sul valore a virgola mobile di input se è NaN o infinito e in caso contrario sul valore di output.
 
@@ -404,9 +405,9 @@ Puntatore a una tabella di coefficienti costanti per un polinomiale.
 *n*<br/>
 Ordine del polinomiale da valutare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Queste primitive a virgola mobile restituiscono la valutazione di *x* nel polinomio dell'ordine *n* i cui coefficienti sono rappresentati dai valori costanti corrispondenti nella *tabella*. Se, ad esempio, la *tabella* \[ 0] = 3,0, *tabella* \[ 1] = 4,0, *tabella* \[ 2] = 5,0 e *n* = 2, rappresenta il polinomiale 5.0 x<sup>2</sup> + 4.0 x + 3,0. Se questo polinomi viene valutato per *x* di 2,0, il risultato è 31,0. Queste funzioni non vengono utilizzate internamente.
+Queste primitive a virgola mobile restituiscono la valutazione di *x* nel polinomio dell'ordine *n* i cui coefficienti sono rappresentati dai valori costanti corrispondenti nella *tabella*. Se, ad esempio, la *tabella* \[ 0] = 3,0, *tabella* \[ 1] = 4,0, *tabella* \[ 2] = 5,0 e *n* = 2, rappresenta il polinomiale 5.0 x <sup>2</sup> + 4.0 x + 3,0. Se questo polinomi viene valutato per *x* di 2,0, il risultato è 31,0. Queste funzioni non vengono utilizzate internamente.
 
 ## <a name="_dlog-_dlog-_dlog"></a>_dlog, _dlog, _dlog
 
@@ -426,9 +427,9 @@ Argomento della funzione a virgola mobile.
 *base_flag*<br/>
 Flag che controlla la base da usare, 0 per la base *e e diverso* da zero per la base 10.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Queste primitive a virgola mobile restituiscono il log naturale di *x*, ln (*x*) o log<sub>*e*</sub>(*x*), quando *base_flag* è 0. Restituiscono il logaritmo in base 10 di *x*o log<sub>10</sub>(*x*) quando *base_flag* è diverso da zero. Queste funzioni non vengono utilizzate internamente. Per la portabilità, preferire le funzioni [log, logf, logl, log10, log10f e log10l](log-logf-log10-log10f.md).
+Queste primitive a virgola mobile restituiscono il log naturale di *x*, ln (*x*) o log <sub>*e*</sub>(*x*), quando *base_flag* è 0. Restituiscono il logaritmo in base 10 di *x* o log <sub>10</sub>(*x*) quando *base_flag* è diverso da zero. Queste funzioni non vengono utilizzate internamente. Per la portabilità, preferire le funzioni [log, logf, logl, log10, log10f e log10l](log-logf-log10-log10f.md).
 
 ## <a name="_dsin-_ldsin-_fdsin"></a>_dsin, _ldsin, _fdsin
 
@@ -448,7 +449,7 @@ Argomento della funzione a virgola mobile.
 *Quadrant*<br/>
 Offset del quadrante di 0, 1, 2 o 3 da usare per produrre `sin` `cos` `-sin` i risultati,, e `-cos` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Queste primitive a virgola mobile restituiscono il seno dell'offset *x* dal *quadrante* modulo 4. In effetti, restituiscono il seno, il coseno, il seno e il coseno di *x* quando il *quadrante* modulo 4 è 0, 1, 2 o 3 rispettivamente. Queste funzioni non vengono utilizzate internamente. Per la portabilità, preferire le funzioni [sin, sinf, sinl](sin-sinf-sinl.md), [cos, cosf e cosl](cos-cosf-cosl.md) .
 
@@ -458,7 +459,7 @@ Intestazione: \<math.h>
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Supporto delle funzioni a virgola mobile](../floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>

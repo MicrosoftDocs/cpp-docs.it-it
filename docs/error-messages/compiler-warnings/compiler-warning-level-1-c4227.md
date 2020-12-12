@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 1) C4227'
 title: Avviso del compilatore (livello 1) C4227
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4227
 ms.assetid: 78f98374-c00b-4000-aefa-1b1c67b4666b
-ms.openlocfilehash: f5cc9e67c06443a73692ce663a2106dacff6035c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f919f3765836548b7aa7410002facd942b942395
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221016"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97266325"
 ---
 # <a name="compiler-warning-level-1-c4227"></a>Avviso del compilatore (livello 1) C4227
 

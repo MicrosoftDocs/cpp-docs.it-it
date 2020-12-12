@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CSimpleRow'
 title: Classe CSimpleRow
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: c0d7ea0966b9a582e4a6969573458bca2e8a0fea
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 7390a8d82e8996c81761065541eebbbccae510ad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507223"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268418"
 ---
 # <a name="csimplerow-class"></a>Classe CSimpleRow
 
@@ -59,7 +60,7 @@ class CSimpleRow
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[AddRefRow](#addrefrow)|Aggiunge un conteggio dei riferimenti a un handle di riga esistente.|
 |[Confronta](#compare)|Confronta due righe per verificare se fanno riferimento alla stessa istanza di riga.|
@@ -68,12 +69,12 @@ class CSimpleRow
 
 ### <a name="data-members"></a>Membri dei dati
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[m_dwRef](#dwref)|Conteggio riferimenti a un handle di riga esistente.|
 |[m_iRowset](#irowset)|Indice del set di righe che rappresenta il cursore.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un handle di riga è logicamente un tag univoco per una riga di risultati. `IRowsetImpl` Crea un nuovo oggetto `CSimpleRow` per ogni riga richiesta in [IRowsetImpl:: GetNextRows](./irowsetimpl-class.md#getnextrows). `CSimpleRow` può anche essere sostituito con la propria implementazione dell'handle di riga, poiché si tratta di un argomento di modello predefinito per `IRowsetImpl` . L'unico requisito per la sostituzione di questa classe consiste nel fare in modo che la classe di sostituzione fornisca un costruttore che accetta un solo parametro di tipo **Long**.
 
@@ -121,7 +122,7 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 *iRowsetCur*<br/>
 in Indice per il set di righe corrente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Imposta [m_iRowset](#irowset) su *iRowsetCur*.
 

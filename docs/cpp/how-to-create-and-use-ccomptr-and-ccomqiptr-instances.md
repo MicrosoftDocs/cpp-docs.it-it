@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: procedura: creare e usare istanze CComPtr e CComQIPtr'
 title: 'Procedura: Creare e usare istanze CComPtr e CComQIPtr'
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
-ms.openlocfilehash: 4d3a9f98f4f4111e88a41f9d4a96cb3caefe64d8
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: c16d908e3df9e10641f1264aed7623463424de69
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414633"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268652"
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Procedura: Creare e usare istanze CComPtr e CComQIPtr
 
@@ -37,6 +38,6 @@ ATL fornisce anche `CComQIPtr`che presenta una sintassi più semplice per interr
 
 [!code-cpp[COM_smart_pointers#03](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_3.cpp)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Puntatori intelligenti (C++ moderno)](../cpp/smart-pointers-modern-cpp.md)

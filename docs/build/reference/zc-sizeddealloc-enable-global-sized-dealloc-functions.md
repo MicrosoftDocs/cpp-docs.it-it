@@ -1,5 +1,6 @@
 ---
-title: '/Zc: sizeddealloc (Abilita la deallocazione le funzioni dimensionata globali)'
+description: 'Altre informazioni su:/Zc: sizedDealloc (Abilita funzioni di deallocazione ridimensionate globali)'
+title: '/Zc: sizedDealloc (Abilita le funzioni di deallocazione ridimensionate globali)'
 ms.date: 03/06/2018
 f1_keywords:
 - sizedDealloc
@@ -11,45 +12,45 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 3a73ace0-4d36-420a-b699-0ca6fc0dd134
-ms.openlocfilehash: dc381058c6a2ef84542be1d3cdd00c410aa51c2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e40355dc3c61f725ca9996dc4c91c0604866fe4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315482"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97269068"
 ---
-# <a name="zcsizeddealloc-enable-global-sized-deallocation-functions"></a>/Zc: sizeddealloc (Abilita la deallocazione le funzioni dimensionata globali)
+# <a name="zcsizeddealloc-enable-global-sized-deallocation-functions"></a>/Zc: sizedDealloc (Abilita le funzioni di deallocazione ridimensionate globali)
 
-Il **/Zc: sizeddealloc** l'opzione del compilatore indica al compilatore di preferibile chiamare globali `operator delete` oppure `operator delete[]` funzioni che hanno un secondo parametro di tipo `size_t` quando le dimensioni dell'oggetto sono disponibili. Queste funzioni possono usare il `size_t` parametro per ottimizzare le prestazioni deallocatore.
+L'opzione del compilatore **/Zc: sizedDealloc** indica al compilatore di chiamare in modo preferenziale le `operator delete` funzioni o globali `operator delete[]` che dispongono di un secondo parametro di tipo `size_t` quando le dimensioni dell'oggetto sono disponibili. Queste funzioni possono utilizzare il `size_t` parametro per ottimizzare le prestazioni di deallocatore.
 
 ## <a name="syntax"></a>Sintassi
 
-> **/Zc:sizedDealloc**[**-**]
+> **/Zc: sizedDealloc**[ **-** ]
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-In c++11 standard, è possibile definire le funzioni membro statiche `operator delete` e `operator delete[]` che accettano un secondo, `size_t` parametro. In genere questi vengono usati in combinazione con [operatore new](../../cpp/new-operator-cpp.md) funzioni implementare più efficiente gli allocatori e i deallocatori per l'oggetto. C++11, tuttavia, non definiscono un set equivalente di funzioni di deallocazione in ambito globale. In C++ 11, deallocazione globale funzioni che hanno un secondo parametro di tipo `size_t` vengono considerate funzioni delete di posizionamento. Deve essere chiamati in modo esplicito, passando un argomento di dimensione.
+Nello standard C++ 11, è possibile definire funzioni membro statiche `operator delete` `operator delete[]` che accettano un secondo `size_t` parametro. Vengono in genere utilizzate in combinazione con funzioni [operatore New](../../cpp/new-operator-cpp.md) per implementare allocatori e deallocatori più efficienti per l'oggetto. Tuttavia, C++ 11 non definisce un set equivalente di funzioni di deallocazione nell'ambito globale. In C++ 11, le funzioni di deallocazione globali che dispongono di un secondo parametro di tipo `size_t` sono considerate funzioni di eliminazione del posizionamento. Devono essere chiamati in modo esplicito passando un argomento di dimensione.
 
-La standard c++14 modifica il comportamento del compilatore. Quando si definisce globali `operator delete` e `operator delete[]` che accettano un secondo parametro di tipo `size_t`, il compilatore è preferibile chiamare queste funzioni quando le versioni ambito dei membri non vengono richiamate e la dimensione dell'oggetto è disponibile. Il compilatore passa l'argomento di dimensione in modo implicito. Le versioni di argomento singolo vengono chiamate quando il compilatore non è possibile determinare le dimensioni dell'oggetto da deallocare. In caso contrario, le regole generali per la scelta della versione della funzione per richiamare deallocazione vengono mantenuti. Chiamate alle funzioni globali possono essere specificate esplicitamente facendo precedere l'operatore di risoluzione ambito (`::`) alla chiamata di funzione di deallocazione.
+Lo standard C++ 14 modifica il comportamento del compilatore. Quando si definisce Global `operator delete` e si `operator delete[]` accetta un secondo parametro di tipo `size_t` , il compilatore preferisce chiamare queste funzioni quando le versioni dell'ambito del membro non vengono richiamate e le dimensioni dell'oggetto sono disponibili. Il compilatore passa l'argomento di dimensione in modo implicito. Le versioni a singolo argomento vengono chiamate quando il compilatore non è in grado di determinare le dimensioni dell'oggetto da deallocare. In caso contrario, verranno applicate le normali regole per la scelta della versione della funzione di deallocazione da richiamare. Le chiamate alle funzioni globali possono essere specificate in modo esplicito anteponendo l'operatore di risoluzione dell'ambito ( `::` ) alla chiamata della funzione di deallocazione.
 
-Per impostazione predefinita, a partire da Visual Studio 2015 Visual C++ implementa questo standard comportamento di c++14. È possibile specificare in modo esplicito questo impostando il **/Zc: sizeddealloc** opzione del compilatore. Rappresenta una modifica potenziale modifica. Usare la **/Zc:sizedDealloc-** opzione per mantenere il comportamento precedente, ad esempio, quando il codice definisce gli operatori delete di posizionamento che usano un secondo parametro di tipo `size_t`. Le implementazioni di libreria di Visual Studio predefinite delle funzioni di deallocazione globali che hanno il secondo parametro di tipo `size_t` richiamare le versioni singolo parametro. Se il codice fornisce solo parametro singolo globale operatore delete e operator delete [], funzioni globali di richiamare le implementazioni di libreria predefinite delle funzioni di deallocazione dimensionata globali.
+Per impostazione predefinita, Visual C++ a partire da Visual Studio 2015 implementa questo comportamento standard di C++ 14. È possibile specificarlo in modo esplicito impostando l'opzione del compilatore **/Zc: sizedDealloc** . Rappresenta una modifica potenzialmente sostanziale. Usare l'opzione **/Zc: sizedDealloc-** per mantenere il comportamento precedente, ad esempio quando il codice definisce gli operatori delete di posizionamento che usano un secondo parametro di tipo `size_t` . Le implementazioni predefinite della libreria di Visual Studio delle funzioni di deallocazione globali che hanno il secondo parametro di tipo `size_t` richiamano le versioni a parametro singolo. Se il codice fornisce solo operatore globale delete e operator delete [] a parametro singolo, le implementazioni di libreria predefinite delle funzioni di deallocazione dimensionate globali richiamano le funzioni globali.
 
-Il **/Zc: sizeddealloc** opzione del compilatore è attivata per impostazione predefinita. Il [/PERMISSIVE--](permissive-standards-conformance.md) opzione non riguarda **/Zc: sizeddealloc**.
+L'opzione del compilatore **/Zc: sizedDealloc** è abilitata per impostazione predefinita. L'opzione [/permissive-](permissive-standards-conformance.md) non influisce su **/Zc: sizedDealloc**.
 
 Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
 
 ## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Dal **configurazioni** dal menu a discesa, scegliere **tutte le configurazioni**.
+1. Dal menu a discesa **configurazioni** scegliere **tutte le configurazioni**.
 
-1. Selezionare il **le proprietà di configurazione** > **C/C++** > **della riga di comando** pagina delle proprietà.
+1. Selezionare la pagina delle proprietà di **configurazione** proprietà della riga di comando di  >  **c/C++**  >   .
 
-1. Modificare il **opzioni aggiuntive** proprietà da includere **/Zc: sizeddealloc** oppure **/Zc:sizedDealloc-** e quindi scegliere **OK**.
+1. Modificare la proprietà **Opzioni aggiuntive** in modo da includere **/Zc: sizedDealloc** o **/Zc: sizedDealloc,** quindi scegliere **OK**.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
-[/Zc (conformità)](zc-conformance.md)<br/>
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[/Zc (Conformità)](zc-conformance.md)<br/>

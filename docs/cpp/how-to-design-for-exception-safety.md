@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: procedura: progettazione per la sicurezza delle eccezioni'
 title: 'Procedura: progettare per la sicurezza delle eccezioni'
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: 732a46166c99396c5d55a7d2acd834b58f3d2b2e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a4b957803d822b495ae6d44bb6640dcbb4535397
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187803"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268639"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Procedura: progettare per la sicurezza delle eccezioni
 
@@ -89,7 +90,7 @@ Per essere indipendente dalle eccezioni, una funzione deve garantire che gli ogg
 
 ## <a name="the-three-exception-guarantees"></a>Le tre garanzie di eccezione
 
-In genere, la sicurezza delle eccezioni viene discussa in termini di tre garanzie di eccezione che una funzione può fornire: la *garanzia di nessun errore*, la *garanzia*sicura e la *garanzia di base*.
+In genere, la sicurezza delle eccezioni viene discussa in termini di tre garanzie di eccezione che una funzione può fornire: la *garanzia di nessun errore*, la *garanzia* sicura e la *garanzia di base*.
 
 ### <a name="no-fail-guarantee"></a>Garanzia senza errori
 
@@ -119,7 +120,7 @@ I tipi predefiniti sono tutti privi di errori e i tipi della libreria standard s
 
 - Non consentire alle eccezioni di uscire da un distruttore. Un assioma di base del linguaggio C++ afferma che i distruttori non dovrebbero mai consentire che un'eccezione si propaghi nello stack di chiamate. Se un distruttore deve eseguire un'operazione che potenzialmente genera un'eccezione, deve farlo in un blocco try-catch e inghiottire l'eccezione. La libreria standard garantisce questo comportamento per tutti i distruttori che definisce.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Procedure consigliate per C++ moderne per le eccezioni e la gestione degli errori](errors-and-exception-handling-modern-cpp.md)<br/>
 [Procedura: interfaccia tra codice eccezionale e non eccezionale](how-to-interface-between-exceptional-and-non-exceptional-code.md)

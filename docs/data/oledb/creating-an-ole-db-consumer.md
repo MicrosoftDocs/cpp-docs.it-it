@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: creazione di un consumer di OLE DB'
 title: Creazione di un consumer OLE DB
 ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: 652309d3-7736-4354-89ec-28ec80a83f9a
-ms.openlocfilehash: fc7222c2ed955e34b5af59ba073462e9edaa898a
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: d2e588c48d9a511fc4d9fd9ab1f56df80b864d4c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921282"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268561"
 ---
 # <a name="creating-an-ole-db-consumer"></a>Creazione di un consumer OLE DB
 
@@ -21,7 +22,7 @@ La Creazione guidata consumer OLE DB ATL non è disponibile in Visual Studio 201
 
 ::: moniker range="<=msvc-150"
 
-È possibile creare un consumer di modelli OLE DB con o senza la **Creazione guidata consumer OLE DB ATL** , anche se l'uso della procedura guidata è il metodo consigliato. Un consumer può funzionare in qualsiasi applicazione che supporta ATL.
+È possibile creare un consumer di modelli OLE DB con o senza la **Creazione guidata consumer OLE DB ATL**, anche se l'uso della procedura guidata è il metodo consigliato. Un consumer può funzionare in qualsiasi applicazione che supporta ATL.
 
 Questa sezione contiene gli argomenti seguenti:
 
@@ -31,6 +32,6 @@ Questa sezione contiene gli argomenti seguenti:
 
 ::: moniker-end
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

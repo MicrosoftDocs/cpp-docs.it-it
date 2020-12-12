@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CRowset'
 title: Classe CRowset
 ms.date: 11/04/2016
 f1_keywords:
@@ -228,12 +229,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: b351530326e0dc4ed0b72db50d17717824eb6bb4
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2d767803dcf5aac6dd4954d970ca753b3cfb24c4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507282"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268535"
 ---
 # <a name="crowset-class"></a>Classe CRowset
 
@@ -259,13 +260,13 @@ Classe della funzione di accesso. Il valore predefinito è `CAccessorBase`.
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[AddRefRows](#addrefrows)|Incrementa il conteggio dei riferimenti associato alla riga corrente.|
 |[Close](#close)|Rilascia le righe e l' `IRowset` interfaccia corrente.|
 |[Confronta](#compare)|Confronta due segnalibri usando [IRowsetLocate:: compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
 |[CRowset](#crowset)|Crea un nuovo `CRowset` oggetto e, facoltativamente, lo associa a un' `IRowset` interfaccia fornita come parametro.|
-|[Elimina](#delete)|Elimina le righe dal set di righe utilizzando [IRowsetChange: DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
+|[Eliminazione](#delete)|Elimina le righe dal set di righe utilizzando [IRowsetChange: DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
 |[FindNextRow](#findnextrow)|Trova la riga corrispondente successiva dopo il segnalibro specificato.|
 |[GetApproximatePosition](#getapproximateposition)|Restituisce la posizione approssimativa di una riga corrispondente a un segnalibro.|
 |[GetData](#getdata)|Recupera dati dalla copia della riga del set di righe.|
@@ -286,7 +287,7 @@ Classe della funzione di accesso. Il valore predefinito è `CAccessorBase`.
 |[Aggiornamento](#update)|Trasmette tutte le modifiche in sospeso apportate alla riga corrente dall'ultimo recupero o aggiornamento.|
 |[UpdateAll](#updateall)|Trasmette tutte le modifiche in sospeso apportate a tutte le righe dall'ultimo recupero o aggiornamento.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 In OLE DB, un set di righe è l'oggetto attraverso il quale un programma imposta e recupera i dati.
 
@@ -306,7 +307,7 @@ HRESULT AddRefRows() throw();
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo incrementa il conteggio dei riferimenti per l'handle di riga corrente. Chiamare [ReleaseRows](#releaserows) per decrementare il conteggio. Le righe restituite dai metodi di spostamento hanno un conteggio dei riferimenti di uno.
 
@@ -351,7 +352,7 @@ out Puntatore al risultato del confronto.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo richiede l'interfaccia facoltativa `IRowsetLocate` , che potrebbe non essere supportata in tutti i provider. in tal caso, il metodo restituisce E_NOINTERFACE. È inoltre necessario impostare su `DBPROP_IRowsetLocate` VARIANT_TRUE prima di chiamare `Open` nella tabella o nel comando contenente il set di righe.
 
@@ -435,7 +436,7 @@ in Segnalibro per la posizione in cui avviare una ricerca.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo richiede l'interfaccia facoltativa `IRowsetFind` , che potrebbe non essere supportata in tutti i provider. in tal caso, il metodo restituisce E_NOINTERFACE. È inoltre necessario impostare su `DBPROP_IRowsetFind` VARIANT_TRUE prima di chiamare `Open` nella tabella o nel comando contenente il set di righe.
 
@@ -468,7 +469,7 @@ out Puntatore alla posizione in cui `GetApproximatePosition` restituisce il nume
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo richiede l'interfaccia facoltativa `IRowsetScroll` , che potrebbe non essere supportata in tutti i provider. in tal caso, il metodo restituisce E_NOINTERFACE. È inoltre necessario impostare su `DBPROP_IRowsetScroll` VARIANT_TRUE prima di chiamare `Open` nella tabella o nel comando contenente il set di righe.
 
@@ -495,7 +496,7 @@ in Numero di indice (offset zero) della funzione di accesso da utilizzare per l'
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se si specifica una funzione di accesso che non è un autoaccesso in [BEGIN_ACCESSOR](./macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor), usare questo metodo per ottenere i dati in modo esplicito passando il numero di funzione di accesso.
 
@@ -522,7 +523,7 @@ out Buffer in cui inserire i dati per il record corrente.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per un esempio di come usare questa funzione, vedere l'esempio relativo a più [letture](../../overview/visual-cpp-samples.md).
 
@@ -540,7 +541,7 @@ HRESULT GetOriginalData() throw();
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo recupera i dati recuperati o trasmessi più di recente all'origine dati. non recupera i valori in base alle modifiche in sospeso.
 
@@ -565,7 +566,7 @@ out Puntatore a una posizione in cui viene `GetRowStatus` restituito il valore d
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo richiede l'interfaccia facoltativa `IRowsetUpdate` , che potrebbe non essere supportata in tutti i provider. in tal caso, il metodo restituisce E_NOINTERFACE. È inoltre necessario impostare su `DBPROP_IRowsetUpdate` VARIANT_TRUE prima di chiamare `Open` nella tabella o nel comando contenente il set di righe.
 
@@ -592,7 +593,7 @@ in Indica se l'handle per la riga inserita viene recuperato.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo richiede l'interfaccia facoltativa `IRowsetChange` , che potrebbe non essere supportata in tutti i provider. in tal caso, il metodo restituisce E_NOINTERFACE. È inoltre necessario impostare su `DBPROP_IRowsetChange` VARIANT_TRUE prima di chiamare `Open` nella tabella o nel comando contenente il set di righe.
 
@@ -639,7 +640,7 @@ HRESULT MoveFirst() throw();
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiama [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85)) per riposizionare il percorso di recupero successivo nella posizione iniziale (la posizione che era il percorso di recupero successivo al momento della creazione del set di righe) e recupera la riga iniziale.
 
@@ -657,7 +658,7 @@ HRESULT MoveLast() throw();
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiama [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85)) per riposizionare il percorso di recupero successivo nell'ultima posizione e recupera l'ultima riga.
 
@@ -688,7 +689,7 @@ in Passare **`true`** per andare avanti al record successivo, **`false`** per sp
 
 Valore HRESULT standard. Quando è stata raggiunta la fine del set di righe, restituisce DB_S_ENDOFROWSET.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Recupera la riga sequenziale successiva dall' `CRowset` oggetto, ricordando la posizione precedente. Facoltativamente, è possibile scegliere di ignorare le righe *lSkip* o tornare indietro.
 
@@ -714,7 +715,7 @@ HRESULT MovePrev() throw();
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per questo metodo è necessario impostare `DBPROP_CANFETCHBACKWARDS` o su `DBPROP_CANSCROLLBACKWARDS` VARIANT_TRUE prima di chiamare `Open` nella tabella o nel comando contenente il set di righe.
 
@@ -741,7 +742,7 @@ in Numero totale di righe dal segnalibro alla riga di destinazione. Se *lSkip* �
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo richiede l'interfaccia facoltativa `IRowsetLocate` , che potrebbe non essere supportata in tutti i provider. in tal caso, il metodo restituisce E_NOINTERFACE. È inoltre necessario impostare su `DBPROP_IRowsetLocate` VARIANT_TRUE e su `DBPROP_CANFETCHBACKWARDS` VARIANT_TRUE prima di chiamare `Open` nella tabella o nel comando contenente il set di righe.
 
@@ -773,7 +774,7 @@ in Indica se spostarsi avanti o indietro. Il valore predefinito è in futuro.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `MoveToRatio` Recupera le righe in base all'approssimativamente alla formula seguente:
 
@@ -818,7 +819,7 @@ in Numero della funzione di accesso da utilizzare per accedere ai dati.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per il `SetData` form che non accetta argomenti, vengono utilizzate tutte le funzioni di accesso per l'aggiornamento. In genere si chiama `SetData` per impostare i valori dei dati nelle colonne di una riga, quindi chiamare [Update](#update) per trasmettere tali modifiche.
 
@@ -853,7 +854,7 @@ out Puntatore alla posizione in cui viene `Undo` restituito il valore dello stat
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo richiede l'interfaccia facoltativa `IRowsetUpdate` , che potrebbe non essere supportata in tutti i provider. in tal caso, il metodo restituisce E_NOINTERFACE. È inoltre necessario impostare su `DBPROP_IRowsetUpdate` VARIANT_TRUE prima di chiamare `Open` nella tabella o nel comando contenente il set di righe.
 
@@ -884,7 +885,7 @@ out Puntatore alla posizione in cui viene `Update` restituito il valore dello st
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Trasmette tutte le modifiche in sospeso apportate alla riga corrente dall'ultimo recupero o aggiornamento della riga (utilizzando `Update` o [UpdateAll](#updateall)). In genere si chiama [SetData](#setdata) per impostare i valori dei dati nelle colonne di una riga e quindi si chiama `Update` per trasmettere tali modifiche.
 
@@ -913,7 +914,7 @@ out Puntatore alla memoria in cui `UpdateAll` viene restituito l'handle della ri
 *ppStatus*<br/>
 out Puntatore alla posizione in cui viene `Update` restituito il valore dello stato della riga. Se *ppStatus* è null, non viene restituito alcuno stato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Trasmette tutte le modifiche in sospeso apportate a tutte le righe dall'ultimo recupero o aggiornamento di tali righe tramite [Update](#update) o `UpdateAll` . `UpdateAll` aggiornerà ogni riga modificata, indipendentemente dal fatto che sia ancora presente il relativo handle (vedere *pphRow*).
 
@@ -925,7 +926,7 @@ Questo metodo richiede l'interfaccia facoltativa `IRowsetUpdate` , che potrebbe 
 
 Valore HRESULT standard.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Esempio DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [Esempio di MultiRead](../../overview/visual-cpp-samples.md)<br/>

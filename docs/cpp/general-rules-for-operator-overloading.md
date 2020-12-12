@@ -1,15 +1,16 @@
 ---
+description: "Altre informazioni su: regole generali per l'overload degli operatori"
 title: Regole generali per overload di operatori
 ms.date: 11/04/2016
 helpviewer_keywords:
 - operator overloading [C++], rules
 ms.assetid: eb2b3754-35f7-4832-b1da-c502893dc0c7
-ms.openlocfilehash: da0bf04435118c819fc29efd3082d8d312e43006
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 224bc6fb8de566519ef848471905d1ed76a020db
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213398"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268730"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Regole generali per overload di operatori
 
@@ -68,6 +69,6 @@ Questa identità non può essere ritenuta attendibile per tipi di classe che sot
 > [!NOTE]
 > Per coerenza, è spesso consigliabile seguire il modello di tipi incorporati quando vengono definiti gli operatori di overload. Se la semantica di un operatore di overload differisce notevolmente dal relativo significato in altri contesti, può essere più ambiguo che utile.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Overload degli operatori](../cpp/operator-overloading.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: direttive #ifdef e #ifndef (C/C++)'
 title: '#Direttive ifdef e #ifndef (C/C++)'
 ms.date: 08/29/2019
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - ifndef directive (#ifndef)
 - '#ifndef directive'
 ms.assetid: 2b0be69d-9e72-45d8-8e24-e4130fb2455b
-ms.openlocfilehash: 433076388f3646b19d75a907c6b2254098096688
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 4888e4516b57465974d99b1c9e8e6393e02f68c6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220109"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97269289"
 ---
 # <a name="ifdef-and-ifndef-directives-cc"></a>direttive #ifdef e #ifndef (C/C++)
 
@@ -24,25 +25,25 @@ Le direttive **#ifdef** e **#ifndef** hanno lo stesso effetto della direttiva [#
 
 ## <a name="syntax"></a>Sintassi
 
-> **#ifdef** *identificatore* di\
-> **#ifndef** *identificatore* di
+>  *identificatore* #ifdef\
+>  *identificatore* #ifndef
 
 Queste direttive sono equivalenti a:
 
-> **#if definito** *identificatore* di\
-> **#if! definito** *identificatore* di
+> *identificatore* **definito #if**\
+> *identificatore* **#if! defined**
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-È possibile usare le direttive **#ifdef** e **#ifndef** ovunque `#if` sia possibile usare. L'istruzione **#ifdef** *Identifier* è equivalente a `#if 1` quando è stato definito *identificatore* . Equivale a `#if 0` quando l' `#undef` *identificatore* non è stato definito o non è stato definito dalla direttiva. Queste direttive controllano solo la presenza o l'assenza di identificatori definiti con `#define`, non di identificatori dichiarati nel codice sorgente in C o C++.
+È possibile usare le direttive **#ifdef** e **#ifndef** ovunque `#if` sia possibile usare. L'istruzione **#ifdef** *Identifier* è equivalente a `#if 1` quando è stato definito *identificatore* . Equivale a `#if 0` quando l' *identificatore* non è stato definito o non è stato definito dalla `#undef` direttiva. Queste direttive controllano solo la presenza o l'assenza di identificatori definiti con `#define`, non di identificatori dichiarati nel codice sorgente in C o C++.
 
 Queste direttive sono fornite solo per compatibilità con le versioni precedenti del linguaggio. È preferibile l'espressione costante **definita (** *identificatore* **)** utilizzata con la `#if` direttiva.
 
-La direttiva **#ifndef** controlla l'opposto della condizione controllata da **#ifdef**. Se l'identificatore non è stato definito o se la relativa definizione è stata rimossa `#undef`con, la condizione è true (diverso da zero). In caso contrario, la condizione è false (0).
+La direttiva **#ifndef** controlla l'opposto della condizione controllata da **#ifdef**. Se l'identificatore non è stato definito o se la relativa definizione è stata rimossa con `#undef` , la condizione è true (diverso da zero). In caso contrario, la condizione è false (0).
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-L' *identificatore* può essere passato dalla riga di comando usando l'opzione [/d](../build/reference/d-preprocessor-definitions.md) . Con `/D`è possibile specificare fino a 30 macro.
+L' *identificatore* può essere passato dalla riga di comando usando l'opzione [/d](../build/reference/d-preprocessor-definitions.md) . Con è possibile specificare fino a 30 macro `/D` .
 
 La direttiva **#ifdef** è utile per verificare se esiste una definizione, perché una definizione può essere passata dalla riga di comando. Ad esempio:
 
@@ -54,8 +55,8 @@ La direttiva **#ifdef** è utile per verificare se esiste una definizione, perch
 #endif
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Direttive per il preprocessore](../preprocessor/preprocessor-directives.md)

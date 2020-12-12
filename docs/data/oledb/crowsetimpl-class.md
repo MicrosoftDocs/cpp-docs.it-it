@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CRowsetImpl'
 title: Classe CRowsetImpl
 ms.date: 11/04/2016
 f1_keywords:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - m_strCommandText
 - m_strIndexText
 ms.assetid: e97614b3-b11d-4806-a0d3-b9401331473f
-ms.openlocfilehash: cca74504c80b964b14742e7405953ad68764aa62
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: e517806cc7083700d4fad7fc053777b11a7de665
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507266"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268444"
 ---
 # <a name="crowsetimpl-class"></a>Classe CRowsetImpl
 
@@ -66,7 +67,7 @@ class CRowsetImpl :
 *T*<br/>
 Classe dell'utente che deriva da `CRowsetImpl` .
 
-*Archiviazione*<br/>
+*Storage*<br/>
 Classe di record utente.
 
 *CreatorClass*<br/>
@@ -83,14 +84,14 @@ Classe che fungerà da archiviazione per i dati del set di righe. Il valore pred
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[NameFromDBID](#namefromdbid)|Estrae una stringa da un oggetto `DBID` e lo copia nell'oggetto *BSTR* passato.|
 |[SetCommandText](#setcommandtext)|Convalida e archivia le istanze `DBID` di nelle due stringhe ([m_strCommandText](#strcommandtext) e [m_strIndexText](#strindextext)).|
 
 ### <a name="overridable-methods"></a>Metodi sottoponibili a override
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[GetColumnInfo](#getcolumninfo)|Recupera le informazioni sulle colonne per una determinata richiesta client.|
 |[GetCommandFromID](#getcommandfromid)|Verifica se uno o entrambi i parametri contengono valori stringa e, in tal caso, copia i valori stringa nei membri dati [m_strCommandText](#strcommandtext) e [m_strIndexText](#strindextext).|
@@ -98,13 +99,13 @@ Classe che fungerà da archiviazione per i dati del set di righe. Il valore pred
 
 ### <a name="data-members"></a>Membri dei dati
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[m_rgRowData](#rgrowdata)|Per impostazione predefinita, un oggetto `CAtlArray` che templatizes nell'argomento del modello di record utente a `CRowsetImpl` . È possibile utilizzare un'altra classe di tipo matrice modificando l' `ArrayType` argomento di modello in `CRowsetImpl` .|
 |[m_strCommandText](#strcommandtext)|Contiene il comando iniziale del set di righe.|
 |[m_strIndexText](#strindextext)|Contiene l'indice iniziale del set di righe.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 `CRowsetImpl` fornisce le sostituzioni sotto forma di multicast statici. I metodi controllano il modo in cui un determinato set di righe convaliderà il testo del comando. È possibile creare una `CRowsetImpl` classe personalizzata rendendo le interfacce di implementazione multiple ereditate. L'unico metodo per cui è necessario fornire l'implementazione è `Execute` . A seconda del tipo di set di righe che si sta creando, i metodi dell'autore si aspettano firme diverse per `Execute` . Se, ad esempio, si utilizza una `CRowsetImpl` classe derivata da per implementare un set di righe dello schema, il `Execute` metodo avrà la firma seguente:
 
@@ -143,7 +144,7 @@ in Riferimento [CComBSTR](../../atl/reference/ccombstr-class.md) per inserire un
 
 Valore HRESULT standard. A seconda che l'oggetto `DBID` sia una tabella o un indice (indicato da *bindex*), il metodo restituirà DB_E_NOINDEX o DB_E_NOTABLE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo viene chiamato dalle `CRowsetImpl` implementazioni di [ValidateCommandID](#validatecommandid) e [GetCommandFromID](#getcommandfromid).
 
@@ -170,7 +171,7 @@ in Puntatore all'oggetto `DBID` che rappresenta l'ID dell'indice.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il `SetCommentText` metodo viene chiamato da `CreateRowset` , un metodo creato un modello statico di `IOpenRowsetImpl` .
 
@@ -199,7 +200,7 @@ in Puntatore (output) al numero di colonne restituite.
 
 Puntatore a una struttura statica `ATLCOLUMNINFO` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo è una sostituzione avanzata.
 
@@ -232,7 +233,7 @@ in Puntatore all'oggetto `DBID` che rappresenta l'ID dell'indice.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo viene chiamato tramite un oggetto statico di cui viene eseguito `CRowsetImpl` il cast per popolare i membri dati [m_strCommandText](#strcommandtext) e [m_strIndexText](#strindextext). Per impostazione predefinita, questo metodo verifica se uno o entrambi i parametri contengono valori di stringa. Se contengono valori stringa, questo metodo copia i valori stringa nei membri dati. Inserendo un metodo con questa firma nella `CRowsetImpl` classe derivata da, il metodo verrà chiamato al posto dell'implementazione di base.
 
@@ -259,7 +260,7 @@ in Puntatore all'oggetto `DBID` che rappresenta l'ID dell'indice.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo viene chiamato tramite un oggetto statico di cui è stato eseguito il cast `CRowsetImpl` per popolare i relativi membri dati [m_strCommandText](#strcommandtext) e [m_strIndexText](#strindextext). Per impostazione predefinita, questo metodo verifica se una o entrambe `DBID` le istanze contengono valori stringa e, in tal caso, le copia nei relativi membri dati. Inserendo un metodo con questa firma nella `CRowsetImpl` classe derivata da, il metodo verrà chiamato al posto dell'implementazione di base.
 

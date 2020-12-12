@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: `/Zc:strictStrings` (Disabilita conversione del tipo di valore letterale stringa)'
 title: /Zc:strictStrings (Disabilitare la conversione del tipo di valore letterale stringa)
 ms.date: 03/06/2018
 f1_keywords:
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: b7eb3f3b-82c1-48a2-8e63-66bad7397b46
-ms.openlocfilehash: df880ed64fa472ff55eb5ee0d17caacf56228ab6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 38c0ac2fe69acd81762fbf26797eece659ee63a3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211892"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97269055"
 ---
-# <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>`/Zc:strictStrings`(Disabilita conversione del tipo di valore letterale stringa)
+# <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>`/Zc:strictStrings` (Disabilita conversione del tipo di valore letterale stringa)
 
 Quando specificato, il compilatore richiede una **`const`** conformità di qualificazione rigorosa per i puntatori inizializzati usando valori letterali stringa.
 
@@ -26,7 +27,7 @@ Quando specificato, il compilatore richiede una **`const`** conformità di quali
 
 > **`/Zc:strictStrings`**[**`-`**]
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Se **`/Zc:strictStrings`** si specifica, il compilatore applica le qualifiche C++ standard **`const`** per i valori letterali stringa, come tipo ' Array of `const char` ' o ' Array of `const wchar_t` ', a seconda della dichiarazione. I valori letterali di stringa non sono modificabili e un tentativo di modificare il contenuto di uno di questi valori provoca un errore di violazione di accesso in fase di esecuzione. È necessario dichiarare un puntatore di stringa come **`const`** per inizializzarlo utilizzando un valore letterale stringa oppure utilizzare un oggetto esplicito **`const_cast`** per inizializzare un non **`const`** puntatore. Per impostazione predefinita, o se **`/Zc:strictStrings-`** viene specificato, il compilatore non impone le **`const`** qualificazioni standard C++ per i puntatori di stringa inizializzati mediante valori letterali stringa.
 
@@ -66,10 +67,10 @@ Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonsta
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la pagina delle proprietà di **configurazione**proprietà della riga di comando di  >  **c/C++**  >  **Command Line** .
+1. Selezionare la pagina delle proprietà di **configurazione** proprietà della riga di comando di  >  **c/C++**  >   .
 
 1. Modificare la proprietà **Opzioni aggiuntive** in modo da includere **`/Zc:strictStrings`** , quindi scegliere **OK**.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[`/Zc`Conformità](zc-conformance.md)<br/>
+[`/Zc` Conformità](zc-conformance.md)<br/>

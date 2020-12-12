@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 1) C4216'
 title: Avviso del compilatore (livello 1) C4216
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4216
 ms.assetid: 211079dc-59d0-42a7-801c-2ddab21d7232
-ms.openlocfilehash: b7fc44fd15f761c19ed28402a41b3bd3619b21a0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b570863653ea64d159cbb2f4a11138b2361ce149
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223265"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97266481"
 ---
 # <a name="compiler-warning-level-1-c4216"></a>Avviso del compilatore (livello 1) C4216
 

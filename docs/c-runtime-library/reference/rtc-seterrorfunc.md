@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _RTC_SetErrorFunc'
 title: _RTC_SetErrorFunc
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - RTC_SetErrorFunc function
 - _RTC_SetErrorFunc function
 ms.assetid: b2292722-0d83-4092-83df-3d5b19880666
-ms.openlocfilehash: 6b173dd9af9fe11146341468c44a0abc10ce90bc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 454fd54e0960e8ce52c94b4e4a1e0a93ea99d3eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949020"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268938"
 ---
 # <a name="_rtc_seterrorfunc"></a>_RTC_SetErrorFunc
 
@@ -53,7 +54,7 @@ L'indirizzo della funzione che gestirà i controlli degli errori di runtime.
 
 La funzione di errore definita in precedenza. Se non è presente alcuna funzione definita in precedenza, restituisce **null**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Non utilizzare questa funzione; usare invece **_RTC_SetErrorFuncW**. Viene mantenuta solo per compatibilità con le versioni precedenti.
 
@@ -69,7 +70,7 @@ Per altre informazioni, vedere [Compatibilità](../../c-runtime-library/compatib
 
 Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [_CrtDbgReport, _CrtDbgReportW](crtdbgreport-crtdbgreportw.md)<br/>
-[Controllo degli errori di runtime](../../c-runtime-library/run-time-error-checking.md)<br/>
+[Controllo degli errori di run-time](../../c-runtime-library/run-time-error-checking.md)<br/>
