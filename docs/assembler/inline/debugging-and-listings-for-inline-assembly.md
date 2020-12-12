@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: debug ed elenchi per assembly inline'
 title: Debug ed elenchi per assembly inline
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - debugging [C++], inline assembly code
 - inline assembly, debugging
 ms.assetid: 69266930-6f9a-433d-b704-f4f44e7b2583
-ms.openlocfilehash: 6e97c2528f480268599f561e8cf4a1df2518c6b3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b4608a0176de5e061d7dc7f15b8758d9bd3a94b2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87192184"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117870"
 ---
 # <a name="debugging-and-listings-for-inline-assembly"></a>Debug ed elenchi per assembly inline
 
@@ -30,6 +31,6 @@ Se si crea un'origine mista e un elenco di assembly con l'opzione del compilator
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Uso del linguaggio assembly nei blocchi di __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

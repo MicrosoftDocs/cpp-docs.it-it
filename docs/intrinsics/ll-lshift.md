@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __ll_lshift'
 title: __ll_lshift
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - ll_lshift intrinsic
 - __ll_lshift intrinsic
 ms.assetid: fe98f733-426d-44b3-8f24-5d0d6d44bd94
-ms.openlocfilehash: 988284b81c9f04ee5d7f09f8a2f173a689f9fb55
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 324286a0f7ca28eaa7259f05f629f87e763aac0c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230519"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167760"
 ---
 # <a name="__ll_lshift"></a>__ll_lshift
 
@@ -44,13 +45,13 @@ Maschera spostata a sinistra di `nBit` bit.
 
 ## <a name="requirements"></a>Requisiti
 
-|Intrinsic|Architecture|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`__ll_lshift`|x86, x64|
 
 **File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Se si compila il programma per l'architettura a 64 bit e `nBit` è maggiore di 63, il numero di bit da spostare è `nBit` modulo 64. Se si compila il programma per l'architettura a 32 bit e `nBit` è maggiore di 31, il numero di bit da spostare è `nBit` modulo 32.
 
@@ -88,7 +89,7 @@ int main()
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [__ll_rshift](../intrinsics/ll-rshift.md)\
 [__ull_rshift](../intrinsics/ull-rshift.md)\

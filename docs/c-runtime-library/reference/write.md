@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _write'
 title: _write
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: 02864a797a64e6c1b1d836edf4e435cdb43d0932
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 15988f803b37f9ce128a49662c2311a4aa6ca8fd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211619"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117159"
 ---
 # <a name="_write"></a>_write
 
@@ -68,9 +69,9 @@ Per altre informazioni su questi e altri codici restituiti, vedere [errno, _dose
 
 Se il file viene aperto in modalità testo, ogni carattere di avanzamento riga viene sostituito con una coppia ritorno a capo/avanzamento riga nell'output. La sostituzione non influisce sul valore restituito.
 
-Quando il file viene aperto in modalità di conversione Unicode, ad esempio se *FD* viene aperto utilizzando **_open** o **_sopen** e un parametro di modalità che include **_O_WTEXT**, **_O_U16TEXT**, o **_O_U8TEXT**, o se viene aperto usando **fopen** e un parametro di modalità che include **CCS = Unicode**, **CCS = UTF-16LE**o **CCS = UTF-8**o se la modalità viene modificata in una modalità di conversione Unicode usando **_setmode**, il*buffer* viene interpretato come un puntatore a una matrice di **`wchar_t`** che contiene dati **UTF-16** . Un tentativo di scrivere un numero dispari di byte in questa modalità causerà un errore di convalida del parametro.
+Quando il file viene aperto in modalità di conversione Unicode, ad esempio se *FD* viene aperto utilizzando **_open** o **_sopen** e un parametro di modalità che include **_O_WTEXT**, **_O_U16TEXT**, o **_O_U8TEXT**, o se viene aperto usando **fopen** e un parametro di modalità che include **CCS = Unicode**, **CCS = UTF-16LE** o **CCS = UTF-8** o se la modalità viene modificata in una modalità di conversione Unicode usando **_setmode**, il *buffer* viene interpretato come un puntatore a una matrice di **`wchar_t`** che contiene dati **UTF-16** . Un tentativo di scrivere un numero dispari di byte in questa modalità causerà un errore di convalida del parametro.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_write** scrive il *numero* di byte dal *buffer* nel file associato a *FD*. L'operazione di scrittura inizia dalla posizione corrente del puntatore del file (se presente) associato al file specifico. Se il file è aperto per l'aggiunta, l'operazione inizia dalla fine corrente del file. Al termine dell'operazione di scrittura, il puntatore del file viene incrementato del numero di byte scritti.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura dettagliata: connessione tramite attività e richieste HTTP XML'
 title: 'Procedura dettagliata: Connessione tramite attività e richieste HTTP XML'
 ms.date: 04/25/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: cdcdd4747e7f32d1d4c0e91959f4b49a45721269
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 88f58639b09c1b996922261c889c4844f1da4963
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224903"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167565"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Procedura dettagliata: Connessione tramite attività e richieste HTTP XML
 
@@ -27,7 +28,7 @@ In questo documento viene prima illustrato come creare `HttpRequest` e le relati
 Per un esempio che usa `IXMLHTTPRequest2` , ma non usa le attività, vedere [Guida introduttiva: connessione tramite richiesta HTTP XML (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\)).
 
 > [!TIP]
-> `IXMLHTTPRequest2`e `IXMLHTTPRequest2Callback` sono le interfacce consigliate per l'uso in un'app UWP. Questo esempio può essere adattato anche per l'uso in un'app desktop.
+> `IXMLHTTPRequest2` e `IXMLHTTPRequest2Callback` sono le interfacce consigliate per l'uso in un'app UWP. Questo esempio può essere adattato anche per l'uso in un'app desktop.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -100,7 +101,7 @@ Questa sezione illustra come usare la `HttpRequest` classe in un'app UWP. L'app 
 
    [!code-cpp[concrt-using-ixhr2#A7](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_10.cpp)]
 
-1. Nelle proprietà del progetto, in **linker**, **input**specificare `shcore.lib` e `msxml6.lib` .
+1. Nelle proprietà del progetto, in **linker**, **input** specificare `shcore.lib` e `msxml6.lib` .
 
 Ecco l'app in esecuzione:
 
@@ -110,7 +111,7 @@ Ecco l'app in esecuzione:
 
 [Procedure dettagliate runtime di concorrenza](../../parallel/concrt/concurrency-runtime-walkthroughs.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [Annullamento nella libreria PPL](cancellation-in-the-ppl.md)<br/>

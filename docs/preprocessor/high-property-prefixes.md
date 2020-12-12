@@ -1,27 +1,28 @@
 ---
-title: attributo di importazione high_property_prefixes
+description: 'Altre informazioni su: high_property_prefixes attributo Import'
+title: high_property_prefixes attributo Import
 ms.date: 08/29/2019
 f1_keywords:
 - high_property_prefixes
 helpviewer_keywords:
 - high_property_prefixes attribute
 ms.assetid: 91c6cc2b-19b6-4aba-8831-d9e5cccb58b5
-ms.openlocfilehash: 9e44f6f1afae479f803f4c6d866ef3ee38744561
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: af6835f5835c23dceadbb5152e36b0dabcbb8c98
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219010"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167474"
 ---
-# <a name="high_property_prefixes-import-attribute"></a>attributo di importazione high_property_prefixes
+# <a name="high_property_prefixes-import-attribute"></a>high_property_prefixes attributo Import
 
-**C++Specifico**
+**Sezione specifica C++**
 
 Specifica i prefissi alternativi per tre metodi della proprietà.
 
 ## <a name="syntax"></a>Sintassi
 
-> **#import** *libreria di tipi* **high_property_prefixes (** "*getPrefix*" **,** "*PutPrefix*" **,** "*PutRefPrefix*" **)**
+> **#import** high_property_prefixes della *libreria di tipi* **(** "*getPrefix*" **,** "*PutPrefix*" **,** "*PutRefPrefix*" **)**
 
 ### <a name="parameters"></a>Parametri
 
@@ -34,13 +35,13 @@ Prefisso da utilizzare per i `propput` metodi.
 *PutRefPrefix*\
 Prefisso da utilizzare per i `propputref` metodi.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Per impostazione predefinita, i metodi, e `propget` `propputref` per la `propput`gestione degli errori di alto livello vengono esposti dalle funzioni membro denominate rispettivamente `PutRef`con i prefissi `Get`, `Put`e.
+Per impostazione predefinita, i metodi, e per la gestione degli errori di alto livello `propget` `propput` `propputref` vengono esposti dalle funzioni membro denominate rispettivamente con i prefissi `Get` , `Put` e `PutRef` .
 
-**Specifico C++ finale**
+**Fine sezione specifica C++**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [attributi di #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: `__asm`'
 title: __asm
 ms.date: 10/09/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - __asm keyword [C++], vs. asm blocks
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
-ms.openlocfilehash: 14a40bef5b2edba76fc130604414c45eee589bcd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5fa4e64bdb9ae4fc01e6e379de3e8a6771959e80
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193003"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118056"
 ---
 # `__asm`
 
@@ -35,7 +36,7 @@ La **`__asm`** parola chiave richiama l'assembler inline e può essere visualizz
 &nbsp;&nbsp;&nbsp;&nbsp;*assembly-istruzione* **`;`** <sub>consenso esplicito</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*assembly-istruzione* **`;`** elenco di istruzioni *assembly* **`;`** <sub>consenso esplicito</sub>
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Se utilizzata senza parentesi graffe, la **`__asm`** parola chiave indica che il resto della riga è un'istruzione del linguaggio assembly. Se utilizzata con le parentesi graffe, significa che ogni riga tra parentesi graffe è un'istruzione del linguaggio assembly. Per compatibilità con le versioni precedenti, **`_asm`** è un sinonimo di **`__asm`** .
 
@@ -85,7 +86,7 @@ A differenza delle parentesi graffe in C e C++, le parentesi graffe che racchiud
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Parole chiave](../../cpp/keywords-cpp.md)<br/>
 [Assembler inline](../../assembler/inline/inline-assembler.md)<br/>

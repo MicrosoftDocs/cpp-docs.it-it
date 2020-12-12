@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: vfscanf, vfwscanf'
 title: vfscanf, vfwscanf
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ f1_keywords:
 - _vftscanf
 - vfscanf
 ms.assetid: c06450ef-03f1-4d24-a8ac-d2dd98847918
-ms.openlocfilehash: 72591c9fa91855745f45f3f77c88dd0ed5b001a0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c087451d7b5a11b8c7cb6af63c9e009971ee87a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945517"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97120592"
 ---
 # <a name="vfscanf-vfwscanf"></a>vfscanf, vfwscanf
 
@@ -52,7 +53,7 @@ int vfwscanf(
 
 ### <a name="parameters"></a>Parametri
 
-*stream*<br/>
+*flusso*<br/>
 Puntatore alla struttura **FILE**.
 
 *format*<br/>
@@ -67,7 +68,7 @@ Ognuna di queste funzioni restituisce il numero di campi che vengono convertiti 
 
 Queste funzioni convalidano i relativi parametri. Se il *flusso* o il *formato* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EOF** e impostano **errno** su **EINVAL**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 La funzione **vfscanf** legge i dati dalla posizione corrente del *flusso* nelle posizioni fornite dall'elenco di argomenti *arglist* . Ogni argomento nell'elenco deve essere un puntatore a una variabile di un tipo che corrisponde a un identificatore di tipo nel *formato*. *Format* controlla l'interpretazione dei campi di input e ha lo stesso formato e la stessa funzione dell'argomento *Format* per **scanf**; vedere [scanf](scanf-scanf-l-wscanf-wscanf-l.md) per una descrizione del *formato*.
 

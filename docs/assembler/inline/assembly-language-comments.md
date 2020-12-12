@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Assembly-Language Commenti'
 title: Commenti in linguaggio assembly
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - macros [C++], assembly language
 - __asm keyword [C++], instructions
 ms.assetid: 0dc10850-77f5-426e-9dab-185ea28e06e4
-ms.openlocfilehash: 2e993bd48c7ec801abd440676c80a5bd8f7b42ec
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 704f5275afe5cb5629b2e7667fe9107417512198
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87192730"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118004"
 ---
 # <a name="assembly-language-comments"></a>Commenti in linguaggio assembly
 
@@ -28,6 +29,6 @@ Poiché le macro di C si espandono in una singola riga logica, evitare di utiliz
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Uso del linguaggio assembly nei blocchi di __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

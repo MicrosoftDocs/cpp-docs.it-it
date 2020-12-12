@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: pragma loop'
 title: Pragma loop
 ms.date: 08/29/2019
 f1_keywords:
 - loop_CPP
 - vc-pragma.loop
 ms.assetid: 6d5bb428-cead-47e7-941d-7513bbb162c7
-ms.openlocfilehash: 83dc8753392f9177f810746fce641437ed0ffec8
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: b54d62a6c9a29a4688453992ad9647d9bc21afd1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520629"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167461"
 ---
 # <a name="loop-pragma"></a>Pragma loop
 
@@ -39,7 +40,7 @@ Hint al compilatore per ignorare le dipendenze vettoriali per questo ciclo.
 
 Per usare il pragma del **ciclo** , posizionarlo immediatamente prima, non in una definizione di ciclo. Il pragma diventa effettivo per l'ambito del ciclo che lo segue. È possibile applicare i pragma a un ciclo, in qualsiasi ordine, ma è necessario dichiarare ciascuno in un'istruzione del pragma distinta.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Parallelizzazione automatica e vettorizzazione automatica](../parallel/auto-parallelization-and-auto-vectorization.md)\
 [Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

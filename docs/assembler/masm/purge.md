@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Ripulisci'
 title: PURGE
 ms.date: 12/16/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - PURGE directive
 ms.assetid: 1e7ec2bf-f123-4ff9-97de-28b512ade2f9
-ms.openlocfilehash: f41ce6490ff9390a6163ecd81116cfe4e2535e05
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: f1f2c9fb18ee7f95f429d31f08e451025f80f184
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318618"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97125892"
 ---
 # <a name="purge"></a>PURGE
 
@@ -19,9 +20,9 @@ Elimina dalla memoria le macro specificate.
 
 ## <a name="syntax"></a>Sintassi
 
-> **Elimina** *macronameId* ⟦ __,__ *macronameId* ... ⟧
+> **Elimina** *macronameId* ⟦__,__ *macronameId* ... ⟧
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-Informazioni di [riferimento sulle direttive](directives-reference.md)
-la [grammatica BNF di MASM](masm-bnf-grammar.md)
+Guida di [riferimento](directives-reference.md) 
+ alle direttive [Grammatica BNF di MASM](masm-bnf-grammar.md)

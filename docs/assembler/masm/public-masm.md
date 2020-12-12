@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: PUBLIC'
 title: PUBLIC (MASM)
 ms.date: 12/16/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - PUBLIC directive
 ms.assetid: 56e15a68-8a35-4bdd-b1ec-a38cbbf1c582
-ms.openlocfilehash: 40dda0641d0f25b9776e072d80bc1d56ad00edf5
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 4f52d132c404d5a7c742eec178447da0e61391e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318631"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97125996"
 ---
 # <a name="public"></a>PUBLIC
 
@@ -21,11 +22,11 @@ Rende disponibili per tutti gli altri moduli del programma ogni variabile, etich
 
 > **Public** ⟦*Language-Type*⟧ *nome* ⟦__,__ ⟦*Language-Type*⟧ *nome* ... ⟧
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 L'argomento del *tipo di linguaggio* è valido solo in MASM a 32 bit.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimento alle direttive](directives-reference.md)\
+[Guida di riferimento alle direttive](directives-reference.md)\
 [Grammatica BNF di MASM](masm-bnf-grammar.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe di interfaccia (C++/CLI e C++/CX)'
 title: interface class (C++/CLI e C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: 8a637332110fa18a7a5803d7512c643e29d66eab
-ms.sourcegitcommit: 68ae6f9ea17f32734b32bb06ffeec12d8d33f0fe
+ms.openlocfilehash: 8d6fd1eda0ddaaf6ab995e09ad1d84f78fcc91be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807745"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119019"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>interface class (C++/CLI e C++/CX)
 
@@ -42,7 +43,7 @@ Accessibilità di *base_interface*.  L'unica accessibilità consentita per un'in
 *base_interface*<br/>
 (Facoltativo) Interfaccia di base per l'oggetto *name* dell'interfaccia.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **interface struct** è equivalente a **interface class**.
 
@@ -66,7 +67,7 @@ Nell'ambiente di sviluppo è possibile ottenere la Guida sensibile al contesto p
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Non esistono note per questa funzionalità del linguaggio che si applichino solo a Windows Runtime.
 
@@ -76,7 +77,7 @@ Opzione del compilatore: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Non esistono note per questa funzionalità del linguaggio che si applichino solo a Common Language Runtime.
 
@@ -84,7 +85,7 @@ Non esistono note per questa funzionalità del linguaggio che si applichino solo
 
 Opzione del compilatore: `/clr`
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 L'esempio di codice seguente illustra in che modo un'interfaccia può definire il comportamento di una funzione clock.
 
@@ -217,6 +218,6 @@ ref struct R : I, J {
 };
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)

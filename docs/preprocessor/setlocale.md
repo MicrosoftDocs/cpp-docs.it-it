@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: setlocale pragma'
 title: Pragma setlocale
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pragmas, setlocale
 - setlocale pragma
 ms.assetid: e60b43d9-fbdf-4c4e-ac85-805523a13b86
-ms.openlocfilehash: 9603c132610e0cfb1e8f955be48271870527105b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 375a2075381b39037a6a723f7d28ef73749ec08f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219378"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167305"
 ---
 # <a name="setlocale-pragma"></a>Pragma setlocale
 
@@ -23,7 +24,7 @@ Definisce le *impostazioni locali*, il paese, l'area geografica e la lingua da u
 
 > **#pragma setlocale ("** [ *locale-String* ] **")**
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Poiché l'algoritmo per la conversione di caratteri multibyte in caratteri wide può variare in base alle impostazioni locali, oppure la compilazione può essere eseguita in impostazioni locali diverse da cui verrà eseguito un file eseguibile, questo pragma fornisce un modo per specificare le impostazioni locali di destinazione in fase di compilazione. Garantisce che le stringhe a caratteri wide vengano archiviate nel formato corretto.
 
@@ -37,6 +38,6 @@ Le impostazioni locali "C" esegue il mapping di ogni carattere nella stringa al 
 
 La possibilità di specificare una stringa di lingua dipende dalla tabella codici e dal supporto dell'ID lingua nel computer.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

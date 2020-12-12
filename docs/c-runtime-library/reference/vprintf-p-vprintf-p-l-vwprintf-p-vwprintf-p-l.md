@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _vprintf_p, _vprintf_p_l, _vwprintf_p, _vwprintf_p_l'
 title: _vprintf_p, _vprintf_p_l, _vwprintf_p, _vwprintf_p_l
 ms.date: 11/04/2016
 api_name:
@@ -47,12 +48,12 @@ helpviewer_keywords:
 - vwprintf_p_l function
 - formatted text [C++]
 ms.assetid: 3f99bde3-c891-493d-908f-30559c421058
-ms.openlocfilehash: 4fa8b6c4909e45d6d4278dc14e3a2947285fe3ed
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 20bee781aa139335dbdbb2feac299e0dde8da8c6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945718"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97120643"
 ---
 # <a name="_vprintf_p-_vprintf_p_l-_vwprintf_p-_vwprintf_p_l"></a>_vprintf_p, _vprintf_p_l, _vwprintf_p, _vwprintf_p_l
 
@@ -92,19 +93,19 @@ Puntatore a un elenco di argomenti.
 *locale*<br/>
 Impostazioni locali da usare.
 
-Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Per altre informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="return-value"></a>Valore restituito
 
 **_vprintf_p** e **_vwprintf_p** restituiscono il numero di caratteri scritti, escluso il carattere null di terminazione, o un valore negativo se si verifica un errore di output.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta e scrive i dati specificati in **stdout**. Queste funzioni differiscono da **vprintf_s** e **vwprintf_s** solo perché supportano la possibilità di specificare l'ordine in cui gli argomenti vengono utilizzati. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).
+Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta e scrive i dati specificati in **stdout**. Queste funzioni differiscono da **vprintf_s** e **vwprintf_s** solo perché supportano la possibilità di specificare l'ordine in cui gli argomenti vengono utilizzati. Per altre informazioni, vedere [Parametri posizionali printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
 **_vwprintf_p** è la versione a caratteri wide di **_vprintf_p**; le due funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **_vprintf_p** attualmente non supporta l'output in un flusso Unicode.
 
-Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
+Le versioni di queste funzioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
 
 > [!IMPORTANT]
 > Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
@@ -123,13 +124,13 @@ Se *Format* è un puntatore null o se la stringa di formato contiene caratteri d
 |Routine|Intestazione obbligatoria|Intestazioni facoltative|
 |-------------|---------------------|----------------------|
 |**_vprintf_p**, **_vprintf_p_l**|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|
-|**_vwprintf_p**, **_vwprintf_p_l**|\<stdio.h> o \<wchar.h> e \<stdarg.h>|\<varargs.h>*|
+|**_vwprintf_p**, **_vwprintf_p_l**|\<stdio.h> o \<wchar.h> , e \<stdarg.h>|\<varargs.h>*|
 
 \* Richiesto per la compatibilità con UNIX V.
 
-La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout**e **stderr**devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout** e **stderr** devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
 [Funzioni vprintf](../../c-runtime-library/vprintf-functions.md)<br/>
@@ -140,4 +141,4 @@ La console non è supportata nelle app piattaforma UWP (Universal Windows Platfo
 [va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)<br/>
 [_vfprintf_p, _vfprintf_p_l, _vfwprintf_p, _vfwprintf_p_l](vfprintf-p-vfprintf-p-l-vfwprintf-p-vfwprintf-p-l.md)<br/>
 [_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l](printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)<br/>
-[Parametri posizionali printf_p](../../c-runtime-library/printf-p-positional-parameters.md)<br/>
+[printf_p parametri posizionali](../../c-runtime-library/printf-p-positional-parameters.md)<br/>

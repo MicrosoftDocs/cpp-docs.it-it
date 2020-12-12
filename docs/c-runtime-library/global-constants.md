@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: costanti globali'
 title: Costanti globali
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - global constants
 ms.assetid: 778d86fd-3ca6-4d2b-b4c5-aee6dc1efe6b
-ms.openlocfilehash: 406cdb46e3a6263559f3f3d0869f1b198b466630
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1727be8670208f4caa3be5ef4b47ce488c86553d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839712"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97120731"
 ---
 # <a name="global-constants"></a>Costanti globali
 
@@ -70,8 +71,8 @@ La libreria di runtime Microsoft contiene le definizioni per le costanti globali
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimenti alla libreria di runtime C](../c-runtime-library/c-run-time-library-reference.md)<br/>
+[Informazioni di riferimento sulla libreria C Run-Time](../c-runtime-library/c-run-time-library-reference.md)<br/>
 [Variabili globali](../c-runtime-library/global-variables.md)<br/>
 [Considerazioni per la scrittura di codice di prologo/epilogo](../cpp/considerations-for-writing-prolog-epilog-code.md)

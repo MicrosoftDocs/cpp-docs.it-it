@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: time_put Class'
 title: Classe time_put
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::time_put [C++], do_put
 - std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
-ms.openlocfilehash: 4f7b609493e16d3d1c0a9ab6274ed6f5bfd7b033
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 135bd8c619907b789f448e41e742fcc256d9b6eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212111"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167266"
 ---
 # <a name="time_put-class"></a>Classe time_put
 
@@ -41,7 +42,7 @@ Tipo utilizzato all'interno di un programma per codificare i caratteri.
 *OutputIterator*\
 Tipo di iteratore in cui le funzioni temporali put scrivono il proprio output.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha un valore archiviato iniziale uguale a zero. Il primo tentativo di accedere a tale valore archiviato consente di archiviare un valore positivo univoco in **id**.
 
@@ -53,7 +54,7 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome tipo|Descrizione|
+|Nome tipo|Description|
 |-|-|
 |[char_type](#char_type)|Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali.|
 |[iter_type](#iter_type)|Tipo che descrive un iteratore di output.|
@@ -71,7 +72,7 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 **Spazio dei nomi:** std
 
-## <a name="time_putchar_type"></a><a name="char_type"></a>time_put:: char_type
+## <a name="time_putchar_type"></a><a name="char_type"></a> time_put:: char_type
 
 Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali.
 
@@ -79,11 +80,11 @@ Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del parametro di modello `CharType`.
 
-## <a name="time_putdo_put"></a><a name="do_put"></a>time_put::d o_put
+## <a name="time_putdo_put"></a><a name="do_put"></a> time_put::d o_put
 
 Funzione virtuale che restituisce informazioni sulla data e l'ora come sequenza di `CharType`.
 
@@ -117,7 +118,7 @@ Modificatore del formato. Vedere [strftime, wcsftime, strftime_l, wcsftime_l](..
 
 Iteratore alla prima posizione dopo l'ultimo elemento inserito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro virtuale protetta genera elementi sequenziali a partire `next` da valori di ora archiviati nell'oggetto \* `_Pt` , di tipo `tm` . La funzione restituisce un iteratore che designa la posizione in cui inserire un elemento immediatamente successiva all'output generato.
 
@@ -127,7 +128,7 @@ L'output viene generato dalle stesse regole usate da `strftime` , con l'ultimo a
 
 Vedere l'esempio relativo a [put](#put), che chiama `do_put`.
 
-## <a name="time_putiter_type"></a><a name="iter_type"></a>time_put:: iter_type
+## <a name="time_putiter_type"></a><a name="iter_type"></a> time_put:: iter_type
 
 Tipo che descrive un iteratore di output.
 
@@ -135,11 +136,11 @@ Tipo che descrive un iteratore di output.
 typedef OutputIterator iter_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del parametro di modello `OutputIterator`.
 
-## <a name="time_putput"></a><a name="put"></a>time_put::p UT
+## <a name="time_putput"></a><a name="put"></a> time_put::p UT
 
 Restituisce informazioni sulla data e l'ora come sequenza di `CharType`.
 
@@ -189,7 +190,7 @@ Fine della stringa di formattazione per l'output. Vedere [strftime, wcsftime, st
 
 Iteratore alla prima posizione dopo l'ultimo elemento inserito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La prima funzione membro restituisce [do_put](#do_put)( `next` , `_Iosbase` , `_Fill` , `_Pt` , `_Fmt` , `_Mod` ). La seconda funzione membro copia in \* `next` + + qualsiasi elemento nell'intervallo [ `first` , `last` ) diverso da una percentuale (%). Per una percentuale seguita da un carattere *C* nell'intervallo [ `first` , `last` ), la funzione restituisce invece `next`  =  `do_put` (,, `next` `_Iosbase` `_Fill` , `_Pt` , *C*, 0) e ignora l'ultima *c*. Se, tuttavia, *C* è un carattere qualificatore del set EOQ #, seguito da un carattere `C2` nell'intervallo [ `first` , `last` ), la funzione restituisce invece `next`  =  `do_put` (,, `next` `_Iosbase` `_Fill` , `_Pt` , `C2` , *C*) e ignora paste `C2` .
 
@@ -237,7 +238,7 @@ num_put( ) = x: 05:30:40 07/04/00
 strftime( ) = x: 05:30:40 07/04/00
 ```
 
-## <a name="time_puttime_put"></a><a name="time_put"></a>time_put:: time_put
+## <a name="time_puttime_put"></a><a name="time_put"></a> time_put:: time_put
 
 Costruttore per oggetti di tipo `time_put`.
 
@@ -250,7 +251,7 @@ explicit time_put(size_t _Refs = 0);
 *_Refs*\
 Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I valori possibili per il parametro *_Refs* e i relativi significati sono:
 
@@ -258,11 +259,11 @@ I valori possibili per il parametro *_Refs* e i relativi significati sono:
 
 - 1: la durata dell'oggetto deve essere gestita manualmente.
 
-- \>1: questi valori non sono definiti.
+- \> 1: questi valori non sono definiti.
 
 Il costruttore inizializza l'oggetto di base con [locale:: facet](../standard-library/locale-class.md#facet_class)(*_Refs*).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [\<locale>](../standard-library/locale.md)\
 [Classe time_base](../standard-library/time-base-class.md)\

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: struttura di interfacet'
 title: InterfaceList (struttura)
 ms.date: 10/03/2018
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - InterfaceList structure
 ms.assetid: 6ec3228d-eb3e-4b7e-aef1-7dcf17bdf61a
-ms.openlocfilehash: 7fd06f71bc4d8097366dc0e87d7ff92c5a12a790
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 660ae5137b7ff41129ce3866f0d289045f7dee9c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213863"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124579"
 ---
 # <a name="interfacelist-structure"></a>InterfaceList (struttura)
 
@@ -33,15 +34,15 @@ Nome di interfaccia; prima interfaccia nell'elenco ricorsivo.
 *U*<br/>
 Nome di interfaccia; interfacce rimanenti nell'elenco ricorsivo.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Utilizzato per creare un elenco ricorsivo di interfacce.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`FirstT`|Sinonimo del parametro di modello *T*.|
 |`RestT`|Sinonimo del parametro di modello *U*.|
@@ -56,6 +57,6 @@ Utilizzato per creare un elenco ricorsivo di interfacce.
 
 **Spazio dei nomi:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi Microsoft::WRL::Details](microsoft-wrl-details-namespace.md)
+[Spazio dei nomi Microsoft:: WRL::D etails](microsoft-wrl-details-namespace.md)

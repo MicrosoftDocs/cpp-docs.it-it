@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: direttiva #using (C++/CLI)'
 title: '#Direttiva using (C++/CLI)'
 ms.date: 08/29/2019
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
-ms.openlocfilehash: 0245eb15219585421be83def0258415ab4b573b6
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 5903e3b5af4cd6ee40e0b087d52d1bd0115b1c6f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684261"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167526"
 ---
 # <a name="using-directive-ccli"></a>direttiva #using (C++/CLI)
 
@@ -30,14 +31,14 @@ Importa i metadati in un programma compilato con [/CLR](../build/reference/clr-c
 ### <a name="parameters"></a>Parametri
 
 *file*\
-Un file MSIL (Microsoft Intermediate Language) *`.dll`* ,, *`.exe`* *`.netmodule`* o *`.obj`* . Ad esempio,
+Un file MSIL (Microsoft Intermediate Language) *`.dll`* ,, *`.exe`* *`.netmodule`* o *`.obj`* . ad esempio:
 
 `#using <MyComponent.dll>`
 
 **`as_friend`**\
 Specifica che tutti i tipi nel *file* sono accessibili. Per ulteriori informazioni, vedere [assembly Friend (C++)](../dotnet/friend-assemblies-cpp.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 il *file* può essere un file Microsoft Intermediate Language (MSIL) che viene importato per i suoi dati gestiti e i costrutti gestiti. Se una DLL contiene un manifesto dell'assembly, verranno importate tutte le dll a cui viene fatto riferimento nel manifesto. Nell'assembly in fase di compilazione verranno elencati i *file* nei metadati come riferimento a un assembly.
 
@@ -72,7 +73,7 @@ Il compilatore cerca i riferimenti lungo il percorso seguente:
 
 - Directory nella variabile di ambiente LIBPATH.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 È possibile compilare un assembly che fa riferimento a un secondo assembly che a sua volta fa riferimento a un terzo assembly. È necessario fare riferimento in modo esplicito al terzo assembly dal primo se si usa in modo esplicito uno dei relativi tipi.
 
@@ -105,6 +106,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Direttive per il preprocessore](../preprocessor/preprocessor-directives.md)

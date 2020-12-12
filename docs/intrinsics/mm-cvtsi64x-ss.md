@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _mm_cvtsi64x_ss'
 title: _mm_cvtsi64x_ss
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - cvtsi2ss instruction
 - _mm_cvtsi64x_ss intrinsic
 ms.assetid: 01e5d321-c18a-46fd-a6f6-324364514e1f
-ms.openlocfilehash: a8227fcb482267946ea7ba08ee352c43e1ac6f6e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 81a1af04d4c66cefd9815471baeb3a6095403ddf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218000"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167721"
 ---
 # <a name="_mm_cvtsi64x_ss"></a>_mm_cvtsi64x_ss
 
 **Specifico di Microsoft**
 
-Genera la versione estesa x64 dell'istruzione Convert Integer a 64 bit in un valore a virgola mobile a precisione singola scalare ( `cvtsi2ss` ).
+Genera la versione estesa x64 dell'istruzione Convert Integer a 64 bit in Scalar Single-Precision Floating-Point value ( `cvtsi2ss` ).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -43,13 +44,13 @@ in Intero a 64 bit da convertire in un valore a virgola mobile.
 
 ## <a name="requirements"></a>Requisiti
 
-|Intrinsic|Architecture|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`_mm_cvtsi64x_ss`|x64|
 
 **File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La **`__m128`** struttura rappresenta un registro XMM, pertanto la funzione intrinseca consente lo spostamento del valore *b* dalla memoria di sistema in un registro XMM.
 
@@ -89,7 +90,7 @@ int main()
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [__m128](../cpp/m128.md)\
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

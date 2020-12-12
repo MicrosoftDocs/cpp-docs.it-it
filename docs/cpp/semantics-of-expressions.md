@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: semantica delle espressioni'
 title: Semantica delle espressioni
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: 43bcd98e0dbf14dada2643c0b731d3f6bae863e6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f5e038d8ea6de55463a60d7b21104c2e71accec1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223603"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116990"
 ---
 # <a name="semantics-of-expressions"></a>Semantica delle espressioni
 
@@ -20,7 +21,7 @@ Le espressioni vengono valutate in base alla precedenza e al raggruppamento dei 
 
 ## <a name="order-of-evaluation"></a>Ordine di valutazione
 
-Considerare questo esempio:
+Prendere in considerazione questo esempio:
 
 ```cpp
 // Order_of_Evaluation.cpp
@@ -69,8 +70,8 @@ Il linguaggio C++ specifica determinate compatibilità quando specifica gli oper
 
 |Tipo previsto|Tipi consentiti|
 |-------------------|-------------------|
-|*type*|**`const`***tipo* di<br /> **`volatile`***tipo* di<br /> *tipo*&<br /> **`const`***tipo* di&<br /> **`volatile`***tipo* di&<br /> `volatile const` *type*<br /> `volatile const`*tipo* di&|
-|*type* \*|*type* \*<br /> **`const`***tipo* di\*<br /> **`volatile`***tipo* di\*<br /> `volatile const` *type* \*|
+|*type*|**`const`***tipo* di<br /> **`volatile`***tipo* di<br /> *tipo*&<br /> **`const`***tipo* di&<br /> **`volatile`***tipo* di&<br /> `volatile const`*tipo* di<br /> `volatile const`*tipo* di&|
+|*tipo* di \*|*tipo* di \*<br /> **`const`***tipo* di\*<br /> **`volatile`***tipo* di\*<br /> `volatile const`*tipo* di\*|
 |**`const`***tipo* di|*type*<br /> **`const`***tipo* di<br />**`const`***tipo* di&|
 |**`volatile`***tipo* di|*type*<br /> **`volatile`***tipo* di<br /> **`volatile`***tipo* di&|
 
@@ -78,7 +79,7 @@ Poiché le regole precedenti possono essere sempre utilizzate in combinazione, q
 
 ## <a name="ambiguous-expressions"></a>Espressioni ambigue
 
-Alcune espressioni sono ambigue nel relativo significato. Queste espressioni si verificano più frequentemente quando un valore di un oggetto viene modificato più volte nella stessa espressione. Queste espressioni si basano su un ordine particolare di valutazione in cui il linguaggio non ne definisce uno. Prendere in considerazione gli esempi seguenti:
+Alcune espressioni sono ambigue nel relativo significato. Queste espressioni si verificano più frequentemente quando un valore di un oggetto viene modificato più volte nella stessa espressione. Queste espressioni si basano su un ordine particolare di valutazione in cui il linguaggio non ne definisce uno. Si consideri l'esempio seguente:
 
 ```
 int i = 7;
@@ -116,6 +117,6 @@ La definizione del linguaggio C++ attualmente non specifica i punti di sequenza.
 
 - L'espressione in un'istruzione return. L'espressione viene valutata completamente e tutti gli effetti collaterali vengono eseguiti prima che il controllo torni alla funzione chiamante.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Espressioni](../cpp/expressions-cpp.md)

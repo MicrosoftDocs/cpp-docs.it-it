@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3104'
 title: Errore del compilatore C3104
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-ms.openlocfilehash: 5f72af3d7149db7362df9fa23ac5ad6c058c552b
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: b093c5daa96a4c0e9bf789dfcc67ac6b6d3f2561
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743464"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116093"
 ---
 # <a name="compiler-error-c3104"></a>Errore del compilatore C3104
 
@@ -23,7 +24,7 @@ Per ulteriori informazioni, vedere [tipi di parametro dell'attributo](../../exte
 
 Questo errore può essere generato come risultato delle operazioni di conformità del compilatore eseguite per Visual Studio 2005: quando si passano matrici gestite a attributi personalizzati, il tipo della matrice non viene più dedotto dall'elenco di inizializzazione aggregata. Il compilatore ora richiede di specificare il tipo della matrice e l'elenco di inizializzatori.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 L'esempio seguente genera l'C3104.
 

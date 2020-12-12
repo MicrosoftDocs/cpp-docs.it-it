@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: timed_mutex Class'
 title: Classe timed_mutex
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_for
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
-ms.openlocfilehash: 3329c46f0760a13693507de18a09b974b6b646e2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: af701a8f1f3777fb7f760c3eed561bd3dae5f21f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212098"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167227"
 ---
 # <a name="timed_mutex-class"></a>Classe timed_mutex
 
@@ -35,18 +36,18 @@ Rappresenta un *tipo mutex programmato*. Gli oggetti di questo tipo vengono usat
 class timed_mutex;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[timed_mutex](#timed_mutex)|Costruisce un oggetto `timed_mutex` non bloccato.|
 |[distruttore timed_mutex:: ~ timed_mutex](#dtortimed_mutex_destructor)|Rilascia le risorse usate dall'oggetto `timed_mutex`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[blocco](#lock)|Blocca il thread chiamante finché il thread non ottiene la proprietà di `mutex`.|
 |[try_lock](#try_lock)|Tenta di ottenere proprietà di `mutex` senza bloccare.|
@@ -60,7 +61,7 @@ class timed_mutex;
 
 **Spazio dei nomi:** std
 
-## <a name="timed_mutexlock"></a><a name="lock"></a>timed_mutex:: Lock
+## <a name="timed_mutexlock"></a><a name="lock"></a> timed_mutex:: Lock
 
 Blocca il thread chiamante finché il thread non ottiene la proprietà di `mutex`.
 
@@ -68,11 +69,11 @@ Blocca il thread chiamante finché il thread non ottiene la proprietà di `mutex
 void lock();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il thread chiamante è già proprietario di `mutex`, il comportamento non è definito.
 
-## <a name="timed_mutextimed_mutex-constructor"></a><a name="timed_mutex"></a>Costruttore timed_mutex:: timed_mutex
+## <a name="timed_mutextimed_mutex-constructor"></a><a name="timed_mutex"></a> Costruttore timed_mutex:: timed_mutex
 
 Costruisce un oggetto `timed_mutex` non bloccato.
 
@@ -80,7 +81,7 @@ Costruisce un oggetto `timed_mutex` non bloccato.
 timed_mutex();
 ```
 
-## <a name="timed_mutextimed_mutex-destructor"></a><a name="dtortimed_mutex_destructor"></a>distruttore timed_mutex:: ~ timed_mutex
+## <a name="timed_mutextimed_mutex-destructor"></a><a name="dtortimed_mutex_destructor"></a> distruttore timed_mutex:: ~ timed_mutex
 
 Rilascia le risorse usate dall'oggetto `mutex`.
 
@@ -88,11 +89,11 @@ Rilascia le risorse usate dall'oggetto `mutex`.
 ~timed_mutex();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se l'oggetto è bloccato quando il distruttore viene eseguito, il comportamento non è definito.
 
-## <a name="timed_mutextry_lock"></a><a name="try_lock"></a>timed_mutex:: try_lock
+## <a name="timed_mutextry_lock"></a><a name="try_lock"></a> timed_mutex:: try_lock
 
 Tenta di ottenere proprietà di `mutex` senza bloccare.
 
@@ -104,11 +105,11 @@ bool try_lock();
 
 **`true`** Se il metodo ottiene correttamente la proprietà di `mutex` ; in caso contrario, **`false`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il thread chiamante è già proprietario di `mutex`, il comportamento non è definito.
 
-## <a name="timed_mutextry_lock_for"></a><a name="try_lock_for"></a>timed_mutex:: try_lock_for
+## <a name="timed_mutextry_lock_for"></a><a name="try_lock_for"></a> timed_mutex:: try_lock_for
 
 Tenta di ottenere proprietà di `mutex` senza bloccare.
 
@@ -126,11 +127,11 @@ Oggetto [chrono::duration](../standard-library/duration-class.md) che specifica 
 
 **`true`** Se il metodo ottiene correttamente la proprietà di `mutex` ; in caso contrario, **`false`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il thread chiamante è già proprietario di `mutex`, il comportamento non è definito.
 
-## <a name="timed_mutextry_lock_until"></a><a name="try_lock_until"></a>timed_mutex:: try_lock_until
+## <a name="timed_mutextry_lock_until"></a><a name="try_lock_until"></a> timed_mutex:: try_lock_until
 
 Tenta di ottenere proprietà di `mutex` senza bloccare.
 
@@ -150,11 +151,11 @@ Momento specifico che indica la soglia oltre la quale il metodo non tenta più d
 
 **`true`** Se il metodo ottiene correttamente la proprietà di `mutex` ; in caso contrario, **`false`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il thread chiamante è già proprietario di `mutex`, il comportamento non è definito.
 
-## <a name="timed_mutexunlock"></a><a name="unlock"></a>timed_mutex:: Unlock
+## <a name="timed_mutexunlock"></a><a name="unlock"></a> timed_mutex:: Unlock
 
 Rilascia la proprietà di `mutex`.
 
@@ -162,11 +163,11 @@ Rilascia la proprietà di `mutex`.
 void unlock();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il thread chiamante non è proprietario di `mutex`, il comportamento non è definito.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [\<mutex>](../standard-library/mutex.md)
