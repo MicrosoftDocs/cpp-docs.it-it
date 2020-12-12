@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: pragma warning'
 title: warning (pragma)
 ms.date: 08/29/2019
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: d8b110d459bba1e0b7e2fd6e2c95e7eed638fc99
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: ac810076d1db0c975d28bc64d0a6d761c9cec608
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416196"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193107"
 ---
 # <a name="warning-pragma"></a>warning (pragma)
 
@@ -23,13 +24,13 @@ Consente la modifica selettiva del comportamento dei messaggi di avviso del comp
 
 ## <a name="syntax"></a>Sintassi
 
-> **avviso #pragma (** \
-> &nbsp;&nbsp;&nbsp;&nbsp;*warning-specifier* **:** *warning-number-list*\
-> &nbsp;&nbsp;&nbsp;&nbsp;[ **;** *warning-specifier* **:** *warning-number-list* ...] **)** \
-> **avviso #pragma (push** [ **,** *n* ] **)** \
+> **avviso #pragma (**\
+> &nbsp;&nbsp;&nbsp;&nbsp;*avviso-identificatore* **:** *Avviso-numero-elenco*\
+> &nbsp;&nbsp;&nbsp;&nbsp;[**;** *warning-specifier* **:** *warning-number-list* ...] **)**\
+> **avviso #pragma (push** [ **,** *n* ] **)**\
 > **avviso #pragma (pop)**
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Sono disponibili i seguenti parametri identificatore-avviso.
 
@@ -39,7 +40,7 @@ Sono disponibili i seguenti parametri identificatore-avviso.
 |*default*|Reimposta il comportamento dell'avviso sul valore predefinito. Attiva anche un avviso specificato che è disattivato per impostazione predefinita. L'avviso verrà generato nel suo livello predefinito e documentato.<br /><br /> Per ulteriori informazioni, vedere [avvisi del compilatore disattivati per impostazione predefinita](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
 |*disable*|Non emettere i messaggi di avviso specificati.|
 |*error*|Segnala gli avvisi specificati come errori.|
-|*once*|Visualizza i messaggi specificati solo una volta.|
+|*una volta*|Visualizza i messaggi specificati solo una volta.|
 |*sopprimere*|Inserisce lo stato corrente del pragma nello stack, disabilita l'avviso specificato per la riga successiva, quindi estrae lo stack di avvisi in modo che venga ripristinato lo stato del pragma.|
 
 Nell'istruzione di codice seguente viene illustrato che un parametro `warning-number-list` può contenere più numeri di avviso e che è possibile specificare più parametri `warning-specifier` nella stessa direttiva pragma.
@@ -93,7 +94,7 @@ Il pragma **warning** supporta anche la sintassi seguente, dove *n* rappresenta 
 
 Il pragma `warning( push )` archivia lo stato di avviso corrente per ogni avviso. Il pragma `warning( push, n )` archivia lo stato corrente per ogni avviso e imposta il livello di avviso globale su *n*.
 
-Il pragma `warning( pop )` estrae l'ultimo stato di avviso inserito nello stack. Tutte le modifiche apportate allo stato di avviso tra *push* e *pop* vengono annullate. Si consideri l'esempio seguente:
+Il pragma `warning( pop )` estrae l'ultimo stato di avviso inserito nello stack. Tutte le modifiche apportate allo stato di avviso tra *push* e *pop* vengono annullate. Prendere in considerazione questo esempio:
 
 ```cpp
 #pragma warning( push )
@@ -116,6 +117,6 @@ Quando si scrivono file di intestazione, è possibile usare *push* e *pop* per g
 
 Per ulteriori informazioni sulle opzioni del compilatore che consentono di non visualizzare gli avvisi, vedere [/Fi](../build/reference/fi-name-forced-include-file.md) e [/w](../build/reference/compiler-option-warning-level.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: restrizioni/CLR'
 title: Limitazioni di /clr
 ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: 641e83cb85b6282e8c4c82dfed8c4b44fc4a7e8f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eb74aea8f1d6fcae4738f17f5fae2a4761350341
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223902"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193006"
 ---
 # <a name="clr-restrictions"></a>Limitazioni di /clr
 
@@ -86,6 +87,6 @@ L'uso di **/clr** è soggetto alle limitazioni seguenti:
 
   - Una funzione che contiene riferimenti a tipi allineati, ossia tipi dichiarati tramite `__declspec(align(...))`.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [/CLR (compilazione Common Language Runtime)](clr-common-language-runtime-compilation.md)

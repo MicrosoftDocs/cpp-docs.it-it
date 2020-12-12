@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: puntini di sospensione e modelli variadic'
 title: Puntini di sospensione e modelli variadic
 ms.date: 11/04/2016
 ms.assetid: f20967d9-c967-4fd2-b902-2bb1d5ed87e3
-ms.openlocfilehash: e916dac40355f4397ef4846c0edf568c60b7d3dd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 37cb2e02f818cc5d4db8954a348fc749a477b7d4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221627"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195464"
 ---
 # <a name="ellipsis-and-variadic-templates"></a>Puntini di sospensione e modelli variadic
 
@@ -17,7 +18,7 @@ Un *modello Variadic* è un modello di classe o di funzione che supporta un nume
 
 ## <a name="syntax"></a>Sintassi
 
-I puntini di sospensione vengono usati in due modi per i modelli variadic. A sinistra del nome del parametro, significa un *pacchetto di parametri*e a destra del nome del parametro espande i pacchetti di parametri in nomi distinti.
+I puntini di sospensione vengono usati in due modi per i modelli variadic. A sinistra del nome del parametro, significa un *pacchetto di parametri* e a destra del nome del parametro espande i pacchetti di parametri in nomi distinti.
 
 Di seguito è riportato un esempio di base della sintassi di definizione della *classe modello Variadic* :
 

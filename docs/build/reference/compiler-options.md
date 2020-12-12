@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: opzioni del compilatore'
 title: Opzioni del compilatore MSVC
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -8,27 +9,27 @@ helpviewer_keywords:
 - compiler options, C++
 - x64 MSVC compiler
 ms.assetid: ed3376c8-bef4-4c9a-80e9-3b5da232644c
-ms.openlocfilehash: ab41a5de027f28b361937e58fb179fd72db54e4e
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: a6b124fa5fce68844d53c1324da48c17ef5a9ccf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221747"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197023"
 ---
 # <a name="compiler-options"></a>Opzioni del compilatore
 
-CL.exe è uno strumento che consente di controllare il Microsoft C++ (MSVC) C e C++ i compilatori e del linker. CL.exe può essere eseguito solo in sistemi operativi che supportano Microsoft Visual Studio per Windows.
+cl.exe è uno strumento che controlla i compilatori e il linker Microsoft C++ (MSVC) C e C++. cl.exe possono essere eseguite solo su sistemi operativi che supportano Microsoft Visual Studio per Windows.
 
 > [!NOTE]
-> È possibile avviare questo strumento solo da un prompt dei comandi per gli sviluppatori di Visual Studio. Non è possibile avviarlo da un prompt dei comandi di sistema o da Esplora File. Per altre informazioni, vedere [un set di strumenti MSVC dalla riga di comando](../building-on-the-command-line.md).
+> È possibile avviare questo strumento solo da un prompt dei comandi per gli sviluppatori di Visual Studio. Non è possibile avviarlo da un prompt dei comandi di sistema o da Esplora File. Per altre informazioni, vedere [usare il set di strumenti MSVC dalla riga di comando](../building-on-the-command-line.md).
 
-I compilatori producono file oggetto (obj) File formato COFF (Common Object). Il linker produce file eseguibili (.exe) o librerie a collegamento dinamico (DLL).
+I compilatori producono file oggetto COFF (Common Object File Format) (con estensione obj). Il linker produce file eseguibili (con estensione exe) o librerie a collegamento dinamico (dll).
 
-Si noti che tutte le opzioni del compilatore sono tra maiuscole e minuscole. È possibile usare una barra rovesciata (`/`) o un trattino (`-`) per specificare un'opzione del compilatore.
+Si noti che tutte le opzioni del compilatore fanno distinzione maiuscole/minuscole. `/` `-` Per specificare un'opzione del compilatore, è possibile usare una barra () o un trattino ().
 
-Per eseguire la compilazione senza collegamento, usare il [/c](c-compile-without-linking.md) opzione.
+Per eseguire la compilazione senza collegamento, usare l'opzione [/c](c-compile-without-linking.md) .
 
-## <a name="find-a-compiler-option"></a>Trovare un'opzione del compilatore
+## <a name="find-a-compiler-option"></a>Trova un'opzione del compilatore
 
 Per trovare una particolare opzione del compilatore, vedere uno degli elenchi seguenti:
 
@@ -38,19 +39,19 @@ Per trovare una particolare opzione del compilatore, vedere uno degli elenchi se
 
 ## <a name="specify-compiler-options"></a>Specificare le opzioni del compilatore
 
-L'argomento relativo a ciascuna opzione del compilatore viene illustrato come può essere impostata nell'ambiente di sviluppo. Per informazioni su come specificare le opzioni di fuori dell'ambiente di sviluppo, vedere:
+Nell'argomento relativo a ogni opzione del compilatore viene illustrato come è possibile impostarlo nell'ambiente di sviluppo. Per informazioni su come specificare le opzioni all'esterno dell'ambiente di sviluppo, vedere:
 
-- [Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+- [Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)
 
-- [File di comando di CL](cl-command-files.md)
+- [File di comando CL](cl-command-files.md)
 
 - [Variabili di ambiente CL](cl-environment-variables.md)
 
 ## <a name="related-build-tools"></a>Strumenti di compilazione correlati
 
-[Le opzioni del Linker MSVC](linker-options.md) anche influire sul modo in cui il programma viene compilato.
+Le [Opzioni del linker MSVC](linker-options.md) influiscono anche sul modo in cui viene compilato il programma.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimenti alla compilazione in C/C++](c-cpp-building-reference.md)<br/>
 [CL richiama il linker](cl-invokes-the-linker.md)

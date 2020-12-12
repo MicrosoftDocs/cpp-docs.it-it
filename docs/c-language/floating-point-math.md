@@ -1,22 +1,23 @@
 ---
+description: 'Altre informazioni su: Floating-Point Math'
 title: Matematica a virgola mobile
 ms.date: 11/04/2016
 ms.assetid: 1ff2f7e9-f29a-4822-9b05-4b4267e80ba3
-ms.openlocfilehash: 8796e55d62fe7415241423089e86c534016d306e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aef6a11a2fe160355921b65c32516c9124c7fd69
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233696"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196087"
 ---
 # <a name="floating-point-math"></a>Matematica a virgola mobile
 
 - [Valori](../c-language/values.md)
 
-- [Cast di Integer a valori a virgola mobile](../c-language/casting-integers-to-floating-point-values.md)
+- [Cast di Integer a valori Floating-Point](../c-language/casting-integers-to-floating-point-values.md)
 
-- [Troncamento di valori a virgola mobile](../c-language/truncation-of-floating-point-values.md)
+- [Troncamento dei valori di Floating-Point](../c-language/truncation-of-floating-point-values.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Comportamento definito in fase di implementazione](../c-language/implementation-defined-behavior.md)
+[Comportamento definito dall'implementazione](../c-language/implementation-defined-behavior.md)

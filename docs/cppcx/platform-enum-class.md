@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe Platform:: enum'
 title: Classe Platform::Enum
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Enum Struct
 ms.assetid: cf82f0eb-7a37-4e4e-bbe7-e4aebbc9ec0a
-ms.openlocfilehash: 67870a0fcc685c420c7d24510e90c6f4ef9b72a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a7cffc7529c0abf23d563b7b60a17248ce02ac2b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387591"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195255"
 ---
 # <a name="platformenum-class"></a>Classe Platform::Enum
 
@@ -24,11 +25,11 @@ Classe di valore che rappresenta un set di costanti denominate.
 public class Enum
 ```
 
-### <a name="members"></a>Membri
+### <a name="members"></a>Members
 
 La classe Enum eredita i metodi Equals(), GetHashCode() e ToString() da [Platform::Object Class](../cppcx/platform-object-class.md).
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Commenti
 
 Usare la parola chiave [classe enum pubblica](../extensions/enum-class-cpp-component-extensions.md) per creare enumerazioni. Non usare il tipo di Platform::Enum in modo esplicito. Per ulteriori informazioni, vedi [Enumerazioni](../cppcx/enums-c-cx.md).
 
@@ -38,10 +39,10 @@ Usare la parola chiave [classe enum pubblica](../extensions/enum-class-cpp-compo
 
 **Server minimo supportato:** Windows Server 2012
 
-**Spazio dei nomi:** Piattaforma
+**Spazio dei nomi:** Platform
 
-**Metadati:** platform.winmd
+**Metadati:** Platform. winmd
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Platform](../cppcx/platform-namespace-c-cx.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: istruzione do-while (C++)'
 title: Istruzione do-while (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - do keyword [C++]
 - while keyword [C++], do-while
 ms.assetid: e01e6f7c-7da1-4591-87f9-c26ff848e7b0
-ms.openlocfilehash: f52c065210a8861dc065508248a506770b039b1d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fed7dc3300651dd35326c1eb28e3078538db1301
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189273"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195489"
 ---
 # <a name="do-while-statement-c"></a>Istruzione do-while (C++)
 
@@ -32,7 +33,7 @@ while ( expression ) ;
 
 Il test della condizione di chiusura viene eseguito dopo ogni esecuzione del ciclo. Pertanto, un ciclo **do-while** viene eseguito una o più volte, a seconda del valore dell'espressione di terminazione. L'istruzione **do-while** può terminare anche quando un'istruzione [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md) o [return](../cpp/return-statement-cpp.md) viene eseguita nel corpo dell'istruzione.
 
-*espressione* deve essere di tipo puntatore o aritmetico. L'esecuzione procede nel modo seguente:
+*expression* deve presentare un tipo di puntatore o un tipo aritmetico. L'esecuzione procede nel modo seguente:
 
 1. Viene eseguito il corpo dell'istruzione.
 
@@ -55,7 +56,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Istruzioni di iterazione](../cpp/iteration-statements-cpp.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)<br/>

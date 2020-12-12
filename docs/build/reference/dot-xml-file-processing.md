@@ -1,15 +1,16 @@
 ---
+description: Ulteriori informazioni su:. Elaborazione di file XML
 title: Elaborazione del file .Xml
 ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-ms.openlocfilehash: 1a0d231a066209307041681232cc3410210d4d02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ded4551adcc4bec4aef27fe38f47470065ea9ef4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293563"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192694"
 ---
 # <a name="xml-file-processing"></a>Elaborazione del file .Xml
 
@@ -31,8 +32,8 @@ Per generare gli ID, il compilatore applica le regole seguenti:
   | F | campo |
   | P | proprietà (compresi gli indicizzatori o altre proprietà indicizzate) |
   | M | metodo (compresi i metodi speciali, ad esempio costruttori, operatori e così via) |
-  | E | event |
-  | ! | stringa di errore<br /><br /> Nella parte restante della stringa vengono fornite informazioni sull'errore. Il compilatore MSVC genera informazioni di errore per i collegamenti che non possono essere risolto. |
+  | E | evento |
+  | ! | stringa di errore<br /><br /> Nella parte restante della stringa vengono fornite informazioni sull'errore. Il compilatore MSVC genera informazioni sugli errori per i collegamenti che non possono essere risolti. |
 
 - La seconda parte della stringa identifica il nome completo dell'elemento, a partire dalla radice dello spazio dei nomi. Il nome dell'elemento, i tipi di inclusione e lo spazio dei nomi sono separati da punti. Se il nome dell'elemento contiene dei punti, questi verranno sostituiti con il segno di cancelletto ('#'), in base al presupposto che nessun nome di elemento contiene direttamente tale segno. Ad esempio, il nome completo del costruttore `String` è "System.String.#ctor".
 
@@ -42,23 +43,23 @@ Per generare gli ID, il compilatore applica le regole seguenti:
 
   - Tipi intrinseci (ad esempio, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF ed ELEMENT_TYPE_VOID) vengono rappresentati come nome completo del tipo completo corrispondente, come ad esempio **System.Int32** o **System.TypedReference**.
 
-  - ELEMENT_TYPE_PTR viene rappresentato con '\*' dopo il tipo modificato.
+  - ELEMENT_TYPE_PTR viene rappresentato con '*' dopo il tipo modificato.
 
   - ELEMENT_TYPE_BYREF viene rappresentato con "\@" dopo il tipo modificato.
 
-  - ELEMENT_TYPE_PINNED viene rappresentato con '^' dopo il tipo modificato. Il compilatore MSVC non lo genera mai.
+  - ELEMENT_TYPE_PINNED viene rappresentato con '^' dopo il tipo modificato. Il compilatore MSVC non genera mai questa operazione.
 
-  - ELEMENT_TYPE_CMOD_REQ viene rappresentato con '&#124;' seguito dal nome completo della classe di modificatori dopo il tipo modificato. Il compilatore MSVC non lo genera mai.
+  - ELEMENT_TYPE_CMOD_REQ viene rappresentato con '&#124;' seguito dal nome completo della classe di modificatori dopo il tipo modificato. Il compilatore MSVC non genera mai questa operazione.
 
   - ELEMENT_TYPE_CMOD_OPT viene rappresentato con '!' seguito dal nome completo della classe di modificatori dopo il tipo modificato.
 
   - ELEMENT_TYPE_SZARRAY viene rappresentato con "[]" dopo il tipo di elemento della matrice.
 
-  - ELEMENT_TYPE_GENERICARRAY viene rappresentato con "[?]" dopo il tipo di elemento della matrice. Il compilatore MSVC non lo genera mai.
+  - ELEMENT_TYPE_GENERICARRAY viene rappresentato con "[?]" dopo il tipo di elemento della matrice. Il compilatore MSVC non genera mai questa operazione.
 
-  - ELEMENT_TYPE_ARRAY viene rappresentato con [*limite inferiore*:`size`,*limite inferiore*:`size`], dove il numero di virgole indica il numero di dimensioni - 1. I limiti inferiori e le dimensioni di ogni dimensione, qualora noti, vengono rappresentati con valori decimali. Se non è specificato alcun valore, il limite o la dimensione inferiore viene omesso. Se vengono omessi il limite inferiore e la dimensione per una dimensione specifica, viene omesso anche ':'. Ad esempio, una matrice a due dimensioni con limiti inferiori pari a 1 e dimensioni non specificate viene rappresentata con [1:,1:].
+  - ELEMENT_TYPE_ARRAY è rappresentato come [*lowerbound*: `size` ,*lowerbound*: `size` ] dove il numero di virgole è il rango-1 e i limiti inferiori e le dimensioni di ogni dimensione, se noti, sono rappresentati in decimali. Se non è specificato alcun valore, il limite o la dimensione inferiore viene omesso. Se vengono omessi il limite inferiore e la dimensione per una dimensione specifica, viene omesso anche ':'. Ad esempio, una matrice a due dimensioni con limiti inferiori pari a 1 e dimensioni non specificate viene rappresentata con [1:,1:].
 
-  - ELEMENT_TYPE_FNPTR viene rappresentato con "=FUNC:`type`(*signature*)", dove `type` rappresenta il tipo restituito e *signature* identifica gli argomenti del metodo. Se non vi sono argomenti, le parentesi vengono omesse. Il compilatore MSVC non lo genera mai.
+  - ELEMENT_TYPE_FNPTR viene rappresentato con "=FUNC:`type`(*signature*)", dove `type` rappresenta il tipo restituito e *signature* identifica gli argomenti del metodo. Se non vi sono argomenti, le parentesi vengono omesse. Il compilatore MSVC non genera mai questa operazione.
 
   I seguenti componenti della firma non vengono rappresentati in quanto non vengono mai usati per differenziare i metodi di overload:
 
@@ -70,7 +71,7 @@ Per generare gli ID, il compilatore applica le regole seguenti:
 
 - Limitatamente agli operatori di conversione, il valore restituito del metodo viene codificato con '~' seguito dal tipo restituito, codificato come descritto in precedenza.
 
-- Nel caso di tipi generici, il nome del tipo verrà seguito da un apice inverso e quindi da un numero che indica il numero di parametri di tipo generici.  Ad esempio,
+- Nel caso di tipi generici, il nome del tipo verrà seguito da un apice inverso e quindi da un numero che indica il numero di parametri di tipo generici.  ad esempio:
 
     ```xml
     <member name="T:MyClass`2">
@@ -178,6 +179,6 @@ namespace N {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Documentazione di XML](xml-documentation-visual-cpp.md)
+[Documentazione XML](xml-documentation-visual-cpp.md)

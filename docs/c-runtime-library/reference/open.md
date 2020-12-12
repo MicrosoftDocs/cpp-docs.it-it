@@ -1,5 +1,6 @@
 ---
-title: open
+description: 'Altre informazioni su: Apri'
+title: apre
 ms.date: 12/16/2019
 api_name:
 - open
@@ -23,15 +24,15 @@ f1_keywords:
 helpviewer_keywords:
 - open function
 ms.assetid: e3139118-4da2-434b-a551-fcf3fccf49b5
-ms.openlocfilehash: 648f55511983264f127976b83a73dd5623717c14
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 65dc30f24737e1071deedead78d0b8267e4de97b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301262"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195645"
 ---
-# <a name="open"></a>open
+# <a name="open"></a>apre
 
-Il nome della funzione POSIX implementato da Microsoft `open` è un alias deprecato per la funzione di [_open](open-wopen.md) . Per impostazione predefinita, viene generato un [Avviso del compilatore (livello 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Il nome è deprecato perché non segue le regole C standard per i nomi specifici dell'implementazione. Tuttavia, la funzione è ancora supportata.
+Il nome della funzione POSIX implementato `open` da Microsoft è un alias deprecato per la funzione [_open](open-wopen.md) . Per impostazione predefinita, viene generato un [Avviso del compilatore (livello 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Il nome è deprecato perché non segue le regole C standard per i nomi specifici dell'implementazione. Tuttavia, la funzione è ancora supportata.
 
 Si consiglia di usare invece [_open](open-wopen.md) . In alternativa, è possibile continuare a usare il nome della funzione e disabilitare l'avviso. Per altre informazioni, vedere [disabilitare i](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) [nomi di funzione](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)di avviso e POSIX.

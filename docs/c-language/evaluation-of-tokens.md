@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: valutazione dei token'
 title: Valutazione di token
 ms.date: 11/04/2016
 helpviewer_keywords:
 - tokens, evaluating
 ms.assetid: 28870b62-dff6-4644-8b75-d58f340b48d2
-ms.openlocfilehash: 15775ca9a7ada46aaf4e53ae952cd67e95bbf8d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e22a904956b3f429585c6627a7fb2e8f8da6d222
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234023"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196529"
 ---
 # <a name="evaluation-of-tokens"></a>Valutazione di token
 
@@ -27,6 +28,6 @@ Il compilatore C considera il carattere di CTRL+Z come indicatore di fine file. 
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Token C](../c-language/c-tokens.md)

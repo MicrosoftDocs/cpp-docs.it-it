@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: &lt; ostream &gt; Typedefs'
 title: Typedef &lt;ostream&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - iosfwd/std::ostream
 - iosfwd/std::wostream
 ms.assetid: 2ec4dc52-a01f-4654-bd65-dd5288777c48
-ms.openlocfilehash: ff9f19f56c8d8fdb9e469e6361a5419468fe7e67
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 886fb729f389fac161e4d154e00898b530d1d9f7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846407"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193019"
 ---
 # <a name="ltostreamgt-typedefs"></a>Typedef &lt;ostream&gt;
 
@@ -25,7 +26,7 @@ Crea un tipo da basic_ostream specializzato su **`char`** e `char_traits` specia
 typedef basic_ostream<char, char_traits<char>> ostream;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del modello di classe [basic_ostream](../standard-library/basic-ostream-class.md), specializzato per gli elementi di tipo **`char`** con tratti di carattere predefiniti.
 
@@ -37,7 +38,7 @@ Crea un tipo da basic_ostream specializzato su **`wchar_t`** e `char_traits` spe
 typedef basic_ostream<wchar_t, char_traits<wchar_t>> wostream;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del modello di classe [basic_ostream](../standard-library/basic-ostream-class.md), specializzato per gli elementi di tipo **`wchar_t`** con tratti di carattere predefiniti.
 

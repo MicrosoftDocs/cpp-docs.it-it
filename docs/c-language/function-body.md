@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: corpo della funzione'
 title: Corpo della funzione
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - function definitions, function body
 - function body
 ms.assetid: f7e74822-fac8-4dc8-8f3a-2b1611da4640
-ms.openlocfilehash: 2ae73ab4ca91e06e3b6cd41166a8d05ae0857e4a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 098a759a8fd4fd9ab69e487ab84f7ed7d0d2c25c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229701"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195983"
 ---
 # <a name="function-body"></a>Corpo della funzione
 
@@ -25,13 +26,13 @@ Un *corpo di funzione* è un'istruzione composta che contiene le istruzioni che 
 
 /\**attribute-seq* è specifico di Microsoft\*/
 
-*compound-statement*:/ \* corpo della funzione\*/<br/>
+*compound-statement*:/ \* corpo della funzione \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>opz</sub> *Statement-list*<sub>opt</sub> **}**
 
 Le variabili dichiarate in un corpo della funzione, note come *variabili locali*, hanno una **`auto`** classe di archiviazione, se non diversamente specificato. Quando la funzione viene chiamata, l'archiviazione viene creata per le variabili locali e le inizializzazioni locali vengono eseguite. Il controllo dell'esecuzione passa alla prima istruzione in *compound-statement* e continua fino a quando non **`return`** viene eseguita un'istruzione o viene rilevata la fine del corpo della funzione. Il controllo ritorna quindi al punto in cui la funzione è stata chiamata.
 
 Un' **`return`** istruzione contenente un'espressione deve essere eseguita se la funzione deve restituire un valore. Il valore restituito di una funzione non è definito se nessuna **`return`** istruzione viene eseguita o se l' **`return`** istruzione non include un'espressione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Definizioni di funzioni C](../c-language/c-function-definitions.md)

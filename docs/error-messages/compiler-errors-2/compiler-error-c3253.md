@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3253'
 title: Errore del compilatore C3253
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3253
 ms.assetid: da40be26-0f78-4730-8727-ad11cddf8869
-ms.openlocfilehash: c895def372fd74f077725479112873020264371f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 492530dfdfbd5b4b219dcee920fd4f4940393b3c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74754264"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97194293"
 ---
 # <a name="compiler-error-c3253"></a>Errore del compilatore C3253
 

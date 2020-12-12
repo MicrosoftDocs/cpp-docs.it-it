@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: extern Storage-Class specifier'
 title: Identificatore di classi di archiviazione extern
 ms.date: 07/10/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 - external linkage, extern modifier
 ms.assetid: 6e16d927-291f-49e4-986c-9d91a482a441
-ms.openlocfilehash: e3242f86e30dcf3227586400b83266ad366ec7e8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f3a4a583f21809761878a060a3131a000f57915f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217103"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196308"
 ---
 # <a name="extern-storage-class-specifier"></a>Identificatore di classi di archiviazione extern
 
@@ -63,6 +64,6 @@ In questo esempio, la variabile `i` è definita in Source1.c con un valore inizi
 
 Nella `func` funzione l'indirizzo della variabile globale `i` viene usato per inizializzare la **`static`** variabile puntatore `external_i` . Questa operazione funziona perché la variabile globale ha una durata, il che significa che l' **`static`** indirizzo non cambia durante l'esecuzione del programma. Viene poi definita una variabile `i` all'interno dell'ambito di `func` come variabile locale con valore iniziale 16. Questa definizione non influisce sul valore di `i` a livello esterno, che viene nascosto mediante l'uso del nome per la variabile locale. Il valore della variabile globale `i` è ora accessibile solo tramite il puntatore `external_i`.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Identificatori di classi di archiviazione per dichiarazioni di livello interno](../c-language/storage-class-specifiers-for-internal-level-declarations.md)
+[Identificatori di classi di archiviazione per dichiarazioni di Internal-Level](../c-language/storage-class-specifiers-for-internal-level-declarations.md)

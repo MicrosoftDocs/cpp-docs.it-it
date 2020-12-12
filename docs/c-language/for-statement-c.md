@@ -1,15 +1,16 @@
 ---
+description: 'Ulteriori informazioni su: istruzione for (C)'
 title: Istruzione for (C)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - for keyword [C]
 ms.assetid: 560a8de4-19db-4868-9f18-dbe51b17900d
-ms.openlocfilehash: 91675fbe15ec6abf5aae4548990d9b4e0703e967
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4e20529ccec4f586f8785e122903b22be42e69a2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229727"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196022"
 ---
 # <a name="for-statement-c"></a>Istruzione for (C)
 
@@ -78,6 +79,6 @@ Number of spaces: 4
 Number of tabs: 2
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Istruzioni](../c-language/statements-c.md)

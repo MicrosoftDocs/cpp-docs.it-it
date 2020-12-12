@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: collegamento esterno'
 title: Collegamento esterno
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - external linkage, about external linkage
 - external linkage
 ms.assetid: a6f8ea69-b405-4cdd-bf12-ad5462b73183
-ms.openlocfilehash: d8a7655b7504aa8458bda8db24ff3f919b5b09c1
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 6920183c53067462dbaadb8514bf747300eb6a1c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509915"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196282"
 ---
 # <a name="external-linkage"></a>Collegamento esterno
 
@@ -21,6 +22,6 @@ Se la dichiarazione di un identificatore per una funzione non dispone di *Storag
 
 Il nome di un identificatore con collegamento esterno definisce la stessa funzione o oggetto dati di una qualunque altra dichiarazione per lo stesso nome con collegamento esterno. Le due dichiarazioni possono trovarsi nella stessa unità di conversione o in unità di conversione diverse. Se l'oggetto o la funzione dispongono anche di durata globale, l'oggetto o la funzione sono condivisi dall'intero programma.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Uso di extern per specificare un collegamento](../cpp/extern-cpp.md)

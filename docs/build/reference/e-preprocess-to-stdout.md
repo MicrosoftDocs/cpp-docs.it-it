@@ -1,4 +1,5 @@
 ---
+description: Ulteriori informazioni su:/E (pre-elabora in stdout)
 title: /E (Pre-elabora in stdout)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - preprocessor output, copy to stdout
 - preprocessor output
 ms.assetid: ddbb1725-d950-4978-ab2f-30a5cd7b778c
-ms.openlocfilehash: 710be7e1dfc4de89bc1eed3e23e4803c561da10c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d6c9ea3a5fcf8e7ba06ede6e7e70d933b5c921a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273261"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192608"
 ---
 # <a name="e-preprocess-to-stdout"></a>/E (Pre-elabora in stdout)
 
-Pre-elabora i file di origine C e C++ e copia i file pre-elaborati per il dispositivo di output standard.
+Pre-elabora i file di origine C e C++ e copia i file pre-elaborati nel dispositivo di output standard.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,23 +27,23 @@ Pre-elabora i file di origine C e C++ e copia i file pre-elaborati per il dispos
 /E
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-In questo processo, vengono eseguite tutte le direttive del preprocessore, espansioni della macro vengono eseguite e vengono rimossi i commenti. Per mantenere i commenti nell'output pre-elaborato, usare il [/C (mantenere i commenti durante la pre-elaborazione)](c-preserve-comments-during-preprocessing.md) anche l'opzione del compilatore.
+In questo processo vengono eseguite tutte le direttive per il preprocessore, vengono eseguite le espansioni di macro e i commenti vengono rimossi. Per mantenere i commenti nell'output pre-elaborato, usare anche l'opzione del compilatore [/c (Mantieni commenti durante la pre-elaborazione)](c-preserve-comments-during-preprocessing.md) .
 
-**/E** aggiunge `#line` direttive nell'output a inizio e alla fine di ogni file incluso e attorno alle righe rimosse dalle direttive del preprocessore per la compilazione condizionale. Queste direttive rinumerano le righe del file pre-elaborato. Di conseguenza, gli errori generati durante le fasi successive dell'elaborazione di fare riferimento ai numeri di riga del file di origine originale anziché alle righe del file pre-elaborato.
+**/E** aggiunge `#line` le direttive all'output all'inizio e alla fine di ogni file incluso e intorno alle righe rimosse dalle direttive del preprocessore per la compilazione condizionale. Queste direttive rinumerano le righe del file pre-elaborato. Di conseguenza, gli errori generati durante le fasi successive dell'elaborazione fanno riferimento ai numeri di riga del file di origine originale anziché alle righe nel file pre-elaborato.
 
-Il **/E** opzione disattiva la compilazione. È necessario eseguire nuovamente il file pre-elaborato per la compilazione. **/E** elimina anche i file di output dal **/FA**, **/Fa**, e **/Fm** opzioni. Per altre informazioni, vedere [/FA, /Fa (File di listato)](fa-fa-listing-file.md) e [/Fm (specifica file MAP)](fm-name-mapfile.md).
+L'opzione **/e** disattiva la compilazione. È necessario inviare nuovamente il file pre-elaborato per la compilazione. **/E** inoltre i file di output vengono eliminati dalle opzioni **/fa**, **/fa** e **/FM** . Per ulteriori informazioni, vedere [/fa,/fa (file di listato)](fa-fa-listing-file.md) e [/FM (nome file map)](fm-name-mapfile.md).
 
-Per sopprimere `#line` direttive, usare il [/EP (pre-elabora in stdout senza direttive #line)](ep-preprocess-to-stdout-without-hash-line-directives.md) opzione.
+Per disattivare `#line` le direttive, usare invece l'opzione [/EP (pre-elabora in stdout senza direttive #line)](ep-preprocess-to-stdout-without-hash-line-directives.md) .
 
-Per inviare l'output pre-elaborato in un file anziché al `stdout`, usare il [/P (pre-elabora in un File)](p-preprocess-to-a-file.md) opzione.
+Per inviare l'output pre-elaborato a un file anziché a `stdout` , usare invece l'opzione [/p (pre-elabora in un file)](p-preprocess-to-a-file.md) .
 
-Per sopprimere `#line` direttive e invia l'output pre-elaborato in un file, usare **/P** e **/EP** tra loro.
+Per disattivare `#line` le direttive e inviare l'output pre-elaborato a un file, **usare/P** e **/EP** insieme.
 
-Non è possibile usare le intestazioni precompilate con il **/E** opzione.
+Non è possibile usare intestazioni precompilate con l'opzione **/e** .
 
-Si noti che quando si pre-elaborazione in un file separato, gli spazi non vengono creati dopo il token. Questo può comportare un programma non valido o avere effetti collaterali imprevisti. Il programma seguente viene compilato correttamente:
+Si noti che quando si esegue la pre-elaborazione in un file separato, gli spazi non vengono emessi dopo i token. Questo può causare un programma non valido o avere effetti collaterali imprevisti. Il programma seguente viene compilato correttamente:
 
 ```
 #define m(x) x
@@ -52,23 +53,23 @@ m(int)main( )
 }
 ```
 
-Tuttavia, se si compila con:
+Tuttavia, se si esegue la compilazione con:
 
 ```
 cl -E test.cpp > test2.cpp
 ```
 
-`int main` in test2 in modo non corretto sarà `intmain`.
+`int main` in test2. cpp non sarà corretto `intmain` .
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
 1. Fare clic sulla pagina delle proprietà **Riga di comando** .
 
-1. Digitare l'opzione del compilatore nella **opzioni aggiuntive**casella.
+1. Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive**.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 
@@ -76,13 +77,13 @@ cl -E test.cpp > test2.cpp
 
 ## <a name="example"></a>Esempio
 
-La seguente riga di comando preelabora `ADD.C`, conserva i commenti, aggiunge `#line` direttive e visualizza il risultato nel dispositivo di output standard:
+La riga di comando seguente pre `ADD.C` -elabora, conserva i commenti, aggiunge `#line` le direttive e visualizza il risultato nel dispositivo di output standard:
 
 ```
 CL /E /C ADD.C
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

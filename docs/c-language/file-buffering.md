@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: buffering dei file'
 title: Buffer dei file
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - buffers [C++], file buffering
 - files [C++], buffering
 ms.assetid: 6bca67d1-a98f-43ac-9c6e-6c0504357aba
-ms.openlocfilehash: 9bf71601a397e94f7f80e1f3451ae5b822b8b9fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c136ecb63d9ab8390e70e63c9a5b3b8e7e60b2e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233791"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196230"
 ---
 # <a name="file-buffering"></a>Buffer dei file
 
@@ -19,6 +20,6 @@ ms.locfileid: "62233791"
 
 I file su disco a cui viene eseguito l'accesso mediante le funzioni di I/O standard vengono memorizzati completamente nel buffer. Per impostazione predefinita, la memorizzazione nel buffer utilizza 512 byte.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Funzioni della libreria](../c-language/library-functions.md)

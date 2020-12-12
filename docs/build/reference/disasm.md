@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/DISASM
 title: /DISASM
 ms.date: 01/17/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - -DISASM dumpbin option
 - DISASM dumpbin option
 - /DISASM dumpbin option
-ms.openlocfilehash: fb394b2266470e77c50ce5398aea961c37ac34fb
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 764754e017958a57afd53236b7fc1ffb6217d850
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927714"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192902"
 ---
 # <a name="disasm"></a>/DISASM
 
@@ -20,17 +21,17 @@ Stampare il disassembly delle sezioni di codice nell'output di DUMPBIN.
 
 ## <a name="syntax"></a>Sintassi
 
-> **/DISASM**{ **:** \[**BYTES**|**NOBYTES**]}
+> **/DISASM**{**:** \[ **byte** | **nobytes**]}
 
 ### <a name="arguments"></a>Argomenti
 
 **BYTES**<br/>
 Include i byte di istruzioni insieme ai codici operativi e agli argomenti interpretati nell'output del Disassembly. Questa è l'opzione predefinita.
 
-**NOBYTES**<br/>
+**Nobytes**<br/>
 Non include i byte dell'istruzione nell'output del Disassembly.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 L'opzione **/DISASM** Visualizza il disassembly delle sezioni di codice nel file. USA i simboli di debug se sono presenti nel file.
 
@@ -38,6 +39,6 @@ L'opzione **/DISASM** Visualizza il disassembly delle sezioni di codice nel file
 
 Solo l'opzione [/headers](headers.md) DUMPBIN è disponibile per l'uso nei file prodotti dall'opzione del compilatore [/GL (intero programma Optimization)](gl-whole-program-optimization.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni di DUMPBIN](dumpbin-options.md)

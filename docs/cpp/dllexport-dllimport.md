@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: dllexport, dllimport'
 title: dllexport, dllimport
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - dllimport __declspec keyword
 - __declspec keyword [C++], dllimport
 ms.assetid: ff95b645-ef55-4e72-b848-df44657b3208
-ms.openlocfilehash: f03c945375cbe8c399e604e12f070b5a63d316f7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7147aa07d5579a61a2913fcc0beb85634dc1d8df
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221653"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195504"
 ---
 # <a name="dllexport-dllimport"></a>dllexport, dllimport
 
@@ -74,7 +75,7 @@ Per altre informazioni, vedere:
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [__declspec](../cpp/declspec.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)

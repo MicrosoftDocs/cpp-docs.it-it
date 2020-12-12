@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: distruttori (C++)'
 title: Distruttori (C++)
 ms.date: 07/20/2019
 helpviewer_keywords:
 - objects [C++], destroying
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-ms.openlocfilehash: 5da7659d2d45bca9efba21be2cd0bf581d539780
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 121df368fc79f7dbabe4ccac6fe93c36788c5e51
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221666"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195567"
 ---
 # <a name="destructors-c"></a>Distruttori (C++)
 
@@ -244,7 +245,7 @@ void copy_strings()
 
 La definizione esplicita di un distruttore, un costruttore di copia o un operatore di assegnazione di copia impedisce la definizione implicita del costruttore di spostamento e dell'operatore di assegnazione di spostamento. In questo caso, la mancata esecuzione delle operazioni di spostamento è in genere, se la copia è costosa, un'opportunità di ottimizzazione mancante.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Costruttori di copia e operatori di assegnazione di copia](../cpp/copy-constructors-and-copy-assignment-operators-cpp.md)</br>
 [Costruttori di spostamento e operatori di assegnazione di spostamento](../cpp/move-constructors-and-move-assignment-operators-cpp.md)

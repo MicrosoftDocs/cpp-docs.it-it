@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; scoped_allocator&gt;'
 title: '&lt;scoped_allocator&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - scoped_allocator Header
 ms.assetid: d20175b8-96be-4896-8141-3faba45e0005
-ms.openlocfilehash: 403a05a75fe3ce7bc006c903af00e7536f4a6ea2
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 0f812f2475fe59c0954bcfb28a3141762e347f0a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72686470"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197127"
 ---
 # <a name="ltscoped_allocatorgt"></a>&lt;scoped_allocator&gt;
 
@@ -25,19 +26,19 @@ Definisce il modello di classe del contenitore scoped_allocator.
 
 ### <a name="operators"></a>Operatori
 
-|??|Descrizione|
+|Operatore|Descrizione|
 |-|-|
-|[operator!=](../standard-library/scoped-allocator-operators.md#op_neq)|Verifica se l'oggetto scoped_allocator a sinistra dell'operatore non è uguale all'oggetto a destra.|
-|[operator==](../standard-library/scoped-allocator-operators.md#op_eq_eq)|Verifica se l'oggetto scoped_allocator a sinistra dell'operatore è uguale all'oggetto a destra.|
+|[operatore! =](../standard-library/scoped-allocator-operators.md#op_neq)|Verifica se l'oggetto scoped_allocator a sinistra dell'operatore non è uguale all'oggetto a destra.|
+|[operatore = =](../standard-library/scoped-allocator-operators.md#op_eq_eq)|Verifica se l'oggetto scoped_allocator a sinistra dell'operatore è uguale all'oggetto a destra.|
 
 ### <a name="classes"></a>Classi
 
-|Class|Descrizione|
+|Classe|Descrizione|
 |-|-|
 |[Classe scoped_allocator_adaptor](../standard-library/scoped-allocator-adaptor-class.md)|Modello di classe che incapsula un annidamento di uno o più allocatori.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md) (Riferimento per la libreria standard C++)
+[Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Riferimenti per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

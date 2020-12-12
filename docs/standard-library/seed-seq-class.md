@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: seed_seq Class'
 title: Classe seed_seq
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - std::seed_seq [C++], size
 - std::seed_seq [C++], param
 ms.assetid: cba114f7-9ac6-4f2f-b773-9c84805401d6
-ms.openlocfilehash: d2dc561a9160188507a61ec3734cfbf9f3e74199
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c92bda66b37162bcaaf9c614185f2c31f29d22c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450514"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197036"
 ---
-# <a name="seedseq-class"></a>Classe seed_seq
+# <a name="seed_seq-class"></a>Classe seed_seq
 
 Archivia un vettore di valori Integer non firmati che può fornire un valore di inizializzazione casuale per un motore di numeri casuali.
 
@@ -88,7 +89,7 @@ seed_seq(InputIterator begin, InputIterator end);
 Inizializza la sequenza interna usando tutti gli elementi nell'intervallo dell'iteratore di input specificato.
 `iterator_traits<InputIterator>::value_type` deve essere un tipo Integer.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="generating-functions"></a>Generazione di funzioni
 
@@ -118,7 +119,7 @@ Copia la sequenza interna nell'iteratore di output `dest`.
 
 ## <a name="example"></a>Esempio
 
-L'esempio di codice seguente usa i tre costruttori e genera output dalle istanze di `seed_seq` risultanti in caso di assegnazione a una matrice. Per un esempio d'uso di `seed_seq` con un generatore di numeri casuali, vedere [\<random>](../standard-library/random.md).
+L'esempio di codice seguente usa i tre costruttori e genera output dalle istanze di `seed_seq` risultanti in caso di assegnazione a una matrice. Per un esempio che usa `seed_seq` con un generatore di numeri casuali, vedere [\<random>](../standard-library/random.md) .
 
 ```cpp
 #include <iostream>
@@ -185,13 +186,13 @@ Generating a sequence of 5 elements into an array:
 1985355432
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Le funzioni membro di questa classe non generano eccezioni.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<random>
+**Intestazione:**\<random>
 
 **Spazio dei nomi:** std
 

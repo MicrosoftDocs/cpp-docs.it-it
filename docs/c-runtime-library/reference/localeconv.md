@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: localeconv'
 title: localeconv
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - localeconv function
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
-ms.openlocfilehash: c4e1820ac412a0447c5059ecc92375275f7b2701
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 488a6e9dbc913f1102be3a53685dc68b38fb833b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218637"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195671"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -47,9 +48,9 @@ struct lconv *localeconv( void );
 
 ## <a name="return-value"></a>Valore restituito
 
-**localeconv** restituisce un puntatore a un oggetto compilato di tipo [struct lconv](../../c-runtime-library/standard-types.md). I valori contenuti nell'oggetto vengono copiati dalle impostazioni locali nella risorsa di archiviazione locale di thread e possono essere sovrascritti dalle chiamate successive a **localeconv**. Le modifiche apportate ai valori in questo oggetto non modificano le impostazioni locali. Le chiamate a [setlocale](setlocale-wsetlocale.md) con i valori di *categoria* di **LC_ALL**, **LC_MONETARY**o **LC_NUMERIC** sovrascrivono il contenuto della struttura.
+**localeconv** restituisce un puntatore a un oggetto compilato di tipo [struct lconv](../../c-runtime-library/standard-types.md). I valori contenuti nell'oggetto vengono copiati dalle impostazioni locali nella risorsa di archiviazione locale di thread e possono essere sovrascritti dalle chiamate successive a **localeconv**. Le modifiche apportate ai valori in questo oggetto non modificano le impostazioni locali. Le chiamate a [setlocale](setlocale-wsetlocale.md) con i valori di *categoria* di **LC_ALL**, **LC_MONETARY** o **LC_NUMERIC** sovrascrivono il contenuto della struttura.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **localeconv** ottiene informazioni dettagliate sulla formattazione numerica per le impostazioni locali correnti. Queste informazioni vengono archiviate in una struttura di tipo **lconv**. La struttura **lconv**, definita in LOCALE.H, contiene i campi seguenti:
 
@@ -74,7 +75,7 @@ n_sep_by_space|Impostare su 1 se il simbolo di valuta è separato con uno spazio
 p_sign_posn|Posizione del segno positivo in quantità monetarie formattata non negative.
 n_sign_posn|Posizione del segno positivo in quantità monetarie formattata negative.
 
-Ad eccezione di quanto specificato, i **lconv** membri della struttura lconv `char *` `wchar_t *` con le versioni e sono puntatori alle stringhe. Uno qualsiasi di questi equivale a **""** (o **L ""** per **`wchar_t`** <strong>\*</strong> ) ha una lunghezza zero o non è supportata nelle impostazioni locali correnti. Si noti che **decimal_point** e **_W_decimal_point** sono sempre supportati e di lunghezza diversa da zero.
+Ad eccezione di quanto specificato, i  membri della struttura lconv `char *` `wchar_t *` con le versioni e sono puntatori alle stringhe. Uno qualsiasi di questi equivale a **""** (o **L ""** per **`wchar_t`** <strong>\*</strong> ) ha una lunghezza zero o non è supportata nelle impostazioni locali correnti. Si noti che **decimal_point** e **_W_decimal_point** sono sempre supportati e di lunghezza diversa da zero.
 
 I **`char`** membri della struttura sono numeri non negativi piccoli, non caratteri. Qualsiasi membro tra questi uguale a **CHAR_MAX** non è supportato nelle impostazioni locali correnti.
 
@@ -130,7 +131,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [setlocale](../../preprocessor/setlocale.md)<br/>

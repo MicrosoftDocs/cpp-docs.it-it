@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: istruzione di espressione (C)'
 title: Istruzione di espressione (C)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - statements, expression
 - expression statements
 ms.assetid: 1085982b-dc16-4c1e-9ddd-0cd85c8fe2e3
-ms.openlocfilehash: 736ed4fbbd9f87c675c0bb9566c6c31287e77917
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b7bd4b0bac73277cedfd1e651ba731715a083b72
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233709"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196438"
 ---
 # <a name="expression-statement-c"></a>Istruzione di espressione (C)
 
@@ -35,6 +36,6 @@ y = z = ( f( x ) + 3 );   /* A function-call expression        */
 
 Nell'ultima istruzione l'espressione di chiamata di funzione, ovvero il valore dell'espressione, che include qualsiasi valore restituito dalla funzione, viene incrementato di 3 e viene quindi assegnato a entrambe le variabili `y` e `z`.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Istruzioni](../c-language/statements-c.md)

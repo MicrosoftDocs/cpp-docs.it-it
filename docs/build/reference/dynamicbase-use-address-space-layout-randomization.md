@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/DYNAMICBASE (usare la sequenza casuale del layout dello spazio degli indirizzi)
 title: /DYNAMICBASE (utilizzo della funzionalità ASLR)
 ms.date: 06/12/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /DYNAMICBASE linker option
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-ms.openlocfilehash: 9af502d65dd81efdedc6b80951f11d68f766cb31
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 481194b0da1a64d8170104344911223bf6ca6f6d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842624"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192612"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (utilizzo della funzionalità ASLR)
 
@@ -23,7 +24,7 @@ Specifica se generare un'immagine eseguibile che può essere ribasata in modo ca
 
 > **/DynamicBase**[**: No**]
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'opzione **/DynamicBase** modifica l'intestazione di un' *immagine eseguibile*, un file con estensione dll o exe, per indicare se l'applicazione deve essere ribasata in modo casuale in fase di caricamento e consente la sequenza casuale di allocazione degli indirizzi virtuali, che influiscono sulla posizione di memoria virtuale di heap, stack e altre allocazioni del sistema operativo. L'opzione **/DynamicBase** si applica alle immagini a 32 bit e a 64 bit. ASLR è supportato in Windows Vista e nei sistemi operativi successivi. L'opzione viene ignorata dai sistemi operativi precedenti.
 
@@ -33,7 +34,7 @@ Per impostazione predefinita, **/DynamicBase** è abilitato. Per disabilitare qu
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la **Configuration Properties**  >  pagina delle proprietà avanzate del**linker**proprietà di configurazione  >  **Advanced** .
+1. Selezionare la   >  pagina delle proprietà avanzate del **linker** proprietà di configurazione  >   .
 
 1. Modificare la proprietà **indirizzo di base casuale** .
 
@@ -41,7 +42,7 @@ Per impostazione predefinita, **/DynamicBase** è abilitato. Per disabilitare qu
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RandomizedBaseAddress%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Informazioni di riferimento sul linker MSVC](linking.md)
 - [Opzioni del linker MSVC](linker-options.md)

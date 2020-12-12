@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: chiamata di funzione (C)'
 title: Chiamata di funzione (C)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - functions [C], calling
 - function calls
 ms.assetid: 35c66719-3f15-4d3b-97da-4e19dc97b308
-ms.openlocfilehash: 23531f25128fc267caa3a3cad5f2c52e603a2cc6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7ebe8ded3e64f7b636aaf438ee2bff8e4f221610
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229688"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195970"
 ---
 # <a name="function-call-c"></a>Chiamata di funzione (C)
 
@@ -30,6 +31,6 @@ L'elemento *postfix-expression* deve restituire un indirizzo di funzione (ad ese
 
 Un'espressione chiamata-funzione ha il valore e il tipo del valore restituito della funzione. Una funzione non può restituire un oggetto di tipo matrice. Se il tipo restituito della funzione è **`void`** (ovvero, la funzione è stata dichiarata mai per restituire un valore), l'espressione di chiamata di funzione dispone anche del **`void`** tipo. Per altre informazioni, vedere [Chiamate di funzione](../c-language/function-calls.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Operatore di chiamata di funzione: ()](../cpp/function-call-operator-parens.md)

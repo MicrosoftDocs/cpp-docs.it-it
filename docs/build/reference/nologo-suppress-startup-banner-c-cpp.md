@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/nologo (non visualizzare il banner di avvio) (C/C++)
 title: /nologo (Non visualizza il messaggio di avvio) (C/C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - nologo compiler option [C++]
 - banners, suppressing startup
 ms.assetid: 75930d8b-b11c-4db8-99e5-b52f97da0693
-ms.openlocfilehash: 1e48989a8e433296856ae58560823e601e36008f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a924eaf18a772b9495e1a493855fd72e9b79dd83
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320461"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196607"
 ---
 # <a name="nologo-suppress-startup-banner-cc"></a>/nologo (Non visualizza il messaggio di avvio) (C/C++)
 
-Disattiva la visualizzazione delle informazioni sul copyright all'avvio il compilatore e visualizzazione dei messaggi informativi durante la compilazione.
+Evita la visualizzazione del banner sul copyright quando il compilatore viene avviato e visualizza messaggi informativi durante la compilazione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -27,23 +28,23 @@ Disattiva la visualizzazione delle informazioni sul copyright all'avvio il compi
 /nologo
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
-1. Scegliere il **generale** pagina delle proprietà.
+1. Fare clic sulla pagina delle proprietà **generale** .
 
-1. Modificare il **eliminare il messaggio di avvio** proprietà.
+1. Modificare la proprietà non **visualizzare il banner di avvio** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.SuppressStartupBanner%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)
