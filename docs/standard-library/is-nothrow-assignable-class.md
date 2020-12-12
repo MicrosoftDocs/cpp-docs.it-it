@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: is_nothrow_assignable Class'
 title: Classe is_nothrow_assignable
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_assignable
 ms.assetid: aa3aca92-308b-4b1d-b3f3-c54216c48fe7
-ms.openlocfilehash: 7130079ff58820ec5a8893fd248c5b98fc10c93c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2d63c0f29b398cb8cd9eaef5e3e9e637c0b4eb16
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222368"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230822"
 ---
 # <a name="is_nothrow_assignable-class"></a>Classe is_nothrow_assignable
 
@@ -32,7 +33,7 @@ Il tipo di oggetto che riceve l'assegnazione.
 *Da*\
 Il tipo di oggetto che fornisce il valore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'espressione `declval<To>() = declval<From>()` deve essere nel formato corretto e deve essere nota al compilatore come espressione che non genera eccezioni. Sia *da* che *da a* devono essere tipi completi, **`void`** , o matrici di associazione sconosciuta.
 
@@ -42,6 +43,6 @@ L'espressione `declval<To>() = declval<From>()` deve essere nel formato corretto
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)

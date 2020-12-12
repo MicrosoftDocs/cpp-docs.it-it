@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r classi'
 title: classi is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r
 ms.date: 02/21/2019
 f1_keywords:
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - is_nothrow_invocable
 - is_nothrow_invocable_r class
 - is_nothrow_invocable_r
-ms.openlocfilehash: 47801eff0ea0c41c7b69dfb7a1aa5190a43f1b75
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 117e2ff85634898e170223e726a2cfea0ac6a470
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233106"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230933"
 ---
 # <a name="is_invocable-is_invocable_r-is_nothrow_invocable-is_nothrow_invocable_r-classes"></a>classi is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r
 
-Questi modelli determinano se un tipo può essere richiamato con i tipi di argomento specificati. `is_invocable_r``is_nothrow_invocable_r`inoltre, determinare se il risultato della chiamata è convertibile in un tipo specifico. `is_nothrow_invocable`e `is_nothrow_invocable_r` determinano inoltre se la chiamata è nota come non generare eccezioni. Aggiunto in C++ 17.
+Questi modelli determinano se un tipo può essere richiamato con i tipi di argomento specificati. `is_invocable_r``is_nothrow_invocable_r`inoltre, determinare se il risultato della chiamata è convertibile in un tipo specifico. `is_nothrow_invocable` e `is_nothrow_invocable_r` determinano inoltre se la chiamata è nota come non generare eccezioni. Aggiunto in C++ 17.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -70,17 +71,17 @@ Tipi di argomento su cui eseguire una query.
 *Convertibile*\
 Il tipo del risultato di *Callable* deve essere convertibile in.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il `is_invocable` predicato di tipo include true se il *chiamabile* del tipo chiamabile può essere richiamato usando gli argomenti *args* in un contesto non valutato.
 
 Il `is_invocable_r` predicato di tipo include true se il *chiamabile* del tipo chiamabile può essere richiamato usando gli argomenti *args* in un contesto non valutato per produrre un tipo di risultato convertibile in *convertibile*.
 
-Il `is_nothrow_invocable` predicato di tipo include true se il *chiamabile* del tipo chiamabile *Args* può essere richiamato usando gli argomenti arguments in un contesto non valutato e tale chiamata è nota come not per generare un'eccezione.
+Il `is_nothrow_invocable` predicato di tipo include true se il *chiamabile* del tipo chiamabile  può essere richiamato usando gli argomenti arguments in un contesto non valutato e tale chiamata è nota come not per generare un'eccezione.
 
-Il `is_nothrow_invocable_r` predicato di tipo include true se il *chiamabile* del tipo chiamabile *Args* può essere richiamato usando gli argomenti arguments in un contesto non valutato per produrre un tipo di risultato convertibile in *convertibile*e che tale chiamata non genera un'eccezione.
+Il `is_nothrow_invocable_r` predicato di tipo include true se il *chiamabile* del tipo chiamabile  può essere richiamato usando gli argomenti arguments in un contesto non valutato per produrre un tipo di risultato convertibile in *convertibile* e che tale chiamata non genera un'eccezione.
 
-Ognuno dei tipi *convertibili*, *richiamabili*e i tipi negli *argomenti* del pacchetto di parametri deve essere un tipo completo, una matrice di limiti sconosciuti o un qualificatore CV **`void`** . In caso contrario, il comportamento del predicato non è definito.
+Ognuno dei tipi *convertibili*, *richiamabili* e i tipi negli *argomenti* del pacchetto di parametri deve essere un tipo completo, una matrice di limiti sconosciuti o un qualificatore CV **`void`** . In caso contrario, il comportamento del predicato non è definito.
 
 ## <a name="example"></a>Esempio
 
@@ -120,7 +121,7 @@ int main()
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)\
 [invoke](functional-functions.md#invoke)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: is_member_object_pointer Class'
 title: Classe is_member_object_pointer
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_member_object_pointer class
 - is_member_object_pointer
 ms.assetid: 64f9cdf3-4621-4310-a076-a7bc986926b9
-ms.openlocfilehash: 37d836c3626b492750ffa28c378413757119c9d3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: bf98bfa4017730a212f99849bde552ceb67625b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456161"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230932"
 ---
-# <a name="ismemberobjectpointer-class"></a>Classe is_member_object_pointer
+# <a name="is_member_object_pointer-class"></a>Classe is_member_object_pointer
 
 Verifica se il tipo è un puntatore a un oggetto membro.
 
@@ -30,9 +31,9 @@ struct is_member_object_pointer;
 *Ty*\
 Tipo su cui eseguire una query.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Un'istanza del predicato di tipo include true se il tipo *Ty* è un puntatore a un oggetto `cv-qualified` membro o un puntatore a un oggetto membro; in caso contrario, include false. Si noti `is_member_object_pointer` che include false se *Ty* è un puntatore a una funzione membro.
+Un'istanza del predicato di tipo include true se il tipo *Ty* è un puntatore a un oggetto membro o un `cv-qualified` puntatore a un oggetto membro; in caso contrario, include false. Si noti che `is_member_object_pointer` include false se *Ty* è un puntatore a una funzione membro.
 
 ## <a name="example"></a>Esempio
 
@@ -79,11 +80,11 @@ is_member_object_pointer<int (functional::*)()> == false
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Classe is_member_pointer](../standard-library/is-member-pointer-class.md)
