@@ -1,18 +1,17 @@
 ---
 title: Parole chiave C
 description: Parole chiave nelle estensioni standard C e del compilatore C Microsoft.
-ms.date: 10/30/2020
+ms.date: 12/8/2020
 helpviewer_keywords:
 - keywords [C]
 - redefining keywords
 - Microsoft-specific keywords
-ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
-ms.openlocfilehash: 9efa3fc353a2386a465227c39f4ae83565ae12c3
-ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
+ms.openlocfilehash: 1bcef118881a0596406d6ff455dd453220ff81c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93238486"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300380"
 ---
 # <a name="c-keywords"></a>Parole chiave C
 
@@ -69,7 +68,7 @@ Nel linguaggio C vengono utilizzate le parole chiave seguenti:
         **`_Atomic`**<sup>2, b</sup>\
         **`_Bool`**<sup>1, a</sup>\
         **`_Complex`**<sup>1, b</sup>\
-        **`_Generic`**<sup>2, a</sup>\
+        **[`_Generic`](generic_selection.md)**<sup>2, a</sup>\
         **`_Imaginary`**<sup>1, b</sup>\
         **`_Noreturn`**<sup>2, a</sup>\
         **`_Static_assert`**<sup>2, a</sup>\
@@ -135,6 +134,6 @@ Le estensioni Microsoft sono attivate per impostazione predefinita. Per semplifi
 
 Quando le estensioni Microsoft sono abilitate, è possibile utilizzare le parole chiave elencate in precedenza nei programmi. Per la conformità agli standard, la maggior parte di queste parole chiave è preceduta da un doppio carattere di sottolineatura. Le quattro eccezioni,,, **`dllexport`** **`dllimport`** **`naked`** e **`thread`** , vengono utilizzate solo con **`__declspec`** e non richiedono un doppio carattere di sottolineatura iniziali. Ai fini della compatibilità con le versioni precedenti, sono supportate le versioni con singolo carattere di sottolineatura delle parole chiave rimanenti.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Elementi di C](../c-language/elements-of-c.md)

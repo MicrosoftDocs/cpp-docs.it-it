@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: dimostrata, _atol_l, _wtol, _wtol_l'
 title: atol, _atol_l, _wtol, _wtol_l
 ms.date: 4/2/2020
 api_name:
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-ms.openlocfilehash: ffb318a53b34e1d69e533b05f80e942c945e1af7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 99830a76d3392af71cf3f55992a4207dc3b6ce18
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218728"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303687"
 ---
 # <a name="atol-_atol_l-_wtol-_wtol_l"></a>atol, _atol_l, _wtol, _wtol_l
 
@@ -95,13 +96,13 @@ Ogni funzione restituisce il **`long`** valore prodotto interpretando i caratter
 
 In caso di overflow con valori integrali positivi di grandi dimensioni **,** diviene restituito **LONG_MAX**; in caso di overflow con valori integrali negativi di grandi dimensioni, viene restituito **LONG_MIN** . In tutti i casi fuori intervallo, **errno** viene impostato su **ERANGE**. Se il parametro passato è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono 0.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Queste funzioni convertono una stringa di caratteri in un valore Long**atol**Integer.
+Queste funzioni convertono una stringa di caratteri in un valore LongInteger.
 
 La stringa di input è una sequenza di caratteri che può essere interpretata come valore numerico del tipo specificato. La funzione interrompe la lettura della stringa di input in corrispondenza del primo carattere che non riconosce come parte di un numero. Questo carattere può essere il carattere null ('\0' o L'\0') che termina la stringa.
 
-Il formato dell'argomento **atol** *Str* per No, è il seguente:
+Il formato dell'argomento  *Str* per No, è il seguente:
 
 > [*spazi vuoti*] [*segno*] [*cifre*]]
 
@@ -176,7 +177,7 @@ Function: atol( "3336402735171707160320" ) = 2147483647
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
 [Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>

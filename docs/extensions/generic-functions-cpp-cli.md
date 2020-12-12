@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: funzioni generiche (C++/CLI)'
 title: Funzioni generiche (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - methods [C++], generic
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-ms.openlocfilehash: 3d648a23176786985a7ca1e22165c7c5a695e601
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cd2c5390499e6858824fae7a3368afe6de8c6c56
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216011"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301737"
 ---
 # <a name="generic-functions-ccli"></a>Funzioni generiche (C++/CLI)
 
@@ -22,13 +23,13 @@ Una funzione generica è una funzione dichiarata con parametri di tipo. Quando v
 
 ## <a name="all-platforms"></a>Tutte le piattaforme
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzionalità non si applica a tutte le piattaforme.
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzionalità non è supportata in Windows Runtime.
 
@@ -62,7 +63,7 @@ return-type identifier<type-parameter identifier(s)>
 *tipo restituito*<br/>
 Tipo restituito dal metodo. Se il tipo restituito è nullo, non è richiesto il valore restituito.
 
-*identificatore*<br/>
+*identifier*<br/>
 Nome della funzione.
 
 *type-parameter identifier(s)*<br/>
@@ -77,7 +78,7 @@ Specifica le restrizioni sui tipi che è possibile usare come argomenti di tipo 
 *corpo della funzione*<br/>
 Corpo del metodo, che può fare riferimento agli identificatori dei parametri di tipo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le funzioni generiche sono funzioni dichiarate con un parametro di tipo generico. Può trattarsi di metodi in una classe o uno struct o di funzioni autonome. Una dichiarazione generica singola dichiara in modo implicito una famiglia di funzioni che differiscono solo per la sostituzione di un tipo effettivo diverso per il parametro di tipo generico.
 
@@ -89,7 +90,7 @@ Quando viene chiamato, il parametro di tipo generico viene sostituito da un tipo
 
 Opzione del compilatore: `/clr`
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 L'esempio di codice seguente illustra una funzione generica.
 
@@ -181,7 +182,7 @@ My function returned an int: 2003
 My function returned a string: Hello generic functions!
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
 [Generics](generics-cpp-component-extensions.md)

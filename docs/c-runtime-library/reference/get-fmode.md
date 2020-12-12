@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _get_fmode'
 title: _get_fmode
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - file translation [C++], default mode
 - get_fmode function
 ms.assetid: 22ea70e2-b9b5-422d-b514-64f4beaea45c
-ms.openlocfilehash: 3e59e608f83874088b64d316c04053b94d8fbfdd
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 56716b7e8c12c5a3de79098a8227be31148ae386
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909859"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303648"
 ---
 # <a name="_get_fmode"></a>_get_fmode
 
@@ -57,9 +58,9 @@ Puntatore a un Integer da riempire con la modalità predefinita corrente: **_O_T
 
 Restituisce zero se ha esito positivo; un codice di errore se ha esito negativo. Se *pmode* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e la funzione restituisce **EINVAL**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione ottiene il valore della variabile globale [_fmode](../../c-runtime-library/fmode.md). Questa variabile specifica la modalità di conversione file predefinita per le operazioni di I/O di file di flusso e di basso livello, ad esempio **_open**, **_pipe**, **fopen**e [freopen](freopen-wfreopen.md).
+La funzione ottiene il valore della variabile globale [_fmode](../../c-runtime-library/fmode.md). Questa variabile specifica la modalità di conversione file predefinita per le operazioni di I/O di file di flusso e di basso livello, ad esempio **_open**, **_pipe**, **fopen** e [freopen](freopen-wfreopen.md).
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -75,7 +76,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runt
 
 Vedere l'esempio in [_set_fmode](set-fmode.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [_fmode](../../c-runtime-library/fmode.md)<br/>
 [_set_fmode](set-fmode.md)<br/>

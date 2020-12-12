@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: direttiva #define (C/C++)'
 title: '#Direttiva define (C/C++)'
 ms.date: 08/29/2019
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-ms.openlocfilehash: e9e5b7a02ee55c05aa44278fbceb9c42f372c443
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 6821f775492671d860f4491354fff77e66150101
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506667"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300461"
 ---
 # <a name="define-directive-cc"></a>direttiva #define (C/C++)
 
@@ -23,10 +24,10 @@ Il **#define** crea una *macro*, ovvero l'associazione di un identificatore o di
 
 ## <a name="syntax"></a>Sintassi
 
-> **#define** *identificatore* del *token di #define-stringa*<sub>opz</sub>\
-> **identificatore #define** *identifier* **(** *identificatore*<sub>opz</sub>**...** **,** *identificatore*<sub>opt</sub> **)** *-stringa di token*<sub>opz</sub>
+>  *identificatore* del *token di #define-stringa*<sub>opz</sub>\
+> **identificatore #define**  **(** *identificatore*<sub>opz</sub>**...** **,** *identificatore*<sub>opt</sub> **)** *-stringa di token*<sub>opz</sub>
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La direttiva **#define** fa in modo che il compilatore sostituisca la *stringa di token* per ogni occorrenza dell' *identificatore* nel file di origine. L' *identificatore* viene sostituito solo quando costituisce un token. Ovvero, l' *identificatore* non viene sostituito se viene visualizzato in un commento, in una stringa o come parte di un identificatore più lungo. Per ulteriori informazioni, vedere [token](../cpp/character-sets.md).
 
@@ -36,7 +37,7 @@ Un oggetto `#define` senza una *stringa di token* rimuove le occorrenze dell' *i
 
 La seconda forma di sintassi definisce una macro simile a una funzione con parametri. Questa forma accetta un elenco facoltativo di parametri che devono essere visualizzati tra parentesi. Dopo che la macro è stata definita, ogni occorrenza successiva di *Identifier*( *Identifier*<sub>opt</sub>,..., *Identifier*<sub>opt</sub> ) viene sostituita con una versione dell'argomento della *stringa di token* con argomenti effettivi sostituiti per i parametri formali.
 
-I nomi dei parametri formali vengono visualizzati nella *stringa token* per contrassegnare le posizioni in cui vengono sostituiti i valori effettivi. Ogni nome di parametro può essere visualizzato più volte nella *stringa di token*e i nomi possono essere visualizzati in qualsiasi ordine. Il numero degli argomenti nella chiamata deve corrispondere al numero di parametri nella definizione della macro. Il libero utilizzo delle parentesi garantisce che gli argomenti effettivi complessi vengano interpretati correttamente.
+I nomi dei parametri formali vengono visualizzati nella *stringa token* per contrassegnare le posizioni in cui vengono sostituiti i valori effettivi. Ogni nome di parametro può essere visualizzato più volte nella *stringa di token* e i nomi possono essere visualizzati in qualsiasi ordine. Il numero degli argomenti nella chiamata deve corrispondere al numero di parametri nella definizione della macro. Il libero utilizzo delle parentesi garantisce che gli argomenti effettivi complessi vengano interpretati correttamente.
 
 I parametri formali nell'elenco sono separati da virgole. Ogni nome nell'elenco deve essere univoco e l'elenco deve essere racchiuso tra parentesi. Nessuno spazio può separare l' *identificatore* e la parentesi di apertura. USA concatenazione di righe: inserire una barra rovesciata ( `\` ) immediatamente prima del carattere di nuova riga, per le direttive Long su più righe di origine. L'ambito di un nome di parametro formale si estende alla nuova riga che termina con la *stringa di token*.
 
@@ -114,6 +115,6 @@ La definizione delle macro e delle costanti con l'opzione del compilatore [/d](.
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Direttive per il preprocessore](../preprocessor/preprocessor-directives.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: setvbuf'
 title: setvbuf
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - stream buffering
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
-ms.openlocfilehash: 907d02e94c79acf09dfa99a8b42e9f448d32dcfa
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8010bdea7a2542e8797ea8c352d9221cdb4cc0b9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915762"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303492"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -68,15 +69,15 @@ Dimensioni del buffer in byte. Intervallo consentito: 2 <= *dimensioni* <= INT_M
 
 Restituisce 0 in caso di esito positivo.
 
-Se il *flusso* è **null**o se la *modalità* o la *dimensione* non rientra in una modifica valida, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce -1 e imposta **errno** su **EINVAL**.
+Se il *flusso* è **null** o se la *modalità* o la *dimensione* non rientra in una modifica valida, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce -1 e imposta **errno** su **EINVAL**.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **setvbuf** consente al programma di controllare il buffering e le dimensioni del buffer per il *flusso*. il *flusso* deve fare riferimento a un file aperto che non è stato sottoposto a un'operazione di I/O dal momento in cui è stato aperto. La matrice a cui fa riferimento il *buffer* viene utilizzata come buffer, a meno che non sia **null**, nel qual caso **setvbuf** utilizza un buffer allocato automaticamente con *dimensioni*di lunghezza/2 \* 2 byte.
+La funzione **setvbuf** consente al programma di controllare il buffering e le dimensioni del buffer per il *flusso*. il *flusso* deve fare riferimento a un file aperto che non è stato sottoposto a un'operazione di I/O dal momento in cui è stato aperto. La matrice a cui fa riferimento il *buffer* viene utilizzata come buffer, a meno che non sia **null**, nel qual caso **setvbuf** utilizza un buffer allocato automaticamente con *dimensioni* di lunghezza/2 \* 2 byte.
 
-La modalità deve essere **_IOFBF**, **_IOLBF**o **_IONBF**. Se la *modalità* è **_IOFBF** o **_IOLBF**, le *dimensioni* vengono utilizzate come dimensioni del buffer. Se la *modalità* è **_IONBF**, il flusso non viene memorizzato nel buffer e le *dimensioni* e il *buffer* vengono ignorati. I valori per la *modalità* e i relativi significati sono:
+La modalità deve essere **_IOFBF**, **_IOLBF** o **_IONBF**. Se la *modalità* è **_IOFBF** o **_IOLBF**, le *dimensioni* vengono utilizzate come dimensioni del buffer. Se la *modalità* è **_IONBF**, il flusso non viene memorizzato nel buffer e le *dimensioni* e il *buffer* vengono ignorati. I valori per la *modalità* e i relativi significati sono:
 
 |valore della *modalità*|Significato|
 |-|-|

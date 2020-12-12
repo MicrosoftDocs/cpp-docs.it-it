@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: scrittura di un gestore di terminazione'
 title: Scrittura di un gestore di terminazione
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - exception handling [C++], termination handlers
 - try-catch keyword [C++], termination handlers
 ms.assetid: 52aa1f8f-f8dd-44b8-be94-5e2fc88d44fb
-ms.openlocfilehash: 8a243281e0d984a42cd4b4d9f249d867812d8bca
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a203cab7d61be66c5fe919aefe1895aa0928c5d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187310"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302985"
 ---
 # <a name="writing-a-termination-handler"></a>Scrittura di un gestore di terminazione
 
@@ -30,10 +31,10 @@ I gestori terminazioni utilizzano l'istruzione try-finally.
 
 - [Pulizia delle risorse](../cpp/cleaning-up-resources.md)
 
-- [Tempistica delle azioni nella gestione delle eccezioni](../cpp/timing-of-exception-handling-a-summary.md)
+- [Tempi delle azioni nella gestione delle eccezioni](../cpp/timing-of-exception-handling-a-summary.md)
 
-- [Restrizioni relative ai gestori di terminazione](../cpp/restrictions-on-termination-handlers.md)
+- [Limitazioni ai gestori di terminazione](../cpp/restrictions-on-termination-handlers.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Gestione strutturata delle eccezioni (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

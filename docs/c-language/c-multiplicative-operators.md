@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: operatori di moltiplicazione C'
 title: Operatori di moltiplicazione C
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-ms.openlocfilehash: 32ff74be0fd1afb1d8a21d74abb194eaa5e273df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 61689435c5e76238feba26d5a49ffe3530798f88
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227985"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300268"
 ---
 # <a name="c-multiplicative-operators"></a>Operatori di moltiplicazione C
 
@@ -24,7 +25,7 @@ Gli operatori di moltiplicazione eseguono operazioni di moltiplicazione ( <stron
 
 ## <a name="syntax"></a>Sintassi
 
-*espressione*moltiplicativa: espressione cast-espressione moltiplicativa espressione cast-espressione moltiplicatore-espressione espressione cast-espressione &nbsp; &nbsp; &nbsp; &nbsp; *cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *multiplicative-expression* <strong>\*</strong> *cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *multiplicative-expression* **/** *cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *moltiplicatore* **%** *cast-expression* -espressione
+*espressione* moltiplicativa: espressione cast-espressione moltiplicativa espressione cast-espressione moltiplicatore-espressione espressione cast-espressione &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  <strong>\*</strong>  &nbsp; &nbsp; &nbsp; &nbsp;  **/**  &nbsp; &nbsp; &nbsp; &nbsp; *moltiplicatore* **%**  -espressione
 
 Gli operandi dell'operatore di resto ( **%** ) devono essere integrali. Gli operatori di moltiplicazione ( <strong>\*</strong> ) e di divisione ( **/** ) possono assumere operandi di tipo integrale o a virgola mobile; i tipi degli operandi possono essere diversi.
 
@@ -47,7 +48,7 @@ Nella divisione in cui uno degli operandi è negativo, la direzione del troncame
 
 Se qualsiasi operazione è negativa nella divisione con l'operatore di resto, il risultato avrà lo stesso segno del dividendo (il primo operando nell'espressione).
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Le dichiarazioni illustrate vengono utilizzate per gli esempi seguenti:
 
@@ -89,6 +90,6 @@ In ogni caso, `50` e `2` hanno lo stesso segno.
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Operatori di moltiplicazione e operatore modulo](../cpp/multiplicative-operators-and-the-modulus-operator.md)

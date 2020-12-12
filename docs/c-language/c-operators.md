@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: operatori C'
 title: Operatori C
 ms.date: 06/14/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - associativity of operators
 - binary data, binary expressions
 ms.assetid: 13bc4c8e-2dc9-4b23-9f3a-25064e8777ed
-ms.openlocfilehash: 7868073f4932e4b77329e6df4a3de374bcf41ec9
-ms.sourcegitcommit: 6284bca6549e7b4f199d4560c30df6c1278bd4a0
+ms.openlocfilehash: 9e7e3a041b271117c0a7caeaa1ee97d88b4c037e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96035235"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300255"
 ---
 # <a name="c-operators"></a>Operatori C
 
@@ -50,6 +51,6 @@ L'operatore di espressione condizionale ha una precedenza minore rispetto alle e
 
 Le espressioni con operatori includono inoltre espressioni di assegnazione, che utilizzano operatori di assegnazione unari o binari. Gli operatori di assegnazione unari sono gli operatori di incremento ( **++** ) e decremento ( **--** ), mentre gli operatori di assegnazione binari sono l'operatore di assegnazione semplice ( **=** ) e gli operatori di assegnazione composta. Ogni operatore di assegnazione composta è una combinazione di un altro operatore binario con l'operatore di assegnazione semplice.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Espressioni e assegnazioni](../c-language/expressions-and-assignments.md)

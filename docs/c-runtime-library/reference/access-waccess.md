@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _access, _waccess'
 title: _access, _waccess
 ms.date: 4/2/2020
 api_name:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: fdada7f02115f44aa6a7e3c5e9bdfdf5e65f8b2f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d8cb62050482f29be0bef2b8433a65c2730de2fe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846589"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303739"
 ---
 # <a name="_access-_waccess"></a>_access, _waccess
 
@@ -73,7 +74,7 @@ Attributo di lettura/scrittura.
 
 Ogni funzione restituisce 0 se il file ha la modalità specificata. La funzione restituisce-1 se il file specificato non esiste o non ha la modalità specificata. in questo caso, `errno` viene impostato come illustrato nella tabella seguente.
 
-| Valore | Descrizione |
+| Valore | Description |
 |--|--|
 | `EACCES` | Accesso non consentito: l'impostazione di autorizzazione del file non consente l'accesso specificato. |
 | `ENOENT` | Nome file o percorso non trovato. |
@@ -81,7 +82,7 @@ Ogni funzione restituisce 0 se il file ha la modalità specificata. La funzione 
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Quando viene usato con i file, la funzione **_access** determina se il file o la directory specificata esiste e ha gli attributi specificati dal valore di *mode*. Se utilizzata con le directory, **_access** determina solo se la directory specificata esiste; in Windows 2000 e nei sistemi operativi successivi, tutte le directory hanno accesso in lettura e scrittura.
 
@@ -147,7 +148,7 @@ File crt_ACCESS.C exists.
 File crt_ACCESS.C does not have write permission.
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione di file](../../c-runtime-library/file-handling.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>

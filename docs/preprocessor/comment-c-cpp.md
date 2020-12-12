@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: pragma comment'
 title: comment (pragma)
 ms.date: 08/29/2019
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - pragmas, comment
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
-ms.openlocfilehash: 3175ad5318bcc6fd9aa6233258ccec9033c89be8
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 71172632ee1589c3f6d66136e9567929bff5d08c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219091"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300814"
 ---
 # <a name="comment-pragma"></a>comment (pragma)
 
@@ -25,11 +26,11 @@ Inserisce un record di commento in un file oggetto o in un file eseguibile.
 
 > **commento #pragma (** *Comment-Type* [ **,** "*Comment-String*"] **)**
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Il *tipo di commento* è uno degli identificatori predefiniti, descritti di seguito, che specifica il tipo di record di commento. La *stringa di commento* facoltativa è un valore letterale stringa che fornisce informazioni aggiuntive per alcuni tipi di commento. Poiché *Comment-String* è un valore letterale stringa, rispetta tutte le regole per i valori letterali stringa in relazione ai caratteri di escape, alle`"`virgolette incorporate () e alla concatenazione.
+Il *tipo di commento* è uno degli identificatori predefiniti, descritti di seguito, che specifica il tipo di record di commento. La *stringa di commento* facoltativa è un valore letterale stringa che fornisce informazioni aggiuntive per alcuni tipi di commento. Poiché *Comment-String* è un valore letterale stringa, rispetta tutte le regole per i valori letterali stringa in relazione ai caratteri di escape, alle virgolette incorporate ( `"` ) e alla concatenazione.
 
-### <a name="compiler"></a>compilatore
+### <a name="compiler"></a>compiler
 
 Inserisce il nome e il numero di versione del compilatore nel file oggetto. Questo record di commento viene ignorato dal linker. Se si specifica un parametro di *stringa di commento* per questo tipo di record, il compilatore genera un avviso.
 
@@ -41,7 +42,7 @@ Se l'ordine della libreria predefinita e di una libreria aggiunta è importante,
 
 ### <a name="linker"></a>linker
 
-Inserisce un' [opzione](../build/reference/linker-options.md) del linker nel file oggetto. È possibile utilizzare questo tipo di commento per specificare un'opzione del linker anziché passarla alla riga di comando o specificarla nell'ambiente di sviluppo. È possibile ad esempio specificare l'opzione /include per imporre l'inclusione di un simbolo:
+Inserisce un' [opzione del linker](../build/reference/linker-options.md) nel file oggetto. È possibile utilizzare questo tipo di commento per specificare un'opzione del linker anziché passarla alla riga di comando o specificarla nell'ambiente di sviluppo. È possibile ad esempio specificare l'opzione /include per imporre l'inclusione di un simbolo:
 
 ```C
 #pragma comment(linker, "/include:__mySymbol")
@@ -61,11 +62,11 @@ Per passare all'identificatore del linker sono disponibili solo le opzioni del l
 
 - [/SECTION](../build/reference/section-specify-section-attributes.md)
 
-### <a name="user"></a>user
+### <a name="user"></a>utente
 
 Inserisce un commento generale nel file oggetto. Il parametro della *stringa di commento* contiene il testo del commento. Questo record di commento viene ignorato dal linker.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Il pragma seguente indica al linker di eseguire la ricerca della libreria EMAPI.LIB durante il collegamento. Il linker esegue la ricerca prima nella directory di lavoro, quindi nel percorso specificato nella variabile di ambiente LIB.
 
@@ -85,6 +86,6 @@ Per i commenti che accettano un parametro di *stringa di commento* , è possibil
 #pragma comment( user, "Compiled on " __DATE__ " at " __TIME__ )
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

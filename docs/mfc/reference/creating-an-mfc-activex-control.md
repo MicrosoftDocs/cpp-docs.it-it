@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: creazione di un controllo ActiveX MFC'
 title: Creazione di un controllo ActiveX MFC
 ms.date: 08/19/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
-ms.openlocfilehash: 19e9ca6f985423bb01a8dea38988c5dcf7285683
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4b35187ffa3e5e4a11d293d4fe202c6e04213664
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505975"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301256"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Creazione di un controllo ActiveX MFC
 
@@ -38,7 +39,7 @@ Dopo aver creato il progetto, è possibile visualizzare i file creati in **Esplo
 
 Dopo aver creato il progetto, è possibile utilizzare le creazioni guidate codice per aggiungere [funzioni](../../ide/adding-a-member-function-visual-cpp.md#add-member-function-wizard), [variabili](../../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard), [eventi](../../ide/adding-an-event-visual-cpp.md#add-event-wizard), [Proprietà](../../ide/adding-a-property-visual-cpp.md#names-add-property-wizard)e [Metodi](../../ide/adding-a-method-visual-cpp.md#add-method-wizard). Per ulteriori informazioni sulla personalizzazione del controllo ActiveX, vedere [controlli ActiveX MFC](../../mfc/mfc-activex-controls.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Pagine delle proprietà](../../build/reference/property-pages-visual-cpp.md)

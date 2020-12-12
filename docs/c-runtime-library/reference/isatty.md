@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _isatty'
 title: _isatty
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-ms.openlocfilehash: 16d67053cd05d567e4c732d4366bd121863d43f9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 354cb0ba66c0c25291626cf4278935571357d058
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919776"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303622"
 ---
 # <a name="_isatty"></a>_isatty
 
@@ -55,7 +56,7 @@ Descrittore di file che fa riferimento al dispositivo da testare.
 
 **_isatty** restituisce un valore diverso da zero se il descrittore è associato a un dispositivo a caratteri. In caso contrario, **_isatty** restituisce 0.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_isatty** determina se *FD* è associato a un dispositivo a caratteri (un terminale, una console, una stampante o una porta seriale).
 
@@ -101,6 +102,6 @@ int main( void )
 stdout has not been redirected to a file
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Gestione dei file](../../c-runtime-library/file-handling.md)<br/>
+[Gestione di file](../../c-runtime-library/file-handling.md)<br/>

@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: Visual C++ quali&#39;nuovi da 2003 a 2015'
 title: 'Visual C++: novità dalla versione 2003 alla 2015'
 ms.date: 07/02/2019
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: eb76e5455f053717859d0ac571b9d1110d11c33b
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: ea126f3138ae437c3338e695fcebdf1cde037a50
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352635"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301113"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++: novità dalla versione 2003 alla 2015
 
@@ -1488,7 +1489,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
     #include "c.h"
    ```
 
-- **File di intestazione precompilata (PCH) e directory di inclusione non corrispondenti ** (interessa solo `/Wall` `/WX`)
+- **File di intestazione precompilata (PCH) e directory di inclusione non corrispondenti** (interessa solo `/Wall` `/WX`)
 
    Le versioni precedenti del compilatore accettavano gli argomenti della riga di comando delle directory di inclusione non corrispondenti (`-I`) per il compilatore tra le compilazioni `-Yc` e `-Yu` quando venivano usati file di intestazione precompilata (PCH). Il codice scritto in questo modo non è più accettato dal compilatore.   Il compilatore ora genera un avviso CC4599 per consentire l'identificazione degli argomenti della riga di comando delle directory di inclusione non corrispondenti (`-I`) quando si usano i file PCH.
 
@@ -1640,7 +1641,7 @@ Questo supporto migliorato per gli standard ISO C/C++ può richiedere modifiche 
 
 **Trova tutti i riferimenti** ora risolve e filtra automaticamente i riferimenti in background dopo aver visualizzato l'elenco delle corrispondenze testuali.
 
-**Filtro elenco di membri basato sul contesto.** I membri inaccessibili vengono filtrati dagli elenchi di membri IntelliSense. Ad esempio, i membri privati non vengono visualizzati nell'elenco dei membri a meno che non si stia modificando il codice che implementa il tipo. Mentre l'elenco dei membri è aperto, è possibile premere **CTRL** + **J** per rimuovere un livello di filtro (si applica solo alla finestra elenco dei membri corrente). È possibile premere **Ctrl** + di nuovo CTRL**J** per rimuovere il filtro testuale e visualizzare ogni membro.
+**Filtro elenco di membri basato sul contesto.** I membri inaccessibili vengono filtrati dagli elenchi di membri IntelliSense. Ad esempio, i membri privati non vengono visualizzati nell'elenco dei membri a meno che non si stia modificando il codice che implementa il tipo. Mentre l'elenco dei membri è aperto, è possibile premere **CTRL** + **J** per rimuovere un livello di filtro (si applica solo alla finestra elenco dei membri corrente). È possibile premere  + di nuovo CTRL **J** per rimuovere il filtro testuale e visualizzare ogni membro.
 
 **Scorrimento della Guida ai parametri.** La firma della funzione visualizzata nella descrizione comando della Guida ai parametri cambia in base al numero di parametri effettivamente immessi, anziché visualizzare solo una firma arbitraria e non aggiornarla in base al contesto corrente. La Guida ai parametri è utile anche quando viene visualizzata sulle funzioni annidate.
 
@@ -1737,7 +1738,7 @@ Oltre alla finestra **Attività in parallelo** e alla finestra **Stack in parall
 
 **Costrutti di codice C++.** La bozza di codice è disponibile per commutazione, if-else, ciclo for e altri costrutti di codice di base, nell'elenco a discesa Elenca membri. Selezionare un frammento di codice dall'elenco per inserirlo nel codice, quindi compilare la logica richiesta. È anche possibile creare i propri frammenti di codice personalizzati da usare nell'editor.
 
-**Miglioramenti di Elenca membri.** L'elenco a discesa **Elenca membri** viene visualizzato automaticamente durante la digitazione di codice nell'editor di codice. I risultati vengono filtrati in modo che solo i membri pertinenti vengono visualizzati durante la digitazione. È possibile controllare il tipo di logica di filtro usata per l'elenco dei membri nella finestra di dialogo **Opzioni** in **Editor di testo** > ** C/C++** > **Avanzate**.
+**Miglioramenti di Elenca membri.** L'elenco a discesa **Elenca membri** viene visualizzato automaticamente durante la digitazione di codice nell'editor di codice. I risultati vengono filtrati in modo che solo i membri pertinenti vengono visualizzati durante la digitazione. È possibile controllare il tipo di logica di filtro usata per l'elenco dei membri nella finestra di dialogo **Opzioni** in **Editor di testo** > **C/C++** > **Avanzate**.
 
 **Colorazione semantica.** Tipi, enumerazioni, macro e altri token C++ hanno ora una colorazione per impostazione predefinita.
 
@@ -1763,11 +1764,11 @@ Usare il nuovo framework unit test di C++ in Visual Studio per scrivere unit tes
 
 #### <a name="architecture-dependency-graphs"></a>Grafici delle dipendenze dell'architettura
 
-Per comprendere meglio il codice, è ora possibile generare grafici delle dipendenze per i file binari, di classe, di spazio dei nomi e di inclusione in una soluzione. Sulla barra dei menu scegliere **architettura**  >  **Genera grafico dipendenze**e quindi **per soluzione** o **per file di inclusione** per generare un grafico delle dipendenze. Completata la generazione del grafico, è possibile esaminarlo espandendo ogni nodo, verificare le relazioni di dipendenza passando da un nodo all'altro ed esplorare il codice sorgente scegliendo **Visualizza contenuto** nel menu di scelta rapida per un nodo. Per generare un grafico delle dipendenze per i file di inclusione, nel menu di scelta rapida per un \* file di codice sorgente. cpp o un \* file di intestazione. h, scegliere **Genera grafico dei file di inclusione**.
+Per comprendere meglio il codice, è ora possibile generare grafici delle dipendenze per i file binari, di classe, di spazio dei nomi e di inclusione in una soluzione. Sulla barra dei menu scegliere **architettura**  >  **Genera grafico dipendenze** e quindi **per soluzione** o **per file di inclusione** per generare un grafico delle dipendenze. Completata la generazione del grafico, è possibile esaminarlo espandendo ogni nodo, verificare le relazioni di dipendenza passando da un nodo all'altro ed esplorare il codice sorgente scegliendo **Visualizza contenuto** nel menu di scelta rapida per un nodo. Per generare un grafico delle dipendenze per i file di inclusione, nel menu di scelta rapida per un \* file di codice sorgente. cpp o un \* file di intestazione. h, scegliere **Genera grafico dei file di inclusione**.
 
 #### <a name="architecture-explorer"></a>Esplora architettura
 
-Con **Esplora architettura**è possibile esplorare gli asset nella soluzione, nei progetti o nei file C++. Nella barra dei menu scegliere **architettura**  >  **Windows**  >  **Esplora architettura**di Windows. È possibile selezionare un nodo che interessa, ad esempio, in **Visualizzazione classi**. In questo caso, il lato destro della finestra degli strumenti viene espanso con un elenco di spazi dei nomi. Se si seleziona uno spazio dei nomi, in una nuova colonna viene visualizzato un elenco delle classi, degli struct e delle enumerazioni contenuti nello spazio dei nomi. È possibile continuare a esplorare questi asset oppure tornare alla colonna all'estrema sinistra per avviare un'altra query. Vedere **trovare codice con Esplora architettura**.
+Con **Esplora architettura** è possibile esplorare gli asset nella soluzione, nei progetti o nei file C++. Nella barra dei menu scegliere **architettura**  >    >  **Esplora architettura** di Windows. È possibile selezionare un nodo che interessa, ad esempio, in **Visualizzazione classi**. In questo caso, il lato destro della finestra degli strumenti viene espanso con un elenco di spazi dei nomi. Se si seleziona uno spazio dei nomi, in una nuova colonna viene visualizzato un elenco delle classi, degli struct e delle enumerazioni contenuti nello spazio dei nomi. È possibile continuare a esplorare questi asset oppure tornare alla colonna all'estrema sinistra per avviare un'altra query. Vedere **trovare codice con Esplora architettura**.
 
 #### <a name="code-coverage"></a>Code coverage
 
@@ -1850,7 +1851,7 @@ Sono state aggiunte nuove macro alla libreria ATL per espandere la funzionalità
 
 #### <a name="analyze-warnings"></a>Avvisi /analyze
 
-La maggior parte degli **`/analyze`** avvisi (analisi codice Enterprise) sono stati rimossi dalle librerie di runtime C (CRT), MFC e ATL.
+La maggior parte degli **`/analyze`** avvisi (analisi codice Enterprise) sono stati rimossi dalle librerie C Run-Time (CRT), MFC e ATL.
 
 #### <a name="animation-and-d2d-support"></a>Animazione e supporto D2D
 
@@ -2047,7 +2048,7 @@ Il compilatore include modifiche di rilievo in questa versione.
 - Aggiunto il modificatore `jitintrinsicdeclspec`.
 - Aggiunto il modificatore `noaliasdeclspec`.
 - Aggiunto il modificatore `process__declspec`.
-- **abstract**, **override**e **sealed** sono validi per le compilazioni native.
+- **abstract**, **override** e **sealed** sono validi per le compilazioni native.
 - **`__restrict`** è stata aggiunta la parola chiave.
 - Aggiunto il modificatore `restrictdeclspec`.
 - **`__thiscall`** è ora una parola chiave.
@@ -2233,6 +2234,6 @@ Sono state aggiunte le seguenti opzioni del linker:
 
 Aggiunte la direttiva .SAFESEH e l'opzione `/safeseh` ml.exe.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida al porting e aggiornamento in Visual C++](visual-cpp-porting-and-upgrading-guide.md)

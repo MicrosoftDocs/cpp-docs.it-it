@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: EXIT_SUCCESS, EXIT_FAILURE'
 title: EXIT_SUCCESS, EXIT_FAILURE
 ms.date: 06/25/2018
 f1_keywords:
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - EXIT_SUCCESS constant
 - EXIT_FAILURE constant
 ms.assetid: ff2c82cb-c0bb-4556-a812-59aa278bfac5
-ms.openlocfilehash: 562c97b62840285719344d124d8df9944bec25cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: d92481635d553de4cfaa9bd026fd577cd51f6eff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519171"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300060"
 ---
-# <a name="exitsuccess-exitfailure"></a>EXIT_SUCCESS, EXIT_FAILURE
+# <a name="exit_success-exit_failure"></a>EXIT_SUCCESS, EXIT_FAILURE
 
 ## <a name="required-header"></a>Intestazione obbligatoria
 
@@ -23,7 +24,7 @@ ms.locfileid: "50519171"
 #include <stdlib.h>
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Questi sono argomenti per le funzioni [exit](reference/exit-exit-exit.md) e [_exit](reference/exit-exit-exit.md) e i valori restituiti per le funzioni [atexit](reference/atexit.md) e [_onexit](reference/onexit-onexit-m.md).
 
@@ -32,6 +33,6 @@ Questi sono argomenti per le funzioni [exit](reference/exit-exit-exit.md) e [_ex
 |EXIT_SUCCESS|0|
 |EXIT_FAILURE|1|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Costanti globali](../c-runtime-library/global-constants.md)

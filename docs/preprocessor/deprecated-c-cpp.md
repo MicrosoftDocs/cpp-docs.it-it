@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: pragma deprecated'
 title: deprecated (pragma)
 ms.date: 08/29/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - deprecated pragma
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-ms.openlocfilehash: 52d9deb4ad68dacc99fab9d12bc9eb21bc0d360e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b3f7e8bf17e98f6e6f57511f3c0c9a94a9388bf1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231611"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300775"
 ---
 # <a name="deprecated-pragma"></a>deprecated (pragma)
 
@@ -25,7 +26,7 @@ Il **`deprecated`** pragma consente di indicare che una funzione, un tipo o un a
 
 > **#pragma deprecato (** *identificatore1* [ **,** *identifier2* ...] **)**
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Quando il compilatore rileva un identificatore specificato da un **`deprecated`** pragma, emette un avviso del compilatore [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).
 
@@ -72,6 +73,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,32 +1,34 @@
 ---
 title: Espressioni primarie C
-ms.date: 10/21/2018
+description: Descrizione dell'espressione primaria C
+ms.date: 12/08/2020
 helpviewer_keywords:
 - primary expressions
-ms.assetid: 49ac134f-0f8a-44f7-800e-86f31f2bd51c
-ms.openlocfilehash: 4374e88edd24c0ba47a567837794698af060747b
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 41f011cc56f4c4fdf58c6a5fd2e3178267995854
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400458"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300203"
 ---
 # <a name="c-primary-expressions"></a>Espressioni primarie C
 
-Gli operandi nelle espressioni sono denominati "espressioni primarie".
+Le espressioni primarie sono i blocchi predefiniti di espressioni più complesse. Possono essere costanti, identificatori, una [selezione generica](generic_selection.md)o un'espressione tra parentesi.
 
 ## <a name="syntax"></a>Sintassi
 
-*espressione primaria*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identificatore*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*costante*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*valore letterale stringa*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(** *espressione* **)**
+*`primary-expression`*:\
+&nbsp;&nbsp;&nbsp;&nbsp;*`identifier`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`constant`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`string-literal`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**(** *`expression`* **)**\
+&nbsp;&nbsp;&nbsp;&nbsp;*`generic-selection`*
 
-*espressione*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assegnazione-espressione*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*espressione* **,** *assignment-expression*
+*espressione*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*`assignment-expression`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`expression`***,** *`assignment-expression`*
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Operandi ed espressioni](../c-language/operands-and-expressions.md)
+[Selezione](generic_selection.md) 
+ generica [Operandi ed espressioni](../c-language/operands-and-expressions.md)

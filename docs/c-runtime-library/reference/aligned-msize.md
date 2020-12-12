@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _aligned_msize'
 title: _aligned_msize
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - aligned_msize function
 - _aligned_msize function
 ms.assetid: 10995edc-2110-4212-9ca9-5e0220a464f4
-ms.openlocfilehash: 1037c63af17a844959bc72e42da2c33267b43004
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 6b3b7df960cdbf687a1ea51fa98da216ddfed068
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414035"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303700"
 ---
 # <a name="_aligned_msize"></a>_aligned_msize
 
@@ -64,7 +65,7 @@ Offset nell'allocazione di memoria per imporre l'allineamento.
 
 Restituisce le dimensioni (in byte) come intero senza segno.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_aligned_msize** restituisce le dimensioni, in byte, del blocco di memoria allocato da una chiamata a [_aligned_malloc](aligned-malloc.md) o [_aligned_realloc](aligned-realloc.md). I valori di *allineamento* e *offset* devono corrispondere ai valori passati alla funzione che ha allocato il blocco.
 
@@ -86,6 +87,6 @@ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runt
 
 Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Allocazione di memoria](../../c-runtime-library/memory-allocation.md)<br/>

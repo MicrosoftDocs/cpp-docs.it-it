@@ -1,36 +1,37 @@
 ---
+description: 'Altre informazioni su: Attributi #import (C++)'
 title: '#Attributi import (C++)'
 ms.date: 08/29/2019
 helpviewer_keywords:
 - '#import directive, attributes'
 ms.assetid: 2a5085e3-82ee-4f83-892b-0aa6cc13863b
-ms.openlocfilehash: fc2af69025d47a9ea6cea0e2c9e1423151b01606
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 87719ba549efab4e0acf13d7e957c6841900d5fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215293"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300451"
 ---
-# <a name="import-attributes-c"></a>Attributi #import (C++)
+# <a name="import-attributes-c"></a>attributi di #import (C++)
 
-Fornisce collegamenti agli attributi utilizzati con la direttiva `#import`.
+Fornisce collegamenti agli attributi utilizzati con la `#import` direttiva.
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Gli attributi seguenti sono disponibili per la direttiva `#import`.
+Gli attributi seguenti sono disponibili per la `#import` direttiva.
 
 |Attributo|Descrizione|
 |---------------|-----------------|
 |[auto_rename](../preprocessor/auto-rename.md)|Rinomina parole riservate C++ aggiungendo due caratteri di sottolineatura (__) al nome della variabile per risolvere potenziali conflitti di nomi.|
 |[auto_search](../preprocessor/auto-search.md)|Specifica che, quando a una libreria dei tipi viene fatto riferimento tramite #import e tale libreria fa riferimento a un'altra libreria dei tipi, il compilatore può eseguire un'operazione #import implicita per un'altra libreria dei tipi.|
 |[embedded_idl](../preprocessor/embedded-idl.md)|Specifica che la libreria dei tipi è scritta nel file con estensione tlh con il codice generato dall'attributo mantenuto.|
-|[exclude](../preprocessor/exclude-hash-import.md)|Esclude gli elementi dai file di intestazione della libreria dei tipi generati.|
+|[escludere](../preprocessor/exclude-hash-import.md)|Esclude gli elementi dai file di intestazione della libreria dei tipi generati.|
 |[high_method_prefix](../preprocessor/high-method-prefix.md)|Specifica un prefisso da utilizzare quando si assegna un nome alle proprietà e ai metodi di alto livello.|
 |[high_property_prefixes](../preprocessor/high-property-prefixes.md)|Specifica i prefissi alternativi per tre metodi della proprietà.|
 |[implementation_only](../preprocessor/implementation-only.md)|Elimina la generazione del file di intestazione con estensione tlh (file di intestazione primario).|
-|[include()](../preprocessor/include-parens.md)|Disabilita l'esclusione automatica.|
+|[Includi ()](../preprocessor/include-parens.md)|Disabilita l'esclusione automatica.|
 |[inject_statement](../preprocessor/inject-statement.md)|Inserisce il proprio argomento come testo di origine nell'intestazione della libreria dei tipi.|
-|[named_guids](../preprocessor/named-guids.md)|Indica al compilatore di definire e inizializzare le variabili GUID in uno stile precedente, nel formato `LIBID_MyLib`, `CLSID_MyCoClass`, `IID_MyInterface`e `DIID_MyDispInterface`.|
+|[named_guids](../preprocessor/named-guids.md)|Indica al compilatore di definire e inizializzare le variabili GUID in uno stile precedente, nel formato `LIBID_MyLib` ,, `CLSID_MyCoClass` `IID_MyInterface` e `DIID_MyDispInterface` .|
 |[no_auto_exclude](../preprocessor/no-auto-exclude.md)|Disabilita l'esclusione automatica.|
 |[no_dual_interfaces](../preprocessor/no-dual-interfaces.md)|Modifica il modo in cui il compilatore genera funzioni wrapper per i metodi di interfaccia duale.|
 |[no_implementation](../preprocessor/no-implementation.md)|Elimina la generazione dell'intestazione con estensione tli, contenente implementazioni delle funzioni membro wrapper.|
@@ -48,8 +49,8 @@ Gli attributi seguenti sono disponibili per la direttiva `#import`.
 |[rename_search_namespace](../preprocessor/rename-search-namespace.md)|Ha la stessa funzionalità dell'attributo [rename_namespace](../preprocessor/rename-namespace.md) , ma viene usato nelle librerie dei tipi che usano la direttiva #import con l'attributo [auto_search](../preprocessor/auto-search.md) .|
 |[tlbid](../preprocessor/tlbid.md)|Consente di caricare librerie diverse dalla libreria dei tipi primaria.|
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

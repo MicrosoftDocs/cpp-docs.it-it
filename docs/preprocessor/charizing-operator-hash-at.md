@@ -1,5 +1,6 @@
 ---
-title: Operatore charizing (#@)
+description: 'Altre informazioni su: operatore charizing (# @)'
+title: Operatore per la creazione di caratteri (#@)
 ms.date: 08/29/2019
 f1_keywords:
 - '#@'
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - charizing operator
 - '#@ preprocessor operator'
 ms.assetid: dee03314-d27c-4063-965c-64756efbef22
-ms.openlocfilehash: cb2a4e07287edf5ed2d0850ec7d870c8ef307879
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6d04aa24c75153957bd6fd09824f4e94e36fd38f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218540"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300866"
 ---
-# <a name="charizing-operator-"></a>Operatore charizing (#@)
+# <a name="charizing-operator-"></a>Operatore per la creazione di caratteri (#@)
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 L'operatore per la creazione di caratteri può essere utilizzato solo con argomenti di macro. Se `#@` precede un parametro formale nella definizione della macro, l'argomento effettivo viene racchiuso tra virgolette singole e considerato come un carattere quando la macro viene espansa. Ad esempio:
 
@@ -37,10 +38,10 @@ venga espansa a
 a = 'b';
 ```
 
-Non è possibile usare le virgolette singole (`'`) con l'operatore charizing.
+Non è possibile usare le virgolette singole ( `'` ) con l'operatore charizing.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Operatori del preprocessore](../preprocessor/preprocessor-operators.md)

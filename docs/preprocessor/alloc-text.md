@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: alloc_text pragma'
 title: alloc_text (pragma)
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - alloc_text pragma
 - pragmas, alloc_text
 ms.assetid: 1fd7be18-e4f7-4f70-b079-6326f72b871a
-ms.openlocfilehash: c638c2026a493453aeb5aff00ba6273efb5f184e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 496a083c251684ebba004eef00bf466e72211ada
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219443"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301061"
 ---
 # <a name="alloc_text-pragma"></a>alloc_text (pragma)
 
@@ -23,7 +24,7 @@ Assegnare un nome alla sezione di codice in cui devono essere presenti le defini
 
 > **#pragma alloc_text (** "*textsection*" **,** *funzione1* [**,** *funzione2* ...] **)**
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il pragma **alloc_text** non gestisce funzioni membro C++ o funzioni in overload. Si applica solo alle funzioni dichiarate con il collegamento C, ovvero funzioni dichiarate con la specifica di collegamento **extern "C"** . Se si tenta di utilizzare questo pragma in una funzione con collegamento C++, viene generato un errore del compilatore.
 
@@ -39,6 +40,6 @@ Di seguito sono riportate altre limitazioni relative a **alloc_text** :
 
 - Deve essere utilizzato dopo che la funzione è stata dichiarata, ma prima che la funzione sia stata definita.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

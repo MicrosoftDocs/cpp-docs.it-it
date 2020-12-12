@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _lsearch_s'
 title: _lsearch_s
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - _lsearch_s function
 - lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
-ms.openlocfilehash: d8c421eb3c7a6a617ce073cbf5f36416294c1874
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fdc3d8011dac00cd8d19fe414c2ae1aa78120eee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920450"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299956"
 ---
 # <a name="_lsearch_s"></a>_lsearch_s
 
@@ -92,7 +93,7 @@ Se alla funzione vengono passati parametri non validi, viene richiamato il gesto
 |any|any|any|any|zero|**EINVAL**|
 |any|any|**NULL**|any|any|**EINVAL**|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_lsearch_s** esegue una ricerca lineare per la *chiave* del valore in una matrice di elementi *numerici* , ciascuno di byte di *larghezza* . A differenza di **bsearch_s**, **_lsearch_s** non richiede che la matrice sia ordinata. Se *Key* non viene trovato, **_lsearch_s** lo aggiunge alla fine della matrice e incrementa il *numero*.
 
@@ -110,7 +111,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Ricerca e ordinamento](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch_s](bsearch-s.md)<br/>

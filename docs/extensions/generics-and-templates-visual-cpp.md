@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: generics e Templates (C++/CLI)'
 title: Generics e modelli (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - generics [C++], vs. templates
 - templates, C++
 ms.assetid: 63adec79-b1dc-4a1a-a21d-b8a72a8fce31
-ms.openlocfilehash: 567286ee24e9df968b2d352489fe12f2735854eb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a62e765255896ef75d4cda73b66e7be0298b3690
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172347"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301685"
 ---
 # <a name="generics-and-templates-ccli"></a>Generics e modelli (C++/CLI)
 
@@ -92,6 +93,6 @@ int main() {
 F
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Generics](generics-cpp-component-extensions.md)

@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: pragma C'
 title: Pragma C
 ms.date: 07/26/2020
 helpviewer_keywords:
 - pragmas, C/C++
 ms.assetid: 3d6d36b4-d565-4632-a4cd-e39aeaded5ad
-ms.openlocfilehash: ce8efb54eacf40a9feb7b629c2a61a32b3a71b79
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 45b899dc3266390095d70e8f74f6c6e5a58fc6c4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845211"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300242"
 ---
 # <a name="c-pragmas"></a>Pragma C
 
@@ -68,6 +69,6 @@ Vedere [direttive pragma e la `__Pragma` parola chiave](../preprocessor/pragma-d
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [File di origine e programmi di origine](../c-language/source-files-and-source-programs.md)

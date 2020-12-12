@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: impostazioni di controllo, creazione guidata controllo ActiveX MFC'
 title: Impostazioni controllo, Creazione guidata controllo ActiveX MFC
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-ms.openlocfilehash: 1578ca7f4134e51e0ba0d3c2b247dcafcb0fbd67
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 31e8c5fd257128e17017d3d0fa801fc812f99397
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405013"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301594"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Impostazioni controllo, Creazione guidata controllo ActiveX MFC
 
@@ -23,9 +24,9 @@ Per ulteriori informazioni su come selezionare le opzioni in questa pagina per o
 
 - **Crea controllo basato su**
 
-   In questo elenco è possibile selezionare il tipo di controllo da cui il controllo deve ereditare. L'elenco è un subset delle classi di controlli disponibili per `CreateWindowEx` e altri controlli comuni specificati in commctrl. h. La selezione determina lo stile del controllo nella `PreCreateWindow` funzione nel file *ProjName*CTRL. cpp. Per ulteriori informazioni, vedere [controlli ActiveX MFC: sottoclasse di un controllo Windows](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
+   In questo elenco è possibile selezionare il tipo di controllo da cui il controllo deve ereditare. L'elenco è un subset delle classi di controlli disponibili per `CreateWindowEx` e altri controlli comuni specificati in commctrl. h. La selezione determina lo stile del controllo nella `PreCreateWindow` funzione nel file *ProjName* CTRL. cpp. Per ulteriori informazioni, vedere [controlli ActiveX MFC: sottoclasse di un controllo Windows](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
 
-   |Controllo|Descrizione|
+   |Controllo|Description|
    |-------------|-----------------|
    |**PULSANTE**|Controllo pulsante di Windows|
    |**COMBOBOX**|Controllo casella combinata di Windows|
@@ -59,7 +60,7 @@ Per ulteriori informazioni su come selezionare le opzioni in questa pagina per o
    > [!NOTE]
    > Il modo in cui l'utente accede alla guida per il controllo dipende dal modo in cui è stata implementata la guida e dal fatto che sia stata integrata la guida del controllo per la guida del contenitore.
 
-   Quando si seleziona questa opzione, il `AboutBox` metodo di controllo viene inserito nella classe del controllo del progetto (C*ProjName*CTRL. cpp) e viene aggiunto AboutBox alla mappa di invio del progetto. Questa opzione è selezionata per impostazione predefinita.
+   Quando si seleziona questa opzione, il `AboutBox` metodo di controllo viene inserito nella classe del controllo del progetto (C *ProjName* CTRL. cpp) e viene aggiunto AboutBox alla mappa di invio del progetto. Questa opzione è selezionata per impostazione predefinita.
 
 - **Codice di disegno ottimizzato**
 
@@ -71,11 +72,11 @@ Per ulteriori informazioni su come selezionare le opzioni in questa pagina per o
 
 - **Contesto di dispositivo non ritagliato**
 
-   Esegue l'override di [COleControl:: GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags) nell'intestazione del controllo (*ProjName*CTRL. h) per disabilitare la chiamata a `IntersectClipRect` effettuata da `COleControl` . Quando si seleziona questa opzione, viene fornito un vantaggio di piccola velocità. Se si seleziona **attivazione senza finestra**, questa funzionalità non è disponibile. Per ulteriori informazioni, vedere [utilizzo di un contesto di dispositivo non ritagliato](../../mfc/using-an-unclipped-device-context.md).
+   Esegue l'override di [COleControl:: GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags) nell'intestazione del controllo (*ProjName* CTRL. h) per disabilitare la chiamata a `IntersectClipRect` effettuata da `COleControl` . Quando si seleziona questa opzione, viene fornito un vantaggio di piccola velocità. Se si seleziona **attivazione senza finestra**, questa funzionalità non è disponibile. Per ulteriori informazioni, vedere [utilizzo di un contesto di dispositivo non ritagliato](../../mfc/using-an-unclipped-device-context.md).
 
 - **Attivazione senza sfarfallio**
 
-   Elimina le operazioni di disegno e lo sfarfallio visivo associato che si verificano tra gli stati attivo e inattivo del controllo. Se si seleziona **attivazione senza finestra**, questa funzionalità non è disponibile. Quando si imposta questa opzione, il `noFlickerActivate` flag è uno dei flag restituiti da [COleControl:: GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). Per altre informazioni, vedere [fornire l'attivazione senza sfarfallio](../../mfc/providing-flicker-free-activation.md).
+   Elimina le operazioni di disegno e lo sfarfallio visivo associato che si verificano tra gli stati attivo e inattivo del controllo. Se si seleziona **attivazione senza finestra**, questa funzionalità non è disponibile. Quando si imposta questa opzione, il `noFlickerActivate` flag è uno dei flag restituiti da [COleControl:: GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). Per ulteriori informazioni, vedere la pagina relativa alla [fornitura di Flicker-Free Activation](../../mfc/providing-flicker-free-activation.md).
 
 - **Disponibile nella finestra di dialogo Inserisci oggetto**
 
@@ -93,8 +94,8 @@ Per ulteriori informazioni su come selezionare le opzioni in questa pagina per o
 
    Consente di reimpostare i dati asincroni precedenti e di avviare un nuovo carico della proprietà asincrona del controllo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Creazione guidata controllo ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
-[Impostazioni applicazione, Creazione guidata controllo ActiveX MFC](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)<br/>
-[Nomi controllo, Creazione guidata controllo ActiveX MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)
+[Impostazioni applicazione, creazione guidata controllo ActiveX MFC](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)<br/>
+[Nomi dei controlli, creazione guidata controllo ActiveX MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)

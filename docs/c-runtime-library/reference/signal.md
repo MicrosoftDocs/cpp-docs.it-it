@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Signal'
 title: signal
 ms.date: 04/12/2018
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 - signal
 helpviewer_keywords:
 - signal function
-ms.openlocfilehash: 1dacf23b6c4f698b61c5bfe2dd2fb1ff7ee389f5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 601e8108f7078356cdd1c6642deb05762b970e00
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216752"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303453"
 ---
 # <a name="signal"></a>signal
 
@@ -53,15 +54,15 @@ Il secondo parametro è un puntatore alla funzione da eseguire. Il primo paramet
 
 ## <a name="return-value"></a>Valore restituito
 
-**Signal** restituisce il valore precedente di Func associato al segnale specificato. Se ad esempio il valore precedente di *Func* è **SIG_IGN**, viene **SIG_IGN**anche il valore restituito. Un valore restituito di **SIG_ERR** indica un errore. in tal caso, **errno** viene impostato su **EINVAL**.
+**Signal** restituisce il valore precedente di Func associato al segnale specificato. Se ad esempio il valore precedente di *Func* è **SIG_IGN**, viene **SIG_IGN** anche il valore restituito. Un valore restituito di **SIG_ERR** indica un errore. in tal caso, **errno** viene impostato su **EINVAL**.
 
 Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **Signal** consente a un processo di scegliere uno dei diversi modi per gestire un segnale di interrupt dal sistema operativo. L'argomento *sig* è l'interrupt a cui risponde il **segnale** . deve corrispondere a una delle costanti manifeste seguenti, definite in SIGNAL. H.
 
-|valore *sig*|Descrizione|
+|valore *sig*|Description|
 |-----------------|-----------------|
 |**SIGABRT**|Terminazione anomala|
 |**SIGFPE**|Errore di virgola mobile|
@@ -91,7 +92,7 @@ Dato che le routine del gestore di segnale vengono in genere chiamate in modo as
 
 - Non eseguire STDIO di basso livello o STDIO. Routine di I/O H (ad esempio, **printf** o **fread**).
 
-- Non chiamare le routine dell'heap o qualsiasi routine che usi le routine dell'heap, ad esempio **malloc**, **_strdup**o **_putenv**. Per altre informazioni, vedere [malloc](malloc.md).
+- Non chiamare le routine dell'heap o qualsiasi routine che usi le routine dell'heap, ad esempio **malloc**, **_strdup** o **_putenv**. Per altre informazioni, vedere [malloc](malloc.md).
 
 - Non usare funzioni che generano una chiamata di sistema, ad esempio **_getcwd** o **Time**.
 
@@ -105,7 +106,7 @@ Un programma deve contenere codice a virgola mobile se è necessario intercettar
 volatile double d = 0.0f;
 ```
 
-I segnali **SIGILL** e **SIGTERM** non vengono generati in Windows. Sono incluso per compatibilità con ANSI. Pertanto, è possibile impostare i gestori di segnale per questi segnali usando **Signal**ed è anche possibile generare questi segnali in modo esplicito chiamando [Raise](raise.md).
+I segnali **SIGILL** e **SIGTERM** non vengono generati in Windows. Sono incluso per compatibilità con ANSI. Pertanto, è possibile impostare i gestori di segnale per questi segnali usando **Signal** ed è anche possibile generare questi segnali in modo esplicito chiamando [Raise](raise.md).
 
 Le impostazioni del segnale non vengono mantenute nei processi generati che vengono creati dalle chiamate alle funzioni [_exec](../../c-runtime-library/exec-wexec-functions.md) o [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) . Le impostazioni del segnale del nuovo processo vengono reimpostate sui valori predefiniti.
 
@@ -160,10 +161,10 @@ R6010
 - abort() has been called
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
-[abort](abort.md)<br/>
+[interruzione](abort.md)<br/>
 [_exec, funzioni _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_fpreset](fpreset.md)<br/>

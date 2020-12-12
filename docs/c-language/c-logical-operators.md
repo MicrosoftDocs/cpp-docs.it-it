@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: operatori logici C'
 title: Operatori logici C
 ms.date: 06/14/2018
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - '&& operator'
 - logical OR operator
 ms.assetid: c0a4e766-ad56-4300-bf76-b28dc0e19b43
-ms.openlocfilehash: 8f59ad927dd8ee62dbfc80fd238677bf1b646f9c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 58527e4702abce6d05f7f8e6d5aed2d7c17eca94
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227998"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300307"
 ---
 # <a name="c-logical-operators"></a>Operatori logici C
 
@@ -32,7 +33,7 @@ Gli operatori logici eseguono operazioni logiche AND ( **&&** ) e OR logico ( **
 &nbsp;&nbsp;&nbsp;&nbsp;*logical-AND-Expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Logical- *or-expression* **&#124;&#124;** *Logical-and-Expression*    
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Gli operatori logici non eseguono le conversioni aritmetiche comuni. Al contrario, tali operatori valutano ogni operando in termini di equivalenza con 0. Il risultato di un'operazione logica può essere 0 o 1. Il tipo del risultato è **`int`** .
 
@@ -45,7 +46,7 @@ Gli operatori logici C sono descritti di seguito:
 
 Gli operandi delle espressioni AND logico e OR logico vengono valutati da sinistra a destra. Se il valore del primo operando è sufficiente per determinare il risultato dell'operazione, il secondo operando non viene valutato. Questa condizione viene denominata anche "valutazione short circuit". Dopo il primo operando è presente un punto di sequenza. Per altre informazioni, vedere [Punti di sequenza](../c-language/c-sequence-points.md).
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Gli esempi seguenti visualizzano gli operatori logici:
 
@@ -64,7 +65,7 @@ printf( "%d" , (x == w || x == y || x == z) );
 
 In questo esempio se `x` è uguale a `w`, `y` o `z`, il secondo argomento della funzione **printf** restituisce true e viene stampato il valore 1. In caso contrario, restituisce false e il valore 0 viene formattato. Appena una delle condizioni restituisce true, la restituzione viene interrotta.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Operatore AND logico: &&](../cpp/logical-and-operator-amp-amp.md)
 - [Operatore OR logico: &#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)

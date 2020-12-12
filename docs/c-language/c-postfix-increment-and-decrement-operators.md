@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: operatori di incremento e decremento suffisso C'
 title: Operatori di incremento e decremento in forma suffissa C
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - scalar operators
 - types [C], scalar
 ms.assetid: 56ba218d-65f9-405f-8684-caccc0ca33aa
-ms.openlocfilehash: 8c2e3ba50ce3e768b377a588cd3e82ad29df79ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5e230f1e1e51a1f48b29436705f4f645be9ed44
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325575"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300216"
 ---
 # <a name="c-postfix-increment-and-decrement-operators"></a>Operatori di incremento e decremento in forma suffissa C
 
@@ -32,6 +33,6 @@ if( var++ > 0 )
 
 In questo esempio la variabile `var` viene confrontata con 0, quindi viene incrementata. Se prima di essere incrementato `var` era positivo, viene eseguita l'istruzione successiva. Innanzitutto, il valore dell'oggetto a cui puntava `q` viene assegnato all'oggetto a cui puntava `p`. Quindi, `q` e `p` vengono incrementati.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Operatori di incremento e decremento in forma suffissa: ++ e --](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)
+[Operatori di incremento e decremento suffisso: + + e--](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)

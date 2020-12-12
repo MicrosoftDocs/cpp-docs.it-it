@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: FOPEN_MAX, _SYS_OPEN'
 title: FOPEN_MAX, _SYS_OPEN
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - maximum number of files
 - open files, maximum
 ms.assetid: 39cf5196-250a-459d-ae90-ce3d99f79039
-ms.openlocfilehash: 8014cf19ebd1c61a077812e2938b3093ce040435
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: ab3d71c221964450e172e7dcade731653d7f69e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742740"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303936"
 ---
-# <a name="fopenmax-sysopen"></a>FOPEN_MAX, _SYS_OPEN
+# <a name="fopen_max-_sys_open"></a>FOPEN_MAX, _SYS_OPEN
 
 ## <a name="syntax"></a>Sintassi
 
@@ -31,6 +32,6 @@ ms.locfileid: "57742740"
 
 Si tratta del numero massimo di file che possono essere aperti contemporaneamente. `FOPEN_MAX` è il nome compatibile con ANSI. `_SYS_OPEN` viene fornito per compatibilità con il codice esistente.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Costanti globali](../c-runtime-library/global-constants.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: longjmp'
 title: longjmp
 ms.date: 08/14/2018
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - restoring stack environment and execution locale
 - longjmp function
 ms.assetid: 0e13670a-5130-45c1-ad69-6862505b7a2f
-ms.openlocfilehash: 4f737818afe7136262362e4fe996745064568758
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bfcbac2ea54e167f65f0d303e08d6450e53ff0e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218559"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299982"
 ---
 # <a name="longjmp"></a>longjmp
 
@@ -53,9 +54,9 @@ Variabile in cui è archiviato l'ambiente.
 *value*<br/>
 Valore da restituire alla chiamata di `setjmp`.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **longjmp** ripristina un ambiente dello stack e le impostazioni locali di esecuzione salvate in precedenza in *ENV* da `setjmp` . `setjmp`e **longjmp** forniscono un modo per eseguire un non locale **`goto`** ; vengono in genere usate per passare il controllo di esecuzione alla gestione degli errori o al codice di ripristino in una routine chiamata in precedenza senza utilizzare le convenzioni di chiamata e di ritorno normali.
+La funzione **longjmp** ripristina un ambiente dello stack e le impostazioni locali di esecuzione salvate in precedenza in *ENV* da `setjmp` . `setjmp` e **longjmp** forniscono un modo per eseguire un non locale **`goto`** ; vengono in genere usate per passare il controllo di esecuzione alla gestione degli errori o al codice di ripristino in una routine chiamata in precedenza senza utilizzare le convenzioni di chiamata e di ritorno normali.
 
 Una chiamata a `setjmp` fa sì che l'ambiente dello stack corrente venga salvato in *ENV*. Una chiamata successiva a **longjmp** ripristina l'ambiente salvato e restituisce il controllo al punto immediatamente successivo alla `setjmp` chiamata corrispondente. L'esecuzione riprende come se la chiamata `setjmp` avesse appena restituito *value*. I valori di tutte le variabili (eccetto le variabili di registro) accessibili al controllo di ricezione di routine contengono i valori che avevano quando è stato chiamato **longjmp** . I valori delle variabili di registro sono imprevedibili. Il valore restituito da `setjmp` deve essere diverso da zero. Se si passa 0 come *value*, il valore restituito effettivo viene sostituito con 1.
 
@@ -94,7 +95,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 Vedere l'esempio per [_fpreset](fpreset.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [setjmp](setjmp.md)

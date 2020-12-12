@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classi generiche (C++/CLI)'
 title: Classi generiche (C++/CLI)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-ms.openlocfilehash: fd287d8e9fe08ccd42436569eafee3f6935700e2
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 6b27f5220ab45fb62858bca2cec9ba0e46e9ec0a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414126"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301763"
 ---
 # <a name="generic-classes-ccli"></a>Classi generiche (C++/CLI)
 
@@ -41,7 +42,7 @@ Nella sintassi precedente vengono usati i termini seguenti:
 (Facoltativo) Informazioni dichiarative aggiuntive. Per ulteriori informazioni sugli attributi e sulle classi di attributo, vedere Attributi.
 
 *class-key*<br/>
-**`class`** O**`typename`**
+**`class`** O **`typename`**
 
 *type-parameter-identifier(s)*: elenco delimitato da virgole di identificatori che specificano i nomi dei parametri di tipo.
 
@@ -56,7 +57,7 @@ Elenco (non delimitato da virgole) di clausole **where** che specificano i vinco
 *accessibility-modifiers*<br/>
 Modificatori di accessibilità per la classe generica. Per il Windows Runtime, l'unico modificatore consentito è **`private`** . Per la Common Language Runtime, i modificatori consentiti sono **`private`** e **`public`** .
 
-*identificatore*<br/>
+*identifier*<br/>
 Nome della classe generica, qualsiasi identificatore C# valido.
 
 *modificatori*<br/>
@@ -710,6 +711,6 @@ The field is assigned the double value: 0.123
 The field is assigned the string: Hello Generics!
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Generics](generics-cpp-component-extensions.md)

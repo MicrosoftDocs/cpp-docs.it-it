@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _mbccpy_s, _mbccpy_s_l'
 title: _mbccpy_s, _mbccpy_s_l
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-ms.openlocfilehash: 85db4e478b070823bb14028018d918e0f3cabbd7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6764c100fb52b025db2d8f79a72c7c6420a64bee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920314"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303531"
 ---
 # <a name="_mbccpy_s-_mbccpy_s_l"></a>_mbccpy_s, _mbccpy_s_l
 
@@ -102,11 +103,11 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Zero se con esito positivo; un codice di errore in caso di errore. Se *src* o *dest* è **null**o se vengono copiati più di **buffSizeInBytes** byte in *dest*, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono **EINVAL** e **errno** viene impostato su **EINVAL**.
+Zero se con esito positivo; un codice di errore in caso di errore. Se *src* o *dest* è **null** o se vengono copiati più di **buffSizeInBytes** byte in *dest*, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono **EINVAL** e **errno** viene impostato su **EINVAL**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **_mbccpy_s** copia un carattere multibyte da *src* a *dest*. Se *src* non punta al byte di apertura di un carattere multibyte come determinato da una chiamata implicita a [_ismbblead](ismbblead-ismbblead-l.md), viene copiato il singolo byte a cui punta *src* . Se *src* punta a un byte di apertura, ma il byte seguente è 0 e pertanto non è valido, 0 viene copiato in *dest*, **errno** viene impostato su **EILSEQ**e la funzione restituisce **EILSEQ**.
+La funzione **_mbccpy_s** copia un carattere multibyte da *src* a *dest*. Se *src* non punta al byte di apertura di un carattere multibyte come determinato da una chiamata implicita a [_ismbblead](ismbblead-ismbblead-l.md), viene copiato il singolo byte a cui punta *src* . Se *src* punta a un byte di apertura, ma il byte seguente è 0 e pertanto non è valido, 0 viene copiato in *dest*, **errno** viene impostato su **EILSEQ** e la funzione restituisce **EILSEQ**.
 
 **_mbccpy_s** non aggiunge un carattere di terminazione null. Tuttavia, se *src* punta a un carattere null, il valore null viene copiato in *dest* (si tratta semplicemente di una normale copia a byte singolo).
 
@@ -119,7 +120,7 @@ Il valore in *pCopied* è riempito con il numero di byte copiati. I valori possi
 |byte di apertura non seguito da 0|byte di apertura non seguito da 0|2|0|
 |byte di apertura seguito da 0|0|1|**EILSEQ**|
 
-Si noti che la seconda riga è semplicemente un caso speciale della prima. Si noti inoltre che la tabella presuppone *buffSizeInBytes* >= *pCopied*.
+Si noti che la seconda riga è semplicemente un caso speciale della prima. Si noti inoltre che la tabella presuppone *buffSizeInBytes*  >=  *pCopied*.
 
 **_mbccpy_s** usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. **_mbccpy_s_l** è identico a **_mbccpy_s** ad eccezione del fatto che **_mbccpy_s_l** usa le impostazioni locali passate per qualsiasi comportamento dipendente dalle impostazioni locali.
 
@@ -142,8 +143,8 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Locale](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
