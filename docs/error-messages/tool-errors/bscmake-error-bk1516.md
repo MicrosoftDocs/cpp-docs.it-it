@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: BSCMAKE Error BK1516'
 title: Errore BK1516 di BSCMAKE
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BK1516
 ms.assetid: 7f4a8391-f857-4ee8-8e26-34868ca84e29
-ms.openlocfilehash: 4edfbdbb070add0c77faefeb77c8db627c260c98
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f63290aeb4ec72fe98204360ad09c7b0632ce07e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80197549"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97237946"
 ---
 # <a name="bscmake-error-bk1516"></a>Errore BK1516 di BSCMAKE
 

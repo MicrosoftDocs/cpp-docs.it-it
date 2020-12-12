@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: aggiungere un evento'
 title: Aggiungere un evento
 ms.date: 11/12/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - events [C++], ActiveX controls
 - add event wizard [C++]
 ms.assetid: fe34832a-edfc-4f86-aacb-8df77001873d
-ms.openlocfilehash: 1d5a8f5666dd04e00f8a438fdbf00320c37e14f4
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
-ms.translationtype: HT
+ms.openlocfilehash: c369be0fe241867b101ab458344ae706b1fd440d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693425"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240819"
 ---
 # <a name="add-an-event"></a>Aggiungere un evento
 
@@ -44,13 +45,13 @@ Questa procedura guidata aggiunge un evento al progetto di un controllo ActiveX 
 
    Imposta il nome usato dai client di automazione per richiedere un evento dalla classe. Immettere un nome o selezionarne uno dall'elenco.
 
-- **Tipo evento**
+- **Tipo di evento**
 
-   Indica il tipo di evento da aggiungere. Disponibile solo se si seleziona un'opzione dall'elenco **Nome evento**.
+   Indica il tipo di evento da aggiungere. Disponibile solo se si seleziona dall'elenco **nome evento** .
 
-   |Opzione|Descrizione|
+   |Opzione|Description|
    |------------|-----------------|
-   |**Predefinito**|Specifica l'implementazione di un evento predefinito per la classe, ad esempio il clic su un pulsante. Gli eventi predefiniti sono definiti nella libreria MFC (Microsoft Foundation Class).|
+   |**Grafico azionario**|Specifica l'implementazione di un evento predefinito per la classe, ad esempio il clic su un pulsante. Gli eventi predefiniti sono definiti nella libreria MFC (Microsoft Foundation Class).|
    |**Personalizzato**|Specifica l'uso dell'implementazione personalizzata dell'evento.|
 
 - **Nome interno**
@@ -70,7 +71,7 @@ Questa procedura guidata aggiunge un evento al progetto di un controllo ActiveX 
    > [!NOTE]
    > Se si specifica un nome di parametro e quindi si seleziona **Fine** prima di selezionare **Aggiungi**, il parametro non viene aggiunto all'evento. È necessario trovare il metodo e inserire il parametro manualmente.
 
-- **Aggiungi**
+- **Aggiungere**
 
    Aggiunge il parametro specificato in **Nome parametro** e il relativo tipo all'**Elenco parametri**. Selezionare **Aggiungi** per aggiungere un parametro all'elenco.
 
@@ -78,6 +79,6 @@ Questa procedura guidata aggiunge un evento al progetto di un controllo ActiveX 
 
    Rimuove il parametro selezionato nell'**Elenco parametri** dall'elenco.
 
-- **Elenco parametri**
+- **Elenco di parametri**
 
    Visualizza tutti i parametri e i relativi tipi aggiunti per il metodo. Quando si aggiungono i parametri, la procedura guidata aggiorna l'**Elenco parametri** in modo da visualizzare ogni parametro con il relativo tipo.

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CKeyboardManager'
 title: Classe CKeyboardManager
 ms.date: 11/04/2016
 f1_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: e67bbb18b6a87edfaa4bc4c410ec28eb613ed51d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9296c1d81cc2d915fe8ba84bfeedb64ae546fdd5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841493"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236893"
 ---
 # <a name="ckeyboardmanager-class"></a>Classe CKeyboardManager
 
@@ -47,17 +48,17 @@ Gestisce le tabelle di tasti di scelta rapida per la finestra cornice principale
 class CKeyboardManager : public CObject
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[CKeyboardManager:: CKeyboardManager](#ckeyboardmanager)|Costruisce un oggetto `CKeyboardManager`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[CKeyboardManager:: CleanUp](#cleanup)|Cancella le tabelle dei tasti di scelta rapida.|
 |[CKeyboardManager:: FindDefaultAccelerator](#finddefaultaccelerator)|Recupera il tasto di scelta rapida predefinito per il comando e la finestra specificati.|
@@ -71,7 +72,7 @@ class CKeyboardManager : public CObject
 |[CKeyboardManager:: TranslateCharToUpper](#translatechartoupper)|Converte un carattere nel relativo registro superiore.|
 |[CKeyboardManager:: UpdateAccelTable](#updateacceltable)|Aggiorna una tabella dei tasti di scelta rapida con una nuova tabella dei tasti di scelta rapida.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 I membri di questa classe consentono di salvare e caricare le tabelle dei tasti di scelta rapida nel registro di sistema di Windows, utilizzare un modello per aggiornare le tabelle dei tasti scorciatoie e trovare il tasto di scelta rapida predefinito per un comando in una finestra cornice. Inoltre, l' `CKeyboardManager` oggetto consente di controllare la modalità di visualizzazione dei tasti di scelta rapida per l'utente.
 
@@ -101,7 +102,7 @@ Costruisce un oggetto `CKeyboardManager`.
 CKeyboardManager();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Nella maggior parte dei casi, non è necessario creare direttamente un oggetto `CKeyboardManager` . Per impostazione predefinita, il Framework ne crea uno. Per ottenere un puntatore a `CKeyboardManager` , chiamare [CWinAppEx:: GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager). Se si crea un'operazione manualmente, è necessario inizializzarla con il metodo [CWinAppEx:: InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager).
 
@@ -113,7 +114,7 @@ Libera le `CKeyboardManager` risorse e cancella tutti i mapping dei tasti di sce
 static void CleanUp();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni sui tasti di scelta rapida, vedere [personalizzazione della tastiera e del mouse](../../mfc/keyboard-and-mouse-customization.md).
 
@@ -136,7 +137,7 @@ static BOOL FindDefaultAccelerator(
 *uiCmd*<br/>
 in ID di comando.
 
-*Str*<br/>
+*str*<br/>
 [out] Riferimento a un oggetto `CString`.
 
 *pWndFrame*<br/>
@@ -149,7 +150,7 @@ in Specifica se la finestra cornice è la finestra cornice predefinita.
 
 Diverso da zero se viene trovato il collegamento. in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo cerca il comando specificato da *uiCmd* e recupera il tasto di scelta rapida predefinito. Il metodo accetta quindi la stringa associata a questo tasto di scelta rapida e scrive il valore nel parametro *Str* .
 
@@ -183,7 +184,7 @@ in Parametro booleano che indica se *pWndFrame* è la finestra cornice predefini
 
 TRUE se il tasto di scelta rapida è gestito. FALSE se la chiave non è gestita o se *pWndFrame* è null.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I parametri di input devono corrispondere alla voce nella tabella Accelerator sia per *nPer* che per *fVirt* per determinare se un tasto di scelta rapida è gestito in *pWndFrame*.
 
@@ -204,7 +205,7 @@ in Carattere verificato da questo metodo.
 
 Diverso da zero se il carattere è stampabile, zero in caso contrario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo ha esito negativo se una chiamata a [GetKeyboardState](/windows/win32/api/winuser/nf-winuser-getkeyboardstate) ha esito negativo.
 
@@ -220,7 +221,7 @@ static BOOL IsShowAllAccelerators();
 
 Diverso da zero se l'applicazione elenca tutti i tasti di scelta rapida per i comandi di menu; 0 se l'applicazione Visualizza solo i tasti di scelta rapida predefiniti.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Nell'applicazione sono elencati i tasti di scelta rapida per i comandi di menu nella barra dei menu. Usare la funzione [CKeyboardManager:: ShowAllAccelerators](#showallaccelerators) per controllare se l'applicazione elenca tutti i tasti di scelta rapida o solo i tasti di scelta rapida predefiniti.
 
@@ -246,7 +247,7 @@ in Puntatore a una finestra cornice da utilizzare come finestra predefinita.
 
 Diverso da zero se lo stato è stato caricato correttamente o 0 in caso contrario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il parametro *lpszProfileName* è null, questo metodo controlla il percorso del registro di sistema predefinito per i `CKeyboardManager` dati. Il percorso predefinito del registro di sistema viene specificato dalla [classe CWinAppEx](../../mfc/reference/cwinappex-class.md). I dati devono essere scritti in precedenza con il metodo [CKeyboardManager:: SaveState](#savestate).
 
@@ -260,7 +261,7 @@ Ricarica le tabelle dei tasti di scelta rapida dalla risorsa dell'applicazione.
 void ResetAll();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione Cancella i collegamenti archiviati nell'istanza di `CKeyboardManager` . Quindi ricarica lo stato del gestore della tastiera dalla risorsa dell'applicazione.
 
@@ -286,7 +287,7 @@ in Puntatore a una finestra cornice che diventa la finestra predefinita.
 
 Diverso da zero se lo stato del gestore della tastiera è stato salvato correttamente oppure 0 in caso contrario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il parametro *lpszProfileName* è null, questo metodo scriverà lo `CKeyboardManager` stato nel percorso predefinito specificato dalla [classe CWinAppEx](../../mfc/reference/cwinappex-class.md). Se si specifica un percorso, è possibile caricare i dati in un secondo momento usando il metodo [CKeyboardManager:: LoadState](#loadstate).
 
@@ -310,7 +311,7 @@ in Se TRUE, verranno visualizzati tutti i tasti di scelta rapida. Se FALSE, verr
 *lpszDelimiter*<br/>
 in Stringa da inserire tra i tasti di scelta rapida. Questo delimitatore non ha alcun effetto se viene visualizzato solo un tasto di scelta rapida.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, se a un comando è associato più di un tasto di scelta rapida, verrà visualizzato solo il primo tasto di scelta rapida. Questa funzione consente di elencare tutti i tasti di scelta rapida associati a tutti i comandi.
 
@@ -371,11 +372,11 @@ in Handle per la nuova tabella dei collegamenti.
 
 Diverso da zero se il metodo ha esito positivo; in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa funzione per sostituire la tabella dei collegamenti esistente con i nuovi tasti di scelta rapida per diversi oggetti della finestra cornice. La funzione riceve un modello di documento come parametro per ottenere l'accesso a tutti gli oggetti della finestra cornice connessi al modello di documento specificato.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>

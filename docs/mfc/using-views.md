@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso delle visualizzazioni'
 title: Utilizzo delle visualizzazioni
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -13,40 +14,40 @@ helpviewer_keywords:
 - user input [MFC], interpreting through view class [MFC]
 - view classes [MFC], role in displaying application data
 ms.assetid: dc3de6ad-5c64-4317-8f10-8bdcc38cdbd5
-ms.openlocfilehash: 81668f7409f2b1a4480bde958dc06ce1156e03fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f17855c1389da44630a21830033c4457db6e3703
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411422"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236646"
 ---
 # <a name="using-views"></a>Utilizzo delle visualizzazioni
 
-Le responsabilità della visualizzazione sono per visualizzare graficamente i dati del documento per l'utente e per accettare e l'interpretazione dell'input dell'utente come operazioni sul documento. Le attività nella scrittura di classe di visualizzazione sono:
+Le responsabilità della visualizzazione consentono di visualizzare graficamente i dati del documento all'utente e di accettare e interpretare l'input dell'utente come operazioni nel documento. Le attività in scrittura della classe di visualizzazione sono:
 
-- Scrivere la classe di visualizzazione [OnDraw](../mfc/reference/cview-class.md#ondraw) funzione membro, che esegue il rendering dei dati del documento.
+- Scrivere la funzione membro [ondisegnare](../mfc/reference/cview-class.md#ondraw) della classe di visualizzazione che esegue il rendering dei dati del documento.
 
-- Connettere i messaggi di Windows appropriati e oggetti dell'interfaccia utente, ad esempio voci di menu per le funzioni membro di gestore di messaggi nella classe di visualizzazione.
+- Connettere i messaggi Windows appropriati e gli oggetti dell'interfaccia utente, ad esempio le voci di menu, alle funzioni membro del gestore di messaggi nella classe di visualizzazione.
 
-- Implementare i gestori per l'interpretazione dell'input dell'utente.
+- Implementare tali gestori per interpretare l'input dell'utente.
 
-Inoltre, potrebbe essere necessario eseguire l'override di altri `CView` funzioni membro nella classe vista derivata. In particolare, è possibile eseguire l'override [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) per eseguire un'inizializzazione speciale per la visualizzazione e [OnUpdate](../mfc/reference/cview-class.md#onupdate) eseguire qualsiasi elaborazione speciale necessari appena prima che la vista viene ridisegnato. Per i documenti con più pagine, è anche necessario eseguire l'override [OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting) per inizializzare la finestra di dialogo di stampa con il numero di pagine da stampare e altre informazioni. Per altre informazioni sull'override `CView` funzioni membro, vedere la classe [CView](../mfc/reference/cview-class.md) nel *riferimenti alla libreria MFC*.
+Inoltre, potrebbe essere necessario eseguire l'override di altre `CView` funzioni membro nella classe di visualizzazione derivata. In particolare, è possibile eseguire l'override di [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) per eseguire un'inizializzazione speciale per la vista e [OnUpdate](../mfc/reference/cview-class.md#onupdate) per eseguire qualsiasi elaborazione speciale necessaria immediatamente prima che la visualizzazione venga ridisegnata. Per i documenti multipagina, è inoltre necessario eseguire l'override di [OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting) per inizializzare la finestra di dialogo Stampa con il numero di pagine da stampare e altre informazioni. Per ulteriori informazioni sull'override delle `CView` funzioni membro, vedere la classe [CView](../mfc/reference/cview-class.md) in *riferimenti a MFC*.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
 - [Classi visualizzazione derivate disponibili in MFC](../mfc/derived-view-classes-available-in-mfc.md)
 
 - [Disegno in una visualizzazione](../mfc/drawing-in-a-view.md)
 
-- [Interpretazione dell'input utente attraverso una visualizzazione](../mfc/interpreting-user-input-through-a-view.md)
+- [Interpretazione dell'input utente tramite una visualizzazione](../mfc/interpreting-user-input-through-a-view.md)
 
-- [Il ruolo della visualizzazione nella stampa](../mfc/role-of-the-view-in-printing.md)
+- [Ruolo della visualizzazione nella stampa](../mfc/role-of-the-view-in-printing.md)
 
-- [Lo scorrimento e ridimensionamento di visualizzazioni](../mfc/scrolling-and-scaling-views.md)
+- [Scorrimento e ridimensionamento di visualizzazioni](../mfc/scrolling-and-scaling-views.md)
 
 - [Inizializzazione e pulizia di documenti e visualizzazioni](../mfc/initializing-and-cleaning-up-documents-and-views.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Architettura documento/visualizzazione](../mfc/document-view-architecture.md)<br/>
 [Classe CFormView](../mfc/reference/cformview-class.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CLinkCtrl'
 title: Classe CLinkCtrl
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-ms.openlocfilehash: 80548015ff9f24127280ee94421c8fbda7a647ea
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: a9a106d7511757fac0abfd19194081729a7d4977
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561414"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236757"
 ---
 # <a name="clinkctrl-class"></a>Classe CLinkCtrl
 
@@ -51,17 +52,17 @@ Fornisce la funzionalità del controllo SysLink comune di Windows.
 class CLinkCtrl : public CWnd
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CLinkCtrl:: CLinkCtrl](#clinkctrl)|Costruisce un oggetto `CLinkCtrl`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CLinkCtrl:: create](#create)|Crea un controllo collegamento e lo collega a un `CLinkCtrl` oggetto.|
 |[CLinkCtrl:: CreateEx](#createex)|Crea un controllo collegamento con stili estesi e lo associa a un `CLinkCtrl` oggetto.|
@@ -77,7 +78,7 @@ class CLinkCtrl : public CWnd
 |[CLinkCtrl:: SetItemState](#setitemstate)|Imposta lo stato dell'elemento di controllo del collegamento.|
 |[CLinkCtrl:: SetItemUrl](#setitemurl)|Imposta l'URL rappresentato dall'elemento di controllo del collegamento.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un "controllo collegamento" fornisce un modo pratico per incorporare collegamenti ipertestuali in una finestra. Il controllo effettivo è una finestra che esegue il rendering del testo contrassegnato e avvia le applicazioni appropriate quando l'utente fa clic su un collegamento incorporato. All'interno di un controllo sono supportati più collegamenti ed è possibile accedervi tramite un indice in base zero.
 
@@ -146,7 +147,7 @@ Specifica l'ID del controllo di collegamento.
 
 TRUE se l'inizializzazione ha avuto esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si costruisce un `CLinkCtrl` oggetto in due passaggi. Chiamare innanzitutto il costruttore e quindi chiamare `Create` , che crea il controllo collegamento e lo collega all' `CLinkCtrl` oggetto. Se si desidera utilizzare gli stili Windows estesi con il controllo, chiamare [CLinkCtrl:: CreateEx](#createex) anziché `Create` .
 
@@ -208,7 +209,7 @@ Specifica l'ID del controllo di collegamento.
 
 TRUE se l'inizializzazione ha avuto esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare `CreateEx` anziché [create](#create) per applicare costanti di stile Windows estese.
 
@@ -226,7 +227,7 @@ int GetIdealHeight() const;
 
 Altezza ideale del controllo, in pixel.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [LM_GETIDEALHEIGHT](/windows/win32/Controls/lm-getidealheight)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -252,7 +253,7 @@ out Puntatore a una struttura di [dimensioni](/windows/win32/api/windef/ns-winde
 
 Altezza preferita del testo del collegamento, in pixel. Il valore restituito è uguale al valore del membro *CY* della `SIZE` struttura.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per un esempio del `GetIdealSize` metodo, vedere l'esempio in [CLinkCtrl:: create](#create).
 
@@ -275,7 +276,7 @@ Puntatore a una struttura di [Lite](/windows/win32/api/commctrl/ns-commctrl-lite
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [LM_GETITEM](/windows/win32/Controls/lm-getitem)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -315,7 +316,7 @@ Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 > [!NOTE]
 > Questa funzione restituisce anche FALSE se il buffer di *szID o Strid* è minore di MAX_LINKID_TEXT.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Recupera l'ID di un elemento di controllo collegamento specifico. Per ulteriori informazioni, vedere la [LM_GETITEM](/windows/win32/Controls/lm-getitem) del messaggio Win32 nella Windows SDK.
 
@@ -345,7 +346,7 @@ Combinazione di flag che descrivono l'elemento di stato da ottenere. Per un elen
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Recupera il valore dell'elemento di stato specificato di un elemento di controllo collegamento specifico. Per ulteriori informazioni, vedere la [LM_GETITEM](/windows/win32/Controls/lm-getitem) del messaggio Win32 nella Windows SDK.
 
@@ -385,7 +386,7 @@ Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 > [!NOTE]
 > Questa funzione restituisce anche FALSE se il buffer di *szURL o strURL* è minore di MAX_LINKID_TEXT.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Recupera l'URL rappresentato dall'elemento di controllo del collegamento specificato. Per ulteriori informazioni, vedere la [LM_GETITEM](/windows/win32/Controls/lm-getitem) del messaggio Win32 nella Windows SDK.
 
@@ -406,7 +407,7 @@ Puntatore a una `LHITTESTINFO` struttura contenente le informazioni sul collegam
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [LM_HITTEST](/windows/win32/Controls/lm-hittest)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -427,7 +428,7 @@ Puntatore a una struttura [litey](/windows/win32/api/commctrl/ns-commctrl-litem)
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [LM_SETITEM](/windows/win32/Controls/lm-setitem)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -453,7 +454,7 @@ Stringa con terminazione null che contiene l'ID dell'elemento specificato.
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Imposta l'ID di un elemento di controllo del collegamento specifico. Per ulteriori informazioni, vedere la [LM_SETITEM](/windows/win32/Controls/lm-setitem) del messaggio Win32 nella Windows SDK.
 
@@ -483,7 +484,7 @@ Combinazione di flag che descrivono l'elemento di stato da impostare. Per un ele
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Imposta il valore dell'elemento di stato specificato di un elemento di controllo del collegamento specifico. Per ulteriori informazioni, vedere la [LM_SETITEM](/windows/win32/Controls/lm-setitem) del messaggio Win32 nella Windows SDK.
 
@@ -509,7 +510,7 @@ Stringa con terminazione null contenente l'URL rappresentato dall'elemento speci
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Imposta l'URL rappresentato dall'elemento di controllo del collegamento specificato. Per ulteriori informazioni, vedere la [LM_SETITEM](/windows/win32/Controls/lm-setitem) del messaggio Win32 nella Windows SDK.
 

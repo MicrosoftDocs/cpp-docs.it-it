@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: alias e typedef (C++)'
 title: Alias e typedef (C++)
 ms.date: 11/04/2016
 f1_keywords:
 - typedef_cpp
 ms.assetid: af1c24d2-4bfd-408a-acfc-482e264232f5
-ms.openlocfilehash: 6054b7119614d9325bd099dd39b8aa1365d97ed7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7b5924fd30fe1d22e6a82fb82e2d252409d782ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227673"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239857"
 ---
 # <a name="aliases-and-typedefs-c"></a>Alias e typedef (C++)
 
@@ -23,7 +24,7 @@ using identifier = type;
 
 ## <a name="remarks"></a>Osservazioni
 
-*identificatore*<br/>
+*identifier*<br/>
 Nome dell'alias.
 
 *type*<br/>
@@ -147,7 +148,7 @@ Una **`typedef`** dichiarazione introduce un nome che, all'interno dell'ambito, 
 
 Diversamente dalle **`class`** **`struct`** dichiarazioni,, **`union`** e, le **`enum`** **`typedef`** dichiarazioni non introducono nuovi tipi, ma introducono nuovi nomi per i tipi esistenti.
 
-I nomi dichiarati utilizzando **`typedef`** occupano lo stesso spazio dei nomi degli altri identificatori (ad eccezione delle etichette di istruzione). Tali nomi pertanto non possono usare lo stesso identificatore di un nome dichiarato in precedenza, tranne che in una dichiarazione di tipo classe. Prendere in considerazione gli esempi seguenti:
+I nomi dichiarati utilizzando **`typedef`** occupano lo stesso spazio dei nomi degli altri identificatori (ad eccezione delle etichette di istruzione). Tali nomi pertanto non possono usare lo stesso identificatore di un nome dichiarato in precedenza, tranne che in una dichiarazione di tipo classe. Si consideri l'esempio seguente:
 
 ```cpp
 // typedef_names1.cpp
@@ -210,7 +211,7 @@ int;  // Illegal declaration
 
 È possibile dichiarare qualsiasi tipo con typedef, incluso il puntatore, la funzione e i tipi di matrice. È possibile dichiarare un nome di typedef per un puntatore a un tipo di unione o di struttura prima di definire il tipo di struttura o di unione, purché la definizione abbia la stessa visibilità della dichiarazione.
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 Un uso delle **`typedef`** dichiarazioni è quello di rendere le dichiarazioni più uniformi e compatti. Ad esempio:
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _umask_s'
 title: _umask_s
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - umask_s function
 - files [C++], permission settings for
 ms.assetid: 70898f61-bf2b-4d8d-8291-0ccaa6d33145
-ms.openlocfilehash: 712313314c67d15987326e3e3a920cd5f1039239
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2a6877b656b17f38dfdf09419da5b64115575a9a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913883"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239935"
 ---
 # <a name="_umask_s"></a>_umask_s
 
@@ -73,9 +74,9 @@ Restituisce un codice di errore se la *modalità* non specifica una modalità va
 
 Se si verifica una delle condizioni precedenti, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **_umask_s** restituisce **EINVAL** e imposta **errno** su **EINVAL**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **_umask_s** imposta la maschera di autorizzazione file del processo corrente sulla modalità specificata dalla *modalità*. La maschera di autorizzazione file modifica l'impostazione di autorizzazione dei nuovi file creati da **_creat**, **_open**o **_sopen**. Se un bit nella maschera è impostato su 1, il bit corrispondente nel valore di autorizzazione richiesto del file è impostato su 0 (non consentito). Se un bit nella maschera è 0, il bit corrispondente viene lasciato invariato. L'impostazione di autorizzazione per un nuovo file non viene impostata fino a quando il file non viene chiuso per la prima volta.
+La funzione **_umask_s** imposta la maschera di autorizzazione file del processo corrente sulla modalità specificata dalla *modalità*. La maschera di autorizzazione file modifica l'impostazione di autorizzazione dei nuovi file creati da **_creat**, **_open** o **_sopen**. Se un bit nella maschera è impostato su 1, il bit corrispondente nel valore di autorizzazione richiesto del file è impostato su 0 (non consentito). Se un bit nella maschera è 0, il bit corrispondente viene lasciato invariato. L'impostazione di autorizzazione per un nuovo file non viene impostata fino a quando il file non viene chiuso per la prima volta.
 
 L'espressione integer *pmode* contiene una o entrambe le costanti manifeste seguenti, definite in SYS\STAT. H
 
@@ -85,7 +86,7 @@ L'espressione integer *pmode* contiene una o entrambe le costanti manifeste segu
 |**_S_IREAD**|Lettura consentita.|
 |**_S_IREAD** \| **_S_IWRITE**|Lettura e scrittura consentite.|
 
-Quando vengono specificate entrambe le costanti, queste vengono unite con l'operatore OR bit per **|** bit (). Se l'argomento *mode* è **_S_IREAD**, la lettura non è consentita (il file è di sola scrittura). Se l'argomento *mode* è **_S_IWRITE**, la scrittura non è consentita (il file è di sola lettura). Ad esempio, se il bit di scrittura è impostato nella maschera, tutti i nuovi file saranno di sola lettura. Si noti che con MS-DOS e i sistemi operativi Windows, tutti i file sono leggibili; non è possibile fornire l'autorizzazione di sola scrittura. Pertanto, l'impostazione del bit di lettura con **_umask_s** non ha alcun effetto sulle modalità del file.
+Quando vengono specificate entrambe le costanti, queste vengono unite con l'operatore OR bit per bit ( **|** ). Se l'argomento *mode* è **_S_IREAD**, la lettura non è consentita (il file è di sola scrittura). Se l'argomento *mode* è **_S_IWRITE**, la scrittura non è consentita (il file è di sola lettura). Ad esempio, se il bit di scrittura è impostato nella maschera, tutti i nuovi file saranno di sola lettura. Si noti che con MS-DOS e i sistemi operativi Windows, tutti i file sono leggibili; non è possibile fornire l'autorizzazione di sola scrittura. Pertanto, l'impostazione del bit di lettura con **_umask_s** non ha alcun effetto sulle modalità del file.
 
 Se *pmode* non è una combinazione di una delle costanti manifeste o incorpora un set alternativo di costanti, la funzione li ignorerà semplicemente.
 
@@ -135,8 +136,8 @@ Oldmask = 0x0000
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione dei file](../../c-runtime-library/file-handling.md)<br/>
-[I/O a basso livello](../../c-runtime-library/low-level-i-o.md)<br/>
+[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
+[I/O di basso livello](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>

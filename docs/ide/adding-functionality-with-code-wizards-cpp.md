@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: aggiunta di funzionalità con creazioni guidate codice (C++)'
 title: Aggiunta di funzionalità con creazioni guidate codice (C++)
 ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: 651eac8c630636455dd1ffa04fdd02b71fa3cf62
-ms.sourcegitcommit: 6284bca6549e7b4f199d4560c30df6c1278bd4a0
+ms.openlocfilehash: b411f3d36ebfa7af63e59a77ee85968de1dc3d24
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96188913"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240741"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Aggiunta di funzionalità con creazioni guidate codice (C++)
 
@@ -72,7 +73,7 @@ Dopo aver creato un progetto, è possibile effettuare modifiche o aggiunte alla 
    |Esplora soluzioni|Le creazioni guidate codice disponibili in Esplora soluzioni variano a seconda della posizione in cui si trova il cursore quando si fa clic su un elemento. Se l'opzione **Aggiungi** non viene visualizzata quando si fa clic con il pulsante destro del mouse su un elemento, spostare il cursore al livello superiore nella struttura di sviluppo e riprovare. Le creazioni guidate codice inseriscono sempre il codice aggiuntivo nella posizione appropriata all'interno della struttura di sviluppo, indipendentemente dalla posizione in cui si trova il cursore. Le creazioni guidate codice disponibili in Esplora soluzioni consentono di:<br /><br />-Aggiungi classe (apre la finestra di dialogo **Aggiungi classe** contenente le creazioni guidate nuove codice).<br />- Aggiungere una risorsa (nuova, importata o personalizzata).<br />- Aggiungere un riferimento Web.|
    |Visualizzazione classi|Le creazioni guidate codice disponibili nella Visualizzazione classi variano a seconda della posizione in cui si trova il cursore quando si fa clic su un elemento. Se l'opzione **Aggiungi** non viene visualizzata quando si fa clic con il pulsante destro del mouse su un elemento, spostare il cursore al livello superiore nella struttura delle classi e riprovare. Le creazioni guidate codice inseriscono sempre il codice aggiuntivo nella posizione appropriata all'interno della struttura di sviluppo, indipendentemente dalla posizione in cui si trova il cursore. Le creazioni guidate codice disponibili nella Visualizzazione classi includono:<br /><br />- [Aggiungi funzione membro](../ide/adding-a-member-function-visual-cpp.md).<br />- [Aggiungi variabile membro](../ide/adding-a-member-variable-visual-cpp.md).<br />- [Aggiungi classe](../ide/adding-a-class-visual-cpp.md).<br />- [Implementa interfaccia](./implementing-an-interface-visual-cpp.md#implement-interface-wizard) (solo da una classe di controllo)<br />- [Aggiungi punto di connessione](./implementing-a-connection-point-visual-cpp.md#implement-connection-point-wizard) (solo classe ATL)<br />- [Aggiungi metodo](./adding-a-method-visual-cpp.md#add-method-wizard) (solo da un'interfaccia)<br />- [Aggiungi proprietà](./adding-a-property-visual-cpp.md#names-add-property-wizard) (solo da un'interfaccia)<br />- [Aggiungi evento](./adding-an-event-visual-cpp.md#add-event-wizard) (solo da una classe di controllo)<br /><br />L'opzione Aggiungi classe visualizza la finestra di dialogo **Aggiungi classe** che consente di accedere a tutte le nuove creazioni guidate codice per l'aggiunta di classi.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Override di una funzione virtual](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
 [Spostarsi all'interno del codice C++ in Visual Studio](../ide/navigate-code-cpp.md)<br>

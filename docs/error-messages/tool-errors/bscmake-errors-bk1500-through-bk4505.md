@@ -1,17 +1,18 @@
 ---
+description: 'Altre informazioni su: errori e avvisi di BSCMAKE (BKxxxx)'
 title: Errori e avvisi di BSCMAKE
 ms.date: 04/16/2019
 ms.assetid: 3767baa6-e639-472e-99fd-7543fd945cd3
-ms.openlocfilehash: e6abc334d9ecf5df54d200ab242c91a7035ab226
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 8273782f82102c81cf7f7dd5e93b7e1ec6d1703e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856359"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97237907"
 ---
 # <a name="bscmake-errors-and-warnings-bkxxxx"></a>Errori e avvisi di BSCMAKE (BKxxxx)
 
-In questa sezione è un riferimento a errori e avvisi generati di BSCMAKE allo strumento di compilazione. Avvisi ed errori BSCMAKE hanno il formato BK*xxxx*, dove *xxxx* è un numero a quattro cifre.
+Questa sezione è un riferimento agli errori e agli avvisi generati dallo strumento di compilazione BSCMAKE. Gli errori e gli avvisi di BSCMAKE hanno il formato BK *xxxx*, dove *xxxx* è un numero a quattro cifre.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -30,15 +31,15 @@ In questa sezione è un riferimento a errori e avvisi generati di BSCMAKE allo s
 [Errore BSCMAKE BK1514](bscmake-error-bk1514.md) \
 [Errore BSCMAKE BK1515](bscmake-error-bk1515.md) \
 [Errore BSCMAKE BK1516](bscmake-error-bk1516.md) \
-[Errore BSCMAKE BK1517](bscmake-error-bk1517.md)
+[Errore BK1517 di BSCMAKE](bscmake-error-bk1517.md)
 
 ## <a name="warning-messages"></a>Messaggi di avviso
 
-[Avviso BK4502 di BSCMAKE](bscmake-warning-bk4502.md) \
-[Avviso BK4503 di BSCMAKE](bscmake-warning-bk4503.md) \
+[Avviso di BSCMAKE BK4502](bscmake-warning-bk4502.md) \
+[Avviso di BSCMAKE BK4503](bscmake-warning-bk4503.md) \
 [Avviso BK4504 di BSCMAKE](bscmake-warning-bk4504.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[C /C++ del compilatore e compilazione di errori e avvisi degli strumenti](../compiler-errors-1/c-cpp-build-errors.md) \
-[Riferimenti a BSCMake](../../build/reference/bscmake-reference.md)
+[Errori e avvisi degli strumenti di compilazione e compilatore C/C++](../compiler-errors-1/c-cpp-build-errors.md) \
+[Riferimento a BSCMake](../../build/reference/bscmake-reference.md)

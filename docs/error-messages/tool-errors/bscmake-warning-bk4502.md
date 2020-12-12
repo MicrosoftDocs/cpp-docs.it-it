@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: BSCMAKE Warning BK4502'
 title: Avviso BK4502 di BSCMAKE
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BK4502
 ms.assetid: ee412ec8-df03-4cdb-91ee-5d609ded8691
-ms.openlocfilehash: 1c5204239909e579fa93006e245e3841b7fb64eb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 97fb7745353a92704fb624a2782a91ea63dc532a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80197457"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97237881"
 ---
 # <a name="bscmake-warning-bk4502"></a>Avviso BK4502 di BSCMAKE
 
@@ -19,7 +20,7 @@ troncato. Il file SBR ' filename ' non è nel nome file
 
 Durante un aggiornamento è stato specificato un file SBR di lunghezza zero che non era originariamente parte del file BSC.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolvere il problema, verificare le seguenti cause possibili:
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili
 
 1. Il nome file specificato non è corretto.
 

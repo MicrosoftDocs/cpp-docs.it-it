@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: class factory e licenze'
 title: Class factory e licenze
 ms.date: 11/04/2016
 helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
-ms.openlocfilehash: 939d7156a9bd7bf0778d2ab4a40acb2afe10cf6e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7470a5828df358a28db5a30832f98314e09a133e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845926"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236841"
 ---
 # <a name="class-factories-and-licensing"></a>Class factory e licenze
 
@@ -21,7 +22,7 @@ La tabella seguente elenca diverse macro e funzioni usate per dichiarare e imple
 
 ### <a name="class-factories-and-licensing"></a>Class factory e licenze
 
-|Macro o funzione|Descrizione|
+|Macro o funzione|Description|
 |-|-|
 |[DECLARE_OLECREATE_EX](#declare_olecreate_ex)|Dichiara l'class factory per una pagina di controllo o di proprietà OLE.|
 |[IMPLEMENT_OLECREATE_EX](#implement_olecreate_ex)|Implementa la funzione del controllo `GetClassID` e dichiara un'istanza del class factory.|
@@ -42,7 +43,7 @@ DECLARE_OLECREATE_EX(class_name)
 *class_name*<br/>
 Nome della classe del controllo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro nel file di intestazione della classe del controllo per un controllo che non supporta la gestione delle licenze.
 
@@ -86,7 +87,7 @@ Nome dell'oggetto esposto alle applicazioni.
 *l, W1, W2, B1, B2, B3, B4, B5, B6, B7, B8*<br/>
 Componenti del CLSID della classe. Per ulteriori informazioni su questi parametri, vedere la sezione Osservazioni per [IMPLEMENT_OLECREATE](run-time-object-model-services.md#implement_olecreate).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa macro deve essere visualizzata nel file di implementazione per qualsiasi classe del controllo che usa la macro DECLARE_OLECREATE_EX o le macro BEGIN_OLEFACTORY e END_OLEFACTORY. Il nome esterno è l'identificatore del controllo OLE esposto ad altre applicazioni. I contenitori usano questo nome per richiedere un oggetto di questa classe del controllo.
 
@@ -107,7 +108,7 @@ BEGIN_OLEFACTORY(class_name)
 *class_name*<br/>
 Specifica il nome della classe del controllo il cui class factory è.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le dichiarazioni di class factory funzioni di gestione licenze devono iniziare immediatamente dopo l'BEGIN_OLEFACTORY.
 
@@ -162,7 +163,7 @@ Numero di caratteri in *pszLicFileContents*.
 
 Diverso da zero se il file di licenza esiste e inizia con la sequenza di caratteri in *pszLicFileContents*; in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se *è* -1, questa funzione USA:
 
@@ -172,6 +173,6 @@ Se *è* -1, questa funzione USA:
 
   **Intestazione** afxctl. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)

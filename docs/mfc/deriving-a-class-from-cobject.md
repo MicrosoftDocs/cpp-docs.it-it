@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: derivazione di una classe da CObject'
 title: Derivazione da una classe da CObject
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - CObject class [MFC], deriving serializable classes
 - CObject class [MFC], deriving from
 ms.assetid: 5ea4ea41-08b5-4bd8-b247-c5de8c152a27
-ms.openlocfilehash: f4c01538877d8517cf3394d9e0108ce3a9df2900
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c6c2ea75354d783b234bc3f7cac7a08dac4f05da
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621933"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240702"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Derivazione da una classe da CObject
 
@@ -40,7 +41,7 @@ Le classi progettate per il riutilizzo, ovvero quelle che verranno utilizzate in
 
 Nella tabella seguente viene illustrata la relazione tra le macro utilizzate per supportare le informazioni sulla serializzazione e la fase di esecuzione.
 
-### <a name="macros-used-for-serialization-and-run-time-information"></a>Macro utilizzate per la serializzazione e le informazioni di run-time
+### <a name="macros-used-for-serialization-and-run-time-information"></a>Macro utilizzate per la serializzazione e Run-Time informazioni
 
 |Macro utilizzata|CObject:: IsKindOf|CRuntimeClass::<br /><br /> CreateObject|>> CArchive:: operator<br /><br /> << CArchive:: operator|
 |----------------|-----------------------|--------------------------------------|-------------------------------------------------------|
@@ -61,6 +62,6 @@ In genere, tuttavia, è consigliabile eseguire l'override di alcune `CObject` fu
 
 L'articolo che [specifica i livelli di funzionalità](specifying-levels-of-functionality.md) descrive come specificare altri livelli di funzionalità, tra cui informazioni sulle classi in fase di esecuzione, creazione dinamica di oggetti e serializzazione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso di CObject](using-cobject.md)
+[Utilizzo di CObject](using-cobject.md)
