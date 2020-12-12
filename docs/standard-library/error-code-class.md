@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: error_code Class'
 title: Classe error_code
 ms.date: 11/04/2016
 f1_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - std::error_code::default_error_condition
 - std::error_code::message
 ms.assetid: c09b4a96-cb14-4281-a319-63543f9b2b4a
-ms.openlocfilehash: 5bbd67d2967a1a6d070ece54ea464a2a5a2deac9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0fb084a7d33cc6c1b7d0d4a821a770e0e49a923e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844457"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324423"
 ---
 # <a name="error_code-class"></a>Classe error_code
 
@@ -44,19 +45,19 @@ Un oggetto di tipo classe `error_code` archivia un valore di codice di errore e 
 
 ### <a name="constructors"></a>Costruttori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[error_code](#error_code)|Costruisce un oggetto di tipo `error_code`.|
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[value_type](#value_type)|Tipo che rappresenta il valore del codice di errore archiviato.|
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[assign](#assign)|Assegna un valore di codice di errore e una categoria a un codice di errore.|
 |[category](#category)|Restituisce la categoria dell'errore.|
@@ -66,7 +67,7 @@ Un oggetto di tipo classe `error_code` archivia un valore di codice di errore e 
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[operatore = =](#op_eq_eq)|Verifica l'uguaglianza tra oggetti `error_code`.|
 |[operatore! =](#op_neq)|Verifica la disuguaglianza tra oggetti `error_code`.|
@@ -90,7 +91,7 @@ Il valore del codice di errore da archiviare nell'`error_code`.
 *_Cat*\
 La categoria dell'errore da archiviare nell'`error_code`.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 La funzione membro Archivia *Val* come valore del codice di errore e un puntatore a *_Cat*.
 
@@ -102,7 +103,7 @@ Restituisce la categoria dell'errore.
 const error_category& category() const;
 ```
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 ### <a name="clear"></a><a name="clear"></a> deselezionare
 
@@ -112,7 +113,7 @@ Cancella il valore del codice di errore e la categoria.
 clear();
 ```
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 La funzione membro archivia un valore del codice di errore zero e un puntatore all'oggetto [generic_category](../standard-library/system-error-functions.md#generic_category).
 
@@ -128,7 +129,7 @@ error_condition default_error_condition() const;
 
 La [error_condition](../standard-library/error-condition-class.md) specificata dalla [default_error_condition](../standard-library/error-category-class.md#default_error_condition).
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Questa funzione membro restituisce `category().default_error_condition(value())`.
 
@@ -158,7 +159,7 @@ La categoria dell'errore da archiviare nell'`error_code`.
 *_Errcode*\
 Il valore di enumerazione da archiviare nell'`error_code`.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Il primo costruttore archivia un valore del codice di errore zero e un puntatore alla [generic_category](../standard-library/system-error-functions.md#generic_category).
 
@@ -178,7 +179,7 @@ string message() const;
 
 `string` che rappresenta il nome del codice di errore.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Questa funzione membro restituisce `category().message(value())`.
 
@@ -199,7 +200,7 @@ Oggetto di cui verificare l'uguaglianza.
 
 **`true`** Se gli oggetti sono uguali; **`false`** se gli oggetti non sono uguali.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 L'operatore membro restituisce `category() == right.category() && value == right.value()`.
 
@@ -220,7 +221,7 @@ L'oggetto di cui verificare la disuguaglianza.
 
 **`true`** Se l' `error_code` oggetto non è uguale all' `error_code` oggetto passato a *destra*; in caso contrario, **`false`** .
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 L'operatore membro restituisce `!(*this == right)`.
 
@@ -241,7 +242,7 @@ L'oggetto error_code da confrontare.
 
 **`true`** Se l' `error_code` oggetto è minore dell' `error_code` oggetto passato per il confronto. In caso contrario, **`false`** .
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 L'operatore membro restituisce `category() < right.category() || category() == right.category() && value < right.value()`.
 
@@ -264,7 +265,7 @@ Il valore di enumerazione da assegnare all'oggetto `error_code`.
 
 Un riferimento all'oggetto `error_code` a cui viene assegnato il nuovo valore di enumerazione dalla funzione membro.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 L'operatore membro archivia `(value_type)_Errcode` come valore del codice di errore e un puntatore alla [generic_category](../standard-library/system-error-functions.md#generic_category). Restituisce **`*this`** .
 
@@ -280,7 +281,7 @@ explicit operator bool() const;
 
 Il valore booleano dell'oggetto `error_code`.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 L'operatore restituisce un valore convertibile in **`true`** solo se il [valore](#value) non è uguale a zero. Il tipo restituito è convertibile solo in **`bool`** , non in `void *` o altri tipi scalari noti.
 
@@ -304,6 +305,6 @@ Tipo che rappresenta il valore del codice di errore archiviato.
 typedef int value_type;
 ```
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Questa definizione di tipo è un sinonimo di **`int`** .

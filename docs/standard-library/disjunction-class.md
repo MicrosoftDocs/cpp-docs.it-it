@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: disgiunzione della classe'
 title: Classe disgiunzione
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::disjunction
 helpviewer_keywords:
 - disjunction
-ms.openlocfilehash: 9087f305bf37bf4f666f06935ce0915dd7ac60d8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ada69f6de028bb1dce58fa4cab6c5a0eea12c192
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454375"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324501"
 ---
 # <a name="disjunction-class"></a>Classe disgiunzione
 
@@ -23,10 +24,10 @@ struct disjunction;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)

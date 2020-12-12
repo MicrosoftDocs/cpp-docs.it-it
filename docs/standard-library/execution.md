@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; esecuzione&gt;'
 title: '&lt;esecuzione&gt;'
 ms.date: 04/18/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - std::<execution>
 helpviewer_keywords:
 - execution header
-ms.openlocfilehash: f37458fdc0b58968e095a7c59de797eac295bde7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ea444ab2f4fcf3211e85837701a8ea6a0c3ec81f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835936"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324409"
 ---
 # <a name="ltexecutiongt"></a>&lt;esecuzione&gt;
 
@@ -32,7 +33,7 @@ namespace std::execution {
 
 ### <a name="classes-and-structs"></a>Classi e struct
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[Struct is_execution_policy](is-execution-policy-struct.md)|Rileva i criteri di esecuzione allo scopo di escludere le firme di funzione dalla partecipazione alla risoluzione dell'overload altrimenti ambigua.|
 |[Classe parallel_policy](parallel-policy-class.md)|Utilizzato come tipo univoco per distinguere l'overload dell'algoritmo parallelo e indicare che l'esecuzione di un algoritmo parallelo può essere parallela.|
@@ -45,7 +46,7 @@ namespace std::execution {
 
 **Spazio dei nomi:** stdext
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento ai file di intestazione](cpp-standard-library-header-files.md)\
 [Thread safety nella libreria standard C++](thread-safety-in-the-cpp-standard-library.md)\

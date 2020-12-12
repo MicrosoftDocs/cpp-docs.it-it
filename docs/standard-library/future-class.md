@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe futura'
 title: Classe future
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - std::future [C++], wait
 - std::future [C++], wait_for
 - std::future [C++], wait_until
-ms.openlocfilehash: ac52429919f83a90a87141399952e248e18e0862
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ca73a3d0273014c4f22e8e807c2bf7c3d6e43320
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220938"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324226"
 ---
 # <a name="future-class"></a>Classe future
 
@@ -46,13 +47,13 @@ Ogni *provider asincrono* standard restituisce un oggetto il cui tipo è una cre
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[futuro](#future)|Costruisce un oggetto `future`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[get](#get)|Recupera il risultato archiviato nello stato asincrono associato.|
 |[condividi](#share)|Converte l'oggetto in `shared_future`.|
@@ -63,7 +64,7 @@ Ogni *provider asincrono* standard restituisce un oggetto il cui tipo è una cre
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[future::operator=](#op_eq)|Trasferisce lo stato asincrono associato da un oggetto specificato.|
 
@@ -73,7 +74,7 @@ Ogni *provider asincrono* standard restituisce un oggetto il cui tipo è una cre
 
 **Spazio dei nomi:** std
 
-## <a name="futurefuture-constructor"></a><a name="future"></a>Costruttore future:: future
+## <a name="futurefuture-constructor"></a><a name="future"></a> Costruttore future:: future
 
 Costruisce un oggetto `future`.
 
@@ -87,13 +88,13 @@ future(future&& Other) noexcept;
 *Altri*\
 Un oggetto `future`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo costruttore crea un oggetto `future` che non ha uno stato asincrono associato.
 
 Il secondo costruttore crea un `future` oggetto e trasferisce lo stato asincrono associato da *altro*. *Other* non dispone più di uno stato asincrono associato.
 
-## <a name="futureget"></a><a name="get"></a>future:: Get
+## <a name="futureget"></a><a name="get"></a> future:: Get
 
 Recupera il risultato archiviato nello stato asincrono associato.
 
@@ -105,7 +106,7 @@ Ty get();
 
 Se il risultato è un'eccezione, il metodo la genera nuovamente. In caso contrario, viene restituito il risultato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Prima di recuperare il risultato, questo metodo blocca il thread corrente finché lo stato asincrono associato non è ready.
 
@@ -115,7 +116,7 @@ Poiché non esiste alcun valore archiviato per la specializzazione `future<void>
 
 In altre specializzazioni il metodo sposta il relativo valore restituito dal valore archiviato. Pertanto, chiamare questo metodo solo una volta.
 
-## <a name="futureoperator"></a><a name="op_eq"></a>future:: operator =
+## <a name="futureoperator"></a><a name="op_eq"></a> future:: operator =
 
 Trasferisce uno stato asincrono associato da un oggetto specificato.
 
@@ -132,11 +133,11 @@ Un oggetto `future`.
 
 `*this`
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Dopo il trasferimento, *right* non dispone più di uno stato asincrono associato.
 
-## <a name="futureshare"></a><a name="share"></a>future:: Share
+## <a name="futureshare"></a><a name="share"></a> future:: Share
 
 Converte l'oggetto in un oggetto [shared_future](../standard-library/shared-future-class.md).
 
@@ -148,7 +149,7 @@ shared_future<Ty> share();
 
 `shared_future(move(*this))`
 
-## <a name="futurevalid"></a><a name="valid"></a>futuro:: valido
+## <a name="futurevalid"></a><a name="valid"></a> futuro:: valido
 
 Specifica se l'oggetto ha uno stato asincrono associato.
 
@@ -160,7 +161,7 @@ bool valid() noexcept;
 
 **`true`** Se l'oggetto ha uno stato asincrono associato; in caso contrario, **`false`** .
 
-## <a name="futurewait"></a><a name="wait"></a>futuro:: wait
+## <a name="futurewait"></a><a name="wait"></a> futuro:: wait
 
 Blocca il thread corrente finché lo stato asincrono associato non è *ready*.
 
@@ -168,11 +169,11 @@ Blocca il thread corrente finché lo stato asincrono associato non è *ready*.
 void wait() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Uno stato asincrono associato è *pronto* solo se il relativo provider asincrono ha archiviato un valore restituito o è stata archiviata un'eccezione.
 
-## <a name="futurewait_for"></a><a name="wait_for"></a>future:: wait_for
+## <a name="futurewait_for"></a><a name="wait_for"></a> future:: wait_for
 
 Blocca il thread corrente finché lo stato asincrono associato non è *ready* o finché non trascorre un determinato intervallo di tempo.
 
@@ -190,11 +191,11 @@ Oggetto [chrono::duration](../standard-library/duration-class.md) che specifica 
 
 Oggetto [future_status](../standard-library/future-enums.md#future_status) che indica il motivo della restituzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Lo stato asincrono associato è ready solo se il relativo provider asincrono ha archiviato un valore restituito o un'eccezione.
 
-## <a name="futurewait_until"></a><a name="wait_until"></a>future:: wait_until
+## <a name="futurewait_until"></a><a name="wait_until"></a> future:: wait_until
 
 Blocca il thread corrente finché lo stato asincrono associato non è *ready* o fino a un determinato momento.
 
@@ -212,11 +213,11 @@ Oggetto [chrono::time_point](../standard-library/time-point-class.md) che specif
 
 Oggetto [future_status](../standard-library/future-enums.md#future_status) che indica il motivo della restituzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Uno stato asincrono associato è *pronto* solo se il relativo provider asincrono ha archiviato un valore restituito o è stata archiviata un'eccezione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [\<future>](../standard-library/future.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; &gt; operatori funzionali'
 title: Operatori &lt;functional&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - functional operators
 ms.assetid: d4b3c760-f3e2-4b65-bdaa-d42e8dd6f5e1
-ms.openlocfilehash: b396e5c692129821c0deb9aef9469a5c54e600b0
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: a22e9203e89c041d5ed1925d55d1cd3aa6d61ba3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419056"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324239"
 ---
 # <a name="ltfunctionalgt-operators"></a>Operatori &lt;functional&gt;
 
-## <a name="op_eq_eq"></a>operatore = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operatore = =
 
 Verifica se l'oggetto chiamabile è vuoto.
 
@@ -30,16 +31,16 @@ template <class Fty>
 
 ### <a name="parameters"></a>Parametri
 
-\ *FTY*
+*FTY*\
 Tipo di funzione di cui eseguire il wrapping.
 
-\ *f*
+*f*\
 Oggetto function.
 
-\ *NPC*
+*NPC*\
 Puntatore Null.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli operatori accettano entrambi un argomento che è un riferimento a un oggetto `function` e un argomento che è una costante puntatore Null. Entrambi restituiscono true solo se l'oggetto `function` è vuoto.
 
@@ -75,7 +76,7 @@ empty == true
 empty == false
 ```
 
-## <a name="op_neq"></a>operatore! =
+## <a name="operator"></a><a name="op_neq"></a> operatore! =
 
 Verifica se l'oggetto chiamabile non è vuoto.
 
@@ -89,16 +90,16 @@ template <class Fty>
 
 ### <a name="parameters"></a>Parametri
 
-\ *FTY*
+*FTY*\
 Tipo di funzione di cui eseguire il wrapping.
 
-\ *f*
+*f*\
 Oggetto function.
 
-\ *NPC*
+*NPC*\
 Puntatore Null.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli operatori accettano entrambi un argomento che è un riferimento a un oggetto `function` e un argomento che è una costante puntatore Null. Tutte e due restituiscono true solo se l'oggetto `function` non è vuoto.
 

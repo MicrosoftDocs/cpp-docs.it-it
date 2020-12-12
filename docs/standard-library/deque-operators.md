@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; &gt; operatori deque'
 title: Operatori &lt;deque&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - std::operator&lt; (deque)
 - std::operator&lt;= (deque)
 - std::operator== (deque)
-ms.openlocfilehash: d91fe64e7d06a80402a0a540be8f63d98ea96d37
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f162a234aec66982e274755e7898cbbc1c63ab22
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222485"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324561"
 ---
 # <a name="ltdequegt-operators"></a>Operatori &lt;deque&gt;
 
-## <a name="operator"></a><a name="op_neq"></a>operatore! =
+## <a name="operator"></a><a name="op_neq"></a> operatore! =
 
 Verifica se l'oggetto deque sul lato sinistro dell'operatore non è uguale all'oggetto deque sul lato destro.
 
@@ -45,7 +46,7 @@ Oggetto di tipo `deque`.
 
 **`true`** Se gli oggetti deque non sono uguali; **`false`** se gli oggetti deque sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti deque si basa su un confronto a coppie dei relativi elementi. Due oggetti deque sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -76,7 +77,7 @@ int main( )
 The deques are not equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>operatore&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> operatore&lt;
 
 Verifica se l'oggetto deque sul lato sinistro dell'operatore è minore dell'oggetto deque sul lato destro.
 
@@ -96,7 +97,7 @@ Oggetto di tipo `deque`.
 
 **`true`** Se la deque sul lato sinistro dell'operatore è minore e non uguale alla deque a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti deque si basa su un confronto a coppie dei relativi elementi. La relazione minore di tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -131,7 +132,7 @@ int main( )
 Deque c1 is less than deque c2.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>operatore&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> operatore&lt;=
 
 Verifica se l'oggetto deque sul lato sinistro dell'operatore è minore o uguale all'oggetto deque sul lato destro.
 
@@ -151,7 +152,7 @@ Oggetto di tipo `deque`.
 
 **`true`** Se la deque sul lato sinistro dell'operatore è minore o uguale alla deque a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti deque si basa su un confronto a coppie dei relativi elementi. La relazione minore di o uguale a tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -186,7 +187,7 @@ int main( )
 Deque c1 is less than or equal to deque c2.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operatore = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operatore = =
 
 Verifica se l'oggetto deque sul lato sinistro dell'operatore è uguale all'oggetto deque sul lato destro.
 
@@ -206,7 +207,7 @@ Oggetto di tipo `deque`.
 
 **`true`** Se la deque sul lato sinistro dell'operatore è uguale alla deque a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti deque si basa su un confronto a coppie dei relativi elementi. Due deque sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -244,7 +245,7 @@ The deques are equal.
 The deques are not equal.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>operatore&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> operatore&gt;
 
 Verifica se l'oggetto deque sul lato sinistro dell'operatore è maggiore dell'oggetto deque sul lato destro.
 
@@ -264,7 +265,7 @@ Oggetto di tipo `deque`.
 
 **`true`** Se la deque sul lato sinistro dell'operatore è maggiore della deque a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti deque si basa su un confronto a coppie dei relativi elementi. La relazione maggiore di tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -300,7 +301,7 @@ int main( )
 Deque c1 is greater than deque c2.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>operatore&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> operatore&gt;=
 
 Verifica se l'oggetto deque sul lato sinistro dell'operatore è maggiore o uguale all'oggetto deque sul lato destro.
 
@@ -320,7 +321,7 @@ Oggetto di tipo `deque`.
 
 **`true`** Se la deque sul lato sinistro dell'operatore è maggiore o uguale alla deque a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti deque si basa su un confronto a coppie dei relativi elementi. La relazione maggiore di o uguale a tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe deque'
 title: Classe deque
 ms.date: 11/04/2016
 f1_keywords:
@@ -88,12 +89,12 @@ helpviewer_keywords:
 - std::deque [C++], size
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
-ms.openlocfilehash: 1edcabf526d0f3aa2ba52ba3fd0fc656c5ae6b9c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f46c3c31dd23f7603a1d4ef6289e435c9b38e823
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838546"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324575"
 ---
 # <a name="deque-class"></a>Classe deque
 
@@ -112,9 +113,9 @@ class deque
 Tipo di dati degli elementi da archiviare nella deque.
 
 *Allocatore*\
-Tipo che rappresenta l'oggetto allocatore memorizzato che incapsula i dettagli sull'allocazione e sulla deallocazione della deque e della memoria. Questo argomento è facoltativo e il valore predefinito è **allocator \<Type> **.
+Tipo che rappresenta l'oggetto allocatore memorizzato che incapsula i dettagli sull'allocazione e sulla deallocazione della deque e della memoria. Questo argomento è facoltativo e il valore predefinito è **allocator \<Type>**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La scelta del tipo di contenitore deve essere basata in genere sul tipo di ricerca e di inserimento richiesti dall'applicazione. I [vettori](../standard-library/vector-class.md) devono essere il contenitore preferito per la gestione di una sequenza quando l'accesso casuale a qualsiasi elemento è a un livello Premium e gli inserimenti o le eliminazioni di elementi sono necessari solo alla fine di una sequenza. Le prestazioni del contenitore elenco sono superiori quando il numero di inserimenti ed eliminazioni efficienti (in tempo costante) in qualsiasi posizione all'interno della sequenza è limitato. Tali operazioni al centro della sequenza richiedono copie di elementi e assegnazioni proporzionali al numero di elementi della sequenza (tempo lineare).
 
@@ -136,13 +137,13 @@ In caso contrario, l'inserimento o l'eliminazione di un elemento invalida tutti 
 
 ### <a name="constructors"></a>Costruttori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[deque](#deque)|Costruisce un oggetto `deque`. Sono disponibili diversi costruttori per configurare il contenuto del nuovo `deque` in modi diversi: vuoto; caricato con un numero specificato di elementi vuoti, contenuto spostato o copiato da un altro oggetto `deque` , contenuto copiato o spostato utilizzando un iteratore e un elemento copiato nei `deque` `count` tempi. Alcuni costruttori consentono l'utilizzo di un `allocator` personalizzato per creare elementi.|
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[allocator_type](#allocator_type)|Tipo che rappresenta la classe `allocator` per l'oggetto `deque`.|
 |[const_iterator](#const_iterator)|Tipo che fornisce un iteratore ad accesso casuale che può accedere e leggere gli elementi in `deque` come **`const`**|
@@ -159,7 +160,7 @@ In caso contrario, l'inserimento o l'eliminazione di un elemento invalida tutti 
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[assign](#assign)|Elimina gli elementi da una `deque` e copia una nuova sequenza di elementi nella `deque` di destinazione.|
 |[at](#at)|Restituisce un riferimento all'elemento in corrispondenza della posizione specificata nella `deque`.|
@@ -174,7 +175,7 @@ In caso contrario, l'inserimento o l'eliminazione di un elemento invalida tutti 
 |[emplace_back](#emplace_back)|Aggiunge un elemento costruito sul posto alla fine della `deque`.|
 |[emplace_front](#emplace_front)|Aggiunge un elemento costruito sul posto all'inizio della `deque`.|
 |[empty](#empty)|Restituisce **`true`** se `deque` contiene zero elementi e **`false`** se contiene uno o più elementi.|
-|[fine](#end)|Restituisce un iteratore ad accesso casuale che punta appena oltre la fine della `deque`.|
+|[end](#end)|Restituisce un iteratore ad accesso casuale che punta appena oltre la fine della `deque`.|
 |[erase](#erase)|Rimuove un elemento o un intervallo di elementi in una `deque` da posizioni specificate.|
 |[fronte](#front)|Restituisce un riferimento al primo elemento in una `deque`.|
 |[get_allocator](#get_allocator)|Restituisce una copia dell'oggetto `allocator` utilizzato per costruire il `deque`.|
@@ -193,7 +194,7 @@ In caso contrario, l'inserimento o l'eliminazione di un elemento invalida tutti 
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[operator&#91;&#93;](#op_at)|Restituisce un riferimento all'elemento `deque` in una posizione specificata.|
 |[operatore =](#op_eq)|Sostituisce gli elementi di una `deque` con una copia di un'altra `deque`.|
@@ -206,7 +207,7 @@ Tipo che rappresenta la classe allocator per l'oggetto deque.
 typedef Allocator allocator_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `allocator_type` è un sinonimo per il parametro di modello `Allocator`.
 
@@ -248,7 +249,7 @@ Valore dell'elemento inserito nella deque.
 *IList*\
 Oggetto initializer_list da inserire nella deque.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Dopo che sono stati eliminati tutti gli elementi esistenti nella deque di destinazione, `assign` inserisce un intervallo specificato di elementi dalla deque originale o da un'altra deque nella deque di destinazione oppure inserisce copie di un nuovo elemento con un valore specifico nella deque di destinazione.
 
@@ -370,7 +371,7 @@ const_reference back() const;
 
 Ultimo elemento della deque. Se l'oggetto deque è vuoto, il valore restituito è indefinito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il valore restituito di `back` viene assegnato a un oggetto `const_reference`, l'oggetto deque non può essere modificato. Se il valore restituito di `back` viene assegnato a un oggetto `reference`, l'oggetto deque può essere modificato.
 
@@ -419,7 +420,7 @@ iterator begin();
 
 Iteratore ad accesso casuale che punta al primo elemento della deque o alla posizione successiva a una deque vuota.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il valore restituito di `begin` viene assegnato a un oggetto `const_iterator`, l'oggetto deque non può essere modificato. Se il valore restituito di `begin` viene assegnato a un `iterator` , l'oggetto deque può essere modificato.
 
@@ -470,7 +471,7 @@ const_iterator cbegin() const;
 
 **`const`** Iteratore ad accesso casuale che punta al primo elemento dell'intervallo o alla posizione oltre la fine di un intervallo vuoto (per un intervallo vuoto, `cbegin() == cend()` ).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Con il valore restituito di `cbegin`, gli elementi dell'intervallo non possono essere modificati.
 
@@ -496,7 +497,7 @@ const_iterator cend() const;
 
 Iteratore ad accesso casuale che punta oltre la fine dell'intervallo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `cend` viene utilizzato per verificare se un iteratore ha superato la fine del relativo intervallo.
 
@@ -556,7 +557,7 @@ Tipo che fornisce un iteratore ad accesso casuale che può accedere e leggere un
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un tipo `const_iterator` non può essere usato per modificare il valore di un elemento.
 
@@ -572,7 +573,7 @@ Fornisce un puntatore a un **`const`** elemento in una deque.
 typedef typename Allocator::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un tipo `const_pointer` non può essere usato per modificare il valore di un elemento. Per accedere a un elemento di deque in genere si usa un [iteratore](#iterator).
 
@@ -584,7 +585,7 @@ Tipo che fornisce un riferimento a un **`const`** elemento archiviato in una deq
 typedef typename Allocator::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un tipo `const_reference` non può essere usato per modificare il valore di un elemento.
 
@@ -628,7 +629,7 @@ Tipo che fornisce un iteratore ad accesso casuale che può leggere qualsiasi **`
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un tipo `const_reverse_iterator` non può modificare il valore di un elemento e viene usato per eseguire l'iterazione nella deque in ordine inverso.
 
@@ -648,7 +649,7 @@ const_reverse_iterator crbegin() const;
 
 Iteratore const inverso ad accesso casuale che punta al primo elemento di un oggetto [deque](../standard-library/deque-class.md) invertito o a quello che era stato l'ultimo elemento nell'oggetto `deque` non invertito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Con il valore restituito di `crbegin`, l'oggetto `deque` non può essere modificato.
 
@@ -697,7 +698,7 @@ const_reverse_iterator crend() const;
 
 Iteratore const inverso ad accesso casuale che punta alla posizione successiva all'ultimo elemento in una [deque](../standard-library/deque-class.md) invertita, ovvero la posizione che precedeva il primo elemento nella deque non invertita.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `crend` viene usato con un oggetto `deque` invertito proprio come [array::cend](../standard-library/array-class-stl.md#cend) viene usato con un oggetto `deque`.
 
@@ -787,7 +788,7 @@ Posizione del primo elemento oltre l'intervallo di elementi da copiare.
 *IList*\
 Oggetto initializer_list da copiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Tutti i costruttori archiviano un oggetto allocatore (*al*) e inizializzano la deque.
 
@@ -1019,7 +1020,7 @@ Tipo che specifica la differenza tra due iteratori che fanno riferimento agli el
 typedef typename Allocator::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un oggetto `difference_type` può anche essere descritto come il numero di elementi tra due puntatori.
 
@@ -1088,7 +1089,7 @@ Valore dell'elemento da inserire nell'oggetto `deque`.
 
 La funzione restituisce un iteratore che punta alla posizione in cui è stato inserito il nuovo elemento nella deque.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un'operazione di inserimento può essere dispendiosa. Vedere `deque` per informazioni sulle prestazioni dell'oggetto `deque`.
 
@@ -1283,7 +1284,7 @@ iterator end();
 
 Iteratore ad accesso casuale che punta alla posizione successiva all'ultimo elemento in una deque. Se la deque è vuota, deque:: end == deque::begin.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `end` viene usato per verificare se un iteratore ha raggiunto la fine della relativa deque.
 
@@ -1354,7 +1355,7 @@ Posizione immediatamente successiva all'ultimo elemento rimosso dalla deque.
 
 Iteratore ad accesso casuale che definisce il primo elemento rimanente oltre tutti gli elementi rimossi o un puntatore alla fine della deque se tale elemento non esiste.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `erase` non genera mai un'eccezione.
 
@@ -1416,7 +1417,7 @@ const_reference front() const;
 
 Se la deque è vuota, il valore restituito è indefinito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il valore restituito di `front` viene assegnato a un oggetto `const_reference`, l'oggetto deque non può essere modificato. Se il valore restituito di `front` viene assegnato a un oggetto `reference`, l'oggetto deque può essere modificato.
 
@@ -1464,7 +1465,7 @@ Allocator get_allocator() const;
 
 Allocatore usato dalla deque.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli allocatori per la classe deque specificano il modo in cui la classe gestisce l'archiviazione. Gli allocatori predefiniti forniti con le classi dei contenitori della libreria standard C++ sono sufficienti per la maggior parte delle esigenze di programmazione. Scrivere e usare una classe allocator personalizzata è un argomento di C++ avanzato.
 
@@ -1544,7 +1545,7 @@ Oggetto initializer_list con gli elementi da inserire.
 
 Le prime due funzioni di inserimento restituiscono un iteratore che punta alla posizione in cui è stato inserito il nuovo elemento nella deque.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un'operazione di inserimento può essere dispendiosa.
 
@@ -1556,7 +1557,7 @@ Tipo che specifica un iteratore ad accesso casuale in grado di leggere o modific
 typedef implementation-defined iterator;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un tipo `iterator` può essere usato per modificare il valore di un elemento.
 
@@ -1614,7 +1615,7 @@ Posizione dell'elemento della deque a cui fare riferimento.
 
 Un riferimento all'elemento la cui posizione è specificata nell'argomento. Se la posizione specificata è maggiore della dimensione della deque, il risultato sarà non definito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il valore restituito di `operator[]` viene assegnato a un oggetto `const_reference`, l'oggetto deque non può essere modificato. Se il valore restituito di `operator[]` viene assegnato a un oggetto `reference`, l'oggetto deque può essere modificato.
 
@@ -1661,7 +1662,7 @@ deque& operator=(deque&& right);
 *Ok*\
 Deque che specifica il nuovo contenuto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo override copia gli elementi in questa deque da *destra*, l'origine dell'assegnazione. Il secondo override sposta gli elementi in questa deque da *destra*.
 
@@ -1728,7 +1729,7 @@ Specifica un puntatore a un elemento in una [deque](../standard-library/deque-cl
 typedef typename Allocator::pointer pointer;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un tipo `pointer` può essere usato per modificare il valore di un elemento. Per accedere a un elemento di deque in genere si usa un [iteratore](#iterator).
 
@@ -1740,7 +1741,7 @@ Elimina l'elemento alla fine della deque.
 void pop_back();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'ultimo elemento non deve essere vuoto. `pop_back` non genera mai un'eccezione.
 
@@ -1782,7 +1783,7 @@ Elimina l'elemento all'inizio della deque.
 void pop_front();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo elemento non deve essere vuoto. `pop_front` non genera mai un'eccezione.
 
@@ -1831,7 +1832,7 @@ void push_back(Type&& val);
 *Val*\
 Elemento aggiunto alla fine della deque.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se viene generata un'eccezione, la deque rimane inalterata e viene nuovamente generata l'eccezione.
 
@@ -1849,7 +1850,7 @@ void push_front(Type&& val);
 *Val*\
 Elemento aggiunto all'inizio della deque.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se viene generata un'eccezione, la deque rimane inalterata e viene nuovamente generata l'eccezione.
 
@@ -1904,7 +1905,7 @@ reverse_iterator rbegin();
 
 Iteratore inverso ad accesso casuale che punta al primo elemento di una deque invertita o a quello che era stato l'ultimo elemento nella deque non invertita.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `rbegin` viene usato con una deque invertita proprio come [begin](#begin) viene usato con una deque.
 
@@ -2016,7 +2017,7 @@ reverse_iterator rend();
 
 Iteratore ad accesso casuale inverso che punta alla posizione successiva all'ultimo elemento in una deque invertita, ovvero la posizione che precedeva il primo elemento nella deque non invertita.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `rend` viene usato con una deque invertita proprio come [end](#end) viene usato con una deque.
 
@@ -2105,7 +2106,7 @@ Nuova dimensione della deque.
 *Val*\
 Valore dei nuovi elementi da aggiungere alla deque se la nuova dimensione è maggiore di quella originale. Se il valore viene omesso, ai nuovi elementi viene assegnato il valore predefinito per la classe.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se la dimensione della deque è inferiore alla dimensione richiesta, *_Newsize*, gli elementi vengono aggiunti alla deque fino a quando non raggiunge la dimensione richiesta.
 
@@ -2163,7 +2164,7 @@ Tipo che fornisce un iteratore ad accesso casuale in grado di leggere o modifica
 typedef std::reverse_iterator<iterator> reverse_iterator;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un tipo `reverse_iterator` viene usato per eseguire l'iterazione sulla deque.
 
@@ -2179,7 +2180,7 @@ Elimina la capacità in eccesso.
 void shrink_to_fit();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Non esiste un modo portabile per determinare se `shrink_to_fit` riduce la memoria usata da una [deque](../standard-library/deque-class.md).
 
@@ -2347,7 +2348,7 @@ Tipo che rappresenta il tipo di dati archiviati in una deque.
 typedef typename Allocator::value_type value_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `value_type` è un sinonimo per il parametro di modello `Type`.
 

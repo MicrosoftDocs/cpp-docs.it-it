@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe Decay'
 title: Classe decay
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - decay class
 ms.assetid: 96baa2fd-c8e0-49af-be91-ba375ba7f9dc
-ms.openlocfilehash: 3b22dfecb1162ce67a0d648197465115acb044ba
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6f6a1ebd31af44a48eaf400f9dccefdbd8ca3d01
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688111"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324601"
 ---
 # <a name="decay-class"></a>Classe decay
 
@@ -29,10 +30,10 @@ using decay_t = typename decay<T>::type;
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *T*
+*T*\
 Tipo da modificare.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Usare il modello decay per ottenere il tipo risultante come se il tipo fosse passato dal valore come argomento. Il typedef del membro del modello di classe `type` include un tipo modificato definito nelle fasi seguenti:
 
@@ -46,10 +47,10 @@ Usare il modello decay per ottenere il tipo risultante come se il tipo fosse pas
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)

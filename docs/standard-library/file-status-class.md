@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: file_status Class'
 title: Classe file_status
 ms.date: 09/10/2018
 f1_keywords:
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - std::experimental::filesystem::file_status::operator=
 - std::experimental::filesystem::file_status::type
 - std::experimental::filesystem::file_status::permissions
-ms.openlocfilehash: 60ced1f60c811f585928f47c6cfd5e695d0c4085
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8bc789d97f9b90b18214407fadab19e9644012a1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457745"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324361"
 ---
-# <a name="filestatus-class"></a>Classe file_status
+# <a name="file_status-class"></a>Classe file_status
 
 Esegue il wrapping di [file_type](../standard-library/filesystem-enumerations.md#file_type) e [perms](../standard-library/filesystem-enumerations.md#perms) del file.
 
@@ -40,21 +41,21 @@ class file_status;
 |Funzione membro|Descrizione|
 |-|-|
 |[type](#type)|Ottiene o imposta `file_type`.|
-|[permissions](#permissions)|Ottiene o imposta le autorizzazioni del file.|
+|[autorizzazioni](#permissions)|Ottiene o imposta le autorizzazioni del file.|
 
 ### <a name="operators"></a>Operatori
 
-|Operator|DESCRIZIONE|
+|Operatore|Descrizione|
 |-|-|
-|[operator=](#op_as)|Gli operatori di assegnazione membro impostati come predefiniti si comportano come previsto.|
+|[operatore =](#op_as)|Gli operatori di assegnazione membro impostati come predefiniti si comportano come previsto.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<> filesystem
+**Intestazione:**\<filesystem>
 
 **Spazio dei nomi:** std:: Experimental:: filesystem, std:: Experimental:: filesystem
 
-## <a name="file_status"></a> file_status::file_status
+## <a name="file_statusfile_status"></a><a name="file_status"></a> file_status:: file_status
 
 Costruisce un wrapper per [file_type](../standard-library/filesystem-enumerations.md#file_type) e [perms](../standard-library/filesystem-enumerations.md#perms)del file.
 
@@ -73,15 +74,15 @@ file_status(file_status&&) noexcept = default;
 ### <a name="parameters"></a>Parametri
 
 *FTYPE*\
-Specificata `file_type`, il valore predefinito `file_type::none`è.
+Specificata `file_type` , il valore predefinito è `file_type::none` .
 
 *maschera*\
-File `perms`specificato `perms::unknown`. il valore predefinito è.
+File specificato `perms` . il valore predefinito è `perms::unknown` .
 
 *file_status*\
 Oggetto archiviato.
 
-## <a name="op_as"></a> file_status::operator=
+## <a name="file_statusoperator"></a><a name="op_as"></a> file_status:: operator =
 
 Gli operatori di assegnazione membro impostati come predefiniti si comportano come previsto.
 
@@ -93,9 +94,9 @@ file_status& operator=(file_status&&) nexcept = default;
 ### <a name="parameters"></a>Parametri
 
 *file_status*\
-[File_status](../standard-library/file-status-class.md) copiato nell'oggetto `file_status`.
+[File_status](../standard-library/file-status-class.md) copiato nell'oggetto `file_status` .
 
-## <a name="type"></a>tipo
+## <a name="type"></a>Tipo di<a name="type"></a>
 
 Ottiene o imposta `file_type`.
 
@@ -109,7 +110,7 @@ void type(file_type ftype) noexcept
 *FTYPE*\
 `file_type`specificato.
 
-## <a name="permissions"></a>autorizzazioni
+## <a name="permissions"></a><a name="permissions"></a> autorizzazioni
 
 Ottiene o imposta le autorizzazioni del file.
 
@@ -125,8 +126,8 @@ void permissions(perms mask) noexcept
 *maschera*\
 `perms`specificato.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [Classe Path](../standard-library/path-class.md)\
 [\<filesystem>](../standard-library/filesystem.md)

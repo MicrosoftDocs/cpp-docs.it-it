@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; cwctype&gt;'
 title: '&lt;cwctype&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - cwctype header
 ms.assetid: 46476f95-b8c3-4ab2-a172-9a1be91124b7
-ms.openlocfilehash: 26fbefa7dbaf68ac559e79c702a5a7a2c31266a2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 604cffe5acb61a90fc36e7733db01f2f92aa6155
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450598"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324614"
 ---
 # <a name="ltcwctypegt"></a>&lt;cwctype&gt;
 
-Include l'intestazione della libreria C standard \<wctype.h> e aggiunge i nomi associati allo spazio dei nomi `std`.
+Include l'intestazione della libreria C standard \<wctype.h> e aggiunge i nomi associati allo `std` spazio dei nomi.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,7 +24,7 @@ Include l'intestazione della libreria C standard \<wctype.h> e aggiunge i nomi a
 #include <cwctype>
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'inclusione di questa intestazione garantisce che i nomi dichiarati usando il collegamento esterno nell'intestazione della libreria C standard vengano dichiarati nello spazio dei nomi `std`.
 
@@ -62,8 +63,8 @@ wint_t towctrans(wint_t wc, wctrans_t desc);
 wctrans_t wctrans(const char* property);
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)\
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Panoramica della libreria standard C++](../standard-library/cpp-standard-library-overview.md)\
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

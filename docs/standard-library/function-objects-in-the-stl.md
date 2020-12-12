@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: oggetti funzione nella libreria standard C++'
 title: Oggetti funzione della libreria standard C++
 ms.date: 03/15/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, function objects
 - function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
-ms.openlocfilehash: ed413b2bcdcda8f65794b10c792b10358564420a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b87db43fbaabf1e9be18c56185ee190e3b2cbcac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215738"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324252"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Oggetti funzione della libreria standard C++
 
@@ -72,6 +73,6 @@ ForwardIterator remove_if(
 
 L'ultimo argomento a `remove_if` è un oggetto funzione che restituisce un valore booleano (un *predicato*). Se il risultato dell'oggetto funzione è **`true`** , l'elemento viene rimosso dal contenitore a cui accedono gli iteratori `first` e `last` . È possibile usare uno degli oggetti funzione dichiarati nell' [\<functional>](../standard-library/functional.md) intestazione per l'argomento `pred` oppure è possibile crearne di personalizzati.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimenti per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
