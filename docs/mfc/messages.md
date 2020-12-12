@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: messaggi'
 title: Messaggi
 ms.date: 11/04/2016
 helpviewer_keywords:
 - messages, MFC
 - messages [MFC]
 ms.assetid: b1476310-a135-42ca-817c-444fb3675491
-ms.openlocfilehash: f36dab679a2e41910b2445a7dab36f5786081563
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: dbfec2794cc0dae5a7358b3c2ba39553643fb7c9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624286"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203094"
 ---
 # <a name="messages"></a>Messaggi
 
@@ -18,6 +19,6 @@ Il ciclo di messaggi nella `Run` funzione membro della classe `CWinApp` Recupera
 
 Le categorie di messaggi importanti sono descritte in [categorie](message-categories.md)di messaggi.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Messaggi e comandi nel framework](messages-and-commands-in-the-framework.md)
+[Messaggi e comandi nel Framework](messages-and-commands-in-the-framework.md)

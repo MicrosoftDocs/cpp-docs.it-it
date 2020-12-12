@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: controlli ActiveX MFC: accesso alle proprietà di ambiente'
 title: 'Controlli ActiveX MFC: accesso a proprietà di ambiente'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], accessing ambient properties
 - properties [MFC], accessing ambient
 ms.assetid: fdc9db29-e6b0-45d2-a879-8bd60e2058a7
-ms.openlocfilehash: e5c78c9943f8baeadcc1198ee8c96f2023ac0215
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 6b553c73873a6f96cab3ab55b576a51045c06609
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625441"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203068"
 ---
 # <a name="mfc-activex-controls-accessing-ambient-properties"></a>Controlli ActiveX MFC: accesso a proprietà di ambiente
 
@@ -55,6 +56,6 @@ Per praticità, `COleControl` fornisce funzioni di supporto che accedono a molte
 
 Se il valore di una proprietà di ambiente viene modificato (tramite un'azione del contenitore), `OnAmbientPropertyChanged` viene chiamata la funzione membro del controllo. Eseguire l'override di questa funzione membro per gestire una notifica di questo tipo. Il parametro per `OnAmbientPropertyChanged` è l'ID dispatch della proprietà di ambiente interessata. Il valore di questo ID di invio può essere DISPID_UNKNOWN, che indica che una o più proprietà di ambiente sono state modificate, ma le informazioni sulle proprietà interessate non sono disponibili.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli ActiveX MFC](mfc-activex-controls.md)

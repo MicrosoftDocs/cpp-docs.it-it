@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: gestione e mapping dei messaggi'
 title: Gestione e mapping dei messaggi
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - message handling [MFC]
 - message maps [MFC]
 ms.assetid: 62fe2a1b-944c-449d-a0f0-63c11ee0a3cb
-ms.openlocfilehash: a27f8220055630873b02dd7ff975c04744ad9e8e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 50a55f4718b47054690325e882177fa9acad2f46
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622412"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203198"
 ---
 # <a name="message-handling-and-mapping"></a>Gestione e mapping dei messaggi
 
@@ -27,13 +28,13 @@ Per informazioni generali sui messaggi e sulle code di messaggi in Windows, vede
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-- [Messaggi e comandi nel framework](messages-and-commands-in-the-framework.md)
+- [Messaggi e comandi nel Framework](messages-and-commands-in-the-framework.md)
 
 - [Come il Framework chiama un gestore di messaggi](how-the-framework-calls-a-handler.md)
 
-- [Come vengono cercate le mappe messaggi nel framework](how-the-framework-searches-message-maps.md)
+- [Modalità di ricerca delle mappe messaggi nel Framework](how-the-framework-searches-message-maps.md)
 
-- [Dichiarazioni di funzioni gestore messaggi](declaring-message-handler-functions.md)
+- [Dichiarazione delle funzioni del gestore di messaggi](declaring-message-handler-functions.md)
 
 - [Mapping di messaggi a funzioni](reference/mapping-messages-to-functions.md)
 
@@ -43,9 +44,9 @@ Per informazioni generali sui messaggi e sulle code di messaggi in Windows, vede
 
 - [Procedura: creare una mappa messaggi per una classe modello](how-to-create-a-message-map-for-a-template-class.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Concetti](mfc-concepts.md)<br/>
 [Argomenti MFC generali](general-mfc-topics.md)<br/>
 [Classe CWnd](reference/cwnd-class.md)<br/>
-[Classe CCmdTarget](reference/ccmdtarget-class.md)
+[CCmdTarget (classe)](reference/ccmdtarget-class.md)
