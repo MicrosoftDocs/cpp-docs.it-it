@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CAccessorRowset'
 title: Classe CAccessorRowset
 ms.date: 11/04/2016
 f1_keywords:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: d9dd2eec3948896487b5b977d1107db1f4a1046b
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: c93580fa41967004947b075e82e00bdcb745ad4e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498725"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307574"
 ---
 # <a name="caccessorrowset-class"></a>Classe CAccessorRowset
 
@@ -62,7 +63,7 @@ Classe del set di righe.
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |--|--|
 | [Associare](#bind) | Crea associazioni (utilizzate quando `bBind` viene specificato come **`false`** in [CCommand:: Open](./ccommand-class.md#open)). |
 | [CAccessorRowset](#caccessorrowset) | Costruttore. |
@@ -70,7 +71,7 @@ Classe del set di righe.
 | [FreeRecordMemory](#freerecordmemory) | Libera tutte le colonne del record corrente che devono essere liberate. |
 | [GetColumnInfo](#getcolumninfo) | Implementa [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)). |
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 `TAccessor`La classe gestisce la funzione di accesso. La classe *TRowset* gestisce il set di righe.
 
@@ -145,13 +146,13 @@ Vedere [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms72270
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'utente deve liberare le informazioni sulle colonne restituite e il buffer di stringa. Utilizzare la seconda versione di questo metodo quando si utilizza [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) ed è necessario eseguire l'override delle associazioni.
 
 Per ulteriori informazioni, vedere [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) nella Guida *di riferimento per programmatori OLE DB*.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

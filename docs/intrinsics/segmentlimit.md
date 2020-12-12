@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __segmentlimit'
 title: __segmentlimit
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - __segmentlimit intrinsic
 - lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-ms.openlocfilehash: 9239d8de8ce2065d09ee7975301a2cb41832ba89
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 49f8688918e07e143615af7b184a784daa0eaaa1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217989"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307002"
 ---
 # <a name="__segmentlimit"></a>__segmentlimit
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Genera l' `lsl` istruzione (limite del segmento di carico).
 
@@ -39,13 +40,13 @@ Limite del segmento del selettore del segmento specificato da *un oggetto*, se i
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`__segmentlimit`|x86, x64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Se non è possibile recuperare il limite del segmento, questa istruzione ha esito negativo. In caso di errore, questa istruzione Cancella il flag ZF e il valore restituito non è definito.
 
@@ -105,8 +106,8 @@ Success!
 sl was changed
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

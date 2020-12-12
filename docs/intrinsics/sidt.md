@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __sidt'
 title: __sidt
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - sidt instruction
 - __sidt intrinsic
 ms.assetid: 01e83d14-6e63-4dea-8f64-5a0339d69641
-ms.openlocfilehash: d6b685da0e02373307a3149c5b7b28213f37ad40
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 075351bc10981dd8453381e9ce9393a046dfd884
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222329"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306963"
 ---
 # <a name="__sidt"></a>__sidt
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Archivia il valore del registro della tabella del descrittore di interrupt (IDTR) nella posizione di memoria specificata.
 
@@ -33,19 +34,19 @@ in Puntatore alla posizione di memoria in cui è archiviato il IDTR.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`__sidt`|x86, x64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-La funzione `__sidt` è equivalente alle `SIDT` istruzioni in linguaggio macchina. Per ulteriori informazioni, cercare il documento "Intel Architecture Software Developer ' s Manual, volume 2: Riferimento al set di istruzioni "nel sito [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
+La funzione `__sidt` è equivalente alle `SIDT` istruzioni in linguaggio macchina. Per ulteriori informazioni, cercare il documento "Intel Architecture Software Developer ' s Manual, volume 2: Instruction Set Reference" nel sito di [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
 [__lidt](../intrinsics/lidt.md)

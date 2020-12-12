@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _rotr8, _rotr16'
 title: _rotr8, _rotr16
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - _rotr8 intrinsic
 - _rotr16 intrinsic
 ms.assetid: dfbd2c82-82b4-427a-ad52-51609027ebff
-ms.openlocfilehash: 66598a4e6cdc26fa60a87cd32abaa34319ebe6cc
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 95908956fe34b654c3602f27b495eb58a0b8f8c7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218047"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307041"
 ---
 # <a name="_rotr8-_rotr16"></a>_rotr8, _rotr16
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Ruotare i valori di input a destra del bit meno significativo di un numero specificato di posizioni di bit.
 
@@ -36,7 +37,7 @@ unsigned short _rotr16(
 
 ### <a name="parameters"></a>Parametri
 
-*value*\
+*valore*\
 in Valore da ruotare.
 
 *MAIUSC*\
@@ -48,14 +49,14 @@ Il valore ruotato.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`_rotr8`|x86, ARM, x64, ARM64|
 |`_rotr16`|x86, ARM, x64, ARM64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 A differenza di un'operazione di spostamento a destra, quando si esegue una rotazione a destra, i bit meno significativi che rientrano nell'estremità inferiore vengono spostati nelle posizioni dei bit di ordine superiore.
 
@@ -99,9 +100,9 @@ Rotating 0x41 right by 7 bits gives 0x82
 Rotating unsigned short 0x12 right by 10 bits gives 0x480
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [_rotl8, _rotl16](../intrinsics/rotl8-rotl16.md)\
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

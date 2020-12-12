@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe Platform:: WriteOnlyArray'
 title: Platform::WriteOnlyArray (classe)
 ms.date: 12/30/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: d06ed19b7c041f9ae73f862ba521449a206aa321
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cddbe0d3823ba7b9751bd60844d9ce699546b804
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374649"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307769"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray (classe)
 
@@ -31,20 +32,20 @@ Questa classe di riferimento viene dichiarata come privata in vccorlib.h, di con
 private ref class WriteOnlyArray<T, 1>
 ```
 
-### <a name="members"></a>Membri
+### <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 Questi metodi presentano accessibilità interna, ovvero sono accessibili solo all'interno dell'app o del componente C++.
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[WriteOnlyArray::begin](#begin)|Iteratore che punta al primo elemento della matrice|
-|[WriteOnlyArray::Data](#data)|Puntatore al buffer di dati.|
-|[WriteOnlyArray::end](#end)|Iteratore che punta all'elemento dopo l'ultimo elemento nella matrice.|
-|[WriteOnlyArray::FastPassWriteOnlyArray::FastPass](#fastpass)|Indica se la matrice può utilizzare il meccanismo FastPass, ovvero un'ottimizzazione eseguita in modo trasparente dal sistema. Non usarla nel codice|
-|[WriteOnlyArray::Lunghezza](#length)|Restituisce il numero di elementi nella matrice.|
-|[WriteOnlyArray::set](#set)|Imposta l'elemento specificato sul valore specificato.|
+|[WriteOnlyArray:: Begin](#begin)|Iteratore che punta al primo elemento della matrice|
+|[WriteOnlyArray::D ATA](#data)|Puntatore al buffer di dati.|
+|[WriteOnlyArray:: end](#end)|Iteratore che punta all'elemento dopo l'ultimo elemento nella matrice.|
+|[WriteOnlyArray:: FastPass](#fastpass)|Indica se la matrice può utilizzare il meccanismo FastPass, ovvero un'ottimizzazione eseguita in modo trasparente dal sistema. Non usarla nel codice|
+|[WriteOnlyArray:: length](#length)|Restituisce il numero di elementi nella matrice.|
+|[WriteOnlyArray:: set](#set)|Imposta l'elemento specificato sul valore specificato.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -52,13 +53,13 @@ Questi metodi presentano accessibilità interna, ovvero sono accessibili solo al
 
 ### <a name="requirements"></a>Requisiti
 
-L'opzione del compilatore: **//W**
+Opzione del compilatore: **/ZW**
 
 **Metadati:** Platform.winmd
 
 **Spazio dei nomi:** Platform
 
-## <a name="writeonlyarraybegin-method"></a><a name="begin"></a>Metodo WriteOnlyArray::begin
+## <a name="writeonlyarraybegin-method"></a><a name="begin"></a> Metodo WriteOnlyArray:: Begin
 
 Restituisce un puntatore al primo elemento della matrice.
 
@@ -72,11 +73,11 @@ T* begin() const;
 
 Puntatore al primo elemento della matrice.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo iteratore può essere usato con algoritmi STL quali `std::sort` per intervenire sugli elementi della matrice.
 
-## <a name="writeonlyarraydata-property"></a><a name="data"></a>WriteOnlyArray::Data Proprietà
+## <a name="writeonlyarraydata-property"></a><a name="data"></a> WriteOnlyArray: proprietà:D ATA
 
 Puntatore al buffer di dati.
 
@@ -92,7 +93,7 @@ property T* Data{
 
 Puntatore ai byte di matrice non elaborati.
 
-## <a name="writeonlyarrayend-method"></a><a name="end"></a>Metodo WriteOnlyArray::end
+## <a name="writeonlyarrayend-method"></a><a name="end"></a> Metodo WriteOnlyArray:: end
 
 Restituisce un puntatore oltre l'ultimo elemento della matrice.
 
@@ -106,11 +107,11 @@ T* end() const;
 
 Iteratore di un puntatore oltre l'ultimo elemento della matrice.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo iteratore può essere usato con algoritmi STL per eseguire operazioni quali `std::sort` sugli elementi della matrice.
 
-## <a name="writeonlyarrayfastpass-property"></a><a name="fastpass"></a>WriteOnlyArray::FastPass Proprietà
+## <a name="writeonlyarrayfastpass-property"></a><a name="fastpass"></a> Proprietà WriteOnlyArray:: FastPass
 
 Indica se l'ottimizzazione FastPass interna può essere eseguita. Non è destinata all'uso da parte del codice utente.
 
@@ -126,7 +127,7 @@ property bool FastPass{
 
 Valore booleano che indica se la matrice è FastPass.
 
-## <a name="writeonlyarrayget-method"></a><a name="get"></a>Metodo WriteOnlyArray::get
+## <a name="writeonlyarrayget-method"></a><a name="get"></a> Metodo WriteOnlyArray:: Get
 
 Restituisce l'elemento in corrispondenza dell'indice specificato.
 
@@ -138,12 +139,12 @@ T& get(unsigned int indexArg) const;
 
 ### <a name="parameters"></a>Parametri
 
-*indexArg (Argino)*<br/>
+*indexArg*<br/>
 Indice da utilizzare.
 
 ### <a name="return-value"></a>Valore restituito
 
-## <a name="writeonlyarraylength-property"></a><a name="length"></a>WriteOnlyArray::Length Proprietà
+## <a name="writeonlyarraylength-property"></a><a name="length"></a> Proprietà WriteOnlyArray:: length
 
 Restituisce il numero di elementi nella matrice allocata dal chiamante.
 
@@ -159,7 +160,7 @@ property unsigned int Length{
 
 Numero di elementi nella matrice.
 
-## <a name="writeonlyarrayset-function"></a><a name="set"></a>Funzione WriteOnlyArray::setWriteOnlyArray::set Function
+## <a name="writeonlyarrayset-function"></a><a name="set"></a> Funzione WriteOnlyArray:: set
 
 Imposta il valore specificato in corrispondenza dell'indice specificato nella matrice.
 
@@ -173,21 +174,21 @@ T& set(
 
 ### <a name="parameters"></a>Parametri
 
-*indexArg (Argino)*<br/>
+*indexArg*<br/>
 Indice dell'elemento da impostare.
 
-*valueArg (valoreArg)*<br/>
+*valueArg*<br/>
 Valore da impostare in corrispondenza di `indexArg`.
 
 ### <a name="return-value"></a>Valore restituito
 
 Riferimento all'elemento appena impostato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Per ulteriori informazioni su come interpretare il valore HRESULT, vedere [Struttura dei codici di errore COM](/windows/win32/com/structure-of-com-error-codes).
+Per ulteriori informazioni su come interpretare il valore HRESULT, vedere la pagina relativa alla [struttura dei codici di errore com](/windows/win32/com/structure-of-com-error-codes).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi della piattaforma](platform-namespace-c-cx.md)<br/>
+[Spazio dei nomi Platform](platform-namespace-c-cx.md)<br/>
 [Creazione di componenti Windows Runtime in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

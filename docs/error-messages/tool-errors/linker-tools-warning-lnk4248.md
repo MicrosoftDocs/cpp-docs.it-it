@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avvisi degli strumenti del linker LNK4248'
 title: Avviso degli strumenti del linker LNK4248
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4248
 ms.assetid: e40523ff-e3cb-4ba6-ab79-23f0f339f6cf
-ms.openlocfilehash: 81f3c2abc41673e6e4c9e3f59ff1dd515e1cf365
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: b5b2247713e5e61ee26cd16e3e6fd46a8cd483af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685425"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97305286"
 ---
 # <a name="linker-tools-warning-lnk4248"></a>Avviso degli strumenti del linker LNK4248
 
@@ -31,7 +32,7 @@ Per altre informazioni, vedere [/CLR (compilazione Common Language Runtime)](../
 
 1. Fornire la definizione del tipo nel modulo MSIL.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 L'esempio seguente genera l'LNK4248. Definire struct a da risolvere.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CMFCTasksPane'
 title: Classe CMFCTasksPane
 ms.date: 07/02/2019
 f1_keywords:
@@ -194,16 +195,16 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: fbcdd6a99375272f440282e76290401ff658d52e
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: a8666f199c952b63d34ae07e958e9cf8e2d37343
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753411"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306794"
 ---
 # <a name="cmfctaskspane-class"></a>Classe CMFCTasksPane
 
-Per informazioni dettagliate, vedere il codice sorgente disponibile nella **cartella\\MFC\\atlmfc\\src di VC** per l'installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella **cartella \\ \\ \\ MFC atlmfc src di VC** per l'installazione di Visual Studio.
 
 La classe `CMFCTasksPane` implementa un elenco di elementi selezionabili (attività).
 
@@ -324,7 +325,7 @@ class CMFCTasksPane : public CDockablePane
 |----------|-----------------|
 |[CMFCTasksPane::OnActivateTasksPanePage](#onactivatetaskspanepage)|Chiamato dal framework quando una nuova pagina del riquadro attività è attivata.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La classe `CMFCTasksPane` implementa la funzionalità seguenti:
 
@@ -340,7 +341,7 @@ Per usare i controlli `CMFCTasksPane` nell'applicazione, attenersi alla procedur
 
 1. Importare un oggetto `CMFCTasksPane` nella classe della finestra cornice principale.
 
-1. Quando si elabora il messaggio di WM_CREATE, `Create` chiamare il metodo. È possibile usare gli stili [CControlBar](../../mfc/reference/ccontrolbar-class.md) normali. Per altre informazioni, vedere `CControlBar::Create`.
+1. Quando si elabora il messaggio di WM_CREATE, chiamare il `Create` metodo. È possibile usare gli stili [CControlBar](../../mfc/reference/ccontrolbar-class.md) normali. Per altre informazioni, vedere `CControlBar::Create`.
 
 1. Chiamare il metodo [CMFCTasksPane:: addgroup](#addgroup) per aggiungere diversi gruppi.
 
@@ -366,7 +367,7 @@ L'esempio seguente illustra come costruire un oggetto `CMFCTasksPane` e usare i 
 
 [CObject](../../mfc/reference/cobject-class.md)\
 &nbsp;[CCmdTarget](../../mfc/reference/ccmdtarget-class.md) └\
-&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CWnd](../../mfc/reference/cwnd-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp; [CWnd](../../mfc/reference/cwnd-class.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CBasePane](../../mfc/reference/cbasepane-class.md) └\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CPane](../../mfc/reference/cpane-class.md) └\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CDockablePane](../../mfc/reference/cdockablepane-class.md) └\
@@ -376,7 +377,7 @@ L'esempio seguente illustra come costruire un oggetto `CMFCTasksPane` e usare i 
 
 **Intestazione:** afxTasksPane. h
 
-## <a name="cmfctaskspaneaddgroup"></a><a name="addgroup"></a>CMFCTasksPane:: AddGroup
+## <a name="cmfctaskspaneaddgroup"></a><a name="addgroup"></a> CMFCTasksPane:: AddGroup
 
 Aggiunge un nuovo gruppo di attività al controllo del riquadro attività.
 
@@ -407,7 +408,7 @@ in Specifica il nome del gruppo.
 in TRUE per creare il gruppo nella parte inferiore del controllo del riquadro attività. in caso contrario, FALSE.
 
 *bSpecial*<br/>
-in TRUE per contrassegnare questo gruppo come gruppo *speciale* ; in caso contrario, FALSE. Per ulteriori informazioni sui gruppi speciali, vedere la sezione Osservazioni di `CMFCTasksPane`.
+in TRUE per contrassegnare questo gruppo come gruppo *speciale* ; in caso contrario, FALSE. Per ulteriori informazioni sui gruppi speciali, vedere la sezione Osservazioni di `CMFCTasksPane` .
 
 *hIcon*<br/>
 in Specifica l'icona da visualizzare nella didascalia del gruppo.
@@ -416,13 +417,13 @@ in Specifica l'icona da visualizzare nella didascalia del gruppo.
 
 Indice in base zero del gruppo nell'elenco interno di gruppi gestiti dalla classe.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamare questo metodo per creare un gruppo di attività e per aggiungere tale gruppo al controllo del riquadro attività.
 
 Il Framework Visualizza i gruppi di attività nella parte superiore del controllo del riquadro attività o nella parte inferiore. Il Framework può visualizzare solo un gruppo nella parte inferiore; Questo gruppo deve essere aggiunto per ultimo.
 
-## <a name="cmfctaskspaneaddlabel"></a><a name="addlabel"></a>CMFCTasksPane:: AddLabel
+## <a name="cmfctaskspaneaddlabel"></a><a name="addlabel"></a> CMFCTasksPane:: AddLabel
 
 Aggiunge un'etichetta al gruppo di attività specificato.
 
@@ -452,11 +453,11 @@ in TRUE per visualizzare l'etichetta in grassetto. in caso contrario, FALSE.
 
 Indice in base zero del gruppo in cui è stata aggiunta l'etichetta oppure-1 se il gruppo specificato da *separa* non esiste.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il Framework gestisce le attività e le etichette in modo diverso. Quando un utente fa clic su un'attività, il Framework esegue un comando. Quando un utente fa clic su un'etichetta, non viene eseguito alcun comando. Per ulteriori informazioni, vedere [CMFCTasksPane:: AddTask](#addtask).
 
-## <a name="cmfctaskspaneaddmrufileslist"></a><a name="addmrufileslist"></a>CMFCTasksPane:: AddMRUFilesList
+## <a name="cmfctaskspaneaddmrufileslist"></a><a name="addmrufileslist"></a> CMFCTasksPane:: AddMRUFilesList
 
 Aggiunge un'attività per ogni file archiviato in un elenco di file utilizzati più di recente (MRU) in un gruppo.
 
@@ -478,7 +479,7 @@ in Specifica il numero di file da visualizzare nell'elenco di file MRU.
 
 Indice in base zero del gruppo in cui è stato aggiunto l'elenco dei file MRU oppure-1 se il gruppo specificato da *separa* non esiste.
 
-## <a name="cmfctaskspaneaddpage"></a><a name="addpage"></a>CMFCTasksPane:: AddPage
+## <a name="cmfctaskspaneaddpage"></a><a name="addpage"></a> CMFCTasksPane:: AddPage
 
 Aggiunge una pagina al riquadro attività.
 
@@ -495,7 +496,7 @@ in Specifica l'etichetta per la pagina.
 
 Indice in base zero della nuova pagina.
 
-## <a name="cmfctaskspaneaddseparator"></a><a name="addseparator"></a>CMFCTasksPane:: AddSeparator
+## <a name="cmfctaskspaneaddseparator"></a><a name="addseparator"></a> CMFCTasksPane:: AddSeparator
 
 ```
 int AddSeparator(int nGroup);
@@ -507,9 +508,9 @@ in *separa*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfctaskspaneaddtask"></a><a name="addtask"></a>CMFCTasksPane:: AddTask
+## <a name="cmfctaskspaneaddtask"></a><a name="addtask"></a> CMFCTasksPane:: AddTask
 
 Aggiunge un'attività al gruppo di attività specificato.
 
@@ -543,7 +544,7 @@ in Specifica i dati definiti dall'utente da associare all'attività.
 
 Indice in base zero del gruppo in cui è stata aggiunta l'attività oppure-1 se il gruppo specificato da *separa* non esiste.
 
-## <a name="cmfctaskspaneaddwindow"></a><a name="addwindow"></a>CMFCTasksPane:: AddWindow
+## <a name="cmfctaskspaneaddwindow"></a><a name="addwindow"></a> CMFCTasksPane:: AddWindow
 
 Aggiunge una finestra figlio al riquadro attività.
 
@@ -577,11 +578,11 @@ in Specifica i dati definiti dall'utente associati all'attività.
 
 Indice in base zero del gruppo in cui è stata aggiunta la finestra, oppure-1 se il gruppo specificato da *separa* non esiste.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamare questo metodo per aggiungere un controllo a un riquadro attività. Ad esempio, è possibile aggiungere un controllo di modifica che funzioni come una barra di ricerca.
 
-## <a name="cmfctaskspanecmfctaskspane"></a><a name="cmfctaskspane"></a>CMFCTasksPane:: CMFCTasksPane
+## <a name="cmfctaskspanecmfctaskspane"></a><a name="cmfctaskspane"></a> CMFCTasksPane:: CMFCTasksPane
 
 Costruisce un oggetto [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) .
 
@@ -589,7 +590,7 @@ Costruisce un oggetto [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md
 CMFCTasksPane();
 ```
 
-## <a name="cmfctaskspanecollapseallgroups"></a><a name="collapseallgroups"></a>CMFCTasksPane:: CollapseAllGroups
+## <a name="cmfctaskspanecollapseallgroups"></a><a name="collapseallgroups"></a> CMFCTasksPane:: CollapseAllGroups
 
 ```cpp
 void CollapseAllGroups(BOOL bCollapse = TRUE);
@@ -604,9 +605,9 @@ void CollapseAllGroups(
 in *bCollapse*<br/>
 in *nPageIdx*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfctaskspanecollapsegroup"></a><a name="collapsegroup"></a>CMFCTasksPane:: CollapseGroup
+## <a name="cmfctaskspanecollapsegroup"></a><a name="collapsegroup"></a> CMFCTasksPane:: CollapseGroup
 
 Comprime o espande un gruppo.
 
@@ -635,11 +636,11 @@ in Specifica l'indice in base zero del gruppo da comprimere nell'elenco interno 
 
 TRUE se il gruppo viene compresso o espanso correttamente; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un gruppo compresso Mostra solo la didascalia del gruppo; l'elenco delle attività è nascosto.
 
-## <a name="cmfctaskspanecreatedefaultminiframe"></a><a name="createdefaultminiframe"></a>CMFCTasksPane:: CreateDefaultMiniframe
+## <a name="cmfctaskspanecreatedefaultminiframe"></a><a name="createdefaultminiframe"></a> CMFCTasksPane:: CreateDefaultMiniframe
 
 ```
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
@@ -651,9 +652,9 @@ in *rectInitial*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfctaskspanecreatemenu"></a><a name="createmenu"></a>CMFCTasksPane:: CreateMenu
+## <a name="cmfctaskspanecreatemenu"></a><a name="createmenu"></a> CMFCTasksPane:: CreateMenu
 
 Consente di creare un menu che viene visualizzato quando un utente fa clic sul pulsante di menu **altri riquadri attività** .
 
@@ -665,13 +666,13 @@ HMENU CreateMenu() const;
 
 Handle per il nuovo menu.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Eseguire l'override di questo metodo in una classe derivata per personalizzare il menu per un riquadro attività.
 
 Il menu popup creato da questo metodo contiene l'elenco di pagine nel riquadro attività. Il menu Visualizza un segno di spunta accanto alla pagina attiva.
 
-## <a name="cmfctaskspaneenableanimation"></a><a name="enableanimation"></a>CMFCTasksPane:: EnableAnimation
+## <a name="cmfctaskspaneenableanimation"></a><a name="enableanimation"></a> CMFCTasksPane:: EnableAnimation
 
 Abilita o Disabilita l'animazione che si verifica quando un gruppo di attività viene espanso o compresso.
 
@@ -684,11 +685,11 @@ void EnableAnimation(BOOL bEnable = TRUE);
 *bEnable*<br/>
 in TRUE per abilitare l'animazione che si verifica quando un gruppo di attività viene espanso o compresso; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, l'animazione che si verifica quando viene espanso o compresso un gruppo di attività è abilitata.
 
-## <a name="cmfctaskspaneenablegroupcollapse"></a><a name="enablegroupcollapse"></a>CMFCTasksPane:: EnableGroupCollapse
+## <a name="cmfctaskspaneenablegroupcollapse"></a><a name="enablegroupcollapse"></a> CMFCTasksPane:: EnableGroupCollapse
 
 Specifica se un utente può comprimere i gruppi di attività.
 
@@ -701,11 +702,11 @@ void EnableGroupCollapse(BOOL bEnable);
 *bEnable*<br/>
 in TRUE se gli utenti possono comprimere i gruppi di attività. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un gruppo di attività compresso Visualizza solo la didascalia del gruppo; l'elenco delle attività è nascosto.
 
-## <a name="cmfctaskspaneenablehistorymenubuttons"></a><a name="enablehistorymenubuttons"></a>CMFCTasksPane:: EnableHistoryMenuButtons
+## <a name="cmfctaskspaneenablehistorymenubuttons"></a><a name="enablehistorymenubuttons"></a> CMFCTasksPane:: EnableHistoryMenuButtons
 
 Consente di abilitare i menu a discesa sui pulsanti di spostamento **Avanti** e **indietro** .
 
@@ -718,13 +719,13 @@ void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 *bEnable*<br/>
 in TRUE per abilitare i menu a discesa sui pulsanti di spostamento **Avanti** e **indietro** ; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, i menu a discesa sui pulsanti **Avanti** e **indietro** sono disabilitati.
 
 I menu contengono la cronologia delle pagine attività utilizzate dall'utente.
 
-## <a name="cmfctaskspaneenablenavigationtoolbar"></a><a name="enablenavigationtoolbar"></a>CMFCTasksPane:: EnableNavigationToolbar
+## <a name="cmfctaskspaneenablenavigationtoolbar"></a><a name="enablenavigationtoolbar"></a> CMFCTasksPane:: EnableNavigationToolbar
 
 Abilita o disabilita la barra degli strumenti di navigazione.
 
@@ -752,13 +753,13 @@ in Specifica le dimensioni di un'immagine della barra degli strumenti.
 *sizeToolbarButton*<br/>
 in Specifica la dimensione di un pulsante della barra degli strumenti.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-La barra degli strumenti di navigazione è una barra degli strumenti visualizzata dal Framework nella parte superiore del riquadro attività. La barra degli strumenti di navigazione contiene i pulsanti di spostamento **indietro**, **Avanti**e **Home** e un pulsante di menu che contiene l'elenco di pagine disponibili.
+La barra degli strumenti di navigazione è una barra degli strumenti visualizzata dal Framework nella parte superiore del riquadro attività. La barra degli strumenti di navigazione contiene i pulsanti di spostamento **indietro**, **Avanti** e **Home** e un pulsante di menu che contiene l'elenco di pagine disponibili.
 
 Per impostazione predefinita, il Framework non Visualizza la barra degli strumenti di navigazione. Se la barra degli strumenti di spostamento non viene visualizzata, i pulsanti di spostamento si trovano nella didascalia della barra di ancoraggio.
 
-## <a name="cmfctaskspaneenableoffsetcustomcontrols"></a><a name="enableoffsetcustomcontrols"></a>CMFCTasksPane:: EnableOffsetCustomControls
+## <a name="cmfctaskspaneenableoffsetcustomcontrols"></a><a name="enableoffsetcustomcontrols"></a> CMFCTasksPane:: EnableOffsetCustomControls
 
 ```cpp
 void EnableOffsetCustomControls(BOOL bEnable);
@@ -768,9 +769,9 @@ void EnableOffsetCustomControls(BOOL bEnable);
 
 in *bEnable*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfctaskspaneenablescrollbuttons"></a><a name="enablescrollbuttons"></a>CMFCTasksPane:: EnableScrollButtons
+## <a name="cmfctaskspaneenablescrollbuttons"></a><a name="enablescrollbuttons"></a> CMFCTasksPane:: EnableScrollButtons
 
 Abilita i pulsanti di scorrimento anziché una barra di scorrimento.
 
@@ -783,11 +784,11 @@ void EnableScrollButtons(BOOL bEnable = TRUE);
 *bEnable*<br/>
 in TRUE per visualizzare i pulsanti di scorrimento nel riquadro attività anziché una barra di scorrimento; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, il Framework Visualizza i pulsanti di scorrimento nel riquadro attività.
 
-## <a name="cmfctaskspaneenablewraplabels"></a><a name="enablewraplabels"></a>CMFCTasksPane:: EnableWrapLabels
+## <a name="cmfctaskspaneenablewraplabels"></a><a name="enablewraplabels"></a> CMFCTasksPane:: EnableWrapLabels
 
 Abilita o Disabilita il ritorno a capo automatico per il testo nelle etichette.
 
@@ -800,11 +801,11 @@ void EnableWrapLabels(BOOL bEnable = TRUE);
 *bEnable*<br/>
 in TRUE per eseguire il wrapping del testo nelle etichette visualizzate nel riquadro attività; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Per impostazione predefinita, il Framework non esegue il wrapping del testo nelle etichette. Quando il ritorno a capo automatico è abilitato, il testo in etichette può essere visualizzato in più righe. L'etichetta può includere marcatori di interruzioni `\n` di riga come e `&`il marcatore di sottolineatura.
+Per impostazione predefinita, il Framework non esegue il wrapping del testo nelle etichette. Quando il ritorno a capo automatico è abilitato, il testo in etichette può essere visualizzato in più righe. L'etichetta può includere marcatori di interruzioni di riga come `\n` e il marcatore di sottolineatura `&` .
 
-## <a name="cmfctaskspaneenablewraptasks"></a><a name="enablewraptasks"></a>CMFCTasksPane:: EnableWrapTasks
+## <a name="cmfctaskspaneenablewraptasks"></a><a name="enablewraptasks"></a> CMFCTasksPane:: EnableWrapTasks
 
 Abilita o Disabilita il ritorno a capo automatico per il testo nelle attività.
 
@@ -817,11 +818,11 @@ void EnableWrapTasks(BOOL bEnable = TRUE);
 *bEnable*<br/>
 in TRUE per eseguire il wrapping delle attività nel riquadro attività; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, il ritorno a capo automatico per le attività è disabilitato.
 
-## <a name="cmfctaskspanegetactivepage"></a><a name="getactivepage"></a>CMFCTasksPane:: GetActivePage
+## <a name="cmfctaskspanegetactivepage"></a><a name="getactivepage"></a> CMFCTasksPane:: GetActivePage
 
 Restituisce l'indice in base zero per la pagina attiva.
 
@@ -833,7 +834,7 @@ int GetActivePage() const;
 
 Indice in base zero della pagina attiva.
 
-## <a name="cmfctaskspanegetgroupcaptionheight"></a><a name="getgroupcaptionheight"></a>CMFCTasksPane:: GetGroupCaptionHeight
+## <a name="cmfctaskspanegetgroupcaptionheight"></a><a name="getgroupcaptionheight"></a> CMFCTasksPane:: GetGroupCaptionHeight
 
 Restituisce l'altezza della didascalia del gruppo.
 
@@ -845,7 +846,7 @@ int GetGroupCaptionHeight() const;
 
 Altezza della didascalia del gruppo, in pixel.
 
-## <a name="cmfctaskspanegetgroupcaptionhorzoffset"></a><a name="getgroupcaptionhorzoffset"></a>CMFCTasksPane:: GetGroupCaptionHorzOffset
+## <a name="cmfctaskspanegetgroupcaptionhorzoffset"></a><a name="getgroupcaptionhorzoffset"></a> CMFCTasksPane:: GetGroupCaptionHorzOffset
 
 Restituisce l'offset orizzontale di una didascalia del gruppo.
 
@@ -857,7 +858,7 @@ int GetGroupCaptionHorzOffset() const;
 
 Offset orizzontale di una didascalia del gruppo. L'offset orizzontale è la distanza in pixel dal bordo sinistro o destro del riquadro attività.
 
-## <a name="cmfctaskspanegetgroupcaptionvertoffset"></a><a name="getgroupcaptionvertoffset"></a>CMFCTasksPane:: GetGroupCaptionVertOffset
+## <a name="cmfctaskspanegetgroupcaptionvertoffset"></a><a name="getgroupcaptionvertoffset"></a> CMFCTasksPane:: GetGroupCaptionVertOffset
 
 Restituisce l'offset verticale di una didascalia del gruppo.
 
@@ -869,11 +870,11 @@ int GetGroupCaptionVertOffset() const;
 
 Offset verticale di una didascalia del gruppo tra i bordi superiore e inferiore del riquadro attività.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore predefinito per l'offset verticale è 7 pixel.
 
-## <a name="cmfctaskspanegetgroupcount"></a><a name="getgroupcount"></a>CMFCTasksPane:: GetGroupCount
+## <a name="cmfctaskspanegetgroupcount"></a><a name="getgroupcount"></a> CMFCTasksPane:: GetGroupCount
 
 Restituisce il numero totale di gruppi.
 
@@ -885,7 +886,7 @@ int GetGroupCount() const;
 
 Numero totale di gruppi nel riquadro attività.
 
-## <a name="cmfctaskspanegetgrouplocation"></a><a name="getgrouplocation"></a>CMFCTasksPane:: GetGroupLocation
+## <a name="cmfctaskspanegetgrouplocation"></a><a name="getgrouplocation"></a> CMFCTasksPane:: GetGroupLocation
 
 Restituisce l'indice di gruppo interno per il gruppo specificato.
 
@@ -907,7 +908,7 @@ out Contiene l'indice in base zero del gruppo di attività.
 
 TRUE se il gruppo di attività è stato trovato. in caso contrario, FALSE.
 
-## <a name="cmfctaskspanegetgroupvertoffset"></a><a name="getgroupvertoffset"></a>CMFCTasksPane:: GetGroupVertOffset
+## <a name="cmfctaskspanegetgroupvertoffset"></a><a name="getgroupvertoffset"></a> CMFCTasksPane:: GetGroupVertOffset
 
 Restituisce l'offset verticale di un gruppo.
 
@@ -919,7 +920,7 @@ int GetGroupVertOffset() const;
 
 Offset verticale di un gruppo, espresso in pixel.
 
-## <a name="cmfctaskspanegethorzmargin"></a><a name="gethorzmargin"></a>CMFCTasksPane:: GetHorzMargin
+## <a name="cmfctaskspanegethorzmargin"></a><a name="gethorzmargin"></a> CMFCTasksPane:: GetHorzMargin
 
 Restituisce la spaziatura orizzontale tra un riquadro attività e il bordo dell'area client.
 
@@ -931,11 +932,11 @@ int GetHorzMargin() const;
 
 Spaziatura orizzontale tra un riquadro attività e il bordo dell'area client.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La spaziatura predefinita tra un riquadro attività e il bordo dell'area client è 12 pixel.
 
-## <a name="cmfctaskspanegetnextpages"></a><a name="getnextpages"></a>CMFCTasksPane:: GetNextPages
+## <a name="cmfctaskspanegetnextpages"></a><a name="getnextpages"></a> CMFCTasksPane:: GetNextPages
 
 ```cpp
 void GetNextPages(CStringList& lstNextPages) const;
@@ -945,9 +946,9 @@ void GetNextPages(CStringList& lstNextPages) const;
 
 in *lstNextPages*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfctaskspanegetpagebygroup"></a><a name="getpagebygroup"></a>CMFCTasksPane:: GetPageByGroup
+## <a name="cmfctaskspanegetpagebygroup"></a><a name="getpagebygroup"></a> CMFCTasksPane:: GetPageByGroup
 
 Recupera l'indice della pagina per un gruppo specificato.
 
@@ -969,7 +970,7 @@ out Contiene l'indice di pagina per il gruppo specificato. Se il gruppo di attiv
 
 TRUE se il gruppo *separa* esiste; in caso contrario, FALSE.
 
-## <a name="cmfctaskspanegetpagescount"></a><a name="getpagescount"></a>CMFCTasksPane:: GetPagesCount
+## <a name="cmfctaskspanegetpagescount"></a><a name="getpagescount"></a> CMFCTasksPane:: GetPagesCount
 
 Restituisce il numero di pagine.
 
@@ -981,7 +982,7 @@ int GetPagesCount() const;
 
 Il numero di pagine nel riquadro attività.
 
-## <a name="cmfctaskspanegetpreviouspages"></a><a name="getpreviouspages"></a>CMFCTasksPane:: GetPreviousPages
+## <a name="cmfctaskspanegetpreviouspages"></a><a name="getpreviouspages"></a> CMFCTasksPane:: GetPreviousPages
 
 ```cpp
 void GetPreviousPages(CStringList& lstPrevPages) const;
@@ -991,9 +992,9 @@ void GetPreviousPages(CStringList& lstPrevPages) const;
 
 in *lstPrevPages*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfctaskspanegetscrollbarctrl"></a><a name="getscrollbarctrl"></a>CMFCTasksPane:: GetScrollBarCtrl
+## <a name="cmfctaskspanegetscrollbarctrl"></a><a name="getscrollbarctrl"></a> CMFCTasksPane:: GetScrollBarCtrl
 
 ```
 virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
@@ -1005,9 +1006,9 @@ in *nBar*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfctaskspanegettask"></a><a name="gettask"></a>CMFCTasksPane:: GetTask
+## <a name="cmfctaskspanegettask"></a><a name="gettask"></a> CMFCTasksPane:: GetTask
 
 Recupera un'attività.
 
@@ -1029,7 +1030,7 @@ in Specifica l'indice in base zero dell'attività nell'elenco specificato da *se
 
 Attività in corrispondenza dell'indice specificato.
 
-## <a name="cmfctaskspanegettaskcount"></a><a name="gettaskcount"></a>CMFCTasksPane:: GetTaskCount
+## <a name="cmfctaskspanegettaskcount"></a><a name="gettaskcount"></a> CMFCTasksPane:: GetTaskCount
 
 Restituisce il numero di attività in un gruppo specificato.
 
@@ -1046,7 +1047,7 @@ in Specifica l'indice del gruppo di attività.
 
 Numero di attività nel gruppo specificato oppure 0 se *separa* non è valido.
 
-## <a name="cmfctaskspanegettaskgroup"></a><a name="gettaskgroup"></a>CMFCTasksPane:: GetTaskGroup
+## <a name="cmfctaskspanegettaskgroup"></a><a name="gettaskgroup"></a> CMFCTasksPane:: GetTaskGroup
 
 Restituisce un gruppo di attività per un indice di gruppo specificato.
 
@@ -1063,7 +1064,7 @@ in Specifica l'indice in base zero del gruppo da recuperare.
 
 Gruppo di attività in corrispondenza dell'indice specificato.
 
-## <a name="cmfctaskspanegettasklocation"></a><a name="gettasklocation"></a>CMFCTasksPane:: GetTaskLocation
+## <a name="cmfctaskspanegettasklocation"></a><a name="gettasklocation"></a> CMFCTasksPane:: GetTaskLocation
 
 Restituisce il gruppo e l'indice per un'attività specificata.
 
@@ -1105,11 +1106,11 @@ in Specifica l'attività da trovare.
 
 TRUE se il percorso dell'attività è stato trovato. FALSE se l'attività specificata non esiste.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo recupera l'indice di gruppo e l'indice dell'attività per l'attività specificata. Se il metodo restituisce FALSE, *separa* e *nTask* vengono impostati su-1.
 
-## <a name="cmfctaskspanegettaskshorzoffset"></a><a name="gettaskshorzoffset"></a>CMFCTasksPane:: GetTasksHorzOffset
+## <a name="cmfctaskspanegettaskshorzoffset"></a><a name="gettaskshorzoffset"></a> CMFCTasksPane:: GetTasksHorzOffset
 
 Restituisce l'offset orizzontale delle attività.
 
@@ -1121,11 +1122,11 @@ int GetTasksHorzOffset() const;
 
 Offset orizzontale delle attività dai bordi sinistro e destro dei gruppi padre.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'offset orizzontale predefinito delle attività è 12 pixel.
 
-## <a name="cmfctaskspanegettasksiconhorzoffset"></a><a name="gettasksiconhorzoffset"></a>CMFCTasksPane:: GetTasksIconHorzOffset
+## <a name="cmfctaskspanegettasksiconhorzoffset"></a><a name="gettasksiconhorzoffset"></a> CMFCTasksPane:: GetTasksIconHorzOffset
 
 ```
 int GetTasksIconHorzOffset() const;
@@ -1133,9 +1134,9 @@ int GetTasksIconHorzOffset() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfctaskspanegettasksiconvertoffset"></a><a name="gettasksiconvertoffset"></a>CMFCTasksPane:: GetTasksIconVertOffset
+## <a name="cmfctaskspanegettasksiconvertoffset"></a><a name="gettasksiconvertoffset"></a> CMFCTasksPane:: GetTasksIconVertOffset
 
 ```
 int GetTasksIconVertOffset() const;
@@ -1143,9 +1144,9 @@ int GetTasksIconVertOffset() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfctaskspanegetvertmargin"></a><a name="getvertmargin"></a>CMFCTasksPane:: GetVertMargin
+## <a name="cmfctaskspanegetvertmargin"></a><a name="getvertmargin"></a> CMFCTasksPane:: GetVertMargin
 
 Restituisce il margine verticale tra un riquadro attività e i bordi dell'area client.
 
@@ -1157,11 +1158,11 @@ int GetVertMargin() const;
 
 Il margine verticale tra un riquadro attività e i bordi dell'area client.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il margine verticale è lo spazio tra un riquadro attività e i bordi dell'area client. Il valore predefinito del margine verticale è 12 pixel.
 
-## <a name="cmfctaskspaneisaccessibilitycompatible"></a><a name="isaccessibilitycompatible"></a>CMFCTasksPane:: IsAccessibilityCompatible
+## <a name="cmfctaskspaneisaccessibilitycompatible"></a><a name="isaccessibilitycompatible"></a> CMFCTasksPane:: IsAccessibilityCompatible
 
 ```
 virtual BOOL IsAccessibilityCompatible();
@@ -1169,9 +1170,9 @@ virtual BOOL IsAccessibilityCompatible();
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfctaskspaneisanimationenabled"></a><a name="isanimationenabled"></a>CMFCTasksPane:: IsAnimationEnabled
+## <a name="cmfctaskspaneisanimationenabled"></a><a name="isanimationenabled"></a> CMFCTasksPane:: IsAnimationEnabled
 
 Indica se l'animazione è abilitata.
 
@@ -1183,11 +1184,11 @@ BOOL IsAnimationEnabled() const;
 
 TRUE se l'animazione che si verifica quando un utente espande o comprime un gruppo è abilitata. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamare [CMFCTasksPane:: EnableAnimation](#enableanimation) per abilitare o disabilitare l'animazione.
 
-## <a name="cmfctaskspaneisbackbuttonenabled"></a><a name="isbackbuttonenabled"></a>CMFCTasksPane:: IsBackButtonEnabled
+## <a name="cmfctaskspaneisbackbuttonenabled"></a><a name="isbackbuttonenabled"></a> CMFCTasksPane:: IsBackButtonEnabled
 
 Indica se il pulsante Indietro è abilitato.
 
@@ -1199,11 +1200,11 @@ BOOL IsBackButtonEnabled() const;
 
 TRUE se il pulsante indietro è abilitato; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando un utente fa clic sul pulsante indietro, il Framework Visualizza la pagina precedente dell'attività.
 
-## <a name="cmfctaskspaneisforwardbuttonenabled"></a><a name="isforwardbuttonenabled"></a>CMFCTasksPane:: IsForwardButtonEnabled
+## <a name="cmfctaskspaneisforwardbuttonenabled"></a><a name="isforwardbuttonenabled"></a> CMFCTasksPane:: IsForwardButtonEnabled
 
 Indica se il pulsante Avanti è abilitato.
 
@@ -1215,11 +1216,11 @@ BOOL IsForwardButtonEnabled() const;
 
 TRUE se il pulsante Avanti è abilitato; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il pulsante Avanti consente la navigazione in avanti nella cronologia delle pagine delle attività.
 
-## <a name="cmfctaskspaneisgroupcollapseenabled"></a><a name="isgroupcollapseenabled"></a>CMFCTasksPane:: IsGroupCollapseEnabled
+## <a name="cmfctaskspaneisgroupcollapseenabled"></a><a name="isgroupcollapseenabled"></a> CMFCTasksPane:: IsGroupCollapseEnabled
 
 ```
 BOOL IsGroupCollapseEnabled() const;
@@ -1227,9 +1228,9 @@ BOOL IsGroupCollapseEnabled() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfctaskspaneishistorymenubuttonsenabled"></a><a name="ishistorymenubuttonsenabled"></a>CMFCTasksPane:: IsHistoryMenuButtonsEnabled
+## <a name="cmfctaskspaneishistorymenubuttonsenabled"></a><a name="ishistorymenubuttonsenabled"></a> CMFCTasksPane:: IsHistoryMenuButtonsEnabled
 
 Indica se i pulsanti di spostamento **Avanti** e **indietro** includono menu a discesa.
 
@@ -1241,7 +1242,7 @@ BOOL IsHistoryMenuButtonsEnabled() const;
 
 TRUE se i pulsanti di spostamento **Avanti** e **indietro** includono menu a discesa; in caso contrario, FALSE.
 
-## <a name="cmfctaskspaneisnavigationtoolbarenabled"></a><a name="isnavigationtoolbarenabled"></a>CMFCTasksPane:: IsNavigationToolbarEnabled
+## <a name="cmfctaskspaneisnavigationtoolbarenabled"></a><a name="isnavigationtoolbarenabled"></a> CMFCTasksPane:: IsNavigationToolbarEnabled
 
 Indica se la barra degli strumenti di navigazione è abilitata.
 
@@ -1253,7 +1254,7 @@ BOOL IsNavigationToolbarEnabled() const;
 
 TRUE se la barra degli strumenti di spostamento è abilitata; in caso contrario, FALSE.
 
-## <a name="cmfctaskspaneistoolbox"></a><a name="istoolbox"></a>CMFCTasksPane:: la casella degli strumenti
+## <a name="cmfctaskspaneistoolbox"></a><a name="istoolbox"></a> CMFCTasksPane:: la casella degli strumenti
 
 ```
 virtual BOOL IsToolBox() const;
@@ -1261,9 +1262,9 @@ virtual BOOL IsToolBox() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfctaskspaneiswraplabelsenabled"></a><a name="iswraplabelsenabled"></a>CMFCTasksPane:: IsWrapLabelsEnabled
+## <a name="cmfctaskspaneiswraplabelsenabled"></a><a name="iswraplabelsenabled"></a> CMFCTasksPane:: IsWrapLabelsEnabled
 
 Indica se il riquadro attività esegue l'a capo automatico nelle etichette.
 
@@ -1275,7 +1276,7 @@ BOOL IsWrapLabelsEnabled() const;
 
 TRUE se le parole nelle etichette sono incapsulate; in caso contrario, FALSE.
 
-## <a name="cmfctaskspaneiswraptasksenabled"></a><a name="iswraptasksenabled"></a>CMFCTasksPane:: IsWrapTasksEnabled
+## <a name="cmfctaskspaneiswraptasksenabled"></a><a name="iswraptasksenabled"></a> CMFCTasksPane:: IsWrapTasksEnabled
 
 Specifica se il Framework esegue il wrapping della stringa dell'attività.
 
@@ -1287,7 +1288,7 @@ BOOL IsWrapTasksEnabled() const;
 
 TRUE se la stringa dell'attività è incapsulata; in caso contrario, FALSE.
 
-## <a name="cmfctaskspaneloadstate"></a><a name="loadstate"></a>CMFCTasksPane:: LoadState
+## <a name="cmfctaskspaneloadstate"></a><a name="loadstate"></a> CMFCTasksPane:: LoadState
 
 ```
 virtual BOOL LoadState(
@@ -1304,9 +1305,9 @@ in *uiID*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfctaskspaneonactivatetaskspanepage"></a><a name="onactivatetaskspanepage"></a>CMFCTasksPane:: OnActivateTasksPanePage
+## <a name="cmfctaskspaneonactivatetaskspanepage"></a><a name="onactivatetaskspanepage"></a> CMFCTasksPane:: OnActivateTasksPanePage
 
 Chiamata eseguita dal framework quando rende attiva una pagina del riquadro attività.
 
@@ -1314,19 +1315,19 @@ Chiamata eseguita dal framework quando rende attiva una pagina del riquadro atti
 virtual void OnActivateTasksPanePage();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Eseguire l'override di questo metodo in una classe derivata per personalizzare l'aspetto della pagina del riquadro attività.
 
-## <a name="cmfctaskspaneoncancel"></a><a name="oncancel"></a>CMFCTasksPane:: OnCancel
+## <a name="cmfctaskspaneoncancel"></a><a name="oncancel"></a> CMFCTasksPane:: OnCancel
 
 ```
 virtual void OnCancel();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfctaskspaneonclicktask"></a><a name="onclicktask"></a>CMFCTasksPane:: OnClickTask
+## <a name="cmfctaskspaneonclicktask"></a><a name="onclicktask"></a> CMFCTasksPane:: OnClickTask
 
 Chiamato dal framework quando l'utente fa clic su un elemento nel riquadro attività.
 
@@ -1352,21 +1353,21 @@ in Specifica l'ID di comando associato all'attività.
 *dwUserData*<br/>
 in Contiene i dati definiti dall'utente associati all'attività su cui è stato fatto clic.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il Framework chiama questo metodo quando un utente fa clic su un'attività. Per impostazione predefinita, il Framework controlla l'ID di comando associato all'attività su cui è stato fatto clic e, se non è zero, invia il messaggio di WM_COMMAND al proprietario del controllo del riquadro attività.
 
 Eseguire l'override di questo metodo in una classe derivata per eseguire codice personalizzato quando si fa clic su un'attività.
 
-## <a name="cmfctaskspaneonok"></a><a name="onok"></a>CMFCTasksPane:: OnOK (
+## <a name="cmfctaskspaneonok"></a><a name="onok"></a> CMFCTasksPane:: OnOK (
 
 ```
 virtual void OnOK();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfctaskspaneonpressbackbutton"></a><a name="onpressbackbutton"></a>CMFCTasksPane:: OnPressBackButton
+## <a name="cmfctaskspaneonpressbackbutton"></a><a name="onpressbackbutton"></a> CMFCTasksPane:: OnPressBackButton
 
 Chiamato dal framework quando l'utente fa clic sul pulsante Indietro.
 
@@ -1374,13 +1375,13 @@ Chiamato dal framework quando l'utente fa clic sul pulsante Indietro.
 virtual void OnPressBackButton();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, il Framework Visualizza la pagina visualizzata in precedenza.
 
 Eseguire l'override di questo metodo in una classe derivata per eseguire codice personalizzato quando l'utente fa clic sul pulsante indietro.
 
-## <a name="cmfctaskspaneonpressforwardbutton"></a><a name="onpressforwardbutton"></a>CMFCTasksPane:: OnPressForwardButton
+## <a name="cmfctaskspaneonpressforwardbutton"></a><a name="onpressforwardbutton"></a> CMFCTasksPane:: OnPressForwardButton
 
 Chiamato dal framework quando l'utente fa clic sul pulsante di navigazione Avanti.
 
@@ -1388,13 +1389,13 @@ Chiamato dal framework quando l'utente fa clic sul pulsante di navigazione Avant
 virtual void OnPressForwardButton();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, il Framework Visualizza la pagina visualizzata dall'utente prima di fare clic sul pulsante **indietro** .
 
 Eseguire l'override di questo metodo in una classe derivata per eseguire codice personalizzato quando l'utente fa clic sul pulsante Avanti.
 
-## <a name="cmfctaskspaneonpresshomebutton"></a><a name="onpresshomebutton"></a>CMFCTasksPane:: OnPressHomeButton
+## <a name="cmfctaskspaneonpresshomebutton"></a><a name="onpresshomebutton"></a> CMFCTasksPane:: OnPressHomeButton
 
 Chiamata eseguita dal framework quando l'utente fa clic sul pulsante di spostamento Home.
 
@@ -1402,13 +1403,13 @@ Chiamata eseguita dal framework quando l'utente fa clic sul pulsante di spostame
 virtual void OnPressHomeButton();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, il Framework Visualizza la pagina predefinita per il gruppo di attività.
 
 Eseguire l'override di questo metodo in una classe derivata per eseguire codice personalizzato quando l'utente fa clic sul pulsante di spostamento Home.
 
-## <a name="cmfctaskspaneonpressotherbutton"></a><a name="onpressotherbutton"></a>CMFCTasksPane:: OnPressOtherButton
+## <a name="cmfctaskspaneonpressotherbutton"></a><a name="onpressotherbutton"></a> CMFCTasksPane:: OnPressOtherButton
 
 ```
 virtual void OnPressOtherButton(
@@ -1421,9 +1422,9 @@ virtual void OnPressOtherButton(
 in *pBtn*<br/>
 in *pWndOwner*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfctaskspaneonsetaccdata"></a><a name="onsetaccdata"></a>CMFCTasksPane:: OnSetAccData
+## <a name="cmfctaskspaneonsetaccdata"></a><a name="onsetaccdata"></a> CMFCTasksPane:: OnSetAccData
 
 ```
 virtual BOOL OnSetAccData(long lVal);
@@ -1435,9 +1436,9 @@ in *LVAL*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfctaskspaneonupdatecmdui"></a><a name="onupdatecmdui"></a>CMFCTasksPane:: OnUpdateCmdUI
+## <a name="cmfctaskspaneonupdatecmdui"></a><a name="onupdatecmdui"></a> CMFCTasksPane:: OnUpdateCmdUI
 
 ```
 virtual void OnUpdateCmdUI(
@@ -1450,9 +1451,9 @@ virtual void OnUpdateCmdUI(
 in *PTarget*<br/>
 in *bDisableIfNoHndler*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfctaskspanepretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCTasksPane::P reTranslateMessage
+## <a name="cmfctaskspanepretranslatemessage"></a><a name="pretranslatemessage"></a> CMFCTasksPane::P reTranslateMessage
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1464,9 +1465,9 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfctaskspanerecalclayout"></a><a name="recalclayout"></a>CMFCTasksPane:: RecalcLayout
+## <a name="cmfctaskspanerecalclayout"></a><a name="recalclayout"></a> CMFCTasksPane:: RecalcLayout
 
 ```cpp
 void RecalcLayout(BOOL bRedraw = TRUE);
@@ -1476,9 +1477,9 @@ void RecalcLayout(BOOL bRedraw = TRUE);
 
 in *bRedraw*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfctaskspaneremoveallgroups"></a><a name="removeallgroups"></a>CMFCTasksPane:: RemoveAllGroups
+## <a name="cmfctaskspaneremoveallgroups"></a><a name="removeallgroups"></a> CMFCTasksPane:: RemoveAllGroups
 
 Rimuove tutti i gruppi nella pagina specificata.
 
@@ -1491,11 +1492,11 @@ void RemoveAllGroups(int nPageIdx = 0);
 *nPageIdx*<br/>
 in Specifica l'indice in base zero della pagina.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Rimuove tutti i gruppi nella pagina specificata da *nPageIdx*oppure tutti i gruppi se è presente solo una pagina predefinita.
+Rimuove tutti i gruppi nella pagina specificata da *nPageIdx* oppure tutti i gruppi se è presente solo una pagina predefinita.
 
-## <a name="cmfctaskspaneremoveallpages"></a><a name="removeallpages"></a>CMFCTasksPane:: RemoveAllPages
+## <a name="cmfctaskspaneremoveallpages"></a><a name="removeallpages"></a> CMFCTasksPane:: RemoveAllPages
 
 Rimuove tutte le pagine dal riquadro attività tranne che nella (prima) pagina predefinita.
 
@@ -1503,7 +1504,7 @@ Rimuove tutte le pagine dal riquadro attività tranne che nella (prima) pagina p
 void RemoveAllPages();
 ```
 
-## <a name="cmfctaskspaneremovealltasks"></a><a name="removealltasks"></a>CMFCTasksPane:: RemoveAllTasks
+## <a name="cmfctaskspaneremovealltasks"></a><a name="removealltasks"></a> CMFCTasksPane:: RemoveAllTasks
 
 Rimuove tutte le attività dal gruppo specificato.
 
@@ -1516,7 +1517,7 @@ void RemoveAllTasks(int nGroup);
 *Separa*<br/>
 in Specifica l'indice in base zero del gruppo.
 
-## <a name="cmfctaskspaneremovegroup"></a><a name="removegroup"></a>CMFCTasksPane:: RemoveGroup
+## <a name="cmfctaskspaneremovegroup"></a><a name="removegroup"></a> CMFCTasksPane:: RemoveGroup
 
 Rimuove un gruppo.
 
@@ -1529,13 +1530,13 @@ void RemoveGroup(int nGroup);
 *Separa*<br/>
 in Specifica l'indice in base zero del gruppo da rimuovere.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo rimuove un singolo gruppo. Per rimuovere tutti i gruppi, chiamare invece [CMFCTasksPane:: RemoveAllGroups](#removeallgroups) .
 
 Quando il Framework rimuove un gruppo, vengono eliminate tutte le attività e le finestre utente associate.
 
-## <a name="cmfctaskspaneremovepage"></a><a name="removepage"></a>CMFCTasksPane:: RemovePage
+## <a name="cmfctaskspaneremovepage"></a><a name="removepage"></a> CMFCTasksPane:: RemovePage
 
 Rimuove una pagina specifica dal riquadro attività.
 
@@ -1548,7 +1549,7 @@ void RemovePage(int nPageIdx);
 *nPageIdx*<br/>
 in Specifica l'indice in base zero della pagina da rimuovere.
 
-## <a name="cmfctaskspaneremovetask"></a><a name="removetask"></a>CMFCTasksPane:: RemoveTask
+## <a name="cmfctaskspaneremovetask"></a><a name="removetask"></a> CMFCTasksPane:: RemoveTask
 
 Rimuove un'attività da un gruppo di attività.
 
@@ -1574,7 +1575,7 @@ in TRUE per ricreare il riquadro attività; in caso contrario, FALSE.
 
 TRUE se la funzione ha esito positivo; FALSE se *separa* o *nTask* non è valido.
 
-## <a name="cmfctaskspanesavestate"></a><a name="savestate"></a>CMFCTasksPane:: SaveState
+## <a name="cmfctaskspanesavestate"></a><a name="savestate"></a> CMFCTasksPane:: SaveState
 
 ```
 virtual BOOL SaveState(
@@ -1591,9 +1592,9 @@ in *uiID*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfctaskspaneserialize"></a><a name="serialize"></a>CMFCTasksPane:: Serialize
+## <a name="cmfctaskspaneserialize"></a><a name="serialize"></a> CMFCTasksPane:: Serialize
 
 ```
 virtual void Serialize(CArchive& ar);
@@ -1603,9 +1604,9 @@ virtual void Serialize(CArchive& ar);
 
 [in] *ar*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfctaskspanesetactivepage"></a><a name="setactivepage"></a>CMFCTasksPane:: SetActivePage
+## <a name="cmfctaskspanesetactivepage"></a><a name="setactivepage"></a> CMFCTasksPane:: SetActivePage
 
 Rende attiva la pagina specificata nel riquadro attività.
 
@@ -1618,11 +1619,11 @@ void SetActivePage(int nPageIdx);
 *nPageIdx*<br/>
 in Specifica l'indice in base zero della pagina da visualizzare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo dichiara se *nPageIdx* non è valido.
 
-## <a name="cmfctaskspanesetcaption"></a><a name="setcaption"></a>CMFCTasksPane:: Caption
+## <a name="cmfctaskspanesetcaption"></a><a name="setcaption"></a> CMFCTasksPane:: Caption
 
 Imposta il nome della didascalia del riquadro attività.
 
@@ -1635,11 +1636,11 @@ void SetCaption(LPCTSTR lpszName);
 *lpszName*<br/>
 in Specifica il nome della didascalia.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se un riquadro attività dispone di più pagine, la pagina predefinita avrà la didascalia impostata tramite questa funzione.
 
-## <a name="cmfctaskspanesetgroupcaptionheight"></a><a name="setgroupcaptionheight"></a>CMFCTasksPane:: SetGroupCaptionHeight
+## <a name="cmfctaskspanesetgroupcaptionheight"></a><a name="setgroupcaptionheight"></a> CMFCTasksPane:: SetGroupCaptionHeight
 
 Imposta l'altezza di una didascalia del gruppo.
 
@@ -1652,13 +1653,13 @@ void SetGroupCaptionHeight(int n = -1);
 *n*<br/>
 in Specifica l'altezza della didascalia.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamare questo metodo per personalizzare i margini degli elementi del riquadro attività.
 
-Se *n* è-1, il Framework determina il valore del margine tramite la gestione visiva ( `CMFCVisualManager::GetTasksPaneGroupCaptionHeight`). L'altezza predefinita della didascalia è 25 pixel.
+Se *n* è-1, il Framework determina il valore del margine tramite la gestione visiva ( `CMFCVisualManager::GetTasksPaneGroupCaptionHeight` ). L'altezza predefinita della didascalia è 25 pixel.
 
-## <a name="cmfctaskspanesetgroupcaptionhorzoffset"></a><a name="setgroupcaptionhorzoffset"></a>CMFCTasksPane:: SetGroupCaptionHorzOffset
+## <a name="cmfctaskspanesetgroupcaptionhorzoffset"></a><a name="setgroupcaptionhorzoffset"></a> CMFCTasksPane:: SetGroupCaptionHorzOffset
 
 Impostare l'offset orizzontale di una didascalia del gruppo.
 
@@ -1671,7 +1672,7 @@ void SetGroupCaptionHorzOffset(int n = -1);
 *n*<br/>
 in Specifica l'offset orizzontale della didascalia del gruppo.
 
-## <a name="cmfctaskspanesetgroupcaptionvertoffset"></a><a name="setgroupcaptionvertoffset"></a>CMFCTasksPane:: SetGroupCaptionVertOffset
+## <a name="cmfctaskspanesetgroupcaptionvertoffset"></a><a name="setgroupcaptionvertoffset"></a> CMFCTasksPane:: SetGroupCaptionVertOffset
 
 Imposta l'offset verticale di didascalia del gruppo.
 
@@ -1684,7 +1685,7 @@ void SetGroupCaptionVertOffset(int n = -1);
 *n*<br/>
 in Specifica l'offset verticale, in pixel, della didascalia del gruppo.
 
-## <a name="cmfctaskspanesetgroupname"></a><a name="setgroupname"></a>CMFCTasksPane:: segroupname
+## <a name="cmfctaskspanesetgroupname"></a><a name="setgroupname"></a> CMFCTasksPane:: segroupname
 
 Imposta un nome di gruppo.
 
@@ -1706,7 +1707,7 @@ in Specifica il nome del gruppo.
 
 TRUE se il nome del gruppo è stato impostato correttamente; in caso contrario, FALSE.
 
-## <a name="cmfctaskspanesetgrouptextcolor"></a><a name="setgrouptextcolor"></a>CMFCTasksPane:: SetGroupTextColor
+## <a name="cmfctaskspanesetgrouptextcolor"></a><a name="setgrouptextcolor"></a> CMFCTasksPane:: SetGroupTextColor
 
 Imposta il colore del testo per una didascalia del gruppo.
 
@@ -1732,7 +1733,7 @@ in Specifica il colore del testo per il gruppo evidenziato. Se-1, viene usato il
 
 TRUE se il colore del testo del gruppo è stato modificato correttamente. in caso contrario, FALSE.
 
-## <a name="cmfctaskspanesetgroupvertoffset"></a><a name="setgroupvertoffset"></a>CMFCTasksPane:: SetGroupVertOffset
+## <a name="cmfctaskspanesetgroupvertoffset"></a><a name="setgroupvertoffset"></a> CMFCTasksPane:: SetGroupVertOffset
 
 Imposta l'offset verticale per un gruppo.
 
@@ -1745,13 +1746,13 @@ void SetGroupVertOffset(int n = -1);
 *n*<br/>
 in Specifica l'offset verticale.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'offset verticale corrisponde alla distanza tra un gruppo di attività e il bordo del riquadro attività.
 
-Chiamare questo metodo per personalizzare i margini degli elementi del riquadro attività. Se *n* è-1, il Framework determina il valore del margine tramite la gestione visiva (`CMFCVisualManager::GetTasksPaneGroupVertOffset`). L'offset predefinito è 15 pixel.
+Chiamare questo metodo per personalizzare i margini degli elementi del riquadro attività. Se *n* è-1, il Framework determina il valore del margine tramite la gestione visiva ( `CMFCVisualManager::GetTasksPaneGroupVertOffset` ). L'offset predefinito è 15 pixel.
 
-## <a name="cmfctaskspanesethorzmargin"></a><a name="sethorzmargin"></a>CMFCTasksPane:: SetHorzMargin
+## <a name="cmfctaskspanesethorzmargin"></a><a name="sethorzmargin"></a> CMFCTasksPane:: SetHorzMargin
 
 Imposta il margine orizzontale.
 
@@ -1764,13 +1765,13 @@ void SetHorzMargin(int n = -1);
 *n*<br/>
 in Specifica il margine, in pixel.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il margine orizzontale è la distanza tra un riquadro attività e il bordo superiore o inferiore dell'area client.
 
-Se n è-1 e il Framework determina il valore del margine tramite la gestione visiva (`CMFCVisualManager::GetTasksPaneHorzMargin`). Il margine orizzontale predefinito è 12 pixel.
+Se n è-1 e il Framework determina il valore del margine tramite la gestione visiva ( `CMFCVisualManager::GetTasksPaneHorzMargin` ). Il margine orizzontale predefinito è 12 pixel.
 
-## <a name="cmfctaskspaneseticonslist"></a><a name="seticonslist"></a>CMFCTasksPane:: fileicon
+## <a name="cmfctaskspaneseticonslist"></a><a name="seticonslist"></a> CMFCTasksPane:: fileicon
 
 Imposta l'elenco di immagini.
 
@@ -1797,13 +1798,13 @@ in Specifica il colore trasparente.
 *hIcons*<br/>
 in Specifica l'elenco di immagini che contiene le icone per il riquadro attività.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il Framework archivia le icone in un elenco immagini. Le attività sono associate a icone archiviate in tale elenco.
 
 Questo metodo associa un elenco di immagini con il controllo del riquadro attività. Per impostare l'icona per un'attività quando si chiama [CMFCTasksPane:: AddTask](#addtask), impostare `nTaskIcon` l'indice in base zero appropriato in questo elenco immagini.
 
-## <a name="cmfctaskspanesetpagecaption"></a><a name="setpagecaption"></a>CMFCTasksPane:: SetPageCaption
+## <a name="cmfctaskspanesetpagecaption"></a><a name="setpagecaption"></a> CMFCTasksPane:: SetPageCaption
 
 Imposta il testo della didascalia per una pagina del riquadro attività.
 
@@ -1821,11 +1822,11 @@ in Specifica l'indice in base zero della pagina.
 *lpszName*<br/>
 in Specifica il testo della didascalia da visualizzare nella pagina.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se un riquadro attività dispone di più pagine, la pagina predefinita avrà la didascalia impostata utilizzando questo metodo.
 
-## <a name="cmfctaskspanesettaskname"></a><a name="settaskname"></a>CMFCTasksPane:: setaskname
+## <a name="cmfctaskspanesettaskname"></a><a name="settaskname"></a> CMFCTasksPane:: setaskname
 
 Imposta il nome per un'attività.
 
@@ -1851,7 +1852,7 @@ in Specifica il nome dell'attività.
 
 TRUE se il nome dell'attività è stato impostato correttamente; in caso contrario, FALSE.
 
-## <a name="cmfctaskspanesettaskshorzoffset"></a><a name="settaskshorzoffset"></a>CMFCTasksPane:: SetTasksHorzOffset
+## <a name="cmfctaskspanesettaskshorzoffset"></a><a name="settaskshorzoffset"></a> CMFCTasksPane:: SetTasksHorzOffset
 
 Imposta l'offset orizzontale per le attività.
 
@@ -1864,7 +1865,7 @@ void SetTasksHorzOffset(int n = -1);
 *n*<br/>
 in Specifica l'offset orizzontale.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'offset orizzontale è la distanza in pixel tra i bordi sinistro e destro di un gruppo.
 
@@ -1872,7 +1873,7 @@ Se *n* è-1, questo metodo imposta l'offset orizzontale sul valore restituito da
 
 L'offset orizzontale predefinito è 12 pixel.
 
-## <a name="cmfctaskspanesettasksiconhorzoffset"></a><a name="settasksiconhorzoffset"></a>CMFCTasksPane:: SetTasksIconHorzOffset
+## <a name="cmfctaskspanesettasksiconhorzoffset"></a><a name="settasksiconhorzoffset"></a> CMFCTasksPane:: SetTasksIconHorzOffset
 
 ```cpp
 void SetTasksIconHorzOffset(int n = -1);
@@ -1882,9 +1883,9 @@ void SetTasksIconHorzOffset(int n = -1);
 
 in *n*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfctaskspanesettasksiconvertoffset"></a><a name="settasksiconvertoffset"></a>CMFCTasksPane:: SetTasksIconVertOffset
+## <a name="cmfctaskspanesettasksiconvertoffset"></a><a name="settasksiconvertoffset"></a> CMFCTasksPane:: SetTasksIconVertOffset
 
 ```cpp
 void SetTasksIconVertOffset(int n = -1);
@@ -1894,9 +1895,9 @@ void SetTasksIconVertOffset(int n = -1);
 
 in *n*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfctaskspanesettasktextcolor"></a><a name="settasktextcolor"></a>CMFCTasksPane:: SetTaskTextColor
+## <a name="cmfctaskspanesettasktextcolor"></a><a name="settasktextcolor"></a> CMFCTasksPane:: SetTaskTextColor
 
 Imposta il colore del testo per un'attività.
 
@@ -1926,7 +1927,7 @@ in Specifica il colore del testo per il gruppo evidenziato. Se-1, questo metodo 
 
 TRUE se il colore del testo per l'attività è stato impostato correttamente; in caso contrario, FALSE.
 
-## <a name="cmfctaskspanesetvertmargin"></a><a name="setvertmargin"></a>CMFCTasksPane:: SetVertMargin
+## <a name="cmfctaskspanesetvertmargin"></a><a name="setvertmargin"></a> CMFCTasksPane:: SetVertMargin
 
 Imposta il margine verticale.
 
@@ -1939,13 +1940,13 @@ void SetVertMargin(int n = -1);
 *n*<br/>
 in Specifica il margine verticale da impostare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il margine verticale è la distanza tra un riquadro attività e i bordi verticali dell'area client.
 
-Se *n* è-1, il Framework determina il valore del margine tramite la gestione visiva (`CMFCVisualManager::GetTasksPaneVertMargin`). Il margine predefinito è 12 pixel.
+Se *n* è-1, il Framework determina il valore del margine tramite la gestione visiva ( `CMFCVisualManager::GetTasksPaneVertMargin` ). Il margine predefinito è 12 pixel.
 
-## <a name="cmfctaskspanesetwindowheight"></a><a name="setwindowheight"></a>CMFCTasksPane:: SetWindowHeight
+## <a name="cmfctaskspanesetwindowheight"></a><a name="setwindowheight"></a> CMFCTasksPane:: SetWindowHeight
 
 Imposta l'altezza per un controllo finestra.
 
@@ -1975,11 +1976,11 @@ in Specifica l'altezza da impostare.
 
 TRUE se l'altezza del controllo finestra è stata impostata correttamente. FALSE se *separa* non è valido o se *hwndTask* non esiste.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamare [CMFCTasksPane:: AddWindow](#addwindow) per aggiungere attività con i controlli finestra.
 
-## <a name="cmfctaskspaneshowcommandmessagestring"></a><a name="showcommandmessagestring"></a>CMFCTasksPane:: ShowCommandMessageString
+## <a name="cmfctaskspaneshowcommandmessagestring"></a><a name="showcommandmessagestring"></a> CMFCTasksPane:: ShowCommandMessageString
 
 ```
 virtual void ShowCommandMessageString(UINT uiCmdId);
@@ -1989,9 +1990,9 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
 
 in *uiCmdId*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfctaskspaneshowtask"></a><a name="showtask"></a>CMFCTasksPane:: ShowTask
+## <a name="cmfctaskspaneshowtask"></a><a name="showtask"></a> CMFCTasksPane:: ShowTask
 
 Mostra o nasconde un'attività.
 
@@ -2021,11 +2022,11 @@ in TRUE per ricreare il riquadro attività; in caso contrario, FALSE.
 
 TRUE se l'attività è stata visualizzata o nascosta correttamente; FALSE se il gruppo o l'attività specificata non esiste.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare [CMFCTasksPane:: ShowTaskByCmdId](#showtaskbycmdid) per mostrare o nascondere un'attività in base al relativo ID di comando.
 
-## <a name="cmfctaskspaneshowtaskbycmdid"></a><a name="showtaskbycmdid"></a>CMFCTasksPane:: ShowTaskByCmdId
+## <a name="cmfctaskspaneshowtaskbycmdid"></a><a name="showtaskbycmdid"></a> CMFCTasksPane:: ShowTaskByCmdId
 
 Mostra o nasconde un'attività in base all'ID di comando.
 
@@ -2051,11 +2052,11 @@ in TRUE per ricreare il riquadro attività; in caso contrario, FALSE.
 
 TRUE se l'attività è stata visualizzata o nascosta correttamente; FALSE se un'attività con l'ID comando specificato non esiste.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare [CMFCTasksPane:: ShowTask](#showtask) per mostrare o nascondere un'attività in base al relativo ID di comando.
 
-## <a name="cmfctaskspaneupdate"></a><a name="update"></a>CMFCTasksPane:: Update
+## <a name="cmfctaskspaneupdate"></a><a name="update"></a> CMFCTasksPane:: Update
 
 Aggiorna tutti i controlli in un riquadro attività.
 
@@ -2063,13 +2064,13 @@ Aggiorna tutti i controlli in un riquadro attività.
 virtual void Update();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo aggiorna la didascalia del riquadro attività, regola la barra di scorrimento, riposiziona tutte le attività e ridisegnato tutti i controlli del riquadro attività.
 
 Eseguire l'override di questo metodo in una classe derivata per eseguire codice personalizzato quando il Framework aggiorna il riquadro attività.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>

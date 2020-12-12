@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _environ, _wenviron'
 title: _environ, _wenviron
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - process environment
 - wenviron function
 ms.assetid: 7e639962-6536-47cd-8095-0cbe44a56e03
-ms.openlocfilehash: 8d67947c93d1387bfdc38c3bae5b3f978024a725
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e1a69bec6fa93373c74e1f73de469bc3b93158e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349376"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97305052"
 ---
 # <a name="_environ-_wenviron"></a>_environ, _wenviron
 
@@ -49,7 +50,7 @@ extern wchar_t **_wenviron;
 
 è una versione a caratteri wide di `_environ`. In un programma che usa la funzione `wmain`, `_wenviron` è inizializzato all'avvio del programma in base alle impostazioni adottate dall'ambiente del sistema operativo.
 
-In un programma che usa `main`, `_wenviron` è inizialmente ** NULL** perché l'ambiente è costituito da stringhe di caratteri multibyte. Alla prima chiamata a `_wgetenv` o a `_wputenv`, viene creato un ambiente corrispondente alla stringa con caratteri wide e a cui punta `_wenviron`.
+In un programma che usa `main`, `_wenviron` è inizialmente **NULL** perché l'ambiente è costituito da stringhe di caratteri multibyte. Alla prima chiamata a `_wgetenv` o a `_wputenv`, viene creato un ambiente corrispondente alla stringa con caratteri wide e a cui punta `_wenviron`.
 
 Allo stesso modo, in un programma che usa `wmain`, `_environ` inizialmente è **NULL** perché l'ambiente è costituito da stringhe di caratteri wide. Alla prima chiamata a `_getenv` o a `_putenv`, viene creato un ambiente corrispondente alla stringa con caratteri multibyte e a cui punta `_environ`.
 
@@ -74,7 +75,7 @@ Nella notazione usata per questo esempio, le stringhe di caratteri non sono valo
 
 Pertanto, nell'ambiente multibyte, il valore di "`env_var_z`" dopo la prima chiamata implicita a `putenv` sarebbe "`string1`", ma questo valore verrà sovrascritto alla seconda chiamata implicita a `putenv`, quando il valore di "`env_var_z`" è impostato su "`string2`". Di conseguenza l'ambiente Unicode (in `_wenviron`) e l'ambiente multibyte (in `_environ`) differirebbero seguendo questa serie di chiamate.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Variabili globali](../c-runtime-library/global-variables.md)<br/>
 [getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)<br/>

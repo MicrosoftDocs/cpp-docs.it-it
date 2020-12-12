@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: strcmp, wcscmp, _mbscmp, _mbscmp_l'
 title: strcmp, wcscmp, _mbscmp, _mbscmp_l
 ms.date: 4/2/2020
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - _ftcscmp function
 - ftcscmp function
 ms.assetid: 5d216b57-7a5c-4cb3-abf0-0f4facf4396d
-ms.openlocfilehash: 805e355fe12cb2f7ead6180edd45ad0748570141
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0c611b92b39d04e455bbd31f22f98898723ff7c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920385"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306157"
 ---
 # <a name="strcmp-wcscmp-_mbscmp-_mbscmp_l"></a>strcmp, wcscmp, _mbscmp, _mbscmp_l
 
@@ -96,15 +97,15 @@ Impostazioni locali da usare.
 
 Il valore restituito per ognuna di queste funzioni indica la relazione ordinale tra *String1* e *string2*.
 
-|Value|Relazione di stringa1 e stringa2|
+|Valore|Relazione di stringa1 e stringa2|
 |-----------|----------------------------------------|
 |< 0|*String1* è minore di *string2*|
 |0|*String1* è identico a *string2*|
 |> 0|*String1* è maggiore di *string2*|
 
-In un errore di convalida dei parametri, **_mbscmp** e **_mbscmp_l** restituire **_NLSCMPERROR**, definito in \<string. h> e \<mbstring. h>.
+In un errore di convalida dei parametri, **_mbscmp** e **_mbscmp_l** restituire **_NLSCMPERROR**, definito in \<string.h> e \<mbstring.h> .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **strcmp** esegue un confronto ordinale tra *String1* e *string2* e restituisce un valore che ne indica la relazione. **wcscmp** e **_mbscmp** sono rispettivamente le versioni a caratteri wide e a caratteri multibyte di **strcmp**. **_mbscmp** riconosce le sequenze di caratteri multibyte in base alla tabella codici multibyte corrente e restituisce **_NLSCMPERROR** su un errore. **_mbscmp_l** ha lo stesso comportamento, ma usa il parametro delle impostazioni locali passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Tabelle codici](../../c-runtime-library/code-pages.md). Inoltre, se *String1* o *string2* è un puntatore null, **_mbscmp** richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **_mbscmp** e **_mbscmp_l** restituire **_NLSCMPERROR** e impostare **errno** su **EINVAL**. **strcmp** e **wcscmp** non convalidano i relativi parametri. A parte ciò, queste funzioni si comportano in modo identico.
 
@@ -122,7 +123,7 @@ Nelle impostazioni locali "C", l'ordine dei caratteri nel set di caratteri (set 
 
 Nelle impostazioni locali per le quali il set di caratteri e l'ordine dei caratteri lessicografico sono diversi, è possibile usare **strcoll** anziché **strcmp** per il confronto lessicografico delle stringhe. In alternativa, è possibile usare **strxfrm** nelle stringhe originali e quindi usare **strcmp** sulle stringhe risultanti.
 
-Le funzioni **strcmp** distinguono tra maiuscole e minuscole. stricmp, ** \_wcsicmp**e ** \_mbsicmp** confrontano le stringhe convertendo prima tali stringhe nelle forme minuscole. ** \_** Due stringhe che contengono caratteri che si trovano tra' Z ' è a' nella tabella ASCII (' [','\\',']',' ^',' _' è\`') vengono confrontate in modo diverso, a seconda del caso. Ad esempio, le due stringhe "ABCDe" e "ABCD ^" vengono confrontate in un modo se il confronto è in minuscolo ("abcde" > "abcd ^") e viceversa ("ABCDe" < "ABCD ^") se il confronto è in maiuscolo.
+Le funzioni **strcmp** distinguono tra maiuscole e minuscole. **\_ stricmp**, **\_ wcsicmp** e **\_ mbsicmp** confrontano le stringhe convertendo prima tali stringhe nelle forme minuscole. Due stringhe che contengono caratteri che si trovano tra' Z ' è a' nella tabella ASCII (' [',' \\ ',']',' ^',' _' è \` ') vengono confrontate in modo diverso, a seconda del caso. Ad esempio, le due stringhe "ABCDe" e "ABCD ^" vengono confrontate in un modo se il confronto è in minuscolo ("abcde" > "abcd ^") e viceversa ("ABCDe" < "ABCD ^") se il confronto è in maiuscolo.
 
 ## <a name="requirements"></a>Requisiti
 

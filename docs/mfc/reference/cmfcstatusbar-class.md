@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CMFCStatusBar'
 title: Classe CMFCStatusBar
 ms.date: 11/19/2018
 f1_keywords:
@@ -72,12 +73,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: 004873ef2696eb9504cdd4df77e700c4a145e886
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 79ba7c749a73406893173d7486fd5df208a37b83
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686574"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307080"
 ---
 # <a name="cmfcstatusbar-class"></a>Classe CMFCStatusBar
 
@@ -95,7 +96,7 @@ class CMFCStatusBar : public CPane
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CMFCStatusBar:: CalcFixedLayout](#calcfixedlayout)|Esegue l'override di [CBasePane:: CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).|
 |[CMFCStatusBar:: CommandToIndex](#commandtoindex)||
@@ -132,17 +133,17 @@ class CMFCStatusBar : public CPane
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CMFCStatusBar:: OnDrawPane](#ondrawpane)|Chiamata eseguita dal framework quando ridisegnato il riquadro della barra di stato.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il diagramma seguente mostra una figura della barra di stato dall'applicazione di [esempio demo della barra di stato](../../overview/visual-cpp-samples.md) .
 
 ![Esempio di CMFCStatusBar](../../mfc/reference/media/cmfcstatusbar.png "Esempio di CMFCStatusBar")
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Nell'esempio seguente vengono illustrate le variabili locali utilizzate dall'applicazione per chiamare vari metodi nella `CMFCStatusBar` classe. Queste variabili vengono dichiarate in StatusBarDemoView. h. Il frame principale viene dichiarato in MainFrm. h, il documento viene dichiarato in StatusBarDemoDoc. h e la vista viene dichiarata in StatusBarDemoView. h. Questo frammento di codice fa parte dell' [esempio demo della barra di stato](../../overview/visual-cpp-samples.md).
 
@@ -195,7 +196,7 @@ in *bHorz*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcstatusbarcommandtoindex"></a><a name="commandtoindex"></a> CMFCStatusBar:: CommandToIndex
 
@@ -209,7 +210,7 @@ in *nIDFind*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcstatusbarcreate"></a><a name="create"></a> CMFCStatusBar:: create
 
@@ -228,7 +229,7 @@ in *NID*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcstatusbarcreateex"></a><a name="createex"></a> CMFCStatusBar:: CreateEx
 
@@ -249,7 +250,7 @@ in *NID*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcstatusbardoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a> CMFCStatusBar::D oesAllowDynInsertBefore
 
@@ -259,7 +260,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcstatusbarenablepanedoubleclick"></a><a name="enablepanedoubleclick"></a> CMFCStatusBar:: EnablePaneDoubleClick
 
@@ -274,7 +275,7 @@ void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 *bEnable*<br/>
 in Se TRUE, abilitare l'elaborazione del doppio clic del mouse. In caso contrario, disabilitare l'elaborazione del doppio clic del mouse.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se la barra di stato è abilitata per elaborare doppi clic, Windows invia la notifica WM_COMMAND insieme a un ID di risorsa al proprietario della barra di stato ogni volta che l'utente fa doppio clic sul riquadro della barra di stato.
 
@@ -312,7 +313,7 @@ in Specifica il colore secondario dello sfondo dell'indicatore di stato. Usare u
 *clrProgressText*<br/>
 in Specifica il colore del testo dell'indicatore di stato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se si desidera disabilitare la chiamata all'indicatore di stato `EnablePaneProgressBar` con *nTotal* impostato su-1. Per impostazione predefinita, *nTotal* è impostato su 100. Non sono pertanto necessari calcoli aggiuntivi per visualizzare lo stato di avanzamento come percentuale.
 
@@ -340,7 +341,7 @@ BOOL GetDrawExtendedArea() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcstatusbargetextendedarea"></a><a name="getextendedarea"></a> CMFCStatusBar:: GetExtendedArea
 
@@ -354,7 +355,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcstatusbargetitemid"></a><a name="getitemid"></a> CMFCStatusBar:: GetItemID
 
@@ -368,7 +369,7 @@ in *nIndex*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcstatusbargetitemrect"></a><a name="getitemrect"></a> CMFCStatusBar:: GetItemRect
 
@@ -383,7 +384,7 @@ void GetItemRect(
 in *nIndex*<br/>
 in *lpRect*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcstatusbargetpaneinfo"></a><a name="getpaneinfo"></a> CMFCStatusBar:: GetPaneInfo
 
@@ -402,7 +403,7 @@ in *NID*<br/>
 in *nStyle*<br/>
 in *cxWidth*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcstatusbargetpaneprogress"></a><a name="getpaneprogress"></a> CMFCStatusBar:: GetPaneProgress
 
@@ -416,7 +417,7 @@ in *nIndex*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcstatusbargetpanestyle"></a><a name="getpanestyle"></a> CMFCStatusBar:: GetPaneStyle
 
@@ -430,7 +431,7 @@ in *nIndex*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcstatusbargetpanetext"></a><a name="getpanetext"></a> CMFCStatusBar:: GetPaneText
 
@@ -449,7 +450,7 @@ in *s*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcstatusbargetpanewidth"></a><a name="getpanewidth"></a> CMFCStatusBar:: GetPaneWidth
 
@@ -498,7 +499,7 @@ void InvalidatePaneContent(int nIndex);
 *nIndex*<br/>
 in Specifica l'indice del riquadro il cui contenuto deve essere invalidato e ridisegnato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando la barra di stato viene invalidata, viene contrassegnata per il ridisegno. Windows lo ridisegnato quando il `UpdateWindow` metodo invia un messaggio di WM_PAINT al `OnPaint` metodo.
 
@@ -520,7 +521,7 @@ in Puntatore a un contesto di dispositivo per il disegno.
 *pPane*<br/>
 in Puntatore a una `CMFCStatusBarPaneInfo` struttura che contiene le informazioni sul riquadro da ricreare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, `OnDrawPane` il riquadro viene ridisegnato usando il *PDC* del contesto di dispositivo in base allo stile e al contenuto del riquadro.
 
@@ -538,7 +539,7 @@ in *CS*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcstatusbarsetdrawextendedarea"></a><a name="setdrawextendedarea"></a> CMFCStatusBar:: SetDrawExtendedArea
 
@@ -550,7 +551,7 @@ void SetDrawExtendedArea(BOOL bSet = TRUE);
 
 in *bSet*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcstatusbarsetindicators"></a><a name="setindicators"></a> CMFCStatusBar:: sespies
 
@@ -567,7 +568,7 @@ in *nIDCount*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcstatusbarsetpaneanimation"></a><a name="setpaneanimation"></a> CMFCStatusBar:: SetPaneAnimation
 
@@ -595,7 +596,7 @@ in Specifica la frequenza dei fotogrammi, in millisecondi, per l'animazione.
 *bAggiornamento*<br/>
 in Se TRUE, aggiornare immediatamente il contenuto del riquadro. In caso contrario, il contenuto del riquadro viene aggiornato quando viene invalidato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se si desidera disabilitare l'animazione corrente, chiamare `SetPaneAnimation` con `hImageList` impostato su null.
 
@@ -655,7 +656,7 @@ in Specifica un handle per la bitmap da impostare come immagine del riquadro.
 *clrTransparent*<br/>
 in Specifica il colore trasparente della bitmap indicata da *hbmp* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostare l'immagine del riquadro, è possibile passare HICON o HBITMAP insieme al colore trasparente. Se non si desidera visualizzare più l'immagine, passare il valore NULL come handle di immagine.
 
@@ -678,7 +679,7 @@ in *NID*<br/>
 in *nStyle*<br/>
 in *cxWidth*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcstatusbarsetpaneprogress"></a><a name="setpaneprogress"></a> CMFCStatusBar:: SetPaneProgress
 
@@ -702,7 +703,7 @@ in Specifica il valore corrente dell'indicatore di stato.
 *bAggiornamento*<br/>
 in Specifica se il riquadro deve essere aggiornato immediatamente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamare questo metodo quando si desidera aggiornare l'indicatore di stato per la barra di stato nel riquadro specificato.
 
@@ -721,7 +722,7 @@ void SetPaneStyle(
 in *nIndex*<br/>
 in *nStyle*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcstatusbarsetpanetext"></a><a name="setpanetext"></a> CMFCStatusBar:: SetPaneText
 
@@ -740,7 +741,7 @@ in *baggiornamento*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcstatusbarsetpanetextcolor"></a><a name="setpanetextcolor"></a> CMFCStatusBar:: SetPaneTextColor
 
@@ -800,7 +801,7 @@ in Indice del riquadro al quale si desidera assegnare il testo della descrizione
 *pszTipText*<br/>
 in Nuovo testo della descrizione comando.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>

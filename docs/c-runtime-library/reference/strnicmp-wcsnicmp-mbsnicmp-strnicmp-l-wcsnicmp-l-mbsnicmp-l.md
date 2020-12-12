@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l'
 title: _strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 ms.date: 4/2/2020
 api_name:
@@ -76,12 +77,12 @@ helpviewer_keywords:
 - mbsnicmp function
 - _wcsnicmp function
 ms.assetid: df6e5037-4039-4c85-a0a6-21d4ef513966
-ms.openlocfilehash: 3be900679dddbbab7cba0982c11d5c75a190d685
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d43a0879bf044f71b9f71b6c5d97d0bd3b1353d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920090"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306079"
 ---
 # <a name="_strnicmp-_wcsnicmp-_mbsnicmp-_strnicmp_l-_wcsnicmp_l-_mbsnicmp_l"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 
@@ -143,15 +144,15 @@ Impostazioni locali da usare.
 
 Indica la relazione tra le sottostringhe, come indicato di seguito.
 
-|Valore restituito|Description|
+|Valore restituito|Descrizione|
 |------------------|-----------------|
 |< 0|la sottostringa *String1* è minore di *string2* substring.|
 |0|la sottostringa *String1* è identica alla sottostringa *string2* .|
 |> 0|la sottostringa *String1* è maggiore di *string2* substring.|
 
-In seguito a un errore di convalida del parametro **_NLSCMPERROR**, queste funzioni restituiscono _NLSCMPERROR \<, definito in String. \<h> e mbstring. h>.
+In seguito a un errore di convalida del parametro, queste funzioni restituiscono **_NLSCMPERROR**, definito in \<string.h> e \<mbstring.h> .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_strnicmp** consente di confrontare ordinali, al massimo, i primi caratteri di *conteggio* di *String1* e *string2*. Il confronto viene eseguito senza fare distinzione tra maiuscole e minuscole convertendo ogni carattere in minuscolo. **_strnicmp** è una versione senza distinzione tra maiuscole e minuscole di **strncmp**. Il confronto termina se viene raggiunto un carattere di terminazione null in entrambe le stringhe prima che vengano confrontati i caratteri di *conteggio* . Se le stringhe sono uguali quando viene raggiunto un carattere di terminazione null in entrambe le stringhe prima che vengano confrontati i caratteri di *conteggio* , la stringa più corta è minore.
 
@@ -185,7 +186,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 Vedere l'esempio per [strncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>

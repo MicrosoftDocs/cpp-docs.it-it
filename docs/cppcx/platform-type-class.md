@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe Platform:: Type'
 title: Platform::Type (classe)
 ms.date: 12/30/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-ms.openlocfilehash: f94e1b37cf198f92d49efc793753892c1b138d69
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c11e85180dfb3eeeeb6eea88c3bd47b40fa7289b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846563"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307899"
 ---
 # <a name="platformtype-class"></a>Platform::Type (classe)
 
@@ -33,20 +34,20 @@ La `Type` classe è utile nelle applicazioni che devono indirizzare l'elaborazio
 
 ## <a name="public-methods"></a>Metodi pubblici
 
-| Nome | Descrizione |
+| Nome | Description |
 |--|--|
 | [metodo Type::GetTypeCode](#gettypecode) | Restituisce un valore dell'enumerazione [Platform::TypeCode](../cppcx/platform-typecode-enumeration.md) per l'oggetto. |
 | [Metodo Type:: ToString](#tostring) | Restituisce il nome del tipo come specificato nei relativi metadati. |
 
 ## <a name="public-properties"></a>Proprietà pubbliche
 
-| Nome | Descrizione |
+| Nome | Description |
 |--|--|
 | [Tipo:: FullName](#fullname) | Restituisce una classe [Platform::String](../cppcx/platform-string-class.md)^ che rappresenta il nome completo del tipo e usa il punto (punto) come separatore, not:: (doppio segno di due punti), ad esempio `MyNamespace.MyClass` . |
 
 ## <a name="conversion-operators"></a>Operatori di conversione
 
-| Nome | Descrizione |
+| Nome | Description |
 |--|--|
 | [Operatore Type ^](../cppcx/operator-type-hat.md) | Consente la conversione da `Windows::UI::Xaml::Interop::TypeName` a `Platform::Type`. |
 | [Operatore Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md) | Consente la conversione da `Platform::Type` a `Windows::UI::Xaml::Interop::TypeName`. |
@@ -102,7 +103,7 @@ Platform::TypeCode GetTypeCode();
 
 Uno dei valori enumerati di Platform::TypeCode.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'equivalente del metodo del membro GetTypeCode () è la **`typeid`** Proprietà.
 
@@ -120,6 +121,6 @@ Platform::String^ ToString();
 
 Nome del tipo come specificato nei relativi metadati.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Platform](../cppcx/platform-namespace-c-cx.md)

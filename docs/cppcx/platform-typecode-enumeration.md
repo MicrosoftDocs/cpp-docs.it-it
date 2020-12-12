@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Enumerazione Platform:: TypeCode'
 title: Platform::TypeCode (enumerazione)
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::TypeCode Enumeration
 ms.assetid: 93c1305f-eb16-4bec-aead-f88d9518b4cf
-ms.openlocfilehash: 86bc17c45f36a5a72b089340e166df11e9a4334d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3e7bc3d5fa3cf8aec29a9aa3f20c7d02489eddf9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214274"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307886"
 ---
 # <a name="platformtypecode-enumeration"></a>Platform::TypeCode (enumerazione)
 
@@ -26,14 +27,14 @@ enum class TypeCode {};
 
 ### <a name="members"></a>Members
 
-|Codice di tipo|Descrizione|
+|Codice di tipo|Description|
 |---------------|-----------------|
 |Boolean|Tipo Platform::Boolean.|
 |Char16|Tipo default::char16.|
 |Datetime|Tipo DateTime.|
 |Decimal|Tipo numerico.|
 |Double|Tipo default::float64.|
-|Empty|Un tipo void.|
+|Empty|Void|
 |Int16|Tipo default::int16.|
 |Int32|Tipo default::int32.|
 |Int64|Tipo default::int64.|
@@ -54,4 +55,4 @@ enum class TypeCode {};
 
 **Spazio dei nomi:** Platform
 
-**Metadati:** platform.winmd
+**Metadati:** Platform. winmd

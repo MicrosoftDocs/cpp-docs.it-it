@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l'
 title: strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 ms.date: 4/2/2020
 api_name:
@@ -68,12 +69,12 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: 1a21d9cb06b9459a7f015cd8f2a8fee75a1ab979
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 28d3998ccfe1e7460fa628d462732f233c553b10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919273"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306105"
 ---
 # <a name="strncpy-_strncpy_l-wcsncpy-_wcsncpy_l-_mbsncpy-_mbsncpy_l"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 
@@ -177,9 +178,9 @@ Impostazioni locali da usare.
 
 Restituisce *strDest*. Nessun valore restituito è riservato per indicare un errore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **strncpy** copia i caratteri di *conteggio* iniziali di *StrSource* in *strDest* e restituisce *strDest*. Se *count* è minore o uguale alla lunghezza di *strSource*, un carattere null non viene aggiunto automaticamente alla stringa copiata. Se *count* è maggiore della lunghezza di *strSource*, la stringa di destinazione viene riempita con caratteri null fino al *numero*di lunghezze. Il comportamento di **strncpy** non è definito se le stringhe di origine e di destinazione si sovrappongono.
+La funzione **strncpy** copia i caratteri di *conteggio* iniziali di *StrSource* in *strDest* e restituisce *strDest*. Se *count* è minore o uguale alla lunghezza di *strSource*, un carattere null non viene aggiunto automaticamente alla stringa copiata. Se *count* è maggiore della lunghezza di *strSource*, la stringa di destinazione viene riempita con caratteri null fino al *numero* di lunghezze. Il comportamento di **strncpy** non è definito se le stringhe di origine e di destinazione si sovrappongono.
 
 > [!IMPORTANT]
 > **strncpy** non verifica la presenza di spazio sufficiente in *strDest*; in questo modo è possibile che si verifichino sovraccarichi del buffer. L'argomento *count* limita il numero di caratteri copiati; non è un limite per le dimensioni di *strDest*. Vedere l'esempio seguente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
@@ -283,11 +284,11 @@ Buffer overrun: s = 'ars.' (should be 'test')
 
 Il layout delle variabili automatiche e il livello di rilevamento degli errori e di protezione di codice possono variare con le impostazioni modificate del compilatore. Questo esempio può produrre risultati diversi quando viene compilato in altri ambienti di compilazione o con altre opzioni del compilatore.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

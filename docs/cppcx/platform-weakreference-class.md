@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: classe Platform:: WeakReference'
 title: Classe Platform::WeakReference
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
 - Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-ms.openlocfilehash: befefba7cc76f24f6dddd58d0c5f040bfd205508
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: edf3220d8916ff4bdb1462f3dd04149a4e9a9709
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216596"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307795"
 ---
 # <a name="platformweakreference-class"></a>Classe Platform::WeakReference
 
@@ -45,11 +46,11 @@ class WeakReference
 |[WeakReference::operator=](#operator-assign)|Assegna un nuovo valore all'oggetto WeakReference.|
 |[BoolType WeakReference::operator](#booltype)|Implementa il modello bool sicuro.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La classe WeakReference stessa non è una classe di riferimento e pertanto non eredita da Platform::Object^ e non può essere usata nella firma di un metodo pubblico.
 
-## <a name="weakreferenceoperator"></a><a name="operator-assign"></a>WeakReference:: operator =
+## <a name="weakreferenceoperator"></a><a name="operator-assign"></a> WeakReference:: operator =
 
 Assegna un valore a WeakReference.
 
@@ -66,7 +67,7 @@ WeakReference& operator=(const volatile ::Platform::Object^ const otherArg);
 
 L'ultimo overload nell'elenco precedente consente di assegnare una classe di riferimento a una variabile WeakReference. In questo caso la classe ref è abbattuta per [Platform:: Object](../cppcx/platform-object-class.md)^. Il tipo originale viene ripristinato in un secondo momento specificandone il tipo come argomento per il parametro di tipo nella funzione membro [WeakReference:: Resolve \<T> ](#resolve) .
 
-## <a name="weakreferenceoperator-booltype"></a><a name="booltype"></a>WeakReference:: operator BoolType
+## <a name="weakreferenceoperator-booltype"></a><a name="booltype"></a> WeakReference:: operator BoolType
 
 Implementa il modello bool sicuro per la classe WeakReference. Non chiamarlo esplicitamente dal codice.
 
@@ -76,7 +77,7 @@ Implementa il modello bool sicuro per la classe WeakReference. Non chiamarlo esp
 BoolType BoolType();
 ```
 
-## <a name="weakreferenceresolve-method-platform-namespace"></a><a name="resolve"></a>Metodo WeakReference:: Resolve (spazio dei nomi Platform)
+## <a name="weakreferenceresolve-method-platform-namespace"></a><a name="resolve"></a> Metodo WeakReference:: Resolve (spazio dei nomi Platform)
 
 Restituisce un handle alla classe di riferimento originale o **`nullptr`** se l'oggetto non esiste più.
 
@@ -108,7 +109,7 @@ if (bar != nullptr)
 
 Si noti che il parametro di tipo è T, non T^.
 
-## <a name="weakreferenceweakreference-constructor"></a><a name="ctor"></a>Costruttore WeakReference:: WeakReference
+## <a name="weakreferenceweakreference-constructor"></a><a name="ctor"></a> Costruttore WeakReference:: WeakReference
 
 Offre vari modi per creare un elemento WeakReference.
 

@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: controlli ActiveX MFC: disegno di un controllo ActiveX'
 title: 'Controlli ActiveX MFC: disegno di un controllo ActiveX'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], painting
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
-ms.openlocfilehash: a01a66402471b295a6e57af8af265c50685b4a1f
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d9e6fb23deb701e32f1af6ff4bf4d79c7d9df085
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618215"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97305273"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>Controlli ActiveX MFC: disegno di un controllo ActiveX
 
@@ -29,7 +30,7 @@ Vengono trattati i seguenti argomenti:
 
 - [Come disegnare il controllo utilizzando metafile](#_core_painting_your_control_using_metafiles)
 
-## <a name="the-painting-process-of-an-activex-control"></a><a name="_core_the_painting_process_of_an_activex_control"></a>Processo di disegno di un controllo ActiveX
+## <a name="the-painting-process-of-an-activex-control"></a><a name="_core_the_painting_process_of_an_activex_control"></a> Processo di disegno di un controllo ActiveX
 
 Quando i controlli ActiveX vengono inizialmente visualizzati o vengono ridisegnati, seguono un processo di disegno simile alle altre applicazioni sviluppate tramite MFC, con un'importante distinzione: i controlli ActiveX possono trovarsi in uno stato attivo o in uno stato inattivo.
 
@@ -53,7 +54,7 @@ L'implementazione predefinita fornita dalla Creazione guidata controllo ActiveX 
 > [!NOTE]
 > Quando si disegna un controllo, è consigliabile non fare supposizioni sullo stato del contesto di dispositivo passato come parametro *PDC* alla `OnDraw` funzione. Talvolta il contesto di dispositivo viene fornito dall'applicazione contenitore e non necessariamente verrà inizializzato allo stato predefinito. In particolare, selezionare esplicitamente penne, pennelli, colori, tipi di carattere e altre risorse da cui dipende il codice di disegno.
 
-## <a name="optimizing-your-paint-code"></a><a name="_core_optimizing_your_paint_code"></a>Ottimizzazione del codice di disegno
+## <a name="optimizing-your-paint-code"></a><a name="_core_optimizing_your_paint_code"></a> Ottimizzazione del codice di disegno
 
 Una volta disegnato il controllo, è necessario ottimizzare la funzione `OnDraw`.
 
@@ -61,7 +62,7 @@ L'implementazione predefinita del disegno del controllo ActiveX disegna l'intera
 
 La `OnDraw` funzione fornisce un metodo di ottimizzazione semplice passando *rcInvalid*, l'area rettangolare del controllo che deve essere ridisegnata. Utilizzare quest'area, in genere più piccola dell'intera area di controllo, per velocizzare il processo di disegno.
 
-## <a name="painting-your-control-using-metafiles"></a><a name="_core_painting_your_control_using_metafiles"></a>Disegnare il controllo usando i metafile
+## <a name="painting-your-control-using-metafiles"></a><a name="_core_painting_your_control_using_metafiles"></a> Disegnare il controllo usando i metafile
 
 Nella maggior parte dei casi il parametro *PDC* per la `OnDraw` funzione punta a un contesto di dispositivo dello schermo (DC). Tuttavia, quando vengono stampate immagini del controllo o durante una sessione di anteprima di stampa, il contesto di dispositivo ricevuto per il rendering è un tipo speciale denominato "contesto di dispositivo metafile". A differenza di un contesto di dispositivo di uno schermo, che gestisce subito le richieste che riceve, un contesto di dispositivo metafile archivia le richieste per riprodurle in un secondo momento. Alcune applicazioni contenitore possono inoltre scegliere di eseguire il rendering dell'immagine del controllo utilizzando un contesto di dispositivo metafile in modalità di progettazione.
 
@@ -98,16 +99,16 @@ Dopo avere implementato il rendering del metafile per il controllo, utilizzare T
 
 #### <a name="to-test-the-controls-metafile-using-test-container"></a>Per eseguire i test sul metafile del controllo utilizzando Test Container
 
-1. Scegliere **Inserisci nuovo controllo**dal menu **modifica** del contenitore di test.
+1. Scegliere **Inserisci nuovo controllo** dal menu **modifica** del contenitore di test.
 
 1. Nella casella **Inserisci nuovo controllo** selezionare il controllo e fare clic su **OK**.
 
    Il controllo verrà visualizzato in Test Container.
 
-1. Scegliere **Estrai metafile**dal menu **controllo** .
+1. Scegliere **Estrai metafile** dal menu **controllo** .
 
    Verrà visualizzata una finestra separata, nella quale sarà visualizzato il metafile. È possibile modificare le dimensioni di questa finestra per vedere in che modo il ridimensionamento influisce sui metafile del controllo. È possibile chiudere questa finestra in qualsiasi momento.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli ActiveX MFC](mfc-activex-controls.md)

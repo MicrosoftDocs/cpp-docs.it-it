@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe Platform:: ValueType'
 title: Classe Platform::ValueType
 ms.date: 02/03/2017
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ValueType Class
 ms.assetid: 79aa8754-b140-4974-a5b1-be046938a10a
-ms.openlocfilehash: f4ce34fa3f197424833d34bdb866712d412e69c3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e6873b4b884586d06dae6e2fd1966041fd49bcc8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846550"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307808"
 ---
 # <a name="platformvaluetype-class"></a>Classe Platform::ValueType
 
@@ -26,11 +27,11 @@ public ref class ValueType : Object
 
 ## <a name="public-methods"></a>Metodi pubblici
 
-| Nome | Descrizione |
+| Nome | Description |
 |--|--|
 | [ValueType:: ToString](#tostring) | Restituisce una rappresentazione in formato stringa dell'oggetto. Ereditato da [Platform:: Object](../cppcx/platform-object-class.md). |
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La classe ValueType viene usata per costruire i tipi valore. ValueType è derivato da Object, che contiene i membri di base. Tuttavia, il compilatore consente di scollegare i membri di base dai tipi valore derivati dalla classe ValueType. Il compilatore ricollega questi membri di base quando un tipo valore è di tipo boxed.
 
@@ -58,6 +59,6 @@ Platform::String ToString();
 
 Oggetto Platform:: String che rappresenta il valore.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Platform](../cppcx/platform-namespace-c-cx.md)

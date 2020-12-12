@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe Variant'
 title: Classe Variant
 ms.date: 04/04/2019
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - variant/std::variant::emplace
 - variant/std::variant::index
 - variant/std::variant::valueless_by_exception
-ms.openlocfilehash: aba121604636ebd253523acb9b630dd9ab762584
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0fc2887def147b458e63bc316f211e62a5eba879
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840024"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97305104"
 ---
 # <a name="variant-class"></a>Classe Variant
 
@@ -29,17 +30,17 @@ template <class... Types>
     class variant
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="constructors"></a>Costruttori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[variant](#variant)|Costruisce un oggetto di tipo `variant`.|
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[emplace](#emplace)|Crea un nuovo valore contenuto.|
 |[index](#index)|Restituisce l'indice di un valore contenuto.|
@@ -48,7 +49,7 @@ template <class... Types>
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[operatore =](#op_eq)|Sostituisce la variante con una copia di un'altra variante.|
 

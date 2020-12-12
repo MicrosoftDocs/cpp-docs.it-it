@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __shiftleft128'
 title: __shiftleft128
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - __shiftleft128 intrinsic
 ms.assetid: 557b846a-8fb0-469d-91ac-1b1fad80dc2a
-ms.openlocfilehash: 5da9ac81cedbdd24e10eb438892f88510c32ca24
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: e0e1402660c2ddb6f5993e5186302ff489ed864f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217999"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306989"
 ---
 # <a name="__shiftleft128"></a>__shiftleft128
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Sposta una quantità di 128 bit, rappresentata come due quantità di 64 bit `LowPart` e `HighPart`, a sinistra di un numero di bit specificato da `Shift` e restituisce i 64 bit più significativi del risultato.
 
@@ -46,15 +47,15 @@ I 64 bit più significativi del risultato.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
-|`__shiftleft128`|X64|
+|`__shiftleft128`|x64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Il valore *Shift* è sempre modulo 64 in modo che, ad esempio, se si `__shiftleft128(1, 0, 64)`chiama, la funzione sposterà i bit `0` della parte inferiore a sinistra e restituirà `0` una parte `1` alta di e non come potrebbe essere altrimenti prevista.
+Il valore *Shift* è sempre modulo 64 in modo che, ad esempio, se si chiama `__shiftleft128(1, 0, 64)` , la funzione sposterà i bit della parte inferiore a `0` sinistra e restituirà una parte alta di `0` e non `1` come potrebbe essere altrimenti prevista.
 
 ## <a name="example"></a>Esempio
 
@@ -94,9 +95,9 @@ int main()
 0x100000000000000001 >> 1 = 0x080000000000000000
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [__shiftright128](../intrinsics/shiftright128.md)\
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

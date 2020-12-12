@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: strnicmp, wcsnicmp'
 title: strnicmp, wcsnicmp
 ms.date: 12/16/2019
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - strnicmp function
 - wcsnicmp function
 ms.assetid: 01324ee4-0bd9-43e9-b2a3-53d180270a64
-ms.openlocfilehash: 6f52df6d0a75922fefb63ee233250f20b1209f74
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: f69874c6dedb72ad0ef2b44f468e2d08236302d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300495"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306053"
 ---
 # <a name="strnicmp-wcsnicmp"></a>strnicmp, wcsnicmp
 
