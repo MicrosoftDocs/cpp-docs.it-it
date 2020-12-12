@@ -1,19 +1,20 @@
 ---
+description: 'Altre informazioni su: struttura common_type'
 title: Struttura common_type
 ms.date: 11/04/2016
 f1_keywords:
 - chrono/std::common_type
 ms.assetid: 2b42722c-c3dc-4d62-8613-0271e52b6f00
-ms.openlocfilehash: cef9b1fb6bc2723de1202b63ddc711ddd39f0d97
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 09d0460235286cb1a08d2d06d6c5a5cba7500617
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689796"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325049"
 ---
 # <a name="common_type-structure"></a>Struttura common_type
 
-Descrive le specializzazioni del modello di classe [common_type](../standard-library/common-type-class.md) per le creazioni di istanze di [Duration](../standard-library/duration-class.md) e [time_point](../standard-library/time-point-class.md).
+Descrive le specializzazioni del modello di classe [common_type](../standard-library/common-type-class.md) per le creazioni di istanze di [durata](../standard-library/duration-class.md) e [time_point](../standard-library/time-point-class.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -33,11 +34,11 @@ chrono::time_point<Clock, Duration2>>;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<chrono >
+**Intestazione:**\<chrono>
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [\<chrono>](../standard-library/chrono.md)
