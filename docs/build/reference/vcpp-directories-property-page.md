@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: directory di VC + + pagina delle proprietà (Windows)'
 title: Directory di VC++ (pagina delle proprietà)
 ms.date: 07/17/2019
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: 39362deaa770b39eea964f1e4e58186dd5923b7f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6d5b30e635003aa4db35e3aef9e1a32f8fa3176c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846030"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247137"
 ---
 # <a name="vc-directories-property-page-windows"></a>Pagina delle proprietà Directory di VC++ (Windows)
 
@@ -90,7 +91,7 @@ Cartelle in cui cercare file di inclusione a cui viene fatto riferimento nel cod
 Directory in cui cercare file di modulo (metadati) e assembly a cui viene fatto riferimento nel codice sorgente tramite la direttiva [#using](../../preprocessor/hash-using-directive-cpp.md). Corrisponde alla variabile di ambiente **LIBPATH**.
 
 **Directory delle librerie**<br/>
-Directory in cui cercare i file delle librerie (LIB), incluse le librerie di runtime. Corrisponde alla variabile di ambiente **LIBPATH**. Questa impostazione non si applica ai file obj; per eseguire il collegamento a un file con estensione obj, nella pagina delle proprietà generale del linker proprietà di **configurazione**  >  **Linker**  >  **General** selezionare **dipendenze aggiuntive della libreria** e quindi specificare il percorso relativo del file. Per altre informazioni, vedere [Pagine delle proprietà Linker](linker-property-pages.md).
+Directory in cui cercare i file delle librerie (LIB), incluse le librerie di runtime. Corrisponde alla variabile di ambiente **LIBPATH**. Questa impostazione non si applica ai file obj; per eseguire il collegamento a un file con estensione obj, nella pagina delle proprietà generale del linker proprietà di **configurazione**  >    >   selezionare **dipendenze aggiuntive della libreria** e quindi specificare il percorso relativo del file. Per altre informazioni, vedere [Pagine delle proprietà Linker](linker-property-pages.md).
 
 **Directory libreria WinRT**<br/>
 Directory in cui ricercare i file di libreria WinRT da usare in app della piattaforma UWP (Universal Windows Platform).
