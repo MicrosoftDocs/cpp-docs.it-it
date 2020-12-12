@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: fisher_f_distribution Class'
 title: Classe fisher_f_distribution
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-ms.openlocfilehash: 6f8c60b5f4523caf19e432ff853d49ad57fd277a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3020faef2ada6254fde940c89a60630816109863
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835805"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232466"
 ---
 # <a name="fisher_f_distribution-class"></a>Classe fisher_f_distribution
 
@@ -75,7 +76,7 @@ Il tipo di risultato a virgola mobile, il valore predefinito è **`double`** . P
 *GENERATORE URNG*\
 Motore di generazione di numeri casuali uniformi. Per i tipi possibili, vedere [\<random>](../standard-library/random.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il modello di classe descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente o di tipo **`double`** se non ne viene fornito alcuno, distribuiti in base alla distribuzione F di Fisher. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
@@ -255,7 +256,7 @@ Parametro di distribuzione `n`.
 *parm*\
 Struttura `param_type` usata per costruire la distribuzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:** `0.0 < m` e `0.0 < n`
 
@@ -290,7 +291,7 @@ Parametro di distribuzione `n`.
 *Ok*\
 Oggetto `param_type` da confrontare con questo oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:** `0.0 < m` e `0.0 < n`
 

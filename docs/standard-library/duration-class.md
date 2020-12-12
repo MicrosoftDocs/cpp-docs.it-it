@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe Duration'
 title: Classe duration
 ms.date: 03/27/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
 helpviewer_keywords:
 - std::chrono [C++], duration
-ms.openlocfilehash: 454c03aeb1a4666543a28759d02405a512453ffc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9a37d3682e70f840c6c32eed55eb52ce133ab6f7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217792"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232733"
 ---
 # <a name="duration-class"></a>Classe duration
 
@@ -41,20 +42,20 @@ L'argomento di modello `Rep` descrive il tipo usato per contenere il numero di t
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |duration::period Typedef|Rappresenta un sinonimo del parametro di modello `Period`.|
 |duration::rep Typedef|Rappresenta un sinonimo del parametro di modello `Rep`.|
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[duration](#duration)|Costruisce un oggetto `duration`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[count](#count)|Recupera il numero di tick nell'intervallo di tempo.|
 |[max](#max)|Statico. Restituisce il valore massimo consentito di parametro di modello `Ref`.|
@@ -63,7 +64,7 @@ L'argomento di modello `Rep` descrive il tipo usato per contenere il numero di t
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Operatore Duration:: operator-](#operator-)|Restituisce una copia dell'oggetto `duration` insieme a un conteggio dei tick negati.|
 |[Operatore Duration:: operator--](#operator--)|Decrementa il conteggio dei tick archiviati.|
@@ -81,7 +82,7 @@ L'argomento di modello `Rep` descrive il tipo usato per contenere il numero di t
 
 **Spazio dei nomi:** std::chrono
 
-## <a name="durationcount"></a><a name="count"></a>Duration:: count
+## <a name="durationcount"></a><a name="count"></a> Duration:: count
 
 Recupera il numero di tick del clock nell'intervallo di tempo.
 
@@ -93,7 +94,7 @@ constexpr Rep count() const;
 
 Recupera il numero di tick del clock nell'intervallo di tempo.
 
-## <a name="durationduration-constructor"></a><a name="duration"></a>Durata::d Costruttore uration
+## <a name="durationduration-constructor"></a><a name="duration"></a> Durata::d Costruttore uration
 
 Costruisce un oggetto `duration`.
 
@@ -121,7 +122,7 @@ Numero di tick del periodo predefinito.
 *Durata*\
 Numero di cicli del periodo specificato da *PERIOD2*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il costruttore predefinito costruisce un oggetto non inizializzato. L'inizializzazione del valore con parentesi graffe vuote inizializza un oggetto che rappresenta un intervallo di tempo di zero tick.
 
@@ -135,7 +136,7 @@ Se *Rep2* non è implicitamente convertibile in `rep` e `treat_as_floating_point
 
 A meno che nessun overflow sia indotto nella conversione e `treat_as_floating_point<rep>`*contenga true*, o `ratio_divide<Period2, period>::den` equivalga a 1 e `treat_as_floating_point<Rep2>`*contenga false*, il terzo costruttore non partecipa alla risoluzione dell'overload. Per altre informazioni, vedere [<type_traits>](../standard-library/type-traits.md).
 
-## <a name="durationmax"></a><a name="max"></a>Durata:: max
+## <a name="durationmax"></a><a name="max"></a> Durata:: max
 
 Metodo statico che restituisce il limite superiore per i valori di tipo `Ref` del parametro di modello.
 
@@ -147,7 +148,7 @@ static constexpr duration max();
 
 In effetti, restituisce `duration(duration_values<rep>::max())`.
 
-## <a name="durationmin"></a><a name="min"></a>Durata:: min
+## <a name="durationmin"></a><a name="min"></a> Durata:: min
 
 Metodo statico che restituisce il limite inferiore per i valori di tipo `Ref` del parametro modello.
 
@@ -159,7 +160,7 @@ static constexpr duration min();
 
 In effetti, restituisce `duration(duration_values<rep>::min())`.
 
-## <a name="durationoperator-"></a><a name="operator-"></a>Operatore Duration:: operator-
+## <a name="durationoperator-"></a><a name="operator-"></a> Operatore Duration:: operator-
 
 Restituisce una copia dell'oggetto `duration` insieme a un conteggio dei tick negati.
 
@@ -167,7 +168,7 @@ Restituisce una copia dell'oggetto `duration` insieme a un conteggio dei tick ne
 constexpr duration operator-() const;
 ```
 
-## <a name="durationoperator--"></a><a name="operator--"></a>Operatore Duration:: operator--
+## <a name="durationoperator--"></a><a name="operator--"></a> Operatore Duration:: operator--
 
 Decrementa il conteggio dei tick archiviati.
 
@@ -183,7 +184,7 @@ Il primo metodo restituisce **`*this`** .
 
 Il secondo metodo restituisce una copia di **`*this`** eseguita prima del decremento.
 
-## <a name="durationoperator"></a><a name="op_eq"></a>Duration:: operator =
+## <a name="durationoperator"></a><a name="op_eq"></a> Duration:: operator =
 
 Riduce il modulo del conteggio dei tick archiviati a un valore specifico.
 
@@ -202,7 +203,7 @@ Per il primo metodo, *div* rappresenta un conteggio. Per il secondo metodo, *div
 
 Dopo l'operazione di modulo viene eseguito l'oggetto `duration`.
 
-## <a name="durationoperator"></a><a name="op_star_eq"></a>Duration:: operator * =
+## <a name="durationoperator"></a><a name="op_star_eq"></a> Duration:: operator * =
 
 Moltiplica il conteggio dei tick archiviati per un valore specificato.
 
@@ -219,7 +220,7 @@ Valore del tipo specificato da `duration::rep`.
 
 Dopo la moltiplicazione viene eseguito l'oggetto `duration`.
 
-## <a name="durationoperator"></a><a name="op_div_eq"></a>Duration:: operator/=
+## <a name="durationoperator"></a><a name="op_div_eq"></a> Duration:: operator/=
 
 Divide il conteggio dei tick archiviati per un valore specificato.
 
@@ -236,7 +237,7 @@ Valore del tipo specificato da `duration::rep`.
 
 Dopo la divisione viene eseguito l'oggetto `duration`.
 
-## <a name="durationoperator"></a><a name="op_add"></a>Duration:: operator +
+## <a name="durationoperator"></a><a name="op_add"></a> Duration:: operator +
 
 Restituisce **`*this`** .
 
@@ -244,7 +245,7 @@ Restituisce **`*this`** .
 constexpr duration operator+() const;
 ```
 
-## <a name="durationoperator"></a><a name="op_add_add"></a>Duration:: operator + +
+## <a name="durationoperator"></a><a name="op_add_add"></a> Duration:: operator + +
 
 Incrementa il conteggio dei tick archiviati.
 
@@ -260,7 +261,7 @@ Il primo metodo restituisce **`*this`** .
 
 Il secondo metodo restituisce una copia di **`*this`** eseguita prima dell'incremento.
 
-## <a name="durationoperator"></a><a name="op_add_eq"></a>Duration:: operator + =
+## <a name="durationoperator"></a><a name="op_add_eq"></a> Duration:: operator + =
 
 Aggiunge il conteggio dei tick di un oggetto `duration` specificati al conteggio dei tick archiviati.
 
@@ -277,7 +278,7 @@ Un oggetto `duration`.
 
 Oggetto `duration` dopo l'esecuzione della somma.
 
-## <a name="durationoperator-"></a><a name="operator-_eq"></a>Duration:: operator-=
+## <a name="durationoperator-"></a><a name="operator-_eq"></a> Duration:: operator-=
 
 Sottrae il conteggio dei tick di un oggetto `duration` specificati dal conteggio dei tick archiviati.
 
@@ -294,7 +295,7 @@ Un oggetto `duration`.
 
 Oggetto `duration` dopo l'esecuzione della sottrazione.
 
-## <a name="durationzero"></a><a name="zero"></a>Durata:: zero
+## <a name="durationzero"></a><a name="zero"></a> Durata:: zero
 
 Restituisce `duration(duration_values<rep>::zero())`.
 
@@ -302,7 +303,7 @@ Restituisce `duration(duration_values<rep>::zero())`.
 static constexpr duration zero();
 ```
 
-## <a name="durationoperator-mod"></a><a name="op_mod_eq"></a>Duration:: operator mod =
+## <a name="durationoperator-mod"></a><a name="op_mod_eq"></a> Duration:: operator mod =
 
 Riduce il modulo Div or Div.count() del conteggio dei tick archiviati.
 
@@ -315,11 +316,11 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 *Div*\
 Divisore, che può essere un oggetto durata o un valore che rappresenta i conteggi dei tick.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La prima funzione del membro riduce il modulo Div del conteggio dei tick archiviati e restituisce *this. La seconda funzione del membro riduce il modulo Div.count() del conteggio dei tick archiviati e restituisce \*this.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [\<chrono>](../standard-library/chrono.md)\

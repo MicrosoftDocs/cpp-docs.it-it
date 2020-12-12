@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: tipi standard'
 title: Tipi standard
 ms.date: 11/04/2016
 f1_keywords:
@@ -160,12 +161,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: 376c29371fb9213ed46435b41bea1666058c7b4e
-ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
+ms.openlocfilehash: 49a8e877987af97e961bb32f47bd857b4eceddfc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765315"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235749"
 ---
 # <a name="standard-types"></a>Tipi standard
 
@@ -189,7 +190,7 @@ La libreria di runtime Microsoft definisce i tipi standard e typedef seguenti.
 |int_fast64_t, uint_fast64_t|long long, long long senza segno|
 |intmax_t, uintmax_t|long long, long long senza segno|
 
-|Tipo|Descrizione|Dichiarato in|
+|Tipo|Description|Dichiarato in|
 |----------|-----------------|-----------------|
 |`clock_t` (long)|Archivia valori temporali. Usato da [clock](../c-runtime-library/reference/clock.md).|TIME.H|
 |Struttura `_complex`|Archivia parti reali e immaginarie di numeri complessi. Usato da [_cabs](../c-runtime-library/reference/cabs.md).|MATH.H|
@@ -253,6 +254,6 @@ La libreria di runtime Microsoft definisce i tipi standard e typedef seguenti.
 |Tipo integer `wctype_t`|Può rappresentare tutti i caratteri di qualsiasi set di caratteri di lingua.|WCHAR.H,<br /><br /> CRTDEFS.H|
 |Tipo integer `wint_t`|Tipo di oggetto dati che può contenere qualsiasi carattere wide o valore di fine file wide.|WCHAR.H,<br /><br /> CRTDEFS.H|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimenti alla libreria di runtime C](../c-runtime-library/c-run-time-library-reference.md)
+[Informazioni di riferimento sulla libreria C Run-Time](../c-runtime-library/c-run-time-library-reference.md)

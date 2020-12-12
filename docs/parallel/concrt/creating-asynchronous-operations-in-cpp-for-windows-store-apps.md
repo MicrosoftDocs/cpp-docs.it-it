@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: creazione di operazioni asincrone in C++ per app UWP'
 title: Creazione di operazioni asincrone in C++ per app UWP
 ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 0361da761b9b05e75233711df9e826c15aa14e28
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2c7ec1a6fc469bf56faa746f11b52547cbf9ac8f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213931"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234500"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Creazione di operazioni asincrone in C++ per app UWP
 
@@ -43,7 +44,7 @@ L'uso della programmazione asincrona è un componente chiave del modello di app 
 
 - [Esempio: controllo dell'esecuzione in un'app Windows Runtime con C++ e XAML](#example-app)
 
-## <a name="creating-asynchronous-operations"></a><a name="create-async"></a>Creazione di operazioni asincrone
+## <a name="creating-asynchronous-operations"></a><a name="create-async"></a> Creazione di operazioni asincrone
 
 È possibile usare il modello di attività e continuazione nella libreria PPL (Parallel Patterns Library) per definire le attività in background, oltre ad attività aggiuntive eseguite al completamento dell'attività precedente. Questa funzionalità viene fornita dalla classe [concurrency::task](../../parallel/concrt/reference/task-class.md) . Per altre informazioni su questo modello e sulla classe `task` , vedere [Task Parallelism](../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
@@ -79,8 +80,8 @@ La tabella seguente riepiloga le combinazioni che possono essere usate per defin
 
 |Per creare questa interfaccia di Windows Runtime|Restituire questo tipo da `create_async`|Passare questi tipi di parametro alla funzione lavoro per usare implicitamente il token di annullamento|Passare questi tipi di parametro alla funzione lavoro per usare esplicitamente il token di annullamento|
 |----------------------------------------------------------------------------------|------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-|`IAsyncAction`|**`void`** o`task<void>`|(nessuna)|(`cancellation_token`)|
-|`IAsyncActionWithProgress<TProgress>`|**`void`** o`task<void>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
+|`IAsyncAction`|**`void`** o `task<void>`|(nessuna)|(`cancellation_token`)|
+|`IAsyncActionWithProgress<TProgress>`|**`void`** o `task<void>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
 |`IAsyncOperation<TResult>`|`T` o `task<T>`|(nessuna)|(`cancellation_token`)|
 |`IAsyncActionOperationWithProgress<TProgress, TProgress>`|`T` o `task<T>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
 
@@ -90,7 +91,7 @@ Nell'esempio seguente vengono illustrati i vari modi per creare un `IAsyncAction
 
 [!code-cpp[concrt-windowsstore-primes#100](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_1.cpp)]
 
-## <a name="example-creating-a-c-windows-runtime-component-and-consuming-it-from-c"></a><a name="example-component"></a>Esempio: creazione di un componente Windows Runtime C++ e utilizzo da C\#
+## <a name="example-creating-a-c-windows-runtime-component-and-consuming-it-from-c"></a><a name="example-component"></a> Esempio: creazione di un componente Windows Runtime C++ e utilizzo da C\#
 
 Si consideri un'app che usa XAML e C# per definire l'interfaccia utente e un componente Windows Runtime C++ per eseguire operazioni a elevato utilizzo di calcolo. In questo esempio il componente C++ calcola i numeri primi di un intervallo specifico. Per illustrare le differenze tra le quattro Windows Runtime interfacce di attività asincrone, avviare in Visual Studio creando una **soluzione vuota** e denominarla `Primes` . Aggiungere quindi un progetto **Componente Windows Runtime** alla soluzione e denominarlo `PrimesLibrary`. Aggiungere il codice seguente al file di intestazione C++ generato. Questo esempio rinomina Class1.h in Primes.h. Ogni **`public`** metodo definisce una delle quattro interfacce asincrone. I metodi che restituiscono un valore restituiscono un oggetto [Windows:: Foundation:: Collections:: IVector \<int> ](/uwp/api/windows.foundation.collections.ivector-1) . I metodi che segnalano lo stato producono **`double`** valori che definiscono la percentuale di lavoro complessivo completata.
 
@@ -128,7 +129,7 @@ La figura seguente mostra l'app `Primes` dopo che ogni opzione è stata selezion
 
 Per un esempio di utilizzo `create_async` di per creare attività asincrone che possono essere utilizzate da altri linguaggi, vedere [utilizzo di C++ nell'esempio dell'utilità di ottimizzazione dei viaggi di Bing mappe](/previous-versions/windows/apps/hh699891(v=vs.140)).
 
-## <a name="controlling-the-execution-thread"></a><a name="exethread"></a>Controllo del thread di esecuzione
+## <a name="controlling-the-execution-thread"></a><a name="exethread"></a> Controllo del thread di esecuzione
 
 Il Windows Runtime utilizza il modello di threading COM. In questo modello gli oggetti vengono ospitati in diversi apartment, in base al modo in cui gestiscono la rispettiva sincronizzazione. Gli oggetti thread-safe vengono ospitati nell'apartment a thread multipli (MTA, Multi-Threaded Apartment). Gli oggetti a cui deve accedere un singolo thread vengono ospitati in un apartment a thread singolo (STA, Single-Threaded Apartment).
 
@@ -153,7 +154,7 @@ La sezione seguente illustra un'app che legge un file da disco, individua le par
 > [!IMPORTANT]
 > Non chiamare [concurrency::task::wait](reference/task-class.md#wait) nel corpo di una continuazione che viene eseguita nell'apartment a thread singolo. In caso contrario, il runtime genera [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) poiché questo metodo blocca il thread corrente e può provocare la mancata risposta da parte dell'app. È tuttavia possibile chiamare il metodo [concurrency::task::get](reference/task-class.md#get) per ricevere il risultato dell'attività antecedente in una continuazione basata su attività.
 
-## <a name="example-controlling-execution-in-a-windows-runtime-app-with-c-and-xaml"></a><a name="example-app"></a>Esempio: controllo dell'esecuzione in un'app Windows Runtime con C++ e XAML
+## <a name="example-controlling-execution-in-a-windows-runtime-app-with-c-and-xaml"></a><a name="example-app"></a> Esempio: controllo dell'esecuzione in un'app Windows Runtime con C++ e XAML
 
 Si consideri un'app XAML C++ che legge un file da disco, individua le parole più comuni in tale file e quindi mostra i risultati nell'interfaccia utente. Per creare questa app, avviare in Visual Studio creando un progetto **app vuota (Windows universale)** e denominarlo `CommonWords` . Nel manifesto dell'app specificare la capacità **Raccolta documenti** per permettere all'app di accedere alla cartella Documenti. Aggiungere anche il tipo di file di testo (con estensione txt) alla sezione relativa alle dichiarazioni nel manifesto dell'app. Per altre informazioni sulle funzionalità e sulle dichiarazioni delle app, vedere Creazione [di pacchetti, distribuzione e query delle app di Windows](/windows/win32/appxpkg/appx-portal).
 
@@ -190,6 +191,6 @@ La figura seguente mostra i risultati dell'app `CommonWords` .
 
 In questo esempio è possibile supportare l'annullamento poiché gli `task` oggetti che supportano `create_async` usano un token di annullamento implicito. Definire la funzione lavoro in modo che accetti un oggetto `cancellation_token` se l'attività deve rispondere all'annullamento in modo cooperativo. Per altre informazioni sull'annullamento nella libreria PPL, vedere [Cancellation in the PPL](cancellation-in-the-ppl.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Runtime di concorrenza](../../parallel/concrt/concurrency-runtime.md)

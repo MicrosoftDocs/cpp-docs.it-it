@@ -1,20 +1,21 @@
 ---
+description: 'Altre informazioni su: container Class:: rbegin'
 title: Container Class::rbegin
 ms.date: 11/04/2016
 helpviewer_keywords:
 - rbegin method
 ms.assetid: c1f0d60c-93aa-4313-81b9-04e3f9c796c2
-ms.openlocfilehash: 9772120ceeeaa906363037ad4f6cd830bc636255
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: eeb3afee9766c51a7176ff3696f64c2bab23317b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453325"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233461"
 ---
 # <a name="container-classrbegin"></a>Container Class::rbegin
 
 > [!NOTE]
-> Questo argomento è disponibile nella documentazione C++ di Microsoft come esempio non funzionale dei contenitori usati nella libreria C++ standard. Per altre informazioni, vedere [Contenitori della libreria standard C++](../standard-library/stl-containers.md).
+> Questo argomento è disponibile nella documentazione di Microsoft C++ come esempio non funzionale dei contenitori usati nella libreria standard C++. Per altre informazioni, vedere [C++ Standard Library Containers](../standard-library/stl-containers.md) (Contenitori della libreria standard C++).
 
 Restituisce un iteratore inverso che punta oltre la fine della sequenza controllata, designando l'inizio della sequenza inversa.
 

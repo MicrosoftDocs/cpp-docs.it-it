@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: stdin, stdout, stderr'
 title: stdin, stdout, stderr
 ms.date: 10/23/2018
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - standard input stream
 - stderr function
 ms.assetid: badd4735-596d-4498-857c-ec8b7e670e4c
-ms.openlocfilehash: 5de1ff01282f30ad133f909cb87f5d7c8d521ae5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: ba31487c472bd714560e919f45ec9e9aa5acd717
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741953"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235723"
 ---
 # <a name="stdin-stdout-stderr"></a>stdin, stdout, stderr
 
@@ -39,7 +40,7 @@ Per impostazione predefinita, l'input standard viene letto dalla tastiera, mentr
 
 I seguenti puntatori di flusso sono disponibili per accedere ai flussi standard:
 
-|Puntatore|Flusso|
+|Puntatore|STREAM|
 |-------------|------------|
 |`stdin`|Input standard|
 |`stdout`|Output standard|
@@ -49,7 +50,7 @@ Questi puntatori possono essere utilizzati come argomenti alle funzioni. Alcune 
 
 Questi puntatori sono costanti e non è possibile assegnare nuovi valori. La funzione [freopen](../c-runtime-library/reference/freopen-wfreopen.md) può essere usata per reindirizzare i flussi ai file su disco o altri dispositivi. Il sistema operativo consente di reindirizzare un input e output standard di programma a livello di comandi.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [I/O di flusso](../c-runtime-library/stream-i-o.md)<br/>
 [Costanti globali](../c-runtime-library/global-constants.md)

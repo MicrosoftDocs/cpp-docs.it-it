@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: argomenti generali di MFC'
 title: Argomenti MFC generali
 ms.date: 09/17/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-ms.openlocfilehash: effab556277b3cd9ca072798bea3a77dbde58620
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a0e19a205e29297bf6808d6d979b9e27366b3e4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618770"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234358"
 ---
 # <a name="general-mfc-topics"></a>Argomenti MFC generali
 
@@ -27,17 +28,17 @@ Il framework MFC rappresenta un metodo efficace che consente di creare applicazi
 
 [Uso dei file di origine MFC](using-the-mfc-source-files.md)
 
-[Versioni di librerie MFC](mfc-library-versions.md)
+[Versioni della libreria MFC](mfc-library-versions.md)
 
-[Uso delle classi per la creazione di applicazioni per Windows](using-the-classes-to-write-applications-for-windows.md)
+[Utilizzo delle classi per scrivere applicazioni per Windows](using-the-classes-to-write-applications-for-windows.md)
 
-[Compilazione nel framework](building-on-the-framework.md)
+[Compilazione nel Framework](building-on-the-framework.md)
 
 [CWinApp: classe Application](cwinapp-the-application-class.md)
 
-[Modelli di documenti e processo di creazione documento/visualizzazione](document-templates-and-the-document-view-creation-process.md)
+[Modelli di documento e processo di creazione documento/visualizzazione](document-templates-and-the-document-view-creation-process.md)
 
-[Gestione dei dati dello stato dei moduli MFC](managing-the-state-data-of-mfc-modules.md)
+[Gestione dei dati sullo stato dei moduli MFC](managing-the-state-data-of-mfc-modules.md)
 
 [Elaborazione di cicli inattivi](idle-loop-processing.md)
 
@@ -47,7 +48,7 @@ Il framework MFC rappresenta un metodo efficace che consente di creare applicazi
 
 [Requisiti di compilazione per i controlli comuni di Windows Vista](build-requirements-for-windows-vista-common-controls.md)
 
-[Procedura: Aggiungere il supporto di Gestione riavvio](how-to-add-restart-manager-support.md)
+[Procedura: aggiungere il supporto di gestione riavvio](how-to-add-restart-manager-support.md)
 
 [Layout dinamico](dynamic-layout.md)
 
@@ -55,6 +56,6 @@ Per una panoramica della documentazione di riferimento per MFC, vedere [libreria
 
 Per informazioni su ATL, vedere [Active Template Library Reference](../atl/atl-class-overview.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Utilizzo di oggetti finestra](working-with-window-objects.md)

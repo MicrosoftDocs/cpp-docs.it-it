@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: I/O di flusso'
 title: I/O di flusso
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-ms.openlocfilehash: 8bff3cd74dfe4b1e3aa749ec28a361dd4a09c2f7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a787d83390239679ad48c2ca09b41f567a0a8c95
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231247"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235671"
 ---
 # <a name="stream-io"></a>I/O di flusso
 
@@ -19,7 +20,7 @@ Queste funzioni elaborano dati di diverse dimensioni e formati, da singoli carat
 
 ## <a name="stream-io-routines"></a>Routine di I/O di flusso
 
-|Routine|Uso|
+|Routine|Usa|
 |-------------|---------|
 |[clearerr](../c-runtime-library/reference/clearerr.md), [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|Eliminare l'indicatore di errore per il flusso|
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|Chiudere il flusso|
@@ -57,7 +58,7 @@ Queste funzioni elaborano dati di diverse dimensioni e formati, da singoli carat
 |[putchar, putwchar](../c-runtime-library/reference/putc-putwc.md)|Scrivere un carattere in **stdout** (versioni macro di **fputchar** e **fputwchar**)|
 |[puts, _putws](../c-runtime-library/reference/puts-putws.md)|Scrivere una riga nel flusso|
 |[_putw](../c-runtime-library/reference/putw.md)|Scrivi binario **`int`** in flusso|
-|[rewind](../c-runtime-library/reference/rewind.md)|Spostare la posizione del file all'inizio di un flusso|
+|[Rewind](../c-runtime-library/reference/rewind.md)|Spostare la posizione del file all'inizio di un flusso|
 |[_rmtmp](../c-runtime-library/reference/rmtmp.md)|Rimuovere i file temporanei creati da **tmpfile**|
 |[scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md),[scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)|Leggere dati formattati da **stdin**|
 |[setbuf](../c-runtime-library/reference/setbuf.md)|Controllare il buffering del flusso|
@@ -93,7 +94,7 @@ Se il programma non chiude in modo esplicito un flusso, il flusso viene automati
 
 L'input può usare direttamente l'output solo con una chiamata corrispondente a **fflush** o a una funzione di posizionamento di file (**fseek**, **fsetpos** o **rewind**). L'output può seguire l'input senza una corrispondente chiamata a una funzione di posizionamento dei file se l'operazione di input rileva la fine del file.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Input e output](../c-runtime-library/input-and-output.md)<br/>
 [Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore errore C2337'
 title: Errore del compilatore C2337
 ms.date: 09/19/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2337
 ms.assetid: eccc9178-a15e-42cd-bbd0-3cea7cf2d55b
-ms.openlocfilehash: bf9b3e782804add13aeaef0e6672d2dd66d193be
-ms.sourcegitcommit: f907b15f50a6b945d0b87c03af0050946157d701
+ms.openlocfilehash: 44def6fe9c220699e3687ce9b843f977528b5e15
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71158779"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234852"
 ---
 # <a name="compiler-error-c2337"></a>Errore del compilatore C2337
 

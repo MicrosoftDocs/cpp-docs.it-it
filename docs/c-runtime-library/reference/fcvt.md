@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _fcvt'
 title: _fcvt
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - fcvt function
 - floating-point functions
 ms.assetid: 74584c88-f0dd-4907-8fca-52da5df583f5
-ms.openlocfilehash: 2ca8a7fcd58e91ffa8982f30117b09af587d96cf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 4d2439c586ec28526849e956b1302c444cafa3a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920191"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235762"
 ---
 # <a name="_fcvt"></a>_fcvt
 
@@ -63,14 +64,14 @@ Numero di cifre dopo il separatore decimale.
 *Dec*<br/>
 Puntatore alla posizione del separatore decimale archiviata.
 
-*Sign*<br/>
+*sign*<br/>
 Puntatore all'indicatore di segno archiviato.
 
 ## <a name="return-value"></a>Valore restituito
 
 **_fcvt** restituisce un puntatore alla stringa di cifre, **null** in errore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_fcvt** converte un numero a virgola mobile in una stringa di caratteri con terminazione null. Il parametro *value* è il numero a virgola mobile da convertire. **_fcvt** archivia le cifre del *valore* come stringa e aggiunge un carattere null (' \ 0'). Il parametro *count* specifica il numero di cifre da archiviare dopo la virgola decimale. Le cifre in eccedenza vengono arrotondate per *calcolare* le posizioni. Se sono presenti meno di un *numero* di cifre di precisione, la stringa viene riempita con zeri.
 
@@ -82,13 +83,13 @@ La differenza tra **_ecvt** e **_fcvt** è nell'interpretazione del parametro *c
 
 **_ecvt** e **_fcvt** utilizzano un singolo buffer allocato in modo statico per la conversione. Ogni chiamata a una di queste funzioni elimina definitivamente i risultati della chiamata precedente.
 
-Questa funzione convalida i relativi parametri. Se *Dec* o *Sign* è **null**o *count* è 0, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e viene restituito **null** .
+Questa funzione convalida i relativi parametri. Se *Dec* o *Sign* è **null** o *count* è 0, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e viene restituito **null** .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**_fcvt**|\<stdlib.h>|
 
@@ -126,7 +127,7 @@ source: 3.1415926535   buffer: '31415927'   decimal: 1   sign: 0
 ## <a name="see-also"></a>Vedere anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

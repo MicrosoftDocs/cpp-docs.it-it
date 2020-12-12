@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: const_mem_fun1_t Class'
 title: Classe const_mem_fun1_t
 ms.date: 02/21/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun1_t class
 ms.assetid: 250fac30-9663-4133-9051-6303f76ea259
-ms.openlocfilehash: 93d0e7a116c7c7ba7a2ed1cb46fd88585a99120d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 998826bbd78745913caf76ad6b152aac490956fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228323"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233656"
 ---
 # <a name="const_mem_fun1_t-class"></a>Classe const_mem_fun1_t
 
@@ -43,10 +44,10 @@ Argomento assegnato a *member_ptr*.
 
 Funzione binaria adattabile.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il modello di classe archivia una copia di *member_ptr*, che deve essere un puntatore a una funzione membro della classe `Type` , in un oggetto membro privato. Definisce la relativa funzione membro `operator()` che restituisce `(left->member_ptr)(right) const` .
 
 ## <a name="example"></a>Esempio
 
-Il costruttore di `const_mem_fun1_t` viene usato raramente in modo diretto. `mem_fn`viene usato per adattare le funzioni membro. Vedere [mem_fn](../standard-library/functional-functions.md#mem_fn) per un esempio di come usare gli adattatori di funzioni membro.
+Il costruttore di `const_mem_fun1_t` viene usato raramente in modo diretto. `mem_fn` viene usato per adattare le funzioni membro. Vedere [mem_fn](../standard-library/functional-functions.md#mem_fn) per un esempio di come usare gli adattatori di funzioni membro.

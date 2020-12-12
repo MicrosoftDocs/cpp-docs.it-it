@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: is_enum Class'
 title: Classe is_enum
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_enum class
 - is_enum
 ms.assetid: df3b00b7-4f98-4b3a-96ce-10ad958ee69c
-ms.openlocfilehash: 4c8ac69bacf72cc9a281e239263a14a42f4a0efe
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6eaffc4258dd7741e177718ed39a3d8c3f75f96f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452685"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231147"
 ---
-# <a name="isenum-class"></a>Classe is_enum
+# <a name="is_enum-class"></a>Classe is_enum
 
 Verifica se il tipo è un'enumerazione.
 
@@ -30,9 +31,9 @@ struct is_enum;
 *Ty*\
 Tipo su cui eseguire una query.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Un'istanza del predicato di tipo include true se il tipo *Ty* è un tipo di `cv-qualified` enumerazione o un form di un tipo di enumerazione; in caso contrario, include false.
+Un'istanza del predicato di tipo include true se il tipo *Ty* è un tipo di enumerazione o un `cv-qualified` form di un tipo di enumerazione; in caso contrario, include false.
 
 ## <a name="example"></a>Esempio
 
@@ -71,11 +72,11 @@ is_enum<int> == false
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Classe is_integral](../standard-library/is-integral-class.md)

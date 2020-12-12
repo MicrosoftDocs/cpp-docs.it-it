@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: insert_iterator Class'
 title: Classe insert_iterator
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - std::insert_iterator [C++], container_type
 - std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
-ms.openlocfilehash: 530168f5e259934f7d614b305e6ac1092ba68f4d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d9089e0ab592ed6c8289570cc422aa6183444d55
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233158"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231576"
 ---
 # <a name="insert_iterator-class"></a>Classe insert_iterator
 
@@ -33,7 +34,7 @@ class insert_iterator;
 *Contenitore*\
 Tipo di contenitore in cui devono essere inseriti gli elementi da un `insert_iterator`.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il contenitore di tipo `Container` deve soddisfare i requisiti per un contenitore a dimensione variabile e disporre di una funzione membro di inserimento a due argomenti in cui i parametri sono di tipo `Container::iterator` e `Container::value_type` e che restituisce un tipo `Container::iterator` . La sequenza della libreria standard C++ e i contenitori associativi ordinati soddisfano tali requisiti e possono essere adattati per l'uso con `insert_iterator`. Per i contenitori associativi, l'argomento della posizione viene considerato come un suggerimento, che potrebbe migliorare o ridurre le prestazioni a seconda della validità di tale suggerimento. Un `insert_iterator` deve essere sempre inizializzato insieme al relativo contenitore.
 
@@ -45,7 +46,7 @@ Il contenitore di tipo `Container` deve soddisfare i requisiti per un contenitor
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome tipo|Descrizione|
+|Nome tipo|Description|
 |-|-|
 |[container_type](#container_type)|Tipo che rappresenta il contenitore in cui è necessario effettuare un inserimento generale.|
 |[reference](#reference)|Tipo che fornisce un riferimento a un elemento di una sequenza controllata dal contenitore associato.|
@@ -60,11 +61,11 @@ Il contenitore di tipo `Container` deve soddisfare i requisiti per un contenitor
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione**:\<iterator>
+**Intestazione**: \<iterator>
 
 **Spazio dei nomi:** std
 
-## <a name="insert_iteratorcontainer_type"></a><a name="container_type"></a>insert_iterator:: container_type
+## <a name="insert_iteratorcontainer_type"></a><a name="container_type"></a> insert_iterator:: container_type
 
 Tipo che rappresenta il contenitore in cui è necessario effettuare un inserimento generale.
 
@@ -72,7 +73,7 @@ Tipo che rappresenta il contenitore in cui è necessario effettuare un inserimen
 typedef Container container_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del parametro di modello *Container*.
 
@@ -106,7 +107,7 @@ The list L2 is: ( 40 20 10 ).
 */
 ```
 
-## <a name="insert_iteratorinsert_iterator"></a><a name="insert_iterator"></a>insert_iterator:: insert_iterator
+## <a name="insert_iteratorinsert_iterator"></a><a name="insert_iterator"></a> insert_iterator:: insert_iterator
 
 Costruisce un `insert_iterator` che inserisce un elemento in una posizione specificata di un contenitore.
 
@@ -122,7 +123,7 @@ Contenitore in cui `insert_iterator` deve inserire gli elementi.
 *_It*\
 Posizione per l'inserimento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Tutti i contenitori hanno la funzione membro di inserimento chiamata da `insert_iterator`. Per i contenitori associativi il parametro della posizione è semplicemente un suggerimento. La funzione insert offre un modo pratico per inserire valori.
 
@@ -172,7 +173,7 @@ After the insertions, the list L is:
 */
 ```
 
-## <a name="insert_iteratoroperator"></a><a name="op_star"></a>insert_iterator:: operator *
+## <a name="insert_iteratoroperator"></a><a name="op_star"></a> insert_iterator:: operator *
 
 Dereferenzia l'iteratore di inserimento restituendo l'elemento a cui punta.
 
@@ -184,9 +185,9 @@ insert_iterator<Container>& operator*();
 
 La funzione membro restituisce il valore dell'elemento puntato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Utilizzato per implementare il valore ** \* iter**dell'espressione dell'iteratore di output  =  **value**. Se `Iter` è un iteratore che punta a un elemento in una sequenza ** \* **,  =  il**valore** iter sostituisce tale elemento con Value e non modifica il numero totale di elementi della sequenza.
+Utilizzato per implementare il valore **\* iter** dell'espressione dell'iteratore di output  =  . Se `Iter` è un iteratore che punta a un elemento in una sequenza **\***,  =  il **valore** iter sostituisce tale elemento con Value e non modifica il numero totale di elementi della sequenza.
 
 ### <a name="example"></a>Esempio
 
@@ -232,7 +233,7 @@ After the insertions, the list L is:
 */
 ```
 
-## <a name="insert_iteratoroperator"></a><a name="op_add_add"></a>insert_iterator:: operator + +
+## <a name="insert_iteratoroperator"></a><a name="op_add_add"></a> insert_iterator:: operator + +
 
 Incrementa `insert_iterator` alla posizione successiva in cui è possibile archiviare un valore.
 
@@ -246,7 +247,7 @@ insert_iterator<Container> operator++(int);
 
 `insert_iterator` che punta alla posizione successiva in cui può essere archiviato un valore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Sia gli operatori di pre-incremento che quelli di post-incremento restituiscono lo stesso risultato.
 
@@ -296,7 +297,7 @@ After the insertions, the vector vec becomes:
 */
 ```
 
-## <a name="insert_iteratoroperator"></a><a name="op_eq"></a>insert_iterator:: operator =
+## <a name="insert_iteratoroperator"></a><a name="op_eq"></a> insert_iterator:: operator =
 
 Inserisce un valore nel contenitore e restituisce l'iteratore aggiornato in modo da puntare al nuovo elemento.
 
@@ -317,7 +318,7 @@ Valore da assegnare al contenitore.
 
 Riferimento all'elemento inserito nel contenitore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo operatore membro valuta
 
@@ -379,7 +380,7 @@ After the insertions, the list L is:
 */
 ```
 
-## <a name="insert_iteratorreference"></a><a name="reference"></a>insert_iterator:: Reference
+## <a name="insert_iteratorreference"></a><a name="reference"></a> insert_iterator:: Reference
 
 Tipo che fornisce un riferimento a un elemento di una sequenza controllata dal contenitore associato.
 
@@ -387,7 +388,7 @@ Tipo che fornisce un riferimento a un elemento di una sequenza controllata dal c
 typedef typename Container::reference reference;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo descrive un riferimento a un elemento della sequenza controllata dal contenitore associato.
 

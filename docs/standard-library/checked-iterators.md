@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: iteratori controllati'
 title: Checked Iterators
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - iterators, checked
 - checked iterators
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
-ms.openlocfilehash: 2327638208f30908cd3429ae656ce569f5821195
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: affa280bf967727a08449cc4f488c3a984e32b0c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684903"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234280"
 ---
 # <a name="checked-iterators"></a>Checked Iterators
 
 Gli iteratori verificati garantiscono che i limiti del contenitore non vengano sovrascritti. Gli iteratori verificati si applicano sia alle build di rilascio che alle build di debug. Per altre informazioni sull'uso degli iteratori di debug quando si esegue la compilazione in modalità di debug, vedere [Supporto degli iteratori di debug](../standard-library/debug-iterator-support.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per informazioni sulla disabilitazione degli avvisi generati dagli iteratori verificati, vedere [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).
 
@@ -73,7 +74,7 @@ Un iteratore verificato fa riferimento a un iteratore che chiama `invalid_parame
 
 Gli adattatori degli iteratori che supportano gli iteratori verificati sono la [classe checked_array_iterator](../standard-library/checked-array-iterator-class.md) e la [classe unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md).
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Quando si esegue la compilazione utilizzando _ITERATOR_DEBUG_LEVEL impostato su 1 o 2, si verificherà un errore di runtime se si tenta di accedere a un elemento che non rientra nei limiti del contenitore utilizzando l'operatore di indicizzazione di determinate classi.
 
@@ -228,7 +229,7 @@ a7: 0 7 14 21 28 35 42 49 56 63 70 77 84 91 98 105
 a8: 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Panoramica della libreria standard C++](../standard-library/cpp-standard-library-overview.md)\
 [Supporto degli iteratori di debug](../standard-library/debug-iterator-support.md)

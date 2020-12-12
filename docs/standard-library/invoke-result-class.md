@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: invoke_result Class'
 title: Classe invoke_result
 ms.date: 02/21/2019
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - std::invoke_result
 - std::invoke_result_t
 - std::invoke_result::type
-ms.openlocfilehash: e3e1a28310660ad1fbdae4dd58973de378ddf364
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4204ff1b0b8d38eab4b7d8c0de4709b90e12f5d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233132"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231497"
 ---
 # <a name="invoke_result-class"></a>Classe invoke_result
 
@@ -39,7 +40,7 @@ Tipo chiamabile su cui eseguire una query.
 *Args*\
 Tipi dell'elenco di argomenti al tipo chiamabile su cui eseguire una query.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Utilizzare questo modello per determinare il tipo di risultato di *Callable*(*args*...) in fase di compilazione, dove *Callable* e tutti i tipi in *args* sono qualsiasi tipo completo, una matrice di associazione sconosciuta o un qualificatore CV **`void`** . Il `type` membro del modello di classe denomina il tipo restituito di *Callable* quando viene richiamato usando gli argomenti *args*.... Il `type` membro viene definito solo se *Callable* può essere chiamato quando viene richiamato usando gli argomenti *args*... in un contesto non valutato. In caso contrario, il modello di classe non dispone `type` di membri, che consente i test SFINAE su un particolare set di tipi di argomento in fase di compilazione.
 
@@ -49,7 +50,7 @@ Utilizzare questo modello per determinare il tipo di risultato di *Callable*(*ar
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)\
 [invoke](functional-functions.md#invoke)

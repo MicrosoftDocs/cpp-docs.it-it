@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2144'
 title: Errore del compilatore C2144
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
-ms.openlocfilehash: b917c0a2c15aeb70222c948bce9a6fb275c91068
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 172ccb897937008aa305616eea19f234dfc6a3bd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80207246"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235502"
 ---
 # <a name="compiler-error-c2144"></a>Errore del compilatore C2144
 
@@ -23,9 +24,9 @@ Questo errore può essere causato da una parentesi graffa di chiusura mancante, 
 
 C2144 può verificarsi anche quando si tenta di creare una macro da una parola chiave CLR che contiene uno spazio vuoto.
 
-È anche possibile visualizzare C2144 se si sta provando a eseguire l'invio del tipo. Per ulteriori informazioni, vedere [tipo di inoltriC++(/CLI)](../../extensions/type-forwarding-cpp-cli.md) .
+È anche possibile visualizzare C2144 se si sta provando a eseguire l'invio del tipo. Per ulteriori informazioni, vedere l' [invio del tipo (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md) .
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Nell'esempio seguente viene generato C2144 e viene illustrato come risolverlo:
 

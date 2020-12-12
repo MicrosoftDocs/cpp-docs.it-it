@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; &gt; funzioni iOS'
 title: Funzioni &lt;ios&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -56,16 +57,16 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: a750f17ba8eba40dd01a2fb4a89e47a0927e4b61
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 82353509be371f9292c05947dbc4221bb0e74b05
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212293"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231433"
 ---
 # <a name="ltiosgt-functions"></a>Funzioni &lt;ios&gt;
 
-## <a name="boolalpha"></a><a name="boolalpha"></a>boolalpha
+## <a name="boolalpha"></a><a name="boolalpha"></a> boolalpha
 
 Specifica che le variabili di tipo [bool](../cpp/bool-cpp.md) vengono visualizzate come **`true`** o **`false`** nel flusso.
 
@@ -82,7 +83,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, le variabili di tipo **`bool`** vengono visualizzate come 1 o 0.
 
@@ -117,7 +118,7 @@ true
 true
 ```
 
-## <a name="dec"></a><a name="dec"></a>Dec
+## <a name="dec"></a><a name="dec"></a> Dec
 
 Specifica che le variabili Integer vengano visualizzate nella notazione in base 10.
 
@@ -134,7 +135,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, le variabili Integer vengono visualizzate in base 10.
 
@@ -183,11 +184,11 @@ ios_base& defaultfloat(ios_base& iosbase);
 *_Iosbase*\
 Oggetto `ios_base`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il manipolatore chiama `iosbase.` [ios_base:: unsetf](../standard-library/ios-base-class.md#unsetf) `(ios_base::floatfield)` , quindi restituisce *iosbase*.
 
-## <a name="fixed"></a><a name="fixed"></a>fissa
+## <a name="fixed"></a><a name="fixed"></a> fissa
 
 Specifica che un numero a virgola mobile venga visualizzato nella notazione decimale fissa.
 
@@ -204,9 +205,9 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-`fixed`è la notazione di visualizzazione predefinita per i numeri a virgola mobile. [scientific](../standard-library/ios-functions.md#scientific) fa sì che i numeri a virgola mobile vengano visualizzati usando la notazione scientifica.
+`fixed` è la notazione di visualizzazione predefinita per i numeri a virgola mobile. [scientific](../standard-library/ios-functions.md#scientific) fa sì che i numeri a virgola mobile vengano visualizzati usando la notazione scientifica.
 
 Il manipolatore chiama *Str*. [setf](../standard-library/ios-base-class.md#setf)( `ios_base::fixed` , `ios_base::floatfield` ) e quindi restituisce *STR*.
 
@@ -235,7 +236,7 @@ int main( )
 1.1
 ```
 
-## <a name="hex"></a><a name="hex"></a>esadecimale
+## <a name="hex"></a><a name="hex"></a> esadecimale
 
 Specifica che le variabili Integer vengano visualizzate nella notazione in base 16.
 
@@ -252,7 +253,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, le variabili Integer vengono visualizzate nella notazione in base 10. [dec](../standard-library/ios-functions.md#dec) e [oct](../standard-library/ios-functions.md#oct) modificano anche il modo in cui vengono visualizzate le variabili Integer.
 
@@ -262,13 +263,13 @@ Il manipolatore chiama effettivamente `str` **.** [setf](../standard-library/ios
 
 Vedere [Dec](../standard-library/ios-functions.md#dec) per un esempio di come usare `hex` .
 
-## <a name="hexfloat"></a><a name="hexfloat"></a>hexfloat
+## <a name="hexfloat"></a><a name="hexfloat"></a> hexfloat
 
 ```cpp
 ios_base& hexfloat (ios_base& str);
 ```
 
-## <a name="io_errc"></a><a name="io_errc"></a>io_errc
+## <a name="io_errc"></a><a name="io_errc"></a> io_errc
 
 ```cpp
 enum class io_errc {
@@ -276,7 +277,7 @@ enum class io_errc {
 };
 ```
 
-## <a name="internal"></a><a name="internal"></a>interno
+## <a name="internal"></a><a name="internal"></a> interno
 
 Fa sì che il segno di un numero venga giustificato a sinistra e il numero a destra.
 
@@ -293,7 +294,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 [showpos](../standard-library/ios-functions.md#showpos) determina il segno da visualizzare per i numeri positivi.
 
@@ -322,19 +323,19 @@ int main( void )
 -..123.456
 ```
 
-## <a name="is_error_code_enum"></a><a name="is_error_code_enum"></a>is_error_code_enum
+## <a name="is_error_code_enum"></a><a name="is_error_code_enum"></a> is_error_code_enum
 
 ```cpp
 template <> struct is_error_code_enum<io_errc> : public true_type { };
 ```
 
-## <a name="iostream_category"></a><a name="iostream_category"></a>iostream_category
+## <a name="iostream_category"></a><a name="iostream_category"></a> iostream_category
 
 ```cpp
 const error_category& iostream_category() noexcept;
 ```
 
-## <a name="left"></a><a name="left"></a>sinistra
+## <a name="left"></a><a name="left"></a> sinistra
 
 Fa sì che il testo la cui larghezza non corrisponde a quella dell'output venga visualizzato nel flusso allineato con il margine sinistro.
 
@@ -351,7 +352,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il manipolatore chiama `str.` [setf](../standard-library/ios-base-class.md#setf) `(ios_base::left, ios_base::adjustfield)` , quindi restituisce *STR*.
 
@@ -377,19 +378,19 @@ int main( )
         5
 ```
 
-## <a name="make_error_code"></a><a name="make_error_code"></a>make_error_code
+## <a name="make_error_code"></a><a name="make_error_code"></a> make_error_code
 
 ```cpp
 error_code make_error_code(io_errc e) noexcept;
 ```
 
-## <a name="make_error_condition"></a><a name="make_error_condition"></a>make_error_condition
+## <a name="make_error_condition"></a><a name="make_error_condition"></a> make_error_condition
 
 ```cpp
 error_condition make_error_condition(io_errc e) noexcept;
 ```
 
-## <a name="noboolalpha"></a><a name="noboolalpha"></a>noboolalpha
+## <a name="noboolalpha"></a><a name="noboolalpha"></a> noboolalpha
 
 Specifica che le variabili di tipo [bool](../cpp/bool-cpp.md) vengano visualizzate come 1 o 0 nel flusso.
 
@@ -406,7 +407,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, l'opzione `noboolalpha` è attiva.
 
@@ -418,7 +419,7 @@ Per impostazione predefinita, l'opzione `noboolalpha` è attiva.
 
 Vedere [boolalpha](../standard-library/ios-functions.md#boolalpha) per un esempio d'uso di `noboolalpha`.
 
-## <a name="noshowbase"></a><a name="noshowbase"></a>noshowbase
+## <a name="noshowbase"></a><a name="noshowbase"></a> noshowbase
 
 Disattiva l'indicazione della base notazionale in cui viene visualizzato un numero.
 
@@ -435,7 +436,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `noshowbase` è attivato per impostazione predefinita. Usare [showbase](../standard-library/ios-functions.md#showbase) per indicare la base notazionale dei numeri.
 
@@ -445,7 +446,7 @@ Il manipolatore chiama `str.` [unsetf](../standard-library/ios-base-class.md#uns
 
 Vedere [showbase](../standard-library/ios-functions.md#showbase) per un esempio di come usare `noshowbase`.
 
-## <a name="noshowpoint"></a><a name="noshowpoint"></a>noshowpoint
+## <a name="noshowpoint"></a><a name="noshowpoint"></a> noshowpoint
 
 Visualizza solo la parte di numero intero dei numeri a virgola mobile la cui parte frazionaria è pari a zero.
 
@@ -462,7 +463,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `noshowpoint` è attivo per impostazione predefinita; usare [showpoint](../standard-library/ios-functions.md#showpoint) e [precision](../standard-library/ios-base-class.md#precision) per visualizzare zeri dopo la virgola decimale.
 
@@ -492,7 +493,7 @@ int main( )
 5
 ```
 
-## <a name="noshowpos"></a><a name="noshowpos"></a>noshowpos
+## <a name="noshowpos"></a><a name="noshowpos"></a> noshowpos
 
 Fa sì che per i numeri positivi il segno non venga visualizzato in modo esplicito.
 
@@ -509,7 +510,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `noshowpos` è attivato per impostazione predefinita.
 
@@ -519,7 +520,7 @@ Il manipolatore chiama `str.` [unsetf](../standard-library/ios-base-class.md#uns
 
 Vedere [showpos](../standard-library/ios-functions.md#showpos) per un esempio d'uso di `noshowpos`.
 
-## <a name="noskipws"></a><a name="noskipws"></a>noskipws
+## <a name="noskipws"></a><a name="noskipws"></a> noskipws
 
 Fa sì che gli spazi vengano letti dal flusso di input.
 
@@ -536,7 +537,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, l'opzione [skipws](../standard-library/ios-functions.md#skipws) è attiva. Quando nel flusso di input viene letto uno spazio, segnala la fine del buffer.
 
@@ -561,7 +562,7 @@ int main() {
 }
 ```
 
-## <a name="nounitbuf"></a><a name="nounitbuf"></a>nounitbuf
+## <a name="nounitbuf"></a><a name="nounitbuf"></a> nounitbuf
 
 Fa sì che l'output venga memorizzato nel buffer ed elaborato quando il buffer è pieno.
 
@@ -578,13 +579,13 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 [unitbuf](../standard-library/ios-functions.md#unitbuf) fa sì che il buffer venga elaborato quando non è vuoto.
 
 Il manipolatore chiama `str.` [unsetf](../standard-library/ios-base-class.md#unsetf) `(ios_base::unitbuf)` , quindi restituisce *STR*.
 
-## <a name="nouppercase"></a><a name="nouppercase"></a>nouppercase
+## <a name="nouppercase"></a><a name="nouppercase"></a> nouppercase
 
 Specifica che le cifre esadecimali e l'esponente nella notazione scientifica vengano visualizzati in minuscolo.
 
@@ -601,7 +602,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il manipolatore chiama `str.` [unsetf](../standard-library/ios-base-class.md#unsetf) `(ios_base::uppercase)` , quindi restituisce *STR*.
 
@@ -609,7 +610,7 @@ Il manipolatore chiama `str.` [unsetf](../standard-library/ios-base-class.md#uns
 
 Vedere [uppercase](../standard-library/ios-functions.md#uppercase) per un esempio d'uso di `nouppercase`.
 
-## <a name="oct"></a><a name="oct"></a>ottobre
+## <a name="oct"></a><a name="oct"></a> ottobre
 
 Specifica che le variabili Integer vengano visualizzate nella notazione in base 8.
 
@@ -626,7 +627,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, le variabili Integer vengono visualizzate nella notazione in base 10. [dec](../standard-library/ios-functions.md#dec) e [hex](../standard-library/ios-functions.md#hex) modificano anche il modo in cui vengono visualizzate le variabili Integer.
 
@@ -636,7 +637,7 @@ Il manipolatore chiama `str.` [setf](../standard-library/ios-base-class.md#setf)
 
 Vedere [Dec](../standard-library/ios-functions.md#dec) per un esempio di come usare `oct` .
 
-## <a name="right"></a><a name="right"></a>Ok
+## <a name="right"></a><a name="right"></a> Ok
 
 Fa sì che il testo la cui larghezza non corrisponde a quella dell'output venga visualizzato nel flusso allineato con il margine destro.
 
@@ -653,7 +654,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 [left](../standard-library/ios-functions.md#left) modifica anche la giustificazione del testo.
 
@@ -693,7 +694,7 @@ int main( )
                    5
 ```
 
-## <a name="scientific"></a><a name="scientific"></a>scientifico
+## <a name="scientific"></a><a name="scientific"></a> scientifico
 
 Fa sì che i numeri a virgola mobile vengano visualizzati usando la notazione scientifica.
 
@@ -710,7 +711,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, la notazione [fixed](../standard-library/ios-functions.md#fixed) è attiva per i numeri a virgola mobile.
 
@@ -738,7 +739,7 @@ int main( )
 1.002300e+002
 ```
 
-## <a name="showbase"></a><a name="showbase"></a>showbase
+## <a name="showbase"></a><a name="showbase"></a> showbase
 
 Indica la base notazionale in cui viene visualizzato un numero.
 
@@ -755,7 +756,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La base notazionale di un numero può essere modificata con [dec](../standard-library/ios-functions.md#dec), [oct](../standard-library/ios-functions.md#oct) o [hex](../standard-library/ios-functions.md#hex).
 
@@ -792,7 +793,7 @@ int main( )
 144
 ```
 
-## <a name="showpoint"></a><a name="showpoint"></a>showpoint
+## <a name="showpoint"></a><a name="showpoint"></a> showpoint
 
 Visualizza la parte di numero intero di un numero a virgola mobile e le cifre a destra del separatore decimale, anche quando la parte frazionaria è pari a zero.
 
@@ -809,7 +810,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, l'opzione [noshowpoint](../standard-library/ios-functions.md#noshowpoint) è attiva.
 
@@ -819,7 +820,7 @@ Il manipolatore chiama `str.` [setf](../standard-library/ios-base-class.md#setf)
 
 Vedere [noshowpoint](../standard-library/ios-functions.md#noshowpoint) per un esempio d'uso di `showpoint`.
 
-## <a name="showpos"></a><a name="showpos"></a>showpos
+## <a name="showpos"></a><a name="showpos"></a> showpos
 
 Fa sì che per i numeri positivi il segno venga visualizzato in modo esplicito.
 
@@ -836,7 +837,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione predefinita è [noshowpos](../standard-library/ios-functions.md#noshowpos).
 
@@ -864,7 +865,7 @@ int main( )
 +1
 ```
 
-## <a name="skipws"></a><a name="skipws"></a>skipws
+## <a name="skipws"></a><a name="skipws"></a> skipws
 
 Fa sì che gli spazi non vengano letti dal flusso di input.
 
@@ -881,7 +882,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, l'opzione `skipws` è attiva. [noskipws](../standard-library/ios-functions.md#noskipws) fa sì che gli spazi vengano letti dal flusso di input.
 
@@ -916,7 +917,7 @@ Enter three characters: 1 2 3
 .3.
 ```
 
-## <a name="unitbuf"></a><a name="unitbuf"></a>unitbuf
+## <a name="unitbuf"></a><a name="unitbuf"></a> unitbuf
 
 Fa sì che l'output venga elaborato quando il buffer non è pieno.
 
@@ -933,7 +934,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Tenere presente che `endl` scarica anche il buffer.
 
@@ -941,7 +942,7 @@ L'opzione [nounitbuf](../standard-library/ios-functions.md#nounitbuf) è attiva 
 
 Il manipolatore chiama in modo efficace `str.` [setf](../standard-library/ios-base-class.md#setf) `(` [ios_base:: unitbuf](../standard-library/ios-base-class.md#fmtflags) `)` e quindi restituisce *Str*.
 
-## <a name="uppercase"></a><a name="uppercase"></a>maiuscolo
+## <a name="uppercase"></a><a name="uppercase"></a> maiuscolo
 
 Specifica che le cifre esadecimali e l'esponente nella notazione scientifica vengano visualizzati in maiuscolo.
 
@@ -958,7 +959,7 @@ Riferimento a un oggetto di tipo [ios_base](../standard-library/ios-base-class.m
 
 Riferimento all'oggetto da cui viene derivato *Str* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, l'opzione [nouppercase](../standard-library/ios-functions.md#nouppercase) è attiva.
 
