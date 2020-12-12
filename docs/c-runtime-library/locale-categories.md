@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: categorie di impostazioni locali'
 title: Categorie di impostazioni locali
 ms.date: 11/04/2016
 f1_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - LC_NUMERIC constant
 - LC_COLLATE constant
 ms.assetid: 868f1493-fe5d-4722-acab-bfcd374a063a
-ms.openlocfilehash: 434500dab0c68aa9475f54e930b91da0b1cd2fc9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 2c6bfa4b2d1d0b76520043ee5568d51cf28a23c4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749802"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246383"
 ---
 # <a name="locale-categories"></a>Categorie di impostazioni locali
 
@@ -53,7 +54,7 @@ Le categorie di impostazioni locali sono costanti manifesto usate dalle routine 
 
 Per un esempio, vedere [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [localeconv](../c-runtime-library/reference/localeconv.md)<br/>
 [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>

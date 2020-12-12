@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: is_same Class'
 title: Classe is_same
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_same class
 - is_same
 ms.assetid: d9df6c1d-c270-4ec2-802a-af275648dd1d
-ms.openlocfilehash: f4e4babeef89960762ebb2ccf0f733f60eadfa47
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 19e0ecec009227c0785c263893aa32beff4049e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450049"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247722"
 ---
-# <a name="issame-class"></a>Classe is_same
+# <a name="is_same-class"></a>Classe is_same
 
 Verifica se due tipi sono uguali.
 
@@ -33,7 +34,7 @@ Primo tipo su cui eseguire una query.
 *Ty2*\
 Secondo tipo su cui eseguire una query.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Un'istanza del predicato di tipo include true se i tipi *Ty1* e *Ty2* sono dello stesso tipo; in caso contrario, contengono false.
 
@@ -82,11 +83,11 @@ is_same<int, const int> == false
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Classe is_convertible](../standard-library/is-convertible-class.md)\

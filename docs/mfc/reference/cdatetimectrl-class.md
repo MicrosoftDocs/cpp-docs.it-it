@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CDateTimeCtrl'
 title: Classe CDateTimeCtrl
 ms.date: 11/04/2016
 f1_keywords:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: f04cce93aa6a86d11c2d9ec953992a0f90f635c5
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: cfed57d74e16f8433a5199ca912379b90a4f48cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561947"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247931"
 ---
 # <a name="cdatetimectrl-class"></a>Classe CDateTimeCtrl
 
@@ -57,17 +58,17 @@ Incapsula la funzionalità di un controllo di selezione data e ora.
 class CDateTimeCtrl : public CWnd
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CDateTimeCtrl:: CDateTimeCtrl](#cdatetimectrl)|Costruisce un oggetto `CDateTimeCtrl`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CDateTimeCtrl:: CloseMonthCal](#closemonthcal)|Chiude il controllo selezione data e ora corrente.|
 |[CDateTimeCtrl:: create](#create)|Crea il controllo selezione data e ora e lo collega all' `CDateTimeCtrl` oggetto.|
@@ -86,7 +87,7 @@ class CDateTimeCtrl : public CWnd
 |[CDateTimeCtrl:: SetRange](#setrange)|Imposta l'ora di sistema minima e massima consentita per un controllo selezione data e ora.|
 |[CDateTimeCtrl:: setime](#settime)|Imposta l'ora in un controllo selezione data e ora.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il controllo selezione data e ora (controllo DTP) fornisce un'interfaccia semplice per scambiare informazioni di data e ora con un utente. Questa interfaccia contiene i campi, ognuno dei quali Visualizza una parte delle informazioni di data e ora archiviate nel controllo. L'utente può modificare le informazioni archiviate nel controllo modificando il contenuto della stringa in un campo specificato. L'utente può spostarsi da un campo all'altra usando il mouse o la tastiera.
 
@@ -124,7 +125,7 @@ Chiude il controllo selezione data e ora corrente.
 void CloseMonthCal() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [DTM_CLOSEMONTHCAL](/windows/win32/Controls/dtm-closemonthcal) , descritto nel Windows SDK.
 
@@ -170,7 +171,7 @@ Specifica l'ID di controllo del controllo selezione data e ora.
 
 Diverso da zero se la creazione ha avuto esito positivo; in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ##### <a name="to-create-a-date-and-time-picker-control"></a>Per creare un controllo selezione data e ora
 
@@ -201,7 +202,7 @@ out Puntatore a una struttura [DATETIMEPICKERINFO](/windows/win32/api/commctrl/n
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [DTM_GETDATETIMEPICKERINFO](/windows/win32/Controls/dtm-getdatetimepickerinfo) , descritto nel Windows SDK.
 
@@ -234,7 +235,7 @@ COLORREF GetMonthCalColor(int iColor) const;
 
 Valore COLORREF che rappresenta l'impostazione del colore per la parte specificata del controllo calendario mensile, se ha esito positivo. La funzione restituisce-1 in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [DTM_GETMCCOLOR](/windows/win32/Controls/dtm-getmccolor)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -254,7 +255,7 @@ CMonthCalCtrl* GetMonthCalCtrl() const;
 
 Puntatore a un oggetto [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md) o null in caso di esito negativo o se la finestra non è visibile.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Controlli di selezione data e ora creare un controllo calendario mensile figlio quando l'utente fa clic sulla freccia a discesa. Quando l' `CMonthCalCtrl` oggetto non è più necessario, viene eliminato definitivamente, quindi l'applicazione non deve basarsi sull'archiviazione dell'oggetto che rappresenta il calendario mensile figlio del controllo selezione data e ora.
 
@@ -274,7 +275,7 @@ CFont* GetMonthCalFont() const;
 
 Puntatore a un oggetto [CFont](../../mfc/reference/cfont-class.md) o null in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L' `CFont` oggetto a cui fa riferimento il valore restituito è un oggetto temporaneo e viene eliminato definitivamente durante il successivo tempo di elaborazione inattivo.
 
@@ -290,7 +291,7 @@ DWORD GetMonthCalStyle() const;
 
 Stile del controllo calendario mensile a discesa, ovvero una combinazione bit per bit (o) degli stili del controllo selezione data e ora. Per altre informazioni, vedere [stili del controllo calendario mensile](/windows/win32/Controls/month-calendar-control-styles).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [DTM_GETMCSTYLE](/windows/win32/Controls/dtm-getmcstyle) , descritto nel Windows SDK.
 
@@ -328,7 +329,7 @@ il secondo parametro è quindi valido. Analogamente, se
 
 il primo parametro è quindi valido.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [DTM_GETRANGE](/windows/win32/Controls/dtm-getrange)del messaggio Win32, come descritto nel Windows SDK. Nell'implementazione di MFC, è possibile specificare uno `COleDateTime` o più `CTime` utilizzi.
 
@@ -358,11 +359,11 @@ Puntatore alla struttura [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbas
 
 Nella prima versione, diverso da zero se l'ora viene scritta correttamente nell' `COleDateTime` oggetto; in caso contrario, 0. Nella seconda e nella terza versione, un valore DWORD uguale al membro *dwFlag* impostato nella struttura [NMDATETIMECHANGE](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange) . Per ulteriori informazioni, vedere la sezione **osservazioni** riportata di seguito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [DTM_GETSYSTEMTIME](/windows/win32/Controls/dtm-getsystemtime)del messaggio Win32, come descritto nel Windows SDK. Nell'implementazione MFC di `GetTime` è possibile usare le `COleDateTime` classi o oppure `CTime` è possibile usare una `SYSTEMTIME` struttura per archiviare le informazioni sull'ora.
 
-Il valore DWORD restituito nella seconda e nella terza versione precedente indica se il controllo selezione data e ora è impostato sullo stato "No date", come indicato nel *dwFlags*del membro della struttura [NMDATETIMECHANGE](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange) . Se il valore restituito è uguale a GDT_NONE, il controllo viene impostato sullo stato "No date" e utilizza lo stile DTS_SHOWNONE. Se il valore restituito è uguale a GDT_VALID, l'ora di sistema viene archiviata correttamente nel percorso di destinazione.
+Il valore DWORD restituito nella seconda e nella terza versione precedente indica se il controllo selezione data e ora è impostato sullo stato "No date", come indicato nel *dwFlags* del membro della struttura [NMDATETIMECHANGE](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange) . Se il valore restituito è uguale a GDT_NONE, il controllo viene impostato sullo stato "No date" e utilizza lo stile DTS_SHOWNONE. Se il valore restituito è uguale a GDT_VALID, l'ora di sistema viene archiviata correttamente nel percorso di destinazione.
 
 ### <a name="example"></a>Esempio
 
@@ -385,7 +386,7 @@ out Puntatore a una struttura di [dimensioni](/windows/win32/api/windef/ns-winde
 
 Il valore restituito è sempre TRUE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [DTM_GETIDEALSIZE](/windows/win32/Controls/dtm-getidealsize) , descritto nel Windows SDK.
 
@@ -421,7 +422,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 > [!NOTE]
 > L'input dell'utente non determina l'esito positivo o negativo della chiamata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [DTM_SETFORMAT](/windows/win32/Controls/dtm-setformat)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -444,7 +445,7 @@ COLORREF SetMonthCalColor(
 *iColor*<br/>
 **`int`** valore che specifica l'area del controllo calendario mensile da impostare. Il valore può essere uno dei seguenti.
 
-|valore|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |MCSC_BACKGROUND|Imposta il colore di sfondo visualizzato tra i mesi.|
 |MCSC_MONTHBK|Imposta il colore di sfondo visualizzato all'interno di un mese.|
@@ -453,14 +454,14 @@ COLORREF SetMonthCalColor(
 |MCSC_TITLETEXT|Consente di impostare il colore utilizzato per visualizzare il testo all'interno del titolo del calendario.|
 |MCSC_TRAILINGTEXT|Imposta il colore utilizzato per visualizzare il testo dell'intestazione e del giorno finale. Le intestazioni e i giorni finali sono i giorni dei mesi precedenti e successivi visualizzati nel calendario corrente.|
 
-*Ref*<br/>
+*ref*<br/>
 Valore COLORREF che rappresenta il colore che verrà impostato per l'area specificata del calendario mensile.
 
 ### <a name="return-value"></a>Valore restituito
 
 Valore COLORREF che rappresenta l'impostazione del colore precedente per la parte specificata del controllo calendario mensile, se ha esito positivo. In caso contrario, il messaggio restituisce-1.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [DTM_SETMCCOLOR](/windows/win32/Controls/dtm-setmccolor)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -486,7 +487,7 @@ Handle per il tipo di carattere che verrà impostato.
 *bRedraw*<br/>
 Specifica se il controllo deve essere ridisegnato immediatamente dopo l'impostazione del tipo di carattere. Se si imposta questo parametro su TRUE, il controllo verrà ridisegnato automaticamente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [DTM_SETMCFONT](/windows/win32/Controls/dtm-setmcfont)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -514,7 +515,7 @@ in Nuovo stile del controllo calendario mensile, ovvero una combinazione bit per
 
 Stile precedente del controllo calendario mensile a discesa.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [DTM_SETMCSTYLE](/windows/win32/Controls/dtm-setmcstyle) , descritto nel Windows SDK.
 
@@ -556,7 +557,7 @@ Puntatore a un `COleDateTime` oggetto o a un `CTime` oggetto che contiene l'ora 
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [DTM_SETRANGE](/windows/win32/Controls/dtm-setrange)del messaggio Win32, come descritto nel Windows SDK. Nell'implementazione di MFC, è possibile specificare uno `COleDateTime` o più `CTime` utilizzi. Se lo `COleDateTime` stato dell'oggetto è null, l'intervallo verrà rimosso. Se il `CTime` puntatore o il `COleDateTime` puntatore è null, l'intervallo verrà rimosso.
 
@@ -586,7 +587,7 @@ Nella seconda versione precedente, un puntatore a un oggetto [CTime](../../atl-m
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [DTM_SETSYSTEMTIME](/windows/win32/Controls/dtm-setsystemtime)del messaggio Win32, come descritto nel Windows SDK. Nell'implementazione MFC di `SetTime` è possibile usare le `COleDateTime` classi o oppure `CTime` è possibile usare una `SYSTEMTIME` struttura per impostare le informazioni sull'ora.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: struttura CDaoRelationFieldInfo'
 title: Struttura CDaoRelationFieldInfo
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Relations collection
 - CDaoRelationFieldInfo structure [MFC]
 ms.assetid: 47cb89ca-dc80-47ce-96fd-cc4b88512558
-ms.openlocfilehash: 85dd853a9aae41a87bbe7ef5c69e22846678cf8a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb470752a9e9da5f610dd59976f2716fa1c4e18a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206108"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248164"
 ---
 # <a name="cdaorelationfieldinfo-structure"></a>Struttura CDaoRelationFieldInfo
 
-Il `CDaoRelationFieldInfo` struttura contiene informazioni su un campo in una relazione definita per data access Object (DAO).
+La `CDaoRelationFieldInfo` struttura contiene informazioni su un campo in una relazione definita per gli oggetti DAO (Data Access Objects).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -31,24 +32,24 @@ struct CDaoRelationFieldInfo
 #### <a name="parameters"></a>Parametri
 
 *m_strName*<br/>
-Il nome del campo nella tabella primaria della relazione.
+Nome del campo nella tabella primaria della relazione.
 
 *m_strForeignName*<br/>
-Il nome del campo della tabella esterna della relazione.
+Nome del campo nella tabella esterna della relazione.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Un oggetto relazione DAO specifica i campi in una tabella primaria e i campi di una tabella esterna che definiscono la relazione. I riferimenti al sito primario nella definizione della struttura precedente indicano la modalità in cui vengono restituite le informazioni nel `m_pFieldInfos` membro di un [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) oggetto ottenuto chiamando il [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)funzione membro di classe `CDaoDatabase`.
+Un oggetto relazione DAO specifica i campi in una tabella primaria e i campi in una tabella esterna che definiscono la relazione. I riferimenti al database primario nella definizione della struttura precedente indicano il modo in cui vengono restituite le informazioni nel `m_pFieldInfos` membro di un oggetto [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) ottenuto chiamando la funzione membro [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) della classe `CDaoDatabase` .
 
-Gli oggetti della relazione e gli oggetti campo della relazione non sono rappresentati da una classe MFC. Al contrario, nell'oggetto DAO oggetti oggetti MFC sottostanti della classe [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) contengono una raccolta di oggetti di relazione, denominata la raccolta di relazioni. Ogni oggetto relation, a sua volta, contiene una raccolta di oggetti di relazione campo. Ogni oggetto campo relation mette in correlazione un campo nella tabella primaria con un campo della tabella esterna. Insieme, gli oggetti campo relazione definiscono un gruppo di campi in ogni tabella, che insieme definiscono la relazione. `CDaoDatabase` Consente di accedere gli oggetti di relazione con un `CDaoRelationInfo` chiamando il `GetRelationInfo` funzione membro. Il `CDaoRelationInfo` oggetto, quindi, ha un membro di dati `m_pFieldInfos`, che punta a una matrice di `CDaoRelationFieldInfo` oggetti.
+Gli oggetti relazione e gli oggetti campo relazione non sono rappresentati da una classe MFC. Gli oggetti DAO sottostanti oggetti MFC della classe [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) contengono invece una raccolta di oggetti relation, denominata raccolta Relations. Ogni oggetto relazione, a sua volta, contiene una raccolta di oggetti campo relazione. Ogni oggetto campo relazione mette in correlazione un campo nella tabella primaria con un campo nella tabella esterna. Insieme, gli oggetti campo relazione definiscono un gruppo di campi in ogni tabella, che insieme definiscono la relazione. `CDaoDatabase` consente di accedere agli oggetti relazione con un `CDaoRelationInfo` oggetto chiamando la `GetRelationInfo` funzione membro. L' `CDaoRelationInfo` oggetto, quindi, dispone di un membro dati, `m_pFieldInfos` , che punta a una matrice di `CDaoRelationFieldInfo` oggetti.
 
-Chiamare il [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) funzione di membro dell'oggetto contenitore `CDaoDatabase` dell'oggetto in cui le relazioni di raccolta è archiviato l'oggetto di relazione si è interessati. Accedere quindi il `m_pFieldInfos` membro del [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) oggetto. `CDaoRelationFieldInfo` definisce inoltre un `Dump` compila la funzione membro in modalità debug. È possibile usare `Dump` per scaricare il contenuto di un `CDaoRelationFieldInfo` oggetto.
+Chiamare la funzione membro [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) dell'oggetto contenitore `CDaoDatabase` nella cui raccolta di relazioni è archiviato l'oggetto relazione a cui si è interessati. Accedere quindi al `m_pFieldInfos` membro dell'oggetto [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) . `CDaoRelationFieldInfo` definisce inoltre una `Dump` funzione membro nelle compilazioni di debug. È possibile utilizzare `Dump` per eseguire il dump del contenuto di un `CDaoRelationFieldInfo` oggetto.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxdao. h
+**Intestazione:** AFXDAO. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [Struttura CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)

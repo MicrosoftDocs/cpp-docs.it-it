@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura: dichiarare handle in tipi nativi'
 title: 'Procedura: dichiarare handle in tipi nativi'
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - gcroot keyword [C++]
 - types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-ms.openlocfilehash: deba9804b9c5c278b3ffcef2923bc8f89fefa676
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 09eba3d04db4dd87de00346e1cccde7805f63100
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684534"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97245928"
 ---
 # <a name="how-to-declare-handles-in-native-types"></a>Procedura: dichiarare handle in tipi nativi
 
@@ -24,7 +25,7 @@ Il `gcroot` modello viene implementato usando le funzionalità della classe Valu
 
 Il runtime manterrà un'associazione tra l'handle e l'oggetto CLR a cui fa riferimento. Quando l'oggetto CLR viene spostato con l'heap sottoposto a Garbage Collection, l'handle restituisce il nuovo indirizzo dell'oggetto. Una variabile non deve essere bloccata prima di essere assegnata a un `gcroot` modello.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 In questo esempio viene illustrato come creare un `gcroot` oggetto nello stack nativo.
 
@@ -109,6 +110,6 @@ int main() {
 String in V: Hello
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Uso dell'interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

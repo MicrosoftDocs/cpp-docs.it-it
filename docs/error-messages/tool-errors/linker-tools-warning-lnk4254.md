@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avvisi degli strumenti del linker LNK4254'
 title: Avviso degli strumenti del linker LNK4254
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4254
 ms.assetid: 6f41dfb3-ca21-40d3-bac7-b637e578efa4
-ms.openlocfilehash: 8431bd2d89fd5df5cf076ad006ab04006f552c4c
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 410a904af6af2015a817ac9e254dff7f09811b72
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988057"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97244472"
 ---
 # <a name="linker-tools-warning-lnk4254"></a>Avviso degli strumenti del linker LNK4254
 
@@ -21,7 +22,7 @@ Il contenuto di una sezione è stato unito in un altro, ma gli attributi delle d
 
 Per risolvere LNK4254, modificare o rimuovere la richiesta di merge.
 
-Quando si fa riferimento a computer x86 e a destinazioni Windows CE (ARM, MIPS, SH4 e Thumb) C++con Visual, il. La sezione CRT è di sola lettura. Se il codice dipende dal comportamento precedente (. Le sezioni CRT sono di lettura/scrittura), è possibile che si verifichi un comportamento imprevisto.
+Quando si fa riferimento a computer x86 e a destinazioni Windows CE (ARM, MIPS, SH4 e Thumb) con Visual C++, il. La sezione CRT è di sola lettura. Se il codice dipende dal comportamento precedente (. Le sezioni CRT sono di lettura/scrittura), è possibile che si verifichi un comportamento imprevisto.
 
 Per ulteriori informazioni, vedere,
 

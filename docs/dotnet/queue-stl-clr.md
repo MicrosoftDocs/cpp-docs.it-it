@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Queue (STL/CLR)'
 title: queue (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -57,12 +58,12 @@ helpviewer_keywords:
 - to_array member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-ms.openlocfilehash: 2d5c1d30704838cdb69516d68d328c90a094a08e
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1cbe30dff567c81840f2b78498b04648954399dc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502383"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97245876"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 
@@ -109,7 +110,7 @@ Tipo del contenitore sottostante.
 |[queue::size_type (STL/CLR)](#size_type)|Tipo di una distanza Signed tra due elementi.|
 |[queue::value_type (STL/CLR)](#value_type)|Tipo di un elemento.|
 
-|Funzione membro|Descrizione|
+|Funzione membro|Description|
 |---------------------|-----------------|
 |[queue::assign (STL/CLR)](#assign)|Sostituisce tutti gli elementi.|
 |[queue::back (STL/CLR)](#back)|Accede all'ultimo elemento.|
@@ -144,7 +145,7 @@ Tipo del contenitore sottostante.
 |<xref:System.ICloneable>|Duplicare un oggetto.|
 |IQueue\<Value, Container>|Gestire un adapter contenitore generico.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'oggetto alloca e libera la memoria per la sequenza che controlla tramite un contenitore sottostante, di tipo `Container` , che archivia `Value` gli elementi e cresce su richiesta. L'oggetto limita l'accesso al solo push del primo elemento e l'ultimo elemento, implementando una coda First-in First-out (nota anche come coda FIFO o semplicemente una coda).
 
@@ -165,7 +166,7 @@ void assign(queue<Value, Container>% right);
 *Ok*<br/>
 Adattatore contenitore da inserire.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro assegna `right.get_container()` al contenitore sottostante. Viene usato per modificare l'intero contenuto della coda.
 
@@ -787,7 +788,7 @@ queue <Value, Container>% operator=(queue <Value, Container>% right);
 *Ok*<br/>
 Adattatore contenitore da copiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operatore membro copia *right* nell'oggetto, quindi restituisce **`*this`** . Viene usato per sostituire la sequenza controllata con una copia della sequenza controllata a *destra*.
 
@@ -936,7 +937,7 @@ Oggetto da copiare.
 *eseguito il wrapping*<br/>
 Contenitore di cui è stato eseguito il wrapper da usare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il costruttore:
 
@@ -1222,7 +1223,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>Osservazioni
 
-Il tipo è un sinonimo del *valore*del parametro di modello.
+Il tipo è un sinonimo del *valore* del parametro di modello.
 
 ### <a name="example"></a>Esempio
 
@@ -1276,7 +1277,7 @@ Contenitore sinistro da confrontare.
 *Ok*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce `!(left == right)` . Viene usato per verificare se *Left* non è ordinato come *right* quando le due code vengono confrontate elemento per elemento.
 
@@ -1347,7 +1348,7 @@ Contenitore sinistro da confrontare.
 *Ok*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce true se, per la posizione più bassa `i` per la quale `!(right[i] < left[i])` è anche true `left[i] < right[i]` . In caso contrario, restituisce `left->` [queue:: size (STL/CLR)](#size) `() <` `right->size()` che viene usato per verificare se *Left* viene ordinato prima del *diritto* quando le due code vengono confrontate elemento per elemento.
 
@@ -1418,7 +1419,7 @@ Contenitore sinistro da confrontare.
 *Ok*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce `!(right < left)` . Viene usato per verificare se *Left* non è ordinato dopo *right* quando le due code vengono confrontate elemento per elemento.
 
@@ -1489,7 +1490,7 @@ Contenitore sinistro da confrontare.
 *Ok*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce true solo se le sequenze controllate da *Left* e *right* hanno la stessa lunghezza e, per ogni posizione `i` , `left[i] ==` `right[i]` . Viene usato per verificare se *Left* è ordinato come *right* quando le due code vengono confrontate elemento per elemento.
 
@@ -1560,7 +1561,7 @@ Contenitore sinistro da confrontare.
 *Ok*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce `right` `<` `left` . Viene usato per verificare se *Left* viene ordinato dopo *right* quando le due code vengono confrontate elemento per elemento.
 
@@ -1631,7 +1632,7 @@ Contenitore sinistro da confrontare.
 *Ok*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce `!(left < right)` . Viene usato per verificare se *Left* non è ordinato prima del *diritto* quando le due code vengono confrontate elemento per elemento.
 

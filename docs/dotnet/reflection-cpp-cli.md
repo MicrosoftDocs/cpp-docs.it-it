@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Reflection (C++/CLI)'
 title: Reflection (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -18,31 +19,31 @@ helpviewer_keywords:
 - data types [C++], enumerating
 - public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-ms.openlocfilehash: 5f18a7faa4e77571a87cc0d76a43240aaf1fd52c
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: a3a9a33a239ec678279455ea41b7c60749cc0189
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447234"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97245798"
 ---
 # <a name="reflection-ccli"></a>Reflection (C++/CLI)
 
-La reflection consente ai tipi di dati noti essere controllata in fase di esecuzione. La reflection consente l'enumerazione dei tipi di dati in un determinato assembly e i membri di un determinato tipo di classe o il valore possono essere individuati. Questo vale indipendentemente dal fatto il tipo è noto o fatto riferimento in fase di compilazione. In questo modo la reflection una funzionalità utile per lo sviluppo e gli strumenti di gestione di codice.
+La reflection consente di controllare i tipi di dati noti in fase di esecuzione. La reflection consente l'enumerazione dei tipi di dati in un determinato assembly e i membri di un determinato tipo di classe o valore possono essere individuati. Questo vale indipendentemente dal fatto che il tipo sia noto o a cui si fa riferimento in fase di compilazione. Questo rende la reflection una funzionalità utile per gli strumenti di sviluppo e gestione del codice.
 
-Si noti che il nome dell'assembly specificato è il nome sicuro (vedere [creazione e assembly con nome sicuro](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)), che include la versione dell'assembly, le impostazioni cultura e le informazioni sulla firma. Si noti inoltre che il nome dello spazio dei nomi in cui è definito il tipo di dati può essere recuperato, insieme al nome della classe di base.
+Si noti che il nome dell'assembly specificato è il nome sicuro (vedere [creazione e uso di assembly Strong-Named](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)), che include la versione dell'assembly, le impostazioni cultura e le informazioni di firma. Si noti inoltre che è possibile recuperare il nome dello spazio dei nomi in cui è definito il tipo di dati, insieme al nome della classe di base.
 
-Il modo più comune per accedere alle funzionalità di reflection è tramite il <xref:System.Object.GetType%2A> (metodo). Questo metodo è fornito da <xref:System.Object?displayProperty=nameWithType>, da cui derivano tutte le classi di garbage collection.
+Il modo più comune per accedere alle funzionalità di Reflection è tramite il <xref:System.Object.GetType%2A> metodo. Questo metodo viene fornito da <xref:System.Object?displayProperty=nameWithType> , da cui derivano tutte le classi sottoposte a Garbage Collection.
 
 > [!NOTE]
-> La reflection su un .exe compilato con Microsoft C++ compilatore è consentito solo se il .exe viene compilata con le **/clr: pure** oppure **/CLR: safe** le opzioni del compilatore. Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015 e non è disponibile in Visual Studio 2017. Visualizzare [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) per altre informazioni.
+> La reflection su un file con estensione exe compilata con il compilatore Microsoft C++ è consentita solo se il file con estensione exe viene compilato con le opzioni del compilatore **/CLR: pure** o **/CLR: safe** . Le opzioni del compilatore **/CLR: pure** e **/CLR: safe** sono deprecate in Visual Studio 2015 e non disponibili in Visual Studio 2017. Per ulteriori informazioni, vedere [/CLR (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) .
 
 Per altre informazioni, vedere <xref:System.Reflection>.
 
 ## <a name="example-gettype"></a>Esempio: GetType
 
-Il `GetType` metodo restituisce un puntatore a un <xref:System.Type> classe object, che descrive il tipo su cui è basato l'oggetto. (Il **tipo** oggetto non contiene eventuali informazioni specifiche dell'istanza.) Uno degli elementi è il nome completo del tipo, che può essere visualizzato come indicato di seguito:
+Il `GetType` metodo restituisce un puntatore a un <xref:System.Type> oggetto classe che descrive il tipo su quando l'oggetto è basato su. (L'oggetto **tipo** non contiene informazioni specifiche dell'istanza). Uno di questi elementi è il nome completo del tipo, che può essere visualizzato come segue:
 
-Si noti che il nome del tipo include l'ambito completo in cui è definito il tipo, incluso lo spazio dei nomi, e che viene visualizzato nella sintassi di .NET, con un punto come operatore di risoluzione dell'ambito.
+Si noti che il nome del tipo include l'ambito completo in cui è definito il tipo, incluso lo spazio dei nomi, e che viene visualizzato nella sintassi .NET, con un punto come operatore di risoluzione dell'ambito.
 
 ```cpp
 // vcpp_reflection.cpp
@@ -60,7 +61,7 @@ full type name of 'sample string' is 'System.String'
 
 ## <a name="example-boxed-value-types"></a>Esempio: tipi di valore boxed
 
-I tipi di valore possono essere utilizzati con il `GetType` funzionano anche, ma deve essere sottoposto a boxing prima di tutto.
+I tipi di valore possono essere usati `GetType` anche con la funzione, ma devono essere prima boxed.
 
 ```cpp
 // vcpp_reflection_2.cpp
@@ -79,9 +80,9 @@ type of i = 'System.Int32'
 
 ## <a name="example-typeid"></a>Esempio: typeid
 
-Come con le `GetType` metodo, il [typeid](../extensions/typeid-cpp-component-extensions.md) operatore restituisce un puntatore a un **tipo** dell'oggetto, pertanto questo codice indica il nome del tipo **System.Int32**. Visualizzazione di nomi di tipo è la più semplice di reflection, ma è una tecnica potenzialmente più utile per controllare o individuare i valori validi per i tipi enumerati. Questa operazione può essere eseguita usando il metodo statico **enum:: GetNames** funzione, che restituisce una matrice di stringhe, ognuna delle quali contiene un valore di enumerazione sotto forma di testo.  L'esempio seguente recupera una matrice di stringhe che descrive i valori di enumerazione per il **opzioni** enum (CLR) e li visualizza in un ciclo.
+Come per il `GetType` metodo, l'operatore [typeid](../extensions/typeid-cpp-component-extensions.md) restituisce un puntatore a un oggetto **tipo** , pertanto questo codice indica il nome del tipo **System. Int32**. La visualizzazione dei nomi dei tipi è la funzionalità di base della reflection, ma una tecnica potenzialmente più utile consiste nell'ispezionare o individuare i valori validi per i tipi enumerati. Questa operazione può essere eseguita tramite la funzione statica **enum:: GetNames** , che restituisce una matrice di stringhe, ognuna delle quali contiene un valore di enumerazione in formato testo.  Nell'esempio seguente viene recuperata una matrice di stringhe che descrive i valori di enumerazione del valore per l'enumerazione **options** (CLR) e le Visualizza in un ciclo.
 
-Se si aggiunge una quarta opzione per la **opzioni** enumerazione, questo codice segnalerà la nuova opzione senza ricompilazione, anche se l'enumerazione viene definita in un assembly separato.
+Se viene aggiunta una quarta opzione all'enumerazione **options** , questo codice segnalerà la nuova opzione senza ricompilazione, anche se l'enumerazione è definita in un assembly separato.
 
 ```cpp
 // vcpp_reflection_3.cpp
@@ -114,9 +115,9 @@ there are 3 options in enum 'Options'
 value of 'o' is Option2
 ```
 
-## <a name="example-gettype-members-and-properties"></a>Esempio: Proprietà e membri GetType
+## <a name="example-gettype-members-and-properties"></a>Esempio: membri e proprietà GetType
 
-Il `GetType` oggetto supporta un numero di membri e le proprietà che possono essere utilizzate per esaminare un tipo. Questo codice recupera e visualizza alcune di queste informazioni:
+L' `GetType` oggetto supporta diversi membri e proprietà che possono essere utilizzati per esaminare un tipo. Questo codice consente di recuperare e visualizzare alcune di queste informazioni:
 
 ```cpp
 // vcpp_reflection_4.cpp
@@ -177,13 +178,13 @@ public:
 
 ## <a name="example-inspection-of-assemblies"></a>Esempio: ispezione degli assembly
 
-Se il codice riportato sopra viene compilato in una DLL denominata vcpp_reflection_6. dll, è quindi possibile usare la reflection per esaminare il contenuto di questo assembly. Ciò comporta l'uso di reflection statica xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType funzione API per caricare l'assembly. Questa funzione restituisce l'indirizzo di un **Assembly** oggetto che è quindi possibile eseguire query relative a moduli e tipi all'interno.
+Se il codice precedente viene compilato in una DLL denominata vcpp_reflection_6.dll, è possibile usare la reflection per esaminare il contenuto di questo assembly. Ciò comporta l'uso della funzione dell'API di reflection statica xrif: System. Reflection. assembly. Load% 2A? displayProperty = nameWithType per caricare l'assembly. Questa funzione restituisce l'indirizzo di un oggetto **assembly** su cui è possibile eseguire una query sui moduli e sui tipi all'interno di.
 
-Una volta che il sistema di reflection è stato caricato l'assembly, una matrice di **tipo** oggetti viene recuperata con il <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> (funzione). Ogni elemento della matrice contiene informazioni su un tipo diverso, anche se in questo caso, viene definita una sola classe. Usando un ciclo, ciascuna **tipo** in questa matrice viene eseguita una query sui membri del tipo tramite il **:: GetMembers** (funzione). Questa funzione restituisce una matrice di **MethodInfo** oggetti, ogni oggetto che contiene informazioni sulla funzione membro, membro dati o proprietà del tipo.
+Una volta che il sistema di reflection ha caricato correttamente l'assembly, viene recuperata una matrice di oggetti di **tipo** con la <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> funzione. Ogni elemento della matrice contiene informazioni su un tipo diverso, anche se in questo caso è definita una sola classe. Utilizzando un ciclo, viene eseguita una query su ogni **tipo** in questa matrice sui membri del tipo utilizzando la funzione **Type:: GetMembers** . Questa funzione restituisce una matrice di oggetti **MethodInfo** , ogni oggetto contenente informazioni sulla funzione membro, sul membro dati o sulla proprietà nel tipo.
 
-Si noti che l'elenco dei metodi include in modo esplicito le funzioni definite **TestClass** e le funzioni ereditate in modo implicito dalle **System:: Object** classe. Come parte dell'adozione in .NET anziché nella sintassi di Visual C++, le proprietà vengono visualizzate come membri dati sottostanti a cui che si accede tramite le funzioni get/set. Le funzioni get/set vengono visualizzati in questo elenco come i metodi regolari. Reflection è supportata tramite common language runtime, non da Microsoft C++ compilatore.
+Si noti che l'elenco di metodi include le funzioni definite in modo esplicito in **TestClass** e le funzioni ereditate in modo implicito dalla classe **System:: Object** . Nell'ambito della descrizione di .NET anziché della sintassi Visual C++, le proprietà vengono visualizzate come membro dati sottostante a cui si accede tramite le funzioni get/set. Le funzioni get/set vengono visualizzate in questo elenco come metodi normali. La reflection è supportata tramite la Common Language Runtime, non dal compilatore Microsoft C++.
 
-Anche se si usa questo codice per esaminare un assembly definito, è possibile utilizzare anche questo codice per controllare gli assembly .NET. Ad esempio, se si modifica TestAssembly a mscorlib, si verrà visualizzato un elenco di ogni tipo e un metodo definito in mscorlib. dll.
+Sebbene sia stato utilizzato questo codice per esaminare un assembly definito, è possibile utilizzare questo codice anche per esaminare gli assembly .NET. Se ad esempio si modifica TestAssembly in mscorlib, verrà visualizzato un elenco di tutti i tipi e metodi definiti in mscorlib.dll.
 
 ```cpp
 // vcpp_reflection_6.cpp
@@ -232,19 +233,19 @@ int main() {
 }
 ```
 
-## <a name="implement"></a> Procedura: Implementare un'architettura plug-in tramite Reflection
+## <a name="how-to-implement-a-plug-in-component-architecture-using-reflection"></a><a name="implement"></a> Procedura: implementare un'architettura del componente Plug-In mediante reflection
 
-Gli esempi di codice seguenti illustrano l'uso della reflection per implementare una semplice architettura "plug-in". Il primo listato è l'applicazione e il secondo è il plug-in. L'applicazione è un form che vengono inserite automaticamente usando tutte le classi presenti nella DLL del plug-in fornito come argomento della riga di comando basata su form.
+Negli esempi di codice seguenti viene illustrato l'utilizzo della reflection per implementare una semplice architettura "plug-in". Il primo elenco è l'applicazione, il secondo è il plug-in. L'applicazione è un modulo costituito da più documenti che si popola utilizzando qualsiasi classe basata su form presente nella DLL del plug-in fornita come argomento della riga di comando.
 
-L'applicazione tenta di caricare l'assembly fornito utilizzando il <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> (metodo). Se ha esito positivo, i tipi all'interno dell'assembly vengono enumerati utilizzando il <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName> (metodo). Ogni tipo viene quindi verificato la compatibilità con le <xref:System.Type.IsAssignableFrom%2A?displayProperty=fullName> (metodo). In questo esempio, le classi disponibili nell'assembly specificato devono essere derivate dal <xref:System.Windows.Forms.Form> classe per essere considerata un plug-in.
+L'applicazione tenta di caricare l'assembly specificato utilizzando il <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> metodo. In caso di esito positivo, i tipi all'interno dell'assembly vengono enumerati utilizzando il <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName> metodo. Viene quindi verificata la compatibilità di ogni tipo utilizzando il <xref:System.Type.IsAssignableFrom%2A?displayProperty=fullName> metodo. In questo esempio, le classi disponibili nell'assembly fornito devono essere derivate dalla <xref:System.Windows.Forms.Form> classe per qualificarsi come plug-in.
 
-Vengano quindi creata un'istanza di classi compatibile con il <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> metodo, che accetta un <xref:System.Type> come argomento e restituisce un puntatore a una nuova istanza. Ogni nuova istanza viene quindi collegato al form e visualizzato.
+Viene quindi creata un'istanza delle classi compatibili con il <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> metodo, che accetta <xref:System.Type> come argomento e restituisce un puntatore a una nuova istanza. Ogni nuova istanza viene quindi associata al form e visualizzata.
 
-Si noti che il <xref:System.Reflection.Assembly.Load%2A> metodo non accetta i nomi di assembly che includono l'estensione di file. La funzione principale dell'applicazione elimina le eventuali estensioni fornite, in modo che il codice seguente funziona in entrambi i casi.
+Si noti che il <xref:System.Reflection.Assembly.Load%2A> metodo non accetta nomi di assembly che includono l'estensione di file. La funzione Main nell'applicazione consente di rimuovere tutte le estensioni fornite, quindi l'esempio di codice seguente funziona in entrambi i casi.
 
 ### <a name="example"></a>Esempio
 
-Il codice seguente definisce l'applicazione che accetta i plug-in. Come primo argomento, è necessario specificare un nome di assembly. Questo assembly deve contenere almeno un pubblico <xref:System.Windows.Forms.Form> tipo derivato.
+Il codice seguente definisce l'applicazione che accetta plug-in. È necessario fornire un nome di assembly come primo argomento. Questo assembly deve contenere almeno un <xref:System.Windows.Forms.Form> tipo derivato pubblico.
 
 ```cpp
 // plugin_application.cpp
@@ -290,7 +291,7 @@ int main() {
 
 ### <a name="example"></a>Esempio
 
-Il codice seguente definisce tre classi derivate da <xref:System.Windows.Forms.Form>. Quando il nome del nome dell'assembly risultante viene passato all'eseguibile nell'elenco precedente, ognuna di queste tre classi verrà ora individuata e creare un'istanza, nonostante il fatto che sono stati tutti sconosciuti per l'applicazione host in fase di compilazione.
+Il codice seguente definisce tre classi derivate da <xref:System.Windows.Forms.Form> . Quando il nome del nome dell'assembly risultante viene passato al file eseguibile nell'elenco precedente, ciascuna di queste tre classi viene individuata e ne viene creata un'istanza, nonostante il fatto che siano stati tutti sconosciuti all'applicazione host in fase di compilazione.
 
 ```cpp
 // plugin_assembly.cpp
@@ -340,13 +341,13 @@ protected:
 };
 ```
 
-## <a name="enumerate"></a> Procedura: Enumerazione dei tipi di dati negli assembly tramite Reflection
+## <a name="how-to-enumerate-data-types-in-assemblies-using-reflection"></a><a name="enumerate"></a> Procedura: enumerare tipi di dati negli assembly tramite reflection
 
-Il codice seguente illustra l'enumerazione dei tipi e membri usando pubblici <xref:System.Reflection>.
+Il codice seguente illustra l'enumerazione dei tipi e dei membri pubblici usando <xref:System.Reflection> .
 
-Dato il nome di un assembly, la directory locale o nella Global Assembly Cache, il codice seguente tenta di aprire l'assembly e recuperare le descrizioni. Se ha esito positivo, viene visualizzato ogni tipo con i propri membri pubblici.
+Dato il nome di un assembly, nella directory locale o nella GAC, il codice seguente tenta di aprire l'assembly e recuperare le descrizioni. In caso di esito positivo, ogni tipo viene visualizzato con i relativi membri pubblici.
 
-Si noti che <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> richiede che venga utilizzata alcuna estensione di file. Pertanto, utilizzando "mscorlib. dll" come un argomento della riga di comando avrà esito negativo, mentre l'uso solo "mscorlib" risulterà la visualizzazione dei tipi .NET Framework. Se viene fornito alcun nome di assembly, il codice rileverà e visualizzano i tipi all'interno dell'assembly corrente (il file EXE risultanti da questo codice).
+Si noti che <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> richiede l'utilizzo di un'estensione di file. Pertanto, l'utilizzo di "mscorlib.dll" come argomento della riga di comando avrà esito negativo, mentre se si utilizza solo "mscorlib" verrà visualizzata la visualizzazione dei tipi di .NET Framework. Se non viene specificato alcun nome di assembly, il codice rileverà e segnalerà i tipi all'interno dell'assembly corrente (il file EXE risultante da questo codice).
 
 ### <a name="example"></a>Esempio
 

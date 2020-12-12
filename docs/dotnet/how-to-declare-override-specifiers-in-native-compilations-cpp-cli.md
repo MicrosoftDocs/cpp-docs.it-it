@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: procedura: dichiarare gli identificatori di override nelle compilazioni native (C++/CLI)'
 title: 'Procedura: dichiarare gli identificatori di override (C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-ms.openlocfilehash: 92bdc41cf9ebe2389f2d22dab211029899283266
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 75e925e26dc62d87e40d56b05e3be6d2dbda3e4a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414594"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246396"
 ---
 # <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Procedura: Dichiarare gli identificatori di override nelle compilazioni native (C++/CLI)
 
@@ -20,7 +21,7 @@ ms.locfileid: "91414594"
 
 ## <a name="example-sealed-is-valid"></a>Esempio: sealed è valido
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
 Nell'esempio seguente viene illustrato che **`sealed`** è valido nelle compilazioni native.
 
@@ -49,7 +50,7 @@ public:
 
 ## <a name="example-override-is-valid"></a>Esempio: override valido
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
 Nell'esempio seguente viene illustrato che `override` è valido nelle compilazioni native.
 
@@ -71,7 +72,7 @@ public:
 
 ## <a name="example-abstract-is-valid"></a>Esempio: abstract è valido
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
 Questo esempio mostra che **`abstract`** è valido nelle compilazioni native.
 
@@ -86,6 +87,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Identificatori di override](../extensions/override-specifiers-cpp-component-extensions.md)

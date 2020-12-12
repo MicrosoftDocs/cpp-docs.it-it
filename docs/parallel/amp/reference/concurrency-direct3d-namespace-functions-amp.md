@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Concurrency::d funzioni dello spazio dei nomi irect3d (AMP)'
 title: Funzioni dello spazio dei nomi Concurrency::direct3d (AMP)
 ms.date: 08/31/2018
 f1_keywords:
@@ -21,12 +22,12 @@ f1_keywords:
 - amp/Concurrency::direct3d::step
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-ms.openlocfilehash: bf98249001c2b8227581fbbbcceeebd085e5d820
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c446e89835e49d9afd7b11abd73ccccd032a7321
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831112"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247826"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Funzioni dello spazio dei nomi Concurrency::direct3d (AMP)
 
@@ -82,7 +83,7 @@ inline int abs(int _X) restrict(amp);
 ### <a name="parameters"></a>Parametri
 
 *_X*<br/>
-Valore Integer
+Valore intero
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -171,7 +172,7 @@ Parametro booleano che specifica se il timeout deve essere disabilitato per il a
 
 `accelerator_view`Oggetto creato dall'interfaccia del dispositivo Direct3D passata.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questa funzione crea un nuovo `accelerator_view` oggetto da un puntatore esistente a un'interfaccia del dispositivo Direct3D. Se la chiamata di funzione ha esito positivo, il conteggio dei riferimenti del parametro viene incrementato per mezzo di una `AddRef` chiamata all'interfaccia. È possibile rilasciare in modo sicuro l'oggetto quando non è più necessario nel codice DirectX. Se la chiamata al metodo ha esito negativo, viene generata un' [runtime_exception](runtime-exception-class.md) .
 
@@ -233,7 +234,7 @@ inline int firstbithigh(int _X) restrict(amp);
 ### <a name="parameters"></a>Parametri
 
 *_X*<br/>
-Valore Integer
+Valore intero
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -250,7 +251,7 @@ inline int firstbitlow(int _X) restrict(amp);
 ### <a name="parameters"></a>Parametri
 
 *_X*<br/>
-Valore Integer
+Valore intero
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -314,10 +315,10 @@ inline int imax(
 ### <a name="parameters"></a>Parametri
 
 *_X*<br/>
-Valore Integer
+Valore intero
 
 *_Y*<br/>
-Valore Integer
+Valore intero
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -336,10 +337,10 @@ inline int imin(
 ### <a name="parameters"></a>Parametri
 
 *_X*<br/>
-Valore Integer
+Valore intero
 
 *_Y*<br/>
-Valore Integer
+Valore intero
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -537,7 +538,7 @@ inline int sign(int _X) restrict(amp);
 ### <a name="parameters"></a>Parametri
 
 *_X*<br/>
-Valore Integer
+Valore intero
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -604,10 +605,10 @@ inline unsigned int umax(
 ### <a name="parameters"></a>Parametri
 
 *_X*<br/>
-Valore Integer
+Valore intero
 
 *_Y*<br/>
-Valore Integer
+Valore intero
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -626,15 +627,15 @@ inline unsigned int umin(
 ### <a name="parameters"></a>Parametri
 
 *_X*<br/>
-Valore Integer
+Valore intero
 
 *_Y*<br/>
-Valore Integer
+Valore intero
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce il valore numerico minimo degli argomenti
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Concurrency::direct3d](concurrency-direct3d-namespace.md)

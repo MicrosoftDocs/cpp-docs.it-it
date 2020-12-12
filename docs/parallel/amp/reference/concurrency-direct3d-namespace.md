@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Concurrency::d spazio dei nomi irect3d'
 title: Spazio dei nomi Concurrency::direct3d
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-ms.openlocfilehash: e1374acbd7061afaba372100cf6e69d9d717da8a
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 9fb0e7d4f5abbccbd9cd931fe2c4520e9410cbc9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127033"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247735"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Spazio dei nomi Concurrency::direct3d
 
-Lo spazio dei nomi `direct3d` fornisce funzioni che supportano l'interoperabilità D3D. Consente di usare le risorse D3D per il calcolo in codice AMP. Consente inoltre di utilizzare le risorse create in AMP nel codice D3D, senza creare copie intermedie ridondanti. È possibile accelerare gradualmente le sezioni con utilizzo intensivo di calcolo delle applicazioni DirectX usando C++ amp e usare l'API D3D sui dati prodotti da calcoli amp.
+Lo `direct3d` spazio dei nomi fornisce funzioni che supportano l'interoperabilità D3D. Consente di usare le risorse D3D per il calcolo in codice AMP. Consente inoltre di utilizzare le risorse create in AMP nel codice D3D, senza creare copie intermedie ridondanti. È possibile accelerare gradualmente le sezioni con utilizzo intensivo di calcolo delle applicazioni DirectX usando C++ AMP e usare l'API D3D sui dati prodotti da calcoli AMP.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -31,21 +32,21 @@ namespace direct3d;
 
 ### <a name="classes"></a>Classi
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[Classe scoped_d3d_access_lock](scoped-d3d-access-lock-class.md)|Wrapper RAII per un blocco di accesso D3D su un oggetto `accelerator_view`.|
+|[Classe scoped_d3d_access_lock](scoped-d3d-access-lock-class.md)|Wrapper RAII per un blocco di accesso D3D su un `accelerator_view` oggetto.|
 
 ### <a name="structures"></a>Strutture
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Struttura adopt_d3d_access_lock_t](adopt-d3d-access-lock-t-structure.md)|Tipo di tag per indicare che è necessario adottare il blocco di accesso D3D anziché acquisire.|
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[abs](concurrency-direct3d-namespace-functions-amp.md#abs)|Restituisce il valore assoluto dell'argomento.|
+|[ABS](concurrency-direct3d-namespace-functions-amp.md#abs)|Restituisce il valore assoluto dell'argomento.|
 |[morsetto](concurrency-direct3d-namespace-functions-amp.md#clamp)|Di overload. Clamp _X al _Min e all'intervallo di _Max specificati|
 |[countbits](concurrency-direct3d-namespace-functions-amp.md#countbits)|Conta il numero di bit impostati in _X|
 |[create_accelerator_view](concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)|Crea una [classe di accelerator_view](accelerator-view-class.md) da un puntatore a un'interfaccia del dispositivo Direct3D|
@@ -62,7 +63,7 @@ namespace direct3d;
 |[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|Crea una matrice da un puntatore all'interfaccia del buffer D3D.|
 |[rumore](concurrency-direct3d-namespace-functions-amp.md#noise)|Genera un valore casuale usando l'algoritmo di disturbo Perlin|
 |[radianti](concurrency-direct3d-namespace-functions-amp.md#radians)|Converte _X da gradi a radianti|
-|[RCP](concurrency-direct3d-namespace-functions-amp.md#rcp)|Calcola un reciproco veloce e approssimativo dell'argomento|
+|[rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|Calcola un reciproco veloce e approssimativo dell'argomento|
 |[reversebits](concurrency-direct3d-namespace-functions-amp.md#reversebits)|Inverte l'ordine dei bit in _X|
 |[saturare](concurrency-direct3d-namespace-functions-amp.md#saturate)|Clamp _X nell'intervallo compreso tra 0 e 1|
 |[sign](concurrency-direct3d-namespace-functions-amp.md#sign)|Di overload. Restituisce il segno dell'argomento.|
@@ -75,8 +76,8 @@ namespace direct3d;
 
 **Intestazione:** amp.h
 
-**Spazio dei nomi:** Concurrency
+**Spazio dei nomi:** Concorrenza
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: opzioni di collegamento'
 title: Opzioni collegamento
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - threadlocale.obj
 - pnoarg.obj
 ms.assetid: 05b5a77b-9dd1-494b-ae46-314598c770bb
-ms.openlocfilehash: 146722fb0dd3a4fc774ede692808b1e6bfb1e5c7
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: affb5d95af176ba49aa2aeafff5ac84653df2ad8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506858"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246526"
 ---
 # <a name="link-options"></a>Opzioni collegamento
 
@@ -43,7 +44,7 @@ La directory lib CRT include un certo numero di file di oggetti piccoli che abil
 
 Le versioni CLR in modalità pure di questi oggetti sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017. Usare le versioni normali per il codice nativo e /clr.
 
-|Codice nativo e /clr|Modalità pure|Descrizione|
+|Codice nativo e /clr|Modalità pure|Description|
 |----------------------|---------------|-----------------|
 |binmode.obj|pbinmode.obj|Imposta la modalità binaria come modalità di conversione di file predefinita. Vedere [_fmode](../c-runtime-library/fmode.md).|
 |chkstk.obj|n/d|Fornisce il controllo dello stack e il supporto di alloca quando non si usa CRT.|
@@ -55,13 +56,13 @@ Le versioni CLR in modalità pure di questi oggetti sono deprecate in Visual Stu
 |loosefpmath.obj|n/d|Assicura che il codice a virgola mobile tolleri i valori denormalizzati.|
 |newmode.obj|pnewmode.obj|Fa sì che [malloc](../c-runtime-library/reference/malloc.md) chiami il nuovo gestore in caso di errore. Vedere [_set_new_mode](../c-runtime-library/reference/set-new-mode.md), [_set_new_handler](../c-runtime-library/reference/set-new-handler.md), [calloc](../c-runtime-library/reference/calloc.md) e [realloc](../c-runtime-library/reference/realloc.md).|
 |noarg.obj|pnoarg.obj|Disabilita tutte le elaborazioni di argc e argv.|
-|nochkclr.obj|n/d|Non esegue operazioni. Rimuovere dal progetto.|
+|nochkclr.obj|n/d|Non effettua alcuna operazione. Rimuovere dal progetto.|
 |noenv.obj|pnoenv.obj|Disabilita la creazione di un ambiente memorizzato nella cache per CRT.|
 |nothrownew.obj|pnothrownew.obj|Abilita la versione di new che non genera eccezioni in CRT. Vedere [Operatori new e delete](../cpp/new-and-delete-operators.md).|
 |setargv.obj|psetargv.obj|Consente l'espansione dei caratteri jolly negli argomenti della riga di comando. Vedere [Espansione di argomenti con caratteri jolly](../c-language/expanding-wildcard-arguments.md).|
 |threadlocale.obj|pthreadlocale.obj|Abilita le impostazioni locali per singoli thread per tutti i nuovi thread per impostazione predefinita.|
 |wsetargv.obj|pwsetargv.obj|Consente l'espansione dei caratteri jolly negli argomenti della riga di comando. Vedere [Espansione di argomenti con caratteri jolly](../c-language/expanding-wildcard-arguments.md).|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md)

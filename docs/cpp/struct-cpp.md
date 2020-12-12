@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: struct (C++)'
 title: struct (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
-ms.openlocfilehash: d0092cf107159f4c84b431f5eeae130df64dc835
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4c7f8ab04bec2f161e303c3fed93414332fddeb6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507466"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246253"
 ---
 # <a name="struct-c"></a>struct (C++)
 
@@ -50,7 +51,7 @@ Elenco dei membri della struttura. Per ulteriori informazioni, vedere [Cenni pre
 *declarators*<br/>
 Elenco di dichiaratori che specificano i nomi della struttura. Gli elenchi dei dichiaratori dichiarano una o più istanze del tipo di struttura. I dichiaratori possono includere elenchi di inizializzatori se tutti i membri dati della struttura sono **`public`** . Gli elenchi di inizializzatori sono comuni nelle strutture perché i membri dati sono **`public`** per impostazione predefinita.  Per ulteriori informazioni, vedere [Cenni preliminari sui dichiaratori](./declarations-and-definitions-cpp.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un tipo di struttura è un tipo composto definito dall'utente. È composto da campi o membri che possono avere tipi diversi.
 

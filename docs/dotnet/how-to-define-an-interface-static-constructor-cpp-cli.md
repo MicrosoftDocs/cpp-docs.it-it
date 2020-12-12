@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura: definire un costruttore statico di interfaccia (C++/CLI)'
 title: 'Procedura: definire un costruttore statico di interfaccia (C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - static constructors, interface
 - interface static constructor
 ms.assetid: 1f031cb2-e94f-43dc-819b-44cf2faaaa49
-ms.openlocfilehash: 562605a579ac372e4a69953853a6e32668357565
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 2cc6eca19a26f9857c029fc01c500ed9f4691e8d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988234"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97245902"
 ---
 # <a name="how-to-define-an-interface-static-constructor-ccli"></a>Procedura: definire un costruttore statico di interfaccia (C++/CLI)
 
@@ -56,4 +57,4 @@ in MyInterface static constructor
 
 ## <a name="see-also"></a>Vedere anche
 
-[interface class](../extensions/interface-class-cpp-component-extensions.md)
+[classe di interfaccia](../extensions/interface-class-cpp-component-extensions.md)

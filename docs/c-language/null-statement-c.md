@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: istruzione null (C)'
 title: Istruzione Null (C)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - null statement
 - null values, expressions
 ms.assetid: 72576ce6-26d0-4379-be65-fee522088790
-ms.openlocfilehash: 58825544121c6cb189b52469403effb93f5f5f8c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 362fc9e311d0495e0a3ab51da7a5042574859649
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227816"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243289"
 ---
 # <a name="null-statement-c"></a>Istruzione Null (C)
 
@@ -22,7 +23,7 @@ Un'istruzione "null" è un'istruzione che contiene solo un punto e virgola; può
 
 > **;**
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le istruzioni, ad esempio **`do`** ,, **`for`** **`if`** e **`while`** richiedono che un'istruzione eseguibile venga visualizzata come corpo dell'istruzione. L'istruzione null soddisfa il requisito della sintassi nei casi in cui non è necessario un corpo effettivo dell'istruzione.
 
@@ -37,6 +38,6 @@ for ( i = 0; i < 10; line[i++] = 0 )
 
 In questo esempio, l'espressione loop dell' **`for`** istruzione `line[i++] = 0` Inizializza i primi 10 elementi di `line` su 0. Il corpo dell'istruzione è un'istruzione null, poiché non sono disponibili ulteriori istruzioni.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Istruzioni](../c-language/statements-c.md)

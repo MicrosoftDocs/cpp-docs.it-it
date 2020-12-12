@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CDaoWorkspace'
 title: Classe CDaoWorkspace
 ms.date: 11/04/2016
 f1_keywords:
@@ -62,12 +63,12 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: eea3fb29f219890ebe596c5d8109257e9d422054
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 73236019db3ecf4a79ef93e19a55d909e6e0d61d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839790"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247997"
 ---
 # <a name="cdaoworkspace-class"></a>Classe CDaoWorkspace
 
@@ -79,17 +80,17 @@ Gestisce una sessione di database denominata e protetta da password, dall'access
 class CDaoWorkspace : public CObject
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CDaoWorkspace:: CDaoWorkspace](#cdaoworkspace)|Costruisce un oggetto dell'area di lavoro. Successivamente, chiamare `Create` o `Open` .|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CDaoWorkspace:: Append](#append)|Accoda un'area di lavoro appena creata alla raccolta di aree di lavoro del motore di database.|
 |[CDaoWorkspace:: BeginTrans](#begintrans)|Inizia una nuova transazione che si applica a tutti i database aperti nell'area di lavoro.|
@@ -120,18 +121,18 @@ class CDaoWorkspace : public CObject
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CDaoWorkspace:: m_pDAOWorkspace](#m_pdaoworkspace)|Punta all'oggetto area di lavoro DAO sottostante.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Nella maggior parte dei casi, non è necessario disporre di più aree di lavoro e non sarà necessario creare oggetti dell'area di lavoro espliciti. Quando si aprono oggetti database e recordset, viene utilizzata l'area di lavoro predefinita di DAO. Tuttavia, se necessario, è possibile eseguire più sessioni alla volta creando altri oggetti dell'area di lavoro. Ogni oggetto area di lavoro può contenere più oggetti di database aperti nella propria raccolta di database. In MFC, un'area di lavoro è principalmente una gestione transazioni, specificando un set di database aperti nello stesso "spazio di transazione".
 
 > [!NOTE]
 > Le classi di database DAO sono diverse dalle classi di database MFC basate su Open Database Connectivity (ODBC). Tutti i nomi delle classi di database DAO hanno un prefisso "CDao". In generale, le classi MFC basate su DAO sono più idonee delle classi MFC basate su ODBC. Le classi basate su DAO accedono ai dati tramite il motore di database di Microsoft Jet, inclusi i driver ODBC. Supportano anche operazioni DDL (Data Definition Language), ad esempio la creazione di database e l'aggiunta di tabelle e campi tramite le classi, senza la necessità di chiamare direttamente DAO.
 
-## <a name="capabilities"></a>Capabilities
+## <a name="capabilities"></a>Funzionalità
 
 `CDaoWorkspace`La classe fornisce gli elementi seguenti:
 
@@ -201,7 +202,7 @@ Chiamare questa funzione membro dopo aver chiamato [create](#create).
 virtual void Append();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `Append` Accoda un oggetto area di lavoro appena creato alla raccolta di aree di lavoro del motore di database. Le aree di lavoro non vengono mantenute tra le sessioni del motore di database. sono archiviati solo in memoria, non su disco. Non è necessario aggiungere un'area di lavoro; in caso contrario, è comunque possibile utilizzarlo.
 
@@ -217,7 +218,7 @@ Chiamare questa funzione membro per avviare una transazione.
 void BeginTrans();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Dopo aver chiamato `BeginTrans` , gli aggiornamenti apportati alla struttura dei dati o del database diventano effettivi quando si esegue il commit della transazione. Poiché l'area di lavoro definisce un solo spazio di transazione, la transazione viene applicata a tutti i database aperti nell'area di lavoro. Esistono due modi per completare la transazione:
 
@@ -237,7 +238,7 @@ Costruisce un oggetto `CDaoWorkspace`.
 CDaoWorkspace();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Dopo la costruzione dell'oggetto C++, sono disponibili due opzioni:
 
@@ -257,7 +258,7 @@ Chiamare questa funzione membro per chiudere l'oggetto area di lavoro.
 virtual void Close();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La chiusura di un oggetto area di lavoro aperto rilascia l'oggetto DAO sottostante e, se l'area di lavoro è un membro della raccolta di aree di lavoro, la rimuove dalla raccolta. La chiamata a `Close` è un'ottima pratica di programmazione.
 
@@ -276,7 +277,7 @@ Chiamare questa funzione membro per eseguire il commit di una transazione: salva
 void CommitTrans();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Una transazione è costituita da una serie di modifiche apportate ai dati del database o alla relativa struttura, a partire da una chiamata a [BeginTrans](#begintrans). Quando si completa la transazione, eseguirne il commit o eseguirne il rollback (annullare le modifiche) con [rollback](#rollback). Per impostazione predefinita, senza transazioni, viene eseguito immediatamente il commit degli aggiornamenti ai record. `BeginTrans`La chiamata a comporta un ritardo dell'impegno degli aggiornamenti fino a quando non si chiama `CommitTrans` .
 
@@ -371,7 +372,7 @@ Indica una o più opzioni per il database di destinazione, *lpszDestName*. Se si
 > [!CAUTION]
 > Se un database non è crittografato, è possibile, anche se si implementa la sicurezza utente/password, per leggere direttamente il file su disco binario che costituisce il database.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando si modificano i dati in un database, il file di database può diventare frammentato e utilizzare più spazio su disco del necessario. Periodicamente, è necessario compattare il database per deframmentare il file di database. Il database compresso è in genere più piccolo. È inoltre possibile scegliere di modificare l'ordine delle regole di confronto, la crittografia o la versione del formato dati durante la copia e la compattazione del database.
 
@@ -405,7 +406,7 @@ Nome utente del proprietario dell'area di lavoro. Per i requisiti, vedere il par
 *lpszPassword*<br/>
 Password per il nuovo oggetto dell'area di lavoro. Una password può contenere un massimo di 14 caratteri e può contenere qualsiasi carattere eccetto ASCII 0 (null). Per le password viene fatta distinzione tra maiuscole e minuscole. Per informazioni correlate, vedere l'argomento "proprietà password" nella Guida di DAO.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il processo di creazione globale è:
 
@@ -429,7 +430,7 @@ short GetDatabaseCount();
 
 Numero di database aperti nell'area di lavoro.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `GetDatabaseCount` è utile se è necessario eseguire il ciclo di tutti i database definiti nella raccolta di database dell'area di lavoro. Per ottenere informazioni su un determinato database nella raccolta, vedere [GetDatabaseInfo](#getdatabaseinfo). L'utilizzo tipico consiste nel chiamare `GetDatabaseCount` per il numero di database aperti, quindi utilizzare tale numero come indice di ciclo per le chiamate ripetute a `GetDatabaseInfo` .
 
@@ -469,7 +470,7 @@ Opzioni che specificano le informazioni sul database da recuperare. Le opzioni d
 *lpszName*<br/>
 Nome dell'oggetto di database per la ricerca in base al nome. Il nome è una stringa con un massimo di 14 caratteri che assegna un nome univoco al nuovo oggetto area di lavoro.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Una versione della funzione consente di cercare un database in base all'indice. L'altra versione consente di cercare un database in base al nome.
 
@@ -487,7 +488,7 @@ static CString PASCAL GetIniPath();
 
 Oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.md) che contiene il percorso del registro di sistema.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È possibile utilizzare il percorso per ottenere informazioni sulle impostazioni per il motore di database. Le informazioni restituite sono in realtà il nome di una sottochiave del registro di sistema.
 
@@ -505,7 +506,7 @@ BOOL GetIsolateODBCTrans();
 
 Diverso da zero se le transazioni ODBC sono isolate; in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 In alcune situazioni, potrebbe essere necessario disporre di più transazioni simultanee in sospeso nello stesso database ODBC. A tale scopo, è necessario aprire un'area di lavoro separata per ogni transazione. Tenere presente che, anche se ogni area di lavoro può avere una propria connessione ODBC al database, questo rallenta le prestazioni di sistema. Poiché l'isolamento delle transazioni non è in genere necessario, le connessioni ODBC da più oggetti dell'area di lavoro aperti dallo stesso utente vengono condivise per impostazione predefinita.
 
@@ -525,7 +526,7 @@ static short PASCAL GetLoginTimeout();
 
 Il numero di secondi prima che si verifichi un errore quando si tenta di accedere a un database ODBC.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo valore rappresenta il numero di secondi prima che si verifichi un errore quando si tenta di accedere a un database ODBC. L'impostazione predefinita di LoginTimeout è 20 secondi. Quando LoginTimeout è impostato su 0, non si verifica alcun timeout e la comunicazione con l'origine dati potrebbe smettere di rispondere.
 
@@ -545,7 +546,7 @@ CString GetName();
 
 Oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.md) contenente il nome definito dall'utente dell'oggetto dell'area di lavoro DAO.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il nome è utile per accedere all'oggetto dell'area di lavoro DAO nella raccolta di aree di lavoro del motore di database in base al nome.
 
@@ -563,7 +564,7 @@ CString GetUserName();
 
 [CString](../../atl-mfc-shared/reference/cstringt-class.md) che rappresenta il proprietario dell'oggetto dell'area di lavoro.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ottenere o impostare le autorizzazioni per il proprietario dell'area di lavoro, chiamare direttamente DAO per verificare l'impostazione della proprietà delle autorizzazioni. determina le autorizzazioni di cui dispone l'utente. Per lavorare con le autorizzazioni, è necessario un sistema. File MDA.
 
@@ -581,7 +582,7 @@ static CString PASCAL GetVersion();
 
 [CString](../../atl-mfc-shared/reference/cstringt-class.md) che indica la versione del motore di database associata all'oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore restituito rappresenta il numero di versione nel formato "Major. minor"; ad esempio, "3,0". Il numero di versione del prodotto (ad esempio, 3,0) è costituito dal numero di versione (3), da un punto e dal numero di versione (0).
 
@@ -599,7 +600,7 @@ short GetWorkspaceCount();
 
 Numero di aree di lavoro aperte nella raccolta di aree di lavoro.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo conteggio non include le aree di lavoro aperte non accodate alla raccolta. `GetWorkspaceCount` è utile se è necessario scorrere in ciclo tutte le aree di lavoro definite nella raccolta di aree di lavoro. Per ottenere informazioni su una determinata area di lavoro nella raccolta, vedere [GetWorkspaceInfo](#getworkspaceinfo). L'utilizzo tipico consiste nel chiamare `GetWorkspaceCount` per il numero di aree di lavoro aperte, quindi utilizzare tale numero come indice di ciclo per le chiamate ripetute a `GetWorkspaceInfo` .
 
@@ -639,7 +640,7 @@ Opzioni che specificano le informazioni sull'area di lavoro da recuperare. Le op
 *lpszName*<br/>
 Nome dell'oggetto dell'area di lavoro, per la ricerca in base al nome. Il nome è una stringa con un massimo di 14 caratteri che assegna un nome univoco al nuovo oggetto area di lavoro.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per una descrizione delle informazioni restituite in *wkspcinfo*, vedere la struttura [CDaoWorkspaceInfo](../../mfc/reference/cdaoworkspaceinfo-structure.md) . Questa struttura dispone di membri che corrispondono agli elementi delle informazioni sopra elencate nella descrizione di *dwInfoOptions*. Quando si richiedono informazioni a un livello, si ottengono anche informazioni per i livelli precedenti.
 
@@ -656,7 +657,7 @@ static void PASCAL Idle(int nAction = dbFreeLocks);
 *nAction*<br/>
 Azione da eseguire durante l'elaborazione inattiva. Attualmente l'unica azione valida è `dbFreeLocks` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa situazione è spesso vera negli ambienti multiutente e multitasking in cui non è disponibile tempo di elaborazione in background sufficiente per la conservazione di tutti i record in un recordset corrente.
 
@@ -681,7 +682,7 @@ BOOL IsOpen() const;
 
 Diverso da zero se l'oggetto dell'area di lavoro è aperto. in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È possibile chiamare qualsiasi funzione membro di un'area di lavoro in uno stato aperto.
 
@@ -689,7 +690,7 @@ Diverso da zero se l'oggetto dell'area di lavoro è aperto. in caso contrario, 0
 
 Puntatore all'oggetto dell'area di lavoro DAO sottostante.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Utilizzare questo membro dati se è necessario l'accesso diretto all'oggetto DAO sottostante. È possibile chiamare le interfacce dell'oggetto DAO tramite questo puntatore.
 
@@ -708,7 +709,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 *lpszName*<br/>
 Nome dell'oggetto dell'area di lavoro DAO da aprire, ovvero una stringa con un massimo di 14 caratteri che assegna un nome univoco all'area di lavoro. Accettare il valore predefinito NULL per aprire in modo esplicito l'area di lavoro predefinita. Per i requisiti di denominazione, vedere il parametro *lpszName* per [create](#create). Per informazioni correlate, vedere l'argomento relativo alla proprietà Name nella Guida di DAO.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Dopo la costruzione di un `CDaoWorkspace` oggetto, chiamare questa funzione membro per eseguire una delle operazioni seguenti:
 
@@ -753,7 +754,7 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
 *lpszName*<br/>
 Il percorso e il nome file di un file di database del motore Microsoft Jet esistente. Se si omette il percorso, viene eseguita la ricerca solo nella directory corrente. Se il sistema supporta la convenzione di denominazione uniforme (UNC), è anche possibile specificare un percorso di rete, ad esempio: " \\ \\ \\ \MYSERVER \\ \MYSHARE \\ \mydir \\ \MYDB. MDB ". Le barre rovesciate doppie sono obbligatorie nella stringa di percorso perché " \\ " è il carattere di escape C++.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Prima di eseguire il ripristino, è necessario chiudere il database specificato da *lpszName* . In un ambiente multiutente, gli altri utenti non possono avere *lpszName* aperti durante il ripristino. Se *lpszName* non è chiuso o non è disponibile per l'utilizzo esclusivo, si verifica un errore.
 
@@ -772,7 +773,7 @@ Chiamare questa funzione membro per terminare la transazione corrente e ripristi
 void Rollback();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 > [!CAUTION]
 > All'interno di un oggetto area di lavoro, le transazioni sono sempre globali per l'area di lavoro e non sono limitate a un solo database o recordset. Se si eseguono operazioni su più di un database o di un recordset all'interno di una transazione dell'area di lavoro, `Rollback` Ripristina tutte le operazioni su tutti i database e i recordset.
@@ -795,7 +796,7 @@ static void PASCAL SetDefaultPassword(LPCTSTR lpszPassword);
 *lpszPassword*<br/>
 Password predefinita. Una password può contenere un massimo di 14 caratteri e può contenere qualsiasi carattere eccetto ASCII 0 (null). Per le password viene fatta distinzione tra maiuscole e minuscole.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La password predefinita impostata si applica alle nuove aree di lavoro create dopo la chiamata. Quando si creano le aree di lavoro successive, non è necessario specificare una password nella chiamata di [creazione](#create) .
 
@@ -824,7 +825,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
 *lpszDefaultUser*<br/>
 Nome utente predefinito. Un nome utente può avere una lunghezza di 1-20 caratteri e includere caratteri alfabetici, caratteri accentati, numeri, spazi e simboli ad eccezione di: "(virgolette),/(barra), \ (barra rovesciata), \[ \] (parentesi quadre),: (due punti), &#124; (pipe), \< (less-than sign), > (segno maggiore di), + (segno più), = (segno di uguale),; (punto e virgola),, (virgola), (punto interrogativo), \* (asterisco), spazi iniziali e caratteri di controllo (da ASCII 00 a ASCII 31). Per informazioni correlate, vedere l'argomento "proprietà UserName" nella Guida di DAO.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il nome utente predefinito impostato si applica alle nuove aree di lavoro create dopo la chiamata. Quando si creano le aree di lavoro successive, non è necessario specificare un nome utente nella chiamata di [creazione](#create) .
 
@@ -853,7 +854,7 @@ static void PASCAL SetIniPath(LPCTSTR lpszRegistrySubKey);
 *lpszRegistrySubkey*<br/>
 Stringa che contiene il nome di una sottochiave del registro di sistema di Windows per il percorso delle impostazioni o dei parametri del motore di database di Microsoft Jet necessari per i database ISAM installabili.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamare `SetIniPath` solo se è necessario specificare impostazioni speciali. Per ulteriori informazioni, vedere l'argomento "proprietà IniPath" nella Guida di DAO.
 
@@ -875,7 +876,7 @@ void SetIsolateODBCTrans(BOOL bIsolateODBCTrans);
 *bIsolateODBCTrans*<br/>
 Passare TRUE se si desidera iniziare a isolare le transazioni ODBC. Passare FALSE se si desidera arrestare l'isolamento delle transazioni ODBC.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 In alcune situazioni, potrebbe essere necessario disporre di più transazioni simultanee in sospeso nello stesso database ODBC. A tale scopo, è necessario aprire un'area di lavoro separata per ogni transazione. Sebbene ogni area di lavoro possa avere una propria connessione ODBC al database, questo rallenta le prestazioni di sistema. Poiché l'isolamento delle transazioni non è in genere necessario, le connessioni ODBC da più oggetti dell'area di lavoro aperti dallo stesso utente vengono condivise per impostazione predefinita.
 
@@ -894,7 +895,7 @@ static void PASCAL SetLoginTimeout(short nSeconds);
 *nSeconds*<br/>
 Il numero di secondi prima che si verifichi un errore quando si tenta di accedere a un database ODBC.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo valore rappresenta il numero di secondi prima che si verifichi un errore quando si tenta di accedere a un database ODBC. L'impostazione predefinita di LoginTimeout è 20 secondi. Quando LoginTimeout è impostato su 0, non si verifica alcun timeout e la comunicazione con l'origine dati potrebbe smettere di rispondere.
 
@@ -902,7 +903,7 @@ Quando si tenta di accedere a un database ODBC, ad esempio Microsoft SQL Server,
 
 Per informazioni correlate, vedere l'argomento "proprietà LoginTimeout" nella Guida di DAO.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>

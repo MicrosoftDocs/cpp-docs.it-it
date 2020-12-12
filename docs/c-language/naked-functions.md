@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: funzioni naked'
 title: Funzioni naked
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - prolog code
 - epilog code
 ms.assetid: 2543c8af-00d4-4a2a-8a87-e746da1f9929
-ms.openlocfilehash: b752dd6fa378bc1275e8a7da90420aa2b8247e4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cea9bf2497a14bc7007f97b2c3db68eafc15059
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232815"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243354"
 ---
 # <a name="naked-functions"></a>Funzioni naked
 
@@ -58,6 +59,6 @@ __declspec( naked ) int func();   /* Error--naked attribute not */
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Definizioni di funzioni C](../c-language/c-function-definitions.md)

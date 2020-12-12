@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2216'
 title: Errore del compilatore C2216
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2216
 ms.assetid: 250f6bdc-a5e1-495f-a1e8-6e8e7021ad9d
-ms.openlocfilehash: 7da1816fbd8196501b043f09c6bf7da201b3de18
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: ff32949342dd4bdc9739dfbb57c4c88ece0d8949
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742645"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97245551"
 ---
 # <a name="compiler-error-c2216"></a>Errore del compilatore C2216
 
@@ -19,7 +20,7 @@ ms.locfileid: "90742645"
 
 Due parole chiave che si escludono reciprocamente sono state usate insieme.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 L'esempio seguente genera l'errore C2216.
 

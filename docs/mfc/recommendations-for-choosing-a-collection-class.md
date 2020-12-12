@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: suggerimenti per la scelta di una classe di raccolte'
 title: Suggerimenti per la scelta di una classe di raccolte
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - collection classes [MFC], duplicates allowed
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
-ms.openlocfilehash: 53a4eb3e30048d9dc82722d912a026d63a87586d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 47cf0cc1f52a10d641dba9eecbd49190d9820f41
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371751"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248530"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>Suggerimenti per la scelta di una classe di raccolte
 
@@ -47,19 +48,19 @@ Nella tabella seguente, [Funzionalità delle forme di raccolta](#_core_collectio
 
 - La colonna 6 indica se ogni forma consente elementi duplicati.
 
-### <a name="collection-shape-features"></a><a name="_core_collection_shape_features"></a>Caratteristiche della forma della raccolta
+### <a name="collection-shape-features"></a><a name="_core_collection_shape_features"></a> Funzionalità delle forme di raccolta
 
-|Con forme|Ordinato|Indicizzato|Inserimento di un elemento|Ricerca di un elemento specificato|Elementi duplicati|
+|Con forme|Ordinato|Indicizzata|Inserimento di un elemento|Ricerca di un elemento specificato|Elementi duplicati|
 |-----------|--------------|--------------|-----------------------|----------------------------------|-------------------------|
-|Elenco|Sì|No|Veloce|Lento|Sì|
-|Array|Sì|Tramite valore Integer|Lento|Lento|Sì|
+|Elenco|Sì|No|Veloci|Lente|Sì|
+|Array|Sì|Tramite valore Integer|Lente|Lente|Sì|
 |Mappa|No|Tramite chiave|Veloce|Veloce|No (chiavi) Sì (valori)|
 
 Nella tabella seguente, [Caratteristiche delle classi di raccolta MFC](#_core_characteristics_of_mfc_collection_classes), vengono riepilogate altre importanti caratteristiche di classi della raccolta MFC specifiche come guida alla selezione. La scelta può variare a seconda se la classe è basata su modelli C++, se gli elementi possono essere serializzati tramite il meccanismo di [serializzazione](../mfc/serialization-in-mfc.md) dei documenti MFC, se è possibile eseguire il dump dei relativi elementi tramite il meccanismo di dump diagnostico di MFC o se la classe è indipendente dai tipi, ovvero se è in grado di garantire il tipo di elementi archiviati in e recuperati da una raccolta basata sulla classe.
 
-### <a name="characteristics-of-mfc-collection-classes"></a><a name="_core_characteristics_of_mfc_collection_classes"></a>Caratteristiche delle classi di raccolte MFC
+### <a name="characteristics-of-mfc-collection-classes"></a><a name="_core_characteristics_of_mfc_collection_classes"></a> Caratteristiche delle classi di raccolta MFC
 
-|Classe|Usa C++<br /><br /> Modelli|Può essere<br /><br /> serializzato|Può essere<br /><br /> oggetto di dump|Is<br /><br /> indipendente dai tipi|
+|Classe|Usa C++<br /><br /> Modelli|Può essere<br /><br /> serializzato|Può essere<br /><br /> oggetto di dump|È<br /><br /> indipendente dai tipi|
 |-----------|------------------------------|---------------------------|-----------------------|-----------------------|
 |`CArray`|Sì|Sì 1|Sì 1|No|
 |`CByteArray`|No|Sì|Sì|Sì 3|
@@ -85,15 +86,15 @@ Nella tabella seguente, [Caratteristiche delle classi di raccolta MFC](#_core_ch
 |`CUIntArray`|No|No|Sì|Sì 3|
 |`CWordArray`|No|Sì|Sì|Sì 3|
 
-1. Per serializzare, è necessario chiamare in modo esplicito la funzione `Serialize` dell'oggetto raccolta. Per eseguire il dump, è necessario chiamare esplicitamente la funzione `Dump`. Non è possibile `ar << collObj` utilizzare il `dmp` `<< collObj` modulo per serializzare o il form per eseguire il dump.
+1. Per serializzare, è necessario chiamare in modo esplicito la funzione `Serialize` dell'oggetto raccolta. Per eseguire il dump, è necessario chiamare esplicitamente la funzione `Dump`. Non è possibile usare il modulo `ar << collObj` per la serializzazione o il modulo `dmp` `<< collObj` per eseguire il dump.
 
 2. La serializzabilità dipende infatti dal tipo di raccolta sottostante. Ad esempio, se una matrice di puntatori tipizzata è basata su `CObArray`, è serializzabile, mentre se è basata su `CPtrArray`, non è serializzabile. In generale, le classi "Ptr" non possono essere serializzate.
 
 3. Se in questa colonna è contrassegnato Sì, una classe Collection non basata su modelli è indipendente dai tipi purché usata per lo scopo previsto. Ad esempio, se si archiviano byte in una classe `CByteArray`, la matrice è indipendente dai tipi. Al contrario, se si usa per archiviare caratteri, la sua indipendenza dai tipi è meno sicura.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Raccolte](../mfc/collections.md)<br/>
+[raccolte](../mfc/collections.md)<br/>
 [Classi basate su modello](../mfc/template-based-classes.md)<br/>
-[Procedura: Creare una raccolta indipendente dai tipi](../mfc/how-to-make-a-type-safe-collection.md)<br/>
+[Procedura: creare una raccolta di Type-Safe](../mfc/how-to-make-a-type-safe-collection.md)<br/>
 [Accesso a tutti i membri di una raccolta](../mfc/accessing-all-members-of-a-collection.md)
