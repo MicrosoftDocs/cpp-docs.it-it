@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _makepath_s, _wmakepath_s'
 title: _makepath_s, _wmakepath_s
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-ms.openlocfilehash: 8eb3cf338d7486d7e7893090a1390e5d2d16a438
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8096061c80c2cfb7da3148e1ba8e7a0d2f193c4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914485"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299904"
 ---
 # <a name="_makepath_s-_wmakepath_s"></a>_makepath_s, _wmakepath_s
 
@@ -99,7 +100,7 @@ Dimensione del buffer in byte.
 Contiene una lettera (A, B e così via) corrispondente all'unità desiderata e i due punti finali opzionali. **_makepath_s** inserisce i due punti automaticamente nel percorso composito, se mancante. Se l' *unità* è **null** o punta a una stringa vuota, nessuna lettera di unità viene visualizzata nella stringa del *percorso* composito.
 
 *dir*<br/>
-Contiene il percorso delle directory, escluso il designatore di unità o il nome del file effettivo. La barra finale è facoltativa e una barra (/) o una barra rovesciata (\\) o entrambe possono essere usate in un unico argomento *dir* . Se non viene specificata una barra finale (/o \\), viene inserita automaticamente. Se *dir* è **null** o punta a una stringa vuota, nessun percorso di directory viene inserito nella stringa del *percorso* composito.
+Contiene il percorso delle directory, escluso il designatore di unità o il nome del file effettivo. La barra finale è facoltativa e una barra (/) o una barra rovesciata ( \\ ) o entrambe possono essere usate in un unico argomento *dir* . Se non viene specificata una barra finale (/o \\), viene inserita automaticamente. Se *dir* è **null** o punta a una stringa vuota, nessun percorso di directory viene inserito nella stringa del *percorso* composito.
 
 *fname*<br/>
 Contiene il nome del file di base senza alcuna estensione di nome file. Se *fname* è **null** o punta a una stringa vuota, nessun nome file viene inserito nella stringa del *percorso* composito.
@@ -113,14 +114,14 @@ Zero se con esito positivo; un codice di errore in caso di errore.
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*path*|*sizeInWords* / *sizeInBytes* sizeInWords|Return|Contenuto del *percorso*|
+|*path*|*sizeInWords*  /  *sizeInBytes*|Return|Contenuto del *percorso*|
 |------------|------------------------------------|------------|------------------------|
 |**NULL**|any|**EINVAL**|non modificato|
 |any|<= 0|**EINVAL**|non modificato|
 
-Se si verifica una delle condizioni di errore sopra indicate, queste funzioni richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e le funzioni restituiscono **EINVAL**. Il **valore null** è consentito per i parametri *Drive*, *fname*e *ext*. Per informazioni sul comportamento quando questi parametri sono puntatori null o stringhe vuote, vedere la sezione Osservazioni.
+Se si verifica una delle condizioni di errore sopra indicate, queste funzioni richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e le funzioni restituiscono **EINVAL**. Il **valore null** è consentito per i parametri *Drive*, *fname* e *ext*. Per informazioni sul comportamento quando questi parametri sono puntatori null o stringhe vuote, vedere la sezione Osservazioni.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_makepath_s** crea una stringa di percorso composita da singoli componenti, archiviando il risultato in *path*. Il *percorso* potrebbe includere una lettera di unità, un percorso di directory, un nome file e un'estensione del nome file. **_wmakepath_s** è una versione a caratteri wide di **_makepath_s**; gli argomenti da **_wmakepath_s** sono stringhe a caratteri wide. **_wmakepath_s** e **_makepath_s** si comportano in modo identico.
 
@@ -201,7 +202,7 @@ Path extracted with _splitpath_s:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione dei file](../../c-runtime-library/file-handling.md)<br/>
+[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
 [_fullpath, _wfullpath](fullpath-wfullpath.md)<br/>
 [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md)<br/>
 [_makepath, _wmakepath](makepath-wmakepath.md)<br/>

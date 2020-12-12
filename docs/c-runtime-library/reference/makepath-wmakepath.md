@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _makepath, _wmakepath'
 title: _makepath, _wmakepath
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _wmakepath function
 - tmakepath function
 ms.assetid: 5930b197-a7b8-46eb-8519-2841a58cd026
-ms.openlocfilehash: 19a20de40bb02e49f618e8e617c9659788dc3e25
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2193c9fafdfea5fbacfef69256e5fd1fbfaf9828
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914387"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299839"
 ---
 # <a name="_makepath-_wmakepath"></a>_makepath, _wmakepath
 
@@ -78,7 +79,7 @@ Buffer del percorso completo.
 Contiene una lettera (A, B e così via) corrispondente all'unità desiderata e i due punti finali opzionali. **_makepath** inserisce i due punti automaticamente nel percorso composito, se mancante. Se l' *unità* è **null** o punta a una stringa vuota, nessuna lettera di unità viene visualizzata nella stringa del *percorso* composito.
 
 *dir*<br/>
-Contiene il percorso delle directory, escluso il designatore di unità o il nome del file effettivo. La barra finale è facoltativa e una barra (/) o una barra rovesciata (\\) o entrambe possono essere usate in un unico argomento *dir* . Se non viene specificata una barra finale (/o \\), viene inserita automaticamente. Se *dir* è **null** o punta a una stringa vuota, nessun percorso di directory viene inserito nella stringa del *percorso* composito.
+Contiene il percorso delle directory, escluso il designatore di unità o il nome del file effettivo. La barra finale è facoltativa e una barra (/) o una barra rovesciata ( \\ ) o entrambe possono essere usate in un unico argomento *dir* . Se non viene specificata una barra finale (/o \\), viene inserita automaticamente. Se *dir* è **null** o punta a una stringa vuota, nessun percorso di directory viene inserito nella stringa del *percorso* composito.
 
 *fname*<br/>
 Contiene il nome del file di base senza alcuna estensione di nome file. Se *fname* è **null** o punta a una stringa vuota, nessun nome file viene inserito nella stringa del *percorso* composito.
@@ -86,7 +87,7 @@ Contiene il nome del file di base senza alcuna estensione di nome file. Se *fnam
 *EXT*<br/>
 Contiene l'estensione di nome file effettiva, con o senza un punto iniziale (.). **_makepath** inserisce il punto automaticamente se non viene visualizzato in *ext*. Se *ext* è **null** o punta a una stringa vuota, nessuna estensione viene inserita nella stringa del *percorso* composito.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_makepath** crea una stringa di percorso composita da singoli componenti, archiviando il risultato in *path*. Il *percorso* potrebbe includere una lettera di unità, un percorso di directory, un nome file e un'estensione del nome file. **_wmakepath** è una versione a caratteri wide di **_makepath**; gli argomenti da **_wmakepath** sono stringhe a caratteri wide. **_wmakepath** e **_makepath** si comportano in modo identico.
 
@@ -153,7 +154,7 @@ Path extracted with _splitpath:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione dei file](../../c-runtime-library/file-handling.md)<br/>
+[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
 [_fullpath, _wfullpath](fullpath-wfullpath.md)<br/>
 [_splitpath, _wsplitpath](splitpath-wsplitpath.md)<br/>
 [_makepath_s, _wmakepath_s](makepath-s-wmakepath-s.md)<br/>

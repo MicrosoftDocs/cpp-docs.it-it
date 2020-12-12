@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _malloca'
 title: _malloca
 ms.date: 11/04/2016
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-ms.openlocfilehash: 64bed4dac2bbaeb60c7b04a600af38f455caf08d
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 8357bc15ba432a0adb390494882ee4b63adf70f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008257"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299800"
 ---
 # <a name="_malloca"></a>_malloca
 
@@ -173,7 +174,7 @@ int main()
 Enter the number of bytes to allocate using _malloca: 1000
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Allocazione di memoria](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>

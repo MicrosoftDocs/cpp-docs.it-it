@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _lsearch'
 title: _lsearch
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - searching, linear
 - lsearch function
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
-ms.openlocfilehash: 73bc82ed57692dee348448d2b523961324203ca9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ee27eb61a76e4b44755d8dcebb5589070ae15c9f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911324"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299943"
 ---
 # <a name="_lsearch"></a>_lsearch
 
@@ -76,13 +77,13 @@ Puntatore alla routine di confronto. Il primo parametro è un puntatore alla chi
 
 Se la chiave viene trovata, **_lsearch** restituisce un puntatore all'elemento della matrice in *base* che corrisponde alla *chiave*. Se la chiave non viene trovata, **_lsearch** restituisce un puntatore all'elemento appena aggiunto alla fine della matrice.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_lsearch** esegue una ricerca lineare per la *chiave* del valore in una matrice di elementi *numerici* , ciascuno di byte di *larghezza* . A differenza di **bCerca**, **_lsearch** non richiede che la matrice sia ordinata. Se *Key* non viene trovato, **_lsearch** lo aggiunge alla fine della matrice e incrementa il *numero*.
 
 L'argomento *compare* è un puntatore a una routine fornita dall'utente che confronta due elementi di matrice e restituisce un valore che ne specifica la relazione. **_lsearch** chiama la routine di *confronto* una o più volte durante la ricerca, passando i puntatori a due elementi di matrice per ogni chiamata. *confrontare* deve confrontare gli elementi e restituire un valore diverso da zero (che indica che gli elementi sono diversi) o 0 (che indica che gli elementi sono identici).
 
-Questa funzione convalida i relativi parametri. Se *compare*, *Key* o *Number* è **null**o se *base* è **null** e *Number* è diverso da zero oppure se *Width* è minore di zero, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e la funzione restituisce **null**.
+Questa funzione convalida i relativi parametri. Se *compare*, *Key* o *Number* è **null** o se *base* è **null** e *Number* è diverso da zero oppure se *Width* è minore di zero, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e la funzione restituisce **null**.
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: malloc'
 title: malloc
 ms.date: 4/2/2020
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - malloc function
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
-ms.openlocfilehash: a093dbdbc4849b1c2f3d86e85a5e2b25a7b988e2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8026cf24ee49999026c58787b83b2c8c0a238a2e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836660"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299787"
 ---
 # <a name="malloc"></a>malloc
 
@@ -55,13 +56,13 @@ Byte da allocare.
 
 **malloc** restituisce un puntatore void allo spazio allocato o **null** se la memoria disponibile è insufficiente. Per restituire un puntatore a un tipo diverso da **`void`** , usare un cast del tipo sul valore restituito. Lo spazio di archiviazione a cui punta il valore restituito è sicuramente allineato in modo corretto per l'archiviazione di qualsiasi tipo di oggetto con un requisito di allineamento minore o uguale a quello dell'allineamento fondamentale. (In Visual C++, l'allineamento fondamentale è l'allineamento richiesto per **`double`** o 8 byte. Nel codice destinato alle piattaforme a 64 bit, è di 16 byte. Usare [_aligned_malloc](aligned-malloc.md) per allocare spazio di archiviazione per gli oggetti con un requisito di allineamento maggiore, ad esempio i tipi SSE [__m128](../../cpp/m128.md) e e i **`__m256`** tipi dichiarati usando `__declspec(align( n ))` dove **n** è maggiore di 8. Se *size* è 0, **malloc** alloca un elemento di lunghezza zero nell'heap e restituisce un puntatore valido a tale elemento. Controllare sempre il ritorno da **malloc**, anche se la quantità di memoria richiesta è ridotta.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **malloc** alloca un blocco di memoria di almeno *dimensioni* pari a byte. Il blocco può essere maggiore di *size* bytes a causa dello spazio necessario per l'allineamento e le informazioni di manutenzione.
 
 **malloc** imposta **errno** su **ENOMEM** se un'allocazione di memoria ha esito negativo o se la quantità di memoria richiesta supera **_HEAP_MAXREQ**. Per informazioni su questo e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Il codice di avvio usa **malloc** per allocare spazio di archiviazione per le variabili **_environ**, *envp*e *argv* . Anche le funzioni seguenti e le relative controparti a caratteri wide chiamano **malloc**.
+Il codice di avvio usa **malloc** per allocare spazio di archiviazione per le variabili **_environ**, *envp* e *argv* . Anche le funzioni seguenti e le relative controparti a caratteri wide chiamano **malloc**.
 
 :::row:::
    :::column span="":::
@@ -173,6 +174,6 @@ Memory freed
 
 [Allocazione di memoria](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[libero](free.md)<br/>
+[free](free.md)<br/>
 [realloc](realloc.md)<br/>
 [_aligned_malloc](aligned-malloc.md)<br/>
