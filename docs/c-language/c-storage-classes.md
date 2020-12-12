@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classi di archiviazione C'
 title: Classi di archiviazione C
 ms.date: 08/31/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - storage class specifiers, C storage classes
 - storage duration
 ms.assetid: 893fb929-f7a9-43dc-a0b3-29cb1ef845c1
-ms.openlocfilehash: 4f793e8485628faf0a80445ce0414835e3b71d1f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 000cb06047a948de413dc9bd55d5ec992459d11c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217168"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214243"
 ---
 # <a name="c-storage-classes"></a>Classi di archiviazione C
 
@@ -38,7 +39,7 @@ Ad eccezione di **`__declspec`** , è possibile usare un solo *Storage-Class-spe
 
 Gli elementi dichiarati con l' **`auto`** **`register`** identificatore o hanno durate locali. Gli elementi dichiarati con l' **`static`** **`extern`** identificatore o hanno durate globali.
 
-Poiché **`typedef`** e **`__declspec`** sono semanticamente diversi dagli altri quattro terminali *Storage-Class-specifier* , vengono descritti separatamente. Per informazioni specifiche su **`typedef`** , vedere [ `typedef` dichiarazioni](../c-language/typedef-declarations.md). Per informazioni specifiche su **`__declspec`** , vedere [attributi estesi della classe di archiviazione](../c-language/c-extended-storage-class-attributes.md).
+Poiché **`typedef`** e **`__declspec`** sono semanticamente diversi dagli altri quattro terminali *Storage-Class-specifier* , vengono descritti separatamente. Per informazioni specifiche su **`typedef`** , vedere [ `typedef` dichiarazioni](../c-language/typedef-declarations.md). Per informazioni specifiche su **`__declspec`** , vedere [attributi di Storage-Class estese](../c-language/c-extended-storage-class-attributes.md).
 
 La posizione delle dichiarazioni di funzione e di variabile nei file di origine influisce anche sulla classe di archiviazione e sulla visibilità. Le dichiarazioni all'esterno di tutte le definizioni di funzione vengono visualizzate a livello "esterno". Le dichiarazioni all'interno delle definizioni di funzione vengono visualizzate a "livello interno".
 
@@ -50,6 +51,6 @@ Il significato esatto di ogni identificatore della classe di archiviazione dipen
 
 Gli argomenti [Identificatori di classi di archiviazione per dichiarazioni di livello esterno](../c-language/storage-class-specifiers-for-external-level-declarations.md) e [Identificatori di classi di archiviazione per dichiarazioni di livello interno](../c-language/storage-class-specifiers-for-internal-level-declarations.md) descrivono i terminali *storage-class-specifier* in ogni tipo di dichiarazione e illustrano il comportamento predefinito quando *storage-class-specifier* viene omesso da una variabile. In [Identificatori di classi di archiviazione con dichiarazioni di funzione](../c-language/storage-class-specifiers-with-function-declarations.md) vengono descritti gli identificatori della classe di archiviazione usati con le funzioni.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Dichiarazioni e tipi](../c-language/declarations-and-types.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: TN017: distruzione di oggetti finestra'
 title: 'TN017: eliminazione definitiva di oggetti finestra'
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - TN017
 - PostNcDestroy method [MFC]
 ms.assetid: 5bf208a5-5683-439b-92a1-547c5ded26cd
-ms.openlocfilehash: 2448a2661851f14fc6fe8747ca19495925442436
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 86ce1255055db98a247ac8997aa7d146eb135583
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226815"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215911"
 ---
 # <a name="tn017-destroying-window-objects"></a>TN017: eliminazione definitiva di oggetti finestra
 
@@ -39,7 +40,7 @@ Il secondo caso, l'utilizzo dell' **`delete`** operatore negli oggetti di Window
 
 ## <a name="auto-cleanup-with-cwndpostncdestroy"></a>Pulizia automatica con CWnd::P ostNcDestroy
 
-Quando il sistema distrugge una finestra di Windows, viene WM_NCDESTROY l'ultimo messaggio di Windows inviato alla finestra. Il `CWnd` gestore predefinito per il messaggio è [CWnd:: OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy). `OnNcDestroy`Scollega l' `HWND` oggetto dall'oggetto C++ e chiama la funzione virtuale `PostNcDestroy` . Alcune classi eseguono l'override di questa funzione per eliminare l'oggetto C++.
+Quando il sistema distrugge una finestra di Windows, viene WM_NCDESTROY l'ultimo messaggio di Windows inviato alla finestra. Il `CWnd` gestore predefinito per il messaggio è [CWnd:: OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy). `OnNcDestroy` Scollega l' `HWND` oggetto dall'oggetto C++ e chiama la funzione virtuale `PostNcDestroy` . Alcune classi eseguono l'override di questa funzione per eliminare l'oggetto C++.
 
 L'implementazione predefinita di `CWnd::PostNcDestroy` non esegue alcuna operazione, che è appropriata per gli oggetti finestra allocati nella stack frame o incorporati in altri oggetti. Questa operazione non è appropriata per gli oggetti finestra progettati per essere allocati nell'heap senza altri oggetti. In altre parole, non è appropriato per gli oggetti finestra che non sono incorporati in altri oggetti C++.
 
@@ -93,7 +94,7 @@ Nel caso di oggetti Windows C++ che eseguono la pulizia automatica, è necessari
 
 Dopo `DestroyWindow` la chiamata a su un oggetto non di pulizia automatica, l'oggetto C++ sarà ancora in funzione, ma *M_HWND* sarà null. Dopo aver chiamato `DestroyWindow` su un oggetto di pulizia automatica, l'oggetto c++ non verrà più rilasciato dall'operatore di eliminazione c++ nell'implementazione di pulitura automatica di `PostNcDestroy` .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
 [Note tecniche per categoria](../mfc/technical-notes-by-category.md)

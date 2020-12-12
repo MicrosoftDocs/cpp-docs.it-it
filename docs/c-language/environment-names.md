@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: nomi di ambiente'
 title: Nomi degli ambienti
 ms.date: 11/04/2016
 ms.assetid: 9af409a5-e724-465a-9a21-88d3586c2e92
-ms.openlocfilehash: 43e1254b4c1ee61a92fbb6499d9396e8b15a3047
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f40da15151385cea4bd581dea8946f50d2b58ea8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234127"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213754"
 ---
 # <a name="environment-names"></a>Nomi degli ambienti
 
@@ -27,7 +28,7 @@ esegue una copia della shell dei comandi (CMD.EXE), imposta la variabile di ambi
 
 Analogamente, le modifiche apportate dalla funzione `_putenv` sono effettive solo fino al termine del programma.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Funzioni della libreria](../c-language/library-functions.md)<br/>
 [_putenv, _wputenv](../c-runtime-library/reference/putenv-wputenv.md)<br/>

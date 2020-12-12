@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: operazioni di flusso nei controlli Rich Edit'
 title: Operazioni di flusso nei controlli Rich Edit
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - stream operations in CRichEditCtrl
 - stream storage and CRichEditCtrl
 ms.assetid: 110b4684-1e76-4ca6-9ef0-5bc8b2d93c78
-ms.openlocfilehash: 73277f59dc0ad4dfe21d481d0b893903ed407ea9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3f9dcfb837d9a4f26454a597507712293d3d895c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512945"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97216483"
 ---
 # <a name="stream-operations-in-rich-edit-controls"></a>Operazioni di flusso nei controlli Rich Edit
 
@@ -24,7 +25,7 @@ Per leggere i dati in un controllo Rich Edit, ovvero trasmettere i dati in, usar
 
 Per salvare il contenuto di un controllo Rich Edit, ovvero trasmettere i dati in uscita, è possibile usare la funzione membro di [streaming](../mfc/reference/cricheditctrl-class.md#streamout) . Il controllo scrive ripetutamente al buffer e quindi chiama la funzione di callback definita dall'applicazione. Per ogni chiamata, la funzione di callback salva il contenuto del buffer.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso di CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
+[Utilizzo di CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
 [Controlli](../mfc/controls-mfc.md)

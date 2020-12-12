@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: supporto per contesti di attivazione nello stato del modulo MFC'
 title: Supporto per contesti di attivazione nello stato del modulo MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
 - activation contexts [MFC]
 - activation contexts [MFC], MFC support
 ms.assetid: 1e49eea9-3620-46dd-bc5f-d664749567c7
-ms.openlocfilehash: 296df3d2ecec74c5c9a7deef1617298d40243724
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e7f7434824956ca2a62d75fbd50eb9dd5e01f34e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511437"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97216470"
 ---
 # <a name="support-for-activation-contexts-in-the-mfc-module-state"></a>Supporto per contesti di attivazione nello stato del modulo MFC
 
@@ -22,7 +23,7 @@ MFC crea un contesto di attivazione utilizzando una risorsa manifesto fornita da
 
 - [Manifesti dell'assembly](/windows/win32/SbsCs/assembly-manifests)
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Quando si leggono questi Windows SDK argomenti, si noti che il meccanismo del contesto di attivazione MFC è simile al contesto di attivazione di Windows SDK ad eccezione del fatto che MFC non utilizza l'API del contesto di attivazione di Windows SDK.
 
@@ -34,13 +35,13 @@ Il contesto di attivazione funziona in applicazioni MFC, dll utente e dll di est
 
 - Le DLL di estensione MFC si basano sulle applicazioni host o sulle DLL dell'utente per determinare il proprio contesto di attivazione.
 
-Sebbene lo stato del contesto di attivazione possa essere modificato utilizzando i processi descritti in [utilizzo dell'API del contesto di attivazione](/windows/win32/SbsCs/using-the-activation-context-api), l'utilizzo del meccanismo del contesto di attivazione MFC può essere utile quando si sviluppano architetture plug-in basate su dll in cui non è facile (o non possibile) per cambiare manualmente lo stato di attivazione prima e dopo le singole chiamate a plug-in esterni.
+Sebbene lo stato del contesto di attivazione possa essere modificato utilizzando i processi descritti in [utilizzo dell'API del contesto di attivazione](/windows/win32/SbsCs/using-the-activation-context-api), l'utilizzo del meccanismo del contesto di attivazione MFC può essere utile quando si sviluppano architetture plug-in basate su dll in cui non è facile (o non possibile) cambiare manualmente lo stato di attivazione prima e dopo le singole chiamate a plug-in esterni.
 
-Il contesto di attivazione viene creato in [AfxWinInit](../mfc/reference/application-information-and-management.md#afxwininit). Viene eliminato definitivamente nel distruttore `AFX_MODULE_STATE`. L'handle del contesto di attivazione viene conservato in `AFX_MODULE_STATE`. (`AFX_MODULE_STATE` è descritto in [AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate)).
+Il contesto di attivazione viene creato in [AfxWinInit](../mfc/reference/application-information-and-management.md#afxwininit). Viene eliminato definitivamente nel distruttore `AFX_MODULE_STATE`. L'handle del contesto di attivazione viene conservato in `AFX_MODULE_STATE`. ( `AFX_MODULE_STATE` è descritto in [AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate)).
 
 La macro [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) attiva e disattiva il contesto di attivazione. `AFX_MANAGE_STATE` è abilitata per le librerie MFC statiche, nonché per le DLL MFC, per consentire al codice MFC di operare nel proprio contesto di attivazione selezionato dalla DLL dell'utente.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Contesti di attivazione](/windows/win32/SbsCs/activation-contexts)<br/>
 [Manifesti dell'applicazione](/windows/win32/SbsCs/application-manifests)<br/>

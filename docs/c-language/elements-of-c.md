@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: elementi di C'
 title: Elementi di C
 ms.date: 11/04/2016
 helpviewer_keywords:
 - lexical conventions
 - conventions, lexical
 ms.assetid: 20668a49-cab7-4153-a6d9-7439aac3ff3b
-ms.openlocfilehash: 52b20c5a8eccbf9e8a87cfa7e8fb01da846153d8
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 447ae9d2065783db12ddceb94217c39122db4b98
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778452"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213780"
 ---
 # <a name="elements-of-c"></a>Elementi di C
 
@@ -30,14 +31,14 @@ Vengono trattati i seguenti argomenti:
 
 - [Costanti](../c-language/c-constants.md)
 
-- [Valori letterali stringa](../c-language/c-string-literals.md)
+- [Valori letterali di stringa](../c-language/c-string-literals.md)
 
-- [Segni di punteggiatura e caratteri speciali](../c-language/punctuation-and-special-characters.md)
+- [Punteggiatura e caratteri speciali](../c-language/punctuation-and-special-characters.md)
 
-La sezione include anche le tabelle di riferimento per i [trigrammi](../c-language/trigraphs.md), i [limiti sulle costanti a virgola mobile](../c-language/limits-on-floating-point-constants.md), i [limiti di interi C e C++](../c-language/cpp-integer-limits.md)e le [sequenze di escape](../c-language/escape-sequences.md).
+La sezione include anche le tabelle di riferimento per i [trigrammi](../c-language/trigraphs.md), i [limiti per Floating-Point costanti](../c-language/limits-on-floating-point-constants.md), i [limiti interi C e C++](../c-language/cpp-integer-limits.md)e le [sequenze di escape](../c-language/escape-sequences.md).
 
 Gli operatori sono simboli (sia singoli caratteri che combinazioni di caratteri) che specificano come utilizzare i valori. Ciascun simbolo viene interpretato come un'unità singola, denominata token. Per altre informazioni, vedere [Operatori](../c-language/c-operators.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimenti per il linguaggio C](../c-language/c-language-reference.md)

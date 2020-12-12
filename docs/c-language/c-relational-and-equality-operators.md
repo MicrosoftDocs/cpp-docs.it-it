@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: operatori relazionali e di uguaglianza C'
 title: Operatori relazionali e operatori di uguaglianza C
 ms.date: 10/18/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - equality operator, syntax
 - operators [C], relational
 ms.assetid: c89a3815-a65e-4e0d-8333-0e8dc7fdb30b
-ms.openlocfilehash: 9ae5a31b5f4b81876d2fe518635a9766d2b5323c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6ed6b4de51fdc9eda929cdaf4cf87d238bf7dcc6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227946"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214256"
 ---
 # <a name="c-relational-and-equality-operators"></a>Operatori relazionali e operatori di uguaglianza C
 
@@ -56,7 +57,7 @@ Gli operandi possono disporre di un tipo integrale, a virgola mobile o puntatore
 
 - Gli operatori di uguaglianza seguono le stesse regole degli operatori relazionali, ma consentono opzioni aggiuntive: un puntatore può essere confrontato con un'espressione integrale costante con valore 0 o a un puntatore a **`void`** . Se due puntatori sono entrambi puntatori null, vengono considerati uguali. Gli operatori di uguaglianza confrontano segmento e offset.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Negli esempi riportati di seguito vengono illustrati gli operatori relazionali e di uguaglianza.
 
@@ -90,7 +91,7 @@ enum color { red, white, green } col;
 
 Queste istruzioni dichiarano una variabile di enumerazione denominata `col` con il tag `color`. In qualsiasi momento, la variabile può contenere un intero pari a 0, 1 o 2, che rappresenta uno degli elementi dell'enumerazione impostata `color`: rispettivamente il colore rosso, bianco o verde. Se `col` contiene 0 quando **`if`** viene eseguita l'istruzione, verranno eseguite tutte le istruzioni che dipendono da **`if`** .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Operatori relazionali: \<, > ,\<=, and >=](../cpp/relational-operators-equal-and-equal.md)<br/>
+[Operatori relazionali: \<, > , \<=, and >=](../cpp/relational-operators-equal-and-equal.md)<br/>
 [Operatori di uguaglianza: = = e! =](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)

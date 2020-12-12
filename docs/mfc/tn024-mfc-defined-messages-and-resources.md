@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: TN024: MFC-Defined messaggi e risorse'
 title: 'TN024: risorse e messaggi definiti da MFC'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-ms.openlocfilehash: 9ad6827e4a46bb9f2ff3b02986a01737772e0858
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7ead4d72588b9acae125cbe90be67d1e03230de8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839218"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215755"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: risorse e messaggi definiti da MFC
 
@@ -41,7 +42,7 @@ In rari casi in cui è necessario gestire uno di questi messaggi, è necessario 
 
 Questo messaggio viene inviato a una finestra in fase di creazione. Questa operazione viene inviata molto presto nel processo di creazione come metodo per determinare se WndProc è **AfxWndProc. AfxWndProc** restituisce 1.
 
-| Parametri e valore restituito | Descrizione |
+| Parametri e valore restituito | Description |
 |-|-|
 |wParam|Non usato|
 |lParam|Non usato|
@@ -51,7 +52,7 @@ Questo messaggio viene inviato a una finestra in fase di creazione. Questa opera
 
 Questo messaggio viene inviato da una finestra cornice agli elementi figlio immediati durante il ridimensionamento (chiama le chiamate `CFrameWnd::OnSize` `CFrameWnd::RecalcLayout` `CWnd::RepositionBars` ) per riposizionare le barre di controllo intorno al lato del frame. La struttura AFX_SIZEPARENTPARAMS contiene il rettangolo client attualmente disponibile dell'elemento padre e un HDWP, che può essere NULL, con il quale chiamare `DeferWindowPos` per ridurre al minimo il ridisegno.
 
-| Parametri e valore restituito | Descrizione |
+| Parametri e valore restituito | Description |
 |-|-|
 |wParam|Non usato|
 |lParam|Indirizzo di una struttura di AFX_SIZEPARENTPARAMS|
@@ -63,7 +64,7 @@ Ignorando il messaggio si indica che la finestra non partecipa al layout.
 
 Questo messaggio viene inviato a una finestra cornice per richiedere di aggiornare la riga del messaggio nella barra di stato. È possibile specificare un ID stringa o un LPCSTR (ma non entrambi).
 
-| Parametri e valore restituito | Descrizione |
+| Parametri e valore restituito | Description |
 |-|-|
 |wParam|ID stringa (o zero)|
 |lParam|LPCSTR per la stringa (o NULL)|
@@ -73,7 +74,7 @@ Questo messaggio viene inviato a una finestra cornice per richiedere di aggiorna
 
 Questo messaggio viene inviato in tempo di inattività per implementare l'aggiornamento del tempo di inattività dei gestori dell'interfaccia utente Update-Command. Se la finestra (in genere una barra di controllo) gestisce il messaggio, viene creato un `CCmdUI` oggetto (o un oggetto di una classe derivata) e viene chiamato `CCmdUI::DoUpdate` per ogni "elemento" nella finestra. In questo modo, a sua volta, viene verificata la presenza di un gestore ON_UPDATE_COMMAND_UI per gli oggetti nella catena del gestore dei comandi.
 
-| Parametri e valore restituito | Descrizione |
+| Parametri e valore restituito | Description |
 |-|-|
 |wParam|BOOL bDisableIfNoHandler|
 |lParam|Non usato (0)|
@@ -85,7 +86,7 @@ Questo messaggio viene inviato in tempo di inattività per implementare l'aggior
 
 Questo messaggio viene inserito in un oggetto `CFrameWnd` per uscire dalla modalità della Guida sensibile al contesto. La ricezione di questo messaggio termina il ciclo modale avviato da `CFrameWnd::OnContextHelp` .
 
-| Parametro e valore restituito | Descrizione |
+| Parametro e valore restituito | Description |
 |-|-|
 |wParam|Non usato (0)|
 |lParam|Non usato (0)|
@@ -95,7 +96,7 @@ Questo messaggio viene inserito in un oggetto `CFrameWnd` per uscire dalla modal
 
 Questo messaggio viene inviato dal modello di documento a tutti i discendenti di una finestra cornice quando è sicuro che esegua l'aggiornamento iniziale. Viene eseguito il mapping a una chiamata a, `CView::OnInitialUpdate` ma è possibile utilizzarlo in altre `CWnd` classi derivate per l'aggiornamento singolo.
 
-| Parametri e valore restituito | Descrizione |
+| Parametri e valore restituito | Description |
 |-|-|
 |wParam|Non usato (0)|
 |lParam|Non usato (0)|
@@ -107,7 +108,7 @@ Questo messaggio viene inviato da una visualizzazione alla relativa finestra pad
 
 Se la finestra padre elabora questo messaggio, deve restituire TRUE e riempire il RECT passato in lParam con le nuove dimensioni dell'area client. Questa operazione viene utilizzata in `CScrollView` per gestire correttamente le barre di scorrimento (Posizionare quindi all'esterno della finestra quando vengono aggiunte) quando un oggetto server è attivato sul posto.
 
-| Parametri e valore restituito | Descrizione |
+| Parametri e valore restituito | Description |
 |-|-|
 |wParam|Non usato (0)|
 |lParam|LPRECT rectClient, può essere NULL|
@@ -119,7 +120,7 @@ Questo messaggio viene inviato da `COleResizeBar` alla finestra proprietaria (vi
 
 Il nuovo rettangolo, fornito in coordinate client rispetto alla finestra cornice che contiene la barra di ridimensionamento, è puntato da lParam.
 
-| Parametri e valore restituito | Descrizione |
+| Parametri e valore restituito | Description |
 |-|-|
 |wParam|Non usato (0)|
 |lParam|RectNew LPRECT|
@@ -131,7 +132,7 @@ Questo messaggio viene inviato a tutte le finestre popup di proprietà di una fi
 
 È possibile usarlo per eseguire un'elaborazione speciale nella finestra popup quando il frame entra in uno stato modale o per impedire la disabilitazione di determinate finestre popup. Le descrizioni comandi usano questo messaggio per eliminare le stesse quando la finestra cornice entra in uno stato modale, ad esempio.
 
-| Parametri e valore restituito | Descrizione |
+| Parametri e valore restituito | Description |
 |-|-|
 |wParam|Non usato (0)|
 |lParam|Non usato (0)|
@@ -141,7 +142,7 @@ Questo messaggio viene inviato a tutte le finestre popup di proprietà di una fi
 
 Questo messaggio viene inviato a tutte le finestre popup di proprietà di una finestra cornice quando il frame viene attivato o disattivato da un'altra finestra cornice di primo livello. Viene utilizzato dall'implementazione di MFS_SYNCACTIVE in `CMiniFrameWnd` per impedire l'attivazione di queste finestre popup sincronizzate con l'attivazione della finestra cornice di primo livello.
 
-| Parametri | Descrizione |
+| Parametri | Description |
 |-|-|
 |wParam|Uno dei valori seguenti:<br /><br /> FS_SHOW<br /><br /> FS_HIDE<br /><br /> FS_ACTIVATE<br /><br /> FS_DEACTIVATE<br /><br /> FS_ENABLEFS_DISABLE<br /><br /> FS_SYNCACTIVE|
 |lParam|Non usato (0)|
@@ -197,7 +198,7 @@ SendDlgItemMessage(<Control ID>, <Message #>, 0, &<Data>);
 
 Si tratta di un formato molto generale che consente tutti i messaggi di Windows e il contenuto dei dati. L'editor di risorse Visual C++ e MFC supporta solo un subset limitato di messaggi di Windows: CB_ADDSTRING per l'elenco iniziale-scelte per le caselle combinate (i dati sono una stringa di testo).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
 [Note tecniche per categoria](../mfc/technical-notes-by-category.md)

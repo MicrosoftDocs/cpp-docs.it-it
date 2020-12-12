@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/OI (genera funzioni intrinseche)
 title: /Oi (Genera funzioni intrinseche)
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - -Oi compiler option [C++]
 - generate intrinsic functions compiler option [C++]
 ms.assetid: fa4a3bf6-0ed8-481b-91c0-add7636132b4
-ms.openlocfilehash: f3afedade6f99129c21069e5117daa4ceb616cc2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc08ff495391092115197fe70e8c3673b77f32e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320344"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214279"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (Genera funzioni intrinseche)
 
-Sostituisce alcune chiamate di funzione con form intrinseci o speciali della funzione che consentono all'applicazione eseguite più velocemente.
+Sostituisce alcune chiamate di funzione con forme intrinseche o particolari della funzione che consentono un'esecuzione più veloce dell'applicazione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -29,41 +30,41 @@ Sostituisce alcune chiamate di funzione con form intrinseci o speciali della fun
 /Oi[-]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-I programmi che usano funzioni intrinseche sono più veloci perché non hanno il sovraccarico delle chiamate di funzione, ma potrebbero essere più grandi a causa del codice aggiuntivo creato.
+I programmi che usano funzioni intrinseche sono più veloci perché non hanno il sovraccarico delle chiamate di funzione, ma possono essere più grandi a causa del codice aggiuntivo creato.
 
-Visualizzare [intrinseco](../../preprocessor/intrinsic.md) per altre informazioni su quali funzioni hanno formati intrinseci.
+Per ulteriori informazioni sulle funzioni con form intrinseci, vedere [intrinseco](../../preprocessor/intrinsic.md) .
 
-**/Oi** è solo una richiesta al compilatore di sostituire alcune chiamate di funzione con le funzioni intrinseche; il compilatore può chiamare la funzione (e non sostituire la chiamata di funzione con una funzione intrinseca) se si ottengono prestazioni migliori.
+**/OI** è solo una richiesta al compilatore di sostituire alcune chiamate di funzione con gli intrinseci. il compilatore può chiamare la funzione (e non sostituire la chiamata di funzione con un intrinseco) se ciò comporterà prestazioni migliori.
 
-**x86 Specific**
+**Sezione specifico x86**
 
-Le funzioni a virgola mobile intrinseche non esegue alcun controllo speciali su valori di input e quindi funzionano in intervalli di input limitati e hanno condizioni limite le routine di libreria con lo stesso nome e la gestione delle eccezioni diverse. Usando i formati intrinseci reali implica la perdita di gestione delle eccezioni IEEE e dei `_matherr` e `errno` funzionalità; quest'ultimo comporta la perdita della conformità ANSI. Tuttavia, intrinseci possono velocizzare notevolmente la virgola mobile cospicuo della virgola programmi e per molti programmi, i problemi di conformità sono di scarso valore pratico.
+Le funzioni intrinseche a virgola mobile non eseguono controlli speciali sui valori di input, quindi funzionano in intervalli di input limitati e hanno diverse condizioni di gestione delle eccezioni e di limite rispetto alle routine di libreria con lo stesso nome. L'utilizzo dei form intrinseci reali implica la perdita della gestione delle eccezioni IEEE e la perdita delle `_matherr` `errno` funzionalità e. il secondo implica la perdita della conformità ANSI. Tuttavia, i moduli intrinseci possono velocizzare notevolmente i programmi a elevato utilizzo a virgola mobile e, per molti programmi, i problemi di conformità sono poco pratici.
 
-È possibile usare la [Za](za-ze-disable-language-extensions.md) opzione del compilatore per eseguire l'override della generazione delle opzioni a virgola mobile intrinseche true. In tal caso le funzioni vengono generate come routine della libreria che passano gli argomenti direttamente al chip a virgola mobile anziché inserirli nello stack del programma.
+È possibile usare l'opzione del compilatore [za](za-ze-disable-language-extensions.md) per eseguire l'override della generazione di opzioni a virgola mobile intrinseche true. In tal caso le funzioni vengono generate come routine della libreria che passano gli argomenti direttamente al chip a virgola mobile anziché inserirli nello stack del programma.
 
-**FINE x86 specifico**
+**Specifica END x86**
 
-Utilizziamo inoltre [intrinseco](../../preprocessor/intrinsic.md) per creare le funzioni intrinseche, o [funzione (C/C++)](../../preprocessor/function-c-cpp.md) per forzare in modo esplicito una chiamata di funzione.
+È anche possibile usare [intrinsic](../../preprocessor/intrinsic.md) per creare funzioni intrinseche o funzioni [(C/C++)](../../preprocessor/function-c-cpp.md) per forzare in modo esplicito una chiamata di funzione.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
-1. Scegliere il **ottimizzazione** pagina delle proprietà.
+1. Fare clic sulla pagina delle proprietà **ottimizzazione** .
 
-1. Modificare il **Abilita funzioni intrinseche** proprietà.
+1. Modificare la proprietà **Abilita funzioni intrinseche** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableIntrinsicFunctions%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Opzioni /O (ottimizza codice)](o-options-optimize-code.md)<br/>
+[Opzioni/o (Ottimizza codice)](o-options-optimize-code.md)<br/>
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)<br/>
 [Intrinseci del compilatore](../../intrinsics/compiler-intrinsics.md)

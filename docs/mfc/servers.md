@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Server'
 title: Server
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,50 +11,50 @@ helpviewer_keywords:
 - OLE server applications [MFC], server types
 - server applications [MFC]
 ms.assetid: e45172e8-eae3-400a-8139-0fa009a42fdc
-ms.openlocfilehash: 7b1eb0df439bcfde3aa295f23a90291e865df3a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e9a9dd7cbb1ab237712b5ad0c84e3114a119ee3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307835"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97217302"
 ---
 # <a name="servers"></a>Server
 
-Un'applicazione server (o un componente applicazione) Crea OLE elementi (o i componenti) per l'utilizzo da applicazioni contenitore. Un'applicazione server di modifica visiva supporta anche la modifica visiva o attivazione sul posto. Un altro tipo di server OLE è un' [server di automazione](../mfc/automation-servers.md). Alcune applicazioni server supportano solo la creazione di elementi incorporati; altri supportano la creazione di elementi collegati e incorporati. Alcuni supportano il collegamento solo, sebbene sia raro. Tutte le applicazioni server devono supportare l'attivazione per le applicazioni contenitore quando l'utente desidera modificare un elemento. Un'applicazione può essere sia un contenitore e un server. In altre parole, possono incorporare i dati all'interno dei documenti e creare i dati che possono essere incorporati come elementi in documenti di altre applicazioni.
+Un'applicazione server (o applicazione componente) crea elementi o componenti OLE per l'uso da parte delle applicazioni contenitore. Un'applicazione server di modifica visiva supporta anche la modifica visiva o l'attivazione sul posto. Un altro tipo di server OLE è un [server di automazione](../mfc/automation-servers.md). Alcune applicazioni server supportano solo la creazione di elementi incorporati; altri supportano la creazione di elementi incorporati e collegati. Alcuni supportano solo il collegamento, sebbene questo sia raro. Tutte le applicazioni server devono supportare l'attivazione da parte di applicazioni contenitore quando l'utente desidera modificare un elemento. Un'applicazione può essere sia un contenitore che un server. In altre parole, può incorporare i dati nei documenti e creare dati che possono essere incorporati come elementi nei documenti di altre applicazioni.
 
-Un server ridotto è un tipo speciale di applicazione server che può essere avviata unicamente da un contenitore. Draw Microsoft e Microsoft Graph sono esempi di server ridotti. Un server ridotto i documenti non vengono archiviati come file su disco. Al contrario, ai documenti da legge e scrive gli elementi nei documenti che appartengono a contenitori. Di conseguenza, un server ridotto supporta solo l'incorporamento, non il collegamento.
+Un miniserver è un tipo speciale di applicazione server che può essere avviato solo da un contenitore. Microsoft disegni e Microsoft Graph sono esempi di miniservers. Un miniserver non archivia i documenti come file su disco. Ma legge i documenti da e li scrive negli elementi dei documenti appartenenti ai contenitori. Di conseguenza, un miniserver supporta solo l'incorporamento e non il collegamento.
 
-Un server completo può essere eseguito come un'applicazione autonoma o avviato da un'applicazione contenitore. Un server completo possa archiviare i documenti come file su disco. Può supportare l'incorporamento, solo l'incorporamento e di collegamento o solo il collegamento. L'utente di un'applicazione contenitore può creare un elemento incorporato scegliendo il comando Taglia o copia nel server e il comando Incolla nel contenitore. Scegliendo il comando copia nel server e il comando Incolla collegamento nel contenitore viene creato un elemento collegato. In alternativa, l'utente può creare un elemento incorporato o collegato utilizzando la finestra di dialogo Inserisci oggetto.
+Un server completo può essere eseguito come applicazione autonoma o avviato da un'applicazione contenitore. Un server completo può archiviare i documenti come file su disco. Può supportare solo l'incorporamento, l'incorporamento e il collegamento o solo il collegamento. L'utente di un'applicazione contenitore può creare un elemento incorporato scegliendo il comando taglia o copia nel server e il comando Incolla nel contenitore. Viene creato un elemento collegato scegliendo il comando Copy nel server e il comando Incolla collegamento nel contenitore. In alternativa, l'utente può creare un elemento incorporato o collegato utilizzando la finestra di dialogo Inserisci oggetto.
 
-La tabella seguente riepiloga le caratteristiche dei diversi tipi di server:
+Nella tabella seguente sono riepilogate le caratteristiche dei diversi tipi di server:
 
 ### <a name="server-characteristics"></a>Caratteristiche del server
 
-|Tipo di server|Supporta più istanze|Elementi per ogni documento|Documenti per ogni istanza|
+|Tipo di server|Supporta più istanze|Elementi per documento|Documenti per istanza|
 |--------------------|---------------------------------|------------------------|----------------------------|
-|Miniserver|Yes|1|1|
-|Completo del server SDI|Yes|1 (se il collegamento è supportato, 1 o più)|1|
-|Server completo MDI|No (non necessaria)|1 (se il collegamento è supportato, 1 o più)|0 o maggiore di|
+|Miniserver|Sì|1|1|
+|Server SDI completo|Sì|1 (se il collegamento è supportato, 1 o più)|1|
+|Server MDI completo|No (non obbligatorio)|1 (se il collegamento è supportato, 1 o più)|0 o più|
 
-Un'applicazione server deve supportare più contenitori contemporaneamente, nel caso in cui verrà usato più di un contenitore per modificare un elemento incorporato o collegato. Se il server è un'applicazione SDI (o un server ridotto con un'interfaccia della finestra di dialogo), più istanze del server devono essere in grado di eseguire contemporaneamente. In questo modo un'istanza separata dell'applicazione per gestire ogni richiesta di contenitore.
+Un'applicazione server deve supportare più contenitori contemporaneamente, nel caso in cui venga utilizzato più di un contenitore per modificare un elemento incorporato o collegato. Se il server è un'applicazione SDI (o un miniserver con un'interfaccia della finestra di dialogo), più istanze del server devono essere in grado di essere eseguite simultaneamente. In questo modo un'istanza separata dell'applicazione può gestire ogni richiesta del contenitore.
 
-Se il server è un'applicazione MDI, è possibile creare una nuova finestra figlio MDI ogni volta che un contenitore deve modificare un elemento. In questo modo, una singola istanza dell'applicazione può supportare più contenitori.
+Se il server è un'applicazione MDI, può creare una nuova finestra figlio MDI ogni volta che un contenitore deve modificare un elemento. In questo modo, una singola istanza dell'applicazione può supportare più contenitori.
 
-L'applicazione server deve indicare DLL del sistema OL cosa fare se un'istanza del server è già in esecuzione quando un altro contenitore richiede i servizi: se devono avviare una nuova istanza del server o di indirizzare le richieste di tutti i contenitori a un'istanza del Server.
+L'applicazione server deve indicare alle DLL di sistema OLE cosa fare se un'istanza del server è già in esecuzione quando un altro contenitore richiede i servizi: se deve avviare una nuova istanza del server o indirizzare tutte le richieste dei contenitori a un'istanza del server.
 
-Per altre informazioni sui server, vedere:
+Per ulteriori informazioni sui server, vedere:
 
 - [Server: implementazione di un server](../mfc/servers-implementing-a-server.md)
 
 - [Server: implementazione di documenti server](../mfc/servers-implementing-server-documents.md)
 
-- [Server: implementazione di finestre cornice sul posto](../mfc/servers-implementing-in-place-frame-windows.md)
+- [Server: implementazione di finestre cornice In-Place](../mfc/servers-implementing-in-place-frame-windows.md)
 
 - [Server: elementi server](../mfc/servers-server-items.md)
 
-- [Server: problemi dell'interfaccia utente](../mfc/servers-user-interface-issues.md)
+- [Server: problemi di User-Interface](../mfc/servers-user-interface-issues.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [Contenitori](../mfc/containers.md)<br/>

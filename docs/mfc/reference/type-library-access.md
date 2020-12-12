@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: accesso alla libreria dei tipi'
 title: Accesso alla libreria dei tipi
 ms.date: 11/04/2016
 helpviewer_keywords:
 - type libraries [MFC], accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
-ms.openlocfilehash: 55d6a56f566416bb25f3ee3ae508c86f17f0df99
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c855f82914e540ab13f4bc20581c041633b5bc0d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840453"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218654"
 ---
 # <a name="type-library-access"></a>Accesso alla libreria dei tipi
 
@@ -19,7 +20,7 @@ Le macro seguenti consentono a un controllo OLE di fornire accesso alla propria 
 
 ### <a name="type-library-access"></a>Accesso alla libreria dei tipi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[DECLARE_OLETYPELIB](#declare_oletypelib)|Dichiara una `GetTypeLib` funzione membro di un controllo OLE (deve essere utilizzato nella dichiarazione di classe).|
 |[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Implementa una `GetTypeLib` funzione membro di un controllo OLE (deve essere utilizzata nell'implementazione della classe).|
@@ -37,7 +38,7 @@ DECLARE_OLETYPELIB(class_name)
 *class_name*<br/>
 Nome della classe del controllo correlato alla libreria dei tipi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro nel file di intestazione della classe del controllo.
 
@@ -67,7 +68,7 @@ Numero di versione principale della libreria dei tipi.
 *wVerMinor*<br/>
 Numero della versione secondaria della libreria dei tipi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa macro deve essere visualizzata nel file di implementazione per qualsiasi classe del controllo che usa la macro DECLARE_OLETYPELIB.
 
@@ -75,6 +76,6 @@ Questa macro deve essere visualizzata nel file di implementazione per qualsiasi 
 
 **Intestazione:** afxdisp.h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)

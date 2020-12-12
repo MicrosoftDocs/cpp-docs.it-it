@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Server: implementazione di finestre cornice In-Place'
 title: 'Server: implementazione di finestre cornice sul posto'
 ms.date: 09/09/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - frame windows [MFC], in-place
 - in-place frame windows
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
-ms.openlocfilehash: a082afe141a21e4175886f13a26043694ac0d426
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 859a31bf107162aea6adb4d40ccf7b7b87f485b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230467"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97217354"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Server: implementazione di finestre cornice sul posto
 
@@ -49,7 +50,7 @@ L'ID per la bitmap della barra degli strumenti deve corrispondere a quello delle
 
 Per ulteriori informazioni, vedere [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md), [COleResizeBar](../mfc/reference/coleresizebar-class.md)e [CDocTemplate:: SetServerInfo](../mfc/reference/cdoctemplate-class.md#setserverinfo) in riferimenti alla *libreria di classi*.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Server](../mfc/servers.md)<br/>
 [Server: implementazione di un server](../mfc/servers-implementing-a-server.md)<br/>

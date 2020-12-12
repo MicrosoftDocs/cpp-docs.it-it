@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __p__commode'
 title: __p__commode
 ms.date: 4/2/2020
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - __p__commode
 ms.assetid: 4380acb8-e3e4-409c-a60f-6205ac5189ce
-ms.openlocfilehash: 057a0146aed87a50fc2e8c444b97a8b7b51eada1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f3f779196b650d05bb16c0da652d47946fc2a10d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919506"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213624"
 ---
 # <a name="__p__commode"></a>__p__commode
 
@@ -45,7 +46,7 @@ int * __p__commode(
 
 Puntatore alla variabile globale `_commode`.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione `__p__commode` è solo per uso interno e non deve essere chiamata dal codice utente.
 

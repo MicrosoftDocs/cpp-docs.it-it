@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: cast del tipo di oggetti classe MFC'
 title: Cast di tipo degli oggetti classe MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - casting types [MFC]
 - macros [MFC], casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
-ms.openlocfilehash: e3702ced83021e42ac6bf71a78efc51fa07b8be9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bec49afc0050aa32c6e5436e5efca9b0dab30709
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840492"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218670"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>Cast di tipo degli oggetti classe MFC
 
@@ -23,7 +24,7 @@ Nella tabella seguente sono elencate le macro di cast del tipo MFC.
 
 ### <a name="macros-that-cast-pointers-to-mfc-class-objects"></a>Macro che consentono di eseguire il cast di puntatori agli oggetti della classe MFC
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[DYNAMIC_DOWNCAST](#dynamic_downcast)|Esegue il cast di un puntatore a un puntatore a un oggetto classe durante il controllo per verificare se il cast è valido.|
 |[STATIC_DOWNCAST](#static_downcast)|Esegue il cast di un puntatore a un oggetto da una classe a un puntatore di un tipo correlato. In una build di debug, genera un'ASSERZIONe se l'oggetto non è un tipo di destinazione.|
@@ -44,7 +45,7 @@ Nome di una classe.
 *puntatore*<br/>
 Puntatore di cui eseguire il cast a un puntatore a un oggetto di tipo *classe*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La macro eseguirà il cast del parametro del *puntatore* a un puntatore a un oggetto del tipo del parametro della *classe* .
 
@@ -66,7 +67,7 @@ Nome della classe di cui eseguire il cast.
 *pObject*<br/>
 Puntatore di cui eseguire il cast su un puntatore a un oggetto *class_name* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 *pObject* deve essere null o puntare a un oggetto di una classe derivata direttamente, o indirettamente, da *class_name*. Nelle compilazioni dell'applicazione con il simbolo del preprocessore _DEBUG definito, la macro asserirà se *pObject* non è null o se punta a un oggetto che non è un "tipo" della classe specificata nel parametro *Class_name* (vedere [CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof)). Nelle compilazioni non **_DEBUG** la macro esegue il cast senza alcun controllo del tipo.
 
@@ -78,6 +79,6 @@ Ad esempio, è possibile eseguire il cast di un puntatore a `CMyDoc` , denominat
 
 Se `pMyDoc` non punta a un oggetto derivato direttamente o indirettamente da `CDocument` , la macro asserterà.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)
