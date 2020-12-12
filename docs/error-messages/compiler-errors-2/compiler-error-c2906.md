@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2906'
 title: Errore del compilatore C2906
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C2906
 ms.assetid: 30f652f1-6af6-4a2f-a69e-a1a4876cc8c6
-ms.openlocfilehash: bf21c4f14948d56fe781226e5aaf1b479059cb55
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 49a7e5736c1f5e1869b04e79f1c979c3620b58ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74748697"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97270667"
 ---
 # <a name="compiler-error-c2906"></a>Errore del compilatore C2906
 
-' specializzazione ': la specializzazione esplicita richiede ' template < >'
+' specializzazione ': la specializzazione esplicita richiede ' template <>'
 
 È necessario utilizzare la nuova sintassi per la specializzazione esplicita di modelli.
 

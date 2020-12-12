@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: implementare un'interfaccia"
 title: Implementare un'interfaccia
 ms.date: 11/12/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - interfaces, implementing
 - implement interface wizard [C++]
 ms.assetid: 72f8731b-7e36-45db-8b10-7ef211a773cd
-ms.openlocfilehash: bb1db35e269ef884f3ebdf4564d8f0a3e579db50
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 202471577ec72f4cc28fa5cdceb3566d60e04653
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509520"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313216"
 ---
 # <a name="implement-an-interface"></a>Implementare un'interfaccia
 
@@ -50,16 +51,16 @@ Se si aggiunge una nuova interfaccia, è necessario aggiungerla manualmente al f
 
 Questa procedura guidata consente di implementare un'interfaccia per un oggetto COM. Nelle librerie COM disponibili con Visual Studio e Windows sono incluse implementazioni di diverse interfacce. L'implementazione dell'interfaccia è associata a un oggetto quando viene creata un'istanza di tale oggetto. L'implementazione rende disponibili anche i servizi offerti dall'oggetto.
 
-Per dettagli su interfacce e implementazioni, vedere [Interfaces and Interface Implementations](/windows/win32/com/interfaces-and-interface-implementations) (Interfacce e implementazioni di interfacce) in Windows SDK.
+Per informazioni sulle interfacce e sulle implementazioni, vedere [interfacce e implementazioni di interfaccia](/windows/win32/com/interfaces-and-interface-implementations) nel Windows SDK.
 
 - **Implementa interfaccia da**
 
   Specifica il percorso della libreria dei tipi, da cui viene creata l'interfaccia.
 
-  |Opzione|DESCRIZIONE|
+  |Opzione|Description|
   |------------|-----------------|
   |**Progetto**|La libreria dei tipi fa parte del progetto.|
-  |**Registry**|La libreria dei tipi è registrata nel sistema. Le librerie dei tipi registrate sono elencate in **Available type libraries** (Librerie dei tipi disponibili).|
+  |**Registro**|La libreria dei tipi è registrata nel sistema. Le librerie dei tipi registrate sono elencate in **Available type libraries** (Librerie dei tipi disponibili).|
   |**File**|La libreria dei tipi non è necessariamente registrata nel sistema, ma è archiviata in un file. Specificare il percorso del file in **Percorso**.|
 
 - **Available type libraries** (Librerie dei tipi disponibili)
@@ -77,7 +78,7 @@ Per dettagli su interfacce e implementazioni, vedere [Interfaces and Interface I
   > [!NOTE]
   > Le interfacce che hanno lo stesso nome di quelle già implementate dall'oggetto selezionato non vengono visualizzate nella casella **Interfacce**.
 
-  |Pulsante Trasferimento|DESCRIZIONE|
+  |Pulsante di trasferimento|Description|
   |---------------------|-----------------|
   |**>**|Aggiunge all'elenco **Implementa interfacce** il nome dell'interfaccia attualmente selezionata nell'elenco **Interfacce**.|
   |**>>**|Aggiunge all'elenco **Implementa interfacce** tutti i nomi delle interfacce disponibili nell'elenco **Interfacce**.|

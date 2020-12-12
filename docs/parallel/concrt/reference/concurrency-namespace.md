@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: spazio dei nomi Concurrency'
 title: Spazio dei nomi concurrency
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: f710ead679484c41b006566a711a03ba153201ec
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c17e058c6666f944ea9f34b90995e9b9d343b40e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230376"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335807"
 ---
 # <a name="concurrency-namespace"></a>Spazio dei nomi concurrency
 
@@ -37,11 +38,11 @@ Lo spazio dei nomi `Concurrency` fornisce classi e funzioni che consentono l'acc
 namespace concurrency;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`runtime_object_identity`|Ogni istanza del messaggio ha un'identità che lo segue quando viene duplicato e viene passato tra i componenti della messaggistica. Non può corrispondere all'indirizzo dell'oggetto del messaggio.|
 |`task_status`|Un tipo che rappresenta lo stato terminale di un'attività. I valori validi sono `completed` e `canceled`.|
@@ -50,7 +51,7 @@ namespace concurrency;
 
 ### <a name="classes"></a>Classi
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Classe affinity_partitioner](affinity-partitioner-class.md)|La classe `affinity_partitioner` è simile alla classe `static_partitioner`, ma migliora l'affinità della cache offrendo la scelta di mappare sottointervalli ai thread di lavoro. Può migliorare notevolmente le prestazioni quando un ciclo viene eseguito di nuovo sullo stesso insieme di dati e i dati si adattano nella cache. Si noti che lo stesso oggetto `affinity_partitioner` deve essere usato con le iterazioni successive di un ciclo parallelo che viene eseguito su un particolare set di dati, per trarre vantaggio dalla località dei dati.|
 |[Classe Agent](agent-class.md)|Classe destinata a essere usata come classe di base per tutti gli agenti indipendenti. Consente di nascondere lo stato ad altri agenti e di interagire attraverso il passaggio di messaggi.|
@@ -133,7 +134,7 @@ namespace concurrency;
 
 ### <a name="structures"></a>Strutture
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Struttura DispatchState](dispatchstate-structure.md)|La struttura `DispatchState` è usata per trasferire lo stato al metodo `IExecutionContext::Dispatch`. Descrive le circostanze in cui il metodo `Dispatch` viene richiamato su un'interfaccia `IExecutionContext`.|
 |[Struttura IExecutionContext](iexecutioncontext-structure.md)|Un'interfaccia a un contesto di esecuzione che può essere in esecuzione su un processore virtuale specificato e il cui contesto può essere cambiato cooperativamente.|
@@ -154,7 +155,7 @@ namespace concurrency;
 
 ### <a name="enumerations"></a>Enumerazioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[agent_status](concurrency-namespace-enums.md#agent_status)|Stati validi per un `agent`.|
 |[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|Tipi di eventi che possono essere tracciati mediante la funzionalità di tracciatura offerta dalla libreria di agenti.|
@@ -173,7 +174,7 @@ namespace concurrency;
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Alloc (funzione)](concurrency-namespace-functions.md#alloc)|Assegna un blocco di memoria dalle dimensioni specificate dal suballocatore di cache del runtime di concorrenza.|
 |[Funzione asend](concurrency-namespace-functions.md#asend)|Di overload. Un'operazione di invio asincrona che pianifica un'attività per propagare i dati nel blocco di destinazione.|
@@ -220,7 +221,7 @@ namespace concurrency;
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[operatore! =](concurrency-namespace-operators.md#operator_neq)|Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore non è uguale all'oggetto `concurrent_vector` sul lato destro.|
 |[operatore&&](concurrency-namespace-operators.md#operator_amp_amp)|Di overload. Crea un'attività che verrà completata correttamente quando entrambe le attività fornite come argomenti vengono completate correttamente.|
@@ -233,7 +234,7 @@ namespace concurrency;
 
 ### <a name="constants"></a>Costanti
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[AgentEventGuid](concurrency-namespace-constants1.md#agenteventguid)|Un GUID di categoria ({B9B5B78C-0713-4898-A21A-C67949DCED07}) che descrive gli eventi ETW generati dalla libreria di agenti nel runtime di concorrenza.|
 |[ChoreEventGuid](concurrency-namespace-constants1.md#choreeventguid)|Un GUID di categoria che descrive eventi ETW generati dal runtime di concorrenza che sono direttamente correlati ad attività di routine o attività.|
@@ -258,6 +259,6 @@ namespace concurrency;
 
 **Intestazione:** Agents. h, concrt. h, concrtrm. h, concurrent_priority_queue. h, concurrent_queue. h, concurrent_unordered_map. h, concurrent_unordered_set. h, concurrent_vector. h, internal_concurrent_hash. h, internal_split_ordered_list. h, ppl. h, pplcancellation_token. h, pplconcrt. h, pplinterface. h, ppltasks. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento](reference-concurrency-runtime.md)

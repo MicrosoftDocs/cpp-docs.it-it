@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: interpretazione dell'input utente tramite una vista"
 title: Interpretazione dell'input utente attraverso una visualizzazione
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - CView class [MFC], interpreting user input
 - user input [MFC], interpreting through view class [MFC]
 ms.assetid: f0302a70-661f-4781-8fe7-78f082bef2a5
-ms.openlocfilehash: 43fb903fa169233ce532e41ecdf02c23ab6037c8
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f3442a13bc60b7424840e23673806c1e5120c4ad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621457"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335840"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>Interpretazione dell'input utente attraverso una visualizzazione
 
@@ -39,6 +40,6 @@ Ad esempio, è possibile che l'applicazione debba implementare il disegno dirett
 
 La visualizzazione potrebbe anche gestire alcuni comandi di menu, ad esempio quelli del menu modifica per tagliare, copiare, incollare o eliminare dati selezionati usando gli Appunti. Tale gestore chiamerebbe alcune delle funzioni membro relative agli Appunti della classe `CWnd` per trasferire un elemento di dati selezionato da o negli Appunti.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Utilizzo delle visualizzazioni](using-views.md)
+[Uso delle visualizzazioni](using-views.md)

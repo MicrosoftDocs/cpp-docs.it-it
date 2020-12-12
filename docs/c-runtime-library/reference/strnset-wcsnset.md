@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: strnset, wcsnset'
 title: strnset, wcsnset
 ms.date: 12/16/2019
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - strnset function
 - wcsnset function
 ms.assetid: e7868ac9-dc34-4606-bd3c-0fb2e7c51631
-ms.openlocfilehash: c1f00410dc15a329d6381af893eab44bb938f248
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a38241e52330786d15fa1ff8bb0172c7aff0e5bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301093"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341412"
 ---
 # <a name="strnset-wcsnset"></a>strnset, wcsnset
 

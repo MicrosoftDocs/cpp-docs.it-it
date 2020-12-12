@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe location'
 title: Classe location
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-ms.openlocfilehash: 848be3131e23ff53f2dec16364b132ee7c218195
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ae6ce0ac58d504f1fb99f5c38db04bb402dc31c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87182694"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335791"
 ---
 # <a name="location-class"></a>Classe location
 
@@ -27,25 +28,25 @@ Un'astrazione di una posizione fisica sull'hardware.
 class location;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[location](#ctor)|Di overload. Costruisce un oggetto `location`.|
 |[~ distruttore località](#dtor)|Elimina un oggetto `location` .|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[corrente](#current)|Restituisce un oggetto `location` che rappresenta il punto più specifico in cui il thread chiamante è in esecuzione.|
 |[from_numa_node](#from_numa_node)|Restituisce un oggetto `location` che rappresenta un nodo NUMA specifico.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[operatore! =](#operator_neq)|Determina se due oggetti `location` rappresentano posizioni diverse.|
 |[operatore =](#operator_eq)|Assegna il contenuto di un oggetto `location` differente a questo oggetto.|
@@ -61,7 +62,7 @@ class location;
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="location"></a><a name="dtor"></a>~ località
+## <a name="location"></a><a name="dtor"></a> ~ località
 
 Elimina un oggetto `location` .
 
@@ -69,7 +70,7 @@ Elimina un oggetto `location` .
 ~location();
 ```
 
-## <a name="current"></a><a name="current"></a>corrente
+## <a name="current"></a><a name="current"></a> corrente
 
 Restituisce un oggetto `location` che rappresenta il punto più specifico in cui il thread chiamante è in esecuzione.
 
@@ -81,7 +82,7 @@ static location __cdecl current();
 
 Posizione che rappresenta il punto più specifico in cui il thread chiamante è in esecuzione.
 
-## <a name="from_numa_node"></a><a name="from_numa_node"></a>from_numa_node
+## <a name="from_numa_node"></a><a name="from_numa_node"></a> from_numa_node
 
 Restituisce un oggetto `location` che rappresenta un nodo NUMA specifico.
 
@@ -98,7 +99,7 @@ Numero del nodo NUMA per cui costruire una posizione.
 
 Posizione che rappresenta il nodo NUMA specificato dal parametro `_NumaNodeNumber`.
 
-## <a name="location"></a><a name="ctor"></a>percorso
+## <a name="location"></a><a name="ctor"></a> percorso
 
 Costruisce un oggetto `location`.
 
@@ -128,11 +129,11 @@ location(
 *_PBinding*<br/>
 Opzionale Puntatore di associazione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Una posizione costruita predefinita rappresenta il sistema nel suo complesso.
 
-## <a name="operator"></a><a name="operator_neq"></a>operatore! =
+## <a name="operator"></a><a name="operator_neq"></a> operatore! =
 
 Determina se due oggetti `location` rappresentano posizioni diverse.
 
@@ -149,7 +150,7 @@ Operando `location` .
 
 **`true`** Se le due posizioni sono diverse; **`false`** in caso contrario,.
 
-## <a name="operator"></a><a name="operator_eq"></a>operatore =
+## <a name="operator"></a><a name="operator_eq"></a> operatore =
 
 Assegna il contenuto di un oggetto `location` differente a questo oggetto.
 
@@ -164,7 +165,7 @@ Oggetto `location` di origine.
 
 ### <a name="return-value"></a>Valore restituito
 
-## <a name="operator"></a><a name="operator_eq_eq"></a>operatore = =
+## <a name="operator"></a><a name="operator_eq_eq"></a> operatore = =
 
 Determina se due `location` oggetti rappresentano la stessa posizione.
 
@@ -181,6 +182,6 @@ Operando `location` .
 
 **`true`** Se le due posizioni sono identiche e **`false`** in caso contrario.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Concurrency](concurrency-namespace.md)

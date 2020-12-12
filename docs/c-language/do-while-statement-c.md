@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: istruzione do-while (C)'
 title: Istruzione do-while (C)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - do-while keyword [C]
 ms.assetid: f2ac20a6-10c7-4a08-b5e3-c3b3639dbeaf
-ms.openlocfilehash: 4a10b9df9f7276eb8e241d76726bca26f2c0cb75
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d80bb2aea047d0dc9cc2b7be417a7a44ced9050
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218871"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246994"
 ---
 # <a name="do-while-statement-c"></a>Istruzione do-while (C)
 
@@ -43,6 +44,6 @@ do
 
 In questa istruzione *do-while*, le due istruzioni `y = f( x );` e `x--;` vengono eseguite, indipendentemente dal valore iniziale di `x`. Quindi `x > 0` viene valutato. Se `x` è maggiore di 0, il corpo dell'istruzione viene eseguito di nuovo e `x > 0` viene rivalutato. Il corpo dell'istruzione viene eseguito ripetutamente finché `x` rimane maggiore di 0. L'esecuzione dell'istruzione *do-while* termina quando `x` diventa 0 o negativo. Il corpo del ciclo viene eseguito almeno una volta.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Istruzione do-while (C++)](../cpp/do-while-statement-cpp.md)

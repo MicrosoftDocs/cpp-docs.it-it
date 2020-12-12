@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classi finestra derivate'
 title: Classi di finestre derivate
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - derived classes [MFC], window classes
 - window classes [MFC], derived
 ms.assetid: 6f7e437e-fbde-4a06-bfab-72d9dbf05292
-ms.openlocfilehash: c84284b765e740fa0a13972e9902e7737e15bbab
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9219267b5351f972257d9770f8e8b38039b85788
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623167"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335905"
 ---
 # <a name="derived-window-classes"></a>Classi di finestre derivate
 
@@ -56,12 +57,12 @@ Finestre figlio che contengono i controlli. Gli esempi includono barre degli str
 
 Fare riferimento al [grafico delle gerarchie MFC](hierarchy-chart.md) in *riferimenti a MFC*. Le visualizzazioni sono descritte nell' [architettura documento/visualizzazione](document-view-architecture.md). Le finestre di dialogo sono descritte nelle [finestre di dialogo](dialog-boxes.md).
 
-## <a name="creating-your-own-special-purpose-window-classes"></a>Creazione di classi di finestra per scopi specifici
+## <a name="creating-your-own-special-purpose-window-classes"></a>Creazione di classi di finestra Special-Purpose personalizzate
 
 Oltre alle classi della finestra fornite dalla libreria di classi, potrebbe essere necessario disporre di finestre figlio per scopi specifici. Per creare una finestra di questo tipo, creare una classe derivata da [CWnd](reference/cwnd-class.md)e impostarla come finestra figlio di un frame o di una vista. Tenere presente che il Framework gestisce l'ambito dell'area client di una finestra cornice del documento. La maggior parte dell'area client viene gestita da una vista, ma altre finestre, ad esempio le barre di controllo o le finestre personalizzate, possono condividere lo spazio con la visualizzazione. Potrebbe essere necessario interagire con i meccanismi nelle classi [CView](reference/cview-class.md) e [CControlBar](reference/ccontrolbar-class.md) per posizionare le finestre figlio nell'area client di una finestra cornice.
 
 La [creazione di finestre](creating-windows.md) illustra la creazione di oggetti finestra e le finestre gestite.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Oggetti finestra](window-objects.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _RTC_SetErrorFuncW'
 title: _RTC_SetErrorFuncW
 ms.date: 11/04/2016
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - _RTC_SetErrorFuncW function
 - RTC_error_fnW typedef
 ms.assetid: b3e0d71f-1bd3-4c37-9ede-2f638eb3c81a
-ms.openlocfilehash: 0d45e5c857e917ca23b62482c64a06314565226e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e1f92b791f986c7881f0c65a22c24432c03160e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948971"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341425"
 ---
 # <a name="_rtc_seterrorfuncw"></a>_RTC_SetErrorFuncW
 
@@ -56,7 +57,7 @@ L'indirizzo della funzione che gestirà i controlli degli errori di runtime.
 
 Funzione di errore definita in precedenza; o **null** se non esiste una funzione definita in precedenza.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 In nuovo codice usare solo **_RTC_SetErrorFuncW**. **_RTC_SetErrorFunc** è incluso nella libreria solo per la compatibilità con le versioni precedenti.
 
@@ -64,7 +65,7 @@ Il callback **_RTC_SetErrorFuncW** si applica solo al componente a cui è stato 
 
 Verificare che l'indirizzo passato a **_RTC_SetErrorFuncW** sia quello di una funzione di gestione degli errori valida.
 
-Se a un errore è stato assegnato un tipo di-1 tramite [_RTC_SetErrorType](rtc-seterrortype.md), la funzione di gestione degli errori non viene chiamata.
+Se a un errore è stato assegnato un tipo di-1 utilizzando [_RTC_SetErrorType](rtc-seterrortype.md), la funzione di gestione degli errori non viene chiamata.
 
 Prima di chiamare questa funzione, è necessario chiamare una delle funzioni di inizializzazione dei controlli degli errori di run-time. Per altre informazioni, vedere [Using Run-Time Checks Without the C Run-Time Library](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library).
 
@@ -88,7 +89,7 @@ Tipo di errore specificato da [RTC_SetErrorType](rtc-seterrortype.md).
 *filename*<br/>
 File di origine in cui si è verificato l'errore o Null se non sono disponibili informazioni di debug.
 
-*linenumber*<br/>
+*LineNumber*<br/>
 Riga in *filename* in cui si è verificato l'errore o 0 se non sono disponibili informazioni di debug.
 
 *moduleName*<br/>
@@ -111,7 +112,7 @@ Per altre informazioni, vedere [Compatibilità](../../c-runtime-library/compatib
 
 Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [_CrtDbgReport, _CrtDbgReportW](crtdbgreport-crtdbgreportw.md)<br/>
-[Controllo degli errori di runtime](../../c-runtime-library/run-time-error-checking.md)<br/>
+[Controllo degli errori di run-time](../../c-runtime-library/run-time-error-checking.md)<br/>

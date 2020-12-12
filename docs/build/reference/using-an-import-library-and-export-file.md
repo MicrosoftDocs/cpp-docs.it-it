@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso di una libreria di importazione e di un file di esportazione'
 title: Utilizzo di una libreria di importazione e di un file di esportazione
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,27 +7,27 @@ helpviewer_keywords:
 - import libraries, using
 - export files
 ms.assetid: 2634256a-8aa5-4495-8c9e-6cde10e4ed76
-ms.openlocfilehash: 030b792d4bbebecef9d9303238657a564a142ecf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f42a98ebe19cb32fb77964f26c37928776b5b30c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317783"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247020"
 ---
 # <a name="using-an-import-library-and-export-file"></a>Utilizzo di una libreria di importazione e di un file di esportazione
 
-Quando un programma (un file eseguibile o una DLL) consente di esportare in un altro programma che importa anche da, o se più di due programmi entrambe esportano e importare uno da altro, i comandi per collegare questi programmi devono adattarsi esportazioni circolari.
+Quando un programma (un file eseguibile o una DLL) viene esportato in un altro programma da cui importa anche o se più di due programmi si esportano e importano tra loro, i comandi per collegare questi programmi devono contenere esportazioni circolari.
 
-In una situazione senza esportazioni circolari, quando un programma che usa il collegamento Esporta da un altro programma, è necessario specificare la libreria di importazione per il programma di esportazione. La libreria di importazione per il programma di esportazione viene creata quando si collega il programma di esportazione. Pertanto, è necessario collegare il programma di esportazione prima del programma di importazione. Ad esempio, se DLL importazione da uno. dll, è necessario collegare uno. dll e ottenere la libreria di importazione lib. Successivamente, specificare lib durante il collegamento di due. dll. Quando il linker crea due. dll, crea anche la libreria di importazione, lib. Usare lib durante il collegamento di programmi che importare dalla DLL.
+In una situazione senza esportazioni circolari, quando si collega un programma che utilizza esportazioni da un altro programma, è necessario specificare la libreria di importazione per il programma di esportazione. La libreria di importazione per il programma di esportazione viene creata quando si collega il programma di esportazione. È pertanto necessario collegare il programma di esportazione prima del programma di importazione. Ad esempio, se TWO.dll importa da ONE.dll, è necessario innanzitutto collegare ONE.dll e ottenere la libreria di importazione ONE. lib. Quindi, si specifica una. lib durante il collegamento TWO.dll. Quando il linker crea TWO.dll, crea anche la relativa libreria di importazione, due. lib. Usare due. lib quando si collegano programmi che importano da TWO.dll.
 
-Tuttavia, in una situazione di esportazione circolare, non è possibile collegare tutti i programmi interdipendenti tramite le librerie di importazione da altri programmi. Nell'esempio illustrato in precedenza, se DLL esporta anche a uno. dll, la libreria di importazione per due. dll non esiste ancora quando uno. dll è collegata. Quando sono presenti esportazioni circolari, è necessario utilizzare LIB per creare una libreria di importazione ed esportazione di file per uno dei programmi.
+Tuttavia, in una situazione di esportazione circolare, non è possibile collegare tutti i programmi interdipendenti utilizzando le librerie di importazione degli altri programmi. Nell'esempio illustrato in precedenza, se TWO.dll esporta anche ONE.dll, la libreria di importazione per TWO.dll non esisterà ancora quando viene collegato ONE.dll. Quando sono presenti esportazioni circolari, è necessario utilizzare LIB per creare una libreria di importazione e un file di esportazione per uno dei programmi.
 
-Per iniziare, scegliere uno dei programmi in cui l'esecuzione di LIB. Nel comando LIB, elencare tutti gli oggetti e librerie per il programma e specificare l'opzione /DEF. Se il programma Usa un file def o /EXPORT specifiche, specificarli anche.
+Per iniziare, scegliere uno dei programmi su cui eseguire LIB. Nel comando LIB elencare tutti gli oggetti e le librerie per il programma e specificare/DEF. Se il programma usa un file con estensione def o/EXPORT, specificare anche questi dati.
 
-Dopo aver creato la libreria di importazione (lib) e il file di esportazione (EXP) per il programma, si usa la libreria di importazione quando si collegano di altro programma o programmi. COLLEGAMENTO Crea una libreria di importazione per ogni programma di esportazione compilato. Ad esempio, se si esegue LIB in oggetti e le esportazioni di DLL, è creare lib ed EXP. È ora possibile usare LIB quando collegherà; Questo passaggio Crea anche la libreria di importazione lib.
+Dopo aver creato la libreria di importazione (lib) e il file di esportazione (exp) per il programma, è possibile utilizzare la libreria di importazione per collegare gli altri programmi o programmi. COLLEGAMENTO crea una libreria di importazione per ogni programma di esportazione compilato. Se, ad esempio, si esegue LIB sugli oggetti e le esportazioni per ONE.dll, è possibile creare un. lib e un. exp. È ora possibile usare una. lib per il collegamento di TWO.dll; Questo passaggio crea anche la libreria di importazione TWO. lib.
 
-Infine, collegare il programma che è iniziato con. Il comando di collegamento, specificare gli oggetti e librerie per il programma, il file EXP LIB creato per il programma e la libreria di importazione o librerie per le esportazioni utilizzate dal programma. Per continuare l'esempio, il comando di collegamento per uno. dll contiene EXP e LIB, nonché gli oggetti e librerie che concorrono a uno. dll. Non si specifica il file con estensione def o /EXPORT specifiche nel comando collegamento. Queste informazioni non sono necessarie perché le definizioni delle esportazioni sono contenuti nel file EXP. Quando si collegano tramite un file. exp, collegamento non crea una libreria di importazione, perché si presuppone che ne è stato creato quando è stato creato il file EXP.
+Infine, collegare il programma avviato con. Nel comando collegamento specificare gli oggetti e le librerie per il programma, il file con estensione exp creato per il programma e la libreria di importazione o le librerie per le esportazioni utilizzate dal programma. Per continuare l'esempio, il comando di collegamento per ONE.dll contiene un. exp e due. lib, nonché gli oggetti e le librerie che entrano ONE.dll. Non specificare il file def o le specifiche/EXPORT nel comando di collegamento. Queste non sono necessarie perché le definizioni di esportazione sono contenute nel file con estensione EXP. Quando si esegue il collegamento utilizzando un file con estensione EXP, il collegamento non crea una libreria di importazione, perché presuppone che ne sia stata creata una al momento della creazione del file con estensione EXP.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso di librerie di importazione e file di esportazione](working-with-import-libraries-and-export-files.md)
+[Utilizzo di librerie di importazione ed esportazione di file](working-with-import-libraries-and-export-files.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: informazioni sulla funzione helper'
 title: Informazioni sulla funzione di supporto
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,50 +11,50 @@ helpviewer_keywords:
 - delayimp.h
 - helper functions
 ms.assetid: 6279c12c-d908-4967-b0b3-cabfc3e91d3d
-ms.openlocfilehash: 3ad193d0101507f43145c6af9f8e6200ab6fcdb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d47e392d78d6cf872af28b992885c57d34bddf0f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317666"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247098"
 ---
 # <a name="understanding-the-helper-function"></a>Informazioni sulla funzione di supporto
 
-La funzione di supporto per il caricamento ritardato supportato dal linker è ciò che effettivamente carica la DLL in fase di esecuzione. È possibile modificare la funzione helper per personalizzarne il comportamento scrivendo una funzione personalizzata e collegarla al programma anziché usare la funzione di supporto fornito in Delayimp. lib. Una funzione di supporto serve tutte le DLL a caricamento ritardato.
+La funzione di supporto per il caricamento ritardato supportato dal linker è quella che carica effettivamente la DLL in fase di esecuzione. È possibile modificare la funzione helper per personalizzarne il comportamento scrivendo una funzione personalizzata e collegarla al programma invece di usare la funzione helper fornita in Delayimp. lib. Una funzione helper serve tutte le dll a caricamento ritardato.
 
-È possibile fornire la propria versione della funzione di supporto se si desidera eseguire elaborazioni specifiche in base ai nomi delle DLL o importazioni.
+È possibile fornire la propria versione della funzione di supporto se si desidera eseguire un'elaborazione specifica in base ai nomi della DLL o alle importazioni.
 
-La funzione di supporto esegue le azioni seguenti:
+La funzione helper esegue le azioni seguenti:
 
 - Controlla l'handle archiviato nella libreria per verificare se è già stato caricato
 
-- Le chiamate **LoadLibrary** tentativi durante il caricamento della DLL
+- Chiama **LoadLibrary** per tentare il caricamento della dll
 
-- Le chiamate **GetProcAddress** per tentare di ottenere l'indirizzo della routine.
+- Chiama **GetProcAddress** per tentare di ottenere l'indirizzo della routine
 
-- Restituisce all'importazione ritardo caricare thunk per chiamare il punto di ingresso appena caricato.
+- Torna al thunk di caricamento dell'importazione ritardata per chiamare il punto di ingresso caricato attualmente
 
-La funzione di supporto è possibile richiamare un hook di notifica nel programma dopo l'esecuzione delle azioni seguenti:
+La funzione helper può richiamare un hook di notifica nel programma dopo ognuna delle azioni seguenti:
 
-- Quando la funzione helper avviato
+- Quando viene avviata la funzione helper
 
-- Immediatamente prima **LoadLibrary** viene chiamato nella funzione di supporto
+- Immediatamente prima della chiamata a **LoadLibrary** nella funzione helper
 
-- Immediatamente prima **GetProcAddress** viene chiamato nella funzione di supporto
+- Appena prima della chiamata di **GetProcAddress** nella funzione helper
 
-- Se la chiamata a **LoadLibrary** nella funzione di supporto non è riuscita
+- Se la chiamata a **LoadLibrary** nella funzione helper non è riuscita
 
-- Se la chiamata a **GetProcAddress** nella funzione di supporto non è riuscita
+- Se la chiamata a **GetProcAddress** nella funzione helper non è riuscita
 
-- Dopo l'helper di funzione viene eseguita l'elaborazione
+- Al termine dell'elaborazione della funzione di supporto
 
-Ognuno di questi punti di hook può restituire un valore che verrà modificata la normale elaborazione della routine di supporto in qualche modo ad eccezione del ritorno al carico thunk importazione ritardo.
+Ognuno di questi punti di hook può restituire un valore che altererà l'elaborazione normale della routine di supporto in qualche modo, ad eccezione del ritorno al thunk di caricamento dell'importazione ritardata.
 
-Il codice helper predefinito è reperibile nel cpp e Delayimp. h (in vc\include) e viene compilato in Delayimp. lib (in vc\lib). È necessario includere questa libreria nelle compilazioni a meno che non si scrive una funzione helper.
+Il codice di supporto predefinito si trova in delayhlp. cpp e delayimp. h (in vc\include) e viene compilato in Delayimp. lib (in vc\lib). È necessario includere questa libreria nelle compilazioni, a meno che non si scriva una funzione helper personalizzata.
 
-Gli argomenti seguenti descrivono la funzione di supporto:
+Negli argomenti seguenti viene descritta la funzione helper:
 
-- [Modifiche della funzione di supporto del caricamento ritardato delle DLL introdotte a partire da Visual C++ 6.0](changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)
+- [Modifiche della funzione di supporto per il caricamento posticipato della DLL da Visual C++ 6,0](changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)
 
 - [Convenzioni di chiamata, parametri e tipo restituito](calling-conventions-parameters-and-return-type.md)
 
@@ -61,8 +62,8 @@ Gli argomenti seguenti descrivono la funzione di supporto:
 
 - [Calcolo dei valori necessari](calculating-necessary-values.md)
 
-- [Scaricamento di una DLL a caricamento ritardato](explicitly-unloading-a-delay-loaded-dll.md)
+- [Scaricamento di una DLL di Delay-Loaded](explicitly-unloading-a-delay-loaded-dll.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Supporto per le DLL a caricamento ritardato nel linker](linker-support-for-delay-loaded-dlls.md)
+[Supporto del linker per le DLL di Delay-Loaded](linker-support-for-delay-loaded-dlls.md)

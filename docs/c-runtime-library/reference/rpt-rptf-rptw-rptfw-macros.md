@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _RPT, _RPTF, _RPTW, _RPTFW macro'
 title: _RPT, _RPTF, _RPTW, _RPTFW Macros
 ms.date: 11/04/2016
 api_location:
@@ -89,12 +90,12 @@ helpviewer_keywords:
 - RPTFW1 macro
 - RPTW1 macro
 ms.assetid: a5bf8b30-57f7-4971-8030-e773b7a1ae13
-ms.openlocfilehash: 567fe0a68f5adad6f5d90ef3da9d673a75bb83a6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6cc20032454002b33b4f3d297db582af09c90805
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949077"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341438"
 ---
 # <a name="_rpt-_rptf-_rptw-_rptfw-macros"></a>_RPT, _RPTF, _RPTW, _RPTFW Macros
 
@@ -130,7 +131,7 @@ _RPTFWn(
 ### <a name="parameters"></a>Parametri
 
 *reportType*<br/>
-Tipo di report: **_CRT_WARN**, **_CRT_ERROR**o **_CRT_ASSERT**.
+Tipo di report: **_CRT_WARN**, **_CRT_ERROR** o **_CRT_ASSERT**.
 
 *format*<br/>
 Stringa di controllo del formato usata per creare il messaggio utente.
@@ -138,19 +139,19 @@ Stringa di controllo del formato usata per creare il messaggio utente.
 *args*<br/>
 Argomenti di sostituzione utilizzati dal *formato*.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Tutte queste macro accettano i parametri *reportType* e *Format* . Potrebbero anche accettare fino a quattro argomenti aggiuntivi, indicati dal numero aggiunto al nome della macro. Ad esempio, **_RPT0** e **_RPTF0** non accettano argomenti aggiuntivi, **_RPT1** e **_RPTF1** prendono *arg1*, **_RPT2** e **_RPTF2** accettano *arg1* e **arg2**e così via.
+Tutte queste macro accettano i parametri *reportType* e *Format* . Potrebbero anche accettare fino a quattro argomenti aggiuntivi, indicati dal numero aggiunto al nome della macro. Ad esempio, **_RPT0** e **_RPTF0** non accettano argomenti aggiuntivi, **_RPT1** e **_RPTF1** accettano *arg1*, **_RPT2** e **_RPTF2** accettano *arg1* e **arg2** e così via.
 
-Le macro **RPT** e **_RPTF** sono simili alla funzione [printf](printf-printf-l-wprintf-wprintf-l.md) , perché possono essere utilizzate per tenere traccia dello stato di avanzamento di un'applicazione durante il processo di debug. Tuttavia, queste macro sono più flessibili di **printf** perché non è necessario che siano racchiuse in istruzioni **#ifdef** per impedire che vengano chiamate in una build finale di un'applicazione. Questa flessibilità viene eseguita usando la macro _ [debug](../../c-runtime-library/debug.md) ; le macro **RPT** e **_RPTF** sono disponibili solo quando è definito il flag _ **debug** . Quando _ **debug** non è definito, le chiamate a queste macro vengono rimosse durante la pre-elaborazione.
+Le macro **_RPT** e **_RPTF** sono simili alla funzione [printf](printf-printf-l-wprintf-wprintf-l.md) , perché possono essere utilizzate per tenere traccia dello stato di avanzamento di un'applicazione durante il processo di debug. Tuttavia, queste macro sono più flessibili di **printf** perché non è necessario che siano racchiuse in istruzioni **#ifdef** per impedire che vengano chiamate in una build finale di un'applicazione. Questa flessibilità viene eseguita utilizzando la macro [_DEBUG](../../c-runtime-library/debug.md) ; le macro **_RPT** e **_RPTF** sono disponibili solo quando viene definito il flag di **_DEBUG** . Quando **_DEBUG** non è definito, le chiamate a queste macro vengono rimosse durante la pre-elaborazione.
 
 Le macro **_RPTW** e **_RPTFW** sono versioni a caratteri wide di queste macro. Sono simili a **wprintf** e accettano stringhe di caratteri wide come argomenti.
 
-Le macro **RPT** chiamano la funzione [_CrtDbgReport](crtdbgreport-crtdbgreportw.md) per generare un report di debug con un messaggio utente. Le macro **_RPTW** chiamano la funzione **_CrtDbgReportW** per generare lo stesso report con caratteri wide. Le macro **_RPTF** e **_RPTFW** creano un report di debug con il file di origine e il numero di riga in cui è stata chiamata la macro di report, oltre al messaggio utente. Il messaggio utente viene creato sostituendo gli argomenti **arg**[*n*] nella stringa di *formato* , usando le stesse regole definite dalla funzione [printf](printf-printf-l-wprintf-wprintf-l.md) .
+Le macro **_RPT** chiamano la funzione [_CrtDbgReport](crtdbgreport-crtdbgreportw.md) per generare un report di debug con un messaggio utente. Le macro **_RPTW** chiamano la funzione **_CrtDbgReportW** per generare lo stesso report con caratteri wide. Le macro **_RPTF** e **_RPTFW** creano un report di debug con il file di origine e il numero di riga in cui è stata chiamata la macro di report, oltre al messaggio utente. Il messaggio utente viene creato sostituendo gli argomenti **arg**[*n*] nella stringa di *formato* , usando le stesse regole definite dalla funzione [printf](printf-printf-l-wprintf-wprintf-l.md) .
 
-**_CrtDbgReport** o **_CrtDbgReportW** genera il report di debug e ne determina le destinazioni in base alle modalità di report correnti e al file definito per *reportType*. Le funzioni [_CrtSetReportFile](crtsetreportmode.md) e [_CrtSetReportMode](crtsetreportfile.md) vengono usate per definire le destinazioni per ogni tipo di report.
+**_CrtDbgReport** o **_CrtDbgReportW** genera il report di debug e ne determina le destinazioni in base alle modalità del report corrente e al file definito per *reportType*. Le funzioni [_CrtSetReportFile](crtsetreportmode.md) e [_CrtSetReportMode](crtsetreportfile.md) vengono usate per definire le destinazioni per ogni tipo di report.
 
-Se viene chiamata una macro **RPT** e non è stato chiamato né **_CrtSetReportMode** né **_CrtSetReportFile** , i messaggi vengono visualizzati come indicato di seguito.
+Se viene chiamata una **_RPT** macro e non è stato chiamato né **_CrtSetReportMode** né **_CrtSetReportFile** , i messaggi vengono visualizzati come indicato di seguito.
 
 |Tipo di report|Destinazione di output|
 |-----------------|------------------------|
@@ -166,16 +167,16 @@ Sono disponibili altre due macro che generano un report di debug. La macro [_ASS
 
 |Macro|Intestazione obbligatoria|
 |-----------|---------------------|
-|Macro **RPT**|\<crtdbg.h>|
+|Macro **_RPT**|\<crtdbg.h>|
 |Macro **_RPTF**|\<crtdbg.h>|
 |Macro **_RPTW**|\<crtdbg.h>|
 |Macro **_RPTFW**|\<crtdbg.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 
-Solo versioni di debug delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).
+Solo le versioni di debug delle [librerie di runtime di C](../../c-runtime-library/crt-library-features.md).
 
 Anche se queste sono macro e diventano disponibili includendo Crtdbg.h, l'applicazione deve collegarsi a una delle librerie di debug perché queste macro chiamano altre funzioni di runtime.
 
@@ -183,6 +184,6 @@ Anche se queste sono macro e diventano disponibili includendo Crtdbg.h, l'applic
 
 Vedere l'esempio nell'argomento [_ASSERT](assert-asserte-assert-expr-macros.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Routine di debug](../../c-runtime-library/debug-routines.md)<br/>

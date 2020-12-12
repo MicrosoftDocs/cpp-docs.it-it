@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CException'
 title: Classe CException
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: e27802e05c832d28d848d9eb1235d6ef5980b306
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 39d3266817ee1be20acde0b01c7c5d1aa90313cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841558"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184660"
 ---
 # <a name="cexception-class"></a>Classe CException
 
@@ -29,28 +30,28 @@ Classe di base per tutte le eccezioni nella libreria Microsoft Foundation Class.
 class AFX_NOVTABLE CException : public CObject
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CException:: CException](#cexception)|Costruisce un oggetto `CException`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CException::D Elimina](#delete)|Elimina un `CException` oggetto.|
 |[CException:: ReportError](#reporterror)|Segnala all'utente un messaggio di errore in una finestra di messaggio.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Poiché `CException` è una classe di base astratta, non è possibile creare `CException` direttamente oggetti. è necessario creare oggetti di classi derivate. Se è necessario creare una classe personalizzata `CException` , utilizzare una delle classi derivate sopra elencate come modello. Verificare che anche la classe derivata usi `IMPLEMENT_DYNAMIC` .
 
 Di seguito sono elencate le classi derivate e le relative descrizioni:
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[CSimpleException](../../mfc/reference/csimpleexception-class.md)|Classe base per le eccezioni MFC critiche per le risorse|
 |[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|Condizione di eccezione argomento non valido|
@@ -97,7 +98,7 @@ explicit CException(BOOL bAutoDelete);
 *b_AutoDelete*<br/>
 Specificare TRUE se la memoria per l' `CException` oggetto è stata allocata nell'heap. In questo modo l' `CException` oggetto verrà eliminato quando `Delete` viene chiamata la funzione membro per eliminare l'eccezione. Specificare FALSE se l' `CException` oggetto si trova nello stack o è un oggetto globale. In questo caso, l' `CException` oggetto non verrà eliminato quando `Delete` viene chiamata la funzione membro.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Normalmente non è necessario chiamare direttamente questo costruttore. Una funzione che genera un'eccezione deve creare un'istanza di una `CException` classe derivata da e chiamare il relativo costruttore oppure utilizzare una delle funzioni throw MFC, ad esempio [AfxThrowFileException](exception-processing.md#afxthrowfileexception), per generare un tipo predefinito. Questa documentazione viene fornita solo per completezza.
 
@@ -109,7 +110,7 @@ Questa funzione verifica se l' `CException` oggetto è stato creato nell'heap e,
 void Delete();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando si elimina un `CException` oggetto, utilizzare la `Delete` funzione membro per eliminare l'eccezione. Non usare direttamente l' **`delete`** operatore, perché l' `CException` oggetto può essere un oggetto globale o essere stato creato nello stack.
 
@@ -226,7 +227,7 @@ else
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CObject](cobject-class.md)<br/>
 [Grafico delle gerarchie](../hierarchy-chart.md)<br/>

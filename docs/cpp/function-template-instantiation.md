@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: creazione di istanze di modelli di funzione'
 title: Creazione di istanze di modelli di funzione
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - function templates, instantiation
 - instantiation, function templates
 ms.assetid: f22a07c7-3ad1-465a-84f5-8737e274bd47
-ms.openlocfilehash: 6917448af067542fffb13aa043720bf8a26f7ba3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1278190c9f86034374ee295a308fe0b8396b8716
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179757"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341373"
 ---
 # <a name="function-template-instantiation"></a>Creazione di istanze di modelli di funzione
 
@@ -37,6 +38,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Modelli di funzioni](../cpp/function-templates.md)
+[Modelli di funzione](../cpp/function-templates.md)

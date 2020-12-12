@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: aggiungere una proprietà'
 title: Aggiungere una proprietà
 ms.date: 11/09/2018
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 63985643973782ea2b4240a338d66cb5cc2195dc
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: bc5a93d42e8694d000da11cd667d48812a075f27
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504691"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97208086"
 ---
 # <a name="add-a-property"></a>Aggiungere una proprietà
 
@@ -62,7 +63,7 @@ Usare questa procedura guidata per aggiungere una proprietà a un'interfaccia.
 
   Imposta il nome della proprietà. Per le interfacce dispatch MFC associate ai controlli ActiveX, è possibile specificare il nome oppure selezionare un nome di proprietà predefinito dall'elenco predefinito. Se si specifica il nome di proprietà, il tipo di implementazione **Predefinito** non è disponibile. Vedere [Proprietà predefinite](#stock-properties) per una descrizione delle proprietà dell'elenco.
 
-  |Tipo interfaccia|Descrizione|
+  |Tipo interfaccia|Description|
   |--------------------|-----------------|
   |Interfaccia duale ATL, interfaccia personalizzata e interfaccia personalizzata locale|Specificare un nome di proprietà.|
   |Interfaccia dispatch MFC, interfaccia dispatch del controllo ActiveX MFC|Specificare un nome di proprietà o selezionare una proprietà predefinita dall'elenco. Se si seleziona una proprietà dall'elenco, il valore appropriato viene visualizzato nella casella **Tipo di proprietà**. È possibile modificare il tipo, a seconda dell'opzione selezionata in **Tipo di implementazione**.|
@@ -91,7 +92,7 @@ Usare questa procedura guidata per aggiungere una proprietà a un'interfaccia.
 
   Solo interfacce dispatch MFC. Specifica come implementare la proprietà da aggiungere.
 
-  |Tipo di implementazione|Descrizione|
+  |Tipo di implementazione|Description|
   |-------------------------|-----------------|
   |**Grafico azionario**|Specifica un'implementazione predefinita per la proprietà selezionata in **Nome proprietà**. Valore predefinito. Per altre informazioni, vedere [Proprietà predefinite](#stock-properties).<br /><br /> Se si specifica **Predefinito**, **Tipo di proprietà**, **Tipo parametro** e **Nome parametro** appaiono disattivate.|
   |**Variabile membro**|Specifica che la proprietà viene aggiunta come variabile membro. È possibile aggiungere proprietà personalizzate o la maggior parte delle proprietà predefinite come variabili membro. Non è possibile specificare la **variabile membro** per le `Caption` `hWnd` proprietà, e `Text` .<br /><br /> Specifica i nomi predefiniti in **Nome variabile** e **Funzione di notifica**. È possibile modificare il nome.|
@@ -105,7 +106,7 @@ Usare questa procedura guidata per aggiungere una proprietà a un'interfaccia.
 
   Solo interfacce ATL. Imposta la proprietà come accessibile in scrittura, ovvero crea il metodo `Put` per l'impostazione o l'inserimento della proprietà dell'oggetto. Selezionare **Get**, **Put** o entrambe. Se si seleziona questa opzione, è possibile scegliere uno dei due modi seguenti per implementare il metodo:
 
-  |Opzione|Descrizione|
+  |Opzione|Description|
   |------------|-----------------|
   |**PropPut**|La funzione [PropPut](../windows/attributes/propput.md) restituisce una copia dell'oggetto. Questo è il valore predefinito e il modo più comune per impostare la proprietà come accessibile in scrittura.|
   |**PropPutRef**|La funzione [PropPutRef](../windows/attributes/propputref.md) restituisce un riferimento all'oggetto anziché restituire la copia dell'oggetto. Può essere utile usare questa opzione per gli oggetti, ad esempio struct o matrici di grandi dimensioni, che potrebbero avere un sovraccarico di inizializzazione.|
@@ -114,12 +115,12 @@ Usare questa procedura guidata per aggiungere una proprietà a un'interfaccia.
 
   Solo interfacce ATL. Imposta un valore che indica se il parametro specificato in base al **nome del parametro** è `in` , `out` , both o None.
 
-  |Opzione|Descrizione|
+  |Opzione|Description|
   |------------|-----------------|
   |`in`|Indica che il parametro viene passato dalla routine chiamante alla routine chiamata.|
   |`out`|Indica che il parametro del puntatore viene restituito dalla routine chiamata alla routine chiamante (dal server al client).|
 
-- **Tipo di parametro**
+- **Tipo parametro**
 
   Imposta il tipo di dati del parametro. Selezionare il tipo dall'elenco.
 
@@ -157,13 +158,13 @@ Usare questa pagina dell'Aggiunta guidata proprietà per specificare le impostaz
 
 - `helpstring`
 
-  Specifica una stringa di caratteri usata per descrivere l'elemento a cui viene applicata. Per impostazione predefinita, è impostato sul **`property`** &nbsp; * &nbsp; nome della proprietà*. Vedere [helpstring](/windows/win32/Midl/helpstring) in *MIDL Reference* (Riferimento MIDL).
+  Specifica una stringa di caratteri usata per descrivere l'elemento a cui viene applicata. Per impostazione predefinita, è impostato sul **`property`** &nbsp; *&nbsp; nome della proprietà*. Vedere [helpstring](/windows/win32/Midl/helpstring) in *MIDL Reference* (Riferimento MIDL).
 
 ### <a name="other-options"></a>Altre opzioni
 
 Non tutte le opzioni sono disponibili per tutti i tipi di proprietà.
 
-|Opzione|Descrizione|
+|Opzione|Description|
 |------------|-----------------|
 |`bindable`|Indica che la proprietà supporta il data binding. Vedere [bindable](/windows/win32/Midl/bindable) in *MIDL Reference* (Riferimento MIDL). Per l'implementazione predefinita della proprietà, questa opzione è impostata per impostazione predefinita e non può essere modificata.|
 |`defaultbind`|Indica la singola proprietà associabile che meglio rappresenta l'oggetto. Vedere [defaultbind](/windows/win32/Midl/defaultbind) in *MIDL Reference* (Riferimento MIDL).|

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CDragListBox'
 title: Classe CDragListBox
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - CDragListBox [MFC], Dropped
 - CDragListBox [MFC], ItemFromPt
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
-ms.openlocfilehash: b260d3a88fc8c3f2d341005c1e47cfd9ab668e1e
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 0dfa61503bd9c1aa3017d37b873a8948f61e68e2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500362"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184765"
 ---
 # <a name="cdraglistbox-class"></a>Classe CDragListBox
 
@@ -41,13 +42,13 @@ class CDragListBox : public CListBox
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CDragListBox:: CDragListBox](#cdraglistbox)|Costruisce un oggetto `CDragListBox`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CDragListBox:: BeginDrag](#begindrag)|Chiamato dal framework quando viene avviata un'operazione di trascinamento.|
 |[CDragListBox:: CancelDrag](#canceldrag)|Chiamata eseguita dal framework quando un'operazione di trascinamento è stata annullata.|
@@ -56,7 +57,7 @@ class CDragListBox : public CListBox
 |[CDragListBox::D ropped](#dropped)|Chiamata eseguita dal Framework dopo l'eliminazione dell'elemento.|
 |[CDragListBox:: ItemFromPt](#itemfrompt)|Restituisce le coordinate dell'elemento trascinato.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le caselle di riepilogo con questa funzionalità consentono agli utenti di ordinare gli elementi in un elenco nel modo più utile. Per impostazione predefinita, la casella di riepilogo sposterà l'elemento nella nuova posizione nell'elenco. È tuttavia `CDragListBox` possibile personalizzare gli oggetti per copiare gli elementi anziché spostarli.
 
@@ -99,7 +100,7 @@ Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che contiene le
 
 Diverso da zero se il trascinamento è consentito; in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Eseguire l'override di questa funzione se si vuole controllare cosa accade quando inizia un'operazione di trascinamento. L'implementazione predefinita acquisisce il mouse e rimane in modalità di trascinamento fino a quando l'utente non fa clic sul pulsante sinistro o destro del mouse oppure preme ESC, a quel punto l'operazione di trascinamento viene annullata.
 
@@ -116,7 +117,7 @@ virtual void CancelDrag(CPoint pt);
 *pt*<br/>
 Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che contiene le coordinate dell'elemento trascinato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Eseguire l'override di questa funzione per gestire qualsiasi elaborazione speciale per il controllo casella di riepilogo.
 
@@ -151,7 +152,7 @@ ID risorsa del cursore da visualizzare. Sono possibili i seguenti valori:
 
 - DL_STOPCURSOR indica che l'obiettivo di rilascio corrente non è accettabile.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il comportamento predefinito restituisce DL_MOVECURSOR. Eseguire l'override di questa funzione se si desidera fornire funzionalità aggiuntive.
 
@@ -168,7 +169,7 @@ virtual void DrawInsert(int nItem);
 *nIten*<br/>
 Indice in base zero del punto di inserimento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore-1 Cancella la Guida di inserimento. Eseguire l'override di questa funzione per modificare l'aspetto o il comportamento della Guida di inserimento.
 
@@ -190,7 +191,7 @@ Specifica l'indice in base zero della stringa eliminata.
 *pt*<br/>
 Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che contiene le coordinate del sito di rilascio.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il comportamento predefinito copia l'elemento casella di riepilogo e i relativi dati nella nuova posizione, quindi Elimina l'elemento originale. Eseguire l'override di questa funzione per personalizzare il comportamento predefinito, ad esempio per consentire il trascinamento delle copie degli elementi della casella di riepilogo in altre posizioni all'interno dell'elenco.
 
@@ -216,7 +217,7 @@ Diverso da zero se lo scorrimento è consentito; in caso contrario, 0.
 
 Indice in base zero dell'elemento della casella di riepilogo di trascinamento.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [TSTCON di esempio MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CListBox](../../mfc/reference/clistbox-class.md)<br/>

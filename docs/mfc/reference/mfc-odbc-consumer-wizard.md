@@ -1,15 +1,16 @@
 ---
+description: 'Ulteriori informazioni su: creazione guidata consumer ODBC MFC'
 title: Creazione guidata consumer ODBC MFC (C++)
 ms.date: 08/29/2019
 helpviewer_keywords:
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: c915408eede80c1564dacc88ab7b9354bd72fc11
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: ffc1378f18ab30d77da00da4ce657a5788e04172
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92918838"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219135"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Creazione guidata consumer ODBC MFC (C++)
 
@@ -35,10 +36,10 @@ Questa procedura guidata configura una classe recordset ODBC e le associazioni d
 
      Nella casella **Cerca in** viene specificata la directory in cui selezionare i file da utilizzare come origini dati. Il valore predefinito è \Programmi\file Comuni\odbc\data sources. Le origini dati dei file esistenti (file con estensione DSN) vengono visualizzate nella casella di riepilogo principale. È possibile configurare le origini dati in anticipo utilizzando la scheda **DSN file** di [Amministrazione origine dati ODBC](/sql/odbc/admin/odbc-data-source-administrator)o crearne di nuove utilizzando questa finestra di dialogo.
 
-     Per creare una nuova origine dati file da questa finestra di dialogo, fare clic su questa opzione `New` per specificare un nome DSN. verrà visualizzata la finestra di dialogo **Crea nuova origine dati** . Nella finestra di dialogo **Crea nuova origine dati** selezionare un driver appropriato e fare clic su, fare clic `Next` su **Sfoglia** e selezionare il nome del file da utilizzare come origine dati (è necessario selezionare "tutti i file" per visualizzare i file non DSN, ad esempio i file con estensione xls), fare clic su `Next` , quindi fare clic su **fine** . Se è stato selezionato un file non DSN, viene visualizzata una finestra di dialogo specifica del driver, ad esempio "installazione ODBC di Microsoft Excel", che converte il file in un DSN.
+     Per creare una nuova origine dati file da questa finestra di dialogo, fare clic su questa opzione `New` per specificare un nome DSN. verrà visualizzata la finestra di dialogo **Crea nuova origine dati** . Nella finestra di dialogo **Crea nuova origine dati** selezionare un driver appropriato e fare clic su, fare clic `Next` su **Sfoglia** e selezionare il nome del file da utilizzare come origine dati (è necessario selezionare "tutti i file" per visualizzare i file non DSN, ad esempio i file con estensione xls), fare clic su `Next` , quindi fare clic su **fine**. Se è stato selezionato un file non DSN, viene visualizzata una finestra di dialogo specifica del driver, ad esempio "installazione ODBC di Microsoft Excel", che converte il file in un DSN.
 
      > [!NOTE]
-     > È inoltre possibile creare una nuova origine dati di file in anticipo utilizzando Amministrazione origine dati ODBC. Dal menu **Start** selezionare **Impostazioni** , pannello di **controllo** , **strumenti di amministrazione** , **origini dati (ODBC)** , quindi **Amministrazione origine dati ODBC** .
+     > È inoltre possibile creare una nuova origine dati di file in anticipo utilizzando Amministrazione origine dati ODBC. Dal menu **Start** selezionare **Impostazioni**, pannello di **controllo**, **strumenti di amministrazione**, **origini dati (ODBC)**, quindi **Amministrazione origine dati ODBC**.
 
      La casella **nome DSN** consente di specificare un nome per l'origine dati del file. È necessario assicurarsi che il nome DSN termini con l'estensione di file appropriata, ad esempio xls per i file di Excel o mdb per i file di Access.
 
@@ -50,7 +51,7 @@ Questa procedura guidata configura una classe recordset ODBC e le associazioni d
 
      Per ulteriori informazioni sulle origini dati ODBC, vedere [origini dati](/sql/odbc/reference/data-sources) in ODBC SDK.
 
-  Fare clic su **OK** per completare la procedura. Verrà visualizzata la finestra di dialogo **Seleziona oggetto di database** . Da questa finestra di dialogo selezionare la tabella o la vista che verrà utilizzata dal consumer. Si noti che è possibile selezionare più viste e tabelle tenendo premuto il tasto CTRL mentre si fa clic sugli elementi. Fare clic su **OK** per completare la procedura.
+  Fare clic su **OK** per completare la procedura. Verrà visualizzata la finestra di dialogo **Seleziona oggetto di database**. Da questa finestra di dialogo selezionare la tabella o la vista che verrà utilizzata dal consumer. Si noti che è possibile selezionare più viste e tabelle tenendo premuto il tasto CTRL mentre si fa clic sugli elementi. Fare clic su **OK** per completare la procedura.
 
 - **Classe**
 
@@ -68,9 +69,9 @@ Questa procedura guidata configura una classe recordset ODBC e le associazioni d
 
    Specifica se il recordset è di un dynaset (impostazione predefinita) o di uno snapshot.
 
-  - **Dynaset** : specifica che il recordset è un dynaset. Un dynaset è il risultato di una query che fornisce una vista indicizzata nei dati del database sottoposto a query. Un dynaset memorizza nella cache solo un indice integrale per i dati originali e pertanto offre un miglioramento delle prestazioni in uno snapshot. L'indice punta direttamente a ogni record trovato come risultato di una query e indica se un record viene rimosso. È anche possibile accedere alle informazioni aggiornate nei record sottoposti a query. Questo è il valore predefinito.
+  - **Dynaset**: specifica che il recordset è un dynaset. Un dynaset è il risultato di una query che fornisce una vista indicizzata nei dati del database sottoposto a query. Un dynaset memorizza nella cache solo un indice integrale per i dati originali e pertanto offre un miglioramento delle prestazioni in uno snapshot. L'indice punta direttamente a ogni record trovato come risultato di una query e indica se un record viene rimosso. È anche possibile accedere alle informazioni aggiornate nei record sottoposti a query. Questo è il valore predefinito.
 
-  - **Snapshot** : specifica che il recordset è uno snapshot. Uno snapshot è il risultato di una query ed è una visualizzazione di un database in un determinato momento. Tutti i record trovati come risultato della query vengono memorizzati nella cache, pertanto non vengono visualizzate modifiche ai record originali.
+  - **Snapshot**: specifica che il recordset è uno snapshot. Uno snapshot è il risultato di una query ed è una visualizzazione di un database in un determinato momento. Tutti i record trovati come risultato della query vengono memorizzati nella cache, pertanto non vengono visualizzate modifiche ai record originali.
 
 - **Associa tutte le colonne**
 
@@ -78,7 +79,7 @@ Questa procedura guidata configura una classe recordset ODBC e le associazioni d
 
 ::: moniker-end
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)

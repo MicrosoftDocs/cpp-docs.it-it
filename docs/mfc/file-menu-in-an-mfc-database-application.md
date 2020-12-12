@@ -1,16 +1,17 @@
 ---
+description: "Altre informazioni su: menu file in un'applicazione di database MFC"
 title: Menu File in un'applicazione database MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
 - File menu
 - database applications [MFC], File menu commands
 ms.assetid: 92dafb75-c1b3-4860-80a0-87a83bfc36f2
-ms.openlocfilehash: fbbb4382749278708e8e758f79a618d5cad0549e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d8d229ce9c53e7a79044af2de03778574c18e5dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615695"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335887"
 ---
 # <a name="file-menu-in-an-mfc-database-application"></a>Menu File in un'applicazione database MFC
 
@@ -32,6 +33,6 @@ Per interpretare un comando di menu file in modo particolare, è necessario eseg
 
 - Poiché le applicazioni di database in genere non salvano un intero documento, è possibile che si desideri rimuovere le implementazioni Save e Save come, a meno che non si utilizzi un documento serializzato per archiviare le informazioni sul profilo. In caso contrario, è possibile implementare il comando Save come, ad esempio, "Commit Transaction". Per ulteriori informazioni sull'override di questi comandi, vedere la [Nota tecnica 22](tn022-standard-commands-implementation.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Serializzazione: serializzazione e input/output del database](serialization-serialization-vs-database-input-output.md)

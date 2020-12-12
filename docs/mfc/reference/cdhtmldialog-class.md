@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CDHtmlDialog'
 title: Classe CDHtmlDialog
 ms.date: 03/27/2019
 f1_keywords:
@@ -116,12 +117,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 9cc01c94357d7aac7fa6fa98127628a60746e1e8
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: aa99d10b0d0ff6920f839d7588d80f489b971384
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842884"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185284"
 ---
 # <a name="cdhtmldialog-class"></a>Classe CDHtmlDialog
 
@@ -133,18 +134,18 @@ Viene utilizzato per creare finestre di dialogo che utilizzano HTML anziché le 
 class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CDHtmlDialog:: CDHtmlDialog](#cdhtmldialog)|Costruisce un oggetto CDHtmlDialog.|
 |[CDHtmlDialog:: ~ CDHtmlDialog](#_dtorcdhtmldialog)|Elimina definitivamente un oggetto CDHtmlDialog.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CDHtmlDialog:: CanAccessExternal](#canaccessexternal)|Sottoponibile a override chiamato come controllo di accesso per verificare se gli oggetti di scripting nella pagina caricata possono accedere al dispatch esterno del sito del controllo. Verifica che l'invio sia sicuro per gli script o che la zona corrente consenta gli oggetti che non sono sicuri per lo scripting.|
 |[CDHtmlDialog:: CreateControlSite](#createcontrolsite)|Sottoponibile a override utilizzato per creare un'istanza del sito del controllo per ospitare il controllo WebBrowser nella finestra di dialogo.|
@@ -197,7 +198,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CDHtmlDialog:: m_bUseHtmlTitle](#m_busehtmltitle)|Indica se utilizzare il titolo del documento HTML come didascalia della finestra di dialogo.|
 |[CDHtmlDialog:: m_nHtmlResID](#m_nhtmlresid)|ID risorsa della risorsa HTML da visualizzare.|
@@ -206,7 +207,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |[CDHtmlDialog:: m_strCurrentUrl](#m_strcurrenturl)|URL corrente.|
 |[CDHtmlDialog:: m_szHtmlResID](#m_szhtmlresid)|Versione stringa dell'ID risorsa HTML.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 `CDHtmlDialog` consente di caricare il codice HTML da visualizzare da una risorsa HTML o un URL.
 
@@ -242,7 +243,7 @@ Le macro di helper DDX_DHtml consentono di accedere facilmente alle proprietà d
 
 ### <a name="data-exchange-macros"></a>Macro scambio di dati
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[DDX_DHtml_ElementValue](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementvalue)|Imposta o recupera la proprietà Value dal controllo selezionato.|
 |[DDX_DHtml_ElementInnerText](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementinnertext)|Imposta o Recupera il testo tra i tag di inizio e di fine dell'elemento corrente.|
@@ -300,7 +301,7 @@ Contiene il numero di ID di una risorsa modello di finestra di dialogo.
 *nHtmlResID*<br/>
 Contiene il numero ID di una risorsa HTML.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il secondo form del costruttore consente di accedere alla risorsa della finestra di dialogo tramite il nome del modello. La terza forma del costruttore consente di accedere alla risorsa della finestra di dialogo mediante l'ID del modello di risorsa. In genere, l'ID inizia con il prefisso **IDD_** .
 
@@ -312,7 +313,7 @@ Elimina definitivamente un oggetto CDHtmlDialog.
 virtual ~CDHtmlDialog();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro [CWnd::D estroywindow](../../mfc/reference/cwnd-class.md#destroywindow) deve essere utilizzata per eliminare le finestre di dialogo non modali create da [CDialog:: create](../../mfc/reference/cdialog-class.md#create).
 
@@ -340,7 +341,7 @@ Puntatore a un puntatore a un [COleControlSite](../../mfc/reference/colecontrols
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È possibile eseguire l'override di questa funzione membro per restituire un'istanza della classe del sito del controllo.
 
@@ -588,7 +589,7 @@ Vedere *fEnable* in [IDocHostUIHandler:: EnableModeless](/previous-versions/wind
 
 Restituisce E_NOTIMPL.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro è l'implementazione di CDHtmlDialog di [IDocHostUIHandler:: EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)), come descritto nel Windows SDK.
 
@@ -614,7 +615,7 @@ Vedere *ppDORet* in `IDocHostUIHandler::FilterDataObject` in Windows SDK.
 
 Restituisce S_FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro è l'implementazione di CDHtmlDialog di [IDocHostUIHandler:: FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)), come descritto nel Windows SDK.
 
@@ -676,7 +677,7 @@ ID di invio di una proprietà.
 
 Variant che contiene la proprietà richiesta o una variante vuota se il controllo o la proprietà non è stato trovato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli overload sono elencati dal meno efficiente nella parte superiore alla più efficiente nella parte inferiore.
 
@@ -703,7 +704,7 @@ HRESULT GetDHtmlDocument(IHTMLDocument2 **pphtmlDoc);
 
 ### <a name="parameters"></a>Parametri
 
-* \* \* pphtmlDoc* un puntatore a un puntatore a un documento HTML.
+*\* \* pphtmlDoc* un puntatore a un puntatore a un documento HTML.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -731,7 +732,7 @@ Vedere *ppDropTarget* in `IDocHostUIHandler::GetDropTarget` in Windows SDK.
 
 Restituisce E_NOTIMPL.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro è l'implementazione di CDHtmlDialog di [IDocHostUIHandler:: GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)), come descritto nel Windows SDK.
 
@@ -768,7 +769,7 @@ BOOL che indica se l'oggetto rappresentato da *ppDisp* è un singolo elemento o 
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare il primo overload se è necessario gestire le condizioni in cui può essere presente più di un elemento con l'ID specificato. È possibile usare l'ultimo parametro per verificare se il puntatore a interfaccia restituito è a una raccolta o a un singolo elemento. Se il puntatore a interfaccia si trova in una raccolta, è possibile eseguire una query per `IHTMLElementCollection` e utilizzare la relativa `item` proprietà per fare riferimento agli elementi in base alla posizione ordinale.
 
@@ -881,7 +882,7 @@ Indirizzo di un puntatore che verrà riempito con il `IHTMLEventObj` puntatore a
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione deve essere chiamata solo dall'interno di un gestore eventi DHTML.
 
@@ -902,7 +903,7 @@ Vedere *ppDispatch* in [IDocHostUIHandler:: getexternal](/previous-versions/wind
 
 Restituisce S_OK in caso di esito positivo o E_NOTIMPL in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro è l'implementazione di CDHtmlDialog di [IDocHostUIHandler:: GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)), come descritto nel Windows SDK.
 
@@ -923,7 +924,7 @@ Vedere *pInfo* in [IDocHostUIHandler:: GetHostInfo](/previous-versions/windows/i
 
 Restituisce S_OK.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro è l'implementazione di CDHtmlDialog di [IDocHostUIHandler:: GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)), come descritto nel Windows SDK.
 
@@ -949,7 +950,7 @@ Vedere *DW* in `IDocHostUIHandler::GetOptionKeyPath` nell'Windows SDK.
 
 Restituisce E_NOTIMPL.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro è l'implementazione di CDHtmlDialog di [IDocHostUIHandler:: GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)), come descritto nel Windows SDK.
 
@@ -965,7 +966,7 @@ STDMETHOD(HideUI)(void);
 
 Restituisce E_NOTIMPL.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro è l'implementazione di CDHtmlDialog di [IDocHostUIHandler:: HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\)), come descritto nel Windows SDK.
 
@@ -1010,9 +1011,9 @@ Indica se utilizzare il titolo del documento HTML come didascalia della finestra
 BOOL m_bUseHtmlTitle;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Se **m**_ **bUseHtmlTitle** è true, la didascalia della finestra di dialogo viene impostata su un valore uguale al titolo del documento HTML. in caso contrario, viene utilizzata la didascalia nella risorsa finestra di dialogo.
+Se **m** _ **bUseHtmlTitle** è true, la didascalia della finestra di dialogo viene impostata su un valore uguale al titolo del documento HTML. in caso contrario, viene utilizzata la didascalia nella risorsa finestra di dialogo.
 
 ## <a name="cdhtmldialogm_nhtmlresid"></a><a name="m_nhtmlresid"></a> CDHtmlDialog:: m_nHtmlResID
 
@@ -1149,7 +1150,7 @@ Vedere *fAttivare* in [IDocHostUIHandler:: OnDocWindowActivate](/previous-versio
 
 Restituisce E_NOTIMPL.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro è l'implementazione di CDHtmlDialog di [IDocHostUIHandler:: OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)), come descritto nel Windows SDK.
 
@@ -1170,7 +1171,7 @@ Vedere *fAttivare* in [IDocHostUIHandler:: OnFrameWindowActivate](/previous-vers
 
 Restituisce E_NOTIMPL.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro è l'implementazione di CDHtmlDialog di [IDocHostUIHandler:: OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)), come descritto nel Windows SDK.
 
@@ -1186,7 +1187,7 @@ virtual BOOL OnInitDialog();
 
 L'implementazione predefinita restituisce TRUE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo messaggio viene inviato alla finestra di dialogo durante le `Create` `CreateIndirect` chiamate, o `DoModal` che si verificano immediatamente prima della visualizzazione della finestra di dialogo.
 
@@ -1404,7 +1405,7 @@ Vedere *pdispReserved* in `IDocHostUIHandler::ShowContextMenu` in Windows SDK.
 
 Restituisce S_FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro è l'implementazione di CDHtmlDialog di [IDocHostUIHandler:: ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)), come descritto nel Windows SDK.
 
@@ -1442,7 +1443,7 @@ Vedere *pDoc* in `IDocHostUIHandler::ShowUI` in Windows SDK.
 
 Restituisce S_FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro è l'implementazione di CDHtmlDialog di [IDocHostUIHandler:: ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)), come descritto nel Windows SDK.
 
@@ -1472,7 +1473,7 @@ Vedere *nCmdID* in `IDocHostUIHandler::TranslateAccelerator` in Windows SDK.
 
 Restituisce S_FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro è l'implementazione di CDHtmlDialog di [IDocHostUIHandler:: TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)), come descritto nel Windows SDK.
 
@@ -1502,7 +1503,7 @@ Vedere *ppchURLOut* in `IDocHostUIHandler::TranslateUrl` in Windows SDK.
 
 Restituisce S_FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro è l'implementazione di CDHtmlDialog di [IDocHostUIHandler:: TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)), come descritto nel Windows SDK.
 
@@ -1518,11 +1519,11 @@ STDMETHOD(UpdateUI)(void);
 
 Restituisce E_NOTIMPL.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro è l'implementazione di CDHtmlDialog di [IDocHostUIHandler:: UpdateUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\)), come descritto nel Windows SDK.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [DHtmlExplore di esempio MFC](../../overview/visual-cpp-samples.md)<br/>
 [DDX_DHtml le macro Helper](#ddx_dhtml_helper_macros)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: aggiunta di schede a un controllo struttura a schede'
 title: Aggiunta di schede a un controllo Tab
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], adding tabs
 - tabs [MFC], adding to CTabCtrl class [MFC]
 ms.assetid: 7f3d9340-e3c7-4c71-9912-be57534ecc78
-ms.openlocfilehash: 89132e94396b51bee4a111b963c67d029f3dd9df
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ca25edf349fb11271d4e355241f4724d11bc4ac0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616524"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185466"
 ---
 # <a name="adding-tabs-to-a-tab-control"></a>Aggiunta di schede a un controllo Tab
 
@@ -28,7 +29,7 @@ Dopo aver creato il controllo struttura a schede ([CTabCtrl](reference/ctabctrl-
 
 Per ulteriori informazioni, vedere [creazione di un controllo](/windows/win32/Controls/tab-controls) struttura a schede nel Windows SDK.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Utilizzo di CTabCtrl](using-ctabctrl.md)<br/>
 [Controlli](controls-mfc.md)

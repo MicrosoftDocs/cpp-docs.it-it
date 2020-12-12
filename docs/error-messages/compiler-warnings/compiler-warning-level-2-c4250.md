@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 2) C4250'
 title: Avviso del compilatore (livello 2) C4250
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
-ms.openlocfilehash: 10064784e1124ac365475f00b3577d22f5e7f3f1
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 04ffb555912c53cb4208cb82ba63c1424ef617e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686522"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321865"
 ---
 # <a name="compiler-warning-level-2-c4250"></a>Avviso del compilatore (livello 2) C4250
 
@@ -23,7 +24,7 @@ Per disattivare C4250, usare il pragma [warning](../../preprocessor/warning.md) 
 
 Poiché una classe base virtuale è condivisa tra più classi derivate, un nome in una classe derivata domina un nome in una classe base. Data la gerarchia di classi seguente, ad esempio, sono presenti due definizioni di func ereditate all'interno di Diamond, ovvero l'istanza vbc:: Func () tramite la classe debole e l'oggetto dominante:: Func () tramite la classe dominante. Chiamata non qualificata di Func () tramite un oggetto classe Diamond, che chiama sempre l'istanza dominate:: Func ().  Se la classe debole doveva introdurre un'istanza di Func (), nessuna definizione verrebbe dominata e la chiamata verrebbe contrassegnata come ambigua.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 ```cpp
 // C4250.cpp

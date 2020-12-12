@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock'
 title: _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 ms.date: 4/2/2020
 api_name:
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 2a7b3b2a71b633eac64ad5ebc5203d70f31626ed
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d7491f80f5c8a619d6382f5811c0ff2fccc00125
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909303"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341399"
 ---
 # <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
@@ -91,7 +92,7 @@ Carattere da inserire.
 
 Entrambe le funzioni restituiscono il carattere *c* in caso di esito positivo. Se si verifica un errore, **_ungetch** restituisce il valore **EOF** e **_ungetwch** restituisce **WEOF**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Queste funzioni eseguono il push del carattere *c* di nuovo nella console *, causando* il carattere successivo letto da **_getch** o **_getche** (o **_getwch** o **_getwche**). **_ungetch** e **_ungetwch** hanno esito negativo se vengono chiamati più di una volta prima della successiva lettura. L'argomento *c* non può essere **EOF** (o **WEOF**).
 

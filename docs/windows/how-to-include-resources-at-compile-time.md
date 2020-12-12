@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura: includere risorse in fase di compilazione (C++)'
 title: 'Procedura: includere risorse in fase di compilazione (C++)'
 ms.date: 02/14/2019
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - symbols [C++], finding
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: 5ac4cba4e8ad8a08fa1010758c5a343501d3af2c
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 18c391351c3a97a8adbbd79691f9c0e3ec07abae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504411"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329347"
 ---
 # <a name="how-to-include-resources-at-compile-time-c"></a>Procedura: includere risorse in fase di compilazione (C++)
 
@@ -63,7 +64,7 @@ Dopo aver apportato modifiche al file di risorse usando la finestra di dialogo *
 
 ### <a name="to-include-resources-in-your-project-at-compile-time"></a>Per includere risorse nel progetto in fase di compilazione
 
-1. Inserire le risorse in un file script di risorsa con un nome file univoco. Non usare *NomeProgetto. RC*perché è il nome del file usato per il file di script di risorsa principale.
+1. Inserire le risorse in un file script di risorsa con un nome file univoco. Non usare *NomeProgetto. RC* perché è il nome del file usato per il file di script di risorsa principale.
 
 1. Fare clic con il pulsante destro del mouse sul file *RC* in [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources) e scegliere **Includi risorse**.
 
@@ -95,7 +96,7 @@ Le risorse nei file inclusi in questo modo vengono rese solo parte del file eseg
 
 Win32
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [File di risorse](../windows/resource-files-visual-studio.md)<br/>
 [Procedura: creare risorse](../windows/how-to-create-a-resource-script-file.md)<br/>

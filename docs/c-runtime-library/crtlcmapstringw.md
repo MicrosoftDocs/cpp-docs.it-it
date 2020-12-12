@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __crtLCMapStringW'
 title: __crtLCMapStringW
 ms.date: 11/04/2016
 api_name:
@@ -20,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - __crtLCMapStringW
 ms.assetid: 45b4ac0e-438c-4fa3-b4d1-34195f4467d9
-ms.openlocfilehash: f239d95c0dfd50f765b6f23d7874f01dce085054
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 57b3f7e961de94d8a3dbd045a1fa1d74681cbfdc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170995"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246754"
 ---
 # <a name="__crtlcmapstringw"></a>__crtLCMapStringW
 
@@ -73,7 +74,7 @@ Se il valore di `cchDest` è zero, la dimensione del buffer in caratteri, o byte
 
 Zero indica un errore. Per ottenere informazioni estese sull'errore, chiamare la funzione `GetLastError` .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Se `cchSrc` è maggiore di zero e `lpSrcStr` è una stringa con terminazione null, `__crtLCMapStringW` imposta `cchSrc` sulla lunghezza della stringa. Quindi `__crtLCMapStringW` chiama la versione di stringa a caratteri wide (Unicode) della funzione `LCMapString` con i parametri specificati. Per altre informazioni sui parametri e sul valore restituito di questa funzione, vedere [LCMapString](/windows/win32/api/winnls/nf-winnls-lcmapstringw).
 

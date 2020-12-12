@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: fgets, fgetws'
 title: fgets, fgetws
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - fgetws function
 - fgetts function
 ms.assetid: ad549bb5-df98-4ccd-a53f-95114e60c4fc
-ms.openlocfilehash: 5c1d63eea6561af6ab7f51c147c92e184d3d11f8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 21c360f621ed19f076af129f618e80aa27102e86
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912061"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329292"
 ---
 # <a name="fgets-fgetws"></a>fgets, fgetws
 
@@ -63,7 +64,7 @@ wchar_t *fgetws(
 
 ### <a name="parameters"></a>Parametri
 
-*Str*<br/>
+*str*<br/>
 Percorso di archiviazione per i dati.
 
 *numChars*<br/>
@@ -78,7 +79,7 @@ Ognuna di queste funzioni restituisce *Str*. Viene restituito **null** per indic
 
 Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **fgets** legge una stringa dall'argomento del *flusso* di input e la archivia in *Str*. **fgets** legge i caratteri dalla posizione corrente del flusso e include il primo carattere di nuova riga, fino alla fine del flusso o fino a quando il numero di caratteri letti è uguale a *numChars* -1, a seconda del valore che viene raggiunto per primo. Il risultato archiviato in *Str* viene accodato con un carattere null. Il carattere di nuova riga, se letto, viene incluso nella stringa.
 
@@ -96,7 +97,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**fgets**|\<stdio.h>|
 |**fgetws**|\<stdio.h> o \<wchar.h>|
@@ -141,9 +142,9 @@ Line two.
 Line one.
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
 [fputs, fputws](fputs-fputws.md)<br/>
-[Ottiene, _getws](../../c-runtime-library/gets-getws.md)<br/>
+[gets, _getws](../../c-runtime-library/gets-getws.md)<br/>
 [puts, _putws](puts-putws.md)<br/>

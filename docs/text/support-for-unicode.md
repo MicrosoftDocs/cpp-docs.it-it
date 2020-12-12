@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: supporto per Unicode'
 title: Supporto per Unicode
 ms.date: 01/09/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - character sets [C++], Unicode
 - localization [C++], character sets
 - Unicode [C++], installing support
-ms.openlocfilehash: 90c07874b61656a8bec0f9ef373f2ee8f339e994
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3226f488afc8d9899777ac0b717dd012fec2cc3d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215374"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335758"
 ---
 # <a name="support-for-unicode"></a>Supporto per Unicode
 
@@ -33,8 +34,8 @@ Nel framework MFC il supporto sistematico per il formato Unicode è ottenuto med
 |Tipo di dati non trasferibile|Sostituito da questa macro|
 |-----------------------------|----------------------------|
 |**`char`**, **`wchar_t`**|`_TCHAR`|
-|**`char*`**, `LPSTR` (Tipo di dati Win32),`LPWSTR`|`LPTSTR`|
-|`const char*`, `LPCSTR` (Tipo di dati Win32),`LPCWSTR`|`LPCTSTR`|
+|**`char*`**, `LPSTR` (Tipo di dati Win32), `LPWSTR`|`LPTSTR`|
+|`const char*`, `LPCSTR` (Tipo di dati Win32), `LPCWSTR`|`LPCTSTR`|
 
 `CString`La classe USA `_TCHAR` come base e fornisce costruttori e operatori per semplificare le conversioni. La maggior parte delle operazioni di stringa per Unicode può essere scritta usando la stessa logica impiegata per la gestione del set di caratteri ANSI di Windows, con la differenza che l'unità di base è costituita da un carattere a 16 bit anziché da un byte a 8 bit. A differenza di quanto avviene con i set di caratteri multibyte (MBCS), non è necessario né consigliabile trattare un carattere Unicode come se fosse formato da due byte distinti. È tuttavia necessario gestire la possibilità di un singolo carattere rappresentato da una coppia di surrogati di caratteri wide. In generale, non scrivere codice che presuppone che la lunghezza di una stringa sia uguale al numero di caratteri, se è di tipo Narrow o Wide, che contiene.
 
@@ -56,7 +57,7 @@ Nel framework MFC il supporto sistematico per il formato Unicode è ottenuto med
 
 - [Informazioni sulle mappature di testo generico per la portabilità della larghezza dei byte](../text/generic-text-mappings-in-tchar-h.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Testo e stringhe](../text/text-and-strings-in-visual-cpp.md)<br/>
 [Supporto per l'uso di wmain](../text/support-for-using-wmain.md)

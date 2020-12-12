@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: costanti errno'
 title: Costanti errno
 ms.date: 09/17/2018
 f1_keywords:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - EXDEV constant
 - EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
-ms.openlocfilehash: 34f92bedfa9606c90196f2e3a5e47dc341b23aea
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.openlocfilehash: 4eb92b66970f1ef9455a0d7dd741ad02a60c26d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898753"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329345"
 ---
 # <a name="errno-constants"></a>Costanti errno
 
@@ -56,7 +57,7 @@ ms.locfileid: "74898753"
 #include <errno.h>
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 I valori di **errno** sono costanti assegnate a [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) in caso di varie condizioni di errore.
 
@@ -78,7 +79,7 @@ Sono supportati i valori **errno** seguenti:
 |**EEXIST**|File esistenti. Si è tentato di creare un file già esistente. Ad esempio, i flag **_O_CREAT** e **_O_EXCL** vengono specificati in una chiamata **_open**, ma il file denominato esiste già.|
 |**EILSEQ**|Sequenza non valida di byte (ad esempio, in una stringa MBCS).|
 |**EINVAL**|Argomento non valido. Un valore non valido è stato fornito per uno degli argomenti a una funzione. Ad esempio, il valore specificato per l'origine quando si posiziona il puntatore del file (mediante una chiamata a **fseek**) è antecedente l'inizio del file.|
-|**EMFILE**|troppi file aperti. Non esistono descrittori di file disponibili, pertanto nessun altro file può essere aperto.|
+|**EMFILE**|Troppi file aperti. Non esistono descrittori di file disponibili, pertanto nessun altro file può essere aperto.|
 |**ENOENT**|Nessun file o directory di questo tipo. Il file o la directory specificata non esiste o non viene trovata. Questo messaggio può essere visualizzato ogni volta che un file specificato non esiste o una parte di un percorso non specifica una directory esistente.|
 |**ENOEXEC**|Errore di formato exec. Si è tentato di eseguire un file che non è eseguibile o con un formato di file eseguibile non valido.|
 |**ENOMEM**|Core insufficiente. Memoria insufficiente per l'operatore desiderato. Ad esempio, questo messaggio può verificarsi quando la memoria è insufficiente per eseguire un processo figlio o quando la richiesta di allocazione in una chiamata **_getcwd** non può essere soddisfatta.|
@@ -171,6 +172,6 @@ Per la compatibilità con POSIX sono supportati i valori seguenti. Sono valori r
 #define EXDEV /* cross device link */
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Costanti globali](../c-runtime-library/global-constants.md)
