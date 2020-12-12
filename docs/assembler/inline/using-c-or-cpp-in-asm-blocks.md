@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: utilizzo di C o C++ in blocchi di __asm'
 title: Utilizzo di C o C++ in blocchi __asm
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - typedef names, used in __asm blocks
 - __asm keyword [C++], C/C++ elements in
 ms.assetid: ae8b2b52-6b75-42e3-ac0c-ad02d922ed97
-ms.openlocfilehash: 05e63d666f3fc39126d6f48e8fc523c4a02e76df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2fc1987339fcbabee07e2b626c3ae764c3d5e2e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87191417"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97121927"
 ---
 # <a name="using-c-or-c-in-__asm-blocks"></a>Utilizzo di C o C++ in blocchi __asm
 
@@ -35,7 +36,7 @@ Un **`__asm`** blocco può utilizzare gli elementi del linguaggio seguenti:
 
 - Direttive per il preprocessore e macro
 
-- __ / \* Commenti \* ( / __ e __//__ )
+- __/ \* Commenti \* ( /__ e __//__ )
 
 - Nomi dei tipi (laddove sia possibile utilizzare i tipi MASM)
 
@@ -55,6 +56,6 @@ All'interno di un **`__asm`** blocco è possibile specificare costanti integer c
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Assembler inline](../../assembler/inline/inline-assembler.md)<br/>

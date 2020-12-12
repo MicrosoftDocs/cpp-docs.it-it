@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: db_command'
 title: db_command (attributo COM C++)
 ms.date: 07/10/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: 5910e72b10d5b849d203d088564d79d0f80a7961
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 109dea1fe2070ef6a0acc9370d4065a9e6a9a575
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504591"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122174"
 ---
 # <a name="db_command"></a>db_command
 
@@ -44,7 +45,7 @@ La sintassi di *command* è la seguente:
 
 Un *blocco del parametro di associazione* è definito nel modo seguente:
 
-> **( \[ ** *BindType* **]** *szVar1* \[ , *szVar2* \[ , *nVar3* \[ ,...]]] **)**
+> **( \[** *BindType* **]** *szVar1* \[ , *szVar2* \[ , *nVar3* \[ ,...]]] **)**
 
 dove:
 
@@ -52,15 +53,15 @@ dove:
 
 - **\[***BindType* **]** è una delle stringhe senza distinzione tra maiuscole e minuscole seguenti:
 
-  - ** \[ db_column]** associa ogni variabile membro a una colonna in un set di righe.
+  - **\[ db_column]** associa ogni variabile membro a una colonna in un set di righe.
 
-  - ** \[ BindTo]** (uguale a ** \[ db_column]**).
+  - **\[ BindTo]** (uguale a **\[ db_column]**).
 
-  - ** \[ in]** associa le variabili membro come parametri di input.
+  - **\[ in]** associa le variabili membro come parametri di input.
 
-  - ** \[ out] associa le** variabili membro come parametri di output.
+  - **\[ out] associa le** variabili membro come parametri di output.
 
-  - ** \[ in, out] associa le** variabili membro come parametri di input/output.
+  - **\[ in, out] associa le** variabili membro come parametri di input/output.
 
 - *szVarX*, *nVarX* si risolve in una variabile membro all'interno dell'ambito corrente.
 
@@ -87,7 +88,7 @@ TCHAR m_state[3] = 'CA';
 ```
 
 *nome*<br/>
-(Facoltativo) Nome dell'handle usato con il set di righe. Se si specifica il parametro *name*, **db_command** genera una classe con il parametro *name*specificato, che può essere usato per attraversare il set di righe o per eseguire più query di comando. Se non si specifica il parametro *name*, non sarà possibile restituire più righe di risultati all'utente.
+(Facoltativo) Nome dell'handle usato con il set di righe. Se si specifica il parametro *name*, **db_command** genera una classe con il parametro *name* specificato, che può essere usato per attraversare il set di righe o per eseguire più query di comando. Se non si specifica il parametro *name*, non sarà possibile restituire più righe di risultati all'utente.
 
 *source_name*<br/>
 (Facoltativo) La variabile `CSession` o l'istanza di una classe a cui è applicato l'attributo `db_source` con cui viene eseguito il comando. Vedere [db_source](db-source.md).
@@ -97,7 +98,7 @@ TCHAR m_state[3] = 'CA';
 *HRESULT*<br/>
 (Facoltativo) Identifica la variabile che riceverà l'HRESULT di questo comando di database. Se la variabile non esiste, verrà automaticamente inserita dall'attributo.
 
-*bindings*<br/>
+*associazioni*<br/>
 (Facoltativo) Consente di separare i parametri di associazione dal comando OLE DB.
 
 Se si specifica un valore per *bindings*, **db_command** analizzerà il valore associato e non il parametro \[*bindtype*]. Questo utilizzo consente di usare la sintassi del provider OLE DB. Per disabilitare l'analisi, senza parametri di associazione, specificare `Bindings=""`.
@@ -113,7 +114,7 @@ Un valore maggiore di 1 che specifica il recupero di righe in blocco. Il recuper
 
 Se *bulk_fetch* è minore di 1, `SetRows` restituirà zero.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 **db_command** crea un oggetto [CCommand](../../data/oledb/ccommand-class.md) , che viene usato da un consumer OLE DB per eseguire un comando.
 
@@ -121,7 +122,7 @@ Se *bulk_fetch* è minore di 1, `SetRows` restituirà zero.
 
 **db_command** può essere usato per eseguire comandi che non restituiscono un set di risultati.
 
-Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore rinomina la classe in \_*NomeClasse*Accessor, dove *NomeClasse* è il nome assegnato alla classe. Il compilatore crea anche una classe denominata *NomeClasse*, che deriva da \_*NomeClasse*Accessor.  In Visualizzazione classi verranno visualizzate entrambe le classi.
+Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore rinomina la classe in \_*NomeClasse* Accessor, dove *NomeClasse* è il nome assegnato alla classe. Il compilatore crea anche una classe denominata *NomeClasse*, che deriva da \_*NomeClasse* Accessor.  In Visualizzazione classi verranno visualizzate entrambe le classi.
 
 ## <a name="examples"></a>Esempio
 
@@ -234,7 +235,7 @@ int main() {
 
 ## <a name="requirements"></a>Requisiti
 
-| Contesto dell'attributo | valore |
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|**`class`**, **`struct`** , membro, metodo, locale|
 |**Ripetibile**|No|
@@ -243,7 +244,7 @@ int main() {
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi del consumer OLE DB](ole-db-consumer-attributes.md)<br/>
 [Attributi autonomi](stand-alone-attributes.md)

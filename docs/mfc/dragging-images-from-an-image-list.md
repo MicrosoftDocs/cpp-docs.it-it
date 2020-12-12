@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: trascinamento di immagini da un elenco di immagini'
 title: Trascinamento di immagini da un elenco di immagini
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - image lists [MFC], dragging images from
 - images [MFC], dragging from image lists
 ms.assetid: af691db8-e4f0-4046-b7b9-9acc68d3713d
-ms.openlocfilehash: 5d15b0b66d2270174dbfbcfd21bb77f5f41558c7
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 4d81be73484d32d9b26e5aa4ae48b7e550306493
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626476"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118849"
 ---
 # <a name="dragging-images-from-an-image-list"></a>Trascinamento di immagini da un elenco di immagini
 
@@ -22,7 +23,7 @@ La funzione membro [BeginDrag](reference/cimagelist-class.md#begindrag) inizia u
 
 La funzione membro [DragEnter](reference/cimagelist-class.md#dragenter) imposta la posizione iniziale dell'immagine di trascinamento all'interno di una finestra e disegna l'immagine in corrispondenza della posizione. I parametri includono un puntatore alla finestra in cui si desidera creare l'immagine e un punto che specifica le coordinate della posizione iniziale all'interno della finestra. Le coordinate sono relative all'angolo superiore sinistro della finestra, non all'area client. Lo stesso vale per tutte le funzioni di trascinamento dell'immagine che accettano le coordinate come parametri. Ciò significa che è necessario compensare le larghezze degli elementi della finestra, ad esempio il bordo, la barra del titolo e la barra dei menu, quando si specificano le coordinate. Se si specifica un handle di finestra **null** quando si chiama `DragEnter` , le funzioni di trascinamento disegnano l'immagine nel contesto di dispositivo associato alla finestra desktop e le coordinate sono relative all'angolo superiore sinistro dello schermo.
 
-`DragEnter`blocca tutti gli altri aggiornamenti della finestra specificata durante l'operazione di trascinamento. Se è necessario eseguire qualsiasi disegno durante un'operazione di trascinamento, ad esempio evidenziando la destinazione di un'operazione di trascinamento della selezione, è possibile nascondere temporaneamente l'immagine trascinata usando la funzione membro [DragLeave](reference/cimagelist-class.md#dragleave) . È anche possibile usare la funzione membro [DragShowNoLock](reference/cimagelist-class.md#dragshownolock) .
+`DragEnter` blocca tutti gli altri aggiornamenti della finestra specificata durante l'operazione di trascinamento. Se è necessario eseguire qualsiasi disegno durante un'operazione di trascinamento, ad esempio evidenziando la destinazione di un'operazione di trascinamento della selezione, è possibile nascondere temporaneamente l'immagine trascinata usando la funzione membro [DragLeave](reference/cimagelist-class.md#dragleave) . È anche possibile usare la funzione membro [DragShowNoLock](reference/cimagelist-class.md#dragshownolock) .
 
 Chiamare [EndDrag](reference/cimagelist-class.md#enddrag) al termine del trascinamento dell'immagine.
 
@@ -30,7 +31,7 @@ La funzione membro [SetDragCursorImage](reference/cimagelist-class.md#setdragcur
 
 Quando un'applicazione chiama `BeginDrag` , il sistema crea un elenco di immagini interne temporaneo e copia l'immagine di trascinamento specificata nell'elenco interno. È possibile recuperare un puntatore all'elenco di immagini di trascinamento temporaneo utilizzando la funzione membro [GetDragImage](reference/cimagelist-class.md#getdragimage) . La funzione recupera inoltre la posizione di trascinamento corrente e l'offset dell'immagine di trascinamento rispetto alla posizione di trascinamento.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso di CImageList](using-cimagelist.md)<br/>
+[Utilizzo di CImageList](using-cimagelist.md)<br/>
 [Controlli](controls-mfc.md)

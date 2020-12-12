@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: dimensioni operatore'
 title: Operatore SIZE
 ms.date: 12/17/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - operator SIZE
 - SIZE operator
 ms.assetid: 2e380289-3ad7-4bf0-8b1c-75211f59e5c4
-ms.openlocfilehash: 9a1906e4a8771df24d352d73bfa870ea71705444
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: a0d8c47fbfbfdc84d351ea65d8cb87ffe3ae43c3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318878"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97126503"
 ---
 # <a name="operator-size"></a>Operatore SIZE
 
@@ -21,9 +22,9 @@ Restituisce il numero di byte nella *variabile* allocata dal primo inizializzato
 
 ## <a name="syntax"></a>Sintassi
 
-> *Variabile* di dimensione
+>  *Variabile* di dimensione
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-Guida di [riferimento agli operatori](operators-reference.md)\
+[Guida di riferimento agli operatori](operators-reference.md)\
 [Grammatica BNF di MASM](masm-bnf-grammar.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: @SubStr'
 title: '@SubStr'
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - '@SubStr symbol'
 ms.assetid: f4b8fc6e-14a0-46fe-8c27-6b3347a08504
-ms.openlocfilehash: 706d174cad8d2cffc05c7b25e5a8d61598a9a580
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 7622acd537a23f87a436cf45416b352525b32d38
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75315368"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97121030"
 ---
-# <a name="substr"></a>\@substr
+# <a name="substr"></a>\@SubStr
 
 Funzione macro che restituisce una sottostringa a partire dalla *posizione*.
 
 ## <a name="syntax"></a>Sintassi
 
-> **\@substr (** *String* __,__ *position* ⟦ __,__ *length*⟧ **)**
+> **\@ Substr (** *String*__,__ *position* ⟦__,__ *length*⟧ **)**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento ai simboli](symbols-reference.md)\
 [Grammatica BNF di MASM](masm-bnf-grammar.md)

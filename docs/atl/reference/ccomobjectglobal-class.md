@@ -1,5 +1,6 @@
 ---
-title: CComObjectGlobal (classe)
+description: 'Altre informazioni su: classe CComObjectGlobal'
+title: Classe CComObjectGlobal
 ms.date: 11/04/2016
 f1_keywords:
 - CComObjectGlobal
@@ -12,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectGlobal class
 ms.assetid: 79bdee55-66e4-4536-b5b3-bdf09f78b9a6
-ms.openlocfilehash: 9a784584179186cdf1e63c1ec43cad4d59391ec3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0f79acb0fdbb43f9456e08f26875d45eec9904c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327631"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151983"
 ---
-# <a name="ccomobjectglobal-class"></a>CComObjectGlobal (classe)
+# <a name="ccomobjectglobal-class"></a>Classe CComObjectGlobal
 
-Questa classe gestisce un conteggio dei `Base` riferimenti nel modulo contenente l'oggetto.
+Questa classe gestisce un conteggio dei riferimenti nel modulo che contiene l' `Base` oggetto.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -33,36 +34,36 @@ class CComObjectGlobal : public Base
 #### <a name="parameters"></a>Parametri
 
 *Base*<br/>
-La classe, derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) o [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), nonché da qualsiasi altra interfaccia che si desidera supportare sull'oggetto.
+La classe, derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) o [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), nonché da qualsiasi altra interfaccia che si desidera supportare nell'oggetto.
 
 ## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CComObjectGlobal::CComObjectGlobal](#ccomobjectglobal)|Costruttore.|
-|[CComObjectGlobal:: CComObjectGlobal](#dtor)|Distruttore.|
+|[CComObjectGlobal:: CComObjectGlobal](#ccomobjectglobal)|Costruttore.|
+|[CComObjectGlobal:: ~ CComObjectGlobal](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CComObjectGlobal::AddRef](#addref)|Implementa un `AddRef`oggetto global .|
-|[CComObjectGlobal::QueryInterface](#queryinterface)|Implementa un `QueryInterface`oggetto global .|
-|[CComObjectGlobal::Release](#release)|Implementa un `Release`oggetto global .|
+|[CComObjectGlobal:: AddRef](#addref)|Implementa un oggetto globale `AddRef` .|
+|[CComObjectGlobal:: QueryInterface](#queryinterface)|Implementa un oggetto globale `QueryInterface` .|
+|[CComObjectGlobal:: Release](#release)|Implementa un oggetto globale `Release` .|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CComObjectGlobal::m_hResFinalConstruct](#m_hresfinalconstruct)|Contiene il valore HRESULT restituito `CComObjectGlobal` durante la costruzione dell'oggetto.|
+|[CComObjectGlobal:: m_hResFinalConstruct](#m_hresfinalconstruct)|Contiene HRESULT restituito durante la costruzione dell' `CComObjectGlobal` oggetto.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-`CComObjectGlobal`gestisce un conteggio dei riferimenti `Base` sul modulo contenente l'oggetto. `CComObjectGlobal`assicura che l'oggetto non venga eliminato finché il modulo non viene rilasciato. L'oggetto verrà rimosso solo quando il conteggio dei riferimenti sull'intero modulo sarà pari a zero.
+`CComObjectGlobal` gestisce un conteggio dei riferimenti nel modulo che contiene l' `Base` oggetto. `CComObjectGlobal` assicura che l'oggetto non venga eliminato fino a quando non viene rilasciato il modulo. L'oggetto verrà rimosso solo quando il conteggio dei riferimenti nell'intero modulo passa a zero.
 
-Ad esempio, `CComObjectGlobal`utilizzando , una class factory può contenere un oggetto globale comune condiviso da tutti i relativi client.
+Usando, ad esempio `CComObjectGlobal` , un class factory può avere un oggetto globale comune condiviso da tutti i relativi client.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -72,11 +73,11 @@ Ad esempio, `CComObjectGlobal`utilizzando , una class factory può contenere un 
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlcom.h
+**Intestazione:** atlcom. h
 
-## <a name="ccomobjectglobaladdref"></a><a name="addref"></a>CComObjectGlobal::AddRef
+## <a name="ccomobjectglobaladdref"></a><a name="addref"></a> CComObjectGlobal:: AddRef
 
-Incrementa il conteggio dei riferimenti dell'oggetto di 1.
+Incrementa di 1 il conteggio dei riferimenti dell'oggetto.
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -86,23 +87,23 @@ STDMETHOD_(ULONG, AddRef)();
 
 Valore che può essere utile per la diagnostica e il test.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Per impostazione predefinita, `AddRef` chiama `_Module::Lock`, dove `_Module` è l'istanza globale di [CComModule](../../atl/reference/ccommodule-class.md) o di una classe derivata da esso.
+Per impostazione predefinita, `AddRef` chiama `_Module::Lock` , dove `_Module` è l'istanza globale di [CComModule](../../atl/reference/ccommodule-class.md) o una classe derivata da essa.
 
-## <a name="ccomobjectglobalccomobjectglobal"></a><a name="ccomobjectglobal"></a>CComObjectGlobal::CComObjectGlobal
+## <a name="ccomobjectglobalccomobjectglobal"></a><a name="ccomobjectglobal"></a> CComObjectGlobal:: CComObjectGlobal
 
-Costruttore. Chiama `FinalConstruct` e [m_hResFinalConstruct](#m_hresfinalconstruct) quindi imposta `HRESULT` m_hResFinalConstruct `FinalConstruct`restituito da .
+Costruttore. Chiama `FinalConstruct` e quindi imposta [m_hResFinalConstruct](#m_hresfinalconstruct) sull'oggetto `HRESULT` restituito da `FinalConstruct` .
 
 ```
 CComObjectGlobal(void* = NULL));
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Se la classe base non è derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), è necessario fornire un metodo personalizzato. `FinalConstruct` Il distruttore chiama `FinalRelease`.
+Se la classe base non è stata derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), è necessario fornire un `FinalConstruct` metodo personalizzato. Il distruttore chiama `FinalRelease`.
 
-## <a name="ccomobjectglobalccomobjectglobal"></a><a name="dtor"></a>CComObjectGlobal:: CComObjectGlobal
+## <a name="ccomobjectglobalccomobjectglobal"></a><a name="dtor"></a> CComObjectGlobal:: ~ CComObjectGlobal
 
 Distruttore.
 
@@ -110,19 +111,19 @@ Distruttore.
 CComObjectGlobal();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Libera tutte le risorse allocate e chiama [FinalRelease](ccomobjectrootex-class.md#finalrelease).
 
-## <a name="ccomobjectglobalm_hresfinalconstruct"></a><a name="m_hresfinalconstruct"></a>CComObjectGlobal::m_hResFinalConstruct
+## <a name="ccomobjectglobalm_hresfinalconstruct"></a><a name="m_hresfinalconstruct"></a> CComObjectGlobal:: m_hResFinalConstruct
 
-Contiene il valore `FinalConstruct` HRESULT da `CComObjectGlobal` chiamare durante la costruzione dell'oggetto.
+Contiene HRESULT da chiamare `FinalConstruct` durante la costruzione dell' `CComObjectGlobal` oggetto.
 
 ```
 HRESULT m_hResFinalConstruct;
 ```
 
-## <a name="ccomobjectglobalqueryinterface"></a><a name="queryinterface"></a>CComObjectGlobal::QueryInterface
+## <a name="ccomobjectglobalqueryinterface"></a><a name="queryinterface"></a> CComObjectGlobal:: QueryInterface
 
 Recupera un puntatore al puntatore a interfaccia richiesto.
 
@@ -132,23 +133,23 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parametri
 
-*Iid*<br/>
-[in] GUID dell'interfaccia richiesta.
+*IID*<br/>
+in GUID dell'interfaccia richiesta.
 
-*Oggetto ppv*<br/>
-[fuori] Puntatore al puntatore a interfaccia identificato da iid o NULL se l'interfaccia non viene trovata.
+*ppvObject*<br/>
+out Puntatore al puntatore a interfaccia identificato da IID oppure NULL se l'interfaccia non viene trovata.
 
 ### <a name="return-value"></a>Valore restituito
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `QueryInterface` gestisce solo le interfacce nella tabella di mappe COM.
 
-## <a name="ccomobjectglobalrelease"></a><a name="release"></a>CComObjectGlobal::Release
+## <a name="ccomobjectglobalrelease"></a><a name="release"></a> CComObjectGlobal:: Release
 
-Decrementa il conteggio dei riferimenti dell'oggetto di 1.
+Decrementa di 1 il conteggio dei riferimenti dell'oggetto.
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -156,15 +157,15 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>Valore restituito
 
-Nelle build di `Release` debug restituisce un valore che può essere utile per la diagnostica e il test. Nelle compilazioni non `Release` di debug, restituisce sempre 0.In non-debug builds, always returns 0.
+Nelle build di debug `Release` restituisce un valore che può essere utile per la diagnostica e il test. Nelle compilazioni non di debug `Release` restituisce sempre 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Per impostazione predefinita, `Release` chiama `_Module::Unlock`, dove `_Module` è l'istanza globale di [CComModule](../../atl/reference/ccommodule-class.md) o di una classe derivata da esso.
+Per impostazione predefinita, `Release` chiama `_Module::Unlock` , dove `_Module` è l'istanza globale di [CComModule](../../atl/reference/ccommodule-class.md) o una classe derivata da essa.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[CComObjectStack (classe)](../../atl/reference/ccomobjectstack-class.md)<br/>
-[CComAggObject (classe)](../../atl/reference/ccomaggobject-class.md)<br/>
+[Classe CComObjectStack](../../atl/reference/ccomobjectstack-class.md)<br/>
+[Classe Ccomaggobjec](../../atl/reference/ccomaggobject-class.md)<br/>
 [Classe CComObject](../../atl/reference/ccomobject-class.md)<br/>
 [Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

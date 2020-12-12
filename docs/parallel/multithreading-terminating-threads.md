@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: multithreading: terminazione dei thread in MFC'
 title: 'Multithreading: terminazione di thread in MFC'
 ms.date: 08/27/2018
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-ms.openlocfilehash: 0625be0a628a6ae991acd2fa1f7118a4deabccda
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dc353bc0edf14d718ee11e140fca11e4c0545588
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217870"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149877"
 ---
 # <a name="multithreading-terminating-threads-in-mfc"></a>Multithreading: terminazione di thread in MFC
 
@@ -28,19 +29,19 @@ Due situazioni normali comportano la terminazione di un thread, ovvero la funzio
 
 - [Recupero del codice di uscita di un thread](#_core_retrieving_the_exit_code_of_a_thread)
 
-## <a name="normal-thread-termination"></a><a name="_core_normal_thread_termination"></a>Terminazione del thread normale
+## <a name="normal-thread-termination"></a><a name="_core_normal_thread_termination"></a> Terminazione del thread normale
 
 Per un thread di lavoro, la terminazione normale dei thread è semplice: uscire dalla funzione di controllo e restituire un valore che indica il motivo della terminazione. È possibile usare la funzione [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) o un' **`return`** istruzione. In genere, 0 indica il completamento corretto, ma spetta all'utente.
 
 Per un thread dell'interfaccia utente, il processo è altrettanto semplice: dall'interno del thread dell'interfaccia utente, chiamare [PostQuitMessage](/windows/win32/api/winuser/nf-winuser-postquitmessage) nel Windows SDK. L'unico parametro che `PostQuitMessage` accetta è il codice di uscita del thread. Per quanto riguarda i thread di lavoro, 0 indica in genere il completamento corretto.
 
-## <a name="premature-thread-termination"></a><a name="_core_premature_thread_termination"></a>Terminazione del thread prematura
+## <a name="premature-thread-termination"></a><a name="_core_premature_thread_termination"></a> Terminazione del thread prematura
 
 La terminazione di un thread in modo anomalo è quasi semplice: chiamare [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) dall'interno del thread. Passare il codice di uscita desiderato come unico parametro. Arresta l'esecuzione del thread, dealloca lo stack del thread, disconnette tutte le DLL collegate al thread ed Elimina l'oggetto thread dalla memoria.
 
-`AfxEndThread`deve essere chiamato dall'interno del thread da terminare. Se si desidera terminare un thread da un altro thread, è necessario configurare un metodo di comunicazione tra i due thread.
+`AfxEndThread` deve essere chiamato dall'interno del thread da terminare. Se si desidera terminare un thread da un altro thread, è necessario configurare un metodo di comunicazione tra i due thread.
 
-## <a name="retrieving-the-exit-code-of-a-thread"></a><a name="_core_retrieving_the_exit_code_of_a_thread"></a>Recupero del codice di uscita di un thread
+## <a name="retrieving-the-exit-code-of-a-thread"></a><a name="_core_retrieving_the_exit_code_of_a_thread"></a> Recupero del codice di uscita di un thread
 
 Per ottenere il codice di uscita del thread di lavoro o dell'interfaccia utente, chiamare la funzione [GetExitCodeThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodethread) . Per informazioni su questa funzione, vedere la Windows SDK. Questa funzione accetta l'handle per il thread (archiviato nel `m_hThread` membro dati degli `CWinThread` oggetti) e l'indirizzo di un valore DWORD.
 
@@ -54,7 +55,7 @@ Il recupero del codice di uscita degli oggetti [CWinThread](../mfc/reference/cwi
 
 Entrambi i metodi consentono di determinare il motivo per cui un oggetto è stato `CWinThread` terminato.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Multithreading con C++ e MFC](multithreading-with-cpp-and-mfc.md)<br/>
 [_endthread, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)<br/>

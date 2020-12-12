@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: supporto del multithreading per il codice precedente (Visual C++)'
 title: Supporto del multithreading per il codice precedente (Visual C++)
 ms.date: 08/27/2018
 helpviewer_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - multiple concurrent threads
 - multithreading [C++]
 ms.assetid: 24425b1f-5031-4c6b-aac7-017115a40e7c
-ms.openlocfilehash: 6f76ff42d2e28afe251ce234220051111736d3c9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a3b04fdde01e2576d37d41f2860526fcf5ba1691
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215085"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149903"
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>Supporto del multithreading per il codice precedente (Visual C++)
 
-L' C++ oggetti visivi consente di eseguire contemporaneamente più thread simultanei di esecuzione. Grazie al multithreading, è possibile disattivare le attività in background, gestire flussi simultanei di input, gestire un'interfaccia utente e molto altro ancora.
+Visual C++ consente l'esecuzione simultanea di più thread simultanei di esecuzione. Grazie al multithreading, è possibile disattivare le attività in background, gestire flussi simultanei di input, gestire un'interfaccia utente e molto altro ancora.
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
@@ -30,7 +31,7 @@ Fornisce supporto per la creazione di applicazioni multithread con Microsoft Win
 Vengono descritti i processi e i thread e l'approccio di MFC al multithreading.
 
 [Multithreading e impostazioni locali](multithreading-and-locales.md)<br/>
-Vengono illustrati i problemi che si verificano quando si utilizza la funzionalità delle impostazioni locali della C++ libreria di runtime C e della libreria standard in un'applicazione multithread.
+Vengono illustrati i problemi che si verificano quando si utilizza la funzionalità delle impostazioni locali della libreria di runtime C e della libreria standard C++ in un'applicazione multithread.
 
 ## <a name="related-sections"></a>Sezioni correlate
 

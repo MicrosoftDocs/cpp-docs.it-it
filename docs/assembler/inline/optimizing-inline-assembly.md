@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: ottimizzazione dell'assembly inline"
 title: Ottimizzazione dell'assembly Inline
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - optimizing performance, inline assembly
 - __asm keyword [C++], optimizing
 ms.assetid: 52a7ec83-9782-4d96-94c1-53bb2ac9e8c8
-ms.openlocfilehash: a558761ff49c2b508a5bad6172cda2283801e30e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 62c4dad85128089cdcf85f4156884747f928338f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87191729"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122096"
 ---
 # <a name="optimizing-inline-assembly"></a>Ottimizzazione dell'assembly Inline
 
@@ -23,6 +24,6 @@ La presenza di un **`__asm`** blocco in una funzione influiscono sull'ottimizzaz
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Assembler inline](../../assembler/inline/inline-assembler.md)<br/>

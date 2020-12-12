@@ -1,20 +1,21 @@
 ---
+description: 'Altre informazioni su: classi C++ come tipi di valore'
 title: Classi C++ come tipi valore
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: f63bb62c-60da-40d5-ac14-4366608fe260
-ms.openlocfilehash: 1aabcad46e848e1a499a142adaba5002a829bbf5
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: cba028f73ef55be76dd7d405a25fd423f3897af4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246016"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116679"
 ---
 # <a name="c-classes-as-value-types"></a>Classi C++ come tipi valore
 
-C++per impostazione predefinita, le classi sono tipi di valore. Possono essere specificati come tipi di riferimento, che consentono il comportamento polimorfico per supportare la programmazione orientata a oggetti. I tipi di valore vengono talvolta visualizzati dal punto di vista della memoria e del controllo del layout, mentre i tipi di riferimento si riferiscono alle classi di base e alle funzioni virtuali per finalità polimorfiche. Per impostazione predefinita, i tipi di valore sono copiabili, ovvero c'è sempre un costruttore di copia e un operatore di assegnazione di copia. Per i tipi di riferimento, è possibile rendere la classe non copiabile (disabilitare il costruttore di copia e l'operatore di assegnazione di copia) e usare un distruttore virtuale, che supporta il polimorfismo previsto. I tipi di valore si riferiscono anche al contenuto, che, quando vengono copiati, fornisce sempre due valori indipendenti che possono essere modificati separatamente. I tipi di riferimento sono relativi all'identità: quale tipo di oggetto è? Per questo motivo, i "tipi riferimento" sono detti anche "tipi polimorfici".
+Per impostazione predefinita, le classi C++ sono tipi di valore. Possono essere specificati come tipi di riferimento, che consentono il comportamento polimorfico per supportare la programmazione orientata a oggetti. I tipi di valore vengono talvolta visualizzati dal punto di vista della memoria e del controllo del layout, mentre i tipi di riferimento si riferiscono alle classi di base e alle funzioni virtuali per finalità polimorfiche. Per impostazione predefinita, i tipi di valore sono copiabili, ovvero c'è sempre un costruttore di copia e un operatore di assegnazione di copia. Per i tipi di riferimento, è possibile rendere la classe non copiabile (disabilitare il costruttore di copia e l'operatore di assegnazione di copia) e usare un distruttore virtuale, che supporta il polimorfismo previsto. I tipi di valore si riferiscono anche al contenuto, che, quando vengono copiati, fornisce sempre due valori indipendenti che possono essere modificati separatamente. I tipi di riferimento sono relativi all'identità: quale tipo di oggetto è? Per questo motivo, i "tipi riferimento" sono detti anche "tipi polimorfici".
 
-Se si desidera effettivamente un tipo di riferimento (classe base, funzioni virtuali), è necessario disabilitare in modo esplicito la copia, come illustrato nella classe `MyRefType` nel codice riportato di seguito.
+Se si desidera effettivamente un tipo di riferimento (classe base, funzioni virtuali), è necessario disabilitare in modo esplicito la copia, come illustrato nella `MyRefType` classe nel codice riportato di seguito.
 
 ```cpp
 // cl /EHsc /nologo /W4
@@ -45,9 +46,9 @@ test.cpp(15) : error C2248: 'MyRefType::operator =' : cannot access private memb
 
 ## <a name="value-types-and-move-efficiency"></a>Tipi di valore e efficienza di spostamento
 
-Il sovraccarico di allocazione delle copie è stato evitato a causa di nuove ottimizzazioni di copia Ad esempio, quando si inserisce una stringa nel mezzo di un vettore di stringhe, non vi sarà alcun overhead di riallocazione della copia, ma solo uno spostamento, anche se comporta un aumento del vettore. Questo vale anche per altre operazioni, ad esempio l'esecuzione di un'operazione di aggiunta su due oggetti di grandi dimensioni. Come si abilitano le ottimizzazioni delle operazioni sui valori? In alcuni C++ compilatori, il compilatore lo Abilita in modo implicito, in modo analogo ai costruttori di copia che possono essere generati automaticamente dal compilatore. In C++, tuttavia, la classe dovrà "acconsentire esplicitamente" per spostare l'assegnazione e i costruttori dichiarando la definizione della classe. A tale scopo, è necessario utilizzare il riferimento rvalue Double e commerciale (& &) nelle dichiarazioni di funzione membro appropriate e definire metodi di assegnazione di spostamento e costruttori di spostamento.  È anche necessario inserire il codice corretto per "rubare le budella" dall'oggetto di origine.
+Il sovraccarico di allocazione delle copie è stato evitato a causa di nuove ottimizzazioni di copia Ad esempio, quando si inserisce una stringa nel mezzo di un vettore di stringhe, non vi sarà alcun overhead di riallocazione della copia, ma solo uno spostamento, anche se comporta un aumento del vettore. Questo vale anche per altre operazioni, ad esempio l'esecuzione di un'operazione di aggiunta su due oggetti di grandi dimensioni. Come si abilitano le ottimizzazioni delle operazioni sui valori? In alcuni compilatori C++, il compilatore lo Abilita in modo implicito, in modo analogo ai costruttori di copia che possono essere generati automaticamente dal compilatore. Tuttavia, in C++, la classe dovrà "acconsentire esplicitamente" per spostare l'assegnazione e i costruttori dichiarando tale classe nella definizione della classe. A tale scopo, è necessario utilizzare il riferimento rvalue di due e commerciale (&&) nelle dichiarazioni di funzione membro appropriate e definire i metodi di assegnazione di spostamento e il costruttore di spostamento.  È anche necessario inserire il codice corretto per "rubare le budella" dall'oggetto di origine.
 
-Come si decide se è necessario lo spostamento abilitato? Se si sa già che è necessaria la costruzione di copia abilitata, è probabile che lo spostamento venga abilitato se può essere più economico di una copia completa. Tuttavia, se si sa che è necessario il supporto di spostamento, non significa necessariamente che la copia sia abilitata. Quest'ultimo caso verrebbe definito "tipo di solo spostamento". Un esempio già presente nella libreria standard è `unique_ptr`. Come nota collaterale, il `auto_ptr` precedente è deprecato ed è stato sostituito da `unique_ptr` esattamente a causa della mancanza di supporto della semantica di spostamento nella versione precedente C++di.
+Come si decide se è necessario lo spostamento abilitato? Se si sa già che è necessaria la costruzione di copia abilitata, è probabile che lo spostamento venga abilitato se può essere più economico di una copia completa. Tuttavia, se si sa che è necessario il supporto di spostamento, non significa necessariamente che la copia sia abilitata. Quest'ultimo caso verrebbe definito "tipo di solo spostamento". Un esempio già presente nella libreria standard è `unique_ptr` . Come nota collaterale, il vecchio `auto_ptr` è deprecato ed è stato sostituito da `unique_ptr` esattamente a causa della mancanza di supporto della semantica di spostamento nella versione precedente di C++.
 
 Usando la semantica di spostamento è possibile restituire per valore o inserire al centro. Lo spostamento è un'ottimizzazione della copia. È necessario disporre dell'allocazione dell'heap come soluzione alternativa. Si consideri lo pseudocodice seguente:
 
@@ -106,9 +107,9 @@ Se si Abilita la costruzione o l'assegnazione di copia, abilitare anche la costr
 
 Alcuni tipi *non di valore* sono di solo spostamento, ad esempio quando non è possibile clonare una risorsa, solo trasferire la proprietà. Esempio: `unique_ptr`.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[C++sistema di tipi](../cpp/cpp-type-system-modern-cpp.md)<br/>
-[BentornatiC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
-[Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
+[Sistema di tipi C++](../cpp/cpp-type-system-modern-cpp.md)<br/>
+[C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Riferimenti per il linguaggio C++](../cpp/cpp-language-reference.md)<br/>
 [Libreria standard C++](../standard-library/cpp-standard-library-reference.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso di simboli C o C++ in blocchi di __asm'
 title: Utilizzo di simboli C o C++ in blocchi __asm
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - __asm keyword [C++], C/C++ elements in
 - Visual C++, in __asm blocks
 ms.assetid: 0758ffdc-dfe9-41c8-a5e1-fd395bcac328
-ms.openlocfilehash: ecdd3b6b6916a5c9585678838d8e494a58e0508c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3a2e46ab13bb316cb4761103d34da6c129c97995
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87191196"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97121888"
 ---
 # <a name="using-c-or-c-symbols-in-__asm-blocks"></a>Utilizzo di simboli C o C++ in blocchi __asm
 
@@ -23,7 +24,7 @@ Un **`__asm`** blocco può fare riferimento a qualsiasi simbolo C o C++ nell'amb
 
 Alcune restrizioni vengono applicate all'utilizzo dei simboli di C++ e C:
 
-- Ogni istruzione in linguaggio assembly può contenere solo un simbolo C++ o C. Nella stessa istruzione di assembly possono essere presenti più simboli solo con espressioni di **lunghezza**, di **tipo**e di **dimensione** .
+- Ogni istruzione in linguaggio assembly può contenere solo un simbolo C++ o C. Nella stessa istruzione di assembly possono essere presenti più simboli solo con espressioni di **lunghezza**, di **tipo** e di **dimensione** .
 
 - Le funzioni a cui viene fatto riferimento in un **`__asm`** blocco devono essere dichiarate (prototipo) prima nel programma. In caso contrario, il compilatore non può distinguere tra i nomi di funzione e le etichette nel **`__asm`** blocco.
 
@@ -33,6 +34,6 @@ Alcune restrizioni vengono applicate all'utilizzo dei simboli di C++ e C:
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Utilizzo di C o C++ in blocchi di __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>

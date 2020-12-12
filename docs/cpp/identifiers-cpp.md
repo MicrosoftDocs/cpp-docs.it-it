@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: identificatori (C++)'
 title: identificatori [C++]
 ms.date: 05/07/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - white space, in C++ identifiers
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
-ms.openlocfilehash: 2d16dd318cd42b6294ef60edf44a16ccaf47b99b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 24798675940761eb7a2b8cbdeb6d63592bb4d05a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187673"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114013"
 ---
 # <a name="identifiers-c"></a>identificatori [C++]
 
@@ -97,6 +98,6 @@ Gli identificatori non possono avere esattamente la stessa ortografia delle paro
 
 L'utilizzo di due caratteri di sottolineatura sequenziali ( **_ _** ) in un identificatore o di un singolo carattere di sottolineatura iniziale seguito da una lettera maiuscola è riservato per le implementazioni C++ in tutti gli ambiti. Evitare di usare un carattere di sottolineatura iniziale seguito da una minuscola per i nomi con ambito file per non creare potenziali conflitti con gli identificatori riservati correnti o futuri.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Convenzioni lessicali](../cpp/lexical-conventions.md)

@@ -1,14 +1,15 @@
 ---
+description: 'Altre informazioni su: applicazioni desktop (Visual C++)'
 title: Applicazioni desktop (Visual C++)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
 ms.topic: overview
-ms.openlocfilehash: 26448ca65b3162e2adfe6988dfd8c9e85432429c
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: eb7badb73af507d31c9dd982f0a6189362249a3b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504442"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114754"
 ---
 # <a name="desktop-applications-visual-c"></a>Applicazioni desktop (Visual C++)
 
@@ -55,6 +56,6 @@ Qualsiasi applicazione desktop in C++ può usare le classi e le funzioni di runt
 |[Hilo: Sviluppo di applicazioni per Windows 7 in C++](/previous-versions/msdn10/ff708696(v=msdn.10))|Descrive come creare un'applicazione desktop di Windows rich-client, che usa librerie di animazioni Windows e Direct2D per creare un'interfaccia utente basata su sequenze.  Questa esercitazione non è stata aggiornata a partire da Windows 7, ma offre comunque un'introduzione completa alla programmazione Win32.|
 |[Panoramica della programmazione Windows in C++](overview-of-windows-programming-in-cpp.md)|Vengono descritte le funzionalità principali della programmazione desktop di Windows in C++.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [C++ in Visual Studio](../overview/visual-cpp-in-visual-studio.md)

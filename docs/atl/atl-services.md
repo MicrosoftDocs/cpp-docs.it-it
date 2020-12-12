@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Servizi ATL'
 title: Servizi ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,43 +8,43 @@ helpviewer_keywords:
 - services, ATL
 - ATL services
 ms.assetid: 8c09d1a8-7548-4d2c-947c-9d795a81659b
-ms.openlocfilehash: 052169154a62cbd07a82f08087fc2c2db8ae46c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cb1f526434cefe57dc4675d592f836e04a6cdb6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62251915"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148603"
 ---
 # <a name="atl-services"></a>Servizi ATL
 
-Per creare un oggetto COM ATL in modo che venga eseguito in un servizio, è sufficiente selezionare servizio (con estensione EXE) dall'elenco di opzioni del server nella creazione guidata progetto ATL. La procedura guidata creerà quindi una classe derivata da `CAtlServiceModuleT` per implementare il servizio.
+Per creare l'oggetto COM ATL in modo che venga eseguito in un servizio, è sufficiente selezionare il servizio (EXE) nell'elenco delle opzioni del server nella creazione guidata progetto ATL. La procedura guidata creerà quindi una classe derivata da `CAtlServiceModuleT` per implementare il servizio.
 
-Quando l'oggetto COM ATL viene compilato come servizio, sarà possibile registrare solo come server locale e non verrà visualizzata nell'elenco dei servizi nel Pannello di controllo. Questo è quanto rende più semplice eseguire il debug del servizio come un server locale rispetto a come servizio. Per installarlo come servizio, eseguire il comando seguente al prompt dei comandi:
+Quando l'oggetto COM ATL è compilato come servizio, verrà registrato solo come server locale e non verrà visualizzato nell'elenco dei servizi nel pannello di controllo. Questo perché è più semplice eseguire il debug del servizio come server locale anziché come servizio. Per installarlo come servizio, eseguire il comando seguente al prompt dei comandi:
 
 `YourEXE` `.exe /Service`
 
-Per disinstallare l'estensione, eseguire le operazioni seguenti:
+Per disinstallarlo, eseguire il comando seguente:
 
 `YourEXE` `.exe /UnregServer`
 
-Nei primi quattro argomenti in questa sezione illustrano le azioni che si verificano durante l'esecuzione di `CAtlServiceModuleT` funzioni membro. Questi argomenti vengono visualizzati nella stessa sequenza come le funzioni vengono in genere chiamate. Per migliorare la comprensione di questi argomenti, è consigliabile usare il codice sorgente generato dalla creazione guidata progetto ATL come riferimento. I primi quattro argomenti sono:
+I primi quattro argomenti di questa sezione illustrano le azioni che si verificano durante l'esecuzione di `CAtlServiceModuleT` funzioni membro. Questi argomenti vengono visualizzati nella stessa sequenza delle funzioni chiamate in genere. Per migliorare la comprensione di questi argomenti, è consigliabile utilizzare il codice sorgente generato dalla creazione guidata progetto ATL come riferimento. Questi primi quattro argomenti sono:
 
-- [Funzione CAtlServiceModuleT:: Start](../atl/reference/catlservicemodulet-class.md#start)
+- [Funzione funzione CAtlServiceModuleT:: Start](../atl/reference/catlservicemodulet-class.md#start)
 
-- [Funzione CAtlServiceModuleT::](../atl/reference/catlservicemodulet-class.md#servicemain)
+- [Funzione funzione CAtlServiceModuleT:: ServiceMain](../atl/reference/catlservicemodulet-class.md#servicemain)
 
-- [Funzione CAtlServiceModuleT:: Run](../atl/reference/catlservicemodulet-class.md#run)
+- [Funzione funzione CAtlServiceModuleT:: Run](../atl/reference/catlservicemodulet-class.md#run)
 
-- [Funzione CAtlServiceModuleT:: Handler](../atl/reference/catlservicemodulet-class.md#handler)
+- [Funzione funzione CAtlServiceModuleT:: handler](../atl/reference/catlservicemodulet-class.md#handler)
 
-Gli ultimi tre argomenti descrivono i concetti relativi allo sviluppo di un servizio:
+Negli ultimi tre argomenti vengono illustrati i concetti relativi allo sviluppo di un servizio:
 
-- [Le voci del Registro di sistema](../atl/registry-entries.md) per i servizi ATL
+- [Voci del registro di sistema](../atl/registry-entries.md) per i servizi ATL
 
 - [DCOMCNFG](../atl/dcomcnfg.md)
 
-- [Suggerimenti sul debug](../atl/debugging-tips.md) per i servizi ATL
+- [Suggerimenti](../atl/debugging-tips.md) per il debug di servizi ATL
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Concetti](../atl/active-template-library-atl-concepts.md)

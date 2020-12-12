@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __movsw'
 title: __movsw
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - rep movsw instruction
 - __movsw intrinsic
 ms.assetid: db402ad5-7f0e-449a-b0b0-eea9928d6435
-ms.openlocfilehash: 67eef7fe0a5b9803650f345740a8c40262cd2014
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 500a2bc3af83887cdd5d65501695c9db60ef60f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221717"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119029"
 ---
 # <a name="__movsw"></a>__movsw
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Genera un'istruzione Move String`rep movsw`().
+Genera un'istruzione Move String ( `rep movsw` ).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -36,7 +37,7 @@ void __movsw(
 *Destinazione*\
 out Destinazione dell'operazione.
 
-*Source*\
+*Origine*\
 in Origine dell'operazione.
 
 *Conteggio*\
@@ -44,13 +45,13 @@ in Numero di parole da copiare.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`__movsw`|x86, x64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Il risultato è che le prime parole di *conteggio* a cui punta l' *origine* vengono copiate nella stringa di *destinazione* .
 
@@ -82,8 +83,8 @@ int main()
 0 1 2 3 4 5 6 7 8 9
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

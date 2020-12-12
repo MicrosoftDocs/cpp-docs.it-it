@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura: migliorare le prestazioni con i generics (C++/CLI)'
 title: 'Procedura: Migliorare le prestazioni con i generics (C++/CLI)'
 ms.date: 10/12/2018
 ms.topic: reference
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - C++, generics
 - generics [C++], performance
 ms.assetid: f14a175b-301f-46cc-86e4-c82d35f9aa3e
-ms.openlocfilehash: 039c5b069351249e51d961d9d1757ed6b09ef99c
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 90066a64deda574dae895023cf92ac7fa2807603
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414165"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119161"
 ---
 # <a name="how-to-improve-performance-with-generics-ccli"></a>Procedura: Migliorare le prestazioni con i generics (C++/CLI)
 
@@ -124,6 +125,6 @@ int main()
 14
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Generics](generics-cpp-component-extensions.md)

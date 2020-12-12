@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CButton'
 title: Classe CButton
 ms.date: 11/04/2016
 f1_keywords:
@@ -74,12 +75,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 7e2156c7fba6d5c621ab9e73b4739be45941fcc5
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: af7b9bec8298942bcb414e83be24257dd62652cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561986"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122577"
 ---
 # <a name="cbutton-class"></a>Classe CButton
 
@@ -91,17 +92,17 @@ Fornisce la funzionalità dei controlli pulsante di Windows.
 class CButton : public CWnd
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CButton:: CButton](#cbutton)|Costruisce un oggetto `CButton`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CButton:: create](#create)|Crea il controllo pulsante di Windows e lo collega all' `CButton` oggetto.|
 |[CButton::D rawItem](#drawitem)|Eseguire l'override di per disegnare un oggetto creato dal proprietario `CButton` .|
@@ -137,7 +138,7 @@ class CButton : public CWnd
 |[CButton:: sestate](#setstate)|Imposta lo stato di evidenziazione di un controllo Button.|
 |[CButton:: SetTextMargin](#settextmargin)|Imposta il margine del testo del controllo Button.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un controllo Button è una piccola finestra figlio rettangolare su cui è possibile fare clic su on e off. I pulsanti possono essere usati singolarmente o in gruppi e possono essere etichettati o visualizzati senza testo. Un pulsante in genere cambia aspetto quando l'utente fa clic su di esso.
 
@@ -153,7 +154,7 @@ Se si desidera gestire i messaggi di notifica di Windows inviati da un controllo
 
 Ogni voce della mappa messaggi assume il formato seguente:
 
-**Il \_ ** _Notifica_ **(** _ID_, _memberFxn_ **)**
+**Il \_** _Notifica_ **(** _ID_, _memberFxn_ **)**
 
 dove *ID* specifica l'ID della finestra figlio del controllo che invia la notifica e *memberFxn* è il nome della funzione membro padre scritta per gestire la notifica.
 
@@ -232,7 +233,7 @@ Specifica l'ID del controllo Button.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si costruisce un `CButton` oggetto in due passaggi. Chiamare innanzitutto il costruttore e quindi chiamare `Create` , che crea il controllo pulsante di Windows e lo collega all' `CButton` oggetto.
 
@@ -267,7 +268,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 *lpDrawItemStruct*<br/>
 Puntatore long a una struttura [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) . La struttura contiene informazioni sull'elemento da disegnare e il tipo di disegno necessario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per un pulsante creato dal proprietario è impostato lo stile BS_OWNERDRAW. Eseguire l'override di questa funzione membro per implementare il disegno per un oggetto creato dal proprietario `CButton` . L'applicazione deve ripristinare tutti gli oggetti GDI (Graphics Device Interface) selezionati per il contesto di visualizzazione fornito in *lpDrawItemStruct* prima che venga terminata la funzione membro.
 
@@ -321,7 +322,7 @@ int GetCheck() const;
 
 Il valore restituito da un controllo Button creato con lo stile BS_AUTOCHECKBOX, BS_AUTORADIOBUTTON, BS_AUTO3STATE, BS_CHECKBOX, BS_RADIOBUTTON o BS_3STATE è uno dei valori seguenti:
 
-|valore|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |BST_UNCHECKED|Lo stato del pulsante è deselezionato.|
 |BST_CHECKED|Lo stato del pulsante è selezionato.|
@@ -382,7 +383,7 @@ Puntatore alla dimensione corrente del pulsante.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di BCM_GETIDEALSIZE, come descritto nella sezione dei [pulsanti](/windows/win32/controls/buttons) della Windows SDK.
 
@@ -403,7 +404,7 @@ Puntatore all'elenco di immagini dell' `CButton` oggetto.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di BCM_GETIMAGELIST, come descritto nella sezione dei [pulsanti](/windows/win32/controls/buttons) della Windows SDK.
 
@@ -435,7 +436,7 @@ Nel primo overload, oggetto [CString](../../atl-mfc-shared/using-cstring.md) che
 
 Nel secondo overload, TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questo metodo solo con i controlli il cui stile del pulsante è BS_COMMANDLINK o BS_DEFCOMMANDLINK.
 
@@ -453,7 +454,7 @@ UINT GetNoteLength() const;
 
 Lunghezza del testo della nota, in caratteri Unicode a 16 bit, per il controllo del collegamento al comando corrente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questo metodo solo con i controlli il cui stile del pulsante è BS_COMMANDLINK o BS_DEFCOMMANDLINK.
 
@@ -471,7 +472,7 @@ TCHAR GetSplitGlyph() const;
 
 Carattere di glifo associato al controllo pulsante di suddivisione corrente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un glifo è la rappresentazione fisica di un carattere in un particolare tipo di carattere. Ad esempio, un controllo pulsante combinato potrebbe essere decorato con il glifo del segno di spunta Unicode (U + 2713).
 
@@ -491,7 +492,7 @@ CImageList* GetSplitImageList() const;
 
 Puntatore a un oggetto [CImageList](../../mfc/reference/cimagelist-class.md) .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questo metodo solo con i controlli il cui stile del pulsante è BS_SPLITBUTTON o BS_DEFSPLITBUTTON.
 
@@ -514,7 +515,7 @@ out Puntatore a una struttura [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questo metodo solo con i controlli il cui stile del pulsante è BS_SPLITBUTTON o BS_DEFSPLITBUTTON.
 
@@ -537,7 +538,7 @@ out Puntatore a una struttura di [dimensioni](/windows/win32/api/windef/ns-winde
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questo metodo solo con i controlli il cui stile del pulsante è BS_SPLITBUTTON o BS_DEFSPLITBUTTON.
 
@@ -557,7 +558,7 @@ UINT GetSplitStyle() const;
 
 Combinazione bit per bit di stili di pulsanti di divisione. Per ulteriori informazioni, vedere il `uSplitStyle` membro della struttura [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questo metodo solo con i controlli il cui stile del pulsante è BS_SPLITBUTTON o BS_DEFSPLITBUTTON.
 
@@ -577,7 +578,7 @@ UINT GetState() const;
 
 Campo di bit che contiene la combinazione di valori che indicano lo stato corrente di un controllo Button. Nella tabella seguente sono elencati i valori possibili.
 
-|Stato pulsante|valore|Descrizione|
+|Stato pulsante|Valore|Description|
 |------------------|-----------|-----------------|
 |BST_UNCHECKED|0x0000|Stato iniziale.|
 |BST_CHECKED|0x0001|Il controllo Button è selezionato.|
@@ -585,7 +586,7 @@ Campo di bit che contiene la combinazione di valori che indicano lo stato corren
 |BST_PUSHED|0x0004|Viene premuto il controllo Button.|
 |BST_FOCUS|0x0008|Il controllo Button ha lo stato attivo.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un controllo Button con lo stile del pulsante BS_3STATE o BS_AUTO3STATE crea una casella di controllo con un terzo stato denominato lo stato indeterminato. Lo stato indeterminato indica che la casella di controllo non è selezionata né deselezionata.
 
@@ -610,11 +611,11 @@ Puntatore al margine del testo dell' `CButton` oggetto.
 
 Restituisce il margine del testo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di BCM_GETTEXTMARGIN, come descritto nella sezione dei [pulsanti](/windows/win32/controls/buttons) della Windows SDK.
 
@@ -635,7 +636,7 @@ Handle di una bitmap.
 
 Handle di una bitmap precedentemente associata al pulsante.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La bitmap verrà posizionata automaticamente sulla faccia del pulsante, centrata per impostazione predefinita. Se la bitmap è troppo grande per il pulsante, verrà ritagliata su entrambi i lati. È possibile scegliere altre opzioni di allineamento, incluse le seguenti:
 
@@ -677,7 +678,7 @@ Specifica lo [stile del pulsante](../../mfc/reference/styles-used-by-mfc.md#butt
 *bRedraw*<br/>
 Specifica se il pulsante deve essere ridisegnato. Il pulsante viene ridisegnato da un valore diverso da zero. Il valore 0 non consente di ricreare il pulsante. Per impostazione predefinita, il pulsante viene ridisegnato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Utilizzare la `GetButtonStyle` funzione membro per recuperare lo stile del pulsante. La parola di ordine inferiore dello stile del pulsante completo è lo stile specifico del pulsante.
 
@@ -698,13 +699,13 @@ void SetCheck(int nCheck);
 *nPer*<br/>
 Specifica lo stato di selezione. Questo parametro può essere uno dei seguenti:
 
-|valore|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |BST_UNCHECKED|Impostare lo stato del pulsante su deselezionato.|
 |BST_CHECKED|Impostare lo stato del pulsante su controllato.|
 |BST_INDETERMINATE|Impostare lo stato del pulsante su indeterminato. Questo valore può essere utilizzato solo se il pulsante presenta lo stile BS_3STATE o BS_AUTO3STATE.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro non ha alcun effetto su un pulsante.
 
@@ -729,7 +730,7 @@ Handle di un cursore.
 
 Handle di un cursore associato in precedenza al pulsante.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il cursore verrà posizionato automaticamente sul lato del pulsante, centrato per impostazione predefinita. Se il cursore è troppo grande per il pulsante, verrà ritagliato su entrambi i lati. È possibile scegliere altre opzioni di allineamento, incluse le seguenti:
 
@@ -768,7 +769,7 @@ in TRUE per impostare lo stato di BST_DROPDOWNPUSHED; in caso contrario, FALSE.
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un controllo pulsante combinato ha uno stile di BS_SPLITBUTTON o BS_DEFSPLITBUTTON ed è costituito da un pulsante e da una freccia a discesa a destra. Per altre informazioni, vedere [stili dei pulsanti](/windows/win32/Controls/button-styles). In genere, lo stato a discesa viene impostato quando l'utente fa clic sulla freccia a discesa. Utilizzare questo metodo per impostare a livello di codice lo stato dell'elenco a discesa del controllo. La freccia a discesa viene disegnata ombreggiata per indicare lo stato.
 
@@ -803,7 +804,7 @@ in TRUE per impostare `elevation required` lo stato; in caso contrario, false.
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se un pulsante o un controllo del collegamento del comando richiede autorizzazioni di sicurezza elevate per eseguire un'azione, impostare il controllo su `elevation required` stato. Successivamente, in Windows viene visualizzata l'icona dello scudo controllo dell'account utente (UAC) nel controllo. Per altre informazioni, vedere [Controllo dell'account utente](/windows/win32/uxguide/winenv-uac).
 
@@ -826,7 +827,7 @@ Handle di un'icona.
 
 Handle di un'icona precedentemente associata al pulsante.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'icona verrà posizionata automaticamente sulla faccia del pulsante, centrata per impostazione predefinita. Se l'icona è troppo grande per il pulsante, verrà ritagliata su entrambi i lati. È possibile scegliere altre opzioni di allineamento, incluse le seguenti:
 
@@ -865,7 +866,7 @@ Puntatore al nuovo elenco di immagini.
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di BCM_SETIMAGELIST, come descritto nella sezione dei [pulsanti](/windows/win32/controls/buttons) della Windows SDK.
 
@@ -886,7 +887,7 @@ in Puntatore a una stringa Unicode impostata come testo della nota per il contro
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questo metodo solo con i controlli il cui stile del pulsante è BS_COMMANDLINK o BS_DEFCOMMANDLINK.
 
@@ -921,7 +922,7 @@ in Carattere che specifica il glifo da utilizzare come freccia a discesa del pul
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questo metodo solo con i controlli che hanno lo stile del pulsante BS_SPLITBUTTON o BS_DEFSPLITBUTTON.
 
@@ -946,7 +947,7 @@ in Puntatore a un oggetto [CImageList](../../mfc/reference/cimagelist-class.md) 
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questo metodo solo con i controlli il cui stile del pulsante è BS_SPLITBUTTON o BS_DEFSPLITBUTTON.
 
@@ -969,7 +970,7 @@ in Puntatore a una struttura [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-c
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questo metodo solo con i controlli il cui stile del pulsante è BS_SPLITBUTTON o BS_DEFSPLITBUTTON.
 
@@ -1004,7 +1005,7 @@ in Puntatore a una struttura di [dimensioni](/windows/win32/api/windef/ns-windef
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questo metodo solo con i controlli il cui stile del pulsante è BS_SPLITBUTTON o BS_DEFSPLITBUTTON.
 
@@ -1041,7 +1042,7 @@ in Combinazione bit per bit di stili di pulsanti di divisione. Per ulteriori inf
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questo metodo solo con i controlli il cui stile del pulsante è BS_SPLITBUTTON o BS_DEFSPLITBUTTON.
 
@@ -1074,7 +1075,7 @@ void SetState(BOOL bHighlight);
 *bHighlight*<br/>
 Specifica se il pulsante deve essere evidenziato. Un valore diverso da zero evidenzia il pulsante; un valore 0 rimuove tutte le evidenziazioni.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'evidenziazione influiscono sull'esterno di un controllo Button. Non ha alcun effetto sullo stato di selezione di un pulsante di opzione o di una casella di controllo.
 
@@ -1101,7 +1102,7 @@ Puntatore al nuovo margine del testo.
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di BCM_SETTEXTMARGIN, come descritto nella sezione dei [pulsanti](/windows/win32/controls/buttons) della Windows SDK.
 

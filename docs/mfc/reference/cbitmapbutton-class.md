@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CBitmapButton'
 title: Classe CBitmapButton
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-ms.openlocfilehash: 0cf4554f86f4a9275e4d96b3db519fde7fb05b22
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 93d114dce87aba4643af427f3726a5ffab004b77
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231871"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122707"
 ---
 # <a name="cbitmapbutton-class"></a>Classe CBitmapButton
 
@@ -31,25 +32,25 @@ Crea controlli di tipo pulsante di comando dotati di immagini bitmap anziché di
 class CBitmapButton : public CButton
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CBitmapButton:: CBitmapButton](#cbitmapbutton)|Costruisce un oggetto `CBitmapButton`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CBitmapButton:: autoload](#autoload)|Associa un pulsante in una finestra di dialogo con un oggetto della `CBitmapButton` classe, carica le bitmap in base al nome e ridimensiona il pulsante per adattarlo alla bitmap.|
 |[CBitmapButton:: LoadBitmaps](#loadbitmaps)|Inizializza l'oggetto caricando una o più risorse bitmap denominate dal file di risorse dell'applicazione e aggiungendo le bitmap all'oggetto.|
 |[CBitmapButton:: SizeToContent](#sizetocontent)|Ridimensiona il pulsante per adattarlo alla bitmap.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-`CBitmapButton`gli oggetti contengono fino a quattro bitmap, che contengono immagini per i diversi Stati che un pulsante può assumere: up (o Normal), Down (o selected), Focused e disabled. È necessaria solo la prima bitmap. le altre sono facoltative.
+`CBitmapButton` gli oggetti contengono fino a quattro bitmap, che contengono immagini per i diversi Stati che un pulsante può assumere: up (o Normal), Down (o selected), Focused e disabled. È necessaria solo la prima bitmap. le altre sono facoltative.
 
 Le immagini dei pulsanti bitmap includono il bordo intorno all'immagine e l'immagine stessa. Il bordo rappresenta in genere una parte della visualizzazione dello stato del pulsante. La bitmap per lo stato attivo, ad esempio, è in genere simile a quella per lo stato attivo, ma con un rettangolo tratteggiato inserito dal bordo o da una linea continua spessa al bordo. La bitmap per lo stato disabilitato è in genere simile a quella per lo stato attivo, ma ha un contrasto inferiore (ad esempio una selezione di menu in grigio o in grigio).
 
@@ -112,7 +113,7 @@ Per ulteriori informazioni su `CBitmapButton` , vedere [controlli](../../mfc/con
 
 **Intestazione:** AFXEXT. h
 
-## <a name="cbitmapbuttonautoload"></a><a name="autoload"></a>CBitmapButton:: autoload
+## <a name="cbitmapbuttonautoload"></a><a name="autoload"></a> CBitmapButton:: autoload
 
 Associa un pulsante in una finestra di dialogo con un oggetto della `CBitmapButton` classe, carica le bitmap in base al nome e ridimensiona il pulsante per adattarlo alla bitmap.
 
@@ -134,7 +135,7 @@ Puntatore all'oggetto proprietario del pulsante.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Utilizzare la `AutoLoad` funzione per inizializzare un pulsante di estrazione del proprietario in una finestra di dialogo come pulsante bitmap. Le istruzioni per l'uso di questa funzione sono disponibili nelle note relative alla `CBitmapButton` classe.
 
@@ -142,7 +143,7 @@ Utilizzare la `AutoLoad` funzione per inizializzare un pulsante di estrazione de
 
 [!code-cpp[NVC_MFCControlLadenDialog#75](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]
 
-## <a name="cbitmapbuttoncbitmapbutton"></a><a name="cbitmapbutton"></a>CBitmapButton:: CBitmapButton
+## <a name="cbitmapbuttoncbitmapbutton"></a><a name="cbitmapbutton"></a> CBitmapButton:: CBitmapButton
 
 Crea un oggetto `CBitmapButton`.
 
@@ -150,7 +151,7 @@ Crea un oggetto `CBitmapButton`.
 CBitmapButton();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Dopo aver creato l' `CBitmapButton` oggetto C++, chiamare [CButton:: create](../../mfc/reference/cbutton-class.md#create) per creare il controllo pulsante di Windows e collegarlo all' `CBitmapButton` oggetto.
 
@@ -158,7 +159,7 @@ Dopo aver creato l' `CBitmapButton` oggetto C++, chiamare [CButton:: create](../
 
 [!code-cpp[NVC_MFCControlLadenDialog#57](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]
 
-## <a name="cbitmapbuttonloadbitmaps"></a><a name="loadbitmaps"></a>CBitmapButton:: LoadBitmaps
+## <a name="cbitmapbuttonloadbitmaps"></a><a name="loadbitmaps"></a> CBitmapButton:: LoadBitmaps
 
 Utilizzare questa funzione quando si desidera caricare le immagini bitmap identificate dai relativi nomi di risorse o numeri ID oppure quando non è possibile utilizzare la `AutoLoad` funzione perché, ad esempio, si sta creando un pulsante bitmap che non fa parte di una finestra di dialogo.
 
@@ -210,7 +211,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 [!code-cpp[NVC_MFCControlLadenDialog#58](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]
 
-## <a name="cbitmapbuttonsizetocontent"></a><a name="sizetocontent"></a>CBitmapButton:: SizeToContent
+## <a name="cbitmapbuttonsizetocontent"></a><a name="sizetocontent"></a> CBitmapButton:: SizeToContent
 
 Chiamare questa funzione per ridimensionare un pulsante bitmap sulle dimensioni della bitmap.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: prototipi di funzione'
 title: Prototipi di funzioni
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-ms.openlocfilehash: 76e8abdaa2e2d0d8ba14209b45982b6a7f63f2e4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d8e83e68daaa610387f3a23c06ad5ee49a8b3944
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227855"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151840"
 ---
 # <a name="function-prototypes"></a>Prototipi di funzioni
 
@@ -42,7 +43,7 @@ Una dichiarazione di funzione precede la definizione di funzione e specifica il 
 *dichiaratore*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*puntatore*<sub>opz</sub> *Direct-declarator*
 
-*Direct-declarator*:/ \* dichiaratore di funzione\*/<br/>
+*Direct-declarator*:/ \* dichiaratore di funzione \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Direct-declarator***(***Parameter-Type-list***)**   / \* dichiaratore nuovo stile      \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Direct-declarator***(***Identifier-list*<sub>opt</sub> **)**  / \* dichiaratore di stile obsoleto    \*/
 
@@ -85,6 +86,6 @@ void func1( struct S * );
 
 In **/Ze**, il tag viene ancora inserito in ambito globale.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Funzioni](../c-language/functions-c.md)

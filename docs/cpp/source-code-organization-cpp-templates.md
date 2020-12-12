@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: organizzazione del codice sorgente (modelli C++)'
 title: Organizzazione del codice sorgente (modelli di C++)
 ms.date: 04/22/2019
 ms.assetid: 50569c5d-0219-4966-9bcf-a8689074ad1d
-ms.openlocfilehash: ecd682056f27200ae31c27295c1aabaf72c74a18
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 72777c550cf36fd635432a8ce840af92f0a3f893
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186113"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97113870"
 ---
 # <a name="source-code-organization-c-templates"></a>Organizzazione del codice sorgente (modelli di C++)
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: defaultvtable'
 title: defaultvtable (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-ms.openlocfilehash: 6b1d6960a065bf2df46852d3df1ca53d4239f1bc
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9cabb2e3487788b56a37e7380ef9a9e08cf2bc67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839491"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122148"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
@@ -28,7 +29,7 @@ Definisce un'interfaccia come interfaccia vtable predefinita per un oggetto COM.
 *interface*<br/>
 Interfaccia designata per la quale si desidera avere il vtable predefinito per l'oggetto COM.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'attributo **defaultvtable** di C++ ha la stessa funzionalità dell'attributo MIDL di [defaultvtable](/windows/win32/Midl/defaultvtable) .
 
@@ -73,7 +74,7 @@ class CMyC3 : public IMyI3 {};
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)

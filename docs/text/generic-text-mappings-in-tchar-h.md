@@ -1,5 +1,6 @@
 ---
-title: Mapping di testo generico in TCHAR. h
+description: 'Altre informazioni su: Generic-Text mapping in TCHAR. h'
+title: Mapping di Generic-Text in TCHAR. h
 ms.date: 11/04/2016
 helpviewer_keywords:
 - mapping generic-text
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: c317e7d67cc3d086dacbe0f24b0103d389afefda
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f083dc03eab7db25b54955d8d34a13f2b5b7197b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217298"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118348"
 ---
-# <a name="generic-text-mappings-in-tcharh"></a>Mapping di testo generico in TCHAR. h
+# <a name="generic-text-mappings-in-tcharh"></a>Mapping di Generic-Text in TCHAR. h
 
 Per semplificare il trasporto del codice per l'utilizzo internazionale, la libreria di runtime Microsoft fornisce mapping di testo generico specifici di Microsoft per molti tipi di dati, routine e altri oggetti. È possibile utilizzare questi mapping, definiti in TCHAR. h, per scrivere codice generico che può essere compilato per set di caratteri a byte singolo, multibyte o Unicode, a seconda di una costante del manifesto definita tramite un' `#define` istruzione. I mapping di testo generico sono estensioni Microsoft non compatibili con ANSI.
 
@@ -27,7 +28,7 @@ Il `_TCHAR` tipo di dati viene definito in modo condizionale in TCHAR. h. Se il 
 
 Poiché alcune funzioni di gestione delle stringhe SBCS (single byte character set) accettano parametri (con segno) **`char*`** , i risultati degli avvisi del compilatore non corrispondono quando `_MBCS` viene definito. Esistono tre modi per evitare questo avviso:
 
-1. Usare i thunk di funzione inline indipendenti dai tipi in TCHAR. h. Questo è il comportamento predefinito.
+1. Usare i thunk di funzione inline indipendenti dai tipi in TCHAR. h. Comportamento predefinito.
 
 1. Utilizzare le macro dirette in TCHAR. h definendo `_MB_MAP_DIRECT` nella riga di comando. In questo caso, è necessario abbinare manualmente i tipi. Questo è il metodo più veloce, ma non è indipendente dai tipi.
 
@@ -45,16 +46,16 @@ Ad esempio, la funzione di testo generico `_tcsrev` , definita in TCHAR. h, vien
 
 ### <a name="generic-text-data-type-mappings"></a>Mapping dei tipi di dati di testo generico
 
-|Testo generico<br /> Nome del tipo di dati|_UNICODE &<br /> _MBCS non definito|_MBCS<br /> Definito|_UNICODE<br /> Definito|
+|Generic-Text<br /> Nome del tipo di dati|_UNICODE &<br /> _MBCS non definito|_MBCS<br /> Definito|_UNICODE<br /> Definito|
 |--------------------------------------|----------------------------------------|------------------------|---------------------------|
 |`_TCHAR`|**`char`**|**`char`**|**`wchar_t`**|
 |`_TINT`|**`int`**|**`unsigned int`**|`wint_t`|
 |`_TSCHAR`|**`signed char`**|**`signed char`**|**`wchar_t`**|
 |`_TUCHAR`|**`unsigned char`**|**`unsigned char`**|**`wchar_t`**|
 |`_TXCHAR`|**`char`**|**`unsigned char`**|**`wchar_t`**|
-|`_T` o `_TEXT`|Nessun effetto (rimosso dal preprocessore)|Nessun effetto (rimosso dal preprocessore)|`L`(converte il carattere o la stringa seguente nella relativa controparte Unicode)|
+|`_T` o `_TEXT`|Nessun effetto (rimosso dal preprocessore)|Nessun effetto (rimosso dal preprocessore)|`L` (converte il carattere o la stringa seguente nella relativa controparte Unicode)|
 
-Per un elenco di mapping di testo generico di routine, variabili e altri oggetti, vedere [mapping di testo generico](../c-runtime-library/generic-text-mappings.md) in riferimenti alla libreria di Runtime.
+Per un elenco di mapping di testo generico di routine, variabili e altri oggetti, vedere [mapping di testo generico](../c-runtime-library/generic-text-mappings.md) in Run-Time Library Reference.
 
 > [!NOTE]
 > Non usare la `str` famiglia di funzioni con stringhe Unicode, che probabilmente contengono byte null incorporati. Analogamente, non usare la `wcs` famiglia di funzioni con stringhe MBCS (o SBCS).
@@ -89,7 +90,7 @@ RetVal = strrev(szString);
 
 Pertanto, è possibile scrivere, gestire e compilare un file di codice a origine singola per l'esecuzione con routine specifiche per uno dei tre tipi di set di caratteri.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Testo e stringhe](../text/text-and-strings-in-visual-cpp.md)<br/>
 [Uso di TCHAR. Tipi di dati H con codice _MBCS](../text/using-tchar-h-data-types-with-mbcs-code.md)

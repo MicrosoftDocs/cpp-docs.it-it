@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: com::p classe TR'
 title: com::ptr Class
 ms.date: 01/16/2019
 ms.topic: reference
@@ -16,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-ms.openlocfilehash: 9cb0ad23450d06bb314b0e2d6fa1d01784d633e2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 73016d425d06ecbda12702afc1793a4bab81ccc7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214906"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124397"
 ---
 # <a name="comptr-class"></a>com::ptr Class
 
@@ -39,7 +40,7 @@ ref class ptr;
 *_interface_type*<br/>
 Interfaccia COM.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 È possibile utilizzare `com::ptr` come variabile di funzione locale per semplificare le varie attività COM e automatizzare la gestione della durata.
 
@@ -167,14 +168,14 @@ int main() {
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |---------|-----------|
 |[ptr::p TR](#ptr)|Costruisce un `com::ptr` oggetto per eseguire il wrapping di un oggetto com.|
 |[ptr::~ptr](#tilde-ptr)|Distrugge un oggetto `com::ptr` .|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |---------|-----------|
 |[ptr::Attach](#attach)|Connette un oggetto COM a un `com::ptr` .|
 |[ptr::CreateInstance](#createInstance)|Crea un'istanza di un oggetto COM all'interno di un oggetto `com::ptr` .|
@@ -185,7 +186,7 @@ int main() {
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |---------|-----------|
 |[operatore PTR:: operator-&gt;](#operator-arrow)|Operatore di accesso ai membri, usato per chiamare i metodi sull'oggetto COM di proprietà.|
 |[ptr:: operator =](#operator-assign)|Connette un oggetto COM a un `com::ptr` .|
@@ -198,7 +199,7 @@ int main() {
 
 **Spazio dei nomi** msclr:: com
 
-## <a name="ptrptr"></a><a name="ptr"></a>ptr::p TR
+## <a name="ptrptr"></a><a name="ptr"></a> ptr::p TR
 
 Restituisce un puntatore all'oggetto COM di proprietà.
 
@@ -214,7 +215,7 @@ ptr(
 *P*<br/>
 Puntatore a interfaccia COM.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il costruttore di nessun argomento viene assegnato **`nullptr`** all'handle di oggetto sottostante. Le chiamate future al `com::ptr` convalideranno l'oggetto interno e non riusciranno automaticamente fino a quando non viene creato o collegato un oggetto.
 
@@ -285,7 +286,7 @@ int main() {
 }
 ```
 
-## <a name="ptrptr"></a><a name="tilde-ptr"></a>ptr:: ~ ptr
+## <a name="ptrptr"></a><a name="tilde-ptr"></a> ptr:: ~ ptr
 
 Distrugge un oggetto `com::ptr` .
 
@@ -293,7 +294,7 @@ Distrugge un oggetto `com::ptr` .
 ~ptr();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 In base alla distruzione, `com::ptr` rilascia tutti i riferimenti di cui è proprietario al relativo oggetto com. Supponendo che non siano presenti altri riferimenti all'oggetto COM, l'oggetto COM verrà eliminato e la relativa memoria verrà liberata.
 
@@ -360,7 +361,7 @@ int main() {
 }
 ```
 
-## <a name="ptrattach"></a><a name="attach"></a>ptr:: Connetti
+## <a name="ptrattach"></a><a name="attach"></a> ptr:: Connetti
 
 Connette un oggetto COM a un `com::ptr` .
 
@@ -379,7 +380,7 @@ Puntatore all'interfaccia COM da collegare.
 
 Se è `com::ptr` già proprietario di un riferimento a un oggetto com, `Attach` genera un'eccezione <xref:System.InvalidOperationException> .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Una chiamata a `Attach` fa riferimento all'oggetto com, ma non rilascia il riferimento del chiamante.
 
@@ -461,7 +462,7 @@ int main() {
 }
 ```
 
-## <a name="ptrcreateinstance"></a><a name="createInstance"></a>ptr:: CreateInstance
+## <a name="ptrcreateinstance"></a><a name="createInstance"></a> ptr:: CreateInstance
 
 Crea un'istanza di un oggetto COM all'interno di un oggetto `com::ptr` .
 
@@ -516,7 +517,7 @@ Puntatore all'interfaccia IUnknown dell'oggetto aggregato (IUnknown di controllo
 Contesto in cui viene eseguito il codice che gestisce l'oggetto appena creato. I valori vengono ricavati dall' `CLSCTX` enumerazione. Se `cls_context` non è specificato, viene usato il valore CLSCTX_ALL.
 
 *rclsid*<br/>
-`CLSID`associato ai dati e al codice che verranno utilizzati per creare l'oggetto.
+`CLSID` associato ai dati e al codice che verranno utilizzati per creare l'oggetto.
 
 ### <a name="exceptions"></a>Eccezioni
 
@@ -524,9 +525,9 @@ Se è `com::ptr` già proprietario di un riferimento a un oggetto com, `CreateIn
 
 Questa funzione chiama `CoCreateInstance` e USA <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> per convertire qualsiasi errore `HRESULT` in un'eccezione appropriata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-`CreateInstance`USA `CoCreateInstance` per creare una nuova istanza dell'oggetto specificato, identificato da un ProgID o da un CLSID. Il `com::ptr` fa riferimento all'oggetto appena creato e rilascerà automaticamente tutti i riferimenti di proprietà al momento dell'eliminazione.
+`CreateInstance` USA `CoCreateInstance` per creare una nuova istanza dell'oggetto specificato, identificato da un ProgID o da un CLSID. Il `com::ptr` fa riferimento all'oggetto appena creato e rilascerà automaticamente tutti i riferimenti di proprietà al momento dell'eliminazione.
 
 ### <a name="example"></a>Esempio
 
@@ -579,7 +580,7 @@ int main() {
 }
 ```
 
-## <a name="ptrdetach"></a><a name="detach"></a>ptr::D etach
+## <a name="ptrdetach"></a><a name="detach"></a> ptr::D etach
 
 Consente di ottenere la proprietà dell'oggetto COM, restituendo un puntatore all'oggetto.
 
@@ -597,9 +598,9 @@ Se non è di proprietà di alcun oggetto, viene restituito NULL.
 
 Internamente, `QueryInterface` viene chiamato sull'oggetto com di proprietà e qualsiasi errore `HRESULT` viene convertito in un'eccezione da <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-`Detach`prima aggiunge un riferimento all'oggetto COM per conto del chiamante, quindi rilascia tutti i riferimenti di proprietà di `com::ptr` .  Il chiamante deve infine rilasciare l'oggetto restituito per eliminarlo.
+`Detach` prima aggiunge un riferimento all'oggetto COM per conto del chiamante, quindi rilascia tutti i riferimenti di proprietà di `com::ptr` .  Il chiamante deve infine rilasciare l'oggetto restituito per eliminarlo.
 
 ### <a name="example"></a>Esempio
 
@@ -684,7 +685,7 @@ int main() {
 }
 ```
 
-## <a name="ptrgetinterface"></a><a name="getInterface"></a>ptr:: GetInterface
+## <a name="ptrgetinterface"></a><a name="getInterface"></a> ptr:: GetInterface
 
 Restituisce un puntatore all'oggetto COM di proprietà.
 
@@ -700,7 +701,7 @@ Puntatore all'oggetto COM di proprietà.
 
 Internamente, `QueryInterface` viene chiamato sull'oggetto com di proprietà e qualsiasi errore `HRESULT` viene convertito in un'eccezione da <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `com::ptr`Aggiunge un riferimento all'oggetto com per conto del chiamante e mantiene anche il proprio riferimento nell'oggetto com. Il chiamante deve infine rilasciare il riferimento all'oggetto restituito o non verrà mai eliminato definitivamente.
 
@@ -826,7 +827,7 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="ptrqueryinterface"></a><a name="queryInterface"></a>ptr:: QueryInterface
+## <a name="ptrqueryinterface"></a><a name="queryInterface"></a> ptr:: QueryInterface
 
 Esegue una query sull'oggetto COM di proprietà per un'interfaccia e connette il risultato a un altro `com::ptr` .
 
@@ -846,7 +847,7 @@ Oggetto `com::ptr` che otterrà l'interfaccia.
 
 Internamente, `QueryInterface` viene chiamato sull'oggetto com di proprietà e qualsiasi errore `HRESULT` viene convertito in un'eccezione da <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Utilizzare questo metodo per creare un wrapper COM per un'interfaccia diversa dell'oggetto COM di proprietà del wrapper corrente. Questo metodo chiama `QueryInterface` tramite l'oggetto com di proprietà per richiedere un puntatore a un'interfaccia specifica dell'oggetto com e connette il puntatore di interfaccia restituito al passato `com::ptr` .
 
@@ -957,7 +958,7 @@ int main() {
 <#document>persnickety</#document>
 ```
 
-## <a name="ptrrelease"></a><a name="release"></a>ptr:: Release
+## <a name="ptrrelease"></a><a name="release"></a> ptr:: Release
 
 Rilascia tutti i riferimenti di proprietà nell'oggetto COM.
 
@@ -965,7 +966,7 @@ Rilascia tutti i riferimenti di proprietà nell'oggetto COM.
 void Release();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La chiamata di questa funzione rilascia tutti i riferimenti di proprietà nell'oggetto COM e imposta l'handle interno sull'oggetto COM su **`nullptr`** .  Se non esistono altri riferimenti sull'oggetto COM, verranno eliminati definitivamente.
 
@@ -1045,7 +1046,7 @@ int main() {
 }
 ```
 
-## <a name="ptroperator-gt"></a><a name="operator-arrow"></a>operatore PTR:: operator-&gt;
+## <a name="ptroperator-gt"></a><a name="operator-arrow"></a> operatore PTR:: operator-&gt;
 
 Operatore di accesso ai membri, usato per chiamare i metodi sull'oggetto COM di proprietà.
 
@@ -1061,7 +1062,7 @@ _detail::smart_com_ptr<_interface_type> operator->();
 
 Internamente, `QueryInterface` viene chiamato sull'oggetto com di proprietà e qualsiasi errore `HRESULT` viene convertito in un'eccezione da <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo operatore consente di chiamare i metodi dell'oggetto COM di proprietà. Restituisce un oggetto temporaneo `smart_com_ptr` che gestisce automaticamente i propri `AddRef` e `Release` .
 
@@ -1187,7 +1188,7 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="ptroperator"></a><a name="operator-assign"></a>ptr:: operator =
+## <a name="ptroperator"></a><a name="operator-assign"></a> ptr:: operator =
 
 Connette un oggetto COM a un `com::ptr` .
 
@@ -1210,7 +1211,7 @@ Riferimento di traccia in `com::ptr` .
 
 Se è `com::ptr` già proprietario di un riferimento a un oggetto com, `operator=` genera un'eccezione <xref:System.InvalidOperationException> .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'assegnazione di un oggetto COM a un oggetto `com::ptr` fa riferimento all'oggetto com, ma non rilascia il riferimento al chiamante.
 
@@ -1292,7 +1293,7 @@ int main() {
 }
 ```
 
-## <a name="ptroperator-bool"></a><a name="operator-bool"></a>ptr:: operator bool
+## <a name="ptroperator-bool"></a><a name="operator-bool"></a> ptr:: operator bool
 
 Operatore per `com::ptr` l'utilizzo di in un'espressione condizionale.
 
@@ -1304,7 +1305,7 @@ operator bool();
 
 **`true`** Se l'oggetto COM di proprietà è valido; **`false`** in caso contrario,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 In caso contrario, l'oggetto COM di proprietà è valido **`nullptr`** .
 
@@ -1363,7 +1364,7 @@ int main() {
 DOM Document created.
 ```
 
-## <a name="ptroperator"></a><a name="operator-logical-not"></a>operatore PTR::
+## <a name="ptroperator"></a><a name="operator-logical-not"></a> operatore PTR::
 
 Per determinare se l'oggetto COM di proprietà non è valido.
 
@@ -1375,7 +1376,7 @@ bool operator!();
 
 **`true`** Se l'oggetto COM di proprietà non è valido; **`false`** in caso contrario,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 In caso contrario, l'oggetto COM di proprietà è valido **`nullptr`** .
 

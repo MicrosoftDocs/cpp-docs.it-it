@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: is_trivially_default_constructible Class'
 title: Classe is_trivially_default_constructible
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_default_constructible
 ms.assetid: 653ecd73-909f-4dd8-b95a-d1164d1c2da4
-ms.openlocfilehash: 19a5e8afedf3e59d5dafa937af4f7d35343eb7d9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3686dab86b8bf04fe7629b53651988d7ccef161e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459646"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118407"
 ---
-# <a name="istriviallydefaultconstructible-class"></a>Classe is_trivially_default_constructible
+# <a name="is_trivially_default_constructible-class"></a>Classe is_trivially_default_constructible
 
 Verifica se il tipo ha un costruttore predefinito semplice.
 
@@ -29,7 +30,7 @@ struct is_trivially_default_constructible;
 *Ty*\
 Tipo su cui eseguire una query.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Un'istanza del predicato di tipo contiene true se il tipo *Ty* è una classe che ha un costruttore semplice; in caso contrario, contiene false.
 
@@ -49,10 +50,10 @@ Un costruttore predefinito per una classe *Ty* è semplice se:
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)

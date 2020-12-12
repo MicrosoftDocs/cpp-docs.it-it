@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CBitmap'
 title: Classe CBitmap
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 8c19a54584390312cfd1657e88898cdb044179d0
-ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
+ms.openlocfilehash: e3d54a87cb53757f4751558b77e9c0c187484410
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344579"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122720"
 ---
 # <a name="cbitmap-class"></a>Classe CBitmap
 
@@ -55,13 +56,13 @@ class CBitmap : public CGdiObject
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CBitmap:: CBitmap](#cbitmap)|Costruisce un oggetto `CBitmap`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CBitmap:: CreateBitmap](#createbitmap)|Inizializza l'oggetto con una bitmap di memoria dipendente dal dispositivo con una larghezza, un'altezza e uno schema di bit specificati.|
 |[CBitmap:: CreateBitmapIndirect](#createbitmapindirect)|Inizializza l'oggetto con una bitmap con la larghezza, l'altezza e lo schema di bit (se ne viene specificato uno) specificati in una `BITMAP` struttura.|
@@ -79,7 +80,7 @@ class CBitmap : public CGdiObject
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CBitmap:: operator HBITMAP](#operator_hbitmap)|Restituisce l'handle di Windows collegato all' `CBitmap` oggetto.|
 
@@ -542,7 +543,7 @@ Dimensioni bitmap precedenti. L'altezza si trova nella `cy` variabile membro del
 
 GDI non utilizza questi valori eccetto per restituirli quando un'applicazione chiama la funzione membro [GetBitmapDimension](#getbitmapdimension) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [MDI di esempio MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>

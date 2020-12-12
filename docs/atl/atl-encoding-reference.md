@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: riferimenti alla codifica ATL'
 title: Riferimenti alla codifica ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
 - encoding
 - encoding, functions
 ms.assetid: 82d4fdf3-3c4a-4fe2-b297-8ffb4714406f
-ms.openlocfilehash: a284645030b5bcdb30b72d7df92231680efb36b4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 309c4cbf695b5f40e58116c9422f8da481799cbc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831892"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148668"
 ---
 # <a name="atl-encoding-reference"></a>Riferimenti alla codifica ATL
 
@@ -42,7 +43,7 @@ La codifica in un intervallo di standard Internet comuni come UUENCODE, esadecim
 | [UUEncode](reference/atl-text-encoding-functions.md#uuencode) | Chiamare questa funzione per convertire i dati in uuencode. |
 | [UUEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#uuencodegetrequiredlength) | Chiamare questa funzione per ottenere la dimensione in caratteri di un buffer contenente una stringa codificata da dati della lunghezza specificata. |
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Concetti](../atl/active-template-library-atl-concepts.md)<br/>
 [Componenti desktop COM ATL](../atl/atl-com-desktop-components.md)

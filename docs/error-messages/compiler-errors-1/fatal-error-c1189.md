@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore irreversibile C1189'
 title: Errore irreversibile C1189
 ms.date: 04/27/2018
 f1_keywords:
@@ -6,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - C1189
 ms.assetid: 2e5c8a78-edd4-411c-b619-558a96be148a
-ms.openlocfilehash: 2217b865109cc48151e4e96b2d38b88764c0c64f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4e71903c6567aedf85de81db59b66e45684d8507
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80203637"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97123591"
 ---
 # <a name="fatal-error-c1189"></a>Errore irreversibile C1189
 
-> **errore\#:** *messaggio di errore fornito dall'utente*
+> **\# errore:** *messaggio di errore fornito dall'utente*
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-C1189 viene generato dalla direttiva `#error`. Lo sviluppatore che codifica la direttiva specifica il testo del messaggio di errore. Per ulteriori informazioni, vedere [#error direttiva (C/C++)](../../preprocessor/hash-error-directive-c-cpp.md).
+C1189 viene generato dalla `#error` direttiva. Lo sviluppatore che codifica la direttiva specifica il testo del messaggio di errore. Per ulteriori informazioni, vedere [direttiva #error (C/C++)](../../preprocessor/hash-error-directive-c-cpp.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'C1189. Nell'esempio, lo sviluppatore genera un messaggio di errore personalizzato perché l'identificatore `_WIN32` non è definito:
+L'esempio seguente genera l'C1189. Nell'esempio, lo sviluppatore genera un messaggio di errore personalizzato perché l' `_WIN32` identificatore non è definito:
 
 ```cpp
 // C1189.cpp
@@ -33,6 +34,6 @@ L'esempio seguente genera l'C1189. Nell'esempio, lo sviluppatore genera un messa
 #endif
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Direttiva #define (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)

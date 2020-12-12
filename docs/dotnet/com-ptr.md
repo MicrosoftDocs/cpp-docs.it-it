@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: com::p TR'
 title: com::ptr
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - com::ptr
 ms.assetid: ee302e3c-8fed-4875-a372-2e55003718d3
-ms.openlocfilehash: 993511142b72bd769fe8582b2650e5d020bd6ce2
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: bbfc38f10afc7d80a87e1bed0bc94716c83b75f0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446261"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124371"
 ---
 # <a name="comptr"></a>com::ptr
 
@@ -26,8 +27,8 @@ Un wrapper per un oggetto COM che può essere utilizzato come membro di una clas
 
 ## <a name="remarks"></a>Osservazioni
 
-[com::P classe TR](../dotnet/com-ptr-class.md) viene definita nel file di > di \<msclr\com\ptr.h.
+[com::P classe TR](../dotnet/com-ptr-class.md) è definita nel \<msclr\com\ptr.h> file.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Libreria di supporto per C++](../dotnet/cpp-support-library.md)

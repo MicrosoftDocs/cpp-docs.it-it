@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura: dichiarare i tipi di valore con la parola chiave interior_ptr (C++/CLI)'
 title: 'Procedura: dichiarare i tipi di valori con la parola chiave interior_ptr (C++/CLI)'
 ms.date: 10/12/2018
 ms.topic: reference
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: b5d17f3621271faa03e30e24f259d8d7cebbb491
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: b8d5c554f212a9536b0ad063d67e044c08194015
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414490"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119174"
 ---
 # <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>Procedura: dichiarare i tipi di valori con la parola chiave interior_ptr (C++/CLI)
 
@@ -22,7 +23,7 @@ Un oggetto **interior_ptr** può essere usato con un tipo valore.
 
 ## <a name="example-interior_ptr-with-value-type"></a>Esempio: interior_ptr con tipo di valore
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
 L'esempio C++/CLI seguente mostra come usare un oggetto **interior_ptr** con un tipo valore.
 
@@ -67,7 +68,7 @@ int main() {
 
 ## <a name="example-this-pointer"></a>Esempio: puntatore
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
 In un tipo valore, il **`this`** puntatore restituisce un interior_ptr.
 
@@ -89,7 +90,7 @@ value struct V {
 
 ## <a name="example-address-of-operator"></a>Esempio: operatore address-of
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
 Nell'esempio seguente viene illustrato come utilizzare l'operatore address-of con membri statici.
 
@@ -127,6 +128,6 @@ int main() {
 hello
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)

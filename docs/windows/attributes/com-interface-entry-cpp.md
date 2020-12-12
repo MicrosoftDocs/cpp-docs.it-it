@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: com_interface_entry (C++)'
 title: com_interface_entry (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-ms.openlocfilehash: 8339afb97df57f5080629dfed08823c5c091c5a3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2f182149eeac887292391cbb06f625aff261e91f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844119"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114885"
 ---
 # <a name="com_interface_entry-c"></a>com_interface_entry (C++)
 
@@ -29,7 +30,7 @@ Aggiunge una voce di interfaccia alla mappa COM della classe di destinazione.
 *com_interface_entry*<br/>
 Stringa contenente il testo effettivo della voce. Per un elenco di valori possibili, vedere [COM_INTERFACE_ENTRY Macros](../../atl/reference/com-interface-entry-macros.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'attributo **COM_INTERFACE_ENTRY** C++ inserisce il contenuto non abbreviato di una stringa di caratteri nella mappa dell'interfaccia com dell'oggetto di destinazione. Se l'attributo viene applicato una volta all'oggetto di destinazione, la voce viene inserita all'inizio della mappa dell'interfaccia esistente. Se l'attributo viene applicato ripetutamente allo stesso oggetto di destinazione, le voci vengono inserite all'inizio della mappa dell'interfaccia nell'ordine in cui vengono ricevute.
 
@@ -114,7 +115,7 @@ END_COM_MAP()
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi COM](com-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)<br/>

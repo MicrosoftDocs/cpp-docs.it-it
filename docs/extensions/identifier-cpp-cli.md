@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __identifier (C++/CLI)'
 title: __identifier (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - __identifier keyword [C++]
 ms.assetid: 348428af-afa7-4ff3-b571-acf874301cf2
-ms.openlocfilehash: 5f95e9fc55acd33705b855c7c4f0ef268d4776a0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 663d05ef482a97b4ac33664ab62f1556e62763a6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219690"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119096"
 ---
 # <a name="__identifier-ccli"></a>__identifier (C++/CLI)
 
@@ -37,7 +38,7 @@ L'uso della parola chiave **__identifier** per gli identificatori che non sono p
 
 Opzione del compilatore: `/ZW`
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 **Esempio**
 
@@ -63,7 +64,7 @@ int main() {
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La parola chiave **__identifier** è valida con l'opzione del compilatore `/clr`.
 
@@ -71,7 +72,7 @@ La parola chiave **__identifier** è valida con l'opzione del compilatore `/clr`
 
 Opzione del compilatore: `/clr`
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 Nell'esempio seguente viene creata una classe denominata `template` in C# e distribuita come dll. Nel programma C++/CLI che usa la `template` classe, la **`__identifier`** parola chiave nasconde il fatto che `template` è una parola chiave C++ standard.
 
@@ -94,7 +95,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
 [Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)

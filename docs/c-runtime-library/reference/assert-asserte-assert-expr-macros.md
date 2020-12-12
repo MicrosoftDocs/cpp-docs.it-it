@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _ASSERT, _ASSERTE _ASSERT_EXPR macro'
 title: Macro _ASSERT, _ASSERTE, _ASSERT_EXPR
 ms.date: 11/04/2016
 api_location:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - _ASSERT macro
 - _ASSERT_EXPR macro
 ms.assetid: e98fd2a6-7f5e-4aa8-8fe8-e93490deba36
-ms.openlocfilehash: d07fbe5de7afdc62f952727660447c5e4f0b78aa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 28c90d2c92feb298b2416633e783c5d0a87e4bd8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232638"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117575"
 ---
 # <a name="_assert-_asserte-_assert_expr-macros"></a>Macro _ASSERT, _ASSERTE, _ASSERT_EXPR
 
@@ -56,11 +57,11 @@ Espressione scalare (incluse le espressioni puntatore) che restituisce un valore
 *message*<br/>
 Stringa di caratteri wide come parte del report.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le macro **_ASSERT_EXPR**, **_ASSERT** e **_ASSERTE** forniscono un'applicazione con un meccanismo semplice e pulito per verificare i presupposti durante il processo di debug. Sono molto flessibili perché non devono essere racchiuse in istruzioni `#ifdef` per evitare che vengano chiamate in una build finale di un'applicazione. Questa flessibilità viene raggiunta usando la macro [_DEBUG](../../c-runtime-library/debug.md) . **_ASSERT_EXPR**, **_ASSERT** e **_ASSERTE** sono disponibili solo quando **_DEBUG** viene definito in fase di compilazione. Quando **_DEBUG** non è definito, le chiamate a queste macro vengono rimosse durante la pre-elaborazione.
 
-**_ASSERT_EXPR**, **_ASSERT** e **_ASSERTE** valutano l'argomento *BooleanExpression* e quando il risultato è **`false`** (0), stampano un messaggio di diagnostica e chiamano [_CrtDbgReportW](crtdbgreport-crtdbgreportw.md) per generare un report di debug. La macro **_ASSERT** stampa un semplice messaggio di diagnostica, **_ASSERTE** include una rappresentazione di stringa dell'espressione non riuscita nel messaggio e **_ASSERT_EXPR** include la *stringa del messaggio nel* messaggio di diagnostica. Queste macro non eseguono alcuna operazione quando *BooleanExpression* restituisce un valore diverso da zero.
+**_ASSERT_EXPR**, **_ASSERT** e **_ASSERTE** valutano l'argomento *BooleanExpression* e quando il risultato è **`false`** (0), stampano un messaggio di diagnostica e chiamano [_CrtDbgReportW](crtdbgreport-crtdbgreportw.md) per generare un report di debug. La macro **_ASSERT** stampa un semplice messaggio di diagnostica,  **_ASSERTE** include una rappresentazione di stringa dell'espressione non riuscita nel messaggio e **_ASSERT_EXPR** include la *stringa del messaggio nel* messaggio di diagnostica. Queste macro non eseguono alcuna operazione quando *BooleanExpression* restituisce un valore diverso da zero.
 
 **_ASSERT_EXPR**, **_ASSERT** e **_ASSERTE** Invoke **_CrtDbgReportW**, che fa sì che tutto l'output sia in caratteri wide. **_ASSERTE** stampa correttamente i caratteri Unicode in *BooleanExpression* e **_ASSERT_EXPR** stampa i caratteri Unicode nel *messaggio*.
 
@@ -78,7 +79,7 @@ Quando la destinazione è una finestra di messaggio di debug e l'utente fa clic 
 
 Per altre informazioni sul processo di creazione di rapporti, vedere la funzione [_CrtDbgReport, _CrtDbgReportW](crtdbgreport-crtdbgreportw.md) . Per altre informazioni sulla risoluzione delle asserzioni non riuscite e sull'uso di queste macro come meccanismo di gestione degli errori di debug, vedere l'argomento relativo all' [uso delle macro per la verifica e la creazione di report](/visualstudio/debugger/macros-for-reporting).
 
-Oltre alle macro di **_ASSERT** , è possibile usare la macro [Assert](assert-macro-assert-wassert.md) per verificare la logica del programma. Questa macro è disponibile nelle versioni di debug e rilascio delle librerie. Anche le macro di debug [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) sono disponibili per generare un report di debug, ma non restituiscono un'espressione. Le macro **_RPT** generano un report semplice. Le macro **_RPTF** includono il file di origine e il numero di riga in cui è stata chiamata la macro di report nel report generato. Sono disponibili versioni a caratteri wide di queste macro **_RPTW**(_RPTW **_RPTFW**). Le versioni a caratteri wide sono identiche alle versioni a caratteri narrow ad eccezione del fatto che le stringhe a caratteri wide vengono usate per tutti i parametri di stringa e l'output.
+Oltre alle macro di **_ASSERT** , è possibile usare la macro [Assert](assert-macro-assert-wassert.md) per verificare la logica del programma. Questa macro è disponibile nelle versioni di debug e rilascio delle librerie. Anche le macro di debug [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) sono disponibili per generare un report di debug, ma non restituiscono un'espressione. Le macro **_RPT** generano un report semplice. Le macro **_RPTF** includono il file di origine e il numero di riga in cui è stata chiamata la macro di report nel report generato. Sono disponibili versioni a caratteri wide di queste macro(_RPTW **_RPTFW**). Le versioni a caratteri wide sono identiche alle versioni a caratteri narrow ad eccezione del fatto che le stringhe a caratteri wide vengono usate per tutti i parametri di stringa e l'output.
 
 Sebbene **_ASSERT_EXPR**, **_ASSERT** e **_ASSERTE** siano macro e siano disponibili includendo \<crtdbg.h> , l'applicazione deve collegarsi a una versione di debug della libreria di runtime del linguaggio C quando viene definito **_DEBUG** perché queste macro chiamano altre funzioni di Runtime.
 
@@ -164,7 +165,7 @@ crt_ASSERT_macro.c(59) : Assertion failed: p1 == p2
 'I am p1' != 'I am p2'
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Routine di debug](../../c-runtime-library/debug-routines.md)<br/>
 [Macro ASSERT, _assert, _wassert](assert-macro-assert-wassert.md)<br/>

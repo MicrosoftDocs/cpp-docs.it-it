@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: tipi e dimensioni delle variabili nell'assembly inline"
 title: Dimensioni delle variabili e dei tipi in assembly inline
 ms.date: 08/30/2018
 ms.topic: reference
@@ -13,18 +14,18 @@ helpviewer_keywords:
 - variables, type
 - variables, size
 ms.assetid: b62c2f2b-a7ad-4145-bae4-d890db86d348
-ms.openlocfilehash: 3e244aaa8ea849b558b77c3f1569820079f6f76c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0d6822537f542c159c40c0ed6f14dca93aa36525
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87191612"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122018"
 ---
 # <a name="type-and-variable-sizes-in-inline-assembly"></a>Dimensioni delle variabili e dei tipi in assembly inline
 
 **Specifico di Microsoft**
 
-Gli operatori **length**, **size**e **Type** hanno un significato limitato nell'assembly inline. Non possono essere utilizzati con l'operatore `DUP` (perché non è possibile definire i dati con direttive o operatori di MASM). Tuttavia, è possibile utilizzarli per determinare la dimensione di variabili o tipi C o C++:
+Gli operatori **length**, **size** e **Type** hanno un significato limitato nell'assembly inline. Non possono essere utilizzati con l'operatore `DUP` (perché non è possibile definire i dati con direttive o operatori di MASM). Tuttavia, è possibile utilizzarli per determinare la dimensione di variabili o tipi C o C++:
 
 - L'operatore **length** può restituire il numero di elementi in una matrice. Restituisce il valore 1 per le variabili non di matrice.
 
@@ -48,6 +49,6 @@ le espressioni assembly e C seguenti impostano la dimensione di `arr` e dei rela
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Uso del linguaggio assembly nei blocchi di __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

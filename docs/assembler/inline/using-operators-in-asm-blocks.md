@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso di operatori in blocchi di __asm'
 title: Utilizzo degli operatori in blocchi __asm
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - operators [C++], using in __asm blocks
 - square brackets [ ]
 ms.assetid: a26ccfd4-40ae-4a61-952f-c417982aa8dd
-ms.openlocfilehash: cdcfee20cfdc5a6dc315d00ef024d1616900a2e8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 266d840e6cb407d45c1d3a49bed6a2390e52aa2e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87191105"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97121849"
 ---
 # <a name="using-operators-in-__asm-blocks"></a>Utilizzo degli operatori in blocchi __asm
 
@@ -40,6 +41,6 @@ array[6] = 0;                   /* Store 0 at array + 24 */
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Utilizzo di C o C++ in blocchi di __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>

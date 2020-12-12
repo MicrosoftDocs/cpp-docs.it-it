@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: funzioni membro di contenitore di esempio'
 title: Funzioni membro di contenitore di esempio
 ms.date: 11/04/2016
 ms.assetid: fbd88c16-57e6-435d-ad70-7a195c0103ab
-ms.openlocfilehash: 4421b83bc2ee8c35f86c337aa69f5deeedc6d582
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f0a3ea87f335e2f2affa20d980efeeb751f6441
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410941"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148837"
 ---
 # <a name="sample-container-member-functions"></a>Funzioni membro di contenitore di esempio
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura: dichiarare i puntatori di blocco e i tipi di valore'
 title: 'Procedura: dichiarare i puntatori di blocco e i tipi di valore'
 ms.date: 10/12/2018
 ms.topic: reference
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - value types, declaring
 - pinning pointers
 ms.assetid: 57c5ec8a-f85a-48c4-ba8b-a81268bcede0
-ms.openlocfilehash: 88ef7e82161703a272a571392fd66e6055371c61
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: abbb085a9d85870d43ad00687b30e0f395186ba2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181967"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119291"
 ---
 # <a name="how-to-declare-pinning-pointers-and-value-types"></a>Procedura: dichiarare i puntatori di blocco e i tipi di valore
 
@@ -45,6 +46,6 @@ int main() {
 7
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [pin_ptr (C++/CLI)](pin-ptr-cpp-cli.md)

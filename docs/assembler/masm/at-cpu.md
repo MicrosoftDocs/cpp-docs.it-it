@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: @Cpu'
 title: '@Cpu'
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - '@Cpu symbol'
 ms.assetid: 04f9fdf6-9772-407e-9c09-c12bed29087b
-ms.openlocfilehash: 46bfcc8e8ba3e109ce998b779c4e80ec1bdb0de5
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: bb414effdeabb563aa2a04b46821f557a9941a9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75316434"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97121524"
 ---
-# <a name="cpu"></a>CPU \@
+# <a name="cpu"></a>\@CPU
 
 Maschera di bit che specifica la modalità del processore (uguaglianza numerica).
 
 ## <a name="syntax"></a>Sintassi
 
-> **CPU \@**
+> **\@CPU**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento ai simboli](symbols-reference.md)\
 [Grammatica BNF di MASM](masm-bnf-grammar.md)

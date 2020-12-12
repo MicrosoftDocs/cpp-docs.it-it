@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: operatore di riferimento indiretto: *'
 title: 'Operatore di riferimento indiretto: *'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - operators [C++], indirection
 - indirection operator [C++], syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
-ms.openlocfilehash: 8f27cfd943455d52b04c41ef2d2d83e6e03a84c0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d82e65676178fcfc9a62b10a780360c0c69d0d2b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178278"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97113909"
 ---
 # <a name="indirection-operator-"></a>Operatore di riferimento indiretto: *
 
@@ -24,7 +25,7 @@ ms.locfileid: "80178278"
 
 ## <a name="remarks"></a>Osservazioni
 
-L'operatore di riferimento indiretto unario (<strong>\*</strong>) dereferenzia un puntatore; ovvero converte un valore del puntatore in un l-value. L'operando dell'operatore di riferimento indiretto deve essere un puntatore a un tipo. Il risultato dell'espressione di riferimento indiretto è il tipo da cui il tipo di puntatore è derivato. L'uso dell'operatore <strong>\*</strong> in questo contesto è diverso dal relativo significato come operatore binario, ovvero moltiplicazione.
+L'operatore di riferimento indiretto unario ( <strong>\*</strong> ) consente di dereferenziare un puntatore, ovvero converte un valore del puntatore in un l-value. L'operando dell'operatore di riferimento indiretto deve essere un puntatore a un tipo. Il risultato dell'espressione di riferimento indiretto è il tipo da cui il tipo di puntatore è derivato. L'uso dell' <strong>\*</strong> operatore in questo contesto è diverso dal relativo significato come operatore binario, ovvero moltiplicazione.
 
 Se l'operando punta a una funzione, il risultato è un indicatore di funzione. Se invece punta a un percorso di archiviazione, il risultato è un valore l-value che definisce il percorso di archiviazione.
 
@@ -60,9 +61,9 @@ Se il valore del puntatore non è valido, il risultato sarà indefinito. Nell'el
 
 - Il puntatore specifica un indirizzo non utilizzato dal programma di esecuzione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Espressioni con operatori unari](../cpp/expressions-with-unary-operators.md)<br/>
-[Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operatori C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Operatore address-of: &](../cpp/address-of-operator-amp.md)<br/>
-[Operatori address-of e di riferimento indiretto](../c-language/indirection-and-address-of-operators.md)
+[Operatori di riferimento indiretto e address-of](../c-language/indirection-and-address-of-operators.md)
