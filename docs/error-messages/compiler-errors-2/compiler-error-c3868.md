@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3868'
 title: Errore del compilatore C3868
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3868
 ms.assetid: f0e45c2a-2149-4885-a03b-0d230069f03a
-ms.openlocfilehash: cea8ee926bb5c1bc7482e53ed48a310c870774d1
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c71a5321b99e5852a2dc7267dd098bfec08c5ad2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761470"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222814"
 ---
 # <a name="compiler-error-c3868"></a>Errore del compilatore C3868
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: macro e globali di database'
 title: Macro e funzioni globali di database
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - global functions [MFC], database functions
 - macros [MFC], MFC database
 ms.assetid: 5b9b9e61-1cf9-4345-9f29-3807dd466488
-ms.openlocfilehash: 0dc53bce8b43677e7fe0aa1787d1adcc16a560c4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1dd6501c8ea37478a7b75341467e1c77819aa3f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837527"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220318"
 ---
 # <a name="database-macros-and-globals"></a>Macro e funzioni globali di database
 
@@ -28,7 +29,7 @@ Prima di MFC 4,2, le macro `AFX_SQL_ASYNC` e `AFX_SQL_SYNC` davano alle operazio
 
 ### <a name="database-macros"></a>Macro di database
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[AFX_ODBC_CALL](#afx_odbc_call)|Chiama una funzione API ODBC che restituisce `SQL_STILL_EXECUTING` . `AFX_ODBC_CALL` chiamerà ripetutamente la funzione fino a quando non restituisce più `SQL_STILL_EXECUTING` .|
 |[AFX_SQL_ASYNC](#afx_sql_async)|Chiama `AFX_ODBC_CALL`.|
@@ -36,7 +37,7 @@ Prima di MFC 4,2, le macro `AFX_SQL_ASYNC` e `AFX_SQL_SYNC` davano alle operazio
 
 ### <a name="database-globals"></a>Globali di database
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[AfxDbInitModule](#afxdbinitmodule)|Aggiunge il supporto del database per una normale DLL MFC collegata a MFC in modo dinamico.|
 |[AfxGetHENV](#afxgethenv)|Recupera un handle per l'ambiente ODBC attualmente utilizzato da MFC. È possibile utilizzare questo handle nelle chiamate ODBC dirette.|
@@ -72,7 +73,7 @@ AFX_ODBC_CALL(SQLFunc)
 *Sqlfunc*<br/>
 Funzione API ODBC. Per ulteriori informazioni sulle funzioni API ODBC, vedere la Windows SDK.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `AFX_ODBC_CALL` chiama ripetutamente la funzione fino a quando non restituisce più `SQL_STILL_EXECUTING` .
 
@@ -100,13 +101,13 @@ AFX_SQL_ASYNC(prs, SQLFunc)
 
 ### <a name="parameters"></a>Parametri
 
-*richieste pull*<br/>
+*prs*<br/>
 Puntatore a un oggetto `CRecordset` o a un oggetto `CDatabase`. A partire da MFC 4.2 il valore di questo parametro viene ignorato.
 
 *Sqlfunc*<br/>
 Funzione API ODBC. Per ulteriori informazioni sulle funzioni API ODBC, vedere la Windows SDK.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `AFX_SQL_ASYNC` chiama semplicemente la macro [AFX_ODBC_CALL](#afx_odbc_call) e ignora il parametro *PRS* . Nelle versioni di MFC precedenti alla 4.2, `AFX_SQL_ASYNC` viene utilizzato per chiamare funzioni API ODBC che potrebbero restituire `SQL_STILL_EXECUTING`. Se una funzione API ODBC restituisse `SQL_STILL_EXECUTING`, `AFX_SQL_ASYNC` chiamerebbe `prs->OnWaitForDataSource`.
 
@@ -130,7 +131,7 @@ AFX_SQL_SYNC(SQLFunc)
 *Sqlfunc*<br/>
 Funzione API ODBC. Per ulteriori informazioni su queste funzioni, vedere la Windows SDK.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Utilizzare questa macro per chiamare le funzioni API ODBC che non restituiranno `SQL_STILL_EXECUTING` .
 
@@ -164,6 +165,6 @@ Handle per l'ambiente ODBC attualmente utilizzato da MFC. Può essere `SQL_HENV_
 
   **Intestazione** AFXDB. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)

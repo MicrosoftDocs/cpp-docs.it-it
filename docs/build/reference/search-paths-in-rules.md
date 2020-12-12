@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: percorsi di ricerca nelle regole'
 title: Percorsi di ricerca nelle regole
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - inference rules in NMAKE
 - rules, inference
 ms.assetid: 38feded6-536d-425d-bf40-fff3173a5506
-ms.openlocfilehash: eab6e9d32940aaf5729ce82c4e8258a3a3132208
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf070fc57907b68eb458b8a5276698282ef30f9d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318862"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224881"
 ---
 # <a name="search-paths-in-rules"></a>Percorsi di ricerca nelle regole
 
@@ -20,9 +21,9 @@ ms.locfileid: "62318862"
    commands
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Una regola di inferenza si applica a una dipendenza solo se i percorsi specificati nella dipendenza esattamente corrispondono i percorsi della regola di inferenza. Specificare la directory del dipendente nella *frompath* e la directory di destinazione nella *topath*; non sono consentiti spazi. Specificare un solo percorso per ogni estensione. Un percorso per un'estensione richiede un percorso in altro. Per specificare la directory corrente, usare un punto (.) o parentesi graffe vuote ({}). Le macro possono rappresentare *frompath* e *topath*; vengono richiamati durante la preelaborazione.
+Una regola di inferenza si applica a una dipendenza solo se i percorsi specificati nella dipendenza corrispondono esattamente ai percorsi della regola di inferenza. Specificare la directory del dipendente in *frompath* e la directory di destinazione in *toPath*; non sono consentiti spazi. Specificare un solo percorso per ogni estensione. Un percorso in un'estensione richiede un percorso sull'altro. Per specificare la directory corrente, utilizzare un punto (.) o parentesi graffe vuote ({}). Le macro possono rappresentare *frompath* e *toPath*; vengono richiamati durante la pre-elaborazione.
 
 ## <a name="example"></a>Esempio
 
@@ -57,6 +58,6 @@ Una regola di inferenza si applica a una dipendenza solo se i percorsi specifica
         $(CC) $(CFLAGS) $<
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Definizione di una regola](defining-a-rule.md)

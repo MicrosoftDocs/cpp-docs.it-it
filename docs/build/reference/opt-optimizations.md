@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/OPT (ottimizzazioni)
 title: /OPT (Ottimizzazioni)
 ms.date: 05/18/2018
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: 7f576d971425a67fc533bb417583173617615e3b
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 73cdb182941ddf865695d58f6d60a96002f5005a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040405"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221956"
 ---
 # <a name="opt-optimizations"></a>/OPT (Ottimizzazioni)
 
@@ -31,7 +32,7 @@ Controlla le ottimizzazioni eseguite da LINK durante una compilazione.
 ## <a name="syntax"></a>Sintassi
 
 > **/opt:**{**ref** \| **NOREF**} \
-> **/Opt:**{**ICF** \[ **=** _iterazioni_ICF] \| **NOICF**} \
+> **/Opt:**{ \[ **=** _iterazioni_ ICF] \| **NOICF**} \
 > **/opt:**{**LBR** \| **NOLBR**}
 
 ## <a name="arguments"></a>Argomenti
@@ -46,11 +47,11 @@ Le funzioni inline e le funzioni membro definite all'interno di una dichiarazion
 
 Per impostazione predefinita, **/opt: Ref** è abilitato dal linker a meno che non sia specificato **/opt: NOREF** o [/debug](debug-generate-debug-info.md) . Per eseguire l'override di questa impostazione predefinita e lasciare COMDAT senza riferimenti nel programma, specificare **/opt: NOREF**. È possibile usare l'opzione [/include](include-force-symbol-references.md) per eseguire l'override della rimozione di un simbolo specifico.
 
-Se si specifica [/debug](debug-generate-debug-info.md) , l'impostazione predefinita per **/opt** è **NOREF**e tutte le funzioni vengono mantenute nell'immagine. Per eseguire l'override di questa impostazione predefinita e ottimizzare una build di debug, specificare **/opt: Ref**. Questo può ridurre le dimensioni del file eseguibile e può essere un'ottimizzazione utile anche nelle build di debug. Si consiglia inoltre di specificare **/opt: NOICF** per mantenere funzioni identiche nelle compilazioni di debug. Questo semplifica la lettura delle tracce dello stack e l'impostazione di punti di interruzione nelle funzioni che altrimenti verrebbero ridotte insieme.
+Se si specifica [/debug](debug-generate-debug-info.md) , l'impostazione predefinita per **/opt** è **NOREF** e tutte le funzioni vengono mantenute nell'immagine. Per eseguire l'override di questa impostazione predefinita e ottimizzare una build di debug, specificare **/opt: Ref**. Questo può ridurre le dimensioni del file eseguibile e può essere un'ottimizzazione utile anche nelle build di debug. Si consiglia inoltre di specificare **/opt: NOICF** per mantenere funzioni identiche nelle compilazioni di debug. Questo semplifica la lettura delle tracce dello stack e l'impostazione di punti di interruzione nelle funzioni che altrimenti verrebbero ridotte insieme.
 
-**ICF** \[ ICF **=** _iterazioni_] &#124; **NOICF**
+ \[ ICF **=** _iterazioni_] &#124; **NOICF**
 
-Usare **ICF**le \[ **=** _iterazioni_ICF] per eseguire una riduzione COMDAT identica. I dati COMDAT ridondanti possono essere rimossi dall'output del linker. Il parametro facoltativo *iterazioni* specifica il numero di volte in cui attraversare i simboli dei duplicati. Il numero predefinito di iterazioni è 1. Attraverso iterazioni aggiuntive si potrebbero trovare più duplicati rivelati attraverso la riduzione nell'iterazione precedente.
+Usare le \[ **=** _iterazioni_ ICF] per eseguire una riduzione COMDAT identica. I dati COMDAT ridondanti possono essere rimossi dall'output del linker. Il parametro facoltativo *iterazioni* specifica il numero di volte in cui attraversare i simboli dei duplicati. Il numero predefinito di iterazioni è 1. Attraverso iterazioni aggiuntive si potrebbero trovare più duplicati rivelati attraverso la riduzione nell'iterazione precedente.
 
 Per impostazione predefinita, **/opt: ICF** è abilitato dal linker a meno che non sia specificato **/opt: NOICF** o [/debug](debug-generate-debug-info.md) . Per eseguire l'override di questa impostazione predefinita e impedire che COMDAT venga ripiegato nel programma, specificare **/opt: NOICF**.
 
@@ -83,7 +84,7 @@ Gli argomenti **/opt** sono spesso impostati per i progetti creati usando la fin
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la **Configuration Properties**  >  pagina delle proprietà di ottimizzazione del**linker**delle proprietà di configurazione  >  **Optimization** .
+1. Selezionare la   >  pagina delle proprietà di ottimizzazione del **linker** delle proprietà di configurazione  >   .
 
 1. Modificare una di queste proprietà:
 
@@ -95,7 +96,7 @@ Gli argomenti **/opt** sono spesso impostati per i progetti creati usando la fin
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la **Configuration Properties**  >  pagina delle proprietà della riga di comando del**linker**proprietà di configurazione  >  **Command Line** .
+1. Selezionare la   >  pagina delle proprietà della riga di comando del **linker** proprietà di configurazione  >   .
 
 1. Immettere l'opzione in **Opzioni aggiuntive**:
 

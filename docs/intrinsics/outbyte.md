@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __outbyte'
 title: __outbyte
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - out instruction
 - __outbyte intrinsic
 ms.assetid: c4cd1a34-8a02-4e37-993d-3201bc17901a
-ms.openlocfilehash: 18792010c45ffb648e9555ccb73f8614c3e3e6ea
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: e062d561719cbcdb32ab980efde9eb568defeadb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217204"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222476"
 ---
 # <a name="__outbyte"></a>__outbyte
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Genera l' `out` istruzione, che invia 1 byte specificato dalla `Data` porta di i/O specificata da `Port`.
+Genera l' `out` istruzione, che invia 1 byte specificato dalla `Data` porta di i/O specificata da `Port` .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -39,18 +40,18 @@ in Byte da inviare alla porta specificata.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`__outbyte`|x86, x64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Questa routine è disponibile solo come funzione intrinseca.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

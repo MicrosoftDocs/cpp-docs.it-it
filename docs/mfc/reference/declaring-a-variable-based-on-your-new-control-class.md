@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: dichiarazione di una variabile in base alla nuova classe di controlli'
 title: Dichiarazione di una variabile basata su una nuova classe di controlli
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - control classes [MFC], variables
 - classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
-ms.openlocfilehash: a828351a9e789228143d43d4c0a756abda879989
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: aa38a38b3113e4c4826756b020860d79e03ef16b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506688"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220227"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>Dichiarazione di una variabile basata su una nuova classe di controlli
 
@@ -35,7 +36,7 @@ Una volta creata una classe del controllo MFC, è possibile dichiarare una varia
 
 1. Digitare un nome nella casella **nome variabile** .
 
-1. In **categoria**fare clic su **controllo**.
+1. In **categoria** fare clic su **controllo**.
 
 1. Nell'elenco **ID controllo** selezionare il controllo aggiunto. Nell'elenco **tipo di variabile** dovrebbe essere visualizzato il tipo di variabile corretto e nella casella tipo di **controllo** dovrebbe essere visualizzato il tipo di controllo corretto.
 
@@ -43,7 +44,7 @@ Una volta creata una classe del controllo MFC, è possibile dichiarare una varia
 
 1. Fare clic su **OK**.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Mapping di messaggi a funzioni](../../mfc/reference/mapping-messages-to-functions.md)<br/>
 [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>

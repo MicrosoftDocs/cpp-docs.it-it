@@ -1,13 +1,14 @@
 ---
+description: Altre informazioni su:/Qpar-report (livello di segnalazione parallelizzazione automatica automatica)
 title: /Qvec-report (livello di segnalazione parallelizzazione automatica)
 ms.date: 11/04/2016
 ms.assetid: 562673b9-02da-4bf8-bb64-70bc25ef4651
-ms.openlocfilehash: 3a154bdf50e951ee932173cdb65f9e1514011245
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 573ab7535b63ba8d3f19f2917c17709ac7726b38
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839413"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225531"
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qvec-report (livello di segnalazione parallelizzazione automatica)
 
@@ -31,7 +32,7 @@ I messaggi vengono inviati a stdout. Se non viene segnalato alcun messaggio info
 
 ### <a name="to-set-the-qpar-report-compiler-option-in-visual-studio"></a>Per impostare l'opzione del compilatore /Qpar-report in Visual Studio
 
-1. In **Esplora soluzioni**aprire il menu di scelta rapida per il progetto, quindi scegliere **Proprietà**.
+1. In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto, quindi scegliere **Proprietà**.
 
 1. Nella finestra di dialogo **pagine delle proprietà** , in **C/C++**, selezionare **riga di comando**.
 
@@ -41,9 +42,9 @@ I messaggi vengono inviati a stdout. Se non viene segnalato alcun messaggio info
 
 - Usare l'esempio di codice in <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni/q (operazioni di basso livello)](q-options-low-level-operations.md)<br/>
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)<br/>
 [Vettorizzazione del codice nativo in Visual Studio](/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview)

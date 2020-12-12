@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3867'
 title: Errore del compilatore C3867
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
-ms.openlocfilehash: 40825bf92a892917f815c955ee4ba1fb6fa906c3
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 5d4340a3e9f2fc94ac9debeded601a37223904aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686418"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222840"
 ---
 # <a name="compiler-error-c3867"></a>Errore del compilatore C3867
 
@@ -21,7 +22,7 @@ Si è cercato di accettare l'indirizzo di una funzione membro senza qualificare 
 
 Questo errore può anche essere generato come risultato delle operazioni di conformità del compilatore eseguite per Visual Studio 2005: conformità avanzata a puntatore a membro. Il codice compilato prima di Visual Studio 2005 genera ora C3867.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 L'errore C3867 può essere generato dal compilatore con una risoluzione suggerita fuorviante. Se possibile, usare la classe più derivata.
 

@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: Tag consigliati per i commenti relativi alla documentazione'
 title: Tag consigliati per i commenti relativi alla documentazione (commenti sulla documentazione C++)
 ms.date: 11/04/2016
 ms.assetid: 6548e798-5235-4a38-9482-bdc7b88f40a9
-ms.openlocfilehash: 9f41e450215e2bce02dbaf66910fc2fc1a131a99
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 34bae4043231abed87770aec252303bd99707afe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836855"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225349"
 ---
 # <a name="recommended-tags-for-documentation-comments"></a>Tag consigliati per i commenti relativi alla documentazione
 
@@ -25,16 +26,16 @@ Il compilatore elabora tutti i tag validi per XML. I tag seguenti forniscono le 
 [`<c>`](c-visual-cpp.md)
 [`<code>`](code-visual-cpp.md)
 [`<example>`](example-visual-cpp.md)
-[`<exception>`](exception-visual-cpp.md)<sup>1</sup> 
- 1 [`<include>`](include-visual-cpp.md) <sup>1</sup> 
+[`<exception>`](exception-visual-cpp.md)<sup></sup> 
+ 1 [`<include>`](include-visual-cpp.md) <sup></sup> 
  [`<list>`](list-visual-cpp.md) 1 
  [`<para>`](para-visual-cpp.md) 
- [`<param>`](param-visual-cpp.md) <sup>1</sup> 
- 1 [`<paramref>`](paramref-visual-cpp.md) <sup>1</sup> 
- 1 [`<permission>`](permission-visual-cpp.md) <sup>1</sup> 
+ [`<param>`](param-visual-cpp.md) <sup></sup> 
+ 1 [`<paramref>`](paramref-visual-cpp.md) <sup></sup> 
+ 1 [`<permission>`](permission-visual-cpp.md) <sup></sup> 
  [`<remarks>`](remarks-visual-cpp.md) 1 
  [`<returns>`](returns-visual-cpp.md) 
- [`<see>`](see-visual-cpp.md) <sup>1</sup> 
+ [`<see>`](see-visual-cpp.md) <sup></sup> 
  1 [`<seealso>`](seealso-visual-cpp.md) <sup>1</sup>
 [`<summary>`](summary-visual-cpp.md)
 [`<value>`](value-visual-cpp.md)
@@ -43,6 +44,6 @@ Il compilatore elabora tutti i tag validi per XML. I tag seguenti forniscono le 
 
 Nella versione corrente il compilatore MSVC non supporta `<paramref>` , un tag supportato da altri compilatori di Visual Studio. Visual C++ potrebbe supportare `<paramref>` in una versione futura.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Documentazione di XML](xml-documentation-visual-cpp.md)
+[Documentazione XML](xml-documentation-visual-cpp.md)

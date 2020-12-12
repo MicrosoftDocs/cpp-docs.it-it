@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/REBASE
 title: /REBASE
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - /REBASE editbin option [C++]
 ms.assetid: 3f89d874-af5c-485b-974b-fd205f6e1a4b
-ms.openlocfilehash: 42cbcb911fcd0aa7753d84aae5523d28371b9972
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6cbbf0a21bd9306167fb165b63c22e810518e161
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319200"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225336"
 ---
 # <a name="rebase"></a>/REBASE
 
@@ -24,18 +25,18 @@ ms.locfileid: "62319200"
 /REBASE[:modifiers]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Questa opzione imposta gli indirizzi di base per i file specificati. EDITBIN assegna nuovi indirizzi di base in uno spazio di indirizzi contigui in base alle dimensioni di ogni file arrotondato un massimo di 64 KB più vicino. Per informazioni dettagliate sugli indirizzi di base, vedere la [indirizzo di Base](base-base-address.md) (/ BASE) l'opzione del linker.
+Questa opzione consente di impostare gli indirizzi di base per i file specificati. EDITBIN) assegna i nuovi indirizzi di base in uno spazio di indirizzi contiguo in base alle dimensioni di ogni file arrotondato per eccesso al 64 KB più vicino. Per informazioni dettagliate sugli indirizzi di base, vedere l'opzione del linker [indirizzo di base](base-base-address.md) (/base).
 
-Specificare il programma i file eseguibili e DLL nel *file* argomento nella riga di comando EDITBIN nell'ordine in cui sono baserà. È possibile specificare facoltativamente uno o più *modificatori*, ciascuno separato da virgole (**,**):
+Specificare i file eseguibili del programma e le dll nell'argomento *files* nella riga di comando di EDITBIN) nell'ordine in cui devono essere basati. Facoltativamente, è possibile specificare uno o più *modificatori*, separati da una virgola (**,**):
 
-|Modificatore|Operazione|
+|Modificatore|Azione|
 |--------------|------------|
-|**BASE=**<em>address</em>|Fornisce un indirizzo iniziale per la riassegnazione di indirizzi di base per i file. Specificare *indirizzo* in notazione decimale o del linguaggio C. Se BASE non viene specificata, l'impostazione predefinita l'indirizzo di base iniziale è 0x400000. Deve essere specificato se verso il basso viene usato, BASE, e *indirizzo* imposta la fine dell'intervallo di indirizzi di base.|
-|**BASEFILE**|Crea un file denominato COFFBASE. TXT, che è un file di testo nel formato previsto del collegamento/opzione di BASE.|
-|**DOWN**|Indica a EDITBIN riassegnare gli indirizzi di base verso il basso dall'indirizzo finale. I file vengono riassegnati nell'ordine specificato, con il primo file che si trova nel primo indirizzo disponibile sotto la fine dell'intervallo di indirizzi. BASE deve essere utilizzata con verso il basso per garantire uno spazio indirizzi sufficiente per basare i file. Per determinare lo spazio degli indirizzi necessaria per i file specificati, eseguire EDITBIN con /REBASE sui file e aggiungere 64 KB per le dimensioni totali visualizzate.|
+|**Base =**<em>Indirizzo</em>|Fornisce un indirizzo iniziale per riassegnare gli indirizzi di base ai file. Specificare l' *Indirizzo* in notazione decimale o in linguaggio C. Se la BASE non è specificata, l'indirizzo di base iniziale predefinito è 0x400000. Se viene utilizzato DOWN, è necessario specificare BASE e *Address* imposta la fine dell'intervallo di indirizzi di base.|
+|**BASEFILE**|Crea un file denominato COFFBASE.TXT, ovvero un file di testo nel formato previsto dall'opzione/BASE del collegamento.|
+|**GIÙ**|Indica a EDITBIN) di riassegnare gli indirizzi di base verso il basso da un indirizzo finale. I file vengono riassegnati nell'ordine specificato e il primo file si trova nell'indirizzo più alto possibile al di sotto della fine dell'intervallo di indirizzi. La BASE deve essere usata con il basso per garantire uno spazio di indirizzi sufficiente per l'assegnazione dei file. Per determinare lo spazio di indirizzi necessario per i file specificati, eseguire EDITBIN) con/REBASE nei file e aggiungere 64 KB alle dimensioni totali visualizzate.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Opzioni di EDITBIN](editbin-options.md)
+[Opzioni di EDITBIN)](editbin-options.md)

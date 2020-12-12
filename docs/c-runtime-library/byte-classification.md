@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classificazione byte'
 title: Classificazione per byte
 ms.date: 04/04/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - byte classification routines
 - bytes, testing
 ms.assetid: 1cb52d71-fb0c-46ca-aad7-6472c1103370
-ms.openlocfilehash: 7272170bd3a1e765e728451afc245947111ee947
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 00691ca85366c5cbbe28b023f2a269838128fe9e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171567"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221696"
 ---
 # <a name="byte-classification"></a>Classificazione per byte
 
@@ -22,7 +23,7 @@ Ognuna di queste routine verifica una specifico byte di un carattere multibyte p
 > [!NOTE]
 > Per definizione, i caratteri ASCII tra 0 e 127 sono un sottoinsieme di tutti i caratteri multibyte. Ad esempio, il set di caratteri giapponese katakana comprende caratteri ASCII e non ASCII.
 
-Le costanti predefinite nella tabella seguente sono definite in \<ctype.h>.
+Le costanti predefinite nella tabella seguente sono definite in \<ctype.h> .
 
 ## <a name="multibyte-character-byte-classification-routines"></a>Routine di classificazione per byte di caratteri multibyte
 
@@ -37,7 +38,7 @@ Le costanti predefinite nella tabella seguente sono definite in \<ctype.h>.
 |[_ismbbkprint, _ismbbkprint_l](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|Testo non ASCII o simbolo di punteggiatura non ASCII. Ad esempio, solo nella tabella codici 932, **_ismbbkprint** esegue il test per i caratteri alfanumerici o la punteggiatura Katakana (intervallo: 0xA1 - 0xDF).|
 |[_ismbbkpunct, _ismbbkpunct_l](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|Punteggiatura non ASCII. Ad esempio, solo nella tabella codici 932, **_ismbbkpunct** verifica la punteggiatura Katakana.|
 |[_ismbblead, _ismbblead_l](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|Primo byte di un carattere multibyte. Ad esempio, solo nella tabella codici 932, gli intervalli validi sono compresi tra 0x81 e 0x9F e tra 0xE0 e 0xFC.|
-|[_ismbbprint, _ismbbprint_l](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|**isprint** &#124;&#124; **_ismbbkprint**. **ismbbprint** include lo spazio (0x20)|
+|[_ismbbprint, _ismbbprint_l](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|**isprint** &#124;&#124; **_ismbbkprint**. **ismbbprint** include il carattere di spazio (0x20)|
 |[_ismbbpunct, _ismbbpunct_l](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)|**ispunct** &#124;&#124; **_ismbbkpunct**|
 |[_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)|Secondo byte di un carattere multibyte. Ad esempio, solo nella tabella codici 932, gli intervalli validi sono compresi tra 0x40 e 0x7E e tra 0x80 e 0xEC.|
 |[_ismbslead, _ismbslead_l](../c-runtime-library/reference/ismbslead-ismbstrail-ismbslead-l-ismbstrail-l.md)|Byte di apertura (nel contesto della stringa)|
@@ -46,8 +47,8 @@ Le costanti predefinite nella tabella seguente sono definite in \<ctype.h>.
 |[_mbsbtype, _mbsbtype_l](../c-runtime-library/reference/mbsbtype-mbsbtype-l.md)|Tipo restituito di byte all'interno della stringa|
 |[mbsinit](../c-runtime-library/reference/mbsinit.md)|Tiene traccia dello stato di una conversione di caratteri multibyte.|
 
-La macro **MB_LEN_MAX**, definita in \<limits.h>, si espande alla lunghezza massima in byte che può avere qualsiasi carattere multibyte. **MB_CUR_MAX**, definita in \<stdlib.h>, si espande alla lunghezza massima in byte di qualsiasi carattere multibyte nelle impostazioni locali correnti.
+La macro **MB_LEN_MAX** , definita in \<limits.h> , si espande alla lunghezza massima in byte di qualsiasi carattere multibyte. **MB_CUR_MAX**, definito in \<stdlib.h> , si espande alla lunghezza massima in byte di qualsiasi carattere multibyte nelle impostazioni locali correnti.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: sezioni (C/C++)'
 title: SECTIONS (C/C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,37 +7,37 @@ f1_keywords:
 helpviewer_keywords:
 - SECTIONS .def file statement
 ms.assetid: 7b974366-9ef5-4e57-bbcc-73a1df6f8857
-ms.openlocfilehash: 5125b09675969c784aafe375faf1fdbc36d8c5d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aaebeb19c921dfb389c55209c7a371f49043cb56
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318628"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224764"
 ---
 # <a name="sections-cc"></a>SECTIONS (C/C++)
 
-Introduce una sezione di uno o più `definitions` che sono identificatori di accesso sulle sezioni nel file di output del progetto.
+Introduce una sezione di uno o più `definitions` identificatori di accesso per le sezioni del file di output del progetto.
 
 ```
 SECTIONS
 definitions
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Ogni definizione deve essere riportata in una riga separata. Il `SECTIONS` parola chiave può essere sulla stessa riga della prima definizione o su una riga precedente. Il file con estensione DEF può contenere uno o più `SECTIONS` istruzioni.
+Ogni definizione deve essere riportata in una riga separata. La `SECTIONS` parola chiave può trovarsi nella stessa riga della prima definizione o in una riga precedente. Il file def può contenere una o più `SECTIONS` istruzioni.
 
-Ciò `SECTIONS` istruzione imposta gli attributi per uno o più sezioni nel file di immagine e può essere utilizzato per eseguire l'override gli attributi predefiniti per ogni tipo di sezione.
+Questa `SECTIONS` istruzione imposta gli attributi per una o più sezioni del file di immagine e può essere usata per eseguire l'override degli attributi predefiniti per ogni tipo di sezione.
 
-Il formato per `definitions` è:
+Il formato di `definitions` è:
 
 `.section_name specifier`
 
-in cui `.section_name` è il nome di una sezione dell'immagine del programma e `specifier` corrisponde a uno o più dei seguenti modificatori di accesso:
+dove `.section_name` è il nome di una sezione nell'immagine del programma e `specifier` è uno o più dei modificatori di accesso seguenti:
 
-|Modificatore|Descrizione|
+|Modificatore|Description|
 |--------------|-----------------|
-|`EXECUTE`|La sezione non eseguibile|
+|`EXECUTE`|La sezione è eseguibile|
 |`READ`|Consente operazioni di lettura sui dati|
 |`SHARED`|Condivide la sezione tra tutti i processi che caricano l'immagine|
 |`WRITE`|Consente operazioni di scrittura sui dati|
@@ -48,18 +49,18 @@ SECTIONS
 .rdata READ WRITE
 ```
 
-`SECTIONS` Contrassegna l'inizio di un elenco di sezione `definitions`. Ogni `definition` deve essere su una riga separata. Il `SECTIONS` parola chiave può essere sulla stessa riga del primo `definition` o su una riga precedente. Il file con estensione DEF può contenere uno o più `SECTIONS` istruzioni. Il `SEGMENTS` parola chiave viene supportata come un sinonimo `SECTIONS`.
+`SECTIONS` contrassegna l'inizio di un elenco di sezioni `definitions` . Ogni `definition` deve trovarsi su una riga separata. La `SECTIONS` parola chiave può trovarsi sulla stessa riga del primo `definition` o su una riga precedente. Il file def può contenere una o più `SECTIONS` istruzioni. La `SEGMENTS` parola chiave è supportata come sinonimo di `SECTIONS` .
 
-Versioni precedenti di Visual C++ supportano:
+Versioni precedenti di Visual C++ supportate:
 
 ```
 section [CLASS 'classname'] specifier
 ```
 
-Il `CLASS` (parola chiave) è supportato per la compatibilità, ma viene ignorato.
+La `CLASS` parola chiave è supportata per la compatibilità, ma viene ignorata.
 
-È un modo equivalente per specificare gli attributi di sezione con il [/Section](section-specify-section-attributes.md) opzione.
+Un modo equivalente per specificare gli attributi della sezione è con l'opzione [/Section](section-specify-section-attributes.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Regole relative alle istruzioni di definizione dei moduli](rules-for-module-definition-statements.md)
+[Regole per Module-Definition istruzioni](rules-for-module-definition-statements.md)

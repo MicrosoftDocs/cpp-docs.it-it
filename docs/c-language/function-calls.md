@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: chiamate di funzione'
 title: Chiamate di funzioni
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - function calls, about function calls
 - function calls
 ms.assetid: 2cfa897d-3874-4820-933c-e624f75d1712
-ms.openlocfilehash: 495dc3cf77df79336af364eb80ea7edf17b54400
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3949ea88637d9476d6acb0fd4fc4cf43dcfb0fc0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227868"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221930"
 ---
 # <a name="function-calls"></a>Chiamate di funzioni
 
@@ -91,6 +92,6 @@ La funzione `work` chiama la funzione selezionata dall'interno del **`for`** cic
 
 Un argomento, `i`, viene passato alla funzione chiamata.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Funzioni](../c-language/functions-c.md)

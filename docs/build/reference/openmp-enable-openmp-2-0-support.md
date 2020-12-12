@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/OpenMP (Abilita supporto OpenMP)
 title: /OpenMP (Abilita supporto OpenMP)
 ms.date: 04/15/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /openmp compiler option [C++]
 - -openmp compiler option [C++]
 ms.assetid: 9082b175-18d3-4378-86a7-c0eb95664e13
-ms.openlocfilehash: 6bd1ffcd9b21bfe22ed9424ee77edf43100abf6c
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 818cd6167bf56b9948a3d9f455b0153b4302e8df
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921230"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221982"
 ---
 # <a name="openmp-enable-openmp-support"></a>/OpenMP (Abilita supporto OpenMP)
 
@@ -23,7 +24,7 @@ Fa in modo che il compilatore elabori le [`#pragma omp`](../../preprocessor/omp.
 
 ::: moniker range=">= msvc-160"
 
-> **/OpenMP** \[ **:**__sperimentale__ ]
+> **/OpenMP** \[ **:**__sperimentale__]
 
 ::: moniker-end
 
@@ -33,7 +34,7 @@ Fa in modo che il compilatore elabori le [`#pragma omp`](../../preprocessor/omp.
 
 ::: moniker-end
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 `#pragma omp` viene utilizzato per specificare le [direttive](../../parallel/openmp/reference/openmp-directives.md) e le [clausole](../../parallel/openmp/reference/openmp-clauses.md). Se **/OpenMP** non è specificato in una compilazione, il compilatore ignora le clausole OpenMP e le direttive. Le chiamate di [funzione OpenMP](../../parallel/openmp/reference/openmp-functions.md) vengono elaborate dal compilatore anche se **/OpenMP** non è specificato.
 
@@ -49,7 +50,7 @@ Se si tenta di caricare un'app compilata con **/OpenMP** e **/CLR** in un domini
 
 Queste eccezioni possono inoltre essere generate nelle situazioni seguenti:
 
-- Se l'applicazione viene compilata usando **/CLR** ma non **/OpenMP** e viene caricata in un dominio applicazione non predefinito, in cui il processo include un'app compilata con **/OpenMP** .
+- Se l'applicazione viene compilata usando **/CLR** ma non **/OpenMP** e viene caricata in un dominio applicazione non predefinito, in cui il processo include un'app compilata con **/OpenMP**.
 
 - Se si passa l'app **/CLR** a un'utilità, ad esempio [regasm.exe](/dotnet/framework/tools/regasm-exe-assembly-registration-tool), che carica gli assembly di destinazione in un dominio applicazione non predefinito.
 
@@ -61,7 +62,7 @@ Microsoft non consiglia di scrivere app **/OpenMP** che consentano chiamanti par
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Espandere la **Configuration Properties**  >  pagina delle proprietà del linguaggio **C/C++** delle proprietà di configurazione  >  **Language** .
+1. Espandere la   >  pagina delle proprietà del linguaggio **C/C++** delle proprietà di configurazione  >   .
 
 1. Modificare la proprietà di **supporto OpenMP** .
 
@@ -73,9 +74,9 @@ Microsoft non consiglia di scrivere app **/OpenMP** che consentano chiamanti par
 
 Nell'esempio seguente vengono illustrati alcuni effetti dell'avvio del pool di thread rispetto all'utilizzo del pool di thread dopo che è stato avviato. Supponendo un processore dual x64, Single Core, il pool di thread richiede circa 16 ms per l'avvio. Successivamente, il pool di thread ha un costo aggiuntivo.
 
-Quando si esegue la compilazione con **/OpenMP** , la seconda chiamata a test2 non viene mai eseguita più a lungo rispetto a quando si esegue la compilazione usando **/OpenMP-** , perché non è presente alcun avvio del pool di thread. A un milione di iterazioni, la versione di **/OpenMP** è più veloce della versione di **/OpenMP-** per la seconda chiamata a test2. Con 25 iterazioni, entrambe le versioni di **/OpenMP-** e **/OpenMP** registrano meno della granularità dell'orologio.
+Quando si esegue la compilazione con **/OpenMP**, la seconda chiamata a test2 non viene mai eseguita più a lungo rispetto a quando si esegue la compilazione usando **/OpenMP-**, perché non è presente alcun avvio del pool di thread. A un milione di iterazioni, la versione di **/OpenMP** è più veloce della versione di **/OpenMP-** per la seconda chiamata a test2. Con 25 iterazioni, entrambe le versioni di **/OpenMP-** e **/OpenMP** registrano meno della granularità dell'orologio.
 
-Se nell'applicazione è presente un solo ciclo e viene eseguito in meno di 15 ms (regolato per l'overhead approssimativo nel computer), **/OpenMP** potrebbe non essere appropriato. Se è più elevata, è consigliabile usare **/OpenMP** .
+Se nell'applicazione è presente un solo ciclo e viene eseguito in meno di 15 ms (regolato per l'overhead approssimativo nel computer), **/OpenMP** potrebbe non essere appropriato. Se è più elevata, è consigliabile usare **/OpenMP**.
 
 ```cpp
 // cpp_compiler_options_openmp.cpp
@@ -121,7 +122,7 @@ int main(int argc, char* argv[]) {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md) \
 [Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md) \
