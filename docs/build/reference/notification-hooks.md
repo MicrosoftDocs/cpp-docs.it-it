@@ -1,61 +1,62 @@
 ---
+description: 'Altre informazioni su: hook di notifica'
 title: Hook di notifica
 ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, notification hooks
 ms.assetid: e9c291ed-2f2d-4319-a171-09800625256f
-ms.openlocfilehash: 884d8e8479b7cad28d99e19adfac4d05dbeec5f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 716d2b31faa71c77ec436662ce00368d15afc4b1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320474"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209750"
 ---
 # <a name="notification-hooks"></a>Hook di notifica
 
-L'hook di notifica vengono chiamati subito prima nella routine di supporto vengono eseguite le azioni seguenti:
+Gli hook di notifica vengono chiamati appena prima che vengano eseguite le azioni seguenti nella routine di supporto:
 
-- L'handle memorizzato alla libreria viene controllato per verificare se è già stato caricato.
+- L'handle archiviato per la libreria viene controllato per verificare se è già stato caricato.
 
-- **LoadLibrary** viene chiamato per tentativi di caricamento della DLL.
+- **LoadLibrary** viene chiamato per tentare il caricamento della dll.
 
 - **GetProcAddress** viene chiamato per tentare di ottenere l'indirizzo della routine.
 
-- Torna all'importazione di ritardo di caricare il thunk.
+- Tornare al thunk di caricamento dell'importazione ritardata.
 
-L'hook di notifica è abilitata:
+L'hook di notifica è abilitato:
 
-- Specificando una nuova definizione dell'indicatore di misura **pfnDliNotifyHook2** che viene inizializzato in modo da puntare alla funzione che riceve le notifiche.
+- Fornendo una nuova definizione del puntatore **__pfnDliNotifyHook2** inizializzata in modo da puntare alla propria funzione che riceve le notifiche.
 
    \-oppure-
 
-- Impostando il puntatore del mouse **pfnDliNotifyHook2** alla funzione hook prima tutte le chiamate alla DLL che il programma è ritardare il caricamento.
+- Impostando il puntatore **__pfnDliNotifyHook2** sulla funzione hook prima di qualsiasi chiamata alla DLL a cui viene ritardato il caricamento del programma.
 
-Se la notifica viene **dliStartProcessing**, la funzione hook può restituire:
+Se la notifica è **dliStartProcessing**, la funzione hook può restituire:
 
 - NULL
 
-   L'helper predefinita gestisce il caricamento della DLL. Ciò è utile per essere chiamato solo per scopi informativi.
+   L'helper predefinito gestisce il caricamento della DLL. Questa operazione è utile per essere chiamata solo a scopo informativo.
 
-- Puntatore a funzione
+- puntatore a funzione
 
-   La gestione del caricamento ritardato predefinite da ignorare. Ciò consente di fornire un gestore di caricamento.
+   Ignorare la gestione predefinita del caricamento ritardato. Questo consente di fornire il proprio gestore di carico.
 
-Se la notifica viene **dliNotePreLoadLibrary**, la funzione hook può restituire:
+Se la notifica è **dliNotePreLoadLibrary**, la funzione hook può restituire:
 
-- 0, se vuole semplicemente notifiche informative.
+- 0, se si desiderano solo le notifiche informative.
 
-- HMODULE per la DLL caricata, se caricato la DLL.
+- HMODULE per la DLL caricata, se è stata caricata la DLL.
 
-Se la notifica viene **dliNotePreGetProcAddress**, la funzione hook può restituire:
+Se la notifica è **dliNotePreGetProcAddress**, la funzione hook può restituire:
 
-- 0, se vuole semplicemente notifiche informative.
+- 0, se si desiderano solo le notifiche informative.
 
-- Indirizzo della funzione importata, se la funzione hook Ottiene l'indirizzo di se stesso.
+- Indirizzo della funzione importata, se la funzione hook Ottiene l'indirizzo stesso.
 
-Se la notifica viene **dliNoteEndProcessing**, valore restituito della funzione hook viene ignorato.
+Se la notifica è **dliNoteEndProcessing**, il valore restituito della funzione hook viene ignorato.
 
-Se questo puntatore viene inizializzato (diverso da zero), helper a caricamento ritardato richiamerà la funzione in determinati momenti di notifica durante l'esecuzione. Puntatore a funzione presenta la seguente definizione:
+Se il puntatore viene inizializzato (diverso da zero), l'helper di caricamento ritardato richiamerà la funzione in determinati punti di notifica durante l'esecuzione. Il puntatore a funzione presenta la definizione seguente:
 
 ```C
 // The "notify hook" gets called for every call to the
@@ -77,8 +78,8 @@ ExternC
 PfnDliHook   __pfnDliFailureHook2;
 ```
 
-Le notifiche di passare un **DelayLoadInfo** struttura alla funzione hook insieme al valore di notifica. Questi dati sono identici a quella usata dalla routine dell'helper carico ritardo. Il valore di notifica sarà uno dei valori definiti nella [struttura e definizioni costanti](structure-and-constant-definitions.md).
+Le notifiche passano una struttura **DelayLoadInfo** alla funzione hook insieme al valore di notifica. Questi dati sono identici a quelli usati dalla routine di supporto per il caricamento ritardato. Il valore di notifica sarà uno dei valori definiti in [struttura e definizioni di costanti](structure-and-constant-definitions.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione e notifica degli errori](error-handling-and-notification.md)

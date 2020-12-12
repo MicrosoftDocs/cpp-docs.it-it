@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2666'
 title: Errore del compilatore C2666
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2666
 ms.assetid: 78364d15-c6eb-439a-9088-e04a0176692b
-ms.openlocfilehash: ebe41a4c4aa090e609d3352635d4e1fc06e22454
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: bfee8a2cb62f351d7d09faa499f1a936d14ea813
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743217"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97210816"
 ---
 # <a name="compiler-error-c2666"></a>Errore del compilatore C2666
 
@@ -19,7 +20,7 @@ ms.locfileid: "90743217"
 
 Una funzione o un operatore di overload è ambiguo.   Gli elenchi di parametri formali potrebbero essere troppo simili per la risoluzione dell'ambiguità da parte del compilatore.  Per correggere l'errore, eseguire il cast esplicito di uno o più parametri effettivi.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 L'esempio seguente genera l'C2666:
 

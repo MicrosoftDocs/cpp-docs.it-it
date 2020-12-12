@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2975'
 title: Errore del compilatore C2975
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2975
 ms.assetid: 526f6b9d-6c76-4c12-9252-1b1d7c1e06c7
-ms.openlocfilehash: 70fc648de8bcf4f1e85edf3a12cc0b7d3d70625f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9f9108d1dc4e0fe61b6dd2135fb69bbaedfaedf0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80201565"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97210348"
 ---
 # <a name="compiler-error-c2975"></a>Errore del compilatore C2975
 
@@ -35,7 +36,7 @@ int main() {
 }
 ```
 
-C2975 si verifica anche quando si &#95; &#95;USA&#95; &#95; la riga come costante in fase di compilazione con [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md). Una soluzione è la compilazione con [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) anziché con **/Zi**.
+C2975 si verifica anche quando si usa &#95;&#95;riga&#95;&#95; come costante in fase di compilazione con [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md). Una soluzione è la compilazione con [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) anziché con **/Zi**.
 
 ```cpp
 // C2975b.cpp

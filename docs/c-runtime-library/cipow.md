@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _CIpow'
 title: _CIpow
 ms.date: 4/2/2020
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - CIpow intrinsic
 - _CIpow intrinsic
 ms.assetid: 477aaf0c-ac58-4252-89dd-9f3e35d47536
-ms.openlocfilehash: 80acead0f40896db6c27cca8440a3069a18c5332
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 69a51df94101091a59f188b1e39d62abb29de2b9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917970"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209633"
 ---
 # <a name="_cipow"></a>_CIpow
 
@@ -54,7 +55,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 **Piattaforma:** x86
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Alphabetical Function Reference](../c-runtime-library/reference/crt-alphabetical-function-reference.md) (Riferimento alfabetico alle funzioni)<br/>
+[Riferimento alfabetico alle funzioni](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [pow, powf, powl](../c-runtime-library/reference/pow-powf-powl.md)

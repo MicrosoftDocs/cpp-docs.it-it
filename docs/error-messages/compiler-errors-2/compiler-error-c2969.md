@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2969'
 title: Errore del compilatore C2969
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2969
 ms.assetid: e4ea3d66-b937-4b2c-b42a-96e03fb11579
-ms.openlocfilehash: 045ba4930e985d90f755ac44d482a55f04a3e6a3
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: d0b52e6033338adc249cc9c7181cbb5dc25f7f8b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759438"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97210400"
 ---
 # <a name="compiler-error-c2969"></a>Errore del compilatore C2969
 

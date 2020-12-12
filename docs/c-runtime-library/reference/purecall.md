@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _purecall'
 title: _purecall
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - _purecall function
 - purecall function
 ms.assetid: 56135d9b-3403-4e22-822d-e714523801cc
-ms.openlocfilehash: 19ad6c2f517d9ddf277a7bdda6e46c7940f0d3f1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: df52d7383685f3ce183562d8789b710fd7587acd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913333"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209451"
 ---
 # <a name="_purecall"></a>_purecall
 
@@ -55,9 +56,9 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-La funzione **_purecall** non dispone di una dichiarazione di intestazione. Il typedef **_purecall_handler** è definito in \<stdlib. h>.
+La funzione **_purecall** non dispone di una dichiarazione di intestazione. Il typedef **_purecall_handler** è definito in \<stdlib.h> .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Alphabetical Function Reference](crt-alphabetical-function-reference.md) (Riferimento alfabetico alle funzioni)<br/>
+[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
 [_get_purecall_handler, _set_purecall_handler](get-purecall-handler-set-purecall-handler.md)<br/>

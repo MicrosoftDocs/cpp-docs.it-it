@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: scrittura di applicazioni MFC'
 title: Scrittura di applicazioni MFC
 ms.date: 09/12/2018
 helpviewer_keywords:
@@ -7,34 +8,34 @@ helpviewer_keywords:
 - application wizards [MFC], Internet applications
 - MFC, application development
 ms.assetid: 6a8d8a03-abfa-4976-86c2-c5773a4b7179
-ms.openlocfilehash: 63636e8c5738eb3823de0befa6237f7ae5b3491d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b01d147f5b15546c9e15e9f8bd5654c7b986cad6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399460"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209919"
 ---
 # <a name="writing-mfc-applications"></a>Scrittura di applicazioni MFC
 
-Questo articolo illustra i passaggi iniziali che necessari per sviluppare l'applicazione. In primo luogo, è necessario decidere quale tipo di applicazione si sta scrivendo. Molte delle scelte discussi in precedenza [scelte di progettazione delle applicazioni](../mfc/application-design-choices.md). L'applicazione sarà:
+Questo articolo illustra i passaggi iniziali necessari per sviluppare l'applicazione. In primo luogo, è necessario decidere il tipo di applicazione che si sta scrivendo. Diverse opzioni sono state discusse nelle [scelte di progettazione delle applicazioni](../mfc/application-design-choices.md). L'applicazione sarà:
 
-- In esecuzione su Internet o intranet
+- Esecuzione in Internet o in una rete Intranet
 
-- In esecuzione in un client o in un server
+- Esecuzione in un client o in un server
 
-- In esecuzione in un browser o come un'applicazione autonoma
+- Esecuzione in un browser o come applicazione autonoma
 
-- Tramite la tecnologia COM o attivo
+- Uso della tecnologia COM o Active
 
-- Download dei dati usando WinInet o moniker asincroni
+- Download dei dati tramite WinInet o moniker asincroni
 
-Le decisioni di determinano quali classi sono appropriate per l'applicazione. Le risposte consentono inoltre di determinare le selezioni effettuate quando si esegue la procedura guidata dell'applicazione per avviare la creazione dell'applicazione.
+Le decisioni determinano quali classi sono appropriate per l'applicazione. Le risposte consentono inoltre di determinare le selezioni effettuate quando si esegue la creazione guidata applicazione per iniziare a creare l'applicazione.
 
-Dopo aver apportato le decisioni di progettazione iniziale sull'applicazione Internet, è possibile utilizzare la creazione guidata applicazione per iniziare. Usare la creazione guidata applicazione per creare uno scheletro di applicazione e modificare il codice, come descritto negli articoli seguenti:
+Una volta prese le decisioni di progettazione iniziali sull'applicazione Internet, è possibile utilizzare la creazione guidata applicazione per iniziare. Utilizzare la creazione guidata applicazione per creare un'applicazione Skeleton e modificare il codice come descritto negli articoli seguenti:
 
 - Per un controllo ActiveX, vedere [controlli ActiveX in Internet](../mfc/activex-controls-on-the-internet.md).
 
-Gli articoli seguenti vengono inoltre fornite istruzioni utili per iniziare l'attività di programmazione:
+Gli articoli seguenti forniscono anche istruzioni per l'avvio delle attività di programmazione:
 
 - [Scelte di progettazione delle applicazioni](../mfc/application-design-choices.md)
 
@@ -42,7 +43,7 @@ Gli articoli seguenti vengono inoltre fornite istruzioni utili per iniziare l'at
 
 - [Nozioni di base su WinInet](../mfc/wininet-basics.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attività di programmazione Internet MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
-[Nozioni di base sulla programmazione Internet MFC](../mfc/mfc-internet-programming-basics.md)
+[Nozioni fondamentali sulla programmazione Internet MFC](../mfc/mfc-internet-programming-basics.md)
