@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: char_traits struct'
 title: Struct char_traits
 ms.date: 05/07/2019
 f1_keywords:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - char_traits struct
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
-ms.openlocfilehash: 834572e96d9d8c19ae5d75a57dfa6c0053ae0ec5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a42aa29f2400d4610974530de04699daa32b7f1d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222602"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325235"
 ---
 # <a name="char_traits-struct"></a>Struct char_traits
 
@@ -50,13 +51,13 @@ struct char_traits;
 *CharType*\
 Tipo di dati elemento.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Lo struct del modello descrive vari tratti di caratteri per il tipo `CharType` . Il modello di classe [basic_string](../standard-library/basic-string-class.md) , oltre a diversi modelli di classe iostream, tra cui [basic_ios](../standard-library/basic-ios-class.md), usare queste informazioni per modificare gli elementi di tipo `CharType` . Un elemento di questo tipo non deve richiedere una costruzione o una distruzione esplicita. Deve fornire un costruttore predefinito, un costruttore di copia e un operatore di assegnazione con la semantica prevista. Una copia bit per bit deve avere lo stesso effetto di un'assegnazione. Nessuna delle funzioni membro di struct char_traits può generare eccezioni.
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome tipo|Descrizione|
+|Nome tipo|Description|
 |-|-|
 |[char_type](#char_type)|Tipo di carattere.|
 |[int_type](#int_type)|Un tipo Integer che può rappresentare un carattere di tipo `char_type` o un carattere EOF.|
@@ -90,7 +91,7 @@ Lo struct del modello descrive vari tratti di caratteri per il tipo `CharType` .
 
 **Spazio dei nomi:** std
 
-## <a name="char_traitsassign"></a><a name="assign"></a>char_traits:: Assign
+## <a name="char_traitsassign"></a><a name="assign"></a> char_traits:: Assign
 
 Assegna un valore del carattere a un altro elemento o un intervallo di elementi in una stringa.
 
@@ -161,7 +162,7 @@ The target string s1 is: abcd-1234-abcd
 The result1 = assign ( s1 , 4 , 'f' ) is: ffff-1234-abcd
 ```
 
-## <a name="char_traitschar_type"></a><a name="char_type"></a>char_traits:: char_type
+## <a name="char_traitschar_type"></a><a name="char_type"></a> char_traits:: char_type
 
 Tipo di carattere.
 
@@ -169,7 +170,7 @@ Tipo di carattere.
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del parametro di modello `CharType`.
 
@@ -177,7 +178,7 @@ Il tipo è un sinonimo del parametro di modello `CharType`.
 
 Vedere l'esempio per [copy](#copy) per un esempio di dichiarazione e utilizzo di `char_type`.
 
-## <a name="char_traitscompare"></a><a name="compare"></a>char_traits:: compare
+## <a name="char_traitscompare"></a><a name="compare"></a> char_traits:: compare
 
 Confronta un numero specificato di caratteri in due stringhe.
 
@@ -202,7 +203,7 @@ Il numero di elementi nelle stringhe da confrontare.
 
 Un valore negativo se la prima stringa è minore della seconda stringa, 0 se le due stringhe sono uguali o un valore positivo se la prima stringa è maggiore della seconda stringa.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra le stringhe viene eseguito elemento per elemento, testando prima l'uguaglianza, quindi, se in una coppia di elementi della sequenza risulta una disuguaglianza, vengono testate per stabilire qual è la minore.
 
@@ -241,7 +242,7 @@ int main() {
 }
 ```
 
-## <a name="char_traitscopy"></a><a name="copy"></a>char_traits:: Copy
+## <a name="char_traitscopy"></a><a name="copy"></a> char_traits:: Copy
 
 Copia un numero specificato di caratteri da una stringa a un'altra.
 
@@ -268,7 +269,7 @@ Il numero di elementi da copiare.
 
 Il primo elemento copiato nella matrice di stringhe o caratteri che deve ricevere la sequenza di caratteri copiata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le sequenze di caratteri di origine e di destinazione non devono sovrapporsi.
 
@@ -303,7 +304,7 @@ The destination string is: ABCD-1234
 The result1 = copy ( s1 , s2 , 4 ) is: ABCD-1234-abcd
 ```
 
-## <a name="char_traits_copy_s"></a><a name="copy_s"></a>char_traits:: _Copy_s
+## <a name="char_traits_copy_s"></a><a name="copy_s"></a> char_traits:: _Copy_s
 
 Copia un numero specificato di caratteri da una stringa a un'altra.
 
@@ -333,7 +334,7 @@ Il numero di elementi da copiare.
 
 La matrice di stringhe o caratteri che deve ricevere la sequenza di caratteri copiata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le sequenze di caratteri di origine e di destinazione non devono sovrapporsi.
 
@@ -368,7 +369,7 @@ The destination string is: ABCD-1234
 The result1 = _Copy_s(s1, char_traits<char>::length(s1), s2, 4) is: ABCD-1234-abcd
 ```
 
-## <a name="char_traitseof"></a><a name="eof"></a>char_traits:: EOF
+## <a name="char_traitseof"></a><a name="eof"></a> char_traits:: EOF
 
 Restituisce il carattere EOF.
 
@@ -380,7 +381,7 @@ static int_type eof();
 
 Il carattere EOF.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Valore che rappresenta la fine del file, ad esempio EOF o WEOF.
 
@@ -419,7 +420,7 @@ The eof marker for char_traits<char> is: -1
 The eof marker for char_traits<wchar_t> is: 65535
 ```
 
-## <a name="char_traitseq"></a><a name="eq"></a>char_traits:: EQ
+## <a name="char_traitseq"></a><a name="eq"></a> char_traits:: EQ
 
 Verifica se due caratteri `char_type` sono uguali.
 
@@ -479,7 +480,7 @@ The character ch1 is not equal to the character ch2.
 The character ch1 is equal to the character ch3.
 ```
 
-## <a name="char_traitseq_int_type"></a><a name="eq_int_type"></a>char_traits:: eq_int_type
+## <a name="char_traitseq_int_type"></a><a name="eq_int_type"></a> char_traits:: eq_int_type
 
 Verifica se due caratteri rappresentati come `int_type` sono uguali.
 
@@ -564,7 +565,7 @@ The int_type representation of character ch1
 is equal to the int_type representation of ch3.
 ```
 
-## <a name="char_traitsfind"></a><a name="find"></a>char_traits:: Find
+## <a name="char_traitsfind"></a><a name="find"></a> char_traits:: Find
 
 Cerca la prima occorrenza di un carattere specificato in un intervallo di caratteri.
 
@@ -631,7 +632,7 @@ of the character 'd' is: d-1234-abcd
 The result2 of the search is NULL.
 ```
 
-## <a name="char_traitsint_type"></a><a name="int_type"></a>char_traits:: int_type
+## <a name="char_traitsint_type"></a><a name="int_type"></a> char_traits:: int_type
 
 Un tipo Integer che può rappresentare un carattere di tipo `char_type` o un carattere EOF.
 
@@ -639,7 +640,7 @@ Un tipo Integer che può rappresentare un carattere di tipo `char_type` o un car
 typedef long int_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È necessario che venga eseguito il cast di un valore di tipo `CharType` per `int_type` poi tornare a `CharType` senza modificare il valore originale.
 
@@ -647,7 +648,7 @@ typedef long int_type;
 
 Vedere l'esempio relativo a [eq_int_type](#eq_int_type) per informazioni su come dichiarare e usare `int_type`.
 
-## <a name="char_traitslength"></a><a name="length"></a>char_traits:: length
+## <a name="char_traitslength"></a><a name="length"></a> char_traits:: length
 
 Restituisce la lunghezza di una stringa.
 
@@ -690,7 +691,7 @@ The C-string str1 is: Hello
 The length of C-string str1 is: 5.
 ```
 
-## <a name="char_traitslt"></a><a name="lt"></a>char_traits:: lt
+## <a name="char_traitslt"></a><a name="lt"></a> char_traits:: lt
 
 Verifica se un carattere è minore di un altro.
 
@@ -749,7 +750,7 @@ The character ch1 is less than the character ch2.
 The character ch3 is not less than the character ch2.
 ```
 
-## <a name="char_traitsmove"></a><a name="move"></a>char_traits:: Move
+## <a name="char_traitsmove"></a><a name="move"></a> char_traits:: Move
 
 Copia un numero specificato di caratteri di una sequenza in un'altra sequenza che potrebbe sovrapporsi.
 
@@ -776,7 +777,7 @@ Il numero di elementi da copiare dalla stringa di origine.
 
 Il primo elemento *_To* copiato nella matrice di stringhe o caratteri di destinazione per ricevere la sequenza di caratteri copiata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'origine e la destinazione possono sovrapporsi.
 
@@ -826,7 +827,7 @@ The source/destination string sToFrom2 is: abcd-1234-ABCD
 The result2 = move ( sToFrom2 , findc , 8 ) is: cd-1234-4-ABCD
 ```
 
-## <a name="char_traits_move_s"></a><a name="move_s"></a>char_traits:: _Move_s
+## <a name="char_traits_move_s"></a><a name="move_s"></a> char_traits:: _Move_s
 
 Copia un numero specificato di caratteri di una sequenza in un'altra sequenza che potrebbe sovrapporsi.
 
@@ -856,7 +857,7 @@ Il numero di elementi da copiare dalla stringa di origine.
 
 Il primo elemento *dest* copiato nella matrice di stringhe o caratteri di destinazione per ricevere la sequenza di caratteri copiata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'origine e la destinazione possono sovrapporsi.
 
@@ -906,7 +907,7 @@ The source/destination string sToFrom2 is: abcd-1234-ABCD
 The result2 = _Move_s(sToFrom2, char_traits<char>::length(sToFrom2), findc, 8) is: cd-1234-4-ABCD
 ```
 
-## <a name="char_traitsnot_eof"></a><a name="not_eof"></a>char_traits:: not_eof
+## <a name="char_traitsnot_eof"></a><a name="not_eof"></a> char_traits:: not_eof
 
 Verifica se un carattere è il carattere EOF (fine del file) o non lo è.
 
@@ -978,7 +979,7 @@ The eofTest1 returns: 120, which is the character: x.
 The eofTest2 indicates int2 is an EOF character.
 ```
 
-## <a name="char_traitsoff_type"></a><a name="off_type"></a>char_traits:: off_type
+## <a name="char_traitsoff_type"></a><a name="off_type"></a> char_traits:: off_type
 
 Un tipo Integer che può rappresentare offset tra posizioni in un flusso.
 
@@ -986,11 +987,11 @@ Un tipo Integer che può rappresentare offset tra posizioni in un flusso.
 typedef streamoff off_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un intero con segno che descrive un oggetto in grado di archiviare un offset di byte interessato da varie operazioni di posizionamento del flusso. In genere è un sinonimo di [streamoff](../standard-library/ios-typedefs.md#streamoff) e ha essenzialmente le stesse proprietà di quel tipo.
 
-## <a name="char_traitspos_type"></a><a name="pos_type"></a>char_traits::p os_type
+## <a name="char_traitspos_type"></a><a name="pos_type"></a> char_traits::p os_type
 
 Un tipo Integer che può rappresentare posizioni in un flusso.
 
@@ -998,11 +999,11 @@ Un tipo Integer che può rappresentare posizioni in un flusso.
 typedef streampos pos_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo descrive un oggetto in grado di archiviare tutte le informazioni necessarie per ripristinare un indicatore di posizione del file arbitrario all'interno di un flusso. In genere è un sinonimo di [streampos](../standard-library/ios-typedefs.md#streampos) e in ogni caso ha essenzialmente le stesse proprietà di quel tipo.
 
-## <a name="char_traitsstate_type"></a><a name="state_type"></a>char_traits:: state_type
+## <a name="char_traitsstate_type"></a><a name="state_type"></a> char_traits:: state_type
 
 Tipo che rappresenta lo stato di conversione per i caratteri multibyte in un flusso.
 
@@ -1010,11 +1011,11 @@ Tipo che rappresenta lo stato di conversione per i caratteri multibyte in un flu
 typedef implementation-defined state_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo descrive un oggetto che può rappresentare uno stato di conversione. In genere è un sinonimo di `mbstate_t` e in ogni caso ha essenzialmente le stesse proprietà di quel tipo.
 
-## <a name="char_traitsto_char_type"></a><a name="to_char_type"></a>char_traits:: to_char_type
+## <a name="char_traitsto_char_type"></a><a name="to_char_type"></a> char_traits:: to_char_type
 
 Converte un carattere `int_type` in quello `char_type` corrispondente e restituisce il risultato.
 
@@ -1033,7 +1034,7 @@ Il carattere `char_type` corrispondente al carattere `int_type`.
 
 Il valore *_Ch* che non può essere rappresentato come tale restituisce un risultato non specificato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le operazioni di conversione [to_int_type](#to_int_type) e `to_char_type` sono l'una l'inverso dell'altra, in modo che:
 
@@ -1120,7 +1121,7 @@ The recovered char_type of ch1 is equal to the original ch1.
 The recovered char_type of ch2 is equal to the original ch2.
 ```
 
-## <a name="char_traitsto_int_type"></a><a name="to_int_type"></a>char_traits:: to_int_type
+## <a name="char_traitsto_int_type"></a><a name="to_int_type"></a> char_traits:: to_int_type
 
 Converte un carattere `char_type` in quello `int_type` corrispondente e restituisce il risultato.
 
@@ -1137,13 +1138,13 @@ Il carattere `char_type` da rappresentare come `int_type`.
 
 Il carattere `int_type` corrispondente al carattere `char_type`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le operazioni di conversione `to_int_type` e [to_char_type](#to_char_type) sono l'una l'inverso dell'altra, in modo che:
 
 `to_int_type` ( `to_char_type` ( *x* ) ) == *x*
 
-per qualsiasi `int_type` *x*e
+per qualsiasi `int_type` *x* e
 
 `to_char_type` ( `to_int_type` ( *x* ) ) == *x*
 

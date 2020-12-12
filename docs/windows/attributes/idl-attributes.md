@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: attributi IDL'
 title: Attributi IDL (C++ COM)
 ms.date: 10/02/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - IDL files [C++], attributes
 - .idl files [C++]
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-ms.openlocfilehash: 8cceae2f1c4880b72f1ffc30070d6aa6bf8e3a51
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1db49b6c68d0dd4e4f4c6c5dcfb148cafc39159d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211970"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275464"
 ---
 # <a name="idl-attributes"></a>Attributi IDL
 
@@ -36,18 +37,18 @@ Si noti che [idl_quote](idl-quote.md) consente di usare costrutti MIDL non suppo
 |[async_uuid](async-uuid.md)|Specifica l'UUID che indica al compilatore MIDL di definire versioni sincrone e asincrone di un'interfaccia COM.|
 |[bindable](bindable.md)|Indica che la proprietà supporta il data binding.|
 |[call_as](call-as.md)|Consente di eseguire il mapping di una funzione non a una funzione remota.|
-|[caso](case-cpp.md)|Utilizzato con l'attributo [switch_type](switch-type.md) in un'Unione.|
+|[case](case-cpp.md)|Utilizzato con l'attributo [switch_type](switch-type.md) in un'Unione.|
 |[coclass](coclass.md)|Inserisce la definizione della classe in un file con estensione IDL come coclasse.|
 |[control](control.md)|Specifica che il tipo definito dall'utente è un controllo.|
 |[cpp_quote](cpp-quote.md)|Genera la stringa specificata, senza virgolette, nel file di intestazione generato.|
 |[defaultbind](defaultbind.md)|Indica la singola proprietà associabile che meglio rappresenta l'oggetto.|
 |[defaultcollelem](defaultcollelem.md)|Usato per l'ottimizzazione del codice Visual Basic.|
 |[DefaultValue](defaultvalue.md)|Consente la specifica di un valore predefinito per un parametro facoltativo tipizzato.|
-|[predefinita](default-cpp.md)|Indica che l'interfaccia personalizzata o dispatch definita in una coclasse rappresenta l'interfaccia di programmabilità predefinita.|
+|[default](default-cpp.md)|Indica che l'interfaccia personalizzata o dispatch definita in una coclasse rappresenta l'interfaccia di programmabilità predefinita.|
 |[defaultvtable](defaultvtable.md)|Definisce un'interfaccia come interfaccia vtable predefinita per un controllo.|
 |[dispinterface](dispinterface.md)|Inserisce un'interfaccia nel file con estensione idl come interfaccia di dispatch.|
 |[displaybind](displaybind.md)|Indica una proprietà che deve essere visualizzata all'utente come associabile.|
-|[dual](dual.md)|Inserisce un'interfaccia nel file con estensione IDL come interfaccia duale.|
+|[Dual](dual.md)|Inserisce un'interfaccia nel file con estensione IDL come interfaccia duale.|
 |[voce](entry.md)|Specifica una funzione o una costante esportata in un modulo identificando il punto di ingresso nella DLL.|
 |[first_is](first-is.md)|Specifica l'indice del primo elemento di matrice da trasmettere.|
 |[helpcontext](helpcontext.md)|Specifica un ID di contesto che consente all'utente di visualizzare informazioni sull'elemento nel file della guida.|
@@ -79,7 +80,7 @@ Si noti che [idl_quote](idl-quote.md) consente di usare costrutti MIDL non suppo
 |[noncreatable](noncreatable.md)|Definisce un oggetto di cui non è possibile creare un'istanza.|
 |[nonextensible](nonextensible.md)|Specifica che l' `IDispatch` implementazione include solo le proprietà e i metodi elencati nella descrizione dell'interfaccia e che non possono essere estesi con membri aggiuntivi in fase di esecuzione.|
 |[object](object-cpp.md)|Identifica un'interfaccia personalizzata. sinonimo di attributo personalizzato.|
-|[odl](odl.md)|Identifica un'interfaccia come interfaccia Object Description Language (FAD).|
+|[ODL](odl.md)|Identifica un'interfaccia come interfaccia Object Description Language (FAD).|
 |[oleautomation](oleautomation.md)|Indica che un'interfaccia è compatibile con l'automazione.|
 |[opzionale](optional-cpp.md)|Specifica un parametro facoltativo per una funzione membro.|
 |[out](out-cpp.md)|Identifica i parametri dei puntatori restituiti dalla routine chiamata alla routine chiamante (dal server al client).|
@@ -90,7 +91,7 @@ Si noti che [idl_quote](idl-quote.md) consente di usare costrutti MIDL non suppo
 |[propputref](propputref.md)|Specifica una funzione di impostazione di proprietà che usa un riferimento invece di un valore.|
 |[propput](propput.md)|Specifica un funzione di impostazione delle proprietà.|
 |[ptr](ptr.md)|Designa un puntatore come puntatore completo.|
-|[pubblico](public-cpp-attributes.md)|Assicura che un typedef entri nella libreria dei tipi anche se non vi viene fatto riferimento dall'interno del file IDL.|
+|[public](public-cpp-attributes.md)|Assicura che un typedef entri nella libreria dei tipi anche se non vi viene fatto riferimento dall'interno del file IDL.|
 |[range](range-cpp.md)|Specifica un intervallo di valori consentiti per argomenti o campi i cui valori sono impostati in fase di esecuzione.|
 |[ReadOnly](readonly-cpp.md)|Impedisce l'assegnazione a una variabile.|
 |[ref](ref-cpp.md)|Identifica un puntatore di riferimento.|
@@ -106,12 +107,12 @@ Si noti che [idl_quote](idl-quote.md) consente di usare costrutti MIDL non suppo
 |[uidefault](uidefault.md)|Indica che il membro delle informazioni sul tipo è il membro predefinito per la visualizzazione nell'interfaccia utente.|
 |[unique](unique-cpp.md)|Specifica un puntatore univoco.|
 |[usesgetlasterror](usesgetlasterror.md)|Indica al chiamante che se si verifica un errore durante la chiamata a tale funzione, il chiamante può quindi chiamare `GetLastError` per recuperare il codice di errore.|
-|[uuid](uuid-cpp-attributes.md)|Specifica l'ID univoco per una classe o un'interfaccia.|
+|[UUID](uuid-cpp-attributes.md)|Specifica l'ID univoco per una classe o un'interfaccia.|
 |[v1_enum](v1-enum.md)|Indica che il tipo enumerato specificato deve essere trasmesso come entità a 32 bit, anziché come valore predefinito a 16 bit.|
 |[vararg](vararg.md)|Specifica che la funzione accetta un numero variabile di argomenti.|
 |[vi_progid](vi-progid.md)|Specifica una forma indipendente dalla versione del ProgID.|
 |[wire_marshal](wire-marshal.md)|Specifica un tipo di dati che verrà utilizzato per la trasmissione anziché un tipo di dati specifico dell'applicazione.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi per gruppo](attributes-by-group.md)

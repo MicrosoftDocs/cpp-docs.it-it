@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: dll e Visual C++ comportamento della libreria di runtime'
 title: DLL e comportamento delle librerie di runtime Visual C++
 ms.date: 08/19/2019
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-ms.openlocfilehash: 5af3efd733a5d682e33863b330b6a558e824c9b3
-ms.sourcegitcommit: 6284bca6549e7b4f199d4560c30df6c1278bd4a0
+ms.openlocfilehash: 5b76ec562b87969350b49d38e24c33ce7a4fabf8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95782979"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275451"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>DLL e comportamento delle librerie di runtime Visual C++
 
@@ -178,7 +179,7 @@ Si noti che il file di intestazione Afxdllx. h contiene definizioni speciali per
 
 Una funzione di inizializzazione di esempio che gestisce il multithreading è inclusa nell' [utilizzo dell'archiviazione locale di thread in una libreria di Dynamic-Link](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library) nel Windows SDK. Si noti che l'esempio contiene una funzione del punto di ingresso denominata `LibMain` , ma è necessario denominare questa funzione `DllMain` in modo che funzioni con le librerie di runtime di C e MFC.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Creare DLL C/C++ in Visual Studio](dlls-in-visual-cpp.md)<br/>
 [Punto di ingresso DllMain](/windows/win32/Dlls/dllmain)<br/>

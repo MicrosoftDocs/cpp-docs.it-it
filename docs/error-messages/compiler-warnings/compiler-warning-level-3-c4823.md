@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 3) C4823'
 title: Avviso del compilatore (livello 3) C4823
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4823
 ms.assetid: 8a77560d-dcea-4cae-aebb-8ebf1b4cef85
-ms.openlocfilehash: a96877252b0b7699f5e4033f8e695f4d9016a6c9
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: b5f4efcf25e59025ad086832c2446d856918542a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541272"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332106"
 ---
 # <a name="compiler-warning-level-3-c4823"></a>Avviso del compilatore (livello 3) C4823
 

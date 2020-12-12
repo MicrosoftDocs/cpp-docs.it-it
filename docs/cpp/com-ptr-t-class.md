@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _com_ptr_t Class'
 title: Classe _com_ptr_t
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t class
 ms.assetid: 3753a8a0-03d4-4cfd-8a9a-74872ea53971
-ms.openlocfilehash: 2c299ea4a5aaabba847c85500a6023d7b112d492
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a68b522806cec14baffe7857c71ac171ed0407f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838503"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295614"
 ---
 # <a name="_com_ptr_t-class"></a>Classe _com_ptr_t
 
@@ -31,13 +32,13 @@ Un set di [modelli di funzione](../cpp/relational-function-templates.md), non me
 
 ### <a name="construction"></a>Edilizia
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|Costruisce un oggetto **_com_ptr_t** .|
 
 ### <a name="low-level-operations"></a>Operazioni di basso livello
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[AddRef](../cpp/com-ptr-t-addref.md)|Chiama la `AddRef` funzione membro di `IUnknown` sul puntatore a interfaccia incapsulato.|
 |[Attach](../cpp/com-ptr-t-attach.md)|Incapsula un puntatore a interfaccia raw di questo tipo di puntatore intelligente.|
@@ -50,7 +51,7 @@ Un set di [modelli di funzione](../cpp/relational-function-templates.md), non me
 
 ### <a name="operators"></a>Operatori
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[operatore =](../cpp/com-ptr-t-operator-equal.md)|Assegna un nuovo valore a un oggetto **_com_ptr_t** esistente.|
 |[Operators = =,! =, \<, > , \<=, >=](../cpp/com-ptr-t-relational-operators.md)|Confrontare l'oggetto del puntatore intelligente con un altro puntatore intelligente, puntatore a interfaccia raw o NULL.|
@@ -64,6 +65,6 @@ Un set di [modelli di funzione](../cpp/relational-function-templates.md), non me
 
 **Lib:** comsuppw. lib o comsuppwd. lib (vedere [/Zc: wchar_t (wchar_t è di tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) per ulteriori informazioni.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classi di supporto COM del compilatore](../cpp/compiler-com-support-classes.md)

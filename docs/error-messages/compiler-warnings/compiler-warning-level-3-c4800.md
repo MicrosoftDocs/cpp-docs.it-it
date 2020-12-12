@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 4) C4800'
 title: Avviso del compilatore (livello 4) C4800
 ms.date: 03/14/2019
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4800
 ms.assetid: 4f409799-a250-45ed-bb5f-657691b0d9f7
-ms.openlocfilehash: bcc98b9bb24f77e39a31332b8fbe2f7dcc5a7638
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: bb46807e6225d4b73b589f8b1b95ea777f69d5b2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924606"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332112"
 ---
 # <a name="compiler-warning-level-4-c4800"></a>Avviso del compilatore (livello 4) C4800
 
 ::: moniker range=">= msvc-160"
 Visual Studio 2019 e versioni successive:
-> Conversione implicita da' *Type* ' a bool. Possibile perdita di informazioni
+> Conversione implicita da'*Type*' a bool. Possibile perdita di informazioni
 ::: moniker-end
 
 C4800 è un avviso di livello 3 in Visual Studio 2015 e versioni precedenti:
-> ' *Type* ': forzando il valore su bool ' true ' o ' false ' (avviso di prestazioni)
+> '*Type*': forzando il valore su bool ' true ' o ' false ' (avviso di prestazioni)
 
 Questo avviso viene generato quando un valore viene convertito in modo implicito nel tipo **`bool`** . In genere, questo messaggio viene causato dall'assegnazione di **`int`** variabili a **`bool`** variabili in cui la **`int`** variabile contiene solo valori **`true`** e e **`false`** può essere ridichiarata come tipo **`bool`** . Se non è possibile riscrivere l'espressione per usare il tipo **`bool`** , è possibile aggiungere " `!=0` " all'espressione, che fornisce il tipo di espressione **`bool`** . Eseguendo il cast dell'espressione al tipo **`bool`** , l'avviso non viene disabilitato, che è da progettazione.
 

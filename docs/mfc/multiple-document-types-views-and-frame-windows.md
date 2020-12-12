@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: tipi di documenti multipli, visualizzazioni e finestre cornice'
 title: Tipi di documenti multipli, visualizzazioni e finestre cornice
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-ms.openlocfilehash: 873903aadc1596fbc56f9a0b0b98dbc5a948113d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 05af9f0a86210804f7f83d82d9c18ddb80e47a4e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619963"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275594"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Tipi di documenti multipli, visualizzazioni e finestre cornice
 
@@ -36,7 +37,7 @@ La relazione standard tra un documento e le relative visualizzazione e finestra 
 
 - [Finestre con separatore](#_core_splitter_windows)
 
-## <a name="multiple-document-types"></a><a name="_core_multiple_document_types"></a>Tipi di documenti multipli
+## <a name="multiple-document-types"></a><a name="_core_multiple_document_types"></a> Tipi di documenti multipli
 
 Creazione guidata applicazione MFC crea automaticamente una classe documento singola. In alcuni casi, tuttavia, può essere necessario il supporto per più tipi di documento. Ad esempio, l'applicazione potrebbe richiedere l'uso di fogli di lavoro e grafici. Ogni tipo di documento è rappresentato dalla rispettiva classe documento e probabilmente anche dalla propria classe visualizzazione. Quando l'utente sceglie il comando File Nuovo, il framework visualizza una finestra di dialogo che elenca i tipi di documento supportati. Viene quindi creato un documento del tipo scelto dall'utente. Ogni tipo di documento è gestito dal proprio oggetto modello di documento.
 
@@ -44,7 +45,7 @@ Per creare altre classi documento, vedere [Aggiunta di una classe](../ide/adding
 
 Per far sì che il framework riconosca la nuova classe documento, è necessario aggiungere una seconda chiamata a [AddDocTemplate](reference/cwinapp-class.md#adddoctemplate) nell'override [InitInstance](reference/cwinapp-class.md#initinstance) della classe di applicazione. Per altre informazioni, vedere [Modelli di documento](document-templates-and-the-document-view-creation-process.md).
 
-## <a name="multiple-views"></a><a name="_core_multiple_views"></a>Visualizzazioni multiple
+## <a name="multiple-views"></a><a name="_core_multiple_views"></a> Visualizzazioni multiple
 
 Molti documenti richiedono esclusivamente una visualizzazione singola, ma è possibile supportare più di una visualizzazione di un documento singolo. Per agevolare l'implementazione di visualizzazioni multiple, l'oggetto documento mantiene l'elenco delle visualizzazioni, offre funzioni membro per l'aggiunta e la rimozione delle visualizzazioni e fornisce la funzione membro [UpdateAllViews](reference/cdocument-class.md#updateallviews) per far sì che le visualizzazioni multiple sappiano quando vengono modificati i dati del documento.
 
@@ -71,11 +72,11 @@ Il framework fornisce questi modelli implementando il comando Nuova finestra e f
 
 Per altre informazioni su `UpdateAllViews`, vedere la classe [CView](reference/cview-class.md) in *Riferimento MFC* ed [Esempio Scribble](../overview/visual-cpp-samples.md).
 
-## <a name="multiple-frame-windows"></a><a name="_core_multiple_frame_windows"></a>Più finestre cornice
+## <a name="multiple-frame-windows"></a><a name="_core_multiple_frame_windows"></a> Più finestre cornice
 
 Il comando Nuova finestra del menu Finestra per le applicazioni MDI consente di creare una seconda finestra cornice nello stesso documento. Per altre informazioni, vedere il primo modello nella figura Interfacce utente con più visualizzazioni.
 
-## <a name="splitter-windows"></a><a name="_core_splitter_windows"></a>Finestre con separatore
+## <a name="splitter-windows"></a><a name="_core_splitter_windows"></a> Finestre con separatore
 
 In una finestra con separatore, la finestra è, o può essere, suddivisa in due o più riquadri scorrevoli. Il controllo Splitter, o casella di divisione controllo posizionato nella cornice della finestra accanto alle barre di scorrimento consente di modificare le dimensioni dei riquadri. Ogni riquadro contiene una visualizzazione dello stesso documento. Nei separatori dinamici le visualizzazioni appartengono alla stessa classe, come illustrato nella parte b della figura Interfacce utente con più visualizzazioni. Nei separatori statici le visualizzazioni possono appartenere a classi diverse. La classe [CSplitterWnd](reference/csplitterwnd-class.md)supporta finestre con separatore di entrambi i tipi.
 
@@ -85,6 +86,6 @@ Le finestre con separatore statico, con visualizzazioni di classi diverse, si ap
 
 Per altre informazioni, vedere la classe [CSplitterWnd](reference/csplitterwnd-class.md) in *Riferimento MFC* e [Esempi di MFC](../overview/visual-cpp-samples.md#mfc-samples).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Architettura documento/visualizzazione](document-view-architecture.md)

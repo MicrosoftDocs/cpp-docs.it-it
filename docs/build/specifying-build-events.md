@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: specifica degli eventi di compilazione'
 title: Specifica di eventi di compilazione
 ms.date: 12/28/2017
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - build events [C++]
 - post-build events
 ms.assetid: 788a6c18-2dbe-4a49-8cd6-86c1ad7a95cc
-ms.openlocfilehash: c8097e013f934c45b8e3860b8377bdb2bdb9d9a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d1dc9a1f0e379c3abe36117beaf9ef58bcbd064
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315235"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275399"
 ---
 # <a name="specifying-build-events"></a>Specifica di eventi di compilazione
 
@@ -46,13 +47,13 @@ Per informazioni generali sugli eventi di compilazione, vedere [Informazioni sul
 
       Le macro di MSBuild consentono di specificare vari file di input e output in modo simbolico. Per informazioni su come specificare il percorso dei file o i nomi dei set di file, vedere [macro comuni per i comandi e le proprietà di compilazione](reference/common-macros-for-build-commands-and-properties.md).
 
-      Poiché il carattere '%' è riservato da MSBuild, se si specifica una variabile di ambiente, **%** sostituire ogni carattere di escape con la sequenza di escape esadecimale **%25** . Ad esempio, sostituire **%WINDIR%** con **%25WINDIR%25**. MSBuild sostituisce ogni sequenza **%25** con il carattere **%** prima di accedere alla variabile di ambiente.
+      Poiché il carattere '%' è riservato da MSBuild, se si specifica una variabile di ambiente, sostituire ogni **%** carattere di escape con la sequenza di escape esadecimale **%25** . Ad esempio, sostituire **%WINDIR%** con **%25WINDIR%25**. MSBuild sostituisce ogni sequenza **%25** con il carattere **%** prima di accedere alla variabile di ambiente.
 
    - In **Descrizione** digitare una descrizione per l'evento. La descrizione viene visualizzata nella finestra **Output** quando si verifica l'evento.
 
    - In **Escluso dalla compilazione** specificare **Sì** se non si vuole che l'evento sia eseguito.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Informazioni sulle istruzioni di compliazione personalizzate e sugli eventi di compilazione](understanding-custom-build-steps-and-build-events.md)<br>
 [Macro comuni per i comandi e le proprietà di compilazione](reference/common-macros-for-build-commands-and-properties.md)<br>

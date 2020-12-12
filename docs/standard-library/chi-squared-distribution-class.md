@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: chi_squared_distribution Class'
 title: Classe chi_squared_distribution
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - std::chi_squared_distribution [C++], param_type
 - std::chi_squared_distribution [C++], param_type
 ms.assetid: 9b603fbe-cafd-4a92-b8c5-a434d60b8122
-ms.openlocfilehash: 5d7a7e2ba3c962a1ef63b14fed5d4bfb67c38b44
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5ee63e0331a8412ca5104dd7dfbfc427d6b7f627
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845679"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325168"
 ---
 # <a name="chi_squared_distribution-class"></a>Classe chi_squared_distribution
 
@@ -72,9 +73,9 @@ Il tipo di risultato a virgola mobile, il valore predefinito è **`double`** . P
 *GENERATORE URNG*\
 Motore di generazione di numeri casuali uniformi. Per i tipi possibili, vedere [\<random>](../standard-library/random.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Il modello di classe descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente o di tipo **`double`** se non ne viene fornito alcuno, distribuiti in base alla distribuzione chi quadrato. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+Il modello di classe descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente o di tipo **`double`** se non ne viene fornito alcuno, distribuiti in base alla distribuzione Chi-Squared. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 [chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)\
 [param_type](#param_type)
@@ -239,7 +240,7 @@ Parametro di distribuzione `n`.
 *parm*\
 Struttura di parametri usata per costruire la distribuzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:**`0.0 < n`
 
@@ -270,7 +271,7 @@ Parametro di distribuzione `n`.
 *Ok*\
 Oggetto `param_type` da confrontare con questo oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:**`0.0 < n`
 

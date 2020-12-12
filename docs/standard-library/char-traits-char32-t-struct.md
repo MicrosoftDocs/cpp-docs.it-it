@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: char_traits &lt; &gt; struct char32_t'
 title: Struct char_traits&lt;char32_t&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<char32_t> class
 ms.assetid: c0315466-45d0-4a99-b83e-3b1dbfbfbbc3
-ms.openlocfilehash: 0daf61f641b0b68bf806bba081b3c312777c6fe7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5b1b37421ef5e43c301cf36e1688806c8b6c8724
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230207"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325248"
 ---
 # <a name="char_traitsltchar32_tgt-struct"></a>Struct char_traits&lt;char32_t&gt;
 
-Struct che rappresenta una specializzazione dello struct modello **char_traits \<CharType> ** a un elemento di tipo **`char32_t`** .
+Struct che rappresenta una specializzazione dello struct modello **char_traits \<CharType>** a un elemento di tipo **`char32_t`** .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -35,7 +36,7 @@ La specializzazione consente allo struct di sfruttare i vantaggi delle funzioni 
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [\<string>](../standard-library/string.md)\
 [Struct char_traits](../standard-library/char-traits-struct.md)

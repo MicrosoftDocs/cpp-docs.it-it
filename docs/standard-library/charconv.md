@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: &lt; charconv&gt;'
 title: '&lt;charconv&gt;'
 ms.date: 07/22/2020
 f1_keywords:
 - <charconv>
 helpviewer_keywords:
 - charconv header
-ms.openlocfilehash: c9dfb8e18a8f7fd367ec4f6b52b1a0af74b3f939
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 9faab40d2b601317e9dd739053c31000da5ea18b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507703"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325208"
 ---
 # <a name="ltcharconvgt"></a>&lt;charconv&gt;
 
@@ -39,7 +40,7 @@ Di seguito sono elencati alcuni dei vantaggi derivanti dall'utilizzo della `<cha
 
 ### <a name="types"></a>Tipi
 
-| Tipo | Descrizione |
+| Tipo | Description |
 |-|:-|
 | [chars_format](chars-format-class.md) | Specifica il tipo di formattazione, ad esempio scientifico, esadecimale e così via. |
 | [from_chars_result](from-chars-result-structure.md) | Include il risultato di una `from_chars` conversione. |
@@ -52,6 +53,6 @@ Di seguito sono elencati alcuni dei vantaggi derivanti dall'utilizzo della `<cha
 | [from_chars](charconv-functions.md#from_chars) | Converte i caratteri in un Integer, float o Double. |
 | [to_chars](charconv-functions.md#to_chars)| Converte un valore integer, float o Double in chars. |
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento file di intestazione](cpp-standard-library-header-files.md)

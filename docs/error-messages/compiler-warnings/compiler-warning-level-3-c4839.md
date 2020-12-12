@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 3) C4839'
 title: Avviso del compilatore (livello 3) C4839
 ms.date: 09/13/2018
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4839
 ms.assetid: f4f99066-9258-4330-81a8-f4a75a1d95ee
-ms.openlocfilehash: 2c238dc16359583bf55f7590d2ce7c0363d66df7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a8ae0d3e3c74c62d05163edd981679e5390fb184
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198575"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332068"
 ---
 # <a name="compiler-warning-level-3-c4839"></a>Avviso del compilatore (livello 3) C4839
 
 > uso non standard della classe '*Type*' come argomento di una funzione Variadic
 
-Le classi o gli struct passati a una funzione Variadic come `printf` devono essere facilmente copiabili. Quando si passano tali oggetti il compilatore si limita a creare una copia bit per bit e non chiama il costruttore o distruttore.
+Le classi o gli struct passati a una funzione Variadic, ad esempio, `printf` devono essere facilmente copiabili. Quando si passano tali oggetti il compilatore si limita a creare una copia bit per bit e non chiama il costruttore o distruttore.
 
 Questo avviso è disponibile a partire da Visual Studio 2017.
 
@@ -51,7 +52,7 @@ Per correggere l'errore, è possibile chiamare una funzione membro che restituis
     printf("%i\n", i.load());
 ```
 
-Per le stringhe compilate e gestite con `CStringW`, è consigliabile usare il `operator LPCWSTR()` fornito per eseguire il cast di un oggetto `CStringW` al puntatore C previsto dalla stringa di formato.
+Per le stringhe compilate e gestite mediante `CStringW` , `operator LPCWSTR()` è necessario utilizzare l'oggetto fornito per eseguire il cast di un `CStringW` oggetto al puntatore C previsto dalla stringa di formato.
 
 ```cpp
     CStringW str1;

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _com_ptr_t:: _com_ptr_t'
 title: _com_ptr_t::_com_ptr_t
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: e8d3d09bf385cb9fdaa02d460952fadbf83bc193
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b92d36b1138ba2615aa8d70acb191c1f4ed43bb2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233795"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295562"
 ---
 # <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
@@ -141,7 +142,7 @@ Puntatore a interfaccia raw.
 *fAddRef*<br/>
 Se **`true`** , `AddRef` viene chiamato per incrementare il conteggio dei riferimenti del puntatore a interfaccia incapsulato.
 
-*CP*<br/>
+*cp*<br/>
 Oggetto **_com_ptr_t** .
 
 *p*<br/>
@@ -150,7 +151,7 @@ Puntatore a interfaccia raw, il cui tipo è diverso dal tipo di puntatore intell
 *varSrc*<br/>
 Un oggetto `_variant_t`.
 
-*clsid*<br/>
+*CLSID*<br/>
 `CLSID`Di una coclasse.
 
 *dwClsContext*<br/>
@@ -164,6 +165,6 @@ Oggetto sconosciuto esterno per l' [aggregazione](/windows/win32/com/aggregation
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe _com_ptr_t](../cpp/com-ptr-t-class.md)

@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: dichiaratori: numero massimo'
 title: 'Dichiaratori: numero massimo'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - declarators, maximum number of
 ms.assetid: f8410673-e11a-4830-89a3-3ffb7bb6562d
-ms.openlocfilehash: c56f0169f1cccf21cdb46e0929c20ee5cca3eece
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6562a6fb32f4bffffdc186fb37626c224205efe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234515"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306391"
 ---
 # <a name="declarators-maximum-number"></a>Dichiaratori: numero massimo
 
@@ -17,6 +18,6 @@ ms.locfileid: "62234515"
 
 Microsoft C non limita il numero di dichiaratori. Il loro numero è limitato solo dalla memoria disponibile.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Comportamento definito in fase di implementazione](../c-language/implementation-defined-behavior.md)
+[Comportamento definito dall'implementazione](../c-language/implementation-defined-behavior.md)
