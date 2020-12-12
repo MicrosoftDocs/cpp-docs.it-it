@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _set_new_handler'
 title: _set_new_handler
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-ms.openlocfilehash: cd6e4df47b28e84bb0ac5ee857cfa1a3e7cf805a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1e693e010bcbb9489426fc5c67e888d50f430765
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218546"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312397"
 ---
 # <a name="_set_new_handler"></a>_set_new_handler
 
@@ -56,7 +57,7 @@ Puntatore alla funzione di gestione della memoria fornita dall'applicazione. Un 
 
 Restituisce un puntatore alla funzione di gestione delle eccezioni precedente registrata da **_set_new_handler**, in modo che la funzione precedente possa essere ripristinata in un secondo momento. Se non è stata impostata alcuna funzione precedente, il valore restituito può essere utilizzato per ripristinare il comportamento predefinito. Questo valore può essere **null**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione C++ **_set_new_handler** specifica una funzione di gestione delle eccezioni che ottiene il controllo se l' **`new`** operatore non riesce ad allocare memoria. Se **`new`** ha esito negativo, il sistema di runtime chiama automaticamente la funzione di gestione delle eccezioni passata come argomento per **_set_new_handler**. **_PNH**, definito in New. h, è un puntatore a una funzione che restituisce il tipo **`int`** e accetta un argomento di tipo **size_t**. Usare **size_t** per specificare la quantità di spazio da allocare.
 
@@ -167,9 +168,9 @@ This application has requested the Runtime to terminate it in an unusual way.
 Please contact the application's support team for more information.
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Allocazione di memoria](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[libero](free.md)<br/>
+[free](free.md)<br/>
 [realloc](realloc.md)<br/>

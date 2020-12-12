@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: creazione della risorsa finestra di dialogo'
 title: Creazione della risorsa finestra di dialogo
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - resources [MFC], creating dialog boxes
 - MFC dialog boxes [MFC], dialog resource
 ms.assetid: 0b83bd33-14d3-4611-8129-fccdae18053e
-ms.openlocfilehash: efaef11cfdc036a201ced3357ca81b37a5dc29db
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 999a63d11981b8d21be85096ff49813c92b15810
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619630"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309719"
 ---
 # <a name="creating-the-dialog-resource"></a>Creazione della risorsa finestra di dialogo
 
@@ -32,7 +33,7 @@ Al termine, la risorsa modello di finestra di dialogo viene archiviata nel file 
 
 Quando l'aspetto della finestra di dialogo si adatta, creare una classe di finestre di dialogo ed eseguire il mapping dei relativi messaggi, come descritto in [creazione di una classe di finestre di dialogo con creazioni guidate codice](creating-a-dialog-class-with-code-wizards.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Finestre di dialogo](dialog-boxes.md)<br/>
 [Utilizzo delle finestre di dialogo in MFC](life-cycle-of-a-dialog-box.md)

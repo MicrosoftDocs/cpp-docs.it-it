@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: bad_weak_ptr Class'
 title: Classe bad_weak_ptr
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - bad_weak_ptr
 - bad_weak_ptr class
 ms.assetid: a09336d5-7237-4480-ab6b-3787e0e6025e
-ms.openlocfilehash: e1d536eed6727a5d1e828d358aa6b64521d748b8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: db74ed31ff92f7665e8ecde5fc4700bcdf1a7fc1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454262"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312917"
 ---
-# <a name="badweakptr-class"></a>Classe bad_weak_ptr
+# <a name="bad_weak_ptr-class"></a>Classe bad_weak_ptr
 
 Segnala un'eccezione weak_ptr non valida.
 
@@ -28,7 +29,7 @@ class bad_weak_ptr : public std::exception
 };
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La classe descrive un'eccezione che può essere generata dal costruttore [shared_ptr Class](../standard-library/shared-ptr-class.md) che accetta un argomento di tipo [weak_ptr Class](../standard-library/weak-ptr-class.md). La funzione membro `what` restituisce `"bad_weak_ptr"`.
 

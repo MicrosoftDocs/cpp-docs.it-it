@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: creazione di finestre cornice del documento'
 title: Creazione di finestre cornice del documento
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - document frame windows [MFC], creating
 - MFC, frame windows
 ms.assetid: 8671e239-b76f-4dea-afa8-7024e6e58ff5
-ms.openlocfilehash: e15a2a6bc016bf23bc0decf529b4c3ffeecc3a4c
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e2c4f72ab56045df7bb121be3bb557314780fedb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621956"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309810"
 ---
 # <a name="creating-document-frame-windows"></a>Creazione di finestre cornice del documento
 
@@ -33,8 +34,8 @@ Prestare attenzione [quando si decide quando inizializzare](when-to-initialize-c
 
 - [Creazione di documenti/visualizzazioni (modelli e creazione di finestre cornice)](document-view-creation.md)
 
-- [Eliminazione definitiva di finestre cornice](destroying-frame-windows.md)
+- [Eliminazione di finestre cornice](destroying-frame-windows.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Utilizzo di finestre cornice](using-frame-windows.md)
+[Uso di finestre cornice](using-frame-windows.md)

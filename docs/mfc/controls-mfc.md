@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: controlli (MFC)'
 title: Controlli (MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - common controls [MFC]
 - controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
-ms.openlocfilehash: accbee66cdee4e7b849da2b034d253b1c206d8f1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 94406928741eecd00794dbde230effe4d89ab3f6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617186"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310135"
 ---
 # <a name="controls-mfc"></a>Controlli (MFC)
 
@@ -47,12 +48,12 @@ Oltre alle classi che incapsulano tutti i controlli comuni di Windows e che supp
 
 Nella tabella seguente viene brevemente descritto ogni controllo comune di Windows, tra cui la classe wrapper MFC del controllo.
 
-### <a name="windows-common-controls-and-mfc-classes"></a><a name="_core_windows_common_controls_and_mfc_classes"></a>Controlli comuni di Windows e classi MFC
+### <a name="windows-common-controls-and-mfc-classes"></a><a name="_core_windows_common_controls_and_mfc_classes"></a> Controlli comuni di Windows e classi MFC
 
-|Controllo|Classe MFC|Descrizione|Novità di Windows 95|
+|Controllo|Classe MFC|Description|Novità di Windows 95|
 |-------------|---------------|-----------------|------------------------|
 |[animazione](using-canimatectrl.md)|[CAnimateCtrl](reference/canimatectrl-class.md)|Visualizza frame successivi di un videoclip AVI|Sì|
-|Pulsante|[CButton](reference/cbutton-class.md)|Pulsanti di comando che determinano un'azione, usati anche per caselle di controllo, pulsanti di opzione e caselle di gruppo|No|
+|.|[CButton](reference/cbutton-class.md)|Pulsanti di comando che determinano un'azione, usati anche per caselle di controllo, pulsanti di opzione e caselle di gruppo|No|
 |casella combinata|[CComboBox](reference/ccombobox-class.md)|Combinazione di una casella di modifica e una casella di riepilogo|No|
 |[selezione data e ora](using-cdatetimectrl.md)|[CDateTimeCtrl](reference/cdatetimectrl-class.md)|Consente all'utente di scegliere un valore di data o di ora specifico|Sì|
 |casella di modifica|[CEdit](reference/cedit-class.md)|Caselle per l'immissione di testo|No|
@@ -80,7 +81,7 @@ Nella tabella seguente viene brevemente descritto ogni controllo comune di Windo
 
 - Un controllo individuale: vedere la tabella [Controlli comuni di Windows e classi MFC](#_core_windows_common_controls_and_mfc_classes) in questo argomento per collegamenti a tutti i controlli
 
-- [Creazione e utilizzo di controlli](making-and-using-controls.md)
+- [Making and using controls (Creazione e uso di controlli)](making-and-using-controls.md)
 
 - [Utilizzo dell'editor finestre per aggiungere controlli](using-the-dialog-editor-to-add-controls.md)
 
@@ -104,7 +105,7 @@ Nella tabella seguente viene brevemente descritto ogni controllo comune di Windo
 
 Per informazioni sui controlli comuni di Windows nell'Windows SDK, vedere [controlli comuni](/windows/win32/Controls/common-controls-intro).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Elementi dell'interfaccia utente](user-interface-elements-mfc.md)<br/>
 [Editor finestre](../windows/dialog-editor.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: barre di controllo'
 title: Barre di controllo
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - CToolBar class [MFC], control bars
 - CStatusBar class [MFC], control bars
 ms.assetid: 31831910-3d23-4d70-9e71-03cc02f01ec4
-ms.openlocfilehash: a2d3683b744493bb5566456b9e1358c1ddc418d4
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 985201b2c09c4d60996e9ee64b2507fe1593e5ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615968"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310148"
 ---
 # <a name="control-bars"></a>Barre di controllo
 
@@ -36,7 +37,7 @@ Le barre di controllo sono finestre che visualizzano righe di controlli con cui 
 - Barre, nella classe [CReBar](reference/crebar-class.md)
 
 > [!IMPORTANT]
-> A partire dalla versione 4,0 di MFC, le barre degli strumenti, le barre di stato e le descrizioni comandi vengono implementate mediante la funzionalità di sistema implementata in *Comctl32. dll* anziché nell'implementazione precedente specifica di MFC. In MFC versione 6,0, `CReBar` , che include anche la funzionalità Comctl32. dll, è stato aggiunto.
+> A partire dalla versione 4,0 di MFC, le barre degli strumenti, le barre di stato e le descrizioni comandi sono implementate utilizzando la funzionalità di sistema implementata nel *comctl32.dll* anziché l'implementazione precedente specifica di MFC. In MFC versione 6,0, `CReBar` , che include anche comctl32.dll funzionalità, è stato aggiunto.
 
 Di seguito una breve introduzione ai tipi di barre di controllo. Per ulteriori informazioni, vedere i collegamenti di seguito.
 
@@ -66,6 +67,6 @@ Una barra della finestra di dialogo è una barra di controllo, basata su una ris
 
 Un controllo [Rebar](using-crebarctrl.md) è una barra di controllo che fornisce informazioni sull'ancoraggio, il layout, lo stato e la persistenza per i controlli Rebar. Un oggetto rebar può contenere diverse finestre figlio, in genere altri controlli, incluse le caselle di modifica, le barre degli strumenti e le caselle di riepilogo. Un oggetto rebar può visualizzare le finestre figlio proprie su una bitmap specificata. Può essere ridimensionato automaticamente o manualmente facendo clic sulla relativa barra verticale di ridimensionamento o trascinandola. Vedere la classe [CReBar](reference/crebar-class.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Elementi dell'interfaccia utente](user-interface-elements-mfc.md)

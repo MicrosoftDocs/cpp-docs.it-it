@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: less_equal struct'
 title: less_equal (struct)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - less_equal function
 - less_equal struct
 ms.assetid: 32085782-c7e0-4310-9b40-8aa3c1bff211
-ms.openlocfilehash: 67a686b139ae4abbf25a42a994cceaba008decf5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: b2d715971c5278629a6ea812c5a9c199f00c4a07
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245378"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312891"
 ---
-# <a name="lessequal-struct"></a>less_equal (struct)
+# <a name="less_equal-struct"></a>less_equal (struct)
 
-Un predicato binario che esegue l'operazione di minore di-di-o-uguale a (`operator<=`) sui relativi argomenti.
+Predicato binario che esegue l'operazione di minore o uguale a ( `operator<=` ) sui relativi argomenti.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -39,22 +40,22 @@ struct less_equal<void>
 
 ### <a name="parameters"></a>Parametri
 
-*Tipo di*, *T*, *U*\
+*Digitare*, *T*, *U*\
 Qualsiasi tipo che supporta un `operator<=` che accetta gli operandi dei tipi specificati o dedotti.
 
-*A sinistra*\
-Operando sinistro dell'operazione di minore o uguale a. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *T*.
+*Sinistra*\
+Operando sinistro dell'operazione di minore o uguale a. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *Type*. Il modello specializzato esegue l'avanzamento perfetto degli argomenti di riferimento lvalue e rvalue del tipo derivato *T*.
 
 *Ok*\
-Operando destro dell'operazione di minore o uguale a. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *U*.
+Operando destro dell'operazione di minore o uguale a. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *Type*. Il modello specializzato esegue l'avanzamento perfetto degli argomenti di riferimento lvalue e rvalue del tipo derivato *U*.
 
 ## <a name="return-value"></a>Valore restituito
 
-Risultato di `Left <= Right`. Il modello specializzato esegue un inoltro perfetto del risultato, che è del tipo restituito da `operator<=`.
+Risultato di `Left <= Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito da `operator<=`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Il predicato binario `less_equal` < `Type`> fornisce un rigido ordinamento debole di un set di valori di elemento di tipo *tipo* in classi di equivalenza esclusivamente se il tipo soddisfa lo standard di matematico requisiti per l'ordinamento. Le specializzazioni per qualsiasi tipo di puntatore producono un ordinamento totale degli elementi, in quanto tutti gli elementi di valori distinti vengono ordinati l'uno rispetto all'altro.
+Il predicato binario `less_equal` < `Type`> fornisce un ordinamento debole rigoroso di un set di valori  di elementi di tipo Type in classi di equivalenza, se e solo se questo tipo soddisfa i requisiti matematici standard per essere ordinati. Le specializzazioni per qualsiasi tipo di puntatore producono un ordinamento totale degli elementi, in quanto tutti gli elementi di valori distinti vengono ordinati l'uno rispetto all'altro.
 
 ## <a name="example"></a>Esempio
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: contenitori'
 title: Contenitori
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - containers [MFC], container applications
 ms.assetid: b19d7c05-4d02-44bd-b76a-4a6c25994a62
-ms.openlocfilehash: a76bc9775e13350a031539c63476a4a8fae68ed0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 20f31535f055312de3da05f5fa3e469183941f25
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620640"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310278"
 ---
 # <a name="containers"></a>Contenitori
 
@@ -27,11 +28,11 @@ Un'applicazione contenitore è un'applicazione in grado di incorporare elementi 
 
 [Usa file composti](containers-compound-files.md)
 
-[Problemi dell'interfaccia utente del contenitore](containers-user-interface-issues.md)
+[Problemi di User-Interface del contenitore](containers-user-interface-issues.md)
 
 [Funzionalità avanzate dei contenitori](containers-advanced-features.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [OLE](ole-in-mfc.md)<br/>
 [Server](servers.md)<br/>

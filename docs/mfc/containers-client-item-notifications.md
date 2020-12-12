@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: contenitori: Client-Item notifiche'
 title: 'Contenitori: notifiche Client-Item'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - OLE containers [MFC], client-item notifications
 - client items and OLE containers
 ms.assetid: e1f1c427-01f5-45f2-b496-c5bce3d76340
-ms.openlocfilehash: 54b1b2a64685b00fb265e0f80c1f6ad878a7da85
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 2918ea29bcd656e76735db8e003d33dce21c6b63
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623022"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310473"
 ---
 # <a name="containers-client-item-notifications"></a>Contenitori: notifiche Client-Item
 
@@ -38,16 +39,16 @@ Il secondo argomento di questa funzione specifica il modo in cui l'elemento è s
 |----------------------------|---------------------|
 |**OLE_SAVED** o **OLE_CLOSED**|Non viene utilizzato.|
 |**OLE_CHANGED**|Specifica l'aspetto dell'elemento OLE che è stato modificato.|
-|**OLE_CHANGED_STATE**|Descrive lo stato immesso (*emptyState*, *loadedState*, *openState*, *ActiveState*o *activeUIState*).|
+|**OLE_CHANGED_STATE**|Descrive lo stato immesso (*emptyState*, *loadedState*, *openState*, *ActiveState* o *activeUIState*).|
 
-Per ulteriori informazioni sugli Stati che un elemento client può assumere, vedere [contenitori: Stati degli elementi client](containers-client-item-states.md).
+Per ulteriori informazioni sugli Stati che un elemento client può assumere, vedere [contenitori: Client-Item stati](containers-client-item-states.md).
 
 Il Framework chiama `COleClientItem::OnGetItemPosition` quando un elemento viene attivato per la modifica sul posto. L'implementazione è necessaria per le applicazioni che supportano la modifica sul posto. La creazione guidata applicazione MFC fornisce un'implementazione di base, che assegna le coordinate dell'elemento all' `CRect` oggetto passato come argomento a `OnGetItemPosition` .
 
 Se la posizione o le dimensioni di un elemento OLE cambiano durante la modifica sul posto, è necessario aggiornare le informazioni del contenitore sulla posizione e sui rettangoli di ritaglio dell'elemento e il server deve ricevere informazioni sulle modifiche. Il Framework chiama `COleClientItem::OnChangeItemPosition` a questo scopo. La creazione guidata applicazione MFC fornisce una sostituzione che chiama la funzione della classe di base. È necessario modificare la funzione che la creazione guidata applicazione scrive per la `COleClientItem` classe derivata da, in modo che la funzione aggiorni le informazioni conservate dall'oggetto client-elemento.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Contenitori](containers.md)<br/>
-[Contenitori: stati elementi client](containers-client-item-states.md)<br/>
+[Contenitori: Stati Client-Item](containers-client-item-states.md)<br/>
 [COleClientItem:: OnChangeItemPosition](reference/coleclientitem-class.md#onchangeitemposition)

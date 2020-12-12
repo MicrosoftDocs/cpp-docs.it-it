@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: contenitori: funzionalità avanzate'
 title: 'Contenitori: funzionalità avanzate'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: 1ef4ed9865d3a88a6ff85f777984b856d03cc48e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d49f699ec0349e5c53b95996c6ee4b5d151dce5e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616367"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310512"
 ---
 # <a name="containers-advanced-features"></a>Contenitori: funzionalità avanzate
 
@@ -27,7 +28,7 @@ In questo articolo vengono descritti i passaggi necessari per incorporare funzio
 
 - [Un collegamento OLE a un oggetto incorporato](#_core_links_to_embedded_objects)
 
-## <a name="creating-a-containerserver-application"></a><a name="_core_creating_a_container_server_application"></a>Creazione di un'applicazione contenitore/server
+## <a name="creating-a-containerserver-application"></a><a name="_core_creating_a_container_server_application"></a> Creazione di un'applicazione contenitore/server
 
 Un'applicazione contenitore/server è un'applicazione che funge sia da contenitore che da server. Microsoft Word per Windows ne è un esempio. È possibile incorporare i documenti di Word per Windows in altre applicazioni ed è inoltre possibile importare elementi nei documenti di Word per Windows. La procedura che consente di trasformare un'applicazione sia in un contenitore che in un server completo (non è possibile creare un'applicazione contenitore/server ridotto) è analoga a quella per la creazione di un server completo.
 
@@ -45,7 +46,7 @@ Se si crea una nuova applicazione e si desidera che funga da applicazione conten
 
 Notare che non è possibile inserire un'applicazione MDI in se stessa. Un'applicazione contenitore/server non può essere inserita in se stessa a meno che non sia un'applicazione SDI.
 
-## <a name="links-to-embedded-objects"></a><a name="_core_links_to_embedded_objects"></a>Collegamenti a oggetti incorporati
+## <a name="links-to-embedded-objects"></a><a name="_core_links_to_embedded_objects"></a> Collegamenti a oggetti incorporati
 
 I collegamenti alla funzionalità Oggetti incorporati consentono all'utente di creare un documento con un collegamento OLE a un oggetto incorporato all'interno dell'applicazione contenitore. Ad esempio, è possibile creare un documento in un elaboratore di testo contenente un foglio di calcolo incorporato. Se l'applicazione supporta i collegamenti a oggetti incorporati, è possibile incollare un collegamento al foglio di calcolo contenuto nel documento dell'elaboratore di testo. Questa funzionalità consente all'applicazione di utilizzare le informazioni contenute nel foglio di lavoro senza sapere da dove provenga originariamente.
 
@@ -71,7 +72,7 @@ I collegamenti alla funzionalità Oggetti incorporati consentono all'utente di c
 
 L'esempio OLE MFC [OCLIENT](../overview/visual-cpp-samples.md) implementa questa funzionalità. Per un esempio di come eseguire questa operazione, vedere la `InitInstance` funzione in *OCLIENT. File CPP* di questa applicazione di esempio.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Contenitori](containers.md)<br/>
 [Server](servers.md)

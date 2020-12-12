@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: problemi di migrazione a virgola mobile'
 title: Problemi relativi alla migrazione dei valori a virgola mobile
 ms.date: 05/17/2017
 ms.assetid: 36a1b552-2f2b-4919-bc9d-c17f42434954
-ms.openlocfilehash: 40eb08e4f9c7058d6b11700535e1c25f86548a22
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 079706570a52d164f4308941924d0a96ca5d44ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215020"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312904"
 ---
 # <a name="floating-point-migration-issues"></a>Problemi relativi alla migrazione dei valori a virgola mobile
 
@@ -29,8 +30,8 @@ I miglioramenti della correttezza della generazione di codice in diverse modalit
 
 Nella maggior parte dei casi, le modifiche dei calcoli a virgola mobile nei compilatori e nelle librerie più recenti determinano un comportamento più veloce o più corretto, o entrambe le cose. È possibile riscontrare addirittura prestazioni migliori del processore in termini di risparmio di energia quando le istruzioni SSE2 sostituiscono le istruzioni x87. Tuttavia, se si usa un codice che deve replicare con precisione il comportamento di un compilatore precedente per i calcoli a virgola mobile, è consigliabile usare le funzionalità multitargeting native di Visual Studio e compilare il progetto interessato con il set di strumenti precedente. Per altre informazioni, vedere [Usare multitargeting nativo in Visual Studio per compilare progetti precedenti](use-native-multi-targeting.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Aggiornamento di progetti da versioni precedenti di VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Aggiornamento di progetti da versioni precedenti di Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Panoramica dei potenziali problemi di aggiornamento (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Cronologia delle modifiche di Visual C++ dal 2003 al 2015](visual-cpp-change-history-2003-2015.md)

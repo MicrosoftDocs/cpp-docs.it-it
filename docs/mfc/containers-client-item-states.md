@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: contenitori: Client-Item Stati'
 title: 'Contenitori: stati Client-Item'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - lifetime, lifetime states and OLE container client items
 - client items and OLE containers
 ms.assetid: e7021caa-bd07-4adb-976e-f5f3d025bc53
-ms.openlocfilehash: 660b544a0f061ae2e4435777cdd934367f2e7652
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2f6560b5694bcd7a55b7547593d9ba2dc9a93389
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228648"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310460"
 ---
 # <a name="containers-client-item-states"></a>Contenitori: stati Client-Item
 
@@ -38,10 +39,10 @@ Quando un elemento è stato aperto nella finestra del server anziché essere ape
 
 Quando un elemento è stato attivato sul posto, viene passato, in genere solo brevemente, tramite lo stato attivo. Entra quindi nello stato attivo dell'interfaccia utente, in cui il server ha unito i menu, le barre degli strumenti e altri componenti dell'interfaccia utente con quelli del contenitore. La presenza di questi componenti dell'interfaccia utente distingue lo stato attivo dell'interfaccia utente da uno stato attivo. In caso contrario, lo stato attivo sarà simile allo stato attivo dell'interfaccia utente. Se il server supporta l'annullamento, è necessario che il server mantenga le informazioni sullo stato di annullamento dell'elemento OLE fino a quando non raggiunge lo stato caricato o aperto.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Contenitori](containers.md)<br/>
-[Attivazione](activation-cpp.md)<br/>
-[Contenitori: notifiche di elementi client](containers-client-item-notifications.md)<br/>
+[Activation](activation-cpp.md)<br/>
+[Contenitori: notifiche Client-Item](containers-client-item-notifications.md)<br/>
 [Tracker](trackers.md)<br/>
 [Classe CRectTracker](reference/crecttracker-class.md)
