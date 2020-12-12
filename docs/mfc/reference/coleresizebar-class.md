@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe COleResizeBar'
 title: Classe COleResizeBar
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - COleResizeBar [MFC], COleResizeBar
 - COleResizeBar [MFC], Create
 ms.assetid: 56a708d9-28c5-4eb0-9404-77b688d91c63
-ms.openlocfilehash: beb0c37b6ac23310b7d5c8506fbdaf677dd74d8d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bdd97e854257e2f858b52ed45f4066b26c71394d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376159"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226714"
 ---
 # <a name="coleresizebar-class"></a>Classe COleResizeBar
 
@@ -27,27 +28,27 @@ Tipo di barra di controllo che supporta il ridimensionamento di elementi OLE sul
 class COleResizeBar : public CControlBar
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[COleResizeBar::COleResizeBar](#coleresizebar)|Costruisce un oggetto `COleResizeBar`.|
+|[COleResizeBar:: COleResizeBar](#coleresizebar)|Costruisce un oggetto `COleResizeBar`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[COleResizeBar::Creare](#create)|Crea e inizializza una finestra figlio di `COleResizeBar` Windows e la associa all'oggetto.|
+|[COleResizeBar:: create](#create)|Crea e Inizializza una finestra figlio di Windows e la associa all' `COleResizeBar` oggetto.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-`COleResizeBar`Gli oggetti vengono visualizzati come [CRectTracker](../../mfc/reference/crecttracker-class.md) con un bordo tratteggiato e quadratini di ridimensionamento esterni.
+`COleResizeBar` gli oggetti vengono visualizzati come [CRectTracker](../../mfc/reference/crecttracker-class.md) con un bordo tratteggiato e un handle di ridimensionamento esterno.
 
-`COleResizeBar`gli oggetti sono in genere membri incorporati di oggetti finestra cornice derivati dalla [Classe COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) .
+`COleResizeBar` gli oggetti sono in genere membri incorporati di oggetti della finestra cornice derivati dalla classe [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) .
 
-Per ulteriori informazioni, vedere l'articolo [Attivazione](../../mfc/activation-cpp.md).
+Per ulteriori informazioni, vedere l'articolo [attivazione](../../mfc/activation-cpp.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -57,15 +58,15 @@ Per ulteriori informazioni, vedere l'articolo [Attivazione](../../mfc/activation
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[Ccontrolbar](../../mfc/reference/ccontrolbar-class.md)
+[CControlBar](../../mfc/reference/ccontrolbar-class.md)
 
 `COleResizeBar`
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxole.h
+**Intestazione:** AFXOLE. h
 
-## <a name="coleresizebarcoleresizebar"></a><a name="coleresizebar"></a>COleResizeBar::COleResizeBar
+## <a name="coleresizebarcoleresizebar"></a><a name="coleresizebar"></a> COleResizeBar:: COleResizeBar
 
 Costruisce un oggetto `COleResizeBar`.
 
@@ -73,13 +74,13 @@ Costruisce un oggetto `COleResizeBar`.
 COleResizeBar();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Chiamare `Create` per creare l'oggetto barra di ridimensionamento.
+Chiamare `Create` per creare l'oggetto della barra di ridimensionamento.
 
-## <a name="coleresizebarcreate"></a><a name="create"></a>COleResizeBar::Creare
+## <a name="coleresizebarcreate"></a><a name="create"></a> COleResizeBar:: create
 
-Crea una finestra figlio e `COleResizeBar` la associa all'oggetto.
+Crea una finestra figlio e la associa all' `COleResizeBar` oggetto.
 
 ```
 virtual BOOL Create(
@@ -90,22 +91,22 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametri
 
-*pParentWnd (informazioni in due)*<br/>
+*pParentWnd*<br/>
 Puntatore alla finestra padre della barra di ridimensionamento.
 
-*DwStyle (in stile dwStyle)*<br/>
-Specifica gli attributi di stile della [finestra.](../../mfc/reference/styles-used-by-mfc.md#window-styles)
+*dwStyle*<br/>
+Specifica gli attributi di [stile della finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles) .
 
 *nID*<br/>
 ID della finestra figlio della barra di ridimensionamento.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se la barra di ridimensionamento è stata creata; in caso contrario 0.
+Diverso da zero se è stata creata la barra di ridimensionamento. in caso contrario, 0.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Esempio MFC SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
-[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)<br/>
+[SUPERPAD di esempio MFC](../../overview/visual-cpp-samples.md)<br/>
+[Classe CControlBar](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleServerDoc](../../mfc/reference/coleserverdoc-class.md)
