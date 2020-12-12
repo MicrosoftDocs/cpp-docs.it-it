@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: stampa e anteprima di stampa'
 title: Stampa e anteprima di stampa
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - print preview
 - printing [MFC], print preview
 ms.assetid: d15059cd-32de-4450-95f7-e73aece238f6
-ms.openlocfilehash: 26ced8172a36d34883d6b65997bb3a81fdc3c319
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 57dfd8eed1719b17f776a62273c9afa9ff5e80f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625270"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205837"
 ---
 # <a name="printing-and-print-preview"></a>Stampa e anteprima di stampa
 
@@ -31,6 +32,6 @@ Questa famiglia di articoli illustra il modo in cui viene implementata la stampa
 
 - [Esempio](../overview/visual-cpp-samples.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Elementi dell'interfaccia utente](user-interface-elements-mfc.md)

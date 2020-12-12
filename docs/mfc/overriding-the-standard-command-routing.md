@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: override del routing dei comandi standard'
 title: Override del routing dei comandi standard
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - command handling [MFC], routing commands
 - overriding, standard command routing
 ms.assetid: 872b698a-7432-40c4-9008-68721e8effa5
-ms.openlocfilehash: 680b185f8d68a834862bc0fe14bf6e7984effd65
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5241e767beee85f92875128cc5ebccd1a23477f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617732"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205993"
 ---
 # <a name="overriding-the-standard-command-routing"></a>Override del routing dei comandi standard
 
@@ -24,6 +25,6 @@ In rari casi, quando è necessario implementare una variante del routing standar
 
 Se si inserisce un nuovo oggetto nel routing, la classe deve essere una classe di destinazione comando. Nelle versioni di che eseguono l'override di `OnCmdMsg` , assicurarsi di chiamare la versione di cui si sta eseguendo l'override. Per esempi, vedere la funzione membro [OnCmdMsg](reference/ccmdtarget-class.md#oncmdmsg) della classe `CCmdTarget` nel *riferimento a MFC* e le versioni di tali classi come `CView` e `CDocument` nel codice sorgente fornito.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Chiamata di un gestore dal framework](how-the-framework-calls-a-handler.md)
+[Modalità di chiamata di un gestore da parte del Framework](how-the-framework-calls-a-handler.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: controlli ActiveX MFC: serializzazione'
 title: 'Controlli ActiveX MFC: serializzazione'
 ms.date: 09/12/2018
 f1_keywords:
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-ms.openlocfilehash: f5e3b4bdf203f90b3550a2521ba51ba451cf3a46
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 24f49aa1dfb37c6ac981035f33d0f60e6fa398f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225020"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206045"
 ---
 # <a name="mfc-activex-controls-serializing"></a>Controlli ActiveX MFC: serializzazione
 
-Questo articolo illustra come serializzare un controllo ActiveX. La serializzazione è il processo di lettura o scrittura in un supporto di archiviazione persistente, ad esempio un file su disco. La libreria MFC (Microsoft Foundation Class) fornisce il supporto incorporato per la serializzazione nella classe `CObject` . `COleControl`estende questo supporto ai controlli ActiveX mediante l'utilizzo di un meccanismo di scambio di proprietà.
+Questo articolo illustra come serializzare un controllo ActiveX. La serializzazione è il processo di lettura o scrittura in un supporto di archiviazione persistente, ad esempio un file su disco. La libreria MFC (Microsoft Foundation Class) fornisce il supporto incorporato per la serializzazione nella classe `CObject` . `COleControl` estende questo supporto ai controlli ActiveX mediante l'utilizzo di un meccanismo di scambio di proprietà.
 
 >[!IMPORTANT]
 > ActiveX è una tecnologia legacy che non deve essere usata per nuove attività di sviluppo. Per ulteriori informazioni sulle tecnologie moderne che sostituiscono ActiveX, vedere [controlli ActiveX](activex-controls.md).
@@ -39,7 +40,7 @@ Negli argomenti seguenti vengono illustrati i principali problemi relativi alla 
 
 - [Implementazione del supporto della versione](#_core_implementing_version_support)
 
-## <a name="implementing-the-dopropexchange-function"></a><a name="_core_implementing_the_dopropexchange_function"></a>Implementazione della funzione DoPropExchange
+## <a name="implementing-the-dopropexchange-function"></a><a name="_core_implementing_the_dopropexchange_function"></a> Implementazione della funzione DoPropExchange
 
 Quando si utilizza la creazione guidata controllo ActiveX per generare il progetto di controllo, diverse funzioni di gestore predefinite vengono aggiunte automaticamente alla classe del controllo, inclusa l'implementazione predefinita di [COleControl::D opropexchange](reference/colecontrol-class.md#dopropexchange). Nell'esempio seguente viene illustrato il codice aggiunto alle classi create con la creazione guidata controllo ActiveX:
 
@@ -71,11 +72,11 @@ Nella tabella seguente sono elencate le possibili funzioni di scambio di proprie
 
 Per ulteriori informazioni su queste funzioni di scambio di proprietà, vedere [persistenza dei controlli OLE](reference/persistence-of-ole-controls.md) nei *riferimenti a MFC*.
 
-## <a name="customizing-the-default-behavior-of-dopropexchange"></a><a name="_core_customizing_the_default_behavior_of_dopropexchange"></a>Personalizzazione del comportamento predefinito di DoPropExchange
+## <a name="customizing-the-default-behavior-of-dopropexchange"></a><a name="_core_customizing_the_default_behavior_of_dopropexchange"></a> Personalizzazione del comportamento predefinito di DoPropExchange
 
 L'implementazione predefinita di `DoPropertyExchange` , come illustrato nell'argomento precedente, effettua una chiamata alla classe di base `COleControl` . In questo modo viene serializzato il set di proprietà supportato automaticamente da `COleControl` , che utilizza uno spazio di archiviazione maggiore rispetto alla serializzazione solo delle proprietà personalizzate del controllo. La rimozione di questa chiamata consente all'oggetto di serializzare solo le proprietà considerate importanti. Tutti gli Stati delle proprietà predefinite che il controllo ha implementato non verranno serializzati durante il salvataggio o il caricamento dell'oggetto controllo a meno che non si aggiungano in modo esplicito **PX_** le chiamate.
 
-## <a name="implementing-version-support"></a><a name="_core_implementing_version_support"></a>Implementazione del supporto della versione
+## <a name="implementing-version-support"></a><a name="_core_implementing_version_support"></a> Implementazione del supporto della versione
 
 Il supporto della versione consente a un controllo ActiveX modificato di aggiungere nuove proprietà permanenti ed è comunque in grado di rilevare e caricare lo stato persistente creato da una versione precedente del controllo. Per rendere disponibile la versione di un controllo come parte dei dati persistenti, chiamare [COleControl:: ExchangeVersion](reference/colecontrol-class.md#exchangeversion) nella funzione del controllo `DoPropExchange` . Questa chiamata viene inserita automaticamente se il controllo ActiveX è stato creato mediante la creazione guidata controllo ActiveX. Può essere rimosso se non è necessario il supporto della versione. Tuttavia, il costo delle dimensioni del controllo è molto ridotto (4 byte) per la flessibilità aggiunta fornita dal supporto della versione.
 
@@ -93,6 +94,6 @@ Nell'esempio seguente, la versione 1 di questo controllo di esempio ha solo una 
 
 Per impostazione predefinita, un controllo "converte" i dati obsoleti nel formato più recente. Se, ad esempio, la versione 2 di un controllo carica i dati salvati dalla versione 1, scriverà il formato versione 2 quando verrà salvato di nuovo. Se si desidera che il controllo salvi i dati nel formato dell'ultima lettura, passare **false** come terzo parametro durante la chiamata a `ExchangeVersion` . Il terzo parametro è facoltativo e è **true** per impostazione predefinita.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli ActiveX MFC](mfc-activex-controls.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore degli strumenti del linker LNK1309'
 title: Errore degli strumenti del linker LNK1309
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1309
 ms.assetid: 10146071-883f-4849-97d1-c7468f90efbb
-ms.openlocfilehash: 88b05512fd45adb6dc96a6c130ceccb74f3ab14e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e04498ae5226f748b6ba5cc2ce0cd9340f4547c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80194902"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193643"
 ---
 # <a name="linker-tools-error-lnk1309"></a>Errore degli strumenti del linker LNK1309
 
 > rilevato modulo *tipo1* ; non valido con l'opzione/CLRIMAGETYPE:*tipo2*
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 È stato richiesto un tipo di immagine CLR con **/CLRIMAGETYPE** , ma il linker non è riuscito a produrre un'immagine di quel tipo perché uno o più moduli sono incompatibili con quel tipo.
 

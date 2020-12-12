@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore degli strumenti del linker LNK1306'
 title: Errore degli strumenti del linker LNK1306
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,28 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1306
 ms.assetid: fad1df6a-0bd9-412f-b0d1-7c9bc749c584
-ms.openlocfilehash: ddaa8797e0cf8ff617408aedc770b21cc656cec4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa6386da7c836eea8365d8a4ffde0bbd80d0fa81
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160458"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193656"
 ---
 # <a name="linker-tools-error-lnk1306"></a>Errore degli strumenti del linker LNK1306
 
-> Funzione di punto di ingresso DLL non può essere gestito; compilare in nativo
+> Impossibile gestire la funzione del punto di ingresso della DLL. Compila in nativo
 
-`DllMain` non possono essere compilate in MSIL. deve essere compilato in codice nativo.
+`DllMain` Impossibile compilare in MSIL. deve essere compilato in nativo.
 
-Per risolvere questo problema,
+Per risolvere il problema,
 
-- Compilare il file che contiene il punto di ingresso senza **/clr**.
+- Compilare il file che contiene il punto di ingresso senza **/CLR**.
 
-- Inserire il punto di ingresso in un `#pragma unmanaged` sezione.
+- Inserire il punto di ingresso in una `#pragma unmanaged` sezione.
 
 Per altre informazioni, vedere:
 
-- [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
+- [/CLR (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
 
 - [managed, unmanaged](../../preprocessor/managed-unmanaged.md)
 
@@ -37,7 +38,7 @@ Per altre informazioni, vedere:
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore LNK1306.
+L'esempio seguente genera l'LNK1306.
 
 ```cpp
 // LNK1306.cpp
@@ -49,7 +50,7 @@ int __stdcall NewDllMain( HINSTANCE h, ULONG ulReason, PVOID pvReserved ) {
 }
 ```
 
-Per risolvere questo problema, non utilizzare l'opzione /clr per compilare il file oppure utilizzare un `#pragma` direttiva per inserire la definizione di punto di ingresso in una sezione non gestita, come illustrato in questo esempio:
+Per risolvere questo problema, non usare l'opzione/CLR per compilare il file oppure usare una `#pragma` direttiva per inserire la definizione del punto di ingresso in una sezione non gestita, come illustrato nell'esempio seguente:
 
 ```cpp
 // LNK1306fix.cpp

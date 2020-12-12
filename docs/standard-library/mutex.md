@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: &lt; mutex&gt;'
 title: '&lt;mutex&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <mutex>
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
-ms.openlocfilehash: d5ff6f2a81a5caa564792e2c0cb43b7722c3e1dd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b04b62629253e725e650009f373702f907b9116a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838551"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338252"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
@@ -24,7 +25,7 @@ Includere l'intestazione standard \<mutex> per definire le classi `mutex` ,, e, 
 
 **Spazio dei nomi:** std
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 > [!NOTE]
 > Nel codice compilato utilizzando **/CLR**, questa intestazione è bloccata.
@@ -51,7 +52,7 @@ Un tipo mutex è noto anche come *tipo bloccabile*. Se non fornisce la funzione 
 
 ### <a name="classes"></a>Classi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[Classe lock_guard](../standard-library/lock-guard-class.md)|Rappresenta un modello di cui è possibile creare un’istanza per la creazione di un oggetto il cui distruttore sblocca un tipo `mutex`.|
 |[Classe Mutex (libreria standard C++)](../standard-library/mutex-class-stl.md)|Rappresenta un tipo mutex. Gli oggetti di questo tipo possono essere utilizzati per gestire l'esclusione reciproca in un programma.|
@@ -63,7 +64,7 @@ Un tipo mutex è noto anche come *tipo bloccabile*. Se non fornisce la funzione 
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[call_once](../standard-library/mutex-functions.md#call_once)|Fornisce un meccanismo per chiamare un oggetto richiamabile esattamente una sola volta l'esecuzione.|
 |[blocco](../standard-library/mutex-functions.md#lock)|Tenta di bloccare tutti gli argomenti senza deadlock.|
@@ -72,7 +73,7 @@ Un tipo mutex è noto anche come *tipo bloccabile*. Se non fornisce la funzione 
 
 ### <a name="structs"></a>Struct
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[Struttura adopt_lock_t](../standard-library/adopt-lock-t-structure.md)|Rappresenta un tipo che viene utilizzato per definire un `adopt_lock`.|
 |[Struttura defer_lock_t](../standard-library/defer-lock-t-structure.md)|Rappresenta un tipo che definisce un oggetto `defer_lock` che consente di selezionare uno dei costruttori di overload di `unique_lock`.|
@@ -81,12 +82,12 @@ Un tipo mutex è noto anche come *tipo bloccabile*. Se non fornisce la funzione 
 
 ### <a name="variables"></a>Variabili
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|Rappresenta un oggetto che è possibile passare ai costruttori di `lock_guard` e `unique_lock` per indicare che l'oggetto mutex, anch'esso passato al costruttore è bloccato.|
 |[defer_lock](../standard-library/mutex-functions.md#defer_lock)|Rappresenta un oggetto che può essere passato al costruttore di `unique_lock` per indicare che il costruttore non deve bloccare l'oggetto mutex anch’esso passato al costruttore.|
 |[try_to_lock](../standard-library/mutex-functions.md#try_to_lock)|Rappresenta un oggetto che può essere passato al costruttore di `unique_lock` per indicare che il costruttore deve provare a sbloccare l’oggetto `mutex` anch’esso passato al costruttore senza blocco.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)

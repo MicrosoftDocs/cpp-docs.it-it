@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: finestre cornice'
 title: Finestre cornice
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-ms.openlocfilehash: 39c0b4b866fa123d8bcae639342c925570d96e1b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ee993b7f8314c28dba38c9ca607366f6fb93da1d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625817"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193500"
 ---
 # <a name="frame-windows"></a>Finestre cornice
 
@@ -45,21 +46,21 @@ Un altro accordo comune è che la finestra cornice per incorniciare più visuali
 
 - [Classi della finestra cornice](frame-window-classes.md)
 
-- [Classi della finestra cornice create dalla creazione guidata applicazione](frame-window-classes-created-by-the-application-wizard.md)
+- [Classi Frame-Window create dalla creazione guidata applicazione](frame-window-classes-created-by-the-application-wizard.md)
 
 - [Stili della finestra cornice](frame-window-styles-cpp.md)
 
-- [Funzionalità delle finestre cornice](what-frame-windows-do.md)
+- [Funzione delle finestre cornice](what-frame-windows-do.md)
 
 **Argomenti sull'utilizzo delle finestre cornice**
 
 - [Uso di finestre cornice](using-frame-windows.md)
 
-- [Creazione di finestre cornice di documento](creating-document-frame-windows.md)
+- [Creazione di finestre cornice di documenti](creating-document-frame-windows.md)
 
-- [Eliminazione definitiva di finestre cornice](destroying-frame-windows.md)
+- [Eliminazione di finestre cornice](destroying-frame-windows.md)
 
-- [Gestione delle finestre figlio MDI](managing-mdi-child-windows.md)
+- [Gestione di finestre figlio MDI](managing-mdi-child-windows.md)
 
 - [Gestione della visualizzazione corrente](managing-the-current-view.md) in una finestra cornice che contiene più di una visualizzazione
 
@@ -77,12 +78,12 @@ Un altro accordo comune è che la finestra cornice per incorniciare più visuali
 
 **Argomenti su altri tipi di finestre**
 
-- [Utilizzo delle visualizzazioni](using-views.md)
+- [Uso delle visualizzazioni](using-views.md)
 
 - [Finestre di dialogo](dialog-boxes.md)
 
 - [Controlli](controls-mfc.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Windows](windows.md)

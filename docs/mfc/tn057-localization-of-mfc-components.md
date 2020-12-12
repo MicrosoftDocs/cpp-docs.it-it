@@ -1,5 +1,6 @@
 ---
-title: 'TN057: Localizzazione di componenti MFC'
+description: 'Altre informazioni su: TN057: localizzazione di componenti MFC'
+title: 'TN057: localizzazione di componenti MFC'
 ms.date: 06/28/2018
 helpviewer_keywords:
 - components [MFC], localizing
@@ -11,31 +12,31 @@ helpviewer_keywords:
 - DLLs [MFC], localizing MFC
 - localization [MFC], resources
 ms.assetid: 5376d329-bd45-41bd-97f5-3d895a9a0af5
-ms.openlocfilehash: 552b925bae00e8bb171c543a6ed16e801186bf89
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: d4a331e74acd2b5b38ae059ea180a0a2148e3a0f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611921"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214806"
 ---
-# <a name="tn057-localization-of-mfc-components"></a>TN057: Localizzazione di componenti MFC
+# <a name="tn057-localization-of-mfc-components"></a>TN057: localizzazione di componenti MFC
 
 > [!NOTE]
 > La seguente nota tecnica non è stata aggiornata da quando è stata inclusa per la prima volta nella documentazione online. Di conseguenza, alcune procedure e argomenti potrebbero essere non aggiornati o errati. Per le informazioni più recenti, è consigliabile cercare l'argomento di interesse nell'indice della documentazione online.
 
-In questa nota descrive alcune delle progettazioni e procedure che utili per localizzare il componente, se si controlla un oggetto OLE o un'applicazione o una DLL che utilizza MFC.
+Questa nota descrive alcune delle progettazioni e delle procedure che è possibile usare per localizzare il componente, se si tratta di un'applicazione o di un controllo OLE o di una DLL che Usa MFC.
 
 ## <a name="overview"></a>Panoramica
 
-Esistono effettivamente due problemi da risolvere quando la localizzazione di un componente che utilizza MFC. In primo luogo, è necessario localizzare le proprie risorse, ovvero stringhe, le finestre di dialogo e altre risorse specifiche per il componente. La maggior parte dei componenti creati con MFC anche includono e usano un numero di risorse che sono definiti da MFC. È necessario fornire anche risorse MFC localizzate. Fortunatamente, diversi linguaggi sono già forniti dalla libreria MFC.
+Esistono due problemi da risolvere quando si localizza un componente che Usa MFC. In primo luogo, è necessario localizzare le proprie risorse, ovvero stringhe, finestre di dialogo e altre risorse specifiche per il componente. La maggior parte dei componenti compilati utilizzando MFC include inoltre e utilizza una serie di risorse definite da MFC. È necessario fornire anche le risorse MFC localizzate. Fortunatamente, diverse lingue sono già fornite da MFC.
 
-Inoltre, il componente dovrebbe prepararsi a eseguire nel proprio ambiente di destinazione (ambiente europea o abilitate per DBCS). Nella maggior parte, ciò dipende dall'applicazione considerando correttamente i caratteri con il set di bit elevato e gestione delle stringhe con caratteri a doppio byte. MFC è abilitata, per impostazione predefinita, per entrambi gli ambienti, in modo che sia possibile disporre di un unico file binario in tutto il mondo che viene usato in tutte le piattaforme con risorse diverse appena collegate al momento dell'installazione.
+Inoltre, il componente deve essere preparato per l'esecuzione nell'ambiente di destinazione (ambiente abilitato per l'uso europeo o DBCS). Nella maggior parte dei casi, ciò dipende dall'applicazione che tratta i caratteri con il bit elevato impostato correttamente e gestendo le stringhe con caratteri a byte doppio. MFC è abilitato, per impostazione predefinita, per entrambi gli ambienti, in modo che sia possibile avere un unico file binario globale che viene usato in tutte le piattaforme con risorse solo diverse collegate al momento dell'installazione.
 
 ## <a name="localizing-your-components-resources"></a>Localizzazione delle risorse del componente
 
-Localizzare l'applicazione o DLL deve comportare semplicemente sostituendo le risorse con le risorse che corrispondono alla lingua di destinazione. Per le proprie risorse, questa operazione è relativamente semplice: modificare le risorse nell'editor di risorse e compilare l'applicazione. Se il codice è scritto correttamente non esisterà alcun stringhe o testo che si vuole localizzare impostate come hardcoded nel codice sorgente C++ - tutti di localizzazione è possibile modificando semplicemente le risorse. In effetti, è possibile implementare il componente in modo che tutti che fornisce una versione localizzata non comporta anche una compilazione del codice originale. Questo è più complesso, ma è ampiamente compensato ed è il meccanismo scelto per la libreria MFC. È anche possibile localizzare un'applicazione per il caricamento del file EXE o DLL nell'editor di risorse e modificare direttamente le risorse. È possibile, ma richiede la riapplicazione di tali modifiche ogni volta che si compila una nuova versione dell'applicazione.
+La localizzazione dell'applicazione o della DLL comporta la semplice sostituzione delle risorse con risorse corrispondenti alla lingua di destinazione. Per le risorse proprie, questo è relativamente semplice: modificare le risorse nell'editor risorse e compilare l'applicazione. Se il codice è scritto correttamente, non saranno presenti stringhe o testo da localizzare a livello di codice nel codice sorgente C++. è possibile eseguire tutte le operazioni di localizzazione semplicemente modificando le risorse. Infatti, è possibile implementare il componente in modo che tutti gli elementi che forniscono una versione localizzata non comportino una compilazione del codice originale. Si tratta di una soluzione più complessa, ma vale la pena ed è il meccanismo scelto per MFC. È anche possibile localizzare un'applicazione caricando il file EXE o DLL nell'editor risorse e modificando direttamente le risorse. Sebbene sia possibile, è necessario riapplicare le modifiche ogni volta che si compila una nuova versione dell'applicazione.
 
-Un modo per evitare che è per individuare tutte le risorse in una DLL separata, detta anche una DLL satellite. Questa DLL verrà quindi ricaricata in modo dinamico in fase di esecuzione e le risorse vengono caricate da tale DLL anziché dal modulo principale con tutto il codice. MFC supporta direttamente questo approccio. Si consideri un'applicazione denominata MYAPP. FILE EXE; tutte le relative risorse che si trova in una DLL denominata MYRES può avere. DLL. Dell'applicazione `InitInstance` eseguirà il comando seguente per caricare la DLL e causare MFC caricare le risorse da tale posizione:
+Un modo per evitare questo consiste nell'individuare tutte le risorse in una DLL separata, talvolta denominata DLL satellite. Questa DLL viene quindi caricata dinamicamente in fase di esecuzione e le risorse vengono caricate da tale DLL invece che dal modulo principale con tutto il codice. MFC supporta direttamente questo approccio. Si consideri un'applicazione denominata MYAPP.EXE; potrebbe avere tutte le risorse presenti in una DLL denominata MYRES.DLL. Nell'applicazione `InitInstance` verrà eseguito quanto segue per caricare la dll e fare in modo che MFC carichi le risorse da tale posizione:
 
 ```cpp
 CMyApp::InitInstance()
@@ -51,26 +52,26 @@ CMyApp::InitInstance()
 }
 ```
 
-Da questo momento, MFC caricherà le risorse da tale DLL anziché da myapp.exe. Tutte le risorse, tuttavia, devono essere presenti in tale DLL. MFC non cercherà l'istanza dell'applicazione alla ricerca di una determinata risorsa. Questa tecnica si applica ugualmente bene a regolare MFC (DLL), nonché di controlli OLE. Il programma di installazione Usa per copiare la versione appropriata di MYRES. DLL a seconda delle impostazioni locali quali risorse l'utente desidera.
+Da quel punto in poi, MFC caricherà le risorse da tale DLL invece che da myapp.exe. Tutte le risorse, tuttavia, devono essere presenti in tale DLL. MFC non effettuerà la ricerca nell'istanza dell'applicazione in cerca di una risorsa specificata. Questa tecnica è valida anche per le normali DLL MFC e per i controlli OLE. Il programma di installazione copia la versione appropriata di MYRES.DLL a seconda delle impostazioni locali delle risorse che l'utente desidera.
 
-È relativamente semplice creare una risorsa DLL di sole. Creare un progetto di DLL, aggiungere il. RC file a esso, quindi aggiungere le risorse necessarie. Se si dispone di un progetto esistente che non utilizza questa tecnica, è possibile copiare le risorse da tale progetto. Dopo aver aggiunto il file di risorse al progetto, si è quasi pronti per compilare il progetto. L'unica cosa è necessario eseguire è impostare opzioni per includere il linker **/NOENTRY**. Ciò indica al linker che la DLL non dispone di alcun punto di ingresso - poiché non dispone di alcun codice, non dispone di alcun punto di ingresso.
+La creazione di una DLL di sole risorse è relativamente semplice. Si crea un progetto di DLL, si aggiunge il. E aggiungere le risorse necessarie per il file RC. Se si dispone di un progetto esistente che non utilizza questa tecnica, è possibile copiare le risorse dal progetto. Dopo aver aggiunto il file di risorse al progetto, si è quasi pronti per compilare il progetto. L'unica cosa da fare è impostare le opzioni del linker in modo da includere **/NOENTRY**. Ciò indica al linker che la DLL non ha alcun punto di ingresso, poiché non contiene codice, non ha alcun punto di ingresso.
 
 > [!NOTE]
-> L'editor di risorse in Visual C++ 4.0 e versioni successive supporta più linguaggi per. File RC. Ciò può rendere molto facile da gestire la localizzazione in un singolo progetto. Le risorse per ogni lingua vengono controllate dalle direttive del preprocessore generate dall'editor di risorse.
+> L'editor di risorse in Visual C++ 4,0 e versioni successive supporta più lingue per. File RC. Ciò consente di semplificare la gestione della localizzazione in un singolo progetto. Le risorse per ogni lingua sono controllate dalle direttive del preprocessore generate dall'editor risorse.
 
-## <a name="using-the-provided-mfc-localized-resources"></a>Utilizza il MFC fornita di risorse localizzate
+## <a name="using-the-provided-mfc-localized-resources"></a>Uso delle risorse localizzate MFC fornite
 
-Qualsiasi applicazione MFC che si compila riusa due cose da MFC: codice e risorse. Vale a dire, MFC include vari messaggi di errore, finestre di dialogo predefinite e altre risorse utilizzate dalle classi MFC. Per poter localizzare completamente l'applicazione, è necessario localizzare non solo le risorse dell'applicazione, ma anche le risorse che provengono direttamente da MFC. MFC fornisce un numero di lingua diversa i file di risorse automaticamente, in modo che se la lingua di destinazione è uno dei linguaggi di che MFC supporta già, è sufficiente Assicurarsi di che usare tali risorse localizzate.
+Qualsiasi applicazione MFC compilata riutilizza due elementi da MFC, ovvero codice e risorse. Ovvero MFC dispone di diversi messaggi di errore, finestre di dialogo predefinite e altre risorse utilizzate dalle classi MFC. Per localizzare completamente l'applicazione, è necessario localizzare non solo le risorse dell'applicazione, ma anche le risorse che provengono direttamente da MFC. MFC fornisce un numero di file di risorse di lingua differenti automaticamente, in modo che se la lingua di destinazione è una delle lingue supportate da MFC, è sufficiente assicurarsi di utilizzare tali risorse localizzate.
 
-Al momento della stesura di questo documento, MFC supporta cinese, tedesco, spagnolo, francese, italiano, giapponese e coreano. I file che contengono queste versioni localizzate si trovano nel MFC\INCLUDE\L.* ("L" è l'acronimo per localizzate) le directory. I file in lingua tedesca sono in MFC\INCLUDE\L.DEU, ad esempio. Affinché l'applicazione per usare questi file RC anziché i file che si trova in MFC\Include., aggiungere un `/IC:\PROGRAM FILES\MICROSOFT VISUAL STUDIO .NET 2003\VC7\MFC\INCLUDE\L.DEU` alla riga di comando RC (questo è solo un esempio; è necessario sostituire le impostazioni locali della scelta, nonché la directory in cui è stato installato Visual C ++).
+Al momento della stesura di questo documento, MFC supporta il cinese, il tedesco, lo spagnolo, il francese, l'italiano, il giapponese e il coreano. I file che contengono queste versioni localizzate si trovano in MFC\INCLUDE\L. * (il "L" sta per localizzare le directory). I file tedeschi si trovano in MFC\INCLUDE\L.DEU, ad esempio. Per fare in modo che l'applicazione usi questi file RC anziché i file presenti in MFC\INCLUDE, aggiungere un `/IC:\PROGRAM FILES\MICROSOFT VISUAL STUDIO .NET 2003\VC7\MFC\INCLUDE\L.DEU` alla riga di comando RC (questo è solo un esempio; è necessario sostituire le impostazioni locali e la directory in cui è stato installato Visual C++).
 
-Le istruzioni riportate sopra funzionerà se l'applicazione è collegato in modo statico con MFC. La maggior parte delle applicazioni collegano in modo dinamico (perché questo è l'impostazione predefinita la creazione guidata applicazione). In questo scenario, non solo il codice è in modo dinamico collegato - sono quindi le risorse. Di conseguenza, è possibile localizzare le risorse nell'applicazione, ma le risorse di implementazione MFC verranno ancora caricate dal MFC7x.DLL (o versione successiva) o da MFC7xLOC.DLL se esiste. È possibile scegliere questo da due diverse angolazioni.
+Le istruzioni sopra riportate funzionano se l'applicazione è collegata in modo statico a MFC. La maggior parte delle applicazioni si collega dinamicamente, perché è l'impostazione predefinita creazione guidata applicazioni. In questo scenario, non solo il codice è collegato dinamicamente, quindi sono le risorse. Di conseguenza, è possibile localizzare le risorse nell'applicazione, ma le risorse di implementazione MFC verranno comunque caricate dalla MFC7x.DLL (o versione successiva) o da MFC7xLOC.DLL se esiste. È possibile avvicinarsi a questo da due diversi angoli.
 
-L'approccio più complesso è ship uno del MFC7xLOC.DLLs localizzate (ad esempio MFC7xDEU, per il tedesco, MFC7xESP.DLL per spagnolo e così via) o versione successiva e installare il MFC7xLOC.DLL appropriati nella directory di sistema quando l'utente installa l'applicazione. Ciò può risultare molto complessa per gli sviluppatori e l'utente finale e di conseguenza non è consigliato. Visualizzare [56 Nota tecnica](../mfc/tn056-installation-of-localized-mfc-components.md) per altre informazioni su questa tecnica e dei relativi aspetti.
+L'approccio più complesso consiste nel fornire uno dei MFC7xLOC.DLLlocalizzati, ad esempio MFC7xDEU, per il tedesco, MFC7xESP.DLL per lo spagnolo e così via, o una versione successiva, e installare il MFC7xLOC.DLL appropriato nella directory di sistema quando l'utente installa l'applicazione. Questa operazione può essere molto complessa sia per lo sviluppatore che per l'utente finale e pertanto non è consigliabile. Vedere la [Nota tecnica 56](../mfc/tn056-installation-of-localized-mfc-components.md) per ulteriori informazioni su questa tecnica e le relative avvertenze.
 
-L'approccio più semplice e più sicura consiste nell'includere le risorse localizzate MFC nell'applicazione o DLL stessa (o la DLL satellite, se si usa uno). Ciò evita i problemi di installazione MFC7xLOC.DLL correttamente. A tale scopo, si seguono le stesse istruzioni per il case statico assegnato in precedenza (l'impostazione della riga di comando RC correttamente in modo da puntare alle risorse localizzate), ad eccezione che è necessario rimuovere anche il `/D_AFXDLL` definite dall'utente è stato aggiunto per la creazione guidata applicazione. Quando si `/D_AFXDLL` è definito, AFXRES. H (e altri file RC MFC) realtà non definisce tutte le risorse (in quanto essi verranno prelevati dalle DLL MFC invece).
+L'approccio più semplice e sicuro consiste nell'includere le risorse MFC localizzate nell'applicazione o nella DLL stessa (o nella relativa DLL satellite se ne viene utilizzata una). In questo modo si evitano i problemi di installazione MFC7xLOC.DLL correttamente. A tale scopo, seguire le stesse istruzioni per il caso statico specificato in precedenza, impostando la riga di comando RC in modo che punti alle risorse localizzate, ad eccezione del fatto che è necessario rimuovere anche la `/D_AFXDLL` definizione aggiunta da Creazione guidata applicazioni. Quando `/D_AFXDLL` è definito, Afxres. H (e gli altri file MFC RC) non definiscono effettivamente le risorse (poiché verranno invece estratte dalle DLL MFC).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
 [Note tecniche per categoria](../mfc/technical-notes-by-category.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: parallelizzazione automatica e vettorizzazione automatica'
 title: Parallelizzazione automatica e vettorizzazione automatica
 ms.date: 11/04/2016
 ms.assetid: ec71583a-287b-4599-8767-1d255e080fe3
-ms.openlocfilehash: adc0dd9346cc2850b02e01804e26044c367f2d14
-ms.sourcegitcommit: fcc3aeb271449f8be80348740cffef39ba543407
+ms.openlocfilehash: 4de73924ab6c28335ea6fcf2e6473e74d68bd189
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538620"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338324"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Parallelizzazione automatica e vettorizzazione automatica
 
@@ -34,9 +35,9 @@ void loop_test(int u) {
 }
 ```
 
-Come per tutte le [direttive pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md), è supportata anche `__pragma(loop(hint_parallel(n)))` la sintassi del pragma alternativa.
+Come per tutte le [direttive pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md), `__pragma(loop(hint_parallel(n)))` è supportata anche la sintassi del pragma alternativa.
 
-Alcuni cicli non possono essere parallelizzati dal compilatore, anche se lo si desidera. Ad esempio:
+Alcuni cicli non possono essere parallelizzati dal compilatore, anche se lo si desidera. Ecco un esempio:
 
 ```cpp
 #pragma loop(hint_parallel(8))
@@ -101,19 +102,19 @@ for (int i = 0; i < 1000; ++i)
    A[i] = B[i] + C[i];
 ```
 
-Come per tutte le [direttive pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md), è supportata anche `__pragma(loop(no_vector))` la sintassi del pragma alternativa.
+Come per tutte le [direttive pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md), `__pragma(loop(no_vector))` è supportata anche la sintassi del pragma alternativa.
 
-Come per la parallelizzazione automatica automatica, è possibile specificare l'opzione della riga di comando [/Qvec-report (Auto-Vectorizer Reporting Level)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md) per segnalare solo`/Qvec-report:1`i cicli con vettorizzazione corretta, ovvero i cicli`/Qvec-report:2`con Vectoring con esito positivo o negativo.
+Come per la parallelizzazione automatica automatica, è possibile specificare l'opzione della riga di comando [/Qvec-report (Auto-Vectorizer Reporting Level)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md) per segnalare solo i cicli con vettorizzazione corretta, ovvero i `/Qvec-report:1` cicli con Vectoring con esito positivo o negativo `/Qvec-report:2` .
 
 Per ulteriori informazioni sui codici motivo e sui messaggi, vedere [Vectorizer e parallelizzazione automatica messages](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).
 
 Per un esempio che illustra il funzionamento di Vectorizer, vedere [Project Austin Part 2 of 6: page curling](https://devblogs.microsoft.com/cppblog/project-austin-part-2-of-6-page-curling/)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[ciclo](../preprocessor/loop.md)<br/>
+[loop](../preprocessor/loop.md)<br/>
 [Programmazione parallela in codice nativo](/archive/blogs/nativeconcurrency)<br/>
-[/Qpar (parallelizzazione automatica)](../build/reference/qpar-auto-parallelizer.md)<br/>
-[/Qvec/report (livello di segnalazione parallelizzazione automatica)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
-[/Qvec-report (livello di segnalazione vettorizzazione automatica)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md)<br/>
-[Messaggi di vettorizzazione e parallelizzazione](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md)
+[/Qpar (parallelizzazione automatica automatico)](../build/reference/qpar-auto-parallelizer.md)<br/>
+[/Qpar-report (livello di segnalazione parallelizzazione automatica automatica)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
+[/Qvec-report (livello di segnalazione Vectorizer automatica)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md)<br/>
+[Messaggi Vectorizer e parallelizzazione automatica](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md)

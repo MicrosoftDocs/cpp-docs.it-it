@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; Double complesso&gt;'
 title: complex&lt;double&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex<double> function
 ms.assetid: 0d0b9d2a-9b9b-410b-82a0-86b6df127e47
-ms.openlocfilehash: b9bf4780dd78800653804762301b36ff6bb30a92
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9238e71fcdd70576276eb1ba429a48eeec954601
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230078"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325036"
 ---
 # <a name="complexltdoublegt"></a>complex&lt;double&gt;
 
@@ -49,7 +50,7 @@ Numero complesso di tipo **`float`** o di tipo le **`long double`** cui parti re
 
 Numero complesso di tipo **`double`** .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La specializzazione esplicita del modello di classe Complex a una classe complessa di tipo **`double`** differisce dal modello di classe solo nei costruttori che definisce. La conversione da **`float`** a **`double`** può essere implicita, ma la conversione da **`long double`** a **`double`** è obbligatoria **`explicit`** . L'uso di **`explicit`** regole esclude l'avvio con la conversione del tipo tramite la sintassi di assegnazione.
 
@@ -112,11 +113,11 @@ arg ( c3 ) = 0.896055 radians, which is 51.3402 degrees.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione**:\<complex>
+**Intestazione**: \<complex>
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe complessa](../standard-library/complex-class.md)\
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

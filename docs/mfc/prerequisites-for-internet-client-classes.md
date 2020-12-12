@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: prerequisiti per le classi client Internet'
 title: Prerequisiti per le classi client Internet
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - prerequisites, Internet client classes [MFC]
 - Gopher client applications [MFC]
 ms.assetid: c51d1dfe-260c-4228-8100-e4efd90e9599
-ms.openlocfilehash: aaf5756df69728e8ae89fb278bc0671bfc6840b7
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9159aa6b3ae4918e406524be05e00fca66cd28a5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619838"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205876"
 ---
 # <a name="prerequisites-for-internet-client-classes"></a>Prerequisiti per le classi client Internet
 
@@ -69,8 +70,8 @@ Alcune azioni eseguite da un client Internet (ad esempio, la lettura di un file)
 |Aprire un file gopher.|Stabilire una connessione gopher. Creare un localizzatore Gopher con [CGopherConnection:: CreateLocator](reference/cgopherconnection-class.md#createlocator) o trovare un localizzatore con [CGopherFileFind:: GetLocator](reference/cgopherfilefind-class.md#getlocator). Chiamare [CGopherConnection:: OpenFile](reference/cgopherconnection-class.md#openfile).|
 |Leggere un file gopher.|Aprire un file gopher. Usare [CGopherFile](reference/cgopherfile-class.md).|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Estensioni Internet Win32 (WinInet)](win32-internet-extensions-wininet.md)<br/>
 [Classi MFC per la creazione di applicazioni client Internet](mfc-classes-for-creating-internet-client-applications.md)<br/>
-[Scrittura di un'applicazione client Internet con classi WinInet MFC](writing-an-internet-client-application-using-mfc-wininet-classes.md)
+[Scrittura di un'applicazione client Internet con classi WinInet di MFC](writing-an-internet-client-application-using-mfc-wininet-classes.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe IOpenRowsetImpl'
 title: Classe IOpenRowsetImpl
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - CreateRowset method
 - OpenRowset method
 ms.assetid: d259cedc-1db4-41cf-bc9f-5030907ab486
-ms.openlocfilehash: a3c94c75db21218aae1205bf9c5c379ab772a7f8
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4ec7f8ebdab132854172f7e5f4dff7387e46717f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843716"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317428"
 ---
 # <a name="iopenrowsetimpl-class"></a>Classe IOpenRowsetImpl
 
@@ -44,12 +45,12 @@ Classe derivata da `IOpenRowsetImpl` .
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[CreateRowset](#createrowset)|Crea un oggetto set di righe. Non viene chiamato direttamente dall'utente.|
 |[OpenRowset](#openrowset)|Apre e restituisce un set di righe che include tutte le righe di una singola tabella o indice di base. (Non in ATLDB. H|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'interfaccia [IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85)) è obbligatoria per un oggetto Session. Si apre e restituisce un set di righe che include tutte le righe di una singola tabella o indice di base.
 
@@ -101,11 +102,11 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
 
 Vedere [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo non è stato trovato in ATLDB. H. Viene creato tramite la creazione guidata oggetto ATL quando si crea un provider.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: architettura dell'anteprima di stampa"
 title: Architettura dell'anteprima di stampa
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - printing [MFC], print preview
 - print preview [MFC], modifications to MFC
 ms.assetid: 0efc87e6-ff8d-43c5-9d72-9b729a169115
-ms.openlocfilehash: 1956313d4e904255ba59e79690fe3d7144669a29
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 34dcd02b189a0065b34cff756596c5c5b1576dc6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623945"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205863"
 ---
 # <a name="print-preview-architecture"></a>Architettura dell'anteprima di stampa
 
@@ -25,7 +26,7 @@ In questo articolo viene illustrata l'implementazione della funzionalità di ant
 
 L'anteprima di stampa è piuttosto diversa dalla visualizzazione e dalla stampa di una schermata perché, anziché disegnare direttamente un'immagine in un dispositivo, l'applicazione deve simulare la stampante utilizzando lo schermo. Per risolvere questo problema, il libreria Microsoft Foundation Class definisce una classe speciale (non documentata) derivata dalla [classe CDC](reference/cdc-class.md), denominata `CPreviewDC` . Tutti gli oggetti `CDC` contengono due contesti di periferica, ma in genere sono identici. In un `CPreviewDC` oggetto sono diversi: il primo rappresenta la stampante da simulare e il secondo rappresenta lo schermo in cui viene effettivamente visualizzato l'output.
 
-## <a name="the-print-preview-process"></a><a name="_core_the_print_preview_process"></a>Processo di anteprima di stampa
+## <a name="the-print-preview-process"></a><a name="_core_the_print_preview_process"></a> Processo di anteprima di stampa
 
 Quando l'utente seleziona il comando anteprima di stampa dal menu **file** , il Framework crea un `CPreviewDC` oggetto. Ogni volta che nell'applicazione viene eseguita un'operazione che imposta una caratteristica del contesto della stampante, viene eseguita dal framework un'operazione simile nel contesto dello schermo. Ad esempio, se nell'applicazione viene selezionato un tipo di carattere per la stampa, dal framework viene selezionato un tipo di carattere per la visualizzazione su schermo che simula il tipo di carattere della stampante. Ogni volta che dall'applicazione l'output viene inviato alla stampante, dal framework viene inviato l'output allo schermo.
 
@@ -33,7 +34,7 @@ L'anteprima di stampa è differente dalla stampa nell'ordine di disegno delle pa
 
 La funzione [CView:: OnPreparePrinting](reference/cview-class.md#onprepareprinting) viene chiamata quando viene richiamata la modalità di anteprima, così come si trova all'inizio di un processo di stampa. La struttura della [struttura CPrintInfo](reference/cprintinfo-structure.md) passata alla funzione contiene diversi membri i cui valori possono essere impostati per modificare determinate caratteristiche dell'operazione di anteprima di stampa. Ad esempio, è possibile impostare il membro *m_nNumPreviewPages* per specificare se si desidera visualizzare in anteprima il documento in modalità a pagina singola o a due pagine.
 
-## <a name="modifying-print-preview"></a><a name="_core_modifying_print_preview"></a>Modifica dell'anteprima di stampa
+## <a name="modifying-print-preview"></a><a name="_core_modifying_print_preview"></a> Modifica dell'anteprima di stampa
 
 È possibile modificare il comportamento e l'aspetto dell'anteprima di stampa in varie modalità in modo piuttosto semplice. Ad esempio, è possibile, tra le altre cose:
 
@@ -55,7 +56,7 @@ In alcuni casi è necessario che `OnPreparePrinting` esegua differenti inizializ
 
 La `CPrintInfo` struttura contiene anche un membro denominato *m_strPageDesc*, che viene usato per formattare le stringhe visualizzate nella parte inferiore dello schermo in modalità a pagina singola e a più pagine. Per impostazione predefinita, queste stringhe hanno il formato "pagina *n*" e "pagine *n*  -  *m*", ma è possibile modificare *m_strPageDesc* dall'interno di `OnPreparePrinting` e impostare le stringhe su un elemento più elaborato. Per ulteriori informazioni, vedere la [struttura CPrintInfo](reference/cprintinfo-structure.md) in *riferimenti a MFC* .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Stampa e anteprima di stampa](printing-and-print-preview.md)<br/>
 [Stampa](printing.md)<br/>

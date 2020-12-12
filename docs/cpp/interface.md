@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __interface'
 title: __interface
 ms.date: 05/07/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
-ms.openlocfilehash: 9ca13ed91601fa3a64071304c14d483e84c314a3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 03ce2b6feb276ed90c3b8855b375a9240e061bba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233717"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97291987"
 ---
 # <a name="__interface"></a>__interface
 
@@ -58,7 +59,7 @@ Si noti che non è necessario dichiarare in modo esplicito che le funzioni `Comm
 virtual HRESULT CommitX() = 0;
 ```
 
-**`__interface`** implica il [novtable](../cpp/novtable.md) **`__declspec`** modificatore novtable.
+**`__interface`** implica il [](../cpp/novtable.md) **`__declspec`** modificatore novtable.
 
 ## <a name="example"></a>Esempio
 
@@ -144,7 +145,7 @@ bstr_data = Testing
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Parole chiave](../cpp/keywords-cpp.md)<br/>
 [Attributi di interfaccia](../windows/attributes/interface-attributes.md)

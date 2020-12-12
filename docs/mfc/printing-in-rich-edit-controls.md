@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: stampa nei controlli Rich Edit'
 title: Stampa in controlli Rich Edit
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - rich edit controls [MFC], printing
 - CRichEditCtrl class [MFC], printing
 ms.assetid: dbda0e40-018f-424e-b5d8-7b489aaf27af
-ms.openlocfilehash: f275078fbef9026363305bb714da3a2af333c91f
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9b5c272df36c6a4472c82cc4b0655b1d9626c2ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619814"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205733"
 ---
 # <a name="printing-in-rich-edit-controls"></a>Stampa in controlli Rich Edit
 
@@ -23,7 +24,7 @@ Dopo aver formattato il testo per un dispositivo di output, è possibile inviare
 
 È possibile usare la funzione membro [SetTargetDevice](reference/cricheditctrl-class.md#settargetdevice) per specificare il dispositivo di destinazione per il quale un controllo Rich Edit formatta il testo. Questa funzione è utile per la formattazione di WYSIWYG (ciò che viene visualizzato), in cui un'applicazione posiziona il testo utilizzando le metriche dei tipi di carattere della stampante predefinita anziché la schermata.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso di CRichEditCtrl](using-cricheditctrl.md)<br/>
+[Utilizzo di CRichEditCtrl](using-cricheditctrl.md)<br/>
 [Controlli](controls-mfc.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Classe IErrorRecordsImpl'
 title: Classe IErrorRecordsImpl
 ms.date: 11/04/2016
 f1_keywords:
@@ -63,12 +64,12 @@ helpviewer_keywords:
 - GetRecordCount method
 - m_rgErrors
 ms.assetid: dea8e938-c5d8-45ab-86de-eb8fbf534ffb
-ms.openlocfilehash: cb0e236a31846e3465d76b6904a7b4c57a2b8cf4
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2c4a674a6197178e3418afc6e62cda1894497599
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509004"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317454"
 ---
 # <a name="ierrorrecordsimpl-class"></a>Classe IErrorRecordsImpl
 
@@ -97,7 +98,7 @@ Classe che rappresenta un OLE DB oggetto Error.
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[GetErrorDescriptionString](#geterrordescriptionstring)|Ottiene la stringa di descrizione dell'errore da un record di errore.|
 |[GetErrorGUID](#geterrorguid)|Ottiene il GUID dell'errore da un record di errore.|
@@ -107,7 +108,7 @@ Classe che rappresenta un OLE DB oggetto Error.
 
 ### <a name="interface-methods"></a>Metodi di interfaccia
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[AddErrorRecord](#adderrorrecord)|Aggiunge un record all'oggetto errore OLE DB.|
 |[GetBasicErrorInfo](#getbasicerrorinfo)|Restituisce informazioni di base sull'errore, ad esempio il codice restituito e il numero di errore specifico del provider.|
@@ -118,7 +119,7 @@ Classe che rappresenta un OLE DB oggetto Error.
 
 ### <a name="data-members"></a>Membri dei dati
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[m_rgErrors](#rgerrors)|Matrice di record degli errori.|
 

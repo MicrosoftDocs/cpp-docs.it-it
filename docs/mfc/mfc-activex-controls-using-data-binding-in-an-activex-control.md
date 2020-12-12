@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: controlli ActiveX MFC: uso del data binding in un controllo ActiveX'
 title: 'Controlli ActiveX MFC: utilizzo del data binding in un controllo ActiveX'
 ms.date: 11/19/2018
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: b32dbd8e1777f11998085a90e8851b25e4298e1a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eb6a6ea52dee7aaf1fcb4c9f15db89cfa5f25deb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224994"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206084"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Controlli ActiveX MFC: utilizzo del data binding in un controllo ActiveX
 
@@ -31,7 +32,7 @@ Uno degli usi più potenti dei controlli ActiveX è data binding, che consente a
 Questo articolo illustra il lato controllo dell'attività. L'implementazione del data binding interazioni con il database è responsabilità del contenitore del controllo. La modalità di gestione delle interazioni del database nel contenitore esula dall'ambito di questa documentazione. La modalità di preparazione del controllo per data binding è illustrata nella parte restante di questo articolo.
 
 ![Diagramma concettuale di un controllo associato&#45;dati](../mfc/media/vc374v1.gif "Diagramma concettuale di un controllo associato&#45;dati") <br/>
-Diagramma concettuale di un controllo con associazione a dati
+Diagramma concettuale di un controllo Data-Bound
 
 La `COleControl` classe fornisce due funzioni membro che rendono Data Binding un processo semplice da implementare. La prima funzione, [BoundPropertyRequestEdit](reference/colecontrol-class.md#boundpropertyrequestedit), viene utilizzata per richiedere l'autorizzazione per la modifica del valore della proprietà. [BoundPropertyChanged](reference/colecontrol-class.md#boundpropertychanged), la seconda funzione, viene chiamato dopo che il valore della proprietà è stato modificato correttamente.
 
@@ -41,7 +42,7 @@ Questo articolo include gli argomenti seguenti:
 
 - [Creazione di un metodo Get/Set associabile](#vchowcreatingbindablegetsetmethod)
 
-## <a name="creating-a-bindable-stock-property"></a><a name="vchowcreatingbindablestockproperty"></a>Creazione di una proprietà azionaria associabile
+## <a name="creating-a-bindable-stock-property"></a><a name="vchowcreatingbindablestockproperty"></a> Creazione di una proprietà azionaria associabile
 
 È possibile creare una proprietà di azione associata ai dati, anche se è più probabile che si desideri un [metodo Get/Set associabile](#vchowcreatingbindablegetsetmethod).
 
@@ -70,7 +71,7 @@ A questo punto, il controllo può visualizzare i dati di un'origine dati, ma l'u
 
 È ora possibile compilare il progetto, che registrerà il controllo. Quando si inserisce il controllo in una finestra di dialogo, il **campo dati** e le proprietà dell' **origine dati** verranno aggiunti ed è ora possibile selezionare un'origine dati e un campo da visualizzare nel controllo.
 
-## <a name="creating-a-bindable-getset-method"></a><a name="vchowcreatingbindablegetsetmethod"></a>Creazione di un metodo Get/Set associabile
+## <a name="creating-a-bindable-getset-method"></a><a name="vchowcreatingbindablegetsetmethod"></a> Creazione di un metodo Get/Set associabile
 
 Oltre a un metodo get/set associato ai dati, è anche possibile creare una [proprietà azionaria associabile](#vchowcreatingbindablestockproperty).
 
@@ -97,7 +98,7 @@ Oltre a un metodo get/set associato ai dati, è anche possibile creare una [prop
 
 1. Per **Tipo di implementazione**, fare clic su **Metodi Get/Set**.
 
-1. Selezionare le caselle di controllo seguenti dalla scheda attributi IDL: **Bindable**, **requestedit**, **displaybind**e **defaultbind** per aggiungere gli attributi alla definizione di proprietà nell'oggetto del progetto. File IDL. Questi attributi rendono visibile il controllo all'utente e rendono la proprietà di magazzino la proprietà associabile predefinita.
+1. Selezionare le caselle di controllo seguenti dalla scheda attributi IDL: **Bindable**, **requestedit**, **displaybind** e **defaultbind** per aggiungere gli attributi alla definizione di proprietà nell'oggetto del progetto. File IDL. Questi attributi rendono visibile il controllo all'utente e rendono la proprietà di magazzino la proprietà associabile predefinita.
 
 1. Fare clic su **Fine**.
 
@@ -133,6 +134,6 @@ Oltre a un metodo get/set associato ai dati, è anche possibile creare una [prop
 
 È ora possibile compilare il progetto, che registrerà il controllo. Quando si inserisce il controllo in una finestra di dialogo, il **campo dati** e le proprietà dell' **origine dati** verranno aggiunti ed è ora possibile selezionare un'origine dati e un campo da visualizzare nel controllo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli ActiveX MFC](mfc-activex-controls.md)

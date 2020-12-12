@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe IRowsetImpl'
 title: Classe IRowsetImpl
 ms.date: 11/04/2016
 f1_keywords:
@@ -88,12 +89,12 @@ helpviewer_keywords:
 - m_iRowset
 - m_rgRowHandles
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-ms.openlocfilehash: 27a07d10256147d3c3ed383744ba1ee5fdfd06a1
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 45b34d0404383bc425b0b4938782b2a34e725808
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504082"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317415"
 ---
 # <a name="irowsetimpl-class"></a>Classe IRowsetImpl
 
@@ -134,7 +135,7 @@ Unità di archiviazione per tutti gli handle di riga utilizzati dal provider.
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[AddRefRows](#addrefrows)|Aggiunge un conteggio dei riferimenti a un handle di riga esistente.|
 |[CreateRow](#createrow)|Chiamato da [GetNextRows](#getnextrows) per allocare un nuovo oggetto `HROW` . Non viene chiamato direttamente dall'utente.|
@@ -149,7 +150,7 @@ Unità di archiviazione per tutti gli handle di riga utilizzati dal provider.
 
 ### <a name="data-members"></a>Membri dei dati
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[m_bCanFetchBack](#bcanfetchback)|Indica se un provider supporta il recupero all'indietro.|
 |[m_bCanScrollBack](#bcanscrollback)|Indica se a un provider è possibile far scorrere il cursore all'indietro.|
@@ -157,7 +158,7 @@ Unità di archiviazione per tutti gli handle di riga utilizzati dal provider.
 |[m_iRowset](#irowset)|Indice del set di righe che rappresenta il cursore.|
 |[m_rgRowHandles](#rgrowhandles)|Elenco di handle di riga.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) è l'interfaccia del set di righe di base.
 
@@ -201,7 +202,7 @@ Un riferimento passato all'utente che indica il numero di righe create.
 *rgRows*<br/>
 Matrice di oggetti `HROW` restituiti al chiamante con gli handle di riga appena creati.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se la riga esiste, questo metodo chiama [AddRefRows](#addrefrows) e restituisce. In caso contrario, alloca una nuova istanza della variabile di modello RowClass e la aggiunge a [m_rgRowHandles](#rgrowhandles).
 
@@ -227,7 +228,7 @@ Alcuni parametri corrispondono ai parametri di *riferimento di OLE DB Programmer
 |--------------------------------|------------------------------------------------|
 |*pDstData*|*pData*|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Consente inoltre di gestire la conversione dei dati utilizzando la DLL di conversione dei dati OLE DB.
 
@@ -340,7 +341,7 @@ STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
 
 Vedere [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La posizione del set di righe non è definita finché non `GetNextRow` viene chiamato il metodo. È possibile spostarsi all'indietro in un rowet chiamando `RestartPosition` e quindi recuperando o scorrendo all'indietro.
 
@@ -371,7 +372,7 @@ Colonna per cui viene impostato lo stato.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il provider esegue l'override di questa funzione per fornire un'elaborazione speciale per DBSTATUS_S_ISNULL e DBSTATUS_S_DEFAULT.
 
@@ -441,7 +442,7 @@ MapClass m_rgRowHandles;
 
 Gli handle di riga vengono rimossi chiamando `ReleaseRows` . Vedere [Panoramica di IRowsetImpl](../../data/oledb/irowsetimpl-class.md) per la definizione di *MapClass*.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura del modello di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: controlli ActiveX MFC: uso di tipi di carattere'
 title: 'Controlli ActiveX MFC: utilizzo dei tipi di carattere'
 ms.date: 11/19/2018
 f1_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 02c52d2544afdc9d13fc3ec67ad9eed757a3f277
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5f0c495ee92dbcfcb27627628f3bcf92982f719f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499695"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206006"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Controlli ActiveX MFC: utilizzo dei tipi di carattere
 
@@ -233,7 +234,7 @@ I `AddRef` `Release` metodi e nell' `IPropertyNotifySink` interfaccia tengono tr
 
 Dopo aver apportato queste modifiche al progetto, ricompilare il progetto e usare test container per testare l'interfaccia. Per informazioni su come accedere al Test Container, vedere [Test di proprietà ed eventi con Test Container](testing-properties-and-events-with-test-container.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli ActiveX MFC](mfc-activex-controls.md)<br/>
 [Controlli ActiveX MFC: utilizzo di immagini in un controllo ActiveX](mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
