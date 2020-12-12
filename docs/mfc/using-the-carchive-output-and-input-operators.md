@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso di CArchive &lt; &lt; e &gt; &gt; Operators'
 title: Uso di CArchive &lt; &lt; e &gt; &gt; Operators
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - CArchive class [MFC], storing and loading objects
 - CArchive class [MFC], operators
 ms.assetid: 56aef326-02dc-4992-8282-f0a4b78a064e
-ms.openlocfilehash: 0351cd0fad1d0fc838c75d3cdbd809a04b0fb393
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a3e6d65ac2ff024f779edb6d23a43f7331628c3b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832295"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314568"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>Uso di CArchive &lt; &lt; e &gt; &gt; Operators
 
@@ -76,6 +77,6 @@ Gli `CArchive` **`<<`** **`>>`** operatori e restituiscono sempre un riferimento
 
 [!code-cpp[NVC_MFCSerialization#11](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_5.cpp)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Serializzazione: serializzazione di un oggetto](../mfc/serialization-serializing-an-object.md)

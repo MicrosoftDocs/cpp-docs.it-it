@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: is_integral Class'
 title: Classe is_integral
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - is_integral class
 - is_integral
 ms.assetid: fe9279d0-4495-4e88-bf23-153cc6602397
-ms.openlocfilehash: a3d618b77d69f5d80736ac20304c9184c5963b25
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: db586054614b9a5ef49ffe9fe8b643b35c65a217
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217766"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323701"
 ---
 # <a name="is_integral-class"></a>Classe is_integral
 
@@ -30,7 +31,7 @@ struct is_integral;
 *Ty*\
 Tipo su cui eseguire una query.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un'istanza del predicato di tipo include true se il tipo *Ty* è uno dei tipi integrali o un `cv-qualified` form di uno dei tipi integrali; in caso contrario, include false.
 
@@ -74,7 +75,7 @@ is_integral<float> == false
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Classe is_enum](../standard-library/is-enum-class.md)\

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Struttura MutexTraits'
 title: MutexTraits (struttura)
 ms.date: 09/27/2018
 ms.topic: reference
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::MutexTraits structure
 - Microsoft::WRL::Wrappers::HandleTraits::MutexTraits::Unlock method
 ms.assetid: 6582df80-b9ba-4892-948f-d572a3b23d54
-ms.openlocfilehash: 6d4ba08ab1884e8584b0e98e931d2d63cdac5aec
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e3dfcee1251794734ed5cf787096361403d80c7f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371257"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330831"
 ---
 # <a name="mutextraits-structure"></a>MutexTraits (struttura)
 
-Definisce le caratteristiche comuni della classe [Mutex.](mutex-class.md)
+Definisce le caratteristiche comuni della classe [mutex](mutex-class.md) .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,13 +27,13 @@ Definisce le caratteristiche comuni della classe [Mutex.](mutex-class.md)
 struct MutexTraits : HANDLENullTraits;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-Nome                           | Descrizione
+Nome                           | Description
 ------------------------------ | ------------------------------------------------
-[MutexTraits::Sblocca](#unlock) | Rilascia il controllo esclusivo di una risorsa condivisa.
+[MutexTraits:: Unlock](#unlock) | Rilascia il controllo esclusivo di una risorsa condivisa.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -42,11 +43,11 @@ Nome                           | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** corewrappers.h
+**Intestazione:** corewrappers. h
 
-**Spazio dei nomi:** Microsoft::WRL::Wrappers::HandleTraits
+**Spazio dei nomi:** Microsoft:: WRL:: Wrappers:: HandleTraits
 
-## <a name="mutextraitsunlock-method"></a><a name="unlock"></a>Metodo MutexTraits::Unlock
+## <a name="mutextraitsunlock-method"></a><a name="unlock"></a> Metodo MutexTraits:: Unlock
 
 Rilascia il controllo esclusivo di una risorsa condivisa.
 
@@ -58,5 +59,5 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>Parametri
 
-*H*<br/>
-Handle a un oggetto mutex.
+*h*<br/>
+Handle per un oggetto mutex.

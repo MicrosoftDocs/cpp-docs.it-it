@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 2) C4412'
 title: Avviso del compilatore (livello 2) C4412
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
-ms.openlocfilehash: 79b4ac95fbac344ff86922b84870e01c6681ed69
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 9b7ce857d5b0545ac620e94bda9655dde0f63489
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684993"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97208632"
 ---
 # <a name="compiler-warning-level-2-c4412"></a>Avviso del compilatore (livello 2) C4412
 
 > '*Function*': la firma della funzione contiene il tipo '*Type*'; Gli oggetti C++ non sono sicuri per passare tra codice puro e misto o nativo.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'opzione del compilatore **/CLR: pure** è deprecata in visual studio 2015 e non è supportata in visual studio 2017. Se si dispone di codice che deve essere pure, è consigliabile portarlo in C#.
 
@@ -31,7 +32,7 @@ C4412 è disattivato per impostazione predefinita. Per ulteriori informazioni, v
 
 Per risolvere il problema, rimuovere tutte le funzioni dal tipo.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 L'esempio seguente genera l'C4412.
 

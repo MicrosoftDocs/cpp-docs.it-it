@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: funzione membro InitInstance'
 title: Funzione membro InitInstance
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - MFC, initializing
 - initializing MFC applications
 ms.assetid: 4ef09267-ff7f-4c39-91a0-57454a264f83
-ms.openlocfilehash: 0a458f19f956bb1092cc76acd587bc467f25325e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b55c5dbd665b45c74e5990b7d40a63fcd9098a9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625578"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220617"
 ---
 # <a name="initinstance-member-function"></a>Funzione membro InitInstance
 
-Il sistema operativo Windows consente di eseguire più di una copia, o "istanza", della stessa applicazione. `WinMain`chiama [InitInstance](reference/cwinapp-class.md#initinstance) ogni volta che viene avviata una nuova istanza dell'applicazione.
+Il sistema operativo Windows consente di eseguire più di una copia, o "istanza", della stessa applicazione. `WinMain` chiama [InitInstance](reference/cwinapp-class.md#initinstance) ogni volta che viene avviata una nuova istanza dell'applicazione.
 
 L' `InitInstance` implementazione standard creata mediante la creazione guidata applicazione MFC esegue le attività seguenti:
 
@@ -37,6 +38,6 @@ L' `InitInstance` implementazione standard creata mediante la creazione guidata 
 > [!NOTE]
 > Le applicazioni MFC devono essere inizializzate come Apartment a thread singolo (STA). Se si chiama [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) nell' `InitInstance` override, specificare COINIT_APARTMENTTHREADED (anziché COINIT_MULTITHREADED).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [CWinApp: classe Application](cwinapp-the-application-class.md)

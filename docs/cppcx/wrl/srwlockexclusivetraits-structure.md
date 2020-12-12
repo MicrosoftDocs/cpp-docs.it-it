@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: struttura SRWLockExclusiveTraits'
 title: SRWLockExclusiveTraits (Struttura)
 ms.date: 09/27/2018
 ms.topic: reference
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::GetInvalidValue method
 - Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::Unlock method
 ms.assetid: 38a996ef-c2d7-4886-b413-a426ecee8f05
-ms.openlocfilehash: eb7b30915d6061e8470601df33fecec310d1bbca
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 135d4f866d1ca32ee9170ef9844cb0bf8d38c29a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374304"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186207"
 ---
 # <a name="srwlockexclusivetraits-structure"></a>SRWLockExclusiveTraits (Struttura)
 
-Descrive le caratteristiche `SRWLock` comuni della classe in modalità di blocco esclusivo.
+Descrive le caratteristiche comuni della `SRWLock` classe in modalità di blocco esclusivo.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -28,20 +29,20 @@ Descrive le caratteristiche `SRWLock` comuni della classe in modalità di blocco
 struct SRWLockExclusiveTraits;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-Nome   | Descrizione
+Nome   | Description
 ------ | --------------------------------------------------------------------------
-`Type` | Sinonimo di puntatore alla classe [SRWLOCK.](srwlock-class.md)
+`Type` | Sinonimo di un puntatore alla classe [SRWLock](srwlock-class.md) .
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-Nome                                                        | Descrizione
+Nome                                                        | Description
 ----------------------------------------------------------- | --------------------------------------------------------------------
-[SRWLockExclusiveTraits::GetInvalidValue (Traitsesclusivi di SRWLockEsclusivOitsits::GetInvalidValue)](#getinvalidvalue) | Recupera un `SRWLockExclusiveTraits` oggetto che non è sempre valido.
-[SRWLockExclusiveTraits::Sblocca](#unlock)                   | Rilascia il controllo `SRWLock` esclusivo dell'oggetto specificato.
+[SRWLockExclusiveTraits:: GetInvalidValue](#getinvalidvalue) | Recupera un `SRWLockExclusiveTraits` oggetto che è sempre non valido.
+[SRWLockExclusiveTraits:: Unlock](#unlock)                   | Rilascia il controllo esclusivo dell' `SRWLock` oggetto specificato.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -49,13 +50,13 @@ Nome                                                        | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** corewrappers.h
+**Intestazione:** corewrappers. h
 
-**Spazio dei nomi:** Microsoft::WRL::Wrappers::HandleTraits
+**Spazio dei nomi:** Microsoft:: WRL:: Wrappers:: HandleTraits
 
-## <a name="srwlockexclusivetraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>SRWLockExclusiveTraits::GetInvalidValue (Traitsesclusivi di SRWLockEsclusivOitsits::GetInvalidValue)
+## <a name="srwlockexclusivetraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a> SRWLockExclusiveTraits:: GetInvalidValue
 
-Recupera un `SRWLockExclusiveTraits` oggetto che non è sempre valido.
+Recupera un `SRWLockExclusiveTraits` oggetto che è sempre non valido.
 
 ```cpp
 inline static Type GetInvalidValue();
@@ -65,9 +66,9 @@ inline static Type GetInvalidValue();
 
 Oggetto `SRWLockExclusiveTraits` vuoto.
 
-## <a name="srwlockexclusivetraitsunlock"></a><a name="unlock"></a>SRWLockExclusiveTraits::Sblocca
+## <a name="srwlockexclusivetraitsunlock"></a><a name="unlock"></a> SRWLockExclusiveTraits:: Unlock
 
-Rilascia il controllo `SRWLock` esclusivo dell'oggetto specificato.
+Rilascia il controllo esclusivo dell' `SRWLock` oggetto specificato.
 
 ```cpp
 inline static void Unlock(
@@ -77,5 +78,5 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>Parametri
 
-*srwlock*<br/>
-Handle a `SRWLock` un oggetto.
+*SRWLock*<br/>
+Handle per un `SRWLock` oggetto.

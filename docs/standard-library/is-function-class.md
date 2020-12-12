@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: is_function Class'
 title: Classe is_function
 ms.date: 02/21/2019
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_function class
 - is_function
 ms.assetid: e5c0dbcd-829b-415f-853f-8c5be47c5040
-ms.openlocfilehash: 6e436d205c7569aeac7b9dc65b122f3fe289f334
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f28f634648d23eb73a1400f662ce9e23c05aaf38
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456264"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323714"
 ---
-# <a name="isfunction-class"></a>Classe is_function
+# <a name="is_function-class"></a>Classe is_function
 
 Verifica se il tipo è un tipo di funzione.
 
@@ -30,7 +31,7 @@ struct is_function;
 *Ty*\
 Tipo su cui eseguire una query.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Un'istanza del predicato di tipo include true se il tipo *Ty* è un tipo di funzione; in caso contrario, include false.
 
@@ -73,11 +74,11 @@ is_function<float()> == true
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Classe is_object](../standard-library/is-object-class.md)

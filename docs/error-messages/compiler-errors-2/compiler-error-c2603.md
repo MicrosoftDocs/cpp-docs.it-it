@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2603'
 title: Errore del compilatore C2603
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2603
 ms.assetid: 9ca520d0-f082-4b65-933d-17c3bcf8b02c
-ms.openlocfilehash: e4540180058c890a1dec9c4060f796f1f044c934
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e28ea581c4c1417972cddc0ce558bd518acb8889
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447989"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97208788"
 ---
 # <a name="compiler-error-c2603"></a>Errore del compilatore C2603
 
-> «*funzione*': Troppi oggetti statici in ambito blocco con costruttore/o distruttori nella funzione
+> '*Function*': troppi oggetti statici con ambito blocco con costruttori/distruttori nella funzione
 
-Nelle versioni di Microsoft C++ compilatore prima di Visual Studio 2015, o quando il [/Zc:threadSafeInit-](../../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) viene specificata l'opzione del compilatore, è previsto un limite pari a 31, sul numero di oggetti statici è possibile avere in visibile esternamente funzione inline.
+Nelle versioni del compilatore Microsoft C++ precedenti a Visual Studio 2015 o quando si specifica l'opzione [/Zc: threadSafeInit-](../../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) Compiler, esiste un limite di 31 per il numero di oggetti statici che è possibile avere in una funzione inline visibile esternamente.
 
-Per risolvere questo problema, è consigliabile adottare la versione più recente di Microsoft C++ set di strumenti del compilatore, o, se possibile, rimuovere l'opzione del compilatore /Zc:threadSafeInit-. Se questo non è possibile, provare a usare gli oggetti statici. Se gli oggetti sono dello stesso tipo, provare a usare una singola matrice statica di quel tipo e fare riferimento a singoli membri in base alle esigenze.
+Per risolvere questo problema, è consigliabile adottare la versione più recente del set di strumenti del compilatore Microsoft C++ o, se possibile, rimuovere l'opzione/Zc: threadSafeInit-Compiler. Se ciò non è possibile, provare a combinare gli oggetti statici. Se gli oggetti sono dello stesso tipo, prendere in considerazione l'uso di una singola matrice statica di quel tipo e fare riferimento a singoli membri come richiesto.
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente genera l'errore C2603 e viene illustrato un modo per risolvere il problema:
+Il codice seguente genera C2603 e Mostra un modo per risolverlo:
 
 ```cpp
 // C2603.cpp

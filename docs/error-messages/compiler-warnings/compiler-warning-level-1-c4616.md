@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 1) C4616'
 title: Avviso del compilatore (livello 1) C4616
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4616
 ms.assetid: 71e15265-c5bc-42ce-a6a9-4879892472b1
-ms.openlocfilehash: fd36d0cdbcaaeca4f84ce85aa80f3bb1fba616a0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 55ddc805c12cdc33947ca1f76c744610a5650497
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185906"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97208697"
 ---
 # <a name="compiler-warning-level-1-c4616"></a>Avviso del compilatore (livello 1) C4616
 
-avviso \#pragma: il numero di avviso ' numerò non è un avviso del compilatore valido
+\#avviso pragma: il numero di avviso ' Number ' non è un avviso del compilatore valido
 
 Il numero di avviso specificato nel pragma [warning](../../preprocessor/warning.md) non può essere riassegnato. Il pragma è stato ignorato.
 

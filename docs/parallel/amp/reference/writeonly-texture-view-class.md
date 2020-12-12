@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: writeonly_texture_view Class'
 title: Classe writeonly_texture_view
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::writeonly_texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::rank Constant
 ms.assetid: 8d117ad3-0a1c-41ae-b29c-7c95fdd4d04d
-ms.openlocfilehash: 8978a548ed246c59d7e7f007f1180685c7343a14
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 17e9ed49c5fb3c976343d8c3ad8690d7f41b166d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126240"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314518"
 ---
 # <a name="writeonly_texture_view-class"></a>Classe writeonly_texture_view
 
@@ -43,39 +44,39 @@ Tipo degli elementi nella trama.
 *_Rank*<br/>
 Rango della trama.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`scalar_type`||
 |`value_type`|Tipo degli elementi nella trama.|
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Costruttore writeonly_texture_view](#ctor)|Inizializza una nuova istanza della classe `writeonly_texture_view`.|
-|[Distruttore ~ writeonly_texture_view](#ctor)|Elimina definitivamente l'oggetto `writeonly_texture_view`.|
+|[Distruttore ~ writeonly_texture_view](#ctor)|Elimina definitivamente l' `writeonly_texture_view` oggetto.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[set](#set)|Imposta il valore dell'elemento in corrispondenza dell'indice specificato.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[operator=](#operator_eq)|Copia l'oggetto `writeonly_texture_view` specificato in questo oggetto.|
+|[operatore =](#operator_eq)|Copia l' `writeonly_texture_view` oggetto specificato in questo oggetto.|
 
 ### <a name="public-constants"></a>Costanti pubbliche
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[Costante di rango](#rank)|Ottiene il rango dell'oggetto `writeonly_texture_view`.|
+|[Costante di rango](#rank)|Ottiene il rango dell' `writeonly_texture_view` oggetto.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -89,17 +90,17 @@ Rango della trama.
 
 **Spazio dei nomi:** Concurrency:: graphics
 
-## <a name="dtor"></a>~ writeonly_texture_view
+## <a name="writeonly_texture_view"></a><a name="dtor"></a> ~ writeonly_texture_view
 
-Elimina definitivamente l'oggetto `writeonly_texture_view`.
+Elimina definitivamente l' `writeonly_texture_view` oggetto.
 
 ```cpp
 ~writeonly_texture_view() restrict(amp,cpu);
 ```
 
-## <a name="operator_eq"></a>operatore =
+## <a name="operator"></a><a name="operator_eq"></a> operatore =
 
-Copia l'oggetto `writeonly_texture_view` specificato in questo oggetto.
+Copia l' `writeonly_texture_view` oggetto specificato in questo oggetto.
 
 ```cpp
 writeonly_texture_view<value_type, _Rank>& operator= (
@@ -113,17 +114,17 @@ writeonly_texture_view<value_type, _Rank>& operator= (
 
 ### <a name="return-value"></a>Valore restituito
 
-Riferimento a questo oggetto `writeonly_texture_view`.
+Riferimento a questo `writeonly_texture_view` oggetto.
 
-## <a name="rank"></a>Rank
+## <a name="rank"></a><a name="rank"></a> Rank
 
-Ottiene il rango dell'oggetto `writeonly_texture_view`.
+Ottiene il rango dell' `writeonly_texture_view` oggetto.
 
 ```cpp
 static const int rank = _Rank;
 ```
 
-## <a name="set"></a>set
+## <a name="set"></a><a name="set"></a> set
 
 Imposta il valore dell'elemento in corrispondenza dell'indice specificato.
 
@@ -141,7 +142,7 @@ Indice dell'elemento.
 *value*<br/>
 Nuovo valore dell'elemento.
 
-## <a name="ctor"></a>writeonly_texture_view
+## <a name="writeonly_texture_view"></a><a name="ctor"></a> writeonly_texture_view
 
 Inizializza una nuova istanza della classe `writeonly_texture_view`.
 
@@ -164,8 +165,8 @@ Rango della trama.
 Tipo degli elementi nella trama.
 
 *_Src*<br/>
-Trama utilizzata per creare la `writeonly_texture_view`.
+Trama utilizzata per creare l'oggetto `writeonly_texture_view` .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)

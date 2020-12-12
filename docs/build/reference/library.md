@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: libreria'
 title: LIBRARY
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - LIBRARY .def file statement
 ms.assetid: 1d7ccc92-e088-4ef7-9ef0-25c3862cc051
-ms.openlocfilehash: b43f269726e8925abeefd41aab0edfd57b071035
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d8c63f323568949cf2fb30935d2557755346422
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291093"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199532"
 ---
 # <a name="library"></a>LIBRARY
 
-Indica a LINK per creare una DLL. Allo stesso tempo, verrà creata una libreria di importazione, a meno che non viene usato un file. exp nella compilazione.
+Indica al collegamento di creare una DLL. Allo stesso tempo, collegamento crea una libreria di importazione, a meno che non venga usato un file exp nella compilazione.
 
 ```
 LIBRARY [library][BASE=address]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Il *libreria* argomento specifica il nome della DLL. È anche possibile usare la [/out](out-output-file-name.md) l'opzione del linker per specificare il nome della DLL output.
+L'argomento *Library* specifica il nome della dll. È anche possibile usare l'opzione [/out](out-output-file-name.md) del linker per specificare il nome di output della dll.
 
-La BASE =*indirizzo* argomento consente di impostare l'indirizzo di base che usa il sistema operativo per caricare la DLL. Questo argomento sovrascrive la posizione predefinita della 0x10000000 DLL. Vedere la descrizione della [/base](base-base-address.md) opzione per informazioni dettagliate sugli indirizzi di base.
+L'argomento BASE =*Address* imposta l'indirizzo di base utilizzato dal sistema operativo per caricare la dll. Questo argomento sostituisce il percorso predefinito della DLL di 0x10000000. Per informazioni dettagliate sugli indirizzi di base, vedere la descrizione dell'opzione [/base](base-base-address.md) .
 
-Ricordarsi di usare la [/DLL](dll-build-a-dll.md) l'opzione del linker quando si compila una DLL.
+Ricordarsi di usare l'opzione del linker [/dll](dll-build-a-dll.md) quando si compila una dll.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Regole relative alle istruzioni di definizione dei moduli](rules-for-module-definition-statements.md)
+[Regole per Module-Definition istruzioni](rules-for-module-definition-statements.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _BitScanReverse, _BitScanReverse64'
 title: _BitScanReverse, _BitScanReverse64
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - _BitScanReverse intrinsic
 - BitScanReverse intrinsic
 ms.assetid: 2520a207-af8b-4aad-9ae7-831abeadf376
-ms.openlocfilehash: 848c153967e5581f08f1d499a28ab282ee2602df
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 1a535dcc95f9fbf791de3ecd2c2d54eddcc0399c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216949"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337213"
 ---
 # <a name="_bitscanreverse-_bitscanreverse64"></a>_BitScanReverse, _BitScanReverse64
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Cercare un bit impostato (1) nei dati di maschera dal bit più significativo (MSB) al bit meno significativo (LSB).
 
@@ -51,7 +52,7 @@ Diverso da zero se `Index` è stato impostato oppure 0 se non vengono trovati bi
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|Intestazione|
+|Intrinsic|Architettura|Intestazione|
 |---------------|------------------|------------|
 |`_BitScanReverse`|x86, ARM, x64, ARM64|\<intrin.h>|
 |`_BitScanReverse64`|ARM64, x64|\<intrin.h>|
@@ -96,8 +97,8 @@ Enter a positive integer as the mask:
 Mask: 12 Index: 3
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

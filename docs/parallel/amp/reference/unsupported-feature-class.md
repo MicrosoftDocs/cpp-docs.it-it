@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: unsupported_feature Class'
 title: Classe unsupported_feature
 ms.date: 03/27/2019
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsupported_feature class
 ms.assetid: 6b1ab917-df13-48c7-9648-7cb2465a0ff5
-ms.openlocfilehash: 561f0a258943f6d7e1c0f1b5cae716592c931fbc
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 22cbc193de2a42e76ead4097d1e39351693ef706
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127712"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314503"
 ---
 # <a name="unsupported_feature-class"></a>Classe unsupported_feature
 
@@ -29,9 +30,9 @@ class unsupported_feature : public runtime_exception;
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[Costruttore unsupported_feature](#unsupported_feature)|Costruisce una nuova istanza dell'eccezione `unsupported_feature`.|
+|[Costruttore unsupported_feature](#unsupported_feature)|Costruisce una nuova istanza dell' `unsupported_feature` eccezione.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -41,9 +42,9 @@ class unsupported_feature : public runtime_exception;
 
 `unsupported_feature`
 
-## <a name="unsupported_feature"></a>unsupported_feature
+## <a name="unsupported_feature"></a><a name="unsupported_feature"></a> unsupported_feature
 
-  Costruisce una nuova istanza dell'eccezione `unsupported_feature`.
+  Costruisce una nuova istanza dell' `unsupported_feature` eccezione.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -67,8 +68,8 @@ Oggetto `unsupported_feature`.
 
 **Intestazione:** amprt. h
 
-**Spazio dei nomi:** Concurrency
+**Spazio dei nomi:** Concorrenza
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

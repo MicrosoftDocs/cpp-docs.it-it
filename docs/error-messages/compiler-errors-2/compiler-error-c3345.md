@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3345'
 title: Errore del compilatore C3345
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3345
 ms.assetid: 1dda4c79-73bb-441b-b939-746154c3afba
-ms.openlocfilehash: 8682069fdf719f4e85d1d6f5107de1903e3ae071
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3e9fba1d24219d8ae3a0dee8488d36dc53557f09
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504847"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337273"
 ---
 # <a name="compiler-error-c3345"></a>Errore del compilatore C3345
 
@@ -52,7 +53,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 };
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [__iscsym](../../c-runtime-library/reference/iscsym-functions.md)<br/>
 [Classificazione caratteri](../../c-runtime-library/character-classification.md)<br/>

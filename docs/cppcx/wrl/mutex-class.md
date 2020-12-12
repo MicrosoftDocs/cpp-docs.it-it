@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: mutex Class'
 title: Classe Mutex
 ms.date: 10/03/2018
 ms.topic: reference
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Mutex::Mutex, constructor
 - Microsoft::WRL::Wrappers::Mutex::operator= operator
 ms.assetid: 682a0963-721c-46a2-8871-000e9997505b
-ms.openlocfilehash: 36466bd00c5b100f20ee87173e68fdef4131ec23
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f69c14014a2283fe56ef8e7f705bebe5a5f6dc9d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371225"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330835"
 ---
 # <a name="mutex-class"></a>Classe Mutex
 
@@ -30,31 +31,31 @@ Rappresenta un oggetto di sincronizzazione che controlla in modo esclusivo una r
 class Mutex : public HandleT<HandleTraits::MutexTraits>;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-Nome       | Descrizione
+Nome       | Description
 ---------- | ------------------------------------------------------
 `SyncLock` | Sinonimo di una classe che supporta blocchi sincroni.
 
 ### <a name="public-constructor"></a>Costruttore pubblico
 
-Nome                   | Descrizione
+Nome                   | Description
 ---------------------- | ------------------------------------------------
-[Mutex::Mutex](#mutex) | Inizializza una nuova istanza della classe `Mutex`.
+[Mutex:: mutex](#mutex) | Inizializza una nuova istanza della classe `Mutex`.
 
 ### <a name="public-members"></a>Membri pubblici
 
-Nome                 | Descrizione
+Nome                 | Description
 -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Mutex::Blocco](#lock) | Attende che l'oggetto `Mutex` corrente o l'oggetto associato all'handle specificato rilasci il mutex o che sia trascorso l'intervallo di timeout specificato.
+[Mutex:: Lock](#lock) | Attende che l'oggetto corrente o l' `Mutex` oggetto associato all'handle specificato rilasci il mutex o che l'intervallo di timeout specificato sia scaduto.
 
 ### <a name="public-operator"></a>Operatore pubblico
 
-Nome                                 | Descrizione
+Nome                                 | Description
 ------------------------------------ | ---------------------------------------------------------------------------
-[Mutex::operatore](#operator-assign) | Assegna (sposta) l'oggetto `Mutex` specificato `Mutex` all'oggetto corrente.
+[Mutex:: operator =](#operator-assign) | Assegna (sposta) l'oggetto specificato `Mutex` all' `Mutex` oggetto corrente.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -62,13 +63,13 @@ Nome                                 | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** corewrappers.h
+**Intestazione:** corewrappers. h
 
-**Spazio dei nomi:** Microsoft::WRL::Wrappers
+**Spazio dei nomi:** Microsoft:: WRL:: Wrappers
 
-## <a name="mutexlock"></a><a name="lock"></a>Mutex::Blocco
+## <a name="mutexlock"></a><a name="lock"></a> Mutex:: Lock
 
-Attende che l'oggetto `Mutex` corrente o l'oggetto associato all'handle specificato rilasci il mutex o che sia trascorso l'intervallo di timeout specificato.
+Attende che l'oggetto corrente o l' `Mutex` oggetto associato all'handle specificato rilasci il mutex o che l'intervallo di timeout specificato sia scaduto.
 
 ```cpp
 SyncLock Lock(
@@ -83,15 +84,15 @@ static SyncLock Lock(
 
 ### <a name="parameters"></a>Parametri
 
-*Millisecondi*<br/>
-Intervallo di timeout, in millisecondi. Il valore predefinito è INFINITE, che attende all'infinito.
+*milliseconds*<br/>
+Intervallo di timeout, in millisecondi. Il valore predefinito è infinito, che attende per un periodo illimitato.
 
-*H*<br/>
-Handle di `Mutex` un oggetto.
+*h*<br/>
+Handle di un `Mutex` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
-## <a name="mutexmutex"></a><a name="mutex"></a>Mutex::Mutex
+## <a name="mutexmutex"></a><a name="mutex"></a> Mutex:: mutex
 
 Inizializza una nuova istanza della classe `Mutex`.
 
@@ -107,16 +108,16 @@ Mutex(
 
 ### <a name="parameters"></a>Parametri
 
-*H*<br/>
-Un handle o un rvalue-reference a `Mutex` un handle, a un oggetto.
+*h*<br/>
+Un handle o un riferimento rvalue a un handle a un `Mutex` oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Il primo costruttore `Mutex` inizializza un oggetto dall'handle specificato. Il secondo costruttore `Mutex` inizializza un oggetto dall'handle specificato e quindi `Mutex` sposta la proprietà del mutex sull'oggetto corrente.
+Il primo costruttore inizializza un `Mutex` oggetto dall'handle specificato. Il secondo costruttore inizializza un `Mutex` oggetto dall'handle specificato e quindi sposta la proprietà del mutex nell' `Mutex` oggetto corrente.
 
-## <a name="mutexoperator"></a><a name="operator-assign"></a>Mutex::operatore
+## <a name="mutexoperator"></a><a name="operator-assign"></a> Mutex:: operator =
 
-Assegna (sposta) l'oggetto `Mutex` specificato `Mutex` all'oggetto corrente.
+Assegna (sposta) l'oggetto specificato `Mutex` all' `Mutex` oggetto corrente.
 
 ```cpp
 Mutex& operator=(
@@ -126,13 +127,13 @@ Mutex& operator=(
 
 ### <a name="parameters"></a>Parametri
 
-*H*<br/>
-Riferimento rvalue a `Mutex` un oggetto.
+*h*<br/>
+Un riferimento rvalue a un `Mutex` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
-Riferimento all'oggetto `Mutex` corrente.
+Riferimento all' `Mutex` oggetto corrente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Per ulteriori informazioni, vedere la sezione **Move Semantics** di Dichiaratore di riferimento [Rvalue: &&](../../cpp/rvalue-reference-declarator-amp-amp.md).
+Per ulteriori informazioni, vedere la sezione relativa alla **semantica di spostamento** del [dichiaratore di riferimento rvalue:  &&](../../cpp/rvalue-reference-declarator-amp-amp.md).

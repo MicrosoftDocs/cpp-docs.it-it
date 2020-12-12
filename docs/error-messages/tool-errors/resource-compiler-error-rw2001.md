@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore di risorse risorse RW2001'
 title: Errore del compilatore di risorse RW2001
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - RW2001
 ms.assetid: 963bdc7d-6ebe-4378-8bbc-47dfcf5d330c
-ms.openlocfilehash: 900bfed9d57af0f6f5dd8fac19380bb7c382addc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e550854af4d504e484b722050f0274887956f2c6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190742"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337251"
 ---
 # <a name="resource-compiler-error-rw2001"></a>Errore del compilatore di risorse RW2001
 

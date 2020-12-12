@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: Estrai funzione'
 title: Estrai funzione
 ms.date: 11/16/2016
 ms.assetid: e31d1249-9705-4511-acbd-9f6fe73bdf2d
-ms.openlocfilehash: ec3b9a0aeaef9e418b457bafdfb9bb1bbd2edffc
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
-ms.translationtype: HT
+ms.openlocfilehash: 4ae5e858c658d14e72db8740232b74935c655292
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692320"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259760"
 ---
 # <a name="extract-function"></a>Estrai funzione
 
@@ -17,7 +18,7 @@ ms.locfileid: "51692320"
 
 **Perché:** è possibile copiare e incollare il codice, ma ciò potrebbe causare la duplicazione.  Una soluzione migliore consiste nell'effettuare il refactoring del frammento nella relativa funzione, che può essere chiamato liberamente da qualsiasi altra funzione.
 
-**Come:**
+**Come**
 
 1. Evidenziare il codice da estrarre:
 
@@ -26,7 +27,7 @@ ms.locfileid: "51692320"
 1. Eseguire quindi una delle operazioni seguenti:
    * **Tastiera**
      * Premere **CTRL+R** e quindi **CTRL+M**.  Si noti che i tasti di scelta rapida possono essere diversi a seconda del profilo selezionato.
-     * Premere **CTRL+.** per attivare il menu **Azioni rapide e refactoring** e selezionare **Estrai funzione (sperimentale)** dal menu di scelta rapida.
+     * Premere **CTRL +.** per attivare il menu **Azioni rapide e refactoring** e selezionare **Estrai funzione (sperimentale)** dal menu di scelta rapida.
    * **Mouse**
      * Selezionare **Modifica > Effettua refactoring > Estrai funzione (sperimentale)**.
      * Fare clic con il pulsante destro sul codice, selezionare il menu **Azioni rapide e refactoring** e selezionare **Estrai funzione (sperimentale)** dal menu di scelta rapida.

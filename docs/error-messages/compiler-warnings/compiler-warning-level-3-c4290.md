@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 3) C4290'
 title: Avviso del compilatore (livello 3) C4290
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4290
 ms.assetid: d1c6d85b-28e0-4a1f-9d48-23593337a6fb
-ms.openlocfilehash: 5970aa439a450bda4c1a2036da299d5c3cfbdb7a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 771eb01c23778a716aee22ca747ea6473909a8bc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198900"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344068"
 ---
 # <a name="compiler-warning-level-3-c4290"></a>Avviso del compilatore (livello 3) C4290
 
-C++la specifica dell'eccezione è stata ignorata, tranne per indicare che una funzione non è __declspec (nothrow)
+La specifica dell'eccezione C++ è stata ignorata, tranne per indicare che una funzione non è __declspec (nothrow)
 
-Una funzione viene dichiarata utilizzando la specifica di C++ eccezione, che l'oggetto visivo accetta ma non implementa. Il codice con specifiche di eccezione che viene ignorato durante la compilazione potrebbe dover essere ricompilato e collegato per essere riutilizzato nelle versioni future che supportano le specifiche di eccezione.
+Una funzione viene dichiarata utilizzando la specifica di eccezione, che Visual C++ accetta ma non implementa. Il codice con specifiche di eccezione che viene ignorato durante la compilazione potrebbe dover essere ricompilato e collegato per essere riutilizzato nelle versioni future che supportano le specifiche di eccezione.
 
 Per ulteriori informazioni, vedere [specifiche di eccezione (throw)](../../cpp/exception-specifications-throw-cpp.md) .
 

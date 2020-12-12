@@ -1,17 +1,18 @@
 ---
+description: 'Altre informazioni su: default::(type_name):: GetHashCode Method'
 title: Metodo default::(type_name)::GetHashCode
 ms.date: 12/30/2016
 ms.assetid: 58ea60f8-f820-4103-9b9b-b6635ada3fa5
-ms.openlocfilehash: 9f64607ab21cd0fd5deccbd16f3f69f96e4d245b
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 9a014b3e3ee0690c8eab384c3b04fb3928c5a0a0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444308"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330862"
 ---
 # <a name="defaulttype_namegethashcode-method"></a>Metodo default::(type_name)::GetHashCode
 
-Restituisce il codice hash relativo a questa istanza.
+Restituisce il codice hash per l'istanza.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -33,6 +34,6 @@ Codice hash per l'istanza.
 
 **Intestazione:** vccorlib.h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi predefinito](../cppcx/default-namespace.md)
+[spazio dei nomi predefinito](../cppcx/default-namespace.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: uso degli oggetti Accelerator e accelerator_view'
 title: Utilizzo degli oggetti accelerator e accelerator_view
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-ms.openlocfilehash: 7807f0c1c572b2e7c3224cf0366233e2a28dbe07
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 270b517764b8060efbaea9d00c20e24aa1746818
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215894"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314490"
 ---
 # <a name="using-accelerator-and-accelerator_view-objects"></a>Utilizzo degli oggetti accelerator e accelerator_view
 
@@ -94,7 +95,7 @@ void pick_with_most_memory()
 
 ## <a name="shared-memory"></a>Shared Memory
 
-La memoria condivisa è la memoria a cui è possibile accedere sia dalla CPU che dal tasto di scelta rapida. L'utilizzo della memoria condivisa Elimina o riduce significativamente il sovraccarico della copia dei dati tra la CPU e l'acceleratore. Sebbene la memoria sia condivisa, non è possibile accedervi contemporaneamente sia dalla CPU che dal tasto di scelta rapida. questa operazione causa un comportamento non definito. La proprietà Accelerator [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) restituisce **`true`** se il tasto di scelta rapida supporta la memoria condivisa e la proprietà [default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type) ottiene la [access_type](reference/concurrency-namespace-enums-amp.md#access_type) predefinita per la memoria allocata in `accelerator` , ad esempio, la **matrice**associata all'oggetto `accelerator` o `array_view` gli oggetti a cui si accede in `accelerator` .
+La memoria condivisa è la memoria a cui è possibile accedere sia dalla CPU che dal tasto di scelta rapida. L'utilizzo della memoria condivisa Elimina o riduce significativamente il sovraccarico della copia dei dati tra la CPU e l'acceleratore. Sebbene la memoria sia condivisa, non è possibile accedervi contemporaneamente sia dalla CPU che dal tasto di scelta rapida. questa operazione causa un comportamento non definito. La proprietà Accelerator [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) restituisce **`true`** se il tasto di scelta rapida supporta la memoria condivisa e la proprietà [default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type) ottiene la [access_type](reference/concurrency-namespace-enums-amp.md#access_type) predefinita per la memoria allocata in `accelerator` , ad esempio, la **matrice** associata all'oggetto `accelerator` o `array_view` gli oggetti a cui si accede in `accelerator` .
 
 Il runtime di C++ AMP sceglie automaticamente il valore predefinito migliore `access_type` per ogni `accelerator` , ma le caratteristiche di prestazioni (larghezza di banda e latenza) della memoria condivisa possono essere inferiori rispetto a quelle della memoria dell'acceleratore dedicata (non condivisa) durante la lettura dalla CPU, la scrittura dalla CPU o entrambe. Se la memoria condivisa viene eseguita oltre alla memoria dedicata per la lettura e la scrittura dalla CPU, l'impostazione predefinita del runtime `access_type_read_write` è. in caso contrario, il runtime sceglie un valore predefinito più conservativo `access_type` e consente all'app di eseguirne l'override se i modelli di accesso alla memoria dei propri kernel di calcolo traggono vantaggio da un diverso `access_type` .
 
@@ -178,7 +179,7 @@ I percorsi dei dispositivi di tre acceleratori speciali sono disponibili come pr
 
 Il runtime di C++ AMP supporta l'interoperabilità tra la `accelerator_view` classe e l' [interfaccia ID3D11Device](/windows/win32/api/d3d11/nn-d3d11-id3d11device)di Direct3D. Il metodo [create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) accetta un' `IUnknown` interfaccia e restituisce un `accelerator_view` oggetto. Il metodo [get_device](reference/concurrency-direct3d-namespace-functions-amp.md#get_device) accetta un `accelerator_view` oggetto e restituisce un' `IUnknown` interfaccia.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Debug del codice GPU](/visualstudio/debugger/debugging-gpu-code)<br/>

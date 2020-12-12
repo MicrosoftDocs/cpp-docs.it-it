@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: is_literal_type Class'
 title: Classe is_literal_type
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_literal_type
 ms.assetid: a03a4ebb-ee66-48d6-91bb-41cf72b2401f
-ms.openlocfilehash: d5b750755f2499c89e91e497ed03244a11484871
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 97cb609c5a42bed0be205b1b51ff901d3e366bb1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212254"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323686"
 ---
 # <a name="is_literal_type-class"></a>Classe is_literal_type
 
@@ -29,7 +30,7 @@ struct is_literal_type;
 *T*\
 Tipo su cui eseguire una query.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un'istanza del predicato di tipo include true se il tipo *T* è un *tipo letterale*; in caso contrario, include false. Un tipo di valore letterale può essere **`void`** , un tipo scalare, un tipo di riferimento, una matrice di tipo letterale o un tipo di classe letterale. Un tipo di classe letterale è un tipo di classe con un distruttore semplice, è un tipo di aggregazione o dispone di almeno un costruttore di non spostamento, non di copia **`constexpr`** , e tutte le relative classi di base e i membri dati non statici sono tipi letterali non volatili. Sebbene il tipo di un valore letterale sia sempre un tipo letterale, il concetto di tipo letterale include qualsiasi elemento che il compilatore può valutare come in fase di **`constexpr`** compilazione.
 
@@ -39,6 +40,6 @@ Un'istanza del predicato di tipo include true se il tipo *T* è un *tipo lettera
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)

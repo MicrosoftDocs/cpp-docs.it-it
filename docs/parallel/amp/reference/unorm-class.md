@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe unorm'
 title: Classe unorm
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - AMP_SHORT_VECTORS/unorm
 - AMP_SHORT_VECTORS/Concurrency::graphics::unorm Constructor
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
-ms.openlocfilehash: 7c9ec967be8be618e5f8ab3bad1bfd940bfeaef4
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 947660d046ea41025e70aa4e6521e3c8f34c0a94
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126305"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314527"
 ---
 # <a name="unorm-class"></a>Classe unorm
 
@@ -27,22 +28,22 @@ class unorm;
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Costruttore unorm](#ctor)|Di overload. Costruttore predefinito. Inizializzare su 0,0 f.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|unorm::operator--||
+|Operatore unorm:: operator--||
 |unorm:: operator float|Operatore di conversione. Converte il numero unorm in un valore a virgola mobile.|
-|unorm::operator*=||
-|unorm::operator/=||
+|unorm:: operator * =||
+|unorm:: operator/=||
 |unorm:: operator + +||
-|unorm::operator+=||
-|unorm::operator=||
-|unorm::operator-=||
+|unorm:: operator + =||
+|unorm:: operator =||
+|unorm:: operator-=||
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -54,7 +55,7 @@ class unorm;
 
 **Spazio dei nomi:** Concurrency:: graphics
 
-## <a name="ctor"></a>unorm
+## <a name="unorm"></a><a name="ctor"></a> unorm
 
 Costruttore predefinito. Inizializzare su 0,0 f.
 
@@ -96,6 +97,6 @@ Valore utilizzato per inizializzare.
 *_Other*<br/>
 Oggetto norm utilizzato per inizializzare.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)

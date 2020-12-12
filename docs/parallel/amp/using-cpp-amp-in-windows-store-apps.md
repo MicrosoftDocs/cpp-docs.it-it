@@ -1,23 +1,24 @@
 ---
-title: Uso di C++ AMP nelle App UWP
+description: 'Altre informazioni su: uso di C++ AMP nelle app UWP'
+title: Uso di C++ AMP nelle app UWP
 ms.date: 11/04/2016
 ms.assetid: 85577298-2c28-4209-9470-eb21048615db
-ms.openlocfilehash: 31fede0a2419e56d53cb16521b08067dac5facc6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91c7b147ff89a1fe19ebe1b18e465533053542d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405352"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314477"
 ---
-# <a name="using-c-amp-in-uwp-apps"></a>Uso di C++ AMP nelle App UWP
+# <a name="using-c-amp-in-uwp-apps"></a>Uso di C++ AMP nelle app UWP
 
-È possibile utilizzare C++ AMP (C++ Accelerated Massive Parallelism) nell'app per la Universal Windows Platform (UWP) per eseguire calcoli su GPU (Graphics Processing Unit) o altri acceleratori computazionali. Tuttavia, C++ AMP non fornisce API per utilizzare direttamente i tipi Windows Runtime; inoltre, Windows Runtime non fornisce un wrapper per C++ AMP. Quando si utilizzano i tipi Windows Runtime nel codice, inclusi quelli creati dall'utente, è necessario convertirli in tipi compatibili con C++ AMP.
+È possibile usare C++ AMP (C++ Accelerated Massive Parallelism) nell'app piattaforma UWP (Universal Windows Platform) (UWP) per eseguire calcoli sulla GPU (unità di elaborazione grafica) o su altri acceleratori computazionali. Tuttavia, C++ AMP non fornisce API per utilizzare direttamente i tipi Windows Runtime; inoltre, Windows Runtime non fornisce un wrapper per C++ AMP. Quando si utilizzano i tipi Windows Runtime nel codice, inclusi quelli creati dall'utente, è necessario convertirli in tipi compatibili con C++ AMP.
 
 ## <a name="performance-considerations"></a>Considerazioni sulle prestazioni
 
-Se si usa Visual C++ estensioni del componente C++/CX per creare l'app Universal Windows Platform (UWP), è consigliabile usare tipi plain-old-data (POD) con archiviazione contigua, ad esempio, `std::vector` o le matrici di tipo C, ovvero per i dati che verranno usati con C++ AMP. Questo può consentire di ottenere prestazioni più elevate utilizzando i tipi non-POD o i contenitori di Windows RT perché nessun marshaling deve verificarsi.
+Se si usa Visual C++ Component Extensions C++/CX per creare l'app piattaforma UWP (Universal Windows Platform) (UWP), è consigliabile usare i tipi di dati Plain-Old-data (POD) insieme all'archiviazione contigua, ad esempio `std::vector` o alle matrici di tipo C, per i dati che verranno usati con C++ amp. Ciò consente di ottenere prestazioni più elevate rispetto all'utilizzo di tipi non POD o di contenitori di Windows RT perché non deve essere eseguito alcun marshalling.
 
-Nel kernel di AMP C++, per accedere ai dati archiviati in questo modo, è sufficiente racchiudere il `std::vector` o una matrice di archiviazione in un `concurrency::array_view` e quindi usare la visualizzazione di matrici in un `concurrency::parallel_for_each` ciclo:
+In un kernel C++ AMP, per accedere ai dati archiviati in questo modo, è sufficiente eseguire il wrapping dell' `std::vector` archiviazione della matrice o in un oggetto `concurrency::array_view` e quindi usare la visualizzazione della matrice in un `concurrency::parallel_for_each` ciclo:
 
 ```cpp
 // simple vector addition example
@@ -39,11 +40,11 @@ concurrency::parallel_for_each(av0.extent, [=](concurrency::index<1> idx) restri
 
 ## <a name="marshaling-windows-runtime-types"></a>Marshalling dei tipi di Windows Runtime
 
-Quando si lavora con Windows Runtime APIs, si potrebbe voler utilizzare C++ AMP sui dati archiviati in un contenitore di Windows Runtime, ad esempio un `Platform::Array<T>^` o nei tipi di dati complessi come classi o struct che vengono dichiarate usando la **ref** parola chiave o il **valore** (parola chiave). In queste situazioni, è necessario effettuare alcune operazioni aggiuntive per rendere disponibili i dati in C++ AMP.
+Quando si lavora con Windows Runtime API, è possibile usare C++ AMP sui dati archiviati in un contenitore Windows Runtime, ad esempio `Platform::Array<T>^` o in tipi di dati complessi, ad esempio classi o struct dichiarati usando la parola chiave **ref** o la parola chiave **value** . In questi casi, è necessario eseguire alcune operazioni aggiuntive per rendere i dati disponibili per C++ AMP.
 
-### <a name="platformarrayt-where-t-is-a-pod-type"></a>Platform:: Array\<T > ^, dove T è un tipo POD
+### <a name="platformarrayt-where-t-is-a-pod-type"></a>Platform:: array \<T> ^, dove T è un tipo POD
 
-Quando si incontra un `Platform::Array<T>^` e T è un tipo POD, è possibile accedere all'archiviazione relativa sottostante semplicemente utilizzando il `get` funzione membro:
+Quando si incontra `Platform::Array<T>^` e T è un tipo POD, è possibile accedere alla relativa archiviazione sottostante semplicemente utilizzando la `get` funzione membro:
 
 ```cpp
 Platform::Array<float>^ arr; // Assume that this was returned by a Windows Runtime API
@@ -54,9 +55,9 @@ Se T non è un tipo POD, usare la tecnica descritta nella sezione seguente per u
 
 ### <a name="windows-runtime-types-ref-classes-and-value-classes"></a>Tipi di Windows Runtime: classi di riferimento e classi di valore
 
-C++ AMP non supporta tipi di dati complessi. Ciò include tipi non POD ed eventuali tipi dichiarati utilizzando la **ref** parola chiave o il **valore** (parola chiave). Se viene usato un tipo non supportato in un `restrict(amp)` contesto, un errore in fase di compilazione viene generato.
+C++ AMP non supporta tipi di dati complessi. Sono inclusi i tipi non POD e i tipi dichiarati utilizzando la parola chiave **ref** o la parola chiave **value** . Se un tipo non supportato viene usato in un `restrict(amp)` contesto, viene generato un errore in fase di compilazione.
 
-Quando si verifica un tipo non supportato, è possibile copiare parti interessanti dei dati in un `concurrency::array` oggetto. Oltre a rendere disponibili per C++ AMP utilizzare i dati, questo approccio di copia manuale può anche migliorare le prestazioni massimizzando la località dei dati e assicurando che i dati che non verrà usati non vengono copiati nell'acceleratore. È possibile migliorare ulteriormente le prestazioni usando una *matrice di gestione temporanea*, che è una forma speciale di `concurrency::array` che fornisce un hint al runtime di AMP che la matrice deve essere ottimizzata per un trasferimento frequente tra questo e ad altre matrici nel tasto di scelta specificato.
+Quando si verifica un tipo non supportato, è possibile copiare parti interessanti dei propri dati in un `concurrency::array` oggetto. Oltre a rendere i dati disponibili per l'utilizzo da parte di C++ AMP, questo approccio di copia manuale può migliorare le prestazioni ottimizzando la località dei dati e assicurando che i dati che non verranno utilizzati non vengano copiati nel tasto di scelta rapida. È possibile migliorare ulteriormente le prestazioni usando un *array di staging*, che è un modulo speciale di `concurrency::array` che fornisce un suggerimento al runtime di amp che la matrice deve essere ottimizzata per il trasferimento frequente tra di essa e altre matrici sull'acceleratore specificato.
 
 ```cpp
 // pixel_color.h
@@ -113,7 +114,7 @@ concurrency::parallel_for_each(av_red.extent, [=](index<1> idx) restrict(amp)
     });
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Creare la prima app UWP in C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)<br/>
+[Creare la prima app UWP con C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)<br/>
 [Creazione di componenti Windows Runtime in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

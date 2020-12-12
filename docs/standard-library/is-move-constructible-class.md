@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: is_move_constructible Class'
 title: Classe is_move_constructible
 ms.date: 10/24/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_move_constructible
 ms.assetid: becdf076-7419-488d-a335-78adf2478b9b
-ms.openlocfilehash: 5495ac39a98f5c194f19d28ba85a1d59f47dfbb4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 05ef640b2841eb3ab66f6d5a6d3b8ede7acf2754
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222381"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323633"
 ---
 # <a name="is_move_constructible-class"></a>Classe is_move_constructible
 
@@ -29,7 +30,7 @@ struct is_move_constructible;
 *T*\
 Tipo da valutare.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Predicato di tipo che restituisce **`true`** se il tipo *T* può essere costruito usando un'operazione di spostamento. Questo predicato è equivalente a `is_constructible<T, T&&>`. Tipo *T* che non ha un costruttore di spostamento, ma ha un costruttore di copia che accetta un `const T&` argomento, soddisfa `std::is_move_constructible` .
 
@@ -39,6 +40,6 @@ Predicato di tipo che restituisce **`true`** se il tipo *T* può essere costruit
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)
