@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore C4484'
 title: Avviso del compilatore C4484
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4484
 ms.assetid: 3d30e5b3-2297-45b7-a37a-1360056fdd0e
-ms.openlocfilehash: c168c91f8259b744ed10dd72701d34fd60b98681
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 43228cabc8dfd728ea104f6c3b57d863ec9e5e5a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165158"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180734"
 ---
 # <a name="compiler-warning-c4484"></a>Avviso del compilatore C4484
 
@@ -21,7 +22,7 @@ Quando si compila con **/CLR**, il compilatore non esegue l'override implicito d
 
 Per altre informazioni, vedere:
 
-- [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
+- [/CLR (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
 
 - [override](../../extensions/override-cpp-component-extensions.md)
 
