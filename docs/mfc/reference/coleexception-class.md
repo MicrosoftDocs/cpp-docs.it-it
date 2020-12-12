@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: COleexception Class'
 title: COleexception (classe)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - COleException [MFC], Process
 - COleException [MFC], m_sc
 ms.assetid: 2571e9fe-26cc-42f0-9ad9-8ad5b4311ec1
-ms.openlocfilehash: c82099d816bc8ee8c179e9d4656f474156a629a9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cb11e9c285180c6e54701c210c5329714d7dccb0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233197"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227091"
 ---
 # <a name="coleexception-class"></a>COleexception (classe)
 
@@ -27,21 +28,21 @@ Rappresenta una condizione di eccezione correlata a un'operazione OLE.
 class COleException : public CException
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[COleexception::P rocess](#process)|Converte un'eccezione rilevata in un codice restituito OLE.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[COleexception:: m_sc](#m_sc)|Contiene il codice di stato che indica il motivo dell'eccezione.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La `COleException` classe include un membro dati pubblico che contiene il codice di stato che indica il motivo dell'eccezione.
 
@@ -61,7 +62,7 @@ Per ulteriori informazioni sulle eccezioni, vedere gli articoli [gestione delle 
 
 **Intestazione:** afxdisp.h
 
-## <a name="coleexceptionm_sc"></a><a name="m_sc"></a>COleexception:: m_sc
+## <a name="coleexceptionm_sc"></a><a name="m_sc"></a> COleexception:: m_sc
 
 Questo membro dati include il codice di stato OLE che indica il motivo dell'eccezione.
 
@@ -69,7 +70,7 @@ Questo membro dati include il codice di stato OLE che indica il motivo dell'ecce
 SCODE m_sc;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore di questa variabile è impostato da [AfxThrowOleException](exception-processing.md#afxthrowoleexception).
 
@@ -79,7 +80,7 @@ Per ulteriori informazioni su SCODE, vedere la pagina relativa alla [struttura d
 
 [!code-cpp[NVC_MFCOleContainer#22](../../mfc/codesnippet/cpp/coleexception-class_1.cpp)]
 
-## <a name="coleexceptionprocess"></a><a name="process"></a>COleexception::P rocess
+## <a name="coleexceptionprocess"></a><a name="process"></a> COleexception::P rocess
 
 Chiamare la funzione membro del **processo** per convertire un'eccezione rilevata in un codice di stato OLE.
 
@@ -96,7 +97,7 @@ Puntatore a un'eccezione rilevata.
 
 Codice di stato OLE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 > [!NOTE]
 > Questa funzione è **`static`** .
@@ -107,7 +108,7 @@ Per ulteriori informazioni su SCODE, vedere la pagina relativa alla [struttura d
 
   Vedere l'esempio relativo a [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [CALCDRIV di esempio MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CException](../../mfc/reference/cexception-class.md)<br/>

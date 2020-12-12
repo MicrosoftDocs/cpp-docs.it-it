@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: menu e risorse: Unione di menu'
 title: 'Menu e risorse: unione di menu'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-ms.openlocfilehash: 03d27443f90634b5d787eee25acc951d24178f42
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b326e02fb4dbdaaef0ae6015fef6b647cc85b907
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626227"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227975"
 ---
 # <a name="menus-and-resources-menu-merging"></a>Menu e risorse: unione di menu
 
@@ -27,7 +28,7 @@ Gli argomenti trattati in questo articolo includono:
 
 - [Barre degli strumenti e barre di stato](#_core_toolbars_and_status_bars)
 
-## <a name="menu-layouts"></a><a name="_core_menu_layouts"></a>Layout di menu
+## <a name="menu-layouts"></a><a name="_core_menu_layouts"></a> Layout di menu
 
 Il primo passaggio consiste nel coordinare i layout dei menu. Le applicazioni contenitore devono creare un nuovo menu da usare solo quando gli elementi incorporati vengono attivati sul posto. Come minimo, questo menu deve essere costituito dagli elementi seguenti, nell'ordine elencato:
 
@@ -99,13 +100,13 @@ Le tabelle dei tasti di scelta rapida associate al menu sul posto devono anche e
 
 Quando un elemento incorporato viene attivato sul posto, il Framework carica il menu sul posto. Quindi chiede all'applicazione server di scegliere il menu per l'attivazione sul posto e lo inserisce in cui si trovano i separatori. Questo è il modo in cui vengono combinati i menu. Si ottengono menu dal contenitore per operare sul posizionamento di file e finestre e si ottengono menu dal server per operare sull'elemento.
 
-## <a name="toolbars-and-status-bars"></a><a name="_core_toolbars_and_status_bars"></a>Barre degli strumenti e barre di stato
+## <a name="toolbars-and-status-bars"></a><a name="_core_toolbars_and_status_bars"></a> Barre degli strumenti e barre di stato
 
-Le applicazioni server devono creare una nuova barra degli strumenti e archiviare la relativa bitmap in un file separato. Le applicazioni generate dalla creazione guidata applicazione archiviano questa bitmap in un file denominato ITOOLBAR. BMP. La nuova barra degli strumenti sostituisce la barra degli strumenti dell'applicazione contenitore quando l'elemento del server viene attivato sul posto e deve contenere gli stessi elementi della barra degli strumenti normale, ma rimuovere le icone che rappresentano gli elementi nei menu file e finestra.
+Le applicazioni server devono creare una nuova barra degli strumenti e archiviare la relativa bitmap in un file separato. Le applicazioni generate dalla creazione guidata applicazione archiviano questa bitmap in un file denominato ITOOLBAR.BMP. La nuova barra degli strumenti sostituisce la barra degli strumenti dell'applicazione contenitore quando l'elemento del server viene attivato sul posto e deve contenere gli stessi elementi della barra degli strumenti normale, ma rimuovere le icone che rappresentano gli elementi nei menu file e finestra.
 
 Questa barra degli strumenti viene caricata nella `COleIPFrameWnd` classe derivata da creata automaticamente dalla creazione guidata applicazione. La barra di stato viene gestita dall'applicazione contenitore. Per ulteriori informazioni sull'implementazione di finestre cornice sul posto, vedere [Servers: Implementing a server](servers-implementing-a-server.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Menu e risorse (OLE)](menus-and-resources-ole.md)<br/>
 [Activation](activation-cpp.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe COleControlModule'
 title: Classe COleControlModule
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - COleControlModule class [MFC]
 - control modules [MFC]
 ms.assetid: 0721724d-d4af-4eda-ad34-5a2b27810dd4
-ms.openlocfilehash: f6d486c7bacb897d70d85414ac3d0bd0d13e447b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f88296b7c0e897f82227343b31ca2f639902256e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310396"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227481"
 ---
 # <a name="colecontrolmodule-class"></a>Classe COleControlModule
 
@@ -26,11 +27,11 @@ Classe di base da cui deriva un oggetto modulo di controllo OLE.
 class COleControlModule : public CWinApp
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Questa classe fornisce funzioni membro per l'inizializzazione del modulo di controllo. Ogni modulo di controllo OLE che usa le classi Microsoft Foundation può contenere solo un oggetto derivato da `COleControlModule`. Questo oggetto viene costruito quando vengono costruite altri oggetti globali C++. Dichiarare la derivata `COleControlModule` oggetto a livello globale.
+Questa classe fornisce funzioni membro per l'inizializzazione del modulo di controllo. Ogni modulo di controllo OLE che utilizza le classi Microsoft Foundation può contenere un solo oggetto derivato da `COleControlModule` . Questo oggetto viene costruito quando vengono costruiti altri oggetti globali di C++. Dichiarare l' `COleControlModule` oggetto derivato a livello globale.
 
-Per altre informazioni sull'uso di `COleControlModule` classe, vedere la [CWinApp](../../mfc/reference/cwinapp-class.md) classe e l'articolo [controlli ActiveX](../../mfc/mfc-activex-controls.md).
+Per ulteriori informazioni sull'utilizzo della `COleControlModule` classe, vedere la classe [CWinApp](../../mfc/reference/cwinapp-class.md) e l'articolo [controlli ActiveX](../../mfc/mfc-activex-controls.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -48,7 +49,7 @@ Per altre informazioni sull'uso di `COleControlModule` classe, vedere la [CWinAp
 
 **Intestazione:** afxctl. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Esempio MFC TESTHELP](../../overview/visual-cpp-samples.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)
+[TESTHELP di esempio MFC](../../overview/visual-cpp-samples.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)

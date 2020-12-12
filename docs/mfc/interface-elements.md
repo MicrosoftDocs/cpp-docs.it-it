@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: elementi di interfaccia'
 title: Elementi dell'interfaccia utente
 ms.date: 11/19/2018
 helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-ms.openlocfilehash: 4d4d81287cb30a7d3608025085cdb3f9a208147a
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a0aa762455f6bfe97d371244682c66dbd141a761
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619985"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97228053"
 ---
 # <a name="interface-elements"></a>Elementi dell'interfaccia utente
 
@@ -40,7 +41,7 @@ Il sito dock (o la finestra cornice principale) possiede tutti i riquadri e le f
 
 ## <a name="dock-bars"></a>Barre di ancoraggio
 
-Ogni finestra cornice principale può posizionare *barre di ancoraggio* lungo i bordi. Una barra di ancoraggio è un riquadro che appartiene a una [classe CDockSite](reference/cdocksite-class.md). Le barre di ancoraggio possono accettare oggetti derivati da [CPane](reference/cpane-class.md), ad esempio barre degli strumenti. Per creare barre di ancoraggio quando viene inizializzata la finestra cornice principale, chiamare `EnableDocking` . Per abilitare le barre Nascondi automaticamente, chiamare `EnableAutoHideBars` . `EnableAutoHideBars`Crea gli oggetti [CAutoHideDockSite](reference/cautohidedocksite-class.md) e li posiziona accanto a ogni barra di ancoraggio.
+Ogni finestra cornice principale può posizionare *barre di ancoraggio* lungo i bordi. Una barra di ancoraggio è un riquadro che appartiene a una [classe CDockSite](reference/cdocksite-class.md). Le barre di ancoraggio possono accettare oggetti derivati da [CPane](reference/cpane-class.md), ad esempio barre degli strumenti. Per creare barre di ancoraggio quando viene inizializzata la finestra cornice principale, chiamare `EnableDocking` . Per abilitare le barre Nascondi automaticamente, chiamare `EnableAutoHideBars` . `EnableAutoHideBars` Crea gli oggetti [CAutoHideDockSite](reference/cautohidedocksite-class.md) e li posiziona accanto a ogni barra di ancoraggio.
 
 Ogni barra di ancoraggio è divisa in righe di ancoraggio. Le righe di ancoraggio sono rappresentate dalla [classe CDockingPanesRow](reference/cdockingpanesrow-class.md). Ogni riga di ancoraggio contiene un elenco di barre degli strumenti. Se un utente ancora una barra degli strumenti o sposta la barra degli strumenti da una riga all'altra all'interno della stessa barra di ancoraggio, il Framework crea una nuova riga e ridimensiona la barra di ancoraggio di conseguenza oppure posiziona la barra degli strumenti su una riga esistente.
 
@@ -62,10 +63,10 @@ Per impostazione predefinita, ogni `CDockablePane` supporta la funzionalità Nas
 
 ## <a name="tabbed-control-bars-and-outlook-bars"></a>Barre di controllo a schede e barre di Outlook
 
-La [classe CMFCBaseTabCtrl](reference/cmfcbasetabctrl-class.md) implementa la funzionalità di base di una finestra a schede con schede scollegabili. Per usare un `CMFCBaseTabCtrl` oggetto, inizializzare una [Classe CBaseTabbedPane](reference/cbasetabbedpane-class.md) nell'applicazione. `CBaseTabbedPane`viene derivato da `CDockablePane` e mantiene un puntatore a un `CMFCBaseTabCtrl` oggetto. `CBaseTabbedPane`Consente agli utenti di ancorare e ridimensionare le barre di controllo a schede. Usare [CDockablePane:: AttachToTabWnd](reference/cdockablepane-class.md#attachtotabwnd) per creare in modo dinamico le barre di controllo ancorate e a schede.
+La [classe CMFCBaseTabCtrl](reference/cmfcbasetabctrl-class.md) implementa la funzionalità di base di una finestra a schede con schede scollegabili. Per usare un `CMFCBaseTabCtrl` oggetto, inizializzare una [Classe CBaseTabbedPane](reference/cbasetabbedpane-class.md) nell'applicazione. `CBaseTabbedPane` viene derivato da `CDockablePane` e mantiene un puntatore a un `CMFCBaseTabCtrl` oggetto. `CBaseTabbedPane`Consente agli utenti di ancorare e ridimensionare le barre di controllo a schede. Usare [CDockablePane:: AttachToTabWnd](reference/cdockablepane-class.md#attachtotabwnd) per creare in modo dinamico le barre di controllo ancorate e a schede.
 
 Il controllo barra di Outlook si basa anche sulle barre a schede. La [Classe CMFCOutlookBar](reference/cmfcoutlookbar-class.md) è derivata da `CBaseTabbedPane` . Per ulteriori informazioni sull'utilizzo della barra di Outlook, vedere [Classe CMFCOutlookBar](reference/cmfcoutlookbar-class.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Concetti](mfc-concepts.md)

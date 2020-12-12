@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3673'
 title: Errore del compilatore C3673
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3673
 ms.assetid: bb6d2079-05af-4e2c-be0e-75c892e6c590
-ms.openlocfilehash: 80e9a80d822a9da0e9ae388991f3dbc78bfca0db
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 8e503497322a8141aa514c50354f19b8638b1e64
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686717"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97228885"
 ---
 # <a name="compiler-error-c3673"></a>Errore del compilatore C3673
 
@@ -19,7 +20,7 @@ ms.locfileid: "90686717"
 
 Per copiare oggetti di tipi di riferimento CLR, è necessario un costruttore definito dall'utente. Per ulteriori informazioni, vedere [semantica dello stack C++ per i tipi di riferimento](../../dotnet/cpp-stack-semantics-for-reference-types.md).
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 L'esempio seguente genera l'C3673.
 

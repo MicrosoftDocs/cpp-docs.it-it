@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _bstr_t:: _bstr_t'
 title: _bstr_t::_bstr_t
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - _bstr_t method [C++]
 - _bstr_t class
 ms.assetid: 116d994e-5a72-4351-afbe-866c80b4c165
-ms.openlocfilehash: 843d6aa0e04595143d7da585e95d58e97fe80db0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: efc28b98ecbc6e22c2a78c89e46c08d94e6ce72d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221835"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229418"
 ---
 # <a name="_bstr_t_bstr_t"></a>_bstr_t::_bstr_t
 
@@ -45,7 +46,7 @@ _bstr_t(
 
 #### <a name="parameters"></a>Parametri
 
-*S1*<br/>
+*s1*<br/>
 Oggetto `_bstr_t` da copiare.
 
 *S2*<br/>
@@ -63,7 +64,7 @@ Oggetto `BSTR` esistente.
 *fCopy*<br/>
 Se **`false`** , l'argomento *BSTR* viene associato al nuovo oggetto senza effettuare una copia chiamando `SysAllocString` .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Nella tabella seguente vengono descritti i costruttori per `_bstr_t`.
 
@@ -78,7 +79,7 @@ Nella tabella seguente vengono descritti i costruttori per `_bstr_t`.
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe _bstr_t](../cpp/bstr-t-class.md)<br/>
 [Classe _variant_t](../cpp/variant-t-class.md)

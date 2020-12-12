@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe COleDialog'
 title: Classe COleDialog
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - COleDialog [MFC], GetLastError
 ms.assetid: b1ed0aca-3914-4b00-af34-4a4fb491aec7
-ms.openlocfilehash: 6a1983d426e97dd8063aee2857dc36557aa20677
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9bdb532d58136ac2aac622fa88f674e60ec7221e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366086"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227299"
 ---
 # <a name="coledialog-class"></a>Classe COleDialog
 
@@ -25,17 +26,17 @@ Fornisce la funzionalità comune alle finestre di dialogo per OLE.
 class COleDialog : public CCommonDialog
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[COleDialog::GetLastError](#getlasterror)|Ottiene il codice di errore restituito dalla finestra di dialogo.|
+|[COleDialog:: GetLastError](#getlasterror)|Ottiene il codice di errore restituito dalla finestra di dialogo.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La libreria Microsoft Foundation Class `COleDialog`fornisce diverse classi derivate da:
+Il libreria Microsoft Foundation Class fornisce diverse classi derivate da `COleDialog` :
 
 - [COleInsertDialog](../../mfc/reference/coleinsertdialog-class.md)
 
@@ -55,7 +56,7 @@ La libreria Microsoft Foundation Class `COleDialog`fornisce diverse classi deriv
 
 - [COleChangeSourceDialog](../../mfc/reference/colechangesourcedialog-class.md)
 
-Per ulteriori informazioni sulle finestre di dialogo specifiche di OLE, vedere l'articolo [Finestre di dialogo in OLE](../../mfc/dialog-boxes-in-ole.md).
+Per ulteriori informazioni sulle finestre di dialogo specifiche di OLE, vedere l'articolo finestre [di dialogo in OLE](../../mfc/dialog-boxes-in-ole.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -73,11 +74,11 @@ Per ulteriori informazioni sulle finestre di dialogo specifiche di OLE, vedere l
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxodlgs.h
+**Intestazione:** afxodlgs. h
 
-## <a name="coledialoggetlasterror"></a><a name="getlasterror"></a>COleDialog::GetLastError
+## <a name="coledialoggetlasterror"></a><a name="getlasterror"></a> COleDialog:: GetLastError
 
-Chiamare `GetLastError` la funzione membro per `DoModal` ottenere informazioni aggiuntive sull'errore quando restituisce IDABORT.
+Chiamare la `GetLastError` funzione membro per ottenere informazioni aggiuntive sull'errore quando `DoModal` restituisce IDABORT.
 
 ```
 UINT GetLastError() const;
@@ -85,13 +86,13 @@ UINT GetLastError() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-I codici di `GetLastError` errore restituiti da dipendono dalla finestra di dialogo specifica visualizzata.
+I codici di errore restituiti da dipendono dalla finestra di `GetLastError` dialogo specifica visualizzata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Vedere `DoModal` la funzione membro nelle classi derivate per informazioni su messaggi di errore specifici.
+`DoModal`Per informazioni su messaggi di errore specifici, vedere la funzione membro nelle classi derivate.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)

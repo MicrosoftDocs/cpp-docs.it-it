@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe COleCurrency'
 title: Classe COleCurrency
 ms.date: 08/29/2019
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: ced4554701cef5fd6f790b9e37f4c1b41746b1ad
-ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
+ms.openlocfilehash: 4a877d455de3f4254711a752bc422bb1cbdcd8c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87470966"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227390"
 ---
 # <a name="colecurrency-class"></a>Classe COleCurrency
 
@@ -39,17 +40,17 @@ Incapsula il tipo di dati `CURRENCY` dell'automazione OLE.
 class COleCurrency
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[COleCurrency:: COleCurrency](#colecurrency)|Costruisce un oggetto `COleCurrency`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[COleCurrency:: Format](#format)|Genera una rappresentazione di stringa formattata di un `COleCurrency` oggetto.|
 |[COleCurrency:: GetStatus](#getstatus)|Ottiene lo stato (validità) di questo `COleCurrency` oggetto.|
@@ -59,7 +60,7 @@ class COleCurrency
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[operatore =](#operator_eq)|Copia un `COleCurrency` valore.|
 |[operatore +,-](#operator_plus_minus)|Aggiunge, sottrae e modifica il segno dei `COleCurrency` valori.|
@@ -73,18 +74,18 @@ class COleCurrency
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[COleCurrency:: m_cur](#m_cur)|Contiene la valuta sottostante per questo `COleCurrency` oggetto.|
 |[COleCurrency:: m_status](#m_status)|Contiene lo stato di questo `COleCurrency` oggetto.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-`COleCurrency`non dispone di una classe base.
+`COleCurrency` non dispone di una classe base.
 
 La valuta viene implementata come valore integer a 8 byte e a complemento doppio ridimensionato di 10.000. In questo modo si ottiene un numero a virgola fissa con 15 cifre a sinistra del separatore decimale e 4 cifre a destra. Il tipo di dati CURRENCY è estremamente utile per i calcoli che comportano denaro o per qualsiasi calcolo a virgola fissa in cui l'accuratezza è importante. È uno dei tipi possibili per il `VARIANT` tipo di dati di automazione OLE.
 
-`COleCurrency`implementa anche alcune operazioni aritmetiche di base per questo tipo a virgola fissa. Sono state selezionate le operazioni supportate per controllare gli errori di arrotondamento che si verificano durante i calcoli a virgola fissa.
+`COleCurrency` implementa anche alcune operazioni aritmetiche di base per questo tipo a virgola fissa. Sono state selezionate le operazioni supportate per controllare gli errori di arrotondamento che si verificano durante i calcoli a virgola fissa.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -94,7 +95,7 @@ La valuta viene implementata come valore integer a 8 byte e a complemento doppio
 
 **Intestazione:** afxdisp.h
 
-## <a name="colecurrencycolecurrency"></a><a name="colecurrency"></a>COleCurrency:: COleCurrency
+## <a name="colecurrencycolecurrency"></a><a name="colecurrency"></a> COleCurrency:: COleCurrency
 
 Costruisce un oggetto `COleCurrency`.
 
@@ -122,7 +123,7 @@ Una `VARIANT` struttura di dati esistente (possibilmente un `COleVariant` oggett
 
 *nUnits*, *nFractionalUnits* indicano le unità e la parte frazionaria (in 1/10000) del valore da copiare nel nuovo `COleCurrency` oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Tutti questi costruttori creano nuovi `COleCurrency` oggetti inizializzati sul valore specificato. Di seguito viene riportata una breve descrizione di ognuno di questi costruttori. Se non specificato diversamente, lo stato del nuovo `COleCurrency` elemento è impostato su valido.
 
@@ -144,7 +145,7 @@ Negli esempi seguenti vengono illustrati gli effetti dei costruttori di parametr
 
 [!code-cpp[NVC_MFCOleContainer#10](../../mfc/codesnippet/cpp/colecurrency-class_1.cpp)]
 
-## <a name="colecurrencyformat"></a><a name="format"></a>COleCurrency:: Format
+## <a name="colecurrencyformat"></a><a name="format"></a> COleCurrency:: Format
 
 Chiamare questa funzione membro per creare una rappresentazione formattata del valore di valuta.
 
@@ -166,7 +167,7 @@ Indica l'ID delle impostazioni locali da utilizzare per la conversione.
 
 Oggetto `CString` che contiene il valore di valuta formattato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore viene formattato utilizzando le specifiche della lingua locale (ID impostazioni locali). Il simbolo di valuta non è incluso nel valore restituito. Se lo stato di questo `COleCurrency` oggetto è null, il valore restituito è una stringa vuota. Se lo stato non è valido, la stringa restituita viene specificata dalla risorsa stringa IDS_INVALID_CURRENCY.
 
@@ -174,7 +175,7 @@ Il valore viene formattato utilizzando le specifiche della lingua locale (ID imp
 
 [!code-cpp[NVC_MFCOleContainer#11](../../mfc/codesnippet/cpp/colecurrency-class_2.cpp)]
 
-## <a name="colecurrencygetstatus"></a><a name="getstatus"></a>COleCurrency:: GetStatus
+## <a name="colecurrencygetstatus"></a><a name="getstatus"></a> COleCurrency:: GetStatus
 
 Chiamare questa funzione membro per ottenere lo stato (validità) di un `COleCurrency` oggetto specificato.
 
@@ -186,7 +187,7 @@ CurrencyStatus GetStatus() const;
 
 Restituisce lo stato di questo `COleCurrency` valore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore restituito è definito dal `CurrencyStatus` tipo enumerato definito all'interno della `COleCurrency` classe.
 
@@ -200,11 +201,11 @@ enum CurrencyStatus {
 
 Per una breve descrizione di questi valori di stato, vedere l'elenco seguente:
 
-- `COleCurrency::valid`Indica che l' `COleCurrency` oggetto è valido.
+- `COleCurrency::valid` Indica che l' `COleCurrency` oggetto è valido.
 
-- `COleCurrency::invalid`Indica che l' `COleCurrency` oggetto non è valido, ovvero che il relativo valore potrebbe non essere corretto.
+- `COleCurrency::invalid` Indica che l' `COleCurrency` oggetto non è valido, ovvero che il relativo valore potrebbe non essere corretto.
 
-- `COleCurrency::null`Indica che l' `COleCurrency` oggetto è null, ovvero che non è stato fornito alcun valore per questo oggetto. (Si tratta di "null" nel senso del database "senza valore", a differenza del valore C++ NULL).
+- `COleCurrency::null` Indica che l' `COleCurrency` oggetto è null, ovvero che non è stato fornito alcun valore per questo oggetto. (Si tratta di "null" nel senso del database "senza valore", a differenza del valore C++ NULL).
 
 Lo stato di un `COleCurrency` oggetto non è valido nei casi seguenti:
 
@@ -234,18 +235,18 @@ Per ulteriori informazioni sulle operazioni che possono impostare lo stato su no
 
 [!code-cpp[NVC_MFCOleContainer#12](../../mfc/codesnippet/cpp/colecurrency-class_3.cpp)]
 
-## <a name="colecurrencym_cur"></a><a name="m_cur"></a>COleCurrency:: m_cur
+## <a name="colecurrencym_cur"></a><a name="m_cur"></a> COleCurrency:: m_cur
 
 Struttura di [valuta](/windows/win32/api/wtypes/ns-wtypes-cy-r1) sottostante per questo `COleCurrency` oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 > [!CAUTION]
 > La modifica del valore nella `CURRENCY` struttura a cui accede il puntatore restituito da questa funzione modificherà il valore di questo `COleCurrency` oggetto. Non modifica lo stato di questo `COleCurrency` oggetto.
 
 Per ulteriori informazioni, vedere la voce relativa alla [valuta](/windows/win32/api/wtypes/ns-wtypes-cy-r1) nella Windows SDK.
 
-## <a name="colecurrencym_status"></a><a name="m_status"></a>COleCurrency:: m_status
+## <a name="colecurrencym_status"></a><a name="m_status"></a> COleCurrency:: m_status
 
 Il tipo di questo membro dati è il tipo enumerato `CurrencyStatus` , definito all'interno della `COleCurrency` classe.
 
@@ -257,15 +258,15 @@ enum CurrencyStatus{
 };
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per una breve descrizione di questi valori di stato, vedere l'elenco seguente:
 
-- `COleCurrency::valid`Indica che l' `COleCurrency` oggetto è valido.
+- `COleCurrency::valid` Indica che l' `COleCurrency` oggetto è valido.
 
-- `COleCurrency::invalid`Indica che l' `COleCurrency` oggetto non è valido, ovvero che il relativo valore potrebbe non essere corretto.
+- `COleCurrency::invalid` Indica che l' `COleCurrency` oggetto non è valido, ovvero che il relativo valore potrebbe non essere corretto.
 
-- `COleCurrency::null`Indica che l' `COleCurrency` oggetto è null, ovvero che non è stato fornito alcun valore per questo oggetto. (Si tratta di "null" nel senso del database "senza valore", a differenza del valore C++ NULL).
+- `COleCurrency::null` Indica che l' `COleCurrency` oggetto è null, ovvero che non è stato fornito alcun valore per questo oggetto. (Si tratta di "null" nel senso del database "senza valore", a differenza del valore C++ NULL).
 
 Lo stato di un `COleCurrency` oggetto non è valido nei casi seguenti:
 
@@ -294,7 +295,7 @@ Per ulteriori informazioni sulle operazioni che possono impostare lo stato su no
 > [!CAUTION]
 > Questo membro dati è per le situazioni di programmazione avanzate. È necessario utilizzare le funzioni membro inline [GetStatus](#getstatus) e [sestatus](#setstatus). `SetStatus`Per ulteriori avvertenze su come impostare in modo esplicito questo membro dati, vedere.
 
-## <a name="colecurrencyoperator-"></a><a name="operator_eq"></a>COleCurrency:: operator =
+## <a name="colecurrencyoperator-"></a><a name="operator_eq"></a> COleCurrency:: operator =
 
 Questi operatori di assegnazione di overload copiano il valore di valuta di origine in questo `COleCurrency` oggetto.
 
@@ -304,7 +305,7 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
 const COleCurrency& operator=(const VARIANT& varSrc);
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Di seguito viene riportata una breve descrizione di ogni operatore:
 
@@ -320,7 +321,7 @@ Per ulteriori informazioni, vedere la [valuta](/windows/win32/api/wtypes/ns-wtyp
 
 [!code-cpp[NVC_MFCOleContainer#15](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]
 
-## <a name="colecurrencyoperator---"></a><a name="operator_plus_minus"></a>COleCurrency:: operator +,-
+## <a name="colecurrencyoperator---"></a><a name="operator_plus_minus"></a> COleCurrency:: operator +,-
 
 Questi operatori consentono di aggiungere e sottrarre due `COleCurrency` valori tra loro e di modificare il segno di un `COleCurrency` valore.
 
@@ -330,7 +331,7 @@ COleCurrency operator-(const COleCurrency& cur) const;
 COleCurrency operator-() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se uno degli operandi è null, lo stato del `COleCurrency` valore risultante è null.
 
@@ -344,7 +345,7 @@ Per ulteriori informazioni sui valori di stato validi, non validi e null, vedere
 
 [!code-cpp[NVC_MFCOleContainer#16](../../mfc/codesnippet/cpp/colecurrency-class_5.cpp)]
 
-## <a name="colecurrencyoperator---"></a><a name="operator_plus_minus_eq"></a>COleCurrency:: operator + =,-=
+## <a name="colecurrencyoperator---"></a><a name="operator_plus_minus_eq"></a> COleCurrency:: operator + =,-=
 
 Consente di aggiungere e sottrarre un `COleCurrency` valore a e da questo `COleCurrency` oggetto.
 
@@ -353,7 +354,7 @@ const COleCurrency& operator+=(const COleCurrency& cur);
 const COleCurrency& operator-=(const COleCurrency& cur);
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se uno degli operandi è null, lo stato di questo `COleCurrency` oggetto viene impostato su null.
 
@@ -367,7 +368,7 @@ Per ulteriori informazioni sui valori di stato validi, non validi e null, vedere
 
 [!code-cpp[NVC_MFCOleContainer#17](../../mfc/codesnippet/cpp/colecurrency-class_6.cpp)]
 
-## <a name="colecurrencyoperator--and-"></a><a name="operator_star"></a>COleCurrency:: operator \* e/
+## <a name="colecurrencyoperator--and-"></a><a name="operator_star"></a> COleCurrency:: operator \* e/
 
 Consente di ridimensionare un `COleCurrency` valore in base a un valore integrale.
 
@@ -376,7 +377,7 @@ COleCurrency operator*(long nOperand) const;
 COleCurrency operator/(long nOperand) const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se l' `COleCurrency` operando è null, lo stato del `COleCurrency` valore risultante è null.
 
@@ -390,7 +391,7 @@ Per ulteriori informazioni sui valori di stato validi, non validi e null, vedere
 
 [!code-cpp[NVC_MFCOleContainer#18](../../mfc/codesnippet/cpp/colecurrency-class_7.cpp)]
 
-## <a name="colecurrencyoperator--"></a><a name="operator_star_div_eq"></a>COleCurrency:: operator \* =,/=
+## <a name="colecurrencyoperator--"></a><a name="operator_star_div_eq"></a> COleCurrency:: operator \* =,/=
 
 Consente di ridimensionare questo `COleCurrency` valore in base a un valore integrale.
 
@@ -399,7 +400,7 @@ const COleCurrency& operator*=(long nOperand);
 const COleCurrency& operator/=(long nOperand);
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se l' `COleCurrency` operando è null, lo stato di questo `COleCurrency` oggetto viene impostato su null.
 
@@ -431,11 +432,11 @@ friend CArchive& operator>>(
     COleCurrency& curSrc);
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operatore Extraction ( **>>** ) supporta il caricamento da un archivio.
 
-## <a name="colecurrencyoperator-currency"></a><a name="operator_currency"></a>VALUTA COleCurrency:: operator
+## <a name="colecurrencyoperator-currency"></a><a name="operator_currency"></a> VALUTA COleCurrency:: operator
 
 Restituisce una `CURRENCY` struttura il cui valore viene copiato da questo `COleCurrency` oggetto.
 
@@ -443,9 +444,9 @@ Restituisce una `CURRENCY` struttura il cui valore viene copiato da questo `COle
 operator CURRENCY() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="colecurrencyparsecurrency"></a><a name="parsecurrency"></a>COleCurrency::P arseCurrency
+## <a name="colecurrencyparsecurrency"></a><a name="parsecurrency"></a> COleCurrency::P arseCurrency
 
 Chiamare questa funzione membro per analizzare una stringa per leggere un valore di valuta.
 
@@ -476,7 +477,7 @@ Indica l'ID delle impostazioni locali da utilizzare per la conversione.
 
 Diverso da zero se la stringa è stata convertita correttamente in un valore di valuta; in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 USA specifiche della lingua locale (ID impostazioni locali) per il significato dei caratteri non numerici nella stringa di origine.
 
@@ -492,7 +493,7 @@ Se la conversione della stringa non è riuscita a causa di errori di allocazione
 
 [!code-cpp[NVC_MFCOleContainer#13](../../mfc/codesnippet/cpp/colecurrency-class_9.cpp)]
 
-## <a name="colecurrency-relational-operators"></a><a name="colecurrency_relational_operators"></a>Operatori relazionali COleCurrency
+## <a name="colecurrency-relational-operators"></a><a name="colecurrency_relational_operators"></a> Operatori relazionali COleCurrency
 
 Confrontare due valori di valuta e restituire un valore diverso da zero se la condizione è true; in caso contrario, 0.
 
@@ -505,7 +506,7 @@ BOOL operator<=(const COleCurrency& cur) const;
 BOOL operator>=(const COleCurrency& cur) const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 > [!NOTE]
 > Il valore restituito delle operazioni di ordinamento ( **<** , **\<=**, **>** , **>=** ) non è definito se lo stato di uno degli operandi è null o non valido. Gli operatori di uguaglianza ( `==` , `!=` ) considerano lo stato degli operandi.
@@ -514,7 +515,7 @@ BOOL operator>=(const COleCurrency& cur) const;
 
 [!code-cpp[NVC_MFCOleContainer#20](../../mfc/codesnippet/cpp/colecurrency-class_10.cpp)]
 
-## <a name="colecurrencysetcurrency"></a><a name="setcurrency"></a>COleCurrency:: securrency
+## <a name="colecurrencysetcurrency"></a><a name="setcurrency"></a> COleCurrency:: securrency
 
 Chiamare questa funzione membro per impostare le unità e la parte frazionaria di questo `COleCurrency` oggetto.
 
@@ -528,7 +529,7 @@ void SetCurrency(
 
 *nUnits*, *nFractionalUnits* indicano le unità e la parte frazionaria (in 1/10000) del valore da copiare in questo `COleCurrency` oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il valore assoluto della parte frazionaria è maggiore di 10.000, viene apportata la rettifica appropriata alle unità, come illustrato nel terzo degli esempi seguenti.
 
@@ -538,7 +539,7 @@ Si noti che le unità e la parte frazionaria sono specificate dai valori Long co
 
 [!code-cpp[NVC_MFCOleContainer#14](../../mfc/codesnippet/cpp/colecurrency-class_11.cpp)]
 
-## <a name="colecurrencysetstatus"></a><a name="setstatus"></a>COleCurrency:: sestatus
+## <a name="colecurrencysetstatus"></a><a name="setstatus"></a> COleCurrency:: sestatus
 
 Chiamare questa funzione membro per impostare lo stato (validità) di questo `COleCurrency` oggetto.
 
@@ -551,7 +552,7 @@ void SetStatus(CurrencyStatus  status  );
 *Stato*<br/>
 Nuovo stato per questo `COleCurrency` oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore del parametro *status* è definito dal `CurrencyStatus` tipo enumerato, definito all'interno della `COleCurrency` classe.
 
@@ -565,16 +566,16 @@ enum CurrencyStatus {
 
 Per una breve descrizione di questi valori di stato, vedere l'elenco seguente:
 
-- `COleCurrency::valid`Indica che l' `COleCurrency` oggetto è valido.
+- `COleCurrency::valid` Indica che l' `COleCurrency` oggetto è valido.
 
-- `COleCurrency::invalid`Indica che l' `COleCurrency` oggetto non è valido, ovvero che il relativo valore potrebbe non essere corretto.
+- `COleCurrency::invalid` Indica che l' `COleCurrency` oggetto non è valido, ovvero che il relativo valore potrebbe non essere corretto.
 
-- `COleCurrency::null`Indica che l' `COleCurrency` oggetto è null, ovvero che non è stato fornito alcun valore per questo oggetto. (Si tratta di "null" nel senso del database "senza valore", a differenza del valore C++ NULL).
+- `COleCurrency::null` Indica che l' `COleCurrency` oggetto è null, ovvero che non è stato fornito alcun valore per questo oggetto. (Si tratta di "null" nel senso del database "senza valore", a differenza del valore C++ NULL).
 
 > [!CAUTION]
 > Questa funzione è destinata a situazioni di programmazione avanzate. Questa funzione non modifica i dati in questo oggetto. Verrà usato più spesso per impostare lo stato su null o non valido. Si noti che l'operatore di assegnazione ( [operator =](#operator_eq)) e la [securrency](#setcurrency) consentono di impostare lo stato su dell'oggetto in base ai valori di origine.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleVariant](../../mfc/reference/colevariant-class.md)

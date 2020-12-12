@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _ismbbpunct, _ismbbpunct_l'
 title: _ismbbpunct, _ismbbpunct_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - ismbbpunct_l function
 - _ismbbpunct_l function
 ms.assetid: 1976c9d3-7d1a-415f-ac52-2715c7bb56eb
-ms.openlocfilehash: bee75f971f6e185b4081ba123e6aef5e1865a14e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a476bae27cf97a43b0a78146c81cb59293f406a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918651"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229691"
 ---
 # <a name="_ismbbpunct-_ismbbpunct_l"></a>_ismbbpunct, _ismbbpunct_l
 
@@ -69,7 +70,7 @@ Impostazioni locali da usare.
 
 **_ismbbpunct** restituisce un valore diverso da zero se l'integer *c* è un simbolo di punteggiatura non ASCII. **_ismbbpunct** usa le impostazioni locali correnti per qualsiasi impostazione del carattere dipendente dalle impostazioni locali. **_ismbbpunct_l** è identico, ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -82,7 +83,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Classificazione per byte](../../c-runtime-library/byte-classification.md)<br/>
+[Classificazione byte](../../c-runtime-library/byte-classification.md)<br/>
 [Routine di _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
