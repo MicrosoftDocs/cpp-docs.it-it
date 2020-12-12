@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: &lt; facoltativo&gt;'
 title: '&lt;facoltativo&gt;'
 ms.date: 08/06/2019
 f1_keywords:
 - <optional>
 helpviewer_keywords:
 - <optional>
-ms.openlocfilehash: 31a3d9aad539e45bb835331a4ef63690d0e16f49
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c1f1e6f99278abf296c361515953a931109f47ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842676"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201833"
 ---
 # <a name="ltoptionalgt"></a>&lt;facoltativo&gt;
 
@@ -26,7 +27,7 @@ Definisce il modello di classe del contenitore `optional` e diversi modelli di s
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[operatore = =](../standard-library/optional-operators.md#op_eq_eq)|Verifica se un oggetto è uguale a un altro oggetto.|
 |[operatore! =](../standard-library/optional-operators.md#op_neq)|Verifica se un oggetto non è uguale a un altro oggetto.|
@@ -40,14 +41,14 @@ Definisce il modello di classe del contenitore `optional` e diversi modelli di s
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[make_optional](../standard-library/optional-functions.md#make_optional)|Rende facoltativo un oggetto.|
 |[scambio](../standard-library/optional-functions.md#swap)|Scambia i valori contenuti di due `optional` oggetti.|
 
 ### <a name="classes-and-structs"></a>Classi e struct
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |hash|Restituisce un hash dell'oggetto contenuto.|
 |[Classe optional](../standard-library/optional-class.md)|Descrive un oggetto che può o non può mantenere un valore.|
@@ -56,10 +57,10 @@ Definisce il modello di classe del contenitore `optional` e diversi modelli di s
 
 ### <a name="objects"></a>Oggetti
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[nullopt](../standard-library/optional-functions.md#nullopt)|Istanza di `nullopt_t` per i confronti.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)

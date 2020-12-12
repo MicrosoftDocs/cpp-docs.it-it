@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: valori letterali Chrono'
 title: valori letterali chrono
 ms.date: 11/04/2016
 ms.assetid: 1a9e23b1-256f-4570-8226-5fa7364fb032
-ms.openlocfilehash: d8416580df09a8a466678702cb20ba4ddf37eb28
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 497094d920a25635496fb0aa30295d378571418c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230156"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325155"
 ---
 # <a name="chrono-literals"></a>valori letterali chrono
 

@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: classe COLLATE'
 title: Classe collate
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - std::collate [C++], hash
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
-ms.openlocfilehash: ccdf05a7a41fc7f646852e7d326832b86c41dde8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cef6d30167aa61c674913ac7844f6eb021a82529
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230104"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325062"
 ---
 # <a name="collate-class"></a>Classe collate
 
@@ -45,7 +46,7 @@ class collate : public locale::facet;
 *CharType*\
 Tipo utilizzato all'interno di un programma per codificare i caratteri.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha un valore archiviato iniziale uguale a zero. Il primo tentativo di accedere al valore archiviato consente di archiviare un valore positivo univoco in `id`. In alcuni linguaggi i caratteri vengono raggruppati e considerati come singoli caratteri, mentre in altri linguaggi i singoli caratteri vengono considerati come se fossero due caratteri. I servizi di ordinamento forniti dalla classe di ordinamento forniscono una modalità di ordinamento per questi casi.
 
@@ -57,7 +58,7 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome tipo|Descrizione|
+|Nome tipo|Description|
 |-|-|
 |[char_type](#char_type)|Tipo che descrive un carattere di tipo `CharType`.|
 |[string_type](#string_type)|Tipo che descrive una stringa di tipo `basic_string` contenente caratteri di tipo `CharType`.|
@@ -79,7 +80,7 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 **Spazio dei nomi:** std
 
-## <a name="collatechar_type"></a><a name="char_type"></a>COLLATE:: char_type
+## <a name="collatechar_type"></a><a name="char_type"></a> COLLATE:: char_type
 
 Tipo che descrive un carattere di tipo `CharType`.
 
@@ -87,11 +88,11 @@ Tipo che descrive un carattere di tipo `CharType`.
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del parametro di modello `CharType`.
 
-## <a name="collatecollate"></a><a name="collate"></a>COLLATE:: COLLATE
+## <a name="collatecollate"></a><a name="collate"></a> COLLATE:: COLLATE
 
 Costruttore per gli oggetti della classe collate usato come facet delle impostazioni locali per gestire le convenzioni di ordinamento delle stringhe.
 
@@ -114,7 +115,7 @@ Valore Integer che consente di specificare il tipo di gestione della memoria per
 *_Locname*\
 Nome delle impostazioni locali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I valori possibili per il parametro *_Refs* e i relativi significati sono:
 
@@ -122,11 +123,11 @@ I valori possibili per il parametro *_Refs* e i relativi significati sono:
 
 - 1: la durata dell'oggetto deve essere gestita manualmente.
 
-- \>1: questi valori non sono definiti.
+- \> 1: questi valori non sono definiti.
 
 Il costruttore inizializza l'oggetto di base con **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs` ).
 
-## <a name="collatecompare"></a><a name="compare"></a>COLLATE:: compare
+## <a name="collatecompare"></a><a name="compare"></a> COLLATE:: compare
 
 Confronta due sequenze di caratteri in base alle regole specifiche del relativo facet per verificarne l'uguaglianza o la disuguaglianza.
 
@@ -161,7 +162,7 @@ La funzione membro restituisce:
 
 - 0 se le sequenze sono equivalenti.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La prima sequenza ottiene un risultato inferiore se contiene l'elemento più piccolo della prima coppia non equivalente rilevata nel confronto delle sequenze, oppure se non ci sono coppie non equivalenti, ma la prima sequenza è più breve.
 
@@ -192,7 +193,7 @@ int main() {
 }
 ```
 
-## <a name="collatedo_compare"></a><a name="do_compare"></a>COLLATE::d o_compare
+## <a name="collatedo_compare"></a><a name="do_compare"></a> COLLATE::d o_compare
 
 Funzione virtuale chiamata per confrontare due sequenze di caratteri in base alle regole specifiche del relativo facet per verificarne l'uguaglianza o la disuguaglianza.
 
@@ -227,7 +228,7 @@ La funzione membro restituisce:
 
 - 0 se le sequenze sono equivalenti.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro virtuale protetta confronta la sequenza in [* first1, last1) * con la sequenza in *[first2, last2*). Confronta i valori applicando `operator<` tra coppie di elementi corrispondenti di tipo `CharType` . La prima sequenza ottiene un risultato inferiore se contiene l'elemento più piccolo della prima coppia non equivalente rilevata nel confronto delle sequenze, oppure se non ci sono coppie non equivalenti, ma la prima sequenza è più breve.
 
@@ -235,7 +236,7 @@ La funzione membro virtuale protetta confronta la sequenza in [* first1, last1) 
 
 Vedere l'esempio di [collate::compare](#compare), che chiama `do_compare`.
 
-## <a name="collatedo_hash"></a><a name="do_hash"></a>COLLATE::d o_hash
+## <a name="collatedo_hash"></a><a name="do_hash"></a> COLLATE::d o_hash
 
 Funzione virtuale chiamata per determinare il valore hash delle sequenze in base alle regole specifiche del relativo facet.
 
@@ -255,7 +256,7 @@ Un puntatore all'ultimo carattere nella sequenza il cui valore deve essere deter
 
 Valore hash di tipo **`long`** per la sequenza.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un valore hash può essere utile, ad esempio, per distribuire le sequenze in modo pseudo-casuale all'interno di una matrice di elenchi.
 
@@ -263,7 +264,7 @@ Un valore hash può essere utile, ad esempio, per distribuire le sequenze in mod
 
 Vedere l'esempio di [hash](#hash), che chiama `do_hash`.
 
-## <a name="collatedo_transform"></a><a name="do_transform"></a>COLLATE::d o_transform
+## <a name="collatedo_transform"></a><a name="do_transform"></a> COLLATE::d o_transform
 
 Funzione virtuale chiamata per convertire una sequenza di caratteri in una stringa che può essere utilizzata nei confronti lessicografici con altre sequenze di caratteri convertite in modo analogo dalle stesse impostazioni locali.
 
@@ -283,7 +284,7 @@ Puntatore all'ultimo carattere nella sequenza da convertire.
 
 Stringa corrispondente alla sequenza di caratteri trasformata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro virtuale protetta restituisce un oggetto della classe [string_type](#string_type) la cui sequenza controllata è una copia della sequenza [ `first` , `last` ). Se una classe derivata da collate \< **CharType**> esegue l'override di [do_compare](#do_compare), deve anche eseguire l'override `do_transform` di per trovare la corrispondenza. Quando vengono passate a `collate::compare`, due stringhe trasformate devono produrre lo stesso risultato che si otterrebbe dal passaggio delle stringhe non trasformate per il confronto nella classe derivata.
 
@@ -291,7 +292,7 @@ La funzione membro virtuale protetta restituisce un oggetto della classe [string
 
 Vedere l'esempio di [transform](#transform) che chiama `do_transform`.
 
-## <a name="collatehash"></a><a name="hash"></a>COLLATE:: hash
+## <a name="collatehash"></a><a name="hash"></a> COLLATE:: hash
 
 Determina il valore hash della sequenza in base alle regole specifiche del relativo facet.
 
@@ -311,7 +312,7 @@ Un puntatore all'ultimo carattere nella sequenza il cui valore deve essere deter
 
 Valore hash di tipo **`long`** per la sequenza.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce [do_hash](#do_hash)( `first` , `last` ).
 
@@ -345,7 +346,7 @@ int main( )
 541187293 551279837
 ```
 
-## <a name="collatestring_type"></a><a name="string_type"></a>COLLATE:: string_type
+## <a name="collatestring_type"></a><a name="string_type"></a> COLLATE:: string_type
 
 Tipo che descrive una stringa di tipo `basic_string` contenente caratteri di tipo `CharType`.
 
@@ -353,7 +354,7 @@ Tipo che descrive una stringa di tipo `basic_string` contenente caratteri di tip
 typedef basic_string<CharType> string_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo descrive una specializzazione del modello di classe [basic_string](../standard-library/basic-string-class.md) i cui oggetti possono archiviare copie della sequenza di origine.
 
@@ -361,7 +362,7 @@ Il tipo descrive una specializzazione del modello di classe [basic_string](../st
 
 Per un esempio di dichiarazione e uso di `string_type`, vedere [transform](#transform).
 
-## <a name="collatetransform"></a><a name="transform"></a>COLLATE:: Transform
+## <a name="collatetransform"></a><a name="transform"></a> COLLATE:: Transform
 
 Converte una sequenza di caratteri dalle impostazioni locali in una stringa che può essere utilizzata nei confronti lessicografici con altre sequenze di caratteri convertite in modo analogo dalle stesse impostazioni locali.
 
@@ -381,7 +382,7 @@ Puntatore all'ultimo carattere nella sequenza da convertire.
 
 Stringa contenente la sequenza di caratteri trasformata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce [do_transform](#do_transform)( `first` , `last` ).
 

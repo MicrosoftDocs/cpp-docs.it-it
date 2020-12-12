@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: avvisi degli strumenti del linker LNK4020'
 title: Avviso degli strumenti del linker LNK4020
 ms.date: 05/29/2018
 f1_keywords:
 - LNK4020
 helpviewer_keywords:
 - LNK4020
-ms.openlocfilehash: e818909cc0b590b0f7727846cfd7b469e8bc0e3f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1f658b999f57a8b4eeaa01e2586bc356da5f91a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80194226"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331961"
 ---
 # <a name="linker-tools-warning-lnk4020"></a>Avviso degli strumenti del linker LNK4020
 

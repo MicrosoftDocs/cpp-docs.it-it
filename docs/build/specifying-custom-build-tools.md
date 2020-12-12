@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: specificare gli strumenti di compilazione personalizzati'
 title: Specifica di strumenti di compilazione personalizzata
 ms.date: 06/05/2018
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - build tools (C++), specifying
 - custom build tools (C++), specifying
 - builds (C++), custom build tools
-ms.openlocfilehash: dbce226b34503a9e8e70b6f19d9aa0c68ef487f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db3162e3f7ad3f007d3f26e1ee2a279e5a132eb9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314754"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275334"
 ---
 # <a name="specify-custom-build-tools"></a>Specificare strumenti di compilazione personalizzati
 
@@ -52,7 +53,7 @@ Per informazioni generali sugli strumenti di compilazione personalizzati e sulle
 
       Le macro di MSBuild consentono di specificare vari file di input e output in modo simbolico. Per informazioni su come specificare il percorso dei file o i nomi dei set di file, vedere [macro comuni per i comandi e le proprietà di compilazione](reference/common-macros-for-build-commands-and-properties.md).
 
-      Poiché il carattere '%' è riservato da MSBuild, se si specifica una variabile di ambiente, **%** sostituire ogni carattere di escape con la sequenza di escape esadecimale **%25** . Ad esempio, sostituire **%WINDIR%** con **%25WINDIR%25**. MSBuild sostituisce ogni sequenza **%25** con il carattere **%** prima di accedere alla variabile di ambiente.
+      Poiché il carattere '%' è riservato da MSBuild, se si specifica una variabile di ambiente, sostituire ogni **%** carattere di escape con la sequenza di escape esadecimale **%25** . Ad esempio, sostituire **%WINDIR%** con **%25WINDIR%25**. MSBuild sostituisce ogni sequenza **%25** con il carattere **%** prima di accedere alla variabile di ambiente.
 
    - In **Descrizione** immettere un messaggio descrittivo per questo strumento di compilazione personalizzato. Il messaggio viene visualizzato nella finestra **Output** quando il sistema esegue lo strumento.
 
@@ -74,11 +75,11 @@ Questo comando esegue l'analizzatore lessicale su parser.l e restituisce parser.
 
 Nella proprietà **Output** immettere quanto segue:
 
-> **. \%(Nomefile). c**
+> **.\% (Nomefile). c**
 
 Quando si compila il progetto, il sistema di compilazione confronta i timestamp di parser.l e parser.c. Se parser.l è più recente o se parser.c non esiste, il sistema di compilazione esegue il valore della proprietà **Riga di comando** per aggiornare parser.c. Dato che anche parser.c è stato aggiunto al progetto, il sistema di compilazione compila quindi parser.c.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro comuni per i comandi e le proprietà di compilazione](reference/common-macros-for-build-commands-and-properties.md)<br>
 [Risoluzione dei problemi di personalizzazione della compilazione](troubleshooting-build-customizations.md)

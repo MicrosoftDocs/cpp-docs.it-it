@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: funzione MakeAndInitialize'
 title: Funzione MakeAndInitialize
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::MakeAndInitialize
 ms.assetid: 71ceeb12-d2a2-4317-b010-3dcde1b39467
-ms.openlocfilehash: 28d9e586a766a131e7ab6280859845810c1d9814
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 108da1f19d6956527f06e5239f5ce2e14716d664
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213798"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317922"
 ---
 # <a name="makeandinitialize-function"></a>Funzione MakeAndInitialize
 
@@ -107,7 +108,7 @@ Argomento 9 passato alla classe di runtime specificata.
 
 Valore HRESULT.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Vedere [procedura: creare un'istanza dei componenti WRL direttamente](how-to-instantiate-wrl-components-directly.md) per informazioni sulle differenze tra questa funzione e [Microsoft:: WRL:: make](make-function.md)e per un esempio.
 
@@ -117,6 +118,6 @@ Vedere [procedura: creare un'istanza dei componenti WRL direttamente](how-to-ins
 
 **Spazio dei nomi:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi Microsoft::WRL::Details](microsoft-wrl-details-namespace.md)
+[Spazio dei nomi Microsoft:: WRL::D etails](microsoft-wrl-details-namespace.md)

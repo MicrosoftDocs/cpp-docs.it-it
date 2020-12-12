@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: tasks.vs.jssu riferimento allo schema (C++)'
 title: tasks.vs.jsper riferimento allo schema (C++)
 ms.date: 08/20/2019
 helpviewer_keywords:
 - tasks.vs.json file [C++]
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: a2aea1b64d5a6c62604c680bf1a4a26478b7b52a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1fd4cfb960afa1260c8ea85c0e7fe9274c77ac68
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844990"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275321"
 ---
 # <a name="tasksvsjson-schema-reference-c"></a>tasks.vs.jsper riferimento allo schema (C++)
 
@@ -130,6 +131,6 @@ Quando il tipo di attività è `msbuild` , sono disponibili le proprietà seguen
 |-|-|-|
 |`verbosity`|string| Specifica i valori verbosityAllowed di output di compilazione del progetto MSBuild: "quiet", "minimal", "Normal", "detailed", "Diagnostic".|
 |`toolsVersion`|string| Specifica la versione del set di strumenti per compilare il progetto, ad esempio "2,0", "3,5", "4,0", "Current". Il valore predefinito è "Current".|
-|`globalProperties`|object|Specifica un elenco di valori chiave/proprietà globali da passare al progetto, ad esempio "Configuration": "release".|
-|`properties`|object| Specifica un elenco di valori chiave-proprietà di proprietà aggiuntive del progetto.|
+|`globalProperties`|oggetto|Specifica un elenco di valori chiave/proprietà globali da passare al progetto, ad esempio "Configuration": "release".|
+|`properties`|oggetto| Specifica un elenco di valori chiave-proprietà di proprietà aggiuntive del progetto.|
 |`targets`|array| Specifica l'elenco di destinazioni da richiamare, in ordine, nel progetto. La destinazione predefinita del progetto viene utilizzata se non ne viene specificato alcuno.|

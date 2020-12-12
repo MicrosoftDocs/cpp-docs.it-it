@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: file di progetto'
 title: File di progetto di esempio
 ms.date: 08/19/2019
 helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-ms.openlocfilehash: eef28961ab8c4d3a34a74999c7e0c69a4fc3fced
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: caadd7c88b910b522868a6481219a3169cab2593
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924011"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225765"
 ---
 # <a name="project-files"></a>File di progetto
 
@@ -26,7 +27,7 @@ Il file vcxproj di esempio seguente è stato prodotto scegliendo **creazione gui
 
 ::: moniker range="<=msvc-150"
 
-L'esempio di file con estensione vcxproj seguente è stato generato specificando **Progetto console Win32** nella finestra di dialogo **Nuovo progetto** . Per elaborare un file di progetto usare lo strumento msbuild.exe dalla riga di comando, o il comando **Build** nell'IDE. Questo esempio non può essere elaborato perché i file di origine e di intestazione necessari non sono stati specificati. Per ulteriori informazioni sugli elementi XML in un file di progetto, vedere [riferimento allo schema del file di progetto](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+L'esempio di file con estensione vcxproj seguente è stato generato specificando **Progetto console Win32** nella finestra di dialogo **Nuovo progetto**. Per elaborare un file di progetto usare lo strumento msbuild.exe dalla riga di comando, o il comando **Build** nell'IDE. Questo esempio non può essere elaborato perché i file di origine e di intestazione necessari non sono stati specificati. Per ulteriori informazioni sugli elementi XML in un file di progetto, vedere [riferimento allo schema del file di progetto](/visualstudio/msbuild/msbuild-project-file-schema-reference).
 
 ::: moniker-end
 
@@ -131,7 +132,7 @@ L'esempio di file con estensione vcxproj seguente è stato generato specificando
 </Project>
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Progetti di Visual Studio-C++](../creating-and-managing-visual-cpp-projects.md)<br>
 [Impostare il compilatore e le proprietà di compilazione C++ in Visual Studio](../working-with-project-properties.md)

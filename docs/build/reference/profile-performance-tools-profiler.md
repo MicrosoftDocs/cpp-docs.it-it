@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/PROFILE (Profiler strumenti di prestazioni)
 title: /PROFILE (Profiler strumenti di prestazioni)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - -PROFILE linker option
 - /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-ms.openlocfilehash: 07952c979fd66291b1744521d83e4556f010d297
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: fb9310bb782a4b321113155f01db2228e3a46e15
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500785"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225791"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (Profiler strumenti di prestazioni)
 

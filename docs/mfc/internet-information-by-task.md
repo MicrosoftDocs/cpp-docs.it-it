@@ -1,15 +1,16 @@
 ---
+description: 'Scopri di più su: informazioni internet per attività'
 title: Informazioni Internet per attività
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC, Internet applications
 ms.assetid: da078bf5-53c3-4167-b1ef-509b5a544ad9
-ms.openlocfilehash: ba359aaba2129af3ab4af9543a46b8810cf4fb6e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 1f0b1651198518b195e4a53f2b4d9d24cf39e686
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615603"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338362"
 ---
 # <a name="internet-information-by-task"></a>Informazioni Internet per attività
 
@@ -26,7 +27,7 @@ In questo argomento sono elencate le categorie di attività seguenti:
 
 ## <a name="what-do-you-want-to-do"></a>Cosa si vuole fare
 
-### <a name="activex-controls-documents-and-asynchronous-moniker-tasks"></a><a name="_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks"></a>Controlli ActiveX, documenti e attività del moniker asincrono
+### <a name="activex-controls-documents-and-asynchronous-moniker-tasks"></a><a name="_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks"></a> Controlli ActiveX, documenti e attività del moniker asincrono
 
 - [Informazioni sui moniker asincroni](asynchronous-monikers-on-the-internet.md)
 
@@ -34,7 +35,7 @@ In questo argomento sono elencate le categorie di attività seguenti:
 
 - [Ottimizzazione di un controllo ActiveX](mfc-activex-controls-optimization.md)
 
-### <a name="wininet-tasks"></a><a name="_core_wininet_tasks"></a>Attività WinInet
+### <a name="wininet-tasks"></a><a name="_core_wininet_tasks"></a> Attività WinInet
 
 - [Informazioni su WinInet, le funzioni API Win32 per l'accesso a Internet](wininet-basics.md)
 
@@ -48,6 +49,6 @@ In questo argomento sono elencate le categorie di attività seguenti:
 
 - [Scrivere un'applicazione client Gopher](steps-in-a-typical-gopher-client-application.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Nozioni fondamentali sulla programmazione Internet MFC](mfc-internet-programming-basics.md)

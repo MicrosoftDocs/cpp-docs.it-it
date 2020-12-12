@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: progettazione e creazione di una visualizzazione di record (accesso ai dati MFC)'
 title: Progettazione e creazione di una visualizzazione di record (accesso ai dati MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - application wizards [C++], creating record view classes
 - designing record views
 ms.assetid: 1d6f5439-754f-4b8b-a19d-841a4657827b
-ms.openlocfilehash: dfd486c397dffa87295839f5ef62de0bd1ba812a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6bcf388abb164c4f20bb639dc19c427bd3fbcad3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213421"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317909"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>Progettazione e creazione di una visualizzazione di record (accesso ai dati MFC)
 
@@ -34,14 +35,14 @@ ms.locfileid: "80213421"
 
 Negli argomenti elencati di seguito vengono forniti altri dettagli sull'uso delle visualizzazioni di record:
 
-- [Visualizzazioni di record: supporto della navigazione in una visualizzazione di record](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
+- [Supporto della navigazione in una visualizzazione di record](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
 
-- [Visualizzazioni di record: uso di una visualizzazione di record](../data/using-a-record-view-mfc-data-access.md)
+- [Utilizzo di una visualizzazione di record](../data/using-a-record-view-mfc-data-access.md)
 
-- [Visualizzazioni di record: riempimento di una casella di riepilogo da un secondo recordset](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
+- [Inserimento di dati in una casella di riepilogo da un secondo recordset](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Visualizzazioni di record (accesso ai dati MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Recordset (ODBC)](../data/odbc/recordset-odbc.md)<br/>
-[Elenco dei driver ODBC](../data/odbc/odbc-driver-list.md)
+[Elenco di driver ODBC](../data/odbc/odbc-driver-list.md)

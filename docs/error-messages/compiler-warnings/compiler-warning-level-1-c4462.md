@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 1) C4462'
 title: Avviso del compilatore (livello 1) C4462
 ms.date: 10/25/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4462
 ms.assetid: 4e20aca4-293e-4c75-a83d-961c27ab7840
-ms.openlocfilehash: bd4d5c1fd7dd8d7419fc901149ceab7e769e7076
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81696df228b2cbe6278521f602d2a6f986cacb13
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404052"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97212532"
 ---
 # <a name="compiler-warning-level-1-c4462"></a>Avviso del compilatore (livello 1) C4462
 
@@ -19,7 +20,7 @@ ms.locfileid: "62404052"
 
 L'avviso C4462 viene generato in un componente o app di Windows Runtime quando un elemento `TypedEventHandler` pubblico presenta come uno dei relativi parametri di tipo un riferimento alla classe contenitore.
 
-Questo avviso viene promossa automaticamente a un errore. Se si vuole modificare questo comportamento, usare [#pragma avviso](../../preprocessor/warning.md). Ad esempio, per rendere C4462 un problema di avviso di livello 4, aggiungere questa riga al file del codice sorgente:
+Questo avviso viene promosso automaticamente a un errore. Se si desidera modificare questo comportamento, utilizzare [#pragma avviso](../../preprocessor/warning.md). Ad esempio, per rendere C4462 un problema di avviso di livello 4, aggiungere questa riga al file del codice sorgente:
 
 ```cpp
 #pragma warning(4:4462)
@@ -27,7 +28,7 @@ Questo avviso viene promossa automaticamente a un errore. Se si vuole modificare
 
 ## <a name="example"></a>Esempio
 
-In questo esempio genera l'avviso C4462:
+Questo esempio genera l'avviso C4462:
 
 ```cpp
 namespace N

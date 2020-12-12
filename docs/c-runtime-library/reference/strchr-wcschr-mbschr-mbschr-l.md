@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: strchr, wcschr, _mbschr, _mbschr_l'
 title: strchr, wcschr, _mbschr, _mbschr_l
 ms.date: 4/2/2020
 api_name:
@@ -47,12 +48,12 @@ helpviewer_keywords:
 - tcschr function
 - mbschr_l function
 ms.assetid: 2639905d-e983-43b7-b885-abef32cfac43
-ms.openlocfilehash: a7cea0b2c640b7cb87d7097cea7bdf94a73abfb8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8971022e529a03199a890d769843fd77ec44c5af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229311"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306222"
 ---
 # <a name="strchr-wcschr-_mbschr-_mbschr_l"></a>strchr, wcschr, _mbschr, _mbschr_l
 
@@ -130,11 +131,11 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce un puntatore alla prima occorrenza di *c* in *Str*oppure null se *c* non viene trovato.
+Ognuna di queste funzioni restituisce un puntatore alla prima occorrenza di *c* in *Str* oppure null se *c* non viene trovato.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La `strchr` funzione trova la prima occorrenza di *c* in *Str*oppure restituisce null se *c* non viene trovato. Il carattere di terminazione Null è incluso nella ricerca.
+La `strchr` funzione trova la prima occorrenza di *c* in *Str* oppure restituisce null se *c* non viene trovato. Il carattere di terminazione Null è incluso nella ricerca.
 
 `wcschr`, `_mbschr` e `_mbschr_l` sono le versioni a caratteri wide e a caratteri multibyte di `strchr`. Gli argomenti e il valore restituito di `wcschr` sono stringhe con caratteri wide, mentre quelli di `_mbschr` sono stringhe con caratteri multibyte. `_mbschr` riconosce sequenze di caratteri multibyte. Inoltre, se la stringa è un puntatore Null, `_mbschr` richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `_mbschr` restituisce null e imposta `errno` su EINVAL. `strchr` e `wcschr` non convalidano i parametri. A parte ciò, queste tre funzioni si comportano in modo identico.
 
@@ -222,7 +223,7 @@ Result:   last r found at position 30
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Impostazioni locali](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>

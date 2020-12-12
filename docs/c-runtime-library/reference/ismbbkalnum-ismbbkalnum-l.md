@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _ismbbkalnum, _ismbbkalnum_l'
 title: _ismbbkalnum, _ismbbkalnum_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-ms.openlocfilehash: 25ce3420ec3fb92701c4ed7cd596c2103c33ac54
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c9f18a80882b9f0bc703b0fbf5caace9746a486e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909512"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306313"
 ---
 # <a name="_ismbbkalnum-_ismbbkalnum_l"></a>_ismbbkalnum, _ismbbkalnum_l
 
@@ -69,7 +70,7 @@ Impostazioni locali da usare.
 
 **_ismbbkalnum** restituisce un valore diverso da zero se l'integer *c* è un simbolo di testo non ASCII diverso dalla punteggiatura; in caso contrario, 0. **_ismbbkalnum** usa le impostazioni locali correnti per le informazioni sui caratteri dipendenti dalle impostazioni locali. **_ismbbkalnum_l** è identico a **_ismbbkalnum** con la differenza che accetta le impostazioni locali come parametro. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -82,7 +83,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Classificazione per byte](../../c-runtime-library/byte-classification.md)<br/>
+[Classificazione byte](../../c-runtime-library/byte-classification.md)<br/>
 [Routine di _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
