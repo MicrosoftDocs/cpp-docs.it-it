@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: boyer_moore_searcher Class'
 title: Classe boyer_moore_searcher
 ms.date: 08/03/2019
 f1_keywords:
 - functional/std::boyer_moore_searcher
 helpviewer_keywords:
 - std::boyer_moore_searcher [C++]
-ms.openlocfilehash: d6fa4dd203336107614ca3431f38846f0c3c89af
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 7d8efe145870847aae8e961dad1b4a92fec8bd57
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039815"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325411"
 ---
 # <a name="boyer_moore_searcher-class"></a>Classe boyer_moore_searcher
 
@@ -75,7 +76,7 @@ Predicato di confronto di uguaglianza facoltativo per gli elementi di sequenza. 
 
 ### <a name="remarks"></a>Commenti
 
-Genera qualsiasi eccezione generata dal costruttore di copia dei tipi *BinaryPredicate*, *hash*o *RandomAccessIterator* oppure dall'operatore di chiamata di *BinaryPredicate* o *hash*.
+Genera qualsiasi eccezione generata dal costruttore di copia dei tipi *BinaryPredicate*, *hash* o *RandomAccessIterator* oppure dall'operatore di chiamata di *BinaryPredicate* o *hash*.
 
 Questa classe è una novità di C++ 17.
 
@@ -100,7 +101,7 @@ Fine della sequenza nella quale eseguire la ricerca.
 
 ### <a name="remarks"></a>Commenti
 
-Se il criterio di ricerca `[pat_first, pat_last)` è vuoto, restituisce `make_pair(first, first)` . Se il criterio di ricerca non viene trovato, restituisce `make_pair(last, last)` . In caso contrario, restituisce una coppia di iteratori all'inizio e alla fine di una sequenza in `[first, last)` uguale a in `[pat_first, pat_last)` base al predicato predicato. *pred*
+Se il criterio di ricerca `[pat_first, pat_last)` è vuoto, restituisce `make_pair(first, first)` . Se il criterio di ricerca non viene trovato, restituisce `make_pair(last, last)` . In caso contrario, restituisce una coppia di iteratori all'inizio e alla fine di una sequenza in `[first, last)` uguale a in `[pat_first, pat_last)` base al predicato predicato. 
 
 Questa classe è una novità di C++ 17.
 

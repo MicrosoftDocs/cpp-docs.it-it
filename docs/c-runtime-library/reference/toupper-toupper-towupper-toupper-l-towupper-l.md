@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: ToUpper, _toupper, towupper, _toupper_l, _towupper_l'
 title: toupper, _toupper, towupper, _toupper_l, _towupper_l
 ms.date: 4/2/2020
 api_name:
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - characters, converting
 - toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
-ms.openlocfilehash: 943b66bf03420dc707415fd5da0ddf8cc3107d85
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cb2a121d1fa96c0149a329520f5c71c1cc4f4d9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913873"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318312"
 ---
 # <a name="toupper-_toupper-towupper-_toupper_l-_towupper_l"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
 
@@ -102,7 +103,7 @@ Non esiste alcuno valore restituito riservato per indicare un errore.
 
 Affinché **ToUpper** fornisca i risultati previsti, è necessario che [__isascii](isascii-isascii-iswascii.md) e il [valore di unlower](islower-iswlower-islower-l-iswlower-l.md) restituiscono entrambi un valore diverso da zero.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Ognuna di queste routine converte una determinata lettera minuscola in maiuscola, se possibile e appropriato. La conversione del case di **towupper** è specifica delle impostazioni locali. La combinazione di maiuscole/minuscole viene modificata solo per i caratteri rilevanti per le impostazioni locali correnti. Le funzioni senza il suffisso **_L** usano le impostazioni locali attualmente impostate. Le versioni di queste funzioni con il suffisso **_L** accettano le impostazioni locali come parametro e lo usano anziché le impostazioni locali attualmente impostate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
@@ -136,9 +137,9 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 Vedere l'esempio in [Funzioni to](../../c-runtime-library/to-functions.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[is, isw Routines](../../c-runtime-library/is-isw-routines.md)<br/>
+[is, ISW routines](../../c-runtime-library/is-isw-routines.md)<br/>
 [Funzioni to](../../c-runtime-library/to-functions.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

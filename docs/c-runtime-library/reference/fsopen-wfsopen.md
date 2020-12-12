@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _fsopen, _wfsopen'
 title: _fsopen, _wfsopen
 ms.date: 4/2/2020
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - _wfsopen function
 - file sharing [C++]
 ms.assetid: 5e4502ab-48a9-4bee-a263-ebac8d638dec
-ms.openlocfilehash: 7c7f079d8867416ab4f091d7c95a01ab9e40c0e8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c7b54a6735939e26c8ff0153abc640e3dc2c8b41
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910149"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318338"
 ---
 # <a name="_fsopen-_wfsopen"></a>_fsopen, _wfsopen
 
@@ -84,7 +85,7 @@ Ognuna di queste funzioni restituisce un puntatore al flusso. Un valore di punta
 
 Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_fsopen** apre il file specificato da *filename* come flusso e prepara il file per una successiva lettura o scrittura condivisa, come definito dagli argomenti mode e *shflag* . **_wfsopen** è una versione a caratteri wide di **_fsopen**; gli argomenti *filename* e *mode* per **_wfsopen** sono stringhe a caratteri wide. **_wfsopen** e **_fsopen** si comportano in modo identico.
 
@@ -134,7 +135,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|Intestazioni facoltative|
+|Funzione|Intestazione obbligatoria|Intestazioni facoltative|
 |--------------|---------------------|----------------------|
 |**_fsopen**|\<stdio.h>|\<share.h><br /><br /> Per la costante manifesto per il parametro *shflag* .|
 |**_wfsopen**|\<stdio.h> o \<wchar.h>|\<share.h><br /><br /> Per la costante manifesto per il parametro *shflag* .|

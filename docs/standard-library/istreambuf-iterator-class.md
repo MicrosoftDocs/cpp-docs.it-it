@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: istreambuf_iterator Class'
 title: Classe istreambuf_iterator
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - std::istreambuf_iterator [C++], traits_type
 - std::istreambuf_iterator [C++], equal
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
-ms.openlocfilehash: b76e327c46a180c1e7ae7287ee9fe49573f3a7a6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 221141f5dd97be80b6f13b677f4ed253d75e1054
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217701"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306729"
 ---
 # <a name="istreambuf_iterator-class"></a>Classe istreambuf_iterator
 
@@ -45,7 +46,7 @@ Tipo che rappresenta il tipo di carattere per istreambuf_iterator.
 *Tratti*\
 Tipo che rappresenta il tipo di carattere per istreambuf_iterator. Questo argomento è facoltativo e il valore predefinito è `char_traits` \< *CharType> . *
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La classe istreambuf_iterator deve soddisfare i requisiti per un iteratore di input.
 
@@ -59,7 +60,7 @@ Dopo la costruzione o l'incremento di un oggetto della classe istreambuf_iterato
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome tipo|Descrizione|
+|Nome tipo|Description|
 |-|-|
 |[char_type](#char_type)|Tipo che fornisce il tipo di carattere di `ostreambuf_iterator`.|
 |[int_type](#int_type)|Tipo che fornisce un tipo Integer per `istreambuf_iterator`.|
@@ -87,7 +88,7 @@ Dopo la costruzione o l'incremento di un oggetto della classe istreambuf_iterato
 
 **Spazio dei nomi:** std
 
-## <a name="istreambuf_iteratorchar_type"></a><a name="char_type"></a>istreambuf_iterator:: char_type
+## <a name="istreambuf_iteratorchar_type"></a><a name="char_type"></a> istreambuf_iterator:: char_type
 
 Tipo che fornisce il tipo di carattere di `ostreambuf_iterator`.
 
@@ -95,7 +96,7 @@ Tipo che fornisce il tipo di carattere di `ostreambuf_iterator`.
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del parametro di modello *CharType*.
 
@@ -132,7 +133,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratorequal"></a><a name="equal"></a>istreambuf_iterator:: EQUAL
+## <a name="istreambuf_iteratorequal"></a><a name="equal"></a> istreambuf_iterator:: EQUAL
 
 Test per verificare l'equivalenza tra due iteratori del buffer del flusso di input.
 
@@ -149,7 +150,7 @@ Iteratore per cui verificare l'equivalenza.
 
 **`true`** Se entrambi `istreambuf_iterator` i sono iteratori di fine flusso o se nessuno dei due è un iteratore di fine flusso; in caso contrario, **`false`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un intervallo viene definito dall'oggetto `istreambuf_iterator` alla posizione corrente e all'iteratore di fine flusso, ma poiché tutti gli iteratori non di fine flusso sono equivalenti nella `equal` funzione membro, non è possibile definire intervalli secondari utilizzando `istreambuf_iterator` s. Gli operatori `==` e `!=` hanno la stessa semantica.
 
@@ -181,7 +182,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratorint_type"></a><a name="int_type"></a>istreambuf_iterator:: int_type
+## <a name="istreambuf_iteratorint_type"></a><a name="int_type"></a> istreambuf_iterator:: int_type
 
 Tipo che fornisce un tipo Integer per `istreambuf_iterator`.
 
@@ -189,7 +190,7 @@ Tipo che fornisce un tipo Integer per `istreambuf_iterator`.
 typedef typename traits_type::int_type int_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è sinonimo di `Traits::int_type`.
 
@@ -212,7 +213,7 @@ The inttype1 = 100.
 */
 ```
 
-## <a name="istreambuf_iteratoristream_type"></a><a name="istream_type"></a>istreambuf_iterator:: istream_type
+## <a name="istreambuf_iteratoristream_type"></a><a name="istream_type"></a> istreambuf_iterator:: istream_type
 
 Tipo che fornisce il tipo di flusso di `istreambuf_iterator`.
 
@@ -220,7 +221,7 @@ Tipo che fornisce il tipo di flusso di `istreambuf_iterator`.
 typedef basic_istream<CharType, Traits> istream_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo di `basic_istream` \< **CharType**, **Traits**> .
 
@@ -228,7 +229,7 @@ Il tipo è un sinonimo di `basic_istream` \< **CharType**, **Traits**> .
 
 Vedere [istreambuf_iterator](#istreambuf_iterator) per un esempio di come dichiarare e usare `istream_type`.
 
-## <a name="istreambuf_iteratoristreambuf_iterator"></a><a name="istreambuf_iterator"></a>istreambuf_iterator:: istreambuf_iterator
+## <a name="istreambuf_iteratoristreambuf_iterator"></a><a name="istreambuf_iterator"></a> istreambuf_iterator:: istreambuf_iterator
 
 Costruisce un oggetto istreambuf_iterator inizializzato per la lettura di caratteri dal flusso di input.
 
@@ -245,7 +246,7 @@ Buffer del flusso di input a cui viene collegato l'oggetto `istreambuf_iterator`
 *_Istr*\
 Flusso di input a cui viene collegato l'oggetto `istreambuf_iterator`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo costruttore inizializza il puntatore del buffer del flusso di input con *Strbuf*. Il secondo costruttore inizializza il puntatore del buffer del flusso di input con *_Istr*. `rdbuf`e, infine, tenta di estrarre e archiviare un oggetto di tipo `CharType` .
 
@@ -281,7 +282,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratoroperator"></a><a name="op_star"></a>istreambuf_iterator:: operator *
+## <a name="istreambuf_iteratoroperator"></a><a name="op_star"></a> istreambuf_iterator:: operator *
 
 L'operatore di dereferenziazione restituisce il carattere successivo del flusso.
 
@@ -321,7 +322,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratoroperator"></a><a name="op_add_add"></a>istreambuf_iterator:: operator + +
+## <a name="istreambuf_iteratoroperator"></a><a name="op_add_add"></a> istreambuf_iterator:: operator + +
 
 Restituisce il carattere successivo del flusso di input oppure copia l'oggetto prima di incrementarlo e restituisce la copia.
 
@@ -334,7 +335,7 @@ istreambuf_iterator<CharType, Traits> operator++(int);
 
 Oggetto `istreambuf_iterator` o riferimento a un oggetto `istreambuf_iterator`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo operatore tenta infine di estrarre e archiviare un oggetto di tipo `CharType` dal flusso di input associato. Il secondo operatore esegue una copia dell'oggetto, incrementa l'oggetto, quindi restituisce la copia.
 
@@ -366,7 +367,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratoroperator-gt"></a><a name="op_arrow"></a>istreambuf_iterator:: operator-&gt;
+## <a name="istreambuf_iteratoroperator-gt"></a><a name="op_arrow"></a> istreambuf_iterator:: operator-&gt;
 
 Restituisce il valore di un numero, se presente.
 
@@ -376,9 +377,9 @@ const Elem* operator->() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-L'operatore restituisce ** & \* \* this**.
+L'operatore restituisce **& \* \* this**.
 
-## <a name="istreambuf_iteratorstreambuf_type"></a><a name="streambuf_type"></a>istreambuf_iterator:: streambuf_type
+## <a name="istreambuf_iteratorstreambuf_type"></a><a name="streambuf_type"></a> istreambuf_iterator:: streambuf_type
 
 Tipo che fornisce il tipo di flusso dell'oggetto istreambuf_iterator.
 
@@ -386,7 +387,7 @@ Tipo che fornisce il tipo di flusso dell'oggetto istreambuf_iterator.
 typedef basic_streambuf<CharType, Traits> streambuf_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo di `basic_streambuf` \< **CharType**, **Traits**> .
 
@@ -394,7 +395,7 @@ Il tipo è un sinonimo di `basic_streambuf` \< **CharType**, **Traits**> .
 
 Vedere [istreambuf_iterator](#istreambuf_iterator) per un esempio di come dichiarare e usare `istreambuf_type`.
 
-## <a name="istreambuf_iteratortraits_type"></a><a name="traits_type"></a>istreambuf_iterator:: traits_type
+## <a name="istreambuf_iteratortraits_type"></a><a name="traits_type"></a> istreambuf_iterator:: traits_type
 
 Tipo che fornisce il tipo di tratti di `istream_iterator`.
 
@@ -402,7 +403,7 @@ Tipo che fornisce il tipo di tratti di `istream_iterator`.
 typedef Traits traits_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del parametro di modello *Traits*.
 
