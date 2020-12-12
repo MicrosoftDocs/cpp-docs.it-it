@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: personalizzazione dell'aspetto dell'elemento di intestazione&#39;s"
 title: Personalizzazione dell'aspetto dell'elemento di intestazione&#39;s
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], customizing the items
 - HDS_ styles
 ms.assetid: b1e1e326-ec7d-4dbd-a46f-96a3e2055618
-ms.openlocfilehash: 8bf1bdad6a0408746b50b6b0dcbecbce308f5ede
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9cddb0f30dc2b7183952bd114990d1a608782ec3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617082"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309368"
 ---
 # <a name="customizing-the-header-item39s-appearance"></a>Personalizzazione dell'aspetto dell'elemento di intestazione&#39;s
 
@@ -33,7 +34,7 @@ Ecco un campionamento degli stili che è possibile impostare e il loro scopo:
 
 Per ulteriori informazioni su queste proprietà, vedere [Items](/windows/win32/Controls/header-controls) in the Windows SDK. Per informazioni sull'aggiunta di elementi a un controllo Header, vedere [aggiunta di elementi al controllo intestazione](adding-items-to-the-header-control.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso di CHeaderCtrl](using-cheaderctrl.md)<br/>
+[Utilizzo di CHeaderCtrl](using-cheaderctrl.md)<br/>
 [Controlli](controls-mfc.md)

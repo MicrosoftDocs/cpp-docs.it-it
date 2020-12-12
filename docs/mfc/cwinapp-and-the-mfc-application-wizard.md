@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: CWinApp e la creazione guidata applicazione MFC'
 title: CWinApp e la Creazione guidata applicazione MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - CWinApp class [MFC], and MFC Application Wizard
 - MFC, wizards
 ms.assetid: f8ac0491-3302-4e46-981d-0790624eb8a2
-ms.openlocfilehash: f57b3b2b37a97093aa6d81b59a12c8cf023e3157
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 1ce1f0a84aa5a0f123f9fa8654d1ce286c47d1d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622936"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309264"
 ---
 # <a name="cwinapp-and-the-mfc-application-wizard"></a>CWinApp e la Creazione guidata applicazione MFC
 
@@ -29,7 +30,7 @@ La classe dell'applicazione viene inserita nell'intestazione del progetto e nei 
 
 Le implementazioni standard e la mappa messaggi fornita sono appropriate per molti scopi, ma è possibile modificarle in base alle esigenze. L'aspetto più interessante di queste implementazioni è la `InitInstance` funzione membro. In genere, si aggiungerà codice all'implementazione scheletrica di `InitInstance` .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [CWinApp: classe Application](cwinapp-the-application-class.md)<br/>
 [Funzioni membro CWinApp sottoponibili a override](overridable-cwinapp-member-functions.md)<br/>
