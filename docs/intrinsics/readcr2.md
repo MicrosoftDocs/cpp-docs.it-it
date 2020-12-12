@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __readcr2'
 title: __readcr2
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - __readcr2 intrinsic
 ms.assetid: d02c97d8-1953-46e7-a79e-a781e2c5bf27
-ms.openlocfilehash: 482f4548a692d6aa3b65fbc42caabda29bb393c1
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: dd862f88716fd2d385622c5100f91fdf47061543
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217102"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257355"
 ---
 # <a name="__readcr2"></a>__readcr2
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Legge il registro CR2 e ne restituisce il valore.
 
@@ -31,18 +32,18 @@ Valore nel registro CR2.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`__readcr2`|x86, x64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 La funzione intrinseca è disponibile solo in modalità kernel e la routine è disponibile solo come funzione intrinseca.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

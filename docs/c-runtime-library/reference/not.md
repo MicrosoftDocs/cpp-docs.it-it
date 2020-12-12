@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: non'
 title: not
 ms.date: 11/04/2016
 api_location:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - not function
 ms.assetid: d2ddbd5c-33c0-4aff-8961-feac155b4ba1
-ms.openlocfilehash: bf84b7fd0cf1379b7a805b5aaf8739189f3e647e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ea70ce27ad496f2231490ebbbcf75ec905990c60
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168733"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256289"
 ---
 # <a name="not"></a>not
 
@@ -73,4 +74,4 @@ a is zero
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<iso646. h >
+**Intestazione:**\<iso646.h>

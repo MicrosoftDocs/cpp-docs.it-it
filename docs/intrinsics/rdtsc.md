@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __rdtsc'
 title: __rdtsc
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - rdtsc instruction
 - Read Time Stamp Counter instruction
 ms.assetid: e31d0e51-c9bb-42ca-bbe9-a81ffe662387
-ms.openlocfilehash: 837b68ca6ac63587cd43a7e8828777221c677e3c
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 930c8fbd0ae762c8674a85e379899bc4fe4d3394
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217141"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257511"
 ---
 # <a name="__rdtsc"></a>__rdtsc
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Genera l' `rdtsc` istruzione, che restituisce l'indicatore di tempo del processore. Il timestamp del processore registra il numero di cicli di clock dall'ultima reimpostazione.
 
@@ -33,13 +34,13 @@ Unsigned Integer a 64 bit che rappresenta un conteggio.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`__rdtsc`|x86, x64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Questa routine è disponibile solo come funzione intrinseca.
 
@@ -67,8 +68,8 @@ int main()
 3363423610155519 ticks
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

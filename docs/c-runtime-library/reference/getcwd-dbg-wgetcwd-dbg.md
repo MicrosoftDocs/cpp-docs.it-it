@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _getcwd_dbg, _wgetcwd_dbg'
 title: _getcwd_dbg, _wgetcwd_dbg
 ms.date: 11/04/2016
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _wgetcwd_dbg function
 - directories [C++], current working
 ms.assetid: 8d5d151f-d844-4aa6-a28c-1c11a22dc00d
-ms.openlocfilehash: 982a7c94ef3cbe5adf1e8e8a8a4c28443d8a5b8f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e470402cc258bf0fa0512136229eeace5bac466e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220665"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256601"
 ---
 # <a name="_getcwd_dbg-_wgetcwd_dbg"></a>_getcwd_dbg, _wgetcwd_dbg
 
@@ -87,7 +88,7 @@ Restituisce un puntatore al *buffer*. Un valore restituito **null** indica un er
 
 Per altre informazioni vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le funzioni **_getcwd_dbg** e **_wgetcwd_dbg** sono identiche a **_getcwd** e **_wgetcwd** ad eccezione del fatto che, quando viene definito **_DEBUG** , queste funzioni usano la versione di debug di **malloc** e **_malloc_dbg** per allocare memoria se viene passato **null** come primo parametro. Per altre informazioni, vedere [_malloc_dbg](malloc-dbg.md).
 
@@ -108,8 +109,8 @@ Nella maggior parte dei casi non è necessario chiamare queste funzioni in modo 
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [_getcwd, _wgetcwd](getcwd-wgetcwd.md)<br/>
 [Controllo Directory](../../c-runtime-library/directory-control.md)<br/>
-[Versioni di debug di funzioni di allocazione heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)<br/>
+[Versioni di debug delle funzioni di allocazione heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)<br/>

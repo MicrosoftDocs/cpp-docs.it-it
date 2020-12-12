@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _getdcwd, _wgetdcwd'
 title: _getdcwd, _wgetdcwd
 ms.date: 4/2/2020
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-ms.openlocfilehash: c9ae07c5880cb86b0aafb0dc66a7c1ce3edcc9d8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 47681e78cb010af2b495091419dec01e40f703a1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218663"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256549"
 ---
 # <a name="_getdcwd-_wgetdcwd"></a>_getdcwd, _wgetdcwd
 
@@ -76,7 +77,7 @@ Se l'unità specificata non è disponibile o non è possibile determinare il tip
 *buffer*<br/>
 Posizione di archiviazione per il percorso o **NULL**.
 
-Se viene specificato **null** , questa funzione alloca un buffer di almeno dimensioni di *maxlen* usando **malloc**e il valore restituito di **_getdcwd** è un puntatore al buffer allocato. Il buffer può essere liberato chiamando **Free** e passandolo al puntatore.
+Se viene specificato **null** , questa funzione alloca un buffer di almeno dimensioni di *maxlen* usando **malloc** e il valore restituito di **_getdcwd** è un puntatore al buffer allocato. Il buffer può essere liberato chiamando **Free** e passandolo al puntatore.
 
 *maxlen*<br/>
 Intero positivo diverso da zero che specifica la lunghezza massima del percorso, in caratteri: **`char`** per **_getdcwd** e **`wchar_t`** per **_wgetdcwd**.
@@ -89,7 +90,7 @@ Puntatore a una stringa che rappresenta il percorso completo della directory di 
 
 Se *il buffer* viene specificato **come null** e la memoria disponibile non è sufficiente per allocare caratteri *maxlen* , si verifica un errore e **errno** viene impostato su **ENOMEM**. Se la lunghezza del percorso, incluso il carattere null di terminazione, supera *maxlen*, si verifica un errore e **errno** viene impostato su **ERANGE**. Per altre informazioni su questi codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_getdcwd** ottiene il percorso completo della directory di lavoro corrente nell'unità specificata e lo archivia nel *buffer*. Se la directory di lavoro corrente è impostata sulla radice, la stringa termina con una barra rovesciata (\\). Se la directory di lavoro corrente è impostata su una directory diversa dalla quella radice, la stringa termina con il nome della directory e non con una barra rovesciata.
 
@@ -122,7 +123,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runt
 
 Vedere l'esempio in [_getdrive](getdrive.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controllo Directory](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>

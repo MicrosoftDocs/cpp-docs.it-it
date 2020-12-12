@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso di interoperabilità C++ (PInvoke implicito)'
 title: Utilizzo delle funzionalità di interoperabilità C++ (PInvoke implicito)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-ms.openlocfilehash: d26fbefd87b3ba6d6ca7e183be78608777f383b5
-ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
+ms.openlocfilehash: e2b1f1aeef68fd6329ef04a53249d7dce627f2c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75676929"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97255548"
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>Utilizzo delle funzionalità di interoperabilità C++ (PInvoke implicito)
 
-A differenza di altri linguaggi .NET, C++ Visual ha un supporto di interoperabilità che consente di esistere codice gestito e non gestito nella stessa applicazione e anche nello stesso file (con i pragma [gestiti e non gestiti](../preprocessor/managed-unmanaged.md) ). Ciò consente agli C++ sviluppatori di visualizzare di integrare le funzionalità .NET C++ in applicazioni visive esistenti senza compromettere il resto dell'applicazione.
+Diversamente da altri linguaggi .NET, Visual C++ dispone di supporto per l'interoperabilità che consente di esistere codice gestito e non gestito nella stessa applicazione e anche nello stesso file (con i pragma [gestiti e non gestiti](../preprocessor/managed-unmanaged.md) ). Ciò consente agli sviluppatori Visual C++ di integrare le funzionalità .NET in applicazioni Visual C++ esistenti senza compromettere il resto dell'applicazione.
 
 È anche possibile chiamare funzioni non gestite da un modulo gestito usando [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
@@ -37,21 +38,21 @@ PInvoke implicito è utile quando non è necessario specificare la modalità di 
 
 Visual C++ offre due modi per interagire con le funzioni gestite e non gestite:
 
-- [Uso esplicito di PInvoke in C++ (attributo DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+- [Utilizzo di PInvoke esplicito in C++ (attributo DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
 
-PInvoke esplicito è supportato dal .NET Framework ed è disponibile nella maggior parte dei linguaggi .NET. Tuttavia, come suggerisce il nome C++ , l'interoperabilità C++è specifica dell'oggetto visivo.
+PInvoke esplicito è supportato dal .NET Framework ed è disponibile nella maggior parte dei linguaggi .NET. Tuttavia, come suggerisce il nome, l'interoperabilità C++ è specifica del Visual C++.
 
 ## <a name="c-interop"></a>interoperabilità C++
 
-C++L'interoperabilità garantisce una maggiore indipendenza dai tipi ed è in genere meno noiosa da implementare. Tuttavia, C++ l'interoperabilità non è un'opzione se il codice sorgente non gestito non è disponibile o per i progetti multipiattaforma.
+L'interoperabilità C++ garantisce una maggiore indipendenza dai tipi ed è in genere meno noiosa da implementare. Tuttavia, l'interoperabilità C++ non è un'opzione se il codice sorgente non gestito non è disponibile o per i progetti multipiattaforma.
 
 ## <a name="c-com-interop"></a>interoperabilità COM C++
 
-Le funzionalità di interoperabilità supportate C++ da Visual offrono un particolare vantaggio rispetto ad altri linguaggi .NET quando si tratta di interoperabilità con i componenti com. Anziché essere limitati alle restrizioni del .NET Framework [Tlbimp. exe (utilità di importazione della libreria dei tipi)](/dotnet/framework/tools/tlbimp-exe-type-library-importer), ad esempio il supporto limitato per i tipi di dati e l'esposizione obbligatoria di ogni membro di ogni interfaccia C++ com, l'interoperabilità consente di accedere ai componenti com in modo da non richiedere assembly di interoperabilità distinti. A differenza di Visual Basic C#e, C++ Visual può utilizzare direttamente gli oggetti com utilizzando i normali meccanismi com, ad esempio **CoCreateInstance** e **QueryInterface**. Questa operazione è possibile a C++ causa delle funzionalità di interoperabilità che comportano l'inserimento automatico del codice di transizione da parte del compilatore per lo spostamento dalle funzioni gestite a quelle non gestite e viceversa.
+Le funzionalità di interoperabilità supportate da Visual C++ offrono un particolare vantaggio rispetto ad altri linguaggi .NET quando si tratta di interoperabilità con i componenti COM. Anziché essere limitati alle restrizioni del .NET Framework [Tlbimp.exe (utilità di importazione della libreria dei tipi)](/dotnet/framework/tools/tlbimp-exe-type-library-importer), ad esempio il supporto limitato per i tipi di dati e l'esposizione obbligatoria di ogni membro di ogni interfaccia com, l'interoperabilità C++ consente l'accesso ai componenti com e non richiede assembly di interoperabilità distinti. A differenza di Visual Basic e C#, Visual C++ possibile usare direttamente gli oggetti COM usando i normali meccanismi COM, ad esempio **CoCreateInstance** e **QueryInterface**. Ciò è possibile a causa delle funzionalità di interoperabilità C++ che fanno sì che il compilatore inserisca automaticamente il codice di transizione per spostarsi dalle funzioni gestite a quelle non gestite e viceversa.
 
-Utilizzando C++ l'interoperabilità, è possibile utilizzare i componenti com quando vengono utilizzati in genere o incapsulati all'interno C++ delle classi. Queste classi wrapper sono denominate runtime personalizzati Callable Wrappers, o CRCWs, e hanno due vantaggi rispetto all'uso di COM direttamente nel codice dell'applicazione:
+Utilizzando l'interoperabilità C++, è possibile utilizzare i componenti COM quando vengono normalmente utilizzati oppure possono essere inclusi nelle classi C++. Queste classi wrapper sono denominate runtime personalizzati Callable Wrappers, o CRCWs, e hanno due vantaggi rispetto all'uso di COM direttamente nel codice dell'applicazione:
 
-- La classe risultante può essere utilizzata da linguaggi diversi dall'oggetto C++visivo.
+- La classe risultante può essere utilizzata da linguaggi diversi da Visual C++.
 
 - I dettagli dell'interfaccia COM possono essere nascosti dal codice client gestito. I tipi di dati .NET possono essere usati al posto dei tipi nativi e i dettagli del marshalling dei dati possono essere eseguiti in modo trasparente all'interno di CRCW.
 
@@ -91,60 +92,60 @@ Begin beep
 Done
 ```
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
-- [Procedura: Effettuare il marshalling di stringhe ANSI tramite l'interoperabilità C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
+- [Procedura: effettuare il marshalling di stringhe ANSI utilizzando l'interoperabilità C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
 
-- [Procedura: Effettuare il marshalling di stringhe Unicode tramite l'interoperabilità C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
+- [Procedura: effettuare il marshalling di stringhe Unicode utilizzando l'interoperabilità C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
 
-- [Procedura: Effettuare il marshalling di stringhe COM tramite l'interoperabilità C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)
+- [Procedura: effettuare il marshalling di stringhe COM utilizzando l'interoperabilità C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)
 
-- [Procedura: Effettuare il marshalling di strutture tramite l'interoperabilità C++](../dotnet/how-to-marshal-structures-using-cpp-interop.md)
+- [Procedura: effettuare il marshalling di strutture utilizzando l'interoperabilità C++](../dotnet/how-to-marshal-structures-using-cpp-interop.md)
 
-- [Procedura: Effettuare il marshalling di matrici tramite l'interoperabilità C++](../dotnet/how-to-marshal-arrays-using-cpp-interop.md)
+- [Procedura: effettuare il marshalling di matrici utilizzando l'interoperabilità C++](../dotnet/how-to-marshal-arrays-using-cpp-interop.md)
 
-- [Procedura: Effettuare il marshalling di callback e delegati tramite l'interoperabilità C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)
+- [Procedura: effettuare il marshalling di callback e delegati utilizzando l'interoperabilità C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)
 
-- [Procedura: Effettuare il marshalling di puntatori incorporati tramite l'interoperabilità C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)
+- [Procedura: effettuare il marshalling di puntatori incorporati utilizzando l'interoperabilità C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)
 
-- [Procedura: Accedere ai caratteri in System::String](../dotnet/how-to-access-characters-in-a-system-string.md)
+- [Procedura: accedere ai caratteri in System:: String](../dotnet/how-to-access-characters-in-a-system-string.md)
 
-- [Procedura: Convertire una stringa char * in una matrice System::Byte](../dotnet/how-to-convert-char-star-string-to-system-byte-array.md)
+- [Procedura: convertire una stringa char * in una matrice System:: byte](../dotnet/how-to-convert-char-star-string-to-system-byte-array.md)
 
 - [Procedura: convertire System:: String in wchar_t * o char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)
 
-- [Procedura: Convertire System::String in stringhe standard](../dotnet/how-to-convert-system-string-to-standard-string.md)
+- [Procedura: convertire System:: String in una stringa standard](../dotnet/how-to-convert-system-string-to-standard-string.md)
 
-- [Procedura: Convertire stringhe standard in System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)
+- [Procedura: convertire una stringa standard in System:: String](../dotnet/how-to-convert-standard-string-to-system-string.md)
 
-- [Procedura: Ottenere un puntatore a una matrice di byte](../dotnet/how-to-obtain-a-pointer-to-byte-array.md)
+- [Procedura: ottenere un puntatore a una matrice di byte](../dotnet/how-to-obtain-a-pointer-to-byte-array.md)
 
-- [Procedura: Caricare risorse non gestite in una matrice di byte](../dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md)
+- [Procedura: caricare risorse non gestite in una matrice di byte](../dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md)
 
-- [Procedura: Modificare una classe di riferimenti in una funzione nativa](../dotnet/how-to-modify-reference-class-in-a-native-function.md)
+- [Procedura: modificare una classe di riferimento in una funzione nativa](../dotnet/how-to-modify-reference-class-in-a-native-function.md)
 
-- [Procedura: Determinare se un'immagine è nativa o CLR](../dotnet/how-to-determine-if-an-image-is-native-or-clr.md)
+- [Procedura: determinare se un'immagine è nativa o CLR](../dotnet/how-to-determine-if-an-image-is-native-or-clr.md)
 
-- [Procedura: Aggiungere DLL native alla Global Assembly Cache](../dotnet/how-to-add-native-dll-to-global-assembly-cache.md)
+- [Procedura: aggiungere DLL native alla Global assembly cache](../dotnet/how-to-add-native-dll-to-global-assembly-cache.md)
 
-- [Procedura: Mantenere riferimenti al tipo di valore nel tipo nativo](../dotnet/how-to-hold-reference-to-value-type-in-native-type.md)
+- [Procedura: mantenere un riferimento al tipo di valore nel tipo nativo](../dotnet/how-to-hold-reference-to-value-type-in-native-type.md)
 
-- [Procedura: Mantenere i riferimenti agli oggetti nella memoria non gestita](../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md)
+- [Procedura: mantenere il riferimento a un oggetto nella memoria non gestita](../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md)
 
 - [Procedura: rilevare la compilazione/clr](../dotnet/how-to-detect-clr-compilation.md)
 
-- [Procedura: Eseguire la conversione tra System::Guid e _GUID](../dotnet/how-to-convert-between-system-guid-and-guid.md)
+- [Procedura: eseguire la conversione tra System:: GUID e _GUID](../dotnet/how-to-convert-between-system-guid-and-guid.md)
 
-- [Procedura: Specificare un parametro out](../dotnet/how-to-specify-an-out-parameter.md)
+- [Procedura: specificare un parametro out](../dotnet/how-to-specify-an-out-parameter.md)
 
 - [Procedura: usare un tipo nativo in una compilazione/clr](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)
 
-- [Procedura: Dichiarare handle in tipi nativi](../dotnet/how-to-declare-handles-in-native-types.md)
+- [Procedura: dichiarare handle in tipi nativi](../dotnet/how-to-declare-handles-in-native-types.md)
 
-- [Procedura: Eseguire il wrapping di una classe nativa affinché possa essere usata in C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
+- [Procedura: eseguire il wrapping di una classe nativa per l'utilizzo in C #](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
-Per informazioni sull'utilizzo di delegati in uno scenario di interoperabilità, vedere [delegate (C++ estensioni del componente)](../extensions/delegate-cpp-component-extensions.md).
+Per informazioni sull'uso di delegati in uno scenario di interoperabilità, vedere [delegate (estensioni del componente C++)](../extensions/delegate-cpp-component-extensions.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Chiamata di funzioni native da codice gestito](../dotnet/calling-native-functions-from-managed-code.md)

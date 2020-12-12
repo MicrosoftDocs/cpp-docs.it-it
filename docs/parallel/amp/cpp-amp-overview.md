@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: C++ AMP Panoramica'
 title: Cenni preliminari su C++ AMP
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 0eeda43a279be74ea71669b55356603e980cab40
-ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
+ms.openlocfilehash: edbf20385724c062deea00ff8ea159d7021f9c63
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344748"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254638"
 ---
 # <a name="c-amp-overview"></a>Cenni preliminari su C++ AMP
 
@@ -225,7 +226,7 @@ for (int i = 0; i < 5; i++)
 
 Nella tabella seguente sono riepilogate le analogie e le differenze tra le `array` `array_view` classi e.
 
-|Descrizione|array (classe)|array_view (classe)|
+|Description|array (classe)|array_view (classe)|
 |-----------------|-----------------|-----------------------|
 |Quando il rango è determinato|In fase di compilazione.|In fase di compilazione.|
 |Quando l'extent è determinato|In fase di esecuzione.|In fase di esecuzione.|
@@ -503,7 +504,7 @@ Il Visualizzatore di concorrenza include il supporto per l'analisi delle prestaz
 
 Il modulo e la divisione di interi senza segno offrono prestazioni significativamente migliori rispetto al modulo e alla divisione di interi con segno. Quando possibile, è consigliabile utilizzare interi senza segno.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Sintassi delle espressioni lambda](../../cpp/lambda-expression-syntax.md)<br/>

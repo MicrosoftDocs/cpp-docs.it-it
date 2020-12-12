@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: accelerator_view_removed Class'
 title: Classe accelerator_view_removed
 ms.date: 03/27/2019
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - AMPRT/Concurrency::accelerator_view_removed::accelerator_view_removed Class
 ms.assetid: 262446de-311c-454e-a5ed-e2aaced0d88a
-ms.openlocfilehash: 9a3f6f349fc3103893639fe209dcf23a07ffec56
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 86a5b89d3b8065bccd8eec8b10bade9ed26d6a05
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127124"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254495"
 ---
 # <a name="accelerator_view_removed-class"></a>Classe accelerator_view_removed
 
@@ -30,15 +31,15 @@ class accelerator_view_removed : public runtime_exception;
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Costruttore accelerator_view_removed](#ctor)|Inizializza una nuova istanza della classe `accelerator_view_removed`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[get_view_removed_reason](#get_view_removed_reason)|Restituisce un codice di errore HRESULT che indica la causare la rimozione dell'oggetto `accelerator_view`.|
+|[get_view_removed_reason](#get_view_removed_reason)|Restituisce un codice di errore HRESULT che indica la motivo della `accelerator_view` rimozione dell'oggetto.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -52,9 +53,9 @@ class accelerator_view_removed : public runtime_exception;
 
 **Intestazione:** amprt. h
 
-**Spazio dei nomi:** Concurrency
+**Spazio dei nomi:** Concorrenza
 
-## <a name="ctor"></a>accelerator_view_removed
+## <a name="accelerator_view_removed"></a><a name="ctor"></a> accelerator_view_removed
 
 Inizializza una nuova istanza della classe [accelerator_view_removed](accelerator-view-removed-class.md) .
 
@@ -75,15 +76,15 @@ explicit accelerator_view_removed(
 Descrizione dell'errore.
 
 *view_removed_reason*<br/>
-Codice di errore HRESULT che indica la rimozione dell'oggetto `accelerator_view`.
+Codice di errore HRESULT che indica la rimozione dell' `accelerator_view` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
 Nuova istanza della classe `accelerator_view_removed`.
 
-## <a name="get_view_removed_reason"></a>get_view_removed_reason
+## <a name="get_view_removed_reason"></a><a name="get_view_removed_reason"></a> get_view_removed_reason
 
-Restituisce un codice di errore HRESULT che indica la causare la rimozione dell'oggetto `accelerator_view`.
+Restituisce un codice di errore HRESULT che indica la motivo della `accelerator_view` rimozione dell'oggetto.
 
 ### <a name="syntax"></a>Sintassi
 

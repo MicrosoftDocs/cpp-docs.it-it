@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: bad_cast eccezione'
 title: Eccezione bad_cast
 ms.date: 10/04/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - exceptions [C++], bad_cast
 - bad_cast keyword [C++]
 ms.assetid: 31eae1e7-d8d5-40a0-9fef-64a6a4fc9021
-ms.openlocfilehash: 2efe5be5e44751831a56b29cfc629df2d21843f7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 40408128bd1c90feff34e8ea1ce8bf7a3c0d56cf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229181"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97255691"
 ---
 # <a name="bad_cast-exception"></a>Eccezione bad_cast
 
@@ -98,7 +99,7 @@ Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);
 |-|-|
 |[operatore =](#op_eq)|Operatore di assegnazione che assegna un `bad_cast` oggetto a un altro.|
 
-## <a name="bad_cast"></a><a name="bad_cast"></a>bad_cast
+## <a name="bad_cast"></a><a name="bad_cast"></a> bad_cast
 
 Costruttore per oggetti di tipo `bad_cast`.
 
@@ -107,7 +108,7 @@ bad_cast(const char * _Message = "bad cast");
 bad_cast(const bad_cast &);
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operatore =
+## <a name="operator"></a><a name="op_eq"></a> operatore =
 
 Operatore di assegnazione che assegna un `bad_cast` oggetto a un altro.
 
@@ -115,13 +116,13 @@ Operatore di assegnazione che assegna un `bad_cast` oggetto a un altro.
 bad_cast& operator=(const bad_cast&) noexcept;
 ```
 
-## <a name="what"></a><a name="what"></a>cosa
+## <a name="what"></a><a name="what"></a> cosa
 
 ```cpp
 const char* what() const noexcept override;
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Operatore dynamic_cast](../cpp/dynamic-cast-operator.md)\
 [Parole](../cpp/keywords-cpp.md)\

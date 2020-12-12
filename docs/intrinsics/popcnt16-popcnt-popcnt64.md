@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __popcnt16, __popcnt, __popcnt64'
 title: __popcnt16, __popcnt, __popcnt64
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-ms.openlocfilehash: 3e5ae7f897500775671f8bd2563028874579a627
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: cb95ff09d589cfd9a9cfc438d0334cf68f073825
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221353"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257524"
 ---
 # <a name="__popcnt16-__popcnt-__popcnt64"></a>__popcnt16, __popcnt, __popcnt64
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Conta il numero di `1` bit (conteggio popolazione) in un Unsigned Integer a 16, 32 o 64 bit.
 
@@ -40,7 +41,7 @@ unsigned __int64 __popcnt64(
 
 ### <a name="parameters"></a>Parametri
 
-*value*\
+*valore*\
 in Unsigned Integer a 16, 32 o 64 bit per cui si desidera il conteggio della popolazione.
 
 ## <a name="return-value"></a>Valore restituito
@@ -49,19 +50,19 @@ Numero di `1` bit nel parametro *value* .
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`__popcnt16`|Manipolazione avanzata di bit|
 |`__popcnt`|Manipolazione avanzata di bit|
 |`__popcnt64`|Manipolazione di bit avanzata in modalità a 64 bit.|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Ognuna delle funzioni intrinseche genera l' `popcnt` istruzione. In modalità a 32 bit non sono disponibili registri per utilizzo generico a 64 bit, pertanto 64 bit `popcnt` non è supportato.
 
-Per determinare il supporto hardware per `popcnt` l'istruzione, chiamare `__cpuid` l'oggetto `InfoType=0x00000001` intrinseco con e selezionare `CPUInfo[2] (ECX)`il bit 23 di. Questo bit è 1 se l'istruzione è supportata; in caso contrario, 0. Se si esegue codice che usa queste funzioni intrinseche su hardware che non supporta `popcnt` l'istruzione, i risultati sono imprevedibili.
+Per determinare il supporto hardware per l' `popcnt` istruzione, chiamare l'oggetto `__cpuid` intrinseco con `InfoType=0x00000001` e selezionare il bit 23 di `CPUInfo[2] (ECX)` . Questo bit è 1 se l'istruzione è supportata; in caso contrario, 0. Se si esegue codice che usa queste funzioni intrinseche su hardware che non supporta l' `popcnt` istruzione, i risultati sono imprevedibili.
 
 ## <a name="example"></a>Esempio
 
@@ -99,10 +100,10 @@ __popcnt(0xffff) = 16
 __popcnt(0xffffffff) = 32
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-Parti Copyright 2007 by Advanced Micro Devices, Inc. Tutti i diritti sono riservati. Riprodotto con l'autorizzazione da Advanced Micro Devices, Inc.
+Parti Copyright 2007 by Advanced Micro Devices, Inc. Tutti i diritti riservati. Riprodotto con l'autorizzazione da Advanced Micro Devices, Inc.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

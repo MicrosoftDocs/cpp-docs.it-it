@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: grafica (C++ AMP)'
 title: Grafica (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: 97fd433387aac809053ea6dd8ac59a56207a4fc8
-ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
+ms.openlocfilehash: 79e908ac673fb8fcc5ac370d6900697b3274585c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344722"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254547"
 ---
 # <a name="graphics-c-amp"></a>Grafica (C++ AMP)
 
@@ -57,7 +58,7 @@ L'operazione viene eseguita per componente tra ogni componente dello short vecto
 
 ### <a name="swizzling-expressions"></a>Espressioni swizzling
 
-La Libreria Short Vector supporta il costrutto della funzione di accesso `vector_type.identifier` per accedere ai componenti di uno short vector. `identifier`, Noto come *espressione swizzling* , specifica i componenti del vettore. L'espressione può essere un l-value o un r-value. I singoli caratteri nell'identificatore possono essere: x, y, z e w; o r, g, b e a. "x" e "r" indicano che il componente zero, "y" e "g" indicano il primo componente e così via. Si noti che non è possibile usare "x" e "r" nello stesso identificatore. Quindi, "RGBA" e "xyzw" restituiscono lo stesso risultato. Le funzioni di accesso con un solo componente come "x" e "y" sono tipi di valore scalari. Le funzioni di accesso con più componenti sono tipi short vector. Se ad esempio si crea un vettore di `int_4` denominato `fourInts` con i valori 2, 4, 6 e 8, `fourInts.y` restituisce il numero intero 4 e `fourInts.rg` restituisce un oggetto `int_2` con i valori 2 e 4.
+La Libreria Short Vector supporta il costrutto della funzione di accesso `vector_type.identifier` per accedere ai componenti di uno short vector. `identifier`, Noto come *espressione swizzling*, specifica i componenti del vettore. L'espressione può essere un l-value o un r-value. I singoli caratteri nell'identificatore possono essere: x, y, z e w; o r, g, b e a. "x" e "r" indicano che il componente zero, "y" e "g" indicano il primo componente e così via. Si noti che non è possibile usare "x" e "r" nello stesso identificatore. Quindi, "RGBA" e "xyzw" restituiscono lo stesso risultato. Le funzioni di accesso con un solo componente come "x" e "y" sono tipi di valore scalari. Le funzioni di accesso con più componenti sono tipi short vector. Se ad esempio si crea un vettore di `int_4` denominato `fourInts` con i valori 2, 4, 6 e 8, `fourInts.y` restituisce il numero intero 4 e `fourInts.rg` restituisce un oggetto `int_2` con i valori 2 e 4.
 
 ## <a name="texture-classes"></a>Classi Texture
 
@@ -406,7 +407,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
 
 Il runtime di C++ AMP supporta l'interoperabilità tra `texture<T,1>` e l' [interfaccia ID3D11Texture1D](/windows/win32/api/d3d11/nn-d3d11-id3d11texture1d), tra `texture<T,2>` e l' [interfaccia ID3D11Texture2D](/windows/win32/api/d3d11/nn-d3d11-id3d11texture2d)e tra `texture<T,3>` e l' [interfaccia ID3D11Texture3D](/windows/win32/api/d3d11/nn-d3d11-id3d11texture3d). Il metodo [get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) accetta un `texture` oggetto e restituisce un' `IUnknown` interfaccia. Il metodo [make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) accetta un' `IUnknown` interfaccia e un `accelerator_view` oggetto e restituisce un `texture` oggetto.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe double_2](../../parallel/amp/reference/double-2-class.md)<br/>
 [Classe double_3](../../parallel/amp/reference/double-3-class.md)<br/>

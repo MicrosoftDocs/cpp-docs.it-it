@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: C++ AMP (C++ Accelerated Massive Parallelism)'
 title: C++ AMP (C++ Accelerated Massive Parallelism)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - C++ AMP (see C++ Accelerated Massive Parallelism)
 - C++ Accelerated Massive Parallelism, getting started
 ms.assetid: e27824cb-3167-409b-8c3f-a0e476d8f349
-ms.openlocfilehash: 243c476b6536278eb09b26b24becb65276d6e48a
-ms.sourcegitcommit: 093f49b8b69daf86661adc125b1d2d7b1f0e0650
+ms.openlocfilehash: e7d53748cbce42958cd3117b2720ecfb46c14425
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89427634"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254612"
 ---
 # <a name="c-amp-c-accelerated-massive-parallelism"></a>C++ AMP (C++ Accelerated Massive Parallelism)
 
@@ -29,7 +30,7 @@ C++ AMP (C++ Accelerated Massive Parallelism) accelera l'esecuzione del codice C
 |[Procedura dettagliata: moltiplicazione di matrici](../../parallel/amp/walkthrough-matrix-multiplication.md)|Viene illustrata la moltiplicazione di matrici utilizzando codice e affiancamento C++ AMP.|
 |[Procedura dettagliata: debug di un'applicazione C++ AMP](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)|Viene illustrato come creare ed eseguire il debug di un'applicazione che usa la riduzione parallela per sommare un'ampia gamma di numeri interi.|
 
-## <a name="reference"></a>Informazioni di riferimento
+## <a name="reference"></a>Riferimento
 
 [Riferimento (C++ AMP)](../../parallel/amp/reference/reference-cpp-amp.md)<br/>
 [Parola chiave tile_static](../../cpp/tile-static-keyword.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _getdcwd_nolock, _wgetdcwd_nolock'
 title: _getdcwd_nolock, _wgetdcwd_nolock
 ms.date: 11/04/2016
 api_name:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - _wgetdcwd_nolock function
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
-ms.openlocfilehash: c07c52e0dcfe84c5f00a9a0b67d872a860941c6f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d40bd7a3cf8d666ad7ba108fc71e443ea262c13f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229441"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256562"
 ---
 # <a name="_getdcwd_nolock-_wgetdcwd_nolock"></a>_getdcwd_nolock, _wgetdcwd_nolock
 
@@ -81,7 +82,7 @@ Lunghezza massima del percorso in caratteri: **`char`** per **_getdcwd** e **`wc
 
 Vedere [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 **_getdcwd_nolock** e **_wgetdcwd_nolock** sono identici rispettivamente a **_getdcwd** e **_wgetdcwd**, ad eccezione del fatto che non sono protette da interferenze da parte di altri thread. Potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
 
@@ -100,7 +101,7 @@ Vedere [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md).
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controllo Directory](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>
