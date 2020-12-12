@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: User-Interface aggiornamento per le visualizzazioni di record (accesso ai dati MFC)'
 title: Aggiornamento dell'interfaccia utente per le visualizzazioni di record (accesso ai dati MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - menus, updating as context changes
 - record views, user interface
 ms.assetid: 2c7914b6-2dc3-40c3-b2f2-8371da2a4063
-ms.openlocfilehash: 9bfb907d21c928c605b304c595acb834d0046e35
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3a199faa3e606260257ece0fff9a7d1de3095d18
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209053"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116444"
 ---
 # <a name="user-interface-updating-for-record-views--mfc-data-access"></a>Aggiornamento dell'interfaccia utente per le visualizzazioni di record (accesso ai dati MFC)
 
@@ -25,7 +26,7 @@ ms.locfileid: "80209053"
 
 1. Facendo riferimento alle informazioni sull'utilizzo dell'editor della [barra degli strumenti](../windows/toolbar-editor.md), modificare la risorsa della barra degli strumenti per aggiungere i pulsanti della barra degli strumenti per i comandi di spostamento dei record.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Supporto della navigazione in una visualizzazione di record](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)<br/>
 [Uso di una visualizzazione di record](../data/using-a-record-view-mfc-data-access.md)

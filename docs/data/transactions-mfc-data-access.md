@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: transazioni (accesso ai dati MFC)'
 title: Transazioni (accesso ai dati MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - transactions [C++]
 - databases [C++], transactions
 ms.assetid: f80afbfe-1517-4fec-8870-9ffc70a58b05
-ms.openlocfilehash: 742e95d896d107fb89b3d65f0eeb6d418f1b2057
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bd04e1c8f1b5ef11e66a3c2c3f1e391f409b4892
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209066"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116483"
 ---
 # <a name="transactions--mfc-data-access"></a>Transazioni (accesso ai dati MFC)
 
@@ -35,6 +36,6 @@ Una transazione deve avere le proprietà ACID, ovvero:
 
 Una transazione distribuita è una transazione che aggiorna i dati distribuiti, ovvero dati presenti in più sistemi collegati in rete. Se si desidera supportare le transazioni in un sistema distribuito, è necessario utilizzare ADO.NET anziché il supporto OLE DB Transaction.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Programmazione dell'accesso ai dati (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

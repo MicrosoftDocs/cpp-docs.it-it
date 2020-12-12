@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: aggiunta di una finestra di dialogo ATL'
 title: Aggiunta di una finestra di dialogo ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - MFC dialog boxes, ATL dialogs
 - dialog boxes, ATL
 ms.assetid: 152a378f-7b24-4f66-aeba-c740973f03a6
-ms.openlocfilehash: 71290cf0763ac6594985acc4cb11562efe7028e6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 9d4abcafd5e12c6b8cffd636bf28a9e79f96e5ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499373"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165719"
 ---
 # <a name="adding-an-atl-dialog-box"></a>Aggiunta di una finestra di dialogo ATL
 
@@ -28,11 +29,11 @@ Per impostazione predefinita, la creazione guidata finestra di dialogo ATL imple
 
 1. Da [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code), fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Aggiungi** dal menu di scelta rapida. Fare clic su **Aggiungi classe**.
 
-1. Nel riquadro **modelli** della finestra di dialogo [Aggiungi classe](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) fare clic su **ATL finestra**di dialogo. Fare clic su **Apri** per visualizzare la [creazione guidata finestra di dialogo ATL](../../atl/reference/atl-dialog-wizard.md).
+1. Nel riquadro **modelli** della finestra di dialogo [Aggiungi classe](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) fare clic su **ATL finestra** di dialogo. Fare clic su **Apri** per visualizzare la [creazione guidata finestra di dialogo ATL](../../atl/reference/atl-dialog-wizard.md).
 
 Per ulteriori informazioni, vedere [implementazione di una](../../atl/implementing-a-dialog-box.md)finestra di dialogo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Aggiunta di una classe](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Classi finestra](../../atl/atl-window-classes.md)<br/>

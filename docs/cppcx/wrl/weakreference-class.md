@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe WeakReference'
 title: Classe WeakReference
 ms.date: 09/24/2018
 ms.topic: reference
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::WeakReference::~WeakReference, destructor
 - Microsoft::WRL::Details::WeakReference::WeakReference, constructor
 ms.assetid: 3f4c956b-dbbd-49b1-8cfa-9509a9956c97
-ms.openlocfilehash: 9a367a61a029abe1be599b1e262e279402149ccd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 743a705fae93d015d190df24d2534de62613e542
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220457"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116549"
 ---
 # <a name="weakreference-class"></a>Classe WeakReference
 
@@ -50,14 +51,14 @@ I `WeakReference` metodi sono thread-safe.
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-Nome                                                  | Descrizione
+Nome                                                  | Description
 ----------------------------------------------------- | ---------------------------------------------------------------------------
 [WeakReference:: WeakReference](#weakreference)        | Inizializza una nuova istanza della classe `WeakReference`.
 [WeakReference:: ~ WeakReference](#tilde-weakreference) | Consente di deinizializzare (Elimina) l'istanza corrente della `WeakReference` classe.
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-Nome                                                                 | Descrizione
+Nome                                                                 | Description
 -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------
 [WeakReference::D ecrementStrongReference](#decrementstrongreference) | Decrementa il conteggio dei riferimenti sicuri dell' `WeakReference` oggetto corrente.
 [WeakReference:: IncrementStrongReference](#incrementstrongreference) | Incrementa il conteggio dei riferimenti sicuri dell'oggetto corrente `WeakReference` .
@@ -74,7 +75,7 @@ Nome                                                                 | Descrizio
 
 **Spazio dei nomi:** Microsoft:: WRL::D etails
 
-## <a name="weakreferenceweakreference"></a><a name="tilde-weakreference"></a>WeakReference:: ~ WeakReference
+## <a name="weakreferenceweakreference"></a><a name="tilde-weakreference"></a> WeakReference:: ~ WeakReference
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -84,11 +85,11 @@ virtual ~WeakReference();
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Consente di deinizializzare l'istanza corrente della `WeakReference` classe.
 
-## <a name="weakreferencedecrementstrongreference"></a><a name="decrementstrongreference"></a>WeakReference::D ecrementStrongReference
+## <a name="weakreferencedecrementstrongreference"></a><a name="decrementstrongreference"></a> WeakReference::D ecrementStrongReference
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -96,7 +97,7 @@ Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codi
 ULONG DecrementStrongReference();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Decrementa il conteggio dei riferimenti sicuri dell' `WeakReference` oggetto corrente.
 
@@ -106,7 +107,7 @@ Quando il conteggio dei riferimenti sicuri diventa zero, il riferimento sicuro �
 
 Conteggio dei riferimenti forti decrementato.
 
-## <a name="weakreferenceincrementstrongreference"></a><a name="incrementstrongreference"></a>WeakReference:: IncrementStrongReference
+## <a name="weakreferenceincrementstrongreference"></a><a name="incrementstrongreference"></a> WeakReference:: IncrementStrongReference
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -118,11 +119,11 @@ ULONG IncrementStrongReference();
 
 Conteggio dei riferimenti sicuri incrementato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Incrementa il conteggio dei riferimenti sicuri dell'oggetto corrente `WeakReference` .
 
-## <a name="weakreferenceresolve"></a><a name="resolve"></a>WeakReference:: Resolve
+## <a name="weakreferenceresolve"></a><a name="resolve"></a> WeakReference:: Resolve
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -149,11 +150,11 @@ Al termine di questa operazione, una copia del riferimento sicuro corrente se il
 
 - In caso contrario, valore HRESULT che indica il motivo per cui l'operazione non è riuscita.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Imposta il puntatore specificato sul valore di riferimento sicuro corrente se il conteggio dei riferimenti sicuri è diverso da zero.
 
-## <a name="weakreferencesetunknown"></a><a name="setunknown"></a>WeakReference:: Unknown
+## <a name="weakreferencesetunknown"></a><a name="setunknown"></a> WeakReference:: Unknown
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -168,11 +169,11 @@ void SetUnknown(
 *UNK*<br/>
 Puntatore all' `IUnknown` interfaccia di un oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Imposta il riferimento sicuro dell'oggetto corrente sul `WeakReference` puntatore a interfaccia specificato.
 
-## <a name="weakreferenceweakreference"></a><a name="weakreference"></a>WeakReference:: WeakReference
+## <a name="weakreferenceweakreference"></a><a name="weakreference"></a> WeakReference:: WeakReference
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -180,7 +181,7 @@ Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codi
 WeakReference();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Inizializza una nuova istanza della classe `WeakReference`.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: aggiunta di un provider di OLE DB ATL'
 title: Aggiunta di un provider OLE DB ATL
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding ATL OLE DB providers
 - ATL OLE DB providers
 ms.assetid: 26fba1e3-880f-4bc6-90e5-2096a48a3a6c
-ms.openlocfilehash: e593fdbd1c8c48a381cb2941971ebe4e0148965d
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: e60150e2d8dc57e16a55c75556d109583a95f054
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92923775"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165667"
 ---
 # <a name="adding-an-atl-ole-db-provider"></a>Aggiunta di un provider OLE DB ATL
 
@@ -27,9 +28,9 @@ Usare questa procedura guidata per aggiungere un provider OLE DB ATL a un proget
 
 ## <a name="to-add-an-atl-ole-db-provider-to-your-project"></a>Per aggiungere un provider OLE DB ATL al progetto
 
-1. In **Visualizzazione classi** fare clic con il pulsante destro del mouse sul progetto. Scegliere **Aggiungi** dal menu di scelta rapida e quindi fare clic su **Aggiungi classe** .
+1. In **Visualizzazione classi** fare clic con il pulsante destro del mouse sul progetto. Scegliere **Aggiungi** dal menu di scelta rapida e quindi fare clic su **Aggiungi classe**.
 
-1. Nella cartella **Visual C++** fare doppio clic sull'icona **Provider OLE DB ATL** o selezionare il provider e quindi fare clic su **Apri** .
+1. Nella cartella **Visual C++** fare doppio clic sull'icona **Provider OLE DB ATL** o selezionare il provider e quindi fare clic su **Apri**.
 
    Verrà avviata la Creazione guidata provider OLE DB ATL.
 
@@ -39,6 +40,6 @@ Usare questa procedura guidata per aggiungere un provider OLE DB ATL a un proget
 
 ::: moniker-end
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)

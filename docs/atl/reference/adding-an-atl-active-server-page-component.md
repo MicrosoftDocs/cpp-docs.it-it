@@ -1,13 +1,14 @@
 ---
+description: 'Ulteriori informazioni su: aggiunta di un componente della pagina Active Server ATL'
 title: Aggiunta di un componente ASP ATL
 ms.date: 05/09/2019
 ms.assetid: 7be2204c-6e58-4099-8892-001b848c8987
-ms.openlocfilehash: 08d49baa547342843b525f871de9570d4e752068
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 4d56e7e55571ca477881175b5aa17e9a627edab6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921165"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165732"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Aggiunta di un componente ASP ATL
 
@@ -33,13 +34,13 @@ I componenti ASP fanno parte dell'architettura di Internet Information Services,
 
 1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto a cui si vuole aggiungere il componente ASP ATL.
 
-1. Scegliere **Aggiungi** dal menu di scelta rapida e quindi fare clic su **Aggiungi classe** .
+1. Scegliere **Aggiungi** dal menu di scelta rapida e quindi fare clic su **Aggiungi classe**.
 
-1. Nella finestra di dialogo [Aggiungi classe](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box), nel riquadro **Modelli** , fare clic su **Componente pagine ASP ATL** e quindi su **Apri** per visualizzare la [Creazione guidata componente ASP ATL](../../atl/reference/atl-active-server-page-component-wizard.md).
+1. Nella finestra di dialogo [Aggiungi classe](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box), nel riquadro **Modelli**, fare clic su **Componente pagine ASP ATL** e quindi su **Apri** per visualizzare la [Creazione guidata componente ASP ATL](../../atl/reference/atl-active-server-page-component-wizard.md).
 
 ::: moniker-end
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Aggiunta di una classe](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Aggiunta di una nuova interfaccia in un progetto ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)<br/>

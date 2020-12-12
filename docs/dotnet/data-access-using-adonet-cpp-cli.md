@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: accesso ai dati con ADO.NET (C++/CLI)'
 title: Accesso ai dati tramite ADO.NET (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - SAFEARRAY, marshaling
 - ADO.NET [C++], marshaling SAFEARRAY types
 ms.assetid: b0cd987d-1ea7-4f76-ba01-cbd52503d06d
-ms.openlocfilehash: 3f3980c98890382e77d9d89db2944bebf7b12319
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 93af8a8a2dc4ebc8d9fe6073b9f3a70f4868bee8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211060"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124267"
 ---
 # <a name="data-access-using-adonet-ccli"></a>Accesso ai dati tramite ADO.NET (C++/CLI)
 
@@ -35,7 +36,7 @@ ADO.NET è l'API .NET Framework per l'accesso ai dati e offre la potenza e la fa
 
 ADO.NET viene eseguito in Common Language Runtime (CLR). Pertanto, qualsiasi applicazione che interagisce con ADO.NET deve essere destinata anche a CLR. Tuttavia, ciò non significa che le applicazioni native non possono usare ADO.NET. In questi esempi viene illustrato come interagire con un database ADO.NET dal codice nativo.
 
-## <a name="marshal-ansi-strings-for-adonet"></a><a name="marshal_ansi"></a>Marshalling di stringhe ANSI per ADO.NET
+## <a name="marshal-ansi-strings-for-adonet"></a><a name="marshal_ansi"></a> Marshalling di stringhe ANSI per ADO.NET
 
 Viene illustrato come aggiungere una stringa nativa ( `char *` ) a un database e come effettuare il marshalling di un oggetto <xref:System.String?displayProperty=fullName> da un database a una stringa nativa.
 
@@ -161,7 +162,7 @@ StringCol: This is string 2.
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_string_native.cpp
     ```
 
-## <a name="marshal-bstr-strings-for-adonet"></a><a name="marshal_bstr"></a>Marshalling di stringhe BSTR per ADO.NET
+## <a name="marshal-bstr-strings-for-adonet"></a><a name="marshal_bstr"></a> Marshalling di stringhe BSTR per ADO.NET
 
 Viene illustrato come aggiungere una stringa COM ( `BSTR` ) a un database e come effettuare il marshalling di <xref:System.String?displayProperty=fullName> da un database a un `BSTR` .
 
@@ -295,7 +296,7 @@ StringCol: This is string 2.
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_string_native.cpp
     ```
 
-## <a name="marshal-unicode-strings-for-adonet"></a><a name="marshal_unicode"></a>Marshalling di stringhe Unicode per ADO.NET
+## <a name="marshal-unicode-strings-for-adonet"></a><a name="marshal_unicode"></a> Marshalling di stringhe Unicode per ADO.NET
 
 Viene illustrato come aggiungere una stringa Unicode nativa ( `wchar_t *` ) a un database e come effettuare il marshalling di un oggetto <xref:System.String?displayProperty=fullName> da un database a una stringa Unicode nativa.
 
@@ -421,7 +422,7 @@ StringCol: This is string 2.
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_string_wide.cpp
     ```
 
-## <a name="marshal-a-variant-for-adonet"></a><a name="marshal_variant"></a>Eseguire il marshalling di VARIANT per ADO.NET
+## <a name="marshal-a-variant-for-adonet"></a><a name="marshal_variant"></a> Eseguire il marshalling di VARIANT per ADO.NET
 
 Viene illustrato come aggiungere un oggetto nativo `VARIANT` a un database e come effettuare il marshalling di un oggetto <xref:System.Object?displayProperty=fullName> da un database a un oggetto nativo `VARIANT` .
 
@@ -562,7 +563,7 @@ ObjectCol: 42
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_variant.cpp
     ```
 
-## <a name="marshal-a-safearray-for-adonet"></a><a name="marshal_safearray"></a>Marshalling di SAFEARRAY per ADO.NET
+## <a name="marshal-a-safearray-for-adonet"></a><a name="marshal_safearray"></a> Marshalling di SAFEARRAY per ADO.NET
 
 Viene illustrato come aggiungere un oggetto nativo `SAFEARRAY` a un database e come effettuare il marshalling di una matrice gestita da un database a un oggetto nativo `SAFEARRAY` .
 
@@ -725,7 +726,7 @@ Per informazioni sui problemi di sicurezza che coinvolgono ADO.NET, vedere [prot
 |-------------|-----------------|
 |[ADO.NET](/dotnet/framework/data/adonet/index)|Viene fornita una panoramica di ADO.NET, un set di classi che espongono servizi di accesso ai dati al programmatore .NET.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Programmazione .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: aggiunta di oggetti e controlli a un progetto ATL'
 title: Aggiunta di oggetti e controlli a un progetto ATL
 ms.date: 05/09/2019
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: 6acd60d430f13906d11e9a9b3e7c5655ee94badb
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 979e15a6fe27599e68841e82ef03a457d66d3bf0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499303"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165589"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Aggiunta di oggetti e controlli a un progetto ATL
 
@@ -51,10 +52,10 @@ ms.locfileid: "91499303"
 
    In alternativa, se si tenta di aggiungere un oggetto ATL a un progetto MFC senza prima aver aggiunto il supporto ATL, Visual Studio chiederà di specificare se si vuole aggiungere al progetto il supporto ATL. Fare clic su **Sì** per aggiungere il supporto ATL al progetto e aprire la procedura guidata ATL selezionata.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md)<br/>
 [Tipi di progetto C++ in Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
 [Nozioni fondamentali sugli oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
-[Programmazione con il codice di runtime di C e ATL](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[Programmazione con ATL e codice C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Configurazioni di progetto ATL predefinite](../../atl/reference/default-atl-project-configurations.md)

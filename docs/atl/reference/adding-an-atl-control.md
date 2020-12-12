@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: aggiunta di un controllo ATL'
 title: Aggiunta di un controllo ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ATL projects, adding controls
 - controls [ATL], adding to projects
 ms.assetid: 10223e7e-fdb7-4163-80c6-44aeafa8e6ce
-ms.openlocfilehash: fac1efeb3d373a8324828a8b10f0570f253f6103
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 91fe393a1e93deb2173ac95a42b7ab9cca339535
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499287"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165706"
 ---
 # <a name="adding-an-atl-control"></a>Aggiunta di un controllo ATL
 
@@ -34,7 +35,7 @@ Utilizzando la **creazione guidata controllo ATL**, è possibile creare uno dei 
 
 Inoltre, è possibile ridurre le dimensioni del controllo e rimuovere le interfacce non utilizzate dalla maggior parte dei contenitori selezionando il **controllo minimo** nella pagina **Opzioni** della procedura guidata.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Aggiunta di funzionalità al controllo composito](../../atl/adding-functionality-to-the-composite-control.md)<br/>
 [Nozioni fondamentali sugli oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md)

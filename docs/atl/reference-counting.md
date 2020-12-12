@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: conteggio dei riferimenti'
 title: Conteggio dei riferimenti (ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - reference counts
 - references, counting
 ms.assetid: b1fd4514-6de6-429f-9e60-2777c0d07a3d
-ms.openlocfilehash: f90c818e58ae7ef6e4a0b771cb53ae5b185d1617
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0e80986f530d1d0c79fd5c271eb21e292dec06de
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224344"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165745"
 ---
 # <a name="reference-counting"></a>Conteggio dei riferimenti
 
@@ -32,7 +33,7 @@ Il conteggio dei riferimenti può anche essere implementato in modo che ogni rif
 > [!NOTE]
 > Quando un `CComObject` oggetto derivato da viene costruito usando l' **`new`** operatore, il conteggio dei riferimenti è 0. Pertanto, una chiamata a `AddRef` deve essere eseguita dopo la creazione dell' `CComObject` oggetto derivato da.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Introduzione a COM](../atl/introduction-to-com.md)<br/>
 [Gestione della durata degli oggetti tramite il conteggio dei riferimenti](/windows/win32/com/managing-object-lifetimes-through-reference-counting)
