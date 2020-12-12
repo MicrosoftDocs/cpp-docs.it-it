@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: allocator_fixed_size Class'
 title: Classe allocator_fixed_size
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - stdext::allocators [C++], allocator_fixed_size
 - stdext::allocator_fixed_size
 ms.assetid: 138f3ef8-b0b3-49c3-9486-58f2213c172f
-ms.openlocfilehash: 340a4e51c82f1799ebea138ce230393825b9e636
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b4b3452a611734dd2731bdb9c43e4bf7a7ce6744
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562610"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163600"
 ---
 # <a name="allocator_fixed_size-class"></a>Classe allocator_fixed_size
 
@@ -32,7 +33,7 @@ class allocator_fixed_size;
 *Tipo*\
 Tipo degli elementi assegnato dall'allocatore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La [ALLOCATOR_DECL](allocators-functions.md#allocator_decl) macro passa questa classe come parametro del *nome* nell'istruzione seguente: `ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_fixed_size<10>), SYNC_DEFAULT, allocator_fixed_size);`
 

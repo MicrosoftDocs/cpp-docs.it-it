@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: fopen, _wfopen'
 title: fopen, _wfopen
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: b7889009fe2de3c5256d6caf6cb5afa8792919c4
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: a11bf5ab387ac3436a488f77bea4c5c130836790
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743061"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164926"
 ---
 # <a name="fopen-_wfopen"></a>fopen, _wfopen
 
@@ -76,7 +77,7 @@ Ognuna di queste funzioni restituisce un puntatore al file aperto. Un valore di 
 
 Per altre informazioni vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **fopen** apre il file specificato da *filename*. Per impostazione predefinita, una stringa di *nome file* Narrow viene interpretata usando la tabella codici ANSI (CP_ACP). Nelle applicazioni per Windows Desktop può essere modificata nella codepage OEM (CP_OEMCP) usando la funzione [SetFileApisToOEM](/windows/win32/api/fileapi/nf-fileapi-setfileapistooem) . È possibile utilizzare la funzione [AreFileApisANSI](/windows/win32/api/fileapi/nf-fileapi-arefileapisansi) per determinare se *filename* viene interpretato utilizzando ANSI o la tabella codici OEM predefinita del sistema. **_wfopen** è una versione a caratteri wide di **fopen**; gli argomenti da **_wfopen** sono stringhe a caratteri wide. In caso contrario, **_wfopen** e **fopen** si comportano in modo identico. Il solo utilizzo di **_wfopen** non influisce sul set di caratteri codificati usato nel flusso di file.
 
@@ -92,7 +93,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 > **File \* fp = fopen ("newfile.txt", "RT +, CCS =**_Encoding_**");**
 
-I valori consentiti per la *codifica* sono **Unicode**, **UTF-8**e **UTF-16LE**.
+I valori consentiti per la *codifica* sono **Unicode**, **UTF-8** e **UTF-16LE**.
 
 Quando un file viene aperto in modalità Unicode, le funzioni di input traducono i dati letti dal file in dati UTF-16 archiviati come tipo **`wchar_t`** . Le funzioni che scrivono in un file aperto in modalità Unicode prevedono buffer contenenti dati UTF-16 archiviati come tipo **`wchar_t`** . Se il file è codificato come UTF-8, i dati UTF-16 vengono tradotti in UTF-8 alla scrittura e il contenuto del file codificato in UTF-8 viene tradotto in UTF-16 alla lettura. Un tentativo di leggere o scrivere un numero dispari di byte in modalità Unicode causa un errore di [convalida del parametro](../../c-runtime-library/parameter-validation.md) . Per leggere o scrivere dati archiviati nel programma come UTF-8, usare una modalità file di testo o binaria al posto della modalità Unicode. Eventuali traduzioni della codifica vanno gestite dall'utente.
 
@@ -123,7 +124,7 @@ Se *mode* è **"a, CCS =**_Encoding_**"**, **fopen** tenta innanzitutto di aprir
 
 La *modalità* stringa di caratteri specifica il tipo di accesso richiesto per il file, come indicato di seguito.
 
-|*mode*|Accesso|
+|*mode*|Access|
 |-|-|
 | **r** | Viene aperto per la lettura. Se il file non esiste o non viene trovato, la chiamata di **fopen** ha esito negativo. |
 | **w** | Apre un file vuoto per la scrittura. Se il file specificato esiste, il contenuto viene eliminato in modo permanente. |
@@ -159,24 +160,24 @@ Le opzioni seguenti possono essere aggiunte alla *modalità* per specificare com
 |-|-|
 | **x** | Impone l'esito negativo della funzione se *filename* esiste già. Può essere usato solo con gli identificatori "w" o "w +". |
 | **c** | Abilitare il flag commit per il *nome file* associato, in modo che il contenuto del buffer di file venga scritto direttamente su disco se viene chiamato **fflush** o **_flushall** . |
-| **n** | Reimpostare il flag di commit per il *nome file* associato su "no-commit". Questa è l'impostazione predefinita. Esegue inoltre l'override del flag commit globale se il programma viene collegato a COMMODE.OBJ. L'impostazione predefinita del flag commit globale è "no-commit", a meno che il programma venga collegato in modo esplicito a COMMODE.OBJ (vedere [Link Options](../../c-runtime-library/link-options.md)). |
+| **n** | Reimpostare il flag di commit per il *nome file* associato su "no-commit". Questo è il valore predefinito. Esegue inoltre l'override del flag commit globale se il programma viene collegato a COMMODE.OBJ. L'impostazione predefinita del flag commit globale è "no-commit", a meno che il programma venga collegato in modo esplicito a COMMODE.OBJ (vedere [Link Options](../../c-runtime-library/link-options.md)). |
 | **N** | Specifica che il file non viene ereditato dai processi figlio. |
 | **S** | Specifica che la memorizzazione nella cache è ottimizzata, ma non limitata, per l'accesso sequenziale dal disco. |
 | **R** | Specifica che la memorizzazione nella cache è ottimizzata, ma non limitata, per l'accesso casuale dal disco. |
 | **T** | Specifica un file come temporaneo. Se possibile, non viene scaricato su disco. |
 | **D** | Specifica un file come temporaneo. Viene eliminato quando viene chiuso l'ultimo puntatore del file. |
-| **CCS =**_codifica_ | Specifica il set di caratteri codificati da usare (uno dei file **UTF-8**, **UTF-16LE**o **Unicode**) per questo file. Lasciare non specificato se si vuole la codifica ANSI. |
+| **CCS =**_codifica_ | Specifica il set di caratteri codificati da usare (uno dei file **UTF-8**, **UTF-16LE** o **Unicode**) per questo file. Lasciare non specificato se si vuole la codifica ANSI. |
 
 I caratteri validi per la stringa della *modalità* utilizzata in **fopen** e **_fdopen** corrispondono agli argomenti *Oflag* usati in [_open](open-wopen.md) e [_sopen](sopen-wsopen.md), come indicato di seguito.
 
 |Caratteri nella stringa della *modalità*|Valore *Oflag* equivalente per \_ Open/ \_ sopen|
 |-------------------------------|----------------------------------------------------|
-|**un**|** \_ O \_ WRONLY** &#124; ** \_ o \_ Append** (in genere ** \_ o \_ WRONLY** &#124; ** \_ o \_ Crea** &#124; ** \_ o \_ Append**)|
-|**a +**|** \_ O \_ RDWR** &#124; ** \_ o \_ Append** (in genere ** \_ o \_ RDWR** &#124; ** \_ o \_ Append** &#124; ** \_ o \_ create** )|
+|**un**|**\_ O \_ WRONLY** &#124; **\_ o \_ Append** (in genere **\_ o \_ WRONLY** &#124; **\_ o \_ Crea** &#124; **\_ o \_ Append**)|
+|**a +**|**\_ O \_ RDWR** &#124; **\_ o \_ Append** (in genere **\_ o \_ RDWR** &#124; **\_ o \_ Append** &#124; **\_ o \_ create** )|
 |**r**|**\_O \_ RDONLY**|
 |**r +**|**\_O \_ RDWR**|
-|**w**|** \_ O \_ WRONLY** (in genere ** \_ o \_ WRONLY** &#124; ** \_ o \_ Crea** &#124; ** \_ o \_ Tronca**)|
-|**w +**|** \_ O \_ RDWR** (in genere ** \_ o \_ RDWR** &#124; ** \_ o \_ Crea** &#124; ** \_ o \_ Tronca**)|
+|**w**|**\_ O \_ WRONLY** (in genere **\_ o \_ WRONLY** &#124; **\_ o \_ Crea** &#124; **\_ o \_ Tronca**)|
+|**w +**|**\_ O \_ RDWR** (in genere **\_ o \_ RDWR** &#124; **\_ o \_ Crea** &#124; **\_ o \_ Tronca**)|
 |**b**|**\_\_binario O**|
 |**t**|**\_\_Testo O**|
 |**x**|**\_O \_ escl.**|
@@ -201,7 +202,7 @@ Se si usa la modalità **RB** , non è necessario trasferire il codice e, se si 
 
 **_wfopen** è un'estensione Microsoft. Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-Le opzioni della *modalità* **c**, **n**, **t**, **S**, **R**, **t**e **D** sono estensioni Microsoft per **fopen** e **_fdopen** e non devono essere usate per la portabilità ANSI desiderata.
+Le opzioni della *modalità* **c**, **n**, **t**, **S**, **R**, **t** e **D** sono estensioni Microsoft per **fopen** e **_fdopen** e non devono essere usate per la portabilità ANSI desiderata.
 
 ## <a name="example-1"></a>Esempio 1
 
@@ -314,10 +315,10 @@ int main(int argc, char** argv)
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>
 [_fdopen, _wfdopen](fdopen-wfdopen.md)<br/>
 [ferror](ferror.md)<br/>

@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: qualificatori: accesso a oggetti volatili'
 title: 'Qualificatori: accesso a oggetti volatili'
 ms.date: 11/04/2016
 ms.assetid: b5644d4a-d93a-4f33-880a-76eb88d5ad7a
-ms.openlocfilehash: 002462cbf436e9f84ead6da821cdf9addb9770f2
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: b7395c7e78ff7a2baefbf3e4315045ac7ce3854e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343902"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137345"
 ---
 # <a name="qualifiers-access-to-volatile-objects"></a>Qualificatori: accesso a oggetti volatili
 
@@ -15,6 +16,6 @@ ms.locfileid: "64343902"
 
 Qualsiasi riferimento a un tipo qualificato volatile è un accesso.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Comportamento definito in fase di implementazione](../c-language/implementation-defined-behavior.md)
+[Comportamento definito dall'implementazione](../c-language/implementation-defined-behavior.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; macro allocatori &gt;'
 title: Macro &lt;allocators&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: dbf7577969ec43de47339bf80327007ac857a5a7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c4866495787cbf502997ca08a06e57ed667f4e9a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834973"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163522"
 ---
 # <a name="ltallocatorsgt-macros"></a>Macro &lt;allocators&gt;
 
@@ -47,7 +48,7 @@ Restituisce un modello di classe allocator.
 #define ALLOCATOR_DECL(cache, sync, name) <alloc_template>
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La macro restituisce una definizione di modello `template <class Type> class name {.....}` e una specializzazione `template <> class name<void> {.....}` che insieme definiscono un modello di classe allocator che usa il filtro `sync` di sincronizzazione e una cache di tipo `cache` .
 
@@ -87,7 +88,7 @@ Restituisce `stdext::allocators::cache_chunklist<sizeof(Type)>`.
 #define CACHE_CHUNKLIST <cache_class>
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cache_freelist"></a><a name="cache_freelist"></a> CACHE_FREELIST
 
@@ -97,7 +98,7 @@ Restituisce `stdext::allocators::cache_freelist<sizeof(Type), max>`.
 #define CACHE_FREELIST(max) <cache_class>
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cache_suballoc"></a><a name="cache_suballoc"></a> CACHE_SUBALLOC
 
@@ -107,7 +108,7 @@ Restituisce `stdext::allocators::cache_suballoc<sizeof(Type)>`.
 #define CACHE_SUBALLOC <cache_class>
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="sync_default"></a><a name="sync_default"></a> SYNC_DEFAULT
 
@@ -117,7 +118,7 @@ Restituisce un filtro di sincronizzazione.
 #define SYNC_DEFAULT <sync_template>
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se un compilatore supporta la compilazione di applicazioni a thread singolo e multithread, per le applicazioni a thread singolo la macro restituisce `stdext::allocators::sync_none`; in tutti gli altri casi, restituisce `stdext::allocators::sync_shared`.
 

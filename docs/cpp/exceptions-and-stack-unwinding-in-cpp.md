@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: eccezioni e rimozione dello stack in C++'
 title: Eccezioni e rimozione dallo stack in C++
 ms.date: 11/19/2019
 ms.assetid: a1a57eae-5fc5-4c49-824f-3ce2eb8129ed
-ms.openlocfilehash: e0dadc90f85caeea359fca4ed0b45868ea77177e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4f9c5faff4dafcae41831eb4b24345134912b073
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221562"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164783"
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>Eccezioni e rimozione dallo stack in C++
 

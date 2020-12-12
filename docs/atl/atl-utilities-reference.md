@@ -1,13 +1,14 @@
 ---
+description: 'Ulteriori informazioni su: riferimenti per le utilità ATL'
 title: Informazioni di riferimento sulle utilità ATL
 ms.date: 11/04/2016
 ms.assetid: dd8a2888-34f4-461e-9bf4-834218f9b95b
-ms.openlocfilehash: f9e59a2c67d391995d94d77f526613534acb48de
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8545881c5cd48aaff1bb25448ba443829128dc41
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831875"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148577"
 ---
 # <a name="atl-utilities-reference"></a>Informazioni di riferimento sulle utilità ATL
 
@@ -90,7 +91,7 @@ ATL fornisce codice per la modifica di percorsi e URL sotto forma di [CPathT](..
 | [ATLPath::StripToRoot](../atl/reference/atl-path-functions.md#striptoroot) | Questa funzione è un wrapper di overload per [PathStripToRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw). |
 | [ATLPath::UnquoteSpaces](../atl/reference/atl-path-functions.md#unquotespaces) | Questa funzione è un wrapper di overload per [PathUnquoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw). |
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Concetti](../atl/active-template-library-atl-concepts.md)<br/>
 [Componenti desktop COM ATL](../atl/atl-com-desktop-components.md)

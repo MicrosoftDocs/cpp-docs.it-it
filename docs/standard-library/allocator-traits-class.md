@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: allocator_traits Class'
 title: Classe allocator_traits
 ms.date: 11/04/2016
 f1_keywords:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.openlocfilehash: 8ab46ebf85531af052bc19bc5f0088f0f564793b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d60658c5f8cf6217dff7a846f0e5cbae42e6a565
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844808"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163561"
 ---
 # <a name="allocator_traits-class"></a>Classe allocator_traits
 
@@ -58,11 +59,11 @@ template <class Alloc>
     class allocator_traits;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |`allocator_type`|Questo tipo è un sinonimo del parametro di modello `Alloc`.|
 |`const_pointer`|Questo tipo è `Alloc::const_pointer`, se il tipo è ben formato; in caso contrario, questo tipo è `pointer_traits<pointer>::rebind<const value_type>`.|
@@ -80,10 +81,10 @@ template <class Alloc>
 
 I metodi statici seguenti chiamano il metodo corrispondente in un parametro allocatore specificato.
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[allocare](#allocate)|Metodo statico che alloca la memoria usando il parametro allocatore specificato.|
-|[costrutto](#construct)|Metodo statico che usa un allocatore specificato per costruire un oggetto.|
+|[costruire](#construct)|Metodo statico che usa un allocatore specificato per costruire un oggetto.|
 |[deallocare](#deallocate)|Metodo statico che usa un allocatore specificato per deallocare un numero specificato di oggetti.|
 |[eliminare](#destroy)|Metodo statico che usa un allocatore specificato per chiamare il distruttore in un oggetto senza la deallocazione della memoria.|
 |[max_size](#max_size)|Metodo statico che usa un allocatore specificato per determinare il numero massimo di oggetti che possono essere allocati.|
@@ -139,7 +140,7 @@ Puntatore al percorso in cui deve essere creato l'oggetto.
 *args*\
 Elenco di argomenti passato al costruttore dell'oggetto.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 La funzione membro statica chiama `al.construct(ptr, args...)`, se l'espressione è ben formata; in caso contrario, restituisce `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`.
 
@@ -164,7 +165,7 @@ Puntatore alla posizione iniziale degli oggetti da deallocare.
 *conteggio*\
 Numero di oggetti da deallocare.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Questo metodo chiama `al.deallocate(ptr, count)`.
 
@@ -187,7 +188,7 @@ Un oggetto allocatore.
 *PTR*\
 Puntatore alla posizione dell'oggetto.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Questo metodo chiama `al.destroy(ptr)`, se l'espressione è ben formata; in caso contrario, restituisce `ptr->~Uty()`.
 
@@ -204,7 +205,7 @@ static size_type max_size(const Alloc& al);
 *al*\
 Un oggetto allocatore.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Questo metodo restituisce `al.max_size()`, se l'espressione è ben formata; in caso contrario, restituisce `numeric_limits<size_type>::max()`.
 
@@ -225,6 +226,6 @@ Un oggetto allocatore.
 
 Questo metodo restituisce `al.select_on_container_copy_construction()` , se il tipo è ben formato; in caso contrario, restituisce *al*.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Questo metodo viene usato per specificare un allocatore quando il contenitore associato è creato con un costruttore di copia.

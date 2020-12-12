@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: interpretazione di dichiaratori più complessi'
 title: Interpretazione di più dichiaratori complessi
 ms.date: 11/04/2016
 helpviewer_keywords:
 - complex declarators
 - interpreting complex declarators
 ms.assetid: dd5b7019-c86d-4645-a5cc-21f834de6f4a
-ms.openlocfilehash: 385392ea8836998e71584d02bd0ee4478fb774a0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 82fc9b3cbd1bbf36191b5bfae7d5c3695f84f964
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87199906"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137514"
 ---
 # <a name="interpreting-more-complex-declarators"></a>Interpretazione di più dichiaratori complessi
 
@@ -50,7 +51,7 @@ In questo esempio, i passaggi sono numerati in ordine e possono essere interpret
 
 1. **`char`** valori.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Negli esempi seguenti vengono illustrate altre dichiarazioni complesse e mostrato come le parentesi possono influire sul significato di una dichiarazione.
 
@@ -126,6 +127,6 @@ union sign *(*var[5])[5]; /* Array of pointers to arrays
 
 In questo esempio viene mostrato come la posizione delle parentesi modifica il significato della dichiarazione. In questo esempio, `var` è una matrice di cinque elementi dei puntatori a matrici di cinque elementi dei puntatori a unioni. Per esempi relativi all'uso **`typedef`** di per evitare dichiarazioni complesse, vedere [dichiarazioni typedef](../c-language/typedef-declarations.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Dichiarazioni e tipi](../c-language/declarations-and-types.md)

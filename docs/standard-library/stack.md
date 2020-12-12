@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; stack&gt;'
 title: '&lt;stack&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-ms.openlocfilehash: b2130994ca69dd23f7df3e521deb67263b13d0cc
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ebb14f25d8a86d11ae0d1837b1b975c97c0ac396
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844288"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153824"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
@@ -31,7 +32,7 @@ Definisce lo stack del modello di classe e due modelli di supporto.
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[operatore! =](../standard-library/stack-operators.md#op_neq)|Verifica se l'oggetto stack a sinistra dell'operatore non è uguale all'oggetto stack a destra.|
 |[operatore<](../standard-library/stack-operators.md#op_lt)|Verifica se l'oggetto stack a sinistra dell'operatore è minore dell'oggetto stack a destra.|
@@ -42,11 +43,11 @@ Definisce lo stack del modello di classe e due modelli di supporto.
 
 ### <a name="classes"></a>Classi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[Classe stack](../standard-library/stack-class.md)|Una classe di adattatori di contenitori di modelli che fornisce una restrizione di funzionalità, limitando l'accesso all'elemento aggiunto più recentemente a un tipo di contenitore sottostante.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

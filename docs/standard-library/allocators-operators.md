@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: &lt; operatori allocatori &gt;'
 title: Operatori &lt;allocators&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - allocators/std::operator!=
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: 969c9f8e05a9fafad4d3a1102060e2b3d4d0eb2e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a0289ca7b76aaddb2e6c8ed20a58a61d1be40998
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844782"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163470"
 ---
 # <a name="ltallocatorsgt-operators"></a>Operatori &lt;allocators&gt;
 
@@ -42,7 +43,7 @@ Uno degli oggetti allocatore di cui verificare la disuguaglianza.
 
 **`true`** Se gli oggetti allocatore non sono uguali. **`false`** se gli oggetti allocatore sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operatore modello restituisce `!(left == right)`.
 
@@ -69,7 +70,7 @@ Uno degli oggetti allocatore di cui verificare l'uguaglianza.
 
 **`true`** Se gli oggetti allocatore sono uguali; **`false`** se gli oggetti allocatore non sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo operatore di modello restituisce `left.equals(right)`.
 

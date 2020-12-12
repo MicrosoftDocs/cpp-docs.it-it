@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: classe CMFCStandardColorsPropertyPage'
 title: Classe CMFCStandardColorsPropertyPage
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CMFCStandardColorsPropertyPage class [MFC]
 ms.assetid: b84b7cfb-bb24-4c65-804a-5b642cb64400
-ms.openlocfilehash: c57715171816e83cd1e04872d88b452b51b39388
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: cffce34642bd4df40ceda3156fe846e60db4b3a6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843950"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164094"
 ---
 # <a name="cmfcstandardcolorspropertypage-class"></a>Classe CMFCStandardColorsPropertyPage
 
@@ -21,22 +22,22 @@ Rappresenta una pagina delle proprietà utilizzata dagli utenti per selezionare 
 class CMFCStandardColorsPropertyPage : public CPropertyPage
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |`CMFCStandardColorsPropertyPage::CMFCStandardColorsPropertyPage`|Costruttore predefinito.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |`CMFCStandardColorsPropertyPage::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|
 |`CMFCStandardColorsPropertyPage::GetThisClass`|Utilizzato dal Framework per ottenere un puntatore all'oggetto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) associato a questo tipo di classe.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La `CMFCColorDialog` classe usa questa classe per visualizzare la pagina delle proprietà colore standard. Per ulteriori informazioni su `CMFCColorDialog` , vedere la [classe CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md).
 
@@ -58,7 +59,7 @@ La `CMFCColorDialog` classe usa questa classe per visualizzare la pagina delle p
 
 **Intestazione:** afxstandardcolorspropertypage. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>

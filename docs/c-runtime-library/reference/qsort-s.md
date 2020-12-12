@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: qsort_s'
 title: qsort_s
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - qsort_s function
 - sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
-ms.openlocfilehash: 934801531804345a8cede6ed1ac4abb06bae45b4
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 01890db21bc1eb470b57aa796313da4c6f0c50a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913268"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137163"
 ---
 # <a name="qsort_s"></a>qsort_s
 
@@ -70,7 +71,7 @@ Funzione di confronto. Il primo argomento è il puntatore di *contesto* . Il sec
 *context*<br/>
 Puntatore a un contesto, che può essere qualsiasi oggetto a cui deve accedere la routine di *confronto* .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **qsort_s** implementa un algoritmo di ordinamento rapido per ordinare una matrice di elementi *numerici* , ciascuno di byte di *larghezza* . La *base* degli argomenti è un puntatore alla base della matrice da ordinare. **qsort_s** sovrascrive questa matrice con gli elementi ordinati. L'argomento *compare* è un puntatore a una routine fornita dall'utente che confronta due elementi di matrice e restituisce un valore che ne specifica la relazione. **qsort_s** chiama la routine di *confronto* una o più volte durante l'ordinamento, passando i puntatori a due elementi di matrice per ogni chiamata:
 
@@ -80,7 +81,7 @@ compare( context, (void *) & elem1, (void *) & elem2 );
 
 La routine deve confrontare gli elementi e quindi restituire uno dei seguenti valori:
 
-|Valore restituito|Description|
+|Valore restituito|Descrizione|
 |------------------|-----------------|
 |< 0|**elem1** minore di **elem2**|
 |0|**elem1** equivalente a **elem2**|
@@ -267,7 +268,7 @@ España Español espantado
 table tablet tableux
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Ricerca e ordinamento](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch_s](bsearch-s.md)<br/>

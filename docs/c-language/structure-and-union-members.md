@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: struttura e membri di Unione'
 title: Membri di struttura e di unione
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - operators [C], member selection
 - structure member selection
 ms.assetid: bb1fe304-af49-4f98-808d-afdc99b3e319
-ms.openlocfilehash: 70c89344e6afcdf52981f779c441c5ec47791a77
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f20074157b28763d1db05487043ba0e1576e2d4c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211645"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137202"
 ---
 # <a name="structure-and-union-members"></a>Membri di struttura e di unione
 
@@ -47,7 +48,7 @@ equivale a
 
 quando *expression* è un valore puntatore.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Negli esempi seguenti viene fatto riferimento a questa dichiarazione della struttura. Per informazioni sull'operatore di riferimento indiretto ( <strong>\*</strong> ) usato in questi esempi, vedere [operatori di riferimento indiretto e address-of](../c-language/indirection-and-address-of-operators.md).
 
@@ -80,6 +81,6 @@ list[8].b = 12;
 
 In questa istruzione viene illustrato come selezionare un singolo membro della struttura da una matrice di strutture.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Operatori di accesso ai membri: . e ->](../cpp/member-access-operators-dot-and.md)

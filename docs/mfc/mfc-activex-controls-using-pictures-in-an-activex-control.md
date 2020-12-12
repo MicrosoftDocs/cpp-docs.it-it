@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: controlli ActiveX MFC: utilizzo di immagini in un controllo ActiveX'
 title: 'Controlli ActiveX MFC: utilizzo di immagini in un controllo ActiveX'
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - OnResetState method [MFC]
 - CLSID_CPicturePropPage [MFC]
 ms.assetid: 2e49735c-21b9-4442-bb3d-c82ef258eec9
-ms.openlocfilehash: 9eb204dd240ae17421a20b7cddeff56c9a22c19b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9c9989be7503eb449b969fbbf37d92f26c165131
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618073"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133081"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>Controlli ActiveX MFC: utilizzo di immagini in un controllo ActiveX
 
@@ -47,7 +48,7 @@ Le classi dei controlli ActiveX forniscono numerosi componenti che è possibile 
 
    Questa pagina proprietà fa parte di un gruppo di pagine delle proprietà predefinite disponibili per i controlli ActiveX. Per altre informazioni sulle pagine proprietà del controllo ActiveX, vedere l'articolo [Controlli ActiveX MFC: utilizzo delle pagine delle proprietà predefinite](mfc-activex-controls-using-stock-property-pages.md)
 
-## <a name="implementing-a-custom-picture-property-in-your-activex-control"></a><a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a>Implementazione di una proprietà immagine personalizzata nel controllo ActiveX
+## <a name="implementing-a-custom-picture-property-in-your-activex-control"></a><a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> Implementazione di una proprietà immagine personalizzata nel controllo ActiveX
 
 Dopo avere completato i passaggi descritti in questa sezione, il controllo può visualizzare le immagini scelte dall'utente. L'utente può modificare l'immagine visualizzata usando una pagina delle proprietà che mostra l'immagine corrente ed è dotata di un pulsante Sfoglia, che consente all'utente di selezionare varie immagini.
 
@@ -116,9 +117,9 @@ L'Aggiunta guidata proprietà aggiunge anche le due funzioni stub seguenti al fi
 > [!NOTE]
 > I nomi di classe e funzione di controllo potrebbero essere diversi dall'esempio precedente.
 
-### <a name="modifications-to-your-control-project"></a><a name="_core_modifications_to_your_control_project"></a>Modifiche al progetto di controllo
+### <a name="modifications-to-your-control-project"></a><a name="_core_modifications_to_your_control_project"></a> Modifiche al progetto di controllo
 
-Dopo avere apportato le opportune aggiunte al progetto del controllo, è necessario modificare diverse funzioni che interessano il rendering del controllo ActiveX. Queste funzioni, `OnResetState`, `OnDraw`, e le funzioni Get/Set di una proprietà immagine personalizzata, si trovano nel file di implementazione del controllo Si noti che in questo esempio viene chiamata la classe del controllo `CSampleCtrl` , il `CPictureHolder` membro dati viene chiamato *m_pic*e il nome della proprietà immagine personalizzata è `ControlPicture` .
+Dopo avere apportato le opportune aggiunte al progetto del controllo, è necessario modificare diverse funzioni che interessano il rendering del controllo ActiveX. Queste funzioni, `OnResetState`, `OnDraw`, e le funzioni Get/Set di una proprietà immagine personalizzata, si trovano nel file di implementazione del controllo Si noti che in questo esempio viene chiamata la classe del controllo `CSampleCtrl` , il `CPictureHolder` membro dati viene chiamato *m_pic* e il nome della proprietà immagine personalizzata è `ControlPicture` .
 
 Nella funzione `OnResetState` del controllo, aggiungere la seguente riga facoltativa dopo la chiamata a `COleControl::OnResetState`:
 
@@ -147,8 +148,8 @@ La proprietà immagine deve essere resa persistente, in modo che le informazioni
 
 Dopo aver completato le modifiche, ricompilare il progetto per incorporare le nuove funzionalità della proprietà immagine personalizzata e usare Test Container per testare la nuova proprietà. Per informazioni su come accedere al Test Container, vedere [Test di proprietà ed eventi con Test Container](testing-properties-and-events-with-test-container.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli ActiveX MFC](mfc-activex-controls.md)<br/>
-[Controlli ActiveX MFC: utilizzo dei tipi di carattere](mfc-activex-controls-using-fonts.md)<br/>
+[Controlli ActiveX MFC: uso di tipi di carattere](mfc-activex-controls-using-fonts.md)<br/>
 [Controlli ActiveX MFC: pagine delle proprietà](mfc-activex-controls-property-pages.md)

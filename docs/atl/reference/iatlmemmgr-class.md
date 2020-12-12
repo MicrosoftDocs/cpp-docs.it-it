@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe IAtlMemMgr'
 title: Classe IAtlMemMgr
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-ms.openlocfilehash: b23d8f582c53114ea1434e250e8e5e64b642f733
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 31f25c5fdb6a4e443bf011aac29620be8a4f13f4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353012"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139750"
 ---
 # <a name="iatlmemmgr-class"></a>Classe IAtlMemMgr
 
@@ -34,14 +35,14 @@ __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 
 ### <a name="methods"></a>Metodi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[Allocare](#allocate)|Chiamare questo metodo per allocare un blocco di memoria.|
 |[Free](#free)|Chiamare questo metodo per liberare un blocco di memoria.|
 |[GetSize](#getsize)|Chiamare questo metodo per recuperare la dimensione di un blocco di memoria allocato.|
 |[Riassegnare](#reallocate)|Chiamare questo metodo per riallocare un blocco di memoria.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questa interfaccia viene implementata da [CComHeap](../../atl/reference/ccomheap-class.md), [CCRTHeap](../../atl/reference/ccrtheap-class.md), [CLocalHeap](../../atl/reference/clocalheap-class.md), [CGlobalHeap](../../atl/reference/cglobalheap-class.md)o [CWin32Heap](../../atl/reference/cwin32heap-class.md).
 
@@ -73,7 +74,7 @@ Numero di byte necessari nel nuovo blocco di memoria.
 
 Restituisce un puntatore all'inizio del blocco di memoria allocata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamare [IAtlMemMgr:: Free](#free) o [IAtlMemMgr:: Reallocate](#reallocate) per liberare la memoria allocata da questo metodo.
 
@@ -94,7 +95,7 @@ void Free(void* p) throw();
 *p*<br/>
 Puntatore alla memoria precedentemente allocata dal gestore di memoria.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Utilizzare questo metodo per liberare la memoria ottenuta da [IAtlMemMgr:: allocate](#allocate) o [IAtlMemMgr:: Reallocate](#reallocate).
 
@@ -143,7 +144,7 @@ Numero di byte necessari nel nuovo blocco di memoria.
 
 Restituisce un puntatore all'inizio del blocco di memoria allocata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamare [IAtlMemMgr:: Free](#free) o [IAtlMemMgr:: Reallocate](#reallocate) per liberare la memoria allocata da questo metodo.
 
@@ -170,7 +171,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza VARIANT_TRUE come valore predefinito di questa proprietà.
 
@@ -191,7 +192,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza VARIANT_FALSE come valore predefinito di questa proprietà.
 
@@ -212,7 +213,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza VARIANT_TRUE come valore predefinito di questa proprietà.
 
@@ -233,7 +234,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza COLOR_BTNFACE o COLOR_WINDOW come valore predefinito di questa proprietà (a seconda che l'elemento padre della finestra host sia o meno una finestra di dialogo).
 
@@ -254,7 +255,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza VARIANT_FALSE come valore predefinito di questa proprietà.
 
@@ -275,7 +276,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza DOCHOSTUIDBLCLK_DEFAULT come valore predefinito di questa proprietà.
 
@@ -296,7 +297,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza DOCHOSTUIFLAG_NO3DBORDER come valore predefinito di questa proprietà.
 
@@ -317,7 +318,7 @@ out Indirizzo di un `IFontDisp` puntatore a interfaccia utilizzato per ricevere 
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL USA il tipo di carattere predefinito della GUI o il tipo di carattere del sistema come valore predefinito di questa proprietà.
 
@@ -338,7 +339,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza il colore del testo della finestra di sistema come valore predefinito di questa proprietà.
 
@@ -359,7 +360,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza le impostazioni locali predefinite dell'utente come valore predefinito di questa proprietà.
 
@@ -382,7 +383,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza VARIANT_TRUE come valore predefinito di questa proprietà.
 
@@ -420,7 +421,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL restituisce sempre VARIANT_FALSE come valore di questa proprietà.
 
@@ -441,7 +442,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL restituisce sempre VARIANT_FALSE come valore di questa proprietà.
 
@@ -462,7 +463,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza VARIANT_TRUE come valore predefinito di questa proprietà.
 
@@ -483,7 +484,7 @@ in Nuovo valore di questa proprietà.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza VARIANT_TRUE come valore predefinito di questa proprietà.
 
@@ -504,7 +505,7 @@ in Nuovo valore di questa proprietà.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza VARIANT_FALSE come valore predefinito di questa proprietà.
 
@@ -525,7 +526,7 @@ in Nuovo valore di questa proprietà.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza VARIANT_TRUE come valore predefinito di questa proprietà.
 
@@ -546,7 +547,7 @@ in Nuovo valore di questa proprietà.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza COLOR_BTNFACE o COLOR_WINDOW come valore predefinito di questa proprietà (a seconda che l'elemento padre della finestra host sia o meno una finestra di dialogo).
 
@@ -567,7 +568,7 @@ in Nuovo valore di questa proprietà.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza VARIANT_FALSE come valore predefinito di questa proprietà.
 
@@ -588,7 +589,7 @@ in Nuovo valore di questa proprietà.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza DOCHOSTUIDBLCLK_DEFAULT come valore predefinito di questa proprietà.
 
@@ -609,7 +610,7 @@ in Nuovo valore di questa proprietà.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza DOCHOSTUIFLAG_NO3DBORDER come valore predefinito di questa proprietà.
 
@@ -630,7 +631,7 @@ in Nuovo valore di questa proprietà.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL USA il tipo di carattere predefinito della GUI o il tipo di carattere del sistema come valore predefinito di questa proprietà.
 
@@ -651,7 +652,7 @@ in Nuovo valore di questa proprietà.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza il colore del testo della finestra di sistema come valore predefinito di questa proprietà.
 
@@ -672,7 +673,7 @@ in Nuovo valore di questa proprietà.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza le impostazioni locali predefinite dell'utente come valore predefinito di questa proprietà.
 
@@ -693,7 +694,7 @@ in Nuovo valore di questa proprietà.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza VARIANT_TRUE come valore predefinito di questa proprietà.
 
@@ -731,7 +732,7 @@ in Nuovo valore di questa proprietà.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza VARIANT_TRUE come valore predefinito di questa proprietà.
 
@@ -752,7 +753,7 @@ Puntatore alla nuova interfaccia.
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando `SetAmbientDispatch` viene chiamato con un puntatore a una nuova interfaccia, questa nuova interfaccia verrà utilizzata per richiamare eventuali proprietà o metodi richiesti dal controllo ospitato, se tali proprietà non sono già state fornite da [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md).
 
@@ -802,7 +803,7 @@ in Puntatore a un'interfaccia per un flusso contenente i dati di inizializzazion
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa finestra sarà sottoclassata dall'oggetto host che espone questa interfaccia in modo che i messaggi possano essere riflessi nel controllo e le altre funzionalità del contenitore funzioneranno.
 
@@ -848,7 +849,7 @@ in Puntatore all' `IUnknown` interfaccia dell'oggetto sink da connettere al punt
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 A differenza del `CreateControl` metodo, `CreateControlEx` consente anche di ricevere un puntatore a interfaccia per il controllo appena creato e di configurare un sink di evento per ricevere gli eventi generati dal controllo.
 
@@ -908,7 +909,7 @@ in Puntatore a un' `IDocHostUIHandlerDispatch` interfaccia.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione viene utilizzata dai controlli (ad esempio, il controllo Web browser) che eseguono una query sul sito dell'host per l' `IDocHostUIHandlerDispatch` interfaccia.
 
@@ -929,7 +930,7 @@ STDMETHOD(CreateControlLic)(
 *bstrLic*<br/>
 in BSTR che contiene la chiave di licenza per il controllo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per una descrizione dei parametri rimanenti e del valore restituito, vedere [IAxWinHostWindow:: CreateControl](#createcontrol) .
 
@@ -959,7 +960,7 @@ STDMETHOD(CreateControlLicEx)(
 *bstrLic*<br/>
 in BSTR che contiene la chiave di licenza per il controllo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per una descrizione dei parametri rimanenti e del valore restituito, vedere [IAxWinHostWindow:: CreateControlEx](#createcontrolex) .
 
@@ -967,6 +968,6 @@ Per una descrizione dei parametri rimanenti e del valore restituito, vedere [IAx
 
 Per un esempio che usa, vedere [hosting di controlli ActiveX con ATL AXHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `IAxWinHostWindowLic::CreateControlLicEx` .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

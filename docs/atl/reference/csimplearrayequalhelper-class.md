@@ -1,5 +1,6 @@
 ---
-title: CSimpleArrayEqualHelper (classe)
+description: 'Altre informazioni su: classe CSimpleArrayEqualHelper'
+title: Classe CSimpleArrayEqualHelper
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleArrayEqualHelper
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArrayEqualHelper class
 ms.assetid: a2b55d89-78c9-42ef-842c-5304c6d20ad6
-ms.openlocfilehash: 386b005777b3e31dd74916a41bc5af2ab82df210
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e1a5fd3eea5fd6ef7563febc662c5a7a1bc639c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330879"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140764"
 ---
-# <a name="csimplearrayequalhelper-class"></a>CSimpleArrayEqualHelper (classe)
+# <a name="csimplearrayequalhelper-class"></a>Classe CSimpleArrayEqualHelper
 
-Questa classe è un helper per la classe [CSimpleArray.](../../atl/reference/csimplearray-class.md)
+Questa classe è un helper per la classe [CSimpleArray](../../atl/reference/csimplearray-class.md) .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -29,27 +30,27 @@ class CSimpleArrayEqualHelper
 #### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Una classe derivata.
+Classe derivata.
 
 ## <a name="members"></a>Membri
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CSimpleArrayEqualHelper::IsEqual](#isequal)|(Statico) Verifica `CSimpleArray` l'uguaglianza di due elementi oggetto.|
+|[CSimpleArrayEqualHelper:: EQUAL](#isequal)|Statico Verifica l' `CSimpleArray` uguaglianza di due elementi oggetto.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Questa classe di tratti è `CSimpleArray` un supplemento alla classe. Fornisce un metodo per confrontare `CSimpleArray` due elementi archiviati in un oggetto. Per impostazione predefinita, gli elementi vengono confrontati utilizzando **operator ,** ma se l'array contiene tipi di dati complessi che non dispongono di un proprio operatore di uguaglianza, sarà necessario eseguire l'override di questa classe.
+Questa classe di tratti è un supplemento alla `CSimpleArray` classe. Fornisce un metodo per confrontare due elementi archiviati in un `CSimpleArray` oggetto. Per impostazione predefinita, gli elementi vengono confrontati utilizzando **operator = ()**, ma se la matrice contiene tipi di dati complessi che non dispongono di un proprio operatore di uguaglianza, sarà necessario eseguire l'override di questa classe.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlsimpcoll.h
+**Intestazione:** atlsimpcoll. h
 
-## <a name="csimplearrayequalhelperisequal"></a><a name="isequal"></a>CSimpleArrayEqualHelper::IsEqual
+## <a name="csimplearrayequalhelperisequal"></a><a name="isequal"></a> CSimpleArrayEqualHelper:: EQUAL
 
-Verifica `CSimpleArray` l'uguaglianza di due elementi oggetto.
+Verifica l' `CSimpleArray` uguaglianza di due elementi oggetto.
 
 ```
 static bool IsEqual(
@@ -62,15 +63,15 @@ static bool IsEqual(
 *T1*<br/>
 Oggetto di tipo T.
 
-*t2*<br/>
+*T2*<br/>
 Oggetto di tipo T.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce true se gli elementi sono uguali, false in caso contrario.
+Restituisce true se gli elementi sono uguali; in caso contrario, false.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CSimpleArray](../../atl/reference/csimplearray-class.md)<br/>
-[CSimpleArrayEqualHelperFalse (classe)](../../atl/reference/csimplearrayequalhelperfalse-class.md)<br/>
+[Classe CSimpleArrayEqualHelperFalse](../../atl/reference/csimplearrayequalhelperfalse-class.md)<br/>
 [Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

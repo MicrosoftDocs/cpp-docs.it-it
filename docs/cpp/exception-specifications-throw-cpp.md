@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: specifiche di eccezione (throw, noexcept) (C++)'
 title: Specifiche di eccezione (throw, noexcept) (C++)
 ms.date: 01/18/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - throw keyword [C++]
 - noexcept keyword [C++]
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
-ms.openlocfilehash: 1fa56ebf0a0358845ef620a89bc416992b3c0e31
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a6b3cb808caf464dc3dd19ea4d34e9d68f09d0d4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221575"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164799"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Specifiche di eccezione (throw, noexcept) (C++)
 
@@ -35,7 +36,7 @@ Nella tabella seguente viene riepilogata l'implementazione di Microsoft C++ dell
 
 |Specifica di eccezione|Significato|
 |-----------------------------|-------------|
-|**`noexcept`**<br/>`noexcept(true)`<br/>`throw()`|La funzione non genera eccezioni. In [/std: modalità c++ 14](../build/reference/std-specify-language-standard-version.md) (impostazione predefinita) **`noexcept`** e `noexcept(true)` sono equivalenti. Quando viene generata un'eccezione da una funzione dichiarata **`noexcept`** o `noexcept(true)` , viene richiamato [std:: terminate](../standard-library/exception-functions.md#terminate) . Quando viene generata un'eccezione da una funzione dichiarata come `throw()` in modalità **/std: c++ 14** , il risultato è un comportamento non definito. Non viene richiamata alcuna funzione specifica. Si tratta di una divergenza rispetto allo standard C++ 14, che richiedeva al compilatore di richiamare [std:: Unexpected](../standard-library/exception-functions.md#unexpected).  <br/> **Visual Studio 2017 versione 15,5 e successive**: in **/std: la modalità c++ 17** ,, **`noexcept`** `noexcept(true)` e `throw()` sono tutti equivalenti. In modalità **/std: c++ 17** , `throw()` è un alias per `noexcept(true)` . In modalità **/std: c++ 17** , quando viene generata un'eccezione da una funzione dichiarata con una di queste specifiche, [std:: terminate](../standard-library/exception-functions.md#terminate) viene richiamato come richiesto dallo standard c++ 17.|
+|**`noexcept`**<br/>`noexcept(true)`<br/>`throw()`|La funzione non genera eccezioni. In [/std: modalità c++ 14](../build/reference/std-specify-language-standard-version.md) (impostazione predefinita) **`noexcept`** e `noexcept(true)` sono equivalenti. Quando viene generata un'eccezione da una funzione dichiarata **`noexcept`** o `noexcept(true)` , viene richiamato [std:: terminate](../standard-library/exception-functions.md#terminate) . Quando viene generata un'eccezione da una funzione dichiarata come `throw()` in modalità **/std: c++ 14** , il risultato è un comportamento non definito. Non viene richiamata alcuna funzione specifica. Si tratta di una divergenza rispetto allo standard C++ 14, che richiedeva al compilatore di richiamare [std:: Unexpected](../standard-library/exception-functions.md#unexpected).  <br/> **Visual Studio 2017 versione 15,5 e successive**: in **/std: la modalità c++ 17** ,, **`noexcept`** `noexcept(true)` e `throw()` sono tutti equivalenti. In modalità **/std: c++ 17** , `throw()` è un alias per `noexcept(true)` . In modalità **/std: c++ 17** , quando viene generata un'eccezione da una funzione dichiarata con una di queste specifiche, [std:: terminate](../standard-library/exception-functions.md#terminate)  viene richiamato come richiesto dallo standard c++ 17.|
 |`noexcept(false)`<br/>`throw(...)`<br/>Nessuna specifica|La funzione può generare un'eccezione di qualsiasi tipo.|
 |`throw(type)`| (**C++ 14 e versioni precedenti**) La funzione può generare un'eccezione di tipo `type` . Il compilatore accetta la sintassi, ma lo interpreta come `noexcept(false)` . In modalità **/std: c++ 17** il compilatore genera un avviso C5040.|
 
@@ -50,15 +51,15 @@ Il comportamento dell'eccezione di una funzione dipende dai fattori seguenti:
 
 - Se la specifica di eccezione viene specificata in modo esplicito.
 
-Le specifiche di eccezioni esplicite nelle funzioni C non sono consentite. Si presuppone che una funzione C non generi eccezioni in **/EHsc**e possa generare eccezioni strutturate in **/EHS**, **/EHA**o **/EHac**.
+Le specifiche di eccezioni esplicite nelle funzioni C non sono consentite. Si presuppone che una funzione C non generi eccezioni in **/EHsc** e possa generare eccezioni strutturate in **/EHS**, **/EHA** o **/EHac**.
 
 Nella tabella seguente viene riepilogato se una funzione C++ può generare potenzialmente in diverse opzioni di gestione delle eccezioni del compilatore:
 
 |Funzione|/EHsc|/EHs|/EHa|/EHac|
 |--------------|------------|-----------|-----------|------------|
-|Funzione C++ senza alcuna specifica di eccezione|sì|sì|sì|sì|
-|Funzione C++ con **`noexcept`** , `noexcept(true)` o `throw()` specifica di eccezione|No|No|Sì|sì|
-|Funzione C++ con `noexcept(false)` , `throw(...)` o `throw(type)` specifica di eccezione|sì|sì|sì|Sì|
+|Funzione C++ senza alcuna specifica di eccezione|Sì|Sì|Sì|Sì|
+|Funzione C++ con **`noexcept`** , `noexcept(true)` o `throw()` specifica di eccezione|No|No|Sì|Sì|
+|Funzione C++ con `noexcept(false)` , `throw(...)` o `throw(type)` specifica di eccezione|Sì|Sì|Sì|Sì|
 
 ## <a name="example"></a>Esempio
 

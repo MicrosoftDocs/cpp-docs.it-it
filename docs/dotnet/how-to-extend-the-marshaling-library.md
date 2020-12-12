@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: procedura: estendere la libreria di marshalling'
 title: 'Procedura: estendere la libreria del marshalling'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-ms.openlocfilehash: 071ea72a2aa03dcf16eb0f09e121eba4514e5828
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 829e05002c23f5a5b59efdb5e65dc5769ca7906a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414607"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97134966"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>Procedura: estendere la libreria del marshalling
 
@@ -67,7 +68,7 @@ namespace msclr {
 
 1. Sostituire il commento sull'inizializzazione con il codice per inizializzare sul `toPtr` valore vuoto appropriato. Se, ad esempio, si tratta di un puntatore, impostarlo su `NULL` .
 
-1. Sostituire il commento sulla logica di conversione con il codice per convertire il `from` parametro in un *TO* oggetto di tipo. Questo oggetto convertito verrà archiviato in `toPtr` .
+1. Sostituire il commento sulla logica di conversione con il codice per convertire il `from` parametro in un  oggetto di tipo. Questo oggetto convertito verrà archiviato in `toPtr` .
 
 1. Sostituire il commento sull'impostazione `toObject` con il codice da impostare sull' `toObject` oggetto convertito.
 
@@ -266,6 +267,6 @@ Native address: 123 Main Street
 Native zip code: 98111
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Cenni preliminari sul marshalling in C++](../dotnet/overview-of-marshaling-in-cpp.md)

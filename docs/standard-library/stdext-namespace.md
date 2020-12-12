@@ -1,5 +1,6 @@
 ---
-title: stdext (spazio dei nomi)
+description: 'Altre informazioni su: spazio dei nomi stdext'
+title: Spazio dei nomi stdext
 ms.date: 09/06/2017
 f1_keywords:
 - stdext
@@ -7,27 +8,27 @@ helpviewer_keywords:
 - _DEFINE_DEPRECATED_HASH_CLASSES symbol
 - stdext namespace
 ms.assetid: 3e94fc89-0584-424f-bc09-081b73379545
-ms.openlocfilehash: d40f3f7a99db72784cc9a32a9c37064228597d34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb81dde22014ec91f7212ce4313c21a8410f30a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412423"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153785"
 ---
-# <a name="stdext-namespace"></a>stdext (spazio dei nomi)
+# <a name="stdext-namespace"></a>Spazio dei nomi stdext
 
-I membri del [ \<hash_map >](../standard-library/hash-map.md) e [ \<hash_set >](../standard-library/hash-set.md) i file di intestazione non fanno attualmente parte di ISO C++ standard. Di conseguenza, questi tipi e membri sono stati spostati dallo spazio dei nomi `std` a quello `stdext`per restare conformi allo standard C++.
+I membri dei [\<hash_map>](../standard-library/hash-map.md) [\<hash_set>](../standard-library/hash-set.md) file di intestazione e non fanno attualmente parte dello standard ISO C++. Di conseguenza, questi tipi e membri sono stati spostati dallo spazio dei nomi `std` a quello `stdext`per restare conformi allo standard C++.
 
-Durante la compilazione con [/Ze](../build/reference/za-ze-disable-language-extensions.md), ovvero l'impostazione predefinita, il compilatore genera un avviso sull'uso delle `std` per i membri del \<hash_map > e \<hash_set > file di intestazione. Per disabilitare l'avviso, usare il pragma [warning](../preprocessor/warning.md) .
+Quando si esegue la compilazione con [/ze](../build/reference/za-ze-disable-language-extensions.md), che è l'impostazione predefinita, il compilatore genera un avviso sull'uso di `std` per i membri dei \<hash_map> file di intestazione e \<hash_set> . Per disabilitare l'avviso, usare il pragma [warning](../preprocessor/warning.md).
 
-Affinché il compilatore generi un errore per l'uso di `std` per i membri del \<hash_map > e \<hash_set > file di intestazione con **/Ze**, aggiungere la direttiva seguente prima di `#include` qualsiasi C++ file di intestazione libreria Standard.
+Per fare in modo che il compilatore generi un errore per l'uso di `std` per i membri dei \<hash_map> file di \<hash_set> intestazione e con **/ze**, aggiungere la direttiva seguente prima di `#include` tutti i file di intestazione della libreria standard C++.
 
 ```cpp
 #define _DEFINE_DEPRECATED_HASH_CLASSES 0
 ```
 
-Durante la compilazione con **/Za**, il compilatore genera un errore.
+Quando si esegue la compilazione con **/za**, il compilatore genera un errore.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)
+[Panoramica della libreria standard C++](../standard-library/cpp-standard-library-overview.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: interfaccia IAxWinAmbientDispatch'
 title: Interfaccia IAxWinAmbientDispatch
 ms.date: 11/04/2016
 f1_keywords:
@@ -35,12 +36,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatch interface
 ms.assetid: 55ba6f7b-7a3c-4792-ae47-c8a84b683ca9
-ms.openlocfilehash: dbd682451ca5499aef4b16b3b51feba8411bdd12
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 5179a9895bc037342aa25cc111795c713e19279b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352960"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139737"
 ---
 # <a name="iaxwinambientdispatch-interface"></a>Interfaccia IAxWinAmbientDispatch
 
@@ -59,7 +60,7 @@ interface IAxWinAmbientDispatch : IDispatch
 
 ### <a name="methods"></a>Metodi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[get_AllowContextMenu](#get_allowcontextmenu)|La `AllowContextMenu` proprietà specifica se il controllo ospitato è autorizzato a visualizzare il proprio menu di scelta rapida.|
 |[get_AllowShowUI](#get_allowshowui)|La `AllowShowUI` proprietà specifica se il controllo ospitato è autorizzato a visualizzare la propria interfaccia utente.|
@@ -90,7 +91,7 @@ interface IAxWinAmbientDispatch : IDispatch
 |[put_OptionKeyPath](#put_optionkeypath)|La `OptionKeyPath` proprietà specifica il percorso della chiave del registro di sistema per le impostazioni utente.|
 |[put_UserMode](#put_usermode)|La `UserMode` proprietà specifica la modalità utente di ambiente del contenitore.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questa interfaccia è esposta dagli oggetti di hosting del controllo ActiveX di ATL. Chiamare i metodi su questa interfaccia per impostare le proprietà di ambiente disponibili per il controllo ospitato o per specificare altri aspetti del comportamento del contenitore. Per integrare le proprietà fornite da `IAxWinAmbientDispatch` , utilizzare [IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md).
 
@@ -127,7 +128,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza VARIANT_TRUE come valore predefinito di questa proprietà.
 
@@ -148,7 +149,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza VARIANT_FALSE come valore predefinito di questa proprietà.
 
@@ -169,7 +170,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza VARIANT_TRUE come valore predefinito di questa proprietà.
 
@@ -190,7 +191,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza COLOR_BTNFACE o COLOR_WINDOW come valore predefinito di questa proprietà (a seconda che l'elemento padre della finestra host sia o meno una finestra di dialogo).
 
@@ -211,7 +212,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza VARIANT_FALSE come valore predefinito di questa proprietà.
 
@@ -232,7 +233,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza DOCHOSTUIDBLCLK_DEFAULT come valore predefinito di questa proprietà.
 
@@ -253,7 +254,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza DOCHOSTUIFLAG_NO3DBORDER come valore predefinito di questa proprietà.
 
@@ -274,7 +275,7 @@ out Indirizzo di un `IFontDisp` puntatore a interfaccia utilizzato per ricevere 
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL USA il tipo di carattere predefinito della GUI o il tipo di carattere del sistema come valore predefinito di questa proprietà.
 
@@ -295,7 +296,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza il colore del testo della finestra di sistema come valore predefinito di questa proprietà.
 
@@ -316,7 +317,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza le impostazioni locali predefinite dell'utente come valore predefinito di questa proprietà.
 
@@ -339,7 +340,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza VARIANT_TRUE come valore predefinito di questa proprietà.
 
@@ -377,7 +378,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL restituisce sempre VARIANT_FALSE come valore di questa proprietà.
 
@@ -398,7 +399,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL restituisce sempre VARIANT_FALSE come valore di questa proprietà.
 
@@ -419,7 +420,7 @@ out Indirizzo di una variabile per la ricezione del valore corrente di questa pr
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza VARIANT_TRUE come valore predefinito di questa proprietà.
 
@@ -440,7 +441,7 @@ in Nuovo valore di questa proprietà.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza VARIANT_TRUE come valore predefinito di questa proprietà.
 
@@ -461,7 +462,7 @@ in Nuovo valore di questa proprietà.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza VARIANT_FALSE come valore predefinito di questa proprietà.
 
@@ -482,7 +483,7 @@ in Nuovo valore di questa proprietà.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza VARIANT_TRUE come valore predefinito di questa proprietà.
 
@@ -503,7 +504,7 @@ in Nuovo valore di questa proprietà.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza COLOR_BTNFACE o COLOR_WINDOW come valore predefinito di questa proprietà (a seconda che l'elemento padre della finestra host sia o meno una finestra di dialogo).
 
@@ -524,7 +525,7 @@ in Nuovo valore di questa proprietà.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza VARIANT_FALSE come valore predefinito di questa proprietà.
 
@@ -545,7 +546,7 @@ in Nuovo valore di questa proprietà.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza DOCHOSTUIDBLCLK_DEFAULT come valore predefinito di questa proprietà.
 
@@ -566,7 +567,7 @@ in Nuovo valore di questa proprietà.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza DOCHOSTUIFLAG_NO3DBORDER come valore predefinito di questa proprietà.
 
@@ -587,7 +588,7 @@ in Nuovo valore di questa proprietà.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL USA il tipo di carattere predefinito della GUI o il tipo di carattere del sistema come valore predefinito di questa proprietà.
 
@@ -608,7 +609,7 @@ in Nuovo valore di questa proprietà.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza il colore del testo della finestra di sistema come valore predefinito di questa proprietà.
 
@@ -629,7 +630,7 @@ in Nuovo valore di questa proprietà.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza le impostazioni locali predefinite dell'utente come valore predefinito di questa proprietà.
 
@@ -650,7 +651,7 @@ in Nuovo valore di questa proprietà.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza VARIANT_TRUE come valore predefinito di questa proprietà.
 
@@ -688,11 +689,11 @@ in Nuovo valore di questa proprietà.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione dell'oggetto host ATL utilizza VARIANT_TRUE come valore predefinito di questa proprietà.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Interfaccia IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md)<br/>
 [Interfaccia IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md)<br/>

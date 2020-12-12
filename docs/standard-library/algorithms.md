@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: algoritmi'
 title: Algoritmi
 ms.date: 10/18/2018
 helpviewer_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-ms.openlocfilehash: 6532cb56bb70c82525a13ba53efdd6203ebafb12
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d270b35720211c099876eb899e4ef5add9813cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87205223"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163756"
 ---
 # <a name="algorithms"></a>Algoritmi
 
 Gli algoritmi rappresentano una parte fondamentale della libreria standard C++. Gli algoritmi non funzionano con i contenitori stessi bensì con gli iteratori. Di conseguenza, lo stesso algoritmo può essere usato dalla maggior parte dei contenitori della libreria standard C++, se non tutti. Questa sezione illustra le convenzioni e la terminologia degli algoritmi della libreria standard C++.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le descrizioni delle funzioni di modello dell'algoritmo utilizzano diverse espressioni abbreviate:
 
@@ -41,7 +42,7 @@ Diversi algoritmi usano un predicato che deve imporre un ordinamento di tipo "st
 
 - Debole significa che *x* e *y* hanno un ordinamento equivalente se \! *prede*(*x*, *y*)  && \! *prede*(*y*, *x*) (*x*  ==  *y* non deve essere definito).
 
-- L'ordinamento indica che *prede*(*x*, *y*) * && prede*(*Y*, *z*) implicano *prede*(*x*, *z*).
+- L'ordinamento indica che *prede*(*x*, *y*) *&& prede*(*Y*, *z*) implicano *prede*(*x*, *z*).
 
 Alcuni di questi algoritmi usano in modo implicito il predicato *x* \< *Y*. Other predicates that typically satisfy the strict weak ordering requirement are *X* > *Y*, `less` (*x*, *y*) e `greater` (*x*, *y*). Si noti, tuttavia, che i predicati come *X* \<= *Y* and *X* > =  *Y* non soddisfano questo requisito.
 
@@ -51,7 +52,7 @@ Una sequenza di elementi designati dagli iteratori nell'intervallo \[ `First` , 
 
 Gli algoritmi della libreria standard C++ si trovano nei [\<algorithm>](algorithm.md) file di [\<numeric>](numeric.md) intestazione e.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimenti per la libreria standard C++](cpp-standard-library-reference.md)\
 [Thread safety nella libreria standard C++](thread-safety-in-the-cpp-standard-library.md)

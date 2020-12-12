@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: macro di categoria'
 title: Macro di categoria
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 - atlcom/ATL::IMPLEMENTED_CATEGORY
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-ms.openlocfilehash: 0db32c9550cd76fbc8e1f6776b8ecf4cceffebd7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 31cbef36ca02fb990ba8935915837074d7dd4116
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833894"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165082"
 ---
 # <a name="category-macros"></a>Macro di categoria
 
 Queste macro definiscono le mappe delle categorie.
 
-|Macro|Descrizione|
+|Macro|Description|
 |-|-|
 |[BEGIN_CATEGORY_MAP](#begin_category_map)|Contrassegna l'inizio della mappa delle categorie.|
 |[END_CATEGORY_MAP](#end_category_map)|Contrassegna la fine della mappa delle categorie.|
@@ -42,7 +43,7 @@ BEGIN_CATEGORY_MAP(theClass)
 *theClass*<br/>
 in Nome della classe che contiene la mappa delle categorie.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La mappa delle categorie viene utilizzata per specificare quali categorie di componenti verrà implementata dalla classe COM e quali categorie sono necessarie dal relativo contenitore.
 
@@ -84,7 +85,7 @@ IMPLEMENTED_CATEGORY(catID)
 *catID*<br/>
 in Una costante o una variabile CATId che contiene l'identificatore univoco globale (GUID) per la categoria implementata. L'indirizzo di *CATID* verrà accettato e aggiunto alla mappa. Vedere la tabella seguente per una selezione delle categorie azionarie.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le categorie di componenti elencate nella mappa verranno registrate automaticamente quando il modulo viene registrato se alla classe è associato un [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) o [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) macro.
 
@@ -94,7 +95,7 @@ Per ulteriori informazioni sulle categorie di componenti, vedere [che cosa sono 
 
 ### <a name="a-selection-of-stock-categories"></a>Selezione di categorie predefinite
 
-|Descrizione|Simbolo|GUID del registro di sistema|
+|Description|Simbolo|GUID del registro di sistema|
 |-----------------|------------|-------------------|
 |Sicurezza per gli script|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |Safe per l'inizializzazione|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
@@ -102,7 +103,7 @@ Per ulteriori informazioni sulle categorie di componenti, vedere [che cosa sono 
 |data binding semplice|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
 |Data Binding avanzato|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |Controlli senza finestra|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|Oggetti compatibili con Internet|Per un elenco di esempio, vedere [oggetti con connessione Internet](/windows/win32/com/internet-aware-objects) nell'Windows SDK.||
+|Oggetti Internet-Aware|Per un elenco di esempio, vedere [oggetti con connessione Internet](/windows/win32/com/internet-aware-objects) nell'Windows SDK.||
 
 ### <a name="example"></a>Esempio
 
@@ -121,7 +122,7 @@ REQUIRED_CATEGORY( catID )
 *catID*<br/>
 in Una costante o una variabile CATId che contiene l'identificatore univoco globale (GUID) per la categoria richiesta. L'indirizzo di *CATID* verrà accettato e aggiunto alla mappa. Vedere la tabella seguente per una selezione delle categorie azionarie.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le categorie di componenti elencate nella mappa verranno registrate automaticamente quando il modulo viene registrato se alla classe è associato un [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) o [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) macro.
 
@@ -131,7 +132,7 @@ Per ulteriori informazioni sulle categorie di componenti, incluso un elenco di e
 
 ### <a name="a-selection-of-stock-categories"></a>Selezione di categorie predefinite
 
-|Descrizione|Simbolo|GUID del registro di sistema|
+|Description|Simbolo|GUID del registro di sistema|
 |-----------------|------------|-------------------|
 |Sicurezza per gli script|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |Safe per l'inizializzazione|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
@@ -139,7 +140,7 @@ Per ulteriori informazioni sulle categorie di componenti, incluso un elenco di e
 |data binding semplice|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
 |Data Binding avanzato|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |Controlli senza finestra|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|Oggetti compatibili con Internet|Per un elenco di esempio, vedere [oggetti con connessione Internet](/windows/win32/com/internet-aware-objects) nell'Windows SDK.||
+|Oggetti Internet-Aware|Per un elenco di esempio, vedere [oggetti con connessione Internet](/windows/win32/com/internet-aware-objects) nell'Windows SDK.||
 
 ### <a name="example"></a>Esempio
 

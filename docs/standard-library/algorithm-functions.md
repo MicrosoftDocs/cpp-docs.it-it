@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; funzioni per gli algoritmi &gt;'
 title: Funzioni &lt;algorithm&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -200,16 +201,16 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 5b83306d34c5e881e679ac4b6f0d7b9c249035cd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dd008215a737313ec8600fa64ac64aa9339b5334
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87205574"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163808"
 ---
 # <a name="ltalgorithmgt-functions"></a>Funzioni &lt;algorithm&gt;
 
-## <a name="adjacent_find"></a><a name="adjacent_find"></a>adjacent_find
+## <a name="adjacent_find"></a><a name="adjacent_find"></a> adjacent_find
 
 Cerca due elementi adiacenti uguali o che soddisfano una condizione specificata.
 
@@ -257,7 +258,7 @@ Predicato binario che fornisce la condizione che deve essere soddisfatta dai val
 
 Iteratore in poi al primo degli elementi adiacenti che sono uguali tra loro (nella prima versione) o che soddisfano la condizione fornita dal predicato binario (nella seconda versione), a condizione che tale coppia di elementi venga trovata. In caso contrario, viene restituito un iteratore che punta all' *Ultima* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'algoritmo `adjacent_find` è un algoritmo di sequenza non modificabile. L'intervallo in cui eseguire la ricerca deve essere valido. Tutti i puntatori devono essere dereferenziabili e l'ultima posizione deve essere raggiungibile dalla prima per incremento. La complessità di tempo dell'algoritmo è lineare nel numero di elementi contenuti nell'intervallo.
 
@@ -327,7 +328,7 @@ There are two adjacent elements where the second is twice the first.
 They have values of 10 & 20.
 ```
 
-## <a name="all_of"></a><a name="all_of"></a>all_of
+## <a name="all_of"></a><a name="all_of"></a> all_of
 
 Restituisce **`true`** quando una condizione è presente in ogni elemento nell'intervallo specificato.
 
@@ -364,7 +365,7 @@ Condizione da verificare. Si tratta di un oggetto funzione predicato definito da
 
 Restituisce **`true`** se la condizione viene rilevata in corrispondenza di ogni elemento nell'intervallo indicato oppure se l'intervallo è vuoto e **`false`** in caso contrario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello restituisce **`true`** solo se, per ogni `N` nell'intervallo `[0, last - first)` , il predicato `pred(*(first + N))` è **`true`** .
 
@@ -403,7 +404,7 @@ li = ( 50 40 10 20 20 )
 All the elements are even numbers.
 ```
 
-## <a name="any_of"></a><a name="any_of"></a>any_of
+## <a name="any_of"></a><a name="any_of"></a> any_of
 
 Restituisce **`true`** quando una condizione è presente almeno una volta nell'intervallo di elementi specificato.
 
@@ -440,7 +441,7 @@ Condizione da verificare. La condizione è fornita da un oggetto funzione predic
 
 Restituisce **`true`** se la condizione viene rilevata almeno una volta nell'intervallo indicato, **`false`** se la condizione non viene mai rilevata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello restituisce **`true`** solo se, per alcuni `N` nell'intervallo
 
@@ -480,7 +481,7 @@ li = ( 51 41 11 21 20 )
 There's an even element in li.
 ```
 
-## <a name="binary_search"></a><a name="binary_search"></a>binary_search
+## <a name="binary_search"></a><a name="binary_search"></a> binary_search
 
 Verifica se in un intervallo ordinato è presente un elemento uguale a un valore specificato o equivalente a tale valore nel senso specificato da un predicato binario.
 
@@ -517,7 +518,7 @@ Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un
 
 **`true`** Se viene trovato un elemento nell'intervallo che è uguale o equivalente al valore specificato; in caso contrario, **`false`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo di origine ordinato a cui si fa riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -619,7 +620,7 @@ Ordered using mod_lesser, vector v1 = ( 0 -1 1 -2 2 3 4 )
 There is an element with a value equivalent to -3 under mod_lesser.
 ```
 
-## <a name="clamp"></a><a name="clamp"></a>morsetto
+## <a name="clamp"></a><a name="clamp"></a> morsetto
 
 Confronta un valore con un limite superiore e inferiore e restituisce un riferimento al valore se è compreso tra i limiti o un riferimento al limite superiore o inferiore, se il valore è rispettivamente superiore o inferiore.
 
@@ -656,11 +657,11 @@ Predicato utilizzato per confrontare il valore con un *valore* *inferiore* o *su
 
 Restituisce un riferimento a un *valore minore* se `value < lower` o un riferimento a un valore *superiore* se `upper < value` . In caso contrario, restituisce un riferimento a *value*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il comportamento non è definito se *Upper* è minore di *Lower*.
 
-## <a name="copy"></a><a name="copy"></a>copia
+## <a name="copy"></a><a name="copy"></a> copia
 
 Assegna i valori degli elementi di un intervallo di origine a un intervallo di destinazione, scorrendo la sequenza di origine degli elementi e assegnando loro nuove posizioni in avanti.
 
@@ -697,11 +698,11 @@ Iteratore di output che punta alla posizione del primo elemento nell'intervallo 
 
 Iteratore di output che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di destinazione, ovvero l'iteratore punta a `result` + (*ultimo*  -  *primo*).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo di origine deve essere valido e la destinazione deve disporre di spazio sufficiente per contenere tutti gli elementi copiati.
 
-Poiché l'algoritmo copia gli elementi di origine in un ordine a partire dal primo elemento, l'intervallo di destinazione può sovrapporsi all'intervallo di origine purché l' *Ultima* posizione dell'intervallo di origine non sia contenuta nell'intervallo di destinazione. `copy`può essere utilizzato per spostare gli elementi a sinistra ma non a destra, a meno che non vi sia alcuna sovrapposizione tra gli intervalli di origine e di destinazione. Per spostare a destra di un numero qualsiasi di posizioni, usare l'algoritmo [copy_backward](algorithm-functions.md#copy_backward).
+Poiché l'algoritmo copia gli elementi di origine in un ordine a partire dal primo elemento, l'intervallo di destinazione può sovrapporsi all'intervallo di origine purché l' *Ultima* posizione dell'intervallo di origine non sia contenuta nell'intervallo di destinazione. `copy` può essere utilizzato per spostare gli elementi a sinistra ma non a destra, a meno che non vi sia alcuna sovrapposizione tra gli intervalli di origine e di destinazione. Per spostare a destra di un numero qualsiasi di posizioni, usare l'algoritmo [copy_backward](algorithm-functions.md#copy_backward).
 
 L'algoritmo `copy` modifica solo i valori a cui puntano gli iteratori, assegnando nuovi valori agli elementi dell'intervallo di destinazione. Tale algoritmo non può essere utilizzato per creare nuovi elementi e non è in grado di inserire direttamente gli elementi in un contenitore vuoto.
 
@@ -763,7 +764,7 @@ v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
 v2 with shifted insert = ( 0 3 0 10 20 10 20 21 24 27 30 )
 ```
 
-## <a name="copy_backward"></a><a name="copy_backward"></a>copy_backward
+## <a name="copy_backward"></a><a name="copy_backward"></a> copy_backward
 
 Assegna i valori degli elementi di un intervallo di origine a un intervallo di destinazione, scorrendo la sequenza di origine degli elementi e assegnando loro nuove posizioni in indietro.
 
@@ -790,7 +791,7 @@ Iteratore bidirezionale che punta alla posizione immediatamente successiva all'u
 
 Iteratore di output che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di destinazione, ovvero l'iteratore punta a *DestEnd* -(*ultimo*  -  *primo*).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo di origine deve essere valido e la destinazione deve disporre di spazio sufficiente per contenere tutti gli elementi copiati.
 
@@ -860,7 +861,7 @@ v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
 v2 with shifted insert = ( 0 3 6 9 0 10 0 10 20 27 30 )
 ```
 
-## <a name="copy_if"></a><a name="copy_if"></a>copy_if
+## <a name="copy_if"></a><a name="copy_if"></a> copy_if
 
 In un intervallo di elementi, copia gli elementi **`true`** per la condizione specificata.
 
@@ -902,7 +903,7 @@ Condizione verificata in ogni elemento dell'intervallo. La condizione è fornita
 
 Un iteratore di output uguale a *dest* incrementato una volta per ogni elemento che soddisfa la condizione. In altre parole, il valore restituito meno *dest* corrisponde al numero di elementi copiati.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione del modello restituisce
 
@@ -965,7 +966,7 @@ Even numbers are le = ( 46 88 72 60 40 84 )
 Odd numbers are lo = ( 59 79 71 5 )
 ```
 
-## <a name="copy_n"></a><a name="copy_n"></a>copy_n
+## <a name="copy_n"></a><a name="copy_n"></a> copy_n
 
 Copia un numero specificato di elementi.
 
@@ -1002,7 +1003,7 @@ Iteratore di output che indica dove copiare gli elementi.
 
 Restituisce un iteratore di output dove sono stati copiati gli elementi. Corrisponde al valore restituito del parametro *dest* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello restituisce `*(dest + N) = *(first + N))` una volta per ogni `N` nell'intervallo `[0, count)`, esclusivamente per aumentare i valori di `N` iniziando dal valore più basso. Restituisce quindi `dest + N`. Se *dest* e *First* designano le aree di archiviazione, *dest* non deve essere compreso nell'intervallo `[first, last)` .
 
@@ -1035,7 +1036,7 @@ int main()
 dandelion + badger = danger
 ```
 
-## <a name="count"></a><a name="count"></a>conteggio
+## <a name="count"></a><a name="count"></a> conteggio
 
 Restituisce il numero di elementi di un intervallo i cui valori corrispondono a un valore specificato.
 
@@ -1071,9 +1072,9 @@ Valore degli elementi da conteggiare.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il tipo di differenza dell'oggetto `InputIterator` che conta il numero di elementi nell'intervallo [*First*, *Last*) con *valore*value.
+Il tipo di differenza dell'oggetto `InputIterator` che conta il numero di elementi nell'intervallo [*First*, *Last*) con *valore* value.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operatore `operator==` usato per determinare la corrispondenza tra un elemento e il valore specificato deve imporre una relazione di equivalenza tra gli operandi.
 
@@ -1116,7 +1117,7 @@ v1 = ( 10 20 10 40 10 )
 The number of 10s in v2 is: 3.
 ```
 
-## <a name="count_if"></a><a name="count_if"></a>count_if
+## <a name="count_if"></a><a name="count_if"></a> count_if
 
 Restituisce il numero di elementi di un intervallo i cui valori soddisfano una condizione specificata.
 
@@ -1154,7 +1155,7 @@ Oggetto funzione predicato definito dall'utente che definisce la condizione che 
 
 Il numero di elementi che soddisfano la condizione specificata dal predicato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione di modello è una generalizzazione dell'algoritmo [count](algorithm-functions.md#count) che sostituisce il predicato "è uguale a un valore specifico" con qualsiasi predicato.
 
@@ -1201,7 +1202,7 @@ v1 = ( 10 20 10 40 10 )
 The number of elements in v1 greater than 10 is: 2.
 ```
 
-## <a name="equal"></a><a name="equal"></a>uguale
+## <a name="equal"></a><a name="equal"></a> uguale
 
 Confronta due intervalli elemento per elemento per verificarne l'uguaglianza o l'equivalenza nel senso specificato da un predicato binario.
 
@@ -1295,7 +1296,7 @@ Oggetto funzione predicato definito dall'utente che definisce la condizione che 
 
 **`true`** Se e solo se gli intervalli sono identici o equivalenti nel predicato binario quando vengono confrontati elemento per elemento; in caso contrario, **`false`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo in cui eseguire la ricerca deve essere valido. Tutti gli iteratori devono essere dereferenziabili e l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -1336,7 +1337,7 @@ int main()
 }
 ```
 
-## <a name="equal_range"></a><a name="equal_range"></a>equal_range
+## <a name="equal_range"></a><a name="equal_range"></a> equal_range
 
 Dato un intervallo ordinato, trova l'intervallo secondario in cui tutti gli elementi sono equivalenti a un determinato valore.
 
@@ -1375,7 +1376,7 @@ Coppia di iteratori in poi che specificano un sottointervallo, contenuto nell'in
 
 Se nessun elemento nell'intervallo è equivalente a *value*, gli iteratori in diretta nella coppia restituita sono uguali e specificano il punto in cui il *valore* può essere inserito senza compromettere l'ordine dell'intervallo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo iteratore restituito dall'algoritmo è [lower_bound](algorithm-functions.md#lower_bound), mentre il secondo iteratore è [upper_bound](algorithm-functions.md#upper_bound).
 
@@ -1502,7 +1503,7 @@ int main()
 }
 ```
 
-## <a name="fill"></a><a name="fill"></a>riempimento
+## <a name="fill"></a><a name="fill"></a> riempimento
 
 Assegna lo stesso nuovo valore a ogni elemento di un intervallo specificato.
 
@@ -1535,7 +1536,7 @@ Iteratore in avanti che punta alla posizione immediatamente successiva all'ultim
 *valore*\
 Valore da assegnare agli elementi nell'intervallo [*First*, *Last*).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo di destinazione deve essere valido. Tutti i puntatori devono essere dereferenziabili e l'ultima posizione deve essere raggiungibile dalla prima per incremento. La complessità è lineare con le dimensioni dell'intervallo.
 
@@ -1580,7 +1581,7 @@ Vector v1 = ( 0 5 10 15 20 25 30 35 40 45 )
 Modified v1 = ( 0 5 10 15 20 2 2 2 2 2 )
 ```
 
-## <a name="fill_n"></a><a name="fill_n"></a>fill_n
+## <a name="fill_n"></a><a name="fill_n"></a> fill_n
 
 Assegna un nuovo valore a un numero specificato di elementi di un intervallo che inizia con un determinato elemento.
 
@@ -1605,7 +1606,7 @@ ForwardIterator fill_n(
 Criteri di esecuzione da utilizzare.
 
 *prima*\
-Iteratore di output che punta alla posizione del primo elemento nell'intervallo a cui assegnare il *valore*del valore.
+Iteratore di output che punta alla posizione del primo elemento nell'intervallo a cui assegnare il *valore* del valore.
 
 *conteggio*\
 Tipo integer con o senza segno che specifica il numero di elementi a cui assegnare il valore.
@@ -1617,7 +1618,7 @@ Valore da assegnare agli elementi nell'intervallo [*First*, *First + count*).
 
 Iteratore all'elemento che segue l'ultimo elemento riempito se *count* > zero, in caso contrario il primo elemento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo di destinazione deve essere valido. Tutti i puntatori devono essere dereferenziabili e l'ultima posizione deve essere raggiungibile dalla prima per incremento. La complessità è lineare con le dimensioni dell'intervallo.
 
@@ -1669,7 +1670,7 @@ int main()
 }
 ```
 
-## <a name="find"></a><a name="find"></a>trovare
+## <a name="find"></a><a name="find"></a> trovare
 
 Individua la posizione della prima occorrenza di un elemento in un intervallo con un valore specificato.
 
@@ -1706,13 +1707,13 @@ Valore da ricercare.
 
 Iteratore di input che punta alla prima occorrenza del valore specificato nell'intervallo in cui eseguire la ricerca. Se non viene trovato alcun elemento con un valore equivalente, restituisce *l'ultimo*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operatore `operator==` usato per determinare la corrispondenza tra un elemento e il valore specificato deve imporre una relazione di equivalenza tra gli operandi.
 
 Per un esempio di codice con `find()`, vedere [find_if](algorithm-functions.md#find_if).
 
-## <a name="find_end"></a><a name="find_end"></a>find_end
+## <a name="find_end"></a><a name="find_end"></a> find_end
 
 Ricerca in un intervallo l'ultima sottosequenza identica a una sequenza specificata o equivalente nel senso specificato da un predicato binario.
 
@@ -1774,7 +1775,7 @@ Oggetto funzione predicato definito dall'utente che definisce la condizione che 
 
 Iteratore in poi che punta alla posizione del primo elemento dell'ultima sottosequenza all'interno di [first1, last1) che corrisponde alla sequenza specificata [first2, Last2).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operatore `operator==` usato per determinare la corrispondenza tra un elemento e il valore specificato deve imporre una relazione di equivalenza tra gli operandi.
 
@@ -1876,7 +1877,7 @@ There is a sequence of elements in v1 that are equivalent to those
 in v2 under the binary predicate twice and that begins at position 8.
 ```
 
-## <a name="find_first_of"></a><a name="find_first_of"></a>find_first_of
+## <a name="find_first_of"></a><a name="find_first_of"></a> find_first_of
 
 Ricerca la prima occorrenza di uno dei diversi valori all'interno di un intervallo di destinazione o la prima occorrenza di uno dei diversi elementi equivalenti nel senso specificato da un predicato binario in un set specificato di elementi.
 
@@ -1938,7 +1939,7 @@ Oggetto funzione predicato definito dall'utente che definisce la condizione che 
 
 Iteratore in avanti che punta alla posizione del primo elemento della prima sottosequenza che corrisponde alla sequenza specificata o che è equivalente nel senso specificato da un predicato binario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operatore `operator==` usato per determinare la corrispondenza tra un elemento e il valore specificato deve imporre una relazione di equivalenza tra gli operandi.
 
@@ -2043,7 +2044,7 @@ to those in v2 under the binary predicate twice
 and the first one begins at position 2.
 ```
 
-## <a name="find_if"></a><a name="find_if"></a>find_if
+## <a name="find_if"></a><a name="find_if"></a> find_if
 
 Individua la posizione della prima occorrenza di un elemento in un intervallo che soddisfa una condizione specificata.
 
@@ -2076,7 +2077,7 @@ Oggetto funzione predicato definito dall'utente o [espressione lambda](../cpp/la
 
 Iteratore di input che fa riferimento al primo elemento dell'intervallo che soddisfa la condizione specificata dal predicato (il predicato restituisce **`true`** ). Se non viene trovato alcun elemento che soddisfi il predicato, restituisce per *ultimo*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione di modello è una generalizzazione dell'algoritmo [find](algorithm-functions.md#find) che sostituisce il predicato "è uguale a un valore specifico" con qualsiasi predicato. Per la logica opposta, ovvero trovare il primo elemento che non soddisfa il predicato, vedere [find_if_not](algorithm-functions.md#find_if_not).
 
@@ -2165,7 +2166,7 @@ int main()
 }
 ```
 
-## <a name="find_if_not"></a><a name="find_if_not"></a>find_if_not
+## <a name="find_if_not"></a><a name="find_if_not"></a> find_if_not
 
 Restituisce il primo elemento nell'intervallo indicato che non soddisfa una determinata condizione.
 
@@ -2198,13 +2199,13 @@ Oggetto funzione predicato definito dall'utente o [espressione lambda](../cpp/la
 
 Iteratore di input che fa riferimento al primo elemento dell'intervallo che non soddisfa la condizione specificata dal predicato (il predicato restituisce **`false`** ). Se tutti gli elementi soddisfano il predicato (il predicato produce **`true`** per ogni elemento), restituisce l' *ultimo*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione di modello è una generalizzazione dell'algoritmo [find](algorithm-functions.md#find) che sostituisce il predicato "è uguale a un valore specifico" con qualsiasi predicato. Per la logica opposta, ovvero trovare il primo elemento che soddisfa il predicato, vedere [find_if](algorithm-functions.md#find_if).
 
 Per un esempio di codice facilmente adattabile a `find_if_not()`, vedere [find_if](algorithm-functions.md#find_if).
 
-## <a name="for_each"></a><a name="for_each"></a>for_each
+## <a name="for_each"></a><a name="for_each"></a> for_each
 
 Applica un oggetto funzione specificato a ogni elemento ordinato in avanti all'interno di un intervallo e restituisce l'oggetto funzione.
 
@@ -2238,7 +2239,7 @@ Oggetto funzione definito dall'utente che viene applicato a ogni elemento nell'i
 
 Una copia dell'oggetto funzione dopo che è stato applicato a tutti gli elementi nell'intervallo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'algoritmo `for_each` è molto flessibile e consente la modifica di ogni elemento all'interno di un intervallo in modi diversi specificati dall'utente. Le funzioni di modello possono essere riutilizzate in un form modificato passando parametri diversi. Le funzioni definite dall'utente possono accumulare informazioni in uno stato interno che l'algoritmo potrebbe restituire dopo l'elaborazione di tutti gli elementi nell'intervallo.
 
@@ -2359,7 +2360,7 @@ The average of the elements of v1 is:
 Average ( v1mod2 ) = 10.
 ```
 
-## <a name="for_each_n"></a><a name="for_each_n"></a>for_each_n
+## <a name="for_each_n"></a><a name="for_each_n"></a> for_each_n
 
 ```cpp
 template<class InputIterator, class Size, class Function>
@@ -2376,7 +2377,7 @@ ForwardIterator for_each_n(
     Function f);
 ```
 
-## <a name="generate"></a><a name="generate"></a>generare
+## <a name="generate"></a><a name="generate"></a> generare
 
 Assegna i valori generati da un oggetto funzione a ogni elemento di un intervallo.
 
@@ -2405,7 +2406,7 @@ Iteratore in avanti che punta alla posizione immediatamente successiva all'ultim
 *generazione*\
 Oggetto funzione chiamato senza argomenti e usato per generare i valori da assegnare a ognuno degli elementi nell'intervallo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'oggetto funzione viene richiamato per ciascun elemento nell'intervallo e non deve necessariamente restituire lo stesso valore ogni volta che viene chiamato. Potrebbe ad esempio leggere da un file o fare riferimento a uno stato locale e modificarlo. Il tipo di risultato del generatore deve essere convertibile nel tipo di valore degli iteratori in avanti per l'intervallo.
 
@@ -2456,7 +2457,7 @@ Vector v1 is ( 41 18467 6334 26500 19169 ).
 Deque deq1 is ( 15724 11478 29358 26962 24464 ).
 ```
 
-## <a name="generate_n"></a><a name="generate_n"></a>generate_n
+## <a name="generate_n"></a><a name="generate_n"></a> generate_n
 
 Assegna i valori generati da un oggetto funzione a un numero specificato di elementi di un intervallo e torna alla posizione immediatamente successiva all'ultimo valore assegnato.
 
@@ -2489,7 +2490,7 @@ Tipo Signed Integer o Unsigned Integer che specifica il numero di elementi a cui
 *generazione*\
 Oggetto funzione chiamato senza argomenti e usato per generare i valori da assegnare a ognuno degli elementi nell'intervallo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'oggetto funzione viene richiamato per ciascun elemento nell'intervallo e non deve necessariamente restituire lo stesso valore ogni volta che viene chiamato. Potrebbe ad esempio leggere da un file o fare riferimento a uno stato locale e modificarlo. Il tipo di risultato del generatore deve essere convertibile nel tipo di valore degli iteratori in avanti per l'intervallo.
 
@@ -2542,7 +2543,7 @@ int main()
 }
 ```
 
-## <a name="includes"></a><a name="includes"></a>include
+## <a name="includes"></a><a name="includes"></a> include
 
 Verifica se un intervallo ordinato contiene tutti gli elementi contenuti in un secondo intervallo ordinato, in cui il criterio di ordinamento o di equivalenza tra gli elementi può essere specificato da un predicato binario.
 
@@ -2604,7 +2605,7 @@ Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un
 
 **`true`** Se il primo intervallo ordinato contiene tutti gli elementi nel secondo intervallo ordinato; in caso contrario, **`false`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È possibile considerare questo test anche come modo per determinare se il secondo intervallo di origine è un subset del primo intervallo di origine.
 
@@ -2767,7 +2768,7 @@ At least one of the elements in vector v2b is not contained in vector v2a.
 At least one of the elements in vector v3b is not contained under mod_lesser in vector v3a.
 ```
 
-## <a name="inplace_merge"></a><a name="inplace_merge"></a>inplace_merge
+## <a name="inplace_merge"></a><a name="inplace_merge"></a> inplace_merge
 
 Combina gli elementi di due intervalli ordinati consecutivi in un unico intervallo ordinato, in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -2818,13 +2819,13 @@ Iteratore bidirezionale che punta alla posizione immediatamente successiva all'u
 *Pred*\
 Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Il predicato di confronto accetta due argomenti e deve restituire **`true`** quando il primo elemento è minore del secondo elemento e **`false`** in caso contrario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli intervalli consecutivi ordinati a cui si fa riferimento devono essere validi. Tutti i puntatori devono essere dereferenziabili e, all'interno di ogni sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
 Gli intervalli consecutivi ordinati devono essere disposti come condizione preliminare per l'applicazione dell'algoritmo `inplace_merge` nello stesso ordine usato dall'algoritmo per ordinare gli intervalli combinati. L'operazione è stabile in quanto viene mantenuto l'ordine relativo degli elementi all'interno di ciascun intervallo. Quando sono presenti elementi equivalenti in entrambi gli intervalli di origine, l'elemento nel primo intervallo precede l'elemento del secondo nell'intervallo combinato.
 
-La complessità dipende dalla memoria disponibile poiché l'algoritmo alloca memoria in un buffer temporaneo. Se è disponibile memoria sufficiente, il caso migliore è lineare con i `(last - first) - 1` confronti; se non è disponibile memoria ausiliaria, il caso peggiore è `N log(N)` , dove *N*  =  *ultimo*  -  *first*.
+La complessità dipende dalla memoria disponibile poiché l'algoritmo alloca memoria in un buffer temporaneo. Se è disponibile memoria sufficiente, il caso migliore è lineare con i `(last - first) - 1` confronti; se non è disponibile memoria ausiliaria, il caso peggiore è `N log(N)` , dove *N*  =  *ultimo*  -  .
 
 ### <a name="example"></a>Esempio
 
@@ -2937,7 +2938,7 @@ Merged inplace with binary predicate mod_lesser specified,
 vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )
 ```
 
-## <a name="is_heap"></a><a name="is_heap"></a>is_heap
+## <a name="is_heap"></a><a name="is_heap"></a> is_heap
 
 Restituisce **`true`** se gli elementi dell'intervallo specificato formano un heap.
 
@@ -2985,7 +2986,7 @@ Condizione da verificare per ordinare gli elementi. Un predicato di confronto ac
 
 Restituisce **`true`** se gli elementi dell'intervallo specificato formano un heap, in **`false`** caso contrario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La prima funzione di modello restituisce [is_heap_until](algorithm-functions.md#is_heap_until) `(first , last) == last` .
 
@@ -2993,7 +2994,7 @@ La seconda funzione di modello restituisce
 
 `is_heap_until(first, last, pred) == last`.
 
-## <a name="is_heap_until"></a><a name="is_heap_until"></a>is_heap_until
+## <a name="is_heap_until"></a><a name="is_heap_until"></a> is_heap_until
 
 Restituisce un iteratore posizionato in corrispondenza del primo elemento nell'intervallo [ `first` , `last` ) che non soddisfa la condizione di ordinamento dell'heap oppure *termina* se l'intervallo forma un heap.
 
@@ -3041,13 +3042,13 @@ Predicato binario che specifica una condizione di ordinamento di tipo "strict we
 
 Restituisce *l'ultimo* se l'intervallo specificato forma un heap o contiene uno o meno elementi. In caso contrario, restituisce un iteratore per il primo elemento che non soddisfa la condizione di heap.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La prima funzione di modello restituisce l'ultimo iteratore `next` in `[first, last)` dove `[first, next)` è un heap ordinato in base all'oggetto funzione `std::less<>`. Se la distanza `last - first` è minore di 2, la funzione restituisce l' *ultimo*.
 
 La seconda funzione di modello si comporta come la prima, ad eccezione del fatto che usa il *predicato* predicato anziché `std::less<>` come condizione di ordinamento heap.
 
-## <a name="is_partitioned"></a><a name="is_partitioned"></a>is_partitioned
+## <a name="is_partitioned"></a><a name="is_partitioned"></a> is_partitioned
 
 Restituisce **`true`** se tutti gli elementi dell'intervallo specificato che testano **`true`** per una condizione precedono gli elementi che testano **`false`** .
 
@@ -3084,11 +3085,11 @@ La condizione da verificare. La condizione è specificata da un oggetto funzione
 
 Restituisce **`true`** quando tutti gli elementi dell'intervallo specificato che testano **`true`** per una condizione precedono tutti gli elementi che testano; **`false`** in caso contrario, restituisce **`false`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello restituisce **`true`** solo se tutti gli elementi in `[first, last)` sono partizionati da *prede*, ovvero tutti gli elementi `X` in per i `[first, last)` quali `pred (X)` è true si verificano prima di tutti gli elementi `Y` per i quali `pred (Y)` è **`false`** .
 
-## <a name="is_permutation"></a><a name="is_permutation"></a>is_permutation
+## <a name="is_permutation"></a><a name="is_permutation"></a> is_permutation
 
 Restituisce true se entrambi gli intervalli contengono gli stessi elementi, gli elementi sono nello stesso ordine o meno. Usare gli overload a doppio intervallo nel codice C++14 perché gli overload che accettano un singolo iteratore per il secondo intervallo non rileveranno differenze se questo è più lungo del primo, e ciò risulterà in un comportamento indefinito, in special modo se il secondo intervallo è più breve del primo.
 
@@ -3144,7 +3145,7 @@ Predicato che verifica l'equivalenza e restituisce un **`bool`** .
 
 **`true`** Quando è possibile riorganizzare gli intervalli in modo che siano identici in base al predicato di confronto; in caso contrario, **`false`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Nel peggiore dei casi, `is_permutation` ha una complessità quadratica.
 
@@ -3208,7 +3209,7 @@ int main()
 }
 ```
 
-## <a name="is_sorted"></a><a name="is_sorted"></a>is_sorted
+## <a name="is_sorted"></a><a name="is_sorted"></a> is_sorted
 
 Restituisce **`true`** se gli elementi dell'intervallo specificato sono ordinati.
 
@@ -3252,13 +3253,13 @@ Iteratore in avanti che indica la fine di un intervallo.
 *Pred*\
 La condizione da testare per determinare un ordine tra due elementi. Un predicato di confronto accetta due argomenti e restituisce **`true`** o **`false`** . Viene eseguita la stessa attività di `operator<`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La prima funzione di modello restituisce [is_sorted_until](#is_sorted_until) `( first, last ) == last` . La `operator<` funzione esegue il confronto degli ordini.
 
 La seconda funzione di modello restituisce `is_sorted_until( first, last , pred ) == last`. La funzione predicato *Predator* esegue il confronto degli ordini.
 
-## <a name="is_sorted_until"></a><a name="is_sorted_until"></a>is_sorted_until
+## <a name="is_sorted_until"></a><a name="is_sorted_until"></a> is_sorted_until
 
 Restituisce un `ForwardIterator` impostato sull'ultimo elemento nell'ordine definito da un intervallo specificato.
 
@@ -3308,13 +3309,13 @@ La condizione da testare per determinare un ordine tra due elementi. Un predicat
 
 Restituisce un `ForwardIterator` impostato sull'ultimo elemento nell'ordine. La sequenza ordinata inizia dalla *prima*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La prima funzione di modello restituisce l'ultimo iteratore `next` in `[first, last]` in modo che `[first, next)` sia una sequenza ordinata per `operator<`. Se `distance()` è minore di 2, la funzione restituisce l' *ultimo*.
 
 La seconda funzione di modello ha lo stesso comportamento, ad eccezione del fatto che sostituisce `operator<(X, Y)` con `pred(X, Y)`.
 
-## <a name="iter_swap"></a><a name="iter_swap"></a>iter_swap
+## <a name="iter_swap"></a><a name="iter_swap"></a> iter_swap
 
 Scambia due valori a cui viene fatto riferimento da una coppia di iteratori specificati.
 
@@ -3331,9 +3332,9 @@ Uno degli iteratori in avanti il cui valore deve essere scambiato.
 *Ok*\
 Il secondo iteratore in avanti il cui valore deve essere scambiato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-`swap`deve essere usato in preferenza per **iter_swap**, incluso nello standard C++ per la compatibilità con le versioni precedenti. Se `Fit1` e `Fit2` sono iteratori in diretta, `iter_swap( Fit1, Fit2 )` è equivalente a `swap( *Fit1, *Fit2 )` .
+`swap` deve essere usato in preferenza per **iter_swap**, incluso nello standard C++ per la compatibilità con le versioni precedenti. Se `Fit1` e `Fit2` sono iteratori in diretta, `iter_swap( Fit1, Fit2 )` è equivalente a `swap( *Fit1, *Fit2 )` .
 
 I tipi di valore degli iteratori in avanti di input devono avere lo stesso valore.
 
@@ -3470,7 +3471,7 @@ vector v1 is: v1 = ( 4 1 2 3 ).
 & deque deq2 is: deq2 = ( 0 5 ).
 ```
 
-## <a name="lexicographical_compare"></a><a name="lexicographical_compare"></a>lexicographical_compare
+## <a name="lexicographical_compare"></a><a name="lexicographical_compare"></a> lexicographical_compare
 
 Confronta due sequenze elemento per elemento per determinare quale delle due è minore.
 
@@ -3532,7 +3533,7 @@ Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un
 
 **`true`** Se il primo intervallo è lessicografico inferiore al secondo intervallo; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un confronto lessicografico tra sequenze confronta le sequenze elemento per elemento fino a quando:
 
@@ -3637,7 +3638,7 @@ Vector v1 is lexicographically_less than L1.
 Vector v1 is not lexicographically_less than v2 under twice.
 ```
 
-## <a name="lower_bound"></a><a name="lower_bound"></a>lower_bound
+## <a name="lower_bound"></a><a name="lower_bound"></a> lower_bound
 
 Trova la posizione del primo elemento in un intervallo ordinato con un valore maggiore o equivalente a un valore specificato, in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -3674,7 +3675,7 @@ Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un
 
 Un iteratore in avanti nella posizione del primo elemento in un intervallo ordinato con un valore maggiore di o equivalente a un valore specificato, dove l'equivalenza è specificata con un predicato binario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo di origine ordinato a cui si fa riferimento deve essere valido. Tutti gli iteratori devono essere dereferenziabili e all'interno della sequenza l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -3776,7 +3777,7 @@ int main()
 }
 ```
 
-## <a name="make_heap"></a><a name="make_heap"></a>make_heap
+## <a name="make_heap"></a><a name="make_heap"></a> make_heap
 
 Converte gli elementi di un intervallo specificato in un heap in cui il primo elemento è il più grande e per il quale un criterio di ordinamento può essere specificato con un predicato binario.
 
@@ -3804,7 +3805,7 @@ Iteratore ad accesso casuale che punta alla posizione immediatamente successiva 
 *Pred*\
 Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli heap hanno due proprietà:
 
@@ -3858,7 +3859,7 @@ int main() {
 }
 ```
 
-## <a name="max"></a><a name="max"></a>Max
+## <a name="max"></a><a name="max"></a> Max
 
 Confronta due oggetti e restituisce il maggiore dei due in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -3899,7 +3900,7 @@ Oggetto initializer list che contiene gli oggetti da confrontare.
 
 Maggiore dei due oggetti, a meno che nessuno dei due sia superiore; in tal caso, restituisce il primo dei due oggetti. Nel caso di un oggetto initializer_list, restituisce il maggiore tra oggetti nell'elenco.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Nell'algoritmo `max` in genere non sono presenti oggetti passati come parametri. La maggior parte degli algoritmi della libreria standard C++ agisce su un intervallo di elementi la cui posizione è specificata dagli iteratori passati come parametri. Se è necessaria una funzione che agisce su un intervallo di elementi, usare invece [max_element](algorithm-functions.md#max_element). Visual Studio 2017 Abilita **`constexpr`** gli overload che accettano un initializer_list.
 
@@ -4071,7 +4072,7 @@ Vector v4 = max (v1,v2) is ( 0 1 2 ).
 Vector v5 = max (v1,v3) is ( 0 2 4 ).
 ```
 
-## <a name="max_element"></a><a name="max_element"></a>max_element
+## <a name="max_element"></a><a name="max_element"></a> max_element
 
 Trova la prima occorrenza dell'elemento più grande in un intervallo specificato in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -4119,7 +4120,7 @@ Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un
 
 Iteratore in avanti che punta alla posizione della prima occorrenza dell'elemento più grande nell'intervallo di ricerca.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo a cui si fa riferimento deve essere valido, tutti i puntatori devono essere dereferenziabili e all'interno di ciascuna sequenza l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -4225,7 +4226,7 @@ int main()
 }
 ```
 
-## <a name="merge"></a><a name="merge"></a>merge
+## <a name="merge"></a><a name="merge"></a> merge
 
 Combina tutti gli elementi di due intervalli di origine ordinati in un unico intervallo di destinazione ordinato, in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -4294,7 +4295,7 @@ Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un
 
 Iteratore di output che punta alla posizione successiva all'ultimo elemento dell'intervallo di destinazione ordinato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli intervalli di origine ordinati a cui si fa riferimento devono essere validi. Tutti i puntatori devono essere dereferenziabili e, all'interno di ogni sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -4464,7 +4465,7 @@ Oggetto contenente `initializer_list` i membri da confrontare.
 
 Il minore dei due oggetti, a meno che nessuno dei due sia minore; in tal caso, restituisce il primo dei due oggetti. Nel caso di un oggetto `initializer_list` , restituisce il minor valore degli oggetti nell'elenco.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Nell'algoritmo `min` in genere non sono presenti oggetti passati come parametri. La maggior parte degli algoritmi della libreria standard C++ agisce su un intervallo di elementi la cui posizione è specificata dagli iteratori passati come parametri. Se è necessaria una funzione che usa un intervallo di elementi, usare [min_element](algorithm-functions.md#min_element). [constExpr](../cpp/constexpr-cpp.md) è stato abilitato negli `initializer_list` Overload di Visual Studio 2017.
 
@@ -4635,7 +4636,7 @@ Vector v4 = min ( v1,v2 ) is ( 0 1 2 ).
 Vector v5 = min ( v1,v3 ) is ( 0 1 2 ).
 ```
 
-## <a name="min_element"></a><a name="min_element"></a>min_element
+## <a name="min_element"></a><a name="min_element"></a> min_element
 
 Trova la prima occorrenza dell'elemento più piccolo in un intervallo specificato in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -4683,7 +4684,7 @@ Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un
 
 Iteratore in avanti che punta alla posizione della prima occorrenza dell'elemento più piccolo nell'intervallo di ricerca.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo a cui si fa riferimento deve essere valido, tutti i puntatori devono essere dereferenziabili e all'interno di ciascuna sequenza l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -4799,7 +4800,7 @@ The smallest element in v1 under the mod_lesser
 binary predicate is: 0
 ```
 
-## <a name="minmax_element"></a><a name="minmax_element"></a>minmax_element
+## <a name="minmax_element"></a><a name="minmax_element"></a> minmax_element
 
 Esegue le operazioni eseguite da `min_element` e `max_element` in un'unica chiamata.
 
@@ -4849,7 +4850,7 @@ Restituisce
 
 `pair<ForwardIterator, ForwardIterator>( min_element(first, last), max_element(first, last))`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La prima funzione di modello restituisce
 
@@ -4859,7 +4860,7 @@ La seconda funzione di modello ha lo stesso comportamento, ad eccezione del fatt
 
 Se la sequenza è non vuota, la funzione esegue al massimo confronti `3 * (last - first - 1) / 2`.
 
-## <a name="minmax"></a><a name="minmax"></a>MinMax
+## <a name="minmax"></a><a name="minmax"></a> MinMax
 
 Confronta due parametri di input e li restituisce come coppia, in ordine crescente.
 
@@ -4899,17 +4900,17 @@ Predicato binario usato per confrontare i due oggetti.
 *inList*\
 Oggetto contenente `initializer_list` i membri da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La prima funzione di modello restituisce `pair<const Type&, const Type&>( right, left )` se *right* è minore di *Left*. In caso contrario, viene restituito `pair<const Type&, const Type&>( left, right )`.
 
-La seconda funzione membro restituisce una coppia in cui il primo elemento è minore e il secondo è maggiore rispetto al *predicato*predicato.
+La seconda funzione membro restituisce una coppia in cui il primo elemento è minore e il secondo è maggiore rispetto al *predicato* predicato.
 
 Le funzioni del modello rimanenti hanno lo stesso comportamento, ad eccezione del fatto che sostituiscono i parametri *Left* e *right* con *inList*.
 
 La funzione esegue un unico confronto.
 
-## <a name="mismatch"></a><a name="mismatch"></a>mancata corrispondenza
+## <a name="mismatch"></a><a name="mismatch"></a> mancata corrispondenza
 
 Confronta due intervalli elemento per elemento e trova la prima posizione in cui viene riscontrata una differenza.
 
@@ -5009,7 +5010,7 @@ Oggetto funzione predicato definito dall'utente che confronta gli elementi corre
 
 Una coppia di iteratori che risolve le posizioni di mancata corrispondenza nei due intervalli: il primo iteratore componenti alla posizione nel primo intervallo e il secondo iteratore componenti alla posizione nel un secondo intervallo. Se non esiste alcuna differenza tra gli elementi di intervalli confrontati o se il predicato binario nella seconda versione è soddisfatto da tutte le coppie di elementi dei due intervalli, il primo iteratore componenti punta alla posizione immediatamente successiva all'ultimo elemento nel primo intervallo e il secondo iteratore componenti alla posizione immediatamente successiva all'ultimo elemento testato nel secondo intervallo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La prima funzione di modello presuppone che siano presenti altrettanti elementi nell'intervallo a partire da first2 quanti sono presenti nell'intervallo designato da [first1, last1). Se nel secondo intervallo sono presenti più elementi, verranno ignorati; Se è presente un numero minore, viene generato un comportamento non definito.
 
@@ -5147,11 +5148,11 @@ Iteratore di input che indica dove termina l'intervallo di elementi da spostare.
 *dest*\
 Iteratore di output che conterrà gli elementi spostati.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello restituisce `*(dest + N) = move(*(first + N))` una volta per ogni `N` nell'intervallo `[0, last - first)`, esclusivamente per aumentare i valori di `N` iniziando dal valore più basso. Restituisce quindi `dest + N`. Se `dest` e *prima* designano le aree di archiviazione, *dest* non deve essere compreso nell'intervallo `[first, last)` .
 
-## <a name="move_backward"></a><a name="move_backward"></a>move_backward
+## <a name="move_backward"></a><a name="move_backward"></a> move_backward
 
 Sposta gli elementi di un iteratore in un altro. Lo spostamento inizia con l'ultimo elemento in un intervallo specificato e termina con il primo elemento in quell'intervallo.
 
@@ -5174,13 +5175,13 @@ Iteratore che indica la fine di un intervallo dal quale spostare gli elementi. Q
 *DestEnd*\
 Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento dell'intervallo di destinazione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello restituisce `*(destEnd - N - 1) = move(*(last - N - 1))` una volta per ogni `N` nell'intervallo `[0, last - first)`, esclusivamente per aumentare i valori di `N` iniziando dal valore più basso. Restituisce quindi `destEnd - (last - first)`. Se *DestEnd* e *First* designano le aree di archiviazione, *DestEnd* non deve essere compreso nell'intervallo `[first, last)` .
 
 `move` e `move_backward` sono equivalenti a livello funzionale all'utilizzo di `copy` e `copy_backward` con un iteratore di spostamento.
 
-## <a name="next_permutation"></a><a name="next_permutation"></a>next_permutation
+## <a name="next_permutation"></a><a name="next_permutation"></a> next_permutation
 
 Riordina gli elementi in un intervallo in modo che l'ordine originale venga sostituito dalla maggior permutazione a livello lessicografico successiva, se esiste, dove il senso di successivo può essere specificato con un predicato binario.
 
@@ -5212,7 +5213,7 @@ Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i c
 
 **`true`** Se la permutazione successiva di lessicografico esiste e ha sostituito l'ordinamento originale dell'intervallo; in caso contrario **`false`** , nel qual caso l'ordinamento viene trasformato nella permutazione lessicografico più piccola.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -5359,9 +5360,9 @@ After another next_permutation of vector v1,
 v1 =   ( -3 -2 -1 1 0 2 3 ).
 ```
 
-## <a name="nth_element"></a><a name="nth_element"></a>nth_element
+## <a name="nth_element"></a><a name="nth_element"></a> nth_element
 
-Esegue il partizionamento di un intervallo di elementi, individuando correttamente l' *n*esimo elemento della sequenza nell'intervallo in modo che tutti gli elementi che lo precedono siano minori o uguali a esso e che tutti gli elementi che lo seguono nella sequenza siano maggiori o uguali.
+Esegue il partizionamento di un intervallo di elementi, individuando correttamente l' *n* esimo elemento della sequenza nell'intervallo in modo che tutti gli elementi che lo precedono siano minori o uguali a esso e che tutti gli elementi che lo seguono nella sequenza siano maggiori o uguali.
 
 ```cpp
 template<class RandomAccessIterator>
@@ -5410,11 +5411,11 @@ Iteratore ad accesso casuale che punta alla posizione immediatamente successiva 
 *Pred*\
 Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato di confronto accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
-L' `nth_element` algoritmo non garantisce che gli elementi negli intervalli secondari dell'elemento *n*siano ordinati. Offre meno garanzie rispetto a `partial_sort`, che ordina gli elementi nell'intervallo sotto un elemento selezionato, e può essere usato come alternativa rapida a `partial_sort` quando l'ordinamento dell'intervallo minore non è necessario.
+L' `nth_element` algoritmo non garantisce che gli elementi negli intervalli secondari dell'elemento *n* siano ordinati. Offre meno garanzie rispetto a `partial_sort`, che ordina gli elementi nell'intervallo sotto un elemento selezionato, e può essere usato come alternativa rapida a `partial_sort` quando l'ordinamento dell'intervallo minore non è necessario.
 
 Gli elementi sono equivalenti, ma non necessariamente uguali, se nessuno di essi è minore di un altro.
 
@@ -5486,7 +5487,7 @@ int main() {
 }
 ```
 
-## <a name="none_of"></a><a name="none_of"></a>none_of
+## <a name="none_of"></a><a name="none_of"></a> none_of
 
 Restituisce **`true`** quando una condizione non è mai presente tra gli elementi nell'intervallo specificato.
 
@@ -5523,11 +5524,11 @@ La condizione da verificare. La condizione è specificata da un oggetto funzione
 
 Restituisce **`true`** se la condizione non viene rilevata almeno una volta nell'intervallo indicato e **`false`** se viene rilevata la condizione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione modello restituisce **`true`** solo se, per alcuni `N` nell'intervallo `[0, last - first)` , il predicato `pred(*(first + N))` è sempre **`false`** .
 
-## <a name="partial_sort"></a><a name="partial_sort"></a>partial_sort
+## <a name="partial_sort"></a><a name="partial_sort"></a> partial_sort
 
 Dispone un numero specificato di elementi più piccoli di un intervallo in un ordine non decrescente o secondo un criterio di ordinamento specificato da un predicato binario.
 
@@ -5578,7 +5579,7 @@ Iteratore ad accesso casuale che punta alla posizione immediatamente successiva 
 *Pred*\
 Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -5658,7 +5659,7 @@ Partially resorted (UDgreater) vector:
 v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )
 ```
 
-## <a name="partial_sort_copy"></a><a name="partial_sort_copy"></a>partial_sort_copy
+## <a name="partial_sort_copy"></a><a name="partial_sort_copy"></a> partial_sort_copy
 
 Copia gli elementi di un intervallo di origine in un intervallo di destinazione in cui gli elementi di origine sono ordinati in base al predicato binario relativo al valore inferiore o a un altro predicato binario specificato.
 
@@ -5720,7 +5721,7 @@ Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i c
 
 Un iteratore ad accesso casuale che punta all'elemento nell'intervallo di destinazione nella posizione immediatamente successiva l'ultimo elemento inserito dall'intervallo di origine.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo di origine e quello di destinazione non devono sovrapporsi e devono essere validi. Tutti i puntatori devono essere dereferenziabili e all'interno della sequenza l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -5802,7 +5803,7 @@ int main() {
 }
 ```
 
-## <a name="partition"></a><a name="partition"></a>partizione
+## <a name="partition"></a><a name="partition"></a> partizione
 
 Classifica gli elementi di un intervallo in due set non contigui, con gli elementi che soddisfano il predicato unario che precedono quelli che non lo soddisfano.
 
@@ -5839,7 +5840,7 @@ Oggetto funzione predicato definito dall'utente che definisce la condizione che 
 
 Iteratore bidirezionale che punta alla posizione del primo elemento nell'intervallo per non soddisfare la condizione del predicato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -5888,7 +5889,7 @@ int main()
 }
 ```
 
-## <a name="partition_copy"></a><a name="partition_copy"></a>partition_copy
+## <a name="partition_copy"></a><a name="partition_copy"></a> partition_copy
 
 Copia gli elementi per i quali una condizione è **`true`** in una destinazione e per la quale la condizione è **`false`** a un'altra. Gli elementi devono provenire da un intervallo specificato.
 
@@ -5931,11 +5932,11 @@ Iteratore di output usato per copiare gli elementi che restituiscono false per u
 *Pred*\
 La condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione da verificare. Un predicato unario accetta un solo argomento e restituisce **`true`** o **`false`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello copia ogni elemento `X` in in `[first,last)` `*dest1++` se `pred(X)` è true oppure in `*dest2++` caso contrario. Restituisce `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.
 
-## <a name="partition_point"></a><a name="partition_point"></a>partition_point
+## <a name="partition_point"></a><a name="partition_point"></a> partition_point
 
 Restituisce il primo elemento nell'intervallo specificato che non soddisfa la condizione. Gli elementi vengono ordinati in modo che quelli che soddisfano la condizione precedano quelli che non la soddisfano.
 
@@ -5960,13 +5961,13 @@ La condizione da verificare. La condizione è specificata da un oggetto funzione
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce un oggetto `ForwardIterator` che fa riferimento al primo elemento che non soddisfa la condizione testata da *predazione*oppure restituisce l' *ultimo* se non ne viene trovato uno.
+Restituisce un oggetto `ForwardIterator` che fa riferimento al primo elemento che non soddisfa la condizione testata da *predazione* oppure restituisce l' *ultimo* se non ne viene trovato uno.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello trova il primo iteratore `it` in `[first, last)` per cui `pred(*it)` è **`false`** . La sequenza deve essere ordinata in base a *predazione*.
 
-## <a name="pop_heap"></a><a name="pop_heap"></a>pop_heap
+## <a name="pop_heap"></a><a name="pop_heap"></a> pop_heap
 
 Rimuove l'elemento più grande dall'inizio di un heap alla penultima posizione nell'intervallo e costituisce un nuovo heap con gli elementi rimanenti.
 
@@ -5994,7 +5995,7 @@ Iteratore ad accesso casuale che punta alla posizione immediatamente successiva 
 *Pred*\
 Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'algoritmo `pop_heap` è l'inverso dell'operazione eseguita dall'algoritmo push_heap dove un elemento nella posizione successiva all'ultima posizione di un intervallo viene aggiunto in un heap costituito dagli elementi precedenti dell'intervallo, nel caso in cui l'elemento aggiunto all'heap è maggiore di qualsiasi elemento già presente nell'heap.
 
@@ -6075,7 +6076,7 @@ int main()
 }
 ```
 
-## <a name="prev_permutation"></a><a name="prev_permutation"></a>prev_permutation
+## <a name="prev_permutation"></a><a name="prev_permutation"></a> prev_permutation
 
 Riordina gli elementi in un intervallo in modo che l'ordine originale venga sostituito dalla maggior permutazione a livello lessicografico precedente, se esiste, dove il significato di precedente può essere specificato con un predicato binario.
 
@@ -6107,7 +6108,7 @@ Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i c
 
 **`true`** Se la permutazione lessicografico precedente esiste e ha sostituito l'ordinamento originale dell'intervallo; in caso contrario **`false`** , nel qual caso l'ordinamento viene trasformato nella permutazione più grande lessicografico.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -6250,7 +6251,7 @@ After another prev_permutation of vector v1,
 v1 =   ( -3 -2 0 2 -1 1 3 ).
 ```
 
-## <a name="push_heap"></a><a name="push_heap"></a>push_heap
+## <a name="push_heap"></a><a name="push_heap"></a> push_heap
 
 Aggiunge un elemento che si trova alla fine di un intervallo a un heap esistente costituito dagli elementi precedenti dell'intervallo.
 
@@ -6278,7 +6279,7 @@ Iteratore ad accesso casuale che punta alla posizione immediatamente successiva 
 *Pred*\
 Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È necessario innanzitutto eseguire il push back dell'elemento alla fine di un heap esistente e quindi usare l'algoritmo per aggiungere l'elemento all'heap esistente.
 
@@ -6363,11 +6364,11 @@ int main() {
 }
 ```
 
-## <a name="random_shuffle"></a><a name="random_shuffle"></a>random_shuffle
+## <a name="random_shuffle"></a><a name="random_shuffle"></a> random_shuffle
 
 La funzione std:: random_shuffle () è deprecata e sostituita da [std:: shuffle](algorithm-functions.md#shuffle). Per un esempio di codice e altre informazioni, vedere [\<random>](random.md) e il post stack overflow [perché i metodi std:: random_shuffle sono deprecati in c++ 14?](https://go.microsoft.com/fwlink/p/?linkid=397954).
 
-## <a name="remove"></a><a name="remove"></a>rimuovere
+## <a name="remove"></a><a name="remove"></a> rimuovere
 
 Elimina un valore specificato da un intervallo specificato senza alterare l'ordine degli elementi rimanenti e restituendo la fine di un nuovo intervallo senza il valore specificato.
 
@@ -6404,7 +6405,7 @@ Il valore da rimuovere dall'intervallo.
 
 Iteratore in avanti che indirizza la nuova posizione finale dell'intervallo modificato, successiva all'ultimo elemento della sequenza rimanente e priva del valore specificato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -6463,7 +6464,7 @@ int main()
 }
 ```
 
-## <a name="remove_copy"></a><a name="remove_copy"></a>remove_copy
+## <a name="remove_copy"></a><a name="remove_copy"></a> remove_copy
 
 Copia gli elementi di un intervallo di origine in un intervallo di destinazione, ad eccezione degli elementi di un determinato valore, senza alterare l'ordine degli elementi rimanenti e restituendo la fine di un nuovo intervallo di destinazione.
 
@@ -6505,7 +6506,7 @@ Il valore da rimuovere dall'intervallo.
 
 Iteratore in avanti che punta alla nuova posizione finale dell'intervallo di destinazione, successiva all'ultimo elemento della copia della sequenza rimanente e priva del valore specificato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli intervalli di origine e destinazione cui viene fatto riferimento devono essere validi. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -6561,7 +6562,7 @@ int main()
 }
 ```
 
-## <a name="remove_copy_if"></a><a name="remove_copy_if"></a>remove_copy_if
+## <a name="remove_copy_if"></a><a name="remove_copy_if"></a> remove_copy_if
 
 Copia gli elementi di un intervallo di origine in un intervallo di destinazione, ad eccezione degli elementi che soddisfano un predicato. Gli elementi vengono copiati senza compromettere l'ordine degli elementi rimanenti. Restituisce la fine di un nuovo intervallo di destinazione.
 
@@ -6603,7 +6604,7 @@ Il predicato unario che deve essere soddisfatto corrisponde al valore di un elem
 
 Iteratore in avanti che punta alla nuova posizione finale dell'intervallo di destinazione, successiva all'ultimo elemento della sequenza rimanente e priva degli elementi che soddisfano il predicato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo di origine cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -6668,7 +6669,7 @@ int main()
 }
 ```
 
-## <a name="remove_if"></a><a name="remove_if"></a>remove_if
+## <a name="remove_if"></a><a name="remove_if"></a> remove_if
 
 Elimina gli elementi che soddisfano un predicato da un intervallo specificato senza alterare l'ordine degli elementi rimanenti e restituendo la fine di un nuovo intervallo senza il valore specificato.
 
@@ -6705,7 +6706,7 @@ Il predicato unario che deve essere soddisfatto corrisponde al valore di un elem
 
 Iteratore in avanti che indirizza la nuova posizione finale dell'intervallo modificato, successiva all'ultimo elemento della sequenza rimanente e priva del valore specificato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -6769,7 +6770,7 @@ int main()
 }
 ```
 
-## <a name="replace"></a><a name="replace"></a>sostituire
+## <a name="replace"></a><a name="replace"></a> sostituire
 
 Esamina ogni elemento di un intervallo e lo sostituisce se corrisponde a un valore specificato.
 
@@ -6807,7 +6808,7 @@ Valore precedente dell'elemento associato da sostituire.
 *newVal*\
 Il nuovo valore assegnato agli elementi con il valore precedente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -6856,7 +6857,7 @@ int main()
 }
 ```
 
-## <a name="replace_copy"></a><a name="replace_copy"></a>replace_copy
+## <a name="replace_copy"></a><a name="replace_copy"></a> replace_copy
 
 Esamina ogni elemento di un intervallo di origine e lo sostituisce se corrisponde a un valore specificato copiando nel contempo il risultato in un nuovo intervallo di destinazione.
 
@@ -6903,7 +6904,7 @@ Il nuovo valore assegnato agli elementi con il valore precedente.
 
 Iteratore di output che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di destinazione in cui viene copiata la sequenza di elementi modificata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo di origine e quello di destinazione a cui si fa riferimento non devono sovrapporsi e devono essere entrambi validi. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -6971,7 +6972,7 @@ int main()
 }
 ```
 
-## <a name="replace_copy_if"></a><a name="replace_copy_if"></a>replace_copy_if
+## <a name="replace_copy_if"></a><a name="replace_copy_if"></a> replace_copy_if
 
 Esamina ogni elemento di un intervallo di origine e lo sostituisce se soddisfa un predicato specificato copiando nel contempo il risultato in un nuovo intervallo di destinazione.
 
@@ -7018,7 +7019,7 @@ Nuovo valore da assegnare agli elementi il cui valore precedente soddisfa il pre
 
 Iteratore di output che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di destinazione in cui viene copiata la sequenza di elementi modificata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo di origine e quello di destinazione a cui si fa riferimento non devono sovrapporsi e devono essere entrambi validi. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -7094,7 +7095,7 @@ int main()
 }
 ```
 
-## <a name="replace_if"></a><a name="replace_if"></a>replace_if
+## <a name="replace_if"></a><a name="replace_if"></a> replace_if
 
 Esamina ogni elemento di un intervallo e lo sostituisce se soddisfa un predicato specificato.
 
@@ -7132,7 +7133,7 @@ Il predicato unario che deve essere soddisfatto corrisponde al valore di un elem
 *valore*\
 Nuovo valore da assegnare agli elementi il cui valore precedente soddisfa il predicato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -7190,7 +7191,7 @@ int main()
 }
 ```
 
-## <a name="reverse"></a><a name="reverse"></a>inverso
+## <a name="reverse"></a><a name="reverse"></a> inverso
 
 Inverte l'ordine degli elementi all'interno di un intervallo.
 
@@ -7218,7 +7219,7 @@ Iteratore bidirezionale che punta alla posizione del primo elemento nell'interva
 *Ultima*\
 Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo nel quale gli elementi vengono permutati.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo di origine cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -7265,7 +7266,7 @@ The modified vector v1 with values reversed is:
 ( 9 8 7 6 5 4 3 2 1 0 ).
 ```
 
-## <a name="reverse_copy"></a><a name="reverse_copy"></a>reverse_copy
+## <a name="reverse_copy"></a><a name="reverse_copy"></a> reverse_copy
 
 Inverte l'ordine degli elementi all'interno di un intervallo di origine copiandoli nel contempo in un intervallo di destinazione
 
@@ -7302,7 +7303,7 @@ Iteratore di output che punta alla posizione del primo elemento nell'intervallo 
 
 Iteratore di output che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di destinazione in cui viene copiata la sequenza di elementi modificata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli intervalli di origine e destinazione cui viene fatto riferimento devono essere validi. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -7347,7 +7348,7 @@ int main()
 }
 ```
 
-## <a name="rotate"></a><a name="rotate"></a>ruotare
+## <a name="rotate"></a><a name="rotate"></a> ruotare
 
 Scambia gli elementi di due intervalli adiacenti.
 
@@ -7380,7 +7381,7 @@ Iteratore in avanti che definisce il limite all'interno dell'intervallo che punt
 *Ultima*\
 Iteratore in avanti che punta alla posizione successiva all'ultimo elemento nell'intervallo da ruotare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli intervalli cui viene fatto riferimento devono essere validi. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -7461,7 +7462,7 @@ After the rotation of a single deque element to the back,
 d1 is   ( 0 1 2 3 4 5 ).
 ```
 
-## <a name="rotate_copy"></a><a name="rotate_copy"></a>rotate_copy
+## <a name="rotate_copy"></a><a name="rotate_copy"></a> rotate_copy
 
 Scambia gli elementi di due intervalli adiacenti all'interno di un intervallo di origine e copia il risultato in un intervallo di destinazione.
 
@@ -7503,7 +7504,7 @@ Iteratore di output che punta alla posizione del primo elemento nell'intervallo 
 
 Iteratore di output che punta alla posizione successiva all'ultimo elemento dell'intervallo di destinazione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli intervalli cui viene fatto riferimento devono essere validi. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -7569,7 +7570,7 @@ int main()
 }
 ```
 
-## <a name="sample"></a><a name="sample"></a>esempio
+## <a name="sample"></a><a name="sample"></a> esempio
 
 ```cpp
 template<class PopulationIterator, class SampleIterator, class Distance, class UniformRandomBitGenerator>
@@ -7581,7 +7582,7 @@ SampleIterator sample(
     UniformRandomBitGenerator&& g);
 ```
 
-## <a name="search"></a><a name="search"></a>ricerca
+## <a name="search"></a><a name="search"></a> ricerca
 
 Cerca la prima occorrenza di una sequenza all'interno di un intervallo di destinazione i cui elementi sono uguali a quelli di una sequenza specificata di elementi oppure i cui elementi sono equivalenti nel senso specificato da un predicato binario agli elementi della sequenza specificata.
 
@@ -7652,7 +7653,7 @@ Il ricercatore che incapsula il modello da cercare e l'algoritmo di ricerca da u
 
 Iteratore in avanti che punta alla posizione del primo elemento della prima sottosequenza che corrisponde alla sequenza specificata o che è equivalente nel senso specificato da un predicato binario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operatore `operator==` usato per determinare la corrispondenza tra un elemento e il valore specificato deve imporre una relazione di equivalenza tra gli operandi.
 
@@ -7759,7 +7760,7 @@ to those in v2 under the binary predicate twice
 and the first one begins at position 2.
 ```
 
-## <a name="search_n"></a><a name="search_n"></a>search_n
+## <a name="search_n"></a><a name="search_n"></a> search_n
 
 Cerca la prima sottosequenza di un intervallo di un numero specificato di elementi che dispongono di un valore specifico o di una relazione con tale valore come specificato da un predicato binario.
 
@@ -7821,7 +7822,7 @@ Oggetto funzione predicato definito dall'utente che definisce la condizione che 
 
 Iteratore in avanti che punta alla posizione del primo elemento della prima sottosequenza che corrisponde alla sequenza specificata o che è equivalente nel senso specificato da un predicato binario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operatore `operator==` usato per determinare la corrispondenza tra un elemento e il valore specificato deve imporre una relazione di equivalenza tra gli operandi.
 
@@ -7912,7 +7913,7 @@ There is a match of a sequence ( 5 5 5 ) under the equivalence
 predicate one_half in v1 and the first one begins at position 15.
 ```
 
-## <a name="set_difference"></a><a name="set_difference"></a>set_difference
+## <a name="set_difference"></a><a name="set_difference"></a> set_difference
 
 Unisce tutti gli elementi appartenenti a un intervallo di origine ordinato, ma non a un secondo intervallo di origine ordinato, in un unico intervallo di destinazione ordinato in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -7981,7 +7982,7 @@ Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un
 
 Iteratore di output che punta alla posizione successiva all'ultimo elemento nell'intervallo di destinazione ordinato che rappresenta la differenza dei due intervalli di origine.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli intervalli di origine ordinati a cui si fa riferimento devono essere validi. Tutti i puntatori devono essere dereferenziabili e, all'interno di ogni sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -8114,7 +8115,7 @@ int main()
 }
 ```
 
-## <a name="set_intersection"></a><a name="set_intersection"></a>set_intersection
+## <a name="set_intersection"></a><a name="set_intersection"></a> set_intersection
 
 Unisce tutti gli elementi appartenenti a entrambi gli intervalli di origine ordinati in un unico intervallo di destinazione ordinato in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -8183,7 +8184,7 @@ Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un
 
 Iteratore di output che punta alla posizione successiva all'ultimo elemento nell'intervallo di destinazione ordinato che rappresenta l'intersezione dei due intervalli di origine.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli intervalli di origine ordinati a cui si fa riferimento devono essere validi. Tutti i puntatori devono essere dereferenziabili e, all'interno di ogni sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -8312,7 +8313,7 @@ int main()
 }
 ```
 
-## <a name="set_symmetric_difference"></a><a name="set_symmetric_difference"></a>set_symmetric_difference
+## <a name="set_symmetric_difference"></a><a name="set_symmetric_difference"></a> set_symmetric_difference
 
 Unisce tutti gli elementi appartenenti a uno degli intervalli di origine ordinati, ma non ad entrambi, in un unico intervallo di destinazione ordinato in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -8381,7 +8382,7 @@ Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un
 
 Iteratore di output che punta alla posizione successiva all'ultimo elemento nell'intervallo di destinazione ordinato che rappresenta la differenza simmetrica dei due intervalli di origine.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli intervalli di origine ordinati a cui si fa riferimento devono essere validi. Tutti i puntatori devono essere dereferenziabili e, all'interno di ogni sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -8514,7 +8515,7 @@ int main()
 }
 ```
 
-## <a name="set_union"></a><a name="set_union"></a>set_union
+## <a name="set_union"></a><a name="set_union"></a> set_union
 
 Unisce tutti gli elementi appartenenti almeno a uno dei due intervalli di origine ordinati in un unico intervallo di destinazione ordinato in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -8583,7 +8584,7 @@ Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un
 
 Iteratore di output che punta alla posizione successiva all'ultimo elemento nell'intervallo di destinazione ordinato che rappresenta l'unione dei due intervalli di origine.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli intervalli di origine ordinati a cui si fa riferimento devono essere validi. Tutti i puntatori devono essere dereferenziabili e, all'interno di ogni sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -8716,7 +8717,7 @@ int main()
 }
 ```
 
-## <a name="shuffle"></a><a name="shuffle"></a>sequenza casuale
+## <a name="shuffle"></a><a name="shuffle"></a> sequenza casuale
 
 Riproduce con sequenza casuale (ridispone) gli elementi di un intervallo specifico usando un generatore di numeri casuali.
 
@@ -8739,11 +8740,11 @@ Iteratore dell'ultimo elemento dell'intervallo da riprodurre con sequenza casual
 *generazione*\
 Generatore di numeri casuali usato dalla funzione `shuffle()` per l'operazione. Deve soddisfare i requisiti di `UniformRandomNumberGenerator`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni e un esempio di codice che utilizza `shuffle()` , vedere [\<random>](random.md) .
 
-## <a name="sort"></a><a name="sort"></a>ordinamento
+## <a name="sort"></a><a name="sort"></a> ordinamento
 
 Dispone gli elementi di un intervallo specificato in un ordine non decrescente o secondo un criterio di ordinamento specificato da un predicato binario.
 
@@ -8787,7 +8788,7 @@ Iteratore ad accesso casuale che punta alla prima posizione oltre l'elemento fin
 *Pred*\
 Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Questo predicato binario accetta due argomenti e restituisce **`true`** se i due argomenti sono ordinati e in **`false`** caso contrario. Tramite questa funzione di confronto deve essere imposto un ordinamento di tipo "strict weak" alle coppie di elementi della sequenza. Per altre informazioni, vedere [Algoritmi](algorithms.md).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -8863,7 +8864,7 @@ Resorted (greater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 Resorted (UDgreater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 ```
 
-## <a name="sort_heap"></a><a name="sort_heap"></a>sort_heap
+## <a name="sort_heap"></a><a name="sort_heap"></a> sort_heap
 
 Converte un heap in un intervallo ordinato.
 
@@ -8891,7 +8892,7 @@ Iteratore ad accesso casuale che punta alla posizione immediatamente successiva 
 *Pred*\
 Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato di confronto accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli heap hanno due proprietà:
 
@@ -8907,7 +8908,7 @@ Gli heap sono un modo ideale per implementare le code di priorità e vengono usa
 
 L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
-La complessità è al massimo `N log N` , dove *N*l'  =  *Ultima*  -  *volta*.
+La complessità è al massimo `N log N` , dove *N* l'  =  *Ultima*  -  *volta*.
 
 ### <a name="example"></a>Esempio
 
@@ -8963,7 +8964,7 @@ int main()
 }
 ```
 
-## <a name="stable_partition"></a><a name="stable_partition"></a>stable_partition
+## <a name="stable_partition"></a><a name="stable_partition"></a> stable_partition
 
 Classifica gli elementi di un intervallo in due set non contigui, con gli elementi che soddisfano un predicato unario che precedono quelli che non lo soddisfano, mantenendo l'ordine relativo degli elementi equivalenti.
 
@@ -9000,7 +9001,7 @@ Oggetto funzione predicato definito dall'utente che definisce la condizione che 
 
 Iteratore bidirezionale che punta alla posizione del primo elemento nell'intervallo per non soddisfare la condizione del predicato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -9053,7 +9054,7 @@ int main()
 }
 ```
 
-## <a name="stable_sort"></a><a name="stable_sort"></a>stable_sort
+## <a name="stable_sort"></a><a name="stable_sort"></a> stable_sort
 
 Dispone gli elementi di un intervallo specificato in un ordine non decrescente o secondo un criterio di ordinamento specificato da un predicato binario e mantiene l'ordinamento relativo degli elementi equivalenti.
 
@@ -9097,13 +9098,13 @@ Iteratore bidirezionale che punta alla posizione immediatamente successiva all'u
 *Pred*\
 Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **`true`** quando è soddisfatto e **`false`** quando non è soddisfatto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
 Gli elementi sono equivalenti, ma non necessariamente uguali, se nessuno di essi è minore di un altro. L' `sort` algoritmo è stabile e garantisce che l'ordinamento relativo degli elementi equivalenti venga mantenuto.
 
-La complessità della fase di esecuzione di `stable_sort` dipende dalla quantità di memoria disponibile, ma il caso migliore (dato memoria sufficiente) è `O(N log N)` e il caso peggiore è `O(N (log N)^2)` , dove *N*per  =  *ultimo*  -  *first*. In genere, l' `sort` algoritmo è notevolmente più veloce rispetto a `stable_sort` .
+La complessità della fase di esecuzione di `stable_sort` dipende dalla quantità di memoria disponibile, ma il caso migliore (dato memoria sufficiente) è `O(N log N)` e il caso peggiore è `O(N (log N)^2)` , dove *N* per  =  *ultimo*  -  . In genere, l' `sort` algoritmo è notevolmente più veloce rispetto a `stable_sort` .
 
 ### <a name="example"></a>Esempio
 
@@ -9172,7 +9173,7 @@ Resorted (greater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 Resorted (UDgreater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 ```
 
-## <a name="swap"></a><a name="swap"></a>scambio
+## <a name="swap"></a><a name="swap"></a> scambio
 
 Il primo override scambia i valori dei due oggetti. Il secondo override scambia i valori tra due matrici di oggetti.
 
@@ -9195,7 +9196,7 @@ Per il primo override, il primo oggetto di cui viene scambiato il contenuto. Per
 *Ok*\
 Per il primo override, il secondo oggetto di cui viene scambiato il contenuto. Per il secondo override, la seconda matrice di oggetti di cui viene scambiato il contenuto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo overload è progettato per operare su singoli oggetti. Il secondo overload scambia il contenuto degli oggetti tra due matrici.
 
@@ -9255,7 +9256,7 @@ Vector v1 is ( 5 5 5 5 5 ).
 Vector v2 is ( 0 1 2 3 4 5 6 7 8 9 10 ).
 ```
 
-## <a name="swap_ranges"></a><a name="swap_ranges"></a>swap_ranges
+## <a name="swap_ranges"></a><a name="swap_ranges"></a> swap_ranges
 
 Scambia gli elementi di un intervallo con gli elementi di un altro intervallo di uguali dimensioni.
 
@@ -9292,7 +9293,7 @@ Iteratore in avanti che punta alla prima posizione del secondo intervallo i cui 
 
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultima posizione del secondo intervallo i cui elementi sono da scambiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli intervalli a cui viene fatto riferimento devono essere validi. Tutti i puntatori devono essere dereferenziabili e all'interno di ciascuna sequenza l'ultima posizione deve essere raggiungibile dalla prima per incremento. Il secondo intervallo deve essere grande quanto il primo intervallo.
 
@@ -9359,7 +9360,7 @@ After the swap_range, vector v1 is ( 6 6 6 6 6 6 ).
 After the swap_range deque d1 is   ( 0 1 2 3 4 5 ).
 ```
 
-## <a name="transform"></a><a name="transform"></a>trasformazione
+## <a name="transform"></a><a name="transform"></a> trasformazione
 
 Applica un oggetto funzione ad ogni elemento di un intervallo di origine o a una coppia di elementi di due intervalli di origine e copia i valori restituiti dell'oggetto funzione in un intervallo di destinazione.
 
@@ -9421,7 +9422,7 @@ Oggetto funzione unario definito dall'utente usato nella prima versione dell'alg
 
 Iteratore di output che punta alla prima posizione dopo l'elemento finale nell'intervallo di destinazione in cui vengono ricevuti gli elementi di output trasformati dall'oggetto funzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli intervalli a cui viene fatto riferimento devono essere validi. Tutti i puntatori devono essere dereferenziabili e all'interno di ciascuna sequenza l'ultima posizione deve essere raggiungibile dalla prima per incremento. L'intervallo di destinazione deve essere abbastanza grande per contenere l'intervallo di origine modificato.
 
@@ -9515,7 +9516,7 @@ Multiplying elements of the vectors v1mod and v2 pairwise gives:
 v3 = ( 320 180 80 20 0 20 80 ).
 ```
 
-## <a name="unique"></a><a name="unique"></a>unico
+## <a name="unique"></a><a name="unique"></a> unico
 
 Rimuove gli elementi duplicati adiacenti l'uno rispetto all'altro in un intervallo specificato.
 
@@ -9563,7 +9564,7 @@ Oggetto funzione predicato definito dall'utente che definisce la condizione che 
 
 Un iteratore in avanti alla nuova fine della sequenza modificata che non contiene alcun duplicato consecutivo e punta alla posizione immediatamente successiva all'ultimo elemento non rimosso.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Entrambe le forme dell'algoritmo rimuovono il secondo duplicato di una coppia consecutiva di elementi uguali.
 
@@ -9664,7 +9665,7 @@ Removing adjacent elements satisfying the binary
   predicate mod_equal from vector v1 gives ( 5 7 ).
 ```
 
-## <a name="unique_copy"></a><a name="unique_copy"></a>unique_copy
+## <a name="unique_copy"></a><a name="unique_copy"></a> unique_copy
 
 Copia gli elementi di un intervallo di origine in un intervallo di destinazione ad eccezione degli elementi duplicati adiacenti l'uno rispetto all'altro.
 
@@ -9719,7 +9720,7 @@ Oggetto funzione predicato definito dall'utente che definisce la condizione che 
 
 Iteratore di output che punta alla posizione successiva all'ultimo elemento nell'intervallo di destinazione che riceve la copia con duplicati consecutivi rimossi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Entrambe le forme dell'algoritmo rimuovono il secondo duplicato di una coppia consecutiva di elementi uguali.
 
@@ -9801,7 +9802,7 @@ int main() {
 }
 ```
 
-## <a name="upper_bound"></a><a name="upper_bound"></a>upper_bound
+## <a name="upper_bound"></a><a name="upper_bound"></a> upper_bound
 
 Trova la posizione del primo elemento in un intervallo ordinato con un valore maggiore di un valore specificato, in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -9838,7 +9839,7 @@ Oggetto funzione predicato di confronto definito dall'utente che definisce il se
 
 Iteratore in avanti alla posizione del primo elemento che ha un valore maggiore del valore specificato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'intervallo di origine ordinato a cui si fa riferimento deve essere valido. Tutti gli iteratori devono essere dereferenziabili e all'interno della sequenza l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 

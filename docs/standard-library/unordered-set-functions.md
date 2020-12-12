@@ -1,20 +1,21 @@
 ---
+description: 'Altre informazioni su: &lt; &gt; funzioni unordered_set'
 title: Funzioni &lt;unordered_set&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: 6b6e764acc9fa3410a44a4a11760933328365852
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 852536a5c5bdfe5d944f3b70581a313a56dc8742
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422514"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153759"
 ---
 # <a name="ltunordered_setgt-functions"></a>Funzioni &lt;unordered_set&gt;
 
-## <a name="swap"></a>Scambia (unordered_set)
+## <a name="swap-unordered_set"></a><a name="swap"></a> Scambia (unordered_set)
 
 Scambia il contenuto di due contenitori.
 
@@ -27,27 +28,27 @@ void swap(
 
 ### <a name="parameters"></a>Parametri
 
-\ *chiave*
+*Chiave*\
 Tipo di chiave.
 
-\ *hash*
+*Hash*\
 Tipo di oggetto della funzione hash.
 
-*Predazione*\
+*Pred*\
 Tipo di oggetto della funzione di confronto di uguaglianza.
 
-\ *Alloc*
+*Alloc*\
 Classe Allocator.
 
-\ a *sinistra*
+*sinistra*\
 Primo contenitore da scambiare.
 
-\ a *destra*
+*Ok*\
 Secondo contenitore da scambiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-La funzione modello esegue `left.`[unordered_set::swap](../standard-library/unordered-set-class.md#swap)`(right)`.
+La funzione modello esegue `left.` [unordered_set:: swap](../standard-library/unordered-set-class.md#swap) `(right)` .
 
 ### <a name="example"></a>Esempio
 
@@ -102,7 +103,7 @@ return (0);
 [c] [b] [a]
 ```
 
-## <a name="swap_unordered_multiset"></a>Scambia (unordered_multiset)
+## <a name="swap-unordered_multiset"></a><a name="swap_unordered_multiset"></a> Scambia (unordered_multiset)
 
 Scambia il contenuto di due contenitori.
 
@@ -115,27 +116,27 @@ void swap(
 
 ### <a name="parameters"></a>Parametri
 
-\ *chiave*
+*Chiave*\
 Tipo di chiave.
 
-\ *hash*
+*Hash*\
 Tipo di oggetto della funzione hash.
 
-*Predazione*\
+*Pred*\
 Tipo di oggetto della funzione di confronto di uguaglianza.
 
-\ *Alloc*
+*Alloc*\
 Classe Allocator.
 
-\ a *sinistra*
+*sinistra*\
 Primo contenitore da scambiare.
 
-\ a *destra*
+*Ok*\
 Secondo contenitore da scambiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-La funzione modello esegue `left.`[unordered_multiset::swap](../standard-library/unordered-multiset-class.md#swap)`(right)`.
+La funzione modello esegue `left.` [unordered_multiset:: swap](../standard-library/unordered-multiset-class.md#swap) `(right)` .
 
 ### <a name="example"></a>Esempio
 

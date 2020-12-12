@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura: mantenere il riferimento a un oggetto nella memoria non gestita'
 title: 'Procedura: mantenere i riferimenti agli oggetti nella memoria non gestita'
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - references, to objects in native functions
 - gcroot keyword [C++], object reference in native function
 ms.assetid: a61eb8ce-3982-477d-8d3d-2173fd57166d
-ms.openlocfilehash: 13d5bd37a0f5e0b065aecb8c5b264fb70685363f
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 9c54d0ce376e57c5865c2fef5987d878bfa8d7f6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684508"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97134927"
 ---
 # <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>Procedura: mantenere i riferimenti agli oggetti nella memoria non gestita
 
 È possibile utilizzare gcroot. h, che esegue <xref:System.Runtime.InteropServices.GCHandle> il wrapping, per includere un riferimento a un oggetto CLR nella memoria non gestita. In alternativa, è possibile usare `GCHandle` direttamente.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 ```cpp
 // hold_object_reference.cpp
@@ -92,6 +93,6 @@ int main() {
 StringWrapper::m_handle == ManagedString
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Uso dell'interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

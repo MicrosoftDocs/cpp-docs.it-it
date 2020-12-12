@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: thread'
 title: thread
 ms.date: 05/07/2019
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-ms.openlocfilehash: 13e6d45642c08a97c06d7099b83e632501267310
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7b83686b6641585e7e7af334a6127c71a9171610
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225813"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164705"
 ---
 # <a name="thread"></a>thread
 
@@ -26,7 +27,7 @@ Il **`thread`** modificatore di classe di archiviazione esteso viene usato per d
 
 **`__declspec(thread)`***dichiaratore*
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'archiviazione thread-local (TLS, Thread Local Storage) rappresenta il meccanismo mediante il quale ogni processo multithread alloca lo spazio di archiviazione per i dati specifici del thread. Nei programmi multithread standard, i dati vengono condivisi da tutti i thread di un determinato processo, mentre l'archiviazione thread-local è il meccanismo che consente di allocare i dati per singoli thread. Per una descrizione completa dei thread, vedere [multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
@@ -85,7 +86,7 @@ Inoltre, è necessario osservare queste linee guida quando si dichiarano variabi
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [__declspec](../cpp/declspec.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)<br/>

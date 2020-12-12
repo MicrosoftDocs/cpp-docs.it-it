@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura: mantenere un riferimento al tipo di valore nel tipo nativo'
 title: 'Procedura: mantenere riferimenti al tipo di valore nel tipo nativo'
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - value type reference in native type
 - reference to value type in native type
 ms.assetid: 1eabf8be-7d4f-4339-9027-48d5c4244483
-ms.openlocfilehash: 4b71701c771f6f49bae172284e23dd9eba2aeded
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 4f012b2590b6085e965f3cd1420dbcba4347c84d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988486"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97134888"
 ---
 # <a name="how-to-hold-reference-to-value-type-in-native-type"></a>Procedura: mantenere riferimenti al tipo di valore nel tipo nativo
 
@@ -51,4 +52,4 @@ String in V: Hello
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[Uso dell'interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

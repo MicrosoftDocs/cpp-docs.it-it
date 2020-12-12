@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: &lt; &gt; operatori unordered_set'
 title: Operatori &lt;unordered_set&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - unordered_set/std::operator!=
 - unordered_set/std::operator==
 ms.assetid: 8653eea6-12f2-4dd7-aa2f-db38a71599a0
-ms.openlocfilehash: 7780b5dd031d6babc13bc202c948c3e8233f7170
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 6404ea9348dedea1e8ecdd4eefbca6b7c1b8158f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90741944"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153733"
 ---
 # <a name="ltunordered_setgt-operators"></a>Operatori &lt;unordered_set&gt;
 
@@ -34,7 +35,7 @@ Oggetto di tipo `unordered_set`.
 
 **`true`** Se il unordered_sets non è uguale. **`false`** se sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra oggetti unordered_set non è influenzato dall'ordine arbitrario in cui vengono archiviati gli elementi. Due oggetti unordered_set sono uguali se hanno lo stesso numero di elementi e gli elementi di un contenitore sono la permutazione degli elementi dell'altro contenitore. In caso contrario, non sono uguali.
 
@@ -102,7 +103,7 @@ Oggetto di tipo `unordered_set`.
 
 **`true`** Se la unordered_sets è uguale; **`false`** se non sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra oggetti unordered_set non è influenzato dall'ordine arbitrario in cui vengono archiviati gli elementi. Due oggetti unordered_set sono uguali se hanno lo stesso numero di elementi e gli elementi di un contenitore sono la permutazione degli elementi dell'altro contenitore. In caso contrario, non sono uguali.
 
@@ -168,7 +169,7 @@ Oggetto di tipo `unordered_multiset`.
 
 **`true`** Se il unordered_multisets non è uguale. **`false`** se sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra oggetti unordered_multiset non è influenzato dall'ordine arbitrario in cui vengono archiviati gli elementi. Due oggetti unordered_multiset sono uguali se hanno lo stesso numero di elementi e gli elementi di un contenitore sono la permutazione degli elementi dell'altro contenitore. In caso contrario, non sono uguali.
 
@@ -237,7 +238,7 @@ Oggetto di tipo `unordered_multiset`.
 
 **`true`** Se la unordered_multisets è uguale; **`false`** se non sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra oggetti unordered_multiset non è influenzato dall'ordine arbitrario in cui vengono archiviati gli elementi. Due oggetti unordered_multiset sono uguali se hanno lo stesso numero di elementi e gli elementi di un contenitore sono la permutazione degli elementi dell'altro contenitore. In caso contrario, non sono uguali.
 

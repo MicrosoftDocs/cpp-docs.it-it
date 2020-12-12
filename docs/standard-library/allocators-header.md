@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; allocatori&gt;'
 title: '&lt;allocators&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
-ms.openlocfilehash: 69c086515230fd5a9aaa039ef02b7995842fa260
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 38183f58d9b919464a6cdbc31c6f75c539a9461b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87204885"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163483"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -24,9 +25,9 @@ Definisce diversi modelli che consentono di allocare e liberare blocchi di memor
 ```
 
 > [!NOTE]
-> \<allocators>è deprecato, a partire da Visual Studio 2019 versione 16,3.
+> \<allocators> è deprecato, a partire da Visual Studio 2019 versione 16,3.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L' \<allocators> intestazione fornisce sei modelli di allocatore che possono essere usati per selezionare le strategie di gestione della memoria per i contenitori basati su nodi. Per l'uso con questi modelli, l'intestazione offre anche diversi filtri di sincronizzazione che consentono di personalizzare la strategia di gestione della memoria in numerosi schemi di multithreading diversi o in nessuno schema. È possibile velocizzare l'applicazione o ridurre i requisiti di memoria, associando una strategia di gestione della memoria ai propri modelli di utilizzo della memoria e ai requisiti di sincronizzazione.
 
@@ -84,7 +85,7 @@ Un allocatore di blocco è una cache o un filtro. Una cache è un modello di cla
 
 Con un compilatore che non è in grado di riassociare il valore dell'argomento std:: size_t usato quando è stata creata un'istanza del modello non è necessariamente il valore dell'argomento _Sz passato alle funzioni membro della cache allocate e deallocate.
 
-\<allocators>fornisce i modelli di cache seguenti:
+\<allocators> fornisce i modelli di cache seguenti:
 
 - [cache_freelist](cache-freelist-class.md)
 
@@ -92,7 +93,7 @@ Con un compilatore che non è in grado di riassociare il valore dell'argomento s
 
 - [cache_chunklist](cache-chunklist-class.md)
 
-Un filtro è un allocatore di blocco che implementa le funzioni membro usando un altro allocatore di blocco, che viene passato come argomento di modello. La forma più comune di filtro è il filtro di sincronizzazione che applica un criterio di sincronizzazione per controllare l'accesso alle funzioni membro di un'istanza di un altro allocatore di blocco. \<allocators>fornisce i filtri di sincronizzazione seguenti:
+Un filtro è un allocatore di blocco che implementa le funzioni membro usando un altro allocatore di blocco, che viene passato come argomento di modello. La forma più comune di filtro è il filtro di sincronizzazione che applica un criterio di sincronizzazione per controllare l'accesso alle funzioni membro di un'istanza di un altro allocatore di blocco. \<allocators> fornisce i filtri di sincronizzazione seguenti:
 
 - [sync_none](sync-none-class.md)
 
@@ -102,7 +103,7 @@ Un filtro è un allocatore di blocco che implementa le funzioni membro usando un
 
 - [sync_shared](sync-shared-class.md)
 
-\<allocators>fornisce inoltre il [rts_alloc](rts-alloc-class.md)di filtro, che contiene più istanze dell'allocatore di blocco e determina quale istanza usare per l'allocazione o la deallocazione in fase di esecuzione anziché in fase di compilazione. Viene usata con i compilatori e non può compilare la riassociazione.
+\<allocators> fornisce inoltre il [rts_alloc](rts-alloc-class.md)di filtro, che contiene più istanze dell'allocatore di blocco e determina quale istanza usare per l'allocazione o la deallocazione in fase di esecuzione anziché in fase di compilazione. Viene usata con i compilatori e non può compilare la riassociazione.
 
 Un criterio di sincronizzazione determina la modalità di gestione delle richieste di allocazione e disallocazione simultanee da più thread di un'istanza dell'allocatore. Il criterio più semplice consiste nel passare tutte le richieste direttamente tramite l'oggetto cache sottostante, lasciando la gestione della sincronizzazione all'utente. Un criterio più complesso potrebbe essere quello di usare un mutex per serializzare l'accesso all'oggetto cache sottostante.
 
@@ -110,7 +111,7 @@ Se un compilatore supporta la compilazione di applicazioni a thread singolo e mu
 
 Il modello di cache `cache_freelist` accetta un argomento di classe Max che determina il numero massimo di elementi da archiviare nell'elenco di disponibilità.
 
-\<allocators>fornisce le classi massime seguenti:
+\<allocators> fornisce le classi massime seguenti:
 
 - [max_none](max-none-class.md)
 
@@ -122,7 +123,7 @@ Il modello di cache `cache_freelist` accetta un argomento di classe Max che dete
 
 ### <a name="macros"></a>Macro
 
-|Macro|Descrizione|
+|Macro|Description|
 |-|-|
 |[ALLOCATOR_DECL](allocators-functions.md#allocator_decl)|Restituisce un modello di classe allocator.|
 |[CACHE_CHUNKLIST](allocators-functions.md#cache_chunklist)|Restituisce `stdext::allocators::cache_chunklist<sizeof(Type)>`.|
@@ -168,6 +169,6 @@ Il modello di cache `cache_freelist` accetta un argomento di classe Max che dete
 
 **Spazio dei nomi:** stdext
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento file di intestazione](cpp-standard-library-header-files.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CAtlAutoThreadModule'
 title: Classe CAtlAutoThreadModule
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlAutoThreadModule class
 ms.assetid: 3be834aa-55ef-403e-94ae-41979691b15f
-ms.openlocfilehash: f4bd1071380bf3e31c69c593c5db81112fdf21de
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: d1742488cca84dccfa53753bec40f9081d77f67d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168306"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165056"
 ---
 # <a name="catlautothreadmodule-class"></a>Classe CAtlAutoThreadModule
 
@@ -29,9 +30,9 @@ class CAtlAutoThreadModule : public CAtlAutoThreadModuleT<CAtlAutoThreadModule>
 
 ## <a name="remarks"></a>Osservazioni
 
-`CAtlAutoThreadModule`deriva da [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) e implementa un server com in pool di Threading. `CAtlAutoThreadModule`USA [CComApartment](../../atl/reference/ccomapartment-class.md) per gestire un Apartment per ogni thread del modulo.
+`CAtlAutoThreadModule` deriva da [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) e implementa un server com in pool di Threading. `CAtlAutoThreadModule` USA [CComApartment](../../atl/reference/ccomapartment-class.md) per gestire un Apartment per ogni thread del modulo.
 
-Per specificare [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) come class factory, è necessario usare la macro [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) nella definizione della classe dell'oggetto. È quindi necessario aggiungere una singola istanza di una classe derivata da `CAtlAutoThreadModuleT` , ad `CAtlAutoThreadModule`esempio. Ad esempio:
+Per specificare [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) come class factory, è necessario usare la macro [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) nella definizione della classe dell'oggetto. È quindi necessario aggiungere una singola istanza di una classe derivata da `CAtlAutoThreadModuleT` , ad esempio `CAtlAutoThreadModule` . Ad esempio:
 
 `CAtlAutoThreadModule _AtlAutoModule; // name is immaterial.`
 
@@ -50,7 +51,7 @@ Per specificare [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactor
 
 **Intestazione:** atlbase. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md)<br/>
 [Classe IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)<br/>

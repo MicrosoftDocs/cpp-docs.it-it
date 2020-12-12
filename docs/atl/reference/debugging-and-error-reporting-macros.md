@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: debug e macro di segnalazione errori'
 title: Macro di debug e segnalazione errori
 ms.date: 05/06/2019
 f1_keywords:
@@ -11,18 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 6b969cfb841a9a95d695eacc0a25f9dd378379ac
-ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
+ms.openlocfilehash: 573c3f341ff9f9df58337b75e1080dde960d232c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92135541"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139945"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macro di debug e segnalazione errori
 
 Queste macro forniscono funzionalità di debug e di traccia utili.
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[_ATL_DEBUG_INTERFACES](#_atl_debug_interfaces)|Scrive, nella finestra di output, qualsiasi perdita di interfaccia che viene rilevata quando `_Module.Term` viene chiamato il metodo.|
 |[_ATL_DEBUG_QI](#_atl_debug_qi)|Scrive tutte le chiamate a nella `QueryInterface` finestra di output.|
@@ -226,7 +227,7 @@ Il parametro *Category* elenca i flag di traccia da impostare. Questi flag corri
 
 ### <a name="atl-trace-flags"></a>Flag di traccia ATL
 
-|Categoria ATL|Descrizione|
+|Categoria ATL|Description|
 |------------------|-----------------|
 |`atlTraceGeneral`|Report su tutte le applicazioni ATL. Valore predefinito.|
 |`atlTraceCOM`|Report sui metodi COM.|
@@ -244,7 +245,7 @@ Il parametro *Category* elenca i flag di traccia da impostare. Questi flag corri
 
 ### <a name="mfc-trace-flags"></a>Flag di traccia MFC
 
-|Categoria MFC|Descrizione|
+|Categoria MFC|Description|
 |------------------|-----------------|
 |`traceAppMsg`|Messaggi MFC, utilizzo generico. Sempre consigliato.|
 |`traceDumpContext`|Messaggi provenienti da [CDumpContext](../../mfc/reference/cdumpcontext-class.md).|

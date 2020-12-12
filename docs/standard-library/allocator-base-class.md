@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: allocator_base Class'
 title: Classe allocator_base
 ms.date: 11/04/2016
 f1_keywords:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: f642c21f2b1060dd5adc5c3d98144592c3413777
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 95da41fd480101c26a2ab71b445790da47144189
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562636"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163639"
 ---
 # <a name="allocator_base-class"></a>Classe allocator_base
 
@@ -72,7 +73,7 @@ I criteri di sincronizzazione per l'allocatore, ovvero la [Classe sync_none](syn
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome tipo|Descrizione|
+|Nome tipo|Description|
 |-|-|
 |[const_pointer](#const_pointer)|Tipo che fornisce un puntatore costante al tipo di oggetto gestito dall'allocatore.|
 |[const_reference](#const_reference)|Tipo che fornisce un riferimento costante al tipo di oggetto gestito dall'allocatore.|
@@ -90,7 +91,7 @@ I criteri di sincronizzazione per l'allocatore, ovvero la [Classe sync_none](syn
 |[_Chardealloc](#chardealloc)|Libera lo spazio di archiviazione per la matrice contenente gli elementi di tipo **`char`** .|
 |[address](#address)|Trova l'indirizzo di un oggetto il cui valore è specificato.|
 |[allocare](#allocate)|Alloca un blocco di memoria sufficiente a contenere almeno un numero specificato di elementi.|
-|[costrutto](#construct)|Costruisce un tipo specifico di oggetto su un indirizzo specificato che viene inizializzato con un valore specificato.|
+|[costruire](#construct)|Costruisce un tipo specifico di oggetto su un indirizzo specificato che viene inizializzato con un valore specificato.|
 |[deallocare](#deallocate)|Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.|
 |[eliminare](#destroy)|Chiama un distruttore di oggetti senza deallocare la memoria in cui è stato archiviato l'oggetto.|
 |[max_size](#max_size)|Restituisce il numero di elementi di tipo *Type* che possono essere allocati da un oggetto della classe allocator prima che la memoria libera si esaurisca.|
@@ -118,7 +119,7 @@ Numero di elementi della matrice da allocare.
 
 Puntatore all'oggetto allocato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro viene usata dai contenitori compilati con un compilatore che non può compilare la riassociazione. Implementa `_Charalloc` per l'allocatore definito dall'utente restituendo il risultato di una chiamata alla funzione `allocate` del filtro di sincronizzazione.
 
@@ -138,7 +139,7 @@ Puntatore al primo oggetto che deve essere deallocato dall'archivio.
 *conteggio*\
 Numero di oggetti da deallocare dall'archivio.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro viene usata dai contenitori compilati con un compilatore che non può compilare la riassociazione. Implementa `_Chardealloc` per l'allocatore definito dall'utente chiamando la funzione `deallocate` del filtro di sincronizzazione. Il puntatore PTR deve essere stato restituito in precedenza da una chiamata a `_Charalloc` per un oggetto allocatore che risulta uguale a **`*this`** , allocando un oggetto matrice con le stesse dimensioni e tipo. `_Chardealloc` non genera mai un'eccezione.
 
@@ -161,7 +162,7 @@ Valore const o nonconst dell'oggetto di cui viene cercato l'indirizzo.
 
 Un puntatore const o nonconst all'oggetto trovato rispettivamente di valore const o nonconst.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro viene implementata per l'allocatore definito dall'utente restituendo `&val`.
 
@@ -188,7 +189,7 @@ Questo parametro viene ignorato.
 
 Puntatore all'oggetto allocato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro implementa l'allocazione di memoria per l'allocatore definito dall'utente restituendo il risultato di una chiamata alla funzione `allocate` del filtro di sincronizzazione di tipo Type `*` se `_Nx == 1`; in caso contrario, restituendo il risultato di una chiamata al cast `operator new(_Nx * sizeof(Type))` al tipo Type `*`.
 
@@ -208,7 +209,7 @@ allocator_base(const allocator_base<Other, Sync>& right);
 *Ok*\
 Oggetto allocatore da copiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo costruttore crea un'istanza [allocator_base](allocator-base-class.md). Il secondo costruttore crea un'istanza `allocator_base` in modo che per qualsiasi istanza `allocator_base<Type, _Sync>``a`, `allocator_base<Type, Sync>(allocator_base<Other, Sync>(a)) == a`.
 
@@ -244,7 +245,7 @@ Puntatore al percorso in cui deve essere creato l'oggetto.
 *Val*\
 Il valore con cui viene inizializzato l'oggetto costruito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro viene implementata per l'allocatore definito dall'utente tramite una chiamata a `new((void*)ptr Type(val)`.
 
@@ -264,7 +265,7 @@ Puntatore al primo oggetto che deve essere deallocato dall'archivio.
 *_Nx*\
 Numero di oggetti da deallocare dall'archivio.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro viene implementata per l'allocatore definito dall'utente tramite una chiamata a `deallocate(ptr)` nel filtro di sincronizzazione `Sync` se `_Nx == 1`; in caso contrario, tramite una chiamata a `operator delete(_Nx * ptr)`.
 
@@ -281,7 +282,7 @@ void destroy(pointer ptr);
 *PTR*\
 Un puntatore che indica l'indirizzo dell'oggetto da distruggere.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro viene implementata per l'allocatore definito dall'utente tramite una chiamata a `ptr->~Type()`.
 
@@ -305,7 +306,7 @@ size_type max_size() const;
 
 Numero degli elementi che possono essere allocati.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro viene implementata per l'allocatore definito dall'utente restituendo `(size_t)-1 / sizeof(Type)` se `0 < (size_t)-1 / sizeof(Type)`: in caso contrario, restituendo `1`.
 

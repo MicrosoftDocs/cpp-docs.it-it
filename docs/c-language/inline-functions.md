@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: funzioni inline'
 title: Funzioni inline
 ms.date: 10/16/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - inline functions, __inline keyword
 - functions [C++], inline functions
 ms.assetid: 00f4b2ff-8ad0-4165-9f4c-2ef157d03f31
-ms.openlocfilehash: 5ee07dbb6cd6ea26991da588747ccbe720358326
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 616e85f2ac298420b3de174551ea2f6f879f24f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211814"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137554"
 ---
 # <a name="inline-functions"></a>Funzioni inline
 
@@ -37,6 +38,6 @@ Le funzioni che utilizzano **`__inline`** non devono essere confuse con il codic
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [inline, __inline, \_ _forceinline](../cpp/inline-functions-cpp.md)

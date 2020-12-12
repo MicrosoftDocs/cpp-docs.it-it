@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: concatenazione di valori letterali stringa'
 title: Concatenazione di valori letterali stringa
 ms.date: 11/04/2016
 helpviewer_keywords:
 - concatenating strings
 - strings [C++], concatenating
 ms.assetid: 51486b1f-4b1e-4061-9add-1aa38c6cdb3c
-ms.openlocfilehash: cdd9a7811635bf43cd76ecbc84d8ab364e7f9dab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3486857cb0d218ea80c00252de02d9f29d58f2c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157791"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137293"
 ---
 # <a name="string-literal-concatenation"></a>Concatenazione di valori letterali stringa
 
@@ -59,6 +60,6 @@ printf_s( "%s" , string ) ;
 
 Nella fase 6 della conversione, le sequenze di caratteri multibyte specificate da una sequenza di valori letterali stringa o di valori letterali stringa con caratteri wide adiacenti, vengono concatenate in una sola sequenza di caratteri multibyte. Pertanto, non progettare programmi per consentire la modifica dei valori letterali stringa durante l'esecuzione. Lo standard ANSI C specifica che il risultato della modifica di una stringa non è definito.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Valori letterali stringa C](../c-language/c-string-literals.md)
