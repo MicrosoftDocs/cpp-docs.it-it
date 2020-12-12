@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe extent (C++ AMP)'
 title: Classe extent (C++ AMP)
 ms.date: 03/27/2019
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-ms.openlocfilehash: b9fd0ffb0c3ac6e0b80823e9f31c3615a045262b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fb355d0ab0676256df42a880722ebaac33eb3cb5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222732"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325863"
 ---
 # <a name="extent-class-c-amp"></a>Classe extent (C++ AMP)
 
@@ -45,21 +46,21 @@ Rango dell' `extent` oggetto.
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Costruttore extent](#ctor)|Inizializza una nuova istanza della classe `extent`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[contains](#contains)|Verifica che l'oggetto specificato `extent` disponga del rango specificato.|
 |[size](#size)|Restituisce la dimensione lineare totale dell'extent (in unità di elementi).|
-|[tile](#tile)|Produce un `tiled_extent` oggetto con gli extent delle sezioni forniti dalle dimensioni specificate.|
+|[piastrelle](#tile)|Produce un `tiled_extent` oggetto con gli extent delle sezioni forniti dalle dimensioni specificate.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[operatore](#operator_min)|Restituisce un nuovo `extent` oggetto creato sottraendo gli `index` elementi dagli `extent` elementi corrispondenti.|
 |[operatore--](#operator_min_min)|Decrementa ogni elemento dell' `extent` oggetto.|
@@ -75,7 +76,7 @@ Rango dell' `extent` oggetto.
 
 ### <a name="public-constants"></a>Costanti pubbliche
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Costante di rango](#rank_constant)|Ottiene il rango dell' `extent` oggetto.|
 
@@ -83,7 +84,7 @@ Rango dell' `extent` oggetto.
 
 `extent`
 
-## <a name="contains"></a><a name="contains"></a>contiene
+## <a name="contains"></a><a name="contains"></a> contiene
 
 Indica se il valore di [Indice](index-class.md) specificato è contenuto all'interno dell'oggetto "extent".
 
@@ -102,7 +103,7 @@ Valore `index` su cui eseguire il test.
 
 **`true`** Se il valore di *Indice* specificato è contenuto nell' `extent` oggetto; in caso contrario, **`false`** .
 
-## <a name="extent"></a><a name="ctor"></a>extent
+## <a name="extent"></a><a name="ctor"></a> extent
 
 Inizializza una nuova istanza della classe ' extent '.
 
@@ -137,13 +138,13 @@ Lunghezza della dimensione meno significativa.
 *_Other*<br/>
 `extent`Oggetto su cui `extent` è basato il nuovo oggetto.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il costruttore predefinito inizializza un `extent` oggetto con un rango pari a tre.
 
 Se viene utilizzata una matrice per costruire un `extent` oggetto, la lunghezza della matrice deve corrispondere al rango dell' `extent` oggetto.
 
-## <a name="operator"></a><a name="operator_mod_eq"></a>operatore% =
+## <a name="operator"></a><a name="operator_mod_eq"></a> operatore% =
 
 Calcola il modulo (resto) di ogni elemento in ' extent ' quando tale elemento è diviso per un numero.
 
@@ -162,7 +163,7 @@ Numero per cui trovare il modulo.
 
 Oggetto `extent`.
 
-## <a name="operator"></a><a name="operator_star_eq"></a>operatore * =
+## <a name="operator"></a><a name="operator_star_eq"></a> operatore * =
 
 Moltiplica ogni elemento nell'oggetto ' extent ' per il numero specificato.
 
@@ -181,7 +182,7 @@ Numero da moltiplicare.
 
 Oggetto `extent`.
 
-## <a name="operator"></a><a name="operator_add"></a>operatore +
+## <a name="operator"></a><a name="operator_add"></a> operatore +
 
 Restituisce un nuovo `extent` oggetto creato aggiungendo gli `index` elementi e corrispondenti `extent` .
 
@@ -200,7 +201,7 @@ extent<_Rank> operator+(const index<_Rank>& _Rhs) restrict(amp,cpu);
 
 Nuovo oggetto `extent`.
 
-## <a name="operator"></a><a name="operator_add_add"></a>operatore + +
+## <a name="operator"></a><a name="operator_add_add"></a> operatore + +
 
 Incrementa ogni elemento dell'oggetto "extent".
 
@@ -215,7 +216,7 @@ extent<_Rank> operator++(int)restrict(amp,cpu);
 
 Per l'operatore di prefisso, l' `extent` oggetto ( **`*this`** ). Per l'operatore di suffisso, un nuovo `extent` oggetto.
 
-## <a name="operator"></a><a name="operator_add_eq"></a>operatore + =
+## <a name="operator"></a><a name="operator_add_eq"></a> operatore + =
 
 Aggiunge il numero specificato a ogni elemento dell'oggetto "extent".
 
@@ -236,7 +237,7 @@ Numero, indice o extent da aggiungere.
 
 L'oggetto `extent` risultante.
 
-## <a name="operator-"></a><a name="operator_min"></a>operatore
+## <a name="operator-"></a><a name="operator_min"></a> operatore
 
 Crea un nuovo `extent` oggetto sottraendo ogni elemento nell' `index` oggetto specificato dall'elemento corrispondente in questo `extent` oggetto.
 
@@ -255,7 +256,7 @@ extent<_Rank> operator-(const index<_Rank>& _Rhs) restrict(amp,cpu);
 
 Nuovo oggetto `extent`.
 
-## <a name="operator--"></a><a name="operator_min_min"></a>operatore--
+## <a name="operator--"></a><a name="operator_min_min"></a> operatore--
 
 Decrementa ogni elemento nell'oggetto "extent".
 
@@ -270,7 +271,7 @@ extent<_Rank> operator--(int)restrict(amp,cpu);
 
 Per l'operatore di prefisso, l' `extent` oggetto ( **`*this`** ). Per l'operatore di suffisso, un nuovo `extent` oggetto.
 
-## <a name="operator"></a><a name="operator_div_eq"></a>operatore/=
+## <a name="operator"></a><a name="operator_div_eq"></a> operatore/=
 
 Divide ogni elemento nell'oggetto ' extent ' in base al numero specificato.
 
@@ -289,7 +290,7 @@ Numero per cui dividere.
 
 Oggetto `extent`.
 
-## <a name="operator-"></a><a name="operator_min_eq"></a>operatore-=
+## <a name="operator-"></a><a name="operator_min_eq"></a> operatore-=
 
 Sottrae il numero specificato da ogni elemento dell'oggetto "extent".
 
@@ -310,7 +311,7 @@ Numero da sottrarre.
 
 L'oggetto `extent` risultante.
 
-## <a name="operator"></a><a name="operator_eq"></a>operatore =
+## <a name="operator"></a><a name="operator_eq"></a> operatore =
 
 Copia il contenuto di un altro oggetto ' extent ' in questo.
 
@@ -329,7 +330,7 @@ extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
 
 Riferimento a questo `extent` oggetto.
 
-## <a name="extentoperator-"></a><a name="operator_at"></a>Operatore extent::\[\]
+## <a name="extentoperator-"></a><a name="operator_at"></a> Operatore extent:: \[\]
 
 Restituisce l'elemento che si trova in corrispondenza dell'indice specificato.
 
@@ -349,7 +350,7 @@ Intero compreso tra 0 e il rango meno 1.
 
 Elemento in corrispondenza dell'indice specificato.
 
-## <a name="rank"></a><a name="rank_constant"></a>Rank
+## <a name="rank"></a><a name="rank_constant"></a> Rank
 
 Archivia il rango dell'oggetto "extent".
 
@@ -359,7 +360,7 @@ Archivia il rango dell'oggetto "extent".
 static const int rank = _Rank;
 ```
 
-## <a name="size"></a><a name="size"></a>dimensioni
+## <a name="size"></a><a name="size"></a> dimensioni
 
 Restituisce le dimensioni lineari totali dell' `extent` oggetto (in unità di elementi).
 
@@ -369,7 +370,7 @@ Restituisce le dimensioni lineari totali dell' `extent` oggetto (in unità di el
 unsigned int size() const restrict(amp,cpu);
 ```
 
-## <a name="tile"></a><a name="tile"></a>piastrelle
+## <a name="tile"></a><a name="tile"></a> piastrelle
 
 Produce un oggetto tiled_extent con le dimensioni del riquadro specificate.
 
@@ -393,6 +394,6 @@ Componente successivo a quello più significativo dell'extent affiancato.
 *_Dim2*<br/>
 Componente meno significativo dell'extent affiancato.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

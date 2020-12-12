@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; csetjmp&gt;'
 title: '&lt;csetjmp&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - csetjmp header
 ms.assetid: 8f21fddd-5e9b-4219-a848-581cdd3569d9
-ms.openlocfilehash: 8f3a1a622776d5dd2ef3d22aaa3436933c5a7137
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ebd3acefbdf96c8dd2b0cba569e7cd2ffc128d31
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452388"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324774"
 ---
 # <a name="ltcsetjmpgt"></a>&lt;csetjmp&gt;
 
-Include l'intestazione della libreria C standard \<setjmp.h> e aggiunge i nomi associati allo spazio dei nomi `std`.
+Include l'intestazione della libreria C standard \<setjmp.h> e aggiunge i nomi associati allo `std` spazio dei nomi.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -37,12 +38,12 @@ using jmp_buf = see below;
 #define setjmp(env)
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 L'inclusione di questa intestazione garantisce che i nomi dichiarati usando il collegamento esterno nell'intestazione della libreria C standard vengano dichiarati nello spazio dei nomi `std`.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)\
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Panoramica della libreria standard C++](../standard-library/cpp-standard-library-overview.md)\
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

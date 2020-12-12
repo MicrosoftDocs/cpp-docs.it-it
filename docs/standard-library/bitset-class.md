@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: classe BITS'
 title: Classe bitset
 ms.date: 03/27/2019
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - std::bitset [C++], to_ulong
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
-ms.openlocfilehash: 623593e723b26244cc82e9eeed3e32657cca0b94
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 061bbe77a701e2161b3a33ffa94d3b8231b9f541
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846485"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325465"
 ---
 # <a name="bitset-class"></a>Classe bitset
 
@@ -57,9 +58,9 @@ class bitset
 *N*\
 Specifica il numero di bit nell'oggetto bitst con un valore integer diverso da zero di tipo `size_t` che deve essere noto in fase di compilazione.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Diversamente dalla [ \<bool> classe Vector](../standard-library/vector-bool-class.md)simile, la classe bitst non contiene iteratori e non è un contenitore della libreria standard C++. Differisce anche dal vettore in quanto è \<bool> di una dimensione specifica, che viene fissata in fase di compilazione in base alle dimensioni specificate dal parametro di modello *N* quando viene dichiarato il **bit \<N\> ** .
+Diversamente dalla [ \<bool> classe Vector](../standard-library/vector-bool-class.md)simile, la classe bitst non contiene iteratori e non è un contenitore della libreria standard C++. Differisce anche dal vettore in quanto è \<bool> di una dimensione specifica, che viene fissata in fase di compilazione in base alle dimensioni specificate dal parametro di modello *N* quando viene dichiarato il **bit \<N\>** .
 
 Un bit viene impostato se il valore è 1 e reimpostato se il valore è 0. Capovolgere o invertire un bit significa modificarne il valore da 1 a 0 o da 0 a 1. I bit *N* in un bitset vengono indicizzati dai valori Integer da 0 a *N* - 1, dove 0 indicizza la prima posizione del bit e *N* - 1 la posizione finale del bit.
 
@@ -67,19 +68,19 @@ Un bit viene impostato se il valore è 1 e reimpostato se il valore è 0. Capovo
 
 ### <a name="constructors"></a>Costruttori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[bitset](#bitset)|Costruisce un oggetto di classe `bitset\<N>` e inizializza i bit a zero, a un valore specificato o a valori ottenuti dai caratteri in una stringa.|
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[element_type](#element_type)|Tipo che è un sinonimo del tipo di dati **`bool`** e può essere utilizzato per fare riferimento a bit di elemento in un oggetto `bitset` .|
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[tutti](#all)|Verifica tutti i bit in questo oggetto `bitset` per determinare se sono tutti impostati su **`true`** .|
 |[qualsiasi](#any)|La funzione membro verifica se nella sequenza sono inclusi bit impostati su 1.|
@@ -96,13 +97,13 @@ Un bit viene impostato se il valore è 1 e reimpostato se il valore è 0. Capovo
 
 ### <a name="classes"></a>Classi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[reference](#reference)|Classe proxy che fornisce i riferimenti ai bit contenuti in un `bitset` usata per accedere e modificare i singoli bit come classe helper per `operator[]` della classe `bitset`.|
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[operatore! =](#op_neq)|Verifica un `bitset` di destinazione per la disuguaglianza con un `bitset` specificato.|
 |[operatore&=](#op_and_eq)|Esegue una combinazione bit per bit di bitset con l'operazione logica `AND`.|
@@ -251,7 +252,7 @@ Il carattere usato per rappresentare uno zero. Il valore predefinito è "0".
 *_One*\
 Il carattere usato per rappresentare un uno. Il valore predefinito è "1".
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Si possono usare tre costruttori per creare oggetti della classe `bitset\<N>`:
 
@@ -470,9 +471,9 @@ La posizione del bit il cui valore viene invertito.
 
 Una copia del bitset modificato per cui è stata richiamata la funzione membro.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
-La seconda funzione membro genera un'eccezione [out_of_range](../standard-library/out-of-range-class.md) se la posizione specificata come parametro è maggiore della dimensione *N* del **bit \<** *N* **> ** il cui bit è stato invertito.
+La seconda funzione membro genera un'eccezione [out_of_range](../standard-library/out-of-range-class.md) se la posizione specificata come parametro è maggiore della dimensione *N* del **bit \<** *N* **>** il cui bit è stato invertito.
 
 #### <a name="example"></a>Esempio
 
@@ -606,7 +607,7 @@ Il bitset che deve essere confrontato con il bitset di destinazione per stabilir
 
 **`true`** Se le bitsets sono diverse; **`false`** se sono uguali.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 I bitset devono avere le stesse dimensioni per poter verificare la disuguaglianza con la funzione dell'operatore membro.
 
@@ -668,7 +669,7 @@ Il bitset che deve essere combinato bit per bit con il bitset di destinazione.
 
 Il bitst di destinazione modificato risultante dall'operazione bit per bit `AND` con il bit specificato come parametro.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Due bit combinati dall' `AND` operatore restituiscono **`true`** se ogni bit è true. in caso contrario, la combinazione restituisce **`false`** .
 
@@ -735,9 +736,9 @@ Il numero di posizioni a sinistra di cui verranno spostati i bit nel bitset.
 
 Il bitset modificato con i bit spostati a sinistra del numero di posizioni richiesto.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
-La funzione dell'operatore membro restituisce **bitst**( ** \* this**) **<<= POS,** dove [<<=](#op_lshift_eq) Sposta i bit in un oggetto BITS a sinistra di un numero di posizioni specificato e restituisce il risultato al bit di destinazione.
+La funzione dell'operatore membro restituisce **bitst**( **\* this**) **<<= POS,** dove [<<=](#op_lshift_eq) Sposta i bit in un oggetto BITS a sinistra di un numero di posizioni specificato e restituisce il risultato al bit di destinazione.
 
 #### <a name="example"></a>Esempio
 
@@ -787,7 +788,7 @@ Il numero di posizioni a sinistra di cui verranno spostati i bit nel bitset.
 
 Il bitset di destinazione modificato in modo che i bit risultano spostati a sinistra del numero di posizioni richiesto.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Se non esiste un elemento da spostare nella posizione, la funzione cancella il bit impostandolo su 0.
 
@@ -834,7 +835,7 @@ Il bitset che deve essere confrontato con il bitset di destinazione per stabilir
 
 **`true`** Se i bitsets sono uguali; **`false`** se sono diversi.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 I bitset devono avere le stesse dimensioni per poter verificare l'uguaglianza con la funzione dell'operatore membro.
 
@@ -948,7 +949,7 @@ Il numero di posizioni a destra di cui verranno spostati i bit nel bitset.
 
 Il bitset di destinazione modificato in modo che i bit risultano spostati a destra del numero di posizioni richiesto.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Se non esiste un elemento da spostare nella posizione, la funzione cancella il bit impostandolo su 0.
 
@@ -993,7 +994,7 @@ reference operator[](size_t _Pos);
 *_Pos*\
 La posizione in cui viene individuato il bit all'interno del bitset.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Quando si definisce il [ \_ \_ \_ livello di debug degli iteratori](../standard-library/iterator-debug-level.md) come 1 o 2 nella compilazione, nel file eseguibile si verificherà un errore di runtime se si tenta di accedere a un elemento all'esterno dei limiti del bit. Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md).
 
@@ -1040,7 +1041,7 @@ Il bitset che deve essere combinato bit per bit con il bitset di destinazione.
 
 Il bitset di destinazione modificato che risulta dall'operazione `OR` bit per bit esclusiva con il bitset specificato come parametro.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Due bit combinati dall'operatore **or** esclusivo restituiscono **`true`** se almeno uno dei bit, ma non entrambi, è **`true`** ; in caso contrario, la combinazione restituisce **`false`** .
 
@@ -1106,7 +1107,7 @@ Il bitset che deve essere combinato bit per bit con il bitset di destinazione.
 
 Il bitset di destinazione modificato che risulta dall'operazione `OR` bit per bit inclusiva con il bitset specificato come parametro.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Due bit combinati dall'operatore inclusivo `OR` restituiscono **`true`** se almeno uno dei bit è **`true`** ; se entrambi i bit sono **`false`** , la combinazione restituisce **`false`** .
 
@@ -1229,9 +1230,9 @@ Un riferimento del form *x [i]* al bit nella posizione *i* nel bitset *x*.
 
 Riferimento al bit nell'oggetto BITS specificato dalla posizione dell'argomento per la prima, la seconda e la quinta funzione membro del riferimento alla classe e **`true`** o **`false`** per riflettere il valore del bit modificato nel punto di bit per la terza e la quarta funzione membro del riferimento alla classe.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
-La classe `reference` esiste solo come classe helper per il bitset `operator[]`. La classe member descrive un oggetto che può accedere a un singolo bit all'interno di un bitset. Lasciare *che b* sia un oggetto di **`bool`** tipo, *x* e *y* oggetti di tipo **bitst \<** *N* **> **, e *i* e *j* posizioni valide all'interno di tale oggetto. La notazione *x [i]* fa riferimento a bit nella posizione *i* nel bitset *x*. Le funzioni membro della classe `reference` specificano, in ordine, le operazioni seguenti:
+La classe `reference` esiste solo come classe helper per il bitset `operator[]`. La classe member descrive un oggetto che può accedere a un singolo bit all'interno di un bitset. Lasciare *che b* sia un oggetto di **`bool`** tipo, *x* e *y* oggetti di tipo **bitst \<** *N* **>**, e *i* e *j* posizioni valide all'interno di tale oggetto. La notazione *x [i]* fa riferimento a bit nella posizione *i* nel bitset *x*. Le funzioni membro della classe `reference` specificano, in ordine, le operazioni seguenti:
 
 |Operazione|Definizione|
 |---------------|----------------|
@@ -1341,7 +1342,7 @@ La posizione del bit nel bitset da reimpostare su 0.
 
 Una copia del bitset per cui è stata richiamata la funzione membro.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 La seconda funzione membro genera un'eccezione [out_of_range](../standard-library/out-of-range-class.md) se la posizione specificata è maggiore della dimensione del bitset.
 
@@ -1407,7 +1408,7 @@ Il valore da assegnare al bit nella posizione specificata.
 
 Una copia del bitset per cui è stata richiamata la funzione membro.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 La seconda funzione membro genera un'eccezione [out_of_range](../standard-library/out-of-range-class.md) se la posizione specificata è maggiore della dimensione del bitset.
 
@@ -1508,7 +1509,7 @@ La posizione del bit nel bitset di cui si deve verificare il valore.
 
 **`true`** Se il bit specificato dalla posizione dell'argomento è impostato su 1; in caso contrario, **`false`** .
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 La funzione membro genera un'eccezione [out_of_range](../standard-library/out-of-range-class.md)
 
@@ -1576,7 +1577,7 @@ Restituisce la somma dei valori di bit presenti nella sequenza di bit come **`un
 
 Genera un oggetto [overflow_error](overflow-error-class.md) se un bit nella sequenza di bit ha un valore di bit che non può essere rappresentato come valore di tipo **`unsigned long long`** .
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Restituisce la somma dei valori di bit presenti nella sequenza di bit come **`unsigned long long`** .
 
@@ -1592,7 +1593,7 @@ unsigned long to_ulong( ) const;
 
 Intero che genera i bit in un oggetto bits se usato nell'inizializzazione del bit.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Se si applica la funzione membro, viene restituito il valore integer con la stessa sequenza di 1 e 0 cifre presente nella sequenza di bit contenuta nel bit.
 

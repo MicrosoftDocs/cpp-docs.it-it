@@ -1,16 +1,17 @@
 ---
+description: "Per altre informazioni, vedere Procedura: convertire un ciclo OpenMP che usa l'annullamento per usare la runtime di concorrenza"
 title: "Procedura: Convertire un ciclo OpenMP che usa l'annullamento per l'utilizzo del runtime di concorrenza"
 ms.date: 11/04/2016
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, cancellation
 - cancellation, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 4b0b3c33-bfa9-4e96-ae08-aef245a39cbb
-ms.openlocfilehash: adde6decc086b883c50e52d12e388197e185fb39
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: d64ba8bc3910181f9ce9ddb3844f778cdfe464d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505950"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325745"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>Procedura: Convertire un ciclo OpenMP che usa l'annullamento per l'utilizzo del runtime di concorrenza
 
@@ -47,7 +48,7 @@ Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure
 
 > **cl.exe/EHsc/OpenMP concrt-omp-parallel-any-of. cpp**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Migrazione da OpenMP al runtime di concorrenza](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [Annullamento nella libreria PPL](cancellation-in-the-ppl.md)<br/>

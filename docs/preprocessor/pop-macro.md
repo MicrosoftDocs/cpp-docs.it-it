@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: pop_macro pragma'
 title: Pragma pop_macro
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pop_macro pragma
 - pragmas, pop_macro
 ms.assetid: 3b5489d0-69ba-4c66-b572-2748af0f12bb
-ms.openlocfilehash: f9e097d139e1df5c9ba09ad9ca99f0cfe6bbbfb3
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 395e107586b9534b2e9db616f30ddd88b15b93ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218289"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325706"
 ---
 # <a name="pop_macro-pragma"></a>Pragma pop_macro
 
@@ -23,9 +24,9 @@ Imposta il valore della macro del *Nome macro* sul valore all'inizio dello stack
 
 > **#pragma pop_macro (** "*Nome-macro*" **)**
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Prima di poter eseguire un **pop_macro**, è necessario emettere un [push_macro](../preprocessor/push-macro.md) per il *nome della macro* .
+Prima di poter eseguire una **pop_macro**, è necessario emettere un [push_macro](../preprocessor/push-macro.md) per il *nome della macro* .
 
 ## <a name="example"></a>Esempio
 

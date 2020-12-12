@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: float_2 Class'
 title: Classe float_2
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_2::y
 - amp_short_vectors/Concurrency::graphics::float_2::g
 ms.assetid: b3ebd48e-f8c8-4f00-a640-357f702f0cae
-ms.openlocfilehash: af5116118c9821f5c1801789bff13f3de8d4026a
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: a0d350c9742da6c11a5bf982a1638a1fc0921eb9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126656"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325850"
 ---
 # <a name="float_2-class"></a>Classe float_2
 
@@ -49,64 +50,64 @@ class float_2;
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Costruttore float_2](#ctor)|Di overload. Costruttore predefinito, Inizializza tutti gli elementi con 0.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|float_2::get_x||
-|float_2::get_xy||
-|float_2::get_y||
-|float_2::get_yx||
-|float_2::ref_g||
-|float_2::ref_r||
-|float_2::ref_x||
-|float_2::ref_y||
-|float_2::set_x||
-|float_2::set_xy||
-|float_2::set_y||
-|float_2::set_yx||
+|float_2:: get_x||
+|float_2:: get_xy||
+|float_2:: get_y||
+|float_2:: get_yx||
+|float_2:: ref_g||
+|float_2:: ref_r||
+|float_2:: ref_x||
+|float_2:: ref_y||
+|float_2:: set_x||
+|float_2:: set_xy||
+|float_2:: set_y||
+|float_2:: set_yx||
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|float_2::operator-||
-|float_2::operator--||
-|float_2::operator*=||
-|float_2::operator/=||
-|float_2::operator++||
-|float_2::operator+=||
-|float_2::operator=||
-|float_2::operator-=||
+|float_2:: operator-||
+|float_2:: operator--||
+|float_2:: operator * =||
+|float_2:: operator/=||
+|float_2:: operator + +||
+|float_2:: operator + =||
+|float_2:: operator =||
+|float_2:: operator-=||
 
 ### <a name="public-constants"></a>Costanti pubbliche
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[dimensioni costanti](#float_2__size)||
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|float_2::g||
-|float_2::gr||
-|float_2::r||
-|float_2::rg||
-|float_2::x||
-|float_2::xy||
-|float_2::y||
-|float_2::yx||
+|float_2:: g||
+|float_2:: gr||
+|float_2:: r||
+|float_2:: RG||
+|float_2:: x||
+|float_2:: XY||
+|float_2:: y||
+|float_2:: YX||
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -118,7 +119,7 @@ class float_2;
 
 **Spazio dei nomi:** Concurrency:: graphics
 
-## <a name="ctor"></a>float_2
+## <a name="float_2"></a><a name="ctor"></a> float_2
 
 Costruttore predefinito, Inizializza tutti gli elementi con 0.
 
@@ -174,12 +175,12 @@ Valore per l'inizializzazione.
 *_Other*<br/>
 Oggetto utilizzato per inizializzare.
 
-## <a name="float_2__size"></a>dimensioni
+## <a name="size"></a><a name="float_2__size"></a> dimensioni
 
 ```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Cenni preliminari sulla libreria standard C++'
 title: Panoramica sulla libreria standard C++
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - libraries, Standard C++
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
-ms.openlocfilehash: e4d49b01f9602d5e6d7316a3a258ffa69bbcc369
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 25cc206c6990e3dbe75c0a3b703766ab0c0e34ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839036"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324761"
 ---
 # <a name="c-standard-library-overview"></a>Panoramica sulla libreria standard C++
 
@@ -59,6 +60,6 @@ Questa sezione contiene le sezioni seguenti:
 
 Per altre informazioni sulle librerie di runtime di Visual C++, vedere [CRT Library Features](../c-runtime-library/crt-library-features.md) (Funzionalità libreria CRT).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Libreria standard C++](../standard-library/cpp-standard-library-reference.md)

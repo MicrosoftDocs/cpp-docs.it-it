@@ -1,19 +1,20 @@
 ---
+description: 'Altre informazioni su: contesti'
 title: Contesti
 ms.date: 11/04/2016
 helpviewer_keywords:
 - contexts [Concurrency Runtime]
 ms.assetid: 10c1d861-8fbb-4ba0-b2ec-61876b11176e
-ms.openlocfilehash: 7df75ae7c1ac2b1d8c0b73ff1f1e3f2800d559b9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 70c97b74afaaa755a85532c7bc08a3a5c5fe3e17
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87194875"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325771"
 ---
 # <a name="contexts"></a>Contesti
 
-In questo documento viene descritto il ruolo dei contesti nella runtime di concorrenza. Un thread associato a un'utilità di pianificazione è noto come contesto di *esecuzione*oppure solo come *contesto*. La funzione [Concurrency:: wait](reference/concurrency-namespace-functions.md#wait) e la classe Concurrency::[context](../../parallel/concrt/reference/context-class.md) consentono di controllare il comportamento dei contesti. Utilizzare la `wait` funzione per sospendere il contesto corrente per un periodo di tempo specificato. Utilizzare la `Context` classe quando è necessario un maggiore controllo sui casi in cui i contesti sono Block, Unblock e yield oppure quando si desidera sovrascrivere il contesto corrente.
+In questo documento viene descritto il ruolo dei contesti nella runtime di concorrenza. Un thread associato a un'utilità di pianificazione è noto come contesto di *esecuzione* oppure solo come *contesto*. La funzione [Concurrency:: wait](reference/concurrency-namespace-functions.md#wait) e la classe Concurrency::[context](../../parallel/concrt/reference/context-class.md) consentono di controllare il comportamento dei contesti. Utilizzare la `wait` funzione per sospendere il contesto corrente per un periodo di tempo specificato. Utilizzare la `Context` classe quando è necessario un maggiore controllo sui casi in cui i contesti sono Block, Unblock e yield oppure quando si desidera sovrascrivere il contesto corrente.
 
 > [!TIP]
 > Il runtime di concorrenza fornisce un'utilità di pianificazione predefinita, pertanto non è necessario crearne una nell'applicazione. Poiché il Utilità di pianificazione consente di ottimizzare le prestazioni delle applicazioni, è consigliabile iniziare con la libreria [PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md) o la [libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md) se non si ha familiarità con l'runtime di concorrenza.
@@ -68,7 +69,7 @@ Per abilitare l'oversubscription nel contesto corrente, chiamare il metodo [Conc
 
 Per un esempio che usa l'oversubscription per compensare la latenza causata dalla lettura dei dati da una connessione di rete, vedere [procedura: usare l'oversubscription per compensare la latenza](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Procedura: usare i gruppi di pianificazione per influenzare l'ordine di esecuzione](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)<br/>

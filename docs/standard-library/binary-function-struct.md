@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: binary_function struct'
 title: Struct binary_function
 ms.date: 02/21/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - binary_function class
 ms.assetid: 79b6d53d-644c-4add-b0ba-3a5f40f69c60
-ms.openlocfilehash: acbcb7496b7e6b37af61c5eb7a113c77855e6928
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3a38579cc5026903dc7c3b7743afd81773b895b7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243393"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325545"
 ---
-# <a name="binaryfunction-struct"></a>Struct binary_function
+# <a name="binary_function-struct"></a>Struct binary_function
 
-Struct di base vuoto che definisce i tipi che possono essere ereditati dalle classi derivate che specificano un oggetto funzione binaria. Deprecate in c++11, rimossi in c++17.
+Struct di base vuoto che definisce i tipi che possono essere ereditati dalle classi derivate che specificano un oggetto funzione binaria. Deprecato in C++ 11, rimosso in C++ 17.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -27,13 +28,13 @@ struct binary_function {
 };
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Lo struct modello serve come base per le classi che definiscono una funzione membro del form:
 
-> *result_type* * * Operator () (const * * <em>first_argument_type</em> **&, const** <em>second_argument_type</em> **&) const**
+> *result_type* * * operator () (const * * <em>first_argument_type</em> **&, const** <em>second_argument_type</em> **&) const**
 
-Tutte le funzioni binarie possono fare riferimento al primo tipo di argomento come *first_argument_type*, al secondo tipo di argomento come *second_argument_type*e al tipo restituito come *result_type*.
+Tutte le funzioni binarie possono fare riferimento al primo tipo di argomento come *first_argument_type*, al secondo tipo di argomento come *second_argument_type* e al tipo restituito come *result_type*.
 
 ## <a name="example"></a>Esempio
 

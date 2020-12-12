@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe binder1st'
 title: Classe binder1st
 ms.date: 02/21/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-ms.openlocfilehash: 15b704134d47b7bf7d8857bf380c756b0b03a1b0
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 1311d598c8300f3bba4d27acdaab879cbd054696
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688393"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325505"
 ---
 # <a name="binder1st-class"></a>Classe binder1st
 
@@ -43,24 +44,24 @@ protected:
 
 ### <a name="parameters"></a>Parametri
 
-\ *binary_fn*
+*binary_fn*\
 Oggetto funzione binaria da convertire in un oggetto funzione unaria.
 
-\ a *sinistra*
+*sinistra*\
 Valore a cui deve essere associato il primo argomento dell'oggetto funzione binaria.
 
-\ a *destra*
+*Ok*\
 Valore dell'argomento che l'oggetto binario adattato confronta con il valore predefinito del secondo argomento.
 
 ## <a name="return-value"></a>Valore restituito
 
 Oggetto funzione unaria risultante dall'associazione del primo argomento dell'oggetto funzione binaria al valore a *sinistra*.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Il modello di classe archivia una copia di un oggetto funzione binaria *binary_fn* in `op` e una copia di *Left* in `value`. Definisce la funzione membro `operator()` come restituito `op(value, right)`.
+Il modello di classe archivia una copia di un oggetto funzione binario *binary_fn* in `op` e una copia di *Left* in `value` . Definisce la relativa funzione membro `operator()` che restituisce `op(value, right)` .
 
-Se *binary_fn* è un oggetto di tipo `Operation` e `c` è una costante, `bind1st(binary_fn, c)` è più utile per `binder1st<Operation>(binary_fn, c)`. Per ulteriori informazioni, vedere [bind1st](../standard-library/functional-functions.md#bind1st).
+Se *binary_fn* è un oggetto di tipo `Operation` ed `c` è una costante, `bind1st(binary_fn, c)` è più comodo equivalente a `binder1st<Operation>(binary_fn, c)` . Per ulteriori informazioni, vedere [bind1st](../standard-library/functional-functions.md#bind1st).
 
 ## <a name="example"></a>Esempio
 

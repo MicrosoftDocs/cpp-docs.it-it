@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe binder2nd'
 title: Classe binder2nd
 ms.date: 02/21/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
-ms.openlocfilehash: 297f91dd9283b9f004247d2d1814b30a17e7ffa2
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: a3c76fcea22045ee7e723ad3ad51390c39f602ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890097"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325492"
 ---
 # <a name="binder2nd-class"></a>Classe binder2nd
 
@@ -38,24 +39,24 @@ class binder2nd
 
 ### <a name="parameters"></a>Parametri
 
-\ *Func*
+*Func*\
 Oggetto funzione binaria da convertire in un oggetto funzione unaria.
 
-\ a *destra*
+*Ok*\
 Valore a cui deve essere associato il secondo argomento dell'oggetto funzione binaria.
 
-\ a *sinistra*
+*sinistra*\
 Valore dell'argomento che l'oggetto binario adattato confronta con il valore predefinito del secondo argomento.
 
 ## <a name="return-value"></a>Valore restituito
 
 Oggetto funzione unaria risultante dall'associazione del secondo argomento dell'oggetto funzione binaria al valore a *destra*.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Il modello di classe archivia una copia di un oggetto funzione binaria *Func* in `op`e una copia di *right* in `value`. Definisce la funzione membro `operator()` come restituito `op(left, value)`.
+Il modello di classe archivia una copia di un oggetto funzione binaria *Func* in `op` e una copia di *right* in `value` . Definisce la relativa funzione membro `operator()` che restituisce `op(left, value)` .
 
-Se *Func* è un oggetto di tipo `Operation` e c è una costante, [bind2nd](../standard-library/functional-functions.md#bind2nd)`(func, c)` è equivalente al costruttore della classe `binder2nd` `binder2nd<Operation>(func, c)`e più pratico.
+Se *Func* è un oggetto di tipo `Operation` e c è una costante, [bind2nd](../standard-library/functional-functions.md#bind2nd) `(func, c)` è equivalente al costruttore della `binder2nd` classe `binder2nd<Operation>(func, c)` ed è più pratico.
 
 ## <a name="example"></a>Esempio
 

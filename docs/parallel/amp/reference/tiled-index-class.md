@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: tiled_index Class'
 title: Classe tiled_index
 ms.date: 03/27/2019
 f1_keywords:
@@ -19,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-ms.openlocfilehash: 9d295093031eaee0a2d4dd83aa931060e6eebc07
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 072735a9f98efc522c2f054d837d3c2f89e8958b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832270"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325824"
 ---
 # <a name="tiled_index-class"></a>Classe tiled_index
 
@@ -67,19 +68,19 @@ Lunghezza della dimensione meno significativa.
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Costruttore tiled_index](#ctor)|Inizializza una nuova istanza della classe `tile_index`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[get_tile_extent](#tiled_index__get_tile_extent)|Restituisce un oggetto [extent](extent-class.md) con i valori degli argomenti di `tiled_index` modello `_Dim0` , `_Dim1` e `_Dim2` .|
 
 ### <a name="public-constants"></a>Costanti pubbliche
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Costante di barriera](#tiled_index__barrier)|Archivia un oggetto [tile_barrier](tile-barrier-class.md) che rappresenta una barriera nel riquadro corrente dei thread.|
 |[Costante globale](#tiled_index__global)|Archivia un oggetto [Indice](index-class.md) di rango 1, 2 o 3 che rappresenta l'indice globale in un oggetto Grid.|
@@ -93,7 +94,7 @@ Lunghezza della dimensione meno significativa.
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[tile_extent](#tile_extent)|Ottiene un oggetto [extent](extent-class.md) con i valori degli argomenti di `tiled_index` modello di argomenti `tiled_index` `_Dim0` , `_Dim1` , e `_Dim2` .|
 
@@ -149,7 +150,7 @@ Oggetto [tile_barrier](tile-barrier-class.md) del costruito `tiled_index` .
 
 ### <a name="overloads"></a>Overload
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|Inizializza una nuova istanza della `tile_index` classe dall'indice del riquadro nelle coordinate globali e la posizione relativa nel riquadro nelle coordinate locali. `_Global` `_Tile_origin` Vengono calcolati i parametri e.|
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|Inizializza una nuova istanza della `tile_index` classe copiando l'oggetto specificato `tiled_index` .|

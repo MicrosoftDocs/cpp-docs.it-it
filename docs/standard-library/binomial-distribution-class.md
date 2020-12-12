@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: binomial_distribution Class'
 title: Classe binomial_distribution
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-ms.openlocfilehash: 3054a29bd1bc82861461851d4403a7095ac1fcbd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2cdb55fe312cd19c944ee6279286fe48e515b8a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846511"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325478"
 ---
 # <a name="binomial_distribution-class"></a>Classe binomial_distribution
 
@@ -77,7 +78,7 @@ Il tipo di risultato Integer, il valore predefinito è **`int`** . Per i tipi po
 *GENERATORE URNG*\
 Motore di generazione di numeri casuali uniformi. Per i tipi possibili, vedere [\<random>](../standard-library/random.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il modello di classe descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo **`int`** se non ne viene fornito alcuno, distribuiti in base alla funzione di probabilità discreta di distribuzione binomiale. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
@@ -249,7 +250,7 @@ Parametro di distribuzione `p`.
 *parm*\
 Struttura `param_type` usata per costruire la distribuzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:** `0 ≤ t` e `0.0 ≤ p ≤ 1.0`
 
@@ -284,7 +285,7 @@ Parametro di distribuzione `p`.
 *Ok*\
 Oggetto `param_type` da confrontare con questo oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:** `0 ≤ t` e `0.0 ≤ p ≤ 1.0`
 

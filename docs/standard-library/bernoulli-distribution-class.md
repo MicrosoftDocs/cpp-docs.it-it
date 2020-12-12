@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: bernoulli_distribution Class'
 title: Classe bernoulli_distribution
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-ms.openlocfilehash: bfb63451c8789f7d390e2387ed8fadae23d1c7a5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 45c63c59aaed3e2c9a5aa7251880767042523763
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846524"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325572"
 ---
 # <a name="bernoulli_distribution-class"></a>Classe bernoulli_distribution
 
@@ -69,7 +70,7 @@ public:
 *GENERATORE URNG*\
 Motore di generazione di numeri casuali uniformi. Per i tipi possibili, vedere [\<random>](../standard-library/random.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La classe descrive una distribuzione che produce valori di tipo **`bool`** , distribuiti in base alla funzione di probabilità discreta della distribuzione di Bernoulli. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
@@ -173,7 +174,7 @@ Parametro di distribuzione `p` archiviato.
 *parm*\
 Struttura `param_type` usata per costruire la distribuzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:**`0.0 ≤ p ≤ 1.0`
 
@@ -194,7 +195,7 @@ struct param_type {typedef bernoulli_distribution distribution_type; param_type 
 *p*\
 Parametro di distribuzione `p` archiviato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:**`0.0 ≤ p ≤ 1.0`
 

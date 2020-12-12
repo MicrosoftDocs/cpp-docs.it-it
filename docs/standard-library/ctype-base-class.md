@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: ctype_base Class'
 title: Classe ctype_base
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-ms.openlocfilehash: 4fac75d90c4e40a22e8ceae974c3f49c3d50a1d3
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 430e6fbf77842e61e662fd3024a54b418f487748
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688187"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324682"
 ---
 # <a name="ctype_base-class"></a>Classe ctype_base
 
@@ -43,9 +44,9 @@ struct ctype_base : public locale::facet
 };
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Definisce una maschera di enumerazione. Ogni costante di enumerazione caratterizza un modo diverso per classificare i caratteri, come definito dalle funzioni con nomi simili dichiarati nell'intestazione di \<ctype.h>. Le costanti sono:
+Definisce una maschera di enumerazione. Ogni costante di enumerazione caratterizza un modo diverso per classificare i caratteri, come definito dalle funzioni con nomi simili dichiarati nell'intestazione \<ctype.h> . Le costanti sono:
 
 - **space** (funzione [isspace](../standard-library/locale-functions.md#isspace))
 
@@ -73,10 +74,10 @@ Definisce una maschera di enumerazione. Ogni costante di enumerazione caratteriz
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<locale>
+**Intestazione:**\<locale>
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

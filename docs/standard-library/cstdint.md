@@ -1,19 +1,20 @@
 ---
+description: 'Altre informazioni su: &lt; cstdint&gt;'
 title: '&lt;cstdint&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <cstdint>
 ms.assetid: 87afafb2-c630-4383-a2fc-a6b47c639e21
-ms.openlocfilehash: 142ea2b341dad307dea98d1406803a1e7eca5e78
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 3edaadf3a5f10e379d943460d24c75fbb0eb091e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076635"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324709"
 ---
 # <a name="ltcstdintgt"></a>&lt;cstdint&gt;
 
-Include l'intestazione della libreria C standard \<stdint.h> e aggiunge i nomi associati allo spazio dei nomi `std`. L'inclusione di questa intestazione garantisce che i nomi dichiarati usando il collegamento esterno nell'intestazione della libreria C standard vengano dichiarati nello spazio dei nomi `std`.
+Include l'intestazione della libreria C standard \<stdint.h> e aggiunge i nomi associati allo `std` spazio dei nomi. L'inclusione di questa intestazione garantisce che i nomi dichiarati usando il collegamento esterno nell'intestazione della libreria C standard vengano dichiarati nello spazio dei nomi `std`.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -69,7 +70,7 @@ SIZE_MAX
 [U]INT{8 16 32 64 MAX}_C
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)\ (Riferimento file di intestazione)
-[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)
+[Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Panoramica della libreria standard C++](../standard-library/cpp-standard-library-overview.md)
