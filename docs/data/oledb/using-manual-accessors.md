@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso delle funzioni di accesso manuali'
 title: Utilizzo delle funzioni di accesso manuali
 ms.date: 10/24/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - manual accessors
 - accessors [C++], manual
 ms.assetid: 29f00a89-0240-482b-8413-4120b9644672
-ms.openlocfilehash: b76c6a2d0af404bc526fee8f511320a58ffd86ec
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 73363be83e06a3eeced114dc90c65f82601a4a16
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218286"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332470"
 ---
 # <a name="using-manual-accessors"></a>Utilizzo delle funzioni di accesso manuali
 
@@ -45,6 +46,6 @@ Per eseguire queste operazioni con i modelli di consumer OLE DB, utilizzare la `
 
 Per un esempio di funzione di accesso manuale, vedere `CDBListView::CallProcedure` nell'esempio [DBVIEWER](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)

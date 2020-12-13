@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _endthread, _endthreadex'
 title: _endthread, _endthreadex
 ms.date: 4/2/2020
 api_name:
@@ -36,16 +37,16 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-ms.openlocfilehash: a3889adcc90bd62e766102b72aae68577915e55b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ef74cac4cbe23a021ed8d796f92f2767695eb08e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915077"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332839"
 ---
 # <a name="_endthread-_endthreadex"></a>_endthread, _endthreadex
 
-Termina un thread. **_endthread** termina un thread creato da **_beginthread** e **_endthreadex** termina un thread creato da **_beginthreadex**.
+Termina un thread. **_endthread** termina un thread creato da **_beginthread** e  **_endthreadex** termina un thread creato da **_beginthreadex**.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -61,7 +62,7 @@ void _endthreadex(
 *retval*<br/>
 Codice di uscita del thread
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 È possibile chiamare in modo esplicito **_endthread** o **_endthreadex** per terminare un thread. Tuttavia, **_endthread** o **_endthreadex** viene chiamato automaticamente quando il thread viene restituito dalla routine passata come parametro a **_beginthread** o **_beginthreadex**. La terminazione di un thread con una chiamata a **endthread** o **_endthreadex** contribuisce a garantire il ripristino corretto delle risorse allocate per il thread.
 
@@ -79,7 +80,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**_endthread**|\<process.h>|
 |**_endthreadex**|\<process.h>|
@@ -94,7 +95,7 @@ Solo versioni multithread delle [librerie di runtime C](../../c-runtime-library/
 
 Vedere l'esempio per [_beginthread](beginthread-beginthreadex.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Process and Environment Control](../../c-runtime-library/process-and-environment-control.md) (Controllo processo e ambiente)<br/>
+[Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_beginthread, _beginthreadex](beginthread-beginthreadex.md)<br/>

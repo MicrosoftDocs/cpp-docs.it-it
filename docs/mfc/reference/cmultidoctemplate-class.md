@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CMultiDocTemplate'
 title: Classe CMultiDocTemplate
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMultiDocTemplate [MFC], CMultiDocTemplate
 ms.assetid: 5b8aa328-e461-41d0-b388-00594535e119
-ms.openlocfilehash: af950d188c4e02a38a39ed3c672f0f8c4161bee8
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 70b77c04fed41da3b5f025f6a600b9ecfd4bc89b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737484"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331569"
 ---
 # <a name="cmultidoctemplate-class"></a>Classe CMultiDocTemplate
 
@@ -25,17 +26,17 @@ Definisce un modello di documento che implementa l'interfaccia a documenti multi
 class CMultiDocTemplate : public CDocTemplate
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 Le funzioni membro per questa classe sono virtuali. Vedere [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) e [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) per la documentazione.
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Name|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CMultiDocTemplate:: CMultiDocTemplate](#cmultidoctemplate)|Costruisce un oggetto `CMultiDocTemplate`.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un'applicazione MDI utilizza la finestra cornice principale come area di lavoro in cui l'utente può aprire zero o più finestre cornice del documento, ognuna delle quali Visualizza un documento. Per una descrizione più dettagliata di MDI, vedere *linee guida sull'interfaccia di Windows per la progettazione software*.
 
@@ -69,7 +70,7 @@ Per altre informazioni su `CMultiDocTemplate` , vedere [modelli di documento e p
 
 **Intestazione:** afxwin.h
 
-## <a name="cmultidoctemplatecmultidoctemplate"></a><a name="cmultidoctemplate"></a>CMultiDocTemplate:: CMultiDocTemplate
+## <a name="cmultidoctemplatecmultidoctemplate"></a><a name="cmultidoctemplate"></a> CMultiDocTemplate:: CMultiDocTemplate
 
 Costruisce un oggetto `CMultiDocTemplate`.
 
@@ -109,7 +110,7 @@ Punta all' `CRuntimeClass` oggetto della classe della finestra cornice. Questa c
 *pViewClass*<br/>
 Punta all' `CRuntimeClass` oggetto della classe di visualizzazione. Questa classe è una `CView` classe derivata da definita per visualizzare i documenti.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Allocare dinamicamente un `CMultiDocTemplate` oggetto per ogni tipo di documento supportato dall'applicazione e passarne uno a `CWinApp::AddDocTemplate` dalla `InitInstance` funzione membro della classe dell'applicazione.
 
@@ -121,7 +122,7 @@ Ecco un secondo esempio.
 
 [!code-cpp[NVC_MFCDocView#93](../../mfc/codesnippet/cpp/cmultidoctemplate-class_2.cpp)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CDocTemplate](../../mfc/reference/cdoctemplate-class.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>

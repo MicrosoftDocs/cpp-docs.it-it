@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _dupenv_s, _wdupenv_s'
 title: _dupenv_s, _wdupenv_s
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-ms.openlocfilehash: 39184eff5db511dfb920782c3e29bf2b0cc9340e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3163645b83ec701478cca76d98fe5e17acdc86d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915188"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332886"
 ---
 # <a name="_dupenv_s-_wdupenv_s"></a>_dupenv_s, _wdupenv_s
 
@@ -87,7 +88,7 @@ Queste funzioni convalidano i relativi parametri. Se *buffer* o *VarName* è **n
 
 Se queste funzioni non sono in grado di allocare memoria sufficiente, il *buffer* viene impostato su **null** e *NumberOfElements* su 0 e viene restituito **ENOMEM**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_dupenv_s** Cerca nell'elenco delle variabili di ambiente per *VarName*. Se la variabile viene trovata, **_dupenv_s** alloca un buffer e copia il valore della variabile nel buffer. L'indirizzo e la lunghezza del buffer vengono restituiti in *buffer* e *NumberOfElements*. Allocando il buffer stesso, **_dupenv_s** rappresenta un'alternativa più comoda per [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
 
@@ -149,7 +150,7 @@ nonexistentvariable = (null)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Process and Environment Control](../../c-runtime-library/process-and-environment-control.md) (Controllo processo e ambiente)<br/>
+[Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [Costanti ambientali](../../c-runtime-library/environmental-constants.md)<br/>
 [_dupenv_s_dbg, _wdupenv_s_dbg](dupenv-s-dbg-wdupenv-s-dbg.md)<br/>
 [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md)<br/>

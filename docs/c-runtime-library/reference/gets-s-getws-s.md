@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: gets_s, _getws_s'
 title: gets_s, _getws_s
 ms.date: 4/2/2020
 api_name:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - gets_s function
 - standard input, reading from
 ms.assetid: 5880c36f-122c-4061-a1a5-aeeced6fe58c
-ms.openlocfilehash: b01456d3ed37c34dbc10980ebdfbe008e27f624a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 17120283019a8065be9663a92541e510632a3626
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913616"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332804"
 ---
 # <a name="gets_s-_getws_s"></a>gets_s, _getws_s
 
@@ -81,7 +82,7 @@ Dimensione del buffer.
 
 Restituisce il *buffer* in caso di esito positivo. Un puntatore **NULL** indica una condizione di errore o di fine file. Usare [ferror](ferror.md) o [feof](feof.md) per determinare quella che si è verificata.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **gets_s** legge una riga dal flusso di input standard **stdin** e la archivia nel *buffer*. La riga è costituita da tutti i caratteri, incluso il primo carattere di nuova riga ('\n'). **gets_s** sostituisce quindi il carattere di nuova riga con un carattere null (' \ 0') prima di restituire la riga. Al contrario, la funzione **fgets_s** mantiene il carattere di nuova riga.
 
@@ -108,7 +109,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |**gets_s**|\<stdio.h>|
 |**_getws_s**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout**e **stderr**devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout** e **stderr** devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -138,7 +139,7 @@ The line entered was: Hello there!
 ## <a name="see-also"></a>Vedere anche
 
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
-[Ottiene, _getws](../../c-runtime-library/gets-getws.md)<br/>
+[gets, _getws](../../c-runtime-library/gets-getws.md)<br/>
 [fgets, fgetws](fgets-fgetws.md)<br/>
 [fputs, fputws](fputs-fputws.md)<br/>
 [puts, _putws](puts-putws.md)<br/>

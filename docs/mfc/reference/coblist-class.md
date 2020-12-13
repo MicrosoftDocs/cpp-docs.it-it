@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CObList'
 title: Classe CObList
 ms.date: 11/04/2016
 f1_keywords:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
-ms.openlocfilehash: a13363ef9b200051c26781ab6e9870a10de06d88
-ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
+ms.openlocfilehash: edfa476780e07b41f4f1e0abede24244ad837578
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92274587"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331452"
 ---
 # <a name="coblist-class"></a>Classe CObList
 
@@ -71,13 +72,13 @@ class CObList : public CObject
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CObList:: CObList](#coblist)|Costruisce un elenco vuoto per i `CObject` puntatori.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CObList:: AddHead](#addhead)|Aggiunge un elemento (o tutti gli elementi di un altro elenco) all'inizio dell'elenco (crea una nuova intestazione).|
 |[CObList:: AddTail](#addtail)|Aggiunge un elemento (o tutti gli elementi di un altro elenco) alla parte finale dell'elenco (crea una nuova coda).|
@@ -101,7 +102,7 @@ class CObList : public CObject
 |[CObList:: RemoveTail](#removetail)|Rimuove l'elemento dalla parte finale dell'elenco.|
 |[CObList:: SetAt](#setat)|Imposta l'elemento in una posizione specificata.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 `CObList` gli elenchi si comportano come elenchi con collegamento doppio.
 
@@ -160,7 +161,7 @@ La tabella seguente Mostra altre funzioni membro simili a `CObList::AddHead` .
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**Posizione AddHead (void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddHead (CPtrList** <strong>\*</strong> `pNewList` **);**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**Position AddHead (const CString&** `newElement` **);**<br /><br /> **Position AddHead (LPCTSTR** `newElement` **);**<br /><br /> **void AddHead (CStrings** <strong>\*</strong> `pNewList` **);**|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'elenco può essere vuoto prima dell'operazione.
 
@@ -199,7 +200,7 @@ Puntatore a un altro `CObList` elenco. Gli elementi in *pNewList* verranno aggiu
 
 La prima versione restituisce il valore di posizione dell'elemento appena inserito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'elenco può essere vuoto prima dell'operazione.
 
@@ -237,7 +238,7 @@ CObList(INT_PTR nBlockSize = 10);
 *nBlockSize*<br/>
 Granularità di allocazione della memoria per l'estensione dell'elenco.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Man mano che l'elenco cresce, la memoria viene allocata in unità di *nBlockSize* . Se un'allocazione di memoria ha esito negativo, `CMemoryException` viene generata un'eccezione.
 
@@ -280,7 +281,7 @@ Posizione iniziale per la ricerca.
 
 Valore POSITION che può essere utilizzato per l'iterazione o il recupero del puntatore a un oggetto; NULL se l'oggetto non viene trovato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si noti che i valori del puntatore vengono confrontati, non il contenuto degli oggetti.
 
@@ -314,7 +315,7 @@ Indice in base zero dell'elemento dell'elenco da trovare.
 
 Valore POSITION che può essere utilizzato per l'iterazione o il recupero del puntatore a un oggetto; NULL se *nIndex* è troppo grande. Il Framework genera un'asserzione se *nIndex* è negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Viene avviata un'analisi sequenziale dall'inizio dell'elenco, arrestando il *n*° elemento.
 
@@ -349,7 +350,7 @@ Valore di posizione restituito da una `GetHeadPosition` chiamata di `Find` funzi
 
 Vedere la descrizione del valore restituito per [GetHead](#gethead).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Non è uguale a un indice e non è possibile operare su un valore di posizione autonomamente. `GetAt` Recupera il `CObject` puntatore associato a una posizione specificata.
 
@@ -406,7 +407,7 @@ Se si accede all'elenco tramite un puntatore a un oggetto `const CObList` , vien
 
 Se è possibile accedere all'elenco direttamente o tramite un puntatore a un oggetto `CObList` , `GetHead` restituisce un riferimento a un `CObject` puntatore. Ciò consente di usare la funzione su entrambi i lati di un'istruzione di assegnazione e quindi di modificare le voci dell'elenco.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Prima di chiamare, è necessario assicurarsi che l'elenco non sia vuoto `GetHead` . Se l'elenco è vuoto, la versione di debug del libreria Microsoft Foundation Class dichiara. Utilizzare [IsEmpty](#isempty) per verificare che l'elenco contenga elementi.
 
@@ -468,7 +469,7 @@ Riferimento a un valore di posizione restituito da un' `GetNext` `GetHeadPositio
 
 Vedere la descrizione del valore restituito per [GetHead](#gethead).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È possibile usare `GetNext` in un ciclo di iterazione in diretta se si stabilisce la posizione iniziale con una chiamata a `GetHeadPosition` o `Find` .
 
@@ -519,7 +520,7 @@ Riferimento a un valore di posizione restituito da una `GetPrev` chiamata di fun
 
 Vedere la descrizione del valore restituito per [GetHead](#gethead).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È possibile usare `GetPrev` in un ciclo di iterazione inversa se si stabilisce la posizione iniziale con una chiamata a `GetTailPosition` o `Find` .
 
@@ -562,7 +563,7 @@ INT_PTR GetSize() const;
 
 Numero di elementi nell'elenco.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamare questo metodo per recuperare il numero di elementi nell'elenco.
 
@@ -592,7 +593,7 @@ const CObject*& GetTail() const;
 
 Vedere la descrizione del valore restituito per [GetHead](#gethead).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Prima di chiamare, è necessario assicurarsi che l'elenco non sia vuoto `GetTail` . Se l'elenco è vuoto, la versione di debug del libreria Microsoft Foundation Class dichiara. Utilizzare [IsEmpty](#isempty) per verificare che l'elenco contenga elementi.
 
@@ -753,7 +754,7 @@ Rimuove tutti gli elementi dall'elenco e libera la `CObList` memoria associata.
 void RemoveAll();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se l'elenco è già vuoto, non viene generato alcun errore.
 
@@ -785,7 +786,7 @@ void RemoveAt(POSITION position);
 *position*<br/>
 Posizione dell'elemento da rimuovere dall'elenco.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando si rimuove un elemento da un `CObList` oggetto, il puntatore all'oggetto viene rimosso dall'elenco. È responsabilità dell'utente eliminare gli oggetti stessi.
 
@@ -826,7 +827,7 @@ CObject* RemoveHead();
 
 `CObject`Puntatore precedente all'inizio dell'elenco.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Prima di chiamare, è necessario assicurarsi che l'elenco non sia vuoto `RemoveHead` . Se l'elenco è vuoto, la versione di debug del libreria Microsoft Foundation Class dichiara. Utilizzare [IsEmpty](#isempty) per verificare che l'elenco contenga elementi.
 
@@ -855,7 +856,7 @@ CObject* RemoveTail();
 
 Puntatore all'oggetto in corrispondenza della parte finale dell'elenco.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Prima di chiamare, è necessario assicurarsi che l'elenco non sia vuoto `RemoveTail` . Se l'elenco è vuoto, la versione di debug del libreria Microsoft Foundation Class dichiara. Utilizzare [IsEmpty](#isempty) per verificare che l'elenco contenga elementi.
 
@@ -890,7 +891,7 @@ POSIZIONE dell'elemento da impostare.
 *newElement*<br/>
 `CObject`Puntatore da scrivere nell'elenco.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Una variabile di tipo POSITION è una chiave per l'elenco. Non è uguale a un indice e non è possibile operare su un valore di posizione autonomamente. `SetAt` scrive il `CObject` puntatore nella posizione specificata nell'elenco.
 
@@ -917,7 +918,7 @@ a CAge at $4D98 40
 a CAge at $4DB8 65
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>

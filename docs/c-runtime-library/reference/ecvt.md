@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _ecvt'
 title: _ecvt
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - converting double numbers
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
-ms.openlocfilehash: 227010fde5dc5ec82fc13c724c8d5a2f43788a8f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9226ac29827db8d412a1266eeba1ccd2b889e2ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234198"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332857"
 ---
 # <a name="_ecvt"></a>_ecvt
 
@@ -69,7 +70,7 @@ Segno del numero convertito.
 
 **_ecvt** restituisce un puntatore alla stringa di cifre; **Null** se si è verificato un errore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_ecvt** converte un numero a virgola mobile in una stringa di caratteri. Il parametro *value* è il numero a virgola mobile da convertire. Questa funzione Archivia fino a *contare* le cifre del *valore* come stringa e aggiunge un carattere null (' \ 0'). Se il numero di cifre in *value* supera il *conteggio*, la cifra di ordine inferiore viene arrotondata. Se sono presenti meno di un *numero* di cifre, la stringa viene riempita con zeri.
 
@@ -81,7 +82,7 @@ La differenza tra **_ecvt** e **_fcvt** è nell'interpretazione del parametro *c
 
 **_ecvt** e **_fcvt** utilizzano un singolo buffer allocato in modo statico per la conversione. Ogni chiamata a una di queste funzioni elimina il risultato della chiamata precedente.
 
-Questa funzione convalida i relativi parametri. Se *Dec* o *Sign* è **null**o *count* è 0, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e viene restituito **null** .
+Questa funzione convalida i relativi parametri. Se *Dec* o *Sign* è **null** o *count* è 0, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e viene restituito **null** .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 

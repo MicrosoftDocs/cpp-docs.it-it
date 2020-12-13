@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _cscanf, _cscanf_l, _cwscanf, _cwscanf_l'
 title: _cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 ms.date: 10/21/2019
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: 45dcbd93ab689c8c86ab35e53552a65f561dfd18
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 65c025c7a02c0bd9493bcaf8d6ff0e29c6c7a217
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234250"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332924"
 ---
 # <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
@@ -103,7 +104,7 @@ Impostazioni locali da usare.
 
 Numero di campi che sono stati convertiti ed assegnati correttamente. Il valore restituito non include i campi che sono stati letti ma non assegnati. Il valore restituito è **EOF** per un tentativo di lettura alla fine del file. Ciò può verificarsi quando viene reindirizzato l'input da tastiera al livello di riga di comando del sistema operativo. Un valore restituito pari a 0 indica che nessun campo è stato assegnato.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_cscanf** legge i dati direttamente dalla console di nei percorsi specificati dall' *argomento*. La funzione [_getche](getch-getwch.md) viene usata per leggere i caratteri. Ogni parametro facoltativo deve essere un puntatore a una variabile con un tipo che corrisponde a un identificatore di tipo nel *formato*. Il formato controlla l'interpretazione dei campi di input e ha lo stesso formato e la stessa funzione del parametro *Format* per la funzione [scanf](scanf-scanf-l-wscanf-wscanf-l.md) . Sebbene **_cscanf** in genere richiami il carattere di input, non esegue questa operazione se l'ultima chiamata è stata **_ungetch**.
 

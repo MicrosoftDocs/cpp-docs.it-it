@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __writemsr'
 title: __writemsr
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - wrmsr instruction
 - __writemsr intrinsic
 ms.assetid: 938b1553-51a8-4822-a818-6bed79b0fde5
-ms.openlocfilehash: 7819477edb8d4e6b18a1213a73ba67065ea7ff57
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 0ab7392d9df07a9083ca095bc7002a6bf7d45628
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219140"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331846"
 ---
 # <a name="__writemsr"></a>__writemsr
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Genera l'istruzione Register (`wrmsr`) specifica del modello di scrittura.
+Genera l'istruzione Register () specifica del modello di scrittura `wrmsr` .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -40,18 +41,18 @@ in Valore da scrivere.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`__writemsr`|x86, x64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Questa funzione può essere utilizzata solo in modalità kernel e questa routine è disponibile solo come funzione intrinseca.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

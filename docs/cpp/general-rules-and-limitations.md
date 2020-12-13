@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: regole e limitazioni generali'
 title: Regole e limitazioni generali
 ms.date: 11/04/2016
 ms.assetid: 6c48902d-4259-4761-95d4-e421d69aa050
-ms.openlocfilehash: 8d21f627f461dce90af93ca5c1af8c4a28098539
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 935befff4cce7f87217e1a05e8ca92835c82565d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213411"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332545"
 ---
 # <a name="general-rules-and-limitations"></a>Regole e limitazioni generali
 
@@ -85,6 +86,6 @@ ms.locfileid: "87213411"
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [dllexport, dllimport](../cpp/dllexport-dllimport.md)

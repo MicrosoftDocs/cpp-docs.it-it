@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: schema (accesso ai dati MFC)'
 title: Schema (accesso ai dati MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - schemas [C++], database
 - structures [C++]
 ms.assetid: 7d17e35f-1ccf-4853-b915-5b8c7a45b9ee
-ms.openlocfilehash: 0eac4f47c3d00c34c1aadaef18202a95f831ad82
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 87080cb05d22a5328e0e6ad5a36b25771d319209
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209093"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332423"
 ---
 # <a name="schema--mfc-data-access"></a>Schema (accesso ai dati MFC)
 
@@ -22,7 +23,7 @@ Uno schema di database descrive la struttura corrente delle tabelle e delle visu
 
 È inoltre possibile integrare il codice generato dalla creazione guidata in modo che funzioni con un database il cui schema non è del tutto conosciuto in fase di compilazione. Per ulteriori informazioni, vedere [Recordset: associazione dinamica di colonne di dati (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Programmazione dell'accesso ai dati (MFC/ATL)](../data/data-access-programming-mfc-atl.md)<br/>
 [SQL](../data/odbc/sql.md)<br/>

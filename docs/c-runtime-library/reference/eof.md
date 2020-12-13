@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _eof'
 title: _eof
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-ms.openlocfilehash: 5d00be1da0f329c43f1b6ea0f912ede74b307bbb
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 98e277c11755d6c3c7cb34a426e006a66f503193
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915050"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332817"
 ---
 # <a name="_eof"></a>_eof
 
@@ -59,7 +60,7 @@ Il descrittore del file che fa riferimento al file aperto.
 
 **_eof** restituisce 1 se la posizione corrente è la fine del file o 0 in caso contrario. Un valore restituito di-1 indica un errore. in questo caso, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EBADF**, che indica un descrittore di file non valido.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_eof** determina se è stata raggiunta la fine del file associato a *FD* .
 
@@ -67,7 +68,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|Intestazione facoltativa|
+|Funzione|Intestazione obbligatoria|Intestazione facoltativa|
 |--------------|---------------------|---------------------|
 |**_eof**|\<io.h>|\<errno.h>|
 
@@ -125,10 +126,10 @@ This file contains some text.
 Number of bytes read = 29
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione degli errori](../../c-runtime-library/error-handling-crt.md)<br/>
-[I/O a basso livello](../../c-runtime-library/low-level-i-o.md)<br/>
+[I/O di basso livello](../../c-runtime-library/low-level-i-o.md)<br/>
 [clearerr](clearerr.md)<br/>
 [feof](feof.md)<br/>
 [ferror](ferror.md)<br/>

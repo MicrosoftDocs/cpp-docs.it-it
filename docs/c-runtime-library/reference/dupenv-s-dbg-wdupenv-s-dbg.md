@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _dupenv_s_dbg, _wdupenv_s_dbg'
 title: _dupenv_s_dbg, _wdupenv_s_dbg
 ms.date: 11/04/2016
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - wdupenv_s_dbg function
 - _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
-ms.openlocfilehash: 6c61986184f93c6cf6e83b33f77dce2bd017cfae
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a12e5adc55cd69b8336b3f9f50d982f80ec1b070
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937684"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332892"
 ---
 # <a name="_dupenv_s_dbg-_wdupenv_s_dbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
 
@@ -72,16 +73,16 @@ Buffer per l'archiviazione del valore della variabile.
 *numberOfElements*<br/>
 Dimensioni del *buffer*.
 
-*varname*<br/>
+*VarName*<br/>
 Nome della variabile di ambiente.
 
 *blockType*<br/>
-Tipo di blocco di memoria richiesto: **_CLIENT_BLOCK** o **_NORMAL_BLOCK**.
+Tipo richiesto di blocco di memoria: **_CLIENT_BLOCK** o **_NORMAL_BLOCK**.
 
 *filename*<br/>
 Puntatore al nome del file di origine o **null**.
 
-*linenumber*<br/>
+*LineNumber*<br/>
 Numero di riga nel file di origine o **null**.
 
 ## <a name="return-value"></a>Valore restituito
@@ -92,11 +93,11 @@ Queste funzioni convalidano i relativi parametri. Se *buffer* o *VarName* è **n
 
 Se queste funzioni non sono in grado di allocare memoria sufficiente, il *buffer* viene impostato su **null** e *NumberOfElements* su 0 e viene restituito **ENOMEM**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Le funzioni **_dupenv_s_dbg** e **_wdupenv_s_dbg** sono identiche a **_dupenv_s** e **_wdupenv_s** , ad eccezione del fatto che, quando viene definito _ **debug** , queste funzioni usano la versione di debug di [malloc](malloc.md), [differenze](malloc-dbg.md), per allocare memoria per il valore della variabile di ambiente. Per informazioni sulle funzionalità di debug di **differenze**, vedere [differenze](malloc-dbg.md).
+Le funzioni **_dupenv_s_dbg** e **_wdupenv_s_dbg** sono identiche a **_dupenv_s** e **_wdupenv_s** ad eccezione del fatto che, quando viene definito **_DEBUG** , queste funzioni usano la versione di debug di [malloc](malloc.md), [_malloc_dbg](malloc-dbg.md), per allocare memoria per il valore della variabile di ambiente. Per informazioni sulle funzionalità di debug di **_malloc_dbg**, vedere [_malloc_dbg](malloc-dbg.md).
 
-Nella maggior parte dei casi non è necessario chiamare queste funzioni in modo esplicito. In alternativa, è possibile definire il flag **_CRTDBG_MAP_ALLOC**. Quando **_CRTDBG_MAP_ALLOC** è definito, le chiamate a **_dupenv_s** e **_wdupenv_s** vengono rimappate rispettivamente a **_dupenv_s_dbg** e **_wdupenv_s_dbg**, con *blockType* impostato su **_NORMAL_BLOCK**. Pertanto, non è necessario chiamare queste funzioni in modo esplicito a meno che non si desideri contrassegnare i blocchi dell'heap come **_CLIENT_BLOCK**. Per altre informazioni sui tipi di blocco, vedere [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details) (Tipi di blocchi sull'heap di debug).
+Nella maggior parte dei casi non è necessario chiamare queste funzioni in modo esplicito. In alternativa, è possibile definire il flag **_CRTDBG_MAP_ALLOC**. Quando **_CRTDBG_MAP_ALLOC** viene definito, le chiamate a **_dupenv_s** e **_wdupenv_s** vengono rimappate rispettivamente a **_dupenv_s_dbg** e **_wdupenv_s_dbg**, con *blockType* impostato su **_NORMAL_BLOCK**. Pertanto, non è necessario chiamare queste funzioni in modo esplicito a meno che non si desideri contrassegnare i blocchi heap come **_CLIENT_BLOCK**. Per altre informazioni sui tipi di blocco, vedere [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details) (Tipi di blocchi sull'heap di debug).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -144,7 +145,7 @@ nonexistentvariable = (null)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
-[Costanti di ambiente](../../c-runtime-library/environmental-constants.md)<br/>
+[Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Costanti ambientali](../../c-runtime-library/environmental-constants.md)<br/>
 [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md)<br/>
 [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md)<br/>

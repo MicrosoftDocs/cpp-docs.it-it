@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CNetAddressCtrl'
 title: Classe CNetAddressCtrl
 ms.date: 11/19/2018
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: e92ea79727248afd84dd08058ea8f23cc8d14f44
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 66f2bb647d02b262f9264d5a99f84a3fb23fc119
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686587"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331509"
 ---
 # <a name="cnetaddressctrl-class"></a>Classe CNetAddressCtrl
 
@@ -41,13 +42,13 @@ class CNetAddressCtrl : public CEdit
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CNetAddressCtrl:: CNetAddressCtrl](#cnetaddressctrl)|Costruisce un oggetto `CNetAddressCtrl`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CNetAddressCtrl:: create](#create)|Crea un controllo indirizzo di rete con gli stili specificati e lo associa all' `CNetAddressCtrl` oggetto corrente.|
 |[CNetAddressCtrl:: CreateEx](#createex)|Crea un controllo indirizzo di rete con gli stili estesi specificati e lo associa all' `CNetAddressCtrl` oggetto corrente.|
@@ -56,7 +57,7 @@ class CNetAddressCtrl : public CEdit
 |[CNetAddressCtrl:: GetAllowType](#getallowtype)|Recupera il tipo di indirizzo di rete che il controllo dell'indirizzo di rete corrente può supportare.|
 |[CNetAddressCtrl:: SetAllowType](#setallowtype)|Imposta il tipo di indirizzo di rete che il controllo dell'indirizzo di rete corrente può supportare.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il controllo dell'indirizzo di rete verifica che il formato dell'indirizzo immesso dall'utente sia corretto. Il controllo non si connette effettivamente all'indirizzo di rete. Il metodo [CNetAddressCtrl:: SetAllowType](#setallowtype) specifica uno o più tipi di indirizzo che il metodo [CNetAddressCtrl:: GetAddress](#getaddress) può analizzare e verificare. Un indirizzo può essere nel formato di un indirizzo IPv4, IPv6 o denominato per un server, una rete, un host o una destinazione dei messaggi broadcast. Se il formato dell'indirizzo non è corretto, è possibile usare il metodo [CNetAddressCtrl::D isplayerrortip](#displayerrortip) per visualizzare una finestra di messaggio infotip che punta graficamente alla casella di testo del controllo dell'indirizzo di rete e visualizza un messaggio di errore predefinito.
 
@@ -66,7 +67,7 @@ Nella figura seguente è illustrata una finestra di dialogo che contiene un cont
 
 ![Finestra di dialogo con controllo per l'indirizzo di rete e finestra popup](../../mfc/reference/media/cnetaddctrl.png "Finestra di dialogo con controllo per l'indirizzo di rete e finestra popup")
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 L'esempio di codice seguente è una parte di una finestra di dialogo che convalida un indirizzo di rete. I gestori eventi per tre pulsanti di opzione specificano che l'indirizzo di rete può essere uno dei tre tipi di indirizzo. L'utente immette un indirizzo nella casella di testo del controllo di rete, quindi preme un pulsante per convalidare l'indirizzo. Se l'indirizzo è valido, viene visualizzato un messaggio di operazione completata; in caso contrario, viene visualizzato il messaggio di errore infotip predefinito.
 
@@ -104,7 +105,7 @@ Costruisce un oggetto `CNetAddressCtrl`.
 CNetAddressCtrl();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare il metodo [CNetAddressCtrl:: create](#create) o [CNetAddressCtrl:: CreateEx](#createex) per creare un controllo di rete e collegarlo all' `CNetAddressCtrl` oggetto.
 
@@ -184,7 +185,7 @@ HRESULT DisplayErrorTip();
 
 Il valore `S_OK` se questo metodo ha esito positivo; in caso contrario, un codice di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare il metodo [CNetAddressCtrl:: SetAllowType](#setallowtype) per specificare i tipi di indirizzi che il controllo dell'indirizzo di rete corrente può supportare. Usare il metodo [CNetAddressCtrl:: GetAddress](#getaddress) per convalidare e analizzare l'indirizzo di rete immesso dall'utente. Usare il metodo [CNetAddressCtrl::D isplayerrortip](#displayerrortip) per visualizzare un messaggio di errore infotip se il metodo [CNetAddressCtrl:: GetAddress](#getaddress) ha esito negativo.
 
@@ -207,7 +208,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
 
 Il valore S_OK se il metodo ha esito positivo; in caso contrario, un codice di errore COM. Per ulteriori informazioni sui possibili codici di errore, vedere la sezione valore restituito della macro [NetAddr_GetAddress](/windows/win32/api/shellapi/nf-shellapi-netaddr_getaddress) .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se questo metodo ha esito positivo, la struttura [NET_ADDRESS_INFO](/windows/win32/shell/hkey-type) contiene informazioni aggiuntive sull'indirizzo di rete.
 
@@ -227,7 +228,7 @@ DWORD GetAllowType() const;
 
 Combinazione bit per bit (o) di flag che specifica i tipi di indirizzi che il controllo dell'indirizzo di rete è in grado di supportare. Per ulteriori informazioni, vedere [NET_STRING](/windows/win32/shell/net-string).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo messaggio richiama la macro [NetAddr_GetAllowType](/windows/win32/api/shellapi/nf-shellapi-netaddr_getallowtype) , descritta nell'Windows SDK. Tale macro invia il messaggio di NCM_GETALLOWTYPE.
 
@@ -248,13 +249,13 @@ in Combinazione bit per bit (o) di flag che specifica i tipi di indirizzi che il
 
 S_OK se questo metodo ha esito positivo; in caso contrario, un codice di errore COM.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare il metodo [CNetAddressCtrl:: SetAllowType](#setallowtype) per specificare i tipi di indirizzi che il controllo dell'indirizzo di rete corrente può supportare. Usare il metodo [CNetAddressCtrl:: GetAddress](#getaddress) per convalidare e analizzare l'indirizzo di rete immesso dall'utente. Usare il metodo [CNetAddressCtrl::D isplayerrortip](#displayerrortip) per visualizzare un messaggio di errore infotip se il metodo [CNetAddressCtrl:: GetAddress](#getaddress) ha esito negativo.
 
 Questo messaggio richiama la macro [NetAddr_SetAllowType](/windows/win32/api/shellapi/nf-shellapi-netaddr_setallowtype) , descritta nell'Windows SDK. Tale macro invia il messaggio di NCM_SETALLOWTYPE.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CNetAddressCtrl](../../mfc/reference/cnetaddressctrl-class.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>

@@ -1,14 +1,15 @@
 ---
+description: 'Altre informazioni su: file di intestazione (C++)'
 title: File di intestazione (C++)
 ms.date: 12/11/2019
 helpviewer_keywords:
 - header files [C++]
-ms.openlocfilehash: 0b76773b8b7d55645c807588fe41b242df9eea2f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 22ef05c723368f0456ee880729031610b34876d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227452"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332521"
 ---
 # <a name="header-files-c"></a>File di intestazione (C++)
 

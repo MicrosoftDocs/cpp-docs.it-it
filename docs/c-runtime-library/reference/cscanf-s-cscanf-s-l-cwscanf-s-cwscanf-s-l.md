@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l'
 title: _cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - _tcscanf_s function
 - tcscanf_s_l function
 ms.assetid: 9ccab74d-916f-42a6-93d8-920525efdf4b
-ms.openlocfilehash: a869ae4ab1b5f81c4198f620662604b79f19c2ab
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e379d454b9acd9cda75eb41721f55f0818004858
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234237"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332940"
 ---
 # <a name="_cscanf_s-_cscanf_s_l-_cwscanf_s-_cwscanf_s_l"></a>_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
 
@@ -105,11 +106,11 @@ Numero di campi che sono stati convertiti ed assegnati correttamente. Il valore 
 
 Queste funzioni convalidano i relativi parametri. Se *Format* è un puntatore null, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EOF** e **errno** viene impostato su **EINVAL**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_cscanf_s** legge i dati direttamente dalla console di nei percorsi specificati dall' *argomento*. La funzione [_getche](getch-getwch.md) viene usata per leggere i caratteri. Ogni parametro facoltativo deve essere un puntatore a una variabile con un tipo che corrisponde a un identificatore di tipo nel *formato*. Il formato controlla l'interpretazione dei campi di input e ha lo stesso formato e la stessa funzione del parametro *Format* per la funzione [scanf_s](scanf-scanf-l-wscanf-wscanf-l.md) . Sebbene **_cscanf_s** in genere richiami il carattere di input, non esegue questa operazione se l'ultima chiamata è stata **_ungetch**.
 
-Analogamente ad altre versioni sicure delle funzioni nella famiglia **scanf** , **_cscanf_s** e **_cswscanf_s** richiedono argomenti di dimensione per i caratteri di campo di tipo **c**, **c**, **s**, **s**e **[**. Per altre informazioni, vedere [Specifica della larghezza per scanf](../../c-runtime-library/scanf-width-specification.md).
+Analogamente ad altre versioni sicure delle funzioni nella famiglia **scanf** , **_cscanf_s** e **_cswscanf_s** richiedono argomenti di dimensione per i caratteri di campo di tipo **c**, **c**, **s**, **s** e **[**. Per altre informazioni, vedere [Specifica della larghezza per scanf](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
 > Il parametro size è di tipo **`unsigned`** , non **size_t**.

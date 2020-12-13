@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: isinf'
 title: isinf
 ms.date: 01/31/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - math/isinf
 helpviewer_keywords:
 - isinf function
-ms.openlocfilehash: 7366f340477bf1bb50ebe1e53bcec1f3e16e0863
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f174855ddbb8cc43fd7338d4254c0f03bf53967d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234094"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332640"
 ---
 # <a name="isinf"></a>isinf
 
@@ -39,7 +40,7 @@ Valore a virgola mobile da verificare.
 
 **isinf** restituisce un valore diverso da zero ( **`true`** nel codice C++) se l'argomento *x* è un infinito positivo o negativo. **isinf** restituisce 0 ( **`false`** nel codice C++) se l'argomento è finito o NaN. Sia i valori a virgola mobile normali che quelli subnormali sono considerati finiti.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 **isinf** è una macro quando viene compilata come C e una funzione di modello inline quando viene compilata come C++.
 
@@ -51,7 +52,7 @@ Valore a virgola mobile da verificare.
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>

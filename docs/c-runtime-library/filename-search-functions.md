@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: funzioni di ricerca filename'
 title: Funzioni di ricerca dei nomi file
 ms.date: 11/04/2016
 api_location:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: fb5cc0e18d150d4171e33038e27810989c0f503b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1ab547de95906909a75bdd73f653c5cdae519879
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226242"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332943"
 ---
 # <a name="filename-search-functions"></a>Funzioni di ricerca dei nomi file
 
@@ -37,7 +38,7 @@ Queste funzioni eseguono e terminano le ricerche per i nomi di file specificati:
 
 - [_findclose](../c-runtime-library/reference/findclose.md)
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione `_findfirst` fornisce informazioni sulla prima istanza di un nome file che corrisponde al file specificato nell'argomento `filespec` . In `filespec` è possibile usare qualsiasi combinazione di caratteri jolly supportata dal sistema operativo host.
 
@@ -104,7 +105,7 @@ Anche le funzioni `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64`e `_wfi
 |`_finddata32i64_t`, `_wfinddata32i64_t`|`__time32_t`|**`__int64`**|
 |`_finddata64i32_t`, `_wfinddata64i32_t`|`__time64_t`|`_fsize_t`|
 
-`_fsize_t`è **`typedef`** per **`unsigned long`** (32 bit).
+`_fsize_t` è **`typedef`** per **`unsigned long`** (32 bit).
 
 ## <a name="example"></a>Esempio
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: isleadbyte, _isleadbyte_l'
 title: isleadbyte, _isleadbyte_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: 1d2202bd1ca59ee42287c398da429df132e24fcb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 544adda1b794db6a003e3ae7d51b15456574f875
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234081"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332652"
 ---
 # <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte, _isleadbyte_l
 
@@ -64,7 +65,7 @@ Valore Integer da testare.
 
 **isleadbyte** restituisce un valore diverso da zero se l'argomento soddisfa la condizione di test oppure 0 in caso contrario. Nelle impostazioni locali "C" e nelle impostazioni locali del set di caratteri a byte singolo (SBCS), **isleadbyte** restituisce sempre 0.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La macro **isleadbyte** restituisce un valore diverso da zero se il relativo argomento è il primo byte di un carattere multibyte. **isleadbyte** produce un risultato significativo per qualsiasi argomento integer da-1 (**EOF**) a **UCHAR_MAX** (0xFF), inclusi.
 
@@ -89,7 +90,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classificazione byte](../../c-runtime-library/byte-classification.md)<br/>
 [Impostazioni locali](../../c-runtime-library/locale.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Scopri di più su: ASCII, __isascii, iswascii'
 title: isascii, __isascii, iswascii
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - istascii function
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
-ms.openlocfilehash: 3e04b85c9ce7519593802c21311315d534dce6a5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0d0a7964ba5b9a3133f100ea94fd4bac95407627
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919781"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332736"
 ---
 # <a name="isascii-__isascii-iswascii"></a>isascii, __isascii, iswascii
 
@@ -72,7 +73,7 @@ Valore Integer da testare.
 
 Ognuna di queste routine restituisce un valore diverso da zero se **c** è una rappresentazione particolare di un carattere ASCII. **__isascii** restituisce un valore diverso da zero se **c** è un carattere ASCII (nell'intervallo tra 0x00 e 0x7F). **iswascii** restituisce un valore diverso da zero se **c** è una rappresentazione a caratteri wide di un carattere ASCII. Ognuna di queste routine restituisce 0 se **c** non soddisfa la condizione di test.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Sia **__isascii** che **iswascii** vengono implementati come macro a meno che non sia definita la macro del preprocessore _CTYPE_DISABLE_MACROS.
 
@@ -90,13 +91,13 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**caratteri**di **__isascii**|C: \<ctype.h><br /><br /> C++: \<cctype> o \<ctype.h>|
-|**iswascii**|C: \<wctype.h>, \<ctype.h> o \<wchar.h><br /><br /> C++: \<cwctype>, \<cctype>, \<wctype.h>, \<ctype.h> o \<wchar.h>|
+|**caratteri** di **__isascii**|C \<ctype.h><br /><br /> C++: \<cctype> o \<ctype.h>|
+|**iswascii**|C: \<wctype.h> , \<ctype.h> o \<wchar.h><br /><br /> C++: \<cwctype> , \<cctype> , \<wctype.h> , \<ctype.h> o \<wchar.h>|
 
 Le funzioni **ASCII**, **__isascii** e **iswascii** sono specifiche di Microsoft. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Classificazione di caratteri](../../c-runtime-library/character-classification.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[is, isw Routines](../../c-runtime-library/is-isw-routines.md)<br/>
+[Classificazione caratteri](../../c-runtime-library/character-classification.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[is, ISW routines](../../c-runtime-library/is-isw-routines.md)<br/>

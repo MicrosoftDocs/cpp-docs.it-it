@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _heapwalk'
 title: _heapwalk
 ms.date: 11/04/2016
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - heapwalk function
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
-ms.openlocfilehash: 8dc7ee9335f227bde93a414748ff70b165c44f8d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 08d877757a443a52a94952032291e69f3466f007
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954780"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332785"
 ---
 # <a name="_heapwalk"></a>_heapwalk
 
@@ -67,9 +68,9 @@ Buffer che deve contenere le informazioni sull'heap.
 
 Inoltre, se si verifica un errore, **_heapwalk** imposta **errno** su **ENOSYS**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-La funzione **_heapwalk** consente di eseguire il debug dei problemi relativi all'heap nei programmi. La funzione esamina l'heap, attraversando una voce per chiamata e restituisce un puntatore a una struttura di tipo **_HEAPINFO** che contiene informazioni sulla voce dell'heap successiva. Il tipo **_HEAPINFO** , definito in malloc. h, contiene gli elementi seguenti.
+La funzione **_heapwalk** consente di eseguire il debug dei problemi relativi all'heap nei programmi. La funzione esamina l'heap, attraversando una voce per chiamata e restituisce un puntatore a una struttura di tipo **_HEAPINFO** che contiene informazioni sulla voce dell'heap successiva. Il tipo di **_HEAPINFO** , definito in malloc. h, contiene gli elementi seguenti.
 
 |Campo|Significato|
 |-|-|
@@ -77,7 +78,7 @@ La funzione **_heapwalk** consente di eseguire il debug dei problemi relativi al
 |`size_t _size`|Dimensioni della voce dell'heap.|
 |`int _useflag`|Flag che indica se la voce dell'heap è in uso.|
 
-Una chiamata a **_heapwalk** che restituisce **_HEAPOK** archivia le dimensioni della voce nel campo **_size** e imposta il campo **_useflag** su **_FREEENTRY** o **_USEDENTRY** (entrambi sono costanti definite in malloc. h). Per ottenere queste informazioni sulla prima voce nell'heap, passare **_heapwalk** un puntatore a una struttura **_HEAPINFO** il cui membro **_pentry** è **null**. Se il sistema operativo non supporta **_heapwalk**(ad esempio, Windows 98), la funzione restituisce **_HEAPEND** e imposta **errno** su **ENOSYS**.
+Una chiamata a **_heapwalk** che restituisce **_HEAPOK** archivia la dimensione della voce nel campo **_size** e imposta il campo **_useflag** su **_FREEENTRY** o **_USEDENTRY** (entrambi sono costanti definite in malloc. h). Per ottenere queste informazioni sulla prima voce nell'heap, passare **_heapwalk** un puntatore a una struttura **_HEAPINFO** il cui membro **_pentry** è **null**. Se il sistema operativo non supporta **_heapwalk**(ad esempio, Windows 98), la funzione restituisce **_HEAPEND** e **errno** viene impostato su **ENOSYS**.
 
 Questa funzione convalida il relativo parametro. Se *entryinfo* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e la funzione restituisce **_HEAPBADPTR**.
 
@@ -87,7 +88,7 @@ Questa funzione convalida il relativo parametro. Se *entryinfo* è un puntatore 
 |-------------|---------------------|---------------------|
 |**_heapwalk**|\<malloc.h>|\<errno.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

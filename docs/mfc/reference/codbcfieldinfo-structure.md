@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: struttura CODBCFieldInfo'
 title: Struttura CODBCFieldInfo
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - ODBC [MFC], data source information
 - CODBCFieldInfo structure [MFC]
 ms.assetid: 92598b4f-facc-4108-b282-63a179ff79ab
-ms.openlocfilehash: bc2ad0c8319a60b773211dbd6b52b57bb2dbcafb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7cd7072719bec46cfbfaeb02c5c86d714c4de13c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388195"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331411"
 ---
 # <a name="codbcfieldinfo-structure"></a>Struttura CODBCFieldInfo
 
-Il `CODBCFieldInfo` struttura contiene informazioni sui campi in un'origine dati ODBC.
+La `CODBCFieldInfo` struttura contiene informazioni sui campi in un'origine dati ODBC.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -37,27 +38,27 @@ struct CODBCFieldInfo
 Nome del campo.
 
 *m_nSQLType*<br/>
-Il tipo di dati SQL del campo. Può trattarsi di un tipo di dati SQL ODBC o un tipo di dati specifici del driver SQL. Per un elenco di tipi di dati SQL ODBC validi, vedere "Tipi di dati di SQL" in Windows SDK. Per informazioni sui tipi di dati specifici del driver SQL, vedere la documentazione del driver.
+Tipo di dati SQL del campo. Può trattarsi di un tipo di dati SQL ODBC o di un tipo di dati SQL specifico del driver. Per un elenco dei tipi di dati ODBC SQL validi, vedere "tipi di dati SQL" nella Windows SDK. Per informazioni sui tipi di dati SQL specifici del driver, vedere la documentazione del driver.
 
 *m_nPrecision*<br/>
-La precisione massima del campo. Per informazioni dettagliate, vedere "Precisione, scala, lunghezza e dimensioni di visualizzazione" di Windows SDK.
+Precisione massima del campo. Per informazioni dettagliate, vedere "precisione, scala, lunghezza e dimensioni di visualizzazione" nel Windows SDK.
 
 *m_nScale*<br/>
-Scala del campo. Per informazioni dettagliate, vedere "Precisione, scala, lunghezza e dimensioni di visualizzazione" di Windows SDK.
+Scala del campo. Per informazioni dettagliate, vedere "precisione, scala, lunghezza e dimensioni di visualizzazione" nel Windows SDK.
 
 *m_nNullability*<br/>
-Indica se il campo accetta un valore Null. Può trattarsi di uno dei due valori: SQL_NULLABLE se il campo accetta valori Null o SQL_NO_NULLS se il campo non accetta valori Null.
+Indica se il campo accetta un valore null. Può essere uno dei due valori seguenti: SQL_NULLABLE se il campo accetta valori null oppure SQL_NO_NULLS se il campo non accetta valori null.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Per recuperare queste informazioni, chiamare [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo).
+Per recuperare queste informazioni, chiamare [CRecordset:: GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo).
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** AFXDB. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
-[CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo)<br/>
-[CRecordset::GetFieldValue](../../mfc/reference/crecordset-class.md#getfieldvalue)
+[CRecordset:: GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo)<br/>
+[CRecordset:: GetFieldValue](../../mfc/reference/crecordset-class.md#getfieldvalue)

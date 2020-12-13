@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: orchestrazione di altre azioni della finestra'
 title: Orchestrazione di altre azioni della finestra
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,17 +10,17 @@ helpviewer_keywords:
 - frame windows [MFC], semimodal states
 - context-sensitive Help [MFC]
 ms.assetid: 5f34eea8-2bf8-4479-95c7-45e8f443db8f
-ms.openlocfilehash: b92a42766b96836dad527ce9191901270ff369ad
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5cbe33e3df525ecbdc332f06ab613d87df3dbc16
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622151"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331796"
 ---
 # <a name="orchestrating-other-window-actions"></a>Orchestrazione di altre azioni della finestra
 
 La finestra cornice orchestra gli Stati semimodali, ad esempio la Guida sensibile al contesto e l'anteprima di stampa. Per una descrizione del ruolo della finestra cornice nell'anteprima di stampa, vedere [stampa e anteprima di stampa](printing-and-print-preview.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Utilizzo di finestre cornice](using-frame-windows.md)
+[Uso di finestre cornice](using-frame-windows.md)

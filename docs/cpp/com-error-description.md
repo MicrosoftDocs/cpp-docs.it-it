@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _com_error::D Descrizione'
 title: _com_error::Description
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - Description method [C++]
 ms.assetid: 88191e24-4ee8-44a6-8c4c-3758e22e0548
-ms.openlocfilehash: de2275f096fe2fde96e64cbc3034602a1fde5e88
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6404d16361abe81d9e234a6b63039a7476d91ef1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180771"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332556"
 ---
 # <a name="_com_errordescription"></a>_com_error::Description
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Chiama `IErrorInfo::GetDescription` funzione.
+Chiama la `IErrorInfo::GetDescription` funzione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -27,14 +28,14 @@ _bstr_t Description( ) const;
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce il risultato di `IErrorInfo::GetDescription` per l'oggetto `IErrorInfo` registrato nell'oggetto `_com_error`. La stringa `BSTR` risultante viene incapsulata in un oggetto `_bstr_t`. Se non viene registrato alcun `IErrorInfo`, viene restituita una `_bstr_t`vuota.
+Restituisce il risultato di `IErrorInfo::GetDescription` per l' `IErrorInfo` oggetto registrato nell' `_com_error` oggetto. La stringa `BSTR` risultante viene incapsulata in un oggetto `_bstr_t`. Se non `IErrorInfo` viene registrato alcun oggetto, viene restituito un oggetto vuoto `_bstr_t` .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Chiama la funzione `IErrorInfo::GetDescription` e recupera `IErrorInfo` registrati all'interno dell'oggetto `_com_error`. Qualsiasi errore durante la chiamata del metodo `IErrorInfo::GetDescription` viene ignorato.
+Chiama la `IErrorInfo::GetDescription` funzione e recupera i `IErrorInfo` record registrati all'interno dell' `_com_error` oggetto. Qualsiasi errore durante la chiamata del `IErrorInfo::GetDescription` metodo viene ignorato.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe _com_error](../cpp/com-error-class.md)

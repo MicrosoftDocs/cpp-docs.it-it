@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: imaxdiv'
 title: imaxdiv
 ms.date: 04/05/2018
 api_name:
@@ -24,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-ms.openlocfilehash: 298356da8e8e76c132b963ef4f71db6a3d0e74f7
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3e1f417c1fb45b452b3cd07560bfec68d21fd1a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505627"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332766"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -56,9 +57,9 @@ Denominatore.
 
 **imaxdiv** chiamato con argomenti di tipo [intmax_t](../../c-runtime-library/standard-types.md) restituisce una struttura di tipo [imaxdiv_t](../../c-runtime-library/standard-types.md) che comprende il quoziente e il resto.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **imaxdiv** divide i *numeri* per *Denom* e quindi calcola il quoziente e il resto. La **struttura imaxdiv_t** contiene il quoziente **, intmax_t** **quot**e il resto **intmax_t** **REM**. Il segno del quoziente è identico a quello del quoziente matematico. Il valore assoluto del quoziente è l'intero più grande che è minore del valore assoluto del quoziente matematico. Se il denominatore è 0, il programma termina con un messaggio di errore.
+La funzione **imaxdiv** divide i *numeri* per *Denom* e quindi calcola il quoziente e il resto. La **struttura imaxdiv_t** contiene il quoziente **, intmax_t** **quot** e il resto **intmax_t** **REM**. Il segno del quoziente è identico a quello del quoziente matematico. Il valore assoluto del quoziente è l'intero più grande che è minore del valore assoluto del quoziente matematico. Se il denominatore è 0, il programma termina con un messaggio di errore.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -103,7 +104,7 @@ The call to imaxdiv(9460730470000000, 8766)
 results in a quotient of 1079252848505, and a remainder of 5170
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [div](div.md)<br/>
