@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2109'
 title: Errore del compilatore C2109
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2109
 ms.assetid: 2d1ac79d-a985-4904-a38b-b270578d664d
-ms.openlocfilehash: 109b4693a07374f05e8b51c73c15d04c6d9793cd
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b47a0034aade2c3afda3e6785fa2dcd3215b3356
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755733"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341282"
 ---
 # <a name="compiler-error-c2109"></a>Errore del compilatore C2109
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _setmbcp'
 title: _setmbcp
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-ms.openlocfilehash: 9a981c40b9e525ba1ffc1f2198f2b6a859fd9ac7
-ms.sourcegitcommit: b51703a96ee35ee2376d5f0775b70f03ccbe6d9a
+ms.openlocfilehash: fe69360de2e6e0ebdea8c700ab398d56e669f022
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88086968"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342218"
 ---
 # <a name="_setmbcp"></a>_setmbcp
 
@@ -50,14 +51,14 @@ int _setmbcp(
 
 ### <a name="parameters"></a>Parametri
 
-*CodePage*<br/>
+*codepage*<br/>
 Nuova impostazione della tabella codici per le routine multibyte indipendenti dalle impostazioni locali.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce 0 se la tabella codici è impostata correttamente. Se per *codepage*viene specificato un valore di tabella codici non valido, restituisce-1 e l'impostazione della tabella codici è invariata. Imposta **errno** su **EINVAL** se si verifica un errore di allocazione della memoria.
+Restituisce 0 se la tabella codici è impostata correttamente. Se per *codepage* viene specificato un valore di tabella codici non valido, restituisce-1 e l'impostazione della tabella codici è invariata. Imposta **errno** su **EINVAL** se si verifica un errore di allocazione della memoria.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_setmbcp** specifica una nuova tabella codici multibyte. Per impostazione predefinita, il sistema di runtime imposta automaticamente la tabella codici multibyte sulla tabella codici ANSI predefinita del sistema. L'impostazione della tabella codici multibyte influisce su tutte le routine multibyte non dipendenti dalle impostazioni locali. Tuttavia, è possibile indicare **_setmbcp** di usare la tabella codici definita per le impostazioni locali correnti. vedere l'elenco seguente di costanti manifeste e i risultati del comportamento associati. Per un elenco delle routine multibyte dipendenti dalla tabella codici delle impostazioni locali, anziché dalla tabella codici multibyte, vedere [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).
 
@@ -85,7 +86,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [_getmbcp](getmbcp.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>

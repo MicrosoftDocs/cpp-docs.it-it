@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l'
 title: _vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l
 ms.date: 11/04/2016
 api_name:
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - _vsctprintf_p function
 - vscprintf_p_l function
 ms.assetid: 5da920b3-8652-4ee9-b19e-5aac3ace9d03
-ms.openlocfilehash: 102ec617e42061e673cd14aea9c96916c907cf58
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fea3af0efc6940adcde6c5ab4ff2f8ae49c79cf5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945435"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342179"
 ---
 # <a name="_vscprintf_p-_vscprintf_p_l-_vscwprintf_p-_vscwprintf_p_l"></a>_vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l
 
@@ -89,17 +90,17 @@ Puntatore a un elenco di argomenti.
 *locale*<br/>
 Impostazioni locali da usare.
 
-Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Per altre informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="return-value"></a>Valore restituito
 
 **_vscprintf_p** restituisce il numero di caratteri che verrebbero generati se la stringa a cui punta l'elenco di argomenti è stata stampata o inviata a un file o a un buffer usando i codici di formattazione specificati. Il valore restituito non include il carattere Null di terminazione. **_vscwprintf_p** esegue la stessa funzione per i caratteri wide.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Queste funzioni differiscono da **_vscprintf** e **_vscwprintf** solo perché supportano la possibilità di specificare l'ordine in cui gli argomenti vengono utilizzati. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).
+Queste funzioni differiscono da **_vscprintf** e **_vscwprintf** solo perché supportano la possibilità di specificare l'ordine in cui gli argomenti vengono utilizzati. Per altre informazioni, vedere [Parametri posizionali printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
-Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
+Le versioni di queste funzioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
 
 Se *Format* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono-1 e impostano **errno** su **EINVAL**.
 
@@ -126,7 +127,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 Vedere l'esempio per [vsprintf](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Funzioni vprintf](../../c-runtime-library/vprintf-functions.md)<br/>
 [_scprintf_p, _scprintf_p_l, _scwprintf_p, _scwprintf_p_l](scprintf-p-scprintf-p-l-scwprintf-p-scwprintf-p-l.md)<br/>

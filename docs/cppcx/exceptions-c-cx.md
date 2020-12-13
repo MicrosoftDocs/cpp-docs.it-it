@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: eccezioni (C++/CX)'
 title: Eccezioni (C++/CX)
 ms.date: 07/02/2019
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-ms.openlocfilehash: 7b4475cfa92aa952dd5a2996508d9343255b7ed2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9bc04febf0d4b13a635ded6807e0cc77654dfdb0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231013"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341945"
 ---
 # <a name="exceptions-ccx"></a>Eccezioni (C++/CX)
 
@@ -27,7 +28,7 @@ Non puoi derivare un tipo di eccezione personale da `Platform::Exception`. Per g
 
 Nella tabella seguente sono elencate le eccezioni standard.
 
-|Nome|HRESULT sottostante|Descrizione|
+|Nome|HRESULT sottostante|Description|
 |----------|------------------------|-----------------|
 |COMException|*HRESULT definito dall'utente*|Generata quando viene restituito un HRESULT non riconosciuto da una chiamata a un metodo COM.|
 |AccessDeniedException|E \_ AccessDenied|Generata quando viene negato l'accesso a una risorsa o a una funzionalità.|
@@ -49,7 +50,7 @@ Nella tabella seguente sono elencate le eccezioni standard.
 
 Tutte le eccezioni presentano una proprietà [HResult](platform-comexception-class.md#hresult) e una proprietà [Message](platform-comexception-class.md#message) . La proprietà [Exception::HResult](platform-exception-class.md#hresult) ottiene il valore HRESULT numerico sottostante dell'eccezione. La proprietà [Exception::Message](platform-exception-class.md#message) ottiene la stringa fornita dal sistema che descrive l'eccezione. In Windows 8 il messaggio è disponibile solo nel debugger ed è di sola lettura. Ciò significa che non puoi modificarlo quando generi di nuovo l'eccezione. In Windows 8.1 puoi accedere alla stringa di messaggio a livello di codice e fornire un nuovo messaggio se generi di nuovo l'eccezione. Migliori informazioni sullo stack di chiamate sono inoltre disponibili nel debugger, inclusi gli stack di chiamate per le chiamate asincrone.
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 Questo esempio illustra come generare un'eccezione Windows Runtime per le operazioni sincrone:
 
@@ -97,11 +98,11 @@ void App::OnUnhandledException(Platform::Object^ sender, Windows::ApplicationMod
 }
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 C++/CX non usa la **`finally`** clausola.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimenti per il linguaggio C++/CX](visual-c-language-reference-c-cx.md)<br/>
 [Riferimenti agli spazi dei nomi](namespaces-reference-c-cx.md)

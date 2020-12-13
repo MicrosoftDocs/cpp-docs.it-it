@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: raccolte (C++/CX)'
 title: Raccolte (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: 84c6ecad5ffb4920972faf5aa564103ec1f5b5df
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: 4843441b5d5091bea36ff8c74bd84bddd5f7fa4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610946"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342049"
 ---
 # <a name="collections-ccx"></a>Raccolte (C++/CX)
 
@@ -57,7 +58,7 @@ Qualsiasi elemento da archiviare in [Platform::Collections::Vector](../cppcx/pla
 
 ## <a name="vectorproxy-elements"></a>Elementi VectorProxy
 
-[Platform:: Collections:: oggetto VectorIterator](../cppcx/platform-collections-vectoriterator-class.md) e [Platform:: Collections:: oggetto VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md) consentono l'uso di `range for` cicli e algoritmi come [std:: Sort](../standard-library/algorithm-functions.md#sort) con un contenitore [ \<T> IVector](/uwp/api/windows.foundation.collections.ivector-1) . Tuttavia, gli elementi `IVector` non sono accessibili attraverso la dereferenziazione del puntatore C++, ma solo attraverso i metodi [GetAt](/uwp/api/windows.foundation.collections.ivector-1.getat) e [SetAt](/uwp/api/windows.foundation.collections.ivector-1.setat) . Pertanto, questi iteratori utilizzano le classi proxy `Platform::Details::VectorProxy<T>` e `Platform::Details::ArrowProxy<T>` per fornire l'accesso ai singoli elementi tramite __\*__ __->__ gli operatori, e __ \[ ]__ , come richiesto dalla libreria standard. In linea puramente teorica, dato un elemento `IVector<Person^> vec`, il tipo di `*begin(vec)` è `VectorProxy<Person^>`. L'oggetto proxy, tuttavia, è quasi sempre trasparente al codice utente. Questi oggetti proxy non sono documentati in quanto riservati al solo uso interno da parte degli iteratori, è tuttavia utile conoscere il funzionamento del meccanismo.
+[Platform:: Collections:: oggetto VectorIterator](../cppcx/platform-collections-vectoriterator-class.md) e [Platform:: Collections:: oggetto VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md) consentono l'uso di `range for` cicli e algoritmi come [std:: Sort](../standard-library/algorithm-functions.md#sort) con un contenitore [ \<T> IVector](/uwp/api/windows.foundation.collections.ivector-1) . Tuttavia, gli elementi `IVector` non sono accessibili attraverso la dereferenziazione del puntatore C++, ma solo attraverso i metodi [GetAt](/uwp/api/windows.foundation.collections.ivector-1.getat) e [SetAt](/uwp/api/windows.foundation.collections.ivector-1.setat) . Pertanto, questi iteratori utilizzano le classi proxy `Platform::Details::VectorProxy<T>` e `Platform::Details::ArrowProxy<T>` per fornire l'accesso ai singoli elementi tramite __\*__ __->__ gli operatori, e __\[ ]__ , come richiesto dalla libreria standard. In linea puramente teorica, dato un elemento `IVector<Person^> vec`, il tipo di `*begin(vec)` è `VectorProxy<Person^>`. L'oggetto proxy, tuttavia, è quasi sempre trasparente al codice utente. Questi oggetti proxy non sono documentati in quanto riservati al solo uso interno da parte degli iteratori, è tuttavia utile conoscere il funzionamento del meccanismo.
 
 Quando usi un ciclo `range for` sui contenitori `IVector` , usa `auto&&` per consentire l'associazione corretta della variabile iteratore agli elementi `VectorProxy` . Se si usa **`auto`** o `auto&` , viene generato un avviso del compilatore C4239 che `VectoryProxy` viene indicato nel testo dell'avviso.
 
@@ -143,7 +144,7 @@ Nella tabella seguente sono elencati gli iteratori e le funzioni disponibili.
 
 I delegati [Windows::Foundation::Collections::VectorChangedEventHandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1) e [Windows::Foundation::Collections::MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2) specificano le firme per i gestori eventi per gli eventi di modifica delle raccolte. La classe di enumerazione pubblica [Windows::Foundation::Collections::CollectionChange](/uwp/api/windows.foundation.collections.collectionchange) e le classi di riferimento `Platform::Collection::Details::MapChangedEventArgs` e `Platform::Collections::Details::VectorChangedEventArgs` archiviano gli argomenti degli eventi per determinare la causa degli eventi. I `*EventArgs` tipi sono definiti nello `Details` spazio dei nomi perché non è necessario costruirli o utilizzarli in modo esplicito quando si usa `Map` o `Vector` .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Sistema di tipi](../cppcx/type-system-c-cx.md)<br/>
 [Riferimenti per il linguaggio C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>

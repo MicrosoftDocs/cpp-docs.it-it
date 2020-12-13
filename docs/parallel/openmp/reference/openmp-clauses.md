@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: clausole OpenMP'
 title: Clausole OpenMP
 ms.date: 03/20/2019
 f1_keywords:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - schedule OpenMP clause
 - shared OpenMP clause
 ms.assetid: 806e7d8f-b204-4e4c-a12c-273ab540a7ca
-ms.openlocfilehash: 495f77003fa43922d49f2fc5203076cbf927f86f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3bdcb496238b2f8acef85819c43348c095293287
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505936"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342413"
 ---
 # <a name="openmp-clauses"></a>Clausole OpenMP
 
@@ -59,7 +60,7 @@ Per gli attributi di condivisione dei dati:
 
 |Clausola|Descrizione|
 |------|-----------|
-|[private](#private-openmp)|Specifica che ogni thread deve avere una propria istanza di una variabile.|
+|[privata](#private-openmp)|Specifica che ogni thread deve avere una propria istanza di una variabile.|
 |[firstprivate](#firstprivate)|Specifica che ogni thread deve avere una propria istanza di una variabile e che la variabile deve essere inizializzata con il valore della variabile, perché esiste prima del costrutto parallelo.|
 |[lastprivate](#lastprivate)|Specifica che la versione del contesto di inclusione della variabile è impostata su un uguale alla versione privata del thread che esegue l'iterazione finale (costrutto del ciclo for) o dell'ultima sezione (#pragma sezioni).|
 |[condiviso](#shared-openmp)|Specifica che una o più variabili devono essere condivise tra tutti i thread.|
@@ -81,7 +82,7 @@ copyin(var)
 *var*<br/>
 `threadprivate`Variabile che verrà inizializzata con il valore della variabile nel thread master, così come esiste prima del costrutto parallelo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `copyin` si applica alle direttive seguenti:
 
@@ -108,7 +109,7 @@ copyprivate(var)
 *var*<br/>
 Una o più variabili da condividere. Se viene specificata più di una variabile, separare i nomi delle variabili con una virgola.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `copyprivate` si applica alla direttiva [singola](openmp-directives.md#single) .
 
@@ -188,7 +189,7 @@ Specifica il comportamento delle variabili senza ambito in un'area parallela.
 default(shared | none)
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `shared`, che è attivo se la `default` clausola non è specificata, significa che qualsiasi variabile in un'area parallela verrà considerata come se fosse specificata con la clausola [Shared](#shared-openmp) . `none` indica che qualsiasi variabile usata in un'area parallela che non ha come ambito la clausola [private](#private-openmp), [Shared](#shared-openmp), [Reduction](#reduction), [firstprivate](#firstprivate)o [lastprivate](#lastprivate) provocherà un errore del compilatore.
 
@@ -217,7 +218,7 @@ firstprivate(var)
 *var*<br/>
 La variabile per avere istanze in ogni thread e che verrà inizializzata con il valore della variabile, perché esiste prima del costrutto parallelo. Se viene specificata più di una variabile, separare i nomi delle variabili con una virgola.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `firstprivate` si applica alle direttive seguenti:
 
@@ -245,7 +246,7 @@ if(expression)
 *expression*<br/>
 Espressione integrale che, se restituisce true (diverso da zero), determina l'esecuzione in parallelo del codice nell'area parallela. Se l'espressione restituisce false (zero), l'area parallela viene eseguita in serie (da un thread singolo).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `if` si applica alle direttive seguenti:
 
@@ -304,7 +305,7 @@ lastprivate(var)
 *var*<br/>
 La variabile impostata equivale alla versione privata del thread che esegue l'iterazione finale (costrutto del ciclo for) o dell'ultima sezione (#pragma sezioni).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `lastprivate` si applica alle direttive seguenti:
 
@@ -325,7 +326,7 @@ Esegue l'override della barriera implicita in una direttiva.
 nowait
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `nowait` si applica alle direttive seguenti:
 
@@ -395,7 +396,7 @@ num_threads(num)
 *num*<br/>
 Numero di thread
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La `num_threads` clausola ha la stessa funzionalità della funzione [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) .
 
@@ -419,7 +420,7 @@ Obbligatorio in un'istruzione Parallel [for](openmp-directives.md#for-openmp) se
 ordered
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `ordered` si applica alla direttiva [for](openmp-directives.md#for-openmp) .
 
@@ -442,7 +443,7 @@ private(var)
 *var*<br/>
 Variabile per avere istanze in ogni thread.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `private` si applica alle direttive seguenti:
 
@@ -647,7 +648,7 @@ Operatore per l'operazione da eseguire sulle variabili *var* alla fine dell'area
 *var*<br/>
 Una o più variabili sulle quali eseguire una riduzione scalare. Se viene specificata più di una variabile, separare i nomi delle variabili con una virgola.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `reduction` si applica alle direttive seguenti:
 
@@ -786,7 +787,7 @@ Tipo di pianificazione, ovvero,, `dynamic` `guided` `runtime` o `static` .
 *size*<br/>
 Opzionale Specifica le dimensioni delle iterazioni. la *dimensione* deve essere un numero intero. Non valido quando il *tipo* è `runtime` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni, vedere [2.4.1 per costrutto](../2-directives.md#241-for-construct).
 
@@ -917,7 +918,7 @@ shared(var)
 *var*<br/>
 Una o più variabili da condividere. Se viene specificata più di una variabile, separare i nomi delle variabili con una virgola.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un altro modo per condividere le variabili tra i thread è con la clausola [copyprivate](#copyprivate) .
 

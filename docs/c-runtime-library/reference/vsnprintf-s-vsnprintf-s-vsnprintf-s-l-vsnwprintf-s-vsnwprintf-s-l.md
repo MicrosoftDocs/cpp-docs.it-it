@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s _vsnwprintf_s_l'
 title: vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - _vsnwprintf_s function
 - formatted text [C++]
 ms.assetid: 147ccfce-58c7-4681-a726-ef54ac1c604e
-ms.openlocfilehash: edb534eb533d63c9298b7b7e9aced1be3e8652d9
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 27c91d6064b4a92da8a6f09e7d7e5b6bfb8bf95f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502784"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342153"
 ---
 # <a name="vsnprintf_s-_vsnprintf_s-_vsnprintf_s_l-_vsnwprintf_s-_vsnwprintf_s_l"></a>vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
 
@@ -136,7 +137,7 @@ Per altre informazioni, vedere [Specifiche di formato](../../c-runtime-library/f
 
 **vsnprintf_s**, **_vsnprintf_s** e **_vsnwprintf_s** restituiscono il numero di caratteri scritti, escluso il carattere null di terminazione, o un valore negativo se si verifica un troncamento dei dati o un errore di output.
 
-* Se *count* è minore di *sizeOfBuffer* e il numero di caratteri dei dati è minore o uguale a *count*oppure *count* è [_TRUNCATE](../../c-runtime-library/truncate.md) e il numero di caratteri dei dati è minore di *sizeOfBuffer*, vengono scritti tutti i dati e viene restituito il numero di caratteri.
+* Se *count* è minore di *sizeOfBuffer* e il numero di caratteri dei dati è minore o uguale a *count* oppure *count* è [_TRUNCATE](../../c-runtime-library/truncate.md) e il numero di caratteri dei dati è minore di *sizeOfBuffer*, vengono scritti tutti i dati e viene restituito il numero di caratteri.
 
 * Se *count* è minore di *sizeOfBuffer* ma i dati superano il *numero* di caratteri, verranno scritti i primi caratteri di *conteggio* . Il troncamento dei dati rimanenti si verifica e viene restituito-1 senza richiamare il gestore di parametro non valido.
 
@@ -144,7 +145,7 @@ Per altre informazioni, vedere [Specifiche di formato](../../c-runtime-library/f
 
 * Se *count* è uguale a o supera *sizeOfBuffer* , ma il numero di caratteri dei dati è minore di *sizeOfBuffer*, tutti i dati vengono scritti (con terminazione null) e viene restituito il numero di caratteri.
 
-* Se *count* e il numero di caratteri dei dati è uguale o superiore a *sizeOfBuffer*, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione continua dopo il gestore di parametro non valido, queste funzioni impostano il *buffer* su una stringa vuota, impostano **errno** su **ERANGE**e restituiscono-1.
+* Se *count* e il numero di caratteri dei dati è uguale o superiore a *sizeOfBuffer*, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione continua dopo il gestore di parametro non valido, queste funzioni impostano il *buffer* su una stringa vuota, impostano **errno** su **ERANGE** e restituiscono-1.
 
 * Se il *buffer* o il *formato* è un puntatore **null** o se *count* è minore o uguale a zero, viene richiamato il gestore di parametri non validi. Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono-1.
 
@@ -157,7 +158,7 @@ Per altre informazioni, vedere [Specifiche di formato](../../c-runtime-library/f
 |*conteggio* <= 0|-1|**EINVAL**|
 |*sizeOfBuffer* troppo piccolo (e *count* ! = **_TRUNCATE**)|-1 (e il *buffer* è impostato su una stringa vuota)|**ERANGE**|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 **vsnprintf_s** è identico a **_vsnprintf_s**. **vsnprintf_s** è incluso per la conformità allo standard ANSI. **_vnsprintf** viene mantenuta per compatibilità con le versioni precedenti.
 

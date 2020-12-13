@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l'
 title: vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
 ms.date: 09/03/2019
 api_name:
@@ -49,12 +50,12 @@ helpviewer_keywords:
 - vsprintf function
 - _vstprintf function
 ms.assetid: b8ef1c0d-58f9-4a18-841a-f1a989e1c29b
-ms.openlocfilehash: 9efb30428a146ec72c48d68ec411b21ca5bfef79
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dd7e06817049f26e80c4be9f1d3f3df40444feaf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945333"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342114"
 ---
 # <a name="vsprintf-_vsprintf_l-vswprintf-_vswprintf_l-__vswprintf_l"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
 
@@ -144,18 +145,18 @@ Impostazioni locali da usare.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta e scrive i dati specificati nella memoria a cui punta il *buffer*.
 
-Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
+Le versioni di queste funzioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
 
 > [!IMPORTANT]
 > Se si usa **vsprintf**, non esiste alcun modo per limitare il numero di caratteri scritti, il che significa che il codice che usa questa funzione è soggetto a sovraccarichi del buffer. Usare [vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) in alternativa o chiamare [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) per determinare le dimensioni necessarie per un buffer. Assicurarsi inoltre che *Format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 **vswprintf** è conforme allo standard ISO C, che richiede il secondo parametro, *count*, di tipo **size_t**. Per forzare il comportamento non standard precedente, definire **_CRT_NON_CONFORMING_SWPRINTFS**. Il comportamento precedente potrebbe non essere in una versione futura, quindi è necessario modificare il codice in modo da usare il nuovo comportamento conforme.
 
-In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -169,7 +170,7 @@ In C++ queste funzioni presentano overload di modello che richiamano le relative
 |Routine|Intestazione obbligatoria|Intestazioni facoltative|
 |-------------|---------------------|----------------------|
 |**vsprintf**, **_vsprintf_l**|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|
-|**vswprintf**, **_vswprintf_l**|\<stdio.h> o \<wchar.h> e \<stdarg.h>|\<varargs.h>*|
+|**vswprintf**, **_vswprintf_l**|\<stdio.h> o \<wchar.h> , e \<stdarg.h>|\<varargs.h>*|
 
 \* Richiesto per la compatibilità con UNIX V.
 
@@ -231,5 +232,5 @@ This is a string
 [Sintassi per la specifica del formato: funzioni printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)\
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)\
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)\
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)\
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)\
 [va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)

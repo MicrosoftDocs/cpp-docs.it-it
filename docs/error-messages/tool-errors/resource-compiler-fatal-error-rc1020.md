@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore irreversibile del compilatore di risorse risorse RC1020'
 title: Errore irreversibile del compilatore di risorse RC1020
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - RC1020
 ms.assetid: 3e073ebf-9136-4bf8-ac6a-3c642ed64594
-ms.openlocfilehash: ff4cc5564f59d0adf74ae86149130dd5d017a9ae
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a3ee2bd319cce9663c27030b523dd9e389158e45
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182682"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341087"
 ---
 # <a name="resource-compiler-fatal-error-rc1020"></a>Errore irreversibile del compilatore di risorse RC1020
 
 ' #endif ' imprevisto
 
-Una direttiva `#endif` è stata visualizzata senza una direttiva `#if`, **#ifdef**o **#ifndef** corrispondente.
+Una `#endif` direttiva è stata visualizzata senza una direttiva matching `#if` , **#ifdef** o **#ifndef** .
 
-Assicurarsi che esista un `#endif` corrispondente per ogni istruzione `#if`, **#ifdef**e **#ifndef** .
+Verificare che sia presente un oggetto corrispondente `#endif` per ogni `#if` istruzione, **#ifdef** e **#ifndef** .

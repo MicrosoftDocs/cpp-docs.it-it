@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore degli strumenti del linker LNK1181'
 title: Errore degli strumenti del linker LNK1181
 ms.date: 08/22/2018
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1181
 ms.assetid: 984b0db6-e331-4284-b2a7-a212fe96c486
-ms.openlocfilehash: d2b28af52a2ca2263a7bad77c8c69242396ff2b4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bda05d15597d6ed82b12145d380bbe40483d7623
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80195253"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341685"
 ---
 # <a name="linker-tools-error-lnk1181"></a>Errore degli strumenti del linker LNK1181
 
 non è possibile aprire il file di input ' filename '
 
-Il linker non è riuscito a trovare `filename` perché non esiste o il percorso non è stato trovato.
+Il linker non è `filename` stato trovato perché non esiste o il percorso non è stato trovato.
 
 Di seguito sono riportate alcune cause comuni di errore LNK1181:
 
-- viene fatto riferimento a `filename` come dipendenza aggiuntiva dalla riga del linker, ma il file non esiste.
+- `filename` viene fatto riferimento a una dipendenza aggiuntiva dalla riga del linker, ma il file non esiste.
 
 - Un'istruzione **/LIBPATH** che specifica la directory che contiene `filename` è mancante.
 
@@ -33,6 +34,6 @@ Un'altra possibile provocazione di LNK1181 è che un nome di file lungo con spaz
 
 La compilazione con l'opzione [/p (pre-elabora in un file)](../../build/reference/p-preprocess-to-a-file.md) può comportare la creazione di LNK1181 perché tale opzione impedisce la creazione di file con estensione obj.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[/LIBPATH (percorso LIB aggiuntivo)](../../build/reference/libpath-additional-libpath.md)
+[/LIBPATH (LIBPATH aggiuntivi)](../../build/reference/libpath-additional-libpath.md)

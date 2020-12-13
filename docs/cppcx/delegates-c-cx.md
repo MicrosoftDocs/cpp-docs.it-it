@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: delegati (C++/CX)'
 title: Delegati (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-ms.openlocfilehash: 4944efc10b4590f8dc682230968d9c97ef91cb5c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3d62b48d76319d79707330e874e6ceddcc22284e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225774"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342010"
 ---
 # <a name="delegates-ccx"></a>Delegati (C++/CX)
 
@@ -93,7 +94,7 @@ Nell'esempio seguente un'app client passa un delegato personalizzato a un metodo
 
 Puoi creare un delegato da uno qualsiasi di questi oggetti:
 
-- funzione lambda
+- lambda
 
 - funzione statica
 
@@ -130,7 +131,7 @@ Se desideri che il delegato sia chiamato di nuovo sullo stesso thread in cui è 
 
 Se hai familiarità con i gestori eventi di .NET, saprai che è preferibile creare una copia locale di un evento prima di generarlo. Questo evita race condition in cui un gestore eventi viene rimosso appena prima che l'evento venga richiamato. Non è necessario eseguire questa operazione in C++/CX, perché quando i gestori eventi vengono aggiunti o rimossi, viene creato un nuovo elenco di gestori. Poiché un oggetto c++ incrementa il conteggio dei riferimenti nell'elenco di gestori prima di richiamare un evento, viene garantito che i gestori saranno validi. Tuttavia, questo significa anche che se rimuovi un gestore eventi nel thread consumer, il gestore può comunque continuare a essere richiamato se l'oggetto di pubblicazione è ancora in esecuzione nella propria copia dell'elenco, che a questo punto non è aggiornato. L'oggetto di pubblicazione non riceverà l'elenco aggiornato fino alla successiva generazione dell'evento.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Sistema di tipi](../cppcx/type-system-c-cx.md)<br/>
 [Riferimenti per il linguaggio C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>

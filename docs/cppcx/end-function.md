@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: End Function'
 title: end (funzione)
 ms.date: 01/22/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - end Function
 ms.assetid: fb837bff-fc76-4bae-9096-facf0e03041c
-ms.openlocfilehash: c46c601be2b2ed78cf79641a7fcf5324e615a771
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e29595e7eb403af85abdbfa18782adf1c33c308e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375808"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341971"
 ---
 # <a name="end-function"></a>end (funzione)
 
@@ -44,16 +45,16 @@ template <typename T>
 Parametro del tipo di modello.
 
 *v*<br/>
-Una raccolta di vettore\<T > o VectorView\<T > gli oggetti a cui accedono un IVector\<T >, o IVectorView\<T > interface.
+Raccolta di oggetti vector \<T> o VectorView a \<T> cui è possibile accedere da un' \<T> interfaccia IVector o IVectorView \<T> .
 
 *i*<br/>
-Raccolta di Runtime di Windows arbitrari oggetti che sono accessibili da un IIterable\<T > interface.
+Raccolta di arbitrari Windows Runtime oggetti a cui è possibile accedere da un' \<T> interfaccia all'IIterable.
 
 ### <a name="return-value"></a>Valore restituito
 
 Iteratore che punta oltre la fine della raccolta.
 
-### <a name="remarks"></a>Note
+### <a name="remarks"></a>Commenti
 
 Le prime due funzioni di modello restituiscono degli iteratori, la terza funzione restituisce un iteratore di input.
 
@@ -65,6 +66,6 @@ L'oggetto [Platform::Collections::VectorViewIterator](../cppcx/platform-collecti
 
 **Spazio dei nomi:** Windows::Foundation::Collections
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi Windows::Foundation::Collections](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+[Spazio dei nomi Windows:: Foundation:: Collections](../cppcx/windows-foundation-collections-namespace-c-cx.md)

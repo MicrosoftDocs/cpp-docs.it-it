@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2057'
 title: Errore del compilatore C2057
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2057
 ms.assetid: 038a99d6-1f5a-42fa-8449-03b4ff11ee0b
-ms.openlocfilehash: bdcf97ab6ea877af4e0713fc96ffd38f299e8234
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 35cbe90f78de3297b1b34f354d524929611b2a7f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90741449"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341334"
 ---
 # <a name="compiler-error-c2057"></a>Errore del compilatore C2057
 
@@ -21,7 +22,7 @@ Il contesto richiede un'espressione costante, un'espressione il cui valore è no
 
 Il compilatore deve conoscere le dimensioni di un tipo in fase di compilazione per allocare lo spazio per un'istanza di tale tipo.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 L'esempio seguente genera l'errore C2057 e mostra come risolverlo:
 

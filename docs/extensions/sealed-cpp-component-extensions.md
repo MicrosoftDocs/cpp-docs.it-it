@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: sealed (C++/CLI e C++/CX)'
 title: sealed (C++/CLI e C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C++]
 ms.assetid: 3d0d688a-41aa-45f5-a25a-65c44206521e
-ms.openlocfilehash: ab5d5b32ceb87a3b1ccf08d170889dd4825f6c17
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a1ec201f9b03d1f2cf4d11eb71ba166f48bc6cea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181798"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341048"
 ---
 # <a name="sealed--ccli-and-ccx"></a>sealed (C++/CLI e C++/CX)
 
@@ -36,10 +37,10 @@ virtual return-type identifier() sealed {...};
 *identifier*<br/>
 Nome della funzione o della classe.
 
-*return-type*<br/>
+*tipo restituito*<br/>
 Tipo restituito da una funzione.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Nel primo esempio di sintassi, la classe è sealed. Nel secondo esempio una funzione virtuale è sealed.
 
@@ -65,7 +66,7 @@ Non esistono note per questa funzionalità del linguaggio che si applichino solo
 
 Opzione del compilatore: `/clr`
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 L'esempio di codice seguente mostra l'effetto di **sealed** su un membro virtuale.
 
@@ -138,6 +139,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Estensioni componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)

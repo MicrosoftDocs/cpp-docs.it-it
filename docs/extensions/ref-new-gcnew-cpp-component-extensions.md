@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: ref new, gcnew (C++/CLI e C++/CX)'
 title: ref new, gcnew (C++/CLI e C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - ref new keyword (C++)
 - gcnew keyword [C++]
 ms.assetid: 388a62da-c2df-4a94-a9a2-205b53e577da
-ms.openlocfilehash: f7269a62d7899df4eb89f6dd9487310c0fda0b4d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bfe93d9d3966f8796c0fc0ab2cdf7b80115b3d33
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181811"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341061"
 ---
 # <a name="ref-new-gcnew--ccli-and-ccx"></a>ref new, gcnew (C++/CLI e C++/CX)
 
@@ -25,7 +26,7 @@ La parola chiave aggregata **ref new** alloca un'istanza di un tipo sottoposto a
 
 La memoria per un'istanza di un tipo allocata da **ref new** viene deallocata automaticamente.
 
-Un'operazione **ref new**  genera un'eccezione `OutOfMemoryException` se non è in grado di allocare memoria.
+Un'operazione **ref new** genera un'eccezione `OutOfMemoryException` se non è in grado di allocare memoria.
 
 Per altre informazioni su come viene allocata e deallocata la memoria per i tipi C++ nativi, vedere gli [operatori new e delete](../cpp/new-and-delete-operators.md).
 
@@ -45,7 +46,7 @@ La memoria per un tipo gestito (tipo riferimento o tipo valore) viene allocata d
 
 Opzione del compilatore: `/clr`
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 L'esempio seguente usa **gcnew** per allocare un oggetto Message.
 
@@ -87,6 +88,6 @@ int main()
 32
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Estensioni componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)

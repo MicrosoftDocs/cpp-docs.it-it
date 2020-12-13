@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: vsscanf_s, vswscanf_s'
 title: vsscanf_s, vswscanf_s
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ f1_keywords:
 - vswscanf_s
 - _vstscanf_s
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
-ms.openlocfilehash: 9150642a6a21198ae43bdea5f33cc5a8f0b6a581
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3be22d5ea1399c426159bcd006e89585128cee55
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87188999"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342101"
 ---
 # <a name="vsscanf_s-vswscanf_s"></a>vsscanf_s, vswscanf_s
 
@@ -69,9 +70,9 @@ Se il *buffer* o il *formato* è un puntatore **null** , viene richiamato il ges
 
 Per informazioni su questi e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **vsscanf_s** legge i dati dal *buffer* nelle posizioni fornite da ogni argomento nell'elenco di argomenti *arglist* . Gli argomenti nell'elenco di argomenti specificano i puntatori alle variabili che hanno un tipo corrispondente a un identificatore di tipo nel *formato*. A differenza della versione meno sicura **vsscanf**, è necessario un parametro di dimensione del buffer quando si usano i caratteri di campo di tipo **c**, **c**, **s**, **s**o set di controlli stringa racchiusi tra **[]**. Le dimensioni del buffer in caratteri vengono passate come parametro aggiuntivo subito dopo ogni parametro del buffer che le richiede.
+La funzione **vsscanf_s** legge i dati dal *buffer* nelle posizioni fornite da ogni argomento nell'elenco di argomenti *arglist* . Gli argomenti nell'elenco di argomenti specificano i puntatori alle variabili che hanno un tipo corrispondente a un identificatore di tipo nel *formato*. A differenza della versione meno sicura **vsscanf**, è necessario un parametro di dimensione del buffer quando si usano i caratteri di campo di tipo **c**, **c**, **s**, **s** o set di controlli stringa racchiusi tra **[]**. Le dimensioni del buffer in caratteri vengono passate come parametro aggiuntivo subito dopo ogni parametro del buffer che le richiede.
 
 La dimensione del buffer include il carattere di terminazione null. Potrebbe essere usato un campo di specifica della larghezza per assicurarsi che il token letto possa essere inserito nel buffer. Se non viene utilizzato alcun campo di specifica di larghezza e il token letto è troppo grande per entrare nel buffer, non vengono scritti dati nel buffer.
 

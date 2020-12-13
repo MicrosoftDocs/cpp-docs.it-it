@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: deprecazione di tipi e membri (C++/CX)'
 title: Deprecazione di tipi e membri (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
-ms.openlocfilehash: 6d61b00690cc087c3baced6d96d0b6c8d73b5850
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: fddb9ecd81045655f3ca80c41e0fa3103d3ff52d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040327"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341997"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>Deprecazione di tipi e membri (C++/CX)
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: vscanf_s, vwscanf_s'
 title: vscanf_s, vwscanf_s
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ f1_keywords:
 - vscanf_s
 - vwscanf_s
 ms.assetid: 23a1c383-5b01-4887-93ce-534a1e38ed93
-ms.openlocfilehash: 9fb58e38362d709ef6d203c5602aa32727efa763
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4bd44b3e89ec1358482ed6161907fd30f13e062d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215101"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342205"
 ---
 # <a name="vscanf_s-vwscanf_s"></a>vscanf_s, vwscanf_s
 
@@ -62,13 +63,13 @@ Restituisce il numero di campi che vengono convertiti ed assegnati correttamente
 
 Per informazioni su questi e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **vscanf_s** legge i dati dal flusso di input standard **stdin** e scrive i dati nelle posizioni fornite dall'elenco di argomenti *arglist* . Ogni argomento nell'elenco deve essere un puntatore a una variabile di un tipo che corrisponde a un identificatore di tipo nel *formato*. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
 **vwscanf_s** è una versione a caratteri wide di **vscanf_s**; l'argomento *Format* per **vwscanf_s** è una stringa di caratteri wide. **vwscanf_s** e **vscanf_s** si comportano in modo identico se il flusso viene aperto in modalità ANSI. **vscanf_s** non supporta l'input da un flusso Unicode.
 
-A differenza di **vscanf** e **vwscanf**, **vscanf_s** e **vwscanf_s** richiedono la specifica delle dimensioni del buffer per tutti i parametri di input di tipo **c**, **c**, **s**, **s**o set di controlli stringa racchiusi tra **[]**. La dimensione del buffer in caratteri viene passata come parametro aggiuntivo segue immediatamente dopo il puntatore del buffer o della variabile. La dimensione del buffer in caratteri per una **`wchar_t`** stringa non corrisponde alle dimensioni in byte.
+A differenza di **vscanf** e **vwscanf**, **vscanf_s** e **vwscanf_s** richiedono la specifica delle dimensioni del buffer per tutti i parametri di input di tipo **c**, **c**, **s**, **s** o set di controlli stringa racchiusi tra **[]**. La dimensione del buffer in caratteri viene passata come parametro aggiuntivo segue immediatamente dopo il puntatore del buffer o della variabile. La dimensione del buffer in caratteri per una **`wchar_t`** stringa non corrisponde alle dimensioni in byte.
 
 La dimensione del buffer include il carattere di terminazione null. È possibile usare un campo di specifica della larghezza per assicurarsi che il token che viene letto possa essere inserito nel buffer. Se non viene utilizzato alcun campo di specifica di larghezza e il token letto è troppo grande per entrare nel buffer, non vengono scritti dati nel buffer.
 
@@ -92,7 +93,7 @@ Per altre informazioni, vedere [Campi di specifica di formato: funzioni scanf e 
 |**vscanf_s**|\<stdio.h>|
 |**wscanf_s**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout**e **stderr**devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout** e **stderr** devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -157,7 +158,7 @@ The number of fields input is 6
 The contents are: 36 92.300003 y n Wide characters
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
