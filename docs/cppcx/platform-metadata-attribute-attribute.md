@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Platform:: Metadata:: attribute attribute'
 title: Platform::Metadata::Attribute (attributo)
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Metadata::Attribute Attribute
 ms.assetid: 0e69727f-429b-4f7d-85c6-eea614f14dd7
-ms.openlocfilehash: 1020982ef79c77bacf920f94dd4bf43fee21424e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48b099e05dec40ad48f023ba6abf34eb26080594
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376172"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338820"
 ---
 # <a name="platformmetadataattribute-attribute"></a>Platform::Metadata::Attribute (attributo)
 
@@ -38,8 +39,8 @@ public ref class Attribute abstract : Object
 
 **Spazio dei nomi:** Platform::Metadata
 
-**Metadati:** platform.winmd
+**Metadati:** Platform. winmd
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Platform::Metadata (spazio dei nomi)](../cppcx/platform-metadata-namespace.md)
+[Spazio dei nomi Platform:: Metadata](../cppcx/platform-metadata-namespace.md)

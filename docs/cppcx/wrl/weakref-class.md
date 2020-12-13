@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe WeakRef'
 title: Classe WeakRef
 ms.date: 10/03/2018
 ms.topic: reference
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - Microsoft::WRL::WeakRef::operator& operator
 - Microsoft::WRL::WeakRef::WeakRef, constructor
 ms.assetid: 572be703-c641-496c-8af5-ad6164670ba1
-ms.openlocfilehash: 715a823784aaa75f9abe349ef0a7ddc9e5d607d1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9c1c3edf7589dfd08e0ebab5389d2ca108d8e73c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218351"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339410"
 ---
 # <a name="weakref-class"></a>Classe WeakRef
 
@@ -36,18 +37,18 @@ Rappresenta un *riferimento debole* che può essere usato solamente da Windows R
 class WeakRef : public ComPtr<IWeakReference>;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Costruttore WeakRef::WeakRef](#weakref)|Inizializza una nuova istanza della classe `WeakRef`.|
 |[Distruttore WeakRef::~WeakRef](#tilde-weakref)|Consente di deinizializzare l'istanza corrente della `WeakRef` classe.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Metodo WeakRef::As](#as)|Imposta il `ComPtr` parametro del puntatore specificato per rappresentare l'interfaccia specificata.|
 |[Metodo WeakRef::AsIID](#asiid)|Imposta il `ComPtr` parametro del puntatore specificato per rappresentare l'ID di interfaccia specificato.|
@@ -55,13 +56,13 @@ class WeakRef : public ComPtr<IWeakReference>;
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Operatore WeakRef::operator&](#operator-ampersand-operator)|Restituisce un `ComPtrRef` oggetto che rappresenta l' `WeakRef` oggetto corrente.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Un `WeakRef` oggetto mantiene un *riferimento sicuro*che è associato a un oggetto e può essere valido o non valido. Chiamare il `As()` `AsIID()` metodo o per ottenere un riferimento sicuro. Quando il riferimento sicuro è valido, può accedere all'oggetto associato. Quando il riferimento sicuro non è valido ( **`nullptr`** ), l'oggetto associato è inaccessibile.
+Un `WeakRef` oggetto mantiene un *riferimento sicuro* che è associato a un oggetto e può essere valido o non valido. Chiamare il `As()` `AsIID()` metodo o per ottenere un riferimento sicuro. Quando il riferimento sicuro è valido, può accedere all'oggetto associato. Quando il riferimento sicuro non è valido ( **`nullptr`** ), l'oggetto associato è inaccessibile.
 
 Un `WeakRef` oggetto viene in genere utilizzato per rappresentare un oggetto la cui esistenza è controllata da un'applicazione o da un thread esterno. Ad esempio, costruire un `WeakRef` oggetto da un riferimento a un oggetto file. Finché il file rimane aperto, il riferimento sicuro è valido. Ma se il file viene chiuso, il riferimento sicuro non è più valido.
 
@@ -105,7 +106,7 @@ if (strongRef == nullptr)
 
 **Spazio dei nomi:** Microsoft::WRL
 
-## <a name="weakrefweakref-destructor"></a><a name="tilde-weakref"></a>Distruttore WeakRef:: ~ WeakRef
+## <a name="weakrefweakref-destructor"></a><a name="tilde-weakref"></a> Distruttore WeakRef:: ~ WeakRef
 
 Consente di deinizializzare l'istanza corrente della `WeakRef` classe.
 
@@ -113,7 +114,7 @@ Consente di deinizializzare l'istanza corrente della `WeakRef` classe.
 ~WeakRef();
 ```
 
-## <a name="weakrefas-method"></a><a name="as"></a>Metodo WeakRef:: As
+## <a name="weakrefas-method"></a><a name="as"></a> Metodo WeakRef:: As
 
 Imposta il `ComPtr` parametro del puntatore specificato per rappresentare l'interfaccia specificata.
 
@@ -145,7 +146,7 @@ Al termine di questa operazione, oggetto che rappresenta il parametro *U*.
 
 - S_OK se l'operazione ha esito positivo, ma l' `WeakRef` oggetto corrente non è derivato dal parametro *U*. Il parametro *ptr* è impostato su **`nullptr`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Viene generato un errore se il parametro *U* è `IWeakReference` o non è derivato da `IInspectable` .
 
@@ -153,7 +154,7 @@ Il primo modello è il form da usare nel codice. Il secondo modello è una speci
 
 A partire da Windows 10 SDK, questo metodo non imposta l' `WeakRef` istanza su **`nullptr`** se non è stato possibile ottenere il riferimento debole, quindi è consigliabile evitare il codice di controllo degli errori che controlla la `WeakRef` per **`nullptr`** . Al contrario, controllare *ptr* per **`nullptr`** .
 
-## <a name="weakrefasiid-method"></a><a name="asiid"></a>Metodo WeakRef:: AsIID
+## <a name="weakrefasiid-method"></a><a name="asiid"></a> Metodo WeakRef:: AsIID
 
 Imposta il `ComPtr` parametro del puntatore specificato per rappresentare l'ID di interfaccia specificato.
 
@@ -180,7 +181,7 @@ Al termine di questa operazione, oggetto che rappresenta il parametro *riid*.
 
 - S_OK se l'operazione ha esito positivo, ma l' `WeakRef` oggetto corrente non è derivato dal parametro *riid*. Il parametro *ptr* è impostato su **`nullptr`** . Per altre informazioni, vedere Note.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il parametro *riid* non deriva da, viene generato un errore `IInspectable` . Questo errore sostituisce il valore restituito.
 
@@ -188,7 +189,7 @@ Il primo modello è il form da usare nel codice. Il secondo modello (non illustr
 
 A partire da Windows 10 SDK, questo metodo non imposta l' `WeakRef` istanza su **`nullptr`** se non è stato possibile ottenere il riferimento debole, quindi è consigliabile evitare il codice di controllo degli errori che controlla la `WeakRef` per **`nullptr`** . Al contrario, controllare *ptr* per **`nullptr`** .
 
-## <a name="weakrefcopyto-method"></a><a name="copyto"></a>Metodo WeakRef:: CopyTo
+## <a name="weakrefcopyto-method"></a><a name="copyto"></a> Metodo WeakRef:: CopyTo
 
 Assegna un puntatore a un'interfaccia, se disponibile, per la variabile del puntatore specificato.
 
@@ -223,7 +224,7 @@ Puntatore doppiamente indiretto a `IInspectable` o `IWeakReference` .
 
 S_OK se riesce; in caso contrario, HRESULT che descrive l'errore. Per ulteriori informazioni, vedere la **sezione Osservazioni**.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore restituito S_OK indica che l'operazione è riuscita, ma non se il riferimento debole è stato risolto in un riferimento forte. Se viene restituito S_OK, verificare che il parametro *p* sia un riferimento sicuro; ovvero il parametro *p* non è uguale a **`nullptr`** .
 
@@ -241,11 +242,11 @@ Details::ComPtrRef<WeakRef> operator&() throw()
 
 `ComPtrRef`Oggetto che rappresenta l'oggetto corrente `WeakRef` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si tratta di un operatore helper interno che non deve essere utilizzato nel codice.
 
-## <a name="weakrefweakref-constructor"></a><a name="weakref"></a>Costruttore WeakRef:: WeakRef
+## <a name="weakrefweakref-constructor"></a><a name="weakref"></a> Costruttore WeakRef:: WeakRef
 
 Inizializza una nuova istanza della classe `WeakRef`.
 
@@ -277,6 +278,6 @@ WeakRef(
 *ptr*<br/>
 Un puntatore, un riferimento o un riferimento rvalue a un oggetto esistente che Inizializza l' `WeakRef` oggetto corrente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo costruttore inizializza un `WeakRef` oggetto vuoto. Il secondo costruttore inizializza un `WeakRef` oggetto da un puntatore all' `IWeakReference` interfaccia. Il terzo costruttore inizializza un `WeakRef` oggetto da un riferimento a un `ComPtr<IWeakReference>` oggetto. Il quarto e il quinto costruttore inizializzano un `WeakRef` oggetto da un altro `WeakRef` oggetto.

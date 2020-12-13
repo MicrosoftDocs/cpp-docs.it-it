@@ -1,5 +1,6 @@
 ---
-title: Struttura CloakedIid
+description: 'Altre informazioni su: Struttura CloakedIid'
+title: CloakedIid (struttura)
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CloakedIid structure
 ms.assetid: 82e0e377-ca3a-46bc-b850-ae2c46c15bb5
-ms.openlocfilehash: 1cc9e79384bbf4aae44199c2f35331e3afd8fd8f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 06bddded27882ae1216064aafc311364a8d2fd9f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214110"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338783"
 ---
-# <a name="cloakediid-structure"></a>Struttura CloakedIid
+# <a name="cloakediid-structure"></a>CloakedIid (struttura)
 
-Indica ai modelli `RuntimeClass`, `Implements` e `ChainInterfaces` che l'interfaccia specificata non è accessibile nell'elenco di IID.
+Indica ai `RuntimeClass` `Implements` `ChainInterfaces` modelli e che l'interfaccia specificata non è accessibile nell'elenco di IID.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -30,9 +31,9 @@ struct CloakedIid : T;
 *T*<br/>
 Interfaccia nascosta (mascherata).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Di seguito è riportato un esempio di come viene usato **CloakedIid** : `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.
+Di seguito è riportato un esempio di utilizzo di **CloakedIid** : `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}` .
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -46,6 +47,6 @@ Di seguito è riportato un esempio di come viene usato **CloakedIid** : `struct 
 
 **Spazio dei nomi:** Microsoft::WRL
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi Microsoft::WRL](microsoft-wrl-namespace.md)
+[Spazio dei nomi Microsoft:: WRL](microsoft-wrl-namespace.md)

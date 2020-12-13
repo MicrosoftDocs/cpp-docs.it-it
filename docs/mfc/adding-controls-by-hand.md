@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: aggiunta di controlli manualmente'
 title: Aggiunta manuale di controlli
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - controls [MFC], adding to dialog boxes
 - common controls [MFC], adding
 ms.assetid: bc843e59-0c51-4b5b-8bf2-343f716469d2
-ms.openlocfilehash: 4efd1c23c7e4d6f7d8e6fa9fe046f8de11c825a6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f6dfa65baa037aa168697aa7abcd3eedc76cc4d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626529"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339086"
 ---
 # <a name="adding-controls-by-hand"></a>Aggiunta manuale di controlli
 
@@ -33,7 +34,7 @@ La `OnInitDialog` funzione seguente configura un rettangolo, quindi chiama `Crea
 
 Dopo aver creato l'oggetto Edit, è anche possibile impostare lo stato attivo per l'input sul controllo chiamando la `SetFocus` funzione membro. Infine, viene restituito 0 da `OnInitDialog` per indicare che si imposta lo stato attivo. Se si restituisce un valore diverso da zero, il gestore della finestra di dialogo Imposta lo stato attivo sul primo elemento di controllo nell'elenco di elementi della finestra di dialogo. Nella maggior parte dei casi, è possibile aggiungere controlli alle finestre di dialogo con l'editor finestre di dialogo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Creazione e utilizzo di controlli](making-and-using-controls.md)<br/>
 [Controlli](controls-mfc.md)<br/>

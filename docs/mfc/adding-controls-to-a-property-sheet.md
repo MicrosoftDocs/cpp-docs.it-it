@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: aggiunta di controlli a una finestra delle proprietà'
 title: Aggiunta di controlli a una finestra delle proprietà
 ms.date: 11/04/2016
 helpviewer_keywords:
 - controls [MFC], adding to property sheets
 - property sheets, adding controls
 ms.assetid: 24ad4c0b-c1db-4850-b9f0-34aae8d74571
-ms.openlocfilehash: 527c0a5ef6e9dc4fcc9d7668c12e15ec956b0e70
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e220d08b46f1db7e09ad1f1398731ce7a98f2dc5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616067"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339067"
 ---
 # <a name="adding-controls-to-a-property-sheet"></a>Aggiunta di controlli a una finestra delle proprietà
 
@@ -18,7 +19,7 @@ Per impostazione predefinita, una finestra delle proprietà alloca l'area della 
 
 È possibile aggiungere controlli alla finestra delle proprietà nel gestore di `OnCreate`. L'aggiunta di ulteriori controlli in genere richiede di espandere le dimensioni della finestra delle proprietà. Dopo la chiamata della classe di base **CPropertySheet:: OnCreate**, chiamare [GetWindowRect](reference/cwnd-class.md#getwindowrect) per ottenere la larghezza e l'altezza della finestra delle proprietà attualmente allocata, espandere le dimensioni del rettangolo e chiamare [MoveWindow](reference/cwnd-class.md#movewindow) per modificare le dimensioni della finestra della finestra delle proprietà.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Finestre delle proprietà](property-sheets-mfc.md)<br/>
 [Classe CPropertyPage](reference/cpropertypage-class.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _get_terminate'
 title: _get_terminate
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - get_terminate function
 - _get_terminate function
 ms.assetid: c8f168c4-0ad5-4832-a522-dd1ef383c208
-ms.openlocfilehash: 2ee68506437cb1c5b76cac05d674527095055055
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 958ecb51620497c459b0505431036d5e9d546862
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920407"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338981"
 ---
 # <a name="_get_terminate"></a>_get_terminate
 
@@ -51,7 +52,7 @@ terminate_function _get_terminate( void );
 
 Restituisce un puntatore alla funzione registrata da [set_terminate](set-terminate-crt.md). Se nessuna funzione è stata impostata, il valore restituito può essere utilizzato per ripristinare il comportamento predefinito; Questo valore può essere **null**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -63,10 +64,10 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Routine di gestione delle eccezioni](../../c-runtime-library/exception-handling-routines.md)<br/>
 [interruzione](abort.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
-[termine](terminate-crt.md)<br/>
+[terminare](terminate-crt.md)<br/>
 [inaspettato](unexpected-crt.md)<br/>

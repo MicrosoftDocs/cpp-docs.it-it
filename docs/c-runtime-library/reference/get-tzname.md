@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _get_tzname'
 title: _get_tzname
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - time zones
 - get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
-ms.openlocfilehash: bf63b0ade0adc0a2dfa471bbfbeebc0cb2d04911
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b98a068d6f2d2643df43078c5a274fd761ac8e95
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919679"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338956"
 ---
 # <a name="_get_tzname"></a>_get_tzname
 
@@ -62,10 +63,10 @@ Indirizzo di una stringa di caratteri per la rappresentazione del nome del fuso 
 *sizeInBytes*<br/>
 Dimensioni in byte della stringa di caratteri *timeZoneName* .
 
-*Indice*<br/>
+*index*<br/>
 Indice di uno dei due nomi di fuso orario da recuperare.
 
-|*Indice*|Contenuto di *timeZoneName*|*timeZoneName* (valore predefinito)|
+|*index*|Contenuto di *timeZoneName*|*timeZoneName* (valore predefinito)|
 |-|-|-|
 |0|Nome del fuso orario|"PST"|
 |1|Nome del fuso orario dell'ora legale|"PDT"|
@@ -77,11 +78,11 @@ A meno che i valori non vengano modificati in modo esplicito in fase di esecuzio
 
 Zero in caso di esito positivo, in caso contrario un valore di tipo **errno** .
 
-Se *timeZoneName* è **null**o *sizeInBytes* è zero o minore di zero (ma non entrambi), viene richiamato un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **EINVAL**.
+Se *timeZoneName* è **null** o *sizeInBytes* è zero o minore di zero (ma non entrambi), viene richiamato un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **EINVAL**.
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*pReturnValue*|*timeZoneName*|*sizeInBytes*|*Indice*|Valore restituito|Contenuto di *timeZoneName*|
+|*pReturnValue*|*timeZoneName*|*sizeInBytes*|*index*|Valore restituito|Contenuto di *timeZoneName*|
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|
 |Dimensioni del nome del fuso orario|**NULL**|0|0 o 1|0|non modificato|
 |Dimensioni del nome del fuso orario|any|> 0|0 o 1|0|Nome del fuso orario|
@@ -89,7 +90,7 @@ Se *timeZoneName* è **null**o *sizeInBytes* è zero o minore di zero (ma non en
 |non modificato|any|zero|any|**EINVAL**|non modificato|
 |non modificato|any|> 0|> 1|**EINVAL**|non modificato|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_get_tzname** recupera la rappresentazione in forma di stringa di caratteri del nome del fuso orario corrente o del nome del fuso orario dell'ora legale (DST) nell'indirizzo di *timeZoneName* , a seconda del valore di indice, insieme alle dimensioni della stringa in *pReturnValue*. Se *timeZoneName* è **null** e *sizeInBytes* è zero, la dimensione della stringa necessaria per conservare il fuso orario specificato e un null di terminazione in byte viene restituita in *pReturnValue*. I valori di indice devono essere 0 per il fuso orario standard o 1 per il fuso orario dell'ora legale; tutti gli altri valori dell' *Indice* hanno risultati indeterminati.
 
@@ -147,10 +148,10 @@ The current Daylight standard time zone name is PDT.
 
 Per altre informazioni, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione del tempo](../../c-runtime-library/time-management.md)<br/>
-[errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
+[errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
 [_get_daylight](get-daylight.md)<br/>
 [_get_dstbias](get-dstbias.md)<br/>
 [_get_timezone](get-timezone.md)<br/>

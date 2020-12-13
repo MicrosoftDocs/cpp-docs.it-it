@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: num_get Class'
 title: Classe num_get
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::num_get [C++], do_get
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
-ms.openlocfilehash: d5a88e904c437e79eabfa854a196aa48dbad955e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0236aac2e7c7859f966430bd276b4dffc42820b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228167"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338090"
 ---
 # <a name="num_get-class"></a>Classe num_get
 
@@ -40,7 +41,7 @@ Tipo utilizzato all'interno di un programma per codificare i caratteri delle imp
 *InputIterator*\
 Tipo di iteratore da cui le funzioni get numeric leggono il relativo input.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha un valore archiviato iniziale uguale a zero. Il primo tentativo di accedere a tale valore archiviato consente di archiviare un valore positivo univoco in **id**.
 
@@ -52,7 +53,7 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome tipo|Descrizione|
+|Nome tipo|Description|
 |-|-|
 |[char_type](#char_type)|Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali.|
 |[iter_type](#iter_type)|Tipo che descrive un iteratore di input.|
@@ -70,7 +71,7 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 **Spazio dei nomi:** std
 
-## <a name="num_getchar_type"></a><a name="char_type"></a>num_get:: char_type
+## <a name="num_getchar_type"></a><a name="char_type"></a> num_get:: char_type
 
 Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali.
 
@@ -78,11 +79,11 @@ Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del parametro di modello **CharType**.
 
-## <a name="num_getdo_get"></a><a name="do_get"></a>num_get::d o_get
+## <a name="num_getdo_get"></a><a name="do_get"></a> num_get::d o_get
 
 Funzione virtuale chiamata per estrarre un valore numerico o booleano da una sequenza di caratteri.
 
@@ -186,7 +187,7 @@ Valore letto.
 
 Iteratore dopo la lettura del valore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La prima funzione membro virtuale protetta
 
@@ -329,7 +330,7 @@ Un campo di input booleano ha una delle due forme seguenti. Se `iosbase.flags() 
 
 Vedere l'esempio relativo a [get](#get), in cui la funzione membro virtuale viene chiamata da `do_get`.
 
-## <a name="num_getget"></a><a name="get"></a>num_get:: Get
+## <a name="num_getget"></a><a name="get"></a> num_get:: Get
 
 Estrae un tipo numerico o booleano da una sequenza di caratteri.
 
@@ -433,7 +434,7 @@ Valore letto.
 
 Iteratore dopo la lettura del valore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Tutte le funzioni membro restituiscono [do_get](#do_get) `( first, last, iosbase, state, val)` .
 
@@ -551,7 +552,7 @@ int main( )
 }
 ```
 
-## <a name="num_getiter_type"></a><a name="iter_type"></a>num_get:: iter_type
+## <a name="num_getiter_type"></a><a name="iter_type"></a> num_get:: iter_type
 
 Tipo che descrive un iteratore di input.
 
@@ -559,11 +560,11 @@ Tipo che descrive un iteratore di input.
 typedef InputIterator iter_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del parametro di modello `InputIterator`.
 
-## <a name="num_getnum_get"></a><a name="num_get"></a>num_get:: num_get
+## <a name="num_getnum_get"></a><a name="num_get"></a> num_get:: num_get
 
 Costruttore per oggetti di tipo `num_get` utilizzati per estrarre i valori numerici dalle sequenze.
 
@@ -576,7 +577,7 @@ explicit num_get(size_t refs = 0);
 *refs*\
 Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I valori possibili per il parametro *refs* e il relativo significato sono:
 
@@ -584,13 +585,13 @@ I valori possibili per il parametro *refs* e il relativo significato sono:
 
 - 1: la durata dell'oggetto deve essere gestita manualmente.
 
-- \>1: questi valori non sono definiti.
+- \> 1: questi valori non sono definiti.
 
 Non è possibile fornire esempi diretti, poiché il distruttore è protetto.
 
 Il costruttore inizializza l'oggetto di base con `locale::` [facet](../standard-library/locale-class.md#facet_class) `(refs)` .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [\<locale>](../standard-library/locale.md)\
 [Classe facet](../standard-library/locale-class.md#facet_class)\

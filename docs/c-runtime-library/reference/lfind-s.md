@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _lfind_s'
 title: _lfind_s
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - searching, linear
 - _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
-ms.openlocfilehash: 589a413c9f1fb49fbfe8cd1b5eacb9d452716523
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b495f8f6f6f39a07b6fa193ede45b5cb875528ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916511"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338859"
 ---
 # <a name="_lfind_s"></a>_lfind_s
 
@@ -91,7 +92,7 @@ Se alla funzione vengono passati parametri non validi, viene richiamato il gesto
 |any|any|any|any|zero|**EINVAL**|
 |any|any|**NULL**|any|any|**EINVAL**|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_lfind_s** esegue una ricerca lineare per la *chiave* del valore in una matrice di elementi *numerici* , ciascuno di byte di *larghezza* . A differenza di **bsearch_s**, **_lfind_s** non richiede che la matrice sia ordinata. L'argomento di *base* è un puntatore alla base della matrice in cui eseguire la ricerca. L'argomento *compare* è un puntatore a una routine fornita dall'utente che confronta due elementi di matrice e quindi restituisce un valore che ne specifica la relazione. **_lfind_s** chiama la routine di *confronto* una o più volte durante la ricerca, passando il puntatore di *contesto* e i puntatori a due elementi di matrice per ogni chiamata. La routine di *confronto* deve confrontare gli elementi, quindi restituire un valore diverso da zero (ovvero gli elementi sono diversi) o 0 (che indica che gli elementi sono identici).
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: operatore Delete (C++)'
 title: Operatore delete (C++)
 ms.date: 08/12/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - delete keyword [C++], deallocating objects
 - delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
-ms.openlocfilehash: 8ce9b8e606d5bbc2051af76e6dc4ac1350ec81a6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: a66fc3af12c08cc019569c1fc1db25a539dcb089
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509147"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339449"
 ---
 # <a name="delete-operator-c"></a>Operatore delete (C++)
 
@@ -24,7 +25,7 @@ Dealloca un blocco di memoria.
 > [ `::` ] `delete` *cast-expression*\
 > [ `::` ] `delete []` *cast-expression*
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'argomento *cast-expression* deve essere un puntatore a un blocco di memoria allocato in precedenza per un oggetto creato con l' [operatore New](../cpp/new-operator-cpp.md). L' **`delete`** operatore ha un risultato di tipo **`void`** e pertanto non restituisce alcun valore. Ad esempio:
 
@@ -92,7 +93,7 @@ L'operatore delete richiama l'operatore Function **Delete**.
 
 Per gli oggetti non di tipo classe ([Class](../cpp/class-cpp.md), [struct](../cpp/struct-cpp.md)o [Union](../cpp/unions.md)) viene richiamato l'operatore delete globale. Per gli oggetti di tipo classe, il nome della funzione di deallocazione viene risolto nell'ambito globale se l'espressione delete inizia con l'operatore di risoluzione dell'ambito unario ( `::` ). In caso contrario, l'operatore delete richiama il distruttore di un oggetto prima della deallocazione di memoria (se il puntatore non ha valore null). L'operatore delete può essere definito in base alle classi; se non è presente una definizione per una determinata classe, l'operatore delete globale viene richiamato. Se l'espressione delete viene utilizzata per deallocare un oggetto di classe di tipo statico con un distruttore virtuale, la funzione di deallocazione viene risolta dal distruttore virtuale di tipo dinamico dell'oggetto.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Espressioni con operatori unari](../cpp/expressions-with-unary-operators.md)\
 [Parole](../cpp/keywords-cpp.md)\

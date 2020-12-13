@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _kbhit'
 title: _kbhit
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-ms.openlocfilehash: bfe26a988c491c4d137bfc1badc093d56cde4010
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 439c3ef6a738bdd7802580eeef1056d0ea02ed58
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916545"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338891"
 ---
 # <a name="_kbhit"></a>_kbhit
 
@@ -59,7 +60,7 @@ int _kbhit( void );
 
 **_kbhit** restituisce un valore diverso da zero se è stato premuto un tasto. In caso contrario, viene restituito 0.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_kbhit** controlla la presenza di una sequenza di tasti recente nella console. Se la funzione restituisce un valore diverso da zero, una sequenza di tasti è in attesa nel buffer. Il programma può quindi chiamare **_getch** o **_getche** per ottenere la sequenza di tasti.
 
@@ -109,6 +110,6 @@ Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!!
 Key struck was 'q'
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [I/O console e porta](../../c-runtime-library/console-and-port-i-o.md)<br/>

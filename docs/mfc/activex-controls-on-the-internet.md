@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: controlli ActiveX in Internet'
 title: Controlli ActiveX in Internet
 ms.date: 09/12/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-ms.openlocfilehash: f06a6f6f71e922163fd95c59836c50b88b05ed3a
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5f186d74ff0b448d1cef6a956a6495f6a8890798
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616483"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339141"
 ---
 # <a name="activex-controls-on-the-internet"></a>Controlli ActiveX in Internet
 
@@ -43,7 +44,7 @@ I controlli ActiveX non sono limitati a Internet. Un controllo ActiveX può esse
 
 - Supportare le interfacce aggiuntive necessarie per la funzionalità.
 
-## <a name="making-your-existing-controls-internet-friendly"></a>Rendere i controlli esistenti intuitivi per Internet
+## <a name="making-your-existing-controls-internet-friendly"></a>Creazione dei controlli esistenti Internet-Friendly
 
 La progettazione di un controllo che funzioni correttamente in un ambiente Internet richiede la considerazione della velocità di trasmissione relativamente bassa su Internet. È possibile usare i controlli esistenti. Tuttavia, è necessario eseguire alcune operazioni per ridurre le dimensioni del codice e rendere le proprietà del controllo scaricate in modo asincrono.
 
@@ -117,9 +118,9 @@ La procedura successiva aggiunge una proprietà al controllo per usare la classe
 
 #### <a name="to-add-a-property"></a>Per aggiungere una proprietà
 
-1. In **Visualizzazione classi**fare clic con il pulsante destro del mouse sull'interfaccia sotto il nodo libreria e scegliere **Aggiungi**, quindi **Aggiungi proprietà**. Verrà avviata l' **Aggiunta guidata proprietà**.
+1. In **Visualizzazione classi** fare clic con il pulsante destro del mouse sull'interfaccia sotto il nodo libreria e scegliere **Aggiungi**, quindi **Aggiungi proprietà**. Verrà avviata l' **Aggiunta guidata proprietà**.
 
-1. Nella **procedura guidata Aggiungi proprietà**selezionare il pulsante di opzione **imposta/Ottieni metodi** , digitare il **nome della proprietà**, ad esempio EditControlText, e selezionare BSTR come **tipo di proprietà**.
+1. Nella **procedura guidata Aggiungi proprietà** selezionare il pulsante di opzione **imposta/Ottieni metodi** , digitare il **nome della proprietà**, ad esempio EditControlText, e selezionare BSTR come **tipo di proprietà**.
 
 1. Fare clic su **Fine**.
 
@@ -191,7 +192,7 @@ Se si aggiunge il supporto di proprietà asincrone a un controllo esistente, sar
 
 Lo stato pronto verrà aggiornato durante il download del codice chiamando [COleControl:: InternalSetReadyState](reference/colecontrol-class.md#internalsetreadystate). Un'unica posizione che è possibile chiamare `InternalSetReadyState` è dall' `OnProgress` override della `CDataPathProperty` classe derivata da.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attività di programmazione Internet MFC](mfc-internet-programming-tasks.md)<br/>
 [Nozioni fondamentali sulla programmazione Internet MFC](mfc-internet-programming-basics.md)

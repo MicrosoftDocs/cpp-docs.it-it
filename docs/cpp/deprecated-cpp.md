@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: deprecato (C++)'
 title: deprecated (C++)
 ms.date: 03/28/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], deprecated
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
-ms.openlocfilehash: 44cb33bae43b32b12dda95423aec5484f61aa596
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: cd7bc3acbe6a61e87a1766025bcc174268190c48
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90683416"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339423"
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
 
@@ -28,7 +29,7 @@ Con le eccezioni indicate di seguito, la **`deprecated`** dichiarazione offre la
 
 Se il compilatore rileva l'uso di un identificatore deprecato o dell' [`[[deprecated]]`](attributes.md) attributo standard, viene generato un avviso [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) .
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Nel seguente codice di esempio viene illustrato come contrassegnare funzioni come deprecate e come specificare un messaggio che verrà visualizzato in fase di compilazione, quando viene utilizzata la funzione deprecata.
 
@@ -68,7 +69,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [__declspec](../cpp/declspec.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)

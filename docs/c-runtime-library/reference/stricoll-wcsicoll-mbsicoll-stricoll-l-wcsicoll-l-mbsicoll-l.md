@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l'
 title: _stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 ms.date: 4/2/2020
 api_name:
@@ -61,12 +62,12 @@ helpviewer_keywords:
 - strings [C++], comparing by code page
 - ftcsicoll function
 ms.assetid: 8ec93016-5a49-49d2-930f-721566661d82
-ms.openlocfilehash: 9c023405043dea1c0a1d8e6d7f6fcc6505677583
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0ed1d883d39ba679b00840267ea404de14072ed9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919997"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338843"
 ---
 # <a name="_stricoll-_wcsicoll-_mbsicoll-_stricoll_l-_wcsicoll_l-_mbsicoll_l"></a>_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 
@@ -126,9 +127,9 @@ Ognuna di queste funzioni restituisce un valore che indica la relazione tra *Str
 |> 0|*String1* maggiore di *string2*|
 |**_NLSCMPERROR**|Si è verificato un errore.|
 
-Ognuna di queste funzioni restituisce **_NLSCMPERROR**. Per utilizzare **_NLSCMPERROR**, includere il \<> String. h> \<o mbstring. h. **_wcsicoll** possono avere esito negativo se *String1* o *string2* contiene codici a caratteri wide al di fuori del dominio della sequenza di ordinamento. Quando si verifica un errore, **_wcsicoll** possibile impostare **errno** su **EINVAL**. Per verificare la presenza di un errore in una chiamata a **_wcsicoll**, impostare **errno** su 0, quindi controllare **errno** dopo aver chiamato **_wcsicoll**.
+Ognuna di queste funzioni restituisce **_NLSCMPERROR**. Per utilizzare **_NLSCMPERROR**, includere \<string.h> o \<mbstring.h> . **_wcsicoll** possono avere esito negativo se *String1* o *string2* contiene codici a caratteri wide al di fuori del dominio della sequenza di ordinamento. Quando si verifica un errore, **_wcsicoll** possibile impostare **errno** su **EINVAL**. Per verificare la presenza di un errore in una chiamata a **_wcsicoll**, impostare **errno** su 0, quindi controllare **errno** dopo aver chiamato **_wcsicoll**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Ognuna di queste funzioni esegue un confronto senza distinzione tra maiuscole e minuscole di *String1* e *string2* in base alla tabella codici attualmente in uso. Usare queste funzioni solo quando esiste una differenza nella tabella codici corrente tra l'ordine del set di caratteri e l'ordine lessicografico dei caratteri e quando questa differenza è di particolare interesse per il confronto fra stringhe.
 
@@ -154,9 +155,9 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Funzioni strcoll](../../c-runtime-library/strcoll-functions.md)<br/>
 [localeconv](localeconv.md)<br/>

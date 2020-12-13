@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: GETC, getwc'
 title: getc, getwc
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - getwc function
 - gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
-ms.openlocfilehash: 6248dd2287b2f11db72f64df1241affe8deec22d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0d48b0d1549009d6eb36f37f2f08cb393fde6ecb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919658"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338911"
 ---
 # <a name="getc-getwc"></a>getc, getwc
 
@@ -67,11 +68,11 @@ Flusso di input.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce il carattere letto. Per indicare una condizione di errore di lettura o di fine file, **GETC** restituisce **EOF**e **getwc** restituisce **WEOF**. Per **GETC**, usare **Ferrer** o **feof** per verificare la presenza di un errore o della fine del file. Se il *flusso* è **null**, **GETC** e **getwc** richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EOF** (o **WEOF** per **getwc**) e impostano **errno** su **EINVAL**.
+Restituisce il carattere letto. Per indicare una condizione di errore di lettura o di fine file, **GETC** restituisce **EOF** e **getwc** restituisce **WEOF**. Per **GETC**, usare **Ferrer** o **feof** per verificare la presenza di un errore o della fine del file. Se il *flusso* è **null**, **GETC** e **getwc** richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EOF** (o **WEOF** per **getwc**) e impostano **errno** su **EINVAL**.
 
 Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Ogni routine legge un singolo carattere da un file alla posizione corrente e incrementa il puntatore del file associato (se definito) per puntare al carattere successivo. Il file è associato al *flusso*.
 
@@ -79,7 +80,7 @@ Queste funzioni bloccano il thread chiamante e pertanto sono thread-safe. Per un
 
 Seguono note specifiche per le routine.
 
-|Routine|Osservazioni|
+|Routine|Commenti|
 |-------------|-------------|
 |**getc**|Uguale a **fgetc**, ma implementato come funzione e come macro.|
 |**getwc**|Versione a caratteri wide di **GETC**. Legge un carattere multibyte o un carattere wide a seconda che il *flusso* venga aperto in modalità testo o in modalità binaria.|
@@ -151,7 +152,7 @@ Line two.
 Input was: Line one.
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>

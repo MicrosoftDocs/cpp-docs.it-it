@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3285'
 title: Errore del compilatore C3285
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3285
 ms.assetid: 04e8f210-d67e-4810-b153-e1efe2986c8f
-ms.openlocfilehash: f5799511575617ad1705bbce50a939ee46599628
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: d5b57b878ed47118e1857558b9d633bb5ef7286c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755343"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339332"
 ---
 # <a name="compiler-error-c3285"></a>Errore del compilatore C3285
 

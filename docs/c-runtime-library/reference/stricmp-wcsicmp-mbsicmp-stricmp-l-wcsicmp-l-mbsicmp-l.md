@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l'
 title: _stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 ms.date: 4/2/2020
 api_name:
@@ -66,12 +67,12 @@ helpviewer_keywords:
 - mbsicmp_l function
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
-ms.openlocfilehash: 786c2bd2738bb82b3edac5c811ccfd3f9f8bc854
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 07ec1b2f53ae299c1c9622422cdf22e7f07ad330
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920004"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338873"
 ---
 # <a name="_stricmp-_wcsicmp-_mbsicmp-_stricmp_l-_wcsicmp_l-_mbsicmp_l"></a>_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 
@@ -124,15 +125,15 @@ Impostazioni locali da usare.
 
 Il valore restituito indica la relazione tra *String1* e *string2* , come indicato di seguito.
 
-|Valore restituito|Description|
+|Valore restituito|Descrizione|
 |------------------|-----------------|
 |< 0|*String1* minore di *string2*|
 |0|*String1* identico a *string2*|
 |> 0|*String1* maggiore di *string2*|
 
-In un errore, **_mbsicmp** restituisce **_NLSCMPERROR**, che è definito in \<String. h> e \<mbstring. h>.
+In un errore, **_mbsicmp** restituisce **_NLSCMPERROR**, che è definito in \<string.h> e \<mbstring.h> .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_stricmp** confronta in modo ordinale *String1* e *string2* dopo aver convertito ogni carattere in minuscolo e restituisce un valore che ne indica la relazione. **_stricmp** differisce da **_stricoll** in quanto il confronto di **_stricmp** è influenzato solo dal **LC_CTYPE**, che determina quali caratteri sono maiuscoli e minuscoli. La funzione **_stricoll** Confronta le stringhe in base alle categorie di **LC_CTYPE** e **LC_COLLATE** delle impostazioni locali, che includono sia il caso che l'ordine delle regole di confronto. Per ulteriori informazioni sulla categoria **LC_COLLATE** [, vedere setlocale](setlocale-wsetlocale.md) e [categorie di impostazioni locali](../../c-runtime-library/locale-categories.md). Le versioni di queste funzioni senza il suffisso **_L** usano le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso sono identiche, ma usano le impostazioni locali passate. Se le impostazioni locali non sono state impostate, vengono usate le impostazioni locali di C. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 

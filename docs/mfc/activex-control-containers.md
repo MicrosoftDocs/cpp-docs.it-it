@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: contenitori di controlli ActiveX'
 title: Contenitori di controlli ActiveX
 ms.date: 09/12/2018
 helpviewer_keywords:
 - ActiveX control containers [MFC]
 - OLE controls [MFC], containers
 ms.assetid: 0eb1a713-e607-4c79-a0c7-67c5f1fd5fab
-ms.openlocfilehash: 42fa18c41ebd960aa8de080df00556ad5c909d40
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 6de379cc152ff35e16366c1b5e920bf3548f4cd4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620761"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339115"
 ---
 # <a name="activex-control-containers"></a>Contenitori di controlli ActiveX
 
@@ -33,7 +34,7 @@ Articoli aggiuntivi in cui vengono illustrati diversi argomenti, dalla creazione
 
 - [Contenitori per i controlli ActiveX](containers-for-activex-controls.md)
 
-- [Contenitori di controlli ActiveX: attivazione manuale del contenimento dei controlli ActiveX](activex-control-containers-manually-enabling-activex-control-containment.md)
+- [Contenitori di controlli ActiveX: abilitazione manuale del contenimento dei controlli ActiveX](activex-control-containers-manually-enabling-activex-control-containment.md)
 
 - [Contenitori di controlli ActiveX: inserimento di un controllo in un'applicazione contenitore di controlli](inserting-a-control-into-a-control-container-application.md)
 
@@ -45,12 +46,12 @@ Articoli aggiuntivi in cui vengono illustrati diversi argomenti, dalla creazione
 
 - [Contenitori di controlli ActiveX: programmazione di controlli ActiveX in un contenitore di controlli ActiveX](programming-activex-controls-in-a-activex-control-container.md)
 
-- [Contenitori di controlli ActiveX: utilizzo di controlli in un contenitore diverso da una finestra di dialogo](activex-control-containers-using-controls-in-a-non-dialog-container.md)
+- [Contenitori di controlli ActiveX: utilizzo di controlli in un contenitore non di finestra di dialogo](activex-control-containers-using-controls-in-a-non-dialog-container.md)
 
 Per ulteriori informazioni sull'utilizzo di controlli ActiveX in una finestra di dialogo, vedere gli argomenti dell' [editor finestre](../windows/dialog-editor.md) .
 
 Per un elenco di articoli in cui vengono illustrati i dettagli sullo sviluppo di controlli ActiveX mediante Visual C++ e le classi di controlli ActiveX MFC, vedere [controlli ActiveX MFC](mfc-activex-controls.md). Gli articoli sono raggruppati per categorie funzionali.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli ActiveX MFC](mfc-activex-controls.md)
