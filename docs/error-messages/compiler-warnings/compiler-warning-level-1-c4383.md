@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 1) C4383'
 title: Avviso del compilatore (livello 1) C4383
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4383
 ms.assetid: 96c0e52d-874e-4b57-a154-0e49b6a00fae
-ms.openlocfilehash: 1c4a7ca806430c73c8e8396e596782253cc06f09
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f6ece51ed497919cf444952f42130cc3a4bfb4a2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162738"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339930"
 ---
 # <a name="compiler-warning-level-1-c4383"></a>Avviso del compilatore (livello 1) C4383
 

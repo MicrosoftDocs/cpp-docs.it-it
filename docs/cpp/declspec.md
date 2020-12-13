@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: `__declspec`'
 title: __declspec
 ms.date: 03/21/2019
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 - _declspec
 helpviewer_keywords:
 - __declspec keyword [C++]
-ms.openlocfilehash: 06af67a24b7514b22e34852dc2c6ee3f35daa24e
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: d0567c522e0e21f70b9ed8acfa428c3374fd09f6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87521122"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339540"
 ---
 # `__declspec`
 
@@ -30,7 +31,7 @@ La sintassi degli attributi estesa per specificare le informazioni sulla classe 
 &nbsp;&nbsp;&nbsp;&nbsp;*`extended-decl-modifier`* *`extended-decl-modifier-seq`*
 
 *`extended-decl-modifier`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`align(`***numero* di**`)`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`align(`***numero* di **`)`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`allocate("`***nomeseg***`")`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`allocator`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`appdomain`**<br/>
@@ -99,7 +100,7 @@ __declspec( thread ) int tls_i = 1;
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Parole chiave](../cpp/keywords-cpp.md)<br/>
-[Attributi di classi di archiviazione estesi C](../c-language/c-extended-storage-class-attributes.md)
+[Attributi di Storage-Class estese C](../c-language/c-extended-storage-class-attributes.md)

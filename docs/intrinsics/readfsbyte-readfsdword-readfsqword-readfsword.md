@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __readfsbyte, __readfsdword, __readfsqword, __readfsword'
 title: __readfsbyte, __readfsdword, __readfsqword, __readfsword
 ms.date: 09/02/2019
 f1_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - readfsqword intrinsic
 - __readfsqword intrinsic
 ms.assetid: f6ee7203-4179-402c-a464-0746c84ce6ac
-ms.openlocfilehash: 30040b33fe8c686bc0cda585c525ae2926cdf314
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 2b733ced12045253c78e823379c10a5e70f65143
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222369"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340983"
 ---
 # <a name="__readfsbyte-__readfsdword-__readfsqword-__readfsword"></a>__readfsbyte, __readfsdword, __readfsqword, __readfsword
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Consente di leggere la memoria da una posizione specificata da un offset relativo all'inizio del segmento FS.
 
@@ -53,26 +54,26 @@ in Offset dall'inizio di `FS` da cui leggere.
 
 ## <a name="return-value"></a>Valore restituito
 
-Contenuto della memoria di byte, Word, parola doppia o quadrupla (come indicato dal nome della funzione chiamata) nella posizione `FS:[Offset]`.
+Contenuto della memoria di byte, Word, parola doppia o quadrupla (come indicato dal nome della funzione chiamata) nella posizione `FS:[Offset]` .
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`__readfsbyte`|x86|
 |`__readfsdword`|x86|
 |`__readfsqword`|x86|
 |`__readfsword`|x86|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Queste routine sono disponibili solo come intrinseci.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)\
+[__writefsbyte, \_ _writefsdword, \_ _writefsqword, \_ _writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)\
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

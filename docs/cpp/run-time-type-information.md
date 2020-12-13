@@ -1,4 +1,5 @@
 ---
+description: 'Scopri di più su: informazioni sui tipi di Run-Time'
 title: Informazioni sui tipi di runtime
 ms.custom: index-page
 ms.date: 11/04/2016
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - type information, run-time type checking
 - run-time checks, type checking
 ms.assetid: becbd0e5-0439-4c61-854f-8a74f7160c54
-ms.openlocfilehash: b6d3652539572f094d0e7139e6672402341c956d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1cba6ffbb46899ace6d5f1d233e077603a0c1c4c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232235"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340437"
 ---
 # <a name="run-time-type-information"></a>Informazioni sui tipi di runtime
 
@@ -36,6 +37,6 @@ Esistono tre elementi principali del linguaggio C++ per eseguire informazioni su
 
    Utilizzato per conservare le informazioni sul tipo restituite dall' **`typeid`** operatore.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Cast](../cpp/casting.md)

@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: regole e limitazioni per le funzioni naked'
 title: Regole e limitazioni per le funzioni naked
 ms.date: 11/04/2016
 helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
-ms.openlocfilehash: 3dd089e13323e1811cf9d7c7717612313f2cef7d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d5dd1b0b115132b4986e9090537fc94eb2aadc0a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225852"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340450"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Regole e limitazioni per le funzioni naked
 
@@ -72,6 +73,6 @@ __declspec(naked) int __fastcall  power(int i, int j) {
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Chiamate di funzioni naked](../cpp/naked-function-calls.md)

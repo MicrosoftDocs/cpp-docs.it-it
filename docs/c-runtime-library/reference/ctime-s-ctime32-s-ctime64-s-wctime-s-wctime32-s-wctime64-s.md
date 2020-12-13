@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s'
 title: ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 ms.date: 4/2/2020
 api_name:
@@ -59,12 +60,12 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-ms.openlocfilehash: ca7636f7054b6c7e228b57e0e776250f1b4ccb32
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8a0f7b281bab32de5c6b5d7f2cf83fb5e1ed811f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914826"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339618"
 ---
 # <a name="ctime_s-_ctime32_s-_ctime64_s-_wctime_s-_wctime32_s-_wctime64_s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 
@@ -161,7 +162,7 @@ Zero in caso di esito positivo. Se si verifica un errore a causa di un parametro
 |Not **null**|>= 26|NULL|**EINVAL**|stringa vuota|
 |Not **null**|>= 26|< 0|**EINVAL**|stringa vuota|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **ctime_s** converte un valore di ora archiviato come struttura di [time_t](../../c-runtime-library/standard-types.md) in una stringa di caratteri. Il valore *sourceTime* viene in genere ottenuto da una chiamata a [Time](time-time32-time64.md), che restituisce il numero di secondi trascorsi dalla mezzanotte (00:00:00) del 1 ° gennaio 1970, UTC (Coordinated Universal Time). La stringa del valore restituito contiene esattamente 26 caratteri e ha il formato:
 
@@ -171,9 +172,9 @@ Viene usato un formato 24 ore. Tutti i campi hanno una larghezza costante. Il ca
 
 La stringa di caratteri convertita viene anche regolata in base alle impostazioni di fuso orario locale. Per informazioni sulla configurazione dell'ora locale e della funzione [_tzset](tzset.md) , vedere le funzioni [Time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md)e [localtime32_s](localtime-s-localtime32-s-localtime64-s.md) per informazioni sulla definizione dell'ambiente e delle variabili globali del fuso orario.
 
-**_wctime32_s** e **_wctime64_s** sono la versione a caratteri wide di **_ctime32_s** e **_ctime64_s**; restituzione di un puntatore a una stringa di caratteri wide. In caso contrario, **_ctime64_s**, **_wctime32_s**e **_wctime64_s** si comportano in modo identico a **_ctime32_s**.
+**_wctime32_s** e **_wctime64_s** sono la versione a caratteri wide di **_ctime32_s** e **_ctime64_s**; restituzione di un puntatore a una stringa di caratteri wide. In caso contrario, **_ctime64_s**, **_wctime32_s** e **_wctime64_s** si comportano in modo identico a **_ctime32_s**.
 
-**ctime_s** è una funzione inline che restituisce **_ctime64_s** e **time_t** equivale a **__time64_t**. Se è necessario forzare il compilatore a interpretare **time_t** come la precedente **time_t**a 32 bit, è possibile definire **_USE_32BIT_TIME_T**. In questo modo **ctime_s** restituirà **_ctime32_s**. Questa operazione non è consigliabile perché potrebbero verificarsi errori per l'applicazione dopo il 18 gennaio 2038 e l'uso non è consentito in piattaforme a 64 bit.
+**ctime_s** è una funzione inline che restituisce **_ctime64_s** e **time_t** equivale a **__time64_t**. Se è necessario forzare il compilatore a interpretare **time_t** come la precedente **time_t** a 32 bit, è possibile definire **_USE_32BIT_TIME_T**. In questo modo **ctime_s** restituirà **_ctime32_s**. Questa operazione non è consigliabile perché potrebbero verificarsi errori per l'applicazione dopo il 18 gennaio 2038 e l'uso non è consentito in piattaforme a 64 bit.
 
 In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
@@ -194,7 +195,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
 |**ctime_s**, **_ctime32_s**, **_ctime64_s**|\<time.h>|
-|**_wctime_s**, **_wctime32_s**, **_wctime64_s**|\<time.h> or \<wchar.h>|
+|**_wctime_s**, **_wctime32_s**, **_wctime64_s**|\<time.h> o \<wchar.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

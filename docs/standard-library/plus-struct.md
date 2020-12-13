@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: struct Plus'
 title: Struct plus
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - plus class
 - plus struct
 ms.assetid: 4594abd5-b2f2-4fac-9b6b-fc9a2723f8cf
-ms.openlocfilehash: 628823a7fc3c176f83bbb1dca59ec194b5d3db97
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9f4b821da3f31255b71730d0f8c800450141d7c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372074"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340723"
 ---
 # <a name="plus-struct"></a>Struct plus
 
@@ -39,14 +40,14 @@ struct plus<void>
 
 ### <a name="parameters"></a>Parametri
 
-*Tipo*, *T*, *U*\
+*Digitare*, *T*, *U*\
 Tipo che supporta un `operator+` binario che accetta gli operandi dei tipi specificati o dedotti.
 
 *Sinistra*\
-Operando sinistro dell'operatore di addizione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *Type*. Il modello specializzato esegue l'inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto *T*.
+Operando sinistro dell'operatore di addizione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *Type*. Il modello specializzato esegue l'avanzamento perfetto degli argomenti di riferimento lvalue e rvalue del tipo derivato *T*.
 
-*va bene*\
-Operando destro dell'operatore di addizione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *Type*. Il modello specializzato esegue l'inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto *U*.
+*Ok*\
+Operando destro dell'operatore di addizione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *Type*. Il modello specializzato esegue l'avanzamento perfetto degli argomenti di riferimento lvalue e rvalue del tipo derivato *U*.
 
 ## <a name="return-value"></a>Valore restituito
 

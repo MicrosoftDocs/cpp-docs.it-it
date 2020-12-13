@@ -1,5 +1,6 @@
 ---
-title: Architettura documento-visualizzazione
+description: 'Altre informazioni su: architettura documento/visualizzazione'
+title: Architettura Document-View
 ms.date: 11/19/2018
 helpviewer_keywords:
 - CView class [MFC], view architecture
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-ms.openlocfilehash: a74aeba651d385cf3a5386e94ec20e4e56b7cd57
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ef6746a77a3f8a482c347d61685fccad3e6b4dfb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624780"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339722"
 ---
 # <a name="documentview-architecture"></a>Architettura documento/visualizzazione
 
@@ -68,7 +69,7 @@ I documenti, le visualizzazioni associate e le finestre cornice che incorniciano
 
 - [Utilizzo di documenti](using-documents.md)
 
-- [Utilizzo delle visualizzazioni](using-views.md)
+- [Uso delle visualizzazioni](using-views.md)
 
 - [Tipi di documenti multipli, visualizzazioni e finestre cornice](multiple-document-types-views-and-frame-windows.md)
 
@@ -82,11 +83,11 @@ I documenti, le visualizzazioni associate e le finestre cornice che incorniciano
 
 - [Esempi](../overview/visual-cpp-samples.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Elementi dell'interfaccia utente](user-interface-elements-mfc.md)<br/>
 [Windows](windows.md)<br/>
 [Finestre cornice](frame-windows.md)<br/>
-[Modelli di documenti e processo di creazione documento/visualizzazione](document-templates-and-the-document-view-creation-process.md)<br/>
-[Creazione di documenti/visualizzazioni](document-view-creation.md)<br/>
+[Modelli di documento e processo di creazione documento/visualizzazione](document-templates-and-the-document-view-creation-process.md)<br/>
+[Creazione documento/visualizzazione](document-view-creation.md)<br/>
 [Creazione di nuovi documenti, finestre e visualizzazioni](creating-new-documents-windows-and-views.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: decltype (C++)'
 title: decltype  (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-ms.openlocfilehash: 9e769bbef66bd1b55b9d445874f00d37a736025e
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: e581436a43fc9632961fcb888dfb0b23974fc2df
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90683481"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339501"
 ---
 # <a name="decltype--c"></a>decltype  (C++)
 
@@ -33,7 +34,7 @@ Espressione. Per ulteriori informazioni, vedere [espressioni](../cpp/expressions
 
 Tipo del parametro dell' *espressione* .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L' **`decltype`** identificatore di tipo è supportato in Visual Studio 2010 o versioni successive e può essere usato con codice nativo o gestito. `decltype(auto)` (C++14) è supportato in Visual Studio 2015 e versioni successive.
 
@@ -78,7 +79,7 @@ L'introduzione dell' **`decltype`** identificatore di tipo consente a uno svilup
 
 Il prototipo indicato di seguito mostra la sintassi per la dichiarazione di una funzione alternativa. Si noti che **`const`** i **`volatile`** qualificatori e e la **`throw`** [specifica dell'eccezione](../cpp/exception-specifications-throw-cpp.md) sono facoltativi. Il segnaposto *function_body* rappresenta un'istruzione composta che specifica le operazioni svolte dalla funzione. Come procedura di codifica ottimale, il segnaposto dell' *espressione* nell' **`decltype`** istruzione deve corrispondere all'espressione specificata dall' **`return`** istruzione, se presente, nel *function_body*.
 
-**`auto`***function_name* **`(`** *parametri*<sub>opt opt</sub> opt esplicito **`)`** **`const`** <sub>opt</sub> **`volatile`** <sub>opt</sub> **`->`** **`decltype(`** *expression* **`)`** **`noexcept`** <sub>opt</sub> **`{`** *function_body***`};`**
+**`auto`***function_name* **`(`** *parametri*<sub>opt opt</sub> opt esplicito **`)`** **`const`** <sub></sub> **`volatile`** <sub></sub> **`->`** **`decltype(`**  **`)`** **`noexcept`** <sub></sub> **`{`** *function_body***`};`**
 
 Nel seguente esempio di codice il tipo restituito ritardo-specificato della funzione di modello `myFunc` dipende dai tipi di argomenti di modello `t` e `u`. Come procedura di codifica ottimale, nell'esempio di codice vengono anche utilizzati i riferimenti rvalue e il `forward` modello di funzione, che supportano l' *invio perfetto*. Per altre informazioni, vedere [Dichiaratore di riferimento rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
@@ -100,7 +101,7 @@ Le funzioni di inoltro eseguono il wrapping delle chiamate ad altre funzioni. Si
 
 In questo scenario non è possibile scrivere un'espressione di tipo appropriata senza l' **`decltype`** identificatore di tipo. L' **`decltype`** identificatore di tipo Abilita funzioni di inoltri generiche perché non perde le informazioni necessarie sul fatto che una funzione restituisca un tipo di riferimento. Per un esempio di codice di una funzione di inoltro, vedere l'esempio della funzione di modello `myFunc` precedente.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Nell'esempio di codice seguente viene dichiarato il tipo restituito ritardo-specificato della funzione di modello `Plus()`. La `Plus` funzione elabora i due operandi con l' **`operator+`** Overload. Di conseguenza, l'interpretazione dell'operatore di addizione ( **`+`** ) e il tipo restituito della `Plus` funzione dipendono dai tipi degli argomenti della funzione.
 

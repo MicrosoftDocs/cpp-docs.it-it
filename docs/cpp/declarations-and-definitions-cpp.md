@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: dichiarazioni e definizioni (C++)'
 title: Dichiarazioni e definizioni (C++)
 ms.date: 12/12/2019
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
-ms.openlocfilehash: 688c1960e37fe74edecabebc4cb8090af9d0dd58
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 00d86e4df70e150a2e9f2417050b47b943a054ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228960"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339514"
 ---
 # <a name="declarations-and-definitions-c"></a>Dichiarazioni e definizioni (C++)
 
@@ -44,7 +45,7 @@ Alla riga 5, la `main` funzione è dichiarata. Alla riga 7, una **`const`** vari
 
 Nella riga 9 `obj` viene dichiarata una variabile denominata di tipo `C` . Tuttavia, questa dichiarazione genera un errore perché non `C` è dichiarata fino a un momento successivo nel programma e non viene dichiarata in avanti. Per correggere l'errore, è possibile spostare l'intera *definizione* di `C` prima `main` o aggiungere una dichiarazione di tipo "Avanti". Questo comportamento è diverso da altri linguaggi, ad esempio C#, in cui le funzioni e le classi possono essere utilizzate prima del relativo punto di dichiarazione in un file di origine.
 
-Nella riga 10 `str` viene dichiarata una variabile denominata di tipo `std::string` . Il nome `std::string` è visibile perché è stato introdotto nel `string` [file di intestazione](header-files-cpp.md) che viene unito al file di origine nella riga 1. `std`spazio dei nomi in cui `string` viene dichiarata la classe.
+Nella riga 10 `str` viene dichiarata una variabile denominata di tipo `std::string` . Il nome `std::string` è visibile perché è stato introdotto nel `string` [file di intestazione](header-files-cpp.md) che viene unito al file di origine nella riga 1. `std` spazio dei nomi in cui `string` viene dichiarata la classe.
 
 Nella riga 11, viene generato un errore perché il nome `j` non è stato dichiarato. Una dichiarazione deve fornire un tipo, a differenza di altri linguaggi, ad esempio javaScript. Nella riga 12 **`auto`** viene utilizzata la parola chiave, che indica al compilatore di dedurre il tipo di in `k` base al valore con cui viene inizializzato. Il compilatore in questo caso sceglie **`int`** il tipo.  
 
@@ -102,11 +103,11 @@ Un programma C++ potrebbe contenere più di un' [unità di compilazione](header-
 [`extern`](extern-cpp.md)<br/>
 [Inizializzatori](initializers.md)<br/>
 [Alias e typedef](aliases-and-typedefs-cpp.md)<br/>
-[`using`Dichiarazione](using-declaration.md)<br/>
+[`using` Dichiarazione](using-declaration.md)<br/>
 [`volatile`](volatile-cpp.md)<br/>
 [`decltype`](decltype-cpp.md)<br/>
 [Attributi in C++](attributes.md)<br/>
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Concetti di base](../cpp/basic-concepts-cpp.md)<br/>

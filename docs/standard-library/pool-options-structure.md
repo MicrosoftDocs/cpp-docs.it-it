@@ -1,16 +1,17 @@
 ---
-title: pool_options struttura
+description: 'Altre informazioni su: struttura pool_options'
+title: Struttura pool_options
 ms.date: 11/04/2016
 f1_keywords:
 - memory_resource/std::pool_options
-ms.openlocfilehash: ec943ab34ddf2bfa785880cb2b0c78453546f933
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e925893a3cbafa5a8a6bc1724e9cf296e5aa0bf6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268343"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340658"
 ---
-# <a name="pooloptions-structure"></a>pool_options struttura
+# <a name="pool_options-structure"></a>Struttura pool_options
 
 ```cpp
 struct pool_options {

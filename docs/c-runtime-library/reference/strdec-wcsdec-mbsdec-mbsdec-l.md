@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _strdec, _wcsdec, _mbsdec, _mbsdec_l'
 title: _strdec, _wcsdec, _mbsdec, _mbsdec_l
 ms.date: 4/2/2020
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - wcsdec function
 - _mbsdec function
 ms.assetid: ae37c223-800f-48a9-ae8e-38c8d20af2dd
-ms.openlocfilehash: c3988beac1a3c1b3d7fa831405208ddc564456a3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 85001258baea9e7c6509bfdd33a74f9a0eccd80f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914492"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340554"
 ---
 # <a name="_strdec-_wcsdec-_mbsdec-_mbsdec_l"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
 
@@ -95,9 +96,9 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**_mbsdec**, **_mbsdec_l**, **_strdec**e **_wcsdec** restituiscono ciascuno un puntatore al carattere che precede immediatamente l' *oggetto corrente*; **_mbsdec** restituisce **null** se il valore di *Start* è maggiore o uguale a quello dell' *oggetto corrente*. **_tcsdec** esegue il mapping a una di queste funzioni e il valore restituito dipende dal mapping.
+**_mbsdec**, **_mbsdec_l**, **_strdec** e **_wcsdec** restituiscono ciascuno un puntatore al carattere che precede immediatamente l' *oggetto corrente*; **_mbsdec** restituisce **null** se il valore di *Start* è maggiore o uguale a quello dell' *oggetto corrente*. **_tcsdec** esegue il mapping a una di queste funzioni e il valore restituito dipende dal mapping.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le funzioni **_mbsdec** e **_mbsdec_l** restituiscono un puntatore al primo byte del carattere multibyte che precede immediatamente *Current* nella stringa che contiene *Start*.
 
@@ -186,7 +187,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strinc, _wcsinc, _mbsinc, _mbsinc_l](strinc-wcsinc-mbsinc-mbsinc-l.md)<br/>

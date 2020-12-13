@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: server di automazione'
 title: Server di automazione
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - dispatch maps [MFC], Automation servers
 - servers, Automation
 ms.assetid: 523fd155-51ce-4f91-b986-b74bdbdd7d92
-ms.openlocfilehash: 4c2ef77e20b7dccfa8cd6830c090111601331642
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e97bcf524b96e459cd1a3caddec7cdaf0c030962
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619414"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339826"
 ---
 # <a name="automation-servers"></a>Server di automazione
 
@@ -27,7 +28,7 @@ Questi oggetti di automazione dispongono di proprietà e metodi come interfaccia
 
 Esponendo la funzionalità dell'applicazione tramite un'interfaccia comune e ben definita, l'automazione rende possibile la creazione di applicazioni in un unico linguaggio di programmazione generale, come Microsoft Visual Basic anziché in linguaggi macro specifici dell'applicazione.
 
-## <a name="support-for-automation-servers"></a><a name="_core_support_for_automation_servers"></a>Supporto per i server di automazione
+## <a name="support-for-automation-servers"></a><a name="_core_support_for_automation_servers"></a> Supporto per i server di automazione
 
 Visual C++ e il framework MFC forniscono un supporto completo per i server di automazione. Gestiscono gran parte del sovraccarico dovuto alla creazione di un server di automazione, in modo da poter concentrare il lavoro sulle funzionalità dell'applicazione.
 
@@ -51,7 +52,7 @@ La creazione guidata applicazione MFC semplifica i passaggi necessari per l'appl
 
 - [Altre informazioni sulla classe COleDispatchDriver](reference/coledispatchdriver-class.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Automazione](automation.md)<br/>
 [Creazione guidata applicazione MFC](reference/mfc-application-wizard.md)

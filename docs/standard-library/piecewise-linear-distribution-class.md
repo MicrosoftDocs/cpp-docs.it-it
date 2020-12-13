@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: piecewise_linear_distribution Class'
 title: Classe piecewise_linear_distribution
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::piecewise_linear_distribution [C++], param_type
 - std::piecewise_linear_distribution [C++], param_type
 ms.assetid: cd141152-7163-4754-8f98-c6d6500005e0
-ms.openlocfilehash: 57c6e19bc56068c98f6c85978c7af68e56cb4f2a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8ba2a0707599c8510488290c5d0c227d464588ff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832685"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340736"
 ---
 # <a name="piecewise_linear_distribution-class"></a>Classe piecewise_linear_distribution
 
@@ -83,7 +84,7 @@ public:
 *RealType*\
 Il tipo di risultato a virgola mobile, il valore predefinito è **`double`** . Per i tipi possibili, vedere [\<random>](../standard-library/random.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questa distribuzione di campionamento ha intervalli di larghezza diversa e probabilità a variabilità lineare in ogni intervallo. Per informazioni su altre distribuzioni di campionamento, vedere [piecewise_linear_distribution](../standard-library/piecewise-constant-distribution-class.md) e [discrete_distribution](../standard-library/discrete-distribution-class.md).
 
@@ -274,7 +275,7 @@ Oggetto che rappresenta la funzione di probabilità per la distribuzione. Il par
 *parm*\
 Struttura di parametri usata per costruire la distribuzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il costruttore predefinito imposta i parametri archiviati in modo che sia disponibile un intervallo, da 0 a 1, con densità di probabilità pari a 1.
 
@@ -312,7 +313,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-costruisce un oggetto di distribuzione con intervalli di *conteggio* distribuiti in modo uniforme su [ `xmin,xmax` ], assegnando i pesi di ogni intervallo in base alla funzione *weightfunc*e *weightfunc* deve accettare un parametro e avere un valore restituito, entrambi convertibili in **`double`** . **Precondizione:** `xmin < xmax` .
+costruisce un oggetto di distribuzione con intervalli di *conteggio* distribuiti in modo uniforme su [ `xmin,xmax` ], assegnando i pesi di ogni intervallo in base alla funzione *weightfunc* e *weightfunc* deve accettare un parametro e avere un valore restituito, entrambi convertibili in **`double`** . **Precondizione:** `xmin < xmax` .
 
 Il costruttore definito come
 
@@ -348,7 +349,7 @@ struct param_type {
 
 Per la distribuzione [piecewise_linear_distribution](#piecewise_linear_distribution) vedere i parametri del costruttore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:**`xmin < xmax`
 

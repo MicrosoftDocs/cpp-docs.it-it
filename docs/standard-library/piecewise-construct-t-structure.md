@@ -1,21 +1,22 @@
 ---
-title: piecewise_contruct_t struttura
+description: 'Altre informazioni su: struttura piecewise_contruct_t'
+title: Struttura piecewise_contruct_t
 ms.date: 11/04/2016
 f1_keywords:
 - utility/std::piecewise_contruct_t
 helpviewer_keywords:
 - piecewise_contruct_t class
 - piecewise_contruct_t structure
-ms.openlocfilehash: 6a9a6af97ca5c7751d64cd1fa70c9d9eba87da7c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7fefacff75b47c25cb9ae07cc894498eadb551df
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268363"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340749"
 ---
-# <a name="piecewisecontructt-structure"></a>piecewise_contruct_t struttura
+# <a name="piecewise_contruct_t-structure"></a>Struttura piecewise_contruct_t
 
-Lo struct `piecewise_construct_t` è un tipo di struttura vuota usato per mantenere il costruttore separato e overload di funzioni. In particolare `pair` ha un costruttore con `piecewise_construct_t` come primo argomento, seguita da due `tuple` argomenti.
+Lo struct `piecewise_construct_t` è un tipo di struttura vuoto utilizzato per evitare l'overload di funzioni e costruttori distinti. In particolare, `pair` dispone di un costruttore con `piecewise_construct_t` come primo argomento, seguito da due `tuple` argomenti.
 
 ## <a name="syntax"></a>Sintassi
 

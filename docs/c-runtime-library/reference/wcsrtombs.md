@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: wcsrtombs'
 title: wcsrtombs
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - string conversion, wide characters
 - wide characters, strings
 ms.assetid: a8d21fec-0d36-4085-9d81-9b1c61c7259d
-ms.openlocfilehash: cad31f28c5542a96eae9f144344882b71806052a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 34fabe44c0e239eba4201b180df026655a4277f4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910621"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340509"
 ---
 # <a name="wcsrtombs"></a>wcsrtombs
 
@@ -75,13 +76,13 @@ Puntatore a un oggetto **mbstate_t** stato di conversione.
 
 Restituisce il numero di byte convertito correttamente, escluso il byte di terminazione Null, se presente. In caso contrario restituisce -1 se si verifica un errore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **wcsrtombs** converte una stringa di caratteri wide, a partire dallo stato di conversione specificato contenuto in *mbstate*, dai valori a cui punta indiretto in *wcstr*nell'indirizzo di *mbstr*. La conversione continuerà per ogni carattere fino a quando non viene rilevato un carattere wide di terminazione null, quando viene rilevato un carattere non corrispondente o quando il carattere successivo supera il limite contenuto nel *conteggio*. Se **wcsrtombs** rileva il carattere null Wide (L'\ 0') prima o quando si verifica il *conteggio* , lo converte in uno 0 a 8 bit e si arresta.
+La funzione **wcsrtombs** converte una stringa di caratteri wide, a partire dallo stato di conversione specificato contenuto in *mbstate*, dai valori a cui punta indiretto in *wcstr* nell'indirizzo di *mbstr*. La conversione continuerà per ogni carattere fino a quando non viene rilevato un carattere wide di terminazione null, quando viene rilevato un carattere non corrispondente o quando il carattere successivo supera il limite contenuto nel *conteggio*. Se **wcsrtombs** rileva il carattere null Wide (L'\ 0') prima o quando si verifica il *conteggio* , lo converte in uno 0 a 8 bit e si arresta.
 
 Quindi, la stringa di caratteri multibyte in *mbstr* è con terminazione null solo se **wcsrtombs** rileva un carattere null a caratteri wide durante la conversione. Se le sequenze a cui puntano *wcstr* e *mbstr* si sovrappongono, il comportamento di **wcsrtombs** non è definito. **wcsrtombs** è influenzato dalla categoria LC_TYPE delle impostazioni locali correnti.
 
-La funzione **wcsrtombs** differisce da [wcstombs _wcstombs_l](wcstombs-wcstombs-l.md) dalla relativa riavviabilità. Lo stato di conversione viene archiviato in *mbstate* per le chiamate successive alle stesse o ad altre funzioni riavviabili. I risultati non sono definiti quando si usano insieme funzioni riavviabili e non riavviabili.  Ad esempio, un'applicazione utilizzerebbe **wcsrlen** anziché **wcsnlen**se veniva utilizzata una chiamata successiva a **wcsrtombs** anziché **wcstombs**.
+La funzione **wcsrtombs** differisce da [wcstombs _wcstombs_l](wcstombs-wcstombs-l.md) dalla relativa riavviabilità. Lo stato di conversione viene archiviato in *mbstate* per le chiamate successive alle stesse o ad altre funzioni riavviabili. I risultati non sono definiti quando si usano insieme funzioni riavviabili e non riavviabili.  Ad esempio, un'applicazione utilizzerebbe **wcsrlen** anziché **wcsnlen** se veniva utilizzata una chiamata successiva a **wcsrtombs** anziché **wcstombs**.
 
 Se l'argomento *mbstr* è **null**, **wcsrtombs** restituisce la dimensione richiesta in byte della stringa di destinazione. Se *mbstate* è null, viene usato lo stato di conversione **mbstate_t** interno. Se la sequenza di caratteri *WCHAR* non presenta una rappresentazione di caratteri multibyte corrispondente, viene restituito-1 e **errno** viene impostato su **EILSEQ**.
 
@@ -145,11 +146,11 @@ The string was successfuly converted.
 |-------------|---------------------|
 |**wcsrtombs**|\<wchar.h>|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [wcrtomb](wcrtomb.md)<br/>
 [wcrtomb_s](wcrtomb-s.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>

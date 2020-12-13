@@ -1,5 +1,6 @@
 ---
-title: Automazione
+description: 'Altre informazioni su: automazione'
+title: automazione
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Automation servers, about Automation servers
@@ -20,14 +21,14 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: e5790be14f26f59c2b51b339c8bee7c5eca7d692
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8a038a3590c3db9c90c8f99eaaa6f98d2c4e20cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616518"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339839"
 ---
-# <a name="automation"></a>Automazione
+# <a name="automation"></a>automazione
 
 L'automazione (precedentemente nota come automazione OLE) fa sì che un'applicazione possa modificare oggetti implementati in un'altra applicazione o esporli in modo che possano essere modificati.
 
@@ -87,6 +88,6 @@ Il tipo **VARIANT** è incapsulato nella classe [COleVariant](reference/colevari
 
 - [Scrivere client di automazione in C++](automation-clients.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [MFC COM](mfc-com.md)

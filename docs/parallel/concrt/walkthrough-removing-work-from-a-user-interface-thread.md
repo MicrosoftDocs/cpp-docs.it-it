@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: procedura dettagliata: rimozione di lavoro da un thread di User-Interface'
 title: "Procedura dettagliata: rimozione di lavoro da un thread dell'interfaccia utente"
 ms.date: 08/19/2019
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 003678f3c79f2abfa7ceb0c67fecd69cf178f442
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 816e8446771cda907397f43386c33476cf3665b8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222693"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340918"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Procedura dettagliata: rimozione di lavoro da un thread dell'interfaccia utente
 
@@ -34,7 +35,7 @@ Prima di iniziare questa procedura dettagliata, leggere gli argomenti seguenti:
 
 Prima di iniziare questa procedura dettagliata, è inoltre consigliabile comprendere le nozioni di base dello sviluppo di applicazioni MFC e di GDI+. Per ulteriori informazioni su MFC, vedere [applicazioni desktop MFC](../../mfc/mfc-desktop-applications.md). Per ulteriori informazioni su GDI+, vedere [GDI+](/windows/win32/gdiplus/-gdiplus-gdi-start).
 
-## <a name="sections"></a><a name="top"></a>Sezioni
+## <a name="sections"></a><a name="top"></a> Sezioni
 
 Questa procedura dettagliata contiene le sezioni seguenti:
 
@@ -42,13 +43,13 @@ Questa procedura dettagliata contiene le sezioni seguenti:
 
 - [Implementazione della versione seriale dell'applicazione Mandelbrot](#serial)
 
-- [Rimozione del lavoro dal thread dell'interfaccia utente](#removing-work)
+- [Rimozione del lavoro dal thread di User-Interface](#removing-work)
 
 - [Miglioramento delle prestazioni di disegno](#performance)
 
 - [Aggiunta del supporto per l'annullamento](#cancellation)
 
-## <a name="creating-the-mfc-application"></a><a name="application"></a>Creazione dell'applicazione MFC
+## <a name="creating-the-mfc-application"></a><a name="application"></a> Creazione dell'applicazione MFC
 
 In questa sezione viene descritto come creare l'applicazione MFC di base.
 
@@ -62,9 +63,9 @@ In questa sezione viene descritto come creare l'applicazione MFC di base.
 
 1. Fare clic su **fine** per creare il progetto e chiudere la **creazione guidata applicazione MFC**.
 
-   Verificare che l'applicazione sia stata creata correttamente mediante la compilazione e l'esecuzione. Per compilare l'applicazione, scegliere **Compila soluzione**dal menu **Compila** . Se l'applicazione viene compilata correttamente, eseguire l'applicazione scegliendo **Avvia debug** dal menu **debug** .
+   Verificare che l'applicazione sia stata creata correttamente mediante la compilazione e l'esecuzione. Per compilare l'applicazione, scegliere **Compila soluzione** dal menu **Compila** . Se l'applicazione viene compilata correttamente, eseguire l'applicazione scegliendo **Avvia debug** dal menu **debug** .
 
-## <a name="implementing-the-serial-version-of-the-mandelbrot-application"></a><a name="serial"></a>Implementazione della versione seriale dell'applicazione Mandelbrot
+## <a name="implementing-the-serial-version-of-the-mandelbrot-application"></a><a name="serial"></a> Implementazione della versione seriale dell'applicazione Mandelbrot
 
 In questa sezione viene descritto come creare il frattale di Mandelbrot. Questa versione disegna il frattale di Mandelbrot in un oggetto [bitmap](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-bitmap) GDI+, quindi copia il contenuto di tale bitmap nella finestra del client.
 
@@ -114,7 +115,7 @@ Poiché il calcolo per ogni pixel è costoso dal punto di vista del calcolo, il 
 
 [All'[inizio](#top)]
 
-## <a name="removing-work-from-the-ui-thread"></a><a name="removing-work"></a>Rimozione del lavoro dal thread UI
+## <a name="removing-work-from-the-ui-thread"></a><a name="removing-work"></a> Rimozione del lavoro dal thread UI
 
 In questa sezione viene illustrato come rimuovere il lavoro di disegno dal thread dell'interfaccia utente nell'applicazione Mandelbrot. Spostando il lavoro di disegno dal thread dell'interfaccia utente a un thread di lavoro, il thread UI può elaborare i messaggi quando il thread di lavoro genera l'immagine in background.
 
@@ -152,7 +153,7 @@ L'interfaccia utente è ora più reattiva perché il lavoro di disegno viene ese
 
 [All'[inizio](#top)]
 
-## <a name="improving-drawing-performance"></a><a name="performance"></a>Miglioramento delle prestazioni di disegno
+## <a name="improving-drawing-performance"></a><a name="performance"></a> Miglioramento delle prestazioni di disegno
 
 La generazione del frattale di Mandelbrot è un buon candidato per la parallelizzazione perché il calcolo di ogni pixel è indipendente da tutti gli altri calcoli. Per parallelizzare la procedura di disegno, convertire il **`for`** ciclo esterno nel `CChildView::DrawMandelbrot` metodo in una chiamata all'algoritmo [concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) , come indicato di seguito.
 
@@ -162,7 +163,7 @@ Poiché il calcolo di ogni elemento bitmap è indipendente, non è necessario si
 
 [All'[inizio](#top)]
 
-## <a name="adding-support-for-cancellation"></a><a name="cancellation"></a>Aggiunta del supporto per l'annullamento
+## <a name="adding-support-for-cancellation"></a><a name="cancellation"></a> Aggiunta del supporto per l'annullamento
 
 In questa sezione viene descritto come gestire il ridimensionamento delle finestre e come annullare tutte le attività di disegno attive quando la finestra viene distrutta.
 
@@ -222,7 +223,7 @@ Quando si ridimensiona la finestra, il lavoro di disegno viene eseguito solo per
 
 [All'[inizio](#top)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Procedure dettagliate runtime di concorrenza](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [Parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>

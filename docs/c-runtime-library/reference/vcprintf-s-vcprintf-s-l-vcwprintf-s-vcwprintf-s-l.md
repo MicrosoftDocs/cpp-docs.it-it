@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l'
 title: _vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - vtcprintf_s function
 - formatted text [C++]
 ms.assetid: 5a46d45a-30db-45df-9850-455cbdac5636
-ms.openlocfilehash: a6a3e94167adcc614a5de45a314fca25bdc9e1f2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 68ac12f9c9ddbebe613ea92ade0b05eeb8e1ab01
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945669"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339592"
 ---
 # <a name="_vcprintf_s-_vcprintf_s_l-_vcwprintf_s-_vcwprintf_s_l"></a>_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l
 
@@ -102,11 +103,11 @@ Numero di caratteri scritti o un valore negativo se si verifica un errore di out
 
 Analogamente alle versioni meno sicure di queste funzioni, se *Format* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Inoltre, a differenza delle versioni meno sicure di queste funzioni, se *Format* non specifica un formato valido, viene generata un'eccezione di parametro non valido. Se l'esecuzione può continuare, queste funzioni restituiscono un codice di errore e impostano **errno** su tale codice di errore. Il codice di errore predefinito è **EINVAL** se non si applica un valore più specifico.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta e scrive i dati specificati nella console. **_vcwprintf_s** è la versione a caratteri wide di **_vcprintf_s**. Accetta una stringa di caratteri wide come argomento.
 
-Le versioni di queste funzioni che hanno il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti.
+Le versioni di queste funzioni che hanno il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti.
 
 > [!IMPORTANT]
 > Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
@@ -123,7 +124,7 @@ Le versioni di queste funzioni che hanno il suffisso **suffisso** sono identiche
 |Routine|Intestazione obbligatoria|Intestazioni facoltative|
 |-------------|---------------------|----------------------|
 |**_vcprintf_s**, **_vcprintf_s_l**|\<conio.h> e \<stdarg.h>|\<varargs.h>*|
-|**_vcwprintf_s**, **_vcwprintf_s_l**|\<conio.h> o \<wchar.h> e \<stdarg.h>|\<varargs.h>*|
+|**_vcwprintf_s**, **_vcwprintf_s_l**|\<conio.h> o \<wchar.h> , e \<stdarg.h>|\<varargs.h>*|
 
 \* Richiesto per la compatibilità con UNIX V.
 
@@ -167,5 +168,5 @@ int main()
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)<br/>

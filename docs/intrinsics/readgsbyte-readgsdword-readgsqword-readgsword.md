@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __readgsbyte, __readgsdword, __readgsqword, __readgsword'
 title: __readgsbyte, __readgsdword, __readgsqword, __readgsword
 ms.date: 09/02/2019
 f1_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - __readgsqword intrinsic
 - __readgsbyte intrinsic
 ms.assetid: f822632d-854c-4558-a71b-cdfc3eea2236
-ms.openlocfilehash: 278f1de33a7e01c5893217ddd8aaa22e68cf0c94
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: fb1faf0e785f0d0983d7d3611e68a7515298e61c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222358"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340970"
 ---
 # <a name="__readgsbyte-__readgsdword-__readgsqword-__readgsword"></a>__readgsbyte, __readgsdword, __readgsqword, __readgsword
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Consente di leggere la memoria da una posizione specificata da un offset relativo all'inizio del segmento GS.
 
@@ -49,26 +50,26 @@ in Offset dall'inizio di `GS` da cui leggere.
 
 ## <a name="return-value"></a>Valore restituito
 
-Contenuto della memoria di byte, Word, Double Word o quadrupla (come indicato dal nome della funzione chiamata) nella posizione `GS:[Offset]`.
+Contenuto della memoria di byte, Word, Double Word o quadrupla (come indicato dal nome della funzione chiamata) nella posizione `GS:[Offset]` .
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
-|`__readgsbyte`|X64|
-|`__readgsdword`|X64|
-|`__readgsqword`|X64|
-|`__readgsword`|X64|
+|`__readgsbyte`|x64|
+|`__readgsdword`|x64|
+|`__readgsqword`|x64|
+|`__readgsword`|x64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Queste routine sono disponibili solo come intrinseci.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)\
+[__writegsbyte, \_ _writegsdword, \_ _writegsqword, \_ _writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)\
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

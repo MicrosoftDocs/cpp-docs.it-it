@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: classe Path'
 title: Classe path
 ms.date: 09/27/2018
 f1_keywords:
 - filesystem/std::experimental::filesystem::path
 ms.assetid: 8a1227ca-aeb2-4e0e-84aa-86e34e4f4fe8
-ms.openlocfilehash: fb56afbc1d29f1d321b394342382f89b06768720
-ms.sourcegitcommit: b5854134553db1d99a5761bec131841c374a3098
+ms.openlocfilehash: 469d594800036b165f8693162ca11ca161736cf0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91958659"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340775"
 ---
 # <a name="path-class"></a>Classe path
 
@@ -31,7 +32,7 @@ class path;
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome tipo|Descrizione|
+|Nome tipo|Description|
 |-|-|
 |[const_iterator](#const_iterator)|Sinonimo di `iterator`.|
 |[iteratore](#iterator)|Iteratore costante bidirezionale che designa i `path` componenti di `myname` .|
@@ -248,7 +249,7 @@ Restituisce il suffisso di `filename()` .
 path extension() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Restituisce il suffisso di `filename() X` tale oggetto:
 
@@ -407,7 +408,7 @@ class iterator
    };
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La classe descrive un iteratore costante bidirezionale che designa i `path` componenti di `myname` nella sequenza:
 
@@ -467,7 +468,7 @@ path& operator=(const Source& source);
 *origine*\
 Percorso di origine.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo operatore membro copia `right.myname` in `myname` . Il secondo operatore membro passa `right.myname` a `myname` . Il terzo operatore membro si comporta allo stesso modo di `*this = path(source)` .
 
@@ -505,7 +506,7 @@ Oggetto aggiunto `value_type` o `Elem` .
 *origine*\
 Origine aggiunta.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le funzioni membro si comportano allo stesso modo delle corrispondenti espressioni riportate di seguito:
 
@@ -540,7 +541,7 @@ Percorso aggiunto.
 *origine*\
 Origine aggiunta.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le funzioni membro si comportano allo stesso modo delle corrispondenti espressioni riportate di seguito:
 
@@ -564,7 +565,7 @@ Restituisce il componente del percorso padre di `myname` .
 path parent_path() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Restituisce il componente del percorso padre di `myname` , in particolare il prefisso di `myname` dopo la rimozione di e di `filename().native()` eventuali separatori di directory immediatamente precedenti. (In modo analogo, se `begin() != end()` è la combinazione di tutti gli elementi nell'intervallo `[begin(), --end())` applicando successivamente `operator/=` ). Il componente può essere vuoto.
 
@@ -608,7 +609,7 @@ Posizione del primo elemento da copiare.
 *Ultima*\
 Posizione dell'ultimo elemento da copiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Costrutti tutti i costruttori `myname` in diversi modi:
 
@@ -638,7 +639,7 @@ static constexpr value_type preferred_separator == '/';
 #endif // filesystem model now defined
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si noti che è ugualmente consentito usare L'/' al suo posto nella maggior parte dei contesti in Windows.
 
@@ -650,7 +651,7 @@ Restituisce il componente path relativo di `myname` .
 path relative_path() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Restituisce il componente path relativo di `myname` , in particolare il suffisso di `myname` dopo la rimozione di `root_path().native()` e di eventuali separatori di directory immediatamente successivi. Il componente può essere vuoto.
 
@@ -675,7 +676,7 @@ path& replace_extension(const path& newext = path());
 *newext*\
 Nuova estensione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Rimuove innanzitutto il suffisso `extension().native()` da `myname` . Quindi se `!newext.empty() && newext[0] != dot` (dove `dot` è `*path(".").c_str()` ), `dot` viene aggiunto a `myname` . Quindi *newext* viene aggiunto a `myname` .
 
@@ -692,7 +693,7 @@ path& replace_filename(const path& pval);
 *Pval*\
 Percorso del nome file.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro esegue:
 
@@ -711,7 +712,7 @@ Restituisce il componente della directory radice di `myname` .
 path root_directory() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il componente può essere vuoto.
 
@@ -723,7 +724,7 @@ Restituisce il componente del nome radice di `myname` .
 path root_name() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il componente può essere vuoto.
 
@@ -735,7 +736,7 @@ Restituisce il componente del percorso radice di `myname` .
 path root_path() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Restituisce il componente del percorso radice di `myname` , in modo specifico `root_name()`  /  `root_directory` . Il componente può essere vuoto.
 
@@ -747,7 +748,7 @@ Restituisce il `stem` componente di `myname` .
 path stem() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Restituisce il `stem` componente di `myname` , in particolare `filename().native()` con eventuali finali `extension().native()` rimossi. Il componente può essere vuoto.
 
@@ -761,7 +762,7 @@ basic_string\<Elem, Traits, Alloc> string(const Alloc& al = Alloc()) const;
 string string() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La prima funzione membro (modello) converte la sequenza archiviata in `mypath` modo analogo a quanto segue:
 
@@ -835,6 +836,6 @@ Converte la sequenza archiviata nella `mypath` codifica preferita dal sistema ho
 wstring wstring() const;
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)

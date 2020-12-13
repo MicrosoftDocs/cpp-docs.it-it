@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3642'
 title: Errore del compilatore C3642
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3642
 ms.assetid: 429790c2-9614-4d85-b31c-687c8d8f83ff
-ms.openlocfilehash: 7c3f9f05bf04c9a1c20fff7910836e7b50468a8e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 77d65d2bb2c426fe78671328b0eccab739b9dabe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74742457"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340307"
 ---
 # <a name="compiler-error-c3642"></a>Errore del compilatore C3642
 
@@ -19,9 +20,9 @@ ms.locfileid: "74742457"
 
 Una funzione contrassegnata con la convenzione di chiamata [__clrcall](../../cpp/clrcall.md) non può essere chiamata dal codice nativo (non gestito).
 
-*return_type/args* è il nome della funzione o il tipo della funzione di `__clrcall` che si sta tentando di chiamare.  Un tipo viene usato quando si esegue una chiamata tramite un puntatore a funzione.
+*return_type/args* è il nome della funzione o il tipo della `__clrcall` funzione che si sta tentando di chiamare.  Un tipo viene usato quando si esegue una chiamata tramite un puntatore a funzione.
 
-Per chiamare una funzione gestita da un contesto nativo, è possibile aggiungere una funzione "wrapper" che chiamerà la funzione `__clrcall`. In alternativa, è possibile utilizzare il meccanismo di marshalling CLR; Per ulteriori informazioni, vedere [procedura: effettuare il marshalling di puntatori a funzione utilizzando PInvoke](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md) .
+Per chiamare una funzione gestita da un contesto nativo, è possibile aggiungere una funzione "wrapper" che chiamerà la `__clrcall` funzione. In alternativa, è possibile utilizzare il meccanismo di marshalling CLR; Per ulteriori informazioni, vedere [procedura: effettuare il marshalling di puntatori a funzione utilizzando PInvoke](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md) .
 
 L'esempio seguente genera l'C3642:
 

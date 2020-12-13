@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe Queue'
 title: Classe queue
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: e0bfa4ab037b52b237bd674d5f705de4e9699383
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b2b30e7a564fa1889d9adc2bb99e48ec1a623c25
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832607"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340619"
 ---
 # <a name="queue-class"></a>Classe queue
 
@@ -48,7 +49,7 @@ Tipo di dati degli elementi da archiviare nell'oggetto queue
 *Contenitore*\
 Tipo del contenitore sottostante usato per implementare l'oggetto queue.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Gli elementi della classe `Type` stipulati nel primo parametro di modello di un oggetto Queue sono sinonimi di [value_type](#value_type) e devono corrispondere al tipo di elemento nella classe del contenitore sottostante `Container` prevista dal secondo parametro di modello. L'oggetto `Type` deve essere assegnabile, in modo che sia possibile copiare oggetti di quel tipo e assegnare valori alle variabili di quel tipo.
 
@@ -68,13 +69,13 @@ Esistono tre tipi di adattatori di contenitori definiti nella libreria standard 
 
 ### <a name="constructors"></a>Costruttori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[coda](#queue)|Costruisce un `queue` vuoto o che rappresenta una copia totale o parziale di un oggetto contenitore di base.|
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[container_type](#container_type)|Tipo che fornisce il contenitore di base che deve essere adattato da `queue`.|
 |[size_type](#size_type)|Tipo Unsigned Integer in grado di rappresentare il numero di elementi di un `queue`.|
@@ -82,12 +83,12 @@ Esistono tre tipi di adattatori di contenitori definiti nella libreria standard 
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[Indietro](#back)|Restituisce un riferimento all'ultimo elemento aggiunto di recente alla fine della `queue`.|
 |[empty](#empty)|Verifica se `queue` è vuoto.|
 |[fronte](#front)|Restituisce un riferimento al primo elemento all'inizio dell'oggetto `queue`.|
-|[popup](#pop)|Rimuove un elemento dall'inizio dell'oggetto `queue`.|
+|[pop](#pop)|Rimuove un elemento dall'inizio dell'oggetto `queue`.|
 |[push](#push)|Aggiunge un elemento alla fine dell'oggetto `queue`.|
 |[size](#size)|Restituisce il numero di elementi nel `queue`.|
 
@@ -105,7 +106,7 @@ const_reference back() const;
 
 Ultimo elemento dell'oggetto queue. Se l'oggetto queue è vuoto, il valore restituito è indefinito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il valore restituito di `back` viene assegnato a un oggetto `const_reference`, l'oggetto queue non può essere modificato. Se il valore restituito di `back` viene assegnato a un `reference` , l'oggetto Queue può essere modificato.
 
@@ -145,7 +146,7 @@ Tipo che fornisce il contenitore di base da adattare.
 typedef Container container_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del parametro di modello `Container`. Due classi contenitore sequenziale della libreria standard C++, ovvero la classe list e la classe deque predefinita, soddisfano i requisiti da usare come contenitore di base per un oggetto queue. È anche possibile usare tipi definiti dall'utente che soddisfano i requisiti.
 
@@ -215,7 +216,7 @@ const_reference front() const;
 
 Primo elemento dell'oggetto queue. Se l'oggetto queue è vuoto, il valore restituito è indefinito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il valore restituito di `front` viene assegnato a un oggetto `const_reference`, l'oggetto queue non può essere modificato. Se il valore restituito di `front` viene assegnato a un `reference` , l'oggetto Queue può essere modificato.
 
@@ -261,7 +262,7 @@ Rimuove un elemento dall'inizio dell'oggetto queue.
 void pop();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'oggetto queue non deve essere vuoto per applicare la funzione membro. L'inizio dell'oggetto queue è la posizione occupata dall'elemento aggiunto più di recente ed è l'ultimo elemento alla fine del contenitore.
 
@@ -322,7 +323,7 @@ void push(const Type& val);
 *Val*\
 Elemento aggiunto alla fine dell'oggetto queue.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La fine dell'oggetto queue è la posizione occupata dall'elemento aggiunto più di recente ed è l'ultimo elemento alla fine del contenitore.
 
@@ -373,7 +374,7 @@ explicit queue(const container_type& right);
 *Ok*\
 **`const`** Contenitore di cui la coda costruita deve essere una copia.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il contenitore di base predefinito per l'oggetto queue è deque. È anche possibile specificare un elenco come contenitore di base, ma non è possibile specificare un vettore, perché non è presente la funzione membro `pop_front` necessaria.
 
@@ -474,7 +475,7 @@ Tipo Unsigned Integer in grado di rappresentare il numero di elementi di un ogge
 typedef typename Container::size_type size_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del `size_type` del contenitore di base adattato dall'oggetto queue.
 
@@ -490,7 +491,7 @@ Tipo che rappresenta il tipo di oggetto archiviato come elemento in un oggetto q
 typedef typename Container::value_type value_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del `value_type` del contenitore di base adattato dall'oggetto queue.
 

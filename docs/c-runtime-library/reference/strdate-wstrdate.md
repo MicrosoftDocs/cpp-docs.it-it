@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _strdate, _wstrdate'
 title: _strdate, _wstrdate
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-ms.openlocfilehash: ea3aec8c007a6c0cae76de2f76d8ca2bafad2241
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1e0daab087653edf57b3f268aa14192ab145cac6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911858"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340567"
 ---
 # <a name="_strdate-_wstrdate"></a>_strdate, _wstrdate
 
@@ -78,11 +79,11 @@ Puntatore a un buffer contenente la stringa di data formattata.
 
 Ognuna di queste funzioni restituisce un puntatore alla stringa di caratteri risultante *dateStr*.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Sono disponibili versioni più sicure di queste funzioni. Vedere [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md). È consigliabile usare le funzioni più sicure laddove possibile.
 
-La funzione **_strdate** copia la data di sistema corrente nel buffer a cui punta *dateStr*, formattato **mm**/**GG**/**AA**, dove **mm** è costituito da due cifre che rappresentano il mese, **DD** è costituito da due cifre che rappresentano il giorno e **AA** corrisponde alle ultime due cifre dell'anno. Ad esempio, la stringa **12/05/99** rappresenta il 5 dicembre 1999. La lunghezza del buffer deve essere di almeno 9 byte.
+La funzione **_strdate** copia la data di sistema corrente nel buffer a cui punta *dateStr*, formattato **mm** / **GG** / **AA**, dove **mm** è costituito da due cifre che rappresentano il mese, **DD** è costituito da due cifre che rappresentano il giorno e **AA** corrisponde alle ultime due cifre dell'anno. Ad esempio, la stringa **12/05/99** rappresenta il 5 dicembre 1999. La lunghezza del buffer deve essere di almeno 9 byte.
 
 Se *dateStr* è un puntatore **null** , viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono-1 e impostano **errno** su **EINVAL**.
 
@@ -103,7 +104,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
 |**_strdate**|\<time.h>|
-|**_wstrdate**|\<time.h> or \<wchar.h>|
+|**_wstrdate**|\<time.h> o \<wchar.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

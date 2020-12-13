@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: controlli Rich Edit senza fondo'
 title: Controlli Rich Edit infiniti
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - rich edit controls [MFC], bottomless
 - CRichEditCtrl class [MFC], bottomless
 ms.assetid: 2877dd32-1e9a-4fd1-98c0-66dcbbeef1de
-ms.openlocfilehash: 567bb5b7f2eb2c203b40b9f1f6add82f5451d672
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ad3f78fb4a5e172c16faf3421b6a9da91d422888
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616428"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339813"
 ---
 # <a name="bottomless-rich-edit-controls"></a>Controlli Rich Edit infiniti
 
@@ -23,7 +24,7 @@ Quando si elabora il messaggio di notifica di **EN_REQUESTRESIZE** , un'applicaz
 
 Per ricevere **EN_REQUESTRESIZE** messaggi di notifica, è necessario abilitare la notifica tramite la `SetEventMask` funzione membro.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso di CRichEditCtrl](using-cricheditctrl.md)<br/>
+[Utilizzo di CRichEditCtrl](using-cricheditctrl.md)<br/>
 [Controlli](controls-mfc.md)

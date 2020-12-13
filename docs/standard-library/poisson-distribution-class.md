@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: poisson_distribution Class'
 title: Classe poisson_distribution
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: bf5cd289ab0ee02d6c9e09e95d01008191899cd6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b640517a63665ebec4573da8aff9e537412de589
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832646"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340671"
 ---
 # <a name="poisson_distribution-class"></a>Classe poisson_distribution
 
@@ -70,7 +71,7 @@ public:
 *IntType*\
 Il tipo di risultato Integer, il valore predefinito è **`int`** . Per i tipi possibili, vedere [\<random>](../standard-library/random.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il modello di classe descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente con una distribuzione di Poisson. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
@@ -211,7 +212,7 @@ Parametro di distribuzione `mean`.
 *parm*\
 Struttura di parametri usata per costruire la distribuzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:**`0.0 < mean`
 
@@ -238,7 +239,7 @@ struct param_type {
 
 Per [poisson_distribution](#poisson_distribution) vedere i parametri del costruttore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:**`0.0 < mean`
 

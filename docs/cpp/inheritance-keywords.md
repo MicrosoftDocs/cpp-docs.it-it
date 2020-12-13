@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: parole chiave di ereditarietà'
 title: Parole chiave di ereditarietà
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - derived classes [C++], declaring
 - inheritance, keywords
 ms.assetid: bb810f56-7720-4fea-b8b6-9499edd141df
-ms.openlocfilehash: bc9afdcb7971c478c1cad9185cece57ea6326a48
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 05d13303064c2857780af62b1b4beba00483b72e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233730"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340463"
 ---
 # <a name="inheritance-keywords"></a>Parole chiave di ereditarietà
 
@@ -74,10 +75,10 @@ indipendentemente dalle opzioni della riga di comando o dai pragma, i puntatori 
 > [!NOTE]
 > La stessa dichiarazione con prototipo della rappresentazione della classe puntatore a membro deve verificarsi in ogni unità di conversione che dichiara i puntatori ai membri di quella classe e la dichiarazione deve verificarsi prima che vengano dichiarati i puntatori ai membri.
 
-Per compatibilità con le versioni precedenti, **_single_inheritance**, **_multiple_inheritance**e **_virtual_inheritance** sono sinonimi per **`__single_inheritance`** , e a **`__multiple_inheritance`** **`__virtual_inheritance`** meno che non sia specificata l'opzione del compilatore [/za \( Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
+Per compatibilità con le versioni precedenti, **_single_inheritance**, **_multiple_inheritance** e **_virtual_inheritance** sono sinonimi per **`__single_inheritance`** , e a **`__multiple_inheritance`** **`__virtual_inheritance`** meno che non sia specificata l'opzione del compilatore [/za \( Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Parole chiave](../cpp/keywords-cpp.md)

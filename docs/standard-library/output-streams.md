@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: flussi di output'
 title: Flussi di output
 ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams
 ms.assetid: b49410e3-5caa-4153-9d0d-c4266408dc83
-ms.openlocfilehash: e650f9fd0bbc7ad483363706e632686e8ec3749e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ec09a6bee1bcd2f329522b61950f3d051fb57889
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450166"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340866"
 ---
 # <a name="output-streams"></a>Flussi di output
 
@@ -31,7 +32,7 @@ Se si specifica un nome di file nel costruttore, tale file viene aperto automati
 
 Analogamente alla funzione di runtime `sprintf_s`, la classe `ostringstream` supporta l'output nelle stringhe in memoria. Per creare una stringa in memoria usando la formattazione di flussi I/O, costruire un oggetto della classe `ostringstream`.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Costruzione di oggetti di flusso di output](../standard-library/constructing-output-stream-objects.md)
 
@@ -39,16 +40,16 @@ Analogamente alla funzione di runtime `sprintf_s`, la classe `ostringstream` sup
 
 [Funzioni membro del flusso di file di output](../standard-library/output-file-stream-member-functions.md)
 
-[Effetti del buffering](../standard-library/effects-of-buffering.md)
+[Effetti della memorizzazione nel buffer](../standard-library/effects-of-buffering.md)
 
 [File di output binari](../standard-library/binary-output-files.md)
 
 [Overload dell'operatore << per classi personalizzate](../standard-library/overloading-the-output-operator-for-your-own-classes.md)
 
-[Scrittura di manipolatori personalizzati senza gli argomenti](../standard-library/writing-your-own-manipulators-without-arguments.md)
+[Scrittura di manipolatori personalizzati senza argomenti](../standard-library/writing-your-own-manipulators-without-arguments.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [ofstream](../standard-library/basic-ofstream-class.md)\
 [ostringstream](../standard-library/basic-ostringstream-class.md)\
-[Programmazione iostream](../standard-library/iostream-programming.md)
+[Programmazione di iostream](../standard-library/iostream-programming.md)

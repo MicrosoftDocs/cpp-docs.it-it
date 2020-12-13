@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: intervalli dei tipi di dati'
 title: Intervalli dei tipi di dati
 ms.date: 05/28/2020
 helpviewer_keywords:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - long int keyword [C++]
 - unsigned long int [C++]
 ms.assetid: 3691ceca-05fb-4b82-b1ae-5c4618cda91a
-ms.openlocfilehash: f7658d0c0a61180193de268414e214595198e8fa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8d4ae1b6aae3a4dbf12180248df6000085103efe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228973"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339527"
 ---
 # <a name="data-type-ranges"></a>Intervalli dei tipi di dati
 
@@ -78,20 +79,20 @@ Gli intervalli specificati nella tabella seguente sono inclusivo-inclusivo.
 |**`unsigned __int32`**|4|**`unsigned`**, **`unsigned int`**|Da 0 a 4.294.967.295|
 |**`__int64`**|8|**`long long`**, **`signed long long`**|Da -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807|
 |**`unsigned __int64`**|8|**`unsigned long long`**|Da 0 a 18.446.744.073.709.551.615|
-|**`bool`**|1|nessuno|**`false`** o**`true`**|
-|**`char`**|1|nessuno|da-128 a 127 per impostazione predefinita<br /><br /> da 0 a 255 quando viene compilato utilizzando[`/J`](../build/reference/j-default-char-type-is-unsigned.md)|
-|**`signed char`**|1|nessuno|Da -128 a 127|
-|**`unsigned char`**|1|nessuno|da 0 a 255|
+|**`bool`**|1|Nessuno|**`false`** o **`true`**|
+|**`char`**|1|Nessuno|da-128 a 127 per impostazione predefinita<br /><br /> da 0 a 255 quando viene compilato utilizzando [`/J`](../build/reference/j-default-char-type-is-unsigned.md)|
+|**`signed char`**|1|Nessuno|Da -128 a 127|
+|**`unsigned char`**|1|Nessuno|da 0 a 255|
 |**`short`**|2|**`short int`**, **`signed short int`**|Da -32.768 a 32.767|
 |**`unsigned short`**|2|**`unsigned short int`**|Da 0 a 65.535|
 |**`long`**|4|**`long int`**, **`signed long int`**|Da -2.147.483.648 a 2.147.483.647|
 |**`unsigned long`**|4|**`unsigned long int`**|Da 0 a 4.294.967.295|
 |**`long long`**|8|None (ma equivalente a **`__int64`** )|Da -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807|
 |**`unsigned long long`**|8|None (ma equivalente a **`unsigned __int64`** )|Da 0 a 18.446.744.073.709.551.615|
-|**`enum`**|variabile|nessuno| |
-|**`float`**|4|nessuno|3.4E +/- 38 (7 cifre)|
-|**`double`**|8|nessuno|1.7E +/- 308 (15 cifre)|
-|**`long double`**|uguale a**`double`**|nessuno|Uguale a**`double`**|
+|**`enum`**|variabile|Nessuno| |
+|**`float`**|4|Nessuno|3.4E +/- 38 (7 cifre)|
+|**`double`**|8|Nessuno|1.7E +/- 308 (15 cifre)|
+|**`long double`**|uguale a **`double`**|Nessuno|Uguale a **`double`**|
 |**`wchar_t`**|2|**`__wchar_t`**|Da 0 a 65.535|
 
 A seconda della modalità di utilizzo, una variabile di **`__wchar_t`** designa un tipo di carattere wide o un tipo di carattere multibyte. Usare il prefisso `L` prima di una costante di carattere o di stringa per definire la costante del tipo di carattere wide.
@@ -106,7 +107,7 @@ Per ulteriori informazioni sulle restrizioni delle dimensioni di ogni tipo, vede
 
 L'intervallo dei tipi enumerati varia a seconda del contesto del linguaggio e dei flag del compilatore specificati. Per altre informazioni, vedere [Dichiarazioni di enumerazioni C](../c-language/c-enumeration-declarations.md) e [Enumerazioni](../cpp/enumerations-cpp.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Parole chiave](../cpp/keywords-cpp.md)<br/>
 [Tipi incorporati](../cpp/fundamental-types-cpp.md)

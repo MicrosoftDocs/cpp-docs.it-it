@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: pointer_traits struct'
 title: Struct pointer_traits
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ f1_keywords:
 - xmemory0/std::pointer_traits::rebind
 - memory/std::pointer_traits::pointer_to
 ms.assetid: 545aecf1-3561-4859-8b34-603c079fe1b3
-ms.openlocfilehash: 1ed8d61a52c11ab48fe6f762ff342ea88d107b14
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ba89d4df45517c142cad172860e4c9ab4d386ce1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832698"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340684"
 ---
 # <a name="pointer_traits-struct"></a>Struct pointer_traits
 
@@ -52,7 +53,7 @@ struct Ptr
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |`typedef T2 difference_type`|Il tipo `T2` è `Ptr::difference_type` se quel tipo esiste; in caso contrario `ptrdiff_t`. Se `Ptr` è un puntatore non elaborato, il tipo è `ptrdiff_t`.|
 |`typedef T1 element_type`|Il tipo `T1` è `Ptr::element_type` se quel tipo esiste; in caso contrario `Ty`. Se `Ptr` è un puntatore non elaborato, il tipo è `Ty`.|
@@ -60,13 +61,13 @@ struct Ptr
 
 ### <a name="structs"></a>Struct
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |`rebind`|Tenta di convertire il tipo di puntatore sottostante in un tipo specificato.|
 
 ### <a name="methods"></a>Metodi
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[pointer_to](#pointer_to)|Converte un riferimento arbitrario a un oggetto della classe `Ptr`.|
 

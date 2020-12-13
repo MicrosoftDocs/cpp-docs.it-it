@@ -1,14 +1,15 @@
 ---
+description: 'Altre informazioni su: sistema di tipi C++'
 title: Sistema di tipi C++
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: b49dfccc7f815bb13a23f4a334066fa5a8ba5c00
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 1be39124e51fc2e812ce5a2779ce701d727c81e2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87521213"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339579"
 ---
 # <a name="c-type-system"></a>Sistema di tipi C++
 
@@ -24,7 +25,7 @@ Il concetto di *tipo* è molto importante in C++. Per poter essere compilati è 
 
 ## <a name="specifying-variable-and-function-types"></a>Specificare tipi di funzione e di variabile
 
-C++ è un linguaggio *fortemente tipizzato* ed è anche *tipizzato*in modo statico; ogni oggetto ha un tipo e tale tipo non viene mai modificato (da non confondere con gli oggetti dati statici). Quando si dichiara una variabile nel codice, è necessario specificarne il tipo in modo esplicito oppure utilizzare la **`auto`** parola chiave per indicare al compilatore di dedurre il tipo dall'inizializzatore. Quando si dichiara una funzione nel codice, è necessario specificare il tipo di ciascun argomento e il relativo valore restituito o **`void`** se la funzione non restituisce alcun valore. Si verifica un'eccezione quando si utilizzano modelli di funzione che consentono l'utilizzo di argomenti di tipi arbitrari.
+C++ è un linguaggio *fortemente tipizzato* ed è anche *tipizzato* in modo statico; ogni oggetto ha un tipo e tale tipo non viene mai modificato (da non confondere con gli oggetti dati statici). Quando si dichiara una variabile nel codice, è necessario specificarne il tipo in modo esplicito oppure utilizzare la **`auto`** parola chiave per indicare al compilatore di dedurre il tipo dall'inizializzatore. Quando si dichiara una funzione nel codice, è necessario specificare il tipo di ciascun argomento e il relativo valore restituito o **`void`** se la funzione non restituisce alcun valore. Si verifica un'eccezione quando si utilizzano modelli di funzione che consentono l'utilizzo di argomenti di tipi arbitrari.
 
 Dopo aver dichiarato una variabile, non è più possibile modificarne il tipo. È tuttavia possibile copiare il valore della variabile o il valore restituito di una funzione in un'altra variabile di un tipo diverso. Tali operazioni sono denominate *conversioni di tipi*, che talvolta sono necessarie, ma sono anche potenziali fonti di perdita o di incorrettezza dei dati.
 
@@ -106,7 +107,7 @@ Quando si definisce un oggetto **`class`** , **`struct`** , **`union`** o **`enu
 
 ## <a name="pointer-types"></a>Tipi puntatore
 
-Risalendo alle versioni meno recenti del linguaggio C, C++ continua a consentire la dichiarazione di una variabile di un tipo di puntatore usando il dichiaratore speciale **`*`** (asterisco). Un tipo di puntatore archivia l'indirizzo della posizione in memoria in cui è archiviato il valore effettivo dei dati. Nel linguaggio C++ moderno, questi vengono definiti *puntatori non elaborati*e sono accessibili nel codice mediante operatori speciali **`*`** (asterisco) o **`->`** (Dash con maggiore di). Questa operazione viene definita *dereferenziazione*e quella da usare dipende dal fatto che si dereferenzia un puntatore a un puntatore scalare o a un membro in un oggetto. L'utilizzo dei tipi di puntatore ha rappresentato per molto tempo uno degli aspetti più ostici e confusi dello sviluppo di programmi in C e C++. In questa sezione vengono descritti alcuni fatti e procedure per l'utilizzo di puntatori non elaborati, ma nel linguaggio C++ moderno non è più necessario (o consigliato) utilizzare i puntatori non elaborati per la proprietà dell'oggetto, a causa dell'evoluzione del [puntatore intelligente](../cpp/smart-pointers-modern-cpp.md) (descritto più alla fine di questa sezione). È ancora utile e sicuro utilizzare i puntatori non elaborati per l'osservazione degli oggetti, tuttavia se è necessario utilizzarli per la proprietà dell'oggetto, è necessario farlo con attenzione valutando attentamente come vengono creati ed eliminati definitivamente gli oggetti di proprietà.
+Risalendo alle versioni meno recenti del linguaggio C, C++ continua a consentire la dichiarazione di una variabile di un tipo di puntatore usando il dichiaratore speciale **`*`** (asterisco). Un tipo di puntatore archivia l'indirizzo della posizione in memoria in cui è archiviato il valore effettivo dei dati. Nel linguaggio C++ moderno, questi vengono definiti *puntatori non elaborati* e sono accessibili nel codice mediante operatori speciali **`*`** (asterisco) o **`->`** (Dash con maggiore di). Questa operazione viene definita *dereferenziazione* e quella da usare dipende dal fatto che si dereferenzia un puntatore a un puntatore scalare o a un membro in un oggetto. L'utilizzo dei tipi di puntatore ha rappresentato per molto tempo uno degli aspetti più ostici e confusi dello sviluppo di programmi in C e C++. In questa sezione vengono descritti alcuni fatti e procedure per l'utilizzo di puntatori non elaborati, ma nel linguaggio C++ moderno non è più necessario (o consigliato) utilizzare i puntatori non elaborati per la proprietà dell'oggetto, a causa dell'evoluzione del [puntatore intelligente](../cpp/smart-pointers-modern-cpp.md) (descritto più alla fine di questa sezione). È ancora utile e sicuro utilizzare i puntatori non elaborati per l'osservazione degli oggetti, tuttavia se è necessario utilizzarli per la proprietà dell'oggetto, è necessario farlo con attenzione valutando attentamente come vengono creati ed eliminati definitivamente gli oggetti di proprietà.
 
 La prima cosa da sapere è che dichiarare una variabile di puntatore non elaborato comporta l'allocazione della sola memoria necessaria per archiviare un indirizzo di posizione in memoria a cui farà riferimento il puntatore quando verrà dereferenziato. L'allocazione della memoria per il valore di dati stesso (anche detto *Archivio di backup*) non è ancora allocata. In altre parole, dichiarando una variabile di puntatore non elaborato si crea una variabile di indirizzo di memoria, non una variabile dati effettivi. Dereferenziare una variabile di puntatore senza verificare che contenga un indirizzo valido a un archivio di backup causa un comportamento non definito (in genere un errore irreversibile) nel programma. Nell'esempio seguente viene illustrato questo tipo di errore:
 
@@ -157,7 +158,7 @@ Per ulteriori informazioni sui puntatori in generale, vedere [puntatori](../cpp/
 
 Nella programmazione Win32 classica per C e C++, la maggior parte delle funzioni utilizza typedef e macro specifici di Windows `#define` (definiti in `windef.h` ) per specificare i tipi di parametri e valori restituiti. Questi tipi di dati di Windows sono principalmente solo nomi speciali (alias) assegnati ai tipi incorporati C/C++. Per un elenco completo dei typedef e delle definizioni del preprocessore, vedere [tipi di dati di Windows](/windows/win32/WinProg/windows-data-types). Alcuni di questi typedef, ad esempio `HRESULT` e `LCID` , sono utili e descrittivi. Altri, ad esempio `INT` , non hanno un significato speciale e sono solo alias per i tipi C++ fondamentali. Altri tipi di dati Windows presentano nomi derivanti dalla programmazione C e dai processori a 16 bit e non hanno alcuno scopo o significato con l'hardware e i sistemi operativi moderni. Alla libreria Windows Runtime sono inoltre associati tipi di dati speciali, elencati come [Windows Runtime tipi di dati di base](/windows/win32/WinRT/base-data-types). Nel linguaggio C++ moderno, la linea guida generale è quella di preferire i tipi C++ fondamentali, a meno che il tipo Windows non trasmetta un significato aggiuntivo sull'interpretazione del valore.
 
-## <a name="more-information"></a>Altre informazioni
+## <a name="more-information"></a>Ulteriori informazioni
 
 Per ulteriori informazioni sul sistema di tipi di C++, vedere gli argomenti seguenti:
 
@@ -167,7 +168,7 @@ Vengono descritti i *tipi di valore* con i problemi relativi all'utilizzo.
 [Conversioni di tipi e indipendenza dai tipi](../cpp/type-conversions-and-type-safety-modern-cpp.md)\
 Vengono descritti i problemi di conversione dei tipi comuni e i modi per evitarli.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Riferimenti per il linguaggio C++](../cpp/cpp-language-reference.md)<br/>
