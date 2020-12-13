@@ -1,18 +1,19 @@
 ---
+description: 'Altre informazioni su: bad_optional_access Class'
 title: Classe bad_optional_access
 ms.date: 08/06/2019
 f1_keywords:
 - optional/std::bad_optional_access
-ms.openlocfilehash: 043b0360c7e0be48267c8f406dbfea50eeb5a8e3
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: e3439c53766a1890592bde8ed449f5ff2779f347
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957095"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132756"
 ---
 # <a name="bad_optional_access-class"></a>Classe bad_optional_access
 
-Definisce il tipo di oggetti generati come eccezioni per segnalare la situazione in cui viene effettuato un tentativo di accesso al valore di `optional` un oggetto che non contiene un valore.
+Definisce il tipo di oggetti generati come eccezioni per segnalare la situazione in cui viene effettuato un tentativo di accesso al valore di un `optional` oggetto che non contiene un valore.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -29,5 +30,5 @@ public:
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<> facoltativo](optional.md)\
-[classe facoltativa](optional-class.md)
+[\<optional>](optional.md)\
+[Classe optional](optional-class.md)

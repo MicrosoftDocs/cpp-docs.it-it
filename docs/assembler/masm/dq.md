@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: DQ'
 title: DQ
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - DQ directive
 ms.assetid: 15de9c41-db90-4bca-affc-426eeb38ebc0
-ms.openlocfilehash: 32cd0bdd0935e5306ff8cc1b5904c283dbc92c40
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: a1e9ccfa6cfe71900d50559607d4643f47242f73
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317435"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97130793"
 ---
 # <a name="dq"></a>DQ
 
@@ -19,10 +20,10 @@ Alloca ed eventualmente Inizializza 8 byte di archiviazione per ogni *inizializz
 
 ## <a name="syntax"></a>Sintassi
 
-> ⟦*nome*⟧ **DQ** *inizializzatore* ⟦ __,__ *inizializzatore* ... ⟧
+> ⟦*nome*⟧ **DQ** *inizializzatore* ⟦__,__ *inizializzatore* ... ⟧
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimento alle direttive](directives-reference.md)\
-\ [QWORD](qword.md)
+[Guida di riferimento alle direttive](directives-reference.md)\
+[QWORD](qword.md)\
 [Grammatica BNF di MASM](masm-bnf-grammar.md)

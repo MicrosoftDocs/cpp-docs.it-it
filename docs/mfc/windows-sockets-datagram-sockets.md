@@ -1,5 +1,6 @@
 ---
-title: 'Windows Sockets: Socket di datagramma'
+description: 'Altre informazioni su: Windows Sockets: socket di datagramma'
+title: 'Windows Sockets: socket di datagramma'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - sockets [MFC], datagram
@@ -8,26 +9,26 @@ helpviewer_keywords:
 - Windows Sockets [MFC], datagram
 - sockets [MFC], bi-directional data flow
 ms.assetid: bec16a1c-74c0-4ff9-8c18-c2d87897d264
-ms.openlocfilehash: 14d33ece66d902b5705e573e9863ea78fff9737f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8de374d6e96348504d4b1fc126c1607c029cd6c9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385286"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132977"
 ---
-# <a name="windows-sockets-datagram-sockets"></a>Windows Sockets: Socket di datagramma
+# <a name="windows-sockets-datagram-sockets"></a>Windows Sockets: socket di datagramma
 
-Questo articolo descrive i socket di datagramma, uno dei due tipi di Socket Windows disponibili. (L'altro tipo è il [socket di flusso](../mfc/windows-sockets-stream-sockets.md).)
+Questo articolo descrive i socket di datagramma, uno dei due tipi di socket di Windows disponibili. (L'altro tipo è il [socket del flusso](../mfc/windows-sockets-stream-sockets.md)).
 
-I socket di datagramma supportano un flusso di dati bidirezionale che non è garantito a essere ordinati in sequenza o la non duplicazione. Datagrammi inoltre non sono necessariamente essere affidabili. è possibile non giunge a destinazione. I dati del datagramma potrebbero arrivare non in ordine e duplicati, ma vengono mantenuti i limiti di record nei dati, fino a quando i record sono inferiori a limite di dimensioni interne del ricevitore. Si è responsabili della gestione di sequenziazione e l'affidabilità. (Affidabilità tende a essere ottimale in reti LAN [LAN] ma meno così via WAN delle reti WAN, ad esempio Internet).
+I socket di datagramma supportano un flusso di dati bidirezionale non necessariamente sequenziato o non duplicato. Non è inoltre garantito che i datagrammi siano affidabili. possono non essere in arrivo. I dati del datagramma possono arrivare senza ordine e possibilmente duplicati, ma i limiti dei record nei dati vengono conservati, purché i record siano inferiori al limite di dimensione interna del ricevitore. L'utente è responsabile della gestione della sequenziazione e dell'affidabilità. (L'affidabilità tende a essere efficace nelle reti locali [LAN], ma in modo minore nelle reti WAN (Wide Area Network), ad esempio Internet.
 
-I datagrammi sono "senza connessione", vale a dire, non viene stabilita alcuna connessione esplicita; si invia un messaggio del datagramma a un socket specificato e si può ricevere messaggi da un socket specificato.
+I datagrammi sono "senza connessione", ovvero non viene stabilita alcuna connessione esplicita; inviare un messaggio di datagramma a un socket specificato ed è possibile ricevere messaggi da un socket specificato.
 
-Un esempio di un socket di datagramma è un'applicazione che mantiene gli orologi di sistema sulla rete sincronizzata. L'esempio illustra una funzionalità aggiuntiva del socket di datagramma in almeno alcune impostazioni: trasmissione di messaggi a un numero elevato di indirizzi della rete.
+Un esempio di socket del datagramma è un'applicazione che mantiene sincronizzati gli orologi di sistema sulla rete. In questo modo viene illustrata una funzionalità aggiuntiva dei socket di datagramma in almeno alcune impostazioni: trasmissione dei messaggi a un numero elevato di indirizzi di rete.
 
-I socket di datagramma sono migliori di socket di flusso per orientato ai record dei dati. Per altre informazioni sui socket di datagramma, vedere la specifica di Windows Sockets, disponibile nel SDK Windows.
+I socket di datagramma sono migliori dei socket di flusso per i dati orientati ai record. Per ulteriori informazioni sui socket di datagramma, vedere la specifica di Windows Sockets, disponibile nel Windows SDK.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)<br/>
 [Windows Sockets: Sfondo](../mfc/windows-sockets-background.md)
