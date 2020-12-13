@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CDefaultElementTraits'
 title: Classe CDefaultElementTraits
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CDefaultElementTraits class
 ms.assetid: ac5ee610-7957-4b7c-92b6-38ff72e4118e
-ms.openlocfilehash: 0ee076af5fc4a1c2145162ac510b3a4460e251e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4dd1bae67ef626ef793ecee946d88879a07f194
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245934"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141895"
 ---
 # <a name="cdefaultelementtraits-class"></a>Classe CDefaultElementTraits
 
-Questa classe fornisce funzioni e metodi predefiniti per una classe di raccolta.
+Questa classe fornisce i metodi e le funzioni predefiniti per una classe di raccolte.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -30,11 +31,11 @@ class CDefaultElementTraits : public CElementTraitsBase<T>,
 #### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Il tipo di dati da archiviare nella raccolta.
+Tipo di dati da archiviare nella raccolta.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Questa classe fornisce metodi e funzioni statiche predefinito per lo spostamento, copia, il confronto e hashing elementi archiviati in un oggetto di classe di raccolta. Le relative funzioni e metodi da cui deriva questa classe [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md), [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md), e [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)e viene utilizzato da [ CElementTraits](../../atl/reference/celementtraits-class.md), [CPrimitiveElementTraits](../../atl/reference/cprimitiveelementtraits-class.md), e [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md).
+Questa classe fornisce funzioni e metodi statici predefiniti per lo stato di trasferimento, la copia, il confronto e l'hashing di elementi archiviati in un oggetto classe di raccolta. Questa classe deriva le funzioni e i metodi da [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md), [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)e [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)e viene utilizzata da [CElementTraits](../../atl/reference/celementtraits-class.md), [CPrimitiveElementTraits](../../atl/reference/cprimitiveelementtraits-class.md)e [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md).
 
 Per altre informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).
 
@@ -42,6 +43,6 @@ Per altre informazioni, vedere [classi Collection ATL](../../atl/atl-collection-
 
 **Intestazione:** atlcoll. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Panoramica della classe](../../atl/atl-class-overview.md)
+[Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l'
 title: _snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -52,12 +53,12 @@ helpviewer_keywords:
 - _sntscanf_s function
 - snwscanf_s_l function
 ms.assetid: 72356653-7362-461a-af73-597b9c0a8094
-ms.openlocfilehash: 6c814d0085fed90f1b3c36684f54368d811c294f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 13ffbc1de17cfe3c154bf1cef512dd7cc58974f7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229402"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137072"
 ---
 # <a name="_snscanf_s-_snscanf_s_l-_snwscanf_s-_snwscanf_s_l"></a>_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
 
@@ -115,11 +116,11 @@ Se *input* o *Format* è un puntatore **null** , viene richiamato il gestore di 
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questa funzione è simile **sscanf_s** ad eccezione del fatto che fornisce la possibilità di specificare un numero fisso di caratteri da esaminare dalla stringa di input. Per altre informazioni, vedere [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
-Il parametro della dimensione del buffer è obbligatorio con i caratteri di campo di tipo **c**, **c**, **s**, **s**e **[**. Per altre informazioni, vedere [Caratteri di campo di tipo per scanf](../../c-runtime-library/scanf-type-field-characters.md).
+Il parametro della dimensione del buffer è obbligatorio con i caratteri di campo di tipo **c**, **c**, **s**, **s** e **[**. Per altre informazioni, vedere [Caratteri di campo di tipo per scanf](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
 > Il parametro size è di tipo **`unsigned`** , non **size_t**.

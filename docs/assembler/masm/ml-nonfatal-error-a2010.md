@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: ML errore non irreversibile irreversibile A2010'
 title: Errore ML non irreversibile A2010
 ms.date: 12/17/2019
 ms.custom: error-reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - A2010
 ms.assetid: 8bcd57f4-1e3f-421f-9ef8-e702daf57fcb
-ms.openlocfilehash: 3bfe4ebf03cd02a39ef4c492b0f6bf54059a8d8f
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 093fb78f8feac4d5cc660423c9bf754536bb9afc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318033"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97129272"
 ---
 # <a name="ml-nonfatal-error-a2010"></a>Errore ML non irreversibile A2010
 
@@ -20,6 +21,6 @@ ms.locfileid: "75318033"
 
 L'operando di [questo](operator-this.md) o [ptr](operator-ptr.md) non è un'espressione di tipo valida.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Messaggi di errore ML](ml-error-messages.md)

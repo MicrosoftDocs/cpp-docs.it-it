@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore irreversibile C1084'
 title: Errore irreversibile C1084
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1084
 ms.assetid: b2f273ef-3a14-4d5f-8ce0-7a11a0388fe6
-ms.openlocfilehash: 649686857000b2bee469f0e3ec551d49717c1d7b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6a3221bb894c0b320642a923d9552a207a2ff9ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80204074"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145314"
 ---
 # <a name="fatal-error-c1084"></a>Errore irreversibile C1084
 
@@ -25,7 +26,7 @@ Per tentare di risolvere l'errore C1084, eseguire i passaggi seguenti:
 
 - Assicurarsi che siano impostate le autorizzazioni appropriate per accedere al file specificato.
 
-- Verificare che la sintassi della riga di comando rispetti le regole descritte nella sintassi della [riga di comando del compilatore](../../build/reference/compiler-command-line-syntax.md).
+- Verificare che la sintassi della riga di comando rispetti le regole descritte nella [sintassi del Command-Line del compilatore](../../build/reference/compiler-command-line-syntax.md).
 
 - Verificare che le variabili di ambiente **tmp** e **Temp** siano impostate correttamente, nonché le autorizzazioni appropriate per accedere alle directory a cui fanno riferimento le variabili di ambiente. Assicurarsi inoltre che le unità a cui fanno riferimento le variabili di ambiente **tmp** e **Temp** contengano una quantità di spazio disponibile adeguata.
 

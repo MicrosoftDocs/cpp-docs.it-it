@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _countof Macro'
 title: Macro _countof
 ms.date: 03/22/2018
 api_location:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - countof macro
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
-ms.openlocfilehash: 3debd63da7d218e29f31847034c69d89b4691643
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 190f47aa7bb6bcf6bbd9478cce9df90aca81b437
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942680"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146458"
 ---
 # <a name="_countof-macro"></a>Macro _countof
 
@@ -49,11 +50,11 @@ Il nome di una matrice.
 
 Numero di elementi nella matrice, espresso come **size_t**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-**_countof** viene implementato come macro del preprocessore simile a una funzione. La C++ versione dispone di un meccanismo di modello aggiuntivo per rilevare in fase di compilazione se viene passato un puntatore anziché una matrice dichiarata in modo statico.
+**_countof** viene implementato come macro del preprocessore di tipo funzione. La versione C++ dispone di un altro modello di macchina per rilevare in fase di compilazione se viene passato un puntatore anziché una matrice dichiarata in modo statico.
 
-Verificare che la *matrice* sia effettivamente una matrice, non un puntatore. In C, **_countof** produce risultati errati se *Array* è un puntatore. In C++ **_countof** non è in grado di compilare se la *matrice* è un puntatore.  Una matrice passata come parametro a una funzione *decade in un puntatore, il*che significa che all'interno della funzione non è possibile usare **_countof** per determinare l'extent della matrice.
+Verificare che la *matrice* sia effettivamente una matrice, non un puntatore. In C, **_countof** produce risultati errati se la *matrice* è un puntatore. In C++ non è possibile compilare **_countof** se la *matrice* è un puntatore.  Una matrice passata come parametro a una funzione *decade in un puntatore, il* che significa che all'interno della funzione non è possibile usare **_countof** per determinare l'extent della matrice.
 
 ## <a name="requirements"></a>Requisiti
 

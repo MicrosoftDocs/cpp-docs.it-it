@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CDialogImpl'
 title: Classe CDialogImpl
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: b92b5130b31e88565d79b59a24b2bd377d0d84c0
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 228a63edde7eb66960a0acad5d60088d909946a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834726"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141856"
 ---
 # <a name="cdialogimpl-class"></a>Classe CDialogImpl
 
@@ -73,7 +74,7 @@ Classe di base della nuova classe. La classe base predefinita è [CWindow](../..
 |[DialogProc](#dialogproc)|Elabora i messaggi inviati alla finestra di dialogo.|
 |[StartDialogProc](#startdialogproc)|Chiamato quando viene ricevuto il primo messaggio per elaborare i messaggi inviati alla finestra di dialogo.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Con `CDialogImpl` è possibile creare una finestra di dialogo modale o non modale. `CDialogImpl` fornisce la routine della finestra di dialogo che utilizza la mappa messaggi predefinita per indirizzare i messaggi ai gestori appropriati.
 
@@ -128,7 +129,7 @@ in Specifica il valore da passare alla finestra di dialogo nel parametro *lParam
 
 Handle per la finestra di dialogo appena creata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa finestra di dialogo viene automaticamente collegata all' `CDialogImpl` oggetto. Per creare una finestra di dialogo modale, chiamare [DoModal](#domodal). La seconda sostituzione precedente viene utilizzata solo con [CComControl](../../atl/reference/ccomcontrol-class.md).
 
@@ -144,7 +145,7 @@ BOOL DestroyWindow();
 
 TRUE se la finestra di dialogo è stata eliminata correttamente. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Restituisce TRUE se la finestra di dialogo è stata eliminata correttamente. in caso contrario, FALSE.
 
@@ -178,7 +179,7 @@ in Informazioni aggiuntive specifiche del messaggio.
 
 TRUE se il messaggio viene elaborato; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `DialogProc` Usa la mappa messaggi predefinita per indirizzare i messaggi ai gestori appropriati.
 
@@ -206,7 +207,7 @@ in Specifica il valore da passare alla finestra di dialogo nel parametro *lParam
 
 Se ha esito positivo, il valore del parametro *nRetCode* specificato nella chiamata a [EndDialog](#enddialog). In caso contrario, -1.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa finestra di dialogo viene automaticamente collegata all' `CDialogImpl` oggetto.
 
@@ -229,7 +230,7 @@ in Valore che deve essere restituito da [CDialogImpl::D omodal](#domodal).
 
 TRUE se la finestra di dialogo viene distrutta; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `EndDialog` deve essere chiamato tramite la routine della finestra di dialogo. Dopo la distruzione della finestra di dialogo, in Windows viene utilizzato il valore di *nRetCode* come valore restituito per `DoModal` , che ha creato la finestra di dialogo.
 
@@ -248,7 +249,7 @@ virtual WNDPROC GetDialogProc();
 
 Routine della finestra di dialogo corrente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Eseguire l'override di questo metodo per sostituire la routine della finestra di dialogo con una propria.
 
@@ -269,7 +270,7 @@ Punta a un `CRect` oggetto o a una struttura [Rect](/windows/win32/api/windef/ns
 
 Diverso da zero se l'aggiornamento ha esito positivo; 0 se l'aggiornamento non riesce. Per ottenere informazioni estese sull'errore, chiamare `GetLastError`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione sostituisce le coordinate nella struttura specificata `RECT` con le coordinate convertite, che consentono di utilizzare la struttura per creare una finestra di dialogo o posizionare un controllo all'interno di una finestra di dialogo.
 
@@ -286,7 +287,7 @@ virtual void OnFinalMessage(HWND hWnd);
 *hWnd*<br/>
 in Handle per la finestra da eliminare definitivamente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si noti che se si desidera eliminare automaticamente l'oggetto alla distruzione della finestra, è possibile chiamare **delete this** . qui.
 
@@ -320,11 +321,11 @@ in Informazioni aggiuntive specifiche del messaggio.
 
 Routine della finestra.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Dopo la chiamata iniziale a `StartDialogProc` , `DialogProc` viene impostato come routine della finestra di dialogo e altre chiamate vengono eseguite.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

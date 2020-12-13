@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _sopen_s, _wsopen_s'
 title: _sopen_s, _wsopen_s
 ms.date: 4/2/2020
 api_name:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - _sopen_s function
 - files [C++], sharing
 ms.assetid: 059a0084-d08c-4973-9174-55e391b72aa2
-ms.openlocfilehash: bddee0b6c5e08e7a7fbae3ca72c3125fa9849c03
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 14a15f78ad452873813f9a6eb4f65de93cd055b8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229389"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136994"
 ---
 # <a name="_sopen_s-_wsopen_s"></a>_sopen_s, _wsopen_s
 
@@ -92,7 +93,7 @@ Un valore restituito diverso da zero indica un errore. in tal caso, **errno** vi
 |-|-|
 | **EACCES** |  Il percorso specificato è una directory o il file è di sola lettura, ma è stata tentata un'operazione di apertura in scrittura. |
 | **EEXIST** |  Sono stati specificati i flag **_O_CREAT** e **_O_EXCL** , ma *filename* esiste già. |
-| **EINVAL** |  Argomento *Oflag*, *shflag*o *pmode* non valido oppure *PFH* o *filename* è un puntatore null. |
+| **EINVAL** |  Argomento *Oflag*, *shflag* o *pmode* non valido oppure *PFH* o *filename* è un puntatore null. |
 | **EMFILE** | Non sono disponibili altri descrittori di file. |
 | **ENOENT** | File o percorso non trovato. |
 
@@ -102,7 +103,7 @@ Per altre informazioni su questi e altri codici restituiti, vedere [errno, _dose
 
 In caso di errore, viene restituito-1 tramite *PFH* (a meno che *PFH* non sia un puntatore null).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_sopen_s** apre il file specificato da *filename* e prepara il file per la lettura o la scrittura condivisa, come definito da *Oflag* e *shflag*. **_wsopen_s** è una versione a caratteri wide di **_sopen_s**; l'argomento *filename* per **_wsopen_s** è una stringa di caratteri wide. **_wsopen_s** e **_sopen_s** si comportano in modo identico.
 
@@ -123,7 +124,7 @@ L'espressione integer *Oflag* è costituita dalla combinazione di una o più cos
 | **_O_CREAT** | Crea e apre un nuovo file per la scrittura. Non ha alcun effetto se il file specificato da *filename* esiste. L'argomento *pmode* è obbligatorio quando si specifica **_O_CREAT** . |
 | **_O_CREAT** &#124; **_O_SHORT_LIVED** | Crea un file come temporaneo e se possibile non lo scarica su disco. L'argomento *pmode* è obbligatorio quando si specifica **_O_CREAT** . |
 | **_O_CREAT** &#124; **_O_TEMPORARY** | Crea un file come temporaneo; il file viene eliminato quando l'ultimo descrittore del file viene chiuso. L'argomento *pmode* è obbligatorio quando si specifica **_O_CREAT** . |
-| **_O_CREAT** &#124;`_O_EXCL` | Restituisce un valore di errore se esiste un file specificato da *filename* . Si applica solo se utilizzato con **_O_CREAT**. |
+| **_O_CREAT** &#124; `_O_EXCL` | Restituisce un valore di errore se esiste un file specificato da *filename* . Si applica solo se utilizzato con **_O_CREAT**. |
 | **_O_NOINHERIT** | Impedisce la creazione di un descrittore di file condiviso. |
 | **_O_RANDOM** | Specifica che la memorizzazione nella cache è ottimizzata, ma non limitata, per l'accesso casuale dal disco. |
 | **_O_RDONLY** | Apre un file per la sola lettura. Non può essere specificato con **_O_RDWR** o **_O_WRONLY**. |
@@ -136,11 +137,11 @@ L'espressione integer *Oflag* è costituita dalla combinazione di una o più cos
 | **_O_U8TEXT** | Apre un file in modalità Unicode UTF-8. |
 | **_O_WTEXT** | Apre un file in modalità Unicode. |
 
-Per specificare la modalità di accesso ai file, è necessario specificare **_O_RDONLY**, **_O_RDWR**o **_O_WRONLY**. Non vi è alcun valore predefinito per la modalità d'accesso.
+Per specificare la modalità di accesso ai file, è necessario specificare **_O_RDONLY**, **_O_RDWR** o **_O_WRONLY**. Non vi è alcun valore predefinito per la modalità d'accesso.
 
-Quando un file viene aperto in modalità Unicode usando **_O_WTEXT**, **_O_U8TEXT**o **_O_U16TEXT**, le funzioni di input traducono i dati letti dal file in dati UTF-16 archiviati come tipo **`wchar_t`** . Le funzioni che scrivono in un file aperto in modalità Unicode prevedono buffer contenenti dati UTF-16 archiviati come tipo **`wchar_t`** . Se il file è codificato come UTF-8, i dati UTF-16 vengono tradotti in UTF-8 alla scrittura e il contenuto del file codificato in UTF-8 viene tradotto in UTF-16 alla lettura. Un tentativo di leggere o scrivere un numero dispari di byte in modalità Unicode causerà un errore di convalida del parametro. Per leggere o scrivere dati archiviati nel programma come UTF-8, usare una modalità file di testo o binaria al posto della modalità Unicode. Eventuali traduzioni della codifica vanno gestite dall'utente.
+Quando un file viene aperto in modalità Unicode usando **_O_WTEXT**, **_O_U8TEXT** o **_O_U16TEXT**, le funzioni di input traducono i dati letti dal file in dati UTF-16 archiviati come tipo **`wchar_t`** . Le funzioni che scrivono in un file aperto in modalità Unicode prevedono buffer contenenti dati UTF-16 archiviati come tipo **`wchar_t`** . Se il file è codificato come UTF-8, i dati UTF-16 vengono tradotti in UTF-8 alla scrittura e il contenuto del file codificato in UTF-8 viene tradotto in UTF-16 alla lettura. Un tentativo di leggere o scrivere un numero dispari di byte in modalità Unicode causerà un errore di convalida del parametro. Per leggere o scrivere dati archiviati nel programma come UTF-8, usare una modalità file di testo o binaria al posto della modalità Unicode. Eventuali traduzioni della codifica vanno gestite dall'utente.
 
-Se **_sopen_s** viene chiamato con **_O_WRONLY**  |  **_O_APPEND** (modalità Append) e **_O_WTEXT**, **_O_U16TEXT**o **_O_U8TEXT**, tenta innanzitutto di aprire il file per la lettura e la scrittura, di leggere l'indicatore di ordine dei byte e quindi di riaprirlo per la sola scrittura. Se l'apertura del file per lettura e scrittura ha esito negativo, il file verrà aperto per la sola lettura e verrà usato il valore predefinito per l'impostazione della modalità Unicode.
+Se **_sopen_s** viene chiamato con **_O_WRONLY**  |  **_O_APPEND** (modalità Append) e **_O_WTEXT**, **_O_U16TEXT** o **_O_U8TEXT**, tenta innanzitutto di aprire il file per la lettura e la scrittura, di leggere l'indicatore di ordine dei byte e quindi di riaprirlo per la sola scrittura. Se l'apertura del file per lettura e scrittura ha esito negativo, il file verrà aperto per la sola lettura e verrà usato il valore predefinito per l'impostazione della modalità Unicode.
 
 L'argomento *shflag* è un'espressione costante costituita da una delle seguenti costanti manifesto, definite in \<share.h> .
 
@@ -176,7 +177,7 @@ Se non viene concessa l'autorizzazione in scrittura, il file è di sola lettura.
 
 Vedere l'esempio per [_locking](locking.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [I/O di basso livello](../../c-runtime-library/low-level-i-o.md)<br/>
 [_close](close.md)<br/>

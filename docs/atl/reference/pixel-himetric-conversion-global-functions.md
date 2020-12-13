@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: funzioni globali di conversione pixel/HIMETRIC'
 title: Funzioni globali di conversione pixel-HIMETRIC
 ms.date: 11/04/2016
 f1_keywords:
 - atlwin/ATL::AtlHiMetricToPixel
 - atlwin/ATL::AtlPixelToHiMetric
 ms.assetid: ecb1b1b2-7e9d-4fbc-a855-16252d2d794c
-ms.openlocfilehash: e71dccbccbe43ea7df3b6a7005da138a8e31aeb3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 53753ff92b04466a94b821fdc4b4f221117c6ade
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834687"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138983"
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>Funzioni globali di conversione pixel/HIMETRIC
 
@@ -19,7 +20,7 @@ Queste funzioni forniscono supporto per la conversione da e verso le unità pixe
 > [!IMPORTANT]
 > Le funzioni elencate nella tabella seguente non possono essere usate nelle applicazioni eseguite nel Windows Runtime.
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[AtlHiMetricToPixel](#atlhimetrictopixel)|Converte le unità HIMETRIC (ogni unità è 0,01 millimetri) in pixel.|
 |[AtlPixelToHiMetric](#atlpixeltohimetric)|Converte i pixel in unità HIMETRIC (ogni unità è 0,01 millimetri).|

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe SimpleClassFactory'
 title: SimpleClassFactory (classe)
 ms.date: 09/7/2018
 ms.topic: reference
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Microsoft::WRL::SimpleClassFactory class
 - Microsoft::WRL::SimpleClassFactory::CreateInstance method
 ms.assetid: 6edda1b2-4e44-4e14-9364-72f519249962
-ms.openlocfilehash: 66794789e51a2635fae646cca49e4fae8385dfe0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cd771909790f80048d8fee678b842f820e2f7be2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211151"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135200"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory (classe)
 
@@ -32,7 +33,7 @@ class SimpleClassFactory : public ClassFactory<>;
 *Base*<br/>
 Classe base.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La classe base deve fornire un costruttore predefinito.
 
@@ -44,7 +45,7 @@ Nell'esempio di codice riportato di seguito viene illustrato come utilizzare `Si
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Metodo SimpleClassFactory::CreateInstance](#createinstance)|Crea un'istanza dell'interfaccia specificata.|
 
@@ -78,7 +79,7 @@ Nell'esempio di codice riportato di seguito viene illustrato come utilizzare `Si
 
 **Spazio dei nomi:** Microsoft::WRL
 
-## <a name="simpleclassfactorycreateinstance-method"></a><a name="createinstance"></a>Metodo SimpleClassFactory:: CreateInstance
+## <a name="simpleclassfactorycreateinstance-method"></a><a name="createinstance"></a> Metodo SimpleClassFactory:: CreateInstance
 
 Crea un'istanza dell'interfaccia specificata.
 
@@ -107,6 +108,6 @@ Al termine di questa operazione, puntatore a un'istanza dell'oggetto specificato
 
 S_OK se riesce; in caso contrario, HRESULT indica un errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se `__WRL_STRICT__` è definito, viene generato un errore di asserzione se la classe di base specificata nel parametro di modello di classe non deriva da [RuntimeClass](runtimeclass-class.md)o non è configurata con il valore di enumerazione ClassicCom o WinRtClassicComMix [RuntimeClassType](runtimeclasstype-enumeration.md) .

@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: specifica del modello di threading per un progetto (ATL)'
 title: Specifica di un modello di threading per un progetto (ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,35 +9,35 @@ helpviewer_keywords:
 - threading [ATL], models
 - _ATL_SINGLE_THREADED macro
 ms.assetid: 6b571078-521c-4f3e-9f08-482aa235a822
-ms.openlocfilehash: 69c1c80bba0b09ce69e0b9b9b27296ef2508e60b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81bf8413a2118797ec0e0c177a06468b8e3c7ba0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275217"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138476"
 ---
 # <a name="specifying-the-threading-model-for-a-project-atl"></a>Specifica di un modello di threading per un progetto (ATL)
 
-Le macro seguenti sono disponibili per specificare il modello di threading di un progetto ATL:
+Per specificare il modello di threading di un progetto ATL sono disponibili le macro seguenti:
 
-|Macro|Linee guida per l'utilizzo|
+|Macro|Linee guida per l'utilizzo di|
 |-----------|--------------------------|
-|_ATL_SINGLE_THREADED|Specificare se tutti gli oggetti utilizzano il modello di threading singolo.|
-|_ATL_APARTMENT_THREADED|Definire se uno o più degli oggetti di usare il threading apartment.|
-|_ATL_FREE_THREADED|Definire se uno o più degli oggetti di usare il threading libero o neutrale. Il codice esistente può contenere riferimenti alla macro equivalente [ATL_MULTI_THREADED](reference/compiler-options-macros.md#_atl_multi_threaded).|
+|_ATL_SINGLE_THREADED|Definire se tutti gli oggetti utilizzano il modello a thread singolo.|
+|_ATL_APARTMENT_THREADED|Definire se uno o più oggetti utilizzano il threading dell'Apartment.|
+|_ATL_FREE_THREADED|Definire se uno o più oggetti utilizzano un Threading libero o neutro. Il codice esistente può contenere riferimenti all' [_ATL_MULTI_THREADED](reference/compiler-options-macros.md#_atl_multi_threaded)macro equivalente.|
 
-Se non si definisce uno qualsiasi di queste macro per il progetto, _ATL_FREE_THREADED saranno in vigore.
+Se non si definisce nessuna di queste macro per il progetto, _ATL_FREE_THREADED sarà attiva.
 
-Le macro influiscono sulle prestazioni di runtime come indicato di seguito:
+Le macro influiscono sulle prestazioni in fase di esecuzione, come indicato di seguito:
 
-- Specificare la macro che corrisponde agli oggetti nel progetto, è possibile migliorare le prestazioni in fase di esecuzione.
+- La specifica della macro che corrisponde agli oggetti nel progetto può migliorare le prestazioni in fase di esecuzione.
 
-- Specifica un livello superiore di una macro, ad esempio se si specifica ATL_APARTMENT_THREADED quando tutti gli oggetti sono a thread singolo, verrà leggermente influire negativamente sulle prestazioni in fase di esecuzione.
+- Se si specifica un livello di macro superiore, ad esempio se si specifica _ATL_APARTMENT_THREADED quando tutti gli oggetti sono a thread singolo, le prestazioni in fase di esecuzione diminuiranno leggermente.
 
-- Specifica un livello inferiore di una macro, ad esempio, se si specifica ATL_SINGLE_THREADED quando uno o più degli oggetti di usare il threading apartment o modello di threading free, può causare l'errore in fase di esecuzione dell'applicazione.
+- Se si specifica un livello inferiore della macro, ad esempio se si specifica _ATL_SINGLE_THREADED quando uno o più oggetti utilizzano il threading di Apartment o il threading libero, l'applicazione potrebbe non riuscire in fase di esecuzione.
 
-Visualizzare [Creazione guidata oggetto semplice ATL, opzioni](../atl/reference/options-atl-simple-object-wizard.md) per una descrizione del threading modelli disponibili per un oggetto ATL.
+Per una descrizione dei modelli di threading disponibili per un oggetto ATL [, vedere Opzioni, creazione guidata oggetto semplice ATL](../atl/reference/options-atl-simple-object-wizard.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Concetti](../atl/active-template-library-atl-concepts.md)

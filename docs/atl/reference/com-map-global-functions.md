@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: COM map Global Functions'
 title: Funzioni globali della mappa COM
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM map global functions
 ms.assetid: b9612d30-eb23-46ef-8093-d56f237d3cf1
-ms.openlocfilehash: adf4e06eb46aed74d08071dccce1db549ca31226
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ee502a68a0a3b21849d2fabdadcc9ecbbcc1602d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833595"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141336"
 ---
 # <a name="com-map-global-functions"></a>Funzioni globali della mappa COM
 
@@ -51,13 +52,13 @@ in Matrice di `_ATL_INTMAP_ENTRY` strutture che accedono a una mappa delle inter
 in GUID dell'interfaccia richiesta.
 
 *ppvObject*<br/>
-out Puntatore al puntatore a interfaccia specificato in *IID*oppure null se l'interfaccia non viene trovata.
+out Puntatore al puntatore a interfaccia specificato in *IID* oppure null se l'interfaccia non viene trovata.
 
 ### <a name="return-value"></a>Valore restituito
 
 Uno dei valori HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `AtlInternalQueryInterface` gestisce solo le interfacce nella tabella di mappe COM. Se l'oggetto è aggregato, non `AtlInternalQueryInterface` delega al sconosciuto esterno. È possibile immettere interfacce nella tabella della mappa COM con la macro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) o una delle relative varianti.
 

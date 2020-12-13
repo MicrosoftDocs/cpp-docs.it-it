@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _controlfp_s'
 title: _controlfp_s
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - EM_AMBIGUOUS
 - _controlfp_s function
 ms.assetid: a51fc3f6-ab13-41f0-b227-6bf02d98e987
-ms.openlocfilehash: 0e734a0286ac21ed0883cc10b0cd4ee5857ba448
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2fed3263374df4bdac012c6d41d89adf9232c338
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917270"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146471"
 ---
 # <a name="_controlfp_s"></a>_controlfp_s
 
@@ -60,20 +61,20 @@ Il valore di bit della parola di controllo corrente.
 *newControl*<br/>
 Valori di bit della parola di controllo nuova.
 
-*mask*<br/>
+*maschera*<br/>
 Maschera di bit della parola di controllo nuova da impostare.
 
 ## <a name="return-value"></a>Valore restituito
 
 Zero se l'operazione ha esito positivo o un codice di errore del valore **errno** .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_controlfp_s** è una versione indipendente dalla piattaforma e più sicura di **_control87**, che ottiene la parola di controllo a virgola mobile nell'indirizzo archiviato in *CurrentControl* e la imposta usando *newControl*. I bit dei valori indicano lo stato di controllo a virgola mobile. Lo stato di controllo a virgola mobile consente al programma di modificare le modalità di precisione, arrotondamento e infinito nel pacchetto matematico a virgola mobile, a seconda della piattaforma. È anche possibile usare **_controlfp_s** per mascherare o annullare il mascheramento delle eccezioni a virgola mobile.
 
 Se il valore per *mask* è uguale a 0, **_controlfp_s** ottiene la parola di controllo a virgola mobile e archivia il valore recuperato in *CurrentControl*.
 
-Se *mask* è diverso da zero, viene impostato un nuovo valore per la parola di controllo: per ogni bit impostato (vale a dire, uguale a 1) nella *maschera*, viene usato il bit corrispondente in *New* per aggiornare la parola di controllo. In altre parole, *fpcntrl* = ((*fpcntrl* & ~*mask*) &#124; (*newControl* & *mask*), dove *fpcntrl* è la parola di controllo a virgola mobile. In questo scenario, *CurrentControl* è impostato sul valore dopo il completamento della modifica; non è il valore bit della parola di controllo precedente.
+Se *mask* è diverso da zero, viene impostato un nuovo valore per la parola di controllo: per ogni bit impostato (vale a dire, uguale a 1) nella *maschera*, viene usato il bit corrispondente in *New* per aggiornare la parola di controllo. In altre parole, *fpcntrl* = ((*fpcntrl* & ~*mask*) &#124; (*newControl*  &  *mask*), dove *fpcntrl* è la parola di controllo a virgola mobile. In questo scenario, *CurrentControl* è impostato sul valore dopo il completamento della modifica; non è il valore bit della parola di controllo precedente.
 
 > [!NOTE]
 > Per impostazione predefinita, le librerie di runtime mascherano tutte le eccezioni a virgola mobile.
@@ -90,9 +91,9 @@ _controlfp_s( &current_word, _EM_INVALID, _MCW_EM );
 // DENORMAL exception mask remains unchanged.
 ```
 
-I valori possibili per la costante Mask (*maschera*) e i nuovi valori di controllo (*newControl*) vengono visualizzati nella tabella dei valori esadecimali seguenti. Usare le costanti portabili elencate di seguito (**_MCW_EM**, **_EM_INVALID**e così via) come argomenti per queste funzioni, anziché specificare in modo esplicito i valori esadecimali.
+I valori possibili per la costante Mask (*maschera*) e i nuovi valori di controllo (*newControl*) vengono visualizzati nella tabella dei valori esadecimali seguenti. Usare le costanti portabili elencate di seguito (**_MCW_EM**, **_EM_INVALID** e così via) come argomenti per queste funzioni, anziché specificare in modo esplicito i valori esadecimali.
 
-Le piattaforme derivate Intel (x86) supportano i valori di input e output DENORMALIZZATI nell'hardware. Il comportamento x86 mantiene i valori DENORMALIZZATI. La piattaforma ARM e le piattaforme x64 con supporto SSE2 consentono di scaricare gli operandi e i risultati denormalizzati oppure forzarli a zero. Le funzioni **_controlfp_s**, **_controlfp**e **_control87** forniscono una maschera per modificare questo comportamento. Nell'esempio seguente viene illustrato l'uso di questa maschera:
+Le piattaforme derivate Intel (x86) supportano i valori di input e output DENORMALIZZATI nell'hardware. Il comportamento x86 mantiene i valori DENORMALIZZATI. La piattaforma ARM e le piattaforme x64 con supporto SSE2 consentono di scaricare gli operandi e i risultati denormalizzati oppure forzarli a zero. Le funzioni **_controlfp_s**, **_controlfp** e **_control87** forniscono una maschera per modificare questo comportamento. Nell'esempio seguente viene illustrato l'uso di questa maschera:
 
 ```C
 unsigned int current_word = 0;
@@ -187,7 +188,7 @@ Default:  0x9001f
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [_clear87, _clearfp](clear87-clearfp.md)<br/>
 [_status87, _statusfp, _statusfp2](status87-statusfp-statusfp2.md)<br/>
-[_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md)<br/>
+[_control87, _controlfp, \_ _control87_2](control87-controlfp-control87-2.md)<br/>

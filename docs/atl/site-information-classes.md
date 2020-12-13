@@ -1,25 +1,26 @@
 ---
-title: Classi di informazioni del sito (ATL)
+description: 'Ulteriori informazioni su: classi di informazioni del sito'
+title: Classi di informazioni sul sito (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - site information classes
 ms.assetid: 102eae20-7953-4efb-b27b-409885c9c064
-ms.openlocfilehash: f6a6e53aa3214a2a2a766d90573481365fe382dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5161533dd9b698f5170f81223ad8ec557791c9a3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274339"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138489"
 ---
 # <a name="site-information-classes"></a>Classi di informazioni del sito
 
-Le classi seguenti consentono a un oggetto comunicare con il relativo sito:
+Le classi seguenti consentono a un oggetto di comunicare con il relativo sito:
 
-- [IObjectWithSiteImpl](../atl/reference/iobjectwithsiteimpl-class.md) recupera e imposta un puntatore al sito di un oggetto. Usato per gli oggetti che non sono controlli.
+- [IObjectWithSiteImpl](../atl/reference/iobjectwithsiteimpl-class.md) Recupera e imposta un puntatore al sito di un oggetto. Usato per gli oggetti che non sono controlli.
 
-- [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) recupera e imposta un puntatore al sito di un oggetto. Usata per i controlli.
+- [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) Recupera e imposta un puntatore al sito di un oggetto. Usato per i controlli.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Panoramica della classe](../atl/atl-class-overview.md)
+[Cenni preliminari sulle classi](../atl/atl-class-overview.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _putw'
 title: _putw
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: 12f54c54b59e43d9a2861489171dd6c9c9436a8a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e49240d7410f47042f515f310ba79f9a9eb38398
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232430"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146393"
 ---
 # <a name="_putw"></a>_putw
 
@@ -63,7 +64,7 @@ Restituisce il valore scritto. Un valore restituito di **EOF** potrebbe indicare
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_putw** scrive un valore binario di tipo nella **`int`** posizione corrente del *flusso.* **_putw** non influisce sull'allineamento degli elementi nel flusso né presuppone un allineamento speciale. **_putw** è principalmente per la compatibilità con le librerie precedenti. È possibile che si verifichino problemi di portabilità con **_putw** perché le dimensioni di un oggetto **`int`** e l'ordine dei byte all'interno di un **`int`** differiscono tra più sistemi.
 
@@ -119,7 +120,7 @@ int main( void )
 Wrote ten words
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
 [_getw](getw.md)<br/>
