@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2247'
 title: Errore del compilatore C2247
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2247
 ms.assetid: 72efa03e-615e-4ef9-aede-0a98654b20fd
-ms.openlocfilehash: e82b406b20d77a824b62207b1766fec55ac65c5c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 480d3862a1f96517ecce11be5c695e106eb58d7e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758905"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177939"
 ---
 # <a name="compiler-error-c2247"></a>Errore del compilatore C2247
 
@@ -34,7 +35,7 @@ int j = c.i;               // C2247, i not accessible
 
 Questo errore può essere generato anche in seguito a operazioni di conformità del compilatore eseguite per Visual Studio .NET 2003: controllo di accesso con membri protetti. È possibile accedere a un membro protetto (n) solo tramite una funzione membro di una classe (B) che eredita dalla classe (A) di cui è membro (n).
 
-Per il codice valido in entrambe le versioni Visual Studio .NET 2003 e Visual Studio .NET di Visual C++studio, dichiarare il membro come Friend del tipo. È anche possibile usare l'ereditarietà pubblica.
+Per il codice valido in entrambe le versioni Visual Studio .NET 2003 e Visual Studio .NET di Visual C++, dichiarare il membro come Friend del tipo. È anche possibile usare l'ereditarietà pubblica.
 
 ```cpp
 // C2247b.cpp
@@ -59,7 +60,7 @@ void A::f() {
 
 C2247 può anche essere generato come risultato delle operazioni di conformità del compilatore eseguite per Visual Studio .NET 2003: le classi base private sono ora inaccessibili. Una classe (A) che è una classe di base privata a un tipo (B) non deve essere accessibile a un tipo (C) che usa B come classe di base.
 
-Per il codice valido in entrambe le versioni Visual Studio .NET 2003 e Visual Studio .NET di Visual C++studio, usare l'operatore scope.
+Per il codice valido in entrambe le versioni Visual Studio .NET 2003 e Visual Studio .NET di Visual C++, usare l'operatore scope.
 
 ```cpp
 // C2247c.cpp

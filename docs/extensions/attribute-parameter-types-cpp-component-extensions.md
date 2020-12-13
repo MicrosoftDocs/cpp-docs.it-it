@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: tipi di parametri degli attributi (C++/CLI e C++/CX)'
 title: Tipi di parametri degli attributi (C++/CLI e C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - custom attributes, parameter types
 ms.assetid: d9f127a3-7f08-456f-acc6-256805632712
-ms.openlocfilehash: cf33014c455bef145f7b7ec7ee353f27d1157f24
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 7f2d5dd2def4e61d5b2b0406cc193bf818bc3d9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008606"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177094"
 ---
 # <a name="attribute-parameter-types--ccli-and-ccx"></a>Tipi di parametri degli attributi (C++/CLI e C++/CX)
 
@@ -67,7 +68,7 @@ ref struct MyStruct {
 
 ## <a name="example-unnamed-arguments-precede-named-arguments"></a>Esempio: gli argomenti senza nome precedono gli argomenti denominati
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
 Quando si specificano gli attributi, tutti gli argomenti senza nome (posizionali) devono precedere quelli con nome.
 
@@ -101,7 +102,7 @@ ref class ClassD {};   // Positional and named
 
 ## <a name="example-one-dimensional-array-attribute-parameter"></a>Esempio: parametro dell'attributo di matrice unidimensionale
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
 I parametri dell'attributo possono essere matrici unidimensionali dei tipi precedenti.
 
@@ -122,6 +123,6 @@ public ref struct ABC : public Attribute {
 ref struct AStruct{};
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi definiti dall'utente](user-defined-attributes-cpp-component-extensions.md)

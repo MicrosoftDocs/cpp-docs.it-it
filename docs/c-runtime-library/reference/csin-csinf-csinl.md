@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: csin, csinf, csinl'
 title: csin, csinf, csinl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - csinf function
 - csinl function
 ms.assetid: 3ed475e8-9aae-42ba-a25c-7ae656a0fd4d
-ms.openlocfilehash: c0e0c57596ac36dbe3c0b72f79177b8df7b15af0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d19f916f6fdd9e871eef6e1ad77369642b939495
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941953"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178862"
 ---
 # <a name="csin-csinf-csinl"></a>csin, csinf, csinl
 
@@ -73,7 +74,7 @@ Numero complesso che rappresenta un angolo, espresso in radianti.
 
 Seno di *z*, in radianti.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Poiché C++ consente l'overload, è possibile chiamare overload di **csin** che accettano e restituiscono valori **_Fcomplex** e **_Lcomplex** . In un programma C **csin** accetta e restituisce sempre un valore **_Dcomplex** .
 
@@ -83,9 +84,9 @@ Poiché C++ consente l'overload, è possibile chiamare overload di **csin** che 
 |-------------|--------------|------------------|
 |**csin**,               **csinf**, **csinl**|\<complex.h>|\<ccomplex>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
 [catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: abstract (C++/CLI e C++/CX)'
 title: abstract (C++/CLI e C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C++]
 ms.assetid: cbae3408-0378-4ac8-b70d-c016b381a6d5
-ms.openlocfilehash: 1e729589f78c56111717a87a27f9c7370dca7b90
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e40d0d0c03bbf97b684d9e011f4bf614f6a44332
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214295"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177120"
 ---
 # <a name="abstract--ccli-and-ccx"></a>abstract (C++/CLI e C++/CX)
 
@@ -31,9 +32,9 @@ La parola chiave **abstract** dichiara:
 
 **`virtual`***return-type* *member-function-identifier* **() abstract;**
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-La sintassi del primo esempio dichiara una classe astratta. Il componente della *dichiarazione di classe* può essere una dichiarazione c++ nativa (** `class` * * * * o **`struct`** ) o una dichiarazione di estensione c++ (** classe ref * * o **struct Ref**) se `/ZW` `/clr` è specificata l'opzione del compilatore o.
+La sintassi del primo esempio dichiara una classe astratta. Il componente della *dichiarazione di classe* può essere una dichiarazione c++ nativa (**`class` * * * * o **`struct`** ) o una dichiarazione di estensione c++ (** classe ref * * o **struct Ref**) se `/ZW` `/clr` è specificata l'opzione del compilatore o.
 
 La sintassi del secondo esempio dichiara una funzione membro virtuale astratta. Dichiarare che una funzione astratta equivale a dichiararla come funzione virtuale pura. Dichiarare una funzione membro astratta comporta che la classe contenitore venga dichiarata astratta.
 
@@ -57,7 +58,7 @@ Opzione del compilatore: `/ZW`
 
 Opzione del compilatore: `/clr`
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 L'esempio di codice seguente genera un errore perché la classe `X` è contrassegnata come **abstract**.
 
@@ -100,6 +101,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)

@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: scaricamento di una DLL di Delay-Loaded'
 title: Scaricamento di una DLL a caricamento ritardato
 ms.date: 11/04/2016
 helpviewer_keywords:
 - __FUnloadDelayLoadedDLL2
 - delayed loading of DLLs, unloading
 ms.assetid: 6463bc71-020e-4aff-a4ca-90360411c54e
-ms.openlocfilehash: 1895bf12cb195ef7b4555d400badf112d377547b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fd733bfa02a6d90eecb1b617288d368d33766282
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211918"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178940"
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>Scaricamento di una DLL a caricamento ritardato
 
@@ -59,6 +60,6 @@ e non:
 __FUnloadDelayLoadedDLL2("User32.DLL");.
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Informazioni sulla funzione helper](understanding-the-helper-function.md)

@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/ZG (genera prototipi di funzione)
 title: /Zg (Genera i prototipi delle funzioni)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - -Zg compiler option [C++]
 - generate function prototypes compiler option
 ms.assetid: c8df1b46-24ff-46f2-8356-e0a144b21dd2
-ms.openlocfilehash: 591460b78a461aa2e33f873b79d6dcec0277f99f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: ee0bed48f15acae867d344a60a6d42f3b17c7e85
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446207"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178875"
 ---
 # <a name="zg-generate-function-prototypes"></a>/Zg (Genera i prototipi delle funzioni)
 
@@ -27,7 +28,7 @@ Rimosso. Crea un prototipo di funzione per ogni funzione definita nel file di or
 /Zg
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'opzione del compilatore non è più disponibile. È stata rimossa in Visual Studio 2015. Questa pagina rimane per gli utenti di versioni precedenti di Visual Studio.
 
@@ -44,11 +45,11 @@ typedef struct MyStruct { int i; } T2;
 void f2(T2 * t) {}
 ```
 
-Il **/Zg** opzione è stata deprecata in Visual Studio 2005 ed è stata rimossa in Visual Studio 2015. Il compilatore MSVC ha rimosso il supporto per il codice precedente, di tipo C. Per un elenco di opzioni del compilatore deprecate, vedere **deprecate o rimosse le opzioni del compilatore** nelle [opzioni del compilatore elencate per categoria](compiler-options-listed-by-category.md).
+L'opzione **/ZG** è stata deprecata in visual Studio 2005 ed è stata rimossa in visual studio 2015. Il compilatore MSVC ha rimosso il supporto per il codice di tipo C meno recente. Per un elenco delle opzioni del compilatore deprecate, vedere Opzioni del compilatore **deprecate e rimosse** nelle [Opzioni del compilatore elencate per categoria](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -60,7 +61,7 @@ Il **/Zg** opzione è stata deprecata in Visual Studio 2005 ed è stata rimossa 
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

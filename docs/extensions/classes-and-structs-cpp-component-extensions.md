@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe di riferimento e struct di riferimento (C++/CLI e C++/CX)'
 title: ref class e ref struct (C++/CLI e C++/CX)
 ms.date: 05/30/2019
 ms.topic: reference
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 1ec29dcc09cd338136102c0f3b769055d5143973
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: 633314e27118cfceddef449ab944c6dd0dbc4f9a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075803"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176977"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class e ref struct (C++/CLI e C++/CX)
 
@@ -54,7 +55,7 @@ Nome della classe o dello struct.
 
 Per altre informazioni, vedere le descrizioni specifiche del linguaggio di questo parametro nelle sezioni Windows Runtime e Common Language Runtime.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'accessibilità del membro predefinita di un oggetto dichiarato con la classe di **riferimento** o la **classe di valore** è **`private`** . E l'accessibilità del membro predefinita di un oggetto dichiarato con struct di **riferimento** o **struct di valore** è **`public`** .
 
@@ -82,7 +83,7 @@ Per altre informazioni sulle classi e gli struct, vedere
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Vedere [Classi e struct di riferimento](../cppcx/ref-classes-and-structs-c-cx.md) e [Classi e struct di valore](../cppcx/value-classes-and-structs-c-cx.md).
 
@@ -101,7 +102,7 @@ Opzione del compilatore: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La tabella seguente elenca le differenze dalla sintassi mostrata nella sezione **Tutti i runtime** specifiche per C++/CLI.
 
@@ -118,6 +119,6 @@ Le parole chiave **value class** e **value struct** indicano al compilatore che 
 
 Opzione del compilatore: `/clr`
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)

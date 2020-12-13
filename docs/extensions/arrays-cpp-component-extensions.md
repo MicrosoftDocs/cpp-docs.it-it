@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: matrici (C++/CLI e C++/CX)'
 title: Matrici (C++/CLI e C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-ms.openlocfilehash: 814be57caafed117a1403105d46326ac53682578
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: e75818b7c4de3123fefb6bed9f24da46f8212ed8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500897"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177107"
 ---
 # <a name="arrays-ccli-and-ccx"></a>Matrici (C++/CLI e C++/CX)
 
@@ -61,7 +62,7 @@ Tipo della variabile di matrice. I tipi validi sono le classi e i tipi fondament
 *Rank*<br/>
 (Facoltativo) Numero di dimensioni nella matrice. Deve essere 1.
 
-*identificatore*<br/>
+*identifier*<br/>
 Nome della variabile di matrice.
 
 *initialization-type*<br/>
@@ -70,7 +71,7 @@ Tipo dei valori che inizializzano la matrice. In genere *array-type* e *initiali
 *initialization-list*<br/>
 (Facoltativo) Elenco delimitato da virgole di valori tra parentesi graffe che inizializzano gli elementi della matrice. Ad esempio, se *rank-size-list* è `(3)`, che dichiara una matrice unidimensionale di 3 elementi, *initialization-list* può essere `{1,2,3}`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È possibile rilevare in fase di compilazione se un tipo è una matrice con conteggio dei riferimenti tramite `__is_ref_array(type)`. Per altre informazioni, vedere [Supporto del compilatore per caratteristiche di tipo](compiler-support-for-type-traits-cpp-component-extensions.md).
 
@@ -117,7 +118,7 @@ Tipo della variabile di matrice. I tipi validi sono classi e tipi fondamentali d
 *Rank*<br/>
 (Facoltativo) Numero di dimensioni nella matrice. Il valore predefinito è 1, il valore massimo è 32. Ogni dimensione della matrice è a sua volta una matrice.
 
-*identificatore*<br/>
+*identifier*<br/>
 Nome della variabile di matrice.
 
 *initialization-type*<br/>
@@ -131,7 +132,7 @@ Elenco delimitato da virgole delle dimensioni di ogni dimensione nella matrice. 
 
 Ad esempio, se *rank-size-list* è `(3)`, che dichiara una matrice unidimensionale di 3 elementi, *initialization-list* può essere `{1,2,3}`. Se *rank-size-list* è `(3,2,4)`, che dichiara una matrice tridimensionale di 3 elementi nella prima dimensione, 2 elementi nella seconda e 4 elementi nella terza, *initialization-list* può essere `{{1,2,3},{0,0},{-5,10,-21,99}}`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **array** si trova negli [spazi dei nomi platform, default e cli](platform-default-and-cli-namespaces-cpp-component-extensions.md).
 
@@ -168,6 +169,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)

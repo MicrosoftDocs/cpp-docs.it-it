@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _fpreset'
 title: _fpreset
 ms.date: 04/05/2018
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - floating-point numbers, resetting math package
 - _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
-ms.openlocfilehash: 842b9c794d04d71f8f6ca97e35fb3cac2f7bb1ec
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7818e0f02f6165c5041245e342a81b1dde25b091
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957006"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178693"
 ---
 # <a name="_fpreset"></a>_fpreset
 
@@ -44,9 +45,9 @@ Reimposta il pacchetto a virgola mobile.
 void _fpreset( void );
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La funzione **_fpreset** reinizializza il pacchetto matematico a virgola mobile. **_fpreset** viene in genere usato con le funzioni **Signal**, **System**o **_exec** o **_spawn** . Se un programma intrappola i segnali di errore a virgola mobile (**SIGFPE**) con **Signal**, può recuperare in modo sicuro gli errori a virgola mobile richiamando **_fpreset** e usando **longjmp**.
+La funzione **_fpreset** reinizializza il pacchetto matematico a virgola mobile. **_fpreset** viene in genere usato con le funzioni **Signal**, **System** o **_exec** o **_spawn** . Se un programma intrappola i segnali di errore a virgola mobile (**SIGFPE**) con **Signal**, può recuperare in modo sicuro da errori a virgola mobile richiamando **_fpreset** e usando **longjmp**.
 
 Questa funzione è deprecata durante la compilazione con [/CLR (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) perché il Common Language Runtime supporta solo la precisione a virgola mobile predefinita.
 
@@ -56,7 +57,7 @@ Questa funzione è deprecata durante la compilazione con [/CLR (compilazione Com
 |--------------|---------------------|
 |**_fpreset**|\<float.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -174,8 +175,8 @@ Error 131: Divide by zero
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[Funzioni _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[_exec, funzioni _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [signal](signal.md)<br/>
-[Funzioni _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, funzioni _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system, _wsystem](system-wsystem.md)<br/>

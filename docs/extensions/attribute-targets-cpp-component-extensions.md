@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: destinazioni degli attributi (C++/CLI e C++/CX)'
 title: Destinazioni degli attributi (C++/CLI e C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-ms.openlocfilehash: fe2c1d27042b51300d01ba70b951b7601d87701e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2c14f80c277feb7fc540eed8735a8a78e1cb1907
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172620"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177029"
 ---
 # <a name="attribute-targets-ccli-and-ccx"></a>Destinazioni degli attributi (C++/CLI e C++/CX)
 
@@ -193,7 +194,7 @@ Di seguito è riportato un elenco di destinazioni degli attributi valide:
     };
     ```
 
-In genere, un attributo precede direttamente l'elemento del linguaggio a cui si applica. In alcuni casi, tuttavia, la posizione di un attributo non è sufficiente per determinare la relativa destinazione prevista. Considerare questo esempio:
+In genere, un attributo precede direttamente l'elemento del linguaggio a cui si applica. In alcuni casi, tuttavia, la posizione di un attributo non è sufficiente per determinare la relativa destinazione prevista. Prendere in considerazione questo esempio:
 
 ```cpp
 [Attr] int MyFn(double x)...
@@ -272,6 +273,6 @@ ref class MyClass {};
 value struct MyStruct {};
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi definiti dall'utente](user-defined-attributes-cpp-component-extensions.md)

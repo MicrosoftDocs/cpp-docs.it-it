@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: messaggi Vectorizer e parallelizzazione automatica'
 title: Messaggi di vettorizzazione e parallelizzazione
 ms.date: 04/17/2019
 f1_keywords:
@@ -8,18 +9,18 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: 1cdbb40d06d2b3da7e6444e3a6743c6e6ae1c874
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 54465331b3301c8f792763b9d7d1e29b8d62b1a0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405000"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177133"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Messaggi di vettorizzazione e parallelizzazione
 
 È possibile utilizzare le opzioni del compilatore Microsoft C++ [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) e [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) per impostare la [parallelizzazione automatica e la vettorizzazione automatica](../../parallel/auto-parallelization-and-auto-vectorization.md) per restituire i codici motivo e i messaggi informativi sulla relativa attività. In questo articolo viene illustrato il significato dei codici e dei messaggi.
 
-## <a name="informational-messages"></a><a name="BKMK_InformationalMessages"></a>Messaggi informativi
+## <a name="informational-messages"></a><a name="BKMK_InformationalMessages"></a> Messaggi informativi
 
 A seconda del livello di creazione rapporti specificato, per ogni ciclo verrà visualizzato uno dei messaggi informativi seguenti.
 
@@ -35,9 +36,9 @@ Per informazioni sui codici, leggere la parte successiva di questo articolo.
 
 Nelle sezioni seguenti sono elencati i possibili codici motivo per parallelizzazione automatica e Vectorizer.
 
-## <a name="5xx-reason-codes"></a><a name="BKMK_ReasonCode50x"></a>codici motivo 5xx
+## <a name="5xx-reason-codes"></a><a name="BKMK_ReasonCode50x"></a> codici motivo 5xx
 
-I codici 5*XX* sono validi sia per parallelizzazione automatica che per Vectorizer.
+I codici 5 *XX* sono validi sia per parallelizzazione automatica che per Vectorizer.
 
 |Codice motivo|Spiegazione|
 |-----------------|-----------------|
@@ -198,9 +199,9 @@ void code_504(int *A) {
 }
 ```
 
-## <a name="10xx-reason-codes"></a><a name="BKMK_ReasonCode100x"></a>codici motivo 10xx
+## <a name="10xx-reason-codes"></a><a name="BKMK_ReasonCode100x"></a> codici motivo 10xx
 
-I codici 10*XX* si applicano a parallelizzazione automatica.
+I codici 10 *XX* si applicano a parallelizzazione automatica.
 
 |Codice motivo|Spiegazione|
 |-----------------|-----------------|
@@ -407,9 +408,9 @@ void code_1010()
 }
 ```
 
-## <a name="11xx-reason-codes"></a><a name="BKMK_ReasonCode110x"></a>codici motivo 11xx
+## <a name="11xx-reason-codes"></a><a name="BKMK_ReasonCode110x"></a> codici motivo 11xx
 
-I codici 11*XX* si applicano a Vectorizer.
+I codici 11 *XX* si applicano a Vectorizer.
 
 |Codice motivo|Spiegazione|
 |-----------------|-----------------|
@@ -555,9 +556,9 @@ void code_1106(int *A)
 }
 ```
 
-## <a name="12xx-reason-codes"></a><a name="BKMK_ReasonCode120x"></a>codici motivo 12xx
+## <a name="12xx-reason-codes"></a><a name="BKMK_ReasonCode120x"></a> codici motivo 12xx
 
-I codici 12*XX* si applicano a Vectorizer.
+I codici 12 *XX* si applicano a Vectorizer.
 
 |Codice motivo|Spiegazione|
 |-----------------|-----------------|
@@ -630,9 +631,9 @@ void code_1203(int *A)
 }
 ```
 
-## <a name="13xx-reason-codes"></a><a name="BKMK_ReasonCode130x"></a>codici motivo 13xx
+## <a name="13xx-reason-codes"></a><a name="BKMK_ReasonCode130x"></a> codici motivo 13xx
 
-I codici 13*XX* si applicano a Vectorizer.
+I codici 13 *XX* si applicano a Vectorizer.
 
 |Codice motivo|Spiegazione|
 |-----------------|-----------------|
@@ -762,9 +763,9 @@ void code_1305( S_1305 *s, S_1305 x)
 }
 ```
 
-## <a name="14xx-reason-codes"></a><a name="BKMK_ReasonCode140x"></a>codici motivo 14xx
+## <a name="14xx-reason-codes"></a><a name="BKMK_ReasonCode140x"></a> codici motivo 14xx
 
-I codici 14*XX* si verificano quando viene specificata un'opzione incompatibile con la vettorizzazione.
+I codici 14 *XX* si verificano quando viene specificata un'opzione incompatibile con la vettorizzazione.
 
 |Codice motivo|Spiegazione|
 |-----------------|-----------------|
@@ -834,9 +835,9 @@ void code_1404(int *A)
 }
 ```
 
-## <a name="15xx-reason-codes"></a><a name="BKMK_ReasonCode150x"></a>codici motivo 15xx
+## <a name="15xx-reason-codes"></a><a name="BKMK_ReasonCode150x"></a> codici motivo 15xx
 
-I codici per i 15*XX* si applicano all'aliasing. Si verifica una condizione di aliasing quando una posizione in memoria è accessibile da due nomi diversi
+I codici per i 15 *XX* si applicano all'aliasing. Si verifica una condizione di aliasing quando una posizione in memoria è accessibile da due nomi diversi
 
 |Codice motivo|Spiegazione|
 |-----------------|-----------------|
@@ -962,7 +963,7 @@ void code_1505(int *A, int *B)
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Errori e avvisi degli strumenti di compilazione e compilatore C/C++](../compiler-errors-1/c-cpp-build-errors.md) 
  [Parallelizzazione automatica e vettorizzazione automatica](../../parallel/auto-parallelization-and-auto-vectorization.md) \

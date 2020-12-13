@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: cast di tipo C con/CLR (C++/CLI)'
 title: Cast di tipo C con /clr (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - C-style casts and /clr
 ms.assetid: d2a4401a-156a-4da9-8d12-923743e26913
-ms.openlocfilehash: daaf92e36550c5479903dec4869b1cb116c0a65a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: aedd794ca0f305f0cc292fb9048bd8dcceace7d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219794"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176990"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>Cast di tipo C con /clr (C++/CLI)
 
@@ -30,7 +31,7 @@ Se usato con tipi CLR, il compilatore prova a eseguire il mapping di cast di tip
 
 Se nessuno dei cast elencati sopra è valido e se il tipo dell'espressione e il tipo di destinazione sono tipi riferimento CLR, il cast di tipo C viene mappato a un controllo in fase di esecuzione (istruzione MSIL castclass). In caso contrario, un cast di tipo C viene considerato non valido e il compilatore genera un errore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un cast di tipo C non è consigliato. Quando si compila con [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md), usare [safe_cast](safe-cast-cpp-component-extensions.md).
 
@@ -160,6 +161,6 @@ int main() {
 
 Opzione del compilatore: `/clr`
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)
