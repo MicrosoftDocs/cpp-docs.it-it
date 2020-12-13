@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 1) C4789'
 title: Avviso del compilatore (livello 1) C4789
 ms.date: 03/25/2019
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
-ms.openlocfilehash: 1e089c45598a53ff337e389feb2a6983a2997041
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: c08264b1790788c2eaba7857f473a5bff42a2da3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684625"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334960"
 ---
 # <a name="compiler-warning-level-1-c4789"></a>Avviso del compilatore (livello 1) C4789
 
 > il buffer '*Identifier*' di dimensioni *N* byte verrà sovraccaricato; I byte *M* verranno scritti a partire dall'offset *L*
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 **C4789** avverte i sovraccarichi del buffer quando vengono usate funzioni di runtime C (CRT) specifiche. Può inoltre segnalare dimensioni non corrispondenti quando vengono passati parametri o vengono assegnate assegnazioni. L'avviso è possibile se le dimensioni dei dati sono note in fase di compilazione. Questo avviso è relativo alle situazioni in cui potrebbe essere eluso il normale rilevamento di dimensioni non corrispondenti dei dati.
 
@@ -44,7 +45,7 @@ Visual C++ possibile generare questo avviso per un percorso di codice che non vi
 
 Questo idioma impedisce a Visual C++ di generare l'avviso per quel blocco di codice specifico. `#pragma warning(push)` mantiene lo stato esistente prima che `#pragma warning(disable: 4789)` lo modifichi. `#pragma warning(pop)` ripristina lo stato di cui è stato eseguito il push ed elimina gli effetti di `#pragma warning(disable:4789)`. Per altre informazioni sulla direttiva per il preprocessore C++ `#pragma` , vedere direttive [warning](../../preprocessor/warning.md) e [pragma e la parola chiave __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 L'esempio seguente genera l'errore C4789.
 

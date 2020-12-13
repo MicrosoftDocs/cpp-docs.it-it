@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2180'
 title: Errore del compilatore C2180
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2180
 ms.assetid: ea71b39e-b977-48a7-b7bd-af68ef5e263b
-ms.openlocfilehash: 3794a1ce0fcbe60c06cb3efca45a3081e85c17ce
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 46ab20e3abfc35355543f90389677737e231257f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87210020"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335181"
 ---
 # <a name="compiler-error-c2180"></a>Errore del compilatore C2180
 

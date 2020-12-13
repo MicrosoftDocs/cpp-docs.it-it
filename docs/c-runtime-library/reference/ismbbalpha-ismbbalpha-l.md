@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _ismbbalpha, _ismbbalpha_l'
 title: _ismbbalpha, _ismbbalpha_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _ismbbalpha function
 - _ismbbalpha_l function
 ms.assetid: 8e54cb92-fc2b-41f5-8ab4-b22ac8aa9ad0
-ms.openlocfilehash: 1fa92d8e0f0ed331110666add1015fbdacf20f07
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 93ae26ff54af4cdee5f99e51c8f85d14ec51ae4e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917504"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335670"
 ---
 # <a name="_ismbbalpha-_ismbbalpha_l"></a>_ismbbalpha, _ismbbalpha_l
 
@@ -70,9 +71,9 @@ Impostazioni locali da usare.
 
 `isalpha(c) || _ismbbkalnum(c)`
 
-è diverso da zero per *c*oppure 0 in caso contrario. **_ismbbalpha** usa le impostazioni locali correnti per qualsiasi impostazione del carattere dipendente dalle impostazioni locali. **_ismbbalpha_l** è identico, ad eccezione del fatto che usa le impostazioni locali passate.
+è diverso da zero per *c* oppure 0 in caso contrario. **_ismbbalpha** usa le impostazioni locali correnti per qualsiasi impostazione del carattere dipendente dalle impostazioni locali. **_ismbbalpha_l** è identico, ad eccezione del fatto che usa le impostazioni locali passate.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -89,7 +90,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runt
 
 Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Classificazione per byte](../../c-runtime-library/byte-classification.md)<br/>
+[Classificazione byte](../../c-runtime-library/byte-classification.md)<br/>
 [Routine di _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

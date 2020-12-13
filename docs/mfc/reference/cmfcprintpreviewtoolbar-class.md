@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: classe CMFCPrintPreviewToolBar'
 title: Classe CMFCPrintPreviewToolBar
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CMFCPrintPreviewToolBar class [MFC]
 - CMFCPrintPreviewToolBar class [MFC], destructor
 ms.assetid: 7b9f641b-d402-4339-8815-e5247237e7e5
-ms.openlocfilehash: ee66c5faf12a8fd651c481f058c24b649a6c2fb4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 69fef1ff5cc2a1ec8be99bdc896491fdbae19184
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838646"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334716"
 ---
 # <a name="cmfcprintpreviewtoolbar-class"></a>Classe CMFCPrintPreviewToolBar
 
@@ -22,17 +23,17 @@ Barra degli strumenti dell'anteprima di stampa.
 class CMFCPrintPreviewToolBar : public CMFCToolBar
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |`CMFCPrintPreviewToolBar::~CMFCPrintPreviewToolBar`|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |`CMFCPrintPreviewToolBar::GetThisClass`|Utilizzato dal Framework per ottenere un puntatore all'oggetto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) associato a questo tipo di classe.|
 
@@ -58,7 +59,7 @@ class CMFCPrintPreviewToolBar : public CMFCToolBar
 
 **Intestazione:** afxpreviewviewex. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)

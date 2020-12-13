@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _ismbbkana, _ismbbkana_l'
 title: _ismbbkana, _ismbbkana_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - ismbbkana function
 - ismbbkana_l function
 ms.assetid: 64d4eb4a-205a-40ef-be35-ff9d77fabbaf
-ms.openlocfilehash: dd788d18692e11886caf4ee12703bb5878de1163
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3b4c005068a6a646c256d0f091e4b86e15df2acb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918941"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335648"
 ---
 # <a name="_ismbbkana-_ismbbkana_l"></a>_ismbbkana, _ismbbkana_l
 
@@ -69,7 +70,7 @@ Impostazioni locali da usare.
 
 **_ismbbkana** restituisce un valore diverso da zero se l'intero *c* è un simbolo katakana oppure 0 in caso contrario. **_ismbbkana** usa le impostazioni locali correnti per le informazioni sui caratteri dipendenti dalle impostazioni locali. **_ismbbkana_l** è identico, ad eccezione del fatto che usa l'oggetto delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -82,7 +83,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Classificazione per byte](../../c-runtime-library/byte-classification.md)<br/>
+[Classificazione byte](../../c-runtime-library/byte-classification.md)<br/>
 [Routine di _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

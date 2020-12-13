@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: modelli di classe'
 title: Modelli di classe
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - class templates
 - templates, class templates
 ms.assetid: 633a53c8-24ee-4c23-8c88-e7c3cb0b7ac3
-ms.openlocfilehash: 36c5263213b5ef348bb341a83da097db7dbb1d9d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3b82cb03fb6f33b8895a6877de98665419902333
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180914"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335579"
 ---
 # <a name="class-templates"></a>Modelli di classe
 
-In questo argomento vengono descritte le regole specifiche C++ per i modelli di classe.
+In questo argomento vengono descritte le regole specifiche per i modelli di classe C++.
 
 ## <a name="member-functions-of-class-templates"></a>Funzioni membro dei modelli di classe
 
@@ -438,6 +439,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli](../cpp/templates-cpp.md)

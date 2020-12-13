@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CColumnAccessor'
 title: Classe CColumnAccessor
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CColumnAccessor class
 ms.assetid: 6ce1e67f-6a20-490d-9326-c168b43eee7e
-ms.openlocfilehash: 2a3b1dac51a8300a915a7177c36f15512b583fa0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7551f39d34bb4f13b4ffae358db05aede2adb9e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212110"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335527"
 ---
 # <a name="ccolumnaccessor-class"></a>Classe CColumnAccessor
 
@@ -31,27 +32,27 @@ Nel codice inserito ogni colonna è associata come funzione di accesso separata.
 
 `CColumnAccessor` implementa i metodi stub seguenti, ognuno dei quali corrisponde alla funzionalità ad altri metodi della classe di funzione di accesso:
 
-- `CColumnAccessor` il costruttore; Crea un'istanza e Inizializza l'oggetto `CColumnAccessor`.
+- `CColumnAccessor` Costruttore. Crea un'istanza dell'oggetto e lo inizializza `CColumnAccessor` .
 
-- `CreateAccessor` alloca memoria per le strutture di associazione di colonna e inizializza i membri dati della colonna.
+- `CreateAccessor` Alloca memoria per le strutture di associazione di colonna e inizializza i membri dati della colonna.
 
-- `BindColumns` associa le colonne alle funzioni di accesso.
+- `BindColumns` Associa colonne alle funzioni di accesso.
 
-- `SetParameterBuffer` alloca i buffer per i parametri.
+- `SetParameterBuffer` Alloca buffer per i parametri.
 
-- `AddParameter` aggiunge una voce di parametro alle strutture di immissione dei parametri.
+- `AddParameter` Aggiunge una voce di parametro alle strutture di immissione dei parametri.
 
-- `HasOutputColumns` determina se la funzione di accesso include colonne di output
+- `HasOutputColumns` Determina se la funzione di accesso include colonne di output
 
-- `HasParameters` determina se la funzione di accesso dispone di parametri.
+- `HasParameters` Determina se la funzione di accesso dispone di parametri.
 
-- `BindParameters` associa i parametri creati alle colonne.
+- `BindParameters` Associa i parametri creati alle colonne.
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** atldbcli.h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

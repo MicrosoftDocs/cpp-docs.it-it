@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _ismbbblank, _ismbbblank_l'
 title: _ismbbblank, _ismbbblank_l
 ms.date: 4/2/2020
 api_name:
@@ -24,12 +25,12 @@ api_type:
 topic_type:
 - apiref
 ms.assetid: d21b2e41-7206-41f5-85bb-9c9ab4f3e21b
-ms.openlocfilehash: 8285a3ae34c3b0fd678e447c76a28495b6f4ffb3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3d604b377ff874418dab11405ad2c891792a5bda
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909527"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335636"
 ---
 # <a name="_ismbbblank-_ismbbblank_l"></a>_ismbbblank, _ismbbblank_l
 
@@ -62,7 +63,7 @@ Impostazioni locali da usare.
 
 **_ismbbblank** restituisce un valore diverso da zero se *c* rappresenta un carattere di spazio (0x20), un carattere di tabulazione orizzontale (0x09) o un carattere specifico delle impostazioni locali utilizzato per separare le parole all'interno di una riga di testo per cui **lo spazio** è true. in caso contrario, restituisce 0. **_ismbbblank** usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. **_ismbbblank_l** è identico, ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -75,7 +76,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Classificazione per byte](../../c-runtime-library/byte-classification.md)<br/>
+[Classificazione byte](../../c-runtime-library/byte-classification.md)<br/>
 [Routine di _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3859'
 title: Errore del compilatore C3859
 ms.date: 03/08/2019
 f1_keywords:
@@ -6,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - C3859
 ms.assetid: 40e93b25-4393-4467-90de-035434a665c7
-ms.openlocfilehash: 9b20224207ba797c6ee93c06404e4d90c3d02525
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25c05425072cda6924d90f08c9aeff7446a4e85b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391881"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336103"
 ---
 # <a name="compiler-error-c3859"></a>Errore del compilatore C3859
 
-> intervallo di memoria virtuale per PCH superato. . ricompilare utilizzando l'opzione della riga di comando '-Zm*valore*' o versioni successive
+> è stato superato l'intervallo di memoria virtuale per PCH; ricompilare con un'opzione della riga di comando di '-ZM *value*' o versione successiva
 
-Memoria virtuale allocata per l'intestazione precompilata è troppo piccola per la quantità di dati, che il compilatore sta cercando di inserire in esso. A partire da Visual Studio 2015, il **/Zm** raccomandazione è significativa solo quando si usa il `#pragma hdrstop` direttiva. In altri casi, è un errore non corretti che indica i problemi di un utilizzo elevato della memoria virtuale di Windows.
+La memoria virtuale allocata per l'intestazione precompilata è troppo piccola per la quantità di dati che il compilatore sta provando a inserire. A partire da Visual Studio 2015, la raccomandazione **/ZM** è significativa solo quando si usa la `#pragma hdrstop` direttiva. In altri casi, si tratta di un errore non corretto che indica problemi di utilizzo della memoria virtuale di Windows.
 
-Se l'intestazione precompilata Usa un' `#pragma hdrstop` direttiva, usare il **/Zm** flag del compilatore per specificare un valore maggiore per il file di intestazione precompilata. In caso contrario, provare a ridurre il numero di processi di compilazione in parallelo nella compilazione. Per altre informazioni, vedere [/Zm (specifica precompilato intestazione memoria limite di allocazione)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md).
+Se l'intestazione precompilata usa una `#pragma hdrstop` direttiva, usare il flag del compilatore **/ZM** per specificare un valore più grande per il file di intestazione precompilata. In caso contrario, provare a ridurre il numero di processi di compilazione paralleli nella compilazione. Per altre informazioni, vedere [/ZM (specifica il limite di allocazione della memoria per l'intestazione precompilata)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md).

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CMFCPopupMenu'
 title: Classe CMFCPopupMenu
 ms.date: 10/18/2018
 f1_keywords:
@@ -160,12 +161,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: 89089559916419bc27b0528430fe7ad12ca804b0
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 97429da34643945ff75b2a16e7bbaf6df439e425
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841025"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334762"
 ---
 # <a name="cmfcpopupmenu-class"></a>Classe CMFCPopupMenu
 
@@ -178,17 +179,17 @@ Per informazioni dettagliate, vedere il codice sorgente disponibile nella **cart
 class CMFCPopupMenu : public CMiniFrameWnd
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="protected-constructors"></a>Costruttori protetti
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CMFCPopupMenu:: CMFCPopupMenu](#cmfcpopupmenu)|Costruisce un oggetto `CMFCPopupMenu`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CMFCPopupMenu:: ActivatePopupMenu](#activatepopupmenu)||
 |[CMFCPopupMenu:: AlwaysShowEmptyToolsEntry](#alwaysshowemptytoolsentry)|Imposta un valore che indica se un menu popup è abilitato per visualizzare voci vuote per gli strumenti definiti dall'utente.|
@@ -266,13 +267,13 @@ class CMFCPopupMenu : public CMiniFrameWnd
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CMFCPopupMenu:: CreateTearOffBar](#createtearoffbar)||
 |[CMFCPopupMenu:: OnChangeHot](#onchangehot)||
 |[CMFCPopupMenu:: OnChooseItem](#onchooseitem)||
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 In genere, MFC crea automaticamente i menu a comparsa. Se si vuole creare un `CMFCPopupMenu` oggetto manualmente, allocarne uno nell'heap e quindi chiamare [CMFCPopupMenu:: create](#create).
 
@@ -315,7 +316,7 @@ in *pPopupMenu*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenualwaysshowemptytoolsentry"></a><a name="alwaysshowemptytoolsentry"></a> CMFCPopupMenu:: AlwaysShowEmptyToolsEntry
 
@@ -338,7 +339,7 @@ BOOL AreAllCommandsShown() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenucheckarea"></a><a name="checkarea"></a> CMFCPopupMenu:: CheckArea
 
@@ -357,7 +358,7 @@ in Punto, in coordinate dello schermo.
 
 Parametro MENUAREA_TYPE che indica dove si trova il punto relativo al menu di scelta rapida.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un parametro MENUAREA_TYPE può avere uno dei valori seguenti.
 
@@ -383,7 +384,7 @@ void CloseMenu(BOOL bSetFocusToBar = FALSE);
 
 in *bSetFocusToBar*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenucmfcpopupmenu"></a><a name="cmfcpopupmenu"></a> CMFCPopupMenu:: CMFCPopupMenu
 
@@ -403,7 +404,7 @@ in Puntatore a una pagina di personalizzazione.
 *lpszTitle*<br/>
 in Stringa che contiene la didascalia di menu.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo alloca le risorse per un oggetto `CMFCPopupMenu` . Per creare la voce di menu popup, chiamare [CMFCPopupMenu:: create](#create).
 
@@ -445,7 +446,7 @@ in Parametro booleano che indica il modo in cui il Framework instrada i messaggi
 
 TRUE se il metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se *bOwnMessage* è true, il Framework instrada tutti i messaggi di menu a *pWndParent*. *pWndParent* non deve essere null se *bOwnMessage* è true. Se *bOwnMessage* è false, il Framework instrada i messaggi di menu al menu di scelta rapida padre.
 
@@ -472,7 +473,7 @@ in *lpszName*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenudefaultmouseclickonclose"></a><a name="defaultmouseclickonclose"></a> CMFCPopupMenu::D efaultMouseClickOnClose
 
@@ -482,7 +483,7 @@ virtual BOOL DefaultMouseClickOnClose() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenuenablemenulogo"></a><a name="enablemenulogo"></a> CMFCPopupMenu:: EnableMenuLogo
 
@@ -502,7 +503,7 @@ in Dimensioni del logo, in pixel.
 *nLogoLocation*<br/>
 in Tipo di dati enumerato che indica la posizione del logo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per visualizzare il logo, implementare il metodo [CFrameWndEx:: OnDrawMenuLogo](../../mfc/reference/cframewndex-class.md#ondrawmenulogo) nella finestra cornice principale.
 
@@ -521,7 +522,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 *bEnable*<br/>
 in TRUE per abilitare il suono, in caso contrario FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se si Abilita il suono, il Framework chiama il metodo [PlaySound](/windows/win32/api/shobjidl_core/nf-shobjidl_core-iusernotification-playsound) quando un utente apre un menu a comparsa o seleziona un comando di menu. Per impostazione predefinita, questa funzionalità è abilitata.
 
@@ -535,7 +536,7 @@ void EnableResize(CSize sizeMinResize);
 
 in *sizeMinResize*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenuenablescrolling"></a><a name="enablescrolling"></a> CMFCPopupMenu:: EnableScrolling
 
@@ -547,7 +548,7 @@ void EnableScrolling(BOOL = TRUE);
 
 in *Bool*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenuenablevertresize"></a><a name="enablevertresize"></a> CMFCPopupMenu:: EnableVertResize
 
@@ -559,7 +560,7 @@ void EnableVertResize(int nMinResize);
 
 in *nMinResize*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenufindsubitembycommand"></a><a name="findsubitembycommand"></a> CMFCPopupMenu:: FindSubItemByCommand
 
@@ -573,7 +574,7 @@ in *uiCmd*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenugetactivemenu"></a><a name="getactivemenu"></a> CMFCPopupMenu:: GetActiveMenu
 
@@ -587,7 +588,7 @@ static CMFCPopupMenu* GetActiveMenu();
 
 Puntatore al menu di scelta rapida attivo oppure NULL se nessun menu popup è attualmente attivo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Ogni applicazione può includere al massimo un menu popup attivo.
 
@@ -603,7 +604,7 @@ static UINT GetAnimationSpeed();
 
 Intero che indica l'intervallo di tempo, in millisecondi, necessario per completare un'animazione del menu popup.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La velocità di animazione è un valore globale. Usare [CMFCPopupMenu:: SetAnimationSpeed](#setanimationspeed) per modificare la velocità di animazione per i menu a comparsa.
 
@@ -624,13 +625,13 @@ in Parametro booleano che indica se questo metodo controlla il valore globale. F
 
 Valore enumerato che descrive il tipo di animazione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Lo stile di animazione per i menu popup è globale per l'applicazione. Usare [CMFCPopupMenu:: SetAnimationType](#setanimationtype) per impostare lo stile di animazione.
 
 Nella tabella seguente sono elencati i tipi di animazione possibili.
 
-|Valore|Descrizione|
+|Valore|Description|
 |-|-|
 |NO_ANIMATION|Il menu popup non è animato e viene visualizzato immediatamente.  |
 |SVOLGERSI|Il Framework consente di visualizzare il menu di scelta rapida dall'angolo superiore sinistro all'angolo inferiore destro.  |
@@ -645,7 +646,7 @@ DROP_DIRECTION GetDropDirection() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenugetforcemenufocus"></a><a name="getforcemenufocus"></a> CMFCPopupMenu:: GetForceMenuFocus
 
@@ -659,7 +660,7 @@ static BOOL GetForceMenuFocus();
 
 TRUE se lo stato attivo per l'input viene restituito alla barra dei menu quando viene visualizzato un menu popup; FALSE se il menu di scelta rapida mantiene lo stato attivo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, l'applicazione non restituisce lo stato attivo sulla barra dei menu. Per modificare questa impostazione, utilizzare [CMFCPopupMenu:: SetForceMenuFocus](#setforcemenufocus).
 
@@ -671,7 +672,7 @@ static BOOL __stdcall GetForceShadow();
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenugethmenu"></a><a name="gethmenu"></a> CMFCPopupMenu:: GetHMenu
 
@@ -693,7 +694,7 @@ virtual CMFCPopupMenuBar* GetMenuBar();
 
 Puntatore all'oggetto incorporato `CMFCPopupMenuBar` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il menu a comparsa include un oggetto incorporato `CMFCPopupMenuBar` . È necessario eseguire l'override di questo metodo in una classe derivata se si utilizza un'altra classe incorporata.
 
@@ -714,7 +715,7 @@ in Indice in base zero di una voce di menu.
 
 Puntatore a una voce di menu. NULL se l'indice non è valido.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le voci di menu sono rappresentate dalla [Classe CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md). Quando si chiama questo metodo, viene restituito un puntatore all'oggetto appropriato `CMFCToolBarMenuButton` .
 
@@ -742,7 +743,7 @@ CWnd* GetMessageWnd() const;
 
 Puntatore alla finestra che riceve i messaggi di menu di scelta rapida; NULL se non è presente alcuna finestra.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando si usa il metodo [CMFCPopupMenu:: create](#create) per creare un menu di scelta rapida, è necessario specificare la finestra che riceve i messaggi di menu.
 
@@ -758,7 +759,7 @@ in *rectParentBtn*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenugetparentbutton"></a><a name="getparentbutton"></a> CMFCPopupMenu:: GetParentButton
 
@@ -772,7 +773,7 @@ CMFCToolBarMenuButton* GetParentButton() const;
 
 Puntatore al pulsante della barra degli strumenti padre. NULL se il menu di scelta rapida non dispone di un pulsante della barra degli strumenti padre.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un oggetto `CMFCPopupMenu` può essere associato a un pulsante nel menu. In questo scenario, il menu di scelta rapida viene visualizzato quando un utente seleziona il pulsante della barra degli strumenti padre.
 
@@ -790,7 +791,7 @@ CMFCPopupMenu* GetParentPopupMenu() const;
 
 Puntatore all' `CMFCPopupMenu` oggetto padre. NULL se non è presente alcun menu popup padre.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un menu popup dispone di un oggetto padre `CMFCPopupMenu` solo se si tratta di un sottomenu.
 
@@ -802,7 +803,7 @@ CMFCRibbonBaseElement* GetParentRibbonElement() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenugetparenttoolbar"></a><a name="getparenttoolbar"></a> CMFCPopupMenu:: GetParentToolBar
 
@@ -816,7 +817,7 @@ CMFCToolBar* GetParentToolBar() const;
 
 Puntatore alla barra degli strumenti padre. NULL se il menu popup non dispone di una barra degli strumenti padre.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se `CMFCPopupMenu` è un menu di scelta rapida, non dispone di una barra degli strumenti padre.
 
@@ -828,7 +829,7 @@ QUICK_CUSTOMIZE_TYPE GetQuickCustomizeType() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenugetselitem"></a><a name="getselitem"></a> CMFCPopupMenu:: GetSelItem
 
@@ -842,7 +843,7 @@ CMFCToolBarMenuButton* GetSelItem();
 
 Puntatore al comando di menu attualmente selezionato; NULL se non è selezionato alcun elemento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I comandi di menu in un menu a comparsa sono rappresentati dalla [Classe CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)o da una classe derivata da `CMFCToolBarMenuButton` .
 
@@ -854,7 +855,7 @@ BOOL HasBeenResized() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenuhiderarelyusedcommands"></a><a name="hiderarelyusedcommands"></a> CMFCPopupMenu:: HideRarelyUsedCommands
 
@@ -868,7 +869,7 @@ BOOL HideRarelyUsedCommands() const;
 
 TRUE se il menu di scelta rapida può nascondere i comandi utilizzati raramente; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo specifica solo se un menu popup può nascondere i comandi utilizzati raramente, non se tale configurazione è abilitata. Un menu popup può nascondere i comandi utilizzati raramente se dispone di un pulsante padre e la finestra padre è derivata dalla [classe CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md). Usare [CMFCMenuBar:: SetRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#setrecentlyusedmenus) per abilitare questa funzionalità e [CMFCMenuBar:: IsRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#isrecentlyusedmenus) per determinare se questa funzionalità è attualmente abilitata. È necessario chiamare entrambi i metodi per la finestra padre.
 
@@ -880,7 +881,7 @@ virtual BOOL InCommand();
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenuinsertitem"></a><a name="insertitem"></a> CMFCPopupMenu:: InsertItem
 
@@ -904,7 +905,7 @@ in Indice in base zero per il nuovo elemento. Se *iInsertAt* è-1, l'elemento vi
 
 Indice in base zero della posizione in cui è stato inserito l'elemento. -1 se il metodo ha esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo avrà esito negativo se si specifica un valore non valido per *iInsertAt*, ad esempio un numero intero maggiore del numero di elementi attualmente presenti nel menu a comparsa.
 
@@ -925,7 +926,7 @@ in Indice in base zero della posizione in cui questo metodo inserirà il separat
 
 Indice in base zero della posizione in cui è stato inserito il separatore. -1 se questo metodo ha esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore-1 per *iInsertAt* indica che questo metodo aggiungerà il separatore alla fine del menu a comparsa.
 
@@ -939,7 +940,7 @@ virtual BOOL IsAlwaysClose() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenuisalwaysshowemptytoolsentry"></a><a name="isalwaysshowemptytoolsentry"></a> CMFCPopupMenu:: IsAlwaysShowEmptyToolsEntry
 
@@ -949,7 +950,7 @@ static BOOL __stdcall IsAlwaysShowEmptyToolsEntry();
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenuiscustomizepane"></a><a name="iscustomizepane"></a> CMFCPopupMenu:: IsCustomizePane
 
@@ -963,7 +964,7 @@ BOOL IsCustomizePane();
 
 TRUE se il popup è un **QuckCustomizePane**. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare **QuickCustomizePane** per consentire all'utente di personalizzare direttamente il menu di scelta rapida. **QuickCustomizePane** è un oggetto `CMFCPopupMenu` visualizzato quando l'utente fa clic su un pulsante della barra degli strumenti per modificarlo direttamente.
 
@@ -977,7 +978,7 @@ BOOL IsEscClose();
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenuisidle"></a><a name="isidle"></a> CMFCPopupMenu:: Idle
 
@@ -991,7 +992,7 @@ virtual BOOL IsIdle() const;
 
 TRUE se il menu di scelta rapida è in modalità inattiva; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, un menu a comparsa è in modalità inattiva se l'animazione di visualizzazione è completa e l'utente non scorre il menu a comparsa.
 
@@ -1003,7 +1004,7 @@ static UINT __stdcall IsMenuSound();
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenuisquickcustomize"></a><a name="isquickcustomize"></a> CMFCPopupMenu:: IsQuickCustomize
 
@@ -1017,7 +1018,7 @@ BOOL IsQuickCustomize();
 
 TRUE se il pulsante di menu associato è in modalità QuickCustomize. in caso contrario, FALSE. Questo metodo restituirà anche FALSE se il menu di scelta rapida non è associato a un `CMFCToolBarMenuButton` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 In modalità QuickCustomize l'utente seleziona un pulsante su una barra degli strumenti per personalizzare direttamente il pulsante.
 
@@ -1029,7 +1030,7 @@ BOOL IsResizeble() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenuisrightalign"></a><a name="isrightalign"></a> CMFCPopupMenu:: IsRightAlign
 
@@ -1043,7 +1044,7 @@ BOOL IsRightAlign() const;
 
 TRUE se il menu è allineato a destra; FALSE se il menu è allineato a sinistra.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostare l'allineamento dei menu, è possibile usare [CMFCPopupMenu:: SetRightAlign](#setrightalign) . Per impostazione predefinita, i menu a comparsa utilizzano l'allineamento a sinistra.
 
@@ -1057,7 +1058,7 @@ BOOL IsScrollable() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenuissendmenuselectmsg"></a><a name="issendmenuselectmsg"></a> CMFCPopupMenu:: IsSendMenuSelectMsg
 
@@ -1071,7 +1072,7 @@ static BOOL IsSendMenuSelectMsg();
 
 TRUE se il framework invia una notifica al frame padre; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il framework invia una notifica al frame padre inviando il messaggio di WM_MENUSELECT quando un oggetto usato seleziona un comando di menu.
 
@@ -1097,7 +1098,7 @@ void MoveTo(const CPoint& pt);
 
 in *PT*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenuonchangehot"></a><a name="onchangehot"></a> CMFCPopupMenu:: OnChangeHot
 
@@ -1109,7 +1110,7 @@ virtual void OnChangeHot(int nHot);
 
 in *nHot*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenuonchooseitem"></a><a name="onchooseitem"></a> CMFCPopupMenu:: OnChooseItem
 
@@ -1121,7 +1122,7 @@ virtual void OnChooseItem(UINT uidCmdID);
 
 in *uidCmdID*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenuoncmdmsg"></a><a name="oncmdmsg"></a> CMFCPopupMenu:: OnCmdMsg
 
@@ -1142,7 +1143,7 @@ in *pHandlerInfo*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenupostcommand"></a><a name="postcommand"></a> CMFCPopupMenu::P ostCommand
 
@@ -1156,7 +1157,7 @@ in *uiCommandID*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenupretranslatemessage"></a><a name="pretranslatemessage"></a> CMFCPopupMenu::P reTranslateMessage
 
@@ -1170,7 +1171,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenurecalclayout"></a><a name="recalclayout"></a> CMFCPopupMenu:: RecalcLayout
 
@@ -1182,7 +1183,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 in *bNotify*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenuremoveallitems"></a><a name="removeallitems"></a> CMFCPopupMenu:: RemoveAllItems
 
@@ -1209,7 +1210,7 @@ in Indice in base zero dell'elemento da eliminare.
 
 TRUE se il metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo dispone automaticamente eventuali separatori interessati dalla rimozione di un elemento. Per ulteriori informazioni sul modo in cui il Framework riorganizza i separatori, vedere [CMFCToolBar:: RemoveButton](../../mfc/reference/cmfctoolbar-class.md#removebutton).
 
@@ -1219,7 +1220,7 @@ Questo metodo dispone automaticamente eventuali separatori interessati dalla rim
 virtual void SaveState();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenusetanimationspeed"></a><a name="setanimationspeed"></a> CMFCPopupMenu:: SetAnimationSpeed
 
@@ -1234,7 +1235,7 @@ static void SetAnimationSpeed(UINT nElapse);
 *nElapse*<br/>
 in Nuova velocità di animazione, in millisecondi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La velocità di animazione è un valore globale e influiscono su tutti i menu a comparsa nell'applicazione. Questo valore specifica il tempo necessario per il completamento dell'animazione per un menu di scelta rapida.
 
@@ -1253,7 +1254,7 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 *type*<br/>
 in Tipo di dati enumerato che specifica il tipo di animazione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per un elenco di valori validi per il *tipo*, vedere [CMFCPopupMenu:: GetAnimationType](#getanimationtype) .
 
@@ -1267,7 +1268,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 
 [in] *bAutoDestroy*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenusetdefaultitem"></a><a name="setdefaultitem"></a> CMFCPopupMenu:: SetDefaultItem
 
@@ -1282,7 +1283,7 @@ void SetDefaultItem(UINT uiCmd);
 *uiCmd*<br/>
 in ID del comando di menu del nuovo comando predefinito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il comando predefinito nel menu a comparsa è il comando selezionato quando viene visualizzato il menu di scelta rapida.
 
@@ -1299,7 +1300,7 @@ static void SetForceMenuFocus(BOOL bValue);
 *bValue*<br/>
 in TRUE se si desidera che il Framework forzi lo stato attivo per l'input sulla barra dei menu quando viene visualizzato un menu a comparsa. FALSE se si desidera che il menu di scelta rapida mantenga lo stato attivo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo imposta un flag che è globale per tutti i menu popup nell'applicazione. Per impostazione predefinita, questa funzionalità non è abilitata.
 
@@ -1316,7 +1317,7 @@ static void SetForceShadow(BOOL bValue);
 *bValue*<br/>
 in TRUE se si desidera che il Framework disegni le ombreggiature dei menu, FALSE in caso contrario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando si chiama questo metodo, viene impostato un flag globale nell'applicazione. Questo flag interessa tutti i menu popup nell'applicazione.
 
@@ -1333,7 +1334,7 @@ void SetMaxWidth(int iMaxWidth);
 *iMaxWidth*<br/>
 in Larghezza massima, in pixel, per il menu di scelta rapida.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il testo associato a un comando di menu non si adatta alla larghezza massima, viene troncato e la parte che non si adatta viene sostituita da tre punti.
 
@@ -1347,7 +1348,7 @@ void SetMessageWnd(CWnd* pMsgWnd);
 
 in *pMsgWnd*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenusetparentribbonelement"></a><a name="setparentribbonelement"></a> CMFCPopupMenu:: SetParentRibbonElement
 
@@ -1359,7 +1360,7 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 
 in *Pelet*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenusetquickcustomizetype"></a><a name="setquickcustomizetype"></a> CMFCPopupMenu:: SetQuickCustomizeType
 
@@ -1371,7 +1372,7 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 
 in *Tipo* di<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenusetquickmode"></a><a name="setquickmode"></a> CMFCPopupMenu:: SetQuickMode
 
@@ -1379,7 +1380,7 @@ in *Tipo* di<br/>
 void SetQuickMode();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenusetrightalign"></a><a name="setrightalign"></a> CMFCPopupMenu:: SetRightAlign
 
@@ -1394,7 +1395,7 @@ void SetRightAlign(BOOL bRightAlign = TRUE);
 *bRightAlign*<br/>
 in Valore booleano che indica l'allineamento dei menu. TRUE indica l'allineamento a destra, FALSE indica l'allineamento a sinistra.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, tutti i menu a comparsa sono allineati a sinistra.
 
@@ -1411,7 +1412,7 @@ static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
 *bSet*<br/>
 in TRUE se il menu di scelta rapida notifica il frame padre; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si tratta di un'opzione globale per tutti i menu a comparsa in un'applicazione. Se è abilitata, i menu a comparsa invieranno un messaggio di WM_MENUSELECT al frame padre quando l'utente seleziona un comando.
 
@@ -1423,7 +1424,7 @@ Impone al menu di scelta rapida di visualizzare tutti i comandi.
 void ShowAllCommands();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Non si tratta di un'impostazione globale e ha effetto solo sul menu popup corrente.
 
@@ -1433,7 +1434,7 @@ Non si tratta di un'impostazione globale e ha effetto solo sul menu popup corren
 void TriggerResize();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="cmfcpopupmenuupdateallshadows"></a><a name="updateallshadows"></a> CMFCPopupMenu:: UpdateAllShadows
 
@@ -1448,7 +1449,7 @@ static void UpdateAllShadows(LPRECT lprectScreen = NULL);
 *lprectScreen*<br/>
 in Rettangolo che specifica l'area da aggiornare, in coordinate dello schermo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo è utile quando i menu a comparsa vengono visualizzati su controlli animati o altre finestre con contenuto dinamico.
 
@@ -1465,11 +1466,11 @@ void UpdateShadow(LPRECT lprectScreen = NULL);
 *lprectScreen*<br/>
 in Rettangolo, in coordinate dello schermo, che specifica i limiti dell'area da aggiornare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamare questo metodo quando un menu a comparsa con un'ombreggiatura si sovrappone a un'immagine animata.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>

@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: ISO646 Operators'
 title: Operatori ISO646
 ms.date: 04/11/2018
 ms.assetid: 93e6d3e7-4889-4d8e-8dcb-c1a6b9bbe0f5
-ms.openlocfilehash: 49fba3eda1be77b3a5026039fbd7b4594e317777
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: dafe41000ae702effff17bf333de7efd6d474063
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839296"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335700"
 ---
 # <a name="iso646-operators"></a>Operatori ISO646
 
@@ -15,7 +16,7 @@ Offre alternative leggibili ad alcuni operatori o segni di punteggiatura. L'inte
 
 ## <a name="macros"></a>Macro
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[and](../c-runtime-library/reference/and.md)|Alternativa all'operatore &&.|
 |[and_eq](../c-runtime-library/reference/and-eq.md)|Alternativa all'operatore &=.|
@@ -29,7 +30,7 @@ Offre alternative leggibili ad alcuni operatori o segni di punteggiatura. L'inte
 |[XOR](../c-runtime-library/reference/xor.md)|Alternativa all'operatore ^.|
 |[xor_eq](../c-runtime-library/reference/xor-eq.md)|Alternativa all'operatore ^=.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Internazionalizzazione](../c-runtime-library/internationalization.md)<br/>
 [Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
