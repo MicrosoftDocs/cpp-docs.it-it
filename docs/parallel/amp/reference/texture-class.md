@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe texture'
 title: Classe texture
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: b8a37293166ec21aeb9410f05fb70c9753ec4f22
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d8712f0d8ef3a66c921b63ae938f575e982d3d97
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230415"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142753"
 ---
 # <a name="texture-class"></a>Classe texture
 
@@ -47,21 +48,21 @@ Rango della trama.
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`scalar_type`|Tipi scalari.|
 |`value_type`|Tipi di valore.|
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Costruttore di trama](#ctor)|Inizializza una nuova istanza della classe `texture`.|
 |[~ distruttore trama](#ctor)|Elimina definitivamente l' `texture` oggetto.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[copy_to](#copy_to)|Copia l' `texture` oggetto nella destinazione, eseguendo una copia completa.|
 |[data](#data)|Restituisce un puntatore CPU ai dati non elaborati di questa trama.|
@@ -73,7 +74,7 @@ Rango della trama.
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[operatore ()](#operator_call)|Restituisce il valore dell'elemento specificato dai parametri.|
 |[operatore\[\]](#operator_at)|Restituisce l'elemento in corrispondenza dell'indice specificato.|
@@ -81,13 +82,13 @@ Rango della trama.
 
 ### <a name="public-constants"></a>Costanti pubbliche
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Costante di rango](#rank)|Ottiene il rango dell' `texture` oggetto.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[associated_accelerator_view](#associated_accelerator_view)|Ottiene l' [accelerator_view](accelerator-view-class.md) che rappresenta la destinazione preferita per la copia della trama.|
 |[depth_pitch](#depth_pitch)|Ottiene il numero di byte tra ciascuna sezione di profondità in una trama di gestione temporanea 3D sulla CPU.|
@@ -105,7 +106,7 @@ Rango della trama.
 
 **Spazio dei nomi:** Concurrency:: graphics
 
-## <a name="texture"></a><a name="dtor"></a>~ trama
+## <a name="texture"></a><a name="dtor"></a> ~ trama
 
 Elimina definitivamente l' `texture` oggetto.
 
@@ -113,7 +114,7 @@ Elimina definitivamente l' `texture` oggetto.
 ~texture() restrict(cpu);
 ```
 
-## <a name="associated_accelerator_view"></a><a name="associated_accelerator_view"></a>associated_accelerator_view
+## <a name="associated_accelerator_view"></a><a name="associated_accelerator_view"></a> associated_accelerator_view
 
 Ottiene l' [accelerator_view](accelerator-view-class.md) che rappresenta la destinazione preferita per la copia della trama.
 
@@ -121,7 +122,7 @@ Ottiene l' [accelerator_view](accelerator-view-class.md) che rappresenta la dest
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;
 ```
 
-## <a name="copy_to"></a><a name="copy_to"></a>copy_to
+## <a name="copy_to"></a><a name="copy_to"></a> copy_to
 
 Copia l' `texture` oggetto nella destinazione, eseguendo una copia completa.
 
@@ -155,7 +156,7 @@ const void* data() const restrict(cpu);
 
 Puntatore ai dati non elaborati della trama.
 
-## <a name="depth_pitch"></a><a name="depth_pitch"></a>depth_pitch
+## <a name="depth_pitch"></a><a name="depth_pitch"></a> depth_pitch
 
 Ottiene il numero di byte tra ciascuna sezione di profondità in una trama di gestione temporanea 3D sulla CPU.
 
@@ -163,7 +164,7 @@ Ottiene il numero di byte tra ciascuna sezione di profondità in una trama di ge
 __declspec(property(get= get_depth_pitch)) unsigned int depth_pitch;
 ```
 
-## <a name="get"></a><a name="get"></a>Ottieni
+## <a name="get"></a><a name="get"></a> Ottieni
 
 Restituisce il valore dell'elemento in corrispondenza dell'indice specificato.
 
@@ -180,7 +181,7 @@ Indice dell'elemento.
 
 Valore dell'elemento in corrispondenza dell'indice specificato.
 
-## <a name="get_associated_accelerator_view"></a><a name="get_associated_accelerator_view"></a>get_associated_accelerator_view
+## <a name="get_associated_accelerator_view"></a><a name="get_associated_accelerator_view"></a> get_associated_accelerator_view
 
 Restituisce la accelerator_view che rappresenta la destinazione preferita per la copia della trama.
 
@@ -192,7 +193,7 @@ Concurrency::accelerator_view get_associated_accelerator_view() const restrict(c
 
 [Accelerator_view](accelerator-view-class.md) che rappresenta la destinazione preferita per la copia della trama.
 
-## <a name="get_depth_pitch"></a><a name="get_depth_pitch"></a>get_depth_pitch
+## <a name="get_depth_pitch"></a><a name="get_depth_pitch"></a> get_depth_pitch
 
 Restituisce il numero di byte tra ciascuna sezione di profondità in una trama di gestione temporanea 3D sulla CPU.
 
@@ -204,7 +205,7 @@ unsigned int get_depth_pitch() const restrict(cpu);
 
 Numero di byte tra ciascuna sezione di profondità in una trama di gestione temporanea 3D sulla CPU.
 
-## <a name="get_row_pitch"></a><a name="get_row_pitch"></a>get_row_pitch
+## <a name="get_row_pitch"></a><a name="get_row_pitch"></a> get_row_pitch
 
 Restituisce il numero di byte tra ogni riga in una trama di gestione temporanea bidimensionale o tra ogni riga di una sezione di profondità in una trama di staging tridimensionale.
 
@@ -216,7 +217,7 @@ unsigned int get_row_pitch() const restrict(cpu);
 
 Il numero di byte tra ogni riga in una trama di gestione temporanea bidimensionale o tra ogni riga di una sezione di profondità in una trama di gestione temporanea 3D.
 
-## <a name="operator"></a><a name="operator_call"></a>operatore ()
+## <a name="operator"></a><a name="operator_call"></a> operatore ()
 
 Restituisce il valore dell'elemento specificato dai parametri.
 
@@ -258,7 +259,7 @@ Rango dell'indice.
 
 Valore dell'elemento specificato dai parametri.
 
-## <a name="operator"></a><a name="operator_at"></a>operator []
+## <a name="operator"></a><a name="operator_at"></a> operator []
 
 Restituisce l'elemento in corrispondenza dell'indice specificato.
 
@@ -280,7 +281,7 @@ Indice.
 
 Elemento in corrispondenza dell'indice specificato.
 
-## <a name="operator"></a><a name="operator_eq"></a>operatore =
+## <a name="operator"></a><a name="operator_eq"></a> operatore =
 
 Copia l'oggetto [texture](texture-class.md) specificato in questo oggetto.
 
@@ -301,7 +302,7 @@ texture& operator= (
 
 Riferimento a questo `texture` oggetto.
 
-## <a name="rank"></a><a name="rank"></a>Rank
+## <a name="rank"></a><a name="rank"></a> Rank
 
 Ottiene il rango dell' `texture` oggetto.
 
@@ -309,7 +310,7 @@ Ottiene il rango dell' `texture` oggetto.
 static const int rank = _Rank;
 ```
 
-## <a name="row_pitch"></a><a name="row_pitch"></a>row_pitch
+## <a name="row_pitch"></a><a name="row_pitch"></a> row_pitch
 
 Ottiene il numero di byte tra ogni riga in una trama di staging 2D o 3D sulla CPU.
 
@@ -317,7 +318,7 @@ Ottiene il numero di byte tra ogni riga in una trama di staging 2D o 3D sulla CP
 __declspec(property(get= get_row_pitch)) unsigned int row_pitch;
 ```
 
-## <a name="set"></a><a name="set"></a>set
+## <a name="set"></a><a name="set"></a> set
 
 Imposta il valore dell'elemento in corrispondenza dell'indice specificato.
 
@@ -338,7 +339,7 @@ Rango dell'indice.
 *value*<br/>
 Nuovo valore dell'elemento.
 
-## <a name="texture"></a><a name="ctor"></a>trama
+## <a name="texture"></a><a name="ctor"></a> trama
 
 Inizializza una nuova istanza della classe `texture`.
 
@@ -594,6 +595,6 @@ Altra origine dati.
 *_Rank*<br/>
 Rango della sezione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)

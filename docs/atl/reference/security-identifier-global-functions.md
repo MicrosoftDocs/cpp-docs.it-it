@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: funzioni globali dell'identificatore di sicurezza"
 title: Funzioni globali dell'identificatore di sicurezza
 ms.date: 11/04/2016
 f1_keywords:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - security IDs [C++]
 - SIDs [C++], returning SID objects
 ms.assetid: 85404dcb-c59b-4535-ab3d-66cfa37e87de
-ms.openlocfilehash: e040cbb76e851bd323360f4f5ae602f9c73651d1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 035cdf2991f00d518bf4cfc3a93a226650728846
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834479"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138866"
 ---
 # <a name="security-identifier-global-functions"></a>Funzioni globali dell'identificatore di sicurezza
 
@@ -51,7 +52,7 @@ Queste funzioni restituiscono oggetti SID noti comuni.
 > [!IMPORTANT]
 > Le funzioni elencate nella tabella seguente non possono essere usate nelle applicazioni eseguite nel Windows Runtime.
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[Sids::AccountOps](#accountops)|Restituisce il SID di DOMAIN_ALIAS_RID_ACCOUNT_OPS.|
 |[Sids::Admins](#admins)|Restituisce il SID di DOMAIN_ALIAS_RID_ADMINS.|
@@ -218,7 +219,7 @@ Restituisce il SID di SECURITY_NETWORK_SERVICE_RID.
 CSid NetworkService() throw(...);
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare NetworkService per consentire all'utente di NT AUTHORITY\NetworkService di leggere un oggetto di sicurezza CPerfMon. NetworkService aggiunge un SecurityAttribute al codice ATLServer che consente alla DLL di eseguire l'accesso con l'account NetworkService in Windows XP Home Edition, Windows XP Professional, Windows Server 2003 e un sistema operativo superiore.
 

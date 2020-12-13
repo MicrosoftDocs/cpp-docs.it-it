@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3918'
 title: Errore del compilatore C3918
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3918
 ms.assetid: a8b3a90a-3fe1-4244-a5ff-a31cdae97d98
-ms.openlocfilehash: cd9c40ef90715e9beca43a114dba475ab29b5e78
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 5945477389aaa2c472a5a95d65f4efb44ef1ca9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686038"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143910"
 ---
 # <a name="compiler-error-c3918"></a>Errore del compilatore C3918
 
@@ -19,7 +20,7 @@ per l'utilizzo è necessario che ' member ' sia un membro dati
 
 C3918 può verificarsi per diversi motivi correlati agli eventi.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 C3918 può verificarsi perché un membro di classe è necessario nel contesto corrente. L'esempio seguente genera l'C3918.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Mapping dei servizi Macros'
 title: Macro Mapping dei servizi
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 - atlcom/ATL::SERVICE_ENTRY
 - atlcom/ATL::SERVICE_ENTRY_CHAIN
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
-ms.openlocfilehash: 1fa163098d89dd949c17ee7cd5e4ddc46cd2a091
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 08a26ac4043b62f8377ca9b4728eb262494f1aa1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835207"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138827"
 ---
 # <a name="service-map-macros"></a>Macro Mapping dei servizi
 
 Queste macro definiscono le mappe e le voci del servizio.
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[BEGIN_SERVICE_MAP](#begin_service_map)|Contrassegna l'inizio di una mappa del servizio ATL.|
 |[END_SERVICE_MAP](#end_service_map)|Contrassegna la fine di una mappa del servizio ATL.|
@@ -42,7 +43,7 @@ BEGIN_SERVICE_MAP(theClass)
 *theClass*<br/>
 in Specifica la classe che contiene la mappa dei servizi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Utilizzare l'elenco dei servizi per implementare la funzionalità del provider di servizi nell'oggetto COM. In primo luogo, è necessario derivare la classe da [IServiceProviderImpl](../../atl/reference/iserviceproviderimpl-class.md). Esistono due tipi di voci:
 
@@ -134,7 +135,7 @@ Il valore HRESULT restituito è uno dei seguenti:
 |E_UNEXPECTED|Si è verificato un errore sconosciuto.|
 |E_NOINTERFACE|L'interfaccia richiesta non fa parte di questo servizio o il servizio è sconosciuto.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `QueryService` Restituisce un puntatore indiretto all'interfaccia richiesta nel servizio specificato. Il chiamante è responsabile del rilascio di questo puntatore quando non è più necessario.
 
@@ -150,6 +151,6 @@ L'oggetto che implementa l'interfaccia può implementare anche interfacce che fa
 
 Due servizi diversi, ad esempio SID_SMyService e SID_SYourService, possono entrambi specificare l'uso della stessa interfaccia, anche se l'implementazione dell'interfaccia potrebbe non avere nulla in comune tra i due servizi. Questa operazione funziona perché una chiamata a `QueryService` (SID_SMyService, IID_IDispatch) può restituire un oggetto diverso da `QueryService` (SID_SYourService, IID_IDispatch). L'identità dell'oggetto non viene presupposta quando si specifica un identificatore del servizio diverso.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro](../../atl/reference/atl-macros.md)

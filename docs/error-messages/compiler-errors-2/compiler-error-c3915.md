@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3915'
 title: Errore del compilatore C3915
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3915
 ms.assetid: 2b0a5e5f-3aec-4a4b-9157-233031817084
-ms.openlocfilehash: d83a837a24fe36b61d3f0fccae4dbe4e93cd3261
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: c1b2e6fb1dd77c315d29bbd704960963766f8931
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686051"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143949"
 ---
 # <a name="compiler-error-c3915"></a>Errore del compilatore C3915
 
@@ -21,7 +22,7 @@ Un tipo non ha una proprietà indicizzata predefinita.
 
 Per altre informazioni, vedere [property](../../extensions/property-cpp-component-extensions.md).
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 L'esempio seguente genera l'C3915.
 

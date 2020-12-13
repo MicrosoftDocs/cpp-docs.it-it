@@ -1,4 +1,5 @@
 ---
+description: Ulteriori informazioni su:/MANIFESTUAC (incorpora le informazioni sul controllo dell'account utente nel manifesto)
 title: /MANIFESTUAC (incorporazione delle informazioni sul controllo dell'account utente nel manifesto)
 ms.date: 06/12/2020
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - MANIFESTUAC linker option
 - -MANIFESTUAC linker option
 ms.assetid: 2d243c39-fa13-493c-b56f-d0d972a1603a
-ms.openlocfilehash: 96719c6f6f5359afb03b967524b1f65db6dc664a
-ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
+ms.openlocfilehash: 165f543dab087ca32c91002811d99b9048fa392b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334928"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137891"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (incorporazione delle informazioni sul controllo dell'account utente nel manifesto)
 
@@ -67,9 +68,9 @@ Ad esempio:
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la **Configuration Properties**  >  pagina delle proprietà del file manifesto del**linker**proprietà di configurazione  >  **Manifest File** .
+1. Selezionare la   >  pagina delle proprietà del file manifesto del **linker** proprietà di configurazione  >   .
 
-1. Modificare le proprietà **Abilita controllo dell'account utente (UAC)**, **livello di esecuzione UAC**ed **UAC bypass di protezione dell'interfaccia utente** .
+1. Modificare le proprietà **Abilita controllo dell'account utente (UAC)**, **livello di esecuzione UAC** ed **UAC bypass di protezione dell'interfaccia utente** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
 

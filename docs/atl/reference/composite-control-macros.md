@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: macro di controllo composito'
 title: Macro di controllo composito
 ms.date: 05/06/2019
 f1_keywords:
@@ -8,18 +9,18 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
-ms.openlocfilehash: 7ac13a11646faca53b38ec610dc0388bdd14d251
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0107f91350516bd0f7e35cf82a49f79ff3c5797e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833543"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141193"
 ---
 # <a name="composite-control-macros"></a>Macro di controllo composito
 
 Queste macro definiscono le mappe e le voci del sink di evento.
 
-|Macro|Descrizione|
+|Macro|Description|
 |-|-|
 |[BEGIN_SINK_MAP](#begin_sink_map)|Contrassegna l'inizio della mappa del sink di evento per il controllo composito.|
 |[END_SINK_MAP](#end_sink_map)|Contrassegna la fine della mappa del sink di evento per il controllo composito.|
@@ -50,7 +51,7 @@ in Specifica il controllo.
 
 [!code-cpp[NVC_ATL_Windowing#104](../../atl/codesnippet/cpp/composite-control-macros_1.h)]
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione della CE ATL dei sink di eventi ActiveX supporta solo valori restituiti di tipo HRESULT o void dai metodi del gestore eventi; qualsiasi altro valore restituito non è supportato e il suo comportamento non è definito.
 
@@ -66,7 +67,7 @@ END_SINK_MAP()
 
 [!code-cpp[NVC_ATL_Windowing#104](../../atl/codesnippet/cpp/composite-control-macros_1.h)]
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione della CE ATL dei sink di eventi ActiveX supporta solo valori restituiti di tipo HRESULT o void dai metodi del gestore eventi; qualsiasi altro valore restituito non è supportato e il suo comportamento non è definito.
 
@@ -93,7 +94,7 @@ in Nome della funzione del gestore eventi. Questa funzione deve usare la `_stdca
 
 [!code-cpp[NVC_ATL_Windowing#104](../../atl/codesnippet/cpp/composite-control-macros_1.h)]
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione della CE ATL dei sink di eventi ActiveX supporta solo valori restituiti di tipo HRESULT o void dai metodi del gestore eventi; qualsiasi altro valore restituito non è supportato e il suo comportamento non è definito.
 
@@ -127,7 +128,7 @@ in Nome della funzione del gestore eventi. Questa funzione deve usare la `_stdca
 
 [!code-cpp[NVC_ATL_Windowing#136](../../atl/codesnippet/cpp/composite-control-macros_2.h)]
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione della CE ATL dei sink di eventi ActiveX supporta solo valori restituiti di tipo HRESULT o void dai metodi del gestore eventi; qualsiasi altro valore restituito non è supportato e il suo comportamento non è definito.
 
@@ -157,14 +158,14 @@ in DISPID che identifica l'evento specificato.
 *FN*<br/>
 in Nome della funzione del gestore eventi. Questa funzione deve usare la `_stdcall` convenzione di chiamata e avere la firma di tipo interfaccia dispatch appropriata.
 
-*informazioni*<br/>
+*info*<br/>
 in Informazioni sul tipo per la funzione del gestore eventi. Queste informazioni sul tipo vengono fornite sotto forma di puntatore a una `_ATL_FUNC_INFO` struttura. CC_CDECL è l'unica opzione supportata in Windows CE per il campo CALLCONV della `_ATL_FUNC_INFO` struttura. Qualsiasi altro valore non è supportato, pertanto il comportamento non è definito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I primi quattro parametri macro sono identici a quelli per la macro [SINK_ENTRY_EX](#sink_entry_ex) . Il parametro finale fornisce informazioni sul tipo per l'evento. L'implementazione della CE ATL dei sink di eventi ActiveX supporta solo valori restituiti di tipo HRESULT o void dai metodi del gestore eventi; qualsiasi altro valore restituito non è supportato e il suo comportamento non è definito.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro](../../atl/reference/atl-macros.md)<br/>
 [Funzioni globali di controllo composito](../../atl/reference/composite-control-global-functions.md)

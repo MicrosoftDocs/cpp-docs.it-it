@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Registro di sistema e funzioni globali TypeLib'
 title: Funzioni globali Registry e TypeLib
 ms.date: 03/27/2019
 f1_keywords:
@@ -17,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-ms.openlocfilehash: 0f29f8cac62a7452781e8fde697cdf992db00b8c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d7420dbbb472f1fc8b01329e9ded4c887e2bd71d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834618"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138885"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Funzioni globali Registry e TypeLib
 
@@ -31,7 +32,7 @@ Queste funzioni forniscono supporto per il caricamento e la registrazione di una
 > [!IMPORTANT]
 > Le funzioni elencate nelle tabelle seguenti non possono essere utilizzate nelle applicazioni eseguite nel Windows Runtime.
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[AfxRegCreateKey](#afxregcreatekey)|Crea la chiave del registro di sistema specificata.|
 |[AfxRegDeleteKey](#afxregdeletekey)|Elimina la chiave del registro di sistema specificata.|
@@ -47,7 +48,7 @@ Queste funzioni forniscono supporto per il caricamento e la registrazione di una
 
 Queste funzioni controllano il nodo del registro di sistema usato dal programma per archiviare le informazioni.
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[AtlGetPerUserRegistration](#atlgetperuserregistration)|Recupera un valore che indica se l'applicazione reindirizza l'accesso al registro di sistema al nodo **HKEY_CURRENT_USER** ( **HKCU**).|
 |[AtlSetPerUserRegistration](#atlsetperuserregistration)|Imposta un valore che indica se l'applicazione reindirizza l'accesso al registro di sistema al nodo **HKEY_CURRENT_USER** ( **HKCU**).|
@@ -75,9 +76,9 @@ out TRUE indica che le informazioni del registro di sistema vengono indirizzate 
 
 S_OK se il metodo ha esito positivo; in caso contrario, il codice di errore HRESULT se si verifica un errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Il reindirizzamento del registro di sistema non è abilitato per impostazione predefinita. Se si abilita questa opzione, l'accesso al registro di sistema viene reindirizzato a **HKEY_CURRENT_USER \SOFTWARE\classes**.
+Il reindirizzamento del registro di sistema non è abilitato per impostazione predefinita. Se si abilita questa opzione, l'accesso al registro di sistema viene reindirizzato a **HKEY_CURRENT_USER\Software\Classes**.
 
 Il reindirizzamento non è globale. Questo reindirizzamento del registro di sistema influisce solo sui framework MFC e ATL.
 
@@ -191,7 +192,7 @@ Stringa nel formato " \\ \n", dove N è l'indice Integer della risorsa della lib
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione helper viene utilizzata da [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver) e [CAtlComModule:: RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib).
 
@@ -307,9 +308,9 @@ in TRUE indica che le informazioni del registro di sistema vengono indirizzate a
 
 S_OK se il metodo ha esito positivo; in caso contrario, il codice di errore HRESULT se si verifica un errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Il reindirizzamento del registro di sistema non è abilitato per impostazione predefinita. Se si abilita questa opzione, l'accesso al registro di sistema viene reindirizzato a **HKEY_CURRENT_USER \SOFTWARE\classes**.
+Il reindirizzamento del registro di sistema non è abilitato per impostazione predefinita. Se si abilita questa opzione, l'accesso al registro di sistema viene reindirizzato a **HKEY_CURRENT_USER\Software\Classes**.
 
 Il reindirizzamento non è globale. Questo reindirizzamento del registro di sistema influisce solo sui framework MFC e ATL.
 
@@ -341,7 +342,7 @@ Stringa nel formato " \\ \n", dove N è l'indice Integer della risorsa della lib
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione helper viene utilizzata da [CAtlComModule:: UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) e [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver).
 
@@ -381,7 +382,7 @@ In esito positivo, contiene un puntatore a un puntatore alla libreria dei tipi c
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione helper viene utilizzata da [AtlRegisterTypeLib](#atlregistertypelib) e [AtlUnRegisterTypeLib](#atlunregistertypelib).
 
@@ -421,7 +422,7 @@ Puntatore ai dati da leggere o scrivere nel registro di sistema. I dati possono 
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le macro [BEGIN_RDX_MAP](registry-data-exchange-macros.md#begin_rdx_map) e [END_RDX_MAP](registry-data-exchange-macros.md#end_rdx_map) si espandono in una funzione che chiama `RegistryDataExchange` .
 

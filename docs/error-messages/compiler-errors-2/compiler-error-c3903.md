@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3903'
 title: Errore del compilatore C3903
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3903
 ms.assetid: cf47d7ad-a3bd-4f75-a253-71586e7a3be6
-ms.openlocfilehash: 585fb82c2838b2bc8aebbfbab7bdda744ba38da8
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a8d0cb8e9629bc2099c73b83367aa602315e26a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74749074"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97144248"
 ---
 # <a name="compiler-error-c3903"></a>Errore del compilatore C3903
 
 ' Property ': non ha un metodo set o Get
 
-Una proprietà deve avere almeno un `get` o un metodo di `set`. Per altre informazioni, vedere [property](../../extensions/property-cpp-component-extensions.md).
+Una proprietà deve avere almeno un `get` `set` metodo o. Per altre informazioni, vedere [property](../../extensions/property-cpp-component-extensions.md).
 
 L'esempio seguente genera l'C3903:
 

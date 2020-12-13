@@ -1,17 +1,18 @@
 ---
+description: "Altre informazioni su: procedura dettagliata: distribuzione di un'applicazione Visual C++ in una cartella locale dell'applicazione"
 title: Distribuire un'applicazione Visual C++ in una cartella locale di un'app
 ms.date: 04/23/2019
 helpviewer_keywords:
 - deploying Visual C++ applications
 ms.assetid: 47a81c47-9dbe-47c6-96cc-fbb2fda5e6ad
-ms.openlocfilehash: b05dcc47aa7c0b75943f0db69797b7bf6fb55df7
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: c06015ea32bb9f54653e350966bd8089c98628b6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877342"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135941"
 ---
-# <a name="walkthrough-deploying-a-visual-c-application-to-an-application-local-folder"></a>Procedura dettagliata: Distribuzione di un'applicazione Visual C++ in una cartella dell'applicazione locale
+# <a name="walkthrough-deploying-a-visual-c-application-to-an-application-local-folder"></a>Procedura dettagliata: distribuzione di un'applicazione Visual C++ in una cartella locale di un'applicazione
 
 Viene descritto come distribuire un'applicazione Visual C++ copiando i file nella cartella corrispondente.
 
@@ -35,6 +36,6 @@ Viene descritto come distribuire un'applicazione Visual C++ copiando i file nell
 
    L'applicazione viene eseguita correttamente perché le librerie Visual C++ sono disponibili nella cartella locale dell'applicazione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Esempi di distribuzione](deployment-examples.md)<br/>

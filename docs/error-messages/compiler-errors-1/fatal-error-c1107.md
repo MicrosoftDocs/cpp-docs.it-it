@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore irreversibile C1107'
 title: Errore irreversibile C1107
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1107
 ms.assetid: 541a4d9f-10bc-4dd8-b68e-15e548f3dc0a
-ms.openlocfilehash: 6e8df232b4d3f3b18eb7c37bcc418ca030a93aef
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c746bcf5f8bcb0247d8603b1734a3b1bdbc174f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80203788"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97144906"
 ---
 # <a name="fatal-error-c1107"></a>Errore irreversibile C1107
 
@@ -19,4 +20,4 @@ non è stato possibile trovare l'assembly ' file ': specificare il percorso di r
 
 Un file di metadati è stato passato a una direttiva [#using](../../preprocessor/hash-using-directive-cpp.md) che il compilatore non è stato in grado di individuare.
 
-LIBPATH, descritto nell'argomento per `#using`, e l'opzione del compilatore [/ai](../../build/reference/ai-specify-metadata-directories.md) consentono di specificare le directory in cui il compilatore cercherà i file di metadati a cui si fa riferimento.
+LIBPATH, descritto nell'argomento per `#using` , e l'opzione del compilatore [/ai](../../build/reference/ai-specify-metadata-directories.md) consentono di specificare le directory in cui il compilatore cercherà i file di metadati a cui si fa riferimento.

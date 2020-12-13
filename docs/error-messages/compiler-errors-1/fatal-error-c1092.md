@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore irreversibile C1092'
 title: Errore irreversibile C1092
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1092
 ms.assetid: bcaa87f0-fbfc-4a33-844b-3b9f5d67f279
-ms.openlocfilehash: af43ddb83e872762f720b156644e0d466957a8a7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b2a16991784b901202e5d51c0d256ad48305f55f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80203879"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145132"
 ---
 # <a name="fatal-error-c1092"></a>Errore irreversibile C1092
 
@@ -21,7 +22,7 @@ Con Modifica e continuazione non sono supportate le modifiche ai tipi di dati. �
 
 - In modifica e continuazione non sono supportate le modifiche ai tipi di dati esistenti, incluse le definizioni di classi, struct o enumerazioni. È necessario arrestare il debug e compilare l'applicazione.
 
-- Modifica e continuazione non supporta l'aggiunta di nuovi tipi di dati se un file di database di programma, ad esempio VC*x*0. pdb (dove *x* è la versione C++ principale di Visual in uso) è di sola lettura. Per aggiungere tipi di dati, il compilatore deve aprire il file con estensione PDB in modalità di scrittura.
+- Modifica e continuazione non supporta l'aggiunta di nuovi tipi di dati se un file di database di programma, ad esempio VC *x* 0. pdb (dove *x* è la versione principale di Visual C++ in uso) è di sola lettura. Per aggiungere tipi di dati, il compilatore deve aprire il file con estensione PDB in modalità di scrittura.
 
 ### <a name="to-remove-this-error-without-ending-the-current-debug-session"></a>Per rimuovere questo errore senza terminare la sessione di debug corrente
 

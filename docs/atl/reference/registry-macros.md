@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: macro del registro di sistema'
 title: Macro del registro di sistema
 ms.date: 08/19/2019
 f1_keywords:
@@ -12,18 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
-ms.openlocfilehash: dac1c187bae0eb55b954fc02cd4fb4c981f272f4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e1f85e43f64dd34455cb9ec453ab3719b07f67f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834518"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138886"
 ---
 # <a name="registry-macros"></a>Macro del registro di sistema
 
 Queste macro definiscono funzionalità utili per la libreria dei tipi e il registro di sistema.
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[_ATL_STATIC_REGISTRY](#_atl_static_registry)|Indica che si desidera che il codice di registrazione per l'oggetto sia presente nell'oggetto per evitare una dipendenza da ATL.DLL.|
 |[DECLARE_LIBID](#declare_libid)|Fornisce un metodo per ATL per ottenere *LIBID* della libreria dei tipi.|
@@ -45,7 +46,7 @@ Simbolo che indica se si desidera che il codice di registrazione per l'oggetto s
 #define _ATL_STATIC_REGISTRY
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando si definiscono ATL_STATIC_REGISTRY, è necessario usare il codice seguente:
 
@@ -64,7 +65,7 @@ DECLARE_LIBID( libid )
 *LIBID*<br/>
 GUID della libreria dei tipi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare DECLARE_LIBID in una `CAtlModuleT` classe derivata da.
 
@@ -110,7 +111,7 @@ in UINT che rappresenta un indice della stringa di risorsa nel registro di siste
 *flags*<br/>
 in Valore DWORD contenente il modello di threading del programma nel registro di sistema. Deve essere uno dei valori seguenti: THREADFLAGS_APARTMENT, THREADFLAGS_BOTH o AUTPRXFLAG.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La registrazione standard è costituita dal CLSID, dall'ID del programma, dall'ID del programma indipendente dalla versione, dalla stringa di descrizione e dal modello di thread.
 
@@ -134,7 +135,7 @@ ID risorsa del file con estensione rgs che contiene informazioni sull' *AppID*.
 *appid*<br/>
 Un valore GUID.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare DECLARE_REGISTRY_APPID_RESOURCEID in una `CAtlModuleT` classe derivata da.
 
@@ -155,7 +156,7 @@ DECLARE_REGISTRY_RESOURCE( x )
 *x*<br/>
 in Identificatore di stringa della risorsa.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando si crea un oggetto o un controllo utilizzando la creazione guidata progetto ATL, la procedura guidata implementa automaticamente il supporto del registro di sistema basato su script e aggiunge la macro [DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid) , che è simile a DECLARE_REGISTRY_RESOURCE, ai file.
 
@@ -180,7 +181,7 @@ DECLARE_REGISTRY_RESOURCEID( x )
 *x*<br/>
 in Identificatore generato dalla procedura guidata della risorsa.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando si crea un oggetto o un controllo utilizzando la creazione guidata progetto ATL, la procedura guidata implementa automaticamente il supporto del registro di sistema basato su script e aggiunge la macro DECLARE_REGISTRY_RESOURCEID ai file.
 
@@ -192,6 +193,6 @@ Se si desidera che ATL sostituisca i valori di sostituzione in fase di esecuzion
 
 Per ulteriori informazioni sui parametri sostituibili e sullo scripting, vedere l'articolo relativo [al componente del registro di sistema ATL (Registrar)](../../atl/atl-registry-component-registrar.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro](../../atl/reference/atl-macros.md)

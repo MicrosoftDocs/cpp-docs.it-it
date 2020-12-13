@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: creazione guidata desktop di Windows'
 title: Creazione guidata applicazione desktop di Windows
 ms.date: 03/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: 47984b4c4416bf129efb226381fe778659aa16ca
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: b80a5fb23bd9ce2428bee17b9c4ca6fd9401d1e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503521"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135928"
 ---
 # <a name="windows-desktop-wizard"></a>Creazione guidata applicazione desktop di Windows
 
@@ -49,7 +50,7 @@ Questa pagina di procedura guidata illustra le impostazioni di progetto correnti
 
 Crea il tipo di applicazione specificato.
 
-|Opzione|Descrizione|
+|Opzione|Description|
 |------------|-----------------|
 |**Applicazione console**|Crea un'applicazione console. Le [librerie di runtime](../c-runtime-library/c-run-time-library-reference.md) Visual C++ forniscono inoltre output e input dalle finestre della console con le funzioni di I/O standard, ad esempio `printf_s()` e `scanf_s()` . Un'applicazione console non dispone di un'interfaccia utente grafica. Viene compilato in un file con estensione exe e può essere eseguito come applicazione autonoma dalla riga di comando.<br /><br /> È possibile aggiungere il supporto MFC e ATL a un'applicazione console.|
 |**Applicazione Windows**|Crea un programma Win32. Un programma Win32 è un'applicazione eseguibile (EXE) scritta in C o C++, usando le chiamate all'API Win32 per creare un'interfaccia utente grafica.<br /><br /> Non è possibile aggiungere il supporto MFC o ATL a un'applicazione Windows.|
@@ -60,7 +61,7 @@ Crea il tipo di applicazione specificato.
 
 Definisce il supporto e le opzioni per l'applicazione, a seconda del tipo.
 
-|Opzione|Descrizione|
+|Opzione|Description|
 |------------|-----------------|
 |**Progetto vuoto**|Specifica che i file di progetto sono vuoti. Se si dispone di un set di file di codice sorgente, ad esempio file con estensione cpp, file di intestazione, icone, barre degli strumenti, finestre di dialogo e così via, e si desidera creare un progetto nell'ambiente di sviluppo Visual C++, è necessario innanzitutto creare un progetto vuoto, quindi aggiungere i file al progetto.<br /><br /> Questa selezione non è disponibile per i progetti di libreria statica.|
 |**Simboli di esportazione**|Specifica che il progetto DLL Esporta simboli.|
@@ -71,12 +72,12 @@ Definisce il supporto e le opzioni per l'applicazione, a seconda del tipo.
 
 Aggiungere il supporto per una delle librerie fornite in Visual C++.
 
-|Opzione|Descrizione|
+|Opzione|Description|
 |------------|-----------------|
 |**ATL**|Si basa sul supporto del progetto per le classi nella Active Template Library (ATL). Solo per le applicazioni console Win32.<br /><br /> **Nota** Questa opzione non indica il supporto per l'aggiunta di oggetti ATL mediante le creazioni guidate codice ATL. È possibile aggiungere oggetti ATL solo a progetti ATL o a progetti MFC con supporto ATL.|
 |**MFC**|Si basa sul supporto del progetto per la libreria MFC (Microsoft Foundation Class). Solo per le applicazioni console Win32 e le librerie statiche.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Dopo aver creato un'applicazione desktop di Windows, è possibile aggiungere classi C++ generiche usando la procedura guidata per codice [generico](../ide/adding-a-generic-cpp-class.md#generic-c-class-wizard) . È possibile aggiungere altri elementi, quali file HTML, file di intestazione, risorse o file di testo.
 
@@ -85,6 +86,6 @@ Dopo aver creato un'applicazione desktop di Windows, è possibile aggiungere cla
 
 È possibile visualizzare i file creati per il progetto con la procedura guidata in **Esplora soluzioni**. Per ulteriori informazioni sui file creati dalla procedura guidata per il progetto, vedere il file generato dal progetto `ReadMe.txt` . Per ulteriori informazioni sui tipi di file, i [tipi di file creati per i progetti Visual Studio C++](../build/reference/file-types-created-for-visual-cpp-projects.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Tipi di progetto C++ in Visual Studio](../build/reference/visual-cpp-project-types.md)

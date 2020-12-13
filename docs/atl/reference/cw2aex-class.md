@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CW2AEX'
 title: Classe CW2AEX
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - CW2AEX class
 ms.assetid: 44dc2cf5-dd30-440b-a9b9-b21b43f49843
-ms.openlocfilehash: 849cbe5c26d7c7af7a8925a26057b5777554471d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dfb654c43f2549cc1cfe58be064b2e6b9621fc69
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330445"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140283"
 ---
 # <a name="cw2aex-class"></a>Classe CW2AEX
 
-Questa classe viene utilizzata dalle macro di conversione delle stringhe CT2AEX, CW2TEX, CW2CTEX e CT2CAEX e dal typedef CW2A.
+Questa classe viene utilizzata dalle macro di conversione di stringhe CT2AEX, CW2TEX, CW2CTEX e CT2CAEX e typedef CW2A.
 
 > [!IMPORTANT]
-> Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.
+> Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Windows Runtime.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -34,41 +35,41 @@ class CW2AEX
 #### <a name="parameters"></a>Parametri
 
 *t_nBufferLength*<br/>
-Dimensione del buffer utilizzato nel processo di conversione. La lunghezza predefinita è 128 byte.
+Dimensioni del buffer utilizzato nel processo di conversione. La lunghezza predefinita è 128 byte.
 
 ## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CW2AEX::CW2AEX](#cw2aex)|Costruttore.|
-|[CW2AEX:: CW2AEX](#dtor)|Distruttore.|
+|[CW2AEX:: CW2AEX](#cw2aex)|Costruttore.|
+|[CW2AEX:: ~ CW2AEX](#dtor)|Distruttore.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CW2AEX::operatore LPSTR](#operator_lpstr)|Operatore di conversione.|
+|[CW2AEX:: operator LPSTR](#operator_lpstr)|Operatore di conversione.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CW2AEX::m_psz](#m_psz)|Membro dati che archivia la stringa di origine.|
-|[CW2AEX::m_szBuffer](#m_szbuffer)|Buffer statico, utilizzato per archiviare la stringa convertita.|
+|[CW2AEX:: m_psz](#m_psz)|Membro dati che archivia la stringa di origine.|
+|[CW2AEX:: m_szBuffer](#m_szbuffer)|Buffer statico utilizzato per archiviare la stringa convertita.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-A meno che non siano necessarie funzionalità aggiuntive, utilizzare CT2AEX, CW2TEX, CW2CTEX, CT2CAEX o CW2A nel codice.
+A meno che non sia necessaria una funzionalità aggiuntiva, usare CT2AEX, CW2TEX, CW2CTEX, CT2CAEX o CW2A nel codice.
 
-Questa classe contiene un buffer statico a dimensione fissa che viene utilizzato per archiviare il risultato della conversione. Se il risultato è troppo grande per essere inserito nel buffer statico, la classe alloca memoria utilizzando **malloc**, liberando la memoria quando l'oggetto esce dall'ambito. Ciò garantisce che, a differenza delle macro di conversione del testo disponibili nelle versioni precedenti di ATL, questa classe è sicura da utilizzare nei cicli e che non verrà eseguito l'overflow dello stack.
+Questa classe contiene un buffer statico di dimensioni fisse usato per archiviare il risultato della conversione. Se il risultato è troppo grande per essere inserito nel buffer statico, la classe alloca memoria utilizzando **malloc**, liberando la memoria quando l'oggetto esce dall'ambito. Ciò garantisce che, a differenza delle macro di conversione del testo disponibili nelle versioni precedenti di ATL, questa classe è sicura per l'utilizzo in cicli e che non si inun overflow dello stack.
 
-Se la classe tenta di allocare memoria nell'heap e ha esito negativo, chiamerà `AtlThrow` con un argomento di E_OUTOFMEMORY.
+Se la classe tenta di allocare memoria nell'heap e ha esito negativo, verrà chiamata `AtlThrow` con un argomento di E_OUTOFMEMORY.
 
-Per impostazione predefinita, le macro e le classi di conversione ATL utilizzano la tabella codici ANSI del thread corrente per la conversione. Se si desidera eseguire l'override di tale comportamento per una conversione specifica, specificare la tabella codici come secondo parametro per il costruttore per la classe.
+Per impostazione predefinita, le classi e le macro di conversione ATL utilizzano la tabella codici ANSI del thread corrente per la conversione. Se si desidera eseguire l'override di tale comportamento per una conversione specifica, specificare la tabella codici come secondo parametro per il costruttore della classe.
 
-Le seguenti macro sono basate su questa classe:
+Le macro seguenti sono basate su questa classe:
 
 - CT2AEX
 
@@ -78,21 +79,21 @@ Le seguenti macro sono basate su questa classe:
 
 - CT2CAEX
 
-Il typedef seguente è basato su questa classe:The following typedef is based on this class:
+Il typedef seguente si basa su questa classe:
 
 - CW2A
 
-Per una descrizione di queste macro di conversione del testo, vedere Macro di [conversione di stringhe ATL e MFC](string-conversion-macros.md).
+Per una descrizione di queste macro di conversione del testo, vedere le [macro di conversione di stringhe ATL e MFC](string-conversion-macros.md).
 
 ## <a name="example"></a>Esempio
 
-Per un esempio di utilizzo di queste macro di conversione delle stringhe, vedere Macro di conversione di stringhe [ATL e MFC.](string-conversion-macros.md)
+Vedere [macro di conversione di stringhe ATL e MFC](string-conversion-macros.md) per un esempio di utilizzo di queste macro di conversione di stringhe.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlconv.h
+**Intestazione:** atlconv. h
 
-## <a name="cw2aexcw2aex"></a><a name="cw2aex"></a>CW2AEX::CW2AEX
+## <a name="cw2aexcw2aex"></a><a name="cw2aex"></a> CW2AEX:: CW2AEX
 
 Costruttore.
 
@@ -103,17 +104,17 @@ CW2AEX(LPCWSTR psz) throw(...);
 
 ### <a name="parameters"></a>Parametri
 
-*Psz*<br/>
+*PSZ*<br/>
 Stringa di testo da convertire.
 
-*nPaginaclico*<br/>
-Tabella codici utilizzata per eseguire la conversione. Vedere la discussione sui parametri della tabella codici per la funzione di Windows SDK [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar) per ulteriori dettagli.
+*nCodePage*<br/>
+Tabella codici utilizzata per eseguire la conversione. Per informazioni dettagliate, vedere la descrizione del parametro della tabella codici per la funzione Windows SDK [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar) .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Alloca il buffer utilizzato nel processo di conversione.
 
-## <a name="cw2aexcw2aex"></a><a name="dtor"></a>CW2AEX:: CW2AEX
+## <a name="cw2aexcw2aex"></a><a name="dtor"></a> CW2AEX:: ~ CW2AEX
 
 Distruttore.
 
@@ -121,11 +122,11 @@ Distruttore.
 ~CW2AEX() throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Libera il buffer allocato.
 
-## <a name="cw2aexm_psz"></a><a name="m_psz"></a>CW2AEX::m_psz
+## <a name="cw2aexm_psz"></a><a name="m_psz"></a> CW2AEX:: m_psz
 
 Membro dati che archivia la stringa di origine.
 
@@ -133,15 +134,15 @@ Membro dati che archivia la stringa di origine.
 LPSTR m_psz;
 ```
 
-## <a name="cw2aexm_szbuffer"></a><a name="m_szbuffer"></a>CW2AEX::m_szBuffer
+## <a name="cw2aexm_szbuffer"></a><a name="m_szbuffer"></a> CW2AEX:: m_szBuffer
 
-Buffer statico, utilizzato per archiviare la stringa convertita.
+Buffer statico utilizzato per archiviare la stringa convertita.
 
 ```
 char m_szBuffer[t_nBufferLength];
 ```
 
-## <a name="cw2aexoperator-lpstr"></a><a name="operator_lpstr"></a>CW2AEX::operatore LPSTR
+## <a name="cw2aexoperator-lpstr"></a><a name="operator_lpstr"></a> CW2AEX:: operator LPSTR
 
 Operatore di conversione.
 
@@ -153,7 +154,7 @@ operator LPSTR() const throw();
 
 Restituisce la stringa di testo come tipo LPSTR.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CA2AEX](../../atl/reference/ca2aex-class.md)<br/>
 [Classe CA2CAEX](../../atl/reference/ca2caex-class.md)<br/>

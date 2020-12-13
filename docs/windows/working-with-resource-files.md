@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso dei file di risorse'
 title: Uso di file di risorse (C++)
 ms.date: 02/14/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 3e387a1cefb6577760a34c7957d4f5019b1d49ef
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: c8e1a891839ee19201a98f9beb5e538e24c1d3f0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502905"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135798"
 ---
 # <a name="working-with-resource-files"></a>Utilizzo di file di risorse
 
@@ -55,7 +56,7 @@ Vengono forniti collegamenti alla documentazione di Visual C++.
 [Comunica con Microsoft](/visualstudio/ide/talk-to-us)<br/>
 Include collegamenti a informazioni sull'uso della documentazione disponibile, su come contattare il supporto tecnico e su come usare le funzionalità di accessibilità.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Applicazioni desktop di Windows](./desktop-applications-visual-cpp.md)<br/>
 [Menu e altre risorse](/windows/win32/menurc/resources)

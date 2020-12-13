@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _query_new_mode'
 title: _query_new_mode
 ms.date: 11/04/2016
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - handler modes
 - _query_new_mode function
 ms.assetid: e185c5f9-b73b-4257-8eff-b47648374768
-ms.openlocfilehash: 26fabc71337f1554b63909697b601a0bd9e86638
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 90c7355f4babc4726c8b52d61309eb1ceb23c9a3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216830"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137137"
 ---
 # <a name="_query_new_mode"></a>_query_new_mode
 
@@ -50,7 +51,7 @@ int _query_new_mode(
 
 Restituisce la nuova modalità del gestore corrente, ovvero 0 o 1, per **malloc**. Il valore restituito 1 indica che, in caso di errore di allocazione della memoria, **malloc** chiama la routine del nuovo gestore; il valore restituito 0 indica che non lo è.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione C++ **_query_new_mode** restituisce un intero che indica la nuova modalità del gestore impostata dalla funzione c++ [_set_new_mode](set-new-mode.md) per [malloc](malloc.md). La nuova modalità del gestore indica se, in caso di errore di allocazione della memoria, **malloc** chiama la routine del nuovo gestore come impostato da [_set_new_handler](set-new-handler.md). Per impostazione predefinita, **malloc** non chiama la routine del nuovo gestore in caso di errore. È possibile usare **_set_new_mode** per eseguire l'override di questo comportamento in modo che, in caso di errore **malloc** chiami la routine del nuovo gestore in modo analogo a **`new`** quando l'operatore non riesce ad allocare memoria. Per altre informazioni, vedere la discussione relativa agli [operatori new e delete](../../cpp/new-and-delete-operators.md) nelle informazioni di riferimento sul linguaggio C++.
 
@@ -66,10 +67,10 @@ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runt
 
 Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Allocazione di memoria](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[libero](free.md)<br/>
+[free](free.md)<br/>
 [realloc](realloc.md)<br/>
 [_query_new_handler](query-new-handler.md)<br/>
