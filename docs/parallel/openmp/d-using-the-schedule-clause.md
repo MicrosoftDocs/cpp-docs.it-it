@@ -1,19 +1,20 @@
 ---
+description: 'Altre informazioni su: D. Clausola Schedule'
 title: D. Clausola schedule
 ms.date: 01/22/2019
 ms.assetid: bf3d8f51-ea05-4803-bf55-657c12e91efe
-ms.openlocfilehash: 89e011784c5cccedc4a75f38d553458ea2e5d7e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd1bb4f9a6c661205e2e647fc9e45d81903008c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362881"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342491"
 ---
 # <a name="d-the-schedule-clause"></a>D. Clausola schedule
 
-Un'area parallela ha almeno una barriera, sul proprio lato e potrebbe essere creare barriere aggiuntive in esso contenuti. Ad ogni barriera, gli altri membri del team devono attendere l'ultimo thread in arrivo. Per ridurre al minimo il tempo di attesa, lavoro condivise deve essere distribuito in modo che tutti i thread descrivo la barriera all'incirca alla stessa ora. Se qualcosa del genere condiviso lavoro è contenuto nel `for` costrutti, il `schedule` clausola può essere utilizzata per questo scopo.
+Un'area parallela ha almeno una barriera, alla sua fine, ed è possibile che vi siano altre barriere al suo interno. A ogni barriera, gli altri membri del team devono attendere l'arrivo dell'ultimo thread. Per ridurre al minimo il tempo di attesa, il lavoro condiviso deve essere distribuito in modo che tutti i thread raggiungano la barriera nello stesso momento. Se alcune delle operazioni condivise sono contenute nei `for` costrutti, è `schedule` possibile usare la clausola a questo scopo.
 
-Quando sono presenti più riferimenti agli stessi oggetti, la scelta della pianificazione per un `for` costrutto può essere determinato principalmente dalle caratteristiche del sistema di memoria, ad esempio la presenza e le dimensioni della cache e se i tempi di accesso di memoria sono uniformi o nonuniform. Tali considerazioni, potrebbero essere preferibile utilizzare ogni thread in modo coerente per fare riferimento allo stesso set di elementi di matrice in una serie di cicli, anche se alcuni thread vengono assegnati meno lavoro in alcuni cicli. Questa configurazione può avvenire usando il `static` pianificazione con gli stessi limiti per tutti i cicli. Nell'esempio seguente, zero viene usato come limite inferiore nel ciclo di secondo, anche se `k` risulterebbe più naturale se la pianificazione non fosse importante.
+Quando ci sono riferimenti ripetuti agli stessi oggetti, la scelta della pianificazione per un `for` costrutto può essere determinata principalmente dalle caratteristiche del sistema di memoria, ad esempio la presenza e le dimensioni delle cache e il fatto che i tempi di accesso alla memoria siano uniformi o non uniformi. Tali considerazioni possono rendere preferibile che ogni thread faccia riferimento in modo coerente allo stesso set di elementi di una matrice in una serie di cicli, anche se alcuni thread sono assegnati relativamente meno lavoro in alcuni cicli. Questa configurazione può essere eseguita usando la `static` pianificazione con gli stessi limiti per tutti i cicli. Nell'esempio seguente zero viene usato come limite inferiore nel secondo ciclo, anche se `k` sarebbe più naturale se la pianificazione non fosse importante.
 
 ```cpp
 #pragma omp parallel
@@ -27,9 +28,9 @@ Quando sono presenti più riferimenti agli stessi oggetti, la scelta della piani
 }
 ```
 
-Negli esempi rimanenti, presuppone che tale memoria accesso non è la considerazione più importante. Se non diversamente specificato, che tutti i thread di ricevano le risorse di calcolo confrontabili. In questi casi, la scelta della pianificazione per un `for` costrutto dipende tutto il lavoro condiviso che deve essere eseguita tra il precedente più vicino barriera e barriera chiusura implicita o il più vicino imminente barriera, se è presente un `nowait` clausola. Per ogni tipo di pianificazione, un breve esempio mostra come questo tipo di pianificazione è probabilmente la scelta migliore. Una breve descrizione segue ogni esempio.
+Negli esempi rimanenti si presuppone che l'accesso alla memoria non sia la considerazione principale. Se non diversamente specificato, tutti i thread ricevono risorse di calcolo analoghe. In questi casi, la scelta della pianificazione per un `for` costrutto dipende da tutte le operazioni condivise che devono essere eseguite tra la barriera precedente più vicina e la barriera di chiusura implicita o la barriera imminente più vicina, se è presente una `nowait` clausola. Per ogni tipo di pianificazione, un breve esempio Mostra come il tipo di pianificazione è probabilmente la scelta migliore. Di seguito viene riportata una breve descrizione di ogni esempio.
 
-Il `static` pianificazione è appropriata anche per il caso più semplice, un'area parallela contenente un singolo `for` costruire, dove ogni iterazione richiede la stessa quantità di lavoro.
+La `static` pianificazione è appropriata anche per il caso più semplice, un'area parallela che contiene un singolo `for` costrutto, con ogni iterazione che richiede la stessa quantità di lavoro.
 
 ```cpp
 #pragma omp parallel for schedule(static)
@@ -38,11 +39,11 @@ for(i=0; i<n; i++) {
 }
 ```
 
-Il `static` pianificazione è caratterizzata dalle proprietà che ogni thread ottiene approssimativamente lo stesso numero di iterazioni di un altro thread e ogni thread può determinare in modo indipendente le iterazioni assegnate ad esso. Quindi, per distribuire il lavoro, non è necessaria alcuna operazione di sincronizzazione e, in base al presupposto che ogni iterazione richiede la stessa quantità di lavoro, tutti i thread dovrebbero terminare all'incirca alla stessa ora.
+La `static` pianificazione è caratterizzata dalle proprietà che ogni thread ottiene approssimativamente lo stesso numero di iterazioni di qualsiasi altro thread e ogni thread può determinare in modo indipendente le iterazioni assegnate. Di conseguenza, non è necessaria alcuna sincronizzazione per distribuire il lavoro e, nel presupposto che ogni iterazione richieda la stessa quantità di lavoro, tutti i thread devono terminare nello stesso momento.
 
-Per un team di *p* thread, consentire *ceiling(n/p)* essere integer *q*, che soddisfa *n = p\*q - r* con *0 < = r < p*. Un'implementazione del `static` pianificazione per questo esempio è necessario assegnare *q* iterazioni nel primo *p-1* thread, e *q-r* iterazioni per l'ultimo thread.  Un'altra implementazione accettabile assegnerà *q* iterazioni nel primo *p-r* thread, e *q-1* iterazioni per il rimanente *r*thread. Questo esempio viene illustrato il motivo per cui un programma non deve fare affidamento sui dettagli di una determinata implementazione.
+Per un team di thread *p* , lasciare che il *limite massimo (n/p)* sia il numero intero *q*, che soddisfa *n = p \* q-r* con *0 <= r < p*. Un'implementazione della `static` pianificazione per questo esempio consente di assegnare le iterazioni *q* ai primi thread *p-1* e le iterazioni *q-r* all'ultimo thread.  Un'altra implementazione accettabile assegna le iterazioni *q* ai primi thread *p-r* e le iterazioni *q-1* ai thread *r* rimanenti. In questo esempio viene illustrato il motivo per cui un programma non deve basarsi sui dettagli di una determinata implementazione.
 
-Il `dynamic` pianificazione è appropriata per il caso di un `for` costruire con le iterazioni che richiedono diversi o anche imprevedibili, quantità di lavoro.
+La `dynamic` pianificazione è appropriata per il caso di un `for` costrutto con le iterazioni che richiedono quantità di lavoro variabili o addirittura imprevedibili.
 
 ```cpp
 #pragma omp parallel for schedule(dynamic)
@@ -51,11 +52,11 @@ Il `dynamic` pianificazione è appropriata per il caso di un `for` costruire con
 }
 ```
 
-Il `dynamic` pianificazione è caratterizzata da proprietà che nessun thread attende alla barriera maggiore rispetto al necessario eseguire l'iterazione finale di un altro thread. Questo requisito significa che le iterazioni devono essere assegnate uno alla volta per thread man mano che diventano disponibili, con la sincronizzazione per ogni assegnazione. È possibile ridurre il sovraccarico della sincronizzazione, specificando una dimensione minima del blocco *k* maggiore di 1, in modo che i thread vengono assegnati *k* alla volta fino a quando non meno *k* rimangono. In questo modo si garantisce che nessun thread in attesa alla barriera maggiore del tempo necessario eseguire il blocco finale di (al massimo) di un altro thread *k* iterazioni.
+La `dynamic` pianificazione è caratterizzata dalla proprietà che nessun thread resta in attesa sulla barriera per più tempo del necessario per l'esecuzione dell'iterazione finale di un altro thread. Questo requisito significa che è necessario assegnare le iterazioni una alla volta ai thread non appena diventano disponibili, con sincronizzazione per ogni assegnazione. L'overhead di sincronizzazione può essere ridotto specificando una dimensione minima del blocco *k* maggiore di 1, in modo che i thread vengano assegnati *k* alla volta fino a quando non rimangono meno di *k* . Ciò garantisce che nessun thread attenda la barriera più a lungo rispetto a un altro thread per eseguire il relativo blocco finale di iterazioni (al massimo) *k* .
 
-Il `dynamic` pianificazione può essere utile se il thread ricevono diverse risorse di calcolo, che ha più lo stesso effetto diverse quantità di lavoro per ogni iterazione. Analogamente, la programmazione dinamica può essere utile anche se il thread arriva al `for` costruire in momenti diversi, anche se in alcuni di questi casi il `guided` pianificazione può essere preferibile.
+La `dynamic` pianificazione può essere utile se i thread ricevono diverse risorse di calcolo, che hanno un effetto molto simile a quello delle diverse quantità di lavoro per ogni iterazione. Analogamente, la pianificazione dinamica può essere utile anche se i thread arrivano al `for` costrutto in momenti diversi, anche se in alcuni di questi casi la `guided` pianificazione potrebbe essere preferibile.
 
-Il `guided` pianificazione è appropriato per il caso in cui i thread possono arrivare in momenti diversi a un `for` costruire ogni iterazione richiedendo sulla stessa quantità di lavoro. Questa situazione può verificarsi se, ad esempio, il `for` costrutto è preceduto da una o più sezioni o `for` costruisce con `nowait` clausole.
+La `guided` pianificazione è appropriata per il caso in cui i thread possano arrivare in momenti diversi in un `for` costrutto con ogni iterazione che richiede la stessa quantità di lavoro. Questa situazione può verificarsi se, ad esempio, il `for` costrutto è preceduto da una o più sezioni o `for` costrutti con `nowait` clausole.
 
 ```cpp
 #pragma omp parallel
@@ -71,12 +72,12 @@ Il `guided` pianificazione è appropriato per il caso in cui i thread possono ar
 }
 ```
 
-Ad esempio `dynamic`, il `guided` pianificare garantisce che nessun thread rimane in attesa alla barriera, maggiore del tempo necessario eseguire l'iterazione finale di un altro thread o l'ultimo *k* iterazioni se le dimensioni del blocco di *k* specificato. Tra tali pianificazioni, le `guided` pianificazione è caratterizzata da proprietà che richiede il minor numero sincronizzazioni. Per le dimensioni del blocco *k*, un'implementazione tipica assegnerà *q = ceiling(n/p)* iterazioni per il primo thread disponibile, impostare *n* al più grande di *n-q* e *p\*k*e ripetere fino a quando non vengono assegnate tutte le iterazioni.
+Analogamente a `dynamic` , la `guided` pianificazione garantisce che nessun thread attenda la barriera più a lungo rispetto a un altro thread per eseguire l'iterazione finale o le iterazioni finali *k* se viene specificata una dimensione del blocco pari a *k* . Tra tali pianificazioni, la `guided` pianificazione è caratterizzata dalla proprietà che richiede il minor numero di sincronizzazioni. Per le dimensioni del blocco *k*, un'implementazione tipica assegna le iterazioni *q = Ceiling (n/p)* al primo thread disponibile, *imposta n* sul valore maggiore di *n-q* e *p \* k* e si ripete fino a quando non vengono assegnate tutte le iterazioni.
 
-Quando non è più chiara di questi esempi, la scelta della pianificazione ottimale di `runtime` pianificazione è comoda per provare diverse pianificazioni e le dimensioni di blocco senza doverlo modificare e ricompilare il programma. Può anche essere utile quando la pianificazione ottimale dipende dal (in qualche modo stimabile) i dati di input a cui viene applicato il programma.
+Quando la scelta della pianificazione ottimale non è chiara come per questi esempi, la `runtime` pianificazione è utile per sperimentare diverse pianificazioni e dimensioni del blocco senza dover modificare e ricompilare il programma. Può anche essere utile quando la pianificazione ottimale dipende (in qualche modo prevedibile) i dati di input a cui viene applicato il programma.
 
-Per un esempio dei compromessi tra diverse pianificazioni, prendere in considerazione la condivisione e 1000 le iterazioni tra otto thread. Si supponga che sia presente una quantità di lavoro in ogni iterazione, invariante e usarlo come unità di tempo.
+Per visualizzare un esempio dei compromessi tra diverse pianificazioni, è consigliabile condividere 1000 iterazioni tra otto thread. Si supponga che esista una quantità di lavoro invariante in ogni iterazione e che venga utilizzata come unità di tempo.
 
-Se tutti i thread avviato nello stesso momento, il `static` pianificazione causerà il costrutto da eseguire in unità di 125, con Nessuna sincronizzazione. Ma si supponga che un thread è 100 unità nelle fasi finali in arrivo. I thread rimanenti sette attendono quindi 100 unità alla barriera e aumenta il tempo di esecuzione per l'intero costrutto di 225.
+Se tutti i thread vengono avviati nello stesso momento, la pianificazione provocherà `static` l'esecuzione del costrutto in unità 125, senza sincronizzazione. Si supponga tuttavia che un thread sia 100 unità in ritardo nell'arrivo. I sette thread restanti attendono la barriera per 100 unità e il tempo di esecuzione per l'intero costrutto aumenta fino a 225.
 
-Poiché sia la `dynamic` e `guided` pianificazioni assicurarsi che nessun thread rimane in attesa per più di un'unità alla barriera, il thread posticipato fa in modo che i tempi di esecuzione per il costrutto aumentare solo alle 138 unità, possibilmente aumentata di ritardi di sincronizzazione. Se tali ritardi non trascurabili, diventa importante che il numero di sincronizzazioni è 1000 per `dynamic` , ma solo 41 per `guided`, presupponendo che le dimensioni di blocco predefinito di uno. Con una dimensione del blocco pari a 25, `dynamic` e `guided` finire in unità di 150, oltre a eventuali ritardi dalle sincronizzazioni necessarie, quali numero ora solo 40 e 20, rispettivamente.
+Poiché entrambe le `dynamic` `guided` pianificazioni e assicurano che nessun thread attenda più di un'unità alla barriera, il thread ritardato causa i tempi di esecuzione del costrutto in modo che il costrutto aumenti solo a 138 unità, eventualmente aumentata da ritardi dalla sincronizzazione. Se tali ritardi non sono trascurabili, diventa importante che il numero di sincronizzazioni sia 1000 per `dynamic` ma solo 41 per `guided` , presumendo la dimensione del blocco predefinita di uno. Con una dimensione di blocco pari a 25 `dynamic` e `guided` entrambe completate in unità di 150, più eventuali ritardi dalle sincronizzazioni richieste, che ora sono solo il numero 40 e 20, rispettivamente.
