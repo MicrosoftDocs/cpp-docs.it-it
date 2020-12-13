@@ -1,19 +1,20 @@
 ---
-title: Errore irreversibile U1078 di NMAKE
+description: 'Altre informazioni su: errore irreversibile U1078 di NMAKE'
+title: 'Errore irreversibile U1078 di NMAKE '
 ms.date: 11/04/2016
 f1_keywords:
 - U1078
 helpviewer_keywords:
 - U1078
 ms.assetid: 24087955-9362-4ddf-9966-e0de43ea4647
-ms.openlocfilehash: d1529e98f851accee071f4f233cc9bf518c70324
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ad2430a3b671f414f5a34b93140f7da2e746254c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80193654"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345407"
 ---
-# <a name="nmake-fatal-error-u1078"></a>Errore irreversibile U1078 di NMAKE
+# <a name="nmake-fatal-error-u1078"></a>Errore irreversibile U1078 di NMAKE 
 
 overflow della costante in ' Expression '
 
@@ -21,4 +22,4 @@ L'espressione specificata contiene una costante che supera l'intervallo compreso
 
 - Espressione specificata con una direttiva di pre-elaborazione
 
-- Livello di errore specificato con il modificatore di comando Dash ( **-** )
+- Livello di errore specificato con il **-** modificatore di comando Dash ()
