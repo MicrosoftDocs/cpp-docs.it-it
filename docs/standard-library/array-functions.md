@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; funzioni di matrice &gt;'
 title: Funzioni &lt;array&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - std::array [C++], get
 - std::get [C++]
 - std::swap [C++]
-ms.openlocfilehash: 3389ba769d6b61a363e8cbfcf5f6a4e9ec679469
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b2f6cd72c5f82f36914f96dee6924654a96a9fc1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844704"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149552"
 ---
 # <a name="ltarraygt-functions"></a>Funzioni &lt;array&gt;
 
@@ -108,7 +109,7 @@ La prima matrice da scambiare.
 *Ok*\
 La seconda matrice da scambiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione modello esegue `left.swap(right)`.
 

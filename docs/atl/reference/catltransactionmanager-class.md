@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: classe all'CAtlTransactionManager"
 title: Classe all'CAtlTransactionManager
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: 74afc1a82c12d6138198f5696d300825e06aba1e
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 25d5ea7e9b4838f483dd7f9ee408cdd5bd4c88cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562216"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147186"
 ---
 # <a name="catltransactionmanager-class"></a>Classe all'CAtlTransactionManager
 
@@ -45,18 +46,18 @@ La classe all'CAtlTransactionManager fornisce un wrapper per le funzioni di gest
 class CAtlTransactionManager;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[~ All'CAtlTransactionManager](#dtor)|Distruttore all'CAtlTransactionManager.|
 |[All'CAtlTransactionManager](#catltransactionmanager)|Costruttore all'CAtlTransactionManager.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Close](#close)|Chiude un handle di transazione.|
 |[Eseguire il commit](#commit)|Richiede che venga eseguito il commit della transazione.|
@@ -77,12 +78,12 @@ class CAtlTransactionManager;
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[m_bFallback](#m_bfallback)|TRUE se il fallback è supportato. In caso contrario, FALSE.|
 |[m_hTransaction](#m_htransaction)|Handle di transazione.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -100,7 +101,7 @@ Distruttore all'CAtlTransactionManager.
 virtual ~CAtlTransactionManager();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Nell'elaborazione normale, la transazione viene automaticamente sottoposta a commit e chiusa. Se il distruttore viene chiamato durante la rimozione di un'eccezione, viene eseguito il rollback e la chiusura della transazione.
 
@@ -120,7 +121,7 @@ TRUE indica il fallback del supporto. Se la funzione transazionale ha esito nega
 *bAutoCreateTransaction*<br/>
 TRUE indica che il gestore transazioni viene creato automaticamente nel costruttore. FALSE indica che non lo è.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="close"></a><a name="close"></a> Vicino
 
@@ -134,7 +135,7 @@ inline BOOL Close();
 
 TRUE se l'operazione riesce; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo wrapper chiama la `CloseHandle` funzione. Il metodo viene chiamato automaticamente nel distruttore.
 
@@ -150,11 +151,11 @@ inline BOOL Commit();
 
 TRUE se l'operazione riesce; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo wrapper chiama la `CommitTransaction` funzione. Il metodo viene chiamato automaticamente nel distruttore.
 
-## <a name="create"></a><a name="create"></a> Create
+## <a name="create"></a><a name="create"></a> Creare
 
 Crea l'handle della transazione.
 
@@ -166,7 +167,7 @@ inline BOOL Create();
 
 TRUE se l'operazione riesce; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo wrapper chiama la `CreateTransaction` funzione. Verifica
 
@@ -212,7 +213,7 @@ Handle valido per un file modello con il diritto di accesso GENERIC_READ. Il fil
 
 Restituisce un handle che può essere utilizzato per accedere all'oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo wrapper chiama la `CreateFileTransacted` funzione.
 
@@ -229,7 +230,7 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 *lpFileName*<br/>
 Nome del file da eliminare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo wrapper chiama la `DeleteFileTransacted` funzione.
 
@@ -255,7 +256,7 @@ Puntatore alla struttura WIN32_FIND_DATA che riceve informazioni su un file o un
 
 Se la funzione ha esito positivo, il valore restituito è un handle di ricerca utilizzato in una chiamata successiva a `FindNextFile` o `FindClose` . Se la funzione ha esito negativo o non riesce a individuare i file dalla stringa di ricerca nel parametro *lpFileName* , il valore restituito viene INVALID_HANDLE_VALUE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo wrapper chiama la `FindFirstFileTransacted` funzione.
 
@@ -272,7 +273,7 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 *lpFileName*<br/>
 Nome del file o della directory.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo wrapper chiama la `GetFileAttributesTransacted` funzione.
 
@@ -298,7 +299,7 @@ Livello di informazioni sugli attributi da recuperare.
 *lpFileInformation*<br/>
 Puntatore a un buffer che riceve le informazioni sugli attributi. Il tipo di informazioni sugli attributi archiviato nel buffer è determinato dal valore di *fInfoLevelId*. Se il parametro *fInfoLevelId* è GetFileExInfoStandard, questo parametro punta a una struttura WIN32_FILE_ATTRIBUTE_DATA.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo wrapper chiama la `GetFileAttributesTransacted` funzione.
 
@@ -314,7 +315,7 @@ HANDLE GetHandle() const;
 
 Restituisce l'handle di transazione per una classe. Restituisce NULL se l'oggetto `CAtlTransactionManager` non è associato a un handle.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="isfallback"></a><a name="isfallback"></a> Fallback
 
@@ -328,7 +329,7 @@ BOOL IsFallback() const;
 
 Restituisce TRUE se la classe supporta le chiamate di fallback. In caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="m_bfallback"></a><a name="m_bfallback"></a> m_bFallback
 
@@ -338,7 +339,7 @@ TRUE se il fallback è supportato. In caso contrario, FALSE.
 BOOL m_bFallback;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="m_htransaction"></a><a name="m_htransaction"></a> m_hTransaction
 
@@ -348,7 +349,7 @@ Handle di transazione.
 HANDLE m_hTransaction;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="movefile"></a><a name="movefile"></a> MoveFile
 
@@ -366,7 +367,7 @@ Nome corrente del file o della directory esistente nel computer locale.
 *lpNewFileName*<br/>
 Nuovo nome del file o della directory. Il nome non deve essere già esistente. Un nuovo file potrebbe trovarsi in una file system o in un'unità diversa. Una nuova directory deve trovarsi nella stessa unità.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo wrapper chiama la `MoveFileTransacted` funzione.
 
@@ -420,7 +421,7 @@ Puntatore a una variabile che riceve uno dei seguenti valori di disposizione: RE
 
 Se la funzione ha esito positivo, il valore restituito viene ERROR_SUCCESS. Se la funzione ha esito negativo, il valore restituito è un codice di errore diverso da zero definito in Winerror. h.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo wrapper chiama la `RegCreateKeyTransacted` funzione.
 
@@ -444,7 +445,7 @@ Nome della chiave da eliminare.
 
 Se la funzione ha esito positivo, il valore restituito viene ERROR_SUCCESS. Se la funzione ha esito negativo, il valore restituito è un codice di errore diverso da zero definito in Winerror. h.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo wrapper chiama la `RegDeleteKeyTransacted` funzione.
 
@@ -482,7 +483,7 @@ Puntatore a una variabile che riceve un handle per la chiave aperta o creata. Se
 
 Se la funzione ha esito positivo, il valore restituito viene ERROR_SUCCESS. Se la funzione ha esito negativo, il valore restituito è un codice di errore diverso da zero definito in Winerror. h
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo wrapper chiama la `RegOpenKeyTransacted` funzione.
 
@@ -498,7 +499,7 @@ inline BOOL Rollback();
 
 TRUE se l'operazione riesce; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo wrapper chiama la `RollbackTransaction` funzione.
 
@@ -518,7 +519,7 @@ Nome del file o della directory.
 *dwAttributes*<br/>
 Attributi del file da impostare per il file. Per ulteriori informazioni, vedere [SetFileAttributesTransacted](/windows/win32/api/winbase/nf-winbase-setfileattributestransactedw).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo wrapper chiama la `SetFileAttributesTransacted` funzione.
 

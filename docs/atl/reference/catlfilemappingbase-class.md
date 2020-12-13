@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CAtlFileMappingBase'
 title: Classe CAtlFileMappingBase
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: 75177c195e83a4ab3ad2a6bd4d608d07f8c2234f
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 14bf275024dc95a3fdaf76c4e4d699127feaa8f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168085"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147459"
 ---
 # <a name="catlfilemappingbase-class"></a>Classe CAtlFileMappingBase
 
@@ -40,14 +41,14 @@ class CAtlFileMappingBase
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CAtlFileMappingBase:: CAtlFileMappingBase](#catlfilemappingbase)|Costruttore.|
 |[CAtlFileMappingBase:: ~ CAtlFileMappingBase](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CAtlFileMappingBase:: CopyFrom](#copyfrom)|Chiamare questo metodo per copiare da un oggetto mapping di file.|
 |[CAtlFileMappingBase:: GetData](#getdata)|Chiamare questo metodo per ottenere i dati da un oggetto di mapping di file.|
@@ -60,11 +61,11 @@ class CAtlFileMappingBase
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CAtlFileMappingBase:: operator =](#operator_eq)|Imposta l'oggetto mapping di file corrente su un altro oggetto mapping di file.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il mapping dei file è l'associazione del contenuto di un file a una parte dello spazio degli indirizzi virtuali di un processo. Questa classe fornisce metodi per la creazione di oggetti di mapping di file che consentono ai programmi di accedere e condividere facilmente i dati.
 
@@ -74,7 +75,7 @@ Per ulteriori informazioni, vedere [mapping dei file](/windows/win32/Memory/file
 
 **Intestazione:** atlfile. h
 
-## <a name="catlfilemappingbasecatlfilemappingbase"></a><a name="catlfilemappingbase"></a>CAtlFileMappingBase:: CAtlFileMappingBase
+## <a name="catlfilemappingbasecatlfilemappingbase"></a><a name="catlfilemappingbase"></a> CAtlFileMappingBase:: CAtlFileMappingBase
 
 Costruttore.
 
@@ -88,7 +89,7 @@ CAtlFileMappingBase() throw();
 *orig*<br/>
 Oggetto di mapping di file originale da copiare per creare il nuovo oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Crea un nuovo oggetto mapping di file, usando facoltativamente un oggetto esistente. È comunque necessario chiamare [CAtlFileMappingBase:: file map](#mapfile) per aprire o creare l'oggetto di mapping dei file per un file specifico.
 
@@ -96,7 +97,7 @@ Crea un nuovo oggetto mapping di file, usando facoltativamente un oggetto esiste
 
 [!code-cpp[NVC_ATL_Utilities#71](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]
 
-## <a name="catlfilemappingbasecatlfilemappingbase"></a><a name="dtor"></a>CAtlFileMappingBase:: ~ CAtlFileMappingBase
+## <a name="catlfilemappingbasecatlfilemappingbase"></a><a name="dtor"></a> CAtlFileMappingBase:: ~ CAtlFileMappingBase
 
 Distruttore.
 
@@ -104,11 +105,11 @@ Distruttore.
 ~CAtlFileMappingBase() throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Libera tutte le risorse allocate dalla classe e chiama il metodo [CAtlFileMappingBase:: annullare](#unmap) .
 
-## <a name="catlfilemappingbasecopyfrom"></a><a name="copyfrom"></a>CAtlFileMappingBase:: CopyFrom
+## <a name="catlfilemappingbasecopyfrom"></a><a name="copyfrom"></a> CAtlFileMappingBase:: CopyFrom
 
 Chiamare questo metodo per copiare da un oggetto mapping di file.
 
@@ -125,7 +126,7 @@ Oggetto di mapping di file originale da cui copiare.
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-## <a name="catlfilemappingbasegetdata"></a><a name="getdata"></a>CAtlFileMappingBase:: GetData
+## <a name="catlfilemappingbasegetdata"></a><a name="getdata"></a> CAtlFileMappingBase:: GetData
 
 Chiamare questo metodo per ottenere i dati da un oggetto di mapping di file.
 
@@ -137,7 +138,7 @@ void* GetData() const throw();
 
 Restituisce un puntatore ai dati.
 
-## <a name="catlfilemappingbasegethandle"></a><a name="gethandle"></a>CAtlFileMappingBase:: GetHandle
+## <a name="catlfilemappingbasegethandle"></a><a name="gethandle"></a> CAtlFileMappingBase:: GetHandle
 
 Chiamare questo metodo per restituire un handle all'oggetto mapping di file.
 
@@ -149,7 +150,7 @@ HANDLE GetHandle() throw ();
 
 Restituisce un handle all'oggetto mapping di file.
 
-## <a name="catlfilemappingbasegetmappingsize"></a><a name="getmappingsize"></a>CAtlFileMappingBase:: GetMappingSize
+## <a name="catlfilemappingbasegetmappingsize"></a><a name="getmappingsize"></a> CAtlFileMappingBase:: GetMappingSize
 
 Chiamare questo metodo per ottenere la dimensione del mapping da un oggetto mapping di file.
 
@@ -165,7 +166,7 @@ Restituisce la dimensione del mapping.
 
 Vedere l'esempio per [CAtlFileMappingBase:: CAtlFileMappingBase](#catlfilemappingbase).
 
-## <a name="catlfilemappingbasemapfile"></a><a name="mapfile"></a>CAtlFileMappingBase:: file map
+## <a name="catlfilemappingbasemapfile"></a><a name="mapfile"></a> CAtlFileMappingBase:: file map
 
 Chiamare questo metodo per aprire o creare un oggetto mapping di file per il file specificato.
 
@@ -199,7 +200,7 @@ Specifica il tipo di accesso alla visualizzazione file e, di conseguenza, la pro
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Dopo la creazione di un oggetto di mapping dei file, le dimensioni del file non devono superare le dimensioni dell'oggetto mapping dei file; in caso contrario, non tutto il contenuto del file sarà disponibile per la condivisione. Per ulteriori informazioni, vedere [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) e [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) nel Windows SDK.
 
@@ -207,7 +208,7 @@ Dopo la creazione di un oggetto di mapping dei file, le dimensioni del file non 
 
 Vedere l'esempio per [CAtlFileMappingBase:: CAtlFileMappingBase](#catlfilemappingbase).
 
-## <a name="catlfilemappingbasemapsharedmem"></a><a name="mapsharedmem"></a>CAtlFileMappingBase:: MapSharedMem
+## <a name="catlfilemappingbasemapsharedmem"></a><a name="mapsharedmem"></a> CAtlFileMappingBase:: MapSharedMem
 
 Chiamare questo metodo per creare un oggetto di mapping dei file che consenta l'accesso completo a tutti i processi.
 
@@ -245,11 +246,11 @@ Specifica il tipo di accesso alla visualizzazione file e, di conseguenza, la pro
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-`MapShareMem`consente a un oggetto di mapping di file esistente, creato da [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga), di essere condiviso tra i processi.
+`MapShareMem` consente a un oggetto di mapping di file esistente, creato da [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga), di essere condiviso tra i processi.
 
-## <a name="catlfilemappingbaseopenmapping"></a><a name="openmapping"></a>CAtlFileMappingBase:: OpenMapping
+## <a name="catlfilemappingbaseopenmapping"></a><a name="openmapping"></a> CAtlFileMappingBase:: OpenMapping
 
 Chiamare questo metodo per aprire un oggetto mapping di file denominato per il file specificato.
 
@@ -279,11 +280,11 @@ Specifica il tipo di accesso alla visualizzazione file e, di conseguenza, la pro
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Nelle build di debug, si verificherà un errore di asserzione se i parametri di input non sono validi.
 
-## <a name="catlfilemappingbaseoperator-"></a><a name="operator_eq"></a>CAtlFileMappingBase:: operator =
+## <a name="catlfilemappingbaseoperator-"></a><a name="operator_eq"></a> CAtlFileMappingBase:: operator =
 
 Imposta l'oggetto mapping di file corrente su un altro oggetto mapping di file.
 
@@ -300,7 +301,7 @@ Oggetto mapping di file corrente.
 
 Restituisce un riferimento all'oggetto corrente.
 
-## <a name="catlfilemappingbaseunmap"></a><a name="unmap"></a>CAtlFileMappingBase:: annullare
+## <a name="catlfilemappingbaseunmap"></a><a name="unmap"></a> CAtlFileMappingBase:: annullare
 
 Chiamare questo metodo per annullare un oggetto mapping di file.
 
@@ -312,11 +313,11 @@ HRESULT Unmap() throw();
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni, vedere [UnmapViewOfFile](/windows/win32/api/memoryapi/nf-memoryapi-unmapviewoffile) nel Windows SDK.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CAtlFileMapping](../../atl/reference/catlfilemapping-class.md)<br/>
 [Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

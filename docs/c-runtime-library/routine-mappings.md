@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: mapping di routine'
 title: Mapping di routine
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - TCHAR.H data types, list of routine mappings
 - generic-text mappings
 ms.assetid: 38f33d3b-0f7b-430d-8a4f-75e27c6f1c42
-ms.openlocfilehash: 245a44a6722bdf704a5ce750dd285eb3eac66609
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 22febc86d47ca435e9667015f1130b472e515946
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444862"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136799"
 ---
 # <a name="routine-mappings"></a>Mapping di routine
 
@@ -260,10 +261,10 @@ Per informazioni correlate, vedere [Mappature di testo generico in Tchar.h](../t
 |`_vtprintf`|`vprintf`|`vprintf`|`vwprintf`|
 |`_vtprintf_s`|`vprintf_s`|`vprintf_s`|`vwprintf_s`|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Mapping di testo generico](../c-runtime-library/generic-text-mappings.md)<br/>
 [Mapping dei tipi di dati](../c-runtime-library/data-type-mappings.md)<br/>
 [Mapping di costanti e variabili globali](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>
-[Programma di testo generico di esempio](../c-runtime-library/a-sample-generic-text-program.md)<br/>
-[Uso di mapping di testo generico](../c-runtime-library/using-generic-text-mappings.md)
+[Programma di Generic-Text di esempio](../c-runtime-library/a-sample-generic-text-program.md)<br/>
+[Uso di mapping di Generic-Text](../c-runtime-library/using-generic-text-mappings.md)

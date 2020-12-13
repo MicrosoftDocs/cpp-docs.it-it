@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CAxWindow'
 title: Classe CAxWindow
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-ms.openlocfilehash: b74ecb9af2decf92f873cef8d016907b6c9474cf
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 0b1cdabbce4fd6a36f6f3e9fb15b3f28249065c3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353077"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146991"
 ---
 # <a name="caxwindow-class"></a>Classe CAxWindow
 
@@ -58,7 +59,7 @@ class CAxWindow : public CWindow
 |-|-|
 |[operatore =](#operator_eq)|Assegna un HWND a un oggetto esistente `CAxWindow` .|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questa classe fornisce metodi per la modifica di una finestra che ospita un controllo ActiveX. L'hosting viene fornito da " **AtlAxWinLic80"**, che è incluso in `CAxWindow` .
 
@@ -94,7 +95,7 @@ out Puntatore all' `IUnknown` oggetto dell'host ( `AxWin` oggetto).
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'oggetto controllo da collegare deve essere inizializzato correttamente prima di chiamare `AttachControl` .
 
@@ -158,7 +159,7 @@ ID risorsa di una risorsa HTML. Il controllo WebBrowser verrà creato e caricato
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se viene usata la seconda versione di questo metodo, viene creato un controllo HTML che viene associato alla risorsa identificata da *dwResID*.
 
@@ -234,7 +235,7 @@ in ID risorsa di una risorsa HTML. Il controllo WebBrowser verrà creato e caric
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo è simile a [CAxWindow:: CreateControl](#createcontrol), ma a differenza di questo metodo, `CreateControlEx` consente anche di ricevere un puntatore di interfaccia al controllo appena creato e di configurare un sink di evento per ricevere gli eventi generati dal controllo.
 
@@ -323,7 +324,7 @@ in Interfaccia su cui viene eseguita una query.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'interfaccia dell'host consente l'accesso alla funzionalità sottostante del codice di hosting della finestra, implementato da `AxWin` .
 
@@ -361,11 +362,11 @@ in Puntatore a un' `IDocHostUIHandlerDispatch` interfaccia.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L' `IDocHostUIHandlerDispatch` interfaccia esterna viene utilizzata dai controlli che eseguono una query sul sito dell'host per l' `IDocHostUIHandlerDispatch` interfaccia. Il controllo WebBrowser è un controllo che esegue questa operazione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Esempio ATLCON](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWindow](../../atl/reference/cwindow-class.md)<br/>

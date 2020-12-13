@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: operatore.'
 title: operatore punto
 ms.date: 12/17/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - operator .
 - . operator
 ms.assetid: 468ea0c8-5b08-47be-991b-38abacb77611
-ms.openlocfilehash: 4f864c288c89d4f47d40a842675c3e9c6bd2a927
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: cc365becc2ef9d60e88af395d3f5e005c4a33d83
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75316681"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97127991"
 ---
 # <a name="operator-"></a>Operatore .
 
@@ -21,11 +22,11 @@ Il primo operatore restituisce l' *espressione* più l'offset del *campo* all'in
 
 ## <a name="syntax"></a>Sintassi
 
-> *espressione* __.__ ⟦ campo __.__ *campo* ... ⟧
+> *espressione*__.__ ⟦ campo __.__ *campo* ... ⟧
 >
-> **\[** _Register_ **]** __.__ ⟦ campo __.__ *campo* ... ⟧
+> **\[**_Register_**]**__.__ ⟦ campo __.__ *campo* ... ⟧
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-Guida di [riferimento agli operatori](operators-reference.md)\
+[Guida di riferimento agli operatori](operators-reference.md)\
 [Grammatica BNF di MASM](masm-bnf-grammar.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: max_variable_size Class'
 title: Classe max_variable_size
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - stdext::max_variable_size [C++], released
 - stdext::max_variable_size [C++], saved
 ms.assetid: 9f2e9df0-4148-4b37-bc30-f8eca0ef86ae
-ms.openlocfilehash: 53d2603c82e94710ed687dce4caeec24aeb2f60a
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 0640e11e4ab68b60dc8114c88463a370e43dc749
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561648"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149227"
 ---
 # <a name="max_variable_size-class"></a>Classe max_variable_size
 
@@ -68,7 +69,7 @@ void allocated(std::size_t _Nx = 1);
 *_Nx*\
 Valore di incremento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro aggiunge *_Nx* al valore archiviato `_Nallocs` . Questa funzione membro viene chiamata dopo ogni chiamata eseguita da `cache_freelist::allocate` all'operatore **`new`** . L'argomento *_Nx* è il numero di blocchi di memoria nel blocco allocato dall'operatore **`new`** .
 
@@ -85,7 +86,7 @@ void deallocated(std::size_t _Nx = 1);
 *_Nx*\
 Valore di incremento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro sottrae *_Nx* dal valore archiviato `_Nallocs` . Questa funzione membro viene chiamata dopo ogni chiamata da `cache_freelist::deallocate` a Operator **`delete`** . L'argomento *_Nx* è il numero di blocchi di memoria nel blocco deallocato dall'operatore **`delete`** .
 
@@ -101,7 +102,7 @@ bool full();
 
 **`true`** Se `_Nallocs / 16 + 16 <= _Nblocks` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro viene chiamata da `cache_freelist::deallocate`. Se la chiamata restituisce **`true`** , `deallocate` inserisce il blocco di memoria nell'elenco di disponibilità; se restituisce false, `deallocate` chiama l'operatore **`delete`** per deallocare il blocco.
 
@@ -113,7 +114,7 @@ Costruisce un oggetto di tipo `max_variable_size`.
 max_variable_size();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il costruttore inizializza i valori archiviati `_Nblocks` e `_Nallocs` su zero.
 
@@ -125,7 +126,7 @@ Decrementa il conteggio dei blocchi di memoria nell'elenco di disponibilità.
 void released();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro decrementa il valore archiviato `_Nblocks`. La funzione membro `released` della classe max corrente viene chiamata da `cache_freelist::allocate` ogni volta che rimuove un blocco di memoria dall'elenco di disponibilità.
 
@@ -137,7 +138,7 @@ Incrementa il conteggio dei blocchi di memoria nell'elenco di disponibilità.
 void saved();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro incrementa il valore archiviato `_Nblocks`. Viene chiamata da `cache_freelist::deallocate` ogni volta che inserisce un blocco di memoria nell'elenco di disponibilità.
 

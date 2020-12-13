@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: rts_alloc Class'
 title: Classe rts_alloc
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: 04a6578c7abd07ff84f4c0a5cee68cfd7ec8ef04
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b2fe4bf3fe3f54e8fe1de3d89605280b2ba2b857
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560556"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148941"
 ---
 # <a name="rts_alloc-class"></a>Classe rts_alloc
 
@@ -35,7 +36,7 @@ class rts_alloc
 *Cache*\
 Il tipo delle istanze cache contenuto nell'array. Può essere [`cache_chunklist`](../standard-library/cache-chunklist-class.md) , [`cache_freelist`](../standard-library/cache-freelist-class.md) o [`cache_suballoc`](../standard-library/cache-suballoc-class.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questo modello di classe include più istanze dell'allocatore di blocchi e determina quale istanza usare per l'allocazione o la deallocazione in fase di esecuzione anziché in fase di compilazione. Viene usata con i compilatori e non può compilare la riassociazione.
 
@@ -70,9 +71,9 @@ Numero di elementi della matrice da allocare.
 
 Puntatore all'oggetto allocato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-La funzione membro restituisce `caches[_IDX].allocate(count)` , in cui l'indice `_IDX` è determinato dal *numero*di dimensioni del blocco richiesto, oppure, se il *conteggio* è troppo grande, restituisce `operator new(count)` . Oggetto `cache` che rappresenta l'oggetto cache.
+La funzione membro restituisce `caches[_IDX].allocate(count)` , in cui l'indice `_IDX` è determinato dal *numero* di dimensioni del blocco richiesto, oppure, se il *conteggio* è troppo grande, restituisce `operator new(count)` . Oggetto `cache` che rappresenta l'oggetto cache.
 
 ## <a name="rts_allocdeallocate"></a><a name="deallocate"></a> rts_alloc::d eallocate
 
@@ -90,9 +91,9 @@ Puntatore al primo oggetto che deve essere deallocato dall'archivio.
 *conteggio*\
 Numero di oggetti da deallocare dall'archivio.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-La funzione membro chiama `caches[_IDX].deallocate(ptr, count)` , dove l'indice `_IDX` è determinato dal *numero*di dimensioni del blocco richiesto, oppure, se il *conteggio* è troppo grande, restituisce `operator delete(ptr)` .
+La funzione membro chiama `caches[_IDX].deallocate(ptr, count)` , dove l'indice `_IDX` è determinato dal *numero* di dimensioni del blocco richiesto, oppure, se il *conteggio* è troppo grande, restituisce `operator delete(ptr)` .
 
 ## <a name="rts_allocequals"></a><a name="equals"></a> rts_alloc:: Equals
 
@@ -110,11 +111,11 @@ Oggetto cache associato al filtro.
 *_Other*\
 Oggetto cache da confrontare per verificarne l'uguaglianza.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **`true`** Se il risultato di `caches[0].equals(other.caches[0])` ; in caso contrario, **`false`** . `caches` rappresenta una matrice di oggetti cache.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)\
 [\<allocators>](../standard-library/allocators-header.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: struttura VerifyInterfaceHelper'
 title: VerifyInterfaceHelper (struttura)
 ms.date: 10/03/2018
 ms.topic: reference
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::VerifyInterfaceHelper structure
 - Microsoft::WRL::Details::VerifyInterfaceHelper::Verify method
 ms.assetid: ea95b641-199a-4fdf-964b-186b40cb3ba7
-ms.openlocfilehash: 09c2cc7e08e2dc0e8df42c64d285c37627c5925a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a9b51eac55666d15b8362fc070d0feb731e9674d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374242"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135031"
 ---
 # <a name="verifyinterfacehelper-structure"></a>VerifyInterfaceHelper (struttura)
 
-Supporta l'infrastruttura della libreria di modelli di Windows Runtime di C, non è destinato a essere utilizzato direttamente dal codice.
+Supporta l'infrastruttura della libreria di modelli C++ Windows Runtime e non può essere utilizzata direttamente dal codice.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -32,12 +33,12 @@ struct VerifyInterfaceHelper<false, I>;
 
 ### <a name="parameters"></a>Parametri
 
-*Ho*<br/>
+*I*<br/>
 Interfaccia da verificare.
 
-*isWinRTInterface (interfaccia utente)*
+*isWinRTInterface*
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Verifica che l'interfaccia specificata dal parametro di modello soddisfi determinati requisiti.
 
@@ -45,7 +46,7 @@ Verifica che l'interfaccia specificata dal parametro di modello soddisfi determi
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-Nome                                            | Descrizione
+Nome                                            | Description
 ----------------------------------------------- | ---------------------------------------------------------------------------------------------------
 [Metodo VerifyInterfaceHelper::Verify](#verify) | Verifica che l'interfaccia specificata dal parametro di modello corrente soddisfi determinati requisiti.
 
@@ -55,11 +56,11 @@ Nome                                            | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** implements.h
+**Intestazione:** Implements. h
 
-**Spazio dei nomi:** Microsoft::WRL::Details
+**Spazio dei nomi:** Microsoft:: WRL::D etails
 
-## <a name="verifyinterfacehelperverify"></a><a name="verify"></a>VerifyInterfaceHelper::Verify
+## <a name="verifyinterfacehelperverify"></a><a name="verify"></a> VerifyInterfaceHelper:: Verify
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -67,6 +68,6 @@ Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codi
 static void Verify();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Verifica che l'interfaccia specificata dal parametro di modello corrente soddisfi determinati requisiti.

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3912'
 title: Errore del compilatore C3912
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3912
 ms.assetid: 674e050c-11fb-4db1-8bdf-a3e95b41161d
-ms.openlocfilehash: 9054124cbfe2d86c062c6e97651bd69eebe5471c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 5c7828fa055aff08ea57759bdf3ee9b9677cc0f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74748749"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97144066"
 ---
 # <a name="compiler-error-c3912"></a>Errore del compilatore C3912
 

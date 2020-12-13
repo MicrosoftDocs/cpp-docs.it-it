@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Classe CD2DRectF'
 title: Classe CD2DRectF
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - CD2DRectF [MFC], CD2DRectF
 - CD2DRectF [MFC], IsNull
 ms.assetid: 87c12d87-9d18-4a19-ba14-0f51d6b6835a
-ms.openlocfilehash: 33d3c5f9e795ad6c91b689436e8a3b1b56966dce
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 273a3d07f152f8b24a24175c0f466c8969830ebd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369115"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136019"
 ---
 # <a name="cd2drectf-class"></a>Classe CD2DRectF
 
@@ -27,25 +28,25 @@ Wrapper per `D2D1_RECT_F`.
 class CD2DRectF : public D2D1_RECT_F;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CD2DRectF::CD2DRectF](#cd2drectf)|Di overload. Costruisce un `CD2DRectF` oggetto `D2D1_RECT_F` dall'oggetto.|
+|[CD2DRectF:: CD2DRectF](#cd2drectf)|Di overload. Costruisce un `CD2DRectF` oggetto da un `D2D1_RECT_F` oggetto.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CD2DRectF::IsNull](#isnull)|Restituisce un valore **booleano** che indica se un'espressione non contiene dati validi (NULL).|
+|[CD2DRectF:: IsNull](#isnull)|Restituisce un valore **booleano** che indica se un'espressione non contiene dati validi (null).|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CD2DRectF::operatore CRect](#operator_crect)|Converte `CD2DRectF` `CRect` in oggetto.|
+|[CD2DRectF:: operator CRect](#operator_crect)|Converte `CD2DRectF` in `CRect` Object.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -55,11 +56,11 @@ class CD2DRectF : public D2D1_RECT_F;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxrendertarget.h
+**Intestazione:** afxrendertarget. h
 
-## <a name="cd2drectfcd2drectf"></a><a name="cd2drectf"></a>CD2DRectF::CD2DRectF
+## <a name="cd2drectfcd2drectf"></a><a name="cd2drectf"></a> CD2DRectF:: CD2DRectF
 
-Costruisce un oggetto CD2DRectF dall'oggetto CRect.
+Costruisce un oggetto CD2DRectF da un oggetto CRect.
 
 ```
 CD2DRectF(const CRect& rect);
@@ -81,18 +82,18 @@ rettangolo di origine
 *fLeft*<br/>
 coordinata sinistra di origine
 
-*fSuperiore*<br/>
-coordinata superiore di origine
+*fTop*<br/>
+coordinata principale di origine
 
 *Paura*<br/>
 coordinata destra di origine
 
-*fInferiore*<br/>
-coordinata inferiore di origine
+*fBottom*<br/>
+coordinata inferiore origine
 
-## <a name="cd2drectfisnull"></a><a name="isnull"></a>CD2DRectF::IsNull
+## <a name="cd2drectfisnull"></a><a name="isnull"></a> CD2DRectF:: IsNull
 
-Restituisce un valore booleano che indica se un'espressione non contiene dati validi (Null).
+Restituisce un valore booleano che indica se un'espressione non contiene dati validi (null).
 
 ```
 BOOL IsNull() const;
@@ -100,11 +101,11 @@ BOOL IsNull() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe i valori superiore, sinistro, inferiore e destro del rettangolo sono tutti uguali a 0; in caso contrario, FALSE.
+TRUE se i valori in alto, a sinistra, in basso e a destra del rettangolo sono tutti uguali a 0; in caso contrario, FALSE.
 
-## <a name="cd2drectfoperator-crect"></a><a name="operator_crect"></a>CD2DRectF::operatore CRect
+## <a name="cd2drectfoperator-crect"></a><a name="operator_crect"></a> CD2DRectF:: operator CRect
 
-Converte CD2DRectF in CRect oggetto.
+Converte CD2DRectF in un oggetto CRect.
 
 ```
 operator CRect();
@@ -114,6 +115,6 @@ operator CRect();
 
 Valore corrente del rettangolo D2D.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classi](../../mfc/reference/mfc-classes.md)

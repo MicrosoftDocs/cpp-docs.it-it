@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe ClassFactory'
 title: ClassFactory (classe)
 ms.date: 10/03/2018
 ms.topic: reference
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ClassFactory::QueryInterface method
 - Microsoft::WRL::ClassFactory::Release method
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
-ms.openlocfilehash: bbf20e2269e6d62206e06e748174d7b88898cd68
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e6503cba1060c432b2cb85020799b83f0ee16c6d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87198099"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135304"
 ---
 # <a name="classfactory-class"></a>ClassFactory (classe)
 
@@ -61,7 +62,7 @@ Prima interfaccia.
 *I2*<br/>
 Seconda interfaccia.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Utilizzare `ClassFactory` per fornire un'implementazione della factory definita dall'utente.
 
@@ -73,13 +74,13 @@ Nel modello di programmazione seguente viene illustrato come utilizzare la strut
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-Nome                                        | Descrizione
+Nome                                        | Description
 ------------------------------------------- | -----------
 [ClassFactory:: ClassFactory](#classfactory) |
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-Nome                                            | Descrizione
+Nome                                            | Description
 ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------
 [ClassFactory:: AddRef](#addref)                 | Incrementa il conteggio dei riferimenti per l' `ClassFactory` oggetto corrente.
 [ClassFactory:: LockServer](#lockserver)         | Incrementa o decrementa il numero di oggetti sottostanti rilevati dall' `ClassFactory` oggetto corrente.
@@ -114,7 +115,7 @@ Nome                                            | Descrizione
 
 **Spazio dei nomi:** Microsoft::WRL
 
-## <a name="classfactoryaddref"></a><a name="addref"></a>ClassFactory:: AddRef
+## <a name="classfactoryaddref"></a><a name="addref"></a> ClassFactory:: AddRef
 
 Incrementa il conteggio dei riferimenti per l' `ClassFactory` oggetto corrente.
 
@@ -129,13 +130,13 @@ STDMETHOD_(
 
 S_OK se riesce; in caso contrario, HRESULT che descrive l'errore.
 
-## <a name="classfactoryclassfactory"></a><a name="classfactory"></a>ClassFactory:: ClassFactory
+## <a name="classfactoryclassfactory"></a><a name="classfactory"></a> ClassFactory:: ClassFactory
 
 ```cpp
 WRL_NOTHROW ClassFactory();
 ```
 
-## <a name="classfactorylockserver"></a><a name="lockserver"></a>ClassFactory:: LockServer
+## <a name="classfactorylockserver"></a><a name="lockserver"></a> ClassFactory:: LockServer
 
 Incrementa o decrementa il numero di oggetti sottostanti rilevati dall' `ClassFactory` oggetto corrente.
 
@@ -154,11 +155,11 @@ STDMETHOD(
 
 S_OK in caso di esito positivo; in caso contrario, E_FAIL.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-`ClassFactory`tiene traccia degli oggetti in un'istanza sottostante della classe del [modulo](module-class.md) .
+`ClassFactory` tiene traccia degli oggetti in un'istanza sottostante della classe del [modulo](module-class.md) .
 
-## <a name="classfactoryqueryinterface"></a><a name="queryinterface"></a>ClassFactory:: QueryInterface
+## <a name="classfactoryqueryinterface"></a><a name="queryinterface"></a> ClassFactory:: QueryInterface
 
 Recupera un puntatore all'interfaccia specificata dal parametro.
 
@@ -180,7 +181,7 @@ Al termine di questa operazione, puntatore all'interfaccia specificata dal param
 
 S_OK se riesce; in caso contrario, HRESULT che descrive l'errore.
 
-## <a name="classfactoryrelease"></a><a name="release"></a>ClassFactory:: Release
+## <a name="classfactoryrelease"></a><a name="release"></a> ClassFactory:: Release
 
 Decrementa il conteggio dei riferimenti per l' `ClassFactory` oggetto corrente.
 

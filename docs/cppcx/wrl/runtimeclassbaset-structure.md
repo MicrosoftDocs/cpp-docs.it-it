@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: struttura RuntimeClassBaseT'
 title: Struttura RuntimeClassBaseT
 ms.date: 10/03/2018
 ms.topic: reference
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::RuntimeClassBaseT::AsIID method
 - Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS method
 ms.assetid: a62775fb-3359-4f45-9ff1-c07fa8da464b
-ms.openlocfilehash: 06a9f73e00d541b0e5bcbe20c57befe4a67c5132
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 48f03a5d54eba455b60646ed47c48e228f07863e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375728"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135291"
 ---
 # <a name="runtimeclassbaset-structure"></a>Struttura RuntimeClassBaseT
 
@@ -32,20 +33,20 @@ friend struct Details::RuntimeClassBaseT;
 ### <a name="parameters"></a>Parametri
 
 *RuntimeClassTypeT*<br/>
-Campo di flag che specifica uno o più enumeratori [RuntimeClassType.](runtimeclasstype-enumeration.md)
+Campo di flag che specifica uno o più enumeratori [RuntimeClassType](runtimeclasstype-enumeration.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Fornisce metodi `QueryInterface` di supporto per le operazioni e il recupero degli ID di interfaccia.
+Fornisce metodi helper per `QueryInterface` le operazioni e il recupero degli ID di interfaccia.
 
 ## <a name="members"></a>Membri
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-Nome                                                         | Descrizione
+Nome                                                         | Description
 ------------------------------------------------------------ | -----------------------------------------------------------------------------
-[RuntimeClassBaseT::AsIID](#asiid)                           | Recupera un puntatore all'ID di interfaccia specificato.
-[RuntimeClassBaseT::GetImplementedIIDS](#getimplementediids) | Recupera una matrice di ID di interfaccia implementati da un tipo specificato.
+[RuntimeClassBaseT:: AsIID](#asiid)                           | Recupera un puntatore all'ID di interfaccia specificato.
+[RuntimeClassBaseT:: GetImplementedIIDS](#getimplementediids) | Recupera una matrice di ID di interfaccia implementata da un tipo specificato.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -53,11 +54,11 @@ Nome                                                         | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** implements.h
+**Intestazione:** Implements. h
 
-**Spazio dei nomi:** Microsoft::WRL::Details
+**Spazio dei nomi:** Microsoft:: WRL::D etails
 
-## <a name="runtimeclassbasetasiid"></a><a name="asiid"></a>RuntimeClassBaseT::AsIID
+## <a name="runtimeclassbasetasiid"></a><a name="asiid"></a> RuntimeClassBaseT:: AsIID
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -75,24 +76,24 @@ __forceinline static HRESULT AsIID(
 *T*<br/>
 Tipo che implementa l'ID di interfaccia specificato dal parametro *riid*.
 
-*Implementa*<br/>
+*implementa*<br/>
 Variabile del tipo specificato dal parametro di modello *T*.
 
-*Riid*<br/>
-ID dell'interfaccia da recuperare.
+*riid*<br/>
+ID di interfaccia da recuperare.
 
-*Oggetto ppv*<br/>
+*ppvObject*<br/>
 Se l'operazione ha esito positivo, un puntatore a un puntatore all'interfaccia specificata dal parametro *riid*.
 
 ### <a name="return-value"></a>Valore restituito
 
-S_OK in caso di esito positivo; in caso contrario, un HRESULT che descrive l'errore.
+S_OK in caso di esito positivo; in caso contrario, HRESULT che descrive l'errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Recupera un puntatore all'ID di interfaccia specificato.
 
-## <a name="runtimeclassbasetgetimplementediids"></a><a name="getimplementediids"></a>RuntimeClassBaseT::GetImplementedIIDS
+## <a name="runtimeclassbasetgetimplementediids"></a><a name="getimplementediids"></a> RuntimeClassBaseT:: GetImplementedIIDS
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -108,21 +109,21 @@ __forceinline static HRESULT GetImplementedIIDS(
 ### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Tipo del parametro *implements.*
+Tipo del parametro *Implements* .
 
-*Implementa*<br/>
+*implementa*<br/>
 Puntatore al tipo specificato dal parametro *T*.
 
 *iidCount*<br/>
 Numero massimo di ID di interfaccia da recuperare.
 
-*iids*<br/>
-Se questa operazione viene completata correttamente, matrice degli ID di interfaccia implementata dal tipo *T*.
+*IID*<br/>
+Se questa operazione viene completata correttamente, una matrice di ID di interfaccia implementata dal tipo *T*.
 
 ### <a name="return-value"></a>Valore restituito
 
-S_OK in caso di esito positivo; in caso contrario, un HRESULT che descrive l'errore.
+S_OK in caso di esito positivo; in caso contrario, HRESULT che descrive l'errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Recupera una matrice di ID di interfaccia implementati da un tipo specificato.
+Recupera una matrice di ID di interfaccia implementata da un tipo specificato.

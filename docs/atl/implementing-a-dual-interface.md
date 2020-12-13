@@ -1,16 +1,17 @@
 ---
+description: "Altre informazioni su: implementazione di un'interfaccia duale"
 title: Implementazione di un'interfaccia duale (ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - IDispatchImpl class, implementing dual interfaces
 - dual interfaces, implementing
 ms.assetid: d1da3633-b445-4dcd-8a0a-3efdafada3ea
-ms.openlocfilehash: 97d8cd912c85a74f3550a9ca6c7b87a9717d4075
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: e20bbe293cb7d6e7ae0f4d0482f1003571178ab9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499553"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147797"
 ---
 # <a name="implementing-a-dual-interface"></a>Implementazione di un'interfaccia duale
 
@@ -46,6 +47,6 @@ Se si dispone di un'interfaccia esistente, è possibile utilizzare la [procedura
 > [!NOTE]
 > ATL offre le classi [IDispEventImpl](../atl/reference/idispeventimpl-class.md) e [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) che consentono di implementare dispinterfaces senza richiedere una libreria dei tipi contenente la definizione di un'interfaccia duale compatibile.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Interfacce duali e ATL](../atl/dual-interfaces-and-atl.md)

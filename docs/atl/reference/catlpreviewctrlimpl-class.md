@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CAtlPreviewCtrlImpl'
 title: Classe CAtlPreviewCtrlImpl
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlPreviewCtrlImpl class
 ms.assetid: 39b3299e-07e4-4abc-9b6e-b54bfa3b0802
-ms.openlocfilehash: fd94d0d6fe43d80b45def3f747c7b7d558de31d4
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 52263a4c65af1b791ca5da64eff235e93006ab52
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167877"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147212"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>Classe CAtlPreviewCtrlImpl
 
@@ -44,14 +45,14 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl](#dtor)|Distrugge un oggetto controllo di anteprima.|
 |[CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl](#catlpreviewctrlimpl)|Costruisce un oggetto controllo di anteprima.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CAtlPreviewCtrlImpl:: create](#create)|Chiamato da un gestore di anteprime avanzato per creare la finestra di Windows.|
 |[CAtlPreviewCtrlImpl::D estroy](#destroy)|Chiamato da un gestore di anteprime avanzato quando è necessario eliminare il controllo.|
@@ -64,24 +65,24 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CAtlPreviewCtrlImpl::D oPaint](#dopaint)|Chiamato dal Framework per eseguire il rendering dell'anteprima.|
 
 ### <a name="protected-constants"></a>Costanti protette
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CAtlPreviewCtrlImpl:: m_plf](#m_plf)|Tipo di carattere utilizzato per visualizzare il testo nella finestra di anteprima.|
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CAtlPreviewCtrlImpl:: m_clrBack](#m_clrback)|Colore di sfondo della finestra di anteprima.|
 |[CAtlPreviewCtrlImpl:: m_clrText](#m_clrtext)|Colore del testo della finestra di anteprima.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -103,7 +104,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 **Intestazione:** atlpreviewctrlimpl. h
 
-## <a name="catlpreviewctrlimplcatlpreviewctrlimpl"></a><a name="catlpreviewctrlimpl"></a>CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl
+## <a name="catlpreviewctrlimplcatlpreviewctrlimpl"></a><a name="catlpreviewctrlimpl"></a> CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl
 
 Costruisce un oggetto controllo di anteprima.
 
@@ -112,9 +113,9 @@ CAtlPreviewCtrlImpl(void) : m_clrText(0),
    m_clrBack(RGB(255, 255, 255)), m_plf(NULL);
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="catlpreviewctrlimplcatlpreviewctrlimpl"></a><a name="dtor"></a>CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl
+## <a name="catlpreviewctrlimplcatlpreviewctrlimpl"></a><a name="dtor"></a> CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl
 
 Distrugge un oggetto controllo di anteprima.
 
@@ -122,9 +123,9 @@ Distrugge un oggetto controllo di anteprima.
 virtual ~CAtlPreviewCtrlImpl(void);
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="catlpreviewctrlimplcreate"></a><a name="create"></a>CAtlPreviewCtrlImpl:: create
+## <a name="catlpreviewctrlimplcreate"></a><a name="create"></a> CAtlPreviewCtrlImpl:: create
 
 Chiamato da un gestore di anteprime avanzato per creare la finestra di Windows.
 
@@ -144,9 +145,9 @@ Specifica le dimensioni e la posizione iniziali della finestra.
 
 TRUE se l'operazione riesce; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="catlpreviewctrlimpldestroy"></a><a name="destroy"></a>CAtlPreviewCtrlImpl::D estroy
+## <a name="catlpreviewctrlimpldestroy"></a><a name="destroy"></a> CAtlPreviewCtrlImpl::D estroy
 
 Chiamato da un gestore di anteprime avanzato quando è necessario eliminare il controllo.
 
@@ -154,9 +155,9 @@ Chiamato da un gestore di anteprime avanzato quando è necessario eliminare il c
 virtual void Destroy();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="catlpreviewctrlimpldopaint"></a><a name="dopaint"></a>CAtlPreviewCtrlImpl::D oPaint
+## <a name="catlpreviewctrlimpldopaint"></a><a name="dopaint"></a> CAtlPreviewCtrlImpl::D oPaint
 
 Chiamato dal Framework per eseguire il rendering dell'anteprima.
 
@@ -169,9 +170,9 @@ virtual void DoPaint(HDC hdc);
 *HDC*<br/>
 Handle per un contesto di dispositivo per il disegno.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="catlpreviewctrlimplfocus"></a><a name="focus"></a>CAtlPreviewCtrlImpl:: Focus
+## <a name="catlpreviewctrlimplfocus"></a><a name="focus"></a> CAtlPreviewCtrlImpl:: Focus
 
 Imposta lo stato attivo per l'input su questo controllo.
 
@@ -179,9 +180,9 @@ Imposta lo stato attivo per l'input su questo controllo.
 virtual void Focus();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="catlpreviewctrlimplm_clrback"></a><a name="m_clrback"></a>CAtlPreviewCtrlImpl:: m_clrBack
+## <a name="catlpreviewctrlimplm_clrback"></a><a name="m_clrback"></a> CAtlPreviewCtrlImpl:: m_clrBack
 
 Colore di sfondo della finestra di anteprima.
 
@@ -189,9 +190,9 @@ Colore di sfondo della finestra di anteprima.
 COLORREF m_clrBack;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="catlpreviewctrlimplm_clrtext"></a><a name="m_clrtext"></a>CAtlPreviewCtrlImpl:: m_clrText
+## <a name="catlpreviewctrlimplm_clrtext"></a><a name="m_clrtext"></a> CAtlPreviewCtrlImpl:: m_clrText
 
 Colore del testo della finestra di anteprima.
 
@@ -199,9 +200,9 @@ Colore del testo della finestra di anteprima.
 COLORREF m_clrText;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="catlpreviewctrlimplm_plf"></a><a name="m_plf"></a>CAtlPreviewCtrlImpl:: m_plf
+## <a name="catlpreviewctrlimplm_plf"></a><a name="m_plf"></a> CAtlPreviewCtrlImpl:: m_plf
 
 Tipo di carattere utilizzato per visualizzare il testo nella finestra di anteprima.
 
@@ -209,9 +210,9 @@ Tipo di carattere utilizzato per visualizzare il testo nella finestra di antepri
 const LOGFONTW* m_plf;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="catlpreviewctrlimplonpaint"></a><a name="onpaint"></a>CAtlPreviewCtrlImpl:: OnPaint
+## <a name="catlpreviewctrlimplonpaint"></a><a name="onpaint"></a> CAtlPreviewCtrlImpl:: OnPaint
 
 Gestisce il messaggio di WM_PAINT.
 
@@ -241,9 +242,9 @@ Quando questa funzione restituisce, contiene TRUE.
 
 Restituisce sempre 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="catlpreviewctrlimplredraw"></a><a name="redraw"></a>CAtlPreviewCtrlImpl:: redisegnato
+## <a name="catlpreviewctrlimplredraw"></a><a name="redraw"></a> CAtlPreviewCtrlImpl:: redisegnato
 
 Indica a questo controllo di ricreare.
 
@@ -251,9 +252,9 @@ Indica a questo controllo di ricreare.
 virtual void Redraw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="catlpreviewctrlimplsethost"></a><a name="sethost"></a>CAtlPreviewCtrlImpl:: sehost
+## <a name="catlpreviewctrlimplsethost"></a><a name="sethost"></a> CAtlPreviewCtrlImpl:: sehost
 
 Imposta un nuovo elemento padre per questo controllo.
 
@@ -266,9 +267,9 @@ virtual void SetHost(HWND hWndParent);
 *hWndParent*<br/>
 Handle per la nuova finestra padre.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="catlpreviewctrlimplsetpreviewvisuals"></a><a name="setpreviewvisuals"></a>CAtlPreviewCtrlImpl::SetPreviewVisuals
+## <a name="catlpreviewctrlimplsetpreviewvisuals"></a><a name="setpreviewvisuals"></a> CAtlPreviewCtrlImpl::SetPreviewVisuals
 
 Chiamato da un gestore di anteprime avanzato quando è necessario impostare oggetti visivi di contenuto di anteprima avanzata.
 
@@ -290,9 +291,9 @@ Colore del testo della finestra di anteprima.
 *PLF*<br/>
 Tipo di carattere utilizzato per visualizzare il testo nella finestra di anteprima.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="catlpreviewctrlimplsetrect"></a><a name="setrect"></a>CAtlPreviewCtrlImpl:: serect
+## <a name="catlpreviewctrlimplsetrect"></a><a name="setrect"></a> CAtlPreviewCtrlImpl:: serect
 
 Imposta un nuovo rettangolo di delimitazione per questo controllo.
 
@@ -308,8 +309,8 @@ Specifica le nuove dimensioni e la posizione del controllo anteprima.
 *bRedraw*<br/>
 Specifica se il controllo deve essere ridisegnato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Componenti Desktop COM ATL](../../atl/atl-com-desktop-components.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CComAutoThreadModule'
 title: Classe CComAutoThreadModule
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - CComAutoThreadModule class
 - apartment model modules
 ms.assetid: 13063ea5-a57e-4aac-97d3-227137262811
-ms.openlocfilehash: 405b05548cda2b2d379b849d9278293b8d747d2e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fe6ded878a054bdcdc2569c8ca347e2ac20410b9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833790"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146939"
 ---
 # <a name="ccomautothreadmodule-class"></a>Classe CComAutoThreadModule
 
@@ -53,18 +54,18 @@ in Classe che gestisce la selezione dei thread. Il valore predefinito è [CComSi
 |[GetDefaultThreads](#getdefaultthreads)|Statico Calcola dinamicamente il numero di thread per il modulo in base al numero di processori.|
 |[Init](#init)|Crea i thread del modulo.|
 |[Lock](#lock)|Incrementa il conteggio dei blocchi sul modulo e sul thread corrente.|
-|[Sbloccare](#unlock)|Decrementa il conteggio dei blocchi sul modulo e sul thread corrente.|
+|[Sblocca](#unlock)|Decrementa il conteggio dei blocchi sul modulo e sul thread corrente.|
 
 ### <a name="data-members"></a>Membri dei dati
 
-|Membro dei dati|Descrizione|
+|Membro dei dati|Description|
 |-|-|
 |[dwThreadID](#dwthreadid)|Contiene l'identificatore del thread corrente.|
 |[m_Allocator](#m_allocator)|Gestisce la selezione del thread.|
 |[m_nThreads](#m_nthreads)|Contiene il numero di thread nel modulo.|
 |[m_pApartments](#m_papartments)|Gestisce gli Apartment del modulo.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 > [!NOTE]
 > Questa classe è obsoleta, che è stata sostituita dalle classi derivate [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) e [CAtlModule](../../atl/reference/catlmodule-class.md) . Le informazioni seguenti sono destinate all'utilizzo con versioni precedenti di ATL.
@@ -123,7 +124,7 @@ out Puntatore al puntatore a interfaccia identificato da *riid*. Se l'oggetto no
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Seleziona un thread e quindi crea un oggetto nell'Apartment associato.
 
@@ -135,7 +136,7 @@ A partire da ATL 7,0, `CComAutoThreadModule` è obsoleto. per altri dettagli, ve
 DWORD dwThreadID;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Contiene l'identificatore del thread corrente.
 
@@ -151,7 +152,7 @@ static int GetDefaultThreads();
 
 Il numero di thread da creare nel modulo EXE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione statica calcola dinamicamente il numero massimo di thread per il modulo EXE, in base al numero di processori. Per impostazione predefinita, questo valore restituito viene passato al metodo [init](#init) per creare i thread.
 
@@ -181,7 +182,7 @@ in Puntatore a LIBID della libreria dei tipi associata al progetto.
 *nThreads*<br/>
 in Numero di thread da creare. Per impostazione predefinita, *nThreads* è il valore restituito da [GetDefaultThreads](#getdefaultthreads).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Inizializza i membri dati e crea il numero di thread specificato da *nThreads*.
 
@@ -197,7 +198,7 @@ LONG Lock();
 
 Valore che può essere utile per la diagnostica o il test.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Esegue un incremento atomico sul conteggio dei blocchi per il modulo e per il thread corrente. `CComAutoThreadModule` Usa il numero di blocchi del modulo per determinare se i client accedono al modulo. Il numero di blocchi nel thread corrente viene usato per scopi statistici.
 
@@ -209,7 +210,7 @@ A partire da ATL 7,0, `CComAutoThreadModule` è obsoleto. per altri dettagli, ve
 ThreadAllocator  m_Allocator;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Oggetto che gestisce la selezione del thread. Per impostazione predefinita, il `ThreadAllocator` parametro del modello di classe è [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).
 
@@ -221,7 +222,7 @@ A partire da ATL 7,0, `CComAutoThreadModule` è obsoleto. per altri dettagli, ve
 int m_nThreads;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Contiene il numero di thread nel modulo EXE. Quando viene chiamato [init](#init) , `m_nThreads` viene impostato sul valore del parametro *nThreads* . L'Apartment associato di ogni thread viene gestito da un oggetto [CComApartment](../../atl/reference/ccomapartment-class.md) .
 
@@ -233,7 +234,7 @@ A partire da ATL 7,0, `CComAutoThreadModule` è obsoleto. per altri dettagli, ve
 CComApartment* m_pApartments;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Punta a una matrice di oggetti [CComApartment](../../atl/reference/ccomapartment-class.md) , ognuno dei quali gestisce un Apartment nel modulo. Il numero di elementi nella matrice è basato sul membro [m_nThreads](#m_nthreads) .
 
@@ -249,13 +250,13 @@ LONG Unlock();
 
 Valore che può essere utile per la diagnostica o il test.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Esegue un decremento atomico sul conteggio dei blocchi per il modulo e per il thread corrente. `CComAutoThreadModule` Usa il numero di blocchi del modulo per determinare se i client accedono al modulo. Il numero di blocchi nel thread corrente viene usato per scopi statistici.
 
 Quando il numero di blocchi del modulo raggiunge lo zero, è possibile scaricare il modulo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Cenni preliminari sulle classi](../../atl/atl-class-overview.md)<br/>
 [Classi modulo](../../atl/atl-module-classes.md)

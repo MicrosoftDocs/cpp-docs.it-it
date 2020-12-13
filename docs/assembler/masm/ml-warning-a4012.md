@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: ML Warning A4012'
 title: Avviso ML A4012
 ms.date: 12/17/2019
 ms.custom: error-reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - A4012
 ms.assetid: 842b1259-9679-4eeb-a02d-672a583a94e5
-ms.openlocfilehash: cf854163c558385d80cddd88efdcac295c3470ee
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 46457491a79b8226d8eae990d1da77b8ca6dae81
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75311936"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97128271"
 ---
 # <a name="ml-warning-a4012"></a>Avviso ML A4012
 
@@ -22,6 +23,6 @@ In un segmento sono presenti istruzioni che non hanno un nome di classe che term
 
 CodeView non è in grado di elaborare moduli con codice in segmenti con nomi di classe che non terminano con "codice".
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Messaggi di errore ML](ml-error-messages.md)

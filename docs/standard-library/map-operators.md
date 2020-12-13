@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; mapping &gt; degli operatori'
 title: Operatori &lt;map&gt;
 ms.date: 03/27/2019
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: 5cfd40add5e2b2503a5eea9610cadffd97bb0a80
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: edd22b4de7c8a4590f2d3570f3315a05abd66f7a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743321"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149422"
 ---
 # <a name="ltmapgt-operators"></a>Operatori &lt;map&gt;
 
@@ -47,7 +48,7 @@ Oggetto di tipo `map`.
 
 **`true`** Se le mappe non sono uguali; **`false`** se le mappe sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti map si basa su un confronto a coppie dei rispettivi elementi. Due oggetti map sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -112,7 +113,7 @@ Oggetto di tipo `map`.
 
 **`true`** Se l'oggetto map a sinistra dell'operatore è rigorosamente minore della mappa a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti map si basa su un confronto a coppie dei rispettivi elementi. La relazione minore di tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -245,7 +246,7 @@ Oggetto di tipo `map`.
 
 **`true`** Se l'oggetto map a sinistra dell'operatore è uguale alla mappa a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti map si basa su un confronto a coppie dei rispettivi elementi. Due oggetti map sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -310,7 +311,7 @@ Oggetto di tipo `map`.
 
 **`true`** Se la mappa sul lato sinistro dell'operatore è maggiore della mappa a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti map si basa su un confronto a coppie dei rispettivi elementi. La relazione maggiore di tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -442,7 +443,7 @@ Oggetto di tipo `multimap`.
 
 **`true`** Se le mappe multimaps non sono uguali. **`false`** se le mappe sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti multimap si basa su un confronto a coppie dei rispettivi elementi. Due oggetti multimap sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -507,7 +508,7 @@ Oggetto di tipo `multimap`.
 
 **`true`** Se l'oggetto multimap a sinistra dell'operatore è rigorosamente minore del multimap a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti multimap si basa su un confronto a coppie dei rispettivi elementi. La relazione minore di tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -640,7 +641,7 @@ Oggetto di tipo `multimap`.
 
 **`true`** Se l'oggetto multimap a sinistra dell'operatore è uguale all'oggetto multimap a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti multimap si basa su un confronto a coppie dei rispettivi elementi. Due oggetti multimap sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -705,7 +706,7 @@ Oggetto di tipo `multimap`.
 
 **`true`** Se l'oggetto multimap a sinistra dell'operatore è maggiore del multimap a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti multimap si basa su un confronto a coppie dei rispettivi elementi. La relazione maggiore di tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 

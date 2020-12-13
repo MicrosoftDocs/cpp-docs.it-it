@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Struttura VerifyInheritanceHelper'
 title: VerifyInheritanceHelper (struttura)
 ms.date: 10/03/2018
 ms.topic: reference
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::VerifyInheritanceHelper structure
 - Microsoft::WRL::Details::VerifyInheritanceHelper::Verify method
 ms.assetid: 8a48a702-0f71-4807-935b-8311f0a7a8b6
-ms.openlocfilehash: 3650cfb70ffc12572b3965534eff4e1f2ecb2cf5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 672455482a2d21cb695124cad31740b6325c377d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374223"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135044"
 ---
 # <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper (struttura)
 
@@ -32,13 +33,13 @@ struct VerifyInheritanceHelper<I, Nil>;
 
 ### <a name="parameters"></a>Parametri
 
-*Ho*<br/>
+*I*<br/>
 Tipo.
 
 *Base*<br/>
 Un altro tipo.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Verifica se un'interfaccia è derivata da un'altra interfaccia.
 
@@ -46,9 +47,9 @@ Verifica se un'interfaccia è derivata da un'altra interfaccia.
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-Nome                                       | Descrizione
+Nome                                       | Description
 ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------
-[VerifyInheritanceHelper::Verify](#verify) | Verifica le due interfacce specificate dai parametri di modello correnti e determina se un'interfaccia è derivata dall'altra.
+[VerifyInheritanceHelper:: Verify](#verify) | Verifica le due interfacce specificate dai parametri del modello corrente e determina se un'interfaccia è derivata dall'altra.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -56,11 +57,11 @@ Nome                                       | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** implements.h
+**Intestazione:** Implements. h
 
-**Spazio dei nomi:** Microsoft::WRL::Details
+**Spazio dei nomi:** Microsoft:: WRL::D etails
 
-## <a name="verifyinheritancehelperverify"></a><a name="verify"></a>VerifyInheritanceHelper::Verify
+## <a name="verifyinheritancehelperverify"></a><a name="verify"></a> VerifyInheritanceHelper:: Verify
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -68,8 +69,8 @@ Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codi
 static void Verify();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Verifica le due interfacce specificate dai parametri di modello correnti e determina se un'interfaccia è derivata dall'altra.
+Verifica le due interfacce specificate dai parametri del modello corrente e determina se un'interfaccia è derivata dall'altra.
 
 Se un'interfaccia non è derivata dall'altra, viene generato un errore.

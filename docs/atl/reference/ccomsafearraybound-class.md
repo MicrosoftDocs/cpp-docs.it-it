@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CComSafeArrayBound'
 title: Classe CComSafeArrayBound
 ms.date: 05/06/2019
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArrayBound class
 ms.assetid: dd6299db-5f84-4630-bbf0-f5add5318437
-ms.openlocfilehash: 9adee1e8b6a46c239aaf6a3c404277b34efd00e2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 09672e4a74db8998b887a093e0f15202903cfcf9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834752"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142248"
 ---
 # <a name="ccomsafearraybound-class"></a>Classe CComSafeArrayBound
 
@@ -29,7 +30,7 @@ Questa classe è un wrapper per una struttura [SAFEARRAYBOUND](/windows/win32/ap
 class CComSafeArrayBound : public SAFEARRAYBOUND
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metodi
 
@@ -48,7 +49,7 @@ class CComSafeArrayBound : public SAFEARRAYBOUND
 |-|-|
 |[operatore =](#operator_eq)|Imposta `CComSafeArrayBound` su un nuovo valore.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questa classe è un wrapper per la `SAFEARRAYBOUND` struttura utilizzata da [CComSafeArray](../../atl/reference/ccomsafearray-class.md). Fornisce metodi per l'esecuzione di query e l'impostazione dei limiti superiore e inferiore di una singola dimensione di un `CComSafeArray` oggetto e il numero di elementi in esso contenuti. Un oggetto multidimensionale `CComSafeArray` utilizza una matrice di `CComSafeArrayBound` oggetti, uno per ogni dimensione. Pertanto, quando si usano metodi come [GetCount](#getcount), tenere presente che questo metodo non restituisce il numero totale di elementi in una matrice multidimensionale.
 
@@ -74,7 +75,7 @@ Numero di elementi nella matrice.
 *lLowerBound*<br/>
 Limite inferiore dal quale è numerata la matrice.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se è necessario accedere alla matrice da un programma C++, è consigliabile definire come 0 il limite inferiore. Potrebbe essere preferibile usare un valore limite inferiore diverso se la matrice deve essere usata con altri linguaggi, ad esempio Visual Basic.
 
@@ -90,7 +91,7 @@ ULONG GetCount() const throw();
 
 Restituisce il numero di elementi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se l' `CComSafeArray` oggetto associato rappresenta una matrice multidimensionale, questo metodo restituirà solo il numero totale di elementi nella dimensione più a destra. Usare [CComSafeArray:: GetCount](../../atl/reference/ccomsafearray-class.md#getcount) per ottenere il numero totale di elementi.
 
@@ -118,7 +119,7 @@ LONG GetUpperBound() const throw();
 
 Restituisce il limite superiore dell' `CComSafeArrayBound` oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il limite superiore dipende dal numero di elementi e dal valore del limite inferiore. Se, ad esempio, il limite inferiore è 0 e il numero di elementi è 10, il limite superiore verrà impostato automaticamente su 9.
 
@@ -143,7 +144,7 @@ Numero di elementi.
 
 Restituisce un puntatore all' `CComSafeArrayBound` oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L' `CComSafeArrayBound` oggetto può essere assegnato utilizzando un esistente `CComSafeArrayBound` o fornendo il numero di elementi, nel qual caso il limite inferiore viene impostato su 0 per impostazione predefinita.
 
@@ -181,12 +182,12 @@ Limite inferiore.
 
 Restituisce il nuovo limite inferiore dell' `CComSafeArrayBound` oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se è necessario accedere alla matrice da un programma di Visual C++, è consigliabile definire come 0 il limite inferiore. Potrebbe essere preferibile usare un valore limite inferiore diverso se la matrice deve essere usata con altri linguaggi, ad esempio Visual Basic.
 
 Il limite superiore dipende dal numero di elementi e dal valore del limite inferiore. Se, ad esempio, il limite inferiore è 0 e il numero di elementi è 10, il limite superiore verrà impostato automaticamente su 9.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

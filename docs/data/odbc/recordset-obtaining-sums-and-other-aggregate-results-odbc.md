@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: Recordset: recupero di somme e altri risultati aggregati (ODBC)'
 title: 'Recordset: recupero di somme e altri risultati aggregati (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: b9e70716ad90a14bbed552d47f48d5a3317e5a62
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 10a2ef3b013d9eba0d9733cc321591ae8d6681f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225709"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136486"
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Recordset: recupero di somme e altri risultati aggregati (ODBC)
 
@@ -91,7 +92,7 @@ Con:
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Recordset: selezione di record in recordset (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

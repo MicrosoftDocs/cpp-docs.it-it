@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Command-Line avviso D9027'
 title: Avviso della riga di comando D9027
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - D9027
 ms.assetid: 2a29edc5-5649-48f2-9058-2057c747284c
-ms.openlocfilehash: 46ed5750bd1f315f20658ace9b83fac532fbbabb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8c17750f3310072f8f69c77587a1c17fc9377e79
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80196678"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136110"
 ---
 # <a name="command-line-warning-d9027"></a>Avviso della riga di comando D9027
 
-il file di origine '\<filename >' è stato ignorato
+il file di origine '' è stato \<filename> ignorato
 
-CL. exe ha ignorato il file di origine di input.
+CL.exe ignorato il file di origine di input.
 
 Questo avviso può essere causato da uno spazio tra l'opzione/Fo e un nome file di output in una riga di comando con l'opzione/c. Ad esempio:
 
@@ -25,7 +26,7 @@ Questo avviso può essere causato da uno spazio tra l'opzione/Fo e un nome file 
 cl /c /Fo output.obj input.c
 ```
 
-Poiché è presente uno spazio tra/Fo e `output.obj`, CL. exe accetta `output.obj` come nome del file di input. Per risolvere il problema, rimuovere lo spazio:
+Poiché è presente uno spazio tra/Fo e `output.obj` , CL.exe accetta `output.obj` come nome del file di input. Per risolvere il problema, rimuovere lo spazio:
 
 ```
 cl /c /Fooutput.obj input.c

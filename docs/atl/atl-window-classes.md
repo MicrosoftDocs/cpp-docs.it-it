@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classi finestra ATL'
 title: Classi di finestra ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,43 +11,43 @@ helpviewer_keywords:
 - superclassing
 - superclassing, ATL
 ms.assetid: 1d12b708-de3e-49d5-9e41-42fe4769fa62
-ms.openlocfilehash: 15c59f964e6b6794f64ed8da64cba6f569879fac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e8e7b8c9d8492c133c305bf46abe493d993d398c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223329"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148551"
 ---
 # <a name="atl-window-classes"></a>Classi di finestra ATL
 
-ATL include diverse classi che consentono di usare e implementare le finestre. Queste classi, come le altre classi ATL, forniscono un'implementazione efficiente che non impone un sovraccarico nel codice.
+ATL include diverse classi che consentono di usare e implementare Windows. Queste classi, come le altre classi ATL, forniscono un'implementazione efficiente che non impone un sovraccarico sul codice.
 
-In questa sezione vengono descritte le classi di finestra ATL e spiega come usarli.
+In questa sezione vengono descritte le classi di finestra ATL e viene illustrato come utilizzarle.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Introduzione alle classi di finestra ATL](../atl/introduction-to-atl-window-classes.md)<br/>
-Descrive ogni classe di finestra ATL brevemente e vengono forniti collegamenti a materiale di riferimento su di essi.
+Descrive brevemente ogni classe della finestra ATL e fornisce collegamenti al materiale di riferimento su di essi.
 
 [Uso di una finestra](../atl/using-a-window.md)<br/>
-Viene descritto come utilizzare `CWindow` per modificare una finestra.
+Viene illustrato come usare `CWindow` per modificare una finestra.
 
 [Implementazione di una finestra](../atl/implementing-a-window.md)<br/>
-Vengono illustrati i gestori di messaggi, le mappe messaggi e l'utilizzo `CWindowImpl`. Include informazioni dettagliate sulla creazione di superclassi e creazione di una sottoclasse.
+Vengono illustrati i gestori di messaggi, le mappe messaggi e l'utilizzo di `CWindowImpl` . Include informazioni dettagliate sulla superclasse e sulla sottoclasse.
 
 [Implementazione di una finestra di dialogo](../atl/implementing-a-dialog-box.md)<br/>
-Illustra i due metodi per l'aggiunta di una classe di finestra di dialogo e viene illustrato un esempio di codice.
+Vengono illustrati i due metodi per aggiungere una classe della finestra di dialogo e viene illustrato un esempio di codice.
 
-[Uso delle finestre contenute](../atl/using-contained-windows.md)<br/>
-Vengono illustrate le finestre contenute in ATL, che sono finestre che delegano i messaggi a un oggetto contenitore invece di gestirli nella propria classe.
+[Uso di finestre contenute](../atl/using-contained-windows.md)<br/>
+Vengono illustrate le finestre contenute in ATL, ovvero finestre che delegano i messaggi a un oggetto contenitore anziché gestirle nella propria classe.
 
-[Informazioni sui tratti delle finestre](../atl/understanding-window-traits.md)<br/>
-Vengono illustrate le classi di finestra tratti in ATL. Queste classi forniscono un metodo semplice per la standardizzazione con gli stili usati per la creazione di un oggetto finestra.
+[Informazioni sui tratti della finestra](../atl/understanding-window-traits.md)<br/>
+Descrive le classi di tratti di finestra in ATL. Queste classi forniscono un metodo semplice per la standardizzazione degli stili utilizzati per la creazione di un oggetto finestra.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Fornisce collegamenti ad argomenti concettuali sulla programmazione con Active Template Library.
 
-[Classi di supporto per Windows](../atl/windows-support-classes.md)<br/>
-Elenca le classi ATL aggiuntive che supportano windows e mappe messaggi in ATL.
+[Classi di supporto di Windows](../atl/windows-support-classes.md)<br/>
+Elenca le altre classi ATL che supportano Windows e le mappe messaggi in ATL.

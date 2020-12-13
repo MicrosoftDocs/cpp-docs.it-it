@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3904'
 title: Errore del compilatore C3904
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3904
 ms.assetid: 08297605-e4f2-4c6c-b637-011f1fd40631
-ms.openlocfilehash: b2c5737a4442761cbaa84b532907e579eddb423d
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 0b1564e609586318d23b4204242f0cb39034c4fd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686065"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97144183"
 ---
 # <a name="compiler-error-c3904"></a>Errore del compilatore C3904
 
@@ -25,7 +26,7 @@ Verificare il numero di parametri nei `get` metodi e `set` rispetto alle dimensi
 
 Per altre informazioni, vedere [property](../../extensions/property-cpp-component-extensions.md).
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 L'esempio seguente genera l'C3904.
 

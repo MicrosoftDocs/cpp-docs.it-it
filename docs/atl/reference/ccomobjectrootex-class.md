@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CComObjectRootEx'
 title: Classe CComObjectRootEx
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: b4dbc42cb0c6fe2c9c6692e0db37267ce3fff361
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9fe0140944e3da5ddf70e0da38d054a35bb648ff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833647"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142480"
 ---
 # <a name="ccomobjectrootex-class"></a>Classe CComObjectRootEx
 
@@ -53,7 +54,7 @@ Classe i cui metodi implementano il modello di threading desiderato. È possibil
 |[InternalAddRef](#internaladdref)|Incrementa il conteggio dei riferimenti per un oggetto non aggregato.|
 |[InternalRelease](#internalrelease)|Decrementa il conteggio dei riferimenti per un oggetto non aggregato.|
 |[Lock](#lock)|Se il modello di thread è multithreading, ottiene la proprietà di un oggetto sezione critica.|
-|[Sbloccare](#unlock)|Se il modello di thread è multithreading, rilascia la proprietà di un oggetto sezione critica.|
+|[Sblocca](#unlock)|Se il modello di thread è multithreading, rilascia la proprietà di un oggetto sezione critica.|
 
 ### <a name="ccomobjectrootbase-methods"></a>Metodi CComObjectRootBase
 
@@ -74,12 +75,12 @@ Classe i cui metodi implementano il modello di threading desiderato. È possibil
 
 ### <a name="data-members"></a>Membri dei dati
 
-|Membro dei dati|Descrizione|
+|Membro dei dati|Description|
 |-|-|
 |[m_dwRef](#m_dwref)|Con `m_pOuterUnknown` , parte di un'Unione. Utilizzato quando l'oggetto non è aggregato per conservare il conteggio dei riferimenti di `AddRef` e `Release` .|
 |[m_pOuterUnknown](#m_pouterunknown)|Con `m_dwRef` , parte di un'Unione. Utilizzato quando l'oggetto viene aggregato per mantenere un puntatore all'oggetto sconosciuto esterno.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 `CComObjectRootEx` gestisce la gestione dei conteggi dei riferimenti agli oggetti per gli oggetti non aggregati e aggregati. Include il conteggio dei riferimenti all'oggetto se l'oggetto non viene aggregato e il puntatore all'oggetto sconosciuto esterno se l'oggetto viene aggregato. Per gli oggetti aggregati, `CComObjectRootEx` è possibile usare i metodi per gestire l'errore dell'oggetto interno da costruire e proteggere l'oggetto esterno dall'eliminazione quando vengono rilasciate le interfacce interne o l'oggetto interno viene eliminato.
 
@@ -119,7 +120,7 @@ HRESULT FinalConstruct();
 
 Restituisce S_OK in esito positivo o uno dei valori HRESULT di errore standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, `CComObjectRootEx::FinalConstruct` restituisce semplicemente S_OK.
 
@@ -159,7 +160,7 @@ Di seguito è riportato un modo tipico per creare un'aggregazione:
 void FinalRelease();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, `CComObjectRootEx::FinalRelease` non esegue alcuna operazione.
 
@@ -177,7 +178,7 @@ ULONG InternalAddRef();
 
 Valore che può essere utile per la diagnostica e il test.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il modello di thread è multithreading, `InterlockedIncrement` viene usato per impedire a più thread di modificare il conteggio dei riferimenti nello stesso momento.
 
@@ -205,13 +206,13 @@ in Puntatore alla `_ATL_INTMAP_ENTRY` struttura che accede a una mappa delle int
 in GUID dell'interfaccia richiesta.
 
 *ppvObject*<br/>
-out Puntatore al puntatore a interfaccia specificato in *IID*oppure null se l'interfaccia non viene trovata.
+out Puntatore al puntatore a interfaccia specificato in *IID* oppure null se l'interfaccia non viene trovata.
 
 ### <a name="return-value"></a>Valore restituito
 
 Uno dei valori HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `InternalQueryInterface` gestisce solo le interfacce nella tabella di mappe COM. Se l'oggetto è aggregato, non `InternalQueryInterface` delega al sconosciuto esterno. È possibile immettere interfacce nella tabella della mappa COM con la macro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) o una delle relative varianti.
 
@@ -227,7 +228,7 @@ ULONG InternalRelease();
 
 Nelle compilazioni non di debug e di debug questa funzione restituisce un valore che può essere utile per la diagnostica o il test. Il valore esatto restituito dipende da molti fattori, ad esempio il sistema operativo utilizzato, e può, o non può, essere il conteggio dei riferimenti.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il modello di thread è multithreading, `InterlockedDecrement` viene usato per impedire a più thread di modificare il conteggio dei riferimenti nello stesso momento.
 
@@ -239,7 +240,7 @@ Se il modello di thread è multithreading, questo metodo chiama la funzione API 
 void Lock();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Al termine dell'esecuzione del codice protetto, il thread deve chiamare `Unlock` per rilasciare la proprietà della sezione critica.
 
@@ -253,7 +254,7 @@ Parte di un'Unione che accede a quattro byte di memoria.
 long m_dwRef;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Con `m_pOuterUnknown` , parte di un'Unione:
 
@@ -275,7 +276,7 @@ IUnknown*
     m_pOuterUnknown;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Con `m_dwRef` , parte di un'Unione:
 
@@ -301,7 +302,7 @@ static void WINAPI ObjectMain(bool bStarting);
 *bStarting*<br/>
 out Il valore è TRUE se la classe è in fase di inizializzazione. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore del parametro *bStarting* indica se il modulo è in fase di inizializzazione o di interruzione. L'implementazione predefinita di `ObjectMain` non esegue alcuna operazione, ma è possibile eseguire l'override di questa funzione nella classe per inizializzare o eliminare le risorse che si desidera allocare per la classe. Si noti che `ObjectMain` viene chiamato prima che vengano richieste tutte le istanze della classe.
 
@@ -337,7 +338,7 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 in GUID dell'interfaccia richiesta.
 
 *ppvObject*<br/>
-out Puntatore al puntatore a interfaccia specificato in *IID*oppure null se l'aggregazione non supporta l'interfaccia.
+out Puntatore al puntatore a interfaccia specificato in *IID* oppure null se l'aggregazione non supporta l'interfaccia.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -363,13 +364,13 @@ Se il modello di thread è multithreading, questo metodo chiama la funzione API 
 void Unlock();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ottenere la proprietà, il thread deve chiamare `Lock` . Ogni chiamata a `Lock` richiede una chiamata corrispondente a `Unlock` per rilasciare la proprietà della sezione critica.
 
 Se il modello di thread è a thread singolo, questo metodo non esegue alcuna operazione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe Ccomaggobjec](../../atl/reference/ccomaggobject-class.md)<br/>
 [Classe CComObject](../../atl/reference/ccomobject-class.md)<br/>

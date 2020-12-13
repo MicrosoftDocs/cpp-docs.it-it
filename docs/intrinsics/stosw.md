@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __stosw'
 title: __stosw
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - __stosw intrinsic
 - rep stosw instruction
 ms.assetid: 7620fd1d-dba5-40e3-8e07-01aa68895133
-ms.openlocfilehash: 5fd29bbf1aebba115670fc1bc35e0d8cbe29c7ad
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 2995276fb255858d6c3dd9f438487726e75fdf1e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219923"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143689"
 ---
 # <a name="__stosw"></a>__stosw
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Genera un'istruzione di stringa di`rep stosw`archiviazione ().
+Genera un'istruzione di stringa di archiviazione ( `rep stosw` ).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -44,15 +45,15 @@ in Lunghezza del blocco di parole da scrivere.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`__stosw`|x86, x64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Il risultato è che i *dati* di Word vengono scritti in un blocco di parole contabili nella stringa di *destinazione* .
+Il risultato è che i *dati* di Word vengono scritti in un blocco di parole *contabili* nella stringa di *destinazione* .
 
 Questa routine è disponibile solo come funzione intrinseca.
 
@@ -80,8 +81,8 @@ int main()
 0 128 128 0
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

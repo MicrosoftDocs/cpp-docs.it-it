@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: mem_fun_t Class'
 title: Classe mem_fun_t
 ms.date: 02/21/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - mem_fun_t class
 ms.assetid: 242566d4-750c-4c87-9d63-2e2c9d19ca2a
-ms.openlocfilehash: 3c6606fe4d2df3b6068c3bb8194dc380344f7d97
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 53c3103c8f2c855d8d6ff9a2861ace4f2c69c787
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689375"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149149"
 ---
 # <a name="mem_fun_t-class"></a>Classe mem_fun_t
 
-Classe di adattatori che consente a una funzione membro `non_const` che non accetta argomenti di essere chiamata come oggetto funzione unaria se inizializzata con un argomento di puntatore. Deprecato in C++ 11, rimosso in C++ 17.
+Classe di adattatori che consente a una `non_const` funzione membro che non accetta argomenti di essere chiamata come oggetto funzione unaria se inizializzata con un argomento di puntatore. Deprecato in C++ 11, rimosso in C++ 17.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -30,19 +31,19 @@ class mem_fun_t : public unary_function<Type *, Result> {
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_Pm*
+*_Pm*\
 Puntatore alla funzione membro di classe `Type` da convertire in un oggetto funzione.
 
-@No__t_1 *_Pleft*
+*_Pleft*\
 Oggetto su cui viene chiamata la funzione membro *_Pm* .
 
 ## <a name="return-value"></a>Valore restituito
 
 Funzione unaria adattabile.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Il modello di classe archivia una copia di *_Pm*, che deve essere un puntatore a una funzione membro della classe `Type`, in un oggetto membro privato. Definisce la funzione membro `operator()` come restituito (`_Pleft` ->*  `_Pm`) ().
+Il modello di classe archivia una copia di *_Pm*, che deve essere un puntatore a una funzione membro della classe `Type` , in un oggetto membro privato. Definisce la relativa funzione membro `operator()` che restituisce ( `_Pleft` ->*  `_Pm` ) ().
 
 ## <a name="example"></a>Esempio
 

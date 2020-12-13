@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: implementazione di pagine delle proprietà'
 title: Implementazione delle pagine delle proprietà
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: c9b1c0c159a15ec7d9a5c99208baa2ed6af2d6d1
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 5f05831fa23eff586e85db56eca8013e0d1d2ea2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92923900"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147758"
 ---
 # <a name="implementing-property-pages"></a>Implementazione delle pagine delle proprietà
 
@@ -29,7 +30,7 @@ Per creare una pagina delle proprietà con ATL:
 
 - Creare o aprire un progetto server di libreria di collegamento dinamico (DLL) ATL.
 
-- Aprire la [finestra di dialogo Aggiungi classe](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) e selezionare **Pagina delle proprietà ATL** .
+- Aprire la [finestra di dialogo Aggiungi classe](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) e selezionare **Pagina delle proprietà ATL**.
 
 - Assicurarsi che la pagina delle proprietà abbia un threading di tipo apartment (poiché ha un'interfaccia utente).
 
@@ -55,7 +56,7 @@ Per un esempio di implementazione della pagina delle proprietà, vedere [esempio
 
 ::: moniker-end
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Pagine delle proprietà](../atl/atl-com-property-pages.md)<br/>
 [Esempio ATLPages](../overview/visual-cpp-samples.md)
