@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura: specificare informazioni aggiuntive sul codice usando _Analysis_assume'
 title: Usare _Analysis_assume per gli hint di analisi del codice
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - _Analysis_assume
 ms.assetid: 51205d97-4084-4cf4-a5ed-3eeaf67deb1b
-ms.openlocfilehash: f427afdcab07b41430a5d4b5fc7f300aa671e30b
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1960fae929f1bd0ffbac4979b76541fd0d396e42
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503300"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151554"
 ---
 # <a name="how-to-specify-additional-code-information-by-using-_analysis_assume"></a>Procedura: specificare informazioni aggiuntive sul codice utilizzando _Analysis_assume
 
@@ -52,6 +53,6 @@ void test()
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [__assume](../intrinsics/assume.md)

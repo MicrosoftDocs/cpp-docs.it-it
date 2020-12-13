@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/YL (inserisce il riferimento PCH per la libreria di debug)
 title: /Yl (Inserisce il riferimento PCH per la libreria di debug)
 ms.date: 01/29/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Yl compiler option [C++]
 - /Yl compiler option [C++]
 ms.assetid: 8e4a396a-6790-4a9f-8387-df015a3220e7
-ms.openlocfilehash: 816ba66c94e616407a8891cd149a41e44e29358d
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: f1d05b4e0c38377233e9aaf6299227f7fbaebd55
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825717"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151853"
 ---
 # <a name="yl-inject-pch-reference-for-debug-library"></a>/Yl (Inserisce il riferimento PCH per la libreria di debug)
 
@@ -22,22 +23,22 @@ L'opzione **/YL** genera un simbolo univoco in un file di intestazione precompil
 ## <a name="syntax"></a>Sintassi
 
 >**/YL**\
->**/Yl**_Nome_ /YL\
+>_Nome_ /YL\
 >**YL (**
 
 ### <a name="arguments"></a>Argomenti
 
-*name*<br/>
+*nome*<br/>
 Nome facoltativo utilizzato come parte del simbolo univoco.
 
 *\-*<br/>
 Un trattino (-) Disabilita in modo esplicito l'opzione del compilatore **/YL** .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'opzione del compilatore **/YL** crea una definizione di simbolo univoca in un file di intestazione precompilato creato con l'opzione [/YC](yc-create-precompiled-header-file.md) . I riferimenti a questo simbolo vengono inseriti automaticamente in tutti i file che includono l'intestazione precompilata usando l'opzione del compilatore [/Yu](yu-use-precompiled-header-file.md) . L'opzione **/YL** è abilitata per impostazione predefinita quando si utilizza **/YC** per creare un file di intestazione precompilato.
 
-L'opzione_nome_ **/YL**viene utilizzata per creare un simbolo identificabile nel file di intestazione precompilata. Il compilatore usa l'argomento *Name* come parte del nome decorato del simbolo creato, simile a `__@@_PchSym_@00@...@name`, dove i puntini di sospensione (...) rappresentano una stringa di caratteri univoca generata dal compilatore. Se l'argomento *Name* viene omesso, il compilatore genera automaticamente un nome di simbolo. In genere, non è necessario conoscerne il nome. Tuttavia, quando il progetto usa più di un file di intestazione precompilata, l'opzione del_nome_ **/YL**può essere utile per determinare i file oggetto che usano l'intestazione precompilata. È possibile utilizzare il *nome* come stringa di ricerca per trovare il riferimento al simbolo in un file dump.
+L'opzione _nome_ **/YL** viene utilizzata per creare un simbolo identificabile nel file di intestazione precompilata. Il compilatore usa l'argomento *Name* come parte del nome decorato del simbolo creato, simile a `__@@_PchSym_@00@...@name` , dove i puntini di sospensione (...) rappresentano una stringa di caratteri univoca generata dal compilatore. Se l'argomento *Name* viene omesso, il compilatore genera automaticamente un nome di simbolo. In genere, non è necessario conoscerne il nome. Tuttavia, quando il progetto usa più di un file di intestazione precompilata, l'opzione del _nome_ **/YL** può essere utile per determinare i file oggetto che usano l'intestazione precompilata. È possibile utilizzare il *nome* come stringa di ricerca per trovare il riferimento al simbolo in un file dump.
 
 **/YL-** Disabilita il comportamento predefinito e non inserisce un simbolo di identificazione nel file di intestazione precompilata. I file compilati che includono questa intestazione precompilata non ottengono un riferimento a un simbolo comune.
 
@@ -47,7 +48,7 @@ Se si utilizzano le opzioni **/YL-**, **/YC** e [/Z7](z7-zi-zi-debug-information
 
 Per ulteriori informazioni sulle intestazioni precompilate, vedere:
 
-- [/Y (Intestazioni precompilate)](y-precompiled-headers.md)
+- [/Y (intestazioni precompilate)](y-precompiled-headers.md)
 
 - [File di intestazione precompilata](../creating-precompiled-header-files.md)
 
@@ -55,7 +56,7 @@ Per ulteriori informazioni sulle intestazioni precompilate, vedere:
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la pagina delle proprietà di **configurazione** > proprietà della**riga di comando** di**c/C++** > .
+1. Selezionare la pagina delle proprietà di **configurazione** proprietà della riga di comando di  >  **c/C++**  >   .
 
 1. Aggiungere l'opzione del compilatore **/YL**_Name_ nella casella **Opzioni aggiuntive** . Scegliere **OK** per salvare le modifiche.
 
@@ -63,7 +64,7 @@ Per ulteriori informazioni sulle intestazioni precompilate, vedere:
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

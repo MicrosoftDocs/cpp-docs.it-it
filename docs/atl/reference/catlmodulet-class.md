@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CAtlModuleT'
 title: Classe CAtlModuleT
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlModuleT class
 ms.assetid: 9b74d02f-9117-47b1-a05e-c5945f83dd2b
-ms.openlocfilehash: b07e60265570e66337a2d13007e9ad57c6f369e4
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 841d4a41b7df818d9e966af1050fd9e376d89447
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167864"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147225"
 ---
 # <a name="catlmodulet-class"></a>Classe CAtlModuleT
 
@@ -35,19 +36,19 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 ### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Classe derivata da `CAtlModuleT`.
+Classe derivata da `CAtlModuleT` .
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CAtlModuleT:: CAtlModuleT](#catlmodulet)|Costruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CAtlModuleT:: InitLibId](#initlibid)|Inizializza il membro dati contenente il GUID del modulo corrente.|
 |[CAtlModuleT:: RegisterAppId](#registerappid)|Aggiunge il file EXE al registro di sistema.|
@@ -56,11 +57,11 @@ Classe derivata da `CAtlModuleT`.
 |[CAtlModuleT:: UnregisterServer](#unregisterserver)|Rimuove il servizio dal registro di sistema.|
 |[CAtlModuleT:: UpdateRegistryAppId](#updateregistryappid)|Aggiorna le informazioni EXE nel registro di sistema.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 `CAtlModuleT`, derivato da [CAtlModule](../../atl/reference/catlmodule-class.md), implementa un modulo eseguibile (exe) o un modulo di servizio (exe) ATL. Un modulo eseguibile è un server locale, out-of-process, mentre un modulo del servizio è un'applicazione Windows che viene eseguito in background all'avvio di Windows.
 
-`CAtlModuleT`fornisce supporto per l'inizializzazione, la registrazione e l'annullamento della registrazione del modulo.
+`CAtlModuleT` fornisce supporto per l'inizializzazione, la registrazione e l'annullamento della registrazione del modulo.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -74,7 +75,7 @@ Classe derivata da `CAtlModuleT`.
 
 **Intestazione:** atlbase. h
 
-## <a name="catlmoduletcatlmodulet"></a><a name="catlmodulet"></a>CAtlModuleT:: CAtlModuleT
+## <a name="catlmoduletcatlmodulet"></a><a name="catlmodulet"></a> CAtlModuleT:: CAtlModuleT
 
 Costruttore.
 
@@ -82,11 +83,11 @@ Costruttore.
 CAtlModuleT() throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiama [CAtlModuleT:: InitLibId](#initlibid).
 
-## <a name="catlmoduletinitlibid"></a><a name="initlibid"></a>CAtlModuleT:: InitLibId
+## <a name="catlmoduletinitlibid"></a><a name="initlibid"></a> CAtlModuleT:: InitLibId
 
 Inizializza il membro dati contenente il GUID del modulo corrente.
 
@@ -94,11 +95,11 @@ Inizializza il membro dati contenente il GUID del modulo corrente.
 static void InitLibId() throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamato dal costruttore [CAtlModuleT:: CAtlModuleT](#catlmodulet).
 
-## <a name="catlmoduletregisterappid"></a><a name="registerappid"></a>CAtlModuleT:: RegisterAppId
+## <a name="catlmoduletregisterappid"></a><a name="registerappid"></a> CAtlModuleT:: RegisterAppId
 
 Aggiunge il file EXE al registro di sistema.
 
@@ -110,7 +111,7 @@ HRESULT RegisterAppId() throw();
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-## <a name="catlmoduletregisterserver"></a><a name="registerserver"></a>CAtlModuleT:: RegisterServer
+## <a name="catlmoduletregisterserver"></a><a name="registerserver"></a> CAtlModuleT:: RegisterServer
 
 Aggiunge il servizio al registro di sistema.
 
@@ -132,7 +133,7 @@ Punta al CLSID dell'oggetto da registrare. Se NULL (valore predefinito), tutti g
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-## <a name="catlmoduletunregisterappid"></a><a name="unregisterappid"></a>CAtlModuleT:: UnregisterAppId
+## <a name="catlmoduletunregisterappid"></a><a name="unregisterappid"></a> CAtlModuleT:: UnregisterAppId
 
 Rimuove il file EXE dal registro di sistema.
 
@@ -144,7 +145,7 @@ HRESULT UnregisterAppId() throw();
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-## <a name="catlmoduletunregisterserver"></a><a name="unregisterserver"></a>CAtlModuleT:: UnregisterServer
+## <a name="catlmoduletunregisterserver"></a><a name="unregisterserver"></a> CAtlModuleT:: UnregisterServer
 
 Rimuove il servizio dal registro di sistema.
 
@@ -166,7 +167,7 @@ Punta al CLSID dell'oggetto di cui annullare la registrazione. Se NULL (valore p
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-## <a name="catlmoduletupdateregistryappid"></a><a name="updateregistryappid"></a>CAtlModuleT:: UpdateRegistryAppId
+## <a name="catlmoduletupdateregistryappid"></a><a name="updateregistryappid"></a> CAtlModuleT:: UpdateRegistryAppId
 
 Aggiorna le informazioni EXE nel registro di sistema.
 
@@ -183,7 +184,7 @@ Riservato.
 
 Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito negativo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CAtlModule](../../atl/reference/catlmodule-class.md)<br/>
 [Cenni preliminari sulle classi](../../atl/atl-class-overview.md)<br/>

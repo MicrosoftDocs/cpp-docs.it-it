@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: forza'
 title: FORC
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - FORC directive
 ms.assetid: 57c05099-0c46-44bc-9ae5-27ce850ccdff
-ms.openlocfilehash: d81c56c3322763030427d68d5b8075c9164f4ae3
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 0db52528d86e324e997f3f339bcfb888ce5e27aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75313314"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97130299"
 ---
 # <a name="forc"></a>FORC
 
@@ -19,15 +20,15 @@ Contrassegna un blocco che verrà ripetuto una volta per ogni carattere della *s
 
 ## <a name="syntax"></a>Sintassi
 
-> *Parametro*force, __\<__ *stringa* __>__ \
-> \ di *istruzioni*
+>  *Parametro* Force,__\<__*string*__>__\
+> *istruzioni*\
 > **ENDM**
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Uguale a [irpc](irpc.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimento alle direttive](directives-reference.md)\
+[Guida di riferimento alle direttive](directives-reference.md)\
 [Grammatica BNF di MASM](masm-bnf-grammar.md)

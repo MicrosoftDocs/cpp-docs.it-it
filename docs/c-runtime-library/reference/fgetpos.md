@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: fgetpos'
 title: fgetpos
 ms.date: 4/2/2020
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - fgetpos function
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
-ms.openlocfilehash: b57a07dbe5c2c746e8af6b96f1864e4f4534849f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 72ee6e683d568de1650d5a046050230fa86dee24
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920357"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151762"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -52,14 +53,14 @@ int fgetpos(
 *flusso*<br/>
 Flusso di destinazione.
 
-*POS*<br/>
+*pos*<br/>
 Archiviazione dell'indicatore di posizione.
 
 ## <a name="return-value"></a>Valore restituito
 
 Se ha esito positivo, **fgetpos** restituisce 0. In caso di errore, restituisce un valore diverso da zero e imposta **errno** su una delle costanti manifeste seguenti, definite in stdio. H): **EBADF**, che indica che il flusso specificato non è un puntatore di file valido o non è accessibile, o **EINVAL**, il che significa che il valore del *flusso* o il valore di *pos* non è valido, ad esempio se uno dei due è un puntatore null. Se *Stream* o *pos* è un puntatore **null** , la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **fgetpos** ottiene il valore corrente dell'indicatore di posizione del file dell'argomento del *flusso* e lo archivia nell'oggetto a cui punta *pos*. La funzione **fsetpos** può usare in un secondo momento le informazioni archiviate in *pos* per reimpostare il puntatore dell'argomento del *flusso* sulla relativa posizione all'ora in cui è stato chiamato **fgetpos** . Il valore *pos* viene archiviato in un formato interno ed è destinato a essere utilizzato solo da **fgetpos** e **fsetpos**.
 
@@ -67,7 +68,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**fgetpos**|\<stdio.h>|
 
@@ -128,7 +129,7 @@ after fgetpos: gets a stream
 after fsetpos: gets a stream
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
 [fsetpos](fsetpos.md)<br/>

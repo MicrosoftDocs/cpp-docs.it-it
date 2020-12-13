@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CAxWindow2T'
 title: Classe CAxWindow2T
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAxWindow2 class
 ms.assetid: b87bc943-7991-4537-b902-2138d7f4d837
-ms.openlocfilehash: e29c30e95116ad68d3498f3f8d3231a63c92c0a7
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: b29ad7bc9a8df17905ef6bc8fc08ebf75e9f847d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353064"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152399"
 ---
 # <a name="caxwindow2t-class"></a>Classe CAxWindow2T
 
@@ -43,13 +44,13 @@ Classe da cui `CAxWindowT` deriva.
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CAxWindow2T:: CAxWindow2T](#caxwindow2t)|Costruisce un oggetto `CAxWindow2T`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CAxWindow2T:: create](#create)|Crea una finestra host.|
 |[CAxWindow2T:: CreateControlLic](#createcontrollic)|Crea un controllo ActiveX con licenza, lo inizializza e lo ospita nella finestra specificata.|
@@ -58,11 +59,11 @@ Classe da cui `CAxWindowT` deriva.
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CAxWindow2T:: operator =](#operator_eq)|Assegna un HWND a un oggetto esistente `CAxWindow2T` .|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 `CAxWindow2T` fornisce metodi per la modifica di una finestra che ospita un controllo ActiveX. `CAxWindow2T` dispone anche del supporto per l'hosting di controlli ActiveX con licenza. L'hosting viene fornito da " **AtlAxWinLic80**", che è incluso in `CAxWindow2T` .
 
@@ -115,7 +116,7 @@ HWND Create(
     LPVOID lpCreateParam = NULL);
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `CAxWindow2T::Create` chiama [CWindow:: create](../../atl/reference/cwindow-class.md#create) con il parametro LPCTSTR *lpstrWndClass* impostato sulla classe della finestra che fornisce l'hosting del controllo ( `AtlAxWinLic80` ).
 
@@ -150,7 +151,7 @@ HRESULT CreateControlLic(
 *bstrLicKey*<br/>
 Codice di licenza per il controllo; NULL se si crea un controllo senza licenza.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per una descrizione dei parametri rimanenti e del valore restituito, vedere [CAxWindow:: CreateControl](../../atl/reference/caxwindow-class.md#createcontrol) .
 
@@ -187,7 +188,7 @@ HRESULT CreateControlLicEx(
 *bstrLicKey*<br/>
 Codice di licenza per il controllo; NULL se si crea un controllo senza licenza.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per una descrizione dei parametri rimanenti e del valore restituito, vedere [CAxWindow:: CreateControlEx](../../atl/reference/caxwindow-class.md#createcontrolex) .
 
@@ -220,7 +221,7 @@ CAxWindow2T<TBase>& operator= (HWND hWnd);
 *hWnd*<br/>
 Handle di una finestra esistente.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Cenni preliminari sulle classi](../../atl/atl-class-overview.md)<br/>
 [Domande frequenti sul contenimento di controlli](../../atl/atl-control-containment-faq.md)

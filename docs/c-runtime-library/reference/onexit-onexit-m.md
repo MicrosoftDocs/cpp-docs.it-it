@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _onexit, _onexit_m'
 title: _onexit, _onexit_m
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - registering exit routines
 - registering to be called on exit
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
-ms.openlocfilehash: 9afcd729f19f11b82e8f24c2b7fcf9ec40990deb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0b79c521b04a4cb1597dda7c7ed2a19ae2dcf905
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951340"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151697"
 ---
 # <a name="_onexit-_onexit_m"></a>_onexit, _onexit_m
 
@@ -64,7 +65,7 @@ Puntatore a una funzione da chiamare all'uscita.
 
 **_onexit** restituisce un puntatore alla funzione in caso di esito positivo o **null** se non è disponibile spazio per archiviare il puntatore a funzione.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Alla funzione **_onexit** viene passato l'indirizzo di una funzione (*funzione*) da chiamare quando il programma termina normalmente. Le chiamate successive a **_onexit** creano un registro di funzioni che vengono eseguite in ordine LIFO (Last-in-First-out). Le funzioni passate a **_onexit** non possono assumere parametri.
 
@@ -78,7 +79,7 @@ Nel caso in cui **_onexit** venga chiamato dall'interno di una dll, le routine r
 |-------------|---------------------|
 |**_onexit**|\<stdlib.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -132,9 +133,9 @@ This is executed first.
 This is executed next.
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [atexit](atexit.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [__dllonexit](../../c-runtime-library/dllonexit.md)<br/>

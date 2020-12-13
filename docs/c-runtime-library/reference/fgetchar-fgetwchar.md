@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _fgetchar, _fgetwchar'
 title: _fgetchar, _fgetwchar
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-ms.openlocfilehash: 99febac7de2c2fa4e6587654e854b32b702d299e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 316948485e0ef024bc726da7f333fd4ee329c7f6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232534"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151814"
 ---
 # <a name="_fgetchar-_fgetwchar"></a>_fgetchar, _fgetwchar
 
@@ -58,9 +59,9 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>Valore restituito
 
-** \_ fgetchar** restituisce il carattere letto come **`int`** o restituisce `EOF` per indicare un errore o la fine del file. ** \_ fgetwchar** restituisce, come [wint_t](../../c-runtime-library/standard-types.md), il carattere wide che corrisponde al carattere letto o restituisce `WEOF` per indicare un errore o la fine del file. Per entrambe le funzioni, usare **feof** o **ferrator** per distinguere tra un errore e una condizione di fine del file.
+**\_ fgetchar** restituisce il carattere letto come **`int`** o restituisce `EOF` per indicare un errore o la fine del file. **\_ fgetwchar** restituisce, come [wint_t](../../c-runtime-library/standard-types.md), il carattere wide che corrisponde al carattere letto o restituisce `WEOF` per indicare un errore o la fine del file. Per entrambe le funzioni, usare **feof** o **ferrator** per distinguere tra un errore e una condizione di fine del file.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Queste funzioni leggono un singolo carattere da **stdin**. La funzione quindi incrementa il puntatore del file associato (se definito) per puntare al carattere successivo. Se il flusso è alla fine del file, viene impostato l'indicatore di fine del file per il flusso.
 
@@ -83,7 +84,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |**_fgetchar**|\<stdio.h>|
 |**_fgetwchar**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, ovvero**stdin**, **stdout**e **stderr**, devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, ovvero **stdin**, **stdout** e **stderr**, devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

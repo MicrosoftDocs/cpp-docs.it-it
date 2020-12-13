@@ -1,23 +1,24 @@
 ---
-title: 'Procedura: Usare riferimenti di rilevamento in C++/CLI'
+description: 'Altre informazioni su: procedura: usare riferimenti di rilevamento in C++/CLI'
+title: 'Procedura: utilizzare riferimenti di rilevamento in C++/CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
-ms.openlocfilehash: 8be575bd39bc3b2e6512ba1bcb40d9206731f83a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c17101b5711feb503ad727d78b427e8766146960
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387136"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151385"
 ---
-# <a name="how-to-use-tracking-references-in-ccli"></a>Procedura: Usare riferimenti di rilevamento in C++/CLI
+# <a name="how-to-use-tracking-references-in-ccli"></a>Procedura: utilizzare riferimenti di rilevamento in C++/CLI
 
-Questo articolo illustra come usare un riferimento di traccia (%) in C++/CLI passare common language runtime (CLR) tipi per riferimento.
+Questo articolo illustra come usare un riferimento di traccia (%) in C++/CLI per passare i tipi di Common Language Runtime (CLR) per riferimento.
 
-## <a name="to-pass-clr-types-by-reference"></a>Per passare i tipi CLR per riferimento
+## <a name="to-pass-clr-types-by-reference"></a>Per passare tipi CLR per riferimento
 
-L'esempio seguente viene illustrato come utilizzare un riferimento di traccia per passare i tipi CLR per riferimento.
+Nell'esempio seguente viene illustrato come utilizzare un riferimento di traccia per passare tipi CLR per riferimento.
 
 ```cpp
 // tracking_reference_handles.cpp
@@ -70,7 +71,7 @@ int main() {
 zip == 20100
 ```
 
-L'esempio successivo viene illustrato che accetta l'indirizzo di un riferimento di rilevamento restituisce un [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)e viene illustrato come modificare e accedere ai dati tramite un riferimento di traccia.
+Nell'esempio seguente viene illustrato che l'acquisizione dell'indirizzo di un riferimento di rilevamento restituisce un [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)e Mostra come modificare e accedere ai dati tramite un riferimento di rilevamento.
 
 ```cpp
 // tracking_reference_data.cpp
@@ -124,7 +125,7 @@ ctor: N(int i)
 
 ## <a name="tracking-references-and-interior-pointers"></a>Riferimenti di rilevamento e puntatori interni
 
-Esempio di codice seguente mostra che è possibile convertire tra i riferimenti di rilevamento e puntatori interni.
+Nell'esempio di codice riportato di seguito viene illustrato che è possibile eseguire la conversione tra riferimenti di rilevamento e puntatori interni.
 
 ```cpp
 // tracking_reference_interior_ptr.cpp
@@ -177,9 +178,9 @@ ctor: R(int)
 ctor: N(int i)
 ```
 
-## <a name="tracking-references-and-value-types"></a>Riferimenti di rilevamento e tipi di valore
+## <a name="tracking-references-and-value-types"></a>Rilevamento di riferimenti e tipi di valore
 
-In questo esempio illustra la semplice conversione boxing tramite un riferimento di traccia a un tipo valore:
+In questo esempio viene illustrata la conversione boxing semplice tramite un riferimento di rilevamento a un tipo di valore:
 
 ```cpp
 // tracking_reference_valuetypes_1.cpp
@@ -194,7 +195,7 @@ int main() {
 }
 ```
 
-Nell'esempio successivo mostra che è possibile avere sia riferimenti di rilevamento e riferimenti nativi per tipi di valore.
+Nell'esempio seguente viene illustrato che è possibile avere sia riferimenti di rilevamento che riferimenti nativi ai tipi di valore.
 
 ```cpp
 // tracking_reference_valuetypes_2.cpp
@@ -219,7 +220,7 @@ int main() {
 13
 ```
 
-L'esempio seguente mostra che è possibile usare riferimenti di rilevamento insieme ai tipi di valore e tipi nativi.
+Nell'esempio seguente viene illustrato che è possibile utilizzare i riferimenti di rilevamento insieme ai tipi di valore e ai tipi nativi.
 
 ```cpp
 // tracking_reference_valuetypes_3.cpp
@@ -254,7 +255,7 @@ int main() {
 5
 ```
 
-In questo esempio mostra che è possibile associare un riferimento di traccia a un tipo di valore nell'heap sottoposto a garbage collection:
+Questo esempio mostra che è possibile associare un riferimento di rilevamento a un tipo di valore nell'heap sottoposta a Garbage Collection:
 
 ```cpp
 // tracking_reference_valuetypes_4.cpp
@@ -292,9 +293,9 @@ Boxed new copy V: 1
 Original V: 4, Reference to handle of originally boxed V: 1
 ```
 
-## <a name="template-functions-that-take-native-value-or-reference-parameters"></a>Funzioni di modello che accettano native, valore o i parametri per riferimento
+## <a name="template-functions-that-take-native-value-or-reference-parameters"></a>Funzioni di modello che accettano parametri nativi, di valore o di riferimento
 
-Utilizzando un riferimento di traccia nella firma della funzione di modello, assicurarsi che la funzione può essere chiamata da un parametro di tipo nativo, CLR valore o riferimento CLR.
+Utilizzando un riferimento di rilevamento nella firma di una funzione di modello, si garantisce che la funzione possa essere chiamata da un parametro il cui tipo è nativo, valore CLR o riferimento CLR.
 
 ```cpp
 // tracking_reference_template.cpp
@@ -341,6 +342,6 @@ T %
 T &
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Operatore di riferimento di rilevamento](../extensions/tracking-reference-operator-cpp-component-extensions.md)

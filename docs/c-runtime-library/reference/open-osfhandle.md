@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _open_osfhandle'
 title: _open_osfhandle
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: d0f86c2588eed506bc9b8408e01bccdb6d1aad9d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3b5fe486416ec49f01078a4d90cab998e4bbe6c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844067"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151658"
 ---
 # <a name="_open_osfhandle"></a>_open_osfhandle
 
@@ -61,7 +62,7 @@ Tipi di operazioni consentite.
 
 Se ha esito positivo, **_open_osfhandle** restituisce un descrittore di file di runtime C. In caso contrario, restituisce -1.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_open_osfhandle** alloca un descrittore di file di runtime C. Associa questo descrittore di file con l'handle di file del sistema operativo specificato da *osfhandle*. Per evitare un avviso del compilatore, eseguire il cast di dell'argomento *osfhandle* da **HANDLE** a **intptr_t**. L'argomento *Flags* è un'espressione Integer formata da una o più costanti manifesto definite in \<fcntl.h> . È possibile utilizzare l'operatore OR bit per bit ( **&#124;** ) per combinare due o più costanti manifesto per formare l'argomento dei *flag* .
 
@@ -86,7 +87,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione di file](../../c-runtime-library/file-handling.md)<br/>
 [\_get_osfhandle](get-osfhandle.md)

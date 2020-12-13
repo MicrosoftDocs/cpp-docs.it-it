@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CPrivateObjectSecurityDesc'
 title: Classe CPrivateObjectSecurityDesc
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: f62d289418280a05f390bf9cdec23ea30632aed2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 339105d2a6356150c7a7ce8ccf04bc17d3df4911
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833504"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141063"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Classe CPrivateObjectSecurityDesc
 
@@ -29,18 +30,18 @@ Questa classe rappresenta un oggetto descrittore di sicurezza di un oggetto priv
 class CPrivateObjectSecurityDesc : public CSecurityDesc
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc](#cprivateobjectsecuritydesc)|Costruttore.|
 |[CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CPrivateObjectSecurityDesc::ConvertToAutoInherit](#converttoautoinherit)|Chiamare questo metodo per convertire un descrittore di sicurezza e i relativi elenchi di controllo di accesso (ACL) in un formato che supporta la propagazione automatica di voci di controllo di accesso (ACE) ereditabili.|
 |[CPrivateObjectSecurityDesc:: create](#create)|Chiamare questo metodo per allocare e inizializzare un descrittore di sicurezza autonomo per l'oggetto privato creato da Gestione risorse chiamante.|
@@ -53,7 +54,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 |-|-|
 |[operatore =](#operator_eq)|Operatore di assegnazione.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questa classe, derivata da [CSecurityDesc](../../atl/reference/csecuritydesc-class.md), fornisce metodi per la creazione e la gestione del descrittore di sicurezza di un oggetto privato.
 
@@ -99,7 +100,7 @@ Puntatore a una struttura [GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-ge
 
 Restituisce true se l'operazione ha esito positivo, false in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo tenta di determinare se le voci ACE nell'elenco di controllo di accesso discrezionale (DACL) e nell'elenco di controllo di accesso di sistema (SACL) del descrittore di sicurezza corrente sono state ereditate dal descrittore di sicurezza padre. Chiama la funzione [ConvertToAutoInheritPrivateObjectSecurity](/windows/win32/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity) .
 
@@ -111,7 +112,7 @@ Costruttore.
 CPrivateObjectSecurityDesc() throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Inizializza l'oggetto `CPrivateObjectSecurityDesc`.
 
@@ -123,7 +124,7 @@ Distruttore.
 ~CPrivateObjectSecurityDesc() throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il distruttore libera tutte le risorse allocate ed Elimina il descrittore di sicurezza dell'oggetto privato.
 
@@ -179,7 +180,7 @@ Set di flag di bit che controllano il modo in cui le voci di controllo di access
 
 Restituisce true se l'operazione ha esito positivo, false in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo chiama [CreatePrivateObjectSercurity](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity) o [CreatePrivateObjectSecurityEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex).
 
@@ -210,7 +211,7 @@ Puntatore a un oggetto [CSecurityDesc](../../atl/reference/csecuritydesc-class.m
 
 Restituisce true se l'operazione ha esito positivo, false in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il descrittore di sicurezza è una struttura e i dati associati che contengono le informazioni di sicurezza per un oggetto a protezione diretta.
 
@@ -271,11 +272,11 @@ Set di flag di bit che controllano il modo in cui le voci di controllo di access
 
 Restituisce true se l'operazione ha esito positivo, false in caso di esito negativo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il secondo metodo consente di specificare il GUID del tipo di oggetto dell'oggetto o di controllare il modo in cui vengono ereditate le voci ACE.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [Cenni preliminari sulle classi](../../atl/atl-class-overview.md)<br/>

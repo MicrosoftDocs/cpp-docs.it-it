@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: riferimento a Linee guida di base di C++ Checker'
 title: Riferimento a Linee guida di base di C++ Checker
 ms.date: 03/22/2018
 ms.topic: reference
 helpviewer_keywords:
 - code analysis, C++ core check
 ms.assetid: f1429463-136e-41ed-8a75-a8dbf0b4fd89
-ms.openlocfilehash: a4dc50395a1da0eda68148123651123cf1607184
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 40d0e713d8064a952c785ca44ac5a7ba60f41b61
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503386"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151580"
 ---
 # <a name="c-core-guidelines-checker-reference"></a>Riferimento a Linee guida di base di C++ Checker
 
@@ -134,7 +135,7 @@ La funzione '*Symbol*' deve essere contrassegnata con ' override '. Vedere [C. 1
 La funzione '*Symbol_1*' nasconde una funzione non virtuale '*symbol_2*'. Vedere [linee guida di base di C++ C. 128](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c128-virtual-functions-should-specify-exactly-one-of-virtual-override-or-final).
 
 [SINGLE_VIRTUAL_SPECIFICATION C26435](c26435.md)\
-La funzione ' symbol ' deve specificare esattamente uno dei*simboli*' Virtual ',' override ' o ' final '. Vedere [C. 128: le funzioni virtuali devono specificare esattamente uno dei caratteri Virtual, override o Final](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md).
+La funzione ' symbol ' deve specificare esattamente uno dei *simboli*' Virtual ',' override ' o ' final '. Vedere [C. 128: le funzioni virtuali devono specificare esattamente uno dei caratteri Virtual, override o Final](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md).
 
 [NEED_VIRTUAL_DTOR C26436](C26436.md)\
 Il tipo '*Symbol*' con una funzione virtuale richiede un distruttore virtuale pubblico o non virtuale protetto. Vedere [linee guida di base di C++ C. 35](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c35-a-base-class-destructor-should-be-either-public-and-virtual-or-protected-and-nonvirtual).
@@ -280,6 +281,6 @@ Gli avvisi seguenti sono presenti in un set di regole sperimentali iniziale dell
 - 26425 ASSIGNING_TO_STATIC
 - 26499 NO_LIFETIME_TRACKING
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Uso dei controlli Linee guida di base di C++](using-the-cpp-core-guidelines-checkers.md)
