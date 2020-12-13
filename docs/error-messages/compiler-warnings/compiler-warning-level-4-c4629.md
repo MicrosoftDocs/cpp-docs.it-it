@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 4) C4629'
 title: Avviso del compilatore (livello 4) C4629
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4629
 ms.assetid: 158cde12-bae5-4d43-b575-b52b35aaa0b9
-ms.openlocfilehash: 4aaaf3d592398981c1266a0ffbc1625da7d906af
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: b357b72ca95682c33d3f4019d4663593c5c5ee8d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990628"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97134173"
 ---
 # <a name="compiler-warning-level-4-c4629"></a>Avviso del compilatore (livello 4) C4629
 

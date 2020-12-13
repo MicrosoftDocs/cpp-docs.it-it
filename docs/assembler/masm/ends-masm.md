@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: termina'
 title: ENDS (MASM)
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ENDS directive
 ms.assetid: 30f68c58-de1f-4bdd-ac83-4658bdbaad65
-ms.openlocfilehash: 2ad3db8a6b271dec5b6cc590a6cf9268bb0fbe30
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 7449fd81dd71d8a2b947e87b458ae6d12e502aac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317370"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97130520"
 ---
 # <a name="ends"></a>ENDS
 
@@ -21,7 +22,7 @@ Contrassegna la fine di un segmento, di una struttura o di un *nome* di Unione i
 
 > *nome* **termina**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimento alle direttive](directives-reference.md)\
+[Guida di riferimento alle direttive](directives-reference.md)\
 [Grammatica BNF di MASM](masm-bnf-grammar.md)

@@ -1,4 +1,5 @@
 ---
+description: Ulteriori informazioni su:. XCREF
 title: .XCREF
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - .XCREF directive
 ms.assetid: f8443482-2a7e-4764-bef8-8bfdaf06d2fe
-ms.openlocfilehash: cdddb9918f3fb1d826b217581f9d8dba9c72019f
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: fb840dad154b3d58f1306657ebbc0c07fc8bf4a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318165"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97130845"
 ---
 # <a name="xcref"></a>.XCREF
 
@@ -21,7 +22,7 @@ Vedere [. NOCREF](dot-nocref.md).
 
 > **.XCREF**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimento alle direttive](directives-reference.md)\
+[Guida di riferimento alle direttive](directives-reference.md)\
 [Grammatica BNF di MASM](masm-bnf-grammar.md)

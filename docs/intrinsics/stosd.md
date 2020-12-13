@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __stosd'
 title: __stosd
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - rep stosd instruction
 - __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
-ms.openlocfilehash: c46bb124390ff23d79361c66530493c48faf3f0a
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 56a29a27790f7f45a9fb3f0ace348759c0b1ff3c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219975"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143715"
 ---
 # <a name="__stosd"></a>__stosd
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Genera un'istruzione di stringa di`rep stosd`archiviazione ().
+Genera un'istruzione di stringa di archiviazione ( `rep stosd` ).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -44,13 +45,13 @@ in Lunghezza del blocco di parole doppie da scrivere.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`__stosd`|x86, x64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Il risultato è che i *dati* parola doppia vengono scritti in un blocco di *count* parole doppie in corrispondenza della posizione di memoria indicata dalla *destinazione*.
 
@@ -85,8 +86,8 @@ printf_s( "%u %u %u %u",
 0 99999 99999 0
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

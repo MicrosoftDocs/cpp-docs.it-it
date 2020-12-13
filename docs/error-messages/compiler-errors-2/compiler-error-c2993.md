@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2993'
 title: Errore del compilatore C2993
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2993
 ms.assetid: 4ffd2b78-654b-46aa-95a6-b62101cf91c8
-ms.openlocfilehash: 5aa0d27b2d469f53ec521f587172398b7d4c2d1b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 2c43d4f3e54378d419f1945b1f6b38e9ee4d9758
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761231"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136422"
 ---
 # <a name="compiler-error-c2993"></a>Errore del compilatore C2993
 
@@ -36,9 +37,9 @@ template <class T, struct MyStruct S>   // C2993
 class CMyClass {};
 ```
 
-Questo errore viene generato anche in seguito alle operazioni di conformità del compilatore eseguite in Visual Studio .NET 2003: i parametri di modello non di tipo a virgola mobile non sono più consentiti. Lo C++ standard non consente parametri di modello non di tipo a virgola mobile.
+Questo errore viene generato anche in seguito alle operazioni di conformità del compilatore eseguite in Visual Studio .NET 2003: i parametri di modello non di tipo a virgola mobile non sono più consentiti. Lo standard C++ non consente parametri di modello non di tipo a virgola mobile.
 
-Se si tratta di un modello di funzione, usare un argomento della funzione per passare il parametro di modello non di tipo a virgola mobile (questo codice sarà valido nelle versioni Visual Studio .NET 2003 e Visual Studio C++.NET di Visual Studio). Se si tratta di un modello di classe, non esiste una soluzione semplice.
+Se si tratta di un modello di funzione, usare un argomento della funzione per passare il parametro di modello non di tipo a virgola mobile. questo codice sarà valido nelle versioni di Visual C++ di Visual Studio .NET 2003 e Visual Studio .NET. Se si tratta di un modello di classe, non esiste una soluzione semplice.
 
 ```cpp
 // C2993b.cpp

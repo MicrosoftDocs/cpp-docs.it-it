@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: wctomb, _wctomb_l'
 title: wctomb, _wctomb_l
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 4a543f0e-5516-4d81-8ff2-3c5206f02ed5
-ms.openlocfilehash: 0a95d61c50af5f49e69df8ae20efccfd3fb8ff5f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f49915d062aa602ab361084cbcc7a9a034599de2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910421"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136812"
 ---
 # <a name="wctomb-_wctomb_l"></a>wctomb, _wctomb_l
 
@@ -65,14 +66,14 @@ int _wctomb_l(
 *mbchar*<br/>
 Indirizzo di un carattere multibyte.
 
-*WCHAR*<br/>
+*wchar*<br/>
 Carattere wide.
 
 ## <a name="return-value"></a>Valore restituito
 
 Se **wctomb** converte il carattere wide in un carattere multibyte, restituisce il numero di byte (che non è mai maggiore di **MB_CUR_MAX**) nel carattere wide. Se *WCHAR* è il carattere null Wide (L'\ 0'), **wctomb** restituisce 1. Se il puntatore di destinazione *mbchar* è **null**, **wctomb** restituisce 0. Se la conversione non è possibile nelle impostazioni locali correnti, **wctomb** restituisce-1 e **errno** viene impostato su **EILSEQ**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **wctomb** converte il relativo argomento *WCHAR* nel carattere multibyte corrispondente e archivia il risultato in *mbchar*. È possibile chiamare la funzione da qualsiasi punto in un qualsiasi programma. **wctomb** usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali; **_wctomb_l** è identico a **wctomb** , con la differenza che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
@@ -118,10 +119,10 @@ Convert a wide character:
    Multibyte character: a
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

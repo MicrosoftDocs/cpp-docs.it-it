@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: procedura dettagliata: aggiornamento dell'applicazione MFC Scribble (parte 1)"
 title: "Procedura dettagliata: aggiornamento dell'applicazione MFC Scribble (parte 1)"
 ms.date: 09/09/2019
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: 2abcb509a3d7a0045ad33bedccdd61fd1e0e58f8
-ms.sourcegitcommit: d8f65b1ddc9ea32e877c67e2c8f0ea7501183fc7
+ms.openlocfilehash: bb60e535031670eddc84e7170431ad6622d434b3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93291081"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142974"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Procedura dettagliata: aggiornamento dell'applicazione MFC Scribble (parte 1)
 
@@ -50,7 +51,7 @@ Per convertire un'applicazione che supporta un menu in un'applicazione che suppo
 
 1. In Scribble. cpp verificare che `CScribbleApp::InitInstance` includa una chiamata a [AfxOleInit](../mfc/reference/ole-initialization.md#afxoleinit).
 
-1. Aggiungere il codice seguente al file *PCH. h* ( *stdafx. h* in Visual Studio 2017 e versioni precedenti):
+1. Aggiungere il codice seguente al file *PCH. h* (*stdafx. h* in Visual Studio 2017 e versioni precedenti):
 
     ```cpp
     #include <afxcontrolbars.h>
@@ -161,7 +162,7 @@ Una barra multifunzione è costituita dal pulsante **applicazione** , ovvero dal
 
 ### <a name="to-add-a-ribbon-resource-to-the-project"></a>Per aggiungere una risorsa barra multifunzione al progetto
 
-1. Con il progetto Scribble selezionato in **Esplora soluzioni** , scegliere **Aggiungi risorsa** dal menu **progetto** .
+1. Con il progetto Scribble selezionato in **Esplora soluzioni**, scegliere **Aggiungi risorsa** dal menu **progetto** .
 
 1. Nella finestra di dialogo **Aggiungi risorsa** selezionare **barra multifunzione** e quindi fare clic su **nuovo**.
 
@@ -171,7 +172,7 @@ Una barra multifunzione è costituita dal pulsante **applicazione** , ovvero dal
 
 1. Nella visualizzazione Progettazione fare clic sul pulsante **applicazione** per visualizzarne le proprietà. Modificare i valori delle proprietà come segue: **Image** to `IDB_RIBBON_MAIN` , **prompt** to `File` , **Keys** to `f` , **large images** to `IDB_RIBBON_FILELARGE` e **small images** to `IDB_RIBBON_FILESMALL` .
 
-1. Le modifiche seguenti creano il menu visualizzato quando l'utente fa clic sul pulsante dell' **applicazione** . Fare clic sui puntini di sospensione ( **...** ) accanto a **elementi principali** per aprire l' **Editor elementi**.
+1. Le modifiche seguenti creano il menu visualizzato quando l'utente fa clic sul pulsante dell' **applicazione** . Fare clic sui puntini di sospensione (**...**) accanto a **elementi principali** per aprire l' **Editor elementi**.
 
    1. Con il **pulsante** tipo di **elemento** selezionato, fare clic su **Aggiungi** per aggiungere un pulsante. Modificare **Caption** in `&New` , **ID** in `ID_FILE_NEW` , **Image** in `0` , **Image large** in `0` .
 
@@ -187,9 +188,9 @@ Una barra multifunzione è costituita dal pulsante **applicazione** , ovvero dal
 
 1. Le modifiche seguenti consentono di creare un sottomenu sotto il pulsante **stampa** creato nel passaggio precedente.
 
-   1. Fare clic sul pulsante **stampa** , modificare il tipo di **elemento** in **etichetta** , quindi fare clic su **Inserisci**. Modificare la **didascalia** in `Preview and print the document` .
+   1. Fare clic sul pulsante **stampa** , modificare il tipo di **elemento** in **etichetta**, quindi fare clic su **Inserisci**. Modificare la **didascalia** in `Preview and print the document` .
 
-   1. Fare clic sul pulsante **stampa** , modificare il tipo di **elemento** in **pulsante** , quindi fare clic su **Inserisci**. Modificare **didascalia** in `&Print` , **ID** in `ID_FILE_PRINT` , **immagine** in `4` e **immagine di grandi dimensioni** in `4` .
+   1. Fare clic sul pulsante **stampa** , modificare il tipo di **elemento** in **pulsante**, quindi fare clic su **Inserisci**. Modificare **didascalia** in `&Print` , **ID** in `ID_FILE_PRINT` , **immagine** in `4` e **immagine di grandi dimensioni** in `4` .
 
    1. Fare clic sul pulsante **stampa** , quindi fare clic su **Inserisci** per aggiungere un pulsante. Modificare **didascalia** in `&Quick Print` , **ID** in `ID_FILE_PRINT_DIRECT` , **immagine** in `7` e **immagine di grandi dimensioni** in `7` .
 
@@ -200,7 +201,7 @@ Una barra multifunzione è costituita dal pulsante **applicazione** , ovvero dal
 1. La modifica seguente consente di creare un pulsante di uscita visualizzato nella parte inferiore del menu del pulsante dell' **applicazione** .
 
    1. Scegliere la scheda **visualizzazione risorse** in **Esplora soluzioni**.
-   1. Nella finestra **Proprietà** fare clic sui puntini di sospensione ( **...** ) accanto a **pulsante** per aprire l' **Editor elementi**.
+   1. Nella finestra **Proprietà** fare clic sui puntini di sospensione (**...**) accanto a **pulsante** per aprire l' **Editor elementi**.
 
    1. Con il **pulsante** tipo di **elemento** selezionato, fare clic su **Aggiungi** per aggiungere un pulsante. Impostare **Caption** su `E&xit` , **ID** su `ID_APP_EXIT` , **Image** su `8` .
 
@@ -239,13 +240,13 @@ Ora che è stato creato il pulsante **applicazione** , è possibile aggiungere e
 
 ### <a name="to-add-a-home-category-and-edit-panel"></a>Per aggiungere una categoria Home e un pannello Modifica
 
-1. Il programma Scribble richiede solo una categoria. Nella visualizzazione progettazione, nella **casella degli strumenti** , fare doppio clic su **categoria** per aggiungerne una e visualizzarne le proprietà. Modificare i valori delle proprietà come segue: **Caption** to `&Home` , **large images** to `IDB_RIBBON_HOMELARGE` , **small images** to `IDB_RIBBON_HOMESMALL` .
+1. Il programma Scribble richiede solo una categoria. Nella visualizzazione progettazione, nella **casella degli strumenti**, fare doppio clic su **categoria** per aggiungerne una e visualizzarne le proprietà. Modificare i valori delle proprietà come segue: **Caption** to `&Home` , **large images** to `IDB_RIBBON_HOMELARGE` , **small images** to `IDB_RIBBON_HOMESMALL` .
 
-1. Ogni categoria della barra multifunzione è organizzata in pannelli, ciascuno dei quali dispone di un nome. Ogni pannello contiene un set di controlli che completano le operazioni correlate. Questa categoria dispone di un solo pannello. Fare clic su **Pannello** , quindi impostare **didascalia** su `Edit` .
+1. Ogni categoria della barra multifunzione è organizzata in pannelli, ciascuno dei quali dispone di un nome. Ogni pannello contiene un set di controlli che completano le operazioni correlate. Questa categoria dispone di un solo pannello. Fare clic su **Pannello**, quindi impostare **didascalia** su `Edit` .
 
-1. Nel pannello **modifica** aggiungere un pulsante responsabile della cancellazione del contenuto del documento. L'ID del messaggio per questo pulsante è già stato definito nella `IDR_SCRIBBTYPE` risorsa di menu. Specificare `Clear All` come testo del pulsante e l'indice della bitmap che decora il pulsante. Aprire la **casella degli strumenti** , quindi trascinare un **pulsante** nel pannello **modifica** . Fare clic sul pulsante, quindi impostare **Caption** su `Clear All` , **ID** su `ID_EDIT_CLEAR_ALL` , **Image index** su `0` , **large image index** su `0` .
+1. Nel pannello **modifica** aggiungere un pulsante responsabile della cancellazione del contenuto del documento. L'ID del messaggio per questo pulsante è già stato definito nella `IDR_SCRIBBTYPE` risorsa di menu. Specificare `Clear All` come testo del pulsante e l'indice della bitmap che decora il pulsante. Aprire la **casella degli strumenti**, quindi trascinare un **pulsante** nel pannello **modifica** . Fare clic sul pulsante, quindi impostare **Caption** su `Clear All` , **ID** su `ID_EDIT_CLEAR_ALL` , **Image index** su `0` , **large image index** su `0` .
 
-1. Salvare le modifiche, quindi compilare ed eseguire l'applicazione. Verrà visualizzata l'applicazione Scribble con una barra multifunzione nella parte superiore della finestra al posto della barra dei menu. La barra multifunzione deve avere una categoria, **Home** e **Home** deve avere un pannello, **Edit**. I pulsanti della barra multifunzione aggiunti devono essere associati ai gestori eventi esistenti e i pulsanti **Apri** , **Chiudi** , **Salva** , **stampa** e **Cancella tutti** dovrebbero funzionare come previsto.
+1. Salvare le modifiche, quindi compilare ed eseguire l'applicazione. Verrà visualizzata l'applicazione Scribble con una barra multifunzione nella parte superiore della finestra al posto della barra dei menu. La barra multifunzione deve avere una categoria, **Home** e **Home** deve avere un pannello, **Edit**. I pulsanti della barra multifunzione aggiunti devono essere associati ai gestori eventi esistenti e i pulsanti **Apri**, **Chiudi**, **Salva**, **stampa** e **Cancella tutti** dovrebbero funzionare come previsto.
 
 ## <a name="setting-the-look-of-the-application"></a><a name="setlook"></a> Impostazione dell'aspetto dell'applicazione
 
@@ -267,7 +268,7 @@ Un *gestore di visualizzazione* è un oggetto globale che controlla tutto il dis
 
 È stato modificato l'esempio classico di MFC Scribble 1,0 per usare la **finestra di progettazione della barra multifunzione**. Passare ora alla [parte 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Procedure dettagliate](../mfc/walkthroughs-mfc.md)<br/>
 [Procedura dettagliata: aggiornamento dell'applicazione MFC Scribble (parte 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)

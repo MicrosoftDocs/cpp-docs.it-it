@@ -1,5 +1,6 @@
 ---
-title: CComObjectStack (classe)
+description: 'Altre informazioni su: classe CComObjectStack'
+title: Classe CComObjectStack
 ms.date: 11/04/2016
 f1_keywords:
 - CComObjectStack
@@ -12,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectStack class
 ms.assetid: 3da72c40-c834-45f6-bb76-6ac204028d80
-ms.openlocfilehash: 8c3fd56635da8b80c84f6151009586b7bd2b4341
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5713601a765ad9ff1c32992d1f9c517dd86affca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327583"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142415"
 ---
-# <a name="ccomobjectstack-class"></a>CComObjectStack (classe)
+# <a name="ccomobjectstack-class"></a>Classe CComObjectStack
 
-Questa classe crea un oggetto COM temporaneo e fornisce `IUnknown`un'implementazione scheletrica di .
+Questa classe crea un oggetto COM temporaneo e fornisce un'implementazione scheletrica di `IUnknown` .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -33,40 +34,40 @@ class CComObjectStack : public Base
 #### <a name="parameters"></a>Parametri
 
 *Base*<br/>
-La classe, derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) o [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), nonché da qualsiasi altra interfaccia che si desidera supportare sull'oggetto.
+La classe, derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) o [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), nonché da qualsiasi altra interfaccia che si desidera supportare nell'oggetto.
 
 ## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CComObjectStack::CComObjectStack](#ccomobjectstack)|Costruttore.|
-|[CComObjectStack:: CComObjectStack](#dtor)|Distruttore.|
+|[CComObjectStack:: CComObjectStack](#ccomobjectstack)|Costruttore.|
+|[CComObjectStack:: ~ CComObjectStack](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CComObjectStack::AddRef](#addref)|Restituisce zero. In modalità `_ASSERTE`di debug, le chiamate a .|
-|[CComObjectStack::QueryInterface](#queryinterface)|Restituisce E_NOINTERFACE. In modalità `_ASSERTE`di debug, le chiamate a .|
-|[CComObjectStack::Release](#release)|Restituisce zero. In modalità `_ASSERTE`di debug, le chiamate a . ~|
+|[CComObjectStack:: AddRef](#addref)|Restituisce zero. In modalità di debug, chiama `_ASSERTE` .|
+|[CComObjectStack:: QueryInterface](#queryinterface)|Restituisce E_NOINTERFACE. In modalità di debug, chiama `_ASSERTE` .|
+|[CComObjectStack:: Release](#release)|Restituisce zero. In modalità di debug, chiama `_ASSERTE` . ~|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CComObjectStack::m_hResFinalConstruct](#m_hresfinalconstruct)|Contiene il valore HRESULT restituito `CComObjectStack` durante la costruzione dell'oggetto.|
+|[CComObjectStack:: m_hResFinalConstruct](#m_hresfinalconstruct)|Contiene HRESULT restituito durante la costruzione dell' `CComObjectStack` oggetto.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-`CComObjectStack`viene utilizzato per creare un oggetto COM temporaneo e fornire `IUnknown`all'oggetto un'implementazione scheletrica di . In genere, l'oggetto viene utilizzato come variabile locale all'interno di una funzione, ovvero inserita nello stack. Poiché l'oggetto viene eliminato al termine della funzione, il conteggio dei riferimenti non viene eseguito per aumentare l'efficienza.
+`CComObjectStack` viene utilizzato per creare un oggetto COM temporaneo e fornire all'oggetto un'implementazione scheletrica di `IUnknown` . In genere, l'oggetto viene utilizzato come variabile locale all'interno di una funzione, ovvero inserito nello stack. Poiché l'oggetto viene eliminato definitivamente al termine della funzione, il conteggio dei riferimenti non viene eseguito per aumentare l'efficienza.
 
-Nell'esempio seguente viene illustrato come creare un oggetto COM utilizzato all'interno di una funzione:The following example shows how to create a COM object used inside a function:
+Nell'esempio seguente viene illustrato come creare un oggetto COM utilizzato all'interno di una funzione:
 
 [!code-cpp[NVC_ATL_COM#42](../../atl/codesnippet/cpp/ccomobjectstack-class_1.cpp)]
 
-L'oggetto `Tempobj` temporaneo viene inserito nello stack e scompare automaticamente al termine della funzione.
+L'oggetto temporaneo `Tempobj` viene inserito nello stack e scompare automaticamente al termine della funzione.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -76,9 +77,9 @@ L'oggetto `Tempobj` temporaneo viene inserito nello stack e scompare automaticam
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlcom.h
+**Intestazione:** atlcom. h
 
-## <a name="ccomobjectstackaddref"></a><a name="addref"></a>CComObjectStack::AddRef
+## <a name="ccomobjectstackaddref"></a><a name="addref"></a> CComObjectStack:: AddRef
 
 Restituisce zero.
 
@@ -90,11 +91,11 @@ STDMETHOD_(ULONG, AddRef)();
 
 Restituisce zero.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-In modalità `_ASSERTE`di debug, le chiamate a .
+In modalità di debug, chiama `_ASSERTE` .
 
-## <a name="ccomobjectstackccomobjectstack"></a><a name="ccomobjectstack"></a>CComObjectStack::CComObjectStack
+## <a name="ccomobjectstackccomobjectstack"></a><a name="ccomobjectstack"></a> CComObjectStack:: CComObjectStack
 
 Costruttore.
 
@@ -102,11 +103,11 @@ Costruttore.
 CComObjectStack(void* = NULL);
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Chiama `FinalConstruct` e quindi imposta [m_hResFinalConstruct](#m_hresfinalconstruct) al `FinalConstruct`valore HRESULT restituito da . Se la classe base non è derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), è necessario fornire un metodo personalizzato. `FinalConstruct` Il distruttore chiama `FinalRelease`.
+Chiama `FinalConstruct` e quindi imposta [m_hResFinalConstruct](#m_hresfinalconstruct) sul valore HRESULT restituito da `FinalConstruct` . Se la classe base non è stata derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), è necessario fornire un `FinalConstruct` metodo personalizzato. Il distruttore chiama `FinalRelease`.
 
-## <a name="ccomobjectstackccomobjectstack"></a><a name="dtor"></a>CComObjectStack:: CComObjectStack
+## <a name="ccomobjectstackccomobjectstack"></a><a name="dtor"></a> CComObjectStack:: ~ CComObjectStack
 
 Distruttore.
 
@@ -114,19 +115,19 @@ Distruttore.
 CComObjectStack();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Libera tutte le risorse allocate e chiama [FinalRelease](ccomobjectrootex-class.md#finalrelease).
 
-## <a name="ccomobjectstackm_hresfinalconstruct"></a><a name="m_hresfinalconstruct"></a>CComObjectStack::m_hResFinalConstruct
+## <a name="ccomobjectstackm_hresfinalconstruct"></a><a name="m_hresfinalconstruct"></a> CComObjectStack:: m_hResFinalConstruct
 
-Contiene il valore HRESULT `FinalConstruct` restituito dalla `CComObjectStack` chiamata durante la costruzione dell'oggetto.
+Contiene HRESULT restituito dalla chiamata `FinalConstruct` di durante la costruzione dell' `CComObjectStack` oggetto.
 
 ```
 HRESULT    m_hResFinalConstruct;
 ```
 
-## <a name="ccomobjectstackqueryinterface"></a><a name="queryinterface"></a>CComObjectStack::QueryInterface
+## <a name="ccomobjectstackqueryinterface"></a><a name="queryinterface"></a> CComObjectStack:: QueryInterface
 
 Restituisce E_NOINTERFACE.
 
@@ -138,11 +139,11 @@ HRESULT    QueryInterface(REFIID, void**);
 
 Restituisce E_NOINTERFACE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-In modalità `_ASSERTE`di debug, le chiamate a .
+In modalità di debug, chiama `_ASSERTE` .
 
-## <a name="ccomobjectstackrelease"></a><a name="release"></a>CComObjectStack::Release
+## <a name="ccomobjectstackrelease"></a><a name="release"></a> CComObjectStack:: Release
 
 Restituisce zero.
 
@@ -154,13 +155,13 @@ STDMETHOD_(ULONG, Release)();
 
 Restituisce zero.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-In modalità `_ASSERTE`di debug, le chiamate a .
+In modalità di debug, chiama `_ASSERTE` .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[CComAggObject (classe)](../../atl/reference/ccomaggobject-class.md)<br/>
+[Classe Ccomaggobjec](../../atl/reference/ccomaggobject-class.md)<br/>
 [Classe CComObject](../../atl/reference/ccomobject-class.md)<br/>
-[CComObjectGlobal (classe)](../../atl/reference/ccomobjectglobal-class.md)<br/>
+[Classe CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)<br/>
 [Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: rendere non creabile un oggetto ATL'
 title: Rendere un oggetto ATL non creabile
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - noncreatable ATL objects
 - ATL projects, noncreatable objects
 ms.assetid: 80d0bca2-dea0-4801-9a85-6243124437f6
-ms.openlocfilehash: b2d0a21ec9e68f76650f0f6cb78446bd93540fa2
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 0a7a07081546722e5a960cb8bf0384a1d7e47f9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506959"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139178"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>Rendere un oggetto ATL non creabile
 
@@ -38,6 +39,6 @@ ms.locfileid: "91506959"
 
 [Creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md)<br/>
 [Tipi di progetto C++ in Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
-[Programmazione con il codice di runtime di C e ATL](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[Programmazione con ATL e codice C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Nozioni fondamentali sugli oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Configurazioni di progetto ATL predefinite](../../atl/reference/default-atl-project-configurations.md)

@@ -1,4 +1,5 @@
 ---
+description: Ulteriori informazioni su:. ERRDIF, . ERRDIFI
 title: .ERRDIF, .ERRDIFI
 ms.date: 05/23/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - .ERRDIF directive
 - .ERRDIFI directive
 ms.assetid: af7cb441-0373-4c7e-af9c-06bcb9ed2b0a
-ms.openlocfilehash: 1bcbdf46e12bacbb5bab68d12605c0cce9cae4d5
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 76def5584a5417055da4f063395d2dd809becdae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75313561"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97131937"
 ---
 # <a name="errdif-errdifi"></a>.ERRDIF, .ERRDIFI
 
@@ -21,14 +22,14 @@ Genera un errore se gli elementi di testo sono diversi.
 
 ## <a name="syntax"></a>Sintassi
 
-> **. ERRDIF** *textitem1* __,__ *textitem2* ⟦ __,__ *Message*⟧ \
-> **. ERRDIFI** *textitem1* __,__ *textitem2* ⟦ __,__ *Message*⟧
+> **. ERRDIF** *textitem1*__,__ *textitem2* ⟦__,__ *Message*⟧ \
+> **. ERRDIFI** *textitem1*__,__ *textitem2* ⟦__,__ *Message*⟧
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Se **. ERRDIFI** viene specificato, il confronto non fa distinzione tra maiuscole e minuscole.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimento alle direttive](directives-reference.md)\
+[Guida di riferimento alle direttive](directives-reference.md)\
 [Grammatica BNF di MASM](masm-bnf-grammar.md)

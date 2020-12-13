@@ -1,4 +1,5 @@
 ---
+description: Ulteriori informazioni su:. ENDIF (MASM a 32 bit)
 title: .ENDIF
 ms.date: 11/05/2019
 f1_keywords:
@@ -6,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - .ENDIF directive
 ms.assetid: b9f25ed5-6634-40f7-bcbc-d3135f09cce6
-ms.openlocfilehash: bcd8b5b2423abf982f999548a50208dfe8e83f6e
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: a1ca05127aae29d9a8bd3788b30a561af90e7b5b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75313821"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132054"
 ---
 # <a name="endif-32-bit-masm"></a>. ENDIF (MASM a 32 bit)
 
 ## <a name="syntax"></a>Sintassi
 
-> **.ENDIF**
+> **. ENDIF**
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 (solo MASM a 32 bit). Vedere [. SE](dot-if.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimento alle direttive](directives-reference.md)\
+[Guida di riferimento alle direttive](directives-reference.md)\
 [Grammatica BNF di MASM](masm-bnf-grammar.md)

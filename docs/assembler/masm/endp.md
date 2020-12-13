@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: ENDP'
 title: ENDP
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ENDP directive
 ms.assetid: 31fc8040-8c49-43e2-8885-a20ba3b69551
-ms.openlocfilehash: c3c5ef6f8853569272706f76f61104dba477c9a3
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 6ee5c3e55655dd0190fe13b006d9d1adf3cd102f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317357"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97130546"
 ---
 # <a name="endp"></a>ENDP
 
@@ -21,11 +22,11 @@ Contrassegna la fine del *nome* della procedura precedentemente iniziata con **p
 
 > *nome* **ENDP**
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Vedere [proc](proc.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimento alle direttive](directives-reference.md)\
+[Guida di riferimento alle direttive](directives-reference.md)\
 [Grammatica BNF di MASM](masm-bnf-grammar.md)

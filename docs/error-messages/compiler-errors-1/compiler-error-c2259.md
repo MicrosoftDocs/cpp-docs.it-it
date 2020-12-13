@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2259'
 title: Errore del compilatore C2259
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2259
 ms.assetid: e458236f-bdea-4786-9aa6-a98d8bffa5f4
-ms.openlocfilehash: 403d674eae696eb42a837aef9d6e97c4b5b8f6c2
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 640349f5870cd818019029c7f04db3e33a068ec9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758788"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97134693"
 ---
 # <a name="compiler-error-c2259"></a>Errore del compilatore C2259
 
@@ -50,7 +51,7 @@ Esistono due possibili soluzioni per il problema:
 
 - Utilizzare l'operatore di risoluzione dell'ambito per i metodi di interfaccia implementati nella classe derivata per qualificare il nome del metodo implementato con il nome dell'interfaccia.
 
-C2259 può anche verificarsi in seguito alle operazioni di conformità eseguite in Visual Studio 2005, **/Zc: wchar_t** è ora attiva per impostazione predefinita. In questa situazione, C2599 può essere risolto eseguendo la compilazione con **/Zc: wchar_t-** , per ottenere il comportamento da versioni precedenti o preferibilmente aggiornando i tipi in modo che siano compatibili. Per altre informazioni, vedere [/Zc:wchar_t (Tipo nativo wchar_t)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+C2259 può anche verificarsi in seguito alle operazioni di conformità eseguite in Visual Studio 2005, **/Zc: wchar_t** è ora attiva per impostazione predefinita. In questa situazione, C2599 può essere risolto eseguendo la compilazione con **/Zc: wchar_t-**, per ottenere il comportamento da versioni precedenti o preferibilmente aggiornando i tipi in modo che siano compatibili. Per altre informazioni, vedere [/Zc:wchar_t (Tipo nativo wchar_t)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 L'esempio seguente genera l'C2259:
 

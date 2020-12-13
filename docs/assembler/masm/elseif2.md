@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: ELSEIF2'
 title: ELSEIF2
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ELSEIF2 directive
 ms.assetid: 6e6a1020-1dc2-45a9-a42c-e08442fb4071
-ms.openlocfilehash: 65bb02bd65531ab0d4f591ca9435c3f3aa6d6bae
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 251ff4ee2a1a992ee3d08777951c65b85cd21c90
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318137"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97130598"
 ---
 # <a name="elseif2"></a>ELSEIF2
 
@@ -21,11 +22,11 @@ Blocco [ElseIf](elseif-masm.md) valutato su ogni assembly pass if **: SETIF2** Ã
 
 > **ELSEIF2**
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni sul comportamento di 2 passaggi in MASM 5,1 e MASM 6,1, vedere [IF1 e IF2](if2.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimento alle direttive](directives-reference.md)\
+[Guida di riferimento alle direttive](directives-reference.md)\
 [Grammatica BNF di MASM](masm-bnf-grammar.md)

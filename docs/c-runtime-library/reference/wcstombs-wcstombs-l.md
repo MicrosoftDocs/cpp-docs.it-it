@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: wcstombs, _wcstombs_l'
 title: wcstombs, _wcstombs_l
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 91234252-9ea1-423a-af99-e9d0ce4a40e3
-ms.openlocfilehash: 33c7554f1ab5c9822a1908a4b50d0ee0764615ae
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 070ba4dbf574ccd6b1afaec074dc9eb9f311e728
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910628"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136838"
 ---
 # <a name="wcstombs-_wcstombs_l"></a>wcstombs, _wcstombs_l
 
@@ -94,7 +95,7 @@ Impostazioni locali da usare.
 
 Se **wcstombs** converte correttamente la stringa multibyte, restituisce il numero di byte scritti nella stringa di output multibyte, escluso il valore null di terminazione (se presente). Se l'argomento *mbstr* è **null**, **wcstombs** restituisce la dimensione richiesta in byte della stringa di destinazione. Se **wcstombs** rileva un carattere wide, non può essere convertito in un carattere multibyte, restituisce il cast-1 al tipo **size_t** e imposta **errno** su **EILSEQ**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **wcstombs** converte la stringa di caratteri wide a cui punta *wcstr* nei caratteri multibyte corrispondenti e archivia i risultati nella matrice *mbstr* . Il parametro *count* indica il numero massimo di byte che possono essere archiviati nella stringa di output multibyte, ovvero la dimensione di *mbstr*. In generale, non è possibile sapere quanti byte saranno necessari durante la conversione di stringa di caratteri wide. Alcuni caratteri wide richiederanno un solo byte nella stringa di output, altri due. Se sono presenti due byte nella stringa di output multibyte per ogni carattere wide nella stringa di input (incluso il carattere wide null), il risultato sarà sicuramente appropriato.
 
@@ -102,7 +103,7 @@ Se **wcstombs** rileva il carattere null Wide (L'\ 0') prima o quando si verific
 
 Se l'argomento *mbstr* è **null**, **wcstombs** restituisce la dimensione richiesta in byte della stringa di destinazione.
 
-**wcstombs** convalida i relativi parametri. Se *wcstr* è **null**o se *count* è maggiore di **INT_MAX**, questa funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, la funzione imposta **errno** su **EINVAL** e restituisce-1.
+**wcstombs** convalida i relativi parametri. Se *wcstr* è **null** o se *count* è maggiore di **INT_MAX**, questa funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, la funzione imposta **errno** su **EINVAL** e restituisce-1.
 
 **wcstombs** usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali; **_wcstombs_l** è identico, ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
@@ -161,10 +162,10 @@ Convert wide-character string:
     Multibyte character: Hello, world.
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

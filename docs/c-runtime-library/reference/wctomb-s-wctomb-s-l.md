@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: wctomb_s, _wctomb_s_l'
 title: wctomb_s, _wctomb_s_l
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 7e94a888-deed-4dbd-b5e9-d4a0455538b8
-ms.openlocfilehash: 63839f70fa334fadd961eb173343d1b406268cfd
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 845bdd5fff74e24226700b1f233ccf1e29afc27e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910437"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136825"
 ---
 # <a name="wctomb_s-_wctomb_s_l"></a>wctomb_s, _wctomb_s_l
 
@@ -75,7 +76,7 @@ Indirizzo di un carattere multibyte.
 *sizeInBytes*<br/>
 Dimensioni del buffer *mbchar*.
 
-*WCHAR*<br/>
+*wchar*<br/>
 Carattere wide.
 
 *locale*<br/>
@@ -95,7 +96,7 @@ Condizioni di errore
 
 Se si verifica una delle condizioni di errore precedenti, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **wctomb** restituisce **EINVAL** e imposta **errno** su **EINVAL**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **wctomb_s** converte il relativo argomento *WCHAR* nel carattere multibyte corrispondente e archivia il risultato in *mbchar*. È possibile chiamare la funzione da qualsiasi punto in un qualsiasi programma.
 
@@ -142,10 +143,10 @@ Convert a wide character:
    Multibyte character: a
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

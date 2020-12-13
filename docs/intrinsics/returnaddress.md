@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _ReturnAddress'
 title: _ReturnAddress
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,28 +8,28 @@ helpviewer_keywords:
 - _ReturnAddress intrinsic
 - ReturnAddress intrinsic
 ms.assetid: 7f4a5811-35e6-4f64-ba7c-21203380eeda
-ms.openlocfilehash: 2a830ff1e8a2c9551dec52cf10a3d5cf126bde3b
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: abb6b879c466372fce0ecbeb7371101e3a3ef82b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218055"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143741"
 ---
 # <a name="_returnaddress"></a>_ReturnAddress
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 La `_ReturnAddress` funzione intrinseca fornisce l'indirizzo dell'istruzione nella funzione chiamante che verrà eseguita dopo la restituzione del controllo al chiamante.
 
-Compilare il programma seguente ed eseguire un'istruzione alla volta nel debugger. Durante l'esecuzione del programma, prendere nota dell'indirizzo restituito da `_ReturnAddress`. Quindi, immediatamente dopo la restituzione dalla funzione `_ReturnAddress` in cui è stato usato [, aprire la procedura: Utilizzare la finestra](/visualstudio/debugger/how-to-use-the-disassembly-window) Disassembly e notare che l'indirizzo dell'istruzione successiva da eseguire corrisponde all'indirizzo restituito da `_ReturnAddress`.
+Compilare il programma seguente ed eseguire un'istruzione alla volta nel debugger. Durante l'esecuzione del programma, prendere nota dell'indirizzo restituito da `_ReturnAddress` . Quindi, immediatamente dopo la restituzione dalla funzione in cui `_ReturnAddress` è stato usato, aprire la [finestra procedura: usare la finestra Disassembly](/visualstudio/debugger/how-to-use-the-disassembly-window) e notare che l'indirizzo dell'istruzione successiva da eseguire corrisponde all'indirizzo restituito da `_ReturnAddress` .
 
-Le ottimizzazioni, ad esempio l'incorporamento, possono influire sull'indirizzo mittente. Se, ad esempio, il programma di esempio seguente viene compilato con [/Ob1](../build/reference/ob-inline-function-expansion.md), `inline_func` verrà inline nella funzione chiamante `main`. Pertanto, le chiamate a `_ReturnAddress` da `inline_func` e `main` producono ognuna lo stesso valore.
+Le ottimizzazioni, ad esempio l'incorporamento, possono influire sull'indirizzo mittente. Se, ad esempio, il programma di esempio seguente viene compilato con [/OB1](../build/reference/ob-inline-function-expansion.md), `inline_func` verrà inline nella funzione chiamante `main` . Pertanto, le chiamate a `_ReturnAddress` da `inline_func` e `main` producono ognuna lo stesso valore.
 
-Quando `_ReturnAddress` si utilizza in un programma compilato con [/CLR](../build/reference/clr-common-language-runtime-compilation.md), la funzione contenente la `_ReturnAddress` chiamata verrà compilata come funzione nativa. Quando una funzione compilata come chiamata gestita nella funzione `_ReturnAddress`che `_ReturnAddress` contiene, potrebbe non comportarsi come previsto.
+Quando `_ReturnAddress` si utilizza in un programma compilato con [/CLR](../build/reference/clr-common-language-runtime-compilation.md), la funzione contenente la `_ReturnAddress` chiamata verrà compilata come funzione nativa. Quando una funzione compilata come chiamata gestita nella funzione che contiene `_ReturnAddress` , `_ReturnAddress` potrebbe non comportarsi come previsto.
 
 ## <a name="requirements"></a>Requisiti
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
 ## <a name="example"></a>Esempio
 
@@ -61,9 +62,9 @@ int main(void)
 }
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)\
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\

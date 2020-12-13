@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2261'
 title: Errore del compilatore C2261
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2261
 ms.assetid: 60969482-9e83-49b5-9631-a04bc844da12
-ms.openlocfilehash: f23c2a38f8e4d6781af73fb70a25cf4737e2c4e8
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c5156a240696f9021613b54cf7013e9372a13b45
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758775"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97134615"
 ---
 # <a name="compiler-error-c2261"></a>Errore del compilatore C2261
 
@@ -19,7 +20,7 @@ ms.locfileid: "74758775"
 
 Valore non valido.
 
-<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> viene usato per specificare un assembly Friend. Se, ad esempio, un file con estensione dll desidera specificare b. dll come assembly Friend, è necessario specificare (in un file con estensione dll): InternalsVisibleTo ("b"). Il runtime consente quindi a b. dll di accedere a tutti gli elementi in un file con estensione dll (eccetto i tipi privati).
+<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> viene usato per specificare un assembly Friend. Se, ad esempio, a.dll desidera specificare b.dll come assembly Friend, è necessario specificare (in a.dll): InternalsVisibleTo ("b"). Il runtime consente quindi b.dll di accedere a tutti gli elementi in a.dll (ad eccezione dei tipi privati).
 
 Per ulteriori informazioni sulla sintassi corretta quando si specificano gli assembly Friend, vedere [assembly Friend (C++)](../../dotnet/friend-assemblies-cpp.md).
 

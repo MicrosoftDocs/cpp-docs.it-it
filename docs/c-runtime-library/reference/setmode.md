@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _setmode'
 title: _setmode
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: abedba6f1d414191732859e3e44b54cc16acc4e9
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 305e9a247410d762821ed0e3e004505adc1a4034
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008422"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146380"
 ---
 # <a name="_setmode"></a>_setmode
 
@@ -71,7 +72,7 @@ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, e
 
 La funzione **_setmode** *imposta la modalità di conversione* del file fornita da *FD*. Se si passa **_O_TEXT** *modalità* , viene impostata la modalità testo (ovvero la traduzione). Le combinazioni di ritorno a capo/avanzamento riga (CR-LF) vengono convertite in un singolo carattere di avanzamento riga nell'input. I caratteri di avanzamento riga sono convertiti in combinazioni di ritorno a capo-avanzamento riga in fase di output. Il passaggio di **_O_BINARY** imposta la modalità binaria (non convertita), in cui queste conversioni vengono omesse.
 
-È anche possibile passare **_O_U16TEXT**, **_O_U8TEXT**o **_O_WTEXT** per abilitare la modalità Unicode, come illustrato nel secondo esempio più avanti in questo documento.
+È anche possibile passare **_O_U16TEXT**, **_O_U8TEXT** o **_O_WTEXT** per abilitare la modalità Unicode, come illustrato nel secondo esempio più avanti in questo documento.
 
 > [!CAUTION]
 > La modalità Unicode è per le funzioni di stampa Wide (ad esempio, `wprintf` ) e non è supportata per le funzioni di stampa narrow. L'uso di una funzione di stampa narrow su un flusso in modalità Unicode attiva un'asserzione.
@@ -139,7 +140,7 @@ int main(void) {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione di file](../../c-runtime-library/file-handling.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

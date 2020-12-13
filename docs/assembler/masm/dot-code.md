@@ -1,4 +1,5 @@
 ---
+description: Ulteriori informazioni su:. CODICE
 title: .CODE
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - .CODE directive
 ms.assetid: 2b8c882c-c0d2-4fa3-8335-e6b12717a4f4
-ms.openlocfilehash: 7e53befcc46319d0ecf2287ab96a19a73a0b0b85
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 3f47b3bf9f345ae39f68b1b21e8f3807f554ea2d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076270"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132276"
 ---
 # <a name="code"></a>.CODE
 
@@ -19,17 +20,17 @@ ms.locfileid: "80076270"
 
 ## <a name="syntax"></a>Sintassi
 
-> **.** *Nome*⟦ del codice ⟧ \
+> **.***Nome*⟦ del codice ⟧ \
 > ⟦ *segmentItem* ⟧... \
 > ⟦ *codesegmentnameId* **termina**;; ⟧\
 
 ### <a name="parameters"></a>Parametri
 
 *nome*\
-Parametro facoltativo che specifica il nome del segmento di codice. Il nome predefinito è **_TEXT** per i [modelli](dot-model.md)piccoli, piccoli, compatti e Flat. Il nome predefinito è *modulename*_TEXT per altri modelli.
+Parametro facoltativo che specifica il nome del segmento di codice. Il nome predefinito è **_TEXT** per i [modelli](dot-model.md)piccoli, piccoli, compatti e Flat. Il nome predefinito è *modulename* _TEXT per altri modelli.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimento alle direttive](directives-reference.md)\
-[.\ dati](dot-data.md)
+[Guida di riferimento alle direttive](directives-reference.md)\
+[. DATI](dot-data.md)\
 [Grammatica BNF di MASM](masm-bnf-grammar.md)

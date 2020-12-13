@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 4) C4680'
 title: Avviso del compilatore (livello 4) C4680
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4680
 ms.assetid: 6e043f4c-c601-4b77-8130-920cff1d912e
-ms.openlocfilehash: ea9eb681d1696c77184a9999a94367a0bce8c454
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 85f14273efb2b7d91a6b663e69918b77bcb7c597
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91510051"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133874"
 ---
 # <a name="compiler-warning-level-4-c4680"></a>Avviso del compilatore (livello 4) C4680
 

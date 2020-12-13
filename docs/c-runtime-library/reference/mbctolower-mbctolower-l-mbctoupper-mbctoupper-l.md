@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l'
 title: _mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 ms.date: 4/2/2020
 api_name:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-ms.openlocfilehash: 3a3adb32b8620a49110e887788e9f3c4893b6a1a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: abf09a7a96fc1df9f34f3263638c68da4f9991d1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914282"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146445"
 ---
 # <a name="_mbctolower-_mbctolower_l-_mbctoupper-_mbctoupper_l"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 
@@ -95,7 +96,7 @@ Impostazioni locali da usare.
 
 Ognuna di queste funzioni restituisce il carattere convertito *c*, se possibile. In caso contrario, restituisce il carattere *c* non modificato.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le funzioni testano un carattere *c* e, se possibile, applicano una delle seguenti conversioni.
 
@@ -106,7 +107,7 @@ Le funzioni testano un carattere *c* e, se possibile, applicano una delle seguen
 
 La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). La versione di questa funzione senza il suffisso **_L** usa le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; la versione con il suffisso **_L** è identica, ma usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Nelle versioni precedenti, **_mbctolower** era denominato **jtolower**e **_mbctoupper** era denominato **jtoupper**. Per il nuovo codice, utilizzare invece i nuovi nomi.
+Nelle versioni precedenti, **_mbctolower** era denominato **jtolower** e **_mbctoupper** era denominato **jtoupper**. Per il nuovo codice, utilizzare invece i nuovi nomi.
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -128,7 +129,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
 [_mbbtombc, _mbbtombc_l](mbbtombc-mbbtombc-l.md)<br/>

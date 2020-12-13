@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __stosq'
 title: __stosq
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - stosq instruction
 - __stosq intrinsic
 ms.assetid: 3ea28297-4369-4c2d-bf0c-91fa539ce209
-ms.openlocfilehash: 8b347d595da4cdbf1fefb6244940e262981671e9
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 5fce587c163da18679750c20ec697c489ecf5d90
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219960"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143702"
 ---
 # <a name="__stosq"></a>__stosq
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Genera un'istruzione di stringa di`rep stosq`archiviazione ().
+Genera un'istruzione di stringa di archiviazione ( `rep stosq` ).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -44,13 +45,13 @@ in Lunghezza del blocco di parole quadruple da scrivere.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`__stosq`|AMD64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Il risultato è che i *dati* quadrupla vengono scritti in un blocco di *count* parole quadruple nella stringa di *destinazione* .
 
@@ -80,8 +81,8 @@ int main()
 0 ffffffffffff ffffffffffff 0
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

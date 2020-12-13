@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:. 686P (MASM a 32 bit)
 title: .686P
 ms.date: 11/05/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - .686P directive
 ms.assetid: 06d9a9bf-50b1-4eed-b4a3-86b256c71b48
-ms.openlocfilehash: f7421d4b008d1f9245a49f05148b41f2206df73f
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 855d37a012279ce37f6c1b82508df8277fb10f3a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75314328"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132353"
 ---
 # <a name="686p-32-bit-masm"></a>.686P (MASM a 32 bit)
 
@@ -21,7 +22,7 @@ Abilita l'assembly di tutte le istruzioni (incluso il privilegio) per il process
 
 > **.686P**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimento alle direttive](directives-reference.md)\
+[Guida di riferimento alle direttive](directives-reference.md)\
 [Grammatica BNF di MASM](masm-bnf-grammar.md)

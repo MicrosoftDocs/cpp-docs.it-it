@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Windows Sockets: esempio di socket con archivi'
 title: 'Windows Sockets: esempio di socket che utilizzano archivi'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - examples [MFC], Windows Sockets
 - Windows Sockets [MFC], with archives
 ms.assetid: 2e3c9bb2-7e7b-4f28-8dc5-6cb7a484edac
-ms.openlocfilehash: 275a6c274648225fedcec9d42c280f77af68158e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 726df9093f71a7c72fc72794044a417c5425d2a6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226776"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132926"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: esempio di socket che utilizzano archivi
 
@@ -53,11 +54,11 @@ Per ulteriori informazioni, vedere la specifica di Windows Sockets: **htonl**, *
 
 - [Windows Sockets: Sfondo](../mfc/windows-sockets-background.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)<br/>
 [CArchive:: l'archiviazione](../mfc/reference/carchive-class.md#isstoring)<br/>
-[ <<CArchive:: operator](../mfc/reference/carchive-class.md#operator_lt_lt)<br/>
-[ >>CArchive:: operator](../mfc/reference/carchive-class.md#operator_lt_lt)<br/>
+[ <<CArchive:: operator ](../mfc/reference/carchive-class.md#operator_lt_lt)<br/>
+[ >>CArchive:: operator ](../mfc/reference/carchive-class.md#operator_lt_lt)<br/>
 [CArchive:: Flush](../mfc/reference/carchive-class.md#flush)<br/>
 [CObject:: Serialize](../mfc/reference/cobject-class.md#serialize)
