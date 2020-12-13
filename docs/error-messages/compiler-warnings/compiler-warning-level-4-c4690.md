@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 4) C4690'
 title: Avviso del compilatore (livello 4) C4690
 ms.date: 07/03/2018
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4690
 ms.assetid: 080a0ea1-458b-477b-a37a-4a34c94709ff
-ms.openlocfilehash: de996128c68ebf96b4a00f6206cbaf54d97ca275
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1f6d3ee3f6ba20207a355350edda99861d10b5f8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509966"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133846"
 ---
 # <a name="compiler-warning-level-4-c4690"></a>Avviso del compilatore (livello 4) C4690
 
 > \[ emitidl (pop)]: più estrazioni che push
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il numero di estrazioni dell'attributo [emitidl](../../windows/attributes/emitidl.md) supera di una volta il numero di inserimenti.
 

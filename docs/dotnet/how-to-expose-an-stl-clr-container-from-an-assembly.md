@@ -1,30 +1,31 @@
 ---
-title: 'Procedura: Esporre un contenitore STL/CLR da un Assembly'
+description: 'Altre informazioni su: procedura: esporre un contenitore STL/CLR da un assembly'
+title: 'Procedura: esporre un contenitore STL/CLR da un assembly'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, cross-assembly issues
 ms.assetid: 87efb41b-3db3-4498-a2e7-f3ef8a99f04d
-ms.openlocfilehash: 206a95cbaa808f54d7ae0e500b5a2bea272d974b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4ed92af956def030c80f8f303f0a7501c4944c6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387331"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97134979"
 ---
-# <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>Procedura: Esporre un contenitore STL/CLR da un Assembly
+# <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>Procedura: esporre un contenitore STL/CLR da un assembly
 
-Contenitori STL/CLR, ad esempio `list` e `map` vengono implementati come classi di riferimento del modello. Poiché i modelli C++ vengono creata un'istanza in fase di compilazione, due classi di modello che hanno esattamente la stessa firma ma si trovano in assembly diversi sono effettivamente diversi tipi. Ciò significa che le classi di modello possono essere usate tra limiti di assembly.
+I contenitori STL/CLR come `list` e `map` vengono implementati come classi di riferimento del modello. Poiché i modelli C++ vengono creati in fase di compilazione, due classi modello con la stessa firma ma che si trovano in assembly diversi sono in realtà tipi diversi. Ciò significa che le classi modello non possono essere utilizzate tra i limiti dell'assembly.
 
-Per consentire la condivisione tra assembly, contenitori STL/CLR implementano l'interfaccia generica <xref:System.Collections.Generic.ICollection%601>. Utilizzando questa interfaccia generica, tutti i linguaggi che supportano i generics, tra cui C++, c# e Visual Basic, possono accedere i contenitori STL/CLR.
+Per consentire la condivisione tra assembly, i contenitori STL/CLR implementano l'interfaccia generica <xref:System.Collections.Generic.ICollection%601> . Utilizzando questa interfaccia generica, tutti i linguaggi che supportano i generics, inclusi C++, C# e Visual Basic, possono accedere ai contenitori STL/CLR.
 
-In questo argomento illustra come visualizzare gli elementi di numerosi contenitori STL/CLR scritti in un assembly C++ denominato `StlClrClassLibrary`. Illustra due assembly che devono accedere `StlClrClassLibrary`. Il primo assembly viene scritto in C++, mentre la seconda nel linguaggio c#.
+In questo argomento viene illustrato come visualizzare gli elementi di diversi contenitori STL/CLR scritti in un assembly C++ denominato `StlClrClassLibrary` . Vengono mostrati due assembly a cui accedere `StlClrClassLibrary` . Il primo assembly è scritto in C++ e il secondo in C#.
 
-Se entrambi gli assembly vengono scritti in C++, è possibile accedere all'interfaccia generica di un contenitore con relativo `generic_container` typedef. Ad esempio, se si dispone di un contenitore di tipo `cliext::vector<int>`, quindi è l'interfaccia generica: `cliext::vector<int>::generic_container`. Analogamente, è possibile ottenere un iteratore tramite l'interfaccia generica usando la `generic_iterator` typedef, come in: `cliext::vector<int>::generic_iterator`.
+Se entrambi gli assembly sono scritti in C++, è possibile accedere all'interfaccia generica di un contenitore usando il relativo `generic_container` typedef. Se, ad esempio, si dispone di un contenitore di tipo `cliext::vector<int>` , l'interfaccia generica è: `cliext::vector<int>::generic_container` . Analogamente, è possibile ottenere un iteratore sull'interfaccia generica usando il `generic_iterator` typedef, come in: `cliext::vector<int>::generic_iterator` .
 
-Poiché questi typedef vengono dichiarati nel file di intestazione C++, non è possibile usarli con assembly scritti in altri linguaggi. Pertanto, per accedere all'interfaccia generica per `cliext::vector<int>` in c# o qualsiasi altro linguaggio .NET, usare `System.Collections.Generic.ICollection<int>`. Per eseguire l'iterazione su questa raccolta, usare un `foreach` ciclo.
+Poiché questi typedef sono dichiarati in file di intestazione C++, gli assembly scritti in altri linguaggi non possono usarli. Pertanto, per accedere all'interfaccia generica per `cliext::vector<int>` in C# o qualsiasi altro linguaggio .NET, usare `System.Collections.Generic.ICollection<int>` . Per eseguire l'iterazione di questa raccolta, utilizzare un `foreach` ciclo.
 
-La tabella seguente elenca l'interfaccia generica che implementa di ciascun contenitore STL/CLR:
+La tabella seguente elenca l'interfaccia generica implementata da ogni contenitore STL/CLR:
 
 |Contenitore STL/CLR|Interfaccia generica|
 |------------------------|-----------------------|
@@ -41,13 +42,13 @@ La tabella seguente elenca l'interfaccia generica che implementa di ciascun cont
 |`vector<T>`|`ICollection<T>`|
 
 > [!NOTE]
-> Poiché il `queue`, `priority_queue`, e `stack` contenitori non supportano gli iteratori, non implementano le interfacce generiche e non può essere cross-assembly a cui si accede.
+> Poiché i `queue` `priority_queue` contenitori, e non supportano gli `stack` iteratori, non implementano interfacce generiche e non è possibile accedervi tra assembly.
 
 ## <a name="example-1"></a>Esempio 1
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
-In questo esempio, si dichiara una classe C++ che contiene i dati dei membri privati di STL/CLR. È quindi possibile dichiarare i metodi pubblici per concedere l'accesso alle raccolte private della classe. Per farlo in due modi diversi, uno per i client C++ e uno per gli altri client .NET.
+In questo esempio viene dichiarata una classe C++ che contiene dati del membro STL/CLR privati. Si dichiarano quindi metodi pubblici per concedere l'accesso alle raccolte private della classe. Questa operazione viene eseguita in due modi diversi, uno per i client C++ e uno per altri client .NET.
 
 ### <a name="code"></a>Codice
 
@@ -103,11 +104,11 @@ namespace StlClrClassLibrary {
 
 ## <a name="example-2"></a>Esempio 2
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
-In questo esempio viene implementata la classe dichiarata nell'esempio 1. Affinché i client usare la libreria di classi, utilizziamo lo strumento manifesto **mt.exe** per incorporare il file manifesto nella DLL. Per informazioni dettagliate, vedere i commenti del codice.
+In questo esempio viene implementata la classe dichiarata nell'esempio 1. Per consentire ai client di utilizzare questa libreria di classi, viene utilizzato lo strumento manifesto **mt.exe** per incorporare il file manifesto nella dll. Per informazioni dettagliate, vedere i commenti del codice.
 
-Per altre informazioni sul manifesto dello strumento e assembly side-by-side, vedere [compilazione di applicazioni isolate C/C++ e assembly Side-by-side](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md).
+Per ulteriori informazioni sullo strumento Manifesto e sugli assembly affiancati, vedere [compilazione di applicazioni isolate C/C++ e assembly affiancati](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md).
 
 ### <a name="code"></a>Codice
 
@@ -197,9 +198,9 @@ namespace StlClrClassLibrary
 
 ## <a name="example-3"></a>Esempio 3
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
-In questo esempio, creiamo un client C++ che usa la libreria di classi creata negli esempi 1 e 2. Questo client utilizza il `generic_container` typedef dei contenitori STL/CLR per scorrere i contenitori e visualizzare i relativi contenuti.
+In questo esempio viene creato un client C++ che usa la libreria di classi creata negli esempi 1 e 2. Questo client usa i `generic_container` typedef dei contenitori STL/CLR per scorrere i contenitori e visualizzarne il contenuto.
 
 ### <a name="code"></a>Codice
 
@@ -291,9 +292,9 @@ cliext::vector contents:
 
 ## <a name="example-4"></a>Esempio 4
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
-In questo esempio, creiamo un client c# che usa la libreria di classi creata negli esempi 1 e 2. Questo client utilizza il <xref:System.Collections.Generic.ICollection%601> metodi dei contenitori STL/CLR per scorrere i contenitori e visualizzare i relativi contenuti.
+In questo esempio viene creato un client C# che usa la libreria di classi creata negli esempi 1 e 2. Questo client usa i <xref:System.Collections.Generic.ICollection%601> metodi dei contenitori STL/CLR per scorrere i contenitori e visualizzarne il contenuto.
 
 ### <a name="code"></a>Codice
 
@@ -384,6 +385,6 @@ cliext::vector contents:
 20
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimenti alla libreria STL/CLR](../dotnet/stl-clr-library-reference.md)

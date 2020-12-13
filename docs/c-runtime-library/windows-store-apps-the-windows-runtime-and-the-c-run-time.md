@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: app UWP, Windows Runtime e C Run-Time'
 title: App UWP, Windows Runtime e run-time di C
 ms.date: 02/02/2019
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
-ms.openlocfilehash: 932b5388f2d1bf87f0d77ae1330fa3e613c9dca7
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: cfbbdbde19b882fb51b8fd8782b20e4205bdb00b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738673"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136747"
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>App UWP, Windows Runtime e run-time di C
 
@@ -39,9 +40,9 @@ Windows Runtime non supporta le funzionalità CRT seguenti:
 
 Per un elenco completo delle funzioni CRT non disponibili in un'app UWP e per suggerimenti su funzioni alternative, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Compatibilità](../c-runtime-library/compatibility.md)<br/>
-[Funzioni CRT non supportate da Windows Runtime](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)<br/>
+[Windows Runtime funzioni CRT non supportate](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)<br/>
 [Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
-[Creare un'app console della piattaforma UWP (Universal Windows Platform)](/windows/uwp/launch-resume/console-uwp)
+[Creare un'app console UWP (Universal Windows Platform)](/windows/uwp/launch-resume/console-uwp)
