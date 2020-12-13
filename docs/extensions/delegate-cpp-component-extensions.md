@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: delegato (C++/CLI e C++/CX)'
 title: delegate (C++/CLI e C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-ms.openlocfilehash: 77cd17eb8c164a08af9ec783f8aba422785609b6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 92cd46980775a340e6bf0d6857ace91645d65a7d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219729"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333722"
 ---
 # <a name="delegate--ccli-and-ccx"></a>delegate (C++/CLI e C++/CX)
 
@@ -23,7 +24,7 @@ Dichiara un tipo che rappresenta un puntatore a una funzione.
 
 Windows Runtime e Common Language Runtime supportano entrambi delegati.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **delegate** è una parola chiave sensibile al contesto. Per altre informazioni, vedere [Parole chiave sensibili al contesto](context-sensitive-keywords-cpp-component-extensions.md).
 
@@ -59,7 +60,7 @@ Nome del tipo di delegato dichiarato.
 *parameters*<br/>
 (Facoltativo) Tipi e identificatori del prototipo di funzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare *delegate-type-identifier* per dichiarare un evento con lo stesso prototipo del delegato. Per altre informazioni, vedere [Delegati (C++/CX)](../cppcx/delegates-c-cx.md).
 
@@ -89,7 +90,7 @@ Firma della funzione che può essere associata al delegato. Il tipo restituito d
 
 Per definire un delegato non associato, il primo parametro di *function_declaration* deve essere il tipo del **`this`** puntatore per l'oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I delegati sono multicast: il "puntatore a funzione" può essere associato a uno o più metodi all'interno di una classe gestita. La parola chiave **delegate** definisce un tipo di delegato multicast con una firma di metodo specifica.
 
@@ -119,7 +120,7 @@ Quando si crea un delegato per una funzione statica o globale, è necessario un 
 
 Per altre informazioni sui delegati, vedere
 
-- [Procedura: Definire e usare delegati (C++/CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
+- [Procedura: definire e utilizzare delegati (C++/CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
 
 - [Delegati generici (C++/CLI)](generic-delegates-visual-cpp.md)
 
@@ -127,7 +128,7 @@ Per altre informazioni sui delegati, vedere
 
 Opzione del compilatore: `/clr`
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 L'esempio seguente mostra come dichiarare, inizializzare e richiamare delegati.
 
@@ -200,6 +201,6 @@ in func2 10
 in static func3 11
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)

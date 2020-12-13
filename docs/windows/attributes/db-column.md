@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: db_column'
 title: db_column (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: 05f734a9b083d93f2501172d9455b7889c65a5a6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 931a285d28752273ecb1941702ff1cb32b42740c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503539"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333080"
 ---
 # <a name="db_column"></a>db_column
 
@@ -48,13 +49,13 @@ Opzionale Variabile membro utilizzata per mantenere lo stato della colonna. Lo s
 *length*<br/>
 Opzionale Variabile membro utilizzata per conservare la dimensione della colonna in byte.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 **db_column** associa la colonna della tabella specificata a una variabile nel set di righe. Delimita i dati dei membri che possono partecipare all' `IAccessor` associazione basata su OLE DB. Questo attributo imposta la mappa delle colonne normalmente definita usando le macro di consumer OLE DB [BEGIN_COLUMN_MAP](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#begin_column_map), [END_COLUMN_MAP](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#end_column_map)e [COLUMN_ENTRY](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#column_entry). Questi consentono di modificare la [struttura OLE DB DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) per associare la colonna specificata. Ogni membro contrassegnato con l'attributo **db_column** occuperà una voce nella mappa delle colonne sotto forma di voce di colonna. Questo attributo viene pertanto chiamato in cui inserire la mappa delle colonne, ovvero nel comando o nella classe della tabella.
 
 Utilizzare **db_column** insieme agli attributi [db_table](db-table.md) o [db_command](db-command.md) .
 
-Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore rinomina la classe in \_*NomeClasse*Accessor, dove *NomeClasse* è il nome assegnato alla classe. Il compilatore crea anche una classe denominata *NomeClasse*, che deriva da \_*NomeClasse*Accessor.  In Visualizzazione classi verranno visualizzate entrambe le classi.
+Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore rinomina la classe in \_*NomeClasse* Accessor, dove *NomeClasse* è il nome assegnato alla classe. Il compilatore crea anche una classe denominata *NomeClasse*, che deriva da \_*NomeClasse* Accessor.  In Visualizzazione classi verranno visualizzate entrambe le classi.
 
 Per un esempio di questo attributo usato in un'applicazione, vedere [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer).
 
@@ -98,7 +99,7 @@ class CProducts {
 
 ## <a name="requirements"></a>Requisiti
 
-| Contesto dell'attributo | valore |
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|**`class`**, **`struct`** , Member, metodo|
 |**Ripetibile**|No|
@@ -107,7 +108,7 @@ class CProducts {
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi del consumer OLE DB](ole-db-consumer-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)

@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: conversione boxing (C++/CLI e C++/CX)'
 title: Conversione boxing (C++/CLI e C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-ms.openlocfilehash: 709754e8609406f635444937af93488060167ba9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b3bdc87d9dea2a5a70344ee032655712af221d59
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172607"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333755"
 ---
 # <a name="boxing--ccli-and-ccx"></a>Conversione boxing (C++/CLI e C++/CX)
 
@@ -34,7 +35,7 @@ value_variable = (value_type) object_variable;
 
 Opzione del compilatore: `/ZW`
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 Nell'esempio di codice seguente viene eseguita la conversione boxing e unboxing di un valore `DateTime`. Prima di tutto, l'esempio ottiene un valore `DateTime` che rappresenta la data e l'ora correnti e lo assegna a una variabile `DateTime`. `DateTime` viene quindi sottoposto a conversione boxing assegnandolo a una variabile `Object`. Infine, il valore sottoposto a conversione boxing viene sottoposto a conversione unboxing assegnandolo a un'altra variabile `DateTime`.
 
@@ -82,11 +83,11 @@ La conversione boxing e unboxing consente di trattare i tipi valore come oggetti
 
 Per altre informazioni, vedere:
 
-- [Procedura: Richiedere la conversione boxing in modo esplicito](../dotnet/how-to-explicitly-request-boxing.md)
+- [Procedura: richiedere la conversione boxing in modo esplicito](../dotnet/how-to-explicitly-request-boxing.md)
 
-- [Procedura: Usare gcnew per creare tipi di valore e usare la conversione boxing implicita](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)
+- [Procedura: utilizzare gcnew per creare tipi di valore e utilizzare la conversione boxing implicita](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)
 
-- [Procedura: Unbox](../dotnet/how-to-unbox.md)
+- [Procedura: Eseguire la conversione unboxing](../dotnet/how-to-unbox.md)
 
 - [Conversioni standard e conversione boxing implicita](../dotnet/standard-conversions-and-implicit-boxing.md)
 
@@ -94,7 +95,7 @@ Per altre informazioni, vedere:
 
 Opzione del compilatore: `/clr`
 
-### <a name="examples"></a>Esempi
+### <a name="examples"></a>Esempio
 
 Nell'esempio seguente viene illustrato come funziona la conversione boxing implicita.
 
@@ -188,6 +189,6 @@ in func2(System::ValueType^)
 in func2(System::ValueType^)
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Estensioni componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Estensioni del componente per .NET e UWP](component-extensions-for-runtime-platforms.md)

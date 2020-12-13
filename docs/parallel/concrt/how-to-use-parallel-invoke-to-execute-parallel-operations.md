@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: procedura: usare parallel_invoke per eseguire operazioni in parallelo'
 title: 'Procedura: Usare parallel_invoke per eseguire operazioni in parallelo'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - parallel_invoke function, example
 - calling multiple functions in parallel [Concurrency Runtime]
 ms.assetid: a6aea69b-d647-4b7e-bf3b-e6a6a9880072
-ms.openlocfilehash: 62781b2915704c4104bd7e8a13e48e43d81955c6
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: e31cc19a1670cf7ccf9d664ffbed33fea98134a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008342"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334670"
 ---
 # <a name="how-to-use-parallel_invoke-to-execute-parallel-operations"></a>Procedura: Usare parallel_invoke per eseguire operazioni in parallelo
 
@@ -76,7 +77,7 @@ Per compilare il codice, copiarlo e incollarlo in un progetto di Visual Studio o
 
 > **cl.exe/EHsc/MD/DUNICODE/D_AFXDLL Parallel-Word-mining. cpp**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md)<br/>
 [Funzione parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)

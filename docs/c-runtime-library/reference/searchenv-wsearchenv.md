@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _searchenv, _wsearchenv'
 title: _searchenv, _wsearchenv
 ms.date: 4/2/2020
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - searchenv function
 - environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
-ms.openlocfilehash: 83ba5663d569d449a0024db5abe2eb3ee903123b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 411cb2b909d3ed948adcce97c41ace1a806f2f02
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913218"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334115"
 ---
 # <a name="_searchenv-_wsearchenv"></a>_searchenv, _wsearchenv
 
@@ -92,15 +93,15 @@ Ambiente per la ricerca.
 *percorso*<br/>
 Buffer per l'archiviazione del percorso completo.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Il **_searchenv** routine Cerca il file di destinazione nel dominio specificato. La variabile *VarName* può essere qualsiasi ambiente o variabile definita dall'utente, ad esempio **path**, **lib**o **include**, che specifica un elenco di percorsi di directory. Poiché **_searchenv** fa distinzione tra maiuscole e minuscole, *VarName* deve corrispondere al case della variabile di ambiente.
+Il **_searchenv** routine Cerca il file di destinazione nel dominio specificato. La variabile *VarName* può essere qualsiasi ambiente o variabile definita dall'utente, ad esempio **path**, **lib** o **include**, che specifica un elenco di percorsi di directory. Poiché **_searchenv** fa distinzione tra maiuscole e minuscole, *VarName* deve corrispondere al case della variabile di ambiente.
 
 La routine cerca innanzitutto il file nella directory di lavoro corrente. Se non trova il file, cerca nelle directory specificate dalla variabile d'ambiente. Se il file di destinazione si trova in una di queste directory, il percorso appena creato viene copiato in *pathname*. Se il file *filename* non viene trovato, *pathname* contiene una stringa vuota con terminazione null.
 
 Il buffer del *percorso* deve avere una lunghezza di almeno **_MAX_PATH** caratteri per contenere la lunghezza totale del nome del percorso costruito. In caso contrario, **_searchenv** potrebbe sovraccaricare il buffer del *percorso* e causare un comportamento imprevisto.
 
-**_wsearchenv** è una versione a caratteri wide di **_searchenv**e gli argomenti per **_wsearchenv** sono stringhe a caratteri wide. **_wsearchenv** e **_searchenv** si comportano in modo identico.
+**_wsearchenv** è una versione a caratteri wide di **_searchenv** e gli argomenti per **_wsearchenv** sono stringhe a caratteri wide. **_wsearchenv** e **_searchenv** si comportano in modo identico.
 
 Se *filename* è una stringa vuota, queste funzioni restituiscono **ENOENT**.
 
@@ -161,7 +162,7 @@ C:\Program Files\Microsoft Visual Studio 8\VC\BIN\CL.EXE
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controllo delle directory](../../c-runtime-library/directory-control.md)<br/>
+[Controllo Directory](../../c-runtime-library/directory-control.md)<br/>
 [getenv, _wgetenv](getenv-wgetenv.md)<br/>
 [_putenv, _wputenv](putenv-wputenv.md)<br/>
 [_searchenv_s, _wsearchenv_s](searchenv-s-wsearchenv-s.md)<br/>

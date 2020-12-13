@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: invalid_operation Class'
 title: Classe invalid_operation
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_operation class
 ms.assetid: 26ba07dc-fcdf-44cb-b748-a31d35205b52
-ms.openlocfilehash: e17d530569d16ba0084a58bf0be00d4a8423b7f6
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: f3050d487f2c374f66f264b6e568fce5244d25ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140876"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334536"
 ---
 # <a name="invalid_operation-class"></a>Classe invalid_operation
 
@@ -29,11 +30,11 @@ class invalid_operation : public std::exception;
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[invalid_operation](#ctor)|Di overload. Costruisce un oggetto `invalid_operation`.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Nei vari metodi che generano tale eccezione vengono di solito documentate le circostanze nelle quali verrà generata.
 
@@ -49,7 +50,7 @@ Nei vari metodi che generano tale eccezione vengono di solito documentate le cir
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="ctor"></a>invalid_operation
+## <a name="invalid_operation"></a><a name="ctor"></a> invalid_operation
 
 Costruisce un oggetto `invalid_operation`.
 
@@ -64,6 +65,6 @@ invalid_operation() throw();
 *_Message*<br/>
 Messaggio descrittivo dell'errore.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)
+[Spazio dei nomi Concurrency](concurrency-namespace.md)

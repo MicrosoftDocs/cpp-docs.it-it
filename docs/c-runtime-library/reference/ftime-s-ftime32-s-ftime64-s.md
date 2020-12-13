@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _ftime_s, _ftime32_s, _ftime64_s'
 title: _ftime_s, _ftime32_s, _ftime64_s
 ms.date: 4/2/2020
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - _ftime_s function
 - _ftime32_s function
 ms.assetid: d03080d9-a520-45be-aa65-504bdb197e8b
-ms.openlocfilehash: a77d149f367c7f565141fbc3be1db1bfc3f3f362
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 97b709f014c463022e18b209e374afd6c18c20e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909964"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334190"
 ---
 # <a name="_ftime_s-_ftime32_s-_ftime64_s"></a>_ftime_s, _ftime32_s, _ftime64_s
 
@@ -63,26 +64,26 @@ errno_t _ftime64_s( struct __timeb64 *timeptr );
 ### <a name="parameters"></a>Parametri
 
 *timeptr*<br/>
-Puntatore a una struttura **_timeb**, **__timeb32**o **__timeb64** .
+Puntatore a una struttura **_timeb**, **__timeb32** o **__timeb64** .
 
 ## <a name="return-value"></a>Valore restituito
 
 Zero in caso di esito positivo, un codice di errore in caso di esito negativo. Se *timeptr* è **null**, il valore restituito è **EINVAL**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **_ftime_s** Ottiene l'ora locale corrente e la archivia nella struttura a cui punta *timeptr*. Le strutture **_timeb**, **__timeb32**e **__timeb64** sono definite in SYS\Timeb.h. Le strutture contengono quattro valori, elencati nella tabella seguente.
+La funzione **_ftime_s** Ottiene l'ora locale corrente e la archivia nella struttura a cui punta *timeptr*. Le strutture **_timeb**, **__timeb32** e **__timeb64** sono definite in SYS\Timeb.h. Le strutture contengono quattro valori, elencati nella tabella seguente.
 
-|Campo|Descrizione|
+|Campo|Description|
 |-|-|
 |**dstflag**|Diverso da zero se l'ora legale è in vigore per il fuso orario locale. (Vedere [tzset](tzset.md) per una spiegazione del modo in cui viene determinata l'ora legale.)|
 |**millitm**|Frazione di secondo in millisecondi.|
 |**time**|Ora in secondi trascorsi dalla mezzanotte (00.00.00) del 1 gennaio 1970 nel formato UTC (Coordinated Universal Time).|
-|**fuso orario**|La differenza in minuti, in direzione ovest, tra l'ora UTC e l'ora locale. Il valore di **TimeZone** viene impostato dal valore della variabile globale **_timezone** (vedere **_tzset**).|
+|**timezone**|La differenza in minuti, in direzione ovest, tra l'ora UTC e l'ora locale. Il valore di **TimeZone** viene impostato dal valore della variabile globale **_timezone** (vedere **_tzset**).|
 
 La funzione **_ftime64_s** , che usa la struttura **__timeb64** , consente di esprimere le date di creazione dei file fino a 23:59:59, 31 dicembre 3000, UTC; mentre **_ftime32_s** rappresenta solo le date a 23:59:59 del 18 gennaio 2038, UTC. La mezzanotte del 1 gennaio 1970 è il limite inferiore dell'intervallo di date per tutte queste funzioni.
 
-La funzione **_ftime_s** è equivalente a **_ftime64_s**e **_timeb** contiene un'ora a 64 bit, a meno che non sia stato definito **_USE_32BIT_TIME_T** , nel qual caso è attivo il comportamento precedente; **_ftime_s** usa un'ora a 32 bit e **_timeb** contiene un'ora a 32 bit.
+La funzione **_ftime_s** è equivalente a **_ftime64_s** e **_timeb** contiene un'ora a 64 bit, a meno che non sia stato definito **_USE_32BIT_TIME_T** , nel qual caso è attivo il comportamento precedente; **_ftime_s** usa un'ora a 32 bit e **_timeb** contiene un'ora a 32 bit.
 
 **_ftime_s** convalida i relativi parametri. Se viene passato un puntatore null come *timeptr*, la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** su **EINVAL**.
 
@@ -90,7 +91,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**_ftime_s**|\<sys/types.h> e \<sys/timeb.h>|
 |**_ftime32_s**|\<sys/types.h> e \<sys/timeb.h>|

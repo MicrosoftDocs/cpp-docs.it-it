@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __vmx_on'
 title: __vmx_on
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - VMXON instruction
 - __vmx_on intrinsic
 ms.assetid: 16804991-6a75-4adf-8ec2-bc95acfa4801
-ms.openlocfilehash: b6041711d9b6806362b856475151f2c4f63750cb
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: a1e9171fe64a239b592f0d27ec49d4159b46523d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219581"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333568"
 ---
 # <a name="__vmx_on"></a>__vmx_on
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Attiva l'operazione di estensioni della macchina virtuale (VMX) nel processore.
 
@@ -35,26 +36,26 @@ in Puntatore a un indirizzo fisico a 64 bit che punta a una struttura di control
 
 ## <a name="return-value"></a>Valore restituito
 
-|Value|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |0|Operazione completata.|
 |1|Operazione non riuscita con stato esteso disponibile in `VM-instruction error field` della VMCS corrente.|
 |2|Operazione non riuscita senza stato disponibile.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-La `__vmx_on` funzione corrisponde all'istruzione `VMXON` del computer. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per ulteriori informazioni, cercare il documento "specifica tecnica di virtualizzazione Intel per l'architettura Intel IA-32", numero documento C97063-002, nel sito [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
+La `__vmx_on` funzione corrisponde all' `VMXON` istruzione del computer. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per ulteriori informazioni, cercare il documento "specifica tecnica di virtualizzazione Intel per l'architettura Intel IA-32", numero documento C97063-002, nel sito [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
-|`__vmx_on`|X64|
+|`__vmx_on`|x64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

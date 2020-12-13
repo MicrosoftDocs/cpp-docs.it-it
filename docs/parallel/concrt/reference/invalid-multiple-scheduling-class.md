@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: invalid_multiple_scheduling Class'
 title: Classe invalid_multiple_scheduling
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_multiple_scheduling class
 ms.assetid: e9a47cb7-a778-4df7-92b0-3752119fd4c7
-ms.openlocfilehash: a8b2a045ce94562dcba0019bc03aaa90c4d384a9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 23d89d93c953a3c01a6e0e698cfa7489effd2986
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140897"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334556"
 ---
 # <a name="invalid_multiple_scheduling-class"></a>Classe invalid_multiple_scheduling
 
@@ -29,7 +30,7 @@ class invalid_multiple_scheduling : public std::exception;
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[invalid_multiple_scheduling](#ctor)|Di overload. Costruisce un oggetto `invalid_multiple_scheduling`.|
 
@@ -45,7 +46,7 @@ class invalid_multiple_scheduling : public std::exception;
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="ctor"></a>invalid_multiple_scheduling
+## <a name="invalid_multiple_scheduling"></a><a name="ctor"></a> invalid_multiple_scheduling
 
 Costruisce un oggetto `invalid_multiple_scheduling`.
 
@@ -60,12 +61,12 @@ invalid_multiple_scheduling() throw();
 *_Message*<br/>
 Messaggio descrittivo dell'errore.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)<br/>
+[Spazio dei nomi Concurrency](concurrency-namespace.md)<br/>
 [Classe task_handle](task-handle-class.md)<br/>
 [Classe task_group](task-group-class.md)<br/>
-[run](task-group-class.md)<br/>
+[Correre](task-group-class.md)<br/>
 [attendere](task-group-class.md)<br/>
 [run_and_wait](task-group-class.md)<br/>
 [Classe structured_task_group](structured-task-group-class.md)

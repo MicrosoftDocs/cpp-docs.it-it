@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: invalid_scheduler_policy_key Class'
 title: Classe invalid_scheduler_policy_key
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_scheduler_policy_key class
 ms.assetid: 6a7c42fe-9bc4-4a02-bebb-99fe9ef9817d
-ms.openlocfilehash: 60d5a57ff9cb33a3d522c14514f5107844216852
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: d352246cf0fe94f0ba5ee567f353680c89efcddc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143016"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334513"
 ---
 # <a name="invalid_scheduler_policy_key-class"></a>Classe invalid_scheduler_policy_key
 
@@ -29,7 +30,7 @@ class invalid_scheduler_policy_key : public std::exception;
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[invalid_scheduler_policy_key](#ctor)|Di overload. Costruisce un oggetto `invalid_scheduler_policy_key`.|
 
@@ -45,7 +46,7 @@ class invalid_scheduler_policy_key : public std::exception;
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="ctor"></a>invalid_scheduler_policy_key
+## <a name="invalid_scheduler_policy_key"></a><a name="ctor"></a> invalid_scheduler_policy_key
 
 Costruisce un oggetto `invalid_scheduler_policy_key`.
 
@@ -60,7 +61,7 @@ invalid_scheduler_policy_key() throw();
 *_Message*<br/>
 Messaggio descrittivo dell'errore.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)<br/>
+[Spazio dei nomi Concurrency](concurrency-namespace.md)<br/>
 [Classe SchedulerPolicy](schedulerpolicy-class.md)

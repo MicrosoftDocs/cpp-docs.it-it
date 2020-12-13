@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __vmx_vmptrld'
 title: __vmx_vmptrld
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - __vmx_vmptrld intrinsic
 - VMPTRLD instruction
 ms.assetid: 95c9ec5b-1a81-41ba-983e-327bd6a65fcb
-ms.openlocfilehash: 79b5a8b34b652ae1f011e89c793a7157c9e435ee
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 850311e4423940ebd34a203e6d43ec961b3258f4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219501"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333531"
 ---
 # <a name="__vmx_vmptrld"></a>__vmx_vmptrld
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Carica il puntatore alla struttura di controllo della macchina virtuale (VMCS) corrente dall'indirizzo specificato.
 
@@ -35,16 +36,16 @@ in Indirizzo in cui è archiviato il puntatore VMCS.
 
 ## <a name="return-value"></a>Valore restituito
 
-0\
+0
 Operazione completata.
 
-1\
+1
 Operazione non riuscita con stato esteso disponibile in `VM-instruction error field` della VMCS corrente.
 
-2\
+2
 Operazione non riuscita senza stato disponibile.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Il puntatore VMCS è un indirizzo fisico a 64 bit.
 
@@ -52,15 +53,15 @@ La funzione `__vmx_vmptrld` è equivalente alle `VMPTRLD` istruzioni in linguagg
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
-|`__vmx_vmptrld`|X64|
+|`__vmx_vmptrld`|x64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
 [__vmx_vmptrst](../intrinsics/vmx-vmptrst.md)

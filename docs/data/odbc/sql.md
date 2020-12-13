@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: SQL'
 title: SQL
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-ms.openlocfilehash: cdceec9f4a6a39e9e1a50fc002d4220801e8d15a
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 01a559b959d0f9a8c37f13a79855d55c5890f20e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404268"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333907"
 ---
 # <a name="sql"></a>SQL
 
@@ -33,7 +34,7 @@ In questo argomento:
 
 - [Modalità di utilizzo di SQL da parte delle classi di database](#_core_how_the_database_classes_use_sql).
 
-## <a name="open-database-connectivity-odbc"></a><a name="_core_open_database_connectivity_.28.odbc.29"></a>Open Database Connectivity (ODBC)
+## <a name="open-database-connectivity-odbc"></a><a name="_core_open_database_connectivity_.28.odbc.29"></a> Open Database Connectivity (ODBC)
 
 Le classi di database sono implementate con ODBC, che usa SQL in un'interfaccia a livello di chiamata, invece di incorporare i comandi SQL nel codice. ODBC usa SQL per comunicare con un'[origine dati](../../data/odbc/data-source-odbc.md) tramite i driver ODBC. Questi driver interpretano il codice SQL e, se necessario, lo convertono per l'uso con un particolare formato di database, ad esempio Microsoft Access. Per ulteriori informazioni sull'utilizzo di SQL in ODBC, vedere [ODBC](../../data/odbc/odbc-basics.md) e la documentazione [di riferimento per programmatori ODBC](/sql/odbc/reference/odbc-programmer-s-reference) .
 
@@ -86,7 +87,7 @@ Gli argomenti seguenti forniscono altre informazioni sul modo in cui SQL viene u
 
 - [SQL: esecuzione di chiamate SQL dirette (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [Nozioni fondamentali su ODBC](../../data/odbc/odbc-basics.md)

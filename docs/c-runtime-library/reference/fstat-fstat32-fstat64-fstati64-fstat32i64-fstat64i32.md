@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32'
 title: _fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 ms.date: 4/2/2020
 api_name:
@@ -57,12 +58,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 75ab00e8ee464e9042ba266b8d72e5ded48785ee
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b7c9bd6994506cabd27bfad949bbe7ec3784ffcc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221900"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334254"
 ---
 # <a name="_fstat-_fstat32-_fstat64-_fstati64-_fstat32i64-_fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 
@@ -109,7 +110,7 @@ Puntatore alla struttura per l'archiviazione dei risultati.
 
 Restituisce 0 se si ottengono le informazioni sullo stato dei file. Un valore restituito di-1 indica un errore. Se il descrittore del file non è valido o il *buffer* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EBADF**, nel caso di un descrittore di file non valido o di **EINVAL**, se il *buffer* è **null**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_fstat** ottiene informazioni sul file aperto associato a *FD* e lo archivia nella struttura a cui punta il *buffer*. La struttura di **_stat** , definita in SYS\Stat.h, contiene i campi seguenti.
 
@@ -124,7 +125,7 @@ La funzione **_fstat** ottiene informazioni sul file aperto associato a *FD* e l
 | **st_rdev** | Se un dispositivo, *FD*; in caso contrario, 0. |
 | **st_size** | Dimensioni del file, in byte. |
 
-Se *FD* fa riferimento a un dispositivo, i campi **st_atime**, **st_ctime**, **st_mtime**e **st_size** non sono significativi.
+Se *FD* fa riferimento a un dispositivo, i campi **st_atime**, **st_ctime**, **st_mtime** e **st_size** non sono significativi.
 
 Dato che Stat.h usa il tipo [dev_t](../../c-runtime-library/standard-types.md) definito in Types.h, è necessario includere Types.h prima di Stat.h nel codice.
 
@@ -132,7 +133,7 @@ Dato che Stat.h usa il tipo [dev_t](../../c-runtime-library/standard-types.md) d
 
 Le variazioni di queste funzioni supportano tipi time a 32 o 64 bit e lunghezze di file a 32 o a 64 bit. Il primo suffisso numerico (**32** o **64**) indica le dimensioni del tipo di tempo usato; il secondo suffisso è **i32** o **I64**, che indica se le dimensioni del file sono rappresentate come Integer a 32 bit o a 64 bit.
 
-**_fstat** equivale a **_fstat64i32**e **`struct`** **_stat** contiene un'ora a 64 bit. Questo vale a meno che non sia stato definito **_USE_32BIT_TIME_T** , nel qual caso è attivo il comportamento precedente; **_fstat** usa un'ora a 32 bit e **`struct`** **_stat** contiene un'ora a 32 bit. Lo stesso vale per **_fstati64**.
+**_fstat** equivale a **_fstat64i32** e **`struct`** **_stat** contiene un'ora a 64 bit. Questo vale a meno che non sia stato definito **_USE_32BIT_TIME_T** , nel qual caso è attivo il comportamento precedente; **_fstat** usa un'ora a 32 bit e **`struct`** **_stat** contiene un'ora a 32 bit. Lo stesso vale per **_fstati64**.
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 

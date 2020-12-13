@@ -1,14 +1,15 @@
 ---
+description: 'Ulteriori informazioni su: Windows Runtime libreria di modelli C++ (WRL)'
 title: Libreria di modelli di Windows Runtime C++ (WRL)
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 12bda00d6687340fbddfb8f81bbb83b6c2bd98a6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: cc94f907964efdf4bf93e8d92922f69373740d85
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509796"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333920"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Libreria di modelli di Windows Runtime C++ (WRL)
 
@@ -137,7 +138,7 @@ La funzione [Callback](callback-function-wrl.md) crea un oggetto la cui funzione
 
 ### <a name="weakref"></a>WeakRef
 
-[WeakRef](weakref-class.md) è un tipo di puntatore intelligente che rappresenta un *riferimento debole*che fa riferimento a un oggetto che potrebbe essere accessibile o meno. Un `WeakRef` oggetto può essere usato solo da Windows Runtime e non da com classico.
+[WeakRef](weakref-class.md) è un tipo di puntatore intelligente che rappresenta un *riferimento debole* che fa riferimento a un oggetto che potrebbe essere accessibile o meno. Un `WeakRef` oggetto può essere usato solo da Windows Runtime e non da com classico.
 
 Un oggetto `WeakRef` in genere rappresenta un oggetto la cui esistenza è controllata da un thread o da un'applicazione esterna. Ad esempio, un oggetto `WeakRef` può fare riferimento a un oggetto file. Quando il file viene aperto, `WeakRef` è valido e il file a cui si fa riferimento è accessibile. Ma quando il file viene chiuso, `WeakRef` non è valido e il file non è accessibile.
 

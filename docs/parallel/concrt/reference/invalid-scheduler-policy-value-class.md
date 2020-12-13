@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: invalid_scheduler_policy_value Class'
 title: Classe invalid_scheduler_policy_value
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_scheduler_policy_value class
 ms.assetid: 8c533e3f-2774-4192-8616-b2313b859bf7
-ms.openlocfilehash: 6a66b2b303a4b3b0cb8c2c7a3c515ac8cd1b33a0
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: c91295646b0bc85ea4ed5ee8f376c1ed029e4f0a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142998"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334494"
 ---
 # <a name="invalid_scheduler_policy_value-class"></a>Classe invalid_scheduler_policy_value
 
@@ -27,9 +28,9 @@ class invalid_scheduler_policy_value : public std::exception;
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[invalid_scheduler_policy_value](invalid-scheduler-policy-thread-specification-class.md#ctor|Di overload. Costruisce un oggetto `invalid_scheduler_policy_value`.|
+|[invalid_scheduler_policy_value] (non valido-Scheduler-Policy-thread-Specification-Class. MD # ctor|Di overload. Costruisce un oggetto `invalid_scheduler_policy_value`.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -43,7 +44,7 @@ class invalid_scheduler_policy_value : public std::exception;
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="ctor"></a>invalid_scheduler_policy_value
+## <a name="invalid_scheduler_policy_value"></a><a name="ctor"></a> invalid_scheduler_policy_value
 
 Costruisce un oggetto `invalid_scheduler_policy_value`.
 
@@ -58,7 +59,7 @@ invalid_scheduler_policy_value() throw();
 *_Message*<br/>
 Messaggio descrittivo dell'errore.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)<br/>
+[Spazio dei nomi Concurrency](concurrency-namespace.md)<br/>
 [Classe SchedulerPolicy](schedulerpolicy-class.md)

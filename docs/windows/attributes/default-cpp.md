@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: predefinito (C++)'
 title: default (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: b53420d721b43f9a51b19c4cc8e4a83fc8b94ed4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 83c4a17f513db755395ed978d57c9c6f01f84ca3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842442"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333012"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -37,7 +38,7 @@ Opzionale Interfaccia di origine predefinita. È necessario anche specificare qu
 
 Se non si specifica un'interfaccia di origine predefinita, viene usata come predefinita la prima interfaccia di origine.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L' **`default`** attributo C++ ha la stessa funzionalità dell'attributo MIDL [predefinito](/windows/win32/Midl/default) . L' **`default`** attributo viene usato anche con l'attributo [case](case-cpp.md) .
 
@@ -104,7 +105,7 @@ L'attributo di [origine](source-cpp.md) include anche un esempio di come usare *
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _fullpath, _wfullpath'
 title: _fullpath, _wfullpath
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-ms.openlocfilehash: 8583ea17930721f8d8b80aa5066dbc07372ce243
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e9c02d100abc175f24194ce71627502544085f9f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231390"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334157"
 ---
 # <a name="_fullpath-_wfullpath"></a>_fullpath, _wfullpath
 
@@ -77,7 +78,7 @@ Lunghezza massima del buffer del nome del percorso assoluto (*absPath*). Questa 
 
 Ognuna di queste funzioni restituisce un puntatore a un buffer contenente il nome del percorso assoluto (*absPath*). Se si verifica un errore (ad esempio, se il valore passato in *RelPath* include una lettera di unità non valida o non trovata oppure se la lunghezza del nome del percorso assoluto creato (*absPath*) è maggiore di *MaxLength*), la funzione restituisce **null**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_fullpath** espande il nome del percorso relativo in *RelPath* al percorso completo o assoluto e archivia il nome in *absPath*. Se *absPath* è **null**, **malloc** viene usato per allocare un buffer di lunghezza sufficiente per memorizzare il nome del percorso. È responsabilità del chiamante liberare questo buffer. Un nome di percorso relativo specifica un percorso a un'altra posizione dalla posizione corrente (ad esempio la directory di lavoro corrente: "."). Un nome di percorso assoluto è l'espansione di un nome di percorso relativo che indica il percorso intero necessario per raggiungere la posizione desiderata dalla radice del file system. A differenza di **_makepath**, è possibile usare **_fullpath** per ottenere il nome del percorso assoluto per i percorsi relativi (*RelPath*) che includono "./" o ".. /"nei rispettivi nomi.
 

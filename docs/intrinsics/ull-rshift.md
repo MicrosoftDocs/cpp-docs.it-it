@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __ull_rshift'
 title: __ull_rshift
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - ull_rshift intrinsic
 - __ull_rshift intrinsic
 ms.assetid: b7ff5254-3540-4e6e-b57c-a6c4beb7dca2
-ms.openlocfilehash: bf9fe7775cee1c774c097a1b6bd371721c9fa34f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 5b819e4a1df8db7b7562023c6acc9dbbd94f7f76
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80074983"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333622"
 ---
 # <a name="__ull_rshift"></a>__ull_rshift
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 in x64, sposta un valore a 64 bit specificato dal primo parametro a destra di un numero di bit specificato dal secondo parametro.
 
@@ -34,7 +35,7 @@ unsigned __int64 __ull_rshift(
 *maschera*\
 in Valore intero a 64 bit da spostare a destra.
 
-\ *Nbit*
+*nBit*\
 in Numero di bit da spostare, modulo 32 su x86 e modulo 64 su x64.
 
 ## <a name="return-value"></a>Valore restituito
@@ -43,15 +44,15 @@ Maschera spostata da `nBit` bit.
 
 ## <a name="requirements"></a>Requisiti
 
-|Intrinsic|Architecture|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`__ull_rshift`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Se il secondo parametro è maggiore di 31 su x86 (63 su x64), il numero viene usato come modulo 32 (64 su x64) per determinare il numero di bit da spostare. Il `ull` nel nome indica `unsigned long long (unsigned __int64)`.
+Se il secondo parametro è maggiore di 31 su x86 (63 su x64), il numero viene usato come modulo 32 (64 su x64) per determinare il numero di bit da spostare. Il `ull` nome indica `unsigned long long (unsigned __int64)` .
 
 ## <a name="example"></a>Esempio
 
@@ -78,9 +79,9 @@ int main()
 1
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [__ll_lshift](../intrinsics/ll-lshift.md)\
 [__ll_rshift](../intrinsics/ll-rshift.md)\

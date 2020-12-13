@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: db_param'
 title: db_param (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-ms.openlocfilehash: 008a7f1ea07e6c23ad6d812ac4fbf3b30ef1da89
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 27666b4cdf027e24b54326a3acc5fe701b9f6f44
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833075"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333104"
 ---
 # <a name="db_param"></a>db_param
 
@@ -25,7 +26,7 @@ Associa la variabile membro specificata a un parametro di input o output e delim
 
 ### <a name="parameters"></a>Parametri
 
-*ordinal*<br/>
+*ordinale*<br/>
 Numero di colonna (ordinale DBCOLUMNINFO) corrispondente a un campo nel set di righe a cui associare i dati.
 
 *ParamType*<br/>
@@ -52,7 +53,7 @@ Opzionale Variabile membro utilizzata per mantenere lo stato della colonna. Lo s
 *length*<br/>
 Opzionale Variabile membro utilizzata per conservare la dimensione della colonna in byte.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 **db_param** definisce i parametri utilizzati nei comandi. quindi, viene usato con `db_command` . Ad esempio, è possibile utilizzare **db_param** per associare parametri in query SQL o stored procedure. I parametri in una stored procedure sono indicati da punti interrogativi (?) ed è necessario associare i membri dati nell'ordine in cui vengono visualizzati i parametri.
 
@@ -60,7 +61,7 @@ Opzionale Variabile membro utilizzata per conservare la dimensione della colonna
 
 **db_param** viene utilizzato in combinazione con gli attributi [db_table](db-table.md) o [db_command](db-command.md) .
 
-Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore rinomina la classe in \_*NomeClasse*Accessor, dove *NomeClasse* è il nome assegnato alla classe. Il compilatore crea anche una classe denominata *NomeClasse*, che deriva da \_*NomeClasse*Accessor.  In Visualizzazione classi verranno visualizzate entrambe le classi.
+Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore rinomina la classe in \_*NomeClasse* Accessor, dove *NomeClasse* è il nome assegnato alla classe. Il compilatore crea anche una classe denominata *NomeClasse*, che deriva da \_*NomeClasse* Accessor.  In Visualizzazione classi verranno visualizzate entrambe le classi.
 
 ## <a name="example"></a>Esempio
 
@@ -113,6 +114,6 @@ struct CSalesbyYear {
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi del consumer OLE DB](ole-db-consumer-attributes.md)

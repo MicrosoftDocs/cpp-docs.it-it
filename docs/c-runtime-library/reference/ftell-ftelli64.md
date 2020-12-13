@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: ftell, _ftelli64'
 title: ftell, _ftelli64
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - file pointers [C++], getting current position
 - file pointers [C++]
 ms.assetid: 40149cd8-65f2-42ff-b70c-68e3e918cdd7
-ms.openlocfilehash: 273ad4990f78355029770e19e7cdcf36d7ba39bf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f3fec98cb9d90c8b63072a8e618f58246a6b0147
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910070"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334234"
 ---
 # <a name="ftell-_ftelli64"></a>ftell, _ftelli64
 
@@ -66,7 +67,7 @@ Struttura del **file** di destinazione.
 
 Per altre informazioni su questo e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le funzioni **ftell** e **_ftelli64** recuperano la posizione corrente del puntatore del file (se presente) associato al *flusso*. La posizione viene espressa come offset rispetto all'inizio del flusso.
 
@@ -80,7 +81,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|Intestazioni facoltative|
+|Funzione|Intestazione obbligatoria|Intestazioni facoltative|
 |--------------|---------------------|----------------------|
 |**ftell**|\<stdio.h>|\<errno.h>|
 |**_ftelli64**|\<stdio.h>|\<errno.h>|

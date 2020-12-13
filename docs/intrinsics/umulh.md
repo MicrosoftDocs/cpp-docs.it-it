@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __umulh'
 title: __umulh
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - __umulh intrinsic
 ms.assetid: d241b53a-e6f7-4af1-9f6e-84e149158f03
-ms.openlocfilehash: bf098657d1bd5b7ef8a4ffc21f487d2ce619a04e
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 1d727d72155bdfb5cd5da1ee56c514af26b5ae89
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219674"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333616"
 ---
 # <a name="__umulh"></a>__umulh
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Restituire i 64 bit alti del prodotto di due valori Unsigned Integer a 64 bit.
 
@@ -42,13 +43,13 @@ unsigned __int64 __umulh(
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
-|`__umulh`|X64|
+|`__umulh`|x64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Queste routine sono disponibili solo come funzioni intrinseche.
 
@@ -78,8 +79,8 @@ int main()
 0x10 * 0xfedcba9876543210 = 0xfedcba98765432100
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

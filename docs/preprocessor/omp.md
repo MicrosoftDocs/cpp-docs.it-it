@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: OMP pragma'
 title: Pragma omp
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pragmas, omp
 - omp pragma
 ms.assetid: 652414c5-78ed-4b7f-8283-1a9fe4c5e78d
-ms.openlocfilehash: 85cf91eeab3e9dff2b06593d3d9906019f4f5739
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 1fdb277fa3512194b6819a95fe663b7848160558
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220595"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333252"
 ---
 # <a name="omp-pragma"></a>Pragma omp
 
@@ -21,12 +22,12 @@ Accetta una o più direttive OpenMP, con eventuali clausole direttive facoltativ
 
 ## <a name="syntax"></a>Sintassi
 
-> **omp #pragma** *direttiva*
+> **#pragma** *direttiva* OMP
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni, vedere [direttive OpenMP](../parallel/openmp/reference/openmp-directives.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

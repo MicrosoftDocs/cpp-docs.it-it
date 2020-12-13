@@ -1,35 +1,36 @@
 ---
-title: attributo di importazione no_smart_pointers
+description: 'Altre informazioni su: no_smart_pointers attributo Import'
+title: no_smart_pointers attributo Import
 ms.date: 08/29/2019
 f1_keywords:
 - no_smart_pointers
 helpviewer_keywords:
 - no_smart_pointers attribute
 ms.assetid: d69dd71e-08a8-4446-a3d0-a062dc29cb17
-ms.openlocfilehash: 1fca3eb486ff3cfc7403c38e91855b799a698782
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: cf2299668a2e1b24cdf45069766466f448ee9d66
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220692"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333275"
 ---
-# <a name="no_smart_pointers-import-attribute"></a>attributo di importazione no_smart_pointers
+# <a name="no_smart_pointers-import-attribute"></a>no_smart_pointers attributo Import
 
-**C++Specifico**
+**Sezione specifica C++**
 
 Elimina la creazione dei puntatori intelligenti per tutte le interfacce nella libreria dei tipi.
 
 ## <a name="syntax"></a>Sintassi
 
-> **#import** *libreria di tipi* **no_smart_pointers**
+> **#import** **no_smart_pointers** della *libreria di tipi*
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, quando si utilizza `#import`, si ottiene una dichiarazione del puntatore intelligente per tutte le interfacce nella libreria dei tipi. Questi puntatori intelligenti sono di tipo [_com_ptr_t](../cpp/com-ptr-t-class.md).
 
-**Specifico C++ finale**
+**Fine sezione specifica C++**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [attributi di #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

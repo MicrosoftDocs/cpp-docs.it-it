@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: db_accessor'
 title: db_accessor (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-ms.openlocfilehash: 2a4c5475007cbc516f1a06c6bf858089ba24311f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: b32fb16fe938a84280b0fb047923bbc2aa687c75
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503558"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333122"
 ---
 # <a name="db_accessor"></a>db_accessor
 
@@ -31,7 +32,7 @@ Specifica il numero di funzione di accesso (indice Integer in base zero). È nec
 *Automatico*<br/>
 Valore booleano che specifica se la funzione di accesso viene recuperata automaticamente (TRUE) o non recuperata (FALSE).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 **db_accessor** definisce la funzione di accesso OLE DB sottostante `db_column` per `db_param` gli attributi e successivi all'interno della stessa classe o funzione. **db_accessor** è utilizzabile a livello di membro e viene utilizzato per raggruppare `db_column` gli attributi che fanno parte dell' `IAccessor` associazione basata su OLE DB. Viene usato in combinazione con gli `db_table` `db_command` attributi o. La chiamata di questo attributo è simile alla chiamata di [BEGIN_ACCESSOR](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor) e [END_ACCESSOR](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#end_accessor) macro.
 
@@ -39,7 +40,7 @@ Valore booleano che specifica se la funzione di accesso viene recuperata automat
 
 **db_accessor** raggruppa le associazioni delle colonne del database in una o più funzioni di accesso. Per informazioni sugli scenari in cui è necessario usare più funzioni di accesso, vedere uso di [più funzioni di accesso su un set di righe](../../data/oledb/using-multiple-accessors-on-a-rowset.md). Vedere anche "supporto dei record utente per più funzioni di accesso" nei [record utente](../../data/oledb/user-records.md).
 
-Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore rinomina la classe in \_*NomeClasse*Accessor, dove *NomeClasse* è il nome assegnato alla classe. Il compilatore crea anche una classe denominata *NomeClasse*, che deriva da \_*NomeClasse*Accessor.  In Visualizzazione classi verranno visualizzate entrambe le classi.
+Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore rinomina la classe in \_*NomeClasse* Accessor, dove *NomeClasse* è il nome assegnato alla classe. Il compilatore crea anche una classe denominata *NomeClasse*, che deriva da \_*NomeClasse* Accessor.  In Visualizzazione classi verranno visualizzate entrambe le classi.
 
 ## <a name="example"></a>Esempio
 
@@ -67,7 +68,7 @@ public:
 
 ## <a name="requirements"></a>Requisiti
 
-| Contesto dell'attributo | valore |
+| Contesto dell'attributo | Valore |
 |-|-|
 |**Si applica a**|Blocchi di attributi|
 |**Ripetibile**|No|
@@ -76,6 +77,6 @@ public:
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi del consumer OLE DB](ole-db-consumer-attributes.md)

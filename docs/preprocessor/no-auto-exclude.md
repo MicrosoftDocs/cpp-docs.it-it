@@ -1,35 +1,36 @@
 ---
-title: attributo di importazione no_auto_exclude
+description: 'Altre informazioni su: no_auto_exclude attributo Import'
+title: no_auto_exclude attributo Import
 ms.date: 08/29/2019
 f1_keywords:
 - no_auto_exclude
 helpviewer_keywords:
 - no_auto_exclude attribute
 ms.assetid: 3241ef9c-758a-4e86-bdc5-37da6072430f
-ms.openlocfilehash: 530c2b2adf24e964cb0a512371f4430a61bf8b11
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 81e4d7e7f9295a4ed983e2a5024d891e30fe1361
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216082"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333350"
 ---
-# <a name="no_auto_exclude-import-attribute"></a>attributo di importazione no_auto_exclude
+# <a name="no_auto_exclude-import-attribute"></a>no_auto_exclude attributo Import
 
-**C++Specifico**
+**Sezione specifica C++**
 
 Disabilita l'esclusione automatica.
 
 ## <a name="syntax"></a>Sintassi
 
-> **#import** *libreria di tipi* **no_auto_exclude**
+> **#import** **no_auto_exclude** della *libreria di tipi*
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Le librerie dei tipi possono includere definizioni di elementi definiti nelle intestazioni di sistema o in altre librerie dei tipi. `#import` tenta di evitare più errori di definizione escludendo automaticamente tali elementi. Viene generato un [Avviso del compilatore (livello 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md) per ogni elemento da escludere. È possibile disabilitare l'esclusione automatica usando questo attributo.
 
-**Specifico C++ finale**
+**Fine sezione specifica C++**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [attributi di #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

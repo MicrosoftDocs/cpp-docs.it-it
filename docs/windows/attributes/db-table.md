@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: db_table'
 title: db_table (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-ms.openlocfilehash: dfdf012550359d0658d53b3f67c0619a124b6309
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3d871961a8ded6070127e5e562615018a4320162
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834193"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333045"
 ---
 # <a name="db_table"></a>db_table
 
@@ -37,11 +38,11 @@ Opzionale Nome dell'handle usato per lavorare con la tabella. È necessario spec
 *HRESULT*<br/>
 (Facoltativo) Identifica la variabile che riceverà l'HRESULT di questo comando di database. Se la variabile non esiste, verrà automaticamente inserita dall'attributo.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 **db_table** crea un oggetto [CTable](../../data/oledb/ctable-class.md) , che viene usato da un consumer OLE DB per aprire una tabella. È possibile usare questo attributo solo a livello di classe; non è possibile utilizzarlo inline. Utilizzare `db_column` per associare le colonne della tabella alle variabili; utilizzare `db_param` per delimitare (impostare il tipo di parametro e così via) dei parametri.
 
-Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore rinomina la classe in \_*NomeClasse*Accessor, dove *NomeClasse* è il nome assegnato alla classe. Il compilatore crea anche una classe denominata *NomeClasse*, che deriva da \_*NomeClasse*Accessor.  In Visualizzazione classi verranno visualizzate entrambe le classi.
+Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore rinomina la classe in \_*NomeClasse* Accessor, dove *NomeClasse* è il nome assegnato alla classe. Il compilatore crea anche una classe denominata *NomeClasse*, che deriva da \_*NomeClasse* Accessor.  In Visualizzazione classi verranno visualizzate entrambe le classi.
 
 ## <a name="example"></a>Esempio
 
@@ -73,6 +74,6 @@ Per un esempio di questo attributo usato in un'applicazione, vedere [MultiRead](
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi del consumer OLE DB](ole-db-consumer-attributes.md)

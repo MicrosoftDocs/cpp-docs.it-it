@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _umul128'
 title: _umul128
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - __umul128 intrinsic
 ms.assetid: 13684df3-3ac7-467c-b258-a0e93bc490b5
-ms.openlocfilehash: 205f0f7f9046ede624bb09e18d8ede32fadbc3de
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 7fd126b169bd01fc4d51d186879e019f8d86f008
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219696"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333595"
 ---
 # <a name="_umul128"></a>_umul128
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Moltiplica due valori integer a 64 bit passati come i primi due argomenti e inserisce i 64 bit alti del prodotto nel valore integer a 64 bit a cui punta `HighProduct` e restituisce i 64 bit bassi del prodotto.
 
@@ -46,9 +47,9 @@ out Un massimo di 64 bit del prodotto.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|Intestazione|
+|Intrinsic|Architettura|Intestazione|
 |---------------|------------------|------------|
-|`_umul128`|X64|\<intrin.h>|
+|`_umul128`|x64|\<intrin.h>|
 
 ## <a name="example"></a>Esempio
 
@@ -77,8 +78,8 @@ int main()
 0xfffffffffffffff * 0xf0000000 = 0xeffffffffffffff10000000
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

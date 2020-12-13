@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: db_source'
 title: db_source (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
-ms.openlocfilehash: f17a4ea183a24f7bf4e88137f4536ca082efdf85
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 273d6626a8cd6fa2cadc42bac7ddb2e5e28a69c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831385"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333069"
 ---
 # <a name="db_source"></a>db_source
 
@@ -34,7 +35,7 @@ Opzionale Quando si usa **db_source** in una classe, il *nome* è un'istanza di 
 *HRESULT*<br/>
 (Facoltativo) Identifica la variabile che riceverà l'HRESULT di questo comando di database. Se la variabile non esiste, verrà automaticamente inserita dall'attributo.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 **db_source** crea un oggetto [CDataSource](../../data/oledb/cdatasource-class.md) e un oggetto [CSession](../../data/oledb/csession-class.md) che insieme rappresentano una connessione con un'origine dati OLE DB consumer.
 
@@ -42,9 +43,9 @@ Quando si usa **db_source** in una classe, l' `CSession` oggetto diventa un memb
 
 Quando si usa **db_source** in un metodo, il codice inserito verrà eseguito all'interno dell'ambito del metodo e l' `CSession` oggetto viene creato come variabile locale.
 
-**db_source** aggiunge le proprietà dell'origine dati a una classe o all'interno di un metodo. Viene usato insieme a `db_command` (che accetta il parametro del *db_source* *nome* del db_source come parametro di *source_name* ).
+**db_source** aggiunge le proprietà dell'origine dati a una classe o all'interno di un metodo. Viene usato insieme a `db_command` (che accetta il parametro del  *nome* del db_source come parametro di *source_name* ).
 
-Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore rinomina la classe in \_*NomeClasse*Accessor, dove *NomeClasse* è il nome assegnato alla classe. Il compilatore crea anche una classe denominata *NomeClasse*, che deriva da \_*NomeClasse*Accessor.  In Visualizzazione classi verranno visualizzate entrambe le classi.
+Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore rinomina la classe in \_*NomeClasse* Accessor, dove *NomeClasse* è il nome assegnato alla classe. Il compilatore crea anche una classe denominata *NomeClasse*, che deriva da \_*NomeClasse* Accessor.  In Visualizzazione classi verranno visualizzate entrambe le classi.
 
 Per un esempio di questo attributo usato in un'applicazione, vedere [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer).
 
@@ -77,6 +78,6 @@ class CMyCommand {};
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi del consumer OLE DB](ole-db-consumer-attributes.md)

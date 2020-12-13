@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: improper_lock Class'
 title: Classe improper_lock
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - improper_lock class
 ms.assetid: 8f494942-7748-4a2a-8de2-23414bfe6346
-ms.openlocfilehash: 886444f3e856234be010715a8ee0c707cf919bb4
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 8e29172ad171bbd3f95b3079840fb50b91dfe577
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142391"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334642"
 ---
 # <a name="improper_lock-class"></a>Classe improper_lock
 
@@ -29,11 +30,11 @@ class improper_lock : public std::exception;
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[improper_lock](#ctor)|Di overload. Costruisce un oggetto `improper_lock exception`.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 In genere, questa eccezione viene generata quando viene eseguito un tentativo di acquisire un blocco non rientrante in modo ricorsivo nello stesso contesto.
 
@@ -49,7 +50,7 @@ In genere, questa eccezione viene generata quando viene eseguito un tentativo di
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="ctor"></a>improper_lock
+## <a name="improper_lock"></a><a name="ctor"></a> improper_lock
 
 Costruisce un oggetto `improper_lock exception`.
 
@@ -64,8 +65,8 @@ improper_lock() throw();
 *_Message*<br/>
 Messaggio descrittivo dell'errore.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)<br/>
+[Spazio dei nomi Concurrency](concurrency-namespace.md)<br/>
 [Classe critical_section](critical-section-class.md)<br/>
 [Classe reader_writer_lock](reader-writer-lock-class.md)
