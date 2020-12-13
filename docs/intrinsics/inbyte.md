@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __inbyte'
 title: __inbyte
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - in instruction
 - __inbyte intrinsic
 ms.assetid: 03b61799-2a08-474d-adc4-2cbf7c81a4d5
-ms.openlocfilehash: f0036763ed7315a54fbfe6dcc873b46b52f0730c
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 77cc1cfb792ffa2f6aef9879820e644372895193
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222136"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337014"
 ---
 # <a name="__inbyte"></a>__inbyte
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Genera l' `in` istruzione, restituendo un solo byte letto dalla porta specificata da `Port`.
+Genera l' `in` istruzione, restituendo un solo byte letto dalla porta specificata da `Port` .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -40,18 +41,18 @@ Byte letto dalla porta specificata.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`__inbyte`|x86, x64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Questa routine è disponibile solo come funzione intrinseca.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: normale'
 title: isnormal
 ms.date: 01/31/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - math/isnormal
 helpviewer_keywords:
 - isnormal function
-ms.openlocfilehash: 2e12cabb57f2e51c08b4d93af33dae85164d016b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3afae5196a7a6b2b149028ad347f95baa27b1544
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213528"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337766"
 ---
 # <a name="isnormal"></a>isnormal
 
@@ -39,7 +40,7 @@ Valore a virgola mobile da verificare.
 
 l'oggetto **Normal** restituisce un valore diverso da zero ( **`true`** nel codice C++) se l'argomento *x* non è né zero, subnormal, infinito né Nan. In caso **contrario, viene** restituito 0 ( **`false`** nel codice C++).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 l' **oggetto è una** macro quando viene compilata come C e un modello di funzione inline quando viene compilato come C++.
 
@@ -51,7 +52,7 @@ l' **oggetto è una** macro quando viene compilata come C e un modello di funzio
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>

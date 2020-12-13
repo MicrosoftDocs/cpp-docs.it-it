@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _disable'
 title: _disable
 ms.date: 09/02/2019
 f1_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - rsm instruction
 - disable intrinsic
 ms.assetid: 52da3df9-815c-4524-9839-6d1742cff5c6
-ms.openlocfilehash: 94be850e1d494ff62df84922b46f28481be68314
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: c118315a4fea2dad401cc5c6f3621a8ec3b1794c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216826"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337101"
 ---
 # <a name="_disable"></a>_disable
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Disabilita gli interrupt.
 
@@ -30,13 +31,13 @@ void _disable(void);
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`_disable`|x86, ARM, x64, ARM64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 `_disable` indica al processore di deselezionare il flag di interrupt. Su sistemi x86, questa funzione genera l'istruzione Clear Interrupt Flag (`cli`).
 
@@ -44,8 +45,8 @@ Questa funzione è disponibile solo in modalità kernel. Se usato in modalità u
 
 Sulle piattaforme ARM e ARM64 questa routine è disponibile solo come funzione intrinseca.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

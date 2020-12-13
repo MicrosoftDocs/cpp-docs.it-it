@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3303'
 title: Errore del compilatore C3303
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3303
 ms.assetid: c6f6ea3d-f6b7-4401-8bbb-f283a2c05540
-ms.openlocfilehash: 8e802c4c085efd5051d7e8efcd67c7d53a354d99
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2600339df86a90b5c691fe6e01ce28241210c607
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80201357"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337396"
 ---
 # <a name="compiler-error-c3303"></a>Errore del compilatore C3303
 

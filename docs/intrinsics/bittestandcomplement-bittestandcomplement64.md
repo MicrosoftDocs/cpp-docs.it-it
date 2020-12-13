@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _bittestandcomplement, _bittestandcomplement64'
 title: _bittestandcomplement, _bittestandcomplement64
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - _bittestandcomplement intrinsic
 - _bittestandcomplement64 intrinsic
 ms.assetid: 53fa12dd-835e-4e5d-baec-a431c8678806
-ms.openlocfilehash: b1dcfe86aad18c8261029c9111681e1882bc96f5
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 8a701b2a38dcfa2e6efe3044b63a78533a7a6efa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222212"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337181"
 ---
 # <a name="_bittestandcomplement-_bittestandcomplement64"></a>_bittestandcomplement, _bittestandcomplement64
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Generare un'istruzione che esamina il bit `b` dell'indirizzo `a`, ne restituisce il valore corrente e imposta il bit sul relativo complemento.
 
@@ -51,14 +52,14 @@ Bit nella posizione specificata.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`_bittestandcomplement`|x86, ARM, x64, ARM64|
 |`_bittestandcomplement64`|x64, ARM64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Questa routine è disponibile solo come funzione intrinseca.
 
@@ -100,8 +101,8 @@ Testing bit 0
 Value changed to 0, Result: 1
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

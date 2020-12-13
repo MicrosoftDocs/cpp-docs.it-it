@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen _mbstrnlen_l'
 title: strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l
 ms.date: 4/2/2020
 api_name:
@@ -66,19 +67,19 @@ helpviewer_keywords:
 - string length
 - strnlen_l function
 ms.assetid: cc05ce1c-72ea-4ae4-a7e7-4464e56e5f80
-ms.openlocfilehash: be13a67d51b0296d91355c970e5e37ad227812ad
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2f38ba18647b232e19e2ecda94519a8a0e55a444
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919259"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336463"
 ---
 # <a name="strnlen-strnlen_s-wcsnlen-wcsnlen_s-_mbsnlen-_mbsnlen_l-_mbstrnlen-_mbstrnlen_l"></a>strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l
 
 Ottiene la lunghezza di una stringa, usando le impostazioni locali correnti o quelle che sono state passate. Queste sono le versioni più sicure di [strlen, wcslen, mbslen, mbslen_l, mbstrlen, mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md).
 
 > [!IMPORTANT]
-> **_mbsnlen**, **_mbsnlen_l**, **_mbstrnlen**e **_mbstrnlen_l** non possono essere utilizzati nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnlen**, **_mbsnlen_l**, **_mbstrnlen** e **_mbstrnlen_l** non possono essere utilizzati nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -121,7 +122,7 @@ size_t _mbstrnlen_l(
 
 ### <a name="parameters"></a>Parametri
 
-*Str*<br/>
+*str*<br/>
 Stringa con terminazione Null.
 
 *numberOfElements*<br/>
@@ -136,18 +137,18 @@ Queste funzioni restituiscono il numero di caratteri nella stringa, escluso il v
 
 **_mbstrnlen** e **_mbstrnlen_l** restituiscono-1 se la stringa contiene un carattere multibyte non valido.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 > [!NOTE]
-> **strnlen** non è una sostituzione per **strlen**; **strnlen** è progettato per essere usato solo per calcolare le dimensioni dei dati non attendibili in arrivo in un buffer di dimensioni note, ad esempio un pacchetto di rete. **strnlen** calcola la lunghezza ma non oltrepassa la fine del buffer se la stringa è senza terminazione. Per altre situazioni, usare **strlen**. (Lo stesso vale per **wcsnlen**, **_mbsnlen**e **_mbstrnlen**).
+> **strnlen** non è una sostituzione per **strlen**; **strnlen** è progettato per essere usato solo per calcolare le dimensioni dei dati non attendibili in arrivo in un buffer di dimensioni note, ad esempio un pacchetto di rete. **strnlen** calcola la lunghezza ma non oltrepassa la fine del buffer se la stringa è senza terminazione. Per altre situazioni, usare **strlen**. (Lo stesso vale per **wcsnlen**, **_mbsnlen** e **_mbstrnlen**).
 
 Ognuna di queste funzioni restituisce il numero di caratteri in *Str*, escluso il carattere null di terminazione. Tuttavia, **strnlen** e **strnlen_s** interpretano la stringa come una stringa di caratteri a byte singolo e pertanto il valore restituito è sempre uguale al numero di byte, anche se la stringa contiene caratteri multibyte. **wcsnlen** e **wcsnlen_s** sono rispettivamente versioni a caratteri wide di **strnlen** e **strnlen_s** . gli argomenti per **wcsnlen** e **wcsnlen_s** sono stringhe a caratteri wide e il numero di caratteri si trova in unità a caratteri wide. In caso contrario, **wcsnlen** e **strnlen** si comportano in modo identico, come **strnlen_s** e **wcsnlen_s**.
 
-**strnlen**, **wcsnlen**e **_mbsnlen** non convalidano i relativi parametri. Se *Str* è **null**, si verifica una violazione di accesso.
+**strnlen**, **wcsnlen** e **_mbsnlen** non convalidano i relativi parametri. Se *Str* è **null**, si verifica una violazione di accesso.
 
 **strnlen_s** e **wcsnlen_s** convalidano i relativi parametri. Se *Str* è **null**, le funzioni restituiscono 0.
 
-**_mbstrnlen** inoltre convalida i relativi parametri. Se *Str* è **null**o se *NumberOfElements* è maggiore di **INT_MAX**, **_mbstrnlen** genera un'eccezione di parametro non valido, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **_mbstrnlen** imposta **errno** su **EINVAL** e restituisce-1.
+**_mbstrnlen** inoltre convalida i relativi parametri. Se *Str* è **null** o se *NumberOfElements* è maggiore di **INT_MAX**, **_mbstrnlen** genera un'eccezione di parametro non valido, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **_mbstrnlen** imposta **errno** su **EINVAL** e restituisce-1.
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -215,8 +216,8 @@ Length: 100
 ## <a name="see-also"></a>Vedere anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>

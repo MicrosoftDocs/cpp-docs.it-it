@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __emul, __emulu'
 title: __emul, __emulu
 ms.date: 09/02/2019
 f1_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - __emul intrinsic
 - __emulu intrinsic
 ms.assetid: 79545236-cca2-40b8-a4e1-8abce9b26311
-ms.openlocfilehash: 16b2b38f6f44b99c9f5b9370ba586342a860684e
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: cdcbd14e4e72bcaf7d2c7fd5f098a291e32227cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216738"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337052"
 ---
 # <a name="__emul-__emulu"></a>__emul, __emulu
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Esegue le moltiplicazioni che possono essere rilevate da un intero a 32 bit.
 
@@ -50,18 +51,18 @@ Risultato della moltiplicazione.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`__emul`|x86, x64|
 |`__emulu`|x86, x64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-`__emul`accetta valori con segno a 2 32 bit e restituisce il risultato della moltiplicazione come valore intero con segno a 64 bit.
+`__emul` accetta valori con segno a 2 32 bit e restituisce il risultato della moltiplicazione come valore intero con segno a 64 bit.
 
-`__emulu`accetta valori Unsigned Integer a 2 32 bit e restituisce il risultato della moltiplicazione come valore Unsigned Integer a 64 bit.
+`__emulu` accetta valori Unsigned Integer a 2 32 bit e restituisce il risultato della moltiplicazione come valore Unsigned Integer a 64 bit.
 
 ## <a name="example"></a>Esempio
 
@@ -102,8 +103,8 @@ int main()
 4294967295 * 251658240 = 1080863910317260800
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

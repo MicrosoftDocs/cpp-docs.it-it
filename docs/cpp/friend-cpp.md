@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Friend (C++)'
 title: friend (C++)
 ms.date: 07/15/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - friend classes [C++]
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
-ms.openlocfilehash: 772eada8257917a6127b15ea2e50946aebb3bc74
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6e25beb10a727d0dcefce15e96059b49c5661601
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227465"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337732"
 ---
 # <a name="friend-c"></a>friend (C++)
 
@@ -155,7 +156,7 @@ int main()
 
 ## <a name="class-members-as-friends"></a>Membri di classe come elementi friend
 
-Le funzioni membro di classe possono essere dichiarate come friend in altre classi. Prendere in considerazione gli esempi seguenti:
+Le funzioni membro di classe possono essere dichiarate come friend in altre classi. Si consideri l'esempio seguente:
 
 ```cpp
 // classes_as_friends1.cpp
@@ -237,6 +238,6 @@ Implicazioni della relazione Friend
 
 Le funzioni Friend possono essere definite (dato un corpo della funzione) all'interno delle dichiarazioni di classe. Queste funzioni sono funzioni inline e, analogamente alle funzioni membro inline, si comportano come se fossero definite immediatamente dopo la visualizzazione di tutti i membri di classe ma prima della chiusura dell'ambito di classe (ovvero la fine della dichiarazione di classe). Le funzioni Friend definite all'interno delle dichiarazioni di classe si trovano nell'ambito della classe contenitore.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Parole chiave](../cpp/keywords-cpp.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _bittest, _bittest64'
 title: _bittest, _bittest64
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - _bittest64 intrinsic
 - bt instruction
 ms.assetid: 15e62afb-abea-4ee7-a6b1-13efa2034937
-ms.openlocfilehash: 37d96cc008d0da018355a2eca63c6c592ab50f12
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 50c0f1637fefab9bd39fcbca2cd18571c7769bd8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216895"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337195"
 ---
 # <a name="_bittest-_bittest64"></a>_bittest, _bittest64
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Genera l'istruzione `bt`, che esamina il bit in posizione `b` dell'indirizzo `a` e restituisce il valore di tale bit.
 
@@ -51,12 +52,12 @@ Bit nella posizione specificata.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|Intestazione|
+|Intrinsic|Architettura|Intestazione|
 |---------------|------------------|------------|
 |`_bittest`|x86, ARM, x64, ARM64|\<intrin.h>|
 |`_bittest64`|ARM64, x64|\<intrin.h>|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Questa routine è disponibile solo come funzione intrinseca.
 
@@ -100,8 +101,8 @@ Binary representation:
 0000000000000010011000010110010
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

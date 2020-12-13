@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: fscanf, _fscanf_l, fwscanf, _fwscanf_l'
 title: fscanf, _fscanf_l, fwscanf, _fwscanf_l
 ms.date: 11/04/2016
 api_name:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - _ftscanf function
 - fwscanf_l function
 ms.assetid: 9004e978-6c5f-4bb2-98fd-51e5948933f2
-ms.openlocfilehash: 1c143cbc1bf642e7efc6f10b9615fdaca8a236d1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fbdcffa7492d8a4f5d465ac0a62eefecca2e5c84
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956624"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336525"
 ---
 # <a name="fscanf-_fscanf_l-fwscanf-_fwscanf_l"></a>fscanf, _fscanf_l, fwscanf, _fwscanf_l
 
@@ -83,7 +84,7 @@ int _fwscanf_l(
 
 ### <a name="parameters"></a>Parametri
 
-*stream*<br/>
+*flusso*<br/>
 Puntatore alla struttura **FILE**.
 
 *format*<br/>
@@ -101,13 +102,13 @@ Ognuna di queste funzioni restituisce il numero di campi che vengono convertiti 
 
 Queste funzioni convalidano i relativi parametri. Se il *flusso* o il *formato* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EOF** e impostano **errno** su **EINVAL**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 La funzione **fscanf** legge i dati dalla posizione corrente del *flusso* nei percorsi specificati dall' *argomento* (se presente). Ogni *argomento* deve essere un puntatore a una variabile di un tipo che corrisponde a un identificatore di tipo nel *formato*. *Format* controlla l'interpretazione dei campi di input e ha lo stesso formato e la stessa funzione dell'argomento *Format* per **scanf**; vedere [scanf](scanf-scanf-l-wscanf-wscanf-l.md) per una descrizione del *formato*.
 
 **fwscanf** è una versione a caratteri wide di **fscanf**; l'argomento format per **fwscanf** è una stringa di caratteri wide. Queste funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **fscanf** attualmente non supporta l'input da un flusso Unicode.
 
-Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
+Le versioni di queste funzioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

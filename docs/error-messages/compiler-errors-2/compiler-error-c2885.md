@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2885'
 title: Errore del compilatore C2885
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
-ms.openlocfilehash: 1953cb8fb9f80c5c1f967e10583c2b7303075f59
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 040f7a151c34fe7b5e30b6aad1e5bc956b3e5cf0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742671"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337491"
 ---
 # <a name="compiler-error-c2885"></a>Errore del compilatore C2885
 
@@ -21,7 +22,7 @@ ms.locfileid: "90742671"
 
 Questo errore può essere generato come risultato delle operazioni di conformità del compilatore eseguite per Visual Studio 2005: non è più valido avere una **`using`** dichiarazione in un tipo annidato. è necessario qualificare in modo esplicito ogni riferimento effettuato al tipo annidato, inserire il tipo in uno spazio dei nomi o creare un typedef.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 L'esempio seguente genera l'C2885.
 

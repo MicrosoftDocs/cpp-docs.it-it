@@ -1,13 +1,14 @@
 ---
+description: "Altre informazioni su: intrinseci del compilatore e linguaggio dell'assembly"
 title: Intrinseci del compilatore e linguaggio dell'assembly
 ms.date: 09/02/2019
 ms.assetid: ddd51620-d01b-44cf-853b-e11420d13137
-ms.openlocfilehash: 36feb6971a8f5e4affd4f71b6afc1d508b2802f1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0207921a951345ca3a9091803294ec5df668fcb6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171684"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337131"
 ---
 # <a name="compiler-intrinsics-and-assembly-language"></a>Intrinseci del compilatore e linguaggio dell'assembly
 

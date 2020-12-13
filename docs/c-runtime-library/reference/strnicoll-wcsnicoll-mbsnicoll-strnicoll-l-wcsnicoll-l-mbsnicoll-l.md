@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l'
 title: _strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
 ms.date: 4/2/2020
 api_name:
@@ -70,12 +71,12 @@ helpviewer_keywords:
 - tcsnicoll function
 - _strnicoll function
 ms.assetid: abf0c569-725b-428d-9ff2-924f430104b4
-ms.openlocfilehash: 7694edda5ef2b214a1ca391ab1b922b8bfbf35e0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7fbbf44747bdcd0b95ccb603d735fc2ac0ecf6b1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914178"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336476"
 ---
 # <a name="_strnicoll-_wcsnicoll-_mbsnicoll-_strnicoll_l-_wcsnicoll_l-_mbsnicoll_l"></a>_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
 
@@ -145,7 +146,7 @@ Ognuna di queste funzioni restituisce un valore che indica la relazione delle so
 
 Ognuna di queste funzioni restituisce **_NLSCMPERROR**. Per usare **_NLSCMPERROR**, includere una delle due stringhe. H o MBSTRING. H. **_wcsnicoll** possono avere esito negativo se *String1* o *string2* contiene codici a caratteri wide al di fuori del dominio della sequenza di ordinamento. Quando si verifica un errore, **_wcsnicoll** possibile impostare **errno** su **EINVAL**. Per verificare la presenza di un errore in una chiamata a **_wcsnicoll**, impostare **errno** su 0, quindi controllare **errno** dopo aver chiamato **_wcsnicoll**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Ognuna di queste funzioni esegue un confronto senza distinzione tra maiuscole e minuscole dei primi caratteri di *conteggio* in *String1* e *string2* in base alla tabella codici. Usare queste funzioni solo quando esiste una differenza nella tabella codici tra l'ordine del set di caratteri e l'ordine lessicografico dei caratteri e quando questa differenza è di particolare interesse per il confronto fra stringhe. Le versioni di queste funzioni senza il suffisso **_L** utilizzano le impostazioni locali e la tabella codici correnti. Le versioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
@@ -171,9 +172,9 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Funzioni strcoll](../../c-runtime-library/strcoll-functions.md)<br/>
 [localeconv](localeconv.md)<br/>

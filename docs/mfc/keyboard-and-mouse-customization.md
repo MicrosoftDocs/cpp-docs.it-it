@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: personalizzazione della tastiera e del mouse'
 title: Personalizzazione di tastiera e mouse
 ms.date: 11/19/2018
 helpviewer_keywords:
 - customizations [MFC], keyboard and mouse (MFC Extensions)
 - keyboard and mouse customizations (MFC Extensions)
 ms.assetid: 1f789f1b-5f2e-4b11-b974-e3e2a2e49d82
-ms.openlocfilehash: 262555b060f226a86438a2189eda44d83c55d5a2
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 2ff54b2092bb6db52d5b780f4e64e51e05d8b402
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621510"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336825"
 ---
 # <a name="keyboard-and-mouse-customization"></a>Personalizzazione di tastiera e mouse
 
@@ -66,7 +67,7 @@ Inoltre, questo tipo di attacco può superare le misure di sicurezza dell'interf
 
 Per proteggere il sistema da questo tipo di attacco, aggiungere del codice al gestore del comando dell'applicazione per verificare la validità di un comando prima dell'esecuzione. Non dipendere dall'interfaccia utente per impedire a un comando di essere inviato all'applicazione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Personalizzazione per MFC](customization-for-mfc.md)<br/>
 [Classe CKeyboardManager](reference/ckeyboardmanager-class.md)<br/>

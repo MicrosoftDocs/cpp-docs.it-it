@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura: aggiungere, modificare o eliminare controlli (C++)'
 title: 'Procedura: aggiungere, modificare o eliminare controlli (C++)'
 ms.date: 02/15/2019
 f1_keywords:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: be2923c98ed1b92d4aeb2692591abcaf9f13c5ec
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4ff0f3bdf7e4da935cba3437900e2319218de771
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508827"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337829"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Procedura: aggiungere, modificare o eliminare controlli (C++)
 
@@ -123,7 +124,7 @@ La scheda **editor finestre** viene visualizzata nella [finestra casella degli s
 ### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>Per definire una variabile membro per il controllo di una finestra di dialogo (non pulsante)
 
 > [!NOTE]
-> Questo processo si applica solo ai controlli della finestra di dialogo all'interno di un progetto MFC. I progetti ATL devono utilizzare la finestra di dialogo **nuovi messaggi e gestori eventi di Windows** . Per ulteriori informazioni, vedere [tipi di messaggi associati a oggetti dell'interfaccia utente](../mfc/reference/message-types-associated-with-user-interface-objects.md), [modifica di un gestore di messaggi](../mfc/reference/editing-a-message-handler.md)e [definizione di un gestore di messaggi per un messaggio riflesso](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).
+> Questo processo si applica solo ai controlli della finestra di dialogo all'interno di un progetto MFC. I progetti ATL devono utilizzare la finestra di dialogo **nuovi messaggi e gestori eventi di Windows** . Per ulteriori informazioni, vedere [tipi di messaggi associati a User-Interface oggetti](../mfc/reference/message-types-associated-with-user-interface-objects.md), [modifica di un gestore di messaggi](../mfc/reference/editing-a-message-handler.md)e [definizione di un gestore di messaggi per un messaggio riflesso](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).
 
 1. Nell' [editor finestre](dialog-editor.md)selezionare un controllo.
 
@@ -234,7 +235,7 @@ La finestra di dialogo **Inserisci controllo ActiveX** consente di inserire cont
 
 I controlli ActiveX forniti da fornitori indipendenti possono essere dotati di proprietà e caratteristiche specifiche. Queste proprietà vengono visualizzate nella finestra **Proprietà** . Tutte le pagine delle proprietà create dai writer del controllo ActiveX vengono visualizzate nella finestra di dialogo **pagine delle proprietà** . (Per visualizzare la **pagina delle proprietà** per un controllo ActiveX specifico, selezionare il pulsante della **pagina delle proprietà** nella [finestra Proprietà](/visualstudio/ide/reference/properties-window)).
 
-- Selezionare la pagina delle proprietà controllo **ActiveX** e vai a **visualizzazione**menu  >  **Property Page** per visualizzare le proprietà. Apportare le modifiche necessarie nella pagina delle proprietà.
+- Selezionare la pagina delle proprietà controllo **ActiveX** e vai a **visualizzazione** menu  >   per visualizzare le proprietà. Apportare le modifiche necessarie nella pagina delle proprietà.
 
    Diverse schede vengono visualizzate nella pagina delle proprietà di un controllo ActiveX, a seconda delle finestre delle proprietà che provengono come parte del controllo ActiveX.
 
@@ -245,7 +246,7 @@ I controlli ActiveX forniti da fornitori indipendenti possono essere dotati di p
 
 Win32
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli della finestra di dialogo Gestisci](controls-in-dialog-boxes.md)<br/>
 [Procedura: layout di controlli](arrangement-of-controls-on-dialog-boxes.md)<br/>

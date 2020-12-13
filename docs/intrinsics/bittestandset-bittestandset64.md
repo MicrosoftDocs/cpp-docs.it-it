@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _bittestandset, _bittestandset64'
 title: _bittestandset, _bittestandset64
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - _bittestandset intrinsic
 - _bittestandset64 intrinsic
 ms.assetid: 6d6c8670-fea0-4c1c-9aad-2bb842715203
-ms.openlocfilehash: d54be5688acfb1e3cfc9d79514c39f665efdd9fd
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 69d1c8569a228ed4994343e12ef769710bd06ad5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216892"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337144"
 ---
 # <a name="_bittestandset-_bittestandset64"></a>_bittestandset, _bittestandset64
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Generare un'istruzione per esaminare il `b` bit dell'indirizzo `a`, restituire il valore corrente e impostare il bit su 1.
+Generare un'istruzione per esaminare `b` il bit dell'indirizzo `a` , restituire il valore corrente e impostare il bit su 1.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -51,14 +52,14 @@ Bit nella posizione specificata.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`_bittestandset`|x86, ARM, x64, ARM64|
 |`_bittestandset64`|x64, ARM64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Questa routine è disponibile solo come funzione intrinseca.
 
@@ -147,8 +148,8 @@ Flags: 0x4
 Flags: 0x0
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

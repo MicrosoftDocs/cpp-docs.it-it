@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: atof, _atof_l, _wtof, _wtof_l'
 title: atof, _atof_l, _wtof, _wtof_l
 ms.date: 4/2/2020
 api_name:
@@ -54,12 +55,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: 8eee8db691b3b652768980237fc90bd675bac89b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b583b4d443264d82fa83124f4dacd597fe8829b6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232586"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337788"
 ---
 # <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof, _atof_l, _wtof, _wtof_l
 
@@ -98,7 +99,7 @@ Ogni funzione restituisce il **`double`** valore prodotto interpretando i caratt
 
 In tutti i casi fuori intervallo, **errno** viene impostato su **ERANGE**. Se il parametro passato è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono 0.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Queste funzioni convertono una stringa di caratteri in un valore a virgola mobile a precisione doppia.
 
@@ -108,7 +109,7 @@ L'argomento *Str* per **atof** e **_wtof** ha il formato seguente:
 
 [*spazi vuoti*] [*segno*] [*cifre*] [__.__ *cifre*] [{**e** &#124; **e** } [*Sign*]*digits*]
 
-Uno spazio *vuoto* è costituito da caratteri di spazio o di tabulazione, che vengono ignorati; *segno* più (+) o meno (-); le *cifre* e corrispondono a una o più cifre decimali. Se non viene visualizzata alcuna cifra prima del separatore decimale, è necessario che sia presente almeno una cifra dopo il separatore decimale. Le cifre decimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**e**o **e**) e un intero decimale con segno facoltativo.
+Uno spazio *vuoto* è costituito da caratteri di spazio o di tabulazione, che vengono ignorati; *segno* più (+) o meno (-); le *cifre* e corrispondono a una o più cifre decimali. Se non viene visualizzata alcuna cifra prima del separatore decimale, è necessario che sia presente almeno una cifra dopo il separatore decimale. Le cifre decimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**e** o **e**) e un intero decimale con segno facoltativo.
 
 Le versioni UCRT di queste funzioni non supportano la conversione di lettere esponenti di tipo FORTRAN (**d** o **d**). Questa estensione non standard è supportata dalle versioni precedenti della libreria CRT e può rappresentare una modifica con impatto significativo per il codice esistente.
 
@@ -127,8 +128,8 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine|Intestazione obbligatoria|
 |------------------|---------------------|
-|**atof**, **_atof_l**|C: \<math.h> o \<stdlib.h> C++: \<cstdlib> , \<stdlib.h> \<cmath> o\<math.h>|
-|**_wtof**, **_wtof_l**|C: \<stdlib.h> o \<wchar.h> C++: \<cstdlib> , \<stdlib.h> o\<wchar.h>|
+|**atof**, **_atof_l**|C: \<math.h> o \<stdlib.h> C++: \<cstdlib> , \<stdlib.h> \<cmath> o \<math.h>|
+|**_wtof**, **_wtof_l**|C: \<stdlib.h> o \<wchar.h> C++: \<cstdlib> , \<stdlib.h> o \<wchar.h>|
 
 ## <a name="example"></a>Esempio
 
@@ -181,7 +182,7 @@ Function: atof("  -2,309e-25") = -2.000000e+00
 Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
 [Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>

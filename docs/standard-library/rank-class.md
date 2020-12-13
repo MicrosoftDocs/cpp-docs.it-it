@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Rank Class'
 title: Classe rank
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - rank class
 - rank
 ms.assetid: bc9f1b8f-800f-46ca-b6f4-d8579ed5406a
-ms.openlocfilehash: cab8d4bb782c7e02df62874a40db14479558da99
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0ec9e66b31e4dd118de3e21761bb9b2175b0c5e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458185"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337927"
 ---
 # <a name="rank-class"></a>Classe rank
 
@@ -30,9 +31,9 @@ struct rank;
 *Ty*\
 Tipo su cui eseguire una query.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-La query di tipo include il valore del numero di dimensioni del tipo di matrice *Ty*oppure 0 se *Ty* non è un tipo di matrice.
+La query di tipo include il valore del numero di dimensioni del tipo di matrice *Ty* oppure 0 se *Ty* non è un tipo di matrice.
 
 ## <a name="example"></a>Esempio
 
@@ -63,11 +64,11 @@ rank<int[5][10]> == 2
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Classe extent](../standard-library/extent-class.md)

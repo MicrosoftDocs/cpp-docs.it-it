@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: mbrlen'
 title: mbrlen
 ms.date: 4/2/2020
 api_name:
@@ -26,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-ms.openlocfilehash: 2e0e0ec9d92744fc904bae5ac7f91db8049de4cd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1a485090c056cb1e5f075bfd226ac7d4717ec0ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842117"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336500"
 ---
 # <a name="mbrlen"></a>mbrlen
 
@@ -49,7 +50,7 @@ size_t mbrlen(
 
 ### <a name="parameters"></a>Parametri
 
-*Str*<br/>
+*str*<br/>
 Puntatore al byte successivo da controllare in una stringa di caratteri multibyte.
 
 *count*<br/>
@@ -62,14 +63,14 @@ Puntatore allo stato di spostamento corrente del byte iniziale di *Str*.
 
 Uno dei valori seguenti:
 
-| Valore | Descrizione |
+| Valore | Description |
 |--|--|
 | 0 | Il *numero* successivo o un minor numero di byte completa il carattere multibyte che rappresenta il carattere wide null. |
-| da 1 a *count*inclusi | Il *conteggio* successivo o un minor numero di byte completa un carattere multibyte valido. Il valore restituito è il numero di byte che completa il carattere multibyte. |
+| da 1 a *count* inclusi | Il *conteggio* successivo o un minor numero di byte completa un carattere multibyte valido. Il valore restituito è il numero di byte che completa il carattere multibyte. |
 | (size_t)(-2) | Il *numero* di byte successivo contribuisce a un carattere multibyte incompleto ma potenzialmente valido e tutti i byte del *conteggio* sono stati elaborati. |
 | (size_t)(-1) | Si è verificato un errore di codifica. Il *numero* di byte successivo o inferiore non contribuisce a un carattere multibyte completo e valido. In questo caso **errno** è impostato su EILSEQ e lo stato di conversione in *mbstate* non è specificato. |
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **mbrlen** esamina al massimo i byte di *conteggio* a partire dal byte a cui punta *Str* per determinare il numero di byte necessari per completare il carattere multibyte successivo, incluse le sequenze di spostamento. Equivale alla chiamata `mbrtowc(NULL, str, count, &mbstate)` dove *mbstate* è un oggetto **mbstate_t** fornito dall'utente o un oggetto interno statico fornito dalla libreria.
 
@@ -155,7 +156,7 @@ Code page: 932
 Character count: 25
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Impostazioni locali](../../c-runtime-library/locale.md)<br/>

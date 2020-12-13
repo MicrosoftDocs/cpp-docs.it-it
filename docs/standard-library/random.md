@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; casuale&gt;'
 title: '&lt;random&gt;'
 ms.date: 08/24/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: e66ffbfba7a7cc4a7dfebbc2dcc074842de3c1ac
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4080e305620dbe4b8fa1674762c27ece4eccd0a1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831438"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337968"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -32,7 +33,7 @@ Un *generatore di numeri casuali* è un oggetto che produce una sequenza di valo
 
 Questi collegamenti permettono di passare alle sezioni principali dell'articolo:
 
-- [esempi](#code)
+- [Esempi](#code)
 
 - [Elenco categorizzato](#listing)
 
@@ -308,7 +309,7 @@ Per la creazione di istanze di motori e adattatori del motore. Per altre informa
 
 I modelli di motore sono usati come generatori URNG autonomi o come motori di base passati ad [adattatori del motore](#engadapt). In genere sono create istanze corrispondenti con un [typedef di motore predefinito](#typedefs) e le istanze sono passate a una [distribuzione](#distributions). Per altre informazioni, vedere la sezione [Motori e distribuzioni](#engdist).
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[Classe linear_congruential_engine](../standard-library/linear-congruential-engine-class.md)|Genera una sequenza casuale usando l'algoritmo congruenziale lineare. È estremamente semplice e offre la qualità più bassa.|
 |[Classe mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)|Genera una sequenza casuale usando l'algoritmo twister Mersenne. È estremamente complesso e offre la qualità più elevata, ad eccezione della classe random_device class. Prestazioni molto elevate.|
@@ -318,7 +319,7 @@ I modelli di motore sono usati come generatori URNG autonomi o come motori di ba
 
 Gli adattatori del motore sono modelli che adattano altri motori (di base). In genere sono create istanze corrispondenti con un [typedef di motore predefinito](#typedefs) e le istanze sono passate a una [distribuzione](#distributions). Per altre informazioni, vedere la sezione [Motori e distribuzioni](#engdist).
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[Classe discard_block_engine](../standard-library/discard-block-engine-class.md)|Genera una sequenza casuale, eliminando i valori restituiti dal motore di base corrispondente.|
 |[Classe independent_bits_engine](../standard-library/independent-bits-engine-class.md)|Genera una sequenza casuale con un numero specificato di bit tramite la creazione di nuovi pacchetti di bit dai valori restituiti dal motore di base corrispondente.|
@@ -332,7 +333,7 @@ Nelle sezioni seguenti sono elencate le distribuzioni disponibili nell'intestazi
 
 #### <a name="uniform-distributions"></a>Distribuzioni uniformi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[Classe uniform_int_distribution](../standard-library/uniform-int-distribution-class.md)|Produce una distribuzione uniforme di valori di tipo Integer in un intervallo che si trova nell'intervallo chiuso \[a, b] (inclusivo- inclusivo).|
 |[Classe uniform_real_distribution](../standard-library/uniform-real-distribution-class.md)|Produce una distribuzione uniforme di valori reali (a virgola mobile) in un intervallo che si trova nell'intervallo semiaperto [a, b) (inclusivo-esclusivo).|
@@ -342,7 +343,7 @@ Nelle sezioni seguenti sono elencate le distribuzioni disponibili nell'intestazi
 
 #### <a name="bernoulli-distributions"></a>Distribuzioni di Bernoulli
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[Classe bernoulli_distribution](../standard-library/bernoulli-distribution-class.md)|Produce una distribuzione di Bernoulli di **`bool`** valori.|
 |[Classe binomial_distribution](../standard-library/binomial-distribution-class.md)|Produce una distribuzione binomiale di valori di tipo Integer.|
@@ -353,7 +354,7 @@ Nelle sezioni seguenti sono elencate le distribuzioni disponibili nell'intestazi
 
 #### <a name="normal-distributions"></a>Distribuzioni normali
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[Classe cauchy_distribution](../standard-library/cauchy-distribution-class.md)|Produce una distribuzione Cauchy di valori reali (a virgola mobile).|
 |[Classe chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)|Produce una distribuzione del chi quadrato di valori reali (a virgola mobile).|
@@ -366,7 +367,7 @@ Nelle sezioni seguenti sono elencate le distribuzioni disponibili nell'intestazi
 
 #### <a name="poisson-distributions"></a>Distribuzioni di Poisson
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[Classe exponential_distribution](../standard-library/exponential-distribution-class.md)|Produce una distribuzione esponenziale di valori reali (a virgola mobile).|
 |[Classe extreme_value_distribution](../standard-library/extreme-value-distribution-class.md)|Produce una distribuzione dei valori estremi di valori reali (a virgola mobile).|
@@ -378,7 +379,7 @@ Nelle sezioni seguenti sono elencate le distribuzioni disponibili nell'intestazi
 
 #### <a name="sampling-distributions"></a>Distribuzioni di campionamento
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[Classe discrete_distribution](../standard-library/discrete-distribution-class.md)|Produce una distribuzione discreta di valori di tipo Integer.|
 |[Classe piecewise_constant_distribution](../standard-library/piecewise-constant-distribution-class.md)|Produce una distribuzione costante a tratti di valori reali (a virgola mobile).|
@@ -390,7 +391,7 @@ Nelle sezioni seguenti sono elencate le distribuzioni disponibili nell'intestazi
 
 In questa sezione sono elencate le funzioni di utilità generali disponibili nell'intestazione \<random>.
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[Classe seed_seq](../standard-library/seed-seq-class.md)|Genera una sequenza di seeding criptata non distorta. Usata per evitare la replica di flussi di varianti casuali. Risulta utile quando i motori creano istanze di molti generatori URNG.|
 
@@ -398,7 +399,7 @@ In questa sezione sono elencate le funzioni di utilità generali disponibili nel
 
 In questa sezione sono elencati gli operatori disponibili nell'intestazione \<random>.
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |`operator==`|Verifica se il generatore URNG sul lato sinistro dell'operatore è uguale al motore sul lato destro.|
 |`operator!=`|Verifica se il generatore URNG sul lato sinistro dell'operatore è diverso dal motore sul lato destro.|
@@ -506,6 +507,6 @@ Anche se lo standard C++ ISO non richiede che `random_device` sia sicuro a livel
 
 Per definizione, i risultati di `random_device` non sono riproducibili e, come effetto collaterale, è possibile che l'esecuzione risulti significativamente più lenta rispetto ad altri generatori URNG. La maggior parte delle applicazioni che non devono essere crittograficamente sicure usano `mt19937` o un motore simile, anche se è consigliabile eseguirne il seeding tramite una chiamata a `random_device`, come illustrato nell'[esempio di codice](#code).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)

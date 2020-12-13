@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _InterlockedAdd funzioni intrinseche'
 title: Funzioni intrinseche _InterlockedAdd
 ms.date: 09/02/2019
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: c611a22e696b9dda0c6910cd4aac84399cc7d20a
-ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
+ms.openlocfilehash: b467cc855e674a50899999c6e945321390735b00
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92135554"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336883"
 ---
 # <a name="_interlockedadd-intrinsic-functions"></a>Funzioni intrinseche _InterlockedAdd
 
@@ -90,7 +91,7 @@ Entrambe le funzioni restituiscono il risultato dell'addizione.
 
 ## <a name="requirements"></a>Requisiti
 
-|Intrinsic|Architecture|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`_InterlockedAdd`|ARM, ARM64|
 |`_InterlockedAdd_acq`|ARM, ARM64|
@@ -169,7 +170,7 @@ Return value: ffff00ffffffff
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
 [Conflitti con il compilatore x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

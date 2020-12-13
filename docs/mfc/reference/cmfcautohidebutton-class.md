@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CMFCAutoHideButton'
 title: Classe CMFCAutoHideButton
 ms.date: 10/18/2018
 f1_keywords:
@@ -50,18 +51,18 @@ helpviewer_keywords:
 - CMFCAutoHideButton [MFC], ShowButton
 - CMFCAutoHideButton [MFC], UnSetAutoHideMode
 ms.assetid: c80e6b8b-25ca-4d12-9d27-457731028ab0
-ms.openlocfilehash: 3ea6ce13b8cca7e0130fe14459a832b476391b0c
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 9d100417193ea8a757b02b9cc8fad0cdedf668f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81751681"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336582"
 ---
 # <a name="cmfcautohidebutton-class"></a>Classe CMFCAutoHideButton
 
 Pulsante che visualizza o nasconde una [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) configurata per nascondere elementi.
 
-Per ulteriori dettagli, vedere il codice sorgente che si trova nella cartella **\\\\mfc di VC atlmfc\\** dell'installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella **cartella \\ \\ \\ MFC atlmfc src di VC** per l'installazione di Visual Studio.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -69,11 +70,11 @@ Per ulteriori dettagli, vedere il codice sorgente che si trova nella cartella **
 class CMFCAutoHideButton : public CObject
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CMFCAutoHideButton::BringToTop](#bringtotop)||
 |[CMFCAutoHideButton::Create](#create)|Crea e inizializza il pulsante Nascondi automaticamente.|
@@ -98,9 +99,9 @@ class CMFCAutoHideButton : public CObject
 |[CMFCAutoHideButton::ShowButton](#showbutton)|Mostra o nasconde il pulsante Nascondi automaticamente.|
 |[CMFCAutoHideButton::UnSetAutoHideMode](#unsetautohidemode)||
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Al successivo `CMFCAutoHideButton` creazione, l'oggetto è associato a una [classe CDockablePane](../../mfc/reference/cdockablepane-class.md). L'oggetto `CDockablePane` viene nascosto o visualizzato quando l'utente interagisce con l'oggetto `CMFCAutoHideButton`.
+Durante la creazione, l' `CMFCAutoHideButton` oggetto viene associato a una [classe CDockablePane](../../mfc/reference/cdockablepane-class.md). L'oggetto `CDockablePane` viene nascosto o visualizzato quando l'utente interagisce con l'oggetto `CMFCAutoHideButton`.
 
 Per impostazione predefinita, il framework crea automaticamente un oggetto `CMFCAutoHideButton` quando l'utente attiva il pulsante Nascondi automaticamente. Il framework può creare un elemento di una classe di interfaccia utente personalizzata anziché la classe `CMFCAutoHideButton`. Per specificare la classe dell'interfaccia utente personalizzata che deve essere usata dal framework, impostare la variabile membro statica `CMFCAutoHideBar::m_pAutoHideButtonRTS` uguale alla classe dell'interfaccia utente personalizzata. Per impostazione predefinita, questa variabile è impostata su `CMFCAutoHideButton`.
 
@@ -120,17 +121,17 @@ L'esempio seguente illustra come costruire un oggetto `CMFCAutoHideButton` e usa
 
 **Intestazione:** afxautohidebutton.h
 
-## <a name="cmfcautohidebuttonbringtotop"></a><a name="bringtotop"></a>CMFCAutoHideButton::BringToTop
+## <a name="cmfcautohidebuttonbringtotop"></a><a name="bringtotop"></a> CMFCAutoHideButton:: BringToTop
 
 ```cpp
 void BringToTop();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfcautohidebuttoncreate"></a><a name="create"></a>CMFCAutoHideButton::Create
+## <a name="cmfcautohidebuttoncreate"></a><a name="create"></a> CMFCAutoHideButton:: create
 
-Crea e inizializza un pulsante Nascondi automaticamente.
+Crea e Inizializza un pulsante Nascondi automaticamente.
 
 ```
 virtual BOOL Create(
@@ -141,24 +142,24 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametri
 
-*pParentBar (bar padre)*<br/>
-[in] Puntatore alla barra degli strumenti padre.
+*pParentBar*<br/>
+in Puntatore alla barra degli strumenti padre.
 
 *pAutoHideWnd*<br/>
-[in] Puntatore a un [CDockablePane](../../mfc/reference/cdockablepane-class.md) oggetto. Questo pulsante Nascondi automaticamente si `CDockablePane`nasconde e mostra che .
+in Puntatore a un oggetto [CDockablePane](../../mfc/reference/cdockablepane-class.md) . Il pulsante Nascondi automaticamente viene nascosto e visualizzato `CDockablePane` .
 
-*dwAllineamento*<br/>
-[in] Valore che specifica l'allineamento del pulsante con la finestra cornice principale.
+*dwAlignment*<br/>
+in Valore che specifica l'allineamento del pulsante con la finestra cornice principale.
 
 ### <a name="return-value"></a>Valore restituito
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Quando si `CMFCAutoHideButton` crea un oggetto, è necessario associare `CDockablePane`il pulsante Nascondi automaticamente a un oggetto specifico. L'utente può utilizzare il pulsante Nascondi `CDockablePane`automaticamente per nascondere e mostrare l'oggetto associato.
+Quando si crea un `CMFCAutoHideButton` oggetto, è necessario associare il pulsante Nascondi automaticamente a uno specifico `CDockablePane` . L'utente può utilizzare il pulsante Nascondi automaticamente per nascondere e visualizzare l'oggetto associato `CDockablePane` .
 
-Il parametro *dwAlignment* indica la posizione del pulsante Nascondi automaticamente nell'applicazione. Il parametro può essere su uno dei valori seguenti:
+Il parametro *dwAlignment* indica la posizione in cui si trova il pulsante Nascondi automaticamente nell'applicazione. Il parametro può essere su uno dei valori seguenti:
 
 - CBRS_ALIGN_LEFT
 
@@ -168,7 +169,7 @@ Il parametro *dwAlignment* indica la posizione del pulsante Nascondi automaticam
 
 - CBRS_ALIGN_BOTTOM
 
-## <a name="cmfcautohidebuttongetalignment"></a><a name="getalignment"></a>CMFCAutoHideButton::GetAlignment
+## <a name="cmfcautohidebuttongetalignment"></a><a name="getalignment"></a> CMFCAutoHideButton:: getAlignment
 
 Recupera l'allineamento del pulsante Nascondi automaticamente.
 
@@ -180,9 +181,9 @@ DWORD GetAlignment() const;
 
 Valore DWORD che contiene l'allineamento corrente del pulsante Nascondi automaticamente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-L'allineamento del pulsante Nascondi automaticamente indica la posizione del pulsante nell'applicazione. Può essere uno dei seguenti valori:
+L'allineamento del pulsante Nascondi automaticamente indica il punto in cui si trova il pulsante nell'applicazione. Può essere uno dei valori seguenti:
 
 - CBRS_ALIGN_LEFT
 
@@ -192,7 +193,7 @@ L'allineamento del pulsante Nascondi automaticamente indica la posizione del pul
 
 - CBRS_ALIGN_BOTTOM
 
-## <a name="cmfcautohidebuttongetautohidewindow"></a><a name="getautohidewindow"></a>CMFCAutoHideButton::GetAutoHideWindow
+## <a name="cmfcautohidebuttongetautohidewindow"></a><a name="getautohidewindow"></a> CMFCAutoHideButton:: GetAutoHideWindow
 
 Restituisce l'oggetto [CDockablePane](../../mfc/reference/cdockablepane-class.md) associato al pulsante Nascondi automaticamente.
 
@@ -202,13 +203,13 @@ CDockablePane* GetAutoHideWindow() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'oggetto associato. `CDockablePane`
+Puntatore all' `CDockablePane` oggetto associato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Per associare un pulsante `CDockablePane`Nascondi `CDockablePane` automaticamente a un , passare il come parametro per il [CMFCAutoHideButton::Create](#create) metodo.
+Per associare un pulsante Nascondi automaticamente a un `CDockablePane` , passare `CDockablePane` come parametro al metodo [CMFCAutoHideButton:: create](#create) .
 
-## <a name="cmfcautohidebuttongetparenttoolbar"></a><a name="getparenttoolbar"></a>CMFCAutoHideButton::GetParentToolBar
+## <a name="cmfcautohidebuttongetparenttoolbar"></a><a name="getparenttoolbar"></a> CMFCAutoHideButton:: GetParentToolBar
 
 ```
 CMFCAutoHideBar* GetParentToolBar();
@@ -216,9 +217,9 @@ CMFCAutoHideBar* GetParentToolBar();
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfcautohidebuttongetrect"></a><a name="getrect"></a>CMFCAutoHideButton::GetRect
+## <a name="cmfcautohidebuttongetrect"></a><a name="getrect"></a> CMFCAutoHideButton:: GetRect
 
 ```
 CRect GetRect() const;
@@ -226,9 +227,9 @@ CRect GetRect() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfcautohidebuttongetsize"></a><a name="getsize"></a>CMFCAutoHideButton::GetSize
+## <a name="cmfcautohidebuttongetsize"></a><a name="getsize"></a> CMFCAutoHideButton:: GetSize
 
 Determina le dimensioni del pulsante Nascondi automaticamente.
 
@@ -238,13 +239,13 @@ CSize GetSize() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto `CSize` che contiene le dimensioni del pulsante.
+`CSize`Oggetto che contiene le dimensioni del pulsante.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-La dimensione calcolata include la dimensione del bordo del pulsante Nascondi automaticamente.
+Le dimensioni calcolate includono le dimensioni del bordo del pulsante Nascondi automaticamente.
 
-## <a name="cmfcautohidebuttongettextsize"></a><a name="gettextsize"></a>CMFCAutoHideButton::GetTextSize
+## <a name="cmfcautohidebuttongettextsize"></a><a name="gettextsize"></a> CMFCAutoHideButton:: GetTextSize
 
 Restituisce le dimensioni dell'etichetta di testo per il pulsante Nascondi automaticamente.
 
@@ -254,9 +255,9 @@ virtual CSize GetTextSize() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) oggetto che contiene la dimensione del testo per il pulsante Nascondi automaticamente.
+Oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) che contiene la dimensione del testo per il pulsante Nascondi automaticamente.
 
-## <a name="cmfcautohidebuttonisactive"></a><a name="isactive"></a>CMFCAutoHideButton::IsActive
+## <a name="cmfcautohidebuttonisactive"></a><a name="isactive"></a> CMFCAutoHideButton:: inattivo
 
 Indica se il pulsante Nascondi automaticamente è attivo.
 
@@ -266,13 +267,13 @@ BOOL IsActive() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe il pulsante Nascondi automaticamente è attivo. FALSE in caso contrario.
+TRUE se il pulsante Nascondi automaticamente è attivo; In caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un pulsante Nascondi automaticamente è attivo quando viene visualizzata la finestra della [classe CDockablePane](../../mfc/reference/cdockablepane-class.md) associata.
 
-## <a name="cmfcautohidebuttonishorizontal"></a><a name="ishorizontal"></a>CMFCAutoHideButton::IsHorizontal
+## <a name="cmfcautohidebuttonishorizontal"></a><a name="ishorizontal"></a> CMFCAutoHideButton:: Horizontal
 
 Determina se il pulsante Nascondi automaticamente è orizzontale o verticale.
 
@@ -284,11 +285,11 @@ BOOL IsHorizontal() const;
 
 Diverso da zero se il pulsante è orizzontale; 0 in caso contrario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Il framework imposta l'orientamento di un [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) oggetto quando lo si crea.  È possibile controllare l'orientamento utilizzando il *dwAlignment* parametro nel [CMFCAutoHideButton::Create](#create) metodo.
+Il Framework imposta l'orientamento di un oggetto [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) al momento della creazione.  È possibile controllare l'orientamento usando il parametro *dwAlignment* nel metodo [CMFCAutoHideButton:: create](#create) .
 
-## <a name="cmfcautohidebuttonistop"></a><a name="istop"></a>CMFCAutoHideButton::IsTop
+## <a name="cmfcautohidebuttonistop"></a><a name="istop"></a> CMFCAutoHideButton:: IsTop
 
 ```
 BOOL IsTop() const;
@@ -296,9 +297,9 @@ BOOL IsTop() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfcautohidebuttonisvisible"></a><a name="isvisible"></a>CMFCAutoHideButton::IsVisible
+## <a name="cmfcautohidebuttonisvisible"></a><a name="isvisible"></a> CMFCAutoHideButton:: IsVisible
 
 Indica se il pulsante Nascondi automaticamente è visibile.
 
@@ -308,9 +309,9 @@ virtual BOOL IsVisible() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe il pulsante è visibile. FALSE in caso contrario.
+TRUE se il pulsante è visibile. In caso contrario, FALSE.
 
-## <a name="cmfcautohidebuttonondraw"></a><a name="ondraw"></a>CMFCAutoHideButton::OnDraw
+## <a name="cmfcautohidebuttonondraw"></a><a name="ondraw"></a> CMFCAutoHideButton:: onpare
 
 Il framework chiama questo metodo quando disegna il pulsante Nascondi automaticamente.
 
@@ -321,13 +322,13 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-[in] Puntatore a un contesto di dispositivo.
+in Puntatore a un contesto di dispositivo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Se si desidera personalizzare l'aspetto dei pulsanti Nascondi automaticamente nell'applicazione, creare una nuova classe derivata da `CMFCAutoHideButton`. Nella classe derivata eseguire l'override di questo metodo.
+Se si desidera personalizzare l'aspetto dei pulsanti Nascondi automaticamente nell'applicazione, creare una nuova classe derivata da `CMFCAutoHideButton` . Nella classe derivata eseguire l'override di questo metodo.
 
-## <a name="cmfcautohidebuttonondrawborder"></a><a name="ondrawborder"></a>CMFCAutoHideButton::OnDrawBorder
+## <a name="cmfcautohidebuttonondrawborder"></a><a name="ondrawborder"></a> CMFCAutoHideButton:: OnDrawBorder
 
 Il framework chiama questo metodo quando disegna il bordo di un pulsante Nascondi automaticamente.
 
@@ -341,19 +342,19 @@ virtual void OnDrawBorder(
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-[in] Puntatore a un contesto di dispositivo.
+in Puntatore a un contesto di dispositivo.
 
-*rectBounds (limiti di rettida)*<br/>
-[in] Rettangolo di delimitazione del pulsante Nascondi automaticamente.
+*rectBounds*<br/>
+in Rettangolo di delimitazione del pulsante Nascondi automaticamente.
 
-*rectBorderSize (dimensioni di confine)*<br/>
-[in] Spessore del bordo per ogni lato del pulsante Nascondi automaticamente.
+*rectBorderSize*<br/>
+in Spessore del bordo per ogni lato del pulsante Nascondi automaticamente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Se si desidera personalizzare il bordo di ogni pulsante Nascondi automaticamente nell'applicazione, creare una nuova classe derivata da `CMFCAutoHideButton`. Nella classe derivata eseguire l'override di questo metodo.
+Se si desidera personalizzare il bordo di ogni pulsante Nascondi automaticamente nell'applicazione, creare una nuova classe derivata da `CMFCAutoHideButton` . Nella classe derivata eseguire l'override di questo metodo.
 
-## <a name="cmfcautohidebuttononfillbackground"></a><a name="onfillbackground"></a>CMFCAutoHideButton::OnFillBackground
+## <a name="cmfcautohidebuttononfillbackground"></a><a name="onfillbackground"></a> CMFCAutoHideButton:: OnFillBackground
 
 Il framework chiama questo metodo quando riempie lo sfondo di un pulsante Nascondi automaticamente.
 
@@ -366,16 +367,16 @@ virtual void OnFillBackground(
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-[in] Puntatore a un contesto di dispositivo.
+in Puntatore a un contesto di dispositivo.
 
 *Rect*<br/>
-[in] Rettangolo di delimitazione del pulsante Nascondi automaticamente.
+in Rettangolo di delimitazione del pulsante Nascondi automaticamente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Se si desidera personalizzare lo sfondo per i pulsanti Nascondi automaticamente `CMFCAutoHideButton`nell'applicazione, creare una nuova classe derivata da . Nella classe derivata eseguire l'override di questo metodo.
+Se si desidera personalizzare lo sfondo per i pulsanti Nascondi automaticamente nell'applicazione, creare una nuova classe derivata da `CMFCAutoHideButton` . Nella classe derivata eseguire l'override di questo metodo.
 
-## <a name="cmfcautohidebuttonshowattachedwindow"></a><a name="showattachedwindow"></a>CMFCAutoHideButton::ShowAttachedWindow
+## <a name="cmfcautohidebuttonshowattachedwindow"></a><a name="showattachedwindow"></a> CMFCAutoHideButton:: ShowAttachedWindow
 
 Mostra o nasconde la [classe CDockablePane](../../mfc/reference/cdockablepane-class.md)associata.
 
@@ -386,9 +387,9 @@ void ShowAttachedWindow(BOOL bShow);
 ### <a name="parameters"></a>Parametri
 
 *bShow*<br/>
-[in] Valore Boolean che specifica se questo `CDockablePane`metodo mostra l'oggetto associato .
+in Valore booleano che specifica se questo metodo Mostra l'oggetto collegato `CDockablePane` .
 
-## <a name="cmfcautohidebuttonshowbutton"></a><a name="showbutton"></a>CMFCAutoHideButton::ShowButton
+## <a name="cmfcautohidebuttonshowbutton"></a><a name="showbutton"></a> CMFCAutoHideButton:: ShowButton
 
 Mostra o nasconde il pulsante Nascondi automaticamente.
 
@@ -399,9 +400,9 @@ virtual void ShowButton(BOOL bShow);
 ### <a name="parameters"></a>Parametri
 
 *bShow*<br/>
-[in] Valore Boolean che specifica se visualizzare il pulsante Nascondi automaticamente.
+in Valore booleano che specifica se visualizzare il pulsante Nascondi automaticamente.
 
-## <a name="cmfcautohidebuttonmove"></a><a name="move"></a>CMFCAutoHideButton::Sposta
+## <a name="cmfcautohidebuttonmove"></a><a name="move"></a> CMFCAutoHideButton:: Move
 
 ```cpp
 void Move(int nOffset);
@@ -409,11 +410,11 @@ void Move(int nOffset);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *nOffset*<br/>
+in *nOffset*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfcautohidebuttonreplacepane"></a><a name="replacepane"></a>CMFCAutoHideButton::ReplacePane
+## <a name="cmfcautohidebuttonreplacepane"></a><a name="replacepane"></a> CMFCAutoHideButton:: ReplacePane
 
 ```cpp
 void ReplacePane(CDockablePane* pNewBar);
@@ -421,11 +422,11 @@ void ReplacePane(CDockablePane* pNewBar);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pNewBar (informazioni in stato inquestoendo*<br/>
+in *pNewBar*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfcautohidebuttonunsetautohidemode"></a><a name="unsetautohidemode"></a>CMFCAutoHideButton::UnSetAutoHideMode
+## <a name="cmfcautohidebuttonunsetautohidemode"></a><a name="unsetautohidemode"></a> CMFCAutoHideButton:: UnSetAutoHideMode
 
 Disabilita la modalità Nascondi automaticamente.
 
@@ -435,12 +436,12 @@ virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
 
 ### <a name="parameters"></a>Parametri
 
-*pFirstBarInGroup (gruppo di colori piFirstBarInGroup)*<br/>
-[in] Puntatore alla prima barra del gruppo.
+*pFirstBarInGroup*<br/>
+in Puntatore alla prima barra del gruppo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfcautohidebuttonhighlightbutton"></a><a name="highlightbutton"></a>CMFCAutoHideButton::HighlightButton
+## <a name="cmfcautohidebuttonhighlightbutton"></a><a name="highlightbutton"></a> CMFCAutoHideButton:: HighlightButton
 
 Evidenzia il pulsante Nascondi automaticamente.
 
@@ -450,12 +451,12 @@ virtual void HighlightButton(BOOL bHighlight);
 
 ### <a name="parameters"></a>Parametri
 
-*bEvidenziare*<br/>
+*bHighlight*<br/>
 Specifica il nuovo stato del pulsante Nascondi automaticamente. TRUE indica che il pulsante è evidenziato, FALSE indica che il pulsante non è evidenziato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfcautohidebuttonishighlighted"></a><a name="ishighlighted"></a>CMFCAutoHideButton::IsHighlighted
+## <a name="cmfcautohidebuttonishighlighted"></a><a name="ishighlighted"></a> CMFCAutoHideButton:: evidenziato
 
 Restituisce lo stato di evidenziazione del pulsante Nascondi automaticamente.
 
@@ -467,11 +468,11 @@ virtual BOOL IsHighlighted() const;
 
 Restituisce TRUE se il pulsante Nascondi automaticamente è evidenziato; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md)<br/>
-[CAutoHideDockSite (classe)](../../mfc/reference/cautohidedocksite-class.md)
+[Classe CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md)

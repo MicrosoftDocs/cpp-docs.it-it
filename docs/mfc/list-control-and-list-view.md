@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: controllo elenco e visualizzazione elenco'
 title: Controllo List e visualizzazione elenco
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - list views [MFC]
 - list controls [MFC], List view
 ms.assetid: 7aee1c48-b158-4399-be0b-be366993665e
-ms.openlocfilehash: d308cfe83f02dcfe3687790c6638d268cc69fc24
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 582957cb59bc28797849d45f56fc2be95b8cc2b3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621436"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336809"
 ---
 # <a name="list-control-and-list-view"></a>Controllo List e visualizzazione elenco
 
@@ -23,7 +24,7 @@ Per praticità, MFC incapsula il controllo elenco in due modi. È possibile util
 
 - Indirettamente, usando la classe [CListView](reference/clistview-class.md).
 
-`CListView`semplifica l'integrazione di un controllo elenco con l'architettura documento/visualizzazione MFC, incapsulando il controllo in modo molto simile a [CEditView](reference/ceditview-class.md) incapsula un controllo di modifica: il controllo riempie l'intera superficie di attacco di una visualizzazione MFC. La visualizzazione *è* il controllo, eseguito il cast a `CListView` .
+`CListView` semplifica l'integrazione di un controllo elenco con l'architettura documento/visualizzazione MFC, incapsulando il controllo in modo molto simile a [CEditView](reference/ceditview-class.md) incapsula un controllo di modifica: il controllo riempie l'intera superficie di attacco di una visualizzazione MFC. La visualizzazione *è* il controllo, eseguito il cast a `CListView` .
 
 Un `CListView` oggetto eredita da [CCtrlView](reference/cctrlview-class.md) e dalle relative classi base e aggiunge una funzione membro per recuperare il controllo elenco sottostante. Usare Visualizza membri per lavorare con la vista come una vista. Usare la funzione membro [GetListCtrl](reference/clistview-class.md#getlistctrl) per accedere alle funzioni membro del controllo elenco. Usare i membri seguenti per:
 
@@ -37,7 +38,7 @@ Per ottenere un riferimento all' `CListCtrl` oggetto sottostante `CListView` , c
 
 In questo argomento vengono descritte entrambe le modalità di utilizzo del controllo elenco.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Utilizzo di CListCtrl](using-clistctrl.md)<br/>
 [Controlli](controls-mfc.md)

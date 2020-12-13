@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: recursive_mutex Class'
 title: Classe recursive_mutex
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], lock
 - std::recursive_mutex [C++], try_lock
 - std::recursive_mutex [C++], unlock
-ms.openlocfilehash: 8455548997c4ccf1b950e26e01df67306554b945
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f8a9c9322407871984c83135eecd2e26ac475d2b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217610"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337887"
 ---
 # <a name="recursive_mutex-class"></a>Classe recursive_mutex
 
@@ -31,18 +32,18 @@ Rappresenta un *tipo mutex*. Contrariamente al [mutex](../standard-library/mutex
 class recursive_mutex;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[recursive_mutex](#recursive_mutex)|Costruisce un oggetto `recursive_mutex`.|
 |[Distruttore ~recursive_mutex](#dtorrecursive_mutex_destructor)|Rilascia le risorse usate dall'oggetto `recursive_mutex`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[blocco](#lock)|Blocca il thread chiamante finché il thread non ottiene la proprietà del mutex.|
 |[try_lock](#try_lock)|Tenta di ottenere la proprietà del mutex senza blocco.|
@@ -54,7 +55,7 @@ class recursive_mutex;
 
 **Spazio dei nomi:** std
 
-## <a name="lock"></a><a name="lock"></a>blocco
+## <a name="lock"></a><a name="lock"></a> blocco
 
 Blocca il thread chiamante finché il thread non ottiene la proprietà di `mutex`.
 
@@ -62,11 +63,11 @@ Blocca il thread chiamante finché il thread non ottiene la proprietà di `mutex
 void lock();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il thread chiamante è già proprietario del `mutex`, il metodo restituisce immediatamente un valore e il blocco precedente rimane valido.
 
-## <a name="recursive_mutex"></a><a name="recursive_mutex"></a>recursive_mutex
+## <a name="recursive_mutex"></a><a name="recursive_mutex"></a> recursive_mutex
 
 Costruisce un oggetto `recursive_mutex` non bloccato.
 
@@ -82,11 +83,11 @@ Rilascia le risorse usate dall'oggetto.
 ~recursive_mutex();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se l'oggetto è bloccato quando il distruttore viene eseguito, il comportamento non è definito.
 
-## <a name="try_lock"></a><a name="try_lock"></a>try_lock
+## <a name="try_lock"></a><a name="try_lock"></a> try_lock
 
 Tenta di ottenere proprietà di `mutex` senza bloccare.
 
@@ -98,11 +99,11 @@ bool try_lock() noexcept;
 
 **`true`** Se il metodo ottiene correttamente la proprietà di `mutex` o se il thread chiamante è già proprietario dell'oggetto `mutex**; otherwise, **false` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il thread chiamante è già proprietario di `mutex` , la funzione restituisce immediatamente **`true`** e il blocco precedente rimane attivo.
 
-## <a name="unlock"></a><a name="unlock"></a>sbloccare
+## <a name="unlock"></a><a name="unlock"></a> sbloccare
 
 Rilascia la proprietà del mutex.
 
@@ -110,13 +111,13 @@ Rilascia la proprietà del mutex.
 void unlock();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo rilascia la proprietà del `mutex` solo dopo essere stato chiamato tante volte quante sono state le chiamate a [lock](#lock) e [try_lock](#try_lock) con esito positivo sull'oggetto `recursive_mutex`.
 
 Se il thread chiamante non è proprietario di `mutex`, il comportamento non è definito.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [\<mutex>](../standard-library/mutex.md)

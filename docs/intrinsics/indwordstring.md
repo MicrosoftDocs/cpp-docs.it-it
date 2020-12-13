@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __indwordstring'
 title: __indwordstring
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - __indwordstring intrinsic
 - rep insd instruction
 ms.assetid: 96a1cf33-f691-4916-99e4-fa849b61e3a9
-ms.openlocfilehash: b0b160ba00b1c0b7aa6bffc913e4cb56d503c2ff
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 18d18a8981a2dd58c0f7bcd366faaf46629647c0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217831"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336920"
 ---
 # <a name="__indwordstring"></a>__indwordstring
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Legge i dati dalla porta specificata utilizzando l' `rep insd` istruzione.
 
@@ -44,18 +45,18 @@ in Numero di byte di dati da leggere.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`__indwordstring`|x86, x64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Questa routine è disponibile solo come funzione intrinseca.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

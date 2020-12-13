@@ -1,20 +1,21 @@
 ---
-title: variant_alternative Struct
+description: 'Altre informazioni su: variant_alternative struct'
+title: Struct variant_alternative
 ms.date: 04/04/2019
 f1_keywords:
 - variant/std::variant_alternative
 helpviewer_keywords:
 - variant_alternative struct
-ms.openlocfilehash: f637a2e588297cb44b582a9c5fa108034d99d8f3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: bbad42afa517c7f6ad46561a85c1b73e71041a57
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268393"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337844"
 ---
-# <a name="variantalternative-struct"></a>variant_alternative Struct
+# <a name="variant_alternative-struct"></a>Struct variant_alternative
 
-Assiste gli oggetti varianti.
+Assiste gli oggetti Variant.
 
 ## <a name="syntax"></a>Sintassi
 

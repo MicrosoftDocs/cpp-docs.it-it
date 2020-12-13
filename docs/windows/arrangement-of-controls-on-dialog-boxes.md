@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura: layout dei controlli (C++)'
 title: 'Procedura: layout di controlli (C++) | Microsoft Docs'
 ms.date: 02/15/2019
 f1_keywords:
@@ -80,12 +81,12 @@ helpviewer_keywords:
 - CListBox class, scroll bar width
 - scroll bars [C++], width
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
-ms.openlocfilehash: ac21096f18b1331759f9bf7dfe613100298b7296
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 75fef5d47df163e1b21b9dd2861ec652179d9eb6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509657"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337839"
 ---
 # <a name="how-to-layout-controls-c"></a>Procedura: layout di controlli (C++)
 
@@ -165,10 +166,10 @@ Quando si posizionano o si organizzano i controlli in una finestra di dialogo, u
 
 - Per spostare le guide senza spostare i controlli bloccati, trascinare la guida tenendo premuto il tasto **MAIUSC** .
 
-- Per disattivare le guide, passare a menu **formato**  >  **Guida Impostazioni**. Quindi, in **guide di layout**selezionare **nessuno**.
+- Per disattivare le guide, passare a menu **formato**  >  **Guida Impostazioni**. Quindi, in **guide di layout** selezionare **nessuno**.
 
    > [!TIP]
-   > È anche possibile usare il tasto di scelta rapida nel **formato**menu  >  **guide**.
+   > È anche possibile usare il tasto di scelta rapida nel **formato** menu  >  **guide**.
 
 ## <a name="select-controls"></a>Selezionare i controlli
 
@@ -190,9 +191,9 @@ Quando si seleziona un controllo, è presente un bordo ombreggiato con quadratin
 
 Quando si ridimensionano o si allineano più controlli, l' **editor finestre** usa il controllo dominante per determinare la dimensione o l'allineamento degli altri controlli. Per impostazione predefinita, il controllo dominante è il primo controllo selezionato.
 
-- Per specificare il controllo dominante, tenere premuto il tasto **CTRL** e selezionare il controllo che si desidera utilizzare per influenzare *prima*la dimensione o la posizione di altri controlli. Tenendo premuto il tasto **CTRL** e selezionando un controllo all'interno di una selezione, si renderà anche il controllo del controllo dominante nella selezione.
+- Per specificare il controllo dominante, tenere premuto il tasto **CTRL** e selezionare il controllo che si desidera utilizzare per influenzare *prima* la dimensione o la posizione di altri controlli. Tenendo premuto il tasto **CTRL** e selezionando un controllo all'interno di una selezione, si renderà anche il controllo del controllo dominante nella selezione.
 
-- Per modificare il controllo dominante, deselezionare la selezione corrente selezionando al di fuori di tutti i controlli attualmente selezionati e ripetere la procedura precedente, selezionando *prima*un controllo diverso.
+- Per modificare il controllo dominante, deselezionare la selezione corrente selezionando al di fuori di tutti i controlli attualmente selezionati e ripetere la procedura precedente, selezionando *prima* un controllo diverso.
 
 > [!NOTE]
 > I quadratini di ridimensionamento del controllo dominante sono solidi mentre gli handle dei controlli subordinati sono vuoti. Tutte le altre operazioni di ridimensionamento o allineamento sono basate sul controllo dominante.
@@ -212,7 +213,7 @@ Utilizzare gli handle di ridimensionamento per ridimensionare un controllo. Quan
 
 - Per ridimensionare automaticamente un controllo in modo da adattarlo al testo al suo interno, passare a **formato** menu o fare clic con il pulsante destro del mouse sul controllo e scegliere **dimensioni per contenuto**.
 
-- Per impostare le stesse dimensioni dei controlli, selezionare i controlli che si desidera ridimensionare e passare a **formato**menu  >  **imposta le stesse dimensioni**, quindi scegliere **sia**, **altezza**o **larghezza**.
+- Per impostare le stesse dimensioni dei controlli, selezionare i controlli che si desidera ridimensionare e passare a **formato** menu  >  **imposta le stesse dimensioni**, quindi scegliere **sia**, **altezza** o **larghezza**.
 
    È possibile ridimensionare un gruppo di controlli in base alla dimensione del controllo dominante, che è il controllo selezionato per primo nella serie. La dimensione finale dei controlli del gruppo dipende dalle dimensioni del controllo dominante.
 
@@ -258,24 +259,24 @@ Utilizzare gli handle di ridimensionamento per ridimensionare un controllo. Quan
 
 - Per controllare lo spazio uniforme, selezionare i controlli che si desidera ridisporre. Vai a menu **Formatta**  >  **spazio** in modo uniforme e scegli uno degli allineamenti di spaziatura seguenti:
 
-   |Spaziatura|Descrizione|
+   |Spaziatura|Description|
    |---|---|
    |**Spaziatura orizzontale**|Spaziatura uniforme tra il controllo più a sinistra e quello più a destra selezionato.|
    |**Giù**|Controlla lo spazio in modo uniforme tra il controllo superiore e il controllo inferiori selezionato.|
 
 - Per centrare i controlli, selezionare il controllo o i controlli che si desidera ridisporre. Passare a menu **Format**  >  **Center nella finestra di dialogo** e scegliere uno dei seguenti accordi:
 
-   |Disposizione|Descrizione|
+   |Disposizione|Description|
    |---|---|
    |**Vertical**|Centra i controlli verticalmente nella finestra di dialogo.|
    |**Ridimensionamento orizzontale**|Centra i controlli orizzontalmente nella finestra di dialogo.|
 
 - Per allineare i pulsanti di push, selezionare uno o più pulsanti di push. Passare a menu **formato disposizione**  >  **pulsanti**, quindi scegliere uno dei seguenti accordi:
 
-   |Disposizione|Descrizione|
+   |Disposizione|Description|
    |---|---|
-   |**Ok**|Allinea i pulsanti di push lungo il bordo destro della finestra di dialogo.|
-   |**Parte inferiore**|Allinea i pulsanti di push lungo il bordo inferiore della finestra di dialogo.|
+   |**Destra**|Allinea i pulsanti di push lungo il bordo destro della finestra di dialogo.|
+   |**In basso**|Allinea i pulsanti di push lungo il bordo inferiore della finestra di dialogo.|
 
    Se si seleziona un controllo diverso da un pulsante di push, la relativa posizione non è interessata.
 
@@ -283,7 +284,7 @@ Utilizzare gli handle di ridimensionamento per ridimensionare un controllo. Quan
 
 Win32
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli della finestra di dialogo Gestisci](controls-in-dialog-boxes.md)<br/>
 [Procedura: aggiungere, modificare o eliminare controlli](adding-editing-or-deleting-controls.md)<br/>

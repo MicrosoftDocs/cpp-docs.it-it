@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l'
 title: strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 ms.date: 4/2/2020
 api_name:
@@ -54,12 +55,12 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 08921ff44d2d69ab77eb210b2123016ea61c4f67
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: eb4ea7c5f7b288640fe0797d9f6c5428fe28e0af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008273"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336490"
 ---
 # <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 
@@ -187,7 +188,7 @@ Queste funzioni tentano di copiare i primi *d* caratteri di *strSource* in *strD
 
 Esiste un'eccezione a quanto indicato nel paragrafo precedente. Se *count* è **_TRUNCATE**, la maggior parte di *strSource* che rientrerà in *strDest* viene copiata lasciando comunque lo spazio per la terminazione null, che viene sempre accodato.
 
-Ad esempio,
+ad esempio:
 
 ```C
 char dst[5];
@@ -203,11 +204,11 @@ strncpy_s(dst, 5, "a long string", _TRUNCATE);
 strncpy_s(dst, 5, "a long string", 4);
 ```
 
-Si noti che, a differenza di **strncpy**, se *count* è maggiore della lunghezza di *strSource*, la stringa di destinazione non viene riempita con caratteri null fino al *numero*di lunghezze.
+Si noti che, a differenza di **strncpy**, se *count* è maggiore della lunghezza di *strSource*, la stringa di destinazione non viene riempita con caratteri null fino al *numero* di lunghezze.
 
 Il comportamento di **strncpy_s** non è definito se le stringhe di origine e di destinazione si sovrappongono.
 
-Se *strDest* o *strSource* è **null**o *NumberOfElements* è 0, viene richiamato il gestore di parametri non validi. Se l'esecuzione può continuare, la funzione restituisce **EINVAL** e imposta **errno** su **EINVAL**.
+Se *strDest* o *strSource* è **null** o *NumberOfElements* è 0, viene richiamato il gestore di parametri non validi. Se l'esecuzione può continuare, la funzione restituisce **EINVAL** e imposta **errno** su **EINVAL**.
 
 **wcsncpy_s** e **_mbsncpy_s** sono versioni a caratteri wide e a caratteri multibyte di **strncpy_s**. Gli argomenti e il valore restituito di **wcsncpy_s** e **mbsncpy_s** variano di conseguenza. In alternativa queste sei funzioni si comportano in modo identico.
 
@@ -410,9 +411,9 @@ After strncpy_s (with null-termination):
    'mice'
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: reference_wrapper Class'
 title: Classe reference_wrapper
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - std::reference_wrapper [C++], type
 - std::reference_wrapper [C++], get
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
-ms.openlocfilehash: 623e1480bdec85120e504c8dc71b28d017c8872a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5d3550a6ff579ea1e4174459d3ab1eab07b8a5d4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845068"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337862"
 ---
 # <a name="reference_wrapper-class"></a>Classe reference_wrapper
 
@@ -59,26 +60,26 @@ Le funzioni helper [std::ref](functional-functions.md#ref) e [std::cref](functio
 
 ### <a name="constructors"></a>Costruttori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[reference_wrapper](#reference_wrapper)|Costruisce un oggetto `reference_wrapper`.|
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[result_type](#result_type)|Tipo di risultato di un riferimento debole di cui è stato eseguito il wrapping.|
 |[type](#type)|Tipo di riferimento di cui è stato eseguito il wrapping.|
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[get](#get)|Ottiene il riferimento di cui è stato eseguito il wrapping.|
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[operatore Ty&amp;](#op_ty_amp)|Ottiene un puntatore al riferimento di cui è stato eseguito il wrapping.|
 |[operatore ()](#op_call)|Chiama il riferimento di cui è stato eseguito il wrapping.|
@@ -91,7 +92,7 @@ Ottiene il riferimento di cui è stato eseguito il wrapping.
 Ty& get() const noexcept;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce il riferimento al wrapper.
 
@@ -130,7 +131,7 @@ Ottiene il riferimento di cui è stato eseguito il wrapping.
 operator Ty&() const noexcept;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operatore membro restituisce `*ptr`.
 
@@ -175,7 +176,7 @@ Tipi dell'elenco di argomenti.
 *args*\
 Elenco di argomenti.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione modello `operator()` restituisce `std::invoke(get(), std::forward<Types>(args)...)`.
 
@@ -220,7 +221,7 @@ Tipo di cui eseguire il wrapping.
 *Val*\
 Valore di cui eseguire il wrapping.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il costruttore imposta il valore archiviato `ptr` su `&val`.
 
@@ -263,7 +264,7 @@ Tipo di risultato di un riferimento debole di cui è stato eseguito il wrapping.
 typedef R result_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Typedef `result_type` è un sinonimo del tipo di risultato debole di una funzione di cui è stato eseguito il wrapping. Questo typedef è significativo solo per i tipi di funzione.
 
@@ -302,7 +303,7 @@ Tipo di riferimento di cui è stato eseguito il wrapping.
 typedef Ty type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Typedef è un sinonimo dell'argomento di modello `Ty`.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: emitidl'
 title: emitidl (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - emitidl attribute
 ms.assetid: 85b80c56-578e-4392-ac03-8443c74ebb7d
-ms.openlocfilehash: 32362f287320e69d1680cbe07ca050143b507514
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 21c4f7fc067eb37b8816bdedd1f338908950566e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846329"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337797"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -44,7 +45,7 @@ Uno di questi valori possibili: **`true`** , **`false`** , `forced` , `restricte
 
 - Se *booleano* è **`false`** , docobj. idl non viene importato nel file con estensione IDL generato. È necessario importare in modo esplicito i file IDL con l' [importazione](import.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Dopo che l'attributo **emitidl** C++ è stato rilevato in un file di codice sorgente, gli attributi di categoria IDL vengono inseriti nel file con estensione IDL generato. Se non è presente alcun attributo **emitidl** , gli attributi IDL nel file di codice sorgente vengono restituiti al file IDL generato.
 
@@ -63,7 +64,7 @@ Ogni volta che il compilatore rileva un nuovo file, **emitidl** viene impostato 
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi del compilatore](compiler-attributes.md)<br/>
 [Attributi autonomi](stand-alone-attributes.md)

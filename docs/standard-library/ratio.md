@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; rapporto&gt;'
 title: '&lt;ratio&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -31,16 +32,16 @@ f1_keywords:
 - ratio/std::deci
 - ratio/std::deca
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
-ms.openlocfilehash: 5f6919c84c3fb125e149ba6bcd69b6b7f996d17f
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 8fab74cde47e4078781b665044bc2becd0a9dac3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687055"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337936"
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
-Includere l'intestazione standard \<ratio> per definire le costanti e i modelli usati per archiviare e modificare i numeri razionali in fase di compilazione.
+Includere l'intestazione standard \<ratio> per definire le costanti e i modelli utilizzati per archiviare e modificare i numeri razionali in fase di compilazione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -60,7 +61,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 }
 ```
 
-Il `ratio` modello definisce le costanti statiche `num` e `den` in modo che `num`  /  `den` = = numeratore/denominatore e `num` e `den` non abbiano fattori comuni. `num`  /  `den` è il valore rappresentato dal modello di classe. Pertanto, `type` definisce la `ratio<num, den>` di creazione di istanze.
+Il modello `ratio` definisce le costanti statiche e in questo `num` `den` modo `num`  /  `den` = = numeratore/denominatore e `num` e `den` non hanno fattori comuni. `num` / `den` valore rappresentato dal modello di classe. Indica pertanto `type` la creazione dell'istanza `ratio<num, den>` .
 
 ### <a name="specializations"></a>Specializzazioni
 
@@ -70,7 +71,7 @@ Il `ratio` modello definisce le costanti statiche `num` e `den` in modo che `num
 
 Ciascuna specializzazione accetta due parametri di modello che devono anche essere specializzazioni di `ratio`. Il valore di `type` è determinato da un'operazione logica associata.
 
-|Name|Valore di `type`|
+|Nome|Valore di `type`|
 |----------|------------------|
 |`ratio_add`|`R1 + R2`|
 |`ratio_divide`|`R1 / R2`|
@@ -106,6 +107,6 @@ typedef ratio<1000000000000000, 1> peta;
 typedef ratio<1000000000000000000, 1> exa;
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)

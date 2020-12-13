@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __int2c'
 title: __int2c
 ms.date: 09/02/2019
 f1_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - int 2c instruction
 - __int2c intrinsic
 ms.assetid: aa20ff30-adef-42bb-8577-8010f3122f8e
-ms.openlocfilehash: d8c94ae78a121157a6347548356631b04e8733d5
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 0ca1cc4d998a6e144d1d172f02ec8b9aa4c739e6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222108"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336896"
 ---
 # <a name="__int2c"></a>__int2c
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Genera l' `int 2c` istruzione, che attiva l' `2c` interruzione.
 
@@ -30,14 +31,14 @@ void __int2c(void);
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`__int2c`|x86, x64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)
