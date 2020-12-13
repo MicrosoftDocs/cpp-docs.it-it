@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: vtordisp pragma'
 title: Pragma vtordisp
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pragmas, vtordisp
 - vtordisp pragma
 ms.assetid: 05b7d73c-43fa-4b62-8c8a-170a9e427391
-ms.openlocfilehash: a6ffc5c0323389d812e659ff68555a8c8c993126
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2cbb8b09584224a454dfe23d5dfd4500f09a1d9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219365"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149643"
 ---
 # <a name="vtordisp-pragma"></a>Pragma vtordisp
 
@@ -40,12 +41,12 @@ Rimuove il record superiore dallo stack interno del compilatore e ripristina l' 
 Specifica il nuovo valore per l' `vtordisp` impostazione. I valori possibili sono 0, 1 o 2, corrispondenti alle `/vd0` `/vd1` Opzioni del compilatore, e `/vd2` . Per ulteriori informazioni, vedere [/VD (Disabilita spostamenti costruzione)](../build/reference/vd-disable-construction-displacements.md).
 
 **in**\
-È equivalente a `#pragma vtordisp(1)`.
+Equivalente a `#pragma vtordisp(1)`.
 
 **off**\
-È equivalente a `#pragma vtordisp(0)`.
+Equivalente a `#pragma vtordisp(0)`.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il pragma **vtordisp** è applicabile solo al codice che usa basi virtuali. Se una classe derivata esegue l'override di una funzione virtuale che eredita da una classe base virtuale e se un costruttore o un distruttore per la classe derivata chiama tale funzione utilizzando un puntatore alla classe base virtuale, il compilatore potrebbe introdurre campi nascosti `vtordisp` aggiuntivi nelle classi con basi virtuali.
 
@@ -53,7 +54,7 @@ Il pragma **vtordisp** influiscono sul layout delle classi che lo seguono. Le `/
 
 Se si specifica 1 o **on**, l'impostazione predefinita Abilita i `vtordisp` membri nascosti laddove sono necessari.
 
-Se si specifica 2, vengono abilitati i `vtordisp` membri nascosti per tutte le basi virtuali con funzioni virtuali.  `#pragma vtordisp(2)`potrebbe essere necessario per garantire le prestazioni corrette di **`dynamic_cast`** su un oggetto costruito parzialmente. Per altre informazioni, vedere [Avviso del compilatore (livello 1) C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md).
+Se si specifica 2, vengono abilitati i `vtordisp` membri nascosti per tutte le basi virtuali con funzioni virtuali.  `#pragma vtordisp(2)` potrebbe essere necessario per garantire le prestazioni corrette di **`dynamic_cast`** su un oggetto costruito parzialmente. Per altre informazioni, vedere [Avviso del compilatore (livello 1) C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md).
 
 `#pragma vtordisp()`, senza argomenti, ripristina l'impostazione iniziale dell' `vtordisp` impostazione.
 
@@ -65,6 +66,6 @@ class GetReal : virtual public VBase { ... };
 
 **Fine sezione specifica C++**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

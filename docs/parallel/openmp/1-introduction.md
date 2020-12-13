@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: 1. Introduzione'
 title: 1. Introduzione
 ms.date: 01/16/2019
 ms.assetid: c42e72bc-0e31-4b1c-b670-cd82673c0c5a
-ms.openlocfilehash: e2857565f7838ae45ff88ea53ba714e1418116ff
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: d9b7374668b8a5cfa4b6ab6771362dac8bdfe14c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87521174"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149721"
 ---
 # <a name="1-introduction"></a>1. Introduzione
 

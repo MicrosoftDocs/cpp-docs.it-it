@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: server di documenti attivi'
 title: Server documenti attivi
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - servers [MFC], active document
 - active document servers [MFC]
 ms.assetid: 131fec1e-02a0-4305-a7ab-903b911232a7
-ms.openlocfilehash: 58f2a63a8c640e6ae31640af680894763603e1d0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 37a8e74b0c4b1b37bb031db522bed394c2a9d545
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619146"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150319"
 ---
 # <a name="active-document-servers"></a>Server documenti attivi
 
@@ -29,6 +30,6 @@ Un server MFC standard esegue l'associazione alla propria classe derivata da `CO
 
 La classe `COleDocObjectItem` consente a un contenitore OLE di diventare un contenitore di documenti attivi. È possibile utilizzare la creazione guidata applicazione MFC per creare un contenitore di documenti attivo selezionando la casella di controllo **contenitore documenti attivi** nella pagina supporto documenti compositi della creazione guidata applicazione MFC. Per altre informazioni, vedere [creazione di un'applicazione contenitore di documenti attivi](creating-an-active-document-container-application.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Contenimento dei documenti attivi](active-document-containment.md)
+[Contenimento del documento attivo](active-document-containment.md)

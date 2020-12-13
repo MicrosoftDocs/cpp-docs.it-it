@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CComVariant'
 title: Classe CComVariant
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - CComVariant class
 - VARIANT macro, ATL
 ms.assetid: 4d31149c-d005-44b5-a509-10f84afa2b61
-ms.openlocfilehash: 40315077ceba3d87e12c8ab426560deef4928793
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e618e7e68704d2fd8b69aecd58cbf986bb704c53
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833608"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142129"
 ---
 # <a name="ccomvariant-class"></a>Classe CComVariant
 
@@ -37,18 +38,18 @@ Questa classe esegue il wrapping del tipo VARIANT, fornendo un membro che indica
 class CComVariant : public tagVARIANT
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CComVariant:: CComVariant](#ccomvariant)|Costruttore.|
 |[CComVariant:: ~ CComVariant](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CComVariant:: Connetti](#attach)|Connette una variante all' `CComVariant` oggetto.|
 |[CComVariant:: ChangeType](#changetype)|Converte l' `CComVariant` oggetto in un nuovo tipo.|
@@ -71,7 +72,7 @@ class CComVariant : public tagVARIANT
 |[operatore =](#operator_eq)|Assegna un valore all' `CComVariant` oggetto.|
 |[operatore = =](#operator_eq_eq)|Indica se l' `CComVariant` oggetto è uguale alla variante specificata.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 `CComVariant` esegue il wrapping del tipo VARIANT e VARIANTARG, che è costituito da un'Unione e da un membro che indica il tipo dei dati archiviati nell'Unione. Le varianti vengono in genere usate in automazione.
 
@@ -104,7 +105,7 @@ in Punta alla [variante](/windows/win32/api/oaidl/ns-oaidl-variant) da collegare
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La proprietà dei dati contenuti da *pSrc* viene trasferita all' `CComVariant` oggetto.
 
@@ -175,7 +176,7 @@ in **`char`** Oggetto utilizzato per inizializzare l' `CComVariant` oggetto. Il 
 *bstrSrc*<br/>
 in BSTR utilizzato per inizializzare l' `CComVariant` oggetto. Il tipo dell' `CComVariant` oggetto verrà VT_BSTR.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il distruttore gestisce la pulizia chiamando [CComVariant:: Clear](#clear).
 
@@ -187,7 +188,7 @@ Distruttore.
 ~CComVariant() throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo gestisce la pulizia chiamando [CComVariant:: Clear](#clear).
 
@@ -211,7 +212,7 @@ in Puntatore alla variante il cui valore verrà convertito nel nuovo tipo. Il va
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se si passa un valore per *pSrc*, `ChangeType` utilizzerà questo VARIANT come origine per la conversione. In caso contrario, l' `CComVariant` oggetto sarà il codice sorgente.
 
@@ -227,7 +228,7 @@ HRESULT Clear();
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il distruttore chiama automaticamente `Clear` .
 
@@ -265,7 +266,7 @@ Punta a un BSTR che riceve una copia del contenuto dell' `CComVariant` oggetto.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L' `CComVariant` oggetto deve essere di tipo VT_BSTR.
 
@@ -286,7 +287,7 @@ out Restituisce il valore VARIANT sottostante dell'oggetto.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si noti che il contenuto del VARIANT a cui viene fatto riferimento da *pDest* verrà cancellato automaticamente prima di essere assegnato il valore e il tipo dell' `CComVariant` oggetto chiamante.
 
@@ -302,7 +303,7 @@ ULONG GetSize() const;
 
 Dimensioni in byte del contenuto corrente dell' `CComVariant` oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se la variante contiene un puntatore a interfaccia, `GetSize` esegue una query per `IPersistStream` o `IPersistStreamInit` . In caso di esito positivo, il valore restituito è il bit 32 di ordine inferiore del valore restituito da `GetSizeMax` più `sizeof(CLSID)` e `sizeof(VARTYPE)` . Se il puntatore di interfaccia è NULL, `GetSize` restituisce `sizeof(CLSID)` più `sizeof(VARTYPE)` . Se la dimensione totale è maggiore di ULONG_MAX, `GetSize` restituisce `sizeof(VARTYPE)` un valore che indica un errore.
 
@@ -381,7 +382,7 @@ Indica se l' `CComVariant` oggetto è uguale alla variante specificata.
 bool operator==(const VARIANT& varSrc) const throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Restituisce TRUE se il valore e il tipo di *varSrc* sono uguali al valore e al tipo rispettivamente dell' `CComVariant` oggetto. In caso contrario, FALSE. L'operatore utilizza le impostazioni locali predefinite dell'utente per eseguire il confronto.
 
@@ -395,7 +396,7 @@ Indica se l' `CComVariant` oggetto non è uguale alla variante specificata.
 bool operator!=(const VARIANT& varSrc) const throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Restituisce TRUE se il valore o il tipo di *varSrc* non è uguale al valore o al tipo, rispettivamente, dell' `CComVariant` oggetto. In caso contrario, FALSE. L'operatore utilizza le impostazioni locali predefinite dell'utente per eseguire il confronto.
 
@@ -409,7 +410,7 @@ Indica se l' `CComVariant` oggetto è minore della variante specificata.
 bool operator<(const VARIANT& varSrc) const throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Restituisce TRUE se il valore dell' `CComVariant` oggetto è minore del valore di *varSrc*. In caso contrario, FALSE. L'operatore utilizza le impostazioni locali predefinite dell'utente per eseguire il confronto.
 
@@ -421,7 +422,7 @@ Indica se l' `CComVariant` oggetto è maggiore della variante specificata.
 bool operator>(const VARIANT& varSrc) const throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Restituisce TRUE se il valore dell' `CComVariant` oggetto è maggiore del valore di *varSrc*. In caso contrario, FALSE. L'operatore utilizza le impostazioni locali predefinite dell'utente per eseguire il confronto.
 
@@ -442,7 +443,7 @@ in Puntatore all'interfaccia [IStream](/windows/win32/api/objidl/nn-objidl-istre
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `ReadToStream` richiede una chiamata precedente a [WriteToStream](#writetostream).
 
@@ -463,7 +464,7 @@ Tipo di VARIANT, ad esempio BSTR, **`int`** o **`char`** .
 *pT*<br/>
 Puntatore utilizzato per inizializzare l' `CComVariant` oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `SetByRef` è un modello di funzione che Inizializza l' `CComVariant` oggetto sul puntatore *PT* e imposta il `vt` membro su VT_BYREF. Ad esempio:
 
@@ -486,6 +487,6 @@ in Puntatore all'interfaccia [IStream](/windows/win32/api/objidl/nn-objidl-istre
 
 Valore HRESULT standard.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

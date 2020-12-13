@@ -1,19 +1,20 @@
 ---
+description: 'Altre informazioni su: uso dei riquadri'
 title: Utilizzo di sezioni
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: edef9154b0c4da6f53c8ac40ee84e55e9b38a9b7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6277faf867cd64e5ea0e4503bb36f8e1d4a8bc74
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228466"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150163"
 ---
 # <a name="using-tiles"></a>Utilizzo di sezioni
 
-È possibile usare l'affiancamento per ottimizzare l'accelerazione dell'app. L'affiancamento divide i thread in subset o *riquadri*rettangolari uguali. Se si usano le dimensioni del riquadro appropriate e l'algoritmo affiancato, è possibile ottenere ancora più accelerazione dal codice C++ AMP. I componenti di base di affiancamento sono:
+È possibile usare l'affiancamento per ottimizzare l'accelerazione dell'app. L'affiancamento divide i thread in subset o *riquadri* rettangolari uguali. Se si usano le dimensioni del riquadro appropriate e l'algoritmo affiancato, è possibile ottenere ancora più accelerazione dal codice C++ AMP. I componenti di base di affiancamento sono:
 
-- `tile_static`variabili. Il vantaggio principale dell'affiancamento è il miglioramento delle prestazioni dall' `tile_static` accesso. L'accesso ai dati in `tile_static` memoria può essere notevolmente più veloce rispetto all'accesso ai dati nello spazio globale ( `array` o `array_view` oggetti). Viene creata un'istanza di una `tile_static` variabile per ogni sezione e tutti i thread del riquadro hanno accesso alla variabile. In un tipico algoritmo affiancato, i dati vengono copiati in `tile_static` memoria una sola volta dalla memoria globale e quindi a cui si accede più spesso dalla `tile_static` memoria.
+- `tile_static` variabili. Il vantaggio principale dell'affiancamento è il miglioramento delle prestazioni dall' `tile_static` accesso. L'accesso ai dati in `tile_static` memoria può essere notevolmente più veloce rispetto all'accesso ai dati nello spazio globale ( `array` o `array_view` oggetti). Viene creata un'istanza di una `tile_static` variabile per ogni sezione e tutti i thread del riquadro hanno accesso alla variabile. In un tipico algoritmo affiancato, i dati vengono copiati in `tile_static` memoria una sola volta dalla memoria globale e quindi a cui si accede più spesso dalla `tile_static` memoria.
 
 - [metodo tile_barrier:: wait](reference/tile-barrier-class.md#wait). Una chiamata a `tile_barrier::wait` sospende l'esecuzione del thread corrente fino a quando tutti i thread nello stesso riquadro raggiungono la chiamata a `tile_barrier::wait` . Non è possibile garantire l'ordine in cui vengono eseguiti i thread, ma solo che nessun thread nel riquadro verrà eseguito oltre la chiamata a `tile_barrier::wait` fino a quando tutti i thread non avranno raggiunto la chiamata. Ciò significa che tramite il `tile_barrier::wait` metodo, è possibile eseguire le attività in un riquadro per riquadro anziché in base a thread. Un algoritmo di affiancamento tipico contiene codice per inizializzare la `tile_static` memoria per l'intero riquadro seguito da una chiamata a `tile_barrier::wait` . Il codice che segue `tile_barrier::wait` contiene i calcoli che richiedono l'accesso a tutti i `tile_static` valori.
 
@@ -329,7 +330,7 @@ parallel_for_each(matrix.extent.tile<SAMPLESIZE, SAMPLESIZE>(),
 });
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Parola chiave tile_static](../../cpp/tile-static-keyword.md)

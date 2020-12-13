@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3369'
 title: Errore del compilatore C3369
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3369
 ms.assetid: c6ceb9cb-3df9-4334-9a5c-d16db351d476
-ms.openlocfilehash: 3b2e6f38e93514154b20e674139a2d771dcf586e
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 0391dbd7fe80daf93c8070253181c40fb805fa82
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503246"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150800"
 ---
 # <a name="compiler-error-c3369"></a>Errore del compilatore C3369
 

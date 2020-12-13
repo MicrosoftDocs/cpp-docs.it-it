@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: COM_INTERFACE_ENTRY Macros'
 title: Macro di immissione dell'interfaccia COM
 ms.date: 03/28/2017
 f1_keywords:
@@ -18,18 +19,18 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: 1358a51f6bcb65f9c54c2006a6a467cf96593b5f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0564c1e4ba6b9778865442d281453ff3a4a56d7c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834700"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141362"
 ---
 # <a name="com_interface_entry-macros"></a>Macro COM_INTERFACE_ENTRY
 
 Queste macro immettono le interfacce di un oggetto nella relativa mappa COM, in modo che sia possibile accedervi da `QueryInterface` . L'ordine delle voci nella mappa COM è che le interfacce degli ordini verranno controllate per un IID corrispondente durante `QueryInterface` .
 
-|Macro|Descrizione|
+|Macro|Description|
 |-|-|
 |[COM_INTERFACE_ENTRY](#com_interface_entry)|Immette le interfacce nella mappa dell'interfaccia COM.|
 |[COM_INTERFACE_ENTRY2](#com_interface_entry2)|Usare questa macro per evitare ambiguità tra due rami di ereditarietà.|
@@ -38,7 +39,7 @@ Queste macro immettono le interfacce di un oggetto nella relativa mappa COM, in 
 |[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)|Quando viene eseguita una query sull'interfaccia identificata da *IID* , `COM_INTERFACE_ENTRY_AGGREGATE` Inoltra a `punk` .|
 |[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|Come [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), ad eccezione del fatto che l'esecuzione di query per qualsiasi IID comporta l'invio della query a *punk*.|
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|Come [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), tranne se *punk* è null, crea automaticamente l'aggregazione descritta dal *CLSID*.|
-|[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|Come [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), ad eccezione del fatto che l'esecuzione di query per qualsiasi IID comporta l'invio della query a *punk*e se *punk* è null, creando automaticamente l'aggregazione descritta dal *CLSID*.|
+|[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|Come [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), ad eccezione del fatto che l'esecuzione di query per qualsiasi IID comporta l'invio della query a *punk* e se *punk* è null, creando automaticamente l'aggregazione descritta dal *CLSID*.|
 |[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Fa in modo che il programma chiami [DebugBreak](/windows/win32/api/debugapi/nf-debugapi-debugbreak) quando viene eseguita una query sull'interfaccia specificata.|
 |[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|Salva i dati specifici dell'interfaccia per ogni istanza.|
 |[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|Espone le interfacce di strappo.|
@@ -66,7 +67,7 @@ COM_INTERFACE_ENTRY( x )
 *x*<br/>
 in Nome di un'interfaccia che l'oggetto della classe deriva direttamente da.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si tratta in genere del tipo di voce usato più di frequente.
 
@@ -100,7 +101,7 @@ in Nome di un'interfaccia che si desidera esporre dall'oggetto.
 *X2*<br/>
 in Nome del ramo di ereditarietà da cui viene esposta la *x* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se, ad esempio, si deriva l'oggetto classe da due interfacce duali, viene esposto `IDispatch` utilizzando COM_INTERFACE_ENTRY2 poiché `IDispatch` può essere ottenuto da una delle interfacce.
 
@@ -163,7 +164,7 @@ in GUID dell'interfaccia sottoposta a query per.
 *punk*<br/>
 in Nome di un `IUnknown` puntatore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si presuppone che il parametro *punk* punti all'oggetto sconosciuto interno di un'aggregazione o a null, nel qual caso la voce viene ignorata. In genere, `CoCreate` l'aggregazione viene eseguita in `FinalConstruct` .
 
@@ -184,7 +185,7 @@ COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
 *punk*<br/>
 in Nome di un `IUnknown` puntatore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se la query dell'interfaccia ha esito negativo, l'elaborazione della mappa COM continua.
 
@@ -208,10 +209,10 @@ in GUID dell'interfaccia sottoposta a query per.
 *punk*<br/>
 in Nome di un `IUnknown` puntatore. Deve essere un membro della classe che contiene la mappa COM.
 
-*clsid*<br/>
+*CLSID*<br/>
 in Identificatore dell'aggregazione che verrà creata se *punk* è null.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ### <a name="example"></a>Esempio
 
@@ -219,7 +220,7 @@ in Identificatore dell'aggregazione che verrà creata se *punk* è null.
 
 ## <a name="com_interface_entry_autoaggregate_blind"></a><a name="com_interface_entry_autoaggregate_blind"></a> COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND
 
-Come [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), ad eccezione del fatto che l'esecuzione di query per qualsiasi IID comporta l'invio della query a *punk*e se *punk* è null, creando automaticamente l'aggregazione descritta dal *CLSID*.
+Come [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), ad eccezione del fatto che l'esecuzione di query per qualsiasi IID comporta l'invio della query a *punk* e se *punk* è null, creando automaticamente l'aggregazione descritta dal *CLSID*.
 
 ```
 COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
@@ -230,10 +231,10 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 *punk*<br/>
 in Nome di un `IUnknown` puntatore. Deve essere un membro della classe che contiene la mappa COM.
 
-*clsid*<br/>
+*CLSID*<br/>
 in Identificatore dell'aggregazione che verrà creata se *punk* è null.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se la query dell'interfaccia ha esito negativo, l'elaborazione della mappa COM continua.
 
@@ -254,7 +255,7 @@ COM_INTERFACE_ENTRY_BREAK(x)
 *x*<br/>
 in Testo usato per costruire l'identificatore di interfaccia.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'IID dell'interfaccia verrà creato aggiungendo *x* a `IID_` . Se, ad esempio, *x* è `IPersistStorage` , l'IID sarà `IID_IPersistStorage` .
 
@@ -277,7 +278,7 @@ in Nome della classe che implementa l'interfaccia.
 *punk*<br/>
 in Nome di un `IUnknown` puntatore. Deve essere un membro della classe che contiene la mappa COM. Deve essere inizializzato su NULL nel costruttore dell'oggetto della classe.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se l'interfaccia non viene utilizzata, in questo caso viene ridotta la dimensione complessiva dell'istanza dell'oggetto.
 
@@ -301,7 +302,7 @@ in GUID dell'interfaccia tear-off.
 *x*<br/>
 in Nome della classe che implementa l'interfaccia.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un'interfaccia di strappo viene implementata come un oggetto separato di cui viene creata un'istanza ogni volta che viene eseguita una query sull'interfaccia che rappresenta. In genere, l'interfaccia viene compilata come un tear-off se l'interfaccia viene utilizzata raramente, perché in questo modo viene salvato un puntatore vtable in ogni istanza dell'oggetto principale. Lo strappo viene eliminato quando il conteggio dei riferimenti diventa zero. La classe che implementa lo strappo deve essere derivata da `CComTearOffObjectBase` e avere una propria mappa com.
 
@@ -322,7 +323,7 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
 *ClassName*<br/>
 in Classe di base dell'oggetto corrente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Ad esempio, nel codice seguente:
 
@@ -351,7 +352,7 @@ in Parametro passato a *Func*.
 *func*<br/>
 in Puntatore a funzione che restituirà *IID*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se *IID* corrisponde all'IID dell'interfaccia su cui viene eseguita la query, viene chiamata la funzione specificata da *Func* . La dichiarazione per la funzione deve essere:
 
@@ -375,7 +376,7 @@ in Parametro passato a *Func*.
 *func*<br/>
 in Funzione che viene chiamata quando viene elaborata questa voce nella mappa COM.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Qualsiasi errore provocherà il proseguimento dell'elaborazione sulla mappa COM. Se la funzione restituisce un puntatore a interfaccia, deve restituire S_OK.
 
@@ -392,7 +393,7 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 *x*<br/>
 in Testo usato per costruire l'identificatore di interfaccia.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È possibile utilizzare questa macro per impedire l'utilizzo di un'interfaccia in un particolare caso. Ad esempio, è possibile inserire questa macro nella mappa COM immediatamente prima di COM_INTERFACE_ENTRY_AGGREGATE_BLIND per impedire che una query per l'interfaccia venga trasmessa all'oggetto sconosciuto interno dell'aggregazione.
 

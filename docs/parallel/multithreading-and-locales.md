@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: multithreading e impostazioni locali'
 title: Multithreading e impostazioni locali
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - threading [C++], locales
 - per-thread locale
 ms.assetid: d6fb159a-eaca-4130-a51a-f95d62f71485
-ms.openlocfilehash: 82b410c592e5b68737514dda5a864c7bd15f6dc3
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 246eb6c9be7046a77770de701d15754579b66055
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008582"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149981"
 ---
 # <a name="multithreading-and-locales"></a>Multithreading e impostazioni locali
 
@@ -22,7 +23,7 @@ La libreria di runtime C e la libreria standard C++ forniscono supporto per la m
 
 Con la libreria di runtime C, è possibile creare applicazioni multithread usando le `_beginthread` funzioni e `_beginthreadex` . In questo argomento vengono illustrate solo le applicazioni multithreading create utilizzando queste funzioni. Per ulteriori informazioni, vedere [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md).
 
-Per modificare le impostazioni locali utilizzando la libreria di runtime C, utilizzare la funzione [setlocale](../preprocessor/setlocale.md) . Nelle versioni precedenti di Visual C++ questa funzione modificherebbe sempre le impostazioni locali nell'intera applicazione. È ora disponibile il supporto per l'impostazione delle impostazioni locali in base ai singoli thread. Questa operazione viene eseguita utilizzando la funzione [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) . Per specificare che [setlocale](../preprocessor/setlocale.md) deve modificare solo le impostazioni locali nel thread corrente, chiamare `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` in tale thread. Viceversa, `_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)` se si chiama, il thread utilizzerà le impostazioni locali globali e qualsiasi chiamata a setlocale in [setlocale](../preprocessor/setlocale.md) tale thread modificherà le impostazioni locali in tutti i thread che non hanno attivato in modo esplicito le impostazioni locali per thread.
+Per modificare le impostazioni locali utilizzando la libreria di runtime C, utilizzare la funzione [setlocale](../preprocessor/setlocale.md) . Nelle versioni precedenti di Visual C++ questa funzione modificherebbe sempre le impostazioni locali nell'intera applicazione. È ora disponibile il supporto per l'impostazione delle impostazioni locali in base ai singoli thread. Questa operazione viene eseguita utilizzando la funzione [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) . Per specificare che [setlocale](../preprocessor/setlocale.md) deve modificare solo le impostazioni locali nel thread corrente, chiamare `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` in tale thread. Viceversa, `_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)` se si chiama, il thread utilizzerà le impostazioni locali globali e qualsiasi chiamata a setlocale in [](../preprocessor/setlocale.md) tale thread modificherà le impostazioni locali in tutti i thread che non hanno attivato in modo esplicito le impostazioni locali per thread.
 
 Per modificare le impostazioni locali utilizzando la libreria di runtime C++, utilizzare la [classe delle impostazioni locali](../standard-library/locale-class.md). Chiamando il metodo [locale:: Global](../standard-library/locale-class.md#global) , si modificano le impostazioni locali in ogni thread che non ha attivato in modo esplicito le impostazioni locali per thread. Per modificare le impostazioni locali in un singolo thread o parte di un'applicazione, è sufficiente creare un'istanza di un `locale` oggetto in tale thread o porzione di codice.
 
@@ -435,7 +436,7 @@ unsigned __stdcall RunThreadB(void *params)
 [Thread main] locale::global is set to "French_France.1252"
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Supporto del multithreading per il codice precedente (Visual C++)](multithreading-support-for-older-code-visual-cpp.md)<br/>
 [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: macro mappa oggetti'
 title: Macro mappa oggetti
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 - atlcom/ATL::OBJECT_ENTRY_AUTO
 - atlcom/ATL::OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO
 ms.assetid: 680087f4-9894-41dd-a79c-6f337e1f13c1
-ms.openlocfilehash: 2eb24914561a958a6d6d79dab6779e0ba0a70201
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: accd1fdaebaab3a5c71730dcfd5db83fc2b320de
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835285"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139035"
 ---
 # <a name="object-map-macros"></a>Macro mappa oggetti
 
 Queste macro definiscono le mappe e le voci degli oggetti.
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[DECLARE_OBJECT_DESCRIPTION](#declare_object_description)|Consente di specificare la descrizione del testo di un oggetto della classe, che verrà immesso nella mappa degli oggetti.|
 |[OBJECT_ENTRY_AUTO](#object_entry_auto)|Immette un oggetto ATL nella mappa degli oggetti, aggiorna il registro di sistema e crea un'istanza dell'oggetto.|
@@ -40,7 +41,7 @@ DECLARE_OBJECT_DESCRIPTION( x )
 *x*<br/>
 in Descrizione dell'oggetto della classe.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ATL immette questa descrizione nella mappa degli oggetti tramite la macro [OBJECT_ENTRY_AUTO](#object_entry_auto) .
 
@@ -64,13 +65,13 @@ OBJECT_ENTRY_AUTO( clsid, class )
 
 ### <a name="parameters"></a>Parametri
 
-*clsid*<br/>
+*CLSID*<br/>
 in CLSID di una classe COM implementata dalla classe C++ denominata *Class*.
 
 *class*<br/>
 in Nome della classe C++ che implementa la classe COM rappresentata da *CLSID*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le macro di voci di oggetto vengono inserite in ambito globale nel progetto per fornire supporto per la registrazione, l'inizializzazione e la creazione di una classe.
 
@@ -96,18 +97,18 @@ OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO( clsid, class )
 
 ### <a name="parameters"></a>Parametri
 
-*clsid*<br/>
+*CLSID*<br/>
 in CLSID di una classe COM implementata dalla classe C++ denominata *Class*.
 
 *class*<br/>
 in Nome della classe C++ che implementa la classe COM rappresentata da *CLSID*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le macro di voci di oggetto vengono inserite in ambito globale nel progetto per fornire supporto per la registrazione, l'inizializzazione e la creazione di una classe.
 
 OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO consente di specificare che un oggetto deve essere registrato e inizializzato (vedere [OBJECT_ENTRY_AUTO](#object_entry_auto) per ulteriori informazioni), ma non deve essere creabile tramite `CoCreateInstance` .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro](../../atl/reference/atl-macros.md)

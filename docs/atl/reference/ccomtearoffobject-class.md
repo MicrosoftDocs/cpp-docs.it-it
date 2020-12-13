@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CComTearOffObject'
 title: Classe CComTearOffObject
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - tear-off interfaces
 - CComTearOffObject class
 ms.assetid: d974b598-c6b2-42b1-8360-9190d9d0fbf3
-ms.openlocfilehash: 3eee1d33d5eded75d8805584a24e6b6f396a8369
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b9fe9e7a790a004aec1de059415bd5f47572455b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833621"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142155"
 ---
 # <a name="ccomtearoffobject-class"></a>Classe CComTearOffObject
 
@@ -44,14 +45,14 @@ ATL implementa le interfacce di strappo in due fasi: i `CComTearOffObjectBase` m
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CComTearOffObject:: CComTearOffObject](#ccomtearoffobject)|Costruttore.|
 |[CComTearOffObject:: ~ CComTearOffObject](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CComTearOffObject:: AddRef](#addref)|Incrementa il conteggio dei riferimenti per un `CComTearOffObject` oggetto.|
 |[CComTearOffObject:: QueryInterface](#queryinterface)|Restituisce un puntatore all'interfaccia richiesta nella classe tear-off o nel proprietario.|
@@ -65,11 +66,11 @@ ATL implementa le interfacce di strappo in due fasi: i `CComTearOffObjectBase` m
 
 ### <a name="ccomtearoffobjectbase-data-members"></a>Membri dati CComTearOffObjectBase
 
-|Membro dei dati|Descrizione|
+|Membro dei dati|Description|
 |-|-|
 |[m_pOwner](#m_powner)|Puntatore a un oggetto `CComObject` derivato dalla classe Owner.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 `CComTearOffObject` implementa un'interfaccia di strappo come oggetto separato di cui viene creata un'istanza solo quando viene eseguita una query su tale interfaccia. Lo strappo viene eliminato quando il conteggio dei riferimenti diventa zero. In genere, si compila un'interfaccia di strappo per un'interfaccia raramente utilizzata, poiché l'utilizzo di un tear-off salva un puntatore vtable in tutte le istanze dell'oggetto principale.
 
@@ -116,7 +117,7 @@ CComTearOffObject(void* pv);
 *PV*<br/>
 in Puntatore che verrà convertito in un puntatore a un `CComObject<Owner>` oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Incrementa di uno il conteggio dei riferimenti del proprietario.
 
@@ -128,7 +129,7 @@ Distruttore.
 ~CComTearOffObject();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Libera tutte le risorse allocate, chiama FinalRelease e decrementa il conteggio dei blocchi del modulo.
 
@@ -140,7 +141,7 @@ Costruttore.
 CComTearOffObjectBase();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Inizializza il membro [m_pOwner](#m_powner) su null.
 
@@ -157,7 +158,7 @@ CComObject<Owner>* m_pOwner;
 *Proprietario*<br/>
 in Classe per la quale è in corso l'implementazione di un tear-off.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il puntatore viene inizializzato su NULL durante la costruzione.
 
@@ -175,13 +176,13 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 in IID dell'interfaccia richiesta.
 
 *ppvObject*<br/>
-out Puntatore al puntatore a interfaccia identificato da *IID*oppure null se l'interfaccia non viene trovata.
+out Puntatore al puntatore a interfaccia identificato da *IID* oppure null se l'interfaccia non viene trovata.
 
 ### <a name="return-value"></a>Valore restituito
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Esegue prima una query per le interfacce della classe tear-off. Se l'interfaccia non è presente, esegue una query per l'interfaccia nell'oggetto proprietario. Se l'interfaccia richiesta è `IUnknown` , restituisce l'oggetto `IUnknown` del proprietario.
 
@@ -197,7 +198,7 @@ STDMETHOD_ULONG Release();
 
 Nelle compilazioni non di debug restituisce sempre zero. Nelle build di debug restituisce un valore che può essere utile per la diagnostica o il test.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)<br/>
 [Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

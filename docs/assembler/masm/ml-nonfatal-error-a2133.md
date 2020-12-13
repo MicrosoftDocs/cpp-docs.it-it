@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: ML errore non irreversibile irreversibile A2133'
 title: Errore ML non irreversibile A2133
 ms.date: 12/17/2019
 ms.custom: error-reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - A2133
 ms.assetid: 5ba50911-22c8-43b7-90e2-946fc612e05f
-ms.openlocfilehash: 1ffdf5fb6577dbd4e24312b3c57a4186173ddcf6
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 11a2d27a00ac4e1d8b669ec7a7d4fe523476b5c4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75312638"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97128466"
 ---
 # <a name="ml-nonfatal-error-a2133"></a>Errore ML non irreversibile A2133
 
@@ -24,6 +25,6 @@ I registri AX, AL, AH, EAX, DX, DL, DH e EDX possono essere usati dall'assembler
 
 Utilizzare un registro diverso.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Messaggi di errore ML](ml-error-messages.md)

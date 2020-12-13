@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: funzioni globali del punto di connessione'
 title: Funzioni globali del punto di connessione
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - connection points [C++], global functions
 ms.assetid: bcb4bf50-2155-4e20-b8bb-f2908b03a6e7
-ms.openlocfilehash: 1a648f49b0f3715fd322b1099dcebbf194f57a10
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 33a9f81b086b572bb31f730e4a6ce1bac0fb45d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833530"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141141"
 ---
 # <a name="connection-point-global-functions"></a>Funzioni globali del punto di connessione
 
@@ -65,7 +66,7 @@ out Puntatore al cookie che identifica in modo univoco la connessione.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il sink implementa l'interfaccia in uscita supportata dal punto di connessione. Il client usa il cookie *PDW* per rimuovere la connessione passandola a [AtlUnadvise](#atlunadvise).
 
@@ -133,7 +134,7 @@ Valore HRESULT standard.
 
 [!code-cpp[NVC_ATL_Windowing#92](../../atl/codesnippet/cpp/connection-point-global-functions_3.h)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Funzioni](../../atl/reference/atl-functions.md)<br/>
 [Macro del punto di connessione](../../atl/reference/connection-point-macros.md)

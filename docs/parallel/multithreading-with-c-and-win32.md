@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: multithreading con C e Win32'
 title: Multithreading con C e Win32
 ms.date: 08/09/2019
 helpviewer_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - Win32 [C++], multithreading
 - threading [C]
 ms.assetid: 67cdc99e-1ad9-452b-a042-ed246b70040e
-ms.openlocfilehash: 1764561e0b2b43b8a89d8a1eb2e85d84ce33c4fc
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: cde6166f071035edd4aa0a07f578c6e3b66a0c21
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422122"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149825"
 ---
 # <a name="multithreading-with-c-and-win32"></a>Multithreading con C e Win32
 
-Microsoft C/C++ Compiler (MSVC) fornisce il supporto per la creazione di applicazioni multithread. Provare a usare più di un thread se l'applicazione deve eseguire operazioni costose che potrebbero causare la mancata risposta dell'interfaccia utente.
+Il compilatore Microsoft C/C++ (MSVC) fornisce il supporto per la creazione di applicazioni multithread. Provare a usare più di un thread se l'applicazione deve eseguire operazioni costose che potrebbero causare la mancata risposta dell'interfaccia utente.
 
 Con MSVC sono disponibili diversi modi per programmare con più thread: è possibile usare C++/WinRT e la libreria Windows Runtime, la libreria MFC (Microsoft Foundation Class), C++/CLI e il Runtime .NET oppure la libreria di runtime C e l'API Win32. Questo articolo riguarda il multithreading in C. Per un esempio di codice, vedere il [programma multithread di esempio in C](sample-multithread-c-program.md).
 
@@ -45,16 +46,16 @@ Tutti i programmi Win32 hanno almeno un thread. Qualsiasi thread può creare thr
 
 Le librerie CRT forniscono le funzioni seguenti per la creazione e la terminazione di thread: [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md), [_endthread e _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md).
 
-Le funzioni `_beginthread` e `_beginthreadex` creano un nuovo thread e restituiscono un identificatore del thread se l'operazione ha esito positivo. Il thread termina automaticamente se viene completata l'esecuzione. In alternativa, può terminare se stesso con una chiamata a `_endthread` o `_endthreadex`.
+Le `_beginthread` `_beginthreadex` funzioni e creano un nuovo thread e restituiscono un identificatore del thread se l'operazione ha esito positivo. Il thread termina automaticamente se viene completata l'esecuzione. In alternativa, può terminare se stesso con una chiamata a `_endthread` o `_endthreadex` .
 
 > [!NOTE]
-> Se si chiamano routine di runtime C da un programma compilato con Libcmt. lib, è necessario avviare i thread con la funzione `_beginthread` o `_beginthreadex`. Non usare le funzioni Win32 `ExitThread` e `CreateThread`. L'uso di `SuspendThread` può causare un deadlock quando più di un thread è bloccato in attesa del completamento dell'accesso del thread sospeso a una struttura dei dati di runtime del linguaggio C.
+> Se si chiamano routine della fase di esecuzione del linguaggio C da un programma compilato con Libcmt. lib, è necessario avviare i thread con la `_beginthread` `_beginthreadex` funzione o. Non usare le funzioni Win32 `ExitThread` e `CreateThread` . L'uso `SuspendThread` di può causare un deadlock quando più di un thread è bloccato in attesa che il thread sospeso completi l'accesso a una struttura dei dati di runtime del linguaggio C.
 
-### <a name="_core_the__beginthread_function"></a>Funzioni _beginthread e _beginthreadex
+### <a name="the-_beginthread-and-_beginthreadex-functions"></a><a name="_core_the__beginthread_function"></a> Funzioni _beginthread e _beginthreadex
 
-Le funzioni `_beginthread` e `_beginthreadex` creano un nuovo thread. Un thread condivide il codice e i segmenti di dati di un processo con altri thread nel processo, ma ha i propri valori di registro univoci, lo spazio dello stack e l'indirizzo di istruzione corrente. Il sistema concede tempo alla CPU per ogni thread, in modo che tutti i thread in un processo possano essere eseguiti contemporaneamente.
+Le `_beginthread` `_beginthreadex` funzioni e creano un nuovo thread. Un thread condivide il codice e i segmenti di dati di un processo con altri thread nel processo, ma ha i propri valori di registro univoci, lo spazio dello stack e l'indirizzo di istruzione corrente. Il sistema concede tempo alla CPU per ogni thread, in modo che tutti i thread in un processo possano essere eseguiti contemporaneamente.
 
-`_beginthread` e `_beginthreadex` sono simili alla funzione [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) nell'API Win32, ma presentano le differenze seguenti:
+`_beginthread` e `_beginthreadex` sono simili alla funzione [CREATETHREAD](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) nell'API Win32, ma presentano le differenze seguenti:
 
 - Inizializzano alcune variabili della libreria di runtime C. Questo è importante solo se si usa la libreria di runtime del linguaggio C nei thread.
 
@@ -62,15 +63,15 @@ Le funzioni `_beginthread` e `_beginthreadex` creano un nuovo thread. Un thread 
 
 `_beginthread` e `_beginthreadex` restituiscono un handle al nuovo thread in caso di esito positivo o un codice di errore se si è verificato un errore.
 
-### <a name="_core_the__endthread_function"></a>Funzioni _endthread e _endthreadex
+### <a name="the-_endthread-and-_endthreadex-functions"></a><a name="_core_the__endthread_function"></a> Funzioni _endthread e _endthreadex
 
-La funzione [_endthread](../c-runtime-library/reference/endthread-endthreadex.md) termina un thread creato da `_beginthread` (e allo stesso modo `_endthreadex` termina un thread creato da `_beginthreadex`). I thread terminano automaticamente al termine. `_endthread` e `_endthreadex` sono utili per la terminazione condizionale all'interno di un thread. Un thread dedicato all'elaborazione delle comunicazioni, ad esempio, può uscire se non è in grado di ottenere il controllo della porta di comunicazione.
+La funzione [_endthread](../c-runtime-library/reference/endthread-endthreadex.md) termina un thread creato da `_beginthread` (e allo stesso modo, `_endthreadex` termina un thread creato da `_beginthreadex` ). I thread terminano automaticamente al termine. `_endthread` e `_endthreadex` sono utili per la terminazione condizionale all'interno di un thread. Un thread dedicato all'elaborazione delle comunicazioni, ad esempio, può uscire se non è in grado di ottenere il controllo della porta di comunicazione.
 
 ## <a name="writing-a-multithreaded-win32-program"></a>Scrittura di un programma multithread Win32
 
 Quando si scrive un programma con più thread, è necessario coordinarne il comportamento e [l'uso delle risorse del programma](#_core_sharing_common_resources_between_threads). Assicurarsi inoltre che ogni thread riceva [il proprio stack](#_core_thread_stacks).
 
-### <a name="_core_sharing_common_resources_between_threads"></a>Condivisione di risorse comuni tra thread
+### <a name="sharing-common-resources-between-threads"></a><a name="_core_sharing_common_resources_between_threads"></a> Condivisione di risorse comuni tra thread
 
 > [!NOTE]
 > Per una discussione simile dal punto di vista di MFC, vedere [multithreading: suggerimenti](multithreading-programming-tips.md) per la programmazione e [multithreading: quando usare le classi di sincronizzazione](multithreading-when-to-use-the-synchronization-classes.md).
@@ -79,11 +80,11 @@ Ogni thread ha un proprio stack e una propria copia dei registri della CPU. Altr
 
 Quando più thread accedono a dati statici, il programma deve fornire i possibili conflitti di risorse. Si consideri un programma in cui un thread aggiorna una struttura di dati statica che contiene le coordinate *x*,*y* per gli elementi che devono essere visualizzati da un altro thread. Se il thread di aggiornamento modifica la coordinata *x* e viene interrotto prima di poter modificare la coordinata *y* , il thread di visualizzazione potrebbe essere pianificato prima dell'aggiornamento della coordinata *y* . L'elemento viene visualizzato nel percorso errato. È possibile evitare questo problema usando i semafori per controllare l'accesso alla struttura.
 
-Un mutex (short per *Mut*registrazione accesso utenti *ex*Clausura) è un modo per comunicare tra thread o processi che vengono eseguiti in modo asincrono l'uno dall'altro. Questa comunicazione può essere usata per coordinare le attività di più thread o processi, in genere controllando l'accesso a una risorsa condivisa bloccando e sbloccando la risorsa. Per *risolvere questo problema*di aggiornamento delle coordinate*y* , il thread di aggiornamento imposta un mutex che indica che la struttura dei dati è in uso prima di eseguire l'aggiornamento. Il mutex verrà cancellato dopo l'elaborazione di entrambe le coordinate. Il thread di visualizzazione deve attendere la cancellazione del mutex prima di aggiornare la visualizzazione. Questo processo di attesa di un mutex viene spesso definito *blocco* su un mutex, perché il processo è bloccato e non può continuare finché il mutex non viene cancellato.
+Un mutex (short per *Mut* registrazione accesso utenti *ex* Clausura) è un modo per comunicare tra thread o processi che vengono eseguiti in modo asincrono l'uno dall'altro. Questa comunicazione può essere usata per coordinare le attività di più thread o processi, in genere controllando l'accesso a una risorsa condivisa bloccando e sbloccando la risorsa. Per *risolvere questo problema* di aggiornamento delle coordinate *y* , il thread di aggiornamento imposta un mutex che indica che la struttura dei dati è in uso prima di eseguire l'aggiornamento. Il mutex verrà cancellato dopo l'elaborazione di entrambe le coordinate. Il thread di visualizzazione deve attendere la cancellazione del mutex prima di aggiornare la visualizzazione. Questo processo di attesa di un mutex viene spesso definito *blocco* su un mutex, perché il processo è bloccato e non può continuare finché il mutex non viene cancellato.
 
-Il programma Bounce. c illustrato nel [programma multithread c di esempio](sample-multithread-c-program.md) usa un mutex denominato `ScreenMutex` per coordinare gli aggiornamenti delle schermate. Ogni volta che uno dei thread di visualizzazione è pronto per la scrittura sullo schermo, chiama `WaitForSingleObject` con l'handle per `ScreenMutex` e infinito costante per indicare che la chiamata `WaitForSingleObject` deve bloccarsi sul mutex e non il timeout. Se `ScreenMutex` è chiaro, la funzione wait imposta il mutex in modo che gli altri thread non possano interferire con la visualizzazione e continuino l'esecuzione del thread. In caso contrario, il thread si blocca fino a quando il mutex non viene cancellato. Quando il thread completa l'aggiornamento della visualizzazione, il mutex viene rilasciato chiamando `ReleaseMutex`.
+Il programma Bounce. c illustrato nel [programma multithread c di esempio](sample-multithread-c-program.md) usa un mutex denominato `ScreenMutex` per coordinare gli aggiornamenti dello schermo. Ogni volta che uno dei thread di visualizzazione è pronto per la scrittura sullo schermo, viene chiamato `WaitForSingleObject` con l'handle a `ScreenMutex` e costante infinito per indicare che la `WaitForSingleObject` chiamata dovrebbe bloccarsi sul mutex e non il timeout. Se `ScreenMutex` è chiaro, la funzione wait imposta il mutex in modo che gli altri thread non possano interferire con la visualizzazione e continuino l'esecuzione del thread. In caso contrario, il thread si blocca fino a quando il mutex non viene cancellato. Quando il thread completa l'aggiornamento della visualizzazione, rilascia il mutex chiamando `ReleaseMutex` .
 
-Gli schermi e i dati statici sono solo due delle risorse che richiedono una gestione attenta. Ad esempio, il programma potrebbe avere più thread che accedono allo stesso file. Poiché un altro thread potrebbe aver spostato il puntatore del file, ogni thread deve reimpostare il puntatore del file prima di leggerlo o scriverlo. Ogni thread deve inoltre assicurarsi che non venga interrotto tra il momento in cui posiziona il puntatore e l'ora di accesso al file. Questi thread devono usare un semaforo per coordinare l'accesso al file, racchiudendo ogni accesso ai file con `WaitForSingleObject` e `ReleaseMutex` chiamate. Questa tecnica è illustrata nell'esempio di codice seguente:
+Gli schermi e i dati statici sono solo due delle risorse che richiedono una gestione attenta. Ad esempio, il programma potrebbe avere più thread che accedono allo stesso file. Poiché un altro thread potrebbe aver spostato il puntatore del file, ogni thread deve reimpostare il puntatore del file prima di leggerlo o scriverlo. Ogni thread deve inoltre assicurarsi che non venga interrotto tra il momento in cui posiziona il puntatore e l'ora di accesso al file. Questi thread devono usare un semaforo per coordinare l'accesso al file racchiudendo ogni accesso ai file con `WaitForSingleObject` e `ReleaseMutex` chiama. Questa tecnica è illustrata nell'esempio di codice seguente:
 
 ```C
 HANDLE    hIOMutex = CreateMutex (NULL, FALSE, NULL);
@@ -94,13 +95,13 @@ fwrite( data, sizeof( data ), 1, fp );
 ReleaseMutex( hIOMutex);
 ```
 
-### <a name="_core_thread_stacks"></a>Stack di thread
+### <a name="thread-stacks"></a><a name="_core_thread_stacks"></a> Stack di thread
 
 Tutto lo spazio dello stack predefinito di un'applicazione viene allocato al primo thread di esecuzione, noto come thread 1. Di conseguenza, è necessario specificare la quantità di memoria da allocare per uno stack separato per ogni thread aggiuntivo necessario per il programma. Il sistema operativo alloca ulteriore spazio dello stack per il thread, se necessario, ma è necessario specificare un valore predefinito.
 
-Il primo argomento nella chiamata `_beginthread` è un puntatore alla funzione `BounceProc`, che esegue i thread. Il secondo argomento specifica le dimensioni predefinite dello stack per il thread. L'ultimo argomento è un numero ID passato a `BounceProc`. `BounceProc` usa il numero ID per inizializzare il generatore di numeri casuali e selezionare l'attributo color del thread e il carattere di visualizzazione.
+Il primo argomento nella `_beginthread` chiamata è un puntatore alla `BounceProc` funzione che esegue i thread. Il secondo argomento specifica le dimensioni predefinite dello stack per il thread. L'ultimo argomento è un numero ID passato a `BounceProc` . `BounceProc` Usa il numero ID per inizializzare il generatore di numeri casuali e per selezionare l'attributo color del thread e il carattere di visualizzazione.
 
-I thread che effettuano chiamate alla libreria di runtime del linguaggio C o all'API Win32 devono consentire spazio dello stack sufficiente per la libreria e le funzioni API che chiamano. La funzione C `printf` richiede più di 500 byte di spazio dello stack ed è necessario avere a disposizione 2K byte di spazio dello stack per la chiamata delle routine dell'API Win32.
+I thread che effettuano chiamate alla libreria di runtime del linguaggio C o all'API Win32 devono consentire spazio dello stack sufficiente per la libreria e le funzioni API che chiamano. Per la `printf` funzione C sono necessari più di 500 byte di spazio dello stack ed è necessario avere a disposizione 2K byte di spazio dello stack per la chiamata delle routine dell'API Win32.
 
 Poiché ogni thread dispone di un proprio stack, è possibile evitare potenziali collisioni sugli elementi di dati utilizzando come minimo i dati statici possibili. Progettare il programma in modo da usare le variabili dello stack automatico per tutti i dati che possono essere privati per un thread. Le uniche variabili globali nel programma Bounce. c sono mutex o variabili che non cambiano mai dopo l'inizializzazione.
 
@@ -115,10 +116,10 @@ Esistono diversi problemi che possono verificarsi durante la creazione, il colle
 |Viene visualizzata una finestra di messaggio in cui viene indicato che il programma ha causato una violazione di protezione.|Molti errori di programmazione Win32 causano violazioni della protezione. Una causa comune di violazioni della protezione è l'assegnazione indiretta dei dati a puntatori null. Poiché il programma tenta di accedere alla memoria che non vi appartiene, viene generata una violazione di protezione.<br /><br /> Un modo semplice per rilevare la causa di una violazione di protezione è compilare il programma con le informazioni di debug e quindi eseguirlo tramite il debugger nell'ambiente Visual Studio. Quando si verifica l'errore di protezione, Windows trasferisce il controllo al debugger e il cursore viene posizionato sulla riga che ha causato il problema.|
 |Il programma genera numerosi errori di compilazione e collegamento.|È possibile eliminare molti problemi potenziali impostando il livello di avviso del compilatore su uno dei valori più elevati e ascoltando i messaggi di avviso. Utilizzando le opzioni del livello di avviso di livello 3 o 4, è possibile rilevare le conversioni di dati non intenzionali, i prototipi di funzione mancanti e l'utilizzo di funzionalità non ANSI.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Supporto del multithreading per il codice precedente C++(Visual)](multithreading-support-for-older-code-visual-cpp.md)\
+[Supporto del multithreading per il codice precedente (Visual C++)](multithreading-support-for-older-code-visual-cpp.md)\
 [Programma multithread di esempio in C](sample-multithread-c-program.md)\
-\ di [archiviazione thread-local (TLS)](thread-local-storage-tls.md)
+[Archiviazione thread-local (TLS)](thread-local-storage-tls.md)\
 [Operazioni di concorrenza e asincrone con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency)\
 [Multithreading con C++ e MFC](multithreading-with-cpp-and-mfc.md)

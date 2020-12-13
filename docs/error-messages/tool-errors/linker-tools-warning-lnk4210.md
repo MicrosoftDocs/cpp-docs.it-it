@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avvisi degli strumenti del linker LNK4210'
 title: Avviso degli strumenti del linker LNK4210
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,39 +7,39 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4210
 ms.assetid: db48cff8-a2be-4a77-8d03-552b42c228fa
-ms.openlocfilehash: 75376129ce0033c717a4da3074cee9de132d357d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7634952df026dc664aed2a2f9625a7380b3a38b4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395066"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150605"
 ---
 # <a name="linker-tools-warning-lnk4210"></a>Avviso degli strumenti del linker LNK4210
 
-> sezione *sezione* esiste; potrebbe esistano inizializzatori o terminatori statici non gestiti
+> *sezione* della sezione esistente. potrebbero essere presenti inizializzatori o terminatori statici non gestiti
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Ha introdotto codice inizializzatori o terminatori statici, ma il codice di avvio della libreria VCRuntime o equivalente (che deve essere eseguito l'inizializzatori o terminatori statici) non viene eseguito all'avvio dell'applicazione. Di seguito sono riportati alcuni esempi di codice che richiede inizializzatori o terminatori statici:
+Nel codice sono stati introdotti inizializzatori o terminatori statici, ma il codice di avvio della libreria VCRuntime o il relativo equivalente (che deve eseguire gli inizializzatori o i terminatori statici) non viene eseguito all'avvio dell'applicazione. Di seguito sono riportati alcuni esempi di codice che richiedono inizializzatori o terminatori statici:
 
-- Variabile di classe globale con un costruttore, un distruttore o tabella di funzioni virtuali.
+- Variabile di classe globale con un costruttore, un distruttore o una tabella di funzioni virtuali.
 
-- Variabile globale inizializzata con una costante non tempo di compilazione.
+- Variabile globale inizializzata con una costante non in fase di compilazione.
 
-Per risolvere questo problema, provare una delle operazioni seguenti:
+Per risolvere il problema, provare a eseguire una delle operazioni seguenti:
 
 - Rimuovere tutto il codice con inizializzatori statici.
 
-- Non utilizzare [/NOENTRY](../../build/reference/noentry-no-entry-point.md). Dopo aver rimosso /NOENTRY, potrebbe anche essere necessario rimuovere [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) dalla riga di comando del linker.
+- Non usare [/NOENTRY](../../build/reference/noentry-no-entry-point.md). Dopo la rimozione di/NOENTRY, potrebbe anche essere necessario rimuovere [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) dalla riga di comando del linker.
 
-- Se la compilazione utilizza /MT, aggiungere LIBCMT. lib, libvcruntime e libucrt alla riga di comando del linker. Se la compilazione utilizza /MTd, aggiungere LIBCMTD. lib e vcruntimed della versione finale.
+- Se la compilazione USA/MT, aggiungere LIBCMT. lib, libvcruntime. lib e libucrt. lib alla riga di comando del linker. Se la compilazione USA/MTd, aggiungere libcmtd. lib, vcruntimed. lib e libucrtd. lib.
 
-- Quando si spostano da /clr: pura compilazione /clr, rimuovere il [/ENTRY](../../build/reference/entry-entry-point-symbol.md) opzione da riga del linker. Questo consente l'inizializzazione di CRT e inizializzatori statici deve essere eseguito all'avvio dell'applicazione. Il **/clr: pure** opzione del compilatore è obsoleta in Visual Studio 2015 e non sono supportata in Visual Studio 2017.
+- Quando si esegue il passaggio dalla compilazione/clr: pure a/CLR, rimuovere l'opzione [/entry](../../build/reference/entry-entry-point-symbol.md) dalla riga del linker. Questo consente l'inizializzazione di CRT e consente l'esecuzione di inizializzatori statici all'avvio dell'applicazione. L'opzione del compilatore **/CLR: pure** è deprecata in visual studio 2015 e non è supportata in visual studio 2017.
 
-Il [/GS](../../build/reference/gs-buffer-security-check.md) l'opzione del compilatore richiede l'inizializzazione mediante le `__security_init_cookie` (funzione). Questa inizializzazione viene fornita per impostazione predefinita nel codice di avvio della libreria VCRuntime che viene eseguito in `_DllMainCRTStartup`.
+L'opzione del compilatore [/GS](../../build/reference/gs-buffer-security-check.md) richiede l'inizializzazione da parte della `__security_init_cookie` funzione. Questa inizializzazione viene fornita per impostazione predefinita nel codice di avvio della libreria VCRuntime che viene eseguito in `_DllMainCRTStartup` .
 
-- Se il progetto viene compilato usando /ENTRY e /ENTRY viene passata una funzione diversa `_DllMainCRTStartup`, è necessario chiamare la funzione `_CRT_INIT` per inizializzare la libreria CRT. Questa chiamata da solo non è sufficiente se la DLL Usa l'opzione /GS, richiede gli inizializzatori statici o viene chiamata nel contesto del codice MFC o ATL. Visualizzare [DLL e Visual C++ il comportamento della libreria di runtime](../../build/run-time-library-behavior.md) per altre informazioni.
+- Se il progetto viene compilato con/ENTRY e se/ENTRY viene passata una funzione diversa da `_DllMainCRTStartup` , la funzione deve chiamare `_CRT_INIT` per inizializzare CRT. Questa chiamata non è sufficiente se la DLL USA/GS, richiede inizializzatori statici o viene chiamata nel contesto di codice MFC o ATL. Per ulteriori informazioni, vedere [dll e Visual C++ comportamento della libreria di runtime](../../build/run-time-library-behavior.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Impostazione delle opzioni del linker](../../build/reference/linking.md)

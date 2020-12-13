@@ -1,26 +1,27 @@
 ---
+description: 'Altre informazioni su: Variadic Macros'
 title: Macro Variadic
 ms.date: 10/17/2019
 helpviewer_keywords:
 - variadic macros [C++]
 - __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-ms.openlocfilehash: de4d3a7f03f613cb058e564664f01837df23aefb
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: 876e0ca46dd8774796c8a4f9d7572cbff5caa93c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72587891"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149656"
 ---
 # <a name="variadic-macros"></a>Macro Variadic
 
 Le macro variadic sono macro di tipo funzione che contengono un numero variabile di argomenti.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Per utilizzare le macro Variadic, i puntini di sospensione possono essere specificati come argomento formale finale in una definizione di macro e l'identificatore di sostituzione `__VA_ARGS__` possibile utilizzare nella definizione per inserire gli argomenti aggiuntivi.  `__VA_ARGS__` viene sostituito da tutti gli argomenti che corrispondono ai puntini di sospensione, incluse le virgole tra di essi.
+Per usare le macro Variadic, i puntini di sospensione possono essere specificati come argomento formale finale in una definizione di macro e l'identificatore `__VA_ARGS__` di sostituzione può essere usato nella definizione per inserire gli argomenti aggiuntivi.  `__VA_ARGS__` viene sostituito da tutti gli argomenti che corrispondono ai puntini di sospensione, incluse le virgole tra di essi.
 
-Lo standard C specifica che è necessario passare almeno un argomento ai puntini di sospensione per assicurarsi che la macro non venga risolta in un'espressione con una virgola finale. L'implementazione di C++ Microsoft tradizionale evita una virgola finale se nessun argomento viene passato ai puntini di sospensione. Quando si imposta l'opzione del compilatore `/experimental:preprocessor`, la virgola finale non viene annullata.
+Lo standard C specifica che è necessario passare almeno un argomento ai puntini di sospensione per assicurarsi che la macro non venga risolta in un'espressione con una virgola finale. L'implementazione di Microsoft C++ tradizionale evita una virgola finale se nessun argomento viene passato ai puntini di sospensione. Quando `/experimental:preprocessor` viene impostata l'opzione del compilatore, la virgola finale non viene annullata.
 
 ## <a name="example"></a>Esempio
 

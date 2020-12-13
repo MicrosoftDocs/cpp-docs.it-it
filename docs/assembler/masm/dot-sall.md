@@ -1,4 +1,5 @@
 ---
+description: Ulteriori informazioni su:. STUTTE
 title: .SALL
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - .SALL directive
 ms.assetid: 2791e746-96aa-4ed5-ae69-abd072378f86
-ms.openlocfilehash: fb76cbef4a7a1fc6fa6f0d23d3da38ddafa5456b
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 038b4c8b667de5178b982ca81bca81d257412b75
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318267"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97131196"
 ---
 # <a name="sall"></a>.SALL
 
@@ -21,7 +22,7 @@ Vedere [. NOLISTMACRO](dot-nolistmacro.md).
 
 > **.SALL**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimento alle direttive](directives-reference.md)\
+[Guida di riferimento alle direttive](directives-reference.md)\
 [Grammatica BNF di MASM](masm-bnf-grammar.md)

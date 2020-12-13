@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura dettagliata: uso di join per impedire il deadlock'
 title: 'Procedura dettagliata: Uso della classe join per impedire un deadlock'
 ms.date: 04/25/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: 5bdd6cd81051d224714dd66d4604cbdec4ddb552
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b74a7cd3f5f2326bb73ece13e16be95d6677bdd0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217883"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150150"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>Procedura dettagliata: Uso della classe join per impedire un deadlock
 
@@ -26,7 +27,7 @@ Prima di iniziare questa procedura dettagliata, leggere gli argomenti seguenti:
 
 - [Agenti asincroni](../../parallel/concrt/asynchronous-agents.md)
 
-- [Procedura dettagliata: creazione di un'applicazione basata su agenti](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
+- [Procedura dettagliata: creazione di un'applicazione Agent-Based](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
 
 - [Blocchi di messaggi asincroni](../../parallel/concrt/asynchronous-message-blocks.md)
 
@@ -34,7 +35,7 @@ Prima di iniziare questa procedura dettagliata, leggere gli argomenti seguenti:
 
 - [Strutture dei dati di sincronizzazione](../../parallel/concrt/synchronization-data-structures.md)
 
-## <a name="sections"></a><a name="top"></a>Sezioni
+## <a name="sections"></a><a name="top"></a> Sezioni
 
 Questa procedura dettagliata contiene le sezioni seguenti:
 
@@ -44,7 +45,7 @@ Questa procedura dettagliata contiene le sezioni seguenti:
 
 - [Utilizzo di join per impedire il deadlock](#solution)
 
-## <a name="the-dining-philosophers-problem"></a><a name="problem"></a>Problema dei filosofi a cena
+## <a name="the-dining-philosophers-problem"></a><a name="problem"></a> Problema dei filosofi a cena
 
 Il problema dei filosofi a cena illustra il modo in cui si verifica il deadlock in un'applicazione. In questo problema cinque filosofi si siedono a una tabella rotonda. Ogni filosofo si alterna tra pensiero e cibo. Ogni filosofo deve condividere un bastoncino con il vicino a sinistra e un altro bastoncino con il vicino a destra. Nella figura seguente viene illustrato questo layout.
 
@@ -54,7 +55,7 @@ Per mangiare, un filosofo deve avere due bastoncini. Se ogni filosofo possiede u
 
 [All'[inizio](#top)]
 
-## <a name="a-nave-implementation"></a><a name="deadlock"></a>Implementazione Naive
+## <a name="a-nave-implementation"></a><a name="deadlock"></a> Implementazione Naive
 
 Nell'esempio seguente viene illustrata un'implementazione ingenua del problema dei filosofi a cena. La `philosopher` classe, che deriva da [Concurrency:: Agent](../../parallel/concrt/reference/agent-class.md), consente a ciascun filosofo di agire in modo indipendente. Nell'esempio viene utilizzata una matrice condivisa di oggetti [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) per concedere a ogni `philosopher` oggetto l'accesso esclusivo a una coppia di bastoncini.
 
@@ -76,7 +77,7 @@ Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure
 
 [All'[inizio](#top)]
 
-## <a name="using-join-to-prevent-deadlock"></a><a name="solution"></a>Utilizzo di join per impedire il deadlock
+## <a name="using-join-to-prevent-deadlock"></a><a name="solution"></a> Utilizzo di join per impedire il deadlock
 
 In questa sezione viene illustrato come utilizzare buffer di messaggi e funzioni di passaggio dei messaggi per eliminare la possibilità di deadlock.
 
@@ -118,7 +119,7 @@ Per ulteriori informazioni sui join greedy e non greedy e sulle differenze tra i
 
 [!code-cpp[concrt-philosophers-join#7](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_8.cpp)]
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
 Di seguito viene illustrato l'esempio completo che utilizza oggetti non greedy `join` per eliminare il rischio di deadlock.
 
@@ -144,7 +145,7 @@ Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure
 
 [All'[inizio](#top)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Procedure dettagliate runtime di concorrenza](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md)<br/>

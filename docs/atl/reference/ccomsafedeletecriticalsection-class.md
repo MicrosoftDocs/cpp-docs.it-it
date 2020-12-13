@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CComSafeDeleteCriticalSection'
 title: Classe CComSafeDeleteCriticalSection
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeDeleteCriticalSection class
 ms.assetid: 4d2932c4-ba8f-48ec-8664-1db8bed01314
-ms.openlocfilehash: 115cbd466f51db271f4be65ce708fe54c7f2b2ce
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 73e27fb267cbfc8cde248c7ac896d29de2a91f77
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833634"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142169"
 ---
 # <a name="ccomsafedeletecriticalsection-class"></a>Classe CComSafeDeleteCriticalSection
 
@@ -29,18 +30,18 @@ Questa classe fornisce metodi per ottenere e rilasciare la proprietà di un ogge
 class CComSafeDeleteCriticalSection : public CComCriticalSection
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CComSafeDeleteCriticalSection:: CComSafeDeleteCriticalSection](#ccomsafedeletecriticalsection)|Costruttore.|
 |[CComSafeDeleteCriticalSection:: ~ CComSafeDeleteCriticalSection](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CComSafeDeleteCriticalSection:: init](#init)|Crea e Inizializza un oggetto sezione critica.|
 |[CComSafeDeleteCriticalSection:: Lock](#lock)|Ottiene la proprietà dell'oggetto sezione critica.|
@@ -48,11 +49,11 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
 
 ### <a name="data-members"></a>Membri dei dati
 
-|Membro dei dati|Descrizione|
+|Membro dei dati|Description|
 |-|-|
 |[m_bInitialized](#m_binitialized)|Contrassegna se l' `CRITICAL_SECTION` oggetto interno è stato inizializzato.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 `CComSafeDeleteCriticalSection` deriva dalla classe [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). Tuttavia, `CComSafeDeleteCriticalSection` fornisce meccanismi di sicurezza aggiuntivi rispetto a [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md).
 
@@ -78,7 +79,7 @@ Costruttore.
 CComSafeDeleteCriticalSection();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Imposta il membro dati [m_bInitialized](#m_binitialized) su false.
 
@@ -90,7 +91,7 @@ Distruttore.
 ~CComSafeDeleteCriticalSection() throw();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Rilascia l' `CRITICAL_SECTION` oggetto interno dalla memoria se il [m_bInitialized](#m_binitialized) membro dati è impostato su true.
 
@@ -118,7 +119,7 @@ HRESULT Lock();
 
 Restituisce il risultato di [CComCriticalSection:: Lock](../../atl/reference/ccomcriticalsection-class.md#lock).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo presuppone che il membro dati [m_bInitialized](#m_binitialized) sia impostato su true alla voce. Se questa condizione non viene soddisfatta, viene generata un'asserzione nelle compilazioni di debug.
 
@@ -132,7 +133,7 @@ Contrassegna se l' `CRITICAL_SECTION` oggetto interno è stato inizializzato.
 bool m_bInitialized;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il `m_bInitialized` membro dati viene usato per tenere traccia della validità dell' `CRITICAL_SECTION` oggetto sottostante associato alla classe [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md) . `CRITICAL_SECTION`Se questo flag non è impostato su true, non verrà eseguito alcun tentativo di rilasciare l'oggetto sottostante dalla memoria.
 
@@ -148,11 +149,11 @@ HRESULT Term() throw();
 
 Restituisce il risultato di [CComCriticalSection:: term](../../atl/reference/ccomcriticalsection-class.md#term)o S_OK se [m_bInitialized](#m_binitialized) è stato impostato su false alla voce.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È possibile chiamare questo metodo in modo sicuro anche se l' `CRITICAL_SECTION` oggetto interno non è valido. Il distruttore di questa classe chiama questo metodo se il membro dati [m_bInitialized](#m_binitialized) è impostato su true.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)<br/>
 [Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

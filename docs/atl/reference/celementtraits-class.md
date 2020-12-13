@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CElementTraits'
 title: Classe CElementTraits
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CElementTraits class
 ms.assetid: 496528e5-7f80-4b45-be0c-6f646feb43c5
-ms.openlocfilehash: 646b445aed93c9041932c60442f61792f5e1a7e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1bcb6c9da2bca733efe68b634eebd7f379ba0d10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245768"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141804"
 ---
 # <a name="celementtraits-class"></a>Classe CElementTraits
 
-Questa classe viene utilizzata dalle classi di raccolta per fornire funzioni e metodi per lo spostamento, copia, confronto e operazioni di hashing.
+Questa classe viene utilizzata dalle classi di raccolta per fornire metodi e funzioni per operazioni di trasferimento, copia, confronto e hashing.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -28,13 +29,13 @@ class CElementTraits : public CDefaultElementTraits<T>
 #### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Il tipo di dati da archiviare nella raccolta.
+Tipo di dati da archiviare nella raccolta.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Questa classe fornisce metodi e funzioni statiche predefinito per lo spostamento, copia, il confronto e hashing elementi archiviati in un oggetto di classe di raccolta. `CElementTraits` viene specificato come provider predefinito di queste operazioni per le classi di raccolte [CAtlArray](../../atl/reference/catlarray-class.md), [CAtlList](../../atl/reference/catllist-class.md), [CRBMap](../../atl/reference/crbmap-class.md), [CRBMultiMap](../../atl/reference/crbmultimap-class.md), e [CRBTree](../../atl/reference/crbtree-class.md).
+Questa classe fornisce funzioni e metodi statici predefiniti per lo stato di trasferimento, la copia, il confronto e l'hashing di elementi archiviati in un oggetto classe di raccolta. `CElementTraits` viene specificato come provider predefinito di queste operazioni dalle classi di raccolta [CAtlArray](../../atl/reference/catlarray-class.md), [CAtlList](../../atl/reference/catllist-class.md), [CRBMap](../../atl/reference/crbmap-class.md), [CRBMultiMap](../../atl/reference/crbmultimap-class.md)e [CRBTree](../../atl/reference/crbtree-class.md).
 
-Le implementazioni predefinite è sufficiente per i tipi di dati semplici, ma se le classi di raccolta vengono utilizzate per archiviare gli oggetti più complessi, le funzioni e metodi devono essere sottoposto a override dalle implementazioni fornite dall'utente.
+Le implementazioni predefinite saranno sufficienti per i tipi di dati semplici, ma se le classi di raccolta vengono usate per archiviare oggetti più complessi, le funzioni e i metodi devono essere sottoposti a override dalle implementazioni fornite dall'utente.
 
 Per altre informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).
 
@@ -42,7 +43,7 @@ Per altre informazioni, vedere [classi Collection ATL](../../atl/atl-collection-
 
 **Intestazione:** atlcoll. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)<br/>
-[Panoramica della classe](../../atl/atl-class-overview.md)
+[Cenni preliminari sulle classi](../../atl/atl-class-overview.md)

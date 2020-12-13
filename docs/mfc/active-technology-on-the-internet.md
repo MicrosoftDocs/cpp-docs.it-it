@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: tecnologia attiva su Internet'
 title: Tecnologia Active in Internet
 ms.date: 09/12/2018
 helpviewer_keywords:
 - Internet applications [MFC], Active technology
 ms.assetid: 6f782aa1-5c2f-47a2-9e63-ddd0829d5a08
-ms.openlocfilehash: 2cd087c99c1ebdcaa8b4a44524e7691984877f20
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 4f8035e0af233eac55c00a84679f79d214978219
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625146"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150241"
 ---
 # <a name="active-technology-on-the-internet"></a>Tecnologia Active in Internet
 
@@ -34,7 +35,7 @@ VBScript e altri linguaggi di scripting connettono i controlli e aggiungono funz
 
 Sono state aggiunte estensioni HTML, ad esempio il tag Object, per supportare i controlli e gli script.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Nozioni fondamentali sulla programmazione Internet MFC](mfc-internet-programming-basics.md)<br/>
 [Controlli ActiveX in Internet](activex-controls-on-the-internet.md)<br/>

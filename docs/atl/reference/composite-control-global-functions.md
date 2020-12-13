@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: funzioni globali di controllo composito'
 title: Funzioni globali di controllo composito
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: fe9d9a3a0538e2e5744987adcd64e67562711ea8
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: fa46cc46247d409b85772e6c1aab229d97fd1c36
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353116"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141245"
 ---
 # <a name="composite-control-global-functions"></a>Funzioni globali di controllo composito
 
@@ -86,7 +87,7 @@ in Specifica il valore da passare alla finestra di dialogo nel parametro *lParam
 
 Uno dei valori HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per usare `AtlAxDialogBox` con un modello di finestra di dialogo che contiene un controllo ActiveX, specificare una stringa di CLSID, AppID o URL valida come campo di *testo* della sezione di **controllo** della risorsa della finestra di dialogo, insieme a "AtlAxWinLic80" come campo del *nome della classe* nella stessa sezione. Di seguito viene illustrata la possibile somiglianza di una sezione di **controllo** valida:
 
@@ -133,7 +134,7 @@ in Specifica il valore da passare alla finestra di dialogo nel parametro *lParam
 
 Uno dei valori HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La finestra di dialogo risultante può contenere controlli ActiveX.
 
@@ -182,7 +183,7 @@ out Indirizzo di un puntatore che riceverà l'oggetto `IUnknown` del contenitore
 
 Uno dei valori HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione globale restituisce lo stesso risultato della chiamata a [AtlAxCreateControlEx](#atlaxcreatecontrolex)(*lpszName*, *HWND*, *pStream*, null, null, null, null);.
 
@@ -243,7 +244,7 @@ Puntatore all' `IUnknown` interfaccia dell'oggetto sink da connettere al punto d
 
 Uno dei valori HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `AtlAxCreateControlEx` è simile a [AtlAxCreateControl](#atlaxcreatecontrol) , ma consente anche di ricevere un puntatore di interfaccia per il controllo appena creato e impostare un sink di evento per ricevere gli eventi generati dal controllo.
 
@@ -359,7 +360,7 @@ BSTR che contiene la licenza per il controllo.
 
 Uno dei valori HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `AtlAxCreateControlLicEx` è simile a [AtlAxCreateControlLic](#atlaxcreatecontrollic) , ma consente anche di ricevere un puntatore di interfaccia per il controllo appena creato e impostare un sink di evento per ricevere gli eventi generati dal controllo.
 
@@ -393,7 +394,7 @@ out Puntatore a un puntatore all' `IUnknown` oggetto dell'oggetto contenitore.
 
 Uno dei valori HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare [AtlAxCreateControlEx](#atlaxcreatecontrolex) e [AtlAxCreateControl](#atlaxcreatecontrol) per creare e alleghi simultaneamente un controllo.
 
@@ -472,7 +473,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
 
 Diverso da zero se l'inizializzazione del codice che ospita il controllo ha avuto esito positivo. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione deve essere chiamata prima di utilizzare l'API di hosting del controllo ATL. Dopo una chiamata a questa funzione, la classe della finestra **"AtlAxWin"** può essere usata nelle chiamate a [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) o [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw), come descritto nel Windows SDK.
 
@@ -488,7 +489,7 @@ inline BOOL AtlAxWinTerm();
 
 Restituisce sempre TRUE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione chiama semplicemente [UnregisterClass](/windows/win32/api/winuser/nf-winuser-unregisterclassw) come descritto nel Windows SDK.
 
@@ -528,7 +529,7 @@ out Puntatore al numero della versione secondaria della libreria dei tipi conten
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `AtlGetObjectSourceInterface` può fornire l'ID di interfaccia dell'interfaccia di origine predefinita, insieme ai numeri di versione principale e secondaria della libreria dei tipi che descrive l'interfaccia.
 

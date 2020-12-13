@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: documenti attivi'
 title: Documenti attivi
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - views [MFC], active documents
 - active documents [MFC], views
 ms.assetid: 1378f18e-aaa6-420b-8501-4b974905baa0
-ms.openlocfilehash: bfe91dcb42b97ddfbb0bf0be36a54b45e6dc0809
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cae0eda775670867d5e36b4f2b9ec895a5dc3eb7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625163"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150306"
 ---
 # <a name="active-documents"></a>Documenti attivi
 
@@ -45,7 +46,7 @@ Ogni documento attivo deve disporre di un provider di visualizzazione del frame 
 
 Un documento attivo può creare uno o più tipi di [visualizzazioni](#requirements_for_view_objects) dei dati, ad esempio normale, struttura, layout di pagina e così via. Le visualizzazioni agiscono da filtri tramite i quali è possibile vedere i dati. Anche se il documento dispone di un solo tipo di visualizzazione, è comunque possibile supportare più visualizzazioni come mezzo per supportare le nuove funzionalità della finestra, ad esempio il **nuovo** elemento della finestra nel menu **finestra** delle applicazioni di Office.
 
-## <a name="requirements-for-active-documents"></a><a name="requirements_for_active_documents"></a>Requisiti per i documenti attivi
+## <a name="requirements-for-active-documents"></a><a name="requirements_for_active_documents"></a> Requisiti per i documenti attivi
 
 Un documento attivo che può essere visualizzato in un contenitore di documenti attivi deve:
 
@@ -59,9 +60,9 @@ Un documento attivo che può essere visualizzato in un contenitore di documenti 
 
 La conoscenza di come e quando utilizzare le interfacce di contenitore è implicita in questi requisiti.
 
-## <a name="requirements-for-view-objects"></a><a name="requirements_for_view_objects"></a>Requisiti per oggetti visualizzazione
+## <a name="requirements-for-view-objects"></a><a name="requirements_for_view_objects"></a> Requisiti per oggetti visualizzazione
 
-Un documento attivo può creare uno o più visualizzazioni dei dati. Dal punto di vista funzionale, queste visualizzazioni sono come le porte in un particolare metodo per la visualizzazione dei dati. Se un documento attivo supporta solo una visualizzazione, il documento attivo e la singola visualizzazione possono essere implementati utilizzando un'unica classe. `IOleDocument::CreateView`Restituisce il puntatore a interfaccia del medesimo oggetto `IOleDocumentView` .
+Un documento attivo può creare uno o più visualizzazioni dei dati. Dal punto di vista funzionale, queste visualizzazioni sono come le porte in un particolare metodo per la visualizzazione dei dati. Se un documento attivo supporta solo una visualizzazione, il documento attivo e la singola visualizzazione possono essere implementati utilizzando un'unica classe. `IOleDocument::CreateView` Restituisce il puntatore a interfaccia del medesimo oggetto `IOleDocumentView` .
 
 Per essere rappresentato in un contenitore di documenti attivi, un componente di visualizzazione deve supportare `IOleInPlaceObject` e, `IOleInPlaceActiveObject` oltre a `IOleDocumentView` :
 
@@ -94,10 +95,10 @@ Ogni visualizzazione dispone di un sito di visualizzazione associato, che incaps
 
 In genere, ogni tipo di visualizzazione dispone di una rappresentazione stampata diversa. Pertanto le visualizzazioni e i siti di visualizzazione corrispondenti devono implementare interfacce di stampa se `IPrint` e `IContinueCallback`, rispettivamente. Il frame di visualizzazione deve negoziare con il provider di visualizzazione tramite all' `IPrint` inizio della stampa, in modo che le intestazioni, i piè di pagina, i margini e gli elementi correlati vengano stampati correttamente. Il provider di visualizzazione notifica al frame degli eventi relativi alla stampa attraverso `IContinueCallback`. Per ulteriori informazioni sull'utilizzo di queste interfacce, vedere la pagina relativa alla [stampa a livello di codice](programmatic-printing.md).
 
-Notare che se un documento attivo supporta solo una visualizzazione, il documento attivo e la singola visualizzazione possono essere implementati utilizzando un'unica classe concreta. `IOleDocument::CreateView`restituisce semplicemente il puntatore di interfaccia del medesimo oggetto `IOleDocumentView` . In poche parole, non è necessario che esistano due istanze di oggetti distinte quando è necessaria una sola visualizzazione.
+Notare che se un documento attivo supporta solo una visualizzazione, il documento attivo e la singola visualizzazione possono essere implementati utilizzando un'unica classe concreta. `IOleDocument::CreateView` restituisce semplicemente il puntatore di interfaccia del medesimo oggetto `IOleDocumentView` . In poche parole, non è necessario che esistano due istanze di oggetti distinte quando è necessaria una sola visualizzazione.
 
 Un oggetto visualizzazione può inoltre essere una destinazione di comando. Implementando `IOleCommandTarget` una vista è possibile ricevere comandi che provengono dall'interfaccia utente del contenitore (ad esempio **nuovo**, **Apri**, **Salva con nome**, **stampa** dal menu **file** e **copia**, **Incolla**, **Annulla** dal menu **modifica** ). Per ulteriori informazioni, vedere [gestione dei messaggi e destinazioni dei comandi](message-handling-and-command-targets.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Contenimento dei documenti attivi](active-document-containment.md)
+[Contenimento del documento attivo](active-document-containment.md)

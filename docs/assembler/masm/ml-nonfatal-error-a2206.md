@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: ML errore non irreversibile irreversibile A2206'
 title: Errore ML non irreversibile A2206
 ms.date: 12/17/2019
 ms.custom: error-reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - A2206
 ms.assetid: 711846d0-5a09-4353-8857-60588c25526a
-ms.openlocfilehash: 6590d294b967d33bb016078f187c7aeb0649719d
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 40912f6dadbd708dd15f45a14cd1a799e61ec6a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75316785"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97128427"
 ---
 # <a name="ml-nonfatal-error-a2206"></a>Errore ML non irreversibile A2206
 
@@ -26,6 +27,6 @@ La riga seguente genererà questo errore:
 value1 = ( 1 + 2 ) 3
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Messaggi di errore ML](ml-error-messages.md)

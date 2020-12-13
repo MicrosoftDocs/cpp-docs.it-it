@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura: usare il colore'
 title: 'Procedura: utilizzare il colore'
 ms.date: 02/15/2019
 f1_keywords:
@@ -62,12 +63,12 @@ helpviewer_keywords:
 - images [C++], colors
 - colors [C++], inverting
 ms.assetid: d34ff96f-241d-494f-abdd-13811ada8cd3
-ms.openlocfilehash: 3c9134fde9053f57f8848a37b1442728f6111c98
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 6c7d6ceaf2510d2360b32138735e8f61398da85a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502942"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135837"
 ---
 # <a name="how-to-work-with-color"></a>Procedura: utilizzare il colore
 
@@ -95,7 +96,7 @@ La finestra **colori** è costituita da due parti:
 
 È possibile utilizzare la finestra **colori** con la [barra degli strumenti dell'editor di immagini](./image-editor-for-icons.md).
 
-- Per visualizzare la finestra **colori** , fare clic con il pulsante destro del mouse su un riquadro dell' **editor di immagini** e scegliere **Mostra colori finestra**o vai a menu [immagine](./image-editor-for-icons.md)  >  **Mostra colori**.
+- Per visualizzare la finestra **colori** , fare clic con il pulsante destro del mouse su un riquadro dell' **editor di immagini** e scegliere **Mostra colori finestra** o vai a menu [immagine](./image-editor-for-icons.md)  >  **Mostra colori**.
 
 - Per nascondere la finestra **colori** , Rimuovi la finestra. questa azione consente di nascondere automaticamente la finestra quando non è in uso, oppure di selezionare il pulsante **Chiudi** .
 
@@ -125,7 +126,7 @@ Utilizzare la finestra di dialogo **Carica tavolozza** per caricare le tavolozze
 |Proprietà|Descrizione|
 |-----------------|-----------------|
 |**Look in**|Specifica il percorso in cui si desidera individuare un file o una cartella.<br/><br/>Selezionare la freccia per scegliere un'altra posizione oppure selezionare l'icona della cartella sulla barra degli strumenti per spostare i livelli.|
-|**Nome file**|Fornisce uno spazio per la digitazione del nome del file che si desidera aprire.<br/><br/>Per trovare rapidamente un file aperto in precedenza, selezionare il nome del file nell'elenco a discesa, se disponibile.<br/><br/>Se si sta cercando un file, è possibile usare asterischi (*) come caratteri jolly. È ad esempio possibile digitare \* . \* per visualizzare un elenco di tutti i file. È anche possibile digitare il percorso completo di un file, ad esempio *C:\My Documents\MyColorPalette.PAL* o * \\ \NetworkServer\MyFolder\MyColorPalette.PAL*.|
+|**Nome file**|Fornisce uno spazio per la digitazione del nome del file che si desidera aprire.<br/><br/>Per trovare rapidamente un file aperto in precedenza, selezionare il nome del file nell'elenco a discesa, se disponibile.<br/><br/>Se si sta cercando un file, è possibile usare asterischi (*) come caratteri jolly. È ad esempio possibile digitare \* . \* per visualizzare un elenco di tutti i file. È anche possibile digitare il percorso completo di un file, ad esempio *C:\My Documents\MyColorPalette.PAL* o *\\ \NetworkServer\MyFolder\MyColorPalette.PAL*.|
 |**Tipo file**|Elenca i tipi di file da visualizzare.<br/><br/>Tavolozza (*. PAL) è il tipo di file predefinito per le tavolozze dei colori.|
 
 ## <a name="how-to"></a>Procedure
@@ -144,7 +145,7 @@ L' **editor di immagini** fornisce lo strumento di **riempimento** per riempire 
 
 ### <a name="to-use-the-fill-tool"></a>Per utilizzare lo strumento riempimento
 
-1. Utilizzare la barra degli strumenti dell' **editor di immagini** o passare a **Image**  >  **strumenti** immagine menu e selezionare lo strumento **riempimento** .
+1. Utilizzare la barra degli strumenti dell' **editor di immagini** o passare a   >  **strumenti** immagine menu e selezionare lo strumento **riempimento** .
 
 1. Se necessario, scegliere disegno colori. Nella [tavolozza colori](./image-editor-for-icons.md)selezionare il pulsante sinistro del mouse per selezionare un colore di primo piano o il pulsante destro del mouse per selezionare un colore di sfondo.
 
@@ -156,7 +157,7 @@ L' **editor di immagini** fornisce lo strumento di **riempimento** per riempire 
 
 Lo strumento **Seleziona colore**, o pickup colore, rende qualsiasi colore sull'immagine il colore di primo piano o il colore di sfondo corrente, a seconda che venga premuto il pulsante sinistro o destro del mouse. Per annullare lo strumento **Seleziona colore** , scegliere un altro strumento.
 
-1. Utilizzare la barra degli strumenti dell' **editor di immagini** o passare a **Image**  >  **strumenti** immagine menu e selezionare lo strumento **Seleziona colore** .
+1. Utilizzare la barra degli strumenti dell' **editor di immagini** o passare a   >  **strumenti** immagine menu e selezionare lo strumento **Seleziona colore** .
 
 1. Selezionare il colore che si desidera prelevare dall'immagine.
 
@@ -183,7 +184,7 @@ Nella barra degli strumenti dell' **editor di immagini** selezionare il selettor
 - **Sfondo trasparente (T)**: l'immagine esistente viene visualizzata attraverso parti della selezione che corrispondono al colore di sfondo corrente.
 
 > [!TIP]
-> Per un tasto di scelta rapida, scegliere o deselezionare **opaco**per il menu **immagine** .
+> Per un tasto di scelta rapida, scegliere o deselezionare **opaco** per il menu **immagine** .
 
 È possibile modificare il colore di sfondo mentre una selezione è già in vigore per modificare le parti dell'immagine trasparenti.
 
@@ -191,7 +192,7 @@ Nella barra degli strumenti dell' **editor di immagini** selezionare il selettor
 
 L' **editor di immagini** offre un modo pratico per invertire i colori nella parte selezionata dell'immagine, in modo da poter indicare la modalità di visualizzazione di un'immagine con colori invertiti.
 
-Per invertire i colori nella selezione corrente, passare a **immagine**menu  >  **Inverti colori**.
+Per invertire i colori nella selezione corrente, passare a **immagine** menu  >  **Inverti colori**.
 
 ### <a name="to-customize-or-change-colors-on-the-colors-palette"></a>Per personalizzare o modificare i colori nella tavolozza colori
 
@@ -225,7 +226,7 @@ Per invertire i colori nella selezione corrente, passare a **immagine**menu  >  
 
 Nessuno
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Editor di immagini per le icone](../windows/image-editor-for-icons.md)<br/>
 [Procedura: creare un'icona o un'altra immagine](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>

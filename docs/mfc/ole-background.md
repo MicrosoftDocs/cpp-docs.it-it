@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: background OLE'
 title: Sfondo OLE
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
-ms.openlocfilehash: baa2bca8b2e06fd55591c3a4fa2a9752abbb5355
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 89d8e3b6e1a84082fabdf954971e75ab86366622
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830787"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150228"
 ---
 # <a name="ole-background"></a>Sfondo OLE
 
@@ -28,7 +29,7 @@ OLE incorpora molti concetti diversi che funzionano per l'obiettivo di un'intera
 
    Il collegamento e l'incorporamento sono i due metodi per archiviare gli elementi creati all'interno di un documento OLE creato in un'altra applicazione. Per informazioni generali sulle differenze tra le due, vedere l'articolo [sfondo OLE: collegamento e incorporamento](ole-background-linking-and-embedding.md). Per informazioni più dettagliate, vedere gli articoli [contenitori](containers.md) e [Server](servers.md).
 
-- Attivazione sul posto (modifica visiva)
+- Attivazione di In-Place (modifica visiva)
 
    L'attivazione di un elemento incorporato nel contesto del documento contenitore viene chiamata attivazione sul posto o modifica visiva. L'interfaccia dell'applicazione contenitore cambia per incorporare le funzionalità dell'applicazione componente che ha creato l'elemento incorporato. Gli elementi collegati non vengono mai attivati perché i dati effettivi per l'elemento sono contenuti in un file separato, dal contesto dell'applicazione contenente il collegamento. Per ulteriori informazioni sull'attivazione sul posto, vedere l'articolo [attivazione](activation-cpp.md).
 
@@ -68,6 +69,6 @@ Negli articoli seguenti sono trattati alcuni degli argomenti OLE più importanti
 
 Per informazioni OLE generali non trovate negli articoli precedenti, [cercare OLE](/search/?terms=ole) in Microsoft docs.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [OLE](ole-in-mfc.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _mm_stream_sd'
 title: _mm_stream_sd
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - _mm_stream_sd intrinsic
 - movntsd instruction
 ms.assetid: 2b4bea5e-e64e-45fa-9afc-88a2e4b82cfc
-ms.openlocfilehash: ec639004884d022fe6a827c2ec31d3201ea04657
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 60ef13afcbe99e1390f4eb1087fddc5540a7de34
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214217"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133263"
 ---
 # <a name="_mm_stream_sd"></a>_mm_stream_sd
 
@@ -43,13 +44,13 @@ Nessuno.
 
 ## <a name="requirements"></a>Requisiti
 
-|Intrinsic|Architecture|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`_mm_stream_sd`|SSE4a|
 
 **File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione intrinseca genera l' `movntsd` istruzione. Per determinare il supporto hardware per questa istruzione, chiamare l'oggetto `__cpuid` intrinseco con `InfoType=0x80000001` e selezionare il bit 6 di `CPUInfo[2] (ECX)` . Questo bit è 1 se l'hardware supporta questa istruzione e 0 in caso contrario.
 
@@ -85,7 +86,7 @@ d[0] = -1, d[1] = 1
 
 Parti Copyright 2007 by Advanced Micro Devices, Inc. Tutti i diritti riservati. Riprodotto con l'autorizzazione da Advanced Micro Devices, Inc.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [_mm_stream_ss](../intrinsics/mm-stream-ss.md)\
 [_mm_store_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_sd)\

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: controlli ActiveX MFC: localizzazione di un controllo ActiveX'
 title: 'Controlli ActiveX MFC: localizzazione di un controllo ActiveX'
 ms.date: 09/12/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - LocaleID ambient property [MFC]
 - LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
-ms.openlocfilehash: a85ec5cbed797b756afd93cd8423c58d138a0625
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 830fecd316b48f61da4f90136dd29455801ec725
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615428"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150215"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>Controlli ActiveX MFC: localizzazione di un controllo ActiveX
 
@@ -42,7 +43,7 @@ In generale, i controlli ActiveX devono basare sempre le proprie impostazioni lo
 
 Nella parte restante di questo articolo vengono descritte due strategie di localizzazione. La prima strategia [localizza l'interfaccia di programmabilità del controllo](#_core_localizing_your_control.92.s_programmability_interface) (nomi di proprietà, metodi ed eventi). La seconda strategia [localizza l'interfaccia utente del controllo](#_core_localizing_the_control.92.s_user_interface)usando la proprietà LocaleID di ambiente del contenitore. Per una dimostrazione della localizzazione dei controlli, vedere l'esempio di controlli ActiveX MFC [Localize](../overview/visual-cpp-samples.md).
 
-## <a name="localizing-the-controls-programmability-interface"></a><a name="_core_localizing_your_control.92.s_programmability_interface"></a>Localizzazione dell'interfaccia di programmabilità del controllo
+## <a name="localizing-the-controls-programmability-interface"></a><a name="_core_localizing_your_control.92.s_programmability_interface"></a> Localizzazione dell'interfaccia di programmabilità del controllo
 
 Quando si localizza l'interfaccia di programmabilità del controllo (l'interfaccia utilizzata dai programmatori che scrivono applicazioni che utilizzano il controllo), è necessario creare una versione modificata del controllo. File IDL (uno script per la compilazione della libreria dei tipi di controllo) per ogni lingua che si intende supportare. Questa è l'unica posizione in cui è necessario localizzare i nomi delle proprietà dei controlli.
 
@@ -50,13 +51,13 @@ Quando si sviluppa un controllo localizzato, includere l'ID delle impostazioni l
 
 [!code-cpp[NVC_MFC_AxLoc#1](codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_1.idl)]
 
-Modificare i nomi delle proprietà in SAMPLEFR. IDL per gli equivalenti francesi, quindi usare MKTYPLIB. EXE per produrre la libreria dei tipi francese, SAMPLEFR. TLB.
+Modificare i nomi delle proprietà in SAMPLEFR. IDL per gli equivalenti francesi, quindi usare MKTYPLIB.EXE per produrre la libreria dei tipi francese, SAMPLEFR. TLB.
 
 Per creare più librerie dei tipi localizzate, è possibile aggiungere qualsiasi localizzata. File IDL per il progetto che verranno compilati automaticamente.
 
 #### <a name="to-add-an-idl-file-to-your-activex-control-project"></a>Per aggiungere un oggetto. File IDL per il progetto di controllo ActiveX
 
-1. Con il progetto di controllo aperto, scegliere **Aggiungi elemento esistente**dal menu **progetto** .
+1. Con il progetto di controllo aperto, scegliere **Aggiungi elemento esistente** dal menu **progetto** .
 
    Verrà visualizzata la finestra di dialogo **Aggiungi elemento esistente** .
 
@@ -80,7 +81,7 @@ Per assicurarsi che i client del controllo possano trovare la libreria dei tipi 
 
 Quando il controllo viene registrato, la `AfxOleRegisterTypeLib` funzione Cerca automaticamente l'oggetto specificato. File TLB nella stessa directory del controllo che viene registrato nel database di registrazione di Windows. Se il. Il file TLB non è stato trovato, la funzione non ha alcun effetto.
 
-## <a name="localizing-the-controls-user-interface"></a><a name="_core_localizing_the_control.92.s_user_interface"></a>Localizzazione dell'interfaccia utente del controllo
+## <a name="localizing-the-controls-user-interface"></a><a name="_core_localizing_the_control.92.s_user_interface"></a> Localizzazione dell'interfaccia utente del controllo
 
 Per localizzare l'interfaccia utente di un controllo, inserire tutte le risorse visibili all'utente del controllo, ad esempio le pagine delle proprietà e i messaggi di errore, in dll di risorse specifiche della lingua. È quindi possibile usare la proprietà LocaleID di ambiente del contenitore per selezionare la DLL appropriata per le impostazioni locali dell'utente.
 
@@ -100,6 +101,6 @@ Inserire il codice di esempio precedente in una funzione membro del controllo, a
 
 [!code-cpp[NVC_MFC_AxLoc#5](codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_5.cpp)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli ActiveX MFC](mfc-activex-controls.md)

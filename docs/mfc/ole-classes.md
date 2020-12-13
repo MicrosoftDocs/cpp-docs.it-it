@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classi OLE'
 title: Classi OLE
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - OLE classes [MFC]
 - OLE [MFC], classes
 ms.assetid: 4c2b2bca-fafb-4d2d-8498-9ed1e04011d2
-ms.openlocfilehash: 039f60f98a9109ca578b52db7d087a22d0440808
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 96b3a45b60a1b229daa73e4f896a867ec4921715
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617847"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150176"
 ---
 # <a name="ole-classes"></a>Classi OLE
 
@@ -36,7 +37,7 @@ Le categorie di classi seguenti supportano ActiveX:
 
 - [Classi server OLE](ole-server-classes.md)
 
-- [Classi di trasferimento dati e trascinamento della selezione OLE](ole-drag-and-drop-and-data-transfer-classes.md)
+- [Classi di trascinamento della selezione OLE e Trasferimento dati](ole-drag-and-drop-and-data-transfer-classes.md)
 
 - [Classi di finestre di dialogo comuni OLE](ole-common-dialog-classes.md)
 
@@ -50,6 +51,6 @@ Le categorie di classi seguenti supportano ActiveX:
 
 Per visualizzare l'ereditarietà di una classe, utilizzare il [grafico della gerarchia di classi](hierarchy-chart.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Cenni preliminari sulle classi](class-library-overview.md)
