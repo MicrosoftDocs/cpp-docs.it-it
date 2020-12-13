@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; algoritmo&gt;'
 title: '&lt;algorithm&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: 003933499eee04c50f15ae4b63dd6b31b81e1069
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 42f03372d01ac2d3218ce5844b86e92526055bbf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845822"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163769"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -28,7 +29,7 @@ Definisce le funzioni di modello del contenitore di libreria standard C++ che es
 > [!NOTE]
 > La \<algorithm> libreria usa anche l' `#include <initializer_list>` istruzione.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Gli algoritmi di libreria standard C++ sono generici perché possono operare su diverse strutture di dati. Le strutture di dati su cui possono operare non includono solo le classi dei contenitori di libreria standard come `vector` e `list`, ma anche le strutture di dati definite a livello di programma e le matrici di elementi che soddisfano i requisiti di un algoritmo specifico. Gli algoritmi di libreria standard C++ raggiungono tale livello di generalità accedendo e attraversando gli elementi di un contenitore indirettamente tramite gli iteratori.
 
@@ -46,7 +47,7 @@ Gli algoritmi numerici della libreria standard C++ forniti per l'elaborazione nu
 
 ### <a name="function-templates"></a>Modelli di funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[adjacent_find](algorithm-functions.md#adjacent_find)|Cerca due elementi adiacenti uguali o che soddisfano una condizione specificata.|
 |[all_of](algorithm-functions.md#all_of)|Restituisce **`true`** quando una condizione è presente in ogni elemento nell'intervallo specificato.|
@@ -96,7 +97,7 @@ Gli algoritmi numerici della libreria standard C++ forniti per l'elaborazione nu
 |[move_backward](algorithm-functions.md#move_backward)|Sposta gli elementi di un iteratore in un altro. Lo spostamento inizia con l'ultimo elemento in un intervallo specificato e termina con il primo elemento in quell'intervallo.|
 |[next_permutation](algorithm-functions.md#next_permutation)|Riordina gli elementi in un intervallo in modo che l'ordine originale venga sostituito dalla maggior permutazione a livello lessicografico successiva, se esiste, dove il senso di successivo può essere specificato con un predicato binario.|
 |[none_of](algorithm-functions.md#none_of)|Restituisce **`true`** quando una condizione non è mai presente tra gli elementi nell'intervallo specificato.|
-|[nth_element](algorithm-functions.md#nth_element)|Esegue il partizionamento di un intervallo di elementi, individuando correttamente l' *n*esimo elemento della sequenza nell'intervallo in modo che tutti gli elementi che lo precedono siano minori o uguali a esso e che tutti gli elementi che lo seguono nella sequenza siano maggiori o uguali.|
+|[nth_element](algorithm-functions.md#nth_element)|Esegue il partizionamento di un intervallo di elementi, individuando correttamente l' *n* esimo elemento della sequenza nell'intervallo in modo che tutti gli elementi che lo precedono siano minori o uguali a esso e che tutti gli elementi che lo seguono nella sequenza siano maggiori o uguali.|
 |[partial_sort](algorithm-functions.md#partial_sort)|Dispone un numero specificato di elementi più piccoli di un intervallo in un ordine non decrescente o secondo un criterio di ordinamento specificato da un predicato binario.|
 |[partial_sort_copy](algorithm-functions.md#partial_sort_copy)|Copia gli elementi di un intervallo di origine in un intervallo di destinazione in cui gli elementi di origine sono ordinati in base al predicato binario relativo al valore inferiore o a un altro predicato binario specificato.|
 |[partizione](algorithm-functions.md#partition)|Classifica gli elementi di un intervallo in due set non contigui, con gli elementi che soddisfano il predicato unario che precedono quelli che non lo soddisfano.|
@@ -137,7 +138,7 @@ Gli algoritmi numerici della libreria standard C++ forniti per l'elaborazione nu
 |[unique_copy](algorithm-functions.md#unique_copy)|Copia gli elementi di un intervallo di origine in un intervallo di destinazione ad eccezione degli elementi duplicati adiacenti l'uno rispetto all'altro.|
 |[upper_bound](algorithm-functions.md#upper_bound)|Trova la posizione del primo elemento in un intervallo ordinato con un valore maggiore di un valore specificato, in cui il criterio di ordinamento può essere specificato da un predicato binario.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento ai file di intestazione](cpp-standard-library-header-files.md)\
 [Thread safety nella libreria standard C++](thread-safety-in-the-cpp-standard-library.md)\

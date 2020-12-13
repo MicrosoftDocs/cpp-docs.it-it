@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: procedura dettagliata: creazione di un blocco di messaggi personalizzato'
 title: 'Procedura dettagliata: creazione di un blocco dei messaggi personalizzato'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - creating custom message blocks Concurrency Runtime]
 - custom message blocks, creating [Concurrency Runtime]
 ms.assetid: 4c6477ad-613c-4cac-8e94-2c9e63cd43a1
-ms.openlocfilehash: f95eaf7e1da41bd473ab15d12330d0177b98ccdf
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2347284c4541ef52579a2179c6387b435b1d382f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219495"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163847"
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>Procedura dettagliata: creazione di un blocco dei messaggi personalizzato
 
@@ -26,7 +27,7 @@ Prima di iniziare questa procedura dettagliata, leggere i documenti seguenti:
 
 - [Funzioni di passaggio del messaggio](../../parallel/concrt/message-passing-functions.md)
 
-## <a name="sections"></a><a name="top"></a>Sezioni
+## <a name="sections"></a><a name="top"></a> Sezioni
 
 Questa procedura dettagliata contiene le sezioni seguenti:
 
@@ -36,7 +37,7 @@ Questa procedura dettagliata contiene le sezioni seguenti:
 
 - [Esempio completo](#complete)
 
-## <a name="designing-a-custom-message-block"></a><a name="design"></a>Progettazione di un blocco di messaggi personalizzato
+## <a name="designing-a-custom-message-block"></a><a name="design"></a> Progettazione di un blocco di messaggi personalizzato
 
 I blocchi di messaggi partecipano all'azione di invio e ricezione dei messaggi. Un blocco di messaggi che invia messaggi è noto come *blocco di origine*. Un blocco di messaggi che riceve i messaggi è noto come *blocco di destinazione*. Un blocco di messaggi che invia e riceve messaggi è noto come *blocco di propagazione*. La libreria di agenti usa la classe astratta [Concurrency:: ISource](../../parallel/concrt/reference/isource-class.md) per rappresentare i blocchi di origine e la classe astratta [Concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md) per rappresentare i blocchi di destinazione. I tipi di blocchi di messaggi che fungono da origini derivano da `ISource` . i tipi di blocchi di messaggio che fungono da destinazioni derivano da `ITarget` .
 
@@ -60,11 +61,11 @@ Il runtime chiama il `propagate_message` metodo per trasferire in modo asincrono
 
 [All'[inizio](#top)]
 
-## <a name="defining-the-priority_buffer-class"></a><a name="class"></a>Definizione della classe priority_buffer
+## <a name="defining-the-priority_buffer-class"></a><a name="class"></a> Definizione della classe priority_buffer
 
 La `priority_buffer` classe è un tipo di blocco di messaggi personalizzato che ordina i messaggi in arrivo prima per priorità, quindi in base all'ordine in cui vengono ricevuti i messaggi. La `priority_buffer` classe è simile alla classe [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) perché contiene una coda di messaggi e anche perché funge sia da un blocco di origine che da un blocco di messaggi di destinazione e può avere più origini e più destinazioni. Tuttavia, `unbounded_buffer` basa la propagazione dei messaggi solo nell'ordine in cui riceve i messaggi dalle relative origini.
 
-La `priority_buffer` classe riceve i messaggi di tipo std::[Tuple](../../standard-library/tuple-class.md) che contengono `PriorityType` `Type` gli elementi e. `PriorityType`si riferisce al tipo che include la priorità di ogni messaggio; `Type`si riferisce alla parte relativa ai dati del messaggio. La `priority_buffer` classe invia messaggi di tipo `Type` . La `priority_buffer` classe gestisce inoltre due code di messaggi: un oggetto [std::p riority_queue](../../standard-library/priority-queue-class.md) per i messaggi in arrivo e un oggetto std::[queue](../../standard-library/queue-class.md) per i messaggi in uscita. L'ordinamento dei messaggi per priorità è utile quando un `priority_buffer` oggetto riceve più messaggi contemporaneamente o quando riceve più messaggi prima che i messaggi vengano letti dai consumer.
+La `priority_buffer` classe riceve i messaggi di tipo std::[Tuple](../../standard-library/tuple-class.md) che contengono `PriorityType` `Type` gli elementi e. `PriorityType` si riferisce al tipo che include la priorità di ogni messaggio; `Type` si riferisce alla parte relativa ai dati del messaggio. La `priority_buffer` classe invia messaggi di tipo `Type` . La `priority_buffer` classe gestisce inoltre due code di messaggi: un oggetto [std::p riority_queue](../../standard-library/priority-queue-class.md) per i messaggi in arrivo e un oggetto std::[queue](../../standard-library/queue-class.md) per i messaggi in uscita. L'ordinamento dei messaggi per priorità è utile quando un `priority_buffer` oggetto riceve più messaggi contemporaneamente o quando riceve più messaggi prima che i messaggi vengano letti dai consumer.
 
 Oltre ai sette metodi che devono essere implementati da una classe che deriva da `propagator_block` , la `priority_buffer` classe esegue anche l'override dei `link_target_notification` `send_message` metodi e. La `priority_buffer` classe definisce inoltre due metodi helper pubblici, `enqueue` e e `dequeue` un metodo helper privato, `propagate_priority_order` .
 
@@ -178,7 +179,7 @@ Poiché la `priority_buffer` classe Ordina i messaggi in base alla priorità e q
 
 [All'[inizio](#top)]
 
-## <a name="the-complete-example"></a><a name="complete"></a>Esempio completo
+## <a name="the-complete-example"></a><a name="complete"></a> Esempio completo
 
 Nell'esempio seguente viene illustrata la definizione completa della `priority_buffer` classe.
 
@@ -206,7 +207,7 @@ Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure
 
 **cl.exe/EHsc priority_buffer. cpp**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Procedure dettagliate runtime di concorrenza](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [Blocchi di messaggi asincroni](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
