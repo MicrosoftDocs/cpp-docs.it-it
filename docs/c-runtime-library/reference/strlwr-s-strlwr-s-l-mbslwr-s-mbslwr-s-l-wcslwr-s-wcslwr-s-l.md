@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l'
 title: _strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
 ms.date: 4/2/2020
 api_name:
@@ -70,12 +71,12 @@ helpviewer_keywords:
 - tcslwr_s_l function
 - strings [C++], converting case
 ms.assetid: 4883d31b-bdac-4049-83a1-91dfdeceee79
-ms.openlocfilehash: 42333433277e1ac593bb2662967b73907ed13c92
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d2a5b0ba3fb8868a4f88c8ee96ecc5fad69c9114
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919961"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344822"
 ---
 # <a name="_strlwr_s-_strlwr_s_l-_mbslwr_s-_mbslwr_s_l-_wcslwr_s-_wcslwr_s_l"></a>_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
 
@@ -145,7 +146,7 @@ errno_t _wcslwr_s_l(
 
 ### <a name="parameters"></a>Parametri
 
-*Str*<br/>
+*str*<br/>
 Stringa con terminazione Null da convertire in minuscolo.
 
 *numberOfElements*<br/>
@@ -160,7 +161,7 @@ Zero in caso di esito positivo. Un codice di errore diverso da zero in caso di e
 
 Queste funzioni convalidano i relativi parametri. Se *Str* non è una stringa con terminazione null valida, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, le funzioni restituiscono **EINVAL** e impostano **errno** su **EINVAL**. Se *NumberOfElements* è minore della lunghezza della stringa, le funzioni restituiscono anche **EINVAL** e impostano **errno** su **EINVAL**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_strlwr_s** converte, sul posto, tutte le lettere maiuscole in *Str* in minuscolo. **_mbslwr_s** è una versione a caratteri multibyte di **_strlwr_s**. **_wcslwr_s** è una versione a caratteri wide di **_strlwr_s**.
 
@@ -230,6 +231,6 @@ Upper: THE STRING TO END ALL STRINGS!
 ## <a name="see-also"></a>Vedere anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)<br/>

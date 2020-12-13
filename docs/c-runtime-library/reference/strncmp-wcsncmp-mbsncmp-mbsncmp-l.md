@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: strncmp, wcsncmp, _mbsncmp, _mbsncmp_l'
 title: strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 ms.date: 4/2/2020
 api_name:
@@ -55,12 +56,12 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-ms.openlocfilehash: deae95f8cf7d538dfe22ebbe0e86524765d9d234
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 91f7351f844425369ccae4bba6d13d177e75910f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919320"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344757"
 ---
 # <a name="strncmp-wcsncmp-_mbsncmp-_mbsncmp_l"></a>strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 
@@ -114,15 +115,15 @@ Impostazioni locali da usare.
 
 Il valore restituito indica la relazione delle sottostringhe di *String1* e *string2* come indicato di seguito.
 
-|Valore restituito|Description|
+|Valore restituito|Descrizione|
 |------------------|-----------------|
 |< 0|sottostringa *String1* minore della sottostringa *string2*|
 |0|sottostringa *String1* identica alla sottostringa *string2*|
 |> 0|sottostringa *String1* maggiore della sottostringa *string2*|
 
-In un errore di convalida dei parametri, **_mbsncmp** e **_mbsncmp_l** restituire **_NLSCMPERROR**, definito in \<string. h> e \<mbstring. h>.
+In un errore di convalida dei parametri, **_mbsncmp** e **_mbsncmp_l** restituire **_NLSCMPERROR**, definito in \<string.h> e \<mbstring.h> .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **strncmp** esegue un confronto ordinale al massimo dei primi caratteri di *conteggio* in *String1* e *string2* e restituisce un valore che indica la relazione tra le sottostringhe. **strncmp** è una versione con distinzione tra maiuscole e minuscole di **_strnicmp**. **wcsncmp** e **_mbsncmp** sono versioni con distinzione tra maiuscole e minuscole di **_wcsnicmp** e **_mbsnicmp**.
 
@@ -205,8 +206,8 @@ Result:      String 1 is equal to string 2
 ## <a name="see-also"></a>Vedere anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_mbsnbicmp, _mbsnbicmp_l](mbsnbicmp-mbsnbicmp-l.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

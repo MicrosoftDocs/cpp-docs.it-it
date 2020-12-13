@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: 2. Direttive'
 title: 2. Direttive
 ms.date: 01/18/2019
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
-ms.openlocfilehash: 5b2649a65efd3368cf8a4d2649a424b1a539f1ef
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 66b4ee4cdf3fec1740ed9b471c1c57cffebad6d1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841974"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342569"
 ---
 # <a name="2-directives"></a>2. Direttive
 
@@ -182,7 +183,7 @@ I tipi validi sono:
 - `>`
 - `>=`
 
-*lb*, *b*e *incr*<br>
+*lb*, *b* e *incr*<br>
 Espressioni Integer invarianti del ciclo. Non viene eseguita alcuna sincronizzazione durante la valutazione di queste espressioni, pertanto tutti gli effetti collaterali valutati producono risultati indeterminati.
 
 Il formato canonico consente di calcolare il numero di iterazioni del ciclo in una voce del ciclo. Questo calcolo viene effettuato con i valori nel tipo di *var*, dopo le promozioni integrali. In particolare, se il valore di *b* `-` *lb* `+` *incr* non può essere rappresentato in quel tipo, il risultato è indeterminato. Inoltre, se *Logical-op* è `<` o `<=` , *incr-expr* deve causare l'aumento di *var* a ogni iterazione del ciclo.   Se *Logical-op* è `>` o `>=` , *incr-expr* deve causare la minore quantità di *var* a ogni iterazione del ciclo.
@@ -191,11 +192,11 @@ La `schedule` clausola specifica il modo in cui le iterazioni del `for` ciclo so
 
 Tabella 2-1: `schedule` valori *Kind* della clausola
 
-|Valore|Descrizione|
+|Valore|Description|
 |-|-|
-|static|Quando `schedule(static,` *chunk_size* `)` si specifica chunk_size, le iterazioni sono divise in blocchi di dimensioni specificate da *chunk_size*. I blocchi vengono assegnati staticamente ai thread del team in base a una modalità Round Robin nell'ordine del numero del thread. Quando non viene specificato alcun *chunk_size* , lo spazio di iterazione è diviso in blocchi di dimensioni approssimativamente uguali, con un blocco assegnato a ogni thread.|
-|dinamico|Quando `schedule(dynamic,` *chunk_size* `)` si specifica chunk_size, le iterazioni sono divise in una serie di blocchi, ognuno dei quali contiene *chunk_size* iterazioni. Ogni blocco viene assegnato a un thread in attesa di un'assegnazione. Il thread esegue il blocco di iterazioni e quindi attende la successiva assegnazione, fino a quando non rimane alcun blocco da assegnare. L'ultimo blocco da assegnare può avere un numero inferiore di iterazioni. Quando non viene specificato alcun *chunk_size* , il valore predefinito è 1.|
-|guidato|Quando `schedule(guided,` *chunk_size* `)` si specifica chunk_size, le iterazioni vengono assegnate ai thread in blocchi con dimensioni decrescenti. Quando un thread termina il blocco di iterazioni assegnato, viene assegnato dinamicamente a un altro blocco, fino a quando non ne viene lasciato nessuno. Per un *chunk_size* di 1, le dimensioni di ogni blocco corrispondono approssimativamente al numero di iterazioni non assegnate divise per il numero di thread. Queste dimensioni diminuiscono quasi esponenzialmente a 1. Per un *chunk_size* con valore *k* maggiore di 1, le dimensioni diminuiscono in modo quasi esponenziale fino a *k*, ad eccezione del fatto che l'ultimo blocco può contenere meno di *k* iterazioni. Quando non viene specificato alcun *chunk_size* , il valore predefinito è 1.|
+|static|Quando `schedule(static,`  `)` si specifica chunk_size, le iterazioni sono divise in blocchi di dimensioni specificate da *chunk_size*. I blocchi vengono assegnati staticamente ai thread del team in base a una modalità Round Robin nell'ordine del numero del thread. Quando non viene specificato alcun *chunk_size* , lo spazio di iterazione è diviso in blocchi di dimensioni approssimativamente uguali, con un blocco assegnato a ogni thread.|
+|dinamico|Quando `schedule(dynamic,`  `)` si specifica chunk_size, le iterazioni sono divise in una serie di blocchi, ognuno dei quali contiene *chunk_size* iterazioni. Ogni blocco viene assegnato a un thread in attesa di un'assegnazione. Il thread esegue il blocco di iterazioni e quindi attende la successiva assegnazione, fino a quando non rimane alcun blocco da assegnare. L'ultimo blocco da assegnare può avere un numero inferiore di iterazioni. Quando non viene specificato alcun *chunk_size* , il valore predefinito è 1.|
+|guidato|Quando `schedule(guided,`  `)` si specifica chunk_size, le iterazioni vengono assegnate ai thread in blocchi con dimensioni decrescenti. Quando un thread termina il blocco di iterazioni assegnato, viene assegnato dinamicamente a un altro blocco, fino a quando non ne viene lasciato nessuno. Per un *chunk_size* di 1, le dimensioni di ogni blocco corrispondono approssimativamente al numero di iterazioni non assegnate divise per il numero di thread. Queste dimensioni diminuiscono quasi esponenzialmente a 1. Per un *chunk_size* con valore *k* maggiore di 1, le dimensioni diminuiscono in modo quasi esponenziale fino a *k*, ad eccezione del fatto che l'ultimo blocco può contenere meno di *k* iterazioni. Quando non viene specificato alcun *chunk_size* , il valore predefinito è 1.|
 |runtime|Quando `schedule(runtime)` si specifica, la decisione relativa alla pianificazione viene posticipata fino al runtime. Il *tipo* di pianificazione e le dimensioni dei blocchi possono essere scelti in fase di esecuzione impostando la variabile di ambiente `OMP_SCHEDULE` . Se questa variabile di ambiente non è impostata, la pianificazione risultante è definita dall'implementazione. Quando  `schedule(runtime)` si specifica, *chunk_size* non deve essere specificato.|
 
 In assenza di una clausola definita in modo esplicito `schedule` , l'impostazione predefinita `schedule` è definita dall'implementazione.
@@ -220,7 +221,7 @@ Le restrizioni alla `for` direttiva sono le seguenti:
 
 - `nowait`In una direttiva può essere presente una sola clausola `for` .
 
-- Non è specificato se o con quale frequenza si verificano gli effetti collaterali all'interno delle espressioni *chunk_size*, *lb*, *b*o *incr* .
+- Non è specificato se o con quale frequenza si verificano gli effetti collaterali all'interno delle espressioni *chunk_size*, *lb*, *b* o *incr* .
 
 - Il valore dell'espressione *chunk_size* deve essere lo stesso per tutti i thread del team.
 
@@ -420,7 +421,7 @@ Nelle espressioni precedenti:
 
 - *binop* non è un operatore di overload e è uno tra `+` ,,, `*` `-` `/` , `&` , `^` , `|` , `<<` o `>>` .
 
-Sebbene sia definito dall'implementazione se un'implementazione sostituisce tutte le `atomic` direttive con `critical` direttive con lo stesso *nome*univoco, la `atomic` direttiva consente una migliore ottimizzazione. Spesso sono disponibili istruzioni hardware che consentono di eseguire l'aggiornamento atomico con il minor sovraccarico.
+Sebbene sia definito dall'implementazione se un'implementazione sostituisce tutte le `atomic` direttive con `critical` direttive con lo stesso *nome* univoco, la `atomic` direttiva consente una migliore ottimizzazione. Spesso sono disponibili istruzioni hardware che consentono di eseguire l'aggiornamento atomico con il minor sovraccarico.
 
 Solo il carico e l'archivio dell'oggetto designato da *x* sono atomici; la valutazione di *expr* non è atomica. Per evitare race condition, tutti gli aggiornamenti della posizione in parallelo devono essere protetti con la `atomic` direttiva, ad eccezione di quelli noti come privi di race condition.
 
@@ -428,7 +429,7 @@ Le restrizioni alla `atomic` direttiva sono le seguenti:
 
 - Per tutti i riferimenti atomici al percorso di archiviazione x in tutto il programma è necessario disporre di un tipo compatibile.
 
-#### <a name="examples"></a>Esempi
+#### <a name="examples"></a>Esempio
 
 ```cpp
 extern float a[], *p = a, b;
@@ -457,7 +458,7 @@ La sintassi della `flush` direttiva è la seguente:
 #pragma omp flush [(variable-list)]  new-line
 ```
 
-Se gli oggetti che richiedono la sincronizzazione possono essere tutti designati dalle variabili, è possibile specificare tali variabili nell' *elenco*di variabili facoltative. Se un puntatore è presente nell' *elenco di variabili*, il puntatore viene scaricato, non l'oggetto a cui fa riferimento il puntatore.
+Se gli oggetti che richiedono la sincronizzazione possono essere tutti designati dalle variabili, è possibile specificare tali variabili nell' *elenco* di variabili facoltative. Se un puntatore è presente nell' *elenco di variabili*, il puntatore viene scaricato, non l'oggetto a cui fa riferimento il puntatore.
 
 Una `flush` direttiva senza un *elenco di variabili* Sincronizza tutti gli oggetti condivisi tranne gli oggetti inaccessibili con durata di archiviazione automatica. È probabile che si disponga di un sovraccarico maggiore rispetto a un oggetto `flush` con un *elenco di variabili*. Una `flush` direttiva senza un *elenco di variabili* è implicita per le direttive seguenti:
 
@@ -709,7 +710,7 @@ Se si specifica una variabile in una `firstprivate` `lastprivate` clausola, o `r
 
 #### <a name="2726-reduction"></a>2.7.2.6 reduction
 
-Questa clausola esegue una riduzione sulle variabili scalari visualizzate nell' *elenco di variabili*con operatore *op*. La sintassi della `reduction` clausola è la seguente:
+Questa clausola esegue una riduzione sulle variabili scalari visualizzate nell' *elenco di variabili* con operatore *op*. La sintassi della `reduction` clausola è la seguente:
 
 `reduction(`*operazione operativa* `:` *elenco di variabili*`)`
 

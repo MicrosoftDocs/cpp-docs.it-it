@@ -1,13 +1,14 @@
 ---
+description: 'Ulteriori informazioni su: C. OpenMP C e C++ grammatica'
 title: C. Grammatica OpenMP C e C++
 ms.date: 01/16/2019
 ms.assetid: 97a878ce-1533-47f7-a134-66fcbff48524
-ms.openlocfilehash: 85e18161079b49e83cc9fedb3184ee220c889e75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9543d721afbff1069b5497ba8dc7092089a1b706
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362946"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342504"
 ---
 # <a name="c-openmp-c-and-c-grammar"></a>C. Grammatica OpenMP C e C++
 
@@ -16,221 +17,221 @@ ms.locfileid: "62362946"
 
 ## <a name="c1-notation"></a>C.1 Notazione
 
-Le regole di grammatica costituito dal nome di un non terminale, seguita da due punti, seguiti da alternative di sostituzione in righe separate.
+Le regole di grammatica sono costituite dal nome di un non terminale, seguito da due punti, seguito da alternative di sostituzione su righe separate.
 
-Il termine espressione sintattica<sub>opt</sub> indica che il termine è facoltativo all'interno della sostituzione.
+Il termine di espressione<sub>sintattica indica che il termine è</sub> facoltativo all'interno della sostituzione.
 
-L'espressione sintattica *termine*<sub>optseq</sub> equivale a *termine-seq*<sub>opt</sub> con le regole aggiuntive seguenti:
+Il *termine* di espressione sintattico <sub>optseq</sub> equivale a *termini-Seq*<sub>opt</sub> con le regole aggiuntive seguenti:
 
-*term-seq*:  
-&nbsp;&nbsp;&nbsp;&nbsp;*term*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*term-seq* *term*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*term-seq*   `,` *term*
+*termine-Seq*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*termine*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;termine *-* *termine* Seq<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*termine-Seq* `,` *termine*   
 
 ## <a name="c2-rules"></a>C.2 Regole
 
-La notazione è descritto nella sezione 6.1 dello standard C. In questa appendice grammatica illustra le estensioni per la grammatica del linguaggio di base per le direttive OpenMP C e C++.
+La notazione è descritta nella sezione 6,1 dello standard C. Questa appendice della grammatica Mostra le estensioni della grammatica del linguaggio di base per le direttive OpenMP C e C++.
 
 **/\* in C++ (ISO/IEC 14882:1998) \*/**
 
-*statement-seq*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*openmp-directive*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*statement-seq statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*istruzione-seq (direttiva openmp-)*
+*istruzione-Seq*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*istruzione*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*OpenMP-Directive*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Statement-istruzione Seq*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*istruzione-Seq OpenMP-Directive*
 
 **/\* in C90 (ISO/IEC 9899:1990) \*/**
 
 *statement-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*openmp-directive*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*istruzione-list-istruzione*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*elenco di istruzioni direttive openmp*
+&nbsp;&nbsp;&nbsp;&nbsp;*istruzione*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*OpenMP-Directive*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Statement-list-istruzione*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*istruzione-list OpenMP-Directive*
 
 **/\* in C99 (ISO/IEC 9899:1999) \*/**
 
 *block-item*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*openmp-directive*
+&nbsp;&nbsp;&nbsp;&nbsp;*Dichiarazione*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*istruzione*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*OpenMP-Directive*
 
 **/\* istruzioni standard \*/**
 
 *istruzione*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*openmp-construct*
+&nbsp;&nbsp;&nbsp;&nbsp;*OpenMP-costrutto*
 
-*openmp-construct*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parallel-construct*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*for-construct*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*sections-construct*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*single-construct*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parallel-for-construct*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parallel-sections-construct*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*master-construct*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*critical-construct*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*atomic-construct*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ordered-construct*
+*OpenMP-costrutto*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*costrutto parallelo*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*per costrutto*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sezioni-costrutto*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*costrutto singolo*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Parallel-for-costrutto*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Parallel-sections-costrutto*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*costrutto Master*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*-costrutto critico*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*costrutto atomico*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*costrutto ordinato*
 
-*openmp-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direttive Barrier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*flush-directive*
+*OpenMP-Directive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Barrier-Directive*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*flush-direttiva*
 
-*structured-block*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*statement*
+*blocco strutturato*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*istruzione*
 
-*parallel-construct*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parallelo-direttiva blocco strutturato*
+*costrutto parallelo*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*blocco strutturato-direttiva parallela*
 
-*parallelo-direttiva*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp parallel` *parallel-clause*<sub>optseq</sub> *new-line*
+*Parallel-Directive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp parallel`*Parallel-clause*<sub>optseq</sub> *New-Line*
 
-*parallelo-clausola*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Unique-parallelo-clausola*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*data-clause*
+*clausola Parallel*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Unique-Parallel-clause*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*data-clausola*
 
-*Unique-parallelo-clausola*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `if (` *expression*   `)`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `num_threads (` *expression*   `)`
+*Unique-Parallel-clausola*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `if (`*espressione*   `)`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `num_threads (`*espressione*   `)`
 
-*for-construct*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*istruzione di iterazione per la direttiva*
+*per il costrutto*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*istruzione di iterazione for-Directive*
 
-*for-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp for` *for-clause*<sub>optseq</sub> *new-line*
+*per-Directive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp for`*clausola for-*<sub>optseq</sub> *New-Line*
 
 *clausola for*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unique-for-clause*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*data-clause*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Unique-for-clause*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*data-clausola*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `nowait`
 
-*univoco per la clausola*:<br/>
+*Unique-for-clause*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `ordered`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `schedule (` *schedule-kind*   `)`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `schedule (` *schedule-kind*   `,` *expression*   `)`
+&nbsp;&nbsp;&nbsp;&nbsp;  `schedule (`*tipo di pianificazione*   `)`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `schedule (`*tipo* `,` di pianificazione *espressione*      `)`
 
-*schedule-kind*:<br/>
+*tipo di pianificazione*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `static`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `dynamic`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `guided`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `runtime`
 
-*sections-construct*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*sezione direttive sezioni dell'ambito*
+*sezioni-costrutto*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sezioni-sezione direttiva-ambito*
 
-*sections-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp sections` *sections-clause*<sub>optseq</sub> *new-line*
+*sections-Directive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp sections`*sections-clausola*<sub>optseq</sub> *New-Line*
 
-*sezioni-clausola*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*data-clause*<br/>
+*sections-clausola*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*data-clausola*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `nowait`
 
-*section-scope*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*{sezione-sequence}*
+*sezione-ambito*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*{Section-Sequence}*
 
-*section-sequence*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direttiva Section*<sub>opt</sub> *blocco strutturato*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*sezione-sequence-direttiva di sezione strutturato blocco*
+*sequenza di sezioni*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sezione-*<sub></sub> *blocco strutturato* opt-Directive<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sezione di sequenza della sezione-blocco strutturato della direttiva*
 
-*section-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp section` *new-line*
+*Section-Directive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp section`*nuova riga*
 
-*single-construct*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*strutturato blocco singolo-direttiva*
+*costrutto singolo*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*blocco strutturato a direttiva singola*
 
-*Single-direttiva*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp single` *single-clause*<sub>optseq</sub> *new-line*
+*Single-Directive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp single`<sub></sub> *nuova riga optseq a* *singola clausola*
 
-*sola clausola*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*data-clause*<br/>
+*singola clausola*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*data-clausola*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `nowait`
 
-*parallel-for-construct*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*istruzione di iterazione parallelo-per-direttiva*
+*parallel-for-costrutto*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*istruzione di iterazione parallela per la direttiva*
 
-*parallelo-per-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp parallel for` *parallel-for-clause*<sub>optseq</sub> *new-line*
+*parallel-for-Directive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp parallel for`<sub>optseq</sub> *New-Line* *parallel-for-clause*
 
-*clausola for parallelo*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Unique-parallelo-clausola*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unique-for-clause*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*data-clause*
+*parallel-for-clause*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Unique-Parallel-clause*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Unique-for-clause*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*data-clausola*
 
-*parallel-sections-construct*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ambito sezione direttive di sezioni parallele*
+*Parallel-sections-costrutto*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sezione Parallel-sections-Directive-scope*
 
-*parallel-sections-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp parallel sections` *parallel-sections-clause*<sub>optseq</sub> *new-line*
+*Parallel-sections-Directive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp parallel sections`*Parallel-sections-clause*<sub>optseq</sub> *New-Line*
 
-*parallel-sections-clause*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Unique-parallelo-clausola*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*data-clause*
+*Parallel-sections-clause*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Unique-Parallel-clause*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*data-clausola*
 
-*master-construct*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struttura blocchi di master (direttiva)*
+*costrutto Master*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*blocco strutturato Master-Directive*
 
-*master-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp master` *new-line*
+*Master-Directive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp master`*nuova riga*
 
-*critical-construct*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direttiva critical blocco strutturato*
+*costrutto critico*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*critico-struttura di direttiva-blocco*
 
-*critical-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp critical` *region-phrase*<sub>opt</sub> *new-line*
+*Critical-Directive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp critical`*nuova riga* - *frase*<sub>opt</sub>
 
-*region-phrase*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*(identifier)*
+*regione-frase*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identificatore*
 
-*barrier-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp barrier` *new-line*
+*Barrier-Directive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp barrier`*nuova riga*
 
-*atomic-construct*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*istruzione di espressione Atomic (direttiva)*
+*costrutto atomico*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*espressione Atomic-Directive-Statement*
 
-*atomic-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp atomic` *new-line*
+*Atomic-Directive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp atomic`*nuova riga*
 
-*flush-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp flush` *flush-vars*<sub>opt</sub> *new-line*
+*Flush-Directive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp flush`*Scarica-var*<sub>opt</sub> - *nuova riga*
 
-*flush-vars*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*(variable-list)*
+*Scarica-var*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*(variabile-list)*
 
 *costrutto ordinato*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direttive ordinati blocco strutturato*
+&nbsp;&nbsp;&nbsp;&nbsp;*blocco strutturato-Directive ordinato*
 
-*ordered-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp ordered` *new-line*
+*ordered-Directive*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp ordered`*nuova riga*
 
 **/\* dichiarazioni standard \*/**
 
-*declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*threadprivate-directive*
+*dichiarazione*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*threadprivate-direttiva*
 
 *threadprivate-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp threadprivate (` *variable-list*    `)` *new-line*
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp threadprivate (`*elenco* `)` di variabili *nuova riga*    
 
-*clausola data*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `private (` *variable-list*   `)`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `copyprivate (`  *variable-list*    `)`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `firstprivate (`  *variable-list*    `)`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `lastprivate (` *variable-list*    `)`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `shared (` *variable-list*   `)`<br/>
+*data-clausola*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `private (`*elenco di variabili*   `)`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `copyprivate (`  *elenco di variabili*    `)`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `firstprivate (`  *elenco di variabili*    `)`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `lastprivate (`*elenco di variabili*    `)`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `shared (`*elenco di variabili*   `)`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `default ( shared )`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `default ( none )`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `reduction (`  *reduction-operator*    `:`  *variable-list*    `)`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `copyin (`  *variable-list*    `)`
+&nbsp;&nbsp;&nbsp;&nbsp;  `reduction (`  *operatore* `:` di riduzione *elenco di variabili*          `)`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `copyin (`  *elenco di variabili*    `)`
 
 *operatore di riduzione*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Uno di:   `+ \* - & ^ | && ||`
+&nbsp;&nbsp;&nbsp;&nbsp;Uno dei seguenti:   `+ \* - & ^ | && ||`
 
 **/\* in C \*/**
 
-*variable-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*variable-list*   `,` *identifier*
+*elenco di variabili*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identificatore*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*elenco* `,` di variabili *identificatore* di   
 
 **/\* in C++ \*/**
 
-*variable-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*id-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*variable-list*   `,` *id-expression*
+*elenco di variabili*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*espressione ID*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*elenco* `,` di variabili *espressione ID*   

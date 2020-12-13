@@ -1,19 +1,20 @@
 ---
-title: Errore irreversibile U1095 di NMAKE
+description: 'Altre informazioni su: errore irreversibile U1095 di NMAKE'
+title: 'Errore irreversibile U1095 di NMAKE '
 ms.date: 11/04/2016
 f1_keywords:
 - U1095
 helpviewer_keywords:
 - U1095
 ms.assetid: a392582b-06db-4568-9c13-450293a4fbda
-ms.openlocfilehash: 55c7ca7d237655b7e20406e7f28e5b2471bdec53
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 047c4aaca15917b884a44bd1e3e156bf8825274f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80193459"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345342"
 ---
-# <a name="nmake-fatal-error-u1095"></a>Errore irreversibile U1095 di NMAKE
+# <a name="nmake-fatal-error-u1095"></a>Errore irreversibile U1095 di NMAKE 
 
 la riga di comando ' CommandLine ' è stata espansa troppo a lungo
 

@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni sui puntatori const e volatile
 title: Puntatori const e volatile
 ms.date: 11/19/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - pointers, and volatile
 - const keyword [C++], volatile pointers
 ms.assetid: 0c92dc6c-400e-4342-b345-63ddfe649d7e
-ms.openlocfilehash: a8fd25777d1169ba281fbee173c1c8f5673c8b56
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 142c6b83c242af969c5f6e1494a56e9598cf537d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227569"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344679"
 ---
 # <a name="const-and-volatile-pointers"></a>Puntatori const e volatile
 
@@ -43,7 +44,7 @@ const char cch = 'A';
 char ch = 'B';
 ```
 
-Date le dichiarazioni precedenti di due oggetti ( `cch` , di tipo **const char**e `ch` , di tipo **Char)**, le seguenti dichiarazioni/inizializzazioni sono valide:
+Date le dichiarazioni precedenti di due oggetti ( `cch` , di tipo **const char** e `ch` , di tipo **Char)**, le seguenti dichiarazioni/inizializzazioni sono valide:
 
 ```cpp
 const char *pch1 = &cch;
@@ -124,7 +125,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Puntatori](pointers-cpp.md) 
  [Puntatori non elaborati](raw-pointers.md)

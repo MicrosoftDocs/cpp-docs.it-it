@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l'
 title: strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 ms.date: 4/2/2020
 api_name:
@@ -64,12 +65,12 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: 98f13967d8abbe079934d0c09ab71c5e279d2b7f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 509afe42e4fbf4cec9f0a7a077f0bf4ce0a1423e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918144"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344770"
 ---
 # <a name="strncat-_strncat_l-wcsncat-_wcsncat_l-_mbsncat-_mbsncat_l"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 
@@ -147,7 +148,7 @@ Impostazioni locali da usare.
 
 Restituisce un puntatore alla stringa di destinazione. Nessun valore restituito è riservato per indicare un errore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **strncat** aggiunge al massimo i primi caratteri di *conteggio* di *strSource* a *strDest*. Il carattere iniziale di *strSource* sovrascrive il carattere null di terminazione di *strDest*. Se viene visualizzato un carattere null in *strSource* prima dell'accodamento dei caratteri di *conteggio* , **strncat** aggiunge tutti i caratteri da *strSource*, fino al carattere null. Se *count* è maggiore della lunghezza di *strSource*, viene utilizzata la lunghezza di *strSource* al posto del *conteggio*. In tutti i casi, la stringa risultante termina con un carattere Null. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
@@ -232,7 +233,7 @@ After GoodAppend:  This is the initial string!Extra text t (39 chars)
 
 Si noti che **BadAppend** ha causato un sovraccarico del buffer.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
@@ -245,5 +246,5 @@ Si noti che **BadAppend** ha causato un sovraccarico del buffer.
 [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
 [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

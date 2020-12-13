@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l'
 title: strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 ms.date: 4/2/2020
 api_name:
@@ -56,12 +57,12 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-ms.openlocfilehash: 4aba4a2bd843fe0946c2e444b305f776065a57be
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c260c1a77908962441dba094686578e61db0e386
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919341"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344783"
 ---
 # <a name="strncat_s-_strncat_s_l-wcsncat_s-_wcsncat_s_l-_mbsncat_s-_mbsncat_s_l"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 
@@ -182,13 +183,13 @@ Restituisce 0 in caso di esito positivo e un codice di errore in caso di errore.
 |any|any|**NULL**|**EINVAL**|non modificato|
 |any|0 o troppo piccolo|any|**ERANGE**|non modificato|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Queste funzioni tentano di accodare i primi *d* caratteri di *strSource* alla fine di *strDest*, dove *D* è il minor *numero di conteggio* e la lunghezza di *strSource*. Se l'aggiunta di tali caratteri *D* si adatta all'interno di *strDest* (le cui dimensioni sono specificate come *NumberOfElements*) e lasciano comunque spazio per un carattere di terminazione null, questi caratteri vengono accodati, a partire dal valore null di terminazione originale di *strDest*e viene aggiunto un nuovo carattere di terminazione null. in caso contrario, *strDest*[0] viene impostato sul carattere null e viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
+Queste funzioni tentano di accodare i primi *d* caratteri di *strSource* alla fine di *strDest*, dove *D* è il minor *numero di conteggio* e la lunghezza di *strSource*. Se l'aggiunta di tali caratteri *D* si adatta all'interno di *strDest* (le cui dimensioni sono specificate come *NumberOfElements*) e lasciano comunque spazio per un carattere di terminazione null, questi caratteri vengono accodati, a partire dal valore null di terminazione originale di *strDest* e viene aggiunto un nuovo carattere di terminazione null. in caso contrario, *strDest*[0] viene impostato sul carattere null e viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
 
 Esiste un'eccezione a quanto indicato nel paragrafo precedente. Se *count* è [_TRUNCATE](../../c-runtime-library/truncate.md) , la maggior parte di *strSource* come si adatta viene aggiunta a *strDest* lasciando spazio per l'aggiunta di un null di terminazione.
 
-Ad esempio,
+ad esempio:
 
 ```C
 char dst[5];
@@ -204,7 +205,7 @@ Se è necessario il comportamento di troncamento, utilizzare **_TRUNCATE** o mod
 strncat_s(dst, _countof(dst), "34567", _TRUNCATE);
 ```
 
-o
+oppure
 
 ```C
 strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
@@ -212,7 +213,7 @@ strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
 
 In tutti i casi, la stringa risultante termina con un carattere Null. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
-Se *strSource* o *strDest* è **null**o è *NumberOfElements* è zero, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, la funzione restituisce **EINVAL** senza modificarne i parametri.
+Se *strSource* o *strDest* è **null** o è *NumberOfElements* è zero, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, la funzione restituisce **EINVAL** senza modificarne i parametri.
 
 **wcsncat_s** e **_mbsncat_s** sono versioni a caratteri wide e a caratteri multibyte di **strncat_s**. Gli argomenti di stringa e il valore restituito di **wcsncat_s** sono stringhe a caratteri wide. i **_mbsncat_s** sono stringhe di caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
 
@@ -383,8 +384,8 @@ Invalid parameter handler invoked: (L"Buffer is too small" && 0)
 ## <a name="see-also"></a>Vedere anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

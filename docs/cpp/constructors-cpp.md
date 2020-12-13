@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: costruttori (C++)'
 title: Costruttori (C++)
 ms.date: 12/27/2019
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: b8373eda52967db881d7d58477fcd2a9181ac3ee
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: bd93053d63e76aef9f2284e18f7748334a3fc6ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924733"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344627"
 ---
 # <a name="constructors-c"></a>Costruttori (C++)
 
-Per personalizzare la modalità di inizializzazione dei membri della classe o per richiamare funzioni quando viene creato un oggetto della classe, definire un *Costruttore* . Ha nome uguale a quello della classe e non restituisce alcun valore. È possibile definire tutti i costruttori di overload necessari per personalizzare l'inizializzazione in diversi modi. In genere, i costruttori hanno accessibilità pubblica, in modo che il codice al di fuori della definizione della classe o della gerarchia di ereditarietà possa creare oggetti della classe. Tuttavia, è anche possibile dichiarare un costruttore come **`protected`** o **`private`** .
+Per personalizzare la modalità di inizializzazione dei membri della classe o per richiamare funzioni quando viene creato un oggetto della classe, definire un *Costruttore*. Ha nome uguale a quello della classe e non restituisce alcun valore. È possibile definire tutti i costruttori di overload necessari per personalizzare l'inizializzazione in diversi modi. In genere, i costruttori hanno accessibilità pubblica, in modo che il codice al di fuori della definizione della classe o della gerarchia di ereditarietà possa creare oggetti della classe. Tuttavia, è anche possibile dichiarare un costruttore come **`protected`** o **`private`** .
 
 I costruttori possono facoltativamente prendere un elenco di inizializzazione del membro. Si tratta di un modo più efficiente per inizializzare i membri della classe rispetto all'assegnazione di valori nel corpo del costruttore. Nell'esempio seguente viene illustrata una classe `Box` con tre costruttori di overload. Gli ultimi due elenchi use member init:
 
@@ -202,7 +203,7 @@ Quando si definisce un costruttore di copia, è necessario definire anche un ope
     Box (const Box& other) = delete;
 ```
 
-Il tentativo di copiare l'oggetto genera l'errore *C2280: tentativo di fare riferimento a una funzione eliminata* .
+Il tentativo di copiare l'oggetto genera l'errore *C2280: tentativo di fare riferimento a una funzione eliminata*.
 
 ## <a name="move-constructors"></a><a name="move_constructors"></a> Costruttori di spostamento
 
@@ -643,7 +644,7 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=msvc-150"
 
-**Visual Studio 2017 e versioni successive** : l' **`using`** istruzione nella modalità **/std: c++ 17** riporta nell'ambito tutti i costruttori della classe di base, ad eccezione di quelli che hanno una firma identica ai costruttori nella classe derivata. In genere, è consigliabile usare i costruttori ereditanti quando la classe derivata non dichiara nuovi membri dati o nuovi costruttori.
+**Visual Studio 2017 e versioni successive**: l' **`using`** istruzione nella modalità **/std: c++ 17** riporta nell'ambito tutti i costruttori della classe di base, ad eccezione di quelli che hanno una firma identica ai costruttori nella classe derivata. In genere, è consigliabile usare i costruttori ereditanti quando la classe derivata non dichiara nuovi membri dati o nuovi costruttori.
 
 ::: moniker-end
 
@@ -661,7 +662,7 @@ Una classe di derivazione non può ereditare da più classi base, se tali classi
 
 ## <a name="constructors-and-composite-classes"></a><a name="constructors_in_composite_classes"></a> Costruttori e classi composite
 
-Le classi che contengono membri di tipo classe sono note come *classi composite* . Quando viene creato un membro di tipo classe di una classe composita, il costruttore viene chiamato prima del costruttore della classe. Quando una classe contenuta è priva di un costruttore predefinito, è necessario utilizzare un elenco di inizializzazione nel costruttore della classe composita. Nell'esempio precedente relativo a `StorageBox`, se si modifica il tipo della variabile membro `m_label` in una nuova classe `Label`, è necessario chiamare il costruttore della classe base e inizializzare la variabile `m_label` nel costruttore `StorageBox`:
+Le classi che contengono membri di tipo classe sono note come *classi composite*. Quando viene creato un membro di tipo classe di una classe composita, il costruttore viene chiamato prima del costruttore della classe. Quando una classe contenuta è priva di un costruttore predefinito, è necessario utilizzare un elenco di inizializzazione nel costruttore della classe composita. Nell'esempio precedente relativo a `StorageBox`, se si modifica il tipo della variabile membro `m_label` in una nuova classe `Label`, è necessario chiamare il costruttore della classe base e inizializzare la variabile `m_label` nel costruttore `StorageBox`:
 
 ```cpp
 class Label {
@@ -698,6 +699,6 @@ int main(){
 - [Costruttori di spostamento e operatori di assegnazione spostamento](move-constructors-and-move-assignment-operators-cpp.md)
 - [Delega dei costruttori](delegating-constructors.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classi e struct](classes-and-structs-cpp.md)

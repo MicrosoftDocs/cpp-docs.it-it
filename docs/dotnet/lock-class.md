@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe Lock'
 title: Classe lock
 ms.date: 01/16/2019
 ms.topic: reference
@@ -14,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
-ms.openlocfilehash: 7b2f187ec940af95523d0bbfb9265d7d9d6f69e8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: d00614e814d171664a75ec61b9227942806b8cca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508644"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344497"
 ---
 # <a name="lock-class"></a>Classe lock
 
@@ -41,14 +42,14 @@ Internamente, la classe Lock USA <xref:System.Threading.Monitor> per sincronizza
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |---------|-----------|
 |[lock::lock](#lock)|Costruisce un `lock` oggetto, facoltativamente in attesa di acquisire il blocco per sempre, per un periodo di tempo specificato o non per tutti.|
 |[Lock:: ~ Lock](#tilde-lock)|Distrugge un `lock` oggetto.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |---------|-----------|
 |[lock::acquire](#acquire)|Acquisisce un blocco su un oggetto, facoltativamente in attesa di acquisire il blocco per sempre, per un periodo di tempo specificato o non per tutti.|
 |[lock::is_locked](#is-locked)|Indica se viene mantenuto un blocco.|
@@ -57,7 +58,7 @@ Internamente, la classe Lock USA <xref:System.Threading.Monitor> per sincronizza
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |---------|-----------|
 |[Lock:: operator &nbsp; bool](#operator-bool)|Operatore per `lock` l'utilizzo di in un'espressione condizionale.|
 |[lock::operator==](#operator-equality)|Operatore di uguaglianza.|
@@ -103,7 +104,7 @@ Valore di timeout in millisecondi o come <xref:System.TimeSpan> .
 
 Genera un'eccezione <xref:System.ApplicationException> se l'acquisizione del blocco non viene eseguita prima del timeout.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le prime tre forme del costruttore tentano di acquisire un blocco su `_object` entro il periodo di timeout specificato (o <xref:System.Threading.Timeout.Infinite> se non è specificato alcun valore).
 
@@ -211,7 +212,7 @@ Distrugge un `lock` oggetto.
 ~lock();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il distruttore chiama [Lock:: Release](#release).
 
@@ -328,7 +329,7 @@ Valore di timeout in millisecondi o come <xref:System.TimeSpan> .
 
 Genera un'eccezione <xref:System.ApplicationException> se l'acquisizione del blocco non viene eseguita prima del timeout.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se non viene specificato un valore di timeout, il timeout predefinito è <xref:System.Threading.Timeout.Infinite> .
 
@@ -539,7 +540,7 @@ operator bool();
 
 **`true`** Se viene mantenuto un blocco; **`false`** in caso contrario,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo operatore esegue la conversione in `_detail_class::_safe_bool` , che è più sicuro di **`bool`** perché non può essere convertito in un tipo integrale.
 
@@ -642,7 +643,7 @@ Rilascia un blocco.
 void release();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se non viene mantenuto alcun blocco, `release` non esegue alcuna operazione.
 
@@ -760,7 +761,7 @@ Valore di timeout in millisecondi o come <xref:System.TimeSpan> .
 
 **`true`** Se il blocco è stato acquisito; **`false`** in caso contrario,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se è già stato acquisito un blocco, questa funzione non esegue alcuna operazione.
 

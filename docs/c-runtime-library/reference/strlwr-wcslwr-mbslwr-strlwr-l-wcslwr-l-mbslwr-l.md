@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l'
 title: _strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 ms.date: 4/2/2020
 api_name:
@@ -67,12 +68,12 @@ helpviewer_keywords:
 - strings [C++], converting case
 - _mbslwr_l function
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
-ms.openlocfilehash: 9ba2570ff02cf11cb5822666b5569fa88caf76b9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7d0d103185494d26890fc62061ebd16c168fc477
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919937"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344809"
 ---
 # <a name="_strlwr-_wcslwr-_mbslwr-_strlwr_l-_wcslwr_l-_mbslwr_l"></a>_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 
@@ -136,7 +137,7 @@ unsigned char *_mbslwr_l(
 
 ### <a name="parameters"></a>Parametri
 
-*Str*<br/>
+*str*<br/>
 Stringa con terminazione Null da convertire in minuscolo.
 
 *locale*<br/>
@@ -146,7 +147,7 @@ Impostazioni locali da usare.
 
 Ognuna di queste funzioni restituisce un puntatore alla stringa convertita. Dato che la modifica viene eseguita sul posto, il puntatore restituito è uguale al puntatore passato come argomento di input. Nessun valore restituito è riservato per indicare un errore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_strlwr** converte le lettere maiuscole in *Str* in lettere minuscole, come determinato dall'impostazione della categoria **LC_CTYPE** delle impostazioni locali. Gli altri caratteri non sono interessati. Per ulteriori informazioni su **LC_CTYPE**, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_L** usano le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali; le versioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
@@ -214,5 +215,5 @@ Upper: THE STRING TO END ALL STRINGS!
 ## <a name="see-also"></a>Vedere anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)<br/>

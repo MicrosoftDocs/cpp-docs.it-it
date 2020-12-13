@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l'
 title: isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 ms.date: 4/2/2020
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - hexadecimal characters
 - iswxdigit function
 ms.assetid: c8bc5146-0b58-4e3f-bee3-f2318dd0f829
-ms.openlocfilehash: 3aefa39d9fabb2b8a3124955f3ab0787e9e174f3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 87e9e8d07f9a0da38bc6590f27fcb770fc2b789b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916594"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344848"
 ---
 # <a name="isxdigit-iswxdigit-_isxdigit_l-_iswxdigit_l"></a>isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 
@@ -95,7 +96,7 @@ Il comportamento di **isxdigit** e **_isxdigit_l** non è definito se *c* non è
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istxdigit**|**isxdigit**|**isxdigit**|**iswxdigit**|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -110,8 +111,8 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Classificazione di caratteri](../../c-runtime-library/character-classification.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[is, isw Routines](../../c-runtime-library/is-isw-routines.md)<br/>
+[Classificazione caratteri](../../c-runtime-library/character-classification.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[is, ISW routines](../../c-runtime-library/is-isw-routines.md)<br/>

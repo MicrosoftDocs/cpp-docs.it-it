@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: istruzione continue (C++)'
 title: Istruzioni continue (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - continue keyword [C++]
 ms.assetid: 3c94ee57-f732-4c1d-8537-d0ce5382bfd4
-ms.openlocfilehash: 55a81338f1a0f9036a6d42c4bac7c99489c18d64
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6899e5cd249ab5a7a3b786e4b82c9890c08a7183
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228999"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344640"
 ---
 # <a name="continue-statement-c"></a>Istruzioni continue (C++)
 

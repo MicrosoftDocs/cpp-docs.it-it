@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CSimpleException'
 title: Classe CSimpleException
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - CSimpleException [MFC], CSimpleException
 - CSimpleException [MFC], GetErrorMessage
 ms.assetid: be0eb8ef-e5b9-47d6-b0fb-efaff2d1e666
-ms.openlocfilehash: afd83c1ddd6f68b10c5cc8c47c0e939bbd01b6c2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8070604e05fa59f7fcdfef6dcaad12ab0497da9f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840713"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342818"
 ---
 # <a name="csimpleexception-class"></a>Classe CSimpleException
 
@@ -27,25 +28,25 @@ Questa classe è una classe di base per le eccezioni MFC critiche per le risorse
 class AFX_NOVTABLE CSimpleException : public CException
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CSimpleException:: CSimpleException](#csimpleexception)|Costruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CSimpleException:: GetErrorMessage](#geterrormessage)|Fornisce il testo relativo a un errore che si è verificato.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 `CSimpleException` è la classe base per le eccezioni MFC critiche per le risorse e gestisce la proprietà e l'inizializzazione di un messaggio di errore. Le classi seguenti usano `CSimpleException` come classe base:
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[Classe CMemoryException](../../mfc/reference/cmemoryexception-class.md)|Eccezione di memoria insufficiente|
 |[Classe CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)|Richieste di un'operazione non supportata|
@@ -83,7 +84,7 @@ explicit CSimpleException(BOOL bAutoDelete);
 *bAutoDelete*<br/>
 Specificare TRUE se la memoria per l' `CSimpleException` oggetto è stata allocata nell'heap. In questo modo l' `CSimpleException` oggetto verrà eliminato quando `Delete` viene chiamata la funzione membro per eliminare l'eccezione. Specificare FALSE se l' `CSimpleException` oggetto si trova nello stack o è un oggetto globale. In questo caso, l' `CSimpleException` oggetto non verrà eliminato quando `Delete` viene chiamata la funzione membro.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Normalmente non è necessario chiamare direttamente questo costruttore. Una funzione che genera un'eccezione deve creare un'istanza di una `CException` classe derivata da e chiamare il relativo costruttore oppure utilizzare una delle funzioni throw MFC, ad esempio [AfxThrowFileException](exception-processing.md#afxthrowfileexception), per generare un tipo predefinito.
 
@@ -113,11 +114,11 @@ Indirizzo di un UINT che riceverà l'ID del contesto della guida. Se è NULL, no
 
 Diverso da zero se la funzione ha esito positivo; in caso contrario, 0 se non è disponibile alcun testo del messaggio di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni, vedere [CException:: GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classe CException](../../mfc/reference/cexception-class.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 2) C4051'
 title: Avviso del compilatore (livello 2) C4051
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4051
 ms.assetid: 8c964e70-df12-45ff-93b9-496ad4271191
-ms.openlocfilehash: e5d5a87e395aa9f6cd6e610cda1f7c4660fa371b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6e4849d7db67f1f3fba85bdf88aaee44d2ffe884
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80174362"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344250"
 ---
 # <a name="compiler-warning-level-2-c4051"></a>Avviso del compilatore (livello 2) C4051
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Enumerazione CancelTransitionPolicy'
 title: Enumerazione CancelTransitionPolicy
 ms.date: 11/04/2016
 ms.topic: reference
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CancelTransitionPolicy Enumeration
 ms.assetid: 5de49f7d-e5e3-43e9-bbca-666caf226cef
-ms.openlocfilehash: e820b3fffb4a00e95a1210a5c0beb3229c6d1657
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8de995ed492f8f1260534b08b818b77d889d95fd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214123"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344536"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>Enumerazione CancelTransitionPolicy
 
@@ -30,7 +31,7 @@ enum CancelTransitionPolicy;
 
 ### <a name="values"></a>Valori
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`RemainCanceled`|Se l'operazione asincrona si trova attualmente in uno stato di annullamento richiesto dal client, significa che resterà nello stato annullato anziché passare a uno stato di completamento o di errore del terminale.|
 |`TransitionFromCanceled`|Se l'operazione asincrona si trova attualmente in uno stato di annullamento richiesto dal client, indica che lo stato deve passare dallo stato annullato allo stato finale di completato o errore come determinato dalla chiamata che utilizza questo flag.|
@@ -41,6 +42,6 @@ enum CancelTransitionPolicy;
 
 **Spazio dei nomi:** Microsoft::WRL
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi Microsoft::WRL](microsoft-wrl-namespace.md)
+[Spazio dei nomi Microsoft:: WRL](microsoft-wrl-namespace.md)

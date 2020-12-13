@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l'
 title: _strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 ms.date: 4/2/2020
 api_name:
@@ -58,19 +59,19 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-ms.openlocfilehash: 77746af98e5d62b80d5a0d2d93eb1f717c74b33e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9030c66e226cc36e08ca1730a8178b0000216d9a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231338"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344744"
 ---
 # <a name="_strncnt-_wcsncnt-_mbsnbcnt-_mbsnbcnt_l-_mbsnccnt-_mbsnccnt_l"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 
 Restituisce il numero di caratteri o byte entro un numero specificato.
 
 > [!IMPORTANT]
-> **_mbsnbcnt**, **_mbsnbcnt_l**, **_mbsnccnt**e **_mbsnccnt_l** non possono essere utilizzati nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnbcnt**, **_mbsnbcnt_l**, **_mbsnccnt** e **_mbsnccnt_l** non possono essere utilizzati nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -120,13 +121,13 @@ Impostazioni locali da usare.
 
 **_strncnt** restituisce il numero di caratteri nei primi byte dei *conteggi* della stringa a byte singolo *Str*. **_wcsncnt** restituisce il numero di caratteri nei primi caratteri wide *count* della stringa di caratteri wide *Str*.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 **_mbsnbcnt** e **_mbsnbcnt_l** contano il numero di byte trovati nel primo *conteggio* di caratteri multibyte di *STR*. **_mbsnbcnt** e **_mbsnbcnt_l** sostituire **MTOB** e devono essere usati al posto di **MTOB**.
 
 **_mbsnccnt** e **_mbsnccnt_l** contano il numero di caratteri trovati nel primo *conteggio* di byte di *STR*. Se **_mbsnccnt** e **_mbsnccnt_l** rilevano un carattere null nel secondo byte di un carattere a due byte, il primo byte viene anche considerato null e non è incluso nel valore count restituito. **_mbsnccnt** e **_mbsnccnt_l** sostituire **BTom** e devono essere usati al posto di **BTom**.
 
-Se *Str* è un puntatore **null** o se il *conteggio* è 0, queste funzioni richiamano il gestore di parametro non valido come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md), **errno** viene impostato su **EINVAL**e la funzione restituisce 0.
+Se *Str* è un puntatore **null** o se il *conteggio* è 0, queste funzioni richiamano il gestore di parametro non valido come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md), **errno** viene impostato su **EINVAL** e la funzione restituisce 0.
 
 La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
@@ -182,9 +183,9 @@ int main( void )
 The first 10 characters are single-byte.
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Impostazioni locali](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

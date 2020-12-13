@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l'
 title: strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 ms.date: 4/2/2020
 api_name:
@@ -57,19 +58,19 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-ms.openlocfilehash: 4dc50decb3c7c72aaa89b729b30d4581d32164c9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 54001a90003ff3a6931f43687fc08366607caf2e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919968"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344835"
 ---
 # <a name="strlen-wcslen-_mbslen-_mbslen_l-_mbstrlen-_mbstrlen_l"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 
 Ottiene la lunghezza di una stringa, usando le impostazioni locali correnti o le impostazioni locali specificate. Sono disponibili versioni più sicure di queste funzioni. Vedere [strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l](strnlen-strnlen-s.md).
 
 > [!IMPORTANT]
-> **_mbslen**, **_mbslen_l**, **_mbstrlen**e **_mbstrlen_l** non possono essere utilizzati nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbslen**, **_mbslen_l**, **_mbstrlen** e **_mbstrlen_l** non possono essere utilizzati nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -98,7 +99,7 @@ size_t _mbstrlen_l(
 
 ### <a name="parameters"></a>Parametri
 
-*Str*<br/>
+*str*<br/>
 Stringa con terminazione Null.
 
 *locale*<br/>
@@ -106,9 +107,9 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce il numero di caratteri in *Str*, escluso il terminale null. Nessun valore restituito è riservato per indicare un errore, ad eccezione di **_mbstrlen** e **_mbstrlen_l**, che `((size_t)(-1))` restituiscono se la stringa contiene un carattere multibyte non valido.
+Ognuna di queste funzioni restituisce il numero di caratteri in *Str*, escluso il terminale null. Nessun valore restituito è riservato per indicare un errore, ad eccezione di **_mbstrlen** e **_mbstrlen_l**, che restituiscono `((size_t)(-1))` se la stringa contiene un carattere multibyte non valido.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 **strlen** interpreta la stringa come una stringa di caratteri a byte singolo, quindi il valore restituito è sempre uguale al numero di byte, anche se la stringa contiene caratteri multibyte. **wcslen** è una versione a caratteri wide di **strlen**; l'argomento di **wcslen** è una stringa di caratteri wide e il numero di caratteri è in caratteri wide (a due byte). **wcslen** e **strlen** si comportano in modo identico.
 
@@ -205,8 +206,8 @@ Bytes in 'ABCァD' : 6
 ## <a name="see-also"></a>Vedere anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

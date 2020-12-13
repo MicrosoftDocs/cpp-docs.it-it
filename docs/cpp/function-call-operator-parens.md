@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: operatore di chiamata di funzione: ()'
 title: 'Operatore di chiamata di funzione: ()'
 ms.date: 06/11/2020
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
 no-loc:
 - opt
-ms.openlocfilehash: 5bb87795d3e91d853dc0d269ee9d2aa3ba025c0e
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 351674f345c7213a3c164ff88e9a165775088c68
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813550"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344562"
 ---
 # <a name="function-call-operator-"></a>Operatore di chiamata di funzione: ()
 
@@ -28,7 +29,7 @@ Una chiamata di funzione è un tipo di *`postfix-expression`* , formato da un'es
 > *`postfix-expression`*:\
 > &emsp;*`postfix-expression`* **`(`** *`argument-expression-list`* <sub>opt</sub> **`)`**
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Gli argomenti dell'operatore di chiamata di funzione provengono da un oggetto *`argument-expression-list`* , un elenco delimitato da virgole di espressioni. I valori di queste espressioni vengono passati alla funzione come argomenti. *Argument-expression-list* può essere vuoto. Prima di C++ 17, l'ordine di valutazione dell'espressione di funzione e le espressioni di argomento non sono specificati e possono verificarsi in qualsiasi ordine. In C++ 17 e versioni successive, l'espressione di funzione viene valutata prima di qualsiasi espressione di argomento o di argomenti predefiniti. Le espressioni di argomento vengono valutate in una sequenza indeterminata.
 
@@ -183,7 +184,7 @@ int main() {
 
 Le funzioni possono essere chiamate in modo ricorsivo. Per ulteriori informazioni sulle dichiarazioni di funzione, vedere [funzioni](functions-cpp.md). Il materiale correlato è in [unità di conversione e collegamento](../cpp/program-and-linkage-cpp.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Espressioni di suffisso](../cpp/postfix-expressions.md)<br/>
 [Operatori, precedenza e associatività predefiniti di C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

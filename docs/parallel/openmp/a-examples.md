@@ -1,21 +1,22 @@
 ---
-title: Un  Esempi
+description: 'Altre informazioni su: A. esempi'
+title: R. Esempi
 ms.date: 01/18/2019
 ms.assetid: c0f6192f-a205-449b-b84c-cb30dbcc8b8f
-ms.openlocfilehash: 061490d34829175bfbdcd84d6208aa396bb19671
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d52b59f9f83cf791c03fb49ca726273a2c977e58
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362972"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342543"
 ---
-# <a name="a-examples"></a>Un  Esempi
+# <a name="a-examples"></a>R. Esempio
 
-Di seguito è riportati esempi dei costrutti definiti in questo documento. Un'istruzione che segue una direttiva è composta solo quando necessario e viene applicato un rientro un'istruzione non composta da una direttiva che la precede.
+Di seguito sono riportati alcuni esempi dei costrutti definiti in questo documento. Un'istruzione che segue una direttiva è composta solo quando è necessario e un'istruzione non composta viene rientrata da una direttiva che la precede.
 
-## <a name="a1-a-simple-loop-in-parallel"></a>A.1 semplici a loop in parallelo
+## <a name="a1-a-simple-loop-in-parallel"></a>A. 1 un ciclo semplice in parallelo
 
-Nell'esempio seguente viene illustrato come parallelizzare un ciclo utilizzando la [parallele per](2-directives.md#251-parallel-for-construct) direttiva. La variabile di iterazione del ciclo è privata per impostazione predefinita, in modo che non è necessario specificarlo in modo esplicito in una clausola private.
+Nell'esempio seguente viene illustrato come parallelizzare un ciclo utilizzando la direttiva [parallel for](2-directives.md#251-parallel-for-construct) . Per impostazione predefinita, la variabile di iterazione del ciclo è privata, pertanto non è necessario specificarla in modo esplicito in una clausola privata.
 
 ```cpp
 #pragma omp parallel for
@@ -23,9 +24,9 @@ Nell'esempio seguente viene illustrato come parallelizzare un ciclo utilizzando 
         b[i] = (a[i] + a[i-1]) / 2.0;
 ```
 
-## <a name="a2-conditional-compilation"></a>Compilazione condizionale A.2
+## <a name="a2-conditional-compilation"></a>A. 2 compilazione condizionale
 
-Gli esempi seguenti illustrano l'uso di compilazione condizionale utilizzando la macro OpenMP [OpenMP](2-directives.md#22-conditional-compilation). Compilazione di OpenMP, con la `_OPENMP` macro viene definita.
+Negli esempi seguenti viene illustrato l'utilizzo della compilazione condizionale utilizzando la macro OpenMP [_OPENMP](2-directives.md#22-conditional-compilation). Con la compilazione OpenMP, la `_OPENMP` macro viene definita.
 
 ```cpp
 # ifdef _OPENMP
@@ -33,7 +34,7 @@ Gli esempi seguenti illustrano l'uso di compilazione condizionale utilizzando la
 # endif
 ```
 
-L'operatore del preprocessore definita consente più di una macro da sottoporre a test in una singola direttiva.
+L'operatore del preprocessore definito consente di testare più di una macro in un'unica direttiva.
 
 ```cpp
 # if defined(_OPENMP) && defined(VERBOSE)
@@ -41,9 +42,9 @@ L'operatore del preprocessore definita consente più di una macro da sottoporre 
 # endif
 ```
 
-## <a name="a3-parallel-regions"></a>A.3 aree parallele
+## <a name="a3-parallel-regions"></a>A. 3 aree parallele
 
-Il [parallele](2-directives.md#23-parallel-construct) direttiva è utilizzabile in programmi paralleli grossolana. Nell'esempio seguente, ogni thread nell'area parallelo decide quale parte della matrice globale `x` a lavorarvi, in base al numero di thread:
+La direttiva [Parallel](2-directives.md#23-parallel-construct) può essere utilizzata in programmi paralleli a granularità grossolana. Nell'esempio seguente ogni thread nell'area parallela decide quale parte della matrice globale `x` usare, in base al numero di thread:
 
 ```cpp
 #pragma omp parallel shared(x, npoints) private(iam, np, ipoints)
@@ -55,9 +56,9 @@ Il [parallele](2-directives.md#23-parallel-construct) direttiva è utilizzabile 
 }
 ```
 
-## <a name="a4-the-nowait-clause"></a>A.4 della clausola nowait
+## <a name="a4-the-nowait-clause"></a>A. 4 la clausola NOWAIT
 
-Se sono presenti numerosi cicli indipendenti in un'area parallela, è possibile usare la [nowait](2-directives.md#241-for-construct) clausola la barriera implicita alla fine di evitare il `for` direttiva, come indicato di seguito:
+Se sono presenti molti cicli indipendenti in un'area parallela, è possibile usare la clausola [nowait](2-directives.md#241-for-construct) per evitare la barriera implicita alla fine della `for` direttiva, come indicato di seguito:
 
 ```cpp
 #pragma omp parallel
@@ -71,9 +72,9 @@ Se sono presenti numerosi cicli indipendenti in un'area parallela, è possibile 
 }
 ```
 
-## <a name="a5-the-critical-directive"></a>A.5 della direttiva critical
+## <a name="a5-the-critical-directive"></a>A. 5 direttiva critical
 
-Nell'esempio seguente include numerose [critici](2-directives.md#262-critical-construct) direttive. Nell'esempio viene illustrato un modello di Accodamento messaggi in cui un'attività viene rimosso dalla coda e lavorando. Per proteggersi da molti thread di rimozione dalla coda la stessa attività, l'operazione di annullamento deve essere un `critical` sezione. Due code in questo esempio sono indipendenti, che sono protette dal `critical` con nomi diversi, direttive *xaxis* e *AsseY*.
+Nell'esempio seguente sono incluse diverse direttive [critiche](2-directives.md#262-critical-construct) . Nell'esempio viene illustrato un modello di Accodamento in cui un'attività viene rimessa in coda e lavorata. Per proteggersi da molti thread che deaccodano la stessa attività, l'operazione di annullamento della coda deve trovarsi in una `critical` sezione. Poiché le due code in questo esempio sono indipendenti, sono protette da `critical` direttive con nomi diversi, *xaxis* e *asseY*.
 
 ```cpp
 #pragma omp parallel shared(x, y) private(x_next, y_next)
@@ -87,9 +88,9 @@ Nell'esempio seguente include numerose [critici](2-directives.md#262-critical-co
 }
 ```
 
-## <a name="a6-the-lastprivate-clause"></a>A.6 della clausola lastprivate
+## <a name="a6-the-lastprivate-clause"></a>A. 6 la clausola lastprivate
 
-In alcuni casi l'esecuzione corretta dipende dal valore che assegna l'ultima iterazione di un ciclo a una variabile. Tali programmi necessario elencare tutte le variabili come argomenti per un [lastprivate](2-directives.md#2723-lastprivate) clausola in modo che i valori delle variabili sono quello utilizzato quando il ciclo viene eseguito in modo sequenziale.
+L'esecuzione corretta a volte dipende dal valore che l'ultima iterazione di un ciclo assegna a una variabile. Tali programmi devono elencare tutte le variabili come argomenti di una clausola [lastprivate](2-directives.md#2723-lastprivate) , in modo che i valori delle variabili siano uguali a quelli del ciclo eseguito in sequenza.
 
 ```cpp
 #pragma omp parallel
@@ -101,11 +102,11 @@ In alcuni casi l'esecuzione corretta dipende dal valore che assegna l'ultima ite
 a[i]=b[i];
 ```
 
-Nell'esempio precedente, il valore di `i` sarà uguale alla fine dell'area parallela `n-1`, come nel caso sequenza.
+Nell'esempio precedente, il valore di `i` alla fine dell'area parallela è uguale `n-1` , come nel caso sequenziale.
 
-## <a name="a7-the-reduction-clause"></a>A.7 clausola reduction
+## <a name="a7-the-reduction-clause"></a>A. 7 clausola reduction
 
-Nell'esempio seguente viene illustrato il [riduzione](2-directives.md#2726-reduction) clausola:
+Nell'esempio seguente viene illustrata la clausola [Reduction](2-directives.md#2726-reduction) :
 
 ```cpp
 #pragma omp parallel for private(i) shared(x, y, n) \
@@ -116,9 +117,9 @@ Nell'esempio seguente viene illustrato il [riduzione](2-directives.md#2726-reduc
     }
 ```
 
-## <a name="a8-parallel-sections"></a>A.8 sezioni parallele
+## <a name="a8-parallel-sections"></a>A. 8 sezioni parallele
 
-Nell'esempio seguente (per [sezione 2.4.2](2-directives.md#242-sections-construct)), le funzioni *xaxis*, *AsseY*, e *AsseZ* possono essere eseguiti contemporaneamente. Il primo `section` direttiva è facoltativa.  Tutti i `section` direttive devono essere visualizzato nell'ambito lessicale del `parallel sections` costruire.
+Nell'esempio seguente (per la [sezione 2.4.2](2-directives.md#242-sections-construct)), le funzioni *xaxis*, *asseY* e *Zaxis* possono essere eseguite contemporaneamente. La prima `section` direttiva è facoltativa.  Tutte le `section` direttive devono essere visualizzate nell'ambito lessicale del `parallel sections` costrutto.
 
 ```cpp
 #pragma omp parallel sections
@@ -132,9 +133,9 @@ Nell'esempio seguente (per [sezione 2.4.2](2-directives.md#242-sections-construc
 }
 ```
 
-## <a name="a9-single-directives"></a>A.9 delle direttive Single
+## <a name="a9-single-directives"></a>A. 9 direttive singole
 
-Nell'esempio seguente viene illustrato il [singolo](2-directives.md#243-single-construct) direttiva. Nell'esempio, un solo thread (in genere il primo thread che rileva il `single` direttiva) viene stampato il messaggio di stato. L'utente deve fare supposizioni a su quale thread eseguirà il `single` sezione. Tutti gli altri thread ignorerà il `single` sezione e terminare con una barriera alla fine del `single` costruire. Se altri thread possa procedere senza attendere che il thread in esecuzione la `single` sezione, una `nowait` clausola può essere specificata nel `single` direttiva.
+Nell'esempio seguente viene illustrata la direttiva [singola](2-directives.md#243-single-construct) . Nell'esempio, un solo thread, in genere il primo thread che rileva la direttiva, `single` stampa il messaggio di stato. L'utente non deve creare presupposti per il thread che eseguirà la `single` sezione. Tutti gli altri thread ignoreranno la `single` sezione e si arresteranno in corrispondenza della barriera alla fine del `single` costrutto. Se gli altri thread possono continuare senza attendere il thread che esegue la `single` sezione, `nowait` è possibile specificare una clausola sulla `single` direttiva.
 
 ```cpp
 #pragma omp parallel
@@ -150,9 +151,9 @@ Nell'esempio seguente viene illustrato il [singolo](2-directives.md#243-single-c
 }
 ```
 
-## <a name="a10-sequential-ordering"></a>A.10 dell'ordinamento sequenziale
+## <a name="a10-sequential-ordering"></a>A. 10 ordinamento sequenziale
 
-[Le sezioni ordinate](2-directives.md#266-ordered-construct) sono utili per l'ordinamento in sequenza l'output dal lavoro eseguito in parallelo. Il seguente programma stampa gli indici in ordine sequenziale:
+Le [sezioni ordinate](2-directives.md#266-ordered-construct) sono utili per ordinare in sequenza l'output del lavoro eseguito in parallelo. Il programma seguente stampa gli indici in ordine sequenziale:
 
 ```cpp
 #pragma omp for ordered schedule(dynamic)
@@ -165,9 +166,9 @@ void work(int k)
 }
 ```
 
-## <a name="a11-a-fixed-number-of-threads"></a>A.11 un numero fisso di thread
+## <a name="a11-a-fixed-number-of-threads"></a>A. 11 numero fisso di thread
 
-Alcuni programmi si basano su un numero fisso predefinito di thread da eseguire in modo corretto.  Poiché l'impostazione predefinita per la regolazione dinamica del numero di thread è definito dall'implementazione, tali programmi possono scegliere di disattivare la funzionalità di thread dinamico e impostare il numero di thread in modo esplicito per mantenere la portabilità. Nell'esempio seguente viene illustrato come eseguire questa operazione usando [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function), e [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function):
+Alcuni programmi si basano su un numero fisso e prespecificato di thread per l'esecuzione corretta.  Poiché l'impostazione predefinita per la regolazione dinamica del numero di thread è definita dall'implementazione, tali programmi possono scegliere di disattivare la funzionalità dei thread dinamici e di impostare il numero di thread in modo esplicito per mantenete la portabilità. Nell'esempio seguente viene illustrato come eseguire questa operazione utilizzando [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function)e [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function):
 
 ```cpp
 omp_set_dynamic(0);
@@ -182,13 +183,13 @@ omp_set_num_threads(16);
 }
 ```
 
-In questo esempio, il programma viene eseguita correttamente solo se viene eseguita da 16 thread. Se l'implementazione non è in grado di supportare 16 thread, il comportamento di questo esempio è definito dall'implementazione.
+In questo esempio, il programma viene eseguito correttamente solo se viene eseguito da 16 thread. Se l'implementazione non è in grado di supportare 16 thread, il comportamento di questo esempio è definito dall'implementazione.
 
-Il numero di thread in esecuzione un'area parallela rimanga costante durante un'area parallela, indipendentemente dal fatto l'impostazione dinamico dei thread. Il meccanismo di thread dinamico determina il numero di thread da usare all'inizio dell'area parallela e mantiene il costante per la durata dell'area.
+Il numero di thread che eseguono un'area parallela rimane costante durante un'area parallela, indipendentemente dall'impostazione dei thread dinamici. Il meccanismo dei thread dinamici determina il numero di thread da usare all'inizio dell'area parallela e lo mantiene costante per la durata dell'area.
 
-## <a name="a12-the-atomic-directive"></a>A.12 della direttiva atomic
+## <a name="a12-the-atomic-directive"></a>A. 12 la direttiva Atomic
 
-Nell'esempio seguente consente di evitare situazioni di race condition (aggiornamenti simultanei di un elemento della *x* dal numero di thread) utilizzando il [atomica](2-directives.md#264-atomic-construct) direttiva:
+Nell'esempio seguente viene evitata la race condition (aggiornamenti simultanei di un elemento di *x* per molti thread) tramite la direttiva [Atomic](2-directives.md#264-atomic-construct) :
 
 ```cpp
 #pragma omp parallel for shared(x, y, index, n)
@@ -200,13 +201,13 @@ Nell'esempio seguente consente di evitare situazioni di race condition (aggiorna
     }
 ```
 
-Il vantaggio dell'uso di `atomic` direttiva in questo esempio è quello di consentire gli aggiornamenti di due diversi elementi di x in parallelo. Se un [critici](2-directives.md#262-critical-construct) direttiva viene utilizzata, invece, tutti gli aggiornamenti agli elementi del *x* vengono eseguite in serie (ma non in qualsiasi ordine garantito).
+Il vantaggio dell'utilizzo della `atomic` direttiva in questo esempio è che consente l'esecuzione in parallelo degli aggiornamenti di due diversi elementi di x. Se invece viene utilizzata una direttiva [critica](2-directives.md#262-critical-construct) , tutti gli aggiornamenti agli elementi di *x* vengono eseguiti in modo seriale (anche se non in un ordine garantito).
 
-Il `atomic` direttiva si applica solo all'istruzione C o C++ lo segue immediatamente.  Di conseguenza, gli elementi della *y* non vengono aggiornati in modo atomico in questo esempio.
+La `atomic` direttiva si applica solo all'istruzione C o C++ che la segue immediatamente.  Di conseguenza, gli elementi di *y* non vengono aggiornati in modo atomico in questo esempio.
 
-## <a name="a13-a-flush-directive-with-a-list"></a>A.13 una direttiva flush con un elenco
+## <a name="a13-a-flush-directive-with-a-list"></a>A. 13 una direttiva flush con un elenco
 
-L'esempio seguente usa il `flush` direttiva per la sincronizzazione da punto a punto degli oggetti specifici tra coppie di thread:
+Nell'esempio seguente viene usata la `flush` direttiva per la sincronizzazione da punto a punto di oggetti specifici tra coppie di thread:
 
 ```cpp
 int   sync[NUMBER_OF_THREADS];
@@ -240,9 +241,9 @@ float work[NUMBER_OF_THREADS];
 }
 ```
 
-## <a name="a14-a-flush-directive-without-a-list"></a>A.14 una direttiva flush senza elenco
+## <a name="a14-a-flush-directive-without-a-list"></a>A. 14 una direttiva di scaricamento senza elenco
 
-Nell'esempio seguente (per [sezione 2.6.5](2-directives.md#265-flush-directive)) consente di distinguere gli oggetti condivisi interessati da un `flush` direttiva con alcun elenco dagli oggetti condivisi che non sono interessati:
+L'esempio seguente (per la [sezione 2.6.5](2-directives.md#265-flush-directive)) distingue gli oggetti condivisi interessati da una `flush` direttiva senza elenco dagli oggetti condivisi che non sono interessati:
 
 ```cpp
 // omp_flush_without_list.c
@@ -297,9 +298,9 @@ int main()
 }
 ```
 
-## <a name="a15-the-number-of-threads-used"></a>A.15 il numero di thread utilizzati
+## <a name="a15-the-number-of-threads-used"></a>A. 15 numero di thread utilizzati
 
-Si consideri l'esempio seguente non corretto (per [sezione 3.1.2](3-run-time-library-functions.md#312-omp_get_num_threads-function)):
+Si consideri l'esempio errato seguente (per la [sezione 3.1.2](3-run-time-library-functions.md#312-omp_get_num_threads-function)):
 
 ```cpp
 np = omp_get_num_threads(); // misplaced
@@ -308,9 +309,9 @@ np = omp_get_num_threads(); // misplaced
         work(i);
 ```
 
-Il `omp_get_num_threads()` chiamata restituisce 1 nella sezione del codice, seriale così *np* sarà sempre uguale a 1 nell'esempio precedente. Per determinare il numero di thread che verranno distribuiti per l'area parallela, la chiamata deve essere all'interno dell'area parallela.
+La `omp_get_num_threads()` chiamata restituisce 1 nella sezione seriale del codice, quindi *NP* sarà sempre uguale a 1 nell'esempio precedente. Per determinare il numero di thread che verranno distribuiti per l'area parallela, la chiamata deve trovarsi all'interno dell'area parallela.
 
-Nell'esempio seguente illustra come riscrivere questo programma senza includere una query per il numero di thread:
+Nell'esempio seguente viene illustrato come riscrivere il programma senza includere una query per il numero di thread:
 
 ```cpp
 #pragma omp parallel private(i)
@@ -320,9 +321,9 @@ Nell'esempio seguente illustra come riscrivere questo programma senza includere 
 }
 ```
 
-## <a name="a16-locks"></a>A.16 blocchi
+## <a name="a16-locks"></a>A. 16 blocchi
 
-Nell'esempio seguente (per [sezione 3.2](3-run-time-library-functions.md#32-lock-functions)), l'argomento alle funzioni di blocco deve avere tipo `omp_lock_t`, e che non è necessario lo scaricamento.  Le funzioni di blocco causano il thread sia inattivo durante l'attesa della voce per la prima sezione critica, ma di eseguire altre attività durante l'attesa di ingresso al secondo.  Il `omp_set_lock` blocchi di funzione, ma la `omp_test_lock` non di funzione, consentendo il lavoro in `skip()` da eseguire.
+Nell'esempio seguente (per la [sezione 3,2](3-run-time-library-functions.md#32-lock-functions)), l'argomento per le funzioni di blocco deve avere il tipo `omp_lock_t` e non è necessario scaricarlo.  Le funzioni di blocco comportano l'inattività dei thread in attesa dell'immissione nella prima sezione critica, ma per eseguire altre operazioni in attesa di una voce al secondo.  La `omp_set_lock` funzione si blocca, ma la `omp_test_lock` funzione non consente di eseguire il lavoro `skip()` .
 
 ```cpp
 // omp_using_locks.c
@@ -360,9 +361,9 @@ int main() {
 }
 ```
 
-## <a name="a17-nestable-locks"></a>A.17 blocchi annidabili
+## <a name="a17-nestable-locks"></a>A. 17 blocchi annidabili
 
-Nell'esempio seguente (per [sezione 3.2](3-run-time-library-functions.md#32-lock-functions)) viene illustrato come utilizzare un blocco annidabile per sincronizzare gli aggiornamenti a una struttura di intera e a uno dei relativi membri.
+Nell'esempio seguente (per la [sezione 3,2](3-run-time-library-functions.md#32-lock-functions)) viene illustrato come è possibile utilizzare un blocco annidabile per sincronizzare gli aggiornamenti sia con una struttura intera che con uno dei relativi membri.
 
 ```cpp
 #include <omp.h>
@@ -405,9 +406,9 @@ void f(pair *p)
 }
 ```
 
-## <a name="a18-nested-for-directives"></a>Nested A.18 direttive for
+## <a name="a18-nested-for-directives"></a>A. 18 direttive for annidate
 
-L'esempio seguente `for` [annidamento di direttive](2-directives.md#29-directive-nesting) è conforme perché l'interno ed esterno `for` direttive associare alle diverse aree parallele:
+L'esempio seguente di `for` [annidamento delle direttive](2-directives.md#29-directive-nesting) è conforme perché le direttive Inner ed outer sono `for` associate a aree parallele diverse:
 
 ```cpp
 #pragma omp parallel default(shared)
@@ -425,7 +426,7 @@ L'esempio seguente `for` [annidamento di direttive](2-directives.md#29-directive
 }
 ```
 
-È anche compatibile con una variante seguente dell'esempio precedente:
+È inoltre conforme la variante seguente dell'esempio precedente:
 
 ```cpp
 #pragma omp parallel default(shared)
@@ -448,11 +449,11 @@ void work1(int i, int n)
 }
 ```
 
-## <a name="a19-examples-showing-incorrect-nesting-of-work-sharing-directives"></a>A.19 esempi sull'annidamento non corretto di condivisione del lavoro direttive
+## <a name="a19-examples-showing-incorrect-nesting-of-work-sharing-directives"></a>A. 19 esempi che illustrano l'annidamento non corretto di direttive per la condivisione del lavoro
 
-Gli esempi in questa sezione illustrano le [annidamento di direttive](2-directives.md#29-directive-nesting) regole.
+Negli esempi di questa sezione vengono illustrate le regole di [annidamento delle direttive](2-directives.md#29-directive-nesting) .
 
-Nell'esempio seguente non è conforme perché l'interno ed esterno `for` direttive sono annidate e associare allo stesso `parallel` direttiva:
+L'esempio seguente non è conforme perché le direttive Inner ed Outer `for` sono annidate e vengono associate alla stessa `parallel` direttiva:
 
 ```cpp
 void wrong1(int n)
@@ -470,7 +471,7 @@ void wrong1(int n)
 }
 ```
 
-La seguente versione dinamicamente nidificata dell'esempio precedente è anche conforme:
+Anche la seguente versione dinamicamente nidificata dell'esempio precedente è non conforme:
 
 ```cpp
 void wrong2(int n)
@@ -493,7 +494,7 @@ void work1(int i, int n)
 }
 ```
 
-Nell'esempio seguente non è conforme perché il `for` e `single` direttive sono nidificate e vengono associate alla stessa area parallela:
+L'esempio seguente non è conforme perché le `for` `single` direttive e sono annidate e vengono associate alla stessa area parallela:
 
 ```cpp
 void wrong3(int n)
@@ -510,7 +511,7 @@ void wrong3(int n)
 }
 ```
 
-Nell'esempio seguente non è conforme perché una `barrier` direttiva all'interno di un `for` può causare deadlock:
+L'esempio seguente non è conforme perché una `barrier` direttiva all'interno di `for` può causare un deadlock:
 
 ```cpp
 void wrong4(int n)
@@ -528,7 +529,7 @@ void wrong4(int n)
 }
 ```
 
-Nell'esempio seguente non è conforme perché il `barrier` comporta un deadlock dovuto al fatto che un solo thread alla volta può accedere alla sezione critica:
+L'esempio seguente non è conforme perché il `barrier` risultato è un deadlock a causa del fatto che un solo thread alla volta può entrare nella sezione critica:
 
 ```cpp
 void wrong5()
@@ -545,7 +546,7 @@ void wrong5()
 }
 ```
 
-Nell'esempio seguente non è conforme perché il `barrier` comporta un deadlock dovuto al fatto che solo un thread esegue il `single` sezione:
+L'esempio seguente non è conforme perché il `barrier` risultato è un deadlock a causa del fatto che un solo thread esegue la `single` sezione:
 
 ```cpp
 void wrong6()
@@ -564,11 +565,11 @@ void wrong6()
 }
 ```
 
-## <a name="a20-bind-barrier-directives"></a>Direttive A.20 associazione barrier
+## <a name="a20-bind-barrier-directives"></a>A. 20 direttive per la barriera di associazione
 
-L'associazione di direttive le regole di chiamata per un `barrier` direttiva a cui associarsi di inclusione più vicina `parallel` direttiva. Per ulteriori informazioni sull'associazione di direttive, vedere [sezione 2.8](2-directives.md#28-directive-binding).
+Le regole di associazione della direttiva chiamano una `barrier` direttiva per l'associazione alla direttiva di inclusione più vicina `parallel` . Per ulteriori informazioni sull'associazione di direttive, vedere la [sezione 2,8](2-directives.md#28-directive-binding).
 
-Nell'esempio seguente, la chiamata da *principale* al *sub2* è conforme perché il `barrier` (in *sub3*) associa all'area parallela in *sub2* . La chiamata da *principale* al *sub1* è conforme perché il `barrier` associa all'area parallela nella subroutine *sub2*.  La chiamata da *principale* al *sub3* è conforme perché il `barrier` non viene associato a un'area parallela e viene ignorato. Inoltre, il `barrier` Sincronizza solo il team di thread in tale area contenitore e non tutti i thread creati nella *sub1*.
+Nell'esempio seguente la chiamata da *Main* a *sub2* è conforme perché `barrier` (in *SUB3*) viene associata all'area parallela in *sub2*. La chiamata da *Main* a *Sub1* è conforme perché viene `barrier` associata all'area parallela in *sub2* subroutine.  La chiamata da *Main* a *SUB3* è conforme perché `barrier` non è associata ad alcuna area parallela e viene ignorata. Inoltre, `barrier` Sincronizza solo il team dei thread nell'area parallela di inclusione e non tutti i thread creati in *Sub1*.
 
 ```cpp
 int main()
@@ -603,9 +604,9 @@ void sub3(int n)
 }
 ```
 
-## <a name="a21-scope-variables-with-the-private-clause"></a>Variabili di ambito A.21 con la clausola private
+## <a name="a21-scope-variables-with-the-private-clause"></a>A. 21 variabili di ambito con la clausola private
 
-I valori della `i` e `j` nell'esempio seguente non sono definiti in uscita dall'area parallela:
+I valori di `i` e `j` nell'esempio seguente non sono definiti all'uscita dall'area parallela:
 
 ```cpp
 int i, j;
@@ -619,11 +620,11 @@ j = 2;
 printf_s("%d %d\n", i, j);
 ```
 
-Per altre informazioni sul `private` clausola, vedere [sezione 2.7.2.1](2-directives.md#2721-private).
+Per ulteriori informazioni sulla `private` clausola, vedere la [sezione 2.7.2.1](2-directives.md#2721-private).
 
-## <a name="a22-the-defaultnone-clause"></a>A.22 la clausola default (None)
+## <a name="a22-the-defaultnone-clause"></a>A. 22 la clausola default (None)
 
-Nell'esempio seguente consente di distinguere le variabili che sono interessate dal `default(none)` clausola dalle variabili che non sono:
+Nell'esempio seguente vengono distinte le variabili interessate dalla `default(none)` clausola dalle variabili che non sono:
 
 ```cpp
 // openmp_using_clausedefault.c
@@ -658,15 +659,15 @@ void fun(int a) {
 }
 ```
 
-Per altre informazioni sul `default` clausola, vedere [sezione 2.7.2.5](2-directives.md#2725-default).
+Per ulteriori informazioni sulla `default` clausola, vedere la [sezione 2.7.2.5](2-directives.md#2725-default).
 
-## <a name="a23-examples-of-the-ordered-directive"></a>A.23 esempi della direttiva ordered
+## <a name="a23-examples-of-the-ordered-directive"></a>A. 23 esempi della direttiva ordered
 
-È possibile disporre di molte sezioni ordinate con un `for` specificato con il `ordered` clausola. Nel primo esempio non è conforme perché l'API consente di specificare la regola seguente:
+È possibile disporre di molte sezioni ordinate con un `for` oggetto specificato con la `ordered` clausola. Il primo esempio è non conforme perché l'API specifica la regola seguente:
 
-"Un'iterazione di un ciclo con un `for` costrutto non deve eseguire lo stesso `ordered` direttiva più di una sola volta e non deve eseguire più `ordered` direttiva." (Vedere [sezione 2.6.6](2-directives.md#266-ordered-construct).)
+"Un'iterazione di un ciclo con un `for` costrutto non deve eseguire più di una volta la stessa `ordered` direttiva e non deve eseguire più di una `ordered` direttiva". Vedere la [sezione 2.6.6](2-directives.md#266-ordered-construct).
 
-In questo esempio non conforme, tutte le iterazioni vengono eseguite due sezioni ordinate:
+In questo esempio non conforme, tutte le iterazioni eseguono due sezioni ordinate:
 
 ```cpp
 #pragma omp for ordered
@@ -682,7 +683,7 @@ for (i=0; i<n; i++)
 }
 ```
 
-Nel seguente esempio conforme un `for` con più di una sezione ordinata:
+Il seguente esempio conforme Mostra un oggetto `for` con più di una sezione ordinata:
 
 ```cpp
 #pragma omp for ordered
@@ -706,9 +707,9 @@ for (i=0; i<n; i++)
 }
 ```
 
-## <a name="a24-example-of-the-private-clause"></a>A.24 esempio della clausola private
+## <a name="a24-example-of-the-private-clause"></a>A. 24 esempio della clausola private
 
-Il [privato](2-directives.md#2721-private) clausola di un'area parallela è attivo solo per l'ambito lessicale dell'area, non per l'estensione dell'area dinamica.  Pertanto, nell'esempio seguente, indipendentemente dall'utilizzo della variabile *una* all'interno di `for` ciclo nella routine *f* fa riferimento a una copia privata del *un*, mentre un utilizzo in routine *g* fa riferimento a globale *un*.
+La clausola [private](2-directives.md#2721-private) di un'area parallela è valida solo per l'extent lessicale dell'area, non per l'extent dinamico dell'area.  Nell'esempio seguente, quindi, qualsiasi uso della variabile *a* all'interno del ciclo della `for` routine *f* fa riferimento a una copia privata di *un oggetto*, mentre un utilizzo nella routine *g* si riferisce a Global *a*.
 
 ```cpp
 int a;
@@ -733,9 +734,9 @@ void g(int k, int n)
 }
 ```
 
-## <a name="a25-examples-of-the-copyprivate-data-attribute-clause"></a>A.25 esempi della clausola di attributi di dati copyprivate
+## <a name="a25-examples-of-the-copyprivate-data-attribute-clause"></a>A. 25 esempi della clausola copyprivate Data Attribute
 
-**Esempio 1:** Il [copyprivate](2-directives.md#2728-copyprivate) clausola può essere utilizzata per trasmettere i valori acquisiti da un thread singolo direttamente a tutte le istanze delle variabili private in altri thread.
+**Esempio 1:** La clausola [copyprivate](2-directives.md#2728-copyprivate) può essere usata per trasmettere i valori acquisiti da un singolo thread direttamente a tutte le istanze delle variabili private negli altri thread.
 
 ```cpp
 float x, y;
@@ -755,9 +756,9 @@ void init( )
 }
 ```
 
-Se routine *init* viene chiamato da un'area seriale, il comportamento non è influenzato dalla presenza delle direttive. Dopo la chiamata per il *get_values* routine è stata eseguita da un solo thread, nessun thread lascia il costrutto finché gli oggetti privati designati dal *una*, *b*, *x*, e *y* diventano definiti in tutti i thread con i valori letti.
+Se la routine *init* viene chiamata da un'area seriale, il comportamento non è influenzato dalla presenza delle direttive. Dopo che la chiamata al *get_Values* routine è stata eseguita da un thread, nessun thread lascia il costrutto finché gli oggetti privati designati da *a*, *b*, *x* e *y* in tutti i thread non vengono definiti con i valori letti.
 
-**Esempio 2:** Contrariamente all'esempio precedente, si supponga che deve essere eseguita la lettura da un thread specifico, ad esempio il thread master. In questo caso, il `copyprivate` clausola non può essere utilizzata per eseguire direttamente la trasmissione, ma può essere utilizzato per fornire l'accesso a un oggetto condiviso temporaneo.
+**Esempio 2:** Diversamente dall'esempio precedente, si supponga che la lettura debba essere eseguita da un thread specifico, ad esempio il thread master. In questo caso, la `copyprivate` clausola non può essere utilizzata per eseguire direttamente la trasmissione, ma può essere utilizzata per fornire l'accesso a un oggetto condiviso temporaneo.
 
 ```cpp
 float read_next( )
@@ -788,7 +789,7 @@ float read_next( )
 }
 ```
 
-**Esempio 3:** Si supponga che il numero di oggetti di blocco richiesti in un'area parallela non è possibile determinare facilmente prima di poterlo. Il `copyprivate` clausola può essere utilizzata per fornire l'accesso agli oggetti di blocco condiviso che vengono allocate in tale area parallela.
+**Esempio 3:** Si supponga che il numero di oggetti Lock necessari in un'area parallela non possa essere facilmente determinato prima di immetterlo. La `copyprivate` clausola può essere usata per fornire l'accesso agli oggetti di blocco condivisi allocati all'interno dell'area parallela.
 
 ```cpp
 #include <omp.h>
@@ -807,9 +808,9 @@ omp_lock_t *new_lock()
 }
 ```
 
-## <a name="a26-the-threadprivate-directive"></a>A.26 della direttiva threadprivate
+## <a name="a26-the-threadprivate-directive"></a>A. 26 Direttiva threadprivate
 
-Gli esempi seguenti illustrano come usare il [threadprivate](2-directives.md#271-threadprivate-directive) direttiva per fornire un contatore separato a ogni thread.
+Gli esempi seguenti illustrano come usare la direttiva [threadprivate](2-directives.md#271-threadprivate-directive) per assegnare a ogni thread un contatore separato.
 
 ### <a name="example-1"></a>Esempio 1
 
@@ -836,12 +837,12 @@ int sub()
 }
 ```
 
-## <a name="a27-c99-variable-length-arrays"></a>A.27 matrici di lunghezza variabile C99
+## <a name="a27-c99-variable-length-arrays"></a>A. 27 matrici di lunghezza variabile C99
 
-L'esempio seguente illustra come usare matrici di lunghezza variabile C99 (VLAs) in un [firstprivate](2-directives.md#2722-firstprivate) direttiva.
+Nell'esempio seguente viene illustrato come usare il metodo VLAs (C99 variable length Array) in una direttiva [firstprivate](2-directives.md#2722-firstprivate) .
 
 > [!NOTE]
-> Matrici di lunghezza variabile non sono attualmente supportate in Visual C++.
+> Le matrici a lunghezza variabile non sono attualmente supportate in Visual C++.
 
 ```cpp
 void f(int m, int C[m][m])
@@ -853,9 +854,9 @@ void f(int m, int C[m][m])
 }
 ```
 
-## <a name="a28-the-numthreads-clause"></a>A.28 della clausola num_threads
+## <a name="a28-the-num_threads-clause"></a>A. 28 la clausola num_threads
 
-Nell'esempio seguente viene illustrato il [num_threads](2-directives.md#23-parallel-construct) clausola. L'area parallela viene eseguita con un massimo di 10 thread.
+Nell'esempio seguente viene illustrata la clausola [num_threads](2-directives.md#23-parallel-construct) . L'area parallela viene eseguita con un massimo di 10 thread.
 
 ```cpp
 #include <omp.h>
@@ -870,9 +871,9 @@ main()
 }
 ```
 
-## <a name="a29-work-sharing-constructs-inside-a-critical-construct"></a>A.29 costrutti di condivisione del lavoro in un costrutto critical
+## <a name="a29-work-sharing-constructs-inside-a-critical-construct"></a>A. 29 costrutti di condivisione del lavoro all'interno di un costrutto critico
 
-Nell'esempio seguente viene illustrato come utilizzare un costrutto di condivisione del lavoro all'interno di un `critical` costruire. In questo esempio è conforme perché la condivisione del lavoro costruire e `critical` costrutto non associare alla stessa area parallela.
+Nell'esempio seguente viene illustrato l'utilizzo di un costrutto di condivisione del lavoro all'interno di un `critical` costrutto. Questo esempio è conforme perché il costrutto di condivisione del lavoro e il `critical` costrutto non vengono associati alla stessa area parallela.
 
 ```cpp
 void f()
@@ -897,9 +898,9 @@ void f()
 }
 ```
 
-## <a name="a30-reprivatization"></a>A.30 riprivatizzazione
+## <a name="a30-reprivatization"></a>A. 30 riprivatizzazione
 
-Nell'esempio seguente viene illustrato il riprivatizzazione delle variabili. Variabili private possono essere contrassegnate `private` nuovamente in un'istruzione nidificata. Non è necessario condividere tali variabili nell'area parallela che lo contiene.
+Nell'esempio seguente viene illustrata la riprivatizzazione delle variabili. Le variabili private possono essere contrassegnate `private` nuovamente in una direttiva nidificata. Non è necessario condividere tali variabili nell'area parallela di inclusione.
 
 ```cpp
 int i, a;
@@ -915,9 +916,9 @@ int i, a;
 }
 ```
 
-## <a name="a31-thread-safe-lock-functions"></a>A.31 funzioni di blocco Thread-safe
+## <a name="a31-thread-safe-lock-functions"></a>A. 31 funzioni di blocco thread-safe
 
-Il seguente C++ riportato di seguito viene illustrato come inizializzare una matrice di blocchi in un'area parallela usando [funzioni omp_init_lock](3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions).
+Nell'esempio C++ riportato di seguito viene illustrato come inizializzare una matrice di blocchi in un'area parallela utilizzando [omp_init_lock](3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions).
 
 ```cpp
 // A_13_omp_init_lock.cpp

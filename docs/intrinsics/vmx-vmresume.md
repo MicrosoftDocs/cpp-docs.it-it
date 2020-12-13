@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __vmx_vmresume'
 title: __vmx_vmresume
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - __vmx_vmresume intrinsic
 - VMRESUME instruction
 ms.assetid: 233fe1b6-c727-493a-a484-1b2363732281
-ms.openlocfilehash: 34d0e6814dd00da07076e644513400bd5be36bd3
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 35c1ca7eeca847b14d16c451752a186c63a59749
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219448"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343778"
 ---
 # <a name="__vmx_vmresume"></a>__vmx_vmresume
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Riprende l'operazione non radice VMX usando la struttura di controllo della macchina virtuale corrente (VMCS, Virtual machine Control Structure).
 
@@ -35,7 +36,7 @@ unsigned char __vmx_vmresume(
 |1|Operazione non riuscita con stato esteso disponibile in `VM-instruction error field` della VMCS corrente.|
 |2|Operazione non riuscita senza stato disponibile.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Un'applicazione può eseguire un'operazione di accesso VM con la funzione [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) o `__vmx_vmresume` . La funzione `__vmx_vmlaunch` può essere usata solo con una VMCS il cui stato di avvio è `Clear`e la funzione `__vmx_vmresume` può essere usata solo con una VMCS il cui stato di avvio è `Launched`. Di conseguenza, usare la funzione [__vmx_vmclear](../intrinsics/vmx-vmclear.md) per impostare lo stato di avvio di una VMCS su `Clear`e quindi usare la funzione `__vmx_vmlaunch` per la prima operazione di accesso VM e la funzione `__vmx_vmresume` per le operazioni di accesso VM successive.
 
@@ -43,15 +44,15 @@ La funzione `__vmx_vmresume` è equivalente alle `VMRESUME` istruzioni in lingua
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
-|`__vmx_vmresume`|X64|
+|`__vmx_vmresume`|x64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
 [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)\

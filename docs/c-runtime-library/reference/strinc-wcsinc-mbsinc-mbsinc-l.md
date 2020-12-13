@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _strinc, _wcsinc, _mbsinc, _mbsinc_l'
 title: _strinc, _wcsinc, _mbsinc, _mbsinc_l
 ms.date: 4/2/2020
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - _tcsinc function
 - tcsinc function
 ms.assetid: 54685943-8e2c-45e9-a559-2d94930dc6b4
-ms.openlocfilehash: a53102f991ec7467fd74e1997f8d5b7419b15aa1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: df42c06b0fd8ec71c56cc25b12f769906b8ee0a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919976"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344861"
 ---
 # <a name="_strinc-_wcsinc-_mbsinc-_mbsinc_l"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
 
@@ -92,7 +93,7 @@ Impostazioni locali da usare.
 
 Ognuna di queste routine restituisce un puntatore al carattere immediatamente successivo a quello *corrente*.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_mbsinc** restituisce un puntatore al primo byte del carattere multibyte che segue immediatamente l' *oggetto corrente*. **_mbsinc** riconosce le sequenze di caratteri multibyte in base alla tabella [codici multibyte](../../c-runtime-library/code-pages.md) attualmente in uso. **_mbsinc_l** è identico con la differenza che usa invece il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
@@ -116,7 +117,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strdec, _wcsdec, _mbsdec, _mbsdec_l](strdec-wcsdec-mbsdec-mbsdec-l.md)<br/>

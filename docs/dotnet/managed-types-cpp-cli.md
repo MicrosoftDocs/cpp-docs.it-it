@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: tipi gestiti (C++/CLI)'
 title: Tipi gestiti (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -17,18 +18,18 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: c542151bda780e5306db35049d988e6514fffd62
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ccf126152216cfddb9a78cb5abc608f23cc3ba80
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225605"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344458"
 ---
 # <a name="managed-types-ccli"></a>Tipi gestiti (C++/CLI)
 
 Visual C++ consente l'accesso alle funzionalità .NET tramite tipi gestiti, che forniscono supporto per le funzionalità del Common Language Runtime e sono soggette ai vantaggi e alle restrizioni del runtime.
 
-## <a name="managed-types-and-the-main-function"></a><a name="main_functions"></a>Tipi gestiti e funzione Main
+## <a name="managed-types-and-the-main-function"></a><a name="main_functions"></a> Tipi gestiti e funzione Main
 
 Quando si scrive un'applicazione utilizzando **`/clr`** , gli argomenti della funzione **Main ()** non possono essere di un tipo gestito.
 
@@ -40,7 +41,7 @@ Un esempio di firma corretta è:
 int main(int, char*[], char*[]) {}
 ```
 
-## <a name="net-framework-equivalents-to-c-native-types"></a><a name="dotnet"></a>.NET Framework equivalenti ai tipi nativi C++
+## <a name="net-framework-equivalents-to-c-native-types"></a><a name="dotnet"></a> .NET Framework equivalenti ai tipi nativi C++
 
 Nella tabella seguente vengono illustrate le parole chiave per i tipi di Visual C++ predefiniti, ovvero alias di tipi predefiniti nello spazio dei nomi **System** .
 
@@ -51,18 +52,18 @@ Nella tabella seguente vengono illustrate le parole chiave per i tipi di Visual 
 |**`signed char`** |<xref:System.SByte?displayProperty=nameWithType>|
 |**`unsigned char`**|<xref:System.Byte?displayProperty=nameWithType>|
 |**`wchar_t`**|<xref:System.Char?displayProperty=nameWithType>|
-|**`short`** e**`signed short`**|<xref:System.Int16?displayProperty=nameWithType>|
+|**`short`** e **`signed short`**|<xref:System.Int16?displayProperty=nameWithType>|
 |**`unsigned short`**|<xref:System.UInt16?displayProperty=nameWithType>|
-|**`int`**, **`signed int`** , **`long`** e**`signed long`**|<xref:System.Int32?displayProperty=nameWithType>|
-|**`unsigned int`** e**`unsigned long`**|<xref:System.UInt32?displayProperty=nameWithType>|
-|**`__int64`** e**`signed __int64`**|<xref:System.Int64?displayProperty=nameWithType>|
+|**`int`**, **`signed int`** , **`long`** e **`signed long`**|<xref:System.Int32?displayProperty=nameWithType>|
+|**`unsigned int`** e **`unsigned long`**|<xref:System.UInt32?displayProperty=nameWithType>|
+|**`__int64`** e **`signed __int64`**|<xref:System.Int64?displayProperty=nameWithType>|
 |**`unsigned __int64`**|<xref:System.UInt64?displayProperty=nameWithType>|
 |**`float`**|<xref:System.Single?displayProperty=nameWithType>|
-|**`double`** e**`long double`**|<xref:System.Double?displayProperty=nameWithType>|
+|**`double`** e **`long double`**|<xref:System.Double?displayProperty=nameWithType>|
 
 Per ulteriori informazioni sull'opzione del compilatore per impostazione predefinita su **`signed char`** o **`unsigned char`** , vedere [ `/J` (il tipo predefinito **`char`** è **`unsigned`** )](../build/reference/j-default-char-type-is-unsigned.md).
 
-## <a name="version-issues-for-value-types-nested-in-native-types"></a><a name="version_issues"></a>Problemi di versione per tipi di valore annidati in tipi nativi
+## <a name="version-issues-for-value-types-nested-in-native-types"></a><a name="version_issues"></a> Problemi di versione per tipi di valore annidati in tipi nativi
 
 Si consideri un componente assembly con firma (nome sicuro) utilizzato per compilare un assembly client. Il componente contiene un tipo di valore usato nel client come tipo per un membro di un'Unione nativa, una classe o una matrice. Se una versione futura del componente modifica la dimensione o il layout del tipo di valore, è necessario ricompilare il client.
 
@@ -127,7 +128,7 @@ S.i = 11
 
 Tuttavia, se si aggiunge un altro membro a `struct S` in nested_value_types. cpp, ad esempio, `double d;` e si ricompila il componente senza ricompilare il client, il risultato è un'eccezione non gestita (di tipo <xref:System.IO.FileLoadException?displayProperty=fullName> ).
 
-## <a name="how-to-test-for-equality"></a><a name="test_equality"></a>Procedura: verificare l'uguaglianza
+## <a name="how-to-test-for-equality"></a><a name="test_equality"></a> Procedura: verificare l'uguaglianza
 
 Nell'esempio seguente, un test di uguaglianza che usa Estensioni gestite per C++ si basa su ciò che fanno riferimento gli handle.
 
@@ -152,7 +153,7 @@ IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,
                                                                string)
 ```
 
-## <a name="how-to-diagnose-and-fix-assembly-compatibility-problems"></a><a name="diagnose_fix"></a>Procedura: diagnosticare e correggere i problemi di compatibilità degli assembly
+## <a name="how-to-diagnose-and-fix-assembly-compatibility-problems"></a><a name="diagnose_fix"></a> Procedura: diagnosticare e correggere i problemi di compatibilità degli assembly
 
 In questo argomento viene illustrato cosa può accadere quando la versione di un assembly a cui si fa riferimento in fase di compilazione non corrisponde alla versione dell'assembly a cui si fa riferimento in fase di esecuzione e come evitare il problema.
 
@@ -227,7 +228,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Programmazione .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 [Interoperabilità con altri linguaggi .NET (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: strlwr, wcslwr'
 title: strlwr, wcslwr
 ms.date: 12/16/2019
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - strlwr function
 - wcslwr function
 ms.assetid: b9274824-4365-4674-b656-823c89653656
-ms.openlocfilehash: ff730d6bea6619c50fefb407a7a69c50e1a06af0
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 522afe9af4da37fdf6f1a22335558edcf24cebee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301080"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344796"
 ---
 # <a name="strlwr-wcslwr"></a>strlwr, wcslwr
 

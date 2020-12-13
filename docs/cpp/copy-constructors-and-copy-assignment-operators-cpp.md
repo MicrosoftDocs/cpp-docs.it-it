@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: costruttori di copia e operatori di assegnazione di copia (C++)'
 title: Costruttori di copia e operatori di assegnazione di copia (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - copying objects
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
-ms.openlocfilehash: faf1a94e27f5a0a435d0a906661444f67709628e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 881470c92e0261dc5c4cd63876d7cb59fcc68fef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221796"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344575"
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>Costruttori di copia e operatori di assegnazione di copia (C++)
 

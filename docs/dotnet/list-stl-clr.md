@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: List (STL/CLR)'
 title: list (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -108,12 +109,12 @@ helpviewer_keywords:
 - operator>(list) member [STL/CLR]
 - operator>=(list) member [STL/CLR]
 ms.assetid: a70c45c8-a257-4f6b-8434-b27ff6685bac
-ms.openlocfilehash: 9ef9f68c6bef72bf251d270b3bc8142448016a11
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: b23bc3f53cc13338e09ee8a6171d3da3b0b75d67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508722"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344510"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 
@@ -165,7 +166,7 @@ Tipo di un elemento nella sequenza controllata.
 |[list::size_type (STL/CLR)](#size_type)|Tipo di una distanza Signed tra due elementi.|
 |[list::value_type (STL/CLR)](#value_type)|Tipo di un elemento.|
 
-|Funzione membro|Descrizione|
+|Funzione membro|Description|
 |---------------------|-----------------|
 |[list::assign (STL/CLR)](#assign)|Sostituisce tutti gli elementi.|
 |[list::back (STL/CLR)](#back)|Accede all'ultimo elemento.|
@@ -221,7 +222,7 @@ Tipo di un elemento nella sequenza controllata.
 |<xref:System.Collections.Generic.ICollection%601>|Mantiene il gruppo di elementi tipizzati.|
 |IList\<Value>|Mantiene il contenitore generico.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'oggetto alloca e libera la memoria per la sequenza che controlla come singoli nodi in un elenco di collegamenti bidirezionali. Riorganizza gli elementi modificando i collegamenti tra i nodi, mai copiando il contenuto di un nodo in un altro. Ciò significa che è possibile inserire e rimuovere elementi liberamente senza disturbare gli elementi rimanenti. Pertanto, un elenco è un buon candidato per il contenitore sottostante per lo stack di classi modello ( [STL/CLR)](../dotnet/queue-stl-clr.md) o lo stack di classi modello [(STL/CLR)](../dotnet/stack-stl-clr.md).
 
@@ -265,13 +266,13 @@ Enumerazione da inserire.
 *Val*<br/>
 Valore dell'elemento da inserire.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La prima funzione membro sostituisce la sequenza controllata con una ripetizione di elementi *count* del valore *Val*. Viene usato per riempire il contenitore con tutti gli elementi con lo stesso valore.
 
 Se `InIt` è un tipo Integer, la seconda funzione membro si comporta come `assign((size_type)first, (value_type)last)` . In caso contrario, sostituisce la sequenza controllata con la sequenza [ `first` , `last` ). Viene usato per fare in modo che la sequenza controllata copi un'altra sequenza.
 
-La terza funzione membro sostituisce la sequenza controllata con la sequenza designata dal *diritto*dell'enumeratore. Viene usato per rendere la sequenza controllata una copia di una sequenza descritta da un enumeratore.
+La terza funzione membro sostituisce la sequenza controllata con la sequenza designata dal *diritto* dell'enumeratore. Viene usato per rendere la sequenza controllata una copia di una sequenza descritta da un enumeratore.
 
 ### <a name="example"></a>Esempio
 
@@ -841,9 +842,9 @@ Fine dell'intervallo da cancellare.
 *where*<br/>
 Elemento da cancellare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-La prima funzione membro rimuove l'elemento della sequenza controllata a *cui*punta. Viene usato per rimuovere un singolo elemento.
+La prima funzione membro rimuove l'elemento della sequenza controllata a *cui* punta. Viene usato per rimuovere un singolo elemento.
 
 La seconda funzione membro rimuove gli elementi della sequenza controllata nell'intervallo [`first`, `last`). Viene usato per rimuovere zero o più elementi contigui.
 
@@ -1272,7 +1273,7 @@ Valore dell'elemento da inserire.
 *where*<br/>
 Posizione del contenitore da inserire prima.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Ogni funzione membro inserisce, prima dell'elemento a cui punta la *posizione* nella sequenza controllata, una sequenza specificata dagli operandi rimanenti.
 
@@ -1438,7 +1439,7 @@ Oggetto o un intervallo da inserire.
 *Val*<br/>
 Valore dell'elemento da inserire.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il costruttore:
 
@@ -1482,7 +1483,7 @@ Il costruttore:
 
 `list(System::Collections::Generic::IEnumerable<Value>^ right);`
 
-Inizializza la sequenza controllata con la sequenza designata dal *diritto*dell'enumeratore. Viene usato per fare in modo che la sequenza controllata venga copiata da un'altra sequenza descritta da un enumeratore.
+Inizializza la sequenza controllata con la sequenza designata dal *diritto* dell'enumeratore. Viene usato per fare in modo che la sequenza controllata venga copiata da un'altra sequenza descritta da un enumeratore.
 
 ### <a name="example"></a>Esempio
 
@@ -1569,7 +1570,7 @@ Operatore di confronto per coppie di elementi.
 *Ok*<br/>
 Contenitore in cui eseguire il merge.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La prima funzione membro rimuove tutti gli elementi dalla sequenza controllata da *right* e li inserisce nella sequenza controllata. Entrambe le sequenze devono essere ordinate in precedenza in base a `operator<` --gli elementi non devono diminuire di valore durante l'avanzamento in una delle sequenze. Anche la sequenza risultante è ordinata in base a `operator<` . Usare questa funzione membro per unire due sequenze che aumentano di valore in una sequenza che aumenta anche il valore.
 
@@ -1661,7 +1662,7 @@ list<Value>% operator=(list<Value>% right);
 *Ok*<br/>
 Contenitore da copiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operatore membro copia *right* nell'oggetto, quindi restituisce **`*this`** . Viene usato per sostituire la sequenza controllata con una copia della sequenza controllata a *destra*.
 
@@ -1998,7 +1999,7 @@ void remove(value_type val);
 *Val*<br/>
 Valore dell'elemento da rimuovere.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro rimuove un elemento nella sequenza controllata per la quale `((System::Object^)val)->Equals((System::Object^)x)` è true (se presente). Viene usato per cancellare un elemento arbitrario con il valore specificato.
 
@@ -2058,7 +2059,7 @@ template<typename Pred1>
 *Pred*<br/>
 Verificare la presenza di elementi da rimuovere.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro rimuove dalla sequenza controllata (Cancella) ogni elemento per il `X` quale `pred(X)` è true. Viene usato per rimuovere tutti gli elementi che soddisfano una condizione specificata come funzione o delegato.
 
@@ -2181,7 +2182,7 @@ Nuove dimensioni della sequenza controllata.
 *Val*<br/>
 Valore dell'elemento di riempimento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le funzioni membro assicurano che [List:: size (STL/CLR)](#size) `()` restituisca *new_size*. Se la sequenza controllata deve essere più lunga, la prima funzione membro accoda elementi con valore `value_type()` , mentre la seconda funzione membro accoda gli elementi con il valore *Val*. Per rendere la sequenza controllata più breve, entrambe le funzioni membro cancellano in modo efficace l'ultimo elemento [List:: size (STL/CLR)](#size) `() -` `new_size` times. Viene usato per garantire che la sequenza controllata abbia dimensioni *new_size*, tagliando o riempiendo la sequenza controllata corrente.
 
@@ -2436,7 +2437,7 @@ template<typename Pred2>
 *Pred*<br/>
 Operatore di confronto per coppie di elementi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La prima funzione membro riorganizza gli elementi nella sequenza controllata in modo che siano ordinati in base a `operator<` --gli elementi non diminuiscano il valore durante l'avanzamento della sequenza. Questa funzione membro viene utilizzata per ordinare la sequenza in ordine crescente.
 
@@ -2512,13 +2513,13 @@ Contenitore da cui effettuare la giunzione.
 *where*<br/>
 Posizione in cui eseguire lo splicing del contenitore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-La prima funzione membro inserisce la sequenza controllata da *subito* prima dell'elemento nella sequenza controllata a *cui*punta. Rimuove anche tutti gli elementi da *destra*. ( `%right` non deve essere uguale a **`this`** ). Viene usato per unire tutti gli elenchi in un altro.
+La prima funzione membro inserisce la sequenza controllata da *subito* prima dell'elemento nella sequenza controllata a *cui* punta. Rimuove anche tutti gli elementi da *destra*. ( `%right` non deve essere uguale a **`this`** ). Viene usato per unire tutti gli elenchi in un altro.
 
-La seconda funzione membro rimuove l'elemento a cui punta *prima* nella sequenza controllata da *right* e lo inserisce prima dell'elemento nella sequenza controllata a *cui*punta. (Se `where` `==` `first` `||` `where` `== ++first`non viene apportata alcuna modifica. Viene usato per unire un singolo elemento di un elenco in un altro.
+La seconda funzione membro rimuove l'elemento a cui punta *prima* nella sequenza controllata da *right* e lo inserisce prima dell'elemento nella sequenza controllata a *cui* punta. (Se `where` `==` `first` `||` `where` `== ++first`non viene apportata alcuna modifica. Viene usato per unire un singolo elemento di un elenco in un altro.
 
-La terza funzione membro inserisce l'intervallo secondario designato da [ `first` , `last` ) dalla sequenza controllata da *subito* prima dell'elemento nella sequenza controllata a *cui*punta. Viene anche rimosso il sottointervallo originale dalla sequenza controllata da *right*. Se `right == this` , l'intervallo [ `first` , `last` ) non deve includere l'elemento a *cui*punta. Viene usato per unire una sottosequenza di zero o più elementi da un elenco a un altro.
+La terza funzione membro inserisce l'intervallo secondario designato da [ `first` , `last` ) dalla sequenza controllata da *subito* prima dell'elemento nella sequenza controllata a *cui* punta. Viene anche rimosso il sottointervallo originale dalla sequenza controllata da *right*. Se `right == this` , l'intervallo [ `first` , `last` ) non deve includere l'elemento a *cui* punta. Viene usato per unire una sottosequenza di zero o più elementi da un elenco a un altro.
 
 ### <a name="example"></a>Esempio
 
@@ -2592,7 +2593,7 @@ void swap(list<Value>% right);
 *Ok*<br/>
 Contenitore con cui scambiare il contenuto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro scambia le sequenze controllate tra **`*this`** e *right*. Esegue questa operazione in un tempo costante e non genera alcuna eccezione. Viene usato come modo rapido per scambiare il contenuto di due contenitori.
 
@@ -2707,7 +2708,7 @@ template<typename Pred2>
 *Pred*<br/>
 Operatore di confronto per coppie di elementi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La prima funzione membro rimuove dalla sequenza controllata (Cancella) tutti gli elementi che risultano uguali all'elemento precedente, se l'elemento precede l' `X` elemento `Y` e `X == Y` , la funzione membro rimuove `Y` . Viene usato per rimuovere tutti gli elementi tranne una copia di ogni sottosequenza di elementi adiacenti che risultano uguali. Si noti che se la sequenza controllata è ordinata, ad esempio chiamando [List:: Sort (STL/CLR)](#sort) `()` , la funzione membro lascia solo gli elementi con valori univoci. come indicato dal nome.
 
@@ -2768,7 +2769,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>Osservazioni
 
-Il tipo è un sinonimo del *valore*del parametro di modello.
+Il tipo è un sinonimo del *valore* del parametro di modello.
 
 ### <a name="example"></a>Esempio
 
@@ -2821,7 +2822,7 @@ Contenitore sinistro da confrontare.
 *Ok*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce `!(left == right)` . Viene usato per verificare se *Left* non è ordinato allo stesso modo di *right* quando i due elenchi vengono confrontati elemento per elemento.
 
@@ -2890,7 +2891,7 @@ Contenitore sinistro da confrontare.
 *Ok*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce true se, per la posizione più bassa `i` per la quale `!(right[i] < left[i])` è anche true `left[i] < right[i]` . In caso contrario, viene restituito `left->size() < right->size()` che viene utilizzato per verificare se *Left* viene ordinato prima del *diritto* quando i due elenchi vengono confrontati elemento per elemento.
 
@@ -2959,7 +2960,7 @@ Contenitore sinistro da confrontare.
 *Ok*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce `!(right < left)` . Viene usato per verificare se *Left* non è ordinato dopo *right* quando i due elenchi vengono confrontati elemento per elemento.
 
@@ -3028,7 +3029,7 @@ Contenitore sinistro da confrontare.
 *Ok*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce true solo se le sequenze controllate da *Left* e *right* hanno la stessa lunghezza e, per ogni posizione `i` , `left[i] ==` `right[i]` . Viene usato per verificare se *Left* è ordinato allo stesso modo di *right* quando i due elenchi vengono confrontati elemento per elemento.
 
@@ -3097,7 +3098,7 @@ Contenitore sinistro da confrontare.
 *Ok*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce `right` `<` `left` . Viene usato per verificare se *Left* viene ordinato dopo *right* quando i due elenchi vengono confrontati elemento per elemento.
 
@@ -3166,7 +3167,7 @@ Contenitore sinistro da confrontare.
 *Ok*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce `!(left` `<` `right)` . Viene usato per verificare se *Left* non è ordinato prima del *diritto* quando i due elenchi vengono confrontati elemento per elemento.
 

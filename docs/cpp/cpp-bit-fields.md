@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: campi di bit C++'
 title: Campi di bit C++
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-ms.openlocfilehash: 7c2dbb6e2932265984c8cb4e1e34504921e5d666
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3cf1eb3e3beb0da69a4c148a48e7c68e23804d1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221783"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344588"
 ---
 # <a name="c-bit-fields"></a>Campi di bit C++
 
@@ -21,7 +22,7 @@ Le classi e le strutture possono contenere membri che occupano uno spazio di arc
 
 *dichiaratore* **:** *Constant-Expression*
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il *dichiaratore* (facoltativo) è il nome con cui viene eseguito l'accesso al membro nel programma. e deve essere un valore di tipo integrale (inclusi i tipi enumerati). *Constant-Expression* specifica il numero di bit occupato dal membro nella struttura. I campi di bit anonimi, ovvero membri del campo di bit senza identificatore, possono essere utilizzati per la spaziatura interna.
 
@@ -85,6 +86,6 @@ Nell'elenco seguente vengono descritte le operazioni erronee nei campi di bit:
 
 - Inizializzazione di un oggetto non **`const`** di riferimento con un campo di bit.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classi e struct](../cpp/classes-and-structs-cpp.md)
