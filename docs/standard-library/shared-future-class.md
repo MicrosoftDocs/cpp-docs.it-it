@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: shared_future Class'
 title: Classe shared_future
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
-ms.openlocfilehash: dcc1f4bf1ce25890945f1d9e207f2363122c0ad2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 169e9c7aa906a788975852ae6a3f90a1b46213c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217493"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154084"
 ---
 # <a name="shared_future-class"></a>Classe shared_future
 
@@ -46,13 +47,13 @@ Gli oggetti `shared_future` non sono sincronizzati. La chiamata di metodi sullo 
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[shared_future](#shared_future)|Costruisce un oggetto `shared_future`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[get](#get)|Recupera il risultato archiviato nello *stato asincrono associato*.|
 |[valido](#valid)|Specifica se l'oggetto non è vuoto.|
@@ -62,7 +63,7 @@ Gli oggetti `shared_future` non sono sincronizzati. La chiamata di metodi sullo 
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[shared_future:: operator =](#op_eq)|Assegna un nuovo stato asincrono associato.|
 
@@ -72,7 +73,7 @@ Gli oggetti `shared_future` non sono sincronizzati. La chiamata di metodi sullo 
 
 **Spazio dei nomi:** std
 
-## <a name="shared_futureget"></a><a name="get"></a>shared_future:: Get
+## <a name="shared_futureget"></a><a name="get"></a> shared_future:: Get
 
 Recupera il risultato archiviato nello *stato asincrono associato*.
 
@@ -84,7 +85,7 @@ Ty& get() const;
 void get() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il risultato è un'eccezione, il metodo la genera nuovamente. In caso contrario, viene restituito il risultato.
 
@@ -94,7 +95,7 @@ Per la specializzazione parziale `shared_future<Ty&>` , il valore archiviato è 
 
 Poiché non esiste alcun valore archiviato per la specializzazione `shared_future<void>` , il metodo restituisce **`void`** .
 
-## <a name="shared_futureoperator"></a><a name="op_eq"></a>shared_future:: operator =
+## <a name="shared_futureoperator"></a><a name="op_eq"></a> shared_future:: operator =
 
 Trasferisce uno *stato asincrono associato* da un oggetto specificato.
 
@@ -112,13 +113,13 @@ Un oggetto `shared_future`.
 
 `*this`
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per il primo operatore, *right* non ha più uno stato asincrono associato dopo l'operazione.
 
 Per il secondo metodo, *right* gestisce lo stato asincrono associato.
 
-## <a name="shared_futureshared_future-constructor"></a><a name="shared_future"></a>Costruttore shared_future:: shared_future
+## <a name="shared_futureshared_future-constructor"></a><a name="shared_future"></a> Costruttore shared_future:: shared_future
 
 Costruisce un oggetto `shared_future`.
 
@@ -134,7 +135,7 @@ shared_future(const shared_future& Right);
 *Ok*\
 Oggetto [future](../standard-library/future-class.md) o `shared_future`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo costruttore costruisce un `shared_future` oggetto a cui non è *associato alcuno stato asincrono*.
 
@@ -142,7 +143,7 @@ Il secondo e il terzo costruttore costruiscono un `shared_future` oggetto e tras
 
 Il quarto costruttore crea un `shared_future` oggetto con lo stesso stato asincrono associato come *diritto*.
 
-## <a name="shared_futurevalid"></a><a name="valid"></a>shared_future:: Valid
+## <a name="shared_futurevalid"></a><a name="valid"></a> shared_future:: Valid
 
 Specifica se l'oggetto ha uno *stato asincrono associato*.
 
@@ -154,7 +155,7 @@ bool valid() noexcept;
 
 **`true`** Se l'oggetto ha uno stato asincrono associato; in caso contrario, **`false`** .
 
-## <a name="shared_futurewait"></a><a name="wait"></a>shared_future:: wait
+## <a name="shared_futurewait"></a><a name="wait"></a> shared_future:: wait
 
 Blocca il thread corrente finché lo *stato asincrono associato* non è *pronto*.
 
@@ -162,11 +163,11 @@ Blocca il thread corrente finché lo *stato asincrono associato* non è *pronto*
 void wait() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Lo stato asincrono associato è ready solo se il relativo provider asincrono ha archiviato un valore restituito o un'eccezione.
 
-## <a name="shared_futurewait_for"></a><a name="wait_for"></a>shared_future:: wait_for
+## <a name="shared_futurewait_for"></a><a name="wait_for"></a> shared_future:: wait_for
 
 Blocca il thread corrente finché lo stato asincrono associato non è *ready* o finché non è trascorso un periodo di tempo specificato.
 
@@ -185,11 +186,11 @@ Oggetto [chrono::duration](../standard-library/duration-class.md) che specifica 
 
 Oggetto [future_status](../standard-library/future-enums.md#future_status) che indica il motivo della restituzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Uno stato asincrono associato è *pronto* solo se il relativo provider asincrono ha archiviato un valore restituito o è stata archiviata un'eccezione.
 
-## <a name="shared_futurewait_until"></a><a name="wait_until"></a>shared_future:: wait_until
+## <a name="shared_futurewait_until"></a><a name="wait_until"></a> shared_future:: wait_until
 
 Blocca il thread corrente finché lo stato asincrono associato non è *ready* o fino a un determinato momento.
 
@@ -208,11 +209,11 @@ Oggetto [chrono::time_point](../standard-library/time-point-class.md) che specif
 
 Oggetto [future_status](../standard-library/future-enums.md#future_status) che indica il motivo della restituzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Lo stato asincrono associato è ready solo se il relativo provider asincrono ha archiviato un valore restituito o un'eccezione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [\<future>](../standard-library/future.md)

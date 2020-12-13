@@ -1,27 +1,28 @@
 ---
+description: 'Altre informazioni su: Introduzione alle classi di finestra ATL'
 title: Introduzione alle classi di finestra ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
 - window classes
 ms.assetid: 503efc2c-a269-495d-97cf-3fb300d52f3d
-ms.openlocfilehash: 0c3bc70b5edfb089a6276003625b876d8c553dcb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54a9d9764450025e51f9fac368a3434ca786fe09
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250480"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152724"
 ---
 # <a name="introduction-to-atl-window-classes"></a>Introduzione alle classi di finestra ATL
 
-Le classi ATL seguenti sono progettate per implementare e modifica delle finestre:
+Le classi ATL seguenti sono progettate per implementare e modificare le finestre:
 
-- [CWindow](../atl/reference/cwindow-class.md) consente di associare un handle di finestra di `CWindow` oggetto. È quindi possibile chiamare `CWindow` metodi per la modifica della finestra.
+- [CWindow](../atl/reference/cwindow-class.md) consente di aggiungere un handle di finestra all' `CWindow` oggetto. Si chiamano quindi `CWindow` i metodi per modificare la finestra.
 
-- [CWindowImpl](../atl/reference/cwindowimpl-class.md) consente di implementare una nuova finestra ed elaborare i messaggi con una mappa messaggi. È possibile creare una finestra basata su una nuova classe, superclasse una classe esistente o sottoclasse Windows una finestra esistente.
+- [CWindowImpl](../atl/reference/cwindowimpl-class.md) consente di implementare una nuova finestra ed elaborare i messaggi con una mappa messaggi. È possibile creare una finestra basata su una nuova classe di Windows, superclasse una classe esistente o una sottoclasse di una finestra esistente.
 
-- [CDialogImpl](../atl/reference/cdialogimpl-class.md) consente di implementare una finestra modale o una finestra di dialogo non modale ed elaborare messaggi con una mappa messaggi.
+- [CDialogImpl](../atl/reference/cdialogimpl-class.md) consente di implementare una finestra di dialogo modale o non modale ed elaborare i messaggi con una mappa messaggi.
 
-- [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md) è una classe che implementa una finestra con mappa dei messaggi è contenuta in un'altra classe. Usando `CContainedWindowT` consente di centralizzare l'elaborazione dei messaggi in una classe.
+- [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md) è una classe predefinita che implementa una finestra la cui mappa messaggi è contenuta in un'altra classe. L'utilizzo `CContainedWindowT` di consente di centralizzare l'elaborazione dei messaggi in una classe.
 
 - [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) consente di implementare una finestra di dialogo (modale o non modale) che ospita i controlli ActiveX.
 
@@ -29,14 +30,14 @@ Le classi ATL seguenti sono progettate per implementare e modifica delle finestr
 
 - [CAxWindow](../atl/reference/caxwindow-class.md) consente di implementare una finestra che ospita un controllo ActiveX.
 
-- [CAxWindow2T](../atl/reference/caxwindow2t-class.md) consente di implementare una finestra che ospita un controllo ActiveX con licenza.
+- [CAxWindow2T](../atl/reference/caxwindow2t-class.md) consente di implementare una finestra che ospita un controllo ActiveX concesso in licenza.
 
-Oltre alle classi di finestra specifica, ATL fornisce molte classi progettate per semplificare l'implementazione di un oggetto di finestra ATL. Le visualizzazioni sono le seguenti:
+Oltre alle classi finestra specifiche, in ATL sono disponibili diverse classi progettate per semplificare l'implementazione di un oggetto finestra ATL. Ecco quali sono:
 
 - [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) gestisce le informazioni di una nuova classe di finestra.
 
-- [CWinTraits](../atl/reference/cwintraits-class.md) e [CWinTraitsOR](../atl/reference/cwintraitsor-class.md) offrono un metodo semplice per standardizzare i tratti di un oggetto di finestra ATL.
+- [CWinTraits](../atl/reference/cwintraits-class.md) e [CWinTraitsOR](../atl/reference/cwintraitsor-class.md) forniscono un metodo semplice per standardizzare i tratti di un oggetto finestra ATL.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Classi di finestre](../atl/atl-window-classes.md)
+[Classi finestra](../atl/atl-window-classes.md)

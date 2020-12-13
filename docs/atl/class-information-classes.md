@@ -1,23 +1,24 @@
 ---
-title: Classi di informazioni di classe (ATL)
+description: 'Ulteriori informazioni su: classi di informazioni sulle classi'
+title: Classi di informazioni sulle classi (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - class information, retrieving
 ms.assetid: 39365025-f24a-41ae-87ab-4ae8ed085b98
-ms.openlocfilehash: 1d95a3444b6f592833367750a26e3a0e4cc0938e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0d35bc3362249d2117b47338cb46eace9dd78f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250644"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153343"
 ---
-# <a name="class-information-classes"></a>Classi di informazioni di classe
+# <a name="class-information-classes"></a>Classi di informazioni sulle classi
 
-La classe seguente fornisce il supporto per il recupero delle informazioni sulla classe:
+La classe seguente fornisce supporto per il recupero delle informazioni sulle classi:
 
-- [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md) fornisce l'accesso alle informazioni sul tipo. Recupera l'IID in uscita per set di eventi dell'oggetto predefinito.
+- [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md) Fornisce accesso alle informazioni sul tipo. Recupera l'IID in uscita per il set di eventi predefinito dell'oggetto.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Panoramica della classe](../atl/atl-class-overview.md)
+[Cenni preliminari sulle classi](../atl/atl-class-overview.md)

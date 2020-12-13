@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: shared_ptr Class'
 title: Classe shared_ptr
 ms.date: 07/29/2019
 f1_keywords:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - std::shared_ptr [C++], unique
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
-ms.openlocfilehash: e41c76e7bd3e77b34ad38d3998ee1d38cdc2fee4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 973bda9cb769eff339a02cbc43838e8c94516408
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846212"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154045"
 ---
 # <a name="shared_ptr-class"></a>Classe shared_ptr
 
@@ -127,7 +128,7 @@ Più thread possono leggere e scrivere contemporaneamente oggetti `shared_ptr` d
 
 ## <a name="members"></a>Membri
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 | **Costruttori** | |
 |[shared_ptr](#shared_ptr)|Costruisce un oggetto `shared_ptr`.|
@@ -157,7 +158,7 @@ typedef T element_type;                  // before C++17
 using element_type = remove_extent_t<T>; // C++17
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il `element_type` tipo è un sinonimo del parametro di modello `T` .
 
@@ -192,7 +193,7 @@ Ottiene l'indirizzo della risorsa posseduta.
 element_type* get() const noexcept;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce l'indirizzo della risorsa posseduta. Se l'oggetto non è il proprietario di una risorsa, restituisce 0.
 
@@ -230,7 +231,7 @@ Verifica se una risorsa di proprietà esiste.
 explicit operator bool() const noexcept;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operatore restituisce un valore di **`true`** quando `get() != nullptr` ; in caso contrario, **`false`** .
 
@@ -269,7 +270,7 @@ Ottiene il valore definito.
 T& operator*() const noexcept;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operatore di riferimento indiretto restituisce `*get()`. Di conseguenza, il puntatore archiviato non deve essere null.
 
@@ -329,12 +330,12 @@ Puntatore automatico da spostare. L' `auto_ptr` Overload è deprecato in c++ 11 
 Puntatore univoco all'oggetto a cui applicare la proprietà. non *possiede alcun* oggetto dopo la chiamata.
 
 *Altri*\
-Tipo dell'oggetto a cui punta *SP*, *AP*o *up*.
+Tipo dell'oggetto a cui punta *SP*, *AP* o *up*.
 
 *Deleter*\
 Tipo dell'eliminazione dell'oggetto di proprietà, archiviato per l'eliminazione successiva dell'oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Tutti gli operatori decrementano il conteggio dei riferimenti per la risorsa attualmente di proprietà di **`*this`** e assegnano la proprietà della risorsa denominata dalla sequenza dell'operando a **`*this`** . Se il conteggio dei riferimenti scende a zero, la risorsa viene rilasciata. Se un operatore ha esito negativo, lascia **`*this`** invariato.
 
@@ -375,7 +376,7 @@ Ottiene un puntatore al valore definito.
 T* operator->() const noexcept;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operatore di selezione restituisce `get()`, in modo che l'espressione `sp->member` si comporti come `(sp.get())->member` dove `sp` è un oggetto di classe `shared_ptr<T>`. Di conseguenza, il puntatore archiviato non deve essere null e `T` deve essere una classe, una struttura o un tipo di unione con un membro `member`.
 
@@ -421,7 +422,7 @@ bool owner_before(const weak_ptr<Other>& ptr) const noexcept;
 *PTR*\
 Riferimento lvalue a un oggetto `shared_ptr` o `weak_ptr` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro del modello restituisce true se **`*this`** è ordinato prima di `ptr` .
 
@@ -467,7 +468,7 @@ Tipo dell'allocatore.
 *Alloc*\
 Allocatore da copiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Tutti gli operatori decrementano il conteggio dei riferimenti per la risorsa attualmente di proprietà di **`*this`** e assegnano la proprietà della risorsa denominata dalla sequenza dell'operando a **`*this`** . Se il conteggio dei riferimenti scende a zero, la risorsa viene rilasciata. Se un operatore ha esito negativo, lascia **`*this`** invariato.
 
@@ -619,7 +620,7 @@ Puntatore debole.
 *Asia Pacifico*\
 Puntatore automatico da copiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Ogni costruttore crea un oggetto che possiede la risorsa descritta dalla sequenza di operandi. Il costruttore `shared_ptr(const weak_ptr<Other>& wp)` genera un oggetto eccezione di tipo [bad_weak_ptr](bad-weak-ptr-class.md) se `wp.expired()` .
 
@@ -683,7 +684,7 @@ Elimina un oggetto `shared_ptr`.
 ~shared_ptr();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il distruttore decrementa il conteggio dei riferimenti per la risorsa attualmente di proprietà di **`*this`** . Se il conteggio dei riferimenti scende a zero, la risorsa viene rilasciata.
 
@@ -735,9 +736,9 @@ void swap(shared_ptr& sp) noexcept;
 *SP*\
 Puntatore condiviso con cui effettuare lo scambio.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-La funzione membro lascia la risorsa originariamente di proprietà di **`*this`** proprietà di *SP*e la risorsa originariamente di proprietà di *SP* successivamente di proprietà di **`*this`** . La funzione non modifica i conteggi dei riferimenti per le due risorse e non genera alcuna eccezione.
+La funzione membro lascia la risorsa originariamente di proprietà di **`*this`** proprietà di *SP* e la risorsa originariamente di proprietà di *SP* successivamente di proprietà di **`*this`** . La funzione non modifica i conteggi dei riferimenti per le due risorse e non genera alcuna eccezione.
 
 ### <a name="example"></a>Esempio
 
@@ -791,7 +792,7 @@ Verifica se la risorsa di proprietà è univoca. Questa funzione è stata deprec
 bool unique() const noexcept;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce **`true`** se nessun altro `shared_ptr` oggetto possiede la risorsa di proprietà di **`*this`** . in caso contrario, **`false`** .
 
@@ -830,7 +831,7 @@ Conta il numero dei proprietari delle risorse.
 long use_count() const noexcept;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce il numero di `shared_ptr` oggetti che possiedono la risorsa di proprietà di **`*this`** .
 
@@ -869,11 +870,11 @@ Tipo di un puntatore debole a un elemento.
 using weak_type = weak_ptr<T>; // C++17
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La `weak_type` definizione è stata aggiunta in c++ 17.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento ai file di intestazione](cpp-standard-library-header-files.md)\
 [\<memory>](memory.md)\

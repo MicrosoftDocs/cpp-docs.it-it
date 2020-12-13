@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; utilità&gt;'
 title: '&lt;utility&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - utility header
 ms.assetid: c4491103-5da9-47a1-9c2b-ed8bc64b0599
-ms.openlocfilehash: 1beade28ceec0f1552def4bc70c2e95e6b2aa24d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 67472492acdb0ddbc1de957a69c01b1aafaf9367
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215439"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153434"
 ---
 # <a name="ltutilitygt"></a>&lt;utility&gt;
 
@@ -23,7 +24,7 @@ Definisce i tipi, le funzioni e gli operatori della libreria standard C++ che se
 
 **Spazio dei nomi:** std
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le coppie sono ampiamente usate nella libreria standard C++. Sono necessarie sia come argomenti e valori restituiti per diverse funzioni sia come tipi di elemento per contenitori quali la [classe map](../standard-library/map-class.md) e la [classe multimap](../standard-library/multimap-class.md). L' \<utility> intestazione viene inclusa automaticamente da \<map> per semplificare la gestione degli elementi del tipo di coppia chiave/valore.
 
@@ -34,7 +35,7 @@ Le coppie sono ampiamente usate nella libreria standard C++. Sono necessarie sia
 
 ### <a name="classes"></a>Classi
 
-|Type|Descrizione|
+|Tipo|Description|
 |-|-|
 |[chars_format](../standard-library/chars-format-class.md)|Formato a virgola mobile per la conversione numerica primitiva.|
 |[tuple_element](../standard-library/tuple-element-class-tuple.md)|Classe che esegue il wrapping del tipo di un elemento `pair`.|
@@ -44,7 +45,7 @@ Le coppie sono ampiamente usate nella libreria standard C++. Sono necessarie sia
 
 |Modello|Description|
 |-|-|
-|[index_sequence](../standard-library/utility-functions.md#index_sequence)|Modello di alias definito per il caso comune in cui `T` è`std::size_t`  |
+|[index_sequence](../standard-library/utility-functions.md#index_sequence)|Modello di alias definito per il caso comune in cui `T` è `std::size_t`  |
 |[index_sequence_for](../standard-library/utility-functions.md#index_sequence_for)|Modello di alias helper per convertire qualsiasi pacchetto di parametri di tipo in una sequenza di indice della stessa lunghezza|
 |[make_index_sequence](../standard-library/utility-functions.md#make_index_sequence)| Modello di alias helper per semplificare la creazione di un `std::index_sequence` tipo. |
 |[make_integer_sequence](../standard-library/utility-functions.md#make_integer_sequence)|Modello di alias helper per semplificare la creazione di un `std::integer_sequence` tipo.|
@@ -88,7 +89,7 @@ Le coppie sono ampiamente usate nella libreria standard C++. Sono necessarie sia
 |[piecewise_construct_t](../standard-library/piecewise-construct-t-structure.md)|Tipo utilizzato per evitare l'overload di funzioni e costruttori distinti.|
 |[to_chars_result](../standard-library/to-chars-result-structure.md)|Struct utilizzato per `to_chars` .|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

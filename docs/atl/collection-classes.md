@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: classi Collection'
 title: Classi Collection in ATL
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - collection classes
 ms.assetid: eff95de6-78ef-4212-9d7d-1dacbdd4cc58
-ms.openlocfilehash: a93810b91cefd897b55cae4760ade32374900eb3
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: bf0b8cf1e45673dd64b1b1d60a56ed9889bb6cff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041419"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153317"
 ---
 # <a name="collection-classes"></a>Classi Collection
 
@@ -60,11 +61,11 @@ Le classi seguenti forniscono supporto per matrici, elenchi, mappe e metodi di t
 
 - [CPrimitiveElementTraits](../atl/reference/cprimitiveelementtraits-class.md) Questa classe fornisce i metodi e le funzioni predefiniti per una classe di raccolta composta da tipi di dati primitivi.
 
-- [CRBMap](../atl/reference/crbmap-class.md) Questa classe rappresenta una struttura di mapping, usando un albero binario rosso-nero.
+- [CRBMap](../atl/reference/crbmap-class.md) Questa classe rappresenta una struttura di mapping, usando un Red-Black albero binario.
 
-- [CRBMultiMap](../atl/reference/crbmultimap-class.md) Questa classe rappresenta una struttura di mapping che consente a ogni chiave di essere associata a più di un valore, utilizzando un albero binario rosso-nero.
+- [CRBMultiMap](../atl/reference/crbmultimap-class.md) Questa classe rappresenta una struttura di mapping che consente a ogni chiave di essere associata a più di un valore, utilizzando un Red-Black albero binario.
 
-- [CRBTree](../atl/reference/crbtree-class.md) Questa classe fornisce metodi per la creazione e l'utilizzo di un albero rosso-nero.
+- [CRBTree](../atl/reference/crbtree-class.md) Questa classe fornisce metodi per la creazione e l'utilizzo di un albero Red-Black.
 
 - [CSimpleArray](../atl/reference/csimplearray-class.md) Questa classe fornisce metodi per la gestione di una matrice semplice.
 

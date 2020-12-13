@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: implementazione di una finestra con CWindowImpl'
 title: Implementazione di una finestra con CWindowImpl
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - subclassing ATL window classes
 - superclassing, ATL
 ms.assetid: 3fc40550-f1d6-4702-8b7c-4cf682b6a855
-ms.openlocfilehash: 7ce1a2ec08e49e047aee5248bda0094d9e392614
-ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
+ms.openlocfilehash: 4010450b21a7cbbb4c4f1e4b7a39f594ce1e466e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92135515"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152881"
 ---
 # <a name="implementing-a-window-with-cwindowimpl"></a>Implementazione di una finestra con CWindowImpl
 
@@ -64,6 +65,6 @@ Per sottoporre a una sottoclasse una finestra esistente, derivare una classe da 
 
 Anziché chiamare `Create` , chiamare `SubclassWindow` e passare l'handle alla finestra esistente di cui si vuole eseguire la sottoclasse. Quando la finestra viene sottoclassata, utilizzerà `CWindowImpl::WindowProc` (o la funzione che esegue l'override di questo metodo) per indirizzare i messaggi alla mappa messaggi. Per scollegare una finestra sottoclassata dall'oggetto, chiamare `UnsubclassWindow` . Verrà ripristinata la routine della finestra originale della finestra.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Implementazione di una finestra](../atl/implementing-a-window.md)

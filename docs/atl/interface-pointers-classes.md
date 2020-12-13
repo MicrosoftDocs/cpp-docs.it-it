@@ -1,5 +1,6 @@
 ---
-title: Classi di puntatori di interfaccia (ATL)
+description: 'Altre informazioni su: classi di puntatori di interfaccia'
+title: Classi di puntatori a interfaccia (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -7,27 +8,27 @@ helpviewer_keywords:
 - interfaces, pointers classes
 - interface pointers classes
 ms.assetid: 712617a1-17ae-4b5c-a32c-a48b758df7a6
-ms.openlocfilehash: 992d4c7d882cd8837c3dbacbfde4855c9c94817f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 308814c0d2ba180e2cdc2a916e7f4f9e4bc520f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250352"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152750"
 ---
-# <a name="interface-pointers-classes"></a>Puntatori a classi di interfaccia
+# <a name="interface-pointers-classes"></a>Classi di puntatori di interfaccia
 
-Le classi seguenti gestiscono un puntatore a interfaccia specificato:
+Le classi seguenti gestiscono un puntatore di interfaccia specificato:
 
-- [CComPtr](../atl/reference/ccomptr-class.md) esegue il conteggio dei riferimenti automatico.
+- [CComPtr](../atl/reference/ccomptr-class.md) Esegue il conteggio automatico dei riferimenti.
 
-- [CComQIPtr](../atl/reference/ccomqiptr-class.md) Analogamente a `CComPtr`, ma esegue anche l'esecuzione di query automatici delle interfacce.
+- [CComQIPtr](../atl/reference/ccomqiptr-class.md) Simile a `CComPtr` , ma esegue anche query automatiche sulle interfacce.
 
-- [CInterfaceArray](../atl/reference/cinterfacearray-class.md) puntatori a interfaccia fornisce metodi utili quando si crea una matrice di COM.
+- [CInterfaceArray](../atl/reference/cinterfacearray-class.md) Fornisce metodi utili per la creazione di una matrice di puntatori di interfaccia COM.
 
-- [CInterfaceList](../atl/reference/cinterfacelist-class.md) puntatori a interfaccia fornisce metodi utili quando si crea un elenco di COM.
+- [CInterfaceList](../atl/reference/cinterfacelist-class.md) Fornisce metodi utili per la creazione di un elenco di puntatori a interfaccia COM.
 
-- [CComGITPtr](../atl/reference/ccomgitptr-class.md) fornisce metodi per la gestione con i puntatori di interfaccia e la tabella di interfaccia globale (GIT).
+- [CComGITPtr](../atl/reference/ccomgitptr-class.md) Fornisce metodi per gestire i puntatori di interfaccia e la tabella di interfaccia globale (GIT).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Panoramica della classe](../atl/atl-class-overview.md)
+[Cenni preliminari sulle classi](../atl/atl-class-overview.md)

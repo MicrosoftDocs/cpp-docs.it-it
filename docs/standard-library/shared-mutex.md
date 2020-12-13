@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; shared_mutex>'
 title: '&lt;shared_mutex&gt;'
 ms.date: 03/27/2019
 f1_keywords:
@@ -45,12 +46,12 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: f33a9c5fe4c5058d039feff896f7e53fe40cbf31
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 97446b3709dd71b49389fa63ac067f7cc9ccf820
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217480"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154064"
 ---
 # <a name="ltshared_mutex"></a>&lt;shared_mutex>
 
@@ -58,13 +59,13 @@ L' &lt; intestazione shared_mutex> fornisce le primitive di sincronizzazione per
 
 L'intestazione &lt; shared_mutex> definisce le classi `shared_mutex` e `shared_timed_mutex` , il modello `shared_lock` di classe e la funzione `swap` di modello per il supporto di mutex condivisi.
 
-|Classi|Descrizione|
+|Classi|Description|
 |-------------|-----------------|
 |[Classe shared_mutex](#class_shared_mutex)|Tipo mutex condiviso che può essere bloccato in modo esclusivo da un solo agente o condiviso in modo non esclusivo da più agenti.|
 |[Classe shared_timed_mutex](#class_shared_timed_mutex)|Tipo mutex condiviso programmato che può essere bloccato in modo esclusivo da un solo agente o condiviso in modo non esclusivo da più agenti.|
 |[Classe shared_lock](#class_shared_lock)|Modello di classe che esegue il wrapping di un mutex condiviso per supportare le operazioni di blocco temporizzate e la condivisione non esclusiva da parte di più agenti.|
 
-|Funzioni|Descrizione|
+|Funzioni|Description|
 |---------------|-----------------|
 |[scambio](#function_swap)|Scambia il contenuto degli oggetti mutex condivisi a cui fanno riferimento i parametri della funzione.|
 
@@ -135,7 +136,7 @@ public:
    };
 ```
 
-### <a name="shared_timed_mutex-class"></a><a name="class_shared_timed_mutex"></a>Classe shared_timed_mutex
+### <a name="shared_timed_mutex-class"></a><a name="class_shared_timed_mutex"></a> Classe shared_timed_mutex
 
 La classe `shared_timed_mutex` implementa un mutex non ricorsivo con semantica di proprietà condivisa che soddisfa i requisiti di un tipo mutex programmato.
 
@@ -215,7 +216,7 @@ private:
 
 ## <a name="functions"></a>Funzioni
 
-### <a name="swap"></a><a name="function_swap"></a>scambio
+### <a name="swap"></a><a name="function_swap"></a> scambio
 
 Scambia gli oggetti `shared_lock`.
 
@@ -232,7 +233,7 @@ Scambia il contenuto di due oggetti `shared_lock`. È effettivamente uguale a `x
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[&lt;>mutex](../standard-library/mutex.md)
+[&lt;>mutex ](../standard-library/mutex.md)

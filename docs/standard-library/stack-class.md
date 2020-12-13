@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: stack Class'
 title: Classe stack
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: f1d44a4242542ac6856fd7208fe423c43ae79997
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6caec52124b247e405299d45f55a86c20f991abc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844301"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153863"
 ---
 # <a name="stack-class"></a>Classe stack
 
@@ -46,7 +47,7 @@ Tipo di dati degli elementi da archiviare nello stack.
 *Contenitore*\
 Tipo del contenitore sottostante usato per implementare lo stack. Il valore predefinito è la classe `deque` *\<Type>* .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Gli elementi della classe `Type` specificati nel primo parametro di modello di un oggetto stack sono sinonimi di [value_type](#value_type) e devono corrispondere al tipo di elemento nella classe del contenitore sottostante `Container` stipulata dal secondo parametro di modello. L'oggetto `Type` deve essere assegnabile, in modo che sia possibile copiare oggetti di quel tipo e assegnare valori alle variabili di quel tipo.
 
@@ -64,13 +65,13 @@ Gli oggetti stack sono confrontabili tra uguaglianza se e solo se gli elementi d
 
 ### <a name="constructors"></a>Costruttori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[stack](#stack)|Costruisce un `stack` vuoto o che rappresenta una copia totale o parziale di un oggetto contenitore di base.|
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[container_type](#container_type)|Tipo che fornisce il contenitore di base che deve essere adattato da un oggetto `stack`.|
 |[size_type](#size_type)|Tipo Unsigned Integer in grado di rappresentare il numero di elementi di un `stack`.|
@@ -78,10 +79,10 @@ Gli oggetti stack sono confrontabili tra uguaglianza se e solo se gli elementi d
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[empty](#empty)|Verifica se `stack` è vuoto.|
-|[popup](#pop)|Rimuove l'elemento dalla parte superiore di `stack`.|
+|[pop](#pop)|Rimuove l'elemento dalla parte superiore di `stack`.|
 |[push](#push)|Aggiunge un elemento alla parte superiore di `stack`.|
 |[size](#size)|Restituisce il numero di elementi nel `stack`.|
 |[top](#top)|Restituisce un riferimento a un elemento nella parte superiore di `stack`.|
@@ -94,7 +95,7 @@ Tipo che fornisce il contenitore di base da adattare.
 typedef Container container_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del parametro di modello `Container`. Tutti e tre i contenitori sequenziali della libreria standard C++, ovvero la classe vector, la classe list e la classe predefinita deque, soddisfano i requisiti richiesti e possono essere usati come contenitori per un oggetto stack. È anche possibile usare tipi definiti dall'utente che soddisfano i requisiti.
 
@@ -157,7 +158,7 @@ Rimuove l'elemento all'inizio dello stack.
 void pop();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per applicare la funzione membro, lo stack deve essere non vuoto. L'inizio dello stack è la posizione occupata dall'elemento aggiunto più di recente ed è l'ultimo elemento alla fine del contenitore.
 
@@ -218,7 +219,7 @@ void push(const Type& val);
 *Val*\
 Elemento aggiunto all'inizio dello stack.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'inizio dello stack è la posizione occupata dall'elemento aggiunto più di recente ed è l'ultimo elemento alla fine del contenitore.
 
@@ -303,7 +304,7 @@ Tipo Unsigned Integer in grado di rappresentare il numero di elementi di uno sta
 typedef typename Container::size_type size_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del `size_type` del contenitore di base adattato dallo stack.
 
@@ -379,7 +380,7 @@ const_reference top() const;
 
 Riferimento all'ultimo elemento del contenitore all'inizio dello stack.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per applicare la funzione membro, lo stack deve essere non vuoto. L'inizio dello stack è la posizione occupata dall'elemento aggiunto più di recente ed è l'ultimo elemento alla fine del contenitore.
 
@@ -424,7 +425,7 @@ Tipo che rappresenta il tipo di oggetto archiviato come elemento in uno stack.
 typedef typename Container::value_type value_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del `value_type` del contenitore di base adattato dallo stack.
 

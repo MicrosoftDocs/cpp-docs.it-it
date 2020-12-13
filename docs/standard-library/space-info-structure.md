@@ -1,17 +1,18 @@
 ---
+description: 'Altre informazioni su: struttura space_info'
 title: Struttura space_info
 ms.date: 09/10/2018
 f1_keywords:
 - filesystem/std::tr2::sys::space_info
 ms.assetid: f2b35b42-06ff-45bd-8617-39a0f5358a54
-ms.openlocfilehash: 2a9856746a8bbc796871663a81bd8911d34dcd4a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 254866a0eb225b4ed7bcfe4e06a734c5c9d0e3ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457560"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153876"
 ---
-# <a name="spaceinfo-structure"></a>Struttura space_info
+# <a name="space_info-structure"></a>Struttura space_info
 
 Contiene informazioni su un volume.
 
@@ -30,7 +31,7 @@ struct space_info
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Name|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`unsigned long long capacity`|Rappresenta il numero totale di byte che il volume può rappresentare.|
 |`unsigned long long free`|Rappresenta il numero di byte che non vengono usati per rappresentare i dati nel volume.|
@@ -38,12 +39,12 @@ struct space_info
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<> filesystem
+**Intestazione:**\<filesystem>
 
-**Spazio nomi:** std::experimental::filesystem
+**Spazio dei nomi:** std::experimental::filesystem
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [\<filesystem>](../standard-library/filesystem.md)\
 [File System Navigation (C++)](../standard-library/file-system-navigation.md) (Esplorazione del file system (C++))

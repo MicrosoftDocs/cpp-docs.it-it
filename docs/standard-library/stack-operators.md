@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; Stack &gt; Operators'
 title: Operatori &lt;stack&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - std::operator&lt; (stack)
 - std::operator&lt;= (stack)
 - std::operator== (stack)
-ms.openlocfilehash: ac694e517279e43a501bb8289544e5da5ddba72b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 56d5dcf7d23fd685cd7d805d773ac9eb77d85506
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217415"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153850"
 ---
 # <a name="ltstackgt-operators"></a>Operatori &lt;stack&gt;
 
-## <a name="operator"></a><a name="op_neq"></a>operatore! =
+## <a name="operator"></a><a name="op_neq"></a> operatore! =
 
 Verifica se l'oggetto stack a sinistra dell'operatore non è uguale all'oggetto stack a destra.
 
@@ -45,7 +46,7 @@ Oggetto di tipo `stack`.
 
 **`true`** Se gli stack o gli stack non sono uguali. **`false`** se gli stack o gli stack sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti stack si basa su un confronto a coppie dei relativi elementi. Due stack sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -90,7 +91,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>operatore&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> operatore&lt;
 
 Verifica se l'oggetto stack a sinistra dell'operatore è minore dell'oggetto stack a destra.
 
@@ -110,7 +111,7 @@ Oggetto di tipo `stack`.
 
 **`true`** Se lo stack a sinistra dell'operatore è minore e non uguale allo stack sul lato destro dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti stack si basa su un confronto a coppie dei relativi elementi. La relazione minore di tra due oggetti stack si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -174,7 +175,7 @@ The stack s1 is greater than or equal to the stack s3.
 The stack s1 from the top down is: ( 8 6 4 2 ).
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>operatore&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> operatore&lt;=
 
 Verifica se l'oggetto stack a sinistra dell'operatore è minore o uguale all'oggetto stack a destra.
 
@@ -194,7 +195,7 @@ Oggetto di tipo `stack`.
 
 **`true`** Se lo stack a sinistra dell'operatore è minore o uguale allo stack sul lato destro dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti stack si basa su un confronto a coppie dei relativi elementi. La relazione minore di o uguale a tra due oggetti stack si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -241,7 +242,7 @@ The stack s1 is greater than the stack s2.
 The stack s1 is less than or equal to the stack s3.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operatore = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operatore = =
 
 Verifica se l'oggetto stack a sinistra dell'operatore è uguale all'oggetto stack a destra.
 
@@ -261,7 +262,7 @@ Oggetto di tipo `stack`.
 
 **`true`** Se gli stack o gli stack sono uguali; **`false`** se gli stack o gli stack non sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti stack si basa su un confronto a coppie dei relativi elementi. Due stack sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -306,7 +307,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>operatore&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> operatore&gt;
 
 Verifica se l'oggetto stack a sinistra dell'operatore è maggiore dell'oggetto stack a destra.
 
@@ -326,7 +327,7 @@ Oggetto di tipo `stack`.
 
 **`true`** Se lo stack a sinistra dell'operatore è maggiore e non uguale allo stack sul lato destro dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti stack si basa su un confronto a coppie dei relativi elementi. La relazione maggiore di tra due oggetti stack si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -375,7 +376,7 @@ The stack s1 is not greater than the stack s2.
 The stack s1 is greater than the stack s3.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>operatore&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> operatore&gt;=
 
 Verifica se l'oggetto stack a sinistra dell'operatore è maggiore o uguale all'oggetto stack a destra.
 
@@ -395,7 +396,7 @@ Oggetto di tipo `stack`.
 
 **`true`** Se lo stack a sinistra dell'operatore è rigorosamente minore dello stack sul lato destro dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti stack si basa su un confronto a coppie dei relativi elementi. La relazione maggiore di o uguale a tra due oggetti stack si basa su un confronto della prima coppia di elementi non uguali.
 

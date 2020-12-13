@@ -1,35 +1,36 @@
 ---
-title: Gli enumeratori e le classi di raccolte (ATL)
+description: 'Altre informazioni su: enumeratori e classi Collections'
+title: Classi Enumerators e Collections (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - enumerators, ATL classes
 ms.assetid: fcd093b2-98bf-444d-94ab-9a55520a5051
-ms.openlocfilehash: 6de81a7b0ddd77471669b19c4be1145c776d2902
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a29c5c4a3923c7ba027845cecf0bb95d0a76ddb6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198122"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152988"
 ---
-# <a name="enumerators-and-collections-classes"></a>Gli enumeratori e le classi di raccolte
+# <a name="enumerators-and-collections-classes"></a>Classi enumeratori e raccolte
 
-Le classi seguenti forniscono supporto per le enumerazioni e le raccolte COM:
+Le classi seguenti forniscono supporto per le raccolte e le enumerazioni COM:
 
-- [CComEnum](../atl/reference/ccomenum-class.md) oggetto enumeratore COM definisce basato su una matrice.
+- [CComEnum](../atl/reference/ccomenum-class.md) Definisce un oggetto enumeratore COM basato su una matrice.
 
-- [CComEnumImpl](../atl/reference/ccomenumimpl-class.md) fornisce l'implementazione di un'interfaccia dell'enumeratore COM in cui sono archiviati gli elementi vengono enumerati in una matrice.
+- [CComEnumImpl](../atl/reference/ccomenumimpl-class.md) Fornisce l'implementazione per un'interfaccia dell'enumeratore COM in cui gli elementi enumerati vengono archiviati in una matrice.
 
-- [CComEnumOnSTL](../atl/reference/ccomenumonstl-class.md) oggetto enumeratore COM definisce basato su una raccolta della libreria Standard C++.
+- [CComEnumOnSTL](../atl/reference/ccomenumonstl-class.md) Definisce un oggetto enumeratore COM basato su una raccolta di librerie standard C++.
 
-- [IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md) fornisce l'implementazione di un'interfaccia dell'enumeratore COM in cui sono archiviati gli elementi vengono enumerati in un contenitore della libreria Standard C++ compatibile con.
+- [IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md) Fornisce l'implementazione per un'interfaccia dell'enumeratore COM in cui gli elementi enumerati vengono archiviati in un contenitore compatibile con la libreria standard C++.
 
-- [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md) fornisce l'implementazione per il `Count`, `Item`, e `_NewEnum` proprietà di un'interfaccia di raccolta.
+- [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md) Fornisce l'implementazione per le `Count` `Item` proprietà, e `_NewEnum` di un'interfaccia di raccolta.
 
 ## <a name="related-articles"></a>Articoli correlati
 
 [Raccolte ed enumeratori ATL](../atl/atl-collections-and-enumerators.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Panoramica della classe](../atl/atl-class-overview.md)
+[Cenni preliminari sulle classi](../atl/atl-class-overview.md)

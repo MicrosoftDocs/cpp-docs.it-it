@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; imposta &gt; operatori'
 title: Operatori &lt;set&gt;
 ms.date: 03/27/2019
 f1_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - std::operator&lt; (set)
 - std::operator&lt;= (set)
 - std::operator== (set)
-ms.openlocfilehash: a3256b7d963feca75e4a975def0f6da77538d278
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5872760bb7f9cd3517ad14ea29fcca495dbaed59
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217506"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154123"
 ---
 # <a name="ltsetgt-operators"></a>Operatori &lt;set&gt;
 
-## <a name="operator-set"></a><a name="op_neq"></a>operatore! = (set)
+## <a name="operator-set"></a><a name="op_neq"></a> operatore! = (set)
 
 Verifica se l'oggetto set a sinistra dell'operatore non è uguale all'oggetto set a destra.
 
@@ -45,7 +46,7 @@ Oggetto di tipo `set`.
 
 **`true`** Se i set non sono uguali. **`false`** se i set sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti set si basa su un confronto a coppie dei rispettivi elementi. Due oggetti set sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -86,7 +87,7 @@ The sets s1 and s3 are equal.
 */
 ```
 
-## <a name="operatorlt-set"></a><a name="op_lt"></a>operatore &lt; (set)
+## <a name="operatorlt-set"></a><a name="op_lt"></a> operatore &lt; (set)
 
 Verifica se l'oggetto set a sinistra dell'operatore è minore dell'oggetto set a destra.
 
@@ -106,7 +107,7 @@ Oggetto di tipo `set`.
 
 **`true`** Se l'oggetto set a sinistra dell'operatore è rigorosamente minore del set a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti set si basa su un confronto a coppie dei rispettivi elementi. La relazione minore di tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -147,7 +148,7 @@ The set s1 is not less than the set s3.
 */
 ```
 
-## <a name="operatorlt-set"></a><a name="op_lt_eq"></a>operatore &lt; = (set)
+## <a name="operatorlt-set"></a><a name="op_lt_eq"></a> operatore &lt; = (set)
 
 Verifica se l'oggetto set a sinistra dell'operatore è minore o uguale all'oggetto set a destra.
 
@@ -167,7 +168,7 @@ Oggetto di tipo `set`.
 
 **`true`** Se l'oggetto set a sinistra dell'operatore è minore o uguale all'oggetto set a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti set si basa su un confronto a coppie dei rispettivi elementi. La relazione minore di o uguale a tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -216,7 +217,7 @@ The set s1 is greater than the set s3.
 Set s1 is less than or equal to the set s4.
 ```
 
-## <a name="operator-set"></a><a name="op_eq_eq"></a>operatore = = (set)
+## <a name="operator-set"></a><a name="op_eq_eq"></a> operatore = = (set)
 
 Verifica se l'oggetto set a sinistra dell'operatore è uguale all'oggetto set a destra.
 
@@ -236,7 +237,7 @@ Oggetto di tipo `set`.
 
 **`true`** Se l'oggetto impostato sul lato sinistro dell'operatore è uguale all'oggetto set a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti set si basa su un confronto a coppie dei rispettivi elementi. Due oggetti set sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -278,7 +279,7 @@ The sets s1 and s2 are not equal.
 The sets s1 and s3 are equal.
 ```
 
-## <a name="operatorgt-set"></a><a name="op_gt"></a>operatore &gt; (set)
+## <a name="operatorgt-set"></a><a name="op_gt"></a> operatore &gt; (set)
 
 Verifica se l'oggetto set a sinistra dell'operatore è maggiore dell'oggetto set a destra.
 
@@ -298,7 +299,7 @@ Oggetto di tipo `set`.
 
 **`true`** Se l'oggetto set a sinistra dell'operatore è maggiore dell'oggetto set a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti set si basa su un confronto a coppie dei rispettivi elementi. La relazione maggiore di tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -339,7 +340,7 @@ The set s1 is greater than the set s3.
 */
 ```
 
-## <a name="operatorgt-set"></a><a name="op_gt_eq"></a>operatore &gt; = (set)
+## <a name="operatorgt-set"></a><a name="op_gt_eq"></a> operatore &gt; = (set)
 
 Verifica se l'oggetto set a sinistra dell'operatore è maggiore o uguale all'oggetto set a destra.
 
@@ -359,7 +360,7 @@ Oggetto di tipo `set`.
 
 **`true`** Se l'oggetto set a sinistra dell'operatore è maggiore o uguale al set sul lato destro dell'elenco; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti set si basa su un confronto a coppie dei rispettivi elementi. La relazione maggiore di o uguale a tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -408,7 +409,7 @@ Set s1 is greater than or equal to set s3.
 Set s1 is greater than or equal to set s4.
 ```
 
-## <a name="operator-multiset"></a><a name="op_neq_multiset"></a>operatore! = (multiset)
+## <a name="operator-multiset"></a><a name="op_neq_multiset"></a> operatore! = (multiset)
 
 Verifica se l'oggetto multiset a sinistra dell'operatore non è uguale all'oggetto multiset a destra.
 
@@ -428,7 +429,7 @@ Oggetto di tipo `multiset`.
 
 **`true`** Se i set o i set di impostazioni non sono uguali. **`false`** se i set o i set di impostazioni sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti multiset si basa su un confronto a coppie dei rispettivi elementi. Due oggetti multiset sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -470,7 +471,7 @@ The multisets s1 and s2 are not equal.
 The multisets s1 and s3 are equal.
 ```
 
-## <a name="operatorlt-multiset"></a><a name="op_lt_multiset"></a>operatore &lt; (multiset)
+## <a name="operatorlt-multiset"></a><a name="op_lt_multiset"></a> operatore &lt; (multiset)
 
 Verifica se l'oggetto multiset a sinistra dell'operatore è minore dell'oggetto multiset a destra.
 
@@ -490,7 +491,7 @@ Oggetto di tipo `multiset`.
 
 **`true`** Se l'oggetto multiset a sinistra dell'operatore è rigorosamente minore dell'oggetto multiset a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti multiset si basa su un confronto a coppie dei rispettivi elementi. La relazione minore di tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -536,7 +537,7 @@ The multiset s1 is less than the multiset s2.
 The multiset s1 is not less than the multiset s3.
 ```
 
-## <a name="operatorlt-multiset"></a><a name="op_lt_eq_multiset"></a>operatore &lt; = (multiset)
+## <a name="operatorlt-multiset"></a><a name="op_lt_eq_multiset"></a> operatore &lt; = (multiset)
 
 Verifica se l'oggetto multiset a sinistra dell'operatore è minore o uguale all'oggetto multiset a destra.
 
@@ -556,7 +557,7 @@ Oggetto di tipo `multiset`.
 
 **`true`** Se l'oggetto multiset a sinistra dell'operatore è minore o uguale all'oggetto multiset a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti multiset si basa su un confronto a coppie dei rispettivi elementi. La relazione minore di o uguale a tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -611,7 +612,7 @@ The multiset s1 is greater than the multiset s3.
 The multiset s1 is less than or equal to the multiset s4.
 ```
 
-## <a name="operator-multiset"></a><a name="op_eq_eq_multiset"></a>operatore = = (multiset)
+## <a name="operator-multiset"></a><a name="op_eq_eq_multiset"></a> operatore = = (multiset)
 
 Verifica se l'oggetto multiset a sinistra dell'operatore è uguale all'oggetto multiset a destra.
 
@@ -631,7 +632,7 @@ Oggetto di tipo `multiset`.
 
 **`true`** Se l'oggetto multiset a sinistra dell'operatore è uguale all'oggetto multiset a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti multiset si basa su un confronto a coppie dei rispettivi elementi. Due oggetti multiset sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -673,7 +674,7 @@ The multisets s1 and s2 are not equal.
 The multisets s1 and s3 are equal.
 ```
 
-## <a name="operatorgt-multiset"></a><a name="op_gt_multiset"></a>operatore &gt; (multiset)
+## <a name="operatorgt-multiset"></a><a name="op_gt_multiset"></a> operatore &gt; (multiset)
 
 Verifica se l'oggetto multiset a sinistra dell'operatore è maggiore dell'oggetto multiset a destra.
 
@@ -693,7 +694,7 @@ Oggetto di tipo `multiset`.
 
 **`true`** Se l'oggetto multiset a sinistra dell'operatore è maggiore dell'oggetto multiset a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti multiset si basa su un confronto a coppie dei rispettivi elementi. La relazione maggiore di tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 
@@ -739,7 +740,7 @@ The multiset s1 is not greater than the multiset s2.
 The multiset s1 is greater than the multiset s3.
 ```
 
-## <a name="operatorgt-multiset"></a><a name="op_gt_eq_multiset"></a>operatore &gt; = (multiset)
+## <a name="operatorgt-multiset"></a><a name="op_gt_eq_multiset"></a> operatore &gt; = (multiset)
 
 Verifica se l'oggetto multiset a sinistra dell'operatore è maggiore o uguale all'oggetto multiset a destra.
 
@@ -759,7 +760,7 @@ Oggetto di tipo `multiset`.
 
 **`true`** Se l'oggetto multiset a sinistra dell'operatore è maggiore o uguale all'oggetto multiset a destra dell'elenco; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il confronto tra gli oggetti multiset si basa su un confronto a coppie dei rispettivi elementi. La relazione maggiore di o uguale a tra due oggetti si basa su un confronto della prima coppia di elementi non uguali.
 

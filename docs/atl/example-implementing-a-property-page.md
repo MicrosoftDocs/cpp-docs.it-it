@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: esempio: implementazione di una pagina delle proprietà'
 title: Implementazione di una pagina delle proprietà (ATL)
 ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 82c2bd3765802f87025eaf2dfbda8f7467bbe9a0
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: b5f05d4e47187a8d3c2fe10ca7a00808095a713a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921243"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152962"
 ---
 # <a name="example-implementing-a-property-page"></a>Esempio: implementazione di una pagina delle proprietà
 
@@ -47,7 +48,7 @@ Per completare questo esempio, è necessario eseguire queste operazioni:
 
 ## <a name="adding-the-atl-property-page-class"></a><a name="vcconusing_the_atl_object_wizard"></a> Aggiunta della classe della pagina delle proprietà ATL
 
-Prima di tutto, creare un nuovo progetto ATL per un server DLL denominato `ATLPages7`. Usare ora la [Creazione guidata pagina delle proprietà ATL](../atl/reference/atl-property-page-wizard.md) per generare una pagina delle proprietà. In **Nome breve** assegnare alla pagina delle proprietà il nome **DocProperties** , quindi passare alla pagina **Stringhe** per impostare gli elementi specifici della pagina delle proprietà come mostrato nella tabella seguente.
+Prima di tutto, creare un nuovo progetto ATL per un server DLL denominato `ATLPages7`. Usare ora la [Creazione guidata pagina delle proprietà ATL](../atl/reference/atl-property-page-wizard.md) per generare una pagina delle proprietà. In **Nome breve** assegnare alla pagina delle proprietà il nome **DocProperties**, quindi passare alla pagina **Stringhe** per impostare gli elementi specifici della pagina delle proprietà come mostrato nella tabella seguente.
 
 |Elemento|valore|
 |----------|-----------|
@@ -171,7 +172,7 @@ Quando si esegue questa macro, verrà visualizzata la pagina delle proprietà ch
 
 ::: moniker-end
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Pagine delle proprietà](../atl/atl-com-property-pages.md)<br/>
 [Esempio ATLPages](../overview/visual-cpp-samples.md)

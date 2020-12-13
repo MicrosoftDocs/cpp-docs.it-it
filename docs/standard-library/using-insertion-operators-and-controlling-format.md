@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: uso degli operatori di inserimento e controllo del formato'
 title: Utilizzo degli operatori di inserimento e controllo del formato
 ms.date: 11/04/2016
 helpviewer_keywords:
 - insertion operators
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
-ms.openlocfilehash: 0d6a2afb320f91e51e2a89156a6e6732c6be90e0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0ed0e850cb578b66ea9131d135891cbbd26da4b7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215459"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153564"
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Utilizzo degli operatori di inserimento e controllo del formato
 
@@ -72,7 +73,7 @@ Il manipolatore `endl` sostituisce il carattere di nuova riga (`'\n'`). L'output
 ******1.23
 *****35.36
 *****653.7
-***4358.24
+**_4358.24
 ```
 
 Per specificare la larghezza per elementi di dati nella stessa riga, usare il manipolatore `setw`:
@@ -87,7 +88,7 @@ using namespace std;
 int main( )
 {
    double values[] = { 1.23, 35.36, 653.7, 4358.24 };
-   char *names[] = { "Zoot", "Jimmy", "Al", "Stan" };
+   char _names[] = { "Zoot", "Jimmy", "Al", "Stan" };
    for( int i = 0; i < 4; i++ )
       cout << setw( 7 )  << names[i]
            << setw( 10 ) << values[i] << endl;
@@ -105,7 +106,7 @@ La `width` funzione membro è dichiarata in \<iostream> . Se si usa `setw` o qua
 
 Né `setw` né `width` troncano i valori. Se l'output formattato supera la larghezza, viene stampato il valore intero, soggetto alle impostazioni di precisione del flusso. `setw`E `width` influiscono solo sul campo seguente. Viene ripristinato il comportamento predefinito della larghezza del campo (larghezza necessaria) dopo la stampa di un campo. Le altre opzioni di formato di flusso, tuttavia, rimangono valide finché non vengono modificate.
 
-## <a name="alignment"></a><a name="vclrfalignmentanchor4"></a>Allineamento
+## <a name="alignment"></a><a name="vclrfalignmentanchor4"></a> Allineamento
 
 Per impostazione predefinita, i flussi di output sono allineati a destra. Per allineare a sinistra i nomi nell'esempio precedente e allineare a destra i numeri, sostituire il **`for`** ciclo come segue:
 
@@ -128,7 +129,7 @@ Stan     4358.24
 
 Il flag di allineamento a sinistra viene impostato usando il manipolatore [setiosflags](../standard-library/iomanip-functions.md#setiosflags) con l'enumeratore `left`. Questo enumeratore viene definito nella classe [ios](../standard-library/basic-ios-class.md), pertanto il relativo riferimento deve includere il prefisso **ios::**. Il manipolatore [resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) disattiva il flag di allineamento a sinistra. A differenza `width` `setw` di e, l'effetto di `setiosflags` e `resetiosflags` è permanente.
 
-## <a name="precision"></a><a name="vclrfprecisionanchor5"></a>Precisione
+## <a name="precision"></a><a name="vclrfprecisionanchor5"></a> Precisione
 
 Il valore predefinito per la precisione a virgola mobile è sei. Ad esempio, il numero 3466.9768 viene stampato come 3466.98. Per modificare il modo in cui questo valore viene stampato, usare il manipolatore [setprecision](../standard-library/iomanip-functions.md#setprecision). Il manipolatore ha due flag: [fixed](../standard-library/ios-functions.md#fixed) e [scientific](../standard-library/ios-functions.md#scientific). Se si imposta [fixed](../standard-library/ios-functions.md#fixed), il numero viene stampato come 3466.976800. Se `scientific` è impostato, viene stampato come 3.4669773 + 003.
 
@@ -181,7 +182,7 @@ Stan    4.4e+03
 
 Anche in questo caso, il programma stampa con una cifra dopo il separatore decimale. Se `ios::fixed` `ios::scientific` è impostato o, il valore di precisione determina il numero di cifre dopo il separatore decimale. Se nessuno dei due flag è impostato, il valore di precisione determina il numero totale di cifre significative. Il manipolatore `resetiosflags` cancella questi flag.
 
-## <a name="radix"></a><a name="vclrfradixanchor6"></a>Radice
+## <a name="radix"></a><a name="vclrfradixanchor6"></a> Radice
 
 I `dec` `oct` `hex` manipolatori, e impostano la radice predefinita per l'input e l'output. Se, ad esempio, si inserisce il `hex` manipolatore nel flusso di output, l'oggetto converte correttamente la rappresentazione di dati interni di Integer in un formato di output esadecimale. I numeri vengono visualizzati con le cifre a-f in lettere minuscole se il flag [uppercase](../standard-library/ios-functions.md#uppercase) flag è deselezionato (predefinito); in caso contrario, vengono visualizzati in lettere maiuscole. La radice predefinita è `dec` (decimale).
 
@@ -209,6 +210,6 @@ Il comportamento degli spazi vuoti delle operazioni di inserimento e di estrazio
 
 Per ulteriori informazioni ed esempi di codice completo, vedere [quoted](../standard-library/iomanip-functions.md#quoted).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Flussi di output](../standard-library/output-streams.md)

@@ -1,47 +1,48 @@
 ---
+description: 'Altre informazioni su: DCOMCNFG'
 title: DCOMCNFG
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DCOMCNFG utility
 - DCOM, configuring in ATL
 ms.assetid: 5a8126e9-ef27-40fb-a66e-9dce8d1a7e80
-ms.openlocfilehash: a389a46cd02b40cef46d687743fd3416cc4f3154
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d99b0018d63cedbccaf57ec4cadeb649f390dcf1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250784"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153161"
 ---
 # <a name="dcomcnfg"></a>DCOMCNFG
 
-DCOMCNFG è un'utilità di Windows NT 4.0 che consente di configurare varie impostazioni DCOM specifico nel Registro di sistema. La finestra DCOMCNFG ha tre pagine: Impostazioni di sicurezza predefinite, le proprietà predefinite e le applicazioni. In Windows 2000 è presente una quarta pagina, protocolli predefiniti.
+DCOMCNFG è un'utilità di Windows NT 4,0 che consente di configurare diverse impostazioni specifiche di DCOM nel registro di sistema. La finestra DCOMCNFG è costituita da tre pagine: sicurezza predefinita, proprietà predefinite e applicazioni. In Windows 2000 è presente una quarta pagina, ovvero i protocolli predefiniti.
 
 ## <a name="default-security-page"></a>Pagina sicurezza predefinita
 
-È possibile utilizzare la pagina Impostazioni di sicurezza predefinite per specificare le autorizzazioni predefinite per gli oggetti nel sistema. Questa pagina ha tre sezioni: L'accesso, avvio e configurazione. Per modificare le impostazioni predefinite della sezione, fare clic sulla rispettiva **modifica predefinite** pulsante. Queste impostazioni di sicurezza predefiniti vengono archiviate nel Registro di sistema `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE`.
+È possibile utilizzare la pagina sicurezza predefinita per specificare le autorizzazioni predefinite per gli oggetti nel sistema. La pagina sicurezza predefinita include tre sezioni: accesso, avvio e configurazione. Per modificare le impostazioni predefinite di una sezione, fare clic sul pulsante **modifica predefinito** corrispondente. Queste impostazioni di sicurezza predefinite sono memorizzate nel registro di sistema in `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE` .
 
 ## <a name="default-protocols-page"></a>Pagina protocolli predefiniti
 
-Questa pagina elenca il set di protocolli di rete disponibili per DCOM in questo computer. L'ordine riflette la priorità in cui verranno usate; il primo nell'elenco ha la priorità più alta. Protocolli possono essere aggiunti o eliminati da questa pagina.
+Questa pagina elenca il set di protocolli di rete disponibili per DCOM in questo computer. L'ordine riflette la priorità in cui verranno utilizzate. il primo nell'elenco ha la priorità più alta. I protocolli possono essere aggiunti o eliminati da questa pagina.
 
-## <a name="default-properties-page"></a>Pagina delle proprietà predefinito
+## <a name="default-properties-page"></a>Pagina proprietà predefinite
 
-Nella pagina delle proprietà predefinito, è necessario selezionare la **abilitare Distributed COM su questo computer** casella di controllo se si desidera che i client in altri computer per accedere a COM oggetti in esecuzione nel computer. Selezionando questa opzione imposta la `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE\EnableDCOM` valore `Y`.
+Nella pagina proprietà predefinite è necessario selezionare la casella di controllo **Abilita Distributed COM nel computer** se si desidera che i client in altri computer accedano a oggetti com in esecuzione nel computer. Se si seleziona questa opzione `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE\EnableDCOM` , il valore verrà impostato su `Y` .
 
 ## <a name="applications-page"></a>Pagina delle applicazioni
 
-Modificare le impostazioni per un determinato oggetto con la pagina delle applicazioni. È sufficiente selezionare l'applicazione dall'elenco e scegliere il **proprietà** pulsante. Finestra delle proprietà dispone di cinque pagine:
+È possibile modificare le impostazioni per un oggetto specifico con la pagina applicazioni. È sufficiente selezionare l'applicazione dall'elenco e fare clic sul pulsante **Proprietà** . Il Finestra Proprietà è costituito da cinque pagine:
 
-- La pagina generale conferma l'applicazione che si sta lavorando.
+- Nella pagina generale viene confermata l'applicazione utilizzata.
 
-- La pagina percorso consente di specificare in cui l'applicazione deve essere eseguito quando un client chiama `CoCreateInstance` sul CLSID corrispondente. Se si seleziona il **eseguire l'applicazione nel computer seguente** casella di controllo e immettere un nome computer, quindi un `RemoteServerName` valore viene aggiunto sotto l'AppID per l'applicazione. La cancellazione il **esecuzione dell'applicazione in questo computer** casella di controllo ridenominazioni le `LocalService` valore `_LocalService` e, in tal modo, lo disabilita.
+- La pagina percorso consente di specificare dove deve essere eseguita l'applicazione quando un client chiama `CoCreateInstance` sul CLSID pertinente. Se si seleziona la casella di controllo **Esegui applicazione nel computer seguente** e si immette un nome computer, `RemoteServerName` verrà aggiunto un valore nell'AppID per l'applicazione. Se si deseleziona la casella di controllo **Esegui applicazione sul computer** , il `LocalService` valore viene rinominato in `_LocalService` e, pertanto, viene disabilitato.
 
-- La pagina sicurezza è simile alla pagina di sicurezza predefinite disponibile nella finestra DCOMCNFG, ad eccezione del fatto che queste impostazioni si applicano solo all'applicazione corrente. Anche in questo caso, le impostazioni vengono archiviate nell'ID applicazione per l'oggetto.
+- La pagina sicurezza è simile alla pagina sicurezza predefinita presente nella finestra DCOMCNFG, con la differenza che queste impostazioni si applicano solo all'applicazione corrente. Anche in questo caso, le impostazioni vengono archiviate nell'AppID per tale oggetto.
 
-- La pagina di identificazione identifica quale utente viene usato per eseguire l'applicazione.
+- La pagina di identificazione identifica l'utente utilizzato per eseguire l'applicazione.
 
-- Pagina endpoint Elenca il set di protocolli e gli endpoint disponibili per l'uso da parte dei client del server selezionato DCOM.
+- La pagina Endpoint elenca il set di protocolli ed endpoint disponibili per l'utilizzo da parte dei client del server DCOM selezionato.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Servizi](../atl/atl-services.md)
+[Services](../atl/atl-services.md)
