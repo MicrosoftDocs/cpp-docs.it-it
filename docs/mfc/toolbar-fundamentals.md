@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Nozioni fondamentali sulla barra degli strumenti'
 title: Nozioni fondamentali sulla barra degli strumenti
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,88 +21,88 @@ helpviewer_keywords:
 - frame window classes [MFC], toolbar embedded in
 - LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
-ms.openlocfilehash: d4e8793337beb2eed533fe04daf549ec21efc61d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ed52c5878482f2ff0fa1c31a133fd2948d21a76e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373470"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264388"
 ---
 # <a name="toolbar-fundamentals"></a>Nozioni fondamentali sulla barra degli strumenti
 
 In questo articolo viene descritta l'implementazione MFC fondamentale che consente di aggiungere una barra degli strumenti predefinita all'applicazione selezionando un'opzione nella creazione guidata applicazione. Gli argomenti trattati includono:
 
-- [Opzione della barra degli strumenti Creazione guidata applicazione](#_core_the_appwizard_toolbar_option)
+- [Opzione della barra degli strumenti della creazione guidata applicazione](#_core_the_appwizard_toolbar_option)
 
-- [La barra degli strumenti nel codice](#_core_the_toolbar_in_code)
+- [Barra degli strumenti nel codice](#_core_the_toolbar_in_code)
 
-- [Modifica della risorsa barra degli strumenti](#_core_editing_the_toolbar_resource)
+- [Modifica della risorsa della barra degli strumenti](#_core_editing_the_toolbar_resource)
 
-- [Barre degli strumenti multiple](#_core_multiple_toolbars)
+- [Più barre degli strumenti](#_core_multiple_toolbars)
 
-## <a name="the-application-wizard-toolbar-option"></a><a name="_core_the_appwizard_toolbar_option"></a>Opzione della barra degli strumenti Creazione guidata applicazione
+## <a name="the-application-wizard-toolbar-option"></a><a name="_core_the_appwizard_toolbar_option"></a> Opzione della barra degli strumenti della creazione guidata applicazione
 
-Per ottenere una singola barra degli strumenti con pulsanti predefiniti, selezionare l'opzione Barra degli strumenti Ancoraggio standard nella pagina con l'etichetta Funzionalità interfaccia utente. Verrà aggiunto codice all'applicazione che:This adds code to your application that:
+Per ottenere una singola barra degli strumenti con i pulsanti predefiniti, selezionare l'opzione barra degli strumenti standard di ancoraggio nella pagina funzionalità interfaccia utente. Il codice verrà aggiunto all'applicazione:
 
 - Crea l'oggetto barra degli strumenti.
 
-- Gestisce la barra degli strumenti, inclusa la possibilità di ancorare o rendere mobile.
+- Gestisce la barra degli strumenti, inclusa la possibilità di ancoraggio o di float.
 
-## <a name="the-toolbar-in-code"></a><a name="_core_the_toolbar_in_code"></a>La barra degli strumenti nel codiceThe Toolbar in Code
+## <a name="the-toolbar-in-code"></a><a name="_core_the_toolbar_in_code"></a> Barra degli strumenti nel codice
 
-La barra degli strumenti è un [oggetto CToolBar](../mfc/reference/ctoolbar-class.md) `CMainFrame` dichiarato come membro dati della classe dell'applicazione. In altre parole, l'oggetto barra degli strumenti è incorporato nell'oggetto finestra cornice principale. Ciò significa che MFC crea la barra degli strumenti quando crea la finestra cornice ed elimina la barra degli strumenti quando elimina la finestra cornice. La dichiarazione di classe parziale seguente, per un'applicazione di interfaccia a documenti multipli (MDI), mostra i membri dati per una barra degli strumenti incorporata e una barra di stato incorporata. Viene inoltre illustrato l'override della `OnCreate` funzione membro.
+La barra degli strumenti è un oggetto [CToolBar](../mfc/reference/ctoolbar-class.md) dichiarato come membro dati della classe dell'applicazione `CMainFrame` . In altre parole, l'oggetto Toolbar è incorporato nell'oggetto finestra cornice principale. Questo significa che MFC crea la barra degli strumenti quando crea la finestra cornice ed elimina la barra degli strumenti quando elimina la finestra cornice. La seguente dichiarazione di classe parziale, per un'applicazione con interfaccia a documenti multipli (MDI), Mostra i membri dati per una barra degli strumenti incorporata e una barra di stato incorporata. Viene inoltre illustrato l'override della `OnCreate` funzione membro.
 
 [!code-cpp[NVC_MFCListView#6](../atl/reference/codesnippet/cpp/toolbar-fundamentals_1.h)]
 
-La creazione `CMainFrame::OnCreate`della barra degli strumenti avviene in . MFC chiama [OnCreate](../mfc/reference/cwnd-class.md#oncreate) dopo aver creato la finestra per il frame, ma prima che diventi visibile. L'impostazione predefinita generata dalla Creazione guidata applicazione esegue le attività della barra degli strumenti seguenti:The default `OnCreate` that the Application Wizard generates does the following toolbar tasks:
+La creazione della barra degli strumenti si verifica in `CMainFrame::OnCreate` . MFC chiama [OnCreate](../mfc/reference/cwnd-class.md#oncreate) dopo la creazione della finestra per il frame ma prima che diventi visibile. Per impostazione predefinita `OnCreate` , la creazione guidata applicazione genera le seguenti attività della barra degli strumenti:
 
-1. Chiama `CToolBar` la funzione membro [Create](../mfc/reference/ctoolbar-class.md#create) dell'oggetto per creare l'oggetto [sottostante CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) oggetto.
+1. Chiama la `CToolBar` funzione membro [create](../mfc/reference/ctoolbar-class.md#create) dell'oggetto per creare l'oggetto [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) sottostante.
 
 1. Chiama [LoadToolBar](../mfc/reference/ctoolbar-class.md#loadtoolbar) per caricare le informazioni sulle risorse della barra degli strumenti.
 
-1. Chiama le funzioni per abilitare l'ancoraggio, il mobile e le descrizioni comandi. Per informazioni dettagliate su queste chiamate, vedere l'articolo [Docking and Floating Toolbars](../mfc/docking-and-floating-toolbars.md).
+1. Chiama funzioni per abilitare l'ancoraggio, la virgola mobile e le descrizioni comandi. Per informazioni dettagliate su queste chiamate, vedere l'articolo [ancoraggio e barre degli strumenti mobili](../mfc/docking-and-floating-toolbars.md).
 
 > [!NOTE]
-> L'esempio di dati E seguito da MFC General [DOCKTOOL](../overview/visual-cpp-samples.md) include illustrazioni delle barre degli strumenti MFC precedenti e nuove. Le barre degli `COldToolbar` strumenti che utilizzano richiedono `LoadToolBar`chiamate `SetButtons`nel passaggio 2 a `LoadBitmap` (anziché ) e a . Le nuove barre degli `LoadToolBar`strumenti richiedono chiamate a .
+> Il [DOCKTOOL](../overview/visual-cpp-samples.md) di esempio generale MFC include illustrazioni di barre degli strumenti MFC nuove e obsolete. Le barre degli strumenti che usano `COldToolbar` richiedono chiamate nel passaggio 2 a `LoadBitmap` (anziché `LoadToolBar` ) e a `SetButtons` . Le nuove barre degli strumenti richiedono chiamate a `LoadToolBar` .
 
-Le chiamate di ancoraggio, flottanti e descrizioni comandi sono facoltative. È possibile rimuovere `OnCreate` tali righe da se si preferisce. Il risultato è una barra degli strumenti che rimane fissa, in grado di fluttuare o riancorare e in grado di visualizzare le descrizioni comandi.
+Le chiamate di ancoraggio, mobile e suggerimenti per gli strumenti sono facoltative. È possibile rimuovere tali righe da `OnCreate` se si preferisce. Il risultato è una barra degli strumenti che rimane fissa, non è possibile eseguire il Floating o il riaggancio e non è possibile visualizzare le descrizioni comandi.
 
-## <a name="editing-the-toolbar-resource"></a><a name="_core_editing_the_toolbar_resource"></a>Modifica della risorsa barra degli strumenti
+## <a name="editing-the-toolbar-resource"></a><a name="_core_editing_the_toolbar_resource"></a> Modifica della risorsa della barra degli strumenti
 
-La barra degli strumenti predefinita che si ottiene con la creazione guidata applicazione è basata su **un RT_TOOLBAR** risorsa personalizzata, introdotto in MFC versione 4.0. È possibile modificare questa risorsa con [l'editor della barra degli strumenti.](../windows/toolbar-editor.md) L'editor consente di aggiungere, eliminare e ridisporre facilmente i pulsanti. Esso contiene un editor grafico per i pulsanti che è molto simile all'editor di grafica generale in Visual C. Se le barre degli strumenti sono state modificate nelle versioni precedenti di Visual C, l'attività è molto più semplice ora.
+La barra degli strumenti predefinita che si ottiene con la creazione guidata applicazione si basa su una risorsa **RT_TOOLBAR** personalizzata, introdotta nella versione MFC 4,0. È possibile modificare questa risorsa con l' [Editor barra degli strumenti](../windows/toolbar-editor.md). L'editor consente di aggiungere, eliminare e ridisporre facilmente i pulsanti. Contiene un editor grafico per i pulsanti molto simili all'editor di grafica generale in Visual C++. Se sono state modificate le barre degli strumenti nelle versioni precedenti di Visual C++, l'attività sarà molto più semplice adesso.
 
-Per connettere un pulsante della barra degli strumenti a `ID_MYCOMMAND`un comando, assegnare al pulsante un ID di comando, ad esempio . Specificare l'ID di comando nella pagina delle proprietà del pulsante nell'editor della barra degli strumenti. Creare quindi una funzione del gestore per il comando (vedere [Mapping di messaggi a funzioni](../mfc/reference/mapping-messages-to-functions.md) per ulteriori informazioni).
+Per connettere un pulsante della barra degli strumenti a un comando, è necessario assegnare un ID comando al pulsante, ad esempio `ID_MYCOMMAND` . Specificare l'ID di comando nella pagina delle proprietà del pulsante nell'editor della barra degli strumenti. Creare quindi una funzione di gestione per il comando. per altre informazioni, vedere [mapping di messaggi a funzioni](../mfc/reference/mapping-messages-to-functions.md) .
 
-Le nuove funzioni membro [di CToolBar](../mfc/reference/ctoolbar-class.md) funzionano con la risorsa **RT_TOOLBAR.** [LoadToolBar](../mfc/reference/ctoolbar-class.md#loadtoolbar) ora prende il posto di [LoadBitmap](../mfc/reference/ctoolbar-class.md#loadbitmap) per caricare la bitmap delle immagini dei pulsanti della barra degli strumenti e [SetButtons](../mfc/reference/ctoolbar-class.md#setbuttons) per impostare gli stili dei pulsanti e collegare i pulsanti con le immagini bitmap.
+Le nuove funzioni membro [CToolBar](../mfc/reference/ctoolbar-class.md) funzionano con la risorsa **RT_TOOLBAR** . [LoadToolBar](../mfc/reference/ctoolbar-class.md#loadtoolbar) ora esegue il [LoadBitmap](../mfc/reference/ctoolbar-class.md#loadbitmap) per caricare la bitmap delle immagini dei pulsanti della barra degli strumenti e i pulsanti per impostare gli stili e i [pulsanti di connessione](../mfc/reference/ctoolbar-class.md#setbuttons) con le immagini bitmap.
 
-Per informazioni dettagliate sull'utilizzo dell'editor della barra degli strumenti, vedere [Editor barra degli strumenti](../windows/toolbar-editor.md).
+Per informazioni dettagliate sull'uso dell'editor della barra degli strumenti, vedere [Editor della barra degli strumenti](../windows/toolbar-editor.md).
 
-## <a name="multiple-toolbars"></a><a name="_core_multiple_toolbars"></a>Barre degli strumenti multiple
+## <a name="multiple-toolbars"></a><a name="_core_multiple_toolbars"></a> Più barre degli strumenti
 
-La Creazione guidata applicazione fornisce una barra degli strumenti predefinita. Se sono necessarie più barre degli strumenti nell'applicazione, è possibile modellare il codice per barre degli strumenti aggiuntive in base al codice generato dalla procedura guidata per la barra degli strumenti predefinita.
+La creazione guidata applicazione fornisce una barra degli strumenti predefinita. Se è necessaria più di una barra degli strumenti dell'applicazione, è possibile modellare il codice per altre barre degli strumenti in base al codice generato dalla procedura guidata per la barra degli strumenti predefinita.
 
-Se si desidera visualizzare una barra degli strumenti come risultato di un comando, è necessario:
+Se si vuole visualizzare una barra degli strumenti come risultato di un comando, è necessario:
 
-- Creare una nuova risorsa barra degli strumenti `OnCreate` con l'editor della barra degli strumenti e caricarla con la funzione membro [LoadToolbar.Create](../mfc/reference/ctoolbar-class.md#loadtoolbar) a new toolbar resource with the toolbar editor and load it in with the LoadToolbar member function.
+- Creare una nuova risorsa della barra degli strumenti con l'editor della barra degli strumenti e caricarla `OnCreate` con la funzione membro [LoadToolBar](../mfc/reference/ctoolbar-class.md#loadtoolbar) .
 
-- Incorporare un nuovo [oggetto CToolBar](../mfc/reference/ctoolbar-class.md) nella classe della finestra cornice principale.
+- Incorpora un nuovo oggetto [CToolBar](../mfc/reference/ctoolbar-class.md) nella classe della finestra cornice principale.
 
-- Effettuare le chiamate `OnCreate` di funzione appropriate per ancorare o rendere mobile la barra degli strumenti, impostarne gli stili e così via.
+- Eseguire le chiamate di funzione appropriate in `OnCreate` per ancorare o rendere mobile la barra degli strumenti, impostarne gli stili e così via.
 
-### <a name="what-do-you-want-to-know-more-about"></a>Cosa vuoi sapere di più su
+### <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
 - [Implementazione della barra degli strumenti MFC (informazioni generali sulle barre degli strumenti)](../mfc/mfc-toolbar-implementation.md)
 
 - [Barre degli strumenti ancorate e mobili](../mfc/docking-and-floating-toolbars.md)
 
-- [Descrizioni comandi della barra degli strumenti](../mfc/toolbar-tool-tips.md)
+- [Descrizioni comando delle barre degli strumenti](../mfc/toolbar-tool-tips.md)
 
-- Le classi [CToolBar](../mfc/reference/ctoolbar-class.md) e [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)
+- Classi [CToolBar](../mfc/reference/ctoolbar-class.md) e [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)
 
-- [Utilizzo del controllo barra degli strumenti](../mfc/working-with-the-toolbar-control.md)
+- [Uso del controllo barra degli strumenti](../mfc/working-with-the-toolbar-control.md)
 
-- [Utilizzo delle barre degli strumenti precedenti](../mfc/using-your-old-toolbars.md)
+- [Uso di barre degli strumenti precedenti](../mfc/using-your-old-toolbars.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Implementazione della barra degli strumenti MFC](../mfc/mfc-toolbar-implementation.md)

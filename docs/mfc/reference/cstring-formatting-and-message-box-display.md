@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: formattazione di CString e visualizzazione Message-Box'
 title: Formattazione CString e visualizzazione finestre di messaggio
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
-ms.openlocfilehash: e346fe6ed5235f98f9e1206e92cb53c2fd5c929f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a3c91a2a8a6f80235a834811433467797d5a37a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831125"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264518"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>Formattazione CString e visualizzazione finestre di messaggio
 
@@ -19,7 +20,7 @@ Questo gruppo di funzioni include anche una routine globale per la visualizzazio
 
 ### <a name="cstring-functions"></a>Funzioni CString
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[AfxExtractSubString](#afxextractsubstring)|Estrae le sottostringhe separate da un singolo carattere da una stringa di origine specificata.|
 |[AfxFormatString1](#afxformatstring1)|Sostituisce una determinata stringa per i caratteri di formato "%1" in una stringa contenuta nella tabella di stringhe.|
@@ -60,7 +61,7 @@ Carattere separatore utilizzato per delimitare le sottostringhe.
 
 TRUE se la funzione ha estratto correttamente la sottostringa in corrispondenza dell'indice specificato. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione è utile per estrarre più sottostringhe da una stringa di origine quando un singolo carattere noto separa ogni sottostringa. Questa funzione esegue la ricerca dall'inizio del parametro *lpszFullString* ogni volta che viene chiamato.
 
@@ -96,7 +97,7 @@ ID della risorsa della stringa di modello in cui verrà eseguita la sostituzione
 *lpsz1*<br/>
 Stringa che sostituirà i caratteri di formato "%1" nella stringa di modello.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La stringa appena formata viene archiviata in *rString*. Ad esempio, se la stringa nella tabella di stringhe è "file %1 non trovato" e *lpsz1* è uguale a "C:\MYFILE.TXT", *rString* conterrà la stringa "file C:\MYFILE.TXT not found". Questa funzione è utile per la formattazione di stringhe inviate alle finestre di messaggio e ad altre finestre.
 
@@ -136,7 +137,7 @@ Stringa che sostituirà i caratteri di formato "%1" nella stringa di modello.
 *lpsz2*<br/>
 Stringa che sostituirà i caratteri di formato "%2" nella stringa del modello.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La stringa appena formata viene archiviata in *rString*. Ad esempio, se la stringa nella tabella di stringhe è "file %1 non trovato nella directory %2", *lpsz1* punta a "MYFILE.TXT" e *lpsz2* punta a "C:\MyDir", quindi *rString* conterrà la stringa "file MYFILE.TXT non trovato nella directory C:\MyDir"
 
@@ -202,11 +203,11 @@ Se una finestra di messaggio contiene un pulsante Annulla, verrà restituito il 
 
 Le funzioni [AfxFormatString1](#afxformatstring1) e [AfxFormatString2](#afxformatstring2) possono essere utili per la formattazione del testo visualizzato in una finestra di messaggio.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo form di questa funzione in overload Visualizza una stringa di testo a cui punta *lpszText* nella finestra di messaggio e USA *nIDHelp* per descrivere un contesto della guida. Il contesto della guida viene utilizzato per passare a un argomento della Guida associato quando l'utente preme il tasto guida (in genere F1).
 
-Il secondo formato della funzione usa la risorsa di tipo stringa con l'ID *nIDPrompt* per visualizzare un messaggio nella finestra di messaggio. La pagina della Guida associata viene individuata tramite il valore di *nIDHelp*. Se viene usato il valore predefinito di *nIDHelp* (-1), viene usato l'ID di risorsa di stringa *nIDPrompt*per il contesto della guida. Per ulteriori informazioni sulla definizione dei contesti della guida, vedere la [Nota tecnica 28](../../mfc/tn028-context-sensitive-help-support.md).
+Il secondo formato della funzione usa la risorsa di tipo stringa con l'ID *nIDPrompt* per visualizzare un messaggio nella finestra di messaggio. La pagina della Guida associata viene individuata tramite il valore di *nIDHelp*. Se viene usato il valore predefinito di *nIDHelp* (-1), viene usato l'ID di risorsa di stringa *nIDPrompt* per il contesto della guida. Per ulteriori informazioni sulla definizione dei contesti della guida, vedere la [Nota tecnica 28](../../mfc/tn028-context-sensitive-help-support.md).
 
 ### <a name="example"></a>Esempio
 

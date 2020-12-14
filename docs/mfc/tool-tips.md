@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: descrizioni comandi'
 title: Descrizioni comandi
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,25 +9,25 @@ helpviewer_keywords:
 - controls [MFC], tool tips
 - buttons [MFC], tool tips
 ms.assetid: 7f0bba86-7c55-4bf6-8455-687a4dcb2be8
-ms.openlocfilehash: ec7795a524420d62b2307f26954bbf205d19dea9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9446974df623ff03d1417ee393242d9995a6cf6c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167972"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264453"
 ---
 # <a name="tool-tips"></a>Descrizioni comandi
 
-Le procedure sono distinte per l'aggiunta di descrizioni comandi per i controlli contenuti in windows derivata dalla classe MFC [CFrameWnd](../mfc/reference/cframewnd-class.md) e windows non derivate da `CFrameWnd`.
+Le procedure sono distinte per l'aggiunta di descrizioni comandi ai controlli contenuti in finestre derivate dalla classe MFC [CFrameWnd](../mfc/reference/cframewnd-class.md) e da Windows non derivate da `CFrameWnd` .
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-Descrizioni comandi per i controlli in una finestra che è:
+Descrizioni comandi per i controlli in una finestra:
 
-- [Descrizioni comandi barra degli strumenti (derivate da CFrameWnd)](../mfc/toolbar-tool-tips.md)
+- [Descrizioni comandi della barra degli strumenti (derivate da CFrameWnd)](../mfc/toolbar-tool-tips.md)
 
 - [Descrizioni comandi in Windows non derivate da CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Elementi dell'interfaccia utente](../mfc/user-interface-elements-mfc.md)
