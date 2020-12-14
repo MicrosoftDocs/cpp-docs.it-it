@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CSmartDockingInfo'
 title: Classe CSmartDockingInfo
 ms.date: 11/19/2018
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerBmpResID
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
-ms.openlocfilehash: ebb5e75b5b298097cfce043bd83ec88ca0ab4030
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 290f9eef208ceed425739ab26e7811c04309e057
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81751303"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345134"
 ---
 # <a name="csmartdockinginfo-class"></a>Classe CSmartDockingInfo
 
@@ -43,55 +44,55 @@ Definisce l'aspetto dei marcatori standard di ancoraggio intelligente.
 class CSmartDockingInfo : public CObject
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`CSmartDockingInfo::CSmartDockingInfo`|Costruttore predefinito.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CSmartDockingInfo::CopiaTo](#copyto)|Copia i parametri delle informazioni di ancoraggio intelligenti correnti nell'oggetto [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) fornito.|
+|[CSmartDockingInfo:: CopyTo](#copyto)|Copia i parametri delle informazioni di ancoraggio intelligente correnti nell'oggetto [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) fornito.|
 
 ### <a name="data-members"></a>Membri dei dati
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|Specifica se utilizzare il colore del tema corrente quando il framework visualizza marcatori di ancoraggio intelligenti.|
-|[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|Specifica il colore di sfondo di base dei marcatori di ancoraggio intelligenti.|
-|[CSmartDockingInfo::m_clrToneDest](#m_clrtonedest)|Specifica il colore che `m_clrToneSrc` sostituisce nelle bitmap degli indicatori di ancoraggio intelligenti.|
-|[CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc)|Specifica il colore delle bitmap degli indicatori di ancoraggio intelligenti.|
-|[CSmartDockingInfo::m_clrTransparent](#m_clrtransparent)|Specifica il colore delle bitmap degli indicatori di ancoraggio intelligenti quando sono trasparenti.|
-|[CSmartDockingInfo::m_nCentralGroupOffset](#m_ncentralgroupoffset)|Specifica l'offset del gruppo centrale di marcatori di ancoraggio intelligente dai contorni del rettangolo del gruppo centrale.|
-|[CSmartDockingInfo::m_sizeTotal](#m_sizetotal)|Specifica la dimensione totale di tutti i marcatori di ancoraggio intelligente in un gruppo.|
-|[CSmartDockingInfo::m_uiMarkerBmpResID](#m_uimarkerbmpresid)|Definisce gli ID di risorsa delle bitmap utilizzate dal framework per gli indicatori di ancoraggio intelligente non evidenziati.|
-|[CSmartDockingInfo::m_uiMarkerLightBmpResID](#m_uimarkerlightbmpresid)|Definisce gli ID di risorsa delle bitmap utilizzate dal framework per gli indicatori di ancoraggio intelligenti evidenziati.|
+|[CSmartDockingInfo:: m_bUseThemeColorInShading](#m_busethemecolorinshading)|Specifica se usare il colore corrente del tema quando il Framework Visualizza i marcatori di ancoraggio intelligente.|
+|[CSmartDockingInfo:: m_clrBaseBackground](#m_clrbasebackground)|Specifica il colore di sfondo di base dei marcatori di ancoraggio intelligente.|
+|[CSmartDockingInfo:: m_clrToneDest](#m_clrtonedest)|Specifica il colore che sostituisce `m_clrToneSrc` nelle bitmap del marcatore di ancoraggio intelligente.|
+|[CSmartDockingInfo:: m_clrToneSrc](#m_clrtonesrc)|Specifica il colore delle bitmap del marcatore di ancoraggio intelligente.|
+|[CSmartDockingInfo:: m_clrTransparent](#m_clrtransparent)|Specifica il colore delle bitmap del marcatore di ancoraggio intelligente quando sono trasparenti.|
+|[CSmartDockingInfo:: m_nCentralGroupOffset](#m_ncentralgroupoffset)|Specifica l'offset del gruppo centrale di marcatori di ancoraggio intelligenti dai limiti del rettangolo del gruppo centrale.|
+|[CSmartDockingInfo:: m_sizeTotal](#m_sizetotal)|Specifica la dimensione totale di tutti i marcatori di ancoraggio intelligenti in un gruppo.|
+|[CSmartDockingInfo:: m_uiMarkerBmpResID](#m_uimarkerbmpresid)|Definisce gli ID risorsa delle bitmap utilizzate dal Framework per i marcatori di ancoraggio intelligenti che non sono evidenziati.|
+|[CSmartDockingInfo:: m_uiMarkerLightBmpResID](#m_uimarkerlightbmpresid)|Definisce gli ID risorsa delle bitmap utilizzate dal Framework per i marcatori di ancoraggio intelligenti evidenziati.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Il framework gestisce internamente i marcatori di ancoraggio intelligenti. La figura seguente mostra i marcatori di ancoraggio intelligenti standard:
+Il Framework gestisce i marcatori di ancoraggio intelligenti internamente. La figura seguente mostra i marcatori di ancoraggio intelligenti standard:
 
 ![Marcatori standard per ancoraggio intelligente](../../mfc/reference/media/nextsdmarkers.png "Marcatori standard per ancoraggio intelligente")
 
-In questa figura, l'immagine a sinistra mostra un indicatore di ancoraggio intelligente del gruppo centrale che non dispone di ancoraggio a una scheda abilitata. L'immagine al centro mostra un indicatore di ancoraggio intelligente del bordo destro. L'immagine a destra mostra un indicatore di ancoraggio intelligente del gruppo centrale che ha l'ancoraggio a una scheda abilitata. Il marcatore di ancoraggio intelligente del gruppo centrale ha una bitmap principale e cinque bitmap del marcatore di ancoraggio intelligente.
+In questa figura, l'immagine a sinistra mostra un marcatore di ancoraggio intelligente del gruppo centrale che non ha ancorato una scheda abilitata. L'immagine al centro mostra un marcatore di ancoraggio intelligente del bordo destro. L'immagine a destra mostra un marcatore di ancoraggio intelligente del gruppo centrale che ha ancorato una scheda abilitata. Il marcatore di ancoraggio intelligente del gruppo centrale ha una bitmap principale e cinque bitmap marcatore di ancoraggio intelligente.
 
-È possibile personalizzare i seguenti parametri dei marcatori di ancoraggio intelligenti:
+È possibile personalizzare i seguenti parametri di marcatori di ancoraggio intelligenti:
 
-- Colore. Ad esempio, è possibile sostituire il colore blu dei marcatori nella figura con qualsiasi colore definito dall'utente.
+- Colore. È ad esempio possibile sostituire il colore blu dei marcatori nella figura con qualsiasi colore definito dall'utente.
 
 - Colore trasparenza.
 
-- Offset di un indicatore di ancoraggio intelligente nel gruppo centrale dal bordo del rettangolo di delimitazione.
+- Offset di un marcatore di ancoraggio intelligente nel gruppo centrale dal bordo del rettangolo di delimitazione.
 
 - Bitmap principale che rappresenta il gruppo centrale.
 
-- Bitmap che rappresenta gli indicatori di ancoraggio intelligente regolari ed evidenziati.
+- Bitmap che rappresentano i marcatori di ancoraggio intelligenti regolari ed evidenziati.
 
-La figura seguente mostra un esempio di marcatori di ancoraggio intelligenti che sono stati personalizzati:
+La figura seguente mostra un esempio di marcatori di ancoraggio intelligenti personalizzati:
 
 ![Marcatori personalizzati per ancoraggio intelligente](../../mfc/reference/media/nextsdmarkerscustom.png "Marcatori personalizzati per ancoraggio intelligente")
 
@@ -103,9 +104,9 @@ La figura seguente mostra un esempio di marcatori di ancoraggio intelligenti che
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxDockingManager.h
+**Intestazione:** afxDockingManager. h
 
-## <a name="csmartdockinginfocopyto"></a><a name="copyto"></a>CSmartDockingInfo::CopiaTo
+## <a name="csmartdockinginfocopyto"></a><a name="copyto"></a> CSmartDockingInfo:: CopyTo
 
 Copia i parametri di ancoraggio intelligente correnti nell'oggetto [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) fornito.
 
@@ -116,105 +117,105 @@ void CopyTo(CSmartDockingInfo& params);
 ### <a name="parameters"></a>Parametri
 
 *params*<br/>
-[fuori] Oggetto di `CSmartDockingInfo` tipo popolato con i parametri di ancoraggio intelligente correnti.
+out Oggetto di tipo `CSmartDockingInfo` popolato con i parametri di ancoraggio intelligente correnti.
 
-## <a name="csmartdockinginfom_busethemecolorinshading"></a><a name="m_busethemecolorinshading"></a>CSmartDockingInfo::m_bUseThemeColorInShading
+## <a name="csmartdockinginfom_busethemecolorinshading"></a><a name="m_busethemecolorinshading"></a> CSmartDockingInfo:: m_bUseThemeColorInShading
 
-Specifica se utilizzare il colore del tema corrente quando il framework visualizza marcatori di ancoraggio intelligenti.
+Specifica se usare il colore corrente del tema quando il Framework Visualizza i marcatori di ancoraggio intelligente.
 
 ```
 BOOL m_bUseThemeColorInShading;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Se TRUE, i marcatori vengono disegnati utilizzando il colore del tema corrente; in caso contrario, i marcatori vengono disegnati con un colore azzurro.
+Se TRUE, i marcatori vengono disegnati utilizzando il colore del tema corrente; in caso contrario, i marcatori vengono disegnati con un colore blu chiaro.
 
 Il valore predefinito è FALSE.
 
-## <a name="csmartdockinginfom_clrbasebackground"></a><a name="m_clrbasebackground"></a>CSmartDockingInfo::m_clrBaseBackground
+## <a name="csmartdockinginfom_clrbasebackground"></a><a name="m_clrbasebackground"></a> CSmartDockingInfo:: m_clrBaseBackground
 
-Specifica il colore di sfondo di base dei marcatori di ancoraggio intelligenti.
+Specifica il colore di sfondo di base dei marcatori di ancoraggio intelligente.
 
 ```
 COLORREF m_clrBaseBackground;
 ```
 
-## <a name="csmartdockinginfom_clrtonedest"></a><a name="m_clrtonedest"></a>CSmartDockingInfo::m_clrToneDest
+## <a name="csmartdockinginfom_clrtonedest"></a><a name="m_clrtonedest"></a> CSmartDockingInfo:: m_clrToneDest
 
-Specifica il colore che `m_clrToneSrc` verrà sostituito nelle bitmap degli indicatori di ancoraggio intelligenti.
+Specifica il colore che sostituirà le `m_clrToneSrc` bitmap del marcatore di ancoraggio intelligente.
 
 ```
 COLORREF m_clrToneDest;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Impostare questo valore per modificare il colore delle bitmap del marcatore a livello di codice. Ad esempio, se si desidera modificare il colore dei marcatori standard forniti con il framework, impostare questo valore sul colore desiderato. Per impostazione predefinita, [CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc) è impostato su RGB (61, 123, 241) (un colore bluastro).
+Impostare questo valore per modificare il colore delle bitmap del marcatore a livello di codice. Se ad esempio si desidera modificare il colore dei marcatori standard forniti con il Framework, impostare questo valore sul colore desiderato. Per impostazione predefinita, [CSmartDockingInfo:: m_clrToneSrc](#m_clrtonesrc) è impostato su RGB (61, 123, 241) (colore bluastro).
 
-Per modificare il colore dei marcatori `m_clrToneDest` personalizzati, è necessario specificare entrambi e `m_clrToneSrc`.
+Per modificare il colore dei marcatori personalizzati, è necessario specificare sia `m_clrToneDest` che `m_clrToneSrc` .
 
-## <a name="csmartdockinginfom_clrtonesrc"></a><a name="m_clrtonesrc"></a>CSmartDockingInfo::m_clrToneSrc
+## <a name="csmartdockinginfom_clrtonesrc"></a><a name="m_clrtonesrc"></a> CSmartDockingInfo:: m_clrToneSrc
 
-Specifica il colore delle bitmap degli indicatori di ancoraggio intelligenti.
+Specifica il colore delle bitmap del marcatore di ancoraggio intelligente.
 
 ```
 COLORREF m_clrToneSrc;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Impostare questo valore solo quando si desidera sostituire il colore di una bitmap personalizzata con un altro colore. Non è necessario impostare questo valore se si modifica il colore di un marcatore standard (framework fornito).
+Impostare questo valore solo quando si desidera sostituire il colore di una bitmap personalizzata con un altro colore. Non è necessario impostare questo valore se si modifica il colore di un marcatore standard (Framework fornito).
 
-Consente `(COLORREF)-1` di lasciare vuoto un membro del gruppo di ancoraggio intelligente.
+Usare `(COLORREF)-1` per lasciare vuoto un membro del gruppo di ancoraggio intelligente.
 
-## <a name="csmartdockinginfom_clrtransparent"></a><a name="m_clrtransparent"></a>CSmartDockingInfo::m_clrTransparent
+## <a name="csmartdockinginfom_clrtransparent"></a><a name="m_clrtransparent"></a> CSmartDockingInfo:: m_clrTransparent
 
-Specifica il colore delle bitmap degli indicatori di ancoraggio intelligenti quando sono trasparenti.
+Specifica il colore delle bitmap del marcatore di ancoraggio intelligente quando sono trasparenti.
 
 ```
 COLORREF m_clrTransparent;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-È necessario impostare questo valore quando si visualizzano marcatori personalizzati e bitmap personalizzate nel gruppo di ancoraggio.
+È necessario impostare questo valore quando si visualizzano i marcatori personalizzati e le bitmap personalizzate nel gruppo di ancoraggio.
 
-## <a name="csmartdockinginfom_ncentralgroupoffset"></a><a name="m_ncentralgroupoffset"></a>CSmartDockingInfo::m_nCentralGroupOffset
+## <a name="csmartdockinginfom_ncentralgroupoffset"></a><a name="m_ncentralgroupoffset"></a> CSmartDockingInfo:: m_nCentralGroupOffset
 
-Specifica l'offset tra il gruppo centrale di indicatori di ancoraggio intelligente e i contorni del rettangolo del gruppo centrale.
+Specifica l'offset tra il gruppo centrale di marcatori di ancoraggio intelligenti e i limiti del rettangolo del gruppo centrale.
 
 ```
 int m_nCentralGroupOffset;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Specificate questo valore se desiderate modificare l'offset predefinito tra i marcatori personalizzati e i limiti del gruppo centrale di marcatori di ancoraggio intelligente. L'offset predefinito è 5 pixel.
+Specificare questo valore se si desidera modificare l'offset predefinito tra i marcatori personalizzati e i limiti del gruppo centrale di marcatori di ancoraggio intelligenti. L'offset predefinito è 5 pixel.
 
-## <a name="csmartdockinginfom_sizetotal"></a><a name="m_sizetotal"></a>CSmartDockingInfo::m_sizeTotal
+## <a name="csmartdockinginfom_sizetotal"></a><a name="m_sizetotal"></a> CSmartDockingInfo:: m_sizeTotal
 
-Specifica la dimensione totale di un rettangolo di delimitazione che racchiude tutti gli indicatori di ancoraggio intelligente nel gruppo centrale.
+Specifica la dimensione totale di un rettangolo di delimitazione che racchiude tutti i marcatori di ancoraggio intelligenti nel gruppo centrale.
 
 ```
 CSize m_sizeTotal;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Impostare `m_sizeTotal` sulla dimensione del rettangolo di delimitazione dell'indicatore del gruppo centrale. È necessario specificare questo valore se si utilizzano bitmap personalizzate per i marcatori.
+Impostare sulla `m_sizeTotal` dimensione del rettangolo di delimitazione del marcatore del gruppo centrale. È necessario specificare questo valore se si utilizzano bitmap personalizzate per i marcatori.
 
-## <a name="csmartdockinginfom_uimarkerbmpresid"></a><a name="m_uimarkerbmpresid"></a>CSmartDockingInfo::m_uiMarkerBmpResID
+## <a name="csmartdockinginfom_uimarkerbmpresid"></a><a name="m_uimarkerbmpresid"></a> CSmartDockingInfo:: m_uiMarkerBmpResID
 
-Definisce gli ID di risorsa delle bitmap utilizzati per i marcatori di ancoraggio intelligente personalizzati non evidenziati.
+Definisce gli ID risorsa delle bitmap utilizzate per i marcatori di ancoraggio intelligenti personalizzati non evidenziati.
 
 ```
 UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Riempire questa matrice con gli ID di risorsa delle bitmap che rappresentano i marcatori di ancoraggio intelligente. AFX_SD_MARKERS_NUM è attualmente definito come 5. Riempire la matrice come segue:
+Riempire questa matrice con gli ID risorsa delle bitmap che rappresentano i marcatori di ancoraggio intelligente. AFX_SD_MARKERS_NUM è attualmente definito come 5. Compilare la matrice come indicato di seguito:
 
 ```cpp
 params.m_uiMarkerBmpResID[0] = IDB_MARKER_LEFT;
@@ -224,17 +225,17 @@ params.m_uiMarkerBmpResID[3] = IDB_MARKER_BOTTOM;
 params.m_uiMarkerBmpResID[4] = IDB_MARKER_CENTER;
 ```
 
-## <a name="csmartdockinginfom_uimarkerlightbmpresid"></a><a name="m_uimarkerlightbmpresid"></a>CSmartDockingInfo::m_uiMarkerLightBmpResID
+## <a name="csmartdockinginfom_uimarkerlightbmpresid"></a><a name="m_uimarkerlightbmpresid"></a> CSmartDockingInfo:: m_uiMarkerLightBmpResID
 
-Definisce gli ID di risorsa delle bitmap utilizzati per gli indicatori di ancoraggio intelligente personalizzati evidenziati.
+Definisce gli ID risorsa delle bitmap utilizzate per i marcatori di ancoraggio intelligenti personalizzati evidenziati.
 
 ```
 UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Riempire questa matrice con gli ID di risorsa delle bitmap che rappresentano gli indicatori di ancoraggio intelligente evidenziati. AFX_SD_MARKERS_NUM è attualmente definito come 5. Riempire la matrice come segue:
+Riempire questa matrice con gli ID risorsa delle bitmap che rappresentano i marcatori di ancoraggio intelligenti evidenziati. AFX_SD_MARKERS_NUM è attualmente definito come 5. Compilare la matrice come indicato di seguito:
 
 ```cpp
 params.m_uiMarkerLightBmpResID[0] = IDB_MARKER_LEFT_LIGHT;
@@ -244,7 +245,7 @@ params.m_uiMarkerLightBmpResID[3] = IDB_MARKER_BOTTOM_LIGHT;
 params.m_uiMarkerLightBmpResID[4] = IDB_MARKER_CENTER_LIGHT;
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>

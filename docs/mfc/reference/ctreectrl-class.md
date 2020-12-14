@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CTreeCtrl'
 title: CTreeCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
@@ -162,12 +163,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 6a824aceae39d5aa6685176354c48a9457a40e9e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e126863bebcc3cb8f878a8ece41ee8d9385c0afe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837619"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345017"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -179,17 +180,17 @@ Fornisce la funzionalità del controllo di visualizzazione albero comune di Wind
 class CTreeCtrl : public CWnd
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CTreeCtrl:: CTreeCtrl](#ctreectrl)|Costruisce un oggetto `CTreeCtrl`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CTreeCtrl:: create](#create)|Crea un controllo di visualizzazione ad albero e lo collega a un `CTreeCtrl` oggetto.|
 |[CTreeCtrl:: CreateDragImage](#createdragimage)|Crea una bitmap di trascinamento per l'elemento della visualizzazione struttura ad albero specificato.|
@@ -269,7 +270,7 @@ class CTreeCtrl : public CWnd
 |[CTreeCtrl:: SortChildren](#sortchildren)|Ordina gli elementi figlio di un elemento padre specificato.|
 |[CTreeCtrl:: SortChildrenCB](#sortchildrencb)|Ordina gli elementi figlio di un elemento padre specificato utilizzando una funzione di ordinamento definita dall'applicazione.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un "controllo di visualizzazione albero" è una finestra che visualizza un elenco gerarchico di elementi, ad esempio le intestazioni in un documento, le voci in un indice o i file e le directory su un disco. Ogni elemento è costituito da un'etichetta e da un'immagine bitmap facoltativa e a ogni elemento può essere associato un elenco di elementi secondari. Facendo clic su un elemento, l'utente può espandere e comprimere l'elenco associato di elementi secondari.
 
@@ -327,7 +328,7 @@ Specifica l'ID del controllo di visualizzazione albero.
 
 Diverso da zero se l'inizializzazione ha esito positivo; in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se si desidera creare il controllo albero come finestra figlio di un'altra finestra, utilizzare la `Create` funzione membro. Se si crea il controllo albero usando `Create` , è necessario passarlo WS_VISIBLE, oltre ad altri stili di visualizzazione ad albero.
 
@@ -373,7 +374,7 @@ ID della finestra figlio del controllo.
 
 Diverso da zero se ha esito positivo, altrimenti 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare `CreateEx` anziché [create](#create) per applicare gli stili estesi di Windows, specificati dall'introduzione allo stile esteso di Windows **WS_EX_**.
 
@@ -394,7 +395,7 @@ Handle dell'elemento della struttura ad albero da trascinare.
 
 Puntatore all'elenco di immagini a cui è stata aggiunta la bitmap di trascinamento; se ha esito positivo; in caso contrario, NULL.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un'applicazione usa le funzioni dell'elenco immagini per visualizzare l'immagine quando l'elemento viene trascinato.
 
@@ -464,7 +465,7 @@ Handle dell'elemento della struttura ad albero da modificare.
 
 In caso di esito positivo, puntatore all' `CEdit` oggetto utilizzato per modificare il testo dell'elemento; in caso contrario, null.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La modifica viene eseguita sostituendo il testo dell'elemento con un controllo di modifica a riga singola contenente il testo.
 
@@ -489,7 +490,7 @@ in TRUE per annullare le modifiche apportate all'elemento della visualizzazione 
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [TVM_ENDEDITLABELNOW](/windows/win32/Controls/tvm-endeditlabelnow) , descritto nel Windows SDK.
 
@@ -510,7 +511,7 @@ Handle dell'elemento della struttura ad albero reso visibile.
 
 Restituisce TRUE se il sistema ha eseguito lo scorrimento degli elementi nel controllo di visualizzazione albero per assicurarsi che l'elemento specificato sia visibile. In caso contrario, il valore restituito è FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se necessario, la funzione espande l'elemento padre o scorre il controllo di visualizzazione ad albero in modo che l'elemento sia visibile.
 
@@ -670,7 +671,7 @@ DWORD GetExtendedStyle() const;
 
 Valore che contiene una combinazione bit per bit (o) degli stili estesi del controllo visualizzazione albero corrente. Per altre informazioni, vedere [stili estesi del controllo di visualizzazione albero](/windows/win32/Controls/tree-view-control-window-extended-styles).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [TVM_GETEXTENDEDSTYLE](/windows/win32/Controls/tvm-getextendedstyle) , descritto nel Windows SDK.
 
@@ -711,7 +712,7 @@ Tipo di elenco di immagini da recuperare. L'elenco di immagini può essere uno d
 
 Puntatore all'elenco di immagini del controllo in caso di esito positivo; in caso contrario, NULL.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 A ogni elemento di un controllo di visualizzazione albero può essere associata una coppia di immagini bitmap. Quando l'elemento è selezionato, viene visualizzata un'immagine e l'altra viene visualizzata quando l'elemento non è selezionato. Ad esempio, un elemento potrebbe visualizzare una cartella aperta quando è selezionata e una cartella chiusa quando non è selezionata.
 
@@ -812,7 +813,7 @@ in Handle per un elemento di controllo di visualizzazione albero.
 
 Indice dell'immagine da visualizzare quando l'elemento specificato si trova nello stato espanso.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [TVM_GETITEM](/windows/win32/Controls/tvm-getitem) , descritto nel Windows SDK. Il messaggio restituisce la struttura [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) che descrive l'elemento di controllo di visualizzazione ad albero, quindi questo metodo recupera il `iExpandedImage` membro da tale struttura.
 
@@ -858,7 +859,7 @@ Intero che riceve l'indice dell'immagine selezionata dell'elemento all'interno d
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le immagini vengono visualizzate sul lato sinistro dell'etichetta di un elemento. Quando l'elemento è selezionato, viene visualizzata un'immagine e l'altra viene visualizzata quando l'elemento non è selezionato. Ad esempio, un elemento potrebbe visualizzare una cartella aperta quando è selezionata e una cartella chiusa quando non è selezionata.
 
@@ -894,7 +895,7 @@ out Puntatore a una struttura [Rect](/windows/win32/api/windef/ns-windef-rect) .
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Ogni elemento del controllo Tree è associato a un rettangolo grafico. Ogni volta che si fa clic su un punto nel rettangolo, viene detto che l'elemento viene *raggiunto*. Questo metodo restituisce il rettangolo più grande in modo tale che, quando si fa clic su un punto nel rettangolo, viene raggiunto l'elemento identificato dal parametro *Hitei* .
 
@@ -985,7 +986,7 @@ in Handle per un elemento di controllo di visualizzazione albero.
 
 Stato esteso dell'elemento. Per ulteriori informazioni, vedere il `uStateEx` membro della struttura [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [TVM_GETITEM](/windows/win32/Controls/tvm-getitem) , descritto nel Windows SDK. Il messaggio restituisce la struttura [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) che descrive l'elemento di controllo di visualizzazione ad albero e questo metodo recupera il `uStateEx` membro da tale struttura.
 
@@ -1022,7 +1023,7 @@ HTREEITEM GetLastVisibleItem() const;
 
 Handle per l'ultimo elemento del nodo non espanso se il metodo ha esito positivo; in caso contrario, NULL.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [TVM_GETNEXTITEM](/windows/win32/Controls/tvm-getnextitem) , descritto nel Windows SDK. Per ulteriori informazioni, vedere il flag TVGN_LASTVISIBLE nel parametro *flag* del messaggio.
 
@@ -1098,7 +1099,7 @@ Flag che indica il tipo di relazione a *hitee*. Questo flag può essere uno dei 
 
 Handle dell'elemento successivo in caso di esito positivo; in caso contrario, NULL.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione restituirà NULL se l'elemento da recuperare è il nodo radice dell'albero. Se, ad esempio, si utilizza questo messaggio con il flag TVGN_PARENT su un figlio di primo livello del nodo radice della visualizzazione albero, il messaggio restituirà NULL.
 
@@ -1167,7 +1168,7 @@ Handle di un elemento della struttura ad albero.
 
 Handle dell'elemento padre. in caso contrario, NULL.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione restituirà NULL se l'elemento padre dell'elemento specificato è il nodo radice dell'albero.
 
@@ -1245,7 +1246,7 @@ UINT GetScrollTime() const;
 
 Tempo massimo di scorrimento, in millisecondi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TVM_GETSCROLLTIME](/windows/win32/Controls/tvm-getscrolltime)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -1261,7 +1262,7 @@ UINT GetSelectedCount();
 
 Numero di elementi selezionati.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [TVM_GETSELECTEDCOUNT](/windows/win32/Controls/tvm-getselectedcount) , descritto nel Windows SDK.
 
@@ -1309,7 +1310,7 @@ CToolTipCtrl* GetToolTips() const;
 
 Puntatore a un oggetto [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) che deve essere utilizzato dal controllo struttura ad albero. Se la funzione membro [create](#create) usa lo stile TVS_NOTOOLTIPS, non viene usata alcuna descrizione comando e viene restituito null.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'implementazione MFC di `GetToolTips` restituisce un `CToolTipCtrl` oggetto, che viene utilizzato dal controllo struttura ad albero, anziché da un handle a un controllo ToolTip.
 
@@ -1360,11 +1361,11 @@ Indirizzo di una struttura [TVHITTESTINFO](/windows/win32/api/commctrl/ns-commct
 
 Handle dell'elemento della visualizzazione struttura ad albero che occupa il punto specificato o NULL se nessun elemento occupa il punto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando viene chiamata questa funzione, il parametro *PT* specifica le coordinate del punto da testare. La funzione restituisce l'handle dell'elemento in corrispondenza del punto specificato o NULL se nessun elemento occupa il punto. Inoltre, il parametro *pFlags* contiene un valore che indica la posizione del punto specificato. I valori possibili sono:
 
-|Valore|Descrizione|
+|Valore|Description|
 |-|-|
 |TVHT_ABOVE|Sopra l'area client.|
 |TVHT_BELOW|Sotto l'area client.|
@@ -1450,7 +1451,7 @@ Handle dell'elemento dopo il quale deve essere inserito il nuovo elemento.
 
 Handle del nuovo elemento in caso di esito positivo; in caso contrario, NULL.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Nell'esempio vengono illustrate le situazioni in cui potrebbe essere necessario utilizzare ogni versione della funzione quando si inserisce un elemento di controllo di struttura ad albero.
 
@@ -1475,7 +1476,7 @@ Handle di un elemento della struttura ad albero.
 
 Diverso da zero se l'elemento della struttura ad albero specificato da *Hite* è costituito da elementi figlio; 0 in caso contrario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 In tal caso, è possibile usare [CTreeCtrl:: GetChildItem](#getchilditem) per recuperare gli elementi figlio.
 
@@ -1500,7 +1501,7 @@ in Identificatore di accessibilità per un elemento nell'elemento della visualiz
 
 Handle per un elemento della visualizzazione struttura ad albero ( `HTREEITEM` ) che corrisponde al parametro *uAccId* . Per ulteriori informazioni, vedere il membro *hitey* della struttura [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli strumenti di accessibilità sono applicazioni che consentono agli utenti con disabilità di usare i computer. Un identificatore di accessibilità viene usato dall' `IAccessible` interfaccia per specificare in modo univoco un elemento in una finestra. Per ulteriori informazioni sugli identificatori di accessibilità, cercare l'argomento "informazioni sul supporto Active Accessibility" in [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
 
@@ -1535,7 +1536,7 @@ in Handle di un elemento della visualizzazione struttura ad albero nel controllo
 
 Identificatore di accessibilità che corrisponde al parametro *hitet* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli strumenti di accessibilità sono applicazioni che consentono agli utenti con disabilità di usare i computer. Un identificatore di accessibilità viene usato dall' `IAccessible` interfaccia per specificare in modo univoco un elemento in una finestra. Per ulteriori informazioni sugli identificatori di accessibilità, cercare l'argomento "informazioni sul supporto Active Accessibility" in [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
 
@@ -1581,7 +1582,7 @@ Tipo di azione da eseguire. Questo parametro può essere uno dei valori seguenti
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se *nCode* contiene il valore TVGN_CARET, la finestra padre riceve i messaggi di notifica TVN_SELCHANGING e TVN_SELCHANGED. Inoltre, se l'elemento specificato è figlio di un elemento padre compresso, l'elenco di elementi figlio dell'elemento padre viene espanso per rivelare l'elemento specificato. In questo caso, la finestra padre riceve il TVN_ITEMEXPANDING e TVN_ITEMEXPANDED i messaggi di notifica.
 
@@ -1627,7 +1628,7 @@ Handle di un elemento della struttura ad albero.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se *Hite* è null, questa funzione non seleziona alcun elemento.
 
@@ -1652,7 +1653,7 @@ Handle dell'elemento della struttura ad albero da impostare come primo elemento 
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione Invia un messaggio alla finestra con i parametri TVM_SELECTITEM e TVGN_FIRSTVISIBLE messaggio.
 
@@ -1682,7 +1683,7 @@ in Intervallo di tempo tra gli aggiornamenti del controllo.
 
 Restituisce sempre TRUE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I parametri di scorrimento automatico vengono usati per scorrere la visualizzazione di un elemento che attualmente non è visibile. Il controllo di visualizzazione albero deve avere lo stile esteso TVS_EX_AUTOHSCROLL, descritto in [stili estesi del controllo di visualizzazione albero](/windows/win32/Controls/tree-view-control-window-extended-styles).
 
@@ -1743,7 +1744,7 @@ Indica se l'elemento di controllo dell'albero deve essere selezionato o deselezi
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando l'elemento del controllo Tree è selezionato ( *fCheck* impostato su true), l'elemento viene visualizzato con un segno di spunta adiacente.
 
@@ -1779,7 +1780,7 @@ in Maschera di bit che specifica gli stili del controllo visualizzazione albero 
 
 Valore che contiene gli stili dei controlli estesi precedenti.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo cancella gli stili specificati nel parametro *dwExMask* , quindi imposta gli stili specificati nel parametro *dwExStyles* . Solo gli stili estesi che corrispondono ai bit in *dwExMask* cambiano.
 
@@ -1942,7 +1943,7 @@ Valore specifico dell'applicazione a dimensione del puntatore associato all'elem
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Nella `TVITEM` struttura il `hItem` membro identifica l'elemento e il `mask` membro specifica gli attributi da impostare.
 
@@ -2000,7 +2001,7 @@ in Indice dell'immagine da visualizzare quando l'elemento specificato si trova n
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [TVM_SETITEM](/windows/win32/Controls/tvm-setitem) , descritto nel Windows SDK. Questo metodo assegna il parametro *iExpandedImage* al `iExpandedImage` membro di una struttura [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) e quindi utilizza tale struttura nel messaggio.
 
@@ -2063,7 +2064,7 @@ Indice dell'immagine selezionata dell'elemento nell'elenco immagini del controll
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 A ogni elemento di un controllo di visualizzazione albero può essere associata una coppia di immagini bitmap. Le immagini vengono visualizzate sul lato sinistro dell'etichetta di un elemento. Quando l'elemento è selezionato, viene visualizzata un'immagine e l'altra viene visualizzata quando l'elemento non è selezionato. Ad esempio, un elemento potrebbe visualizzare una cartella aperta quando è selezionata e una cartella chiusa quando non è selezionata.
 
@@ -2101,7 +2102,7 @@ Specifica gli Stati da modificare.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per informazioni sugli Stati, vedere [CTreeCtrl:: GetItem](#getitem).
 
@@ -2131,7 +2132,7 @@ in Stato esteso dell'elemento. Per ulteriori informazioni, vedere il `uStateEx` 
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [TVM_SETITEM](/windows/win32/Controls/tvm-setitem) , descritto nel Windows SDK. Questo metodo assegna il parametro *uStateEx* al `uStateEx` membro di una struttura [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) e quindi utilizza tale struttura nel messaggio.
 
@@ -2190,7 +2191,7 @@ Colore della nuova riga.
 
 Colore della riga precedente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TVM_SETLINECOLOR](/windows/win32/Controls/tvm-setlinecolor)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -2215,7 +2216,7 @@ Nuovo tempo di scorrimento massimo, in millisecondi. Se questo valore è inferio
 
 Tempo di scorrimento massimo precedente, in millisecondi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [TVM_SETSCROLLTIME](/windows/win32/Controls/tvm-setscrolltime)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -2257,7 +2258,7 @@ Puntatore a un oggetto [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)
 
 Puntatore a un oggetto [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) contenente la descrizione comando utilizzata in precedenza dal controllo o null se non è stata utilizzata in precedenza alcuna descrizione comando.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per usare le descrizioni comandi, indicare lo stile TVS_NOTOOLTIPS quando si crea l' `CTreeCtrl` oggetto.
 
@@ -2278,7 +2279,7 @@ void ShowInfoTip(HTREEITEM hItem);
 *hItem*\
 in Handle per un elemento della visualizzazione struttura ad albero nel controllo. Per ulteriori informazioni, vedere il `hItem` membro della struttura [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni sulla differenza tra descrizioni comando e infotip, cercare l'argomento "tooltips and infotip" in [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
 
@@ -2301,7 +2302,7 @@ Handle dell'elemento padre i cui elementi figlio devono essere ordinati. Se *il*
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `SortChildren` non ricorrerà nell'albero; verranno ordinati solo gli elementi figlio immediati di *hitet* .
 
@@ -2326,7 +2327,7 @@ Puntatore a una struttura [TVSORTCB](/windows/win32/api/commctrl/ns-commctrl-tvs
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di confronto della struttura, `lpfnCompare` , deve restituire un valore negativo se il primo elemento deve precedere il secondo, un valore positivo se il primo elemento deve seguire il secondo o zero se i due elementi sono equivalenti.
 

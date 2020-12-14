@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3225'
 title: Errore del compilatore C3225
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3225
 ms.assetid: f5f66973-256e-4298-ac46-c87819cbde34
-ms.openlocfilehash: ed645535300e0a7c4d27f8bed43d3143bae7e97a
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: d186fc51917f7dfcfb44bbcd1dbf0b6de761ade6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742866"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304181"
 ---
 # <a name="compiler-error-c3225"></a>Errore del compilatore C3225
 
@@ -21,7 +22,7 @@ Il tipo dell'argomento di tipo generico non è corretto.
 
 Per altre informazioni, vedere [Generics](../../extensions/generics-cpp-component-extensions.md).
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Non è possibile creare un'istanza di un tipo generico con un tipo nativo. L'esempio seguente genera l'C3225.
 

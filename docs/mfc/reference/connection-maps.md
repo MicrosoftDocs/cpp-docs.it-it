@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: mappe di connessione'
 title: Mappe di connessione
 ms.date: 11/04/2016
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-ms.openlocfilehash: 517017e9e60b86e96daa24f7822538e91c609fb4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 61d2e7023ab97aa00952aee4786b34e60ba57af7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841415"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345251"
 ---
 # <a name="connection-maps"></a>Mappe di connessione
 
@@ -21,7 +22,7 @@ In genere, un controllo supporta solo due punti di connessione: uno per gli even
 
 ### <a name="connection-map-declaration-and-demarcation"></a>Dichiarazione e delimitazione della mappa di connessione
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[BEGIN_CONNECTION_PART](#begin_connection_part)|Dichiara una classe incorporata che implementa un punto di connessione aggiuntivo (deve essere utilizzato nella dichiarazione di classe).|
 |[END_CONNECTION_PART](#end_connection_part)|Termina la dichiarazione di un punto di connessione (deve essere utilizzato nella dichiarazione di classe).|
@@ -35,7 +36,7 @@ Le funzioni seguenti consentono a un sink di stabilire e disconnettere una conne
 
 ### <a name="initializationtermination-of-connection-points"></a>Inizializzazione/terminazione dei punti di connessione
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[AfxConnectionAdvise](#afxconnectionadvise)|Stabilisce una connessione tra un'origine e un sink.|
 |[AfxConnectionUnadvise](#afxconnectionunadvise)|Interrompe una connessione tra un'origine e un sink.|
@@ -56,7 +57,7 @@ Specifica il nome della classe del controllo il cui punto di connessione è.
 *localClass*<br/>
 Specifica il nome della classe locale che implementa il punto di connessione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Nel file di dichiarazione (. h) che definisce le funzioni membro per la classe, avviare il punto di connessione con la macro BEGIN_CONNECTION_PART, quindi aggiungere la macro CONNECTION_IID e qualsiasi altra funzione membro che si desidera implementare e completare la mappa del punto di connessione con la macro END_CONNECTION_PART.
 
@@ -94,7 +95,7 @@ CONNECTION_IID(iid)
 *IID*<br/>
 ID di interfaccia dell'interfaccia chiamata dal punto di connessione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'argomento *IID* è un ID di interfaccia utilizzato per identificare l'interfaccia che verrà chiamata dal punto di connessione sui sink connessi. Ad esempio:
 
@@ -114,7 +115,7 @@ Ogni `COleControl` classe derivata da nel programma può fornire una mappa di co
 DECLARE_CONNECTION_MAP()
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il controllo supporta punti aggiuntivi, usare la macro DECLARE_CONNECTION_MAP alla fine della dichiarazione di classe. Quindi, nel file cpp che definisce le funzioni membro per la classe, utilizzare la macro BEGIN_CONNECTION_MAP, CONNECTION_PART macro per ogni punto di connessione del controllo e la macro END_CONNECTION_MAP per dichiarare la fine della mappa di connessione.
 
@@ -138,7 +139,7 @@ Specifica il nome della classe del controllo a cui appartiene la mappa delle con
 *theBase*<br/>
 Specifica il nome della classe di base di *theClass*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Nell'implementazione di (. CPP) che definisce le funzioni membro per la classe, avviare la mappa di connessione con la macro BEGIN_CONNECTION_MAP, quindi aggiungere le voci della macro per ogni punto di connessione usando la macro [CONNECTION_PART](#connection_part) . Infine, completare la mappa delle connessioni con la macro [END_CONNECTION_MAP](#end_connection_map) .
 
@@ -177,7 +178,7 @@ ID di interfaccia dell'interfaccia chiamata dal punto di connessione.
 *localClass*<br/>
 Specifica il nome della classe locale che implementa il punto di connessione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Ad esempio:
 
@@ -273,6 +274,6 @@ Diverso da zero se una connessione è stata disconnessa; in caso contrario, 0.
 
 **Intestazione:** afxctl. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)

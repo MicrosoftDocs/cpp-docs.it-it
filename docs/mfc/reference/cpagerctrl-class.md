@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CPagerCtrl'
 title: Classe CPagerCtrl
 ms.date: 11/04/2016
 f1_keywords:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: 9b3af31e7d352e93144cde0c321620693111e145
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: ba01d07ebd6d638a1d505d555e44e9562e4bd27b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561908"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345225"
 ---
 # <a name="cpagerctrl-class"></a>Classe CPagerCtrl
 
@@ -65,17 +66,17 @@ La classe `CPagerCtrl` esegue il wrapping del controllo pager di Windows, che pu
 class CPagerCtrl : public CWnd
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CPagerCtrl:: CPagerCtrl](#cpagerctrl)|Costruisce un oggetto `CPagerCtrl`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CPagerCtrl:: create](#create)|Crea un controllo pager con gli stili specificati e lo associa all'oggetto corrente `CPagerCtrl` .|
 |[CPagerCtrl:: CreateEx](#createex)|Crea un controllo pager con gli stili estesi specificati e lo associa all' `CPagerCtrl` oggetto corrente.|
@@ -98,7 +99,7 @@ class CPagerCtrl : public CWnd
 |[CPagerCtrl:: figlio](#setchild)|Imposta la finestra contenuta per il controllo pager corrente.|
 |[CPagerCtrl:: SetScrollPos](#setscrollpos)|Imposta la posizione di scorrimento del controllo pager corrente.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un controllo pager è una finestra che contiene un'altra finestra che è lineare e più grande della finestra che lo contiene e consente di scorrere la finestra contenuta nella visualizzazione. Il controllo pager Visualizza due pulsanti di scorrimento che scompaiono automaticamente quando viene eseguito lo scorrimento della finestra contenuta fino al suo extent più lontano e vengono nuovamente visualizzati in altro modo. È possibile creare un controllo pager che scorre orizzontalmente o verticalmente.
 
@@ -128,7 +129,7 @@ Costruisce un oggetto `CPagerCtrl`.
 CPagerCtrl();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare il metodo [CPagerCtrl:: create](#create) o [CPagerCtrl:: CreateEx](#createex) per creare un controllo pager e collegarlo all' `CPagerCtrl` oggetto.
 
@@ -162,7 +163,7 @@ in ID del controllo.
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per creare un controllo pager, dichiarare una `CPagerCtrl` variabile, quindi chiamare il metodo [CPagerCtrl:: create](#create) o [CPagerCtrl:: CreateEx](#createex) su tale variabile.
 
@@ -206,7 +207,7 @@ in ID del controllo.
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per creare un controllo pager, dichiarare una `CPagerCtrl` variabile, quindi chiamare il metodo [CPagerCtrl:: create](#create) o [CPagerCtrl:: CreateEx](#createex) su tale variabile.
 
@@ -223,7 +224,7 @@ void ForwardMouse(BOOL bForward);
 *bForward*\
 in TRUE per l'invio dei messaggi del mouse oppure FALSE per non inviare i messaggi del mouse.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [PGM_FORWARDMOUSE](/windows/win32/Controls/pgm-forwardmouse) , descritto nel Windows SDK.
 
@@ -239,7 +240,7 @@ int GetBorder() const;
 
 Dimensioni correnti del bordo, misurate in pixel.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [PGM_GETBORDER](/windows/win32/Controls/pgm-getborder) , descritto nel Windows SDK.
 
@@ -261,7 +262,7 @@ COLORREF GetBkColor() const;
 
 Valore [COLORREF](/windows/win32/gdi/colorref) che contiene il colore di sfondo corrente del controllo pager.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [PGM_GETBKCOLOR](/windows/win32/Controls/pgm-getbkcolor) , descritto nel Windows SDK.
 
@@ -283,7 +284,7 @@ int GetButtonSize() const;
 
 Dimensioni correnti del pulsante, misurate in pixel.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [PGM_GETBUTTONSIZE](/windows/win32/Controls/pgm-getbuttonsize) , descritto nel Windows SDK.
 
@@ -306,7 +307,7 @@ in Indica il pulsante per il quale viene recuperato lo stato. Se lo stile del co
 
 Stato del pulsante specificato dal parametro *IButton* . Lo stato è PGF_INVISIBLE, PGF_NORMAL, PGF_GRAYED, PGF_DEPRESSED o PGF_HOT. Per ulteriori informazioni, vedere la sezione valore restituito del messaggio [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) , descritto nel Windows SDK.
 
@@ -322,7 +323,7 @@ IDropTarget* GetDropTarget() const;
 
 Puntatore all' `IDropTarget` interfaccia per il controllo pager corrente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `IDropTarget` è una delle interfacce implementate per supportare le operazioni di trascinamento della selezione nell'applicazione.
 
@@ -340,7 +341,7 @@ int GetScrollPos() const;
 
 Posizione di scorrimento corrente, misurata in pixel.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [PGM_GETPOS](/windows/win32/Controls/pgm-getpos) , descritto nel Windows SDK.
 
@@ -367,7 +368,7 @@ in Indica il pulsante per il quale viene recuperato lo stato. Se lo stile del co
 
 TRUE se il pulsante specificato si trova nello stato premuto. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) , descritto nel Windows SDK. Viene quindi verificato se lo stato restituito è PGF_DEPRESSED. Per ulteriori informazioni, vedere la sezione valore restituito del messaggio [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) .
 
@@ -388,7 +389,7 @@ in Indica il pulsante per il quale viene recuperato lo stato. Se lo stile del co
 
 TRUE se il pulsante specificato è in stato grigio; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) , descritto nel Windows SDK. Viene quindi verificato se lo stato restituito è PGF_GRAYED. Per ulteriori informazioni, vedere la sezione valore restituito del messaggio [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) .
 
@@ -409,7 +410,7 @@ in Indica il pulsante per il quale viene recuperato lo stato. Se lo stile del co
 
 TRUE se il pulsante specificato è nello stato attivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) , descritto nel Windows SDK. Viene quindi verificato se lo stato restituito è PGF_HOT. Per ulteriori informazioni, vedere la sezione valore restituito del messaggio [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) .
 
@@ -430,7 +431,7 @@ in Indica il pulsante per il quale viene recuperato lo stato. Se lo stile del co
 
 TRUE se il pulsante specificato è in stato invisibile; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Windows rende invisibile il pulsante di scorrimento in una direzione particolare quando viene eseguito lo scorrimento della finestra contenuta fino alla sua estensione, perché facendo clic sul pulsante non è più possibile portare la finestra contenuta nella visualizzazione.
 
@@ -459,7 +460,7 @@ in Indica il pulsante per il quale viene recuperato lo stato. Se lo stile del co
 
 TRUE se il pulsante specificato è nello stato normale; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) , descritto nel Windows SDK. Viene quindi verificato se lo stato restituito è PGF_NORMAL. Per ulteriori informazioni, vedere la sezione valore restituito del messaggio [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) .
 
@@ -471,7 +472,7 @@ Fa in modo che il controllo pager corrente ricalcoli le dimensioni della finestr
 void RecalcSize();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [PGM_RECALCSIZE](/windows/win32/Controls/pgm-recalcsize) , descritto nel Windows SDK. Di conseguenza, il controllo pager Invia la notifica di [PGN_CALCSIZE](/windows/win32/Controls/pgn-calcsize) per ottenere le dimensioni scorrevoli della finestra contenuta.
 
@@ -504,7 +505,7 @@ in Valore [COLORREF](/windows/win32/gdi/colorref) che contiene il nuovo colore d
 
 Valore [COLORREF](/windows/win32/gdi/colorref) che contiene il colore di sfondo precedente del controllo pager.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [PGM_SETBKCOLOR](/windows/win32/Controls/pgm-setbkcolor) , descritto nel Windows SDK.
 
@@ -531,7 +532,7 @@ in Dimensioni del nuovo bordo, misurate in pixel. Se il parametro *iBorder* è n
 
 Dimensioni del bordo precedenti, misurate in pixel.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [PGM_SETBORDER](/windows/win32/Controls/pgm-setborder) , descritto nel Windows SDK.
 
@@ -558,7 +559,7 @@ in Dimensioni del nuovo pulsante, misurate in pixel.
 
 Dimensioni del pulsante precedente, misurate in pixel.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [PGM_SETBUTTONSIZE](/windows/win32/Controls/pgm-setpos) , descritto nel Windows SDK.
 
@@ -583,7 +584,7 @@ void SetChild(HWND hwndChild);
 *hwndChild*\
 in Handle per la finestra da contenere.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [PGM_SETCHILD](/windows/win32/Controls/pgm-setchild) , descritto nel Windows SDK.
 
@@ -608,7 +609,7 @@ void SetScrollPos(int iPos);
 *IPO*\
 in Nuova posizione di scorrimento, misurata in pixel.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [PGM_SETPOS](/windows/win32/Controls/pgm-setpos) , descritto nel Windows SDK.
 

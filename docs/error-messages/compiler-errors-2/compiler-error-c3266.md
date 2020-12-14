@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3266'
 title: Errore del compilatore C3266
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3266
 ms.assetid: 7375c099-acb7-42f6-898d-57cfefa010b8
-ms.openlocfilehash: 9122663108cafc8c73564379892e96978a90b26d
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 8522d893b6998be92a2b6241936481a7becb0c2a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74754173"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283640"
 ---
 # <a name="compiler-error-c3266"></a>Errore del compilatore C3266
 

@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: nomi dei controlli, creazione guidata controllo ActiveX MFC'
 title: Nomi controllo, Creazione guidata controllo ActiveX MFC
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control names
 ms.assetid: 9b8b81d2-36df-48ed-b58a-a771a0e269ee
-ms.openlocfilehash: eff7b537e7fe5c19d10cce8766557a3d1ff49342
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 26d329465c13c3988a3e9d4d7ccd06294f3b2be3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077511"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345238"
 ---
 # <a name="control-names-mfc-activex-control-wizard"></a>Nomi controllo, Creazione guidata controllo ActiveX MFC
 
@@ -23,19 +24,19 @@ Specificare i nomi per la classe del controllo e la classe della pagina delle pr
 
 - **Nome della classe del controllo**
 
-   Per impostazione predefinita, il nome della classe del controllo è basato sul nome breve, con `C` come prefisso e `Ctrl` come suffisso. Se, ad esempio, il nome breve del controllo è `Price`, il nome della classe del controllo è `CPriceCtrl`.
+   Per impostazione predefinita, il nome della classe del controllo è basato sul nome breve, con `C` come prefisso e `Ctrl` come suffisso. Se, ad esempio, il nome breve del controllo è `Price` , il nome della classe del controllo è `CPriceCtrl` .
 
 - **File Control. h**
 
-   Per impostazione predefinita, il nome del file di intestazione è basato sul nome breve, con `Ctrl` come suffisso e `.h` come estensione di file. Se, ad esempio, il nome breve del controllo è `Price`, il nome del file di intestazione è `PriceCtrl.h`. Il nome in questo campo deve corrispondere al nome della classe del controllo.
+   Per impostazione predefinita, il nome del file di intestazione è basato sul nome breve, con `Ctrl` come suffisso e `.h` come estensione di file. Se, ad esempio, il nome breve del controllo è `Price` , il nome del file di intestazione è `PriceCtrl.h` . Il nome in questo campo deve corrispondere al nome della classe del controllo.
 
 - **File Control. cpp**
 
-   Per impostazione predefinita, il nome del file di intestazione è basato sul nome breve, con `Ctrl` come suffisso e `.cpp` come estensione di file. Se, ad esempio, il nome breve del controllo è `Price`, il nome del file di intestazione è `PriceCtrl.cpp`. Il nome in questo campo deve corrispondere al nome dell'intestazione.
+   Per impostazione predefinita, il nome del file di intestazione è basato sul nome breve, con `Ctrl` come suffisso e `.cpp` come estensione di file. Se, ad esempio, il nome breve del controllo è `Price` , il nome del file di intestazione è `PriceCtrl.cpp` . Il nome in questo campo deve corrispondere al nome dell'intestazione.
 
 - **Nome del tipo di controllo**
 
-   Per impostazione predefinita, il nome del tipo di controllo è basato sul nome breve, seguito da `Control`. Se, ad esempio, il nome breve del controllo è `Price`, il nome del tipo di classe del controllo è `Price Control`. Se si modifica il valore in questo campo, verificare che il nome indichi un'ereditarietà.
+   Per impostazione predefinita, il nome del tipo di controllo è basato sul nome breve, seguito da `Control` . Se, ad esempio, il nome breve del controllo è `Price` , il nome del tipo di classe di controllo è `Price Control` . Se si modifica il valore in questo campo, verificare che il nome indichi un'ereditarietà.
 
 - **ID tipo di controllo**
 
@@ -53,19 +54,19 @@ Specificare i nomi per la classe del controllo e la classe della pagina delle pr
 
 - **Nome della classe di appoggio**
 
-   Per impostazione predefinita, il nome della classe della pagina delle proprietà è basato sul nome breve, con `C` come prefisso e `PropPage` come suffisso. Se, ad esempio, il nome breve del controllo è `Price`, il nome della classe della pagina delle proprietà è `CPricePropPage`. Questo nome deve corrispondere al nome della classe del controllo, accodato con `PropPage`.
+   Per impostazione predefinita, il nome della classe della pagina delle proprietà è basato sul nome breve, con `C` come prefisso e `PropPage` come suffisso. Se, ad esempio, il nome breve del controllo è `Price` , il nome della classe della pagina delle proprietà è `CPricePropPage` . Questo nome deve corrispondere al nome della classe del controllo, accodato con `PropPage` .
 
 - **File con estensione h**
 
-   Per impostazione predefinita, il nome del file di intestazione della pagina delle proprietà è basato sul nome breve, con come `PropPage` come suffisso e `.h` come estensione di file. Se, ad esempio, il nome breve del controllo è `Price`, il nome del file di intestazione della pagina delle proprietà è `PricePropPage.h`. Questo nome deve corrispondere al nome della classe.
+   Per impostazione predefinita, il nome del file di intestazione della pagina delle proprietà è basato sul nome breve, con come `PropPage` suffisso e `.h` come estensione di file. Se, ad esempio, il nome breve del controllo è `Price` , il nome del file di intestazione della pagina delle proprietà è `PricePropPage.h` . Questo nome deve corrispondere al nome della classe.
 
 - **File con estensione cpp**
 
-   Per impostazione predefinita, il nome del file di implementazione della pagina delle proprietà è basato sul nome breve, con come `PropPage` come suffisso e `.cpp` come estensione di file. Se, ad esempio, il nome breve del controllo è `Price`, il nome del file di intestazione della pagina delle proprietà è `PricePropPage.cpp`. Questo nome deve corrispondere al nome del file di intestazione.
+   Per impostazione predefinita, il nome del file di implementazione della pagina delle proprietà è basato sul nome breve, con come `PropPage` suffisso e `.cpp` come estensione di file. Se, ad esempio, il nome breve del controllo è `Price` , il nome del file di intestazione della pagina delle proprietà è `PricePropPage.cpp` . Questo nome deve corrispondere al nome del file di intestazione.
 
 - **Nome del tipo di pagina**
 
-   Per impostazione predefinita, il nome del tipo di pagina delle proprietà è basato sul nome breve, seguito da `Property Page`. Se, ad esempio, il nome breve del controllo è `Price`, il nome del tipo di pagina delle proprietà è `Price Property Page`. Se si modifica il valore in questo campo, verificare che il nome indichi la classe del controllo.
+   Per impostazione predefinita, il nome del tipo di pagina delle proprietà è basato sul nome breve, seguito da `Property Page` . Se, ad esempio, il nome breve del controllo è `Price` , il nome del tipo di pagina delle proprietà è `Price Property Page` . Se si modifica il valore in questo campo, verificare che il nome indichi la classe del controllo.
 
 - **ID del tipo di appoggio**
 
@@ -81,9 +82,9 @@ Specificare i nomi per la classe del controllo e la classe della pagina delle pr
 
    *NomeProgetto. NewShortName* Pagina 1
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Creazione guidata controllo ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
-[Impostazioni applicazione, Creazione guidata controllo ActiveX MFC](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)<br/>
-[Impostazioni controllo, Creazione guidata controllo ActiveX MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)<br/>
+[Impostazioni applicazione, creazione guidata controllo ActiveX MFC](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)<br/>
+[Impostazioni controllo, creazione guidata controllo ActiveX MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)<br/>
 [Tipi di file creati per i progetti di Visual Studio C++](../../build/reference/file-types-created-for-visual-cpp-projects.md)

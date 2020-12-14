@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: classe CString.'
 title: CString (classe)
 ms.date: 11/04/2016
 f1_keywords:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - CStringList [MFC], RemoveTail
 - CStringList [MFC], SetAt
 ms.assetid: 310a7edb-263c-4bd2-ac43-0bfbfddc5a33
-ms.openlocfilehash: 9eb7a713fc02cd3e51135d1985a41688d4c885d9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: c9043ef648f50e880f3b5946c1912deca3de6714
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447553"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345069"
 ---
 # <a name="cstringlist-class"></a>CString (classe)
 
@@ -69,7 +70,7 @@ class CStringList : public CObject
 
 ## <a name="members"></a>Members
 
-Le funzioni membro di `CStringList` sono simili alle funzioni membro della classe [CObList](../../mfc/reference/coblist-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CObList`. Ogni volta che viene visualizzato un puntatore `CObject` come valore restituito, sostituire una `CString` (non un puntatore di `CString`). Ogni volta che viene visualizzato un puntatore `CObject` come parametro di funzione, sostituire una `LPCTSTR`.
+Le funzioni membro di `CStringList` sono simili alle funzioni membro della classe [CObList](../../mfc/reference/coblist-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CObList`. Ogni volta che viene visualizzato un `CObject` puntatore come valore restituito, sostituire `CString` (non un `CString` puntatore). Quando viene visualizzato un `CObject` puntatore come parametro di funzione, sostituire `LPCTSTR` .
 
 `CObject*& CObList::GetHead() const;`
 
@@ -87,13 +88,13 @@ si converte in
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CStrings:: CStrings](../../mfc/reference/coblist-class.md#coblist)|Costruisce un elenco vuoto.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CStrings:: AddHead](../../mfc/reference/coblist-class.md#addhead)|Aggiunge un elemento (o tutti gli elementi di un altro elenco) all'inizio dell'elenco (crea una nuova intestazione).|
 |[CStrings:: AddTail](../../mfc/reference/coblist-class.md#addtail)|Aggiunge un elemento (o tutti gli elementi di un altro elenco) alla parte finale dell'elenco (crea una nuova coda).|
@@ -117,15 +118,15 @@ si converte in
 |[CStrings:: RemoveTail](../../mfc/reference/coblist-class.md#removetail)|Rimuove l'elemento dalla parte finale dell'elenco.|
 |[CStringt:: SetAt](../../mfc/reference/coblist-class.md#setat)|Imposta l'elemento in una posizione specificata.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Tutti i confronti vengono eseguiti per valore, ovvero i caratteri nella stringa vengono confrontati al posto degli indirizzi delle stringhe.
 
-`CStringList` incorpora la macro IMPLEMENT_SERIAL per supportare la serializzazione e il dump dei relativi elementi. Se un elenco di oggetti `CString` viene archiviato in un archivio, con un operatore di inserimento di overload o con la funzione membro `Serialize`, ogni elemento `CString` viene serializzato a sua volta.
+`CStringList` incorpora la macro IMPLEMENT_SERIAL per supportare la serializzazione e il dump dei relativi elementi. Se un elenco di `CString` oggetti viene archiviato in un archivio, con un operatore di inserimento di overload o con la `Serialize` funzione membro, ogni `CString` elemento viene serializzato a sua volta.
 
-Se è necessario un dump di singoli elementi di `CString`, è necessario impostare la profondità del contesto di dump su 1 o su un valore superiore.
+Se è necessario un dump di singoli `CString` elementi, è necessario impostare la profondità del contesto di dump su 1 o su un valore superiore.
 
-Per ulteriori informazioni sull'utilizzo di `CStringList`, vedere le [raccolte](../../mfc/collections.md)di articoli.
+Per ulteriori informazioni sull'utilizzo di `CStringList` , vedere le [raccolte](../../mfc/collections.md)di articoli.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -137,8 +138,8 @@ Per ulteriori informazioni sull'utilizzo di `CStringList`, vedere le [raccolte](
 
 **Intestazione:** AFXCOLL. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Esempio di raccolta MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: signbit'
 title: signbit
 ms.date: 01/31/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - math/signbit
 helpviewer_keywords:
 - signbit function
-ms.openlocfilehash: 7f8399c16d2abc70a50740b0629bc5d9b3a1f067
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7f6416647db67a49bd6950c011575b72f4c43f10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216739"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303466"
 ---
 # <a name="signbit"></a>signbit
 
@@ -46,7 +47,7 @@ Valore a virgola mobile da verificare.
 
 **signbit** restituisce un valore diverso da zero ( **`true`** in C++) se l'argomento *x* è negativo o infinito negativo. Restituisce 0 ( **`false`** in C++) se l'argomento è non negativo, infinito positivo o NaN.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 **signbit** è una macro compilata come C e una funzione inline in overload quando viene compilata come C++.
 
@@ -58,7 +59,7 @@ Valore a virgola mobile da verificare.
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
