@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errori irreversibili del compilatore da C999 tramite C1999'
 title: Errori irreversibili del compilatore da C999 a C1999
 ms.date: 04/21/2019
 f1_keywords:
@@ -50,33 +51,33 @@ helpviewer_keywords:
 - C1505
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: 395d7403ef4fe04b671a84a61d320b27ad8ad1c7
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 93b1e9d3998a3ad29d45e2b1c197807bf61e4176
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626560"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97262841"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Errori irreversibili del compilatore da C999 a C1999
 
-Negli articoli di questa sezione della documentazione viene illustrato un subset dei messaggi di errore generati da Microsoft C/C++ Compiler.
+Negli articoli di questa sezione della documentazione viene illustrato un subset dei messaggi di errore generati dal compilatore Microsoft C/C++.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
 ## <a name="error-messages"></a>Messaggi di errore
 
-|Error|Messaggio|
+|Errore|Message|
 |-----------|-------------|
 |[Errore irreversibile da C999](../../error-messages/compiler-errors-1/fatal-error-c999.md)|ERRORE SCONOSCIUTO Per altre informazioni, scegliere Supporto tecnico dal menu ? di Visual C++ o aprire il file della Guida relativo al supporto tecnico|
 |[Errore irreversibile C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|Si è verificato un errore interno del compilatore.<br /> (file del compilatore '*file*', riga *number*)<br /> Per evitare il problema, provare a semplificare o modificare le parti del programma indicate sopra. Per altre informazioni, scegliere Supporto tecnico dal menu ? di Visual C++ o aprire il file della Guida relativo al supporto tecnico|
 |[Errore irreversibile C1002](../../error-messages/compiler-errors-1/fatal-error-c1002.md)|Il compilatore ha esaurito lo spazio dell'heap durante il passaggio 2|
-|[Errore irreversibile C1003](../../error-messages/compiler-errors-1/fatal-error-c1003.md)|il conteggio degli errori supera *number*. Interruzione della compilazione|
+|[Errore irreversibile C1003](../../error-messages/compiler-errors-1/fatal-error-c1003.md)|il conteggio degli errori supera il *numero*; arresto della compilazione|
 |[Errore irreversibile C1004](../../error-messages/compiler-errors-1/fatal-error-c1004.md)|fine del file imprevista|
 |[Errore irreversibile C1005](../../error-messages/compiler-errors-1/fatal-error-c1005.md)|stringa troppo grande per il buffer|
 |[Errore irreversibile C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|'*string*' di contrassegno non riconosciuto in '*option*'|
 |[Errore irreversibile C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|nessun file di input specificato|
 |[Errore irreversibile C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|limite del compilatore: macro eccessivamente annidate|
-|[Errore irreversibile C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|fine file imprevista durante la ricerca dell'intestazione precompilata. Si è omesso di aggiungere ' #include \<*file*>' all'origine?|
+|[Errore irreversibile C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|fine file imprevista durante la ricerca dell'intestazione precompilata. Si è omesso di aggiungere ' #include \<*file*> ' all'origine?|
 |[Errore irreversibile C1012](fatal-error-c1012.md)|parentesi non corrispondenti: '*character*'' mancante|
 |[Errore irreversibile C1013](fatal-error-c1013.md)|limite del compilatore: troppe parentesi aperte|
 |[Errore irreversibile C1014](fatal-error-c1014.md)|troppi file di inclusione: profondità = *number*|
@@ -119,7 +120,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Errore irreversibile C1071](../../error-messages/compiler-errors-1/fatal-error-c1071.md)|fine file imprevista nel commento|
 |[Errore irreversibile C1073](../../error-messages/compiler-errors-1/fatal-error-c1073.md)|Errore interno durante la compilazione incrementale (file del compilatore '*file*', riga *number*)|
 |[Errore irreversibile C1074](fatal-error-c1074.md)|estensione 'IDB' non valida per il file PDB: *file*|
-|[Errore irreversibile C1075](../../error-messages/compiler-errors-1/fatal-error-c1075.md)|alla fine del file l'elemento *token* di sinistra è senza corrispondenza|
+|[Errore irreversibile C1075](../../error-messages/compiler-errors-1/fatal-error-c1075.md)|il *token* di sinistra è senza corrispondenza alla fine del file|
 |[Errore irreversibile C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)|limite del compilatore: raggiunto limite interno dell'heap. Usare /Zm per specificare un limite maggiore|
 |[Errore irreversibile C1077](fatal-error-c1077.md)|limite del compilatore: impossibile avere più di *number* opzioni nella riga di comando|
 |[Errore irreversibile C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|limite del compilatore: superato limite della dimensione del file PCH|
@@ -137,28 +138,28 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Errore irreversibile C1091](fatal-error-c1091.md)|limite del compilatore: la lunghezza della stringa supera i *number* byte|
 |[Errore irreversibile C1092](../../error-messages/compiler-errors-1/fatal-error-c1092.md)|Con Modifica e continuazione non sono supportate le modifiche ai tipi di dati. È richiesta la compilazione|
 |[Errore irreversibile C1093](../../error-messages/compiler-errors-1/fatal-error-c1093.md)|chiamata API '*function*' non riuscita '*HRESULT*': '*description*'|
-|[Errore irreversibile C1094](../../error-messages/compiler-errors-1/fatal-error-c1094.md)|'-Zm*number*': opzione della riga di comando non coerente con il valore usato per compilare l'intestazione precompilata ('-Zm*number*')|
+|[Errore irreversibile C1094](../../error-messages/compiler-errors-1/fatal-error-c1094.md)|'-Zm *number*': opzione della riga di comando non coerente con il valore usato per compilare l'intestazione precompilata ('-Zm *number*')|
 |[Errore irreversibile C1098](fatal-error-c1098.md)|Versione non conforme al motore di Modifica e continuazione|
 |[Errore irreversibile C1099](fatal-error-c1099.md)|il motore di Modifica e continuazione terminerà la compilazione|
 |[Errore irreversibile C1100](fatal-error-c1100.md)|impossibile inizializzare OLE: *error*|
 |Errore irreversibile C1101|impossibile creare un gestore per l'attributo '*identifier*'|
 |Errore irreversibile c1102|impossibile inizializzare: ' *error*'|
 |[Errore irreversibile C1103](fatal-error-c1103.md)|errore irreversibile durante l'importazione del progid: '*message*'|
-|[Errore irreversibile C1104](fatal-error-c1104.md)|Errore irreversibile durante l'importazione del libid: '*message*'|
+|[Errore irreversibile C1104](fatal-error-c1104.md)|errore irreversibile durante l'importazione di LIBID:'*Message*'|
 |Errore irreversibile C1105|*message*: *error*|
 |[Errore irreversibile C1107](../../error-messages/compiler-errors-1/fatal-error-c1107.md)|l'assembly '*assembly*' non è stato trovato: specificare il percorso di ricerca dell'assembly usando /AI o impostando la variabile di ambiente LIBPATH|
 |[Errore irreversibile C1108](fatal-error-c1108.md)|impossibile trovare la DLL: '*file*'|
-|[Errore irreversibile C1109](fatal-error-c1109.md)|impossibile trovare '*symbol*' nella DLL*file*|
+|[Errore irreversibile C1109](fatal-error-c1109.md)|impossibile trovare '*symbol*' nella DLL *file*|
 |Errore irreversibile C1110|troppe definizioni di modello/generiche annidate|
 |Errore irreversibile C1111|troppi parametri di modello/generici|
-|Errore irreversibile C1112|limite del compilatore: `'number`' troppi argomenti macro, è consentito solo il *numero*|
+|Errore irreversibile C1112|limite del compilatore: `'number` ' troppi argomenti macro, è consentito solo il *numero*|
 |[Errore irreversibile C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#using non riuscito in '*file*'|
 |Errore irreversibile C1114|'*file*': WinRT non supporta #using di un assembly gestito|
 |[Errore irreversibile C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|chiamata a GetProcAddress non riuscita per '*function*'|
 |[Errore irreversibile C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|chiamata a CryptoAPI non riuscita|
 |[Errore irreversibile C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|l'allocazione automatica supera *size*|
 |[Errore irreversibile C1128](../../error-messages/compiler-errors-1/fatal-error-c1128.md)|il numero di sezioni ha superato il limite di formato del file oggetto: compilare con /bigobj|
-|[Errore irreversibile C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#errore: *message*|
+|[Errore irreversibile C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#error: *messaggio*|
 |[Errore irreversibile C1190](fatal-error-c1190.md)|il codice gestito interessato richiede un'opzione '/clr'|
 |[Errore irreversibile C1191](../../error-messages/compiler-errors-1/fatal-error-c1191.md)|'*file*' può essere importato solo in ambito globale|
 |[Errore irreversibile C1192](../../error-messages/compiler-errors-1/fatal-error-c1192.md)|#using non riuscito in '*file*'|
@@ -182,7 +183,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |Errore irreversibile C1306|le ultime modifiche al database di profilo '*file*' non sono state sottoposte all'analisi di ottimizzazione. L'ottimizzazione potrebbe non essere aggiornata|
 |[Errore irreversibile C1307](../../error-messages/compiler-errors-1/fatal-error-c1307.md)|programma modificato dopo la raccolta dei dati di profilo|
 |[Errore irreversibile C1308](../../error-messages/compiler-errors-1/fatal-error-c1308.md)|*file*: collegamento di assembly non supportato|
-|[Errore irreversibile C1309](../../error-messages/compiler-errors-1/fatal-error-c1309.md)|Versioni di C2.DLL e pgodb*ver*.DLL non corrispondenti|
+|[Errore irreversibile C1309](../../error-messages/compiler-errors-1/fatal-error-c1309.md)|Versioni di C2.DLL e pgodb *ver*.DLL non corrispondenti|
 |[Errore irreversibile C1310](fatal-error-c1310.md)|ottimizzazione PGO non disponibile con OpenMP|
 |[Errore irreversibile C1311](../../error-messages/compiler-errors-1/fatal-error-c1311.md)|formato COFF non in grado di inizializzare in modo statico '*symbol*' con *number* byte di indirizzo|
 |[Errore irreversibile C1312](fatal-error-c1312.md)|La funzione contiene troppe diramazioni condizionali.  Semplificare il codice sorgente o effettuarne il refactoring.|
@@ -213,6 +214,6 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Errore irreversibile C1904](fatal-error-c1904.md)|interazione del provider errata: '*file*'|
 |[Errore irreversibile C1905](../../error-messages/compiler-errors-1/fatal-error-c1905.md)|Front end e back end non compatibili (il processore di destinazione deve essere lo stesso).|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Errori eC++ avvisi di C/compilatore e strumenti di compilazione](../compiler-errors-1/c-cpp-build-errors.md)
+[Errori e avvisi di strumenti di compilazione e compilatori C/C++](../compiler-errors-1/c-cpp-build-errors.md)

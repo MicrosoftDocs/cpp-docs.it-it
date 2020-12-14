@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: helpstringcontext'
 title: helpstringcontext (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-ms.openlocfilehash: 9e089c210ad52d8ee07291c174a151f5077ae074
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: afcd1d4052f7422cc6078c8dfdd0a0242c667f0f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830982"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263361"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -28,7 +29,7 @@ Specifica l'ID di un argomento della Guida in un file con estensione hlp o CHM.
 *contextID*<br/>
 Identificatore di contesto della guida a 32 bit nel file della **Guida** .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'attributo **helpstringcontext** di C++ ha la stessa funzionalità dell'attributo [helpstringcontext](/windows/win32/Midl/helpstringcontext) FAD.
 
@@ -59,7 +60,7 @@ __interface IMyI
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di interfaccia](interface-attributes.md)<br/>

@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: riferimenti al linguaggio C++'
 title: Riferimenti al linguaggio C++
 ms.custom: index-page
 ms.date: 12/10/2019
 helpviewer_keywords:
 - C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 7b0d1227419aef3174d4f18b11cdc334879383b1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 67d1adf6105d0f90a7ef29402624148dbcf8ea53
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221744"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253923"
 ---
 # <a name="c-language-reference"></a>Riferimenti al linguaggio C++
 
@@ -69,8 +70,8 @@ Operatori di overload, regole per l'overload degli operatori.
 [Gestione delle eccezioni](../cpp/exception-handling-in-visual-cpp.md)<br/>
 Gestione delle eccezioni, gestione delle eccezioni strutturata (SEH), parole chiave usate nella scrittura di istruzioni di gestione delle eccezioni di C++.
 
-[Asserzione e messaggi forniti dall'utente](../cpp/assertion-and-user-supplied-messages-cpp.md)<br/>
-`#error`, la **`static_assert`** parola chiave, la `assert` macro.
+[Asserzione e messaggi di User-Supplied](../cpp/assertion-and-user-supplied-messages-cpp.md)<br/>
+`#error` , la **`static_assert`** parola chiave, la `assert` macro.
 
 [Modelli](../cpp/templates-cpp.md)<br/>
 Specifiche del modello, modelli di funzione, modelli **`typename`** di classe, parola chiave, modelli e macro, modelli e puntatori intelligenti.
@@ -110,6 +111,6 @@ Materiale di riferimento sui pragma, le direttive per il preprocessore, le macro
 [Librerie di Visual C++](../standard-library/cpp-standard-library-reference.md)<br/>
 Elenco di collegamenti alle pagine iniziali di riferimento per le varie librerie Microsoft C++.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimenti per il linguaggio C](../c-language/c-language-reference.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: dichiarazioni e definizioni C'
 title: Dichiarazioni e definizioni C
 ms.date: 11/04/2016
 ms.assetid: 575f0c9b-5554-4346-be64-b2129ca9227f
-ms.openlocfilehash: 3be9cd72e9f4dbad4d279cc1bb65dfb92a61cd42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dac53ac203c8e58e3af87e4869983c0443ffb092
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326053"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254313"
 ---
 # <a name="c-declarations-and-definitions"></a>Dichiarazioni e definizioni C
 
@@ -28,6 +29,6 @@ int count( double f ) {}
 
 Le variabili `var` e `val` possono essere utilizzate nelle funzioni `find` e `count` ; non sono necessarie ulteriori dichiarazioni. Ma questi nomi non sono visibili (non è possibile accedervi) in `main`.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[File e programmi di origine](../c-language/source-files-and-source-programs.md)
+[File di origine e programmi di origine](../c-language/source-files-and-source-programs.md)

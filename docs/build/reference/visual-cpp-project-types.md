@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: modelli di progetto C++'
 title: Tipi di progetto Visual C++
 ms.date: 08/13/2019
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - applications [C++], projects
 - C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: e929142181ebd849c820ad50e5ce64c2d4f5ab44
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 924e53e0d977b4f9b3b40bf7444f8495dbe1d451
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509331"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253169"
 ---
 # <a name="c-project-templates"></a>Modelli di progetto C++
 
@@ -30,7 +31,7 @@ I modelli di progetto inclusi in Visual Studio dipendono dalla versione del prod
 
 ### <a name="windows-desktop"></a>Windows Desktop
 
-|Modello di progetto|Descrizione|
+|Modello di progetto|Description|
 |----------------------|-----------------------------|
 |[Applicazione console di Windows](../../windows/overview-of-windows-programming-in-cpp.md)|Progetto per la creazione di un'applicazione console di Windows.|
 |[Applicazione desktop di Windows](../../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|Progetto per la creazione di un'applicazione desktop di Windows (Win32).|
@@ -40,7 +41,7 @@ I modelli di progetto inclusi in Visual Studio dipendono dalla versione del prod
 
 ### <a name="general"></a>Generale
 
-|Modello di progetto|Descrizione|
+|Modello di progetto|Description|
 |----------------------|-----------------------------|
 |Progetto vuoto|Progetto vuoto per la creazione di un'applicazione, una libreria o una DLL. È necessario aggiungere il codice o le risorse richieste.|
 |[Progetto Makefile](creating-a-makefile-project.md)|Progetto che esegue il wrapping di un makefile di Windows in un progetto di Visual Studio. Per aprire un makefile così com'è in Visual Studio, usare [Apri cartella](../open-folder-projects-cpp.md).|
@@ -48,13 +49,13 @@ I modelli di progetto inclusi in Visual Studio dipendono dalla versione del prod
 
 ### <a name="atl"></a>ATL
 
-|Modello di progetto|Descrizione|
+|Modello di progetto|Description|
 |----------------------|-----------------------------|
 |[Progetto ATL](../../atl/reference/creating-an-atl-project.md)|Progetto che usa Active Template Library.|
 
 ### <a name="test"></a>Test
 
-|Modello di progetto|Descrizione|
+|Modello di progetto|Description|
 |----------------------|-----------------------------|
 |[Progetto di unit test nativo](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)|Progetto contenente unit test C++ nativi.|
 
@@ -62,7 +63,7 @@ I modelli di progetto inclusi in Visual Studio dipendono dalla versione del prod
 
 Se si aggiunge il componente per il supporto di MFC e ATL all'installazione di Visual Studio, i modelli di progetto seguenti vengono aggiunti a Visual Studio.
 
-|Modello di progetto|Descrizione|
+|Modello di progetto|Description|
 |----------------------|-----------------------------|
 |[Applicazione MFC](../../mfc/reference/creating-an-mfc-application.md)|Progetto per la creazione di un'applicazione che usa la libreria MFC (Microsoft Foundation Class).|
 |[Controllo ActiveX MFC](../../mfc/reference/creating-an-mfc-activex-control.md)|Progetto per la creazione di un controllo ActiveX che usa la libreria MFC.|
@@ -74,9 +75,9 @@ Se si aggiunge il componente C++ per gli strumenti della piattaforma UWP all'ins
 
 Per una panoramica delle app universali di Windows in C++, vedere [App universali di Windows (C++)](../../cppcx/universal-windows-apps-cpp.md).
 
-|Modello di progetto|Descrizione|
+|Modello di progetto|Description|
 |----------------------|-----------------------------|
-|Applicazione vuota|Progetto per un'app della piattaforma UWP (Universal Windows Platform) a una pagina che non include layout o controlli predefiniti.|
+|App vuota|Progetto per un'app della piattaforma UWP (Universal Windows Platform) a una pagina che non include layout o controlli predefiniti.|
 |App DirectX 11|Progetto per un'app della piattaforma UWP (Universal Windows Platform) che usa DirectX 11.|
 |App DirectX 12|Progetto per un'app della piattaforma UWP (Universal Windows Platform) che usa DirectX 12.|
 |App DirectX 11 e XAML|Progetto per un'app della piattaforma UWP (Universal Windows Platform) che usa DirectX 11 e XAML.|

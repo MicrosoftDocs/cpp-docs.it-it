@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _chsize_s'
 title: _chsize_s
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - chsize_s function
 - _chsize_s function
 ms.assetid: d88d2e94-6e3b-42a5-8631-16ac4d82fa38
-ms.openlocfilehash: faed95bfeb6fad88f502101e166ec6124b6e591d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b3fa28923b558dc9b396cffc3418ff679349000d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910410"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253091"
 ---
 # <a name="_chsize_s"></a>_chsize_s
 
@@ -63,7 +64,7 @@ Nuova lunghezza, in byte, del file.
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_chsize_s** estende o tronca il file associato a *FD* alla lunghezza specificata dalla *dimensione*. Il file deve essere aperto in una modalità che consente la scrittura. Se il file viene esteso, vengono aggiunti caratteri null ("\0"). Se il file viene troncato, si perderanno tutti i dati a partire dalla fine del file abbreviato fino alla fine del file originale.
 
@@ -81,9 +82,9 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Gestione dei file](../../c-runtime-library/file-handling.md)<br/>
+[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
 [_chsize](chsize.md)<br/>
 [_close](close.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

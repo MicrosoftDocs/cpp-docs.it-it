@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _spawnlpe, _wspawnlpe'
 title: _spawnlpe, _wspawnlpe
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: e171ebfa-70e7-4c44-8331-2a291fc17bd6
-ms.openlocfilehash: 8e5e20827ef67d83b008a055505ec95abbde7d49
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ebe51a8268bb8b641492ef40bd37e55e19bef0c7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844171"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97262958"
 ---
 # <a name="_spawnlpe-_wspawnlpe"></a>_spawnlpe, _wspawnlpe
 
@@ -88,7 +89,7 @@ Matrice di puntatori alle impostazioni d'ambiente.
 
 Il valore restituito da un **_spawnlpe** sincrono o da un **_wspawnlpe** (**_P_WAIT** specificato per la *modalità*) è lo stato di uscita del nuovo processo. Il valore restituito da un **_spawnlpe** asincrono o da un **_wspawnlpe** (**_P_NOWAIT** o **_P_NOWAITO** specificato per la *modalità*) è l'handle del processo. Lo stato di uscita è 0 se il processo è terminato normalmente. È possibile impostare lo stato di uscita su un valore diverso da zero se il processo generato USA in modo specifico un argomento diverso da zero per chiamare la routine di **uscita** . Se il nuovo processo non ha impostato in modo esplicito uno stato di uscita positivo, questo stato indica l'uscita anomala causata da un'interruzione. Un valore restituito-1 indica un errore (il nuovo processo non è stato avviato). In questo caso **errno** viene impostato su uno dei valori seguenti.
 
-| Valore | Descrizione |
+| Valore | Description |
 |-|-|
 | **E2BIG** | L'elenco di argomenti supera i 1024 byte. |
 | **EINVAL** | argomento *mode* non valido. |
@@ -98,11 +99,11 @@ Il valore restituito da un **_spawnlpe** sincrono o da un **_wspawnlpe** (**_P_W
 
 Per altre informazioni su questi e altri codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Ognuna di queste funzioni carica ed esegue un nuovo processo, passa ogni argomento della riga di comando come parametro separato e passa una matrice di puntatori alle impostazioni di ambiente. Queste funzioni usano la variabile di ambiente **path** per trovare il file da eseguire.
 
-Queste funzioni convalidano i relativi parametri. Se *CmdName* o *arg0* è una stringa vuota o un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL**e restituiscono-1. Nessun nuovo processo viene generato.
+Queste funzioni convalidano i relativi parametri. Se *CmdName* o *arg0* è una stringa vuota o un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono-1. Nessun nuovo processo viene generato.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -117,7 +118,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runt
 
 Vedere l'esempio in [_spawn, _wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_spawn, funzioni _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

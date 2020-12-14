@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: file di risorse (C++)'
 title: File di risorse (C++)
 ms.date: 02/14/2019
 f1_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: 463c27959b049436e29f872c966bc276c6ef5f2d
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 8d76a8778cc3c94dd06b6b5b0ea3d6ee6b951e28
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507015"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263323"
 ---
 # <a name="resource-files-c"></a>File di risorse (C++)
 
@@ -129,7 +130,7 @@ Per visualizzare le informazioni sulla versione e sul tipo contenute in una riso
 
 Win32
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Uso di file di risorse](../windows/working-with-resource-files.md)<br/>
 [Identificatori di risorsa (simboli)](../windows/symbols-resource-identifiers.md)<br/>

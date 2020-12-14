@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; &gt; funzioni type_traits'
 title: Funzioni &lt;type_traits&gt;
 ms.date: 11/04/2016
 ms.assetid: dce4492f-f3e4-4d5e-bdb4-5875321254ec
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: 11defadff0b1785f6e4c5aba6356f7b68a78b9fc
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a1608ddc9d846ca9e8e851ef67d390aebb6f840e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841779"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253325"
 ---
 # <a name="lttype_traitsgt-functions"></a>Funzioni &lt;type_traits&gt;
 
@@ -54,7 +55,7 @@ Il tipo di oggetto che riceve l'assegnazione.
 *Da*\
 Il tipo di oggetto che fornisce il valore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'espressione non valutata `declval<To>() = declval<From>()` deve essere nel formato corretto. Sia *da* che *da a* devono essere tipi completi, **`void`** , o matrici di associazione sconosciuta.
 
@@ -72,7 +73,7 @@ struct is_copy_assignable;
 *Ty*\
 Tipo su cui eseguire una query.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un'istanza del predicato di tipo contiene true se il tipo *Ty* è una classe che ha un operatore di assegnazione di copia; in caso contrario, contiene false. Equivale a is_assignable \<Ty&, const Ty&> .
 
@@ -90,7 +91,7 @@ struct is_copy_constructible;
 *Ty*\
 Tipo su cui eseguire una query.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un'istanza del predicato di tipo contiene true se il tipo *Ty* è una classe che ha un costruttore di copia; in caso contrario, contiene false.
 
@@ -142,7 +143,7 @@ struct is_default_constructible;
 *T*\
 Tipo su cui eseguire una query.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un'istanza del predicato di tipo contiene true se il tipo *T* è un tipo di classe con un costruttore predefinito; in caso contrario, contiene false. Equivale al predicato `is_constructible<T>`. Il tipo *T* deve essere un tipo completo, **`void`** o una matrice di associazione sconosciuta.
 
@@ -194,7 +195,7 @@ struct is_move_assignable;
 *T*\
 Tipo su cui eseguire una query.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un tipo può essere assegnato mediante spostamento se un riferimento rvalue a tale tipo può essere assegnato a un riferimento al tipo stesso. Il predicato del tipo è equivalente a `is_assignable<T&, T&&>`. I tipi assegnabili mediante spostamento includono tipi scalari referenziabili e tipi di classe con operatori di assegnazione mediante spostamento generati dal compilatore o definiti dall'utente.
 
@@ -212,7 +213,7 @@ struct is_move_constructible;
 *T*\
 Il tipo da valutare
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Predicato di tipo che restituisce true se il tipo *T* può essere costruito usando un'operazione di spostamento. Questo predicato è equivalente a `is_constructible<T, T&&>`.
 
@@ -230,7 +231,7 @@ struct is_nothrow_move_assignable;
 *Ty*\
 Tipo su cui eseguire una query.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un'istanza del predicato di tipo contiene true se il tipo *Ty* ha un operatore nothrow di assegnazione di spostamento; in caso contrario, contiene false.
 
@@ -272,7 +273,7 @@ struct is_trivially_copy_assignable;
 *T*\
 Tipo su cui eseguire una query.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un'istanza del predicato di tipo contiene true se il tipo *T* è una classe che ha un operatore di assegnazione di copia semplice; in caso contrario, contiene false.
 
@@ -292,7 +293,7 @@ struct is_trivially_move_assignable;
 *Ty*\
 Tipo su cui eseguire una query.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un'istanza del predicato di tipo contiene true se il tipo *Ty* è una classe che ha un operatore di assegnazione di spostamento semplice; in caso contrario, contiene false.
 
@@ -322,7 +323,7 @@ struct is_trivially_move_constructible;
 *Ty*\
 Tipo su cui eseguire una query.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un'istanza del predicato di tipo contiene true se il tipo *Ty* è una classe che ha un costruttore di spostamento semplice; in caso contrario, contiene false.
 
@@ -344,6 +345,6 @@ le classi di tutti i membri dati non statici del tipo di classe hanno costruttor
 
 le classi di tutti i membri dati non statici di tipo matrice della classe hanno costruttori di spostamento semplici
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore irreversibile C1004'
 title: Errore irreversibile C1004
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1004
 ms.assetid: dbe034b0-6eb0-41b4-a50c-2fccf9e78ad4
-ms.openlocfilehash: 82a1a3e410505be53d4356e46d5521aebb72763c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f21978f5ff314a8273dde60428dc89ca0c5767b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756968"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97262685"
 ---
 # <a name="fatal-error-c1004"></a>Errore irreversibile C1004
 
@@ -31,7 +32,7 @@ Per correggere l'errore, verificare quanto segue:
 
 - Lo spazio disponibile nell'unità disco predefinita non è sufficiente per i file temporanei, che richiedono circa due volte lo spazio del file di origine.
 
-- Una direttiva `#if` che restituisce false non dispone di una direttiva di `#endif` di chiusura.
+- Una `#if` direttiva che restituisce false non dispone di una direttiva di chiusura `#endif` .
 
 - Un file di origine non termina con un ritorno a capo e un avanzamento riga.
 

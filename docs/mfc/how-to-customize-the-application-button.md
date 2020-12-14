@@ -1,19 +1,20 @@
 ---
+description: "Altre informazioni su: procedura: personalizzare il pulsante dell'applicazione"
 title: "Procedura: personalizzare il pulsante dell'applicazione"
 ms.date: 09/07/2019
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-ms.openlocfilehash: 9160e602848adf8dc95c840d702e0b1a1b2f9049
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 72db627c6a4efef711ea7cc3163d0266e0a6c219
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620045"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253455"
 ---
 # <a name="how-to-customize-the-application-button"></a>Procedura: personalizzare il pulsante dell'applicazione
 
-Quando si fa clic sul pulsante applicazione, viene visualizzato un menu di comandi. In genere, il menu contiene comandi correlati ai file, ad esempio **apertura**, **salvataggio**, **stampa**e **uscita**.
+Quando si fa clic sul pulsante applicazione, viene visualizzato un menu di comandi. In genere, il menu contiene comandi correlati ai file, ad esempio **apertura**, **salvataggio**, **stampa** e **uscita**.
 
 ![Pulsante Applicazione della barra multifunzione MFC](../mfc/media/application_button.png "Pulsante Applicazione della barra multifunzione MFC")
 
@@ -21,9 +22,9 @@ Per personalizzare il pulsante dell'applicazione, aprirlo nella finestra **Propr
 
 ### <a name="to-open-the-application-button-in-the-properties-window"></a>Per aprire il pulsante dell'applicazione nella Finestra Proprietà
 
-1. In Visual Studio scegliere **visualizzazione risorse**dal menu **Visualizza** .
+1. In Visual Studio scegliere **visualizzazione risorse** dal menu **Visualizza** .
 
-1. In **visualizzazione risorse**fare doppio clic sulla risorsa barra multifunzione per visualizzarla nell'area di progettazione.
+1. In **visualizzazione risorse** fare doppio clic sulla risorsa barra multifunzione per visualizzarla nell'area di progettazione.
 
 1. Nell'area di progettazione fare clic con il pulsante destro del mouse sul menu del pulsante applicazione, quindi scegliere **Proprietà**.
 
@@ -52,8 +53,8 @@ Il menu applicazione non viene visualizzato nell'area di progettazione. Per visu
 
 #### <a name="to-preview-the-ribbon-control"></a>Per visualizzare in anteprima il controllo Ribbon
 
-- Sulla **barra degli strumenti Editor della barra multifunzione**fare clic su **test barra multifunzione**.
+- Sulla **barra degli strumenti Editor della barra multifunzione** fare clic su **test barra multifunzione**.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Finestra di progettazione della barra multifunzione (MFC)](ribbon-designer-mfc.md)

@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: interfaccia Platform:: IValueType'
 title: Interfaccia Platform::IValueType
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::IValueType
 ms.assetid: 8b89b21e-0d7b-4cc2-baa3-93b17c82945c
-ms.openlocfilehash: 62fe9d7d24a29d30d96f3608a89bd690529d10f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bde2b72d3f79130c8316524bad8fa8c505e7b138
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209541"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97262867"
 ---
 # <a name="platformivaluetype-interface"></a>Interfaccia Platform::IValueType
 

@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/VMB,/VMG (metodo di rappresentazione)
 title: /vmb, /vmg (Metodo di rappresentazione)
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,20 +14,20 @@ helpviewer_keywords:
 - representation method compiler options [C++]
 - /vmg compiler option [C++]
 ms.assetid: ecdb391c-7dab-40b1-916b-673d10889fd4
-ms.openlocfilehash: 25d24d7f92537f16e36213b8a8fd7b945fda7f5a
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 19d183ef8d1dd152043d7249d907c9d5b48de230
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504303"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254284"
 ---
 # <a name="vmb-vmg-representation-method"></a>/vmb, /vmg (Metodo di rappresentazione)
 
-Selezionare il metodo usato dal compilatore per rappresentare i puntatori ai membri della classe.
+Consente di selezionare il metodo utilizzato dal compilatore per rappresentare i puntatori ai membri della classe.
 
-Uso **/vmb** se sempre definire una classe prima di dichiarare un puntatore a un membro della classe.
+Usare **/VMB** se si definisce sempre una classe prima di dichiarare un puntatore a un membro della classe.
 
-Uso **/vmg** per dichiarare un puntatore a un membro di una classe prima della definizione della classe. Questa esigenza può verificarsi se si definiscano i membri in due diverse classi che fanno riferimento a altro. Per queste classi di riferimento si escludono a vicenda, una classe deve fare riferimento prima che sia definita.
+Usare **/VMG** per dichiarare un puntatore a un membro di una classe prima di definire la classe. Questa esigenza può verificarsi se si definiscono membri in due classi diverse che fanno riferimento l'una all'altra. Per le classi che fanno riferimento a vicenda, è necessario fare riferimento a una classe prima che venga definita.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -35,9 +36,9 @@ Uso **/vmg** per dichiarare un puntatore a un membro di una classe prima della d
 /vmg
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-È anche possibile usare [pointers_to_members](../../preprocessor/pointers-to-members.md) oppure [parole chiave di ereditarietà](../../cpp/inheritance-keywords.md) nel codice per specificare una rappresentazione del puntatore.
+È inoltre possibile utilizzare [pointers_to_members](../../preprocessor/pointers-to-members.md) o [parole chiave di ereditarietà](../../cpp/inheritance-keywords.md) nel codice per specificare una rappresentazione del puntatore.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
@@ -53,7 +54,7 @@ Uso **/vmg** per dichiarare un puntatore a un membro di una classe prima della d
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

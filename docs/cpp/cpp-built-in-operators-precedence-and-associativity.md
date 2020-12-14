@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: operatori predefiniti di C++, precedenza e associatività'
 title: Operatori, precedenza e associatività predefiniti di C++
 ms.date: 07/23/2020
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - evaluation order
 - hierarchy, operator
 ms.assetid: 95c1f0ba-dad8-4034-b039-f79a904f112f
-ms.openlocfilehash: 10c9e5db569ba211ed8d42386816b4f6bb71ee29
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ff8ae84a62ef47449364d0815922326d7b8566d4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221770"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253962"
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>Operatori, precedenza e associatività predefiniti di C++
 
@@ -40,7 +41,7 @@ La tabella seguente illustra la precedenza e l'associatività degli operatori C+
 | **Precedenza gruppo 1, nessuna associatività** |
 | [Risoluzione dell'ambito](../cpp/scope-resolution-operator.md) | [`::`](../cpp/scope-resolution-operator.md) |
 | **Precedenza gruppo 2, associatività da sinistra a destra** |
-| [Selezione del membro (oggetto o puntatore)](../cpp/member-access-operators-dot-and.md) | [`.`o`->`](../cpp/member-access-operators-dot-and.md) |
+| [Selezione del membro (oggetto o puntatore)](../cpp/member-access-operators-dot-and.md) | [`.` o `->`](../cpp/member-access-operators-dot-and.md) |
 | [Indice inferiore di matrice](../cpp/subscript-operator.md) | [`[]`](../cpp/subscript-operator.md) |
 | [Chiamata di funzione](../cpp/function-call-operator-parens.md) | [`()`](../cpp/function-call-operator-parens.md) |
 | [Incremento suffisso](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md) | [`++`](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md) |
@@ -64,13 +65,13 @@ La tabella seguente illustra la precedenza e l'associatività degli operatori C+
 | [Destroy, oggetto](../cpp/delete-operator-cpp.md) | [`delete`](../cpp/delete-operator-cpp.md) |
 | [Cast](../cpp/cast-operator-parens.md) | [`()`](../cpp/cast-operator-parens.md) |
 | **Precedenza gruppo 4, associatività da sinistra a destra** |
-| [Puntatore a membro (oggetti o puntatori)](../cpp/pointer-to-member-operators-dot-star-and-star.md) | [`.*`o`->*`](../cpp/pointer-to-member-operators-dot-star-and-star.md) |
+| [Puntatore a membro (oggetti o puntatori)](../cpp/pointer-to-member-operators-dot-star-and-star.md) | [`.*` o `->*`](../cpp/pointer-to-member-operators-dot-star-and-star.md) |
 | **Precedenza gruppo 5, associatività da sinistra a destra** |
 | [Moltiplicazione](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`*`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
 | [Divisione](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`/`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
-| [Modulus](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`%`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
+| [Modulo](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`%`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
 | **Precedenza gruppo 6, associatività da sinistra a destra** |
-| [Addizione](../cpp/additive-operators-plus-and.md) | [`+`](../cpp/additive-operators-plus-and.md) |
+| [Oltre](../cpp/additive-operators-plus-and.md) | [`+`](../cpp/additive-operators-plus-and.md) |
 | [Sottrazione](../cpp/additive-operators-plus-and.md) | [`-`](../cpp/additive-operators-plus-and.md) |
 | **Precedenza gruppo 7, associatività da sinistra a destra** |
 | [Spostamento a sinistra](../cpp/left-shift-and-right-shift-operators-input-and-output.md) | [`<<`](../cpp/left-shift-and-right-shift-operators-input-and-output.md) |
@@ -112,6 +113,6 @@ La tabella seguente illustra la precedenza e l'associatività degli operatori C+
 | **Precedenza gruppo 18, associatività da sinistra a destra** |
 | [Virgola](../cpp/comma-operator.md) | [,](../cpp/comma-operator.md) |
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Overload degli operatori](operator-overloading.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s, _ltow_s, _ultow_s, _i64tow_s, _ui64tow_s'
 title: _itoa_s, funzioni _itow_s
 ms.date: 4/2/2020
 api_name:
@@ -90,12 +91,12 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-ms.openlocfilehash: 5cc3706abd07e11c819d4b2d37ff89e9b9137a22
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c02ca2e6090c9396a3a6c91cd6353604d5df8096
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916563"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254235"
 ---
 # <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s, _ltow_s, _ultow_s, _i64tow_s _ui64tow_s
 
@@ -164,7 +165,7 @@ Zero se con esito positivo; un codice di errore in caso di errore. Se si applica
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|value|buffer|size|radix|Return|
+|Valore|buffer|size|radix|Return|
 |-----------|------------|----------------------|-----------|------------|
 |any|**NULL**|any|any|**EINVAL**|
 |any|any|<=0|any|**EINVAL**|
@@ -173,9 +174,9 @@ Zero se con esito positivo; un codice di errore in caso di errore. Se si applica
 
 ### <a name="security-issues"></a>Problemi di sicurezza
 
-Queste funzioni possono generare una violazione di accesso se il *buffer* non punta alla memoria valida e non è **null**o se la lunghezza del buffer non è sufficiente per conservare la stringa di risultato.
+Queste funzioni possono generare una violazione di accesso se il *buffer* non punta alla memoria valida e non è **null** o se la lunghezza del buffer non è sufficiente per conservare la stringa di risultato.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Ad eccezione dei parametri e del valore restituito, le famiglie di funzioni **_itoa_s** e **_itow_s** hanno lo stesso comportamento delle versioni di **_itow** e **_itoa** meno sicure corrispondenti.
 
@@ -276,7 +277,7 @@ base 3: 11112220022122120101211020120210210211220 (41 chars)
 base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 chars)
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
 [_itoa, funzioni _itow](itoa-itow.md)<br/>

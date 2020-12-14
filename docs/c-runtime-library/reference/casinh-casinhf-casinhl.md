@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: casinh, casinhf, casinhl'
 title: casinh, casinhf, casinhl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - casinhf function
 - casinhl function
 ms.assetid: bd18340b-21dd-4c86-a14e-e8e15dd97e3b
-ms.openlocfilehash: 6deec85dc980a7bd421de87349f512564912d98c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 96d3b2bc6b299f7ba6ef38fbd83f55507af26bd3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943380"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253156"
 ---
 # <a name="casinh-casinhf-casinhl"></a>casinh, casinhf, casinhl
 
@@ -73,7 +74,7 @@ Numero complesso che rappresenta un angolo, espresso in radianti.
 
 Seno iperbolico inverso di *z*, in radianti. Il risultato è Unbound lungo l'asse reale e nell'intervallo [-Iπ/2, + Iπ/2] lungo l'asse immaginario.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Poiché C++ consente l'overload, è possibile chiamare overload di **casinh** che accettano e restituiscono valori **_Fcomplex** e **_Lcomplex** . In un programma C **casinh** accetta e restituisce sempre un valore **_Dcomplex** .
 
@@ -83,9 +84,9 @@ Poiché C++ consente l'overload, è possibile chiamare overload di **casinh** ch
 |-------------|--------------|------------------|
 |**casinh**,               **casinhf**, **casinhl**|\<complex.h>|\<ccomplex>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
 [catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>

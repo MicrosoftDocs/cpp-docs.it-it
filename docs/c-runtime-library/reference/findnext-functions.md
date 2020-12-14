@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32 _wfindnexti64'
 title: _findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
 ms.date: 4/2/2020
 api_name:
@@ -114,12 +115,12 @@ helpviewer_keywords:
 - tfindnext32i64 function
 - _tfindnexti64 function
 ms.assetid: 75d97188-5add-4698-a46c-4c492378f0f8
-ms.openlocfilehash: acb680db3b07b0f600b758401f1270deccf03da7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5513f3932b78d450ecce81947e0095efb8df1d9d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911657"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263127"
 ---
 # <a name="_findnext-_findnext32-_findnext32i64-_findnext64-_findnext64i32-_findnexti64-_wfindnext-_wfindnext32-_wfindnext32i64-_wfindnext64-_wfindnext64i32-_wfindnexti64"></a>_findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
 
@@ -198,7 +199,7 @@ Se l'esito è positivo, restituisce 0. In caso contrario, restituisce-1 e **errn
 
 Se viene passato un parametro non valido, queste funzioni chiamano il gestore di parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md) (Convalida dei parametri).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 È necessario chiamare [_findclose](findclose.md) dopo aver terminato di utilizzare la funzione **_findfirst** o **_findnext** (o qualsiasi variante). Ciò consente di liberare le risorse usate da queste funzioni nell'applicazione.
 
@@ -236,7 +237,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**_findnext**|\<io.h>|
 |**_findnext32**|\<io.h>|
@@ -257,7 +258,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runt
 
 Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[System Calls](../../c-runtime-library/system-calls.md) (Chiamate di sistema)<br/>
-[Funzioni di ricerca dei nomi file](../../c-runtime-library/filename-search-functions.md)<br/>
+[Chiamate di sistema](../../c-runtime-library/system-calls.md)<br/>
+[Funzioni di ricerca filename](../../c-runtime-library/filename-search-functions.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: marshal_context Class'
 title: Classe marshal_context
 ms.date: 01/16/2019
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::marshal_context class [C++]
 ms.assetid: 241b0cf6-4ca4-4812-aaee-d671c11dc034
-ms.openlocfilehash: aa5935332cfa12c02e8084136a311a7593a4f3b9
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 6fa625ed52ac69682574d52c423e54d200461e73
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508588"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253650"
 ---
 # <a name="marshal_context-class"></a>Classe marshal_context
 
@@ -35,14 +36,14 @@ Lo stesso `marshal_context` può essere utilizzato per numerose conversioni di d
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |---------|-----------|
 |[marshal_context::marshal_context](#marshal-context)|Costruisce un `marshal_context` oggetto da utilizzare per la conversione dei dati tra tipi di dati gestiti e nativi.|
 |[marshal_context:: ~ marshal_context](#tilde-marshal-context)|Elimina un oggetto `marshal_context` .|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |---------|-----------|
 |[marshal_context::marshal_as](#marshal-as)|Effettua il marshalling su un oggetto dati specifico per convertirlo tra un tipo di dati gestito e un tipo nativo.|
 
@@ -60,7 +61,7 @@ Costruisce un `marshal_context` oggetto da utilizzare per la conversione dei dat
 marshal_context();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Alcune conversioni di dati richiedono un contesto di marshalling. Per ulteriori informazioni sulle traduzioni che richiedono un contesto e sul file di marshalling che è necessario includere nell'applicazione, vedere [Panoramica del marshalling in C++](../dotnet/overview-of-marshaling-in-cpp.md).
 
@@ -76,7 +77,7 @@ Elimina un oggetto `marshal_context` .
 ~marshal_context();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Alcune conversioni di dati richiedono un contesto di marshalling. Per ulteriori informazioni sulle traduzioni che richiedono un contesto e sul file di marshalling da includere nell'applicazione, vedere [Cenni preliminari sul marshalling in C++](../dotnet/overview-of-marshaling-in-cpp.md) .
 
@@ -101,7 +102,7 @@ in Valore di cui si desidera effettuare il marshalling in una `To_Type` variabil
 
 Variabile di tipo `To_Type` che è il valore convertito di `input` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione effettua il marshalling di un oggetto dati specifico. Utilizzare questa funzione solo con le conversioni indicate dalla tabella in [Cenni preliminari sul marshalling in C++](../dotnet/overview-of-marshaling-in-cpp.md).
 

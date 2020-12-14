@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/VD (Disabilita spostamenti costruzione)
 title: /vd (Disabilita spostamenti costruttori)
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - vd0 compiler option [C++]
 - Disable Construction Displacements compiler option
 ms.assetid: 93258964-14d7-4b1c-9cbc-d6f4d74eab69
-ms.openlocfilehash: df8891cc71dd5a4cfd417969578c0c1b46ae3be3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9c90e2fa4f93ea0ba3892a07e13f2a15e848d608
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223811"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253195"
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd (Disabilita spostamenti costruttori)
 
@@ -44,7 +45,7 @@ Consente di usare [dynamic_cast operatore](../../cpp/dynamic-cast-operator.md) s
 
 **/vd2** aggiunge un campo vtordisp quando si dispone di una base virtuale con funzioni virtuali. **/VD1** dovrebbe essere sufficiente. Il caso più comune in cui **/vd2** è necessario è quando l'unica funzione virtuale nella base virtuale è un distruttore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Queste opzioni si applicano solo al codice C++ che usa le basi virtuali.
 
@@ -70,7 +71,7 @@ Queste opzioni interessano interi file di origine. Usare [vtordisp](../../prepro
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

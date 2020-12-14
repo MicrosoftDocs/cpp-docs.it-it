@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; &gt; funzioni Regex'
 title: Funzioni &lt;regex&gt;
 ms.date: 09/10/2018
 f1_keywords:
@@ -13,16 +14,16 @@ helpviewer_keywords:
 - std::regex_search [C++]
 - std::swap [C++]
 - std::swap [C++]
-ms.openlocfilehash: fd7087025939a0aacf17153f201e37fc377653f9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: aa2186d7b394d1b603d5600d1977efa8d268a32f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842871"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253338"
 ---
 # <a name="ltregexgt-functions"></a>Funzioni &lt;regex&gt;
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[regex_match](#regex_match)|Verifica se un'espressione regolare corrisponde all'intera stringa di destinazione.|
 |[regex_replace](#regex_replace)|Sostituisce espressioni regolari corrispondenti.|
@@ -126,7 +127,7 @@ Espressione regolare in base a cui trovare una corrispondenza. Digitare `regex` 
 *Str*\
 Stringa per cui cercare una corrispondenza. Corrisponde al tipo di *elem*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Ogni funzione modello restituisce true solo se l'intera sequenza di operandi *Str* corrisponde esattamente all'argomento di espressione regolare *re*. Usare [regex_search](../standard-library/regex-functions.md#regex_search) per trovare la corrispondenza con una sottostringa all'interno di una sequenza di destinazione e `regex_iterator` per trovare più corrispondenze. Le funzioni che accettano un oggetto `match_results` impostano i propri membri in modo da indicare se la corrispondenza ha avuto esito positivo e, in caso affermativo, cosa hanno acquisito i vari gruppi di acquisizione nell'espressione regolare.
 
@@ -256,7 +257,7 @@ Espressione regolare in base a cui trovare una corrispondenza.
 *Str*\
 Stringa per cui cercare una corrispondenza.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La prima funzione costruisce un oggetto [Regex_iterator classe](../standard-library/regex-iterator-class.md) `iter(first, last, re, flags)` e lo usa per suddividere l'intervallo `[first, last)` di input in una serie di sottosequenze `T0 M0 T1 M1...TN-1 MN-1 TN` , dove `Mn` è l'ennesima corrispondenza rilevata dall'iteratore. Se non viene trovata alcuna corrispondenza, `T0` è l'intero intervallo di input e `N` è zero. Se `(flags & format_first_only) != 0` viene usata solo la prima corrispondenza, `T1` è il testo di input che segue la corrispondenza e `N` è 1. Per ogni `i` nell'intervallo `[0, N)` , se `(flags & format_no_copy) == 0` copia il testo nell'intervallo nell' `Ti` iteratore in *uscita*. Viene quindi chiamato `m.format(out, fmt, flags)` , dove `m` è l' `match_results` oggetto restituito dall'oggetto iteratore `iter` per la sottosequenza `Mi` . Infine, se `(flags & format_no_copy) == 0` copia il testo nell'intervallo nell' `TN` iteratore in *uscita*. La funzione restituisce *out*.
 
@@ -395,7 +396,7 @@ Espressione regolare in base a cui trovare una corrispondenza.
 *Str*\
 Stringa per cui cercare una corrispondenza.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Ogni funzione modello restituisce true solo se la ricerca dell'argomento di espressione regolare *re* nella sequenza di operandi ha esito positivo. Le funzioni che accettano un oggetto `match_results` impostano i propri membri in modo da indicare se la ricerca ha avuto esito positivo e, in caso affermativo, cosa hanno acquisito i vari gruppi di acquisizione nell'espressione regolare.
 
@@ -479,7 +480,7 @@ Tipo di elementi di cui trovare una corrispondenza.
 *RXtraits*\
 Classe traits per gli elementi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le funzioni modello scambiano il contenuto dei rispettivi argomenti in un tempo costante e non generano eccezioni.
 

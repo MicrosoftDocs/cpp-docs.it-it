@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32 _wfindfirsti64'
 title: _findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32, _wfindfirsti64
 ms.date: 4/2/2020
 api_name:
@@ -112,12 +113,12 @@ helpviewer_keywords:
 - wfindfirst64i32 function
 - _wfindfirst64 function
 ms.assetid: 9bb46d1a-b946-47de-845a-a0b109a33ead
-ms.openlocfilehash: 879a84b14f612992ae7ed3a96211637aaf5c4783
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: dce0c283a6177940019f1d358bd6cfa500c04306
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911745"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263140"
 ---
 # <a name="_findfirst-_findfirst32-_findfirst32i64-_findfirst64-_findfirst64i32-_findfirsti64-_wfindfirst-_wfindfirst32-_wfindfirst32i64-_wfindfirst64-_wfindfirst64i32-_wfindfirsti64"></a>_findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32, _wfindfirsti64
 
@@ -199,19 +200,19 @@ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, e
 
 Se viene passato un parametro non valido, queste funzioni chiamano il gestore di parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md) (Convalida dei parametri).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 È necessario chiamare [_findclose](findclose.md) una volta terminata la funzione **_findfirst** o [_findnext](findnext-functions.md) (o qualsiasi variante). Ciò consente di liberare le risorse usate da queste funzioni nell'applicazione.
 
 Le varianti di queste funzioni con il prefisso **w** sono versioni a caratteri wide. in caso contrario, sono identici alle funzioni a byte singolo corrispondenti.
 
-Le varianti di queste funzioni supportano tipi time a 32 o 64 bit e dimensioni di file a 32 o a 64 bit. Il primo suffisso numerico (**32** o **64**) indica le dimensioni del tipo di tempo; il secondo suffisso è **i32** o **I64**e indica se le dimensioni del file sono rappresentate come Integer a 32 bit o a 64 bit. Per informazioni su quali versioni supportano tipi time e dimensioni dei file a 32 bit e 64 bit, vedere la tabella seguente. Il suffisso **i32** o **I64** viene omesso se corrisponde alla dimensione del tipo time, quindi **_findfirst64** supporta anche lunghezze di file a 64 bit e **_findfirst32** supporta solo lunghezze di file a 32 bit.
+Le varianti di queste funzioni supportano tipi time a 32 o 64 bit e dimensioni di file a 32 o a 64 bit. Il primo suffisso numerico (**32** o **64**) indica le dimensioni del tipo di tempo; il secondo suffisso è **i32** o **I64** e indica se le dimensioni del file sono rappresentate come Integer a 32 bit o a 64 bit. Per informazioni su quali versioni supportano tipi time e dimensioni dei file a 32 bit e 64 bit, vedere la tabella seguente. Il suffisso **i32** o **I64** viene omesso se corrisponde alla dimensione del tipo time, quindi **_findfirst64** supporta anche lunghezze di file a 64 bit e **_findfirst32** supporta solo lunghezze di file a 32 bit.
 
 Queste funzioni usano diverse forme della struttura **_finddata_t** per il parametro *FileInfo* . Per altre informazioni sulla struttura, vedere [Filename Search Functions](../../c-runtime-library/filename-search-functions.md) (Funzioni di ricerca dei nomi file).
 
 Le varianti che usano un tipo time a 64 bit consentono di esprimere le date di creazione di file fino alle 23.59.59 del 31 dicembre 3000 UTC. Quelle che usano tipi time a 32 bit possono rappresentare date solo fino alle 23.59.59 del 18 gennaio 2038 UTC. La mezzanotte del 1 gennaio 1970 è il limite inferiore dell'intervallo di date per tutte queste funzioni.
 
-A meno che non esista un motivo specifico per usare le versioni che specificano le dimensioni temporali in modo esplicito, usare **_findfirst** o **_wfindfirst** o, se è necessario supportare dimensioni di file maggiori di 3 GB, usare **_findfirsti64** o **_wfindfirsti64**. Tutte queste funzioni usano il tipo time a 64 bit. Nelle versioni precedenti queste funzioni usavano un tipo time a 32 bit. Se si tratta di una modifica di rilievo per un'applicazione, è possibile definire **_USE_32BIT_TIME_T** per ripristinare il comportamento precedente. Se **_USE_32BIT_TIME_T** è definito, **_findfirst**, **_finfirsti64**e le versioni Unicode corrispondenti utilizzano un'ora a 32 bit.
+A meno che non esista un motivo specifico per usare le versioni che specificano le dimensioni temporali in modo esplicito, usare **_findfirst** o **_wfindfirst** o, se è necessario supportare dimensioni di file maggiori di 3 GB, usare **_findfirsti64** o **_wfindfirsti64**. Tutte queste funzioni usano il tipo time a 64 bit. Nelle versioni precedenti queste funzioni usavano un tipo time a 32 bit. Se si tratta di una modifica di rilievo per un'applicazione, è possibile definire **_USE_32BIT_TIME_T** per ripristinare il comportamento precedente. Se **_USE_32BIT_TIME_T** è definito, **_findfirst**, **_finfirsti64** e le versioni Unicode corrispondenti utilizzano un'ora a 32 bit.
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -241,7 +242,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**_findfirst**|\<io.h>|
 |**_findfirst32**|\<io.h>|
@@ -258,7 +259,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[System Calls](../../c-runtime-library/system-calls.md) (Chiamate di sistema)<br/>
-[Funzioni di ricerca dei nomi file](../../c-runtime-library/filename-search-functions.md)<br/>
+[Chiamate di sistema](../../c-runtime-library/system-calls.md)<br/>
+[Funzioni di ricerca filename](../../c-runtime-library/filename-search-functions.md)<br/>

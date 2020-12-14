@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Map (STL/CLR)'
 title: map (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -99,12 +100,12 @@ helpviewer_keywords:
 - operator> (map) member [STL/CLR]
 - operator>= (map) member [STL/CLR]
 ms.assetid: 8b0a7764-b5e4-4175-a802-82b72eb8662a
-ms.openlocfilehash: 31d696c1bf85cdcb1d662474042c82524abdfcf1
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 8aa30fb1b939eeeb7211e2f932833a2953825e72
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508604"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253663"
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 
@@ -174,7 +175,7 @@ Tipo del componente aggiuntivo di un elemento nella sequenza controllata.
 |[map::value_compare (STL/CLR)](#value_compare)|Delegato di ordinamento per i valori di due elementi.|
 |[map::value_type (STL/CLR)](#value_type)|Tipo di un elemento.|
 
-|Funzione membro|Descrizione|
+|Funzione membro|Description|
 |---------------------|-----------------|
 |[map::begin (STL/CLR)](#begin)|Indica l'inizio della sequenza controllata.|
 |[map::clear (STL/CLR)](#clear)|Rimuove tutti gli elementi.|
@@ -220,7 +221,7 @@ Tipo del componente aggiuntivo di un elemento nella sequenza controllata.
 |<xref:System.Collections.Generic.IDictionary%602>|Mantiene il gruppo di coppie {Key, value}.|
 |Chiave<ITree, valore>|Mantiene il contenitore generico.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'oggetto alloca e libera la memoria per la sequenza che controlla come singoli nodi. Inserisce gli elementi in un albero (quasi) bilanciato che mantiene ordinato modificando i collegamenti tra i nodi, mai copiando il contenuto di un nodo in un altro. Ciò significa che è possibile inserire e rimuovere elementi liberamente senza disturbare gli elementi rimanenti.
 
@@ -503,7 +504,7 @@ size_type count(key_type key);
 *key*<br/>
 Valore della chiave da cercare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce il numero di elementi nella sequenza controllata che hanno un ordinamento equivalente con la *chiave*. Viene utilizzata per determinare il numero di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
 
@@ -710,7 +711,7 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 *key*<br/>
 Valore della chiave da cercare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce una coppia di iteratori `cliext::pair<iterator, iterator>(` [Map:: lower_bound (STL/CLR)](#lower_bound) `(key),` [Map:: upper_bound (STL/CLR)](#upper_bound) `(key))` . Viene usato per determinare l'intervallo di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
 
@@ -782,13 +783,13 @@ Fine dell'intervallo da cancellare.
 *where*<br/>
 Elemento da cancellare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-La prima funzione membro rimuove l'elemento della sequenza controllata a *cui*punta e restituisce un iteratore che definisce il primo elemento rimanente oltre l'elemento rimosso oppure [Map:: end (STL/CLR)](#end) `()` se tale elemento non esiste. Viene usato per rimuovere un singolo elemento.
+La prima funzione membro rimuove l'elemento della sequenza controllata a *cui* punta e restituisce un iteratore che definisce il primo elemento rimanente oltre l'elemento rimosso oppure [Map:: end (STL/CLR)](#end) `()` se tale elemento non esiste. Viene usato per rimuovere un singolo elemento.
 
 La seconda funzione membro rimuove gli elementi della sequenza controllata nell'intervallo [ `first` , `last` ) e restituisce un iteratore che definisce il primo elemento rimanente oltre tutti gli elementi rimossi o `end()` se tale elemento non esiste. Viene usato per rimuovere zero o più elementi contigui.
 
-La terza funzione membro rimuove qualsiasi elemento della sequenza controllata la cui chiave ha un ordinamento equivalente a *Key*e restituisce un conteggio del numero di elementi rimossi. Viene usato per rimuovere e contare tutti gli elementi che corrispondono a una chiave specificata.
+La terza funzione membro rimuove qualsiasi elemento della sequenza controllata la cui chiave ha un ordinamento equivalente a *Key* e restituisce un conteggio del numero di elementi rimossi. Viene usato per rimuovere e contare tutti gli elementi che corrispondono a una chiave specificata.
 
 Ogni cancellazione di elementi richiede tempo proporzionale al logaritmo del numero di elementi nella sequenza controllata.
 
@@ -864,7 +865,7 @@ iterator find(key_type key);
 *key*<br/>
 Valore della chiave da cercare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se almeno un elemento nella sequenza controllata ha un ordinamento equivalente con la *chiave*, la funzione membro restituisce un iteratore che designa uno di tali elementi. in caso contrario, restituisce [Map:: end (STL/CLR)](#end) `()` . Viene usato per individuare un elemento attualmente nella sequenza controllata che corrisponde a una chiave specificata.
 
@@ -1170,11 +1171,11 @@ Valore della chiave da inserire.
 *where*<br/>
 Posizione del contenitore da inserire (solo hint).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Ogni funzione membro inserisce una sequenza specificata dagli operandi rimanenti.
 
-La prima funzione membro tenta di inserire un elemento con il valore *Val*e restituisce una coppia di valori `X` . Se `X.second` è true, `X.first` definisce l'elemento appena inserito; in caso contrario, `X.first` definisce un elemento con ordinamento equivalente già esistente e non viene inserito alcun nuovo elemento. Viene utilizzato per inserire un singolo elemento.
+La prima funzione membro tenta di inserire un elemento con il valore *Val* e restituisce una coppia di valori `X` . Se `X.second` è true, `X.first` definisce l'elemento appena inserito; in caso contrario, `X.first` definisce un elemento con ordinamento equivalente già esistente e non viene inserito alcun nuovo elemento. Viene utilizzato per inserire un singolo elemento.
 
 La seconda funzione membro inserisce un elemento con il valore *Val*, usando *where* come hint (per migliorare le prestazioni) e restituisce un iteratore che designa l'elemento appena inserito. Viene usato per inserire un singolo elemento che può essere adiacente a un elemento noto.
 
@@ -1432,7 +1433,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Osservazioni
 
-Il tipo è un sinonimo della *chiave*del parametro di modello.
+Il tipo è un sinonimo della *chiave* del parametro di modello.
 
 ### <a name="example"></a>Esempio
 
@@ -1480,7 +1481,7 @@ iterator lower_bound(key_type key);
 *key*<br/>
 Valore della chiave da cercare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro determina il primo elemento `X` nella sequenza controllata che ha un ordinamento equivalente a *Key*. Se tale elemento non esiste, restituisce [Map:: end (STL/CLR)](#end) `()` ; in caso contrario, restituisce un iteratore che designa `X` . Viene usato per individuare l'inizio di una sequenza di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
 
@@ -1542,7 +1543,7 @@ Valore della chiave da usare.
 *Mappati*<br/>
 Valore mappato da cercare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce un `value_type` oggetto la cui chiave è *la chiave* e il cui valore mappato è *mappato*. Viene usato per comporre un oggetto adatto per l'uso con diverse altre funzioni membro.
 
@@ -1608,7 +1609,7 @@ Predicato di ordinamento per la sequenza controllata.
 *Ok*<br/>
 Oggetto o un intervallo da inserire.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il costruttore:
 
@@ -1650,13 +1651,13 @@ Il costruttore:
 
 `map(System::Collections::Generic::IEnumerable<Key>^ right);`
 
-Inizializza la sequenza controllata con la sequenza designata dal *diritto*dell'enumeratore, con il predicato di ordinamento predefinito. Viene usato per fare in modo che la sequenza controllata venga copiata da un'altra sequenza descritta da un enumeratore, con il predicato di ordinamento predefinito.
+Inizializza la sequenza controllata con la sequenza designata dal *diritto* dell'enumeratore, con il predicato di ordinamento predefinito. Viene usato per fare in modo che la sequenza controllata venga copiata da un'altra sequenza descritta da un enumeratore, con il predicato di ordinamento predefinito.
 
 Il costruttore:
 
 `map(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`
 
-Inizializza la sequenza controllata con la sequenza designata dal *diritto*dell'enumeratore, con il *predicato*di ordinamento. Viene usato per fare in modo che la sequenza controllata venga copiata da un'altra sequenza descritta da un enumeratore, con il predicato di ordinamento specificato.
+Inizializza la sequenza controllata con la sequenza designata dal *diritto* dell'enumeratore, con il *predicato* di ordinamento. Viene usato per fare in modo che la sequenza controllata venga copiata da un'altra sequenza descritta da un enumeratore, con il predicato di ordinamento specificato.
 
 ### <a name="example"></a>Esempio
 
@@ -1806,7 +1807,7 @@ map<Key, Mapped>% operator=(map<Key, Mapped>% right);
 *Ok*<br/>
 Contenitore da copiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operatore membro copia *right* nell'oggetto, quindi restituisce **`*this`** . Viene usato per sostituire la sequenza controllata con una copia della sequenza controllata a *destra*.
 
@@ -1861,7 +1862,7 @@ mapped_type operator[](key_type key);
 *key*<br/>
 Valore della chiave da cercare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le funzioni membro tentano di trovare un elemento con un ordinamento equivalente alla *chiave*. Se ne trova uno, restituisce il valore mappato associato; in caso contrario, inserisce `value_type(key, mapped_type())` e restituisce il valore mappato (predefinito) associato. Viene usato per cercare un valore mappato in base alla relativa chiave associata oppure per assicurarsi che esista una voce per la chiave se non ne viene trovata una.
 
@@ -2219,7 +2220,7 @@ void swap(map<Key, Mapped>% right);
 *Ok*<br/>
 Contenitore con cui scambiare il contenuto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro scambia le sequenze controllate tra **`this`** e *right*. Esegue questa operazione in un tempo costante e non genera alcuna eccezione. Viene usato come modo rapido per scambiare il contenuto di due contenitori.
 
@@ -2337,7 +2338,7 @@ iterator upper_bound(key_type key);
 *key*<br/>
 Valore della chiave da cercare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro determina l'ultimo elemento della `X` sequenza controllata che ha un ordinamento equivalente a *Key*. Se tale elemento non esiste o se `X` è l'ultimo elemento nella sequenza controllata, restituisce [Map:: end (STL/CLR)](#end) `()` ; in caso contrario, restituisce un iteratore che definisce il primo elemento successivo a `X` . Viene usato per individuare la fine di una sequenza di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.
 
@@ -2541,7 +2542,7 @@ Contenitore sinistro da confrontare.
 *Ok*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce `!(left == right)` . Viene usato per verificare se *Left* non è ordinato come *right* quando le due mappe vengono confrontate elemento per elemento.
 
@@ -2612,7 +2613,7 @@ Contenitore sinistro da confrontare.
 *Ok*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce true se, per la posizione più bassa `i` per la quale `!(right[i] < left[i])` è anche true `left[i] < right[i]` . In caso contrario, viene restituito `left->size() < right->size()` che viene utilizzato per verificare se *Left* viene ordinato prima del *diritto* quando le due mappe vengono confrontate elemento per elemento.
 
@@ -2683,7 +2684,7 @@ Contenitore sinistro da confrontare.
 *Ok*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce `!(right < left)` . Viene usato per verificare se *Left* non è ordinato dopo *right* quando le due mappe vengono confrontate elemento per elemento.
 
@@ -2754,7 +2755,7 @@ Contenitore sinistro da confrontare.
 *Ok*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce true solo se le sequenze controllate da *Left* e *right* hanno la stessa lunghezza e, per ogni posizione `i` , `left[i] ==` `right[i]` . Viene usato per verificare se *Left* è ordinato come *right* quando le due mappe vengono confrontate elemento per elemento.
 
@@ -2825,7 +2826,7 @@ Contenitore sinistro da confrontare.
 *Ok*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce `right` `<` `left` . Viene usato per verificare se *Left* viene ordinato dopo *right* quando le due mappe vengono confrontate elemento per elemento.
 
@@ -2896,7 +2897,7 @@ Contenitore sinistro da confrontare.
 *Ok*<br/>
 Contenitore destro da confrontare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione operator restituisce `!(left` `<` `right)` . Viene usato per verificare se *Left* non è ordinato prima di *right* quando le due mappe vengono confrontate elemento per elemento.
 

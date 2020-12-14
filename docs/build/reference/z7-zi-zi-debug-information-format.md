@@ -1,4 +1,5 @@
 ---
+description: Ulteriori informazioni su:/Z7,/Zi,/ZI (formato informazioni di debug)
 title: /Z7, /Zi, /ZI (Formato informazioni di debug)
 ms.date: 07/06/2020
 f1_keywords:
@@ -23,11 +24,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: bc3fd9c065219a128e29290084b1e1fb51fc773e
-ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.openlocfilehash: 604c34cac5c3cd049f23e21f5db033c0ecc8c480
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86058594"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263231"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (Formato informazioni di debug)
 
@@ -43,7 +45,7 @@ Le **`/Z7`** **`/Zi`** Opzioni del compilatore,, e **`/ZI`** specificano il tipo
 
 Quando si specifica un'opzione di debug, il compilatore produce nomi di simboli per le funzioni e le variabili, le informazioni sul tipo e i percorsi delle righe per l'uso da parte del debugger. Queste informazioni sul debug simbolico possono essere incluse nei file oggetto ( *`.obj`* file) prodotti dal compilatore o in un file PDB separato (un *`.pdb`* file) per il file eseguibile. Le opzioni relative al formato delle informazioni di debug sono descritte nelle sezioni riportate di seguito.
 
-### <a name="none"></a>nessuno
+### <a name="none"></a>Nessuno
 
 Per impostazione predefinita, se non viene specificata alcuna opzione di formato delle informazioni di debug, il compilatore non produce informazioni di debug, quindi la compilazione è più veloce.
 
@@ -71,7 +73,7 @@ Se si crea una libreria da oggetti compilati utilizzando **`/Zi`** , il file PDB
 
 L' **`/ZI`** opzione è simile a **`/Zi`** , ma produce un file PDB in un formato che supporta la funzionalità [modifica e continuazione](/visualstudio/debugger/edit-and-continue-visual-cpp) . Per usare le funzionalità di debug di modifica e continuazione, è necessario usare questa opzione. La funzionalità modifica e continuazione è utile per la produttività degli sviluppatori, ma può causare problemi in termini di dimensioni del codice, prestazioni e conformità del compilatore. Poiché la maggior parte delle ottimizzazioni non è compatibile con modifica e continuazione, l'utilizzo di **`/ZI`** Disabilita qualsiasi `#pragma optimize` istruzione nel codice. **`/ZI`** Anche l'opzione non è compatibile con l'uso della [ `__LINE__` macro predefinita](../../preprocessor/predefined-macros.md). il codice compilato con **`/ZI`** non può usare `__LINE__` come argomento di modello non di tipo, sebbene `__LINE__` possa essere usato nelle espansioni di macro.
 
-Con l' **`/ZI`** opzione vengono forzate le opzioni [ `/Gy` (Abilita collegamento a livello di funzione)](gy-enable-function-level-linking.md) e [ `/FC` (percorso completo del file di codice sorgente nella diagnostica)](fc-full-path-of-source-code-file-in-diagnostics.md) da usare nella compilazione.
+Con l' **`/ZI`** opzione vengono forzate le opzioni [ `/Gy` (abilita il collegamento Function-Level)](gy-enable-function-level-linking.md) e [ `/FC` (percorso completo del file di codice sorgente nella diagnostica)](fc-full-path-of-source-code-file-in-diagnostics.md) da utilizzare nella compilazione.
 
 **`/ZI`** è incompatibile con [ `/clr` (compilazione Common Language Runtime)](clr-common-language-runtime-compilation.md).
 
@@ -82,7 +84,7 @@ Con l' **`/ZI`** opzione vengono forzate le opzioni [ `/Gy` (Abilita collegament
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Aprire la pagina delle proprietà generale relativa alle **proprietà di configurazione**  >  **C/C++**  >  **General** .
+1. Aprire la pagina delle proprietà generale relativa alle **proprietà di configurazione**  >  **C/C++**  >   .
 
 1. Modificare la proprietà **formato informazioni di debug** . Scegliere **OK** per salvare le modifiche.
 
@@ -90,7 +92,7 @@ Con l' **`/ZI`** opzione vengono forzate le opzioni [ `/Gy` (Abilita collegament
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DebugInformationFormat%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
 [Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
