@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: sfondo OLE: contenitori e server'
 title: 'Sfondo OLE: contenitori e server'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - server applications [MFC]
 ms.assetid: dafbb31d-096c-4654-b774-12900d832919
-ms.openlocfilehash: 7c3130ab9d8dff6551ef0ecbec43e5422dbdc4c4
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 3ea578ce14165b16e84520b22bc545fc5d2a8882
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617903"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254776"
 ---
 # <a name="ole-background-containers-and-servers"></a>Sfondo OLE: contenitori e server
 
-Un'applicazione contenitore è un'applicazione in grado di incorporare elementi incorporati o collegati nei propri documenti. I documenti gestiti da un'applicazione contenitore devono essere in grado di archiviare e visualizzare i componenti del documento OLE, nonché i dati creati dall'applicazione stessa. Un'applicazione contenitore deve inoltre consentire agli utenti di inserire nuovi elementi o modificare gli elementi esistenti attivando le applicazioni server quando necessario. I requisiti dell'interfaccia utente di un'applicazione contenitore sono elencati nell'articolo [contenitori: problemi dell'interfaccia utente](containers-user-interface-issues.md).
+Un'applicazione contenitore è un'applicazione in grado di incorporare elementi incorporati o collegati nei propri documenti. I documenti gestiti da un'applicazione contenitore devono essere in grado di archiviare e visualizzare i componenti del documento OLE, nonché i dati creati dall'applicazione stessa. Un'applicazione contenitore deve inoltre consentire agli utenti di inserire nuovi elementi o modificare gli elementi esistenti attivando le applicazioni server quando necessario. I requisiti dell'interfaccia utente di un'applicazione contenitore sono elencati nell'articolo [contenitori: User-Interface problemi](containers-user-interface-issues.md).
 
 Un'applicazione server o un'applicazione componente è un'applicazione in grado di creare componenti del documento OLE utilizzabili dalle applicazioni contenitore. Le applicazioni server in genere supportano il trascinamento della selezione o la copia dei dati negli Appunti, in modo che un'applicazione contenitore possa inserire i dati come elementi incorporati o collegati. Un'applicazione può essere sia un contenitore che un server.
 
@@ -33,7 +34,7 @@ I contenitori e i server non comunicano direttamente. Ma comunicano tramite le l
 
 Utilizzando questo mezzo di comunicazione, non è necessario che un contenitore conosca i dettagli di implementazione dell'applicazione server. Consente a un contenitore di accettare gli elementi creati da qualsiasi server senza dover definire i tipi di server con cui può funzionare. Di conseguenza, l'utente di un'applicazione contenitore può sfruttare i vantaggi delle applicazioni e dei formati dati futuri. Se queste nuove applicazioni sono componenti OLE, un documento composto sarà in grado di incorporare elementi creati da tali applicazioni.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Sfondo OLE](ole-background.md)<br/>
 [Sfondo OLE: implementazione MFC](ole-background-mfc-implementation.md)<br/>

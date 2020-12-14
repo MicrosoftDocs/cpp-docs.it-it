@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: gestione delle notifiche delle descrizioni comandi'
 title: Gestione delle notifiche delle descrizioni comandi
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - notifications [MFC], tool tips
 - tool tips [MFC], notifications
 ms.assetid: ddb93b5f-2e4f-4537-8053-3453c86e2bbb
-ms.openlocfilehash: 41e3dbfc2269f5fbf3c12dc00c19f8a2253fd16a
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 02bb1fb0760cf91c76e3c3be75fe097d5d57b71e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626437"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254859"
 ---
 # <a name="handling-tool-tip-notifications"></a>Gestione delle notifiche delle descrizioni comandi
 
@@ -22,7 +23,7 @@ Prima che venga visualizzata la descrizione comando, viene inviato il messaggio 
 
 [!code-cpp[NVC_MFCControlLadenDialog#40](codesnippet/cpp/handling-tool-tip-notifications_1.cpp)]
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 *memberFxn*<br/>
 Funzione membro da chiamare quando è necessario il testo per questo pulsante.
@@ -43,7 +44,7 @@ Oltre alla notifica **TTN_NEEDTEXT** , un controllo descrizione comando può inv
 
 Per una funzione di gestione di esempio e altre informazioni sull'abilitazione delle descrizioni comandi, vedere le descrizioni [comandi](tool-tips-in-windows-not-derived-from-cframewnd.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Utilizzo di CToolBarCtrl](using-ctoolbarctrl.md)<br/>
 [Controlli](controls-mfc.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore degli strumenti del linker LNK2026'
 title: Errore degli strumenti del linker LNK2026
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2026
 ms.assetid: 9955bf7c-59b5-4fa1-8481-147db0d7df45
-ms.openlocfilehash: f1be3b3d292b0d4ab616a5a7f3fbcd4105faaecd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 30d7b1d620fd152e6a32b5b8c4d0354595bf5875
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80194597"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275802"
 ---
 # <a name="linker-tools-error-lnk2026"></a>Errore degli strumenti del linker LNK2026
 

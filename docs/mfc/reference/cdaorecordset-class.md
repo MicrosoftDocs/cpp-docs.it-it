@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CDaoRecordset'
 title: Classe CDaoRecordset
 ms.date: 08/27/2018
 f1_keywords:
@@ -166,12 +167,12 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 4a1026c6b652bc5141855670db3b1ee34e7974b9
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: cc24894c0efc61ae37d57ff3c01ca43e71beddf3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040275"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248210"
 ---
 # <a name="cdaorecordset-class"></a>Classe CDaoRecordset
 
@@ -187,13 +188,13 @@ class CDaoRecordset : public CObject
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CDaoRecordset:: CDaoRecordset](#cdaorecordset)|Costruisce un oggetto `CDaoRecordset`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CDaoRecordset:: AddNew](#addnew)|Prepara l'aggiunta di un nuovo record. Chiamare [Update](#update) per completare l'aggiunta.|
 |[CDaoRecordset:: CanAppend](#canappend)|Restituisce un valore diverso da zero se è possibile aggiungere nuovi record al recordset tramite la funzione membro [AddNew](#addnew) .|
@@ -270,7 +271,7 @@ class CDaoRecordset : public CObject
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CDaoRecordset:: m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)|Contiene un flag che indica se i campi vengono contrassegnati automaticamente come modificati.|
 |[CDaoRecordset:: m_nFields](#m_nfields)|Contiene il numero di membri dati di campo nella classe recordset e il numero di colonne selezionate dal recordset dall'origine dati.|
@@ -1077,7 +1078,7 @@ Restituisce un valore che indica lo stato della modifica del record corrente.
 
 ### <a name="remarks"></a>Commenti
 
-|Valore|Descrizione|
+|Valore|Description|
 |-----------|-----------------|
 |`dbEditNone`|Non è in corso alcuna operazione di modifica.|
 |`dbEditInProgress`|È stato chiamato `Edit`.|
@@ -1509,7 +1510,7 @@ Consentire un'operazione di spostamento non significa che l'operazione troverà 
 
 La tabella seguente mostra l'effetto delle operazioni di spostamento che non individuano un record sul valore di `IsBOF` e delle `IsEOF` impostazioni.
 
-|Operazioni|IsBOF|IsEOF|
+|Gestione operativa|IsBOF|IsEOF|
 |------|-----------|-----------|
 |`MoveFirst`, `MoveLast`|Diverso da zero|Diverso da zero|
 |`Move` 0|Nessuna modifica|Nessuna modifica|
@@ -1582,7 +1583,7 @@ Consentire un'operazione di spostamento non significa che l'operazione troverà 
 
 La tabella seguente mostra l'effetto delle operazioni di spostamento che non individuano un record sul valore di `IsBOF` e delle `IsEOF` impostazioni.
 
-|Operazioni|IsBOF|IsEOF|
+|Gestione operativa|IsBOF|IsEOF|
 |------|-----------|-----------|
 |`MoveFirst`, `MoveLast`|Diverso da zero|Diverso da zero|
 |`Move` 0|Nessuna modifica|Nessuna modifica|

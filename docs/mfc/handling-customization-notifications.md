@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: gestione delle notifiche di personalizzazione'
 title: Gestione delle notifiche di personalizzazione
 ms.date: 11/04/2016
 f1_keywords:
@@ -47,12 +48,12 @@ helpviewer_keywords:
 - NM_RDBLCLK notification [MFC]
 - TBN_GETBUTTONINFO notification [MFC]
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
-ms.openlocfilehash: d88e1efe12fd5b31a9f78b8fe439ba1aefa72d1e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b5e104f118ac0eeff96965692615ce9143c5c178
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625720"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254963"
 ---
 # <a name="handling-customization-notifications"></a>Gestione delle notifiche di personalizzazione
 
@@ -214,7 +215,7 @@ Le notifiche che la barra degli strumenti invia sono i seguenti:
 
    Inviato dopo che l'utente ha personalizzato un controllo Toolbar. Il puntatore punta a una struttura **NMHDR** contenente informazioni sul messaggio di notifica. Il gestore non deve necessariamente restituire un valore specifico.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Utilizzo di CToolBarCtrl](using-ctoolbarctrl.md)<br/>
 [Controlli](controls-mfc.md)

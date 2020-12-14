@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: gestione del pulsante applica'
 title: Gestione del pulsante Applica
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Apply button in property sheet
 - property sheets, Apply button
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
-ms.openlocfilehash: cd1254a31491e713513f0db0d4cf87baddd9bb23
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a626dcab04d68d19efba79465bfca46545ff6670
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618607"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254937"
 ---
 # <a name="handling-the-apply-button"></a>Gestione del pulsante Applica
 
@@ -32,6 +33,6 @@ Per implementare l'effetto del pulsante Applica, la finestra delle proprietà de
 
 Per un esempio di questo processo, vedere l'esempio generale MFC [PROPDLG](../overview/visual-cpp-samples.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Finestre delle proprietà](property-sheets-mfc.md)

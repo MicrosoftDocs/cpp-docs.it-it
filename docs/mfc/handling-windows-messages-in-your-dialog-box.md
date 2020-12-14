@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: gestione dei messaggi di Windows nella finestra di dialogo'
 title: Gestione dei messaggi di Windows nella finestra di dialogo
 ms.date: 09/05/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - Windows messages [MFC], handling
 - message handling [MFC], in dialog boxes
 ms.assetid: 4af0c9cb-09da-4b15-97df-a1cfb89def79
-ms.openlocfilehash: 72ac1bdc84d1e657440e8cc4ee52eca3324167ed
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 05aa68c17e401dad02ab513e13c7ff735761041f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626436"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254846"
 ---
 # <a name="handling-windows-messages-in-your-dialog-box"></a>Gestione dei messaggi di Windows nella finestra di dialogo
 
@@ -19,6 +20,6 @@ Le finestre di dialogo sono finestre, in modo da poter gestire i messaggi di Win
 
 Per ulteriori informazioni, vedere [mapping dei messaggi di Windows alla classe della finestra di dialogo](mapping-windows-messages-to-your-class.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Utilizzo delle finestre di dialogo in MFC](life-cycle-of-a-dialog-box.md)

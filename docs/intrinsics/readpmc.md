@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __readpmc'
 title: __readpmc
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - __readpmc intrinsic
 - rdpmc instruction
 ms.assetid: 14ed45a6-28b6-4635-8437-a597c04b43d4
-ms.openlocfilehash: af0f1874d991771423ddebfedd4624cd0b71760f
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: ceff8522d4895f69a47cf429e59d267c671e3a66
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221031"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97294132"
 ---
 # <a name="__readpmc"></a>__readpmc
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Genera l' `rdpmc` istruzione, che legge il contatore di monitoraggio delle prestazioni specificato dal *contatore*.
 
@@ -40,18 +41,18 @@ Valore del contatore delle prestazioni specificato.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`__readpmc`|x86, x64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 La funzione intrinseca è disponibile solo in modalità kernel e la routine è disponibile solo come funzione intrinseca.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

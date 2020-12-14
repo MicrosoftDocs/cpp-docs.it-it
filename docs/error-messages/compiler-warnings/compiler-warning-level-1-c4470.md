@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 1) C4470'
 title: Avviso del compilatore (livello 1) C4470
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4470
 ms.assetid: f52a3eaa-a235-4747-a47d-9ec4ad4cb0ea
-ms.openlocfilehash: 164bc1fa85466b80ee66a22a1a1679a40b89ce2e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6fe01782fbd2151175bc1da59afa8bd73fa5648d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80186725"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310980"
 ---
 # <a name="compiler-warning-level-1-c4470"></a>Avviso del compilatore (livello 1) C4470
 

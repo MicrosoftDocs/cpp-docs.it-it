@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore degli strumenti del linker LNK2027'
 title: Errore degli strumenti del linker LNK2027
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2027
 ms.assetid: e2f857a8-8e8a-4697-bbff-12ccb84a35c1
-ms.openlocfilehash: 0c531f70f98a017e8b75cceddc684f99d33bc554
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 006ca3b0c9d0ef85f118db9b562e8228c7cad238
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80194596"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275763"
 ---
 # <a name="linker-tools-error-lnk2027"></a>Errore degli strumenti del linker LNK2027
 

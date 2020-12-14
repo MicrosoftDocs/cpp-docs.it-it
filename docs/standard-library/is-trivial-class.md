@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: is_trivial Class'
 title: Classe is_trivial
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivial
 ms.assetid: 6beb11d4-2f38-4c7e-9959-ca5d26250df7
-ms.openlocfilehash: 1d218848fd65ca68022e3e66df02201582626711
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 56e5a3c915893b88228f4a40307d2c1e3c32555d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457431"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247657"
 ---
-# <a name="istrivial-class"></a>Classe is_trivial
+# <a name="is_trivial-class"></a>Classe is_trivial
 
 Verifica se il tipo è trivial.
 
@@ -29,16 +30,16 @@ struct is_trivial;
 *T*\
 Tipo su cui eseguire una query.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Un'istanza del predicato di tipo include true se il tipo *T* è un tipo semplice; in caso contrario, include false. I tipi trivial sono tipi scalari, tipi di classe facilmente copiabili, matrici di questi tipi e versioni qualificate CV di questi tipi.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)

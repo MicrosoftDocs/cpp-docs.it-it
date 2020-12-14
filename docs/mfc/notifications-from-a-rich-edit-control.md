@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: notifiche da un controllo Rich Edit'
 title: Notifiche da un controllo Rich Edit
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - rich edit controls [MFC], notifications
 - notifications [MFC], from CRichEditCtrl
 ms.assetid: eb5304fe-f4f3-4557-9ebf-3095dea383c4
-ms.openlocfilehash: 206fc02088f6531338bf2aa4cf272a1da096bae4
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 83f76c2b0bf8c27d30d8c113fc1607f3cbd718fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622218"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254794"
 ---
 # <a name="notifications-from-a-rich-edit-control"></a>Notifiche da un controllo Rich Edit
 
@@ -30,7 +31,7 @@ I paragrafi seguenti elencano diverse notifiche specifiche e i relativi utilizzi
 
 - EN_SELCHANGE un'applicazione può rilevare quando la selezione corrente viene modificata elaborando il messaggio di notifica EN_SELCHANGE. Il messaggio di notifica specifica una struttura [selChange](/windows/win32/api/richedit/ns-richedit-selchange) contenente informazioni sulla nuova selezione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso di CRichEditCtrl](using-cricheditctrl.md)<br/>
+[Utilizzo di CRichEditCtrl](using-cricheditctrl.md)<br/>
 [Controlli](controls-mfc.md)

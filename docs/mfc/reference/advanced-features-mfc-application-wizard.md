@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: funzionalità avanzate, creazione guidata applicazione MFC'
 title: Funzionalità avanzate, Creazione guidata applicazione MFC
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-ms.openlocfilehash: dc2b745bf97dff65a3612c29745c9d0e455a347d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f709f933549c9cc1aa4a53a361682f1c444bbcbf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507800"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248255"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Funzionalità avanzate, Creazione guidata applicazione MFC
 
@@ -19,9 +20,9 @@ In questo argomento sono elencate opzioni per funzionalità aggiuntive dell'appl
 
 - **Guida sensibile al contesto (HTML)**
 
-   Genera un set di file della Guida per la Guida sensibile al contesto, disponibile tramite F1 e un menu? oppure facendo clic su un pulsante? in una finestra di dialogo. Il supporto della Guida richiede il compilatore della Guida. Se non è disponibile, è possibile installarlo eseguendo nuovamente il programma di installazione.
+   Genera un set di file della Guida per la Guida sensibile al contesto, disponibile tramite F1 e un menu? oppure facendo clic su **un pulsante?** in una finestra di dialogo. Il supporto della Guida richiede il compilatore della Guida. Se non è disponibile, è possibile installarlo eseguendo nuovamente il programma di installazione.
 
-   Vedere [la Guida HTML: Guida sensibile al contesto per i programmi](../../mfc/html-help-context-sensitive-help-for-your-programs.md) e [i file della guida (Guida HTML)](../../build/reference/help-files-html-help.md) per ulteriori informazioni.
+   Per ulteriori informazioni, vedere [la Guida HTML: Context-Sensitive della Guida per i programmi](../../mfc/html-help-context-sensitive-help-for-your-programs.md) e [i file della guida (Guida HTML)](../../build/reference/help-files-html-help.md) .
 
 - **Stampa e anteprima di stampa**
 
@@ -47,7 +48,7 @@ In questo argomento sono elencate opzioni per funzionalità aggiuntive dell'appl
 
    Aggiunge il supporto per [IAccessible](/windows/win32/api/oleacc/nn-oleacc-iaccessible) alle classi derivate da [CWnd](../../mfc/reference/cwnd-class.md), che è possibile usare per personalizzare l'interfaccia utente per un'interazione migliore con i client di accessibilità.
 
-- **Manifesto del controllo comune**
+- **Manifesto controlli comuni**
 
    Abilitato per impostazione predefinita. Genera un manifesto dell'applicazione per abilitare la DLL dei controlli comuni fornita con Microsoft Windows XP e i sistemi operativi più recenti.
 
@@ -55,24 +56,24 @@ In questo argomento sono elencate opzioni per funzionalità aggiuntive dell'appl
 
    Un manifesto dell'applicazione può anche specificare altre DLL e versioni necessarie all'applicazione. Per ulteriori informazioni sui manifesti dell'applicazione, vedere [applicazioni isolate e assembly affiancati](/windows/win32/SbsCs/isolated-applications-and-side-by-side-assemblies-portal) nella Windows SDK.
 
-- **Supporto gestione riavvio**
+- **Supporto Gestione riavvio**
 
-   Aggiunge il supporto per [Gestione riavvio di Windows](/windows/win32/RstMgr/using-restart-manager). In questo video viene illustrato come utilizzare Gestione riavvio di MFC: [Procedura: Utilizzare la nuova gestione](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100))riavvio.
+   Aggiunge il supporto per [Gestione riavvio di Windows](/windows/win32/RstMgr/using-restart-manager). Questo video illustra come usare Gestione riavvio di MFC: [procedura: usare la nuova gestione riavvio](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100)).
 
 - **Riquadri frame avanzati**
 
-   |Opzione|Descrizione|
+   |Opzione|Description|
    |------------|-----------------|
-   |**Riquadro di ancoraggio di Esplora risorse**|Crea un riquadro ancorato simile a quello di Visual Studio **Esplora soluzioni** a sinistra della finestra cornice principale.|
-   |**Frame di ancoraggio output**|Crea un riquadro ancorato simile al riquadro di **output** di Visual Studio che si trova nella finestra cornice principale.|
-   |**Riquadro di ancoraggio delle proprietà**|Crea un riquadro ancorato simile al riquadro **Proprietà** di Visual Studio a destra della finestra cornice principale.|
+   |**Riquadro ancorato di tipo Esplora soluzioni**|Crea un riquadro ancorato simile a quello di Visual Studio **Esplora soluzioni** a sinistra della finestra cornice principale.|
+   |**Riquadro ancorato di tipo output**|Crea un riquadro ancorato simile al riquadro di **output** di Visual Studio che si trova nella finestra cornice principale.|
+   |**Riquadro ancorato di tipo Proprietà**|Crea un riquadro ancorato simile al riquadro **Proprietà** di Visual Studio a destra della finestra cornice principale.|
    |**Riquadro di spostamento**|Crea un riquadro ancorato simile alla barra di navigazione di Outlook a sinistra della finestra cornice principale.|
    |**Barra del titolo**|Crea una barra del titolo di tipo Office sopra la finestra cornice principale.|
 
-- **Numero di file nell'elenco dei file recenti**
+- **Numero di file visualizzati nell'elenco dei file recenti**
 
    Specifica il numero di file da inserire nell'elenco dei file recenti. Il numero predefinito è 4.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Creazione guidata applicazione MFC](../../mfc/reference/mfc-application-wizard.md)

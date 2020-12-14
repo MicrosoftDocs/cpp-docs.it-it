@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 4) C4564'
 title: Avviso del compilatore (livello 4) C4564
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4564
 ms.assetid: 555b301b-313e-4262-9f81-eb878674be60
-ms.openlocfilehash: 042eab1c125f2b98fd36257dfd8971262015ab92
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 112d1d20d34619d7a39d20c7fcd5f21584730cef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990671"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97255171"
 ---
 # <a name="compiler-warning-level-4-c4564"></a>Avviso del compilatore (livello 4) C4564
 
 il metodo ' Method ' della classe ' Class ' definisce il parametro predefinito ' parameter ' non supportato
 
-Il compilatore ha rilevato un metodo con uno o più parametri con i valori predefiniti. I valori predefiniti per i parametri verranno ignorati quando viene richiamato il metodo. specificare in modo esplicito i valori per tali parametri. Se non si specificano in modo esplicito i valori per tali C++ parametri, il compilatore genererà un errore.
+Il compilatore ha rilevato un metodo con uno o più parametri con i valori predefiniti. I valori predefiniti per i parametri verranno ignorati quando viene richiamato il metodo. specificare in modo esplicito i valori per tali parametri. Se non si specificano in modo esplicito i valori per tali parametri, il compilatore C++ genererà un errore.
 
 Dato il file con estensione dll seguente creato con Visual Basic, che consente i parametri predefiniti negli argomenti del metodo:
 
@@ -31,7 +32,7 @@ Public class TestClass
 End class
 ```
 
-E l'esempio C++ seguente che usa il file con estensione dll creato con Visual Basic,
+E il seguente esempio di C++ che usa il file con estensione dll creato con Visual Basic,
 
 ```cpp
 // C4564.cpp

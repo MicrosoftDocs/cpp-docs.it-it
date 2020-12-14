@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore degli strumenti del linker LNK2022'
 title: Errore degli strumenti del linker LNK2022
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2022
 ms.assetid: d2128c73-dde3-4b8e-a9b2-0a153acefb3b
-ms.openlocfilehash: 187a63cb4bd22fc5e0d35523d97f438ba56b8576
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: ed609c47e67a4719f2447f9cdff35221ef157cf8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686358"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275841"
 ---
 # <a name="linker-tools-error-lnk2022"></a>Errore degli strumenti del linker LNK2022
 
@@ -27,7 +28,7 @@ Un'altra possibile provocazione di LNK2022 è quando il linker trova un file di 
 
 Quando si compila un'applicazione ATL, l'uso della macro `_ATL_MIXED` è obbligatorio in tutti moduli, se usato in almeno uno.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Nell'esempio seguente viene definito un tipo vuoto.
 

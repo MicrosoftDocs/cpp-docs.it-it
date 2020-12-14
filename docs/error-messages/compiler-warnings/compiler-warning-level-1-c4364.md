@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 1) C4364'
 title: Avviso del compilatore (livello 1) C4364
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4364
 ms.assetid: 1477634c-d60f-4570-ad16-1aaeae24ac7f
-ms.openlocfilehash: 7f1c71cb3cd6a99d4ed9960032813e7cebca7591
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 760676be4ba431ffa9c514316142b1a14ce87c8e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685079"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97311396"
 ---
 # <a name="compiler-warning-level-1-c4364"></a>Avviso del compilatore (livello 1) C4364
 
@@ -21,7 +22,7 @@ Una `#using` direttiva è stata ripetuta per un file di metadati specificato, ma
 
 Per ulteriori informazioni, vedere [assembly Friend (C++)](../../dotnet/friend-assemblies-cpp.md).
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 L'esempio seguente crea un componente.
 
