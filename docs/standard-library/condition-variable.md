@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: &lt; condition_variable&gt;'
 title: '&lt;condition_variable&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <condition_variable>
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
-ms.openlocfilehash: d13b58fc05055ceecb6472003d7682c41c76e23d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d3179677c1440777e0f9c1d5c6ff21ba13681aaa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222537"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233799"
 ---
 # <a name="ltcondition_variablegt"></a>&lt;condition_variable&gt;
 
@@ -26,7 +27,7 @@ Questa intestazione usa il runtime di concorrenza (ConcRT) in modo da essere uti
 > [!NOTE]
 > Nel codice compilato utilizzando **/CLR**, questa intestazione è bloccata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il codice che è in attesa di una variabile di condizione deve usare anche un `mutex`. Un thread chiamante deve bloccare il `mutex` prima di chiamare le funzioni di attesa per la variabile di condizione. In seguito il `mutex` viene bloccato quando la funzione chiamata viene restituita. Il `mutex` non risulta bloccato mentre il thread è in attesa che la condizione diventi true. Per far sì che non vi siano risultati imprevedibili, tutti i thread in attesa di una variabile di condizione devono usare lo stesso oggetto `mutex`.
 
@@ -65,7 +66,7 @@ void notify_all_at_thread_exit(condition_variable& cond, unique_lock<mutex> lk);
 enum class cv_status { no_timeout, timeout };
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [Classe condition_variable](../standard-library/condition-variable-class.md)\

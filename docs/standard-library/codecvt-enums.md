@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; codecvt &gt; enums'
 title: Enumerazioni &lt;codecvt&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 ms.assetid: 46a8b073-01bc-46d3-b3d3-a8540f9422c1
 helpviewer_keywords:
 - std::codecvt_mode
-ms.openlocfilehash: e67290d8de0b8251191c4a93b66b7e19a293ed61
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bcd40f72f563b3ecf91125f7167f206d4b1b6517
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371937"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234059"
 ---
 # <a name="ltcodecvtgt-enums"></a>Enumerazioni &lt;codecvt&gt;
 
-## <a name="codecvt_mode-enumeration"></a><a name="codecvt_mode"></a>Enumerazione codecvt_mode
+## <a name="codecvt_mode-enumeration"></a><a name="codecvt_mode"></a> Enumerazione codecvt_mode
 
-Specifica le informazioni di configurazione per i facet [delle impostazioni locali.](../standard-library/locale-class.md)
+Specifica le informazioni di configurazione per i facet delle [impostazioni locali](../standard-library/locale-class.md) .
 
 ```cpp
 enum codecvt_mode {
@@ -27,9 +28,9 @@ enum codecvt_mode {
 };
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-L'enumerazione definisce tre costanti che forniscono informazioni di configurazione ai facet delle impostazioni locali dichiarati in [ \<codecvt>](../standard-library/codecvt.md). I valori distinti sono:
+L'enumerazione definisce tre costanti che forniscono informazioni di configurazione ai facet delle impostazioni locali dichiarati in [\<codecvt>](../standard-library/codecvt.md) . I valori distinti sono:
 
 - `consume_header`, per consumare una sequenza di intestazione iniziale durante la lettura di una sequenza multibyte e determinare l'ordine dei byte della sequenza multibyte successiva da leggere
 
@@ -41,4 +42,4 @@ Queste costanti possono essere introdotte insieme dall'operatore OR in combinazi
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<>codecvt](../standard-library/codecvt.md)
+[\<codecvt>](../standard-library/codecvt.md)

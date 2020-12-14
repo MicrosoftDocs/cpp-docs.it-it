@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livelli 1 e 4) C4112'
 title: Avviso del compilatore (livelli 1 e 4) C4112
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4112
 ms.assetid: aff64897-bb79-4a67-9b6f-902c6d44f3dc
-ms.openlocfilehash: f614373e1b96de2c8167d7981c0a87a4e1c58435
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: a4958cbd4537ab9c1f5686383f27414ae366e72b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991238"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234553"
 ---
 # <a name="compiler-warning-levels-1-and-4-c4112"></a>Avviso del compilatore (livelli 1 e 4) C4112
 
-\#riga richiede un numero intero compreso tra 1 e numero
+\#la riga richiede un numero intero compreso tra 1 e numero
 
 La direttiva [#line](../../preprocessor/hash-line-directive-c-cpp.md) specifica un parametro Integer che non rientra nell'intervallo consentito.
 

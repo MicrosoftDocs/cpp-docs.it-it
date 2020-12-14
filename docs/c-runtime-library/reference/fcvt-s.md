@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _fcvt_s'
 title: _fcvt_s
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-ms.openlocfilehash: 557a1d359c389f0eb7477aab4bf9cbb51558703a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: dd4d58b39d4c18f2fff7da54c5fbd0f2346dfdd4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920196"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235879"
 ---
 # <a name="_fcvt_s"></a>_fcvt_s
 
@@ -79,7 +80,7 @@ Numero di cifre dopo il separatore decimale.
 *Dec*<br/>
 Puntatore alla posizione del separatore decimale archiviata.
 
-*Sign*<br/>
+*sign*<br/>
 Puntatore all'indicatore di segno archiviato.
 
 ## <a name="return-value"></a>Valore restituito
@@ -90,7 +91,7 @@ Se uno parametro non è valido, come elencato nella tabella seguente, questa fun
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*buffer*|*sizeInBytes*|value|count|dec|sign|Return|Valore nel *buffer*|
+|*buffer*|*sizeInBytes*|Valore|count|dec|segno|Return|Valore nel *buffer*|
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
 |**NULL**|any|any|any|any|any|**EINVAL**|Non modificato.|
 |Not **null** (punta alla memoria valida)|<=0|any|any|any|any|**EINVAL**|Non modificato.|
@@ -101,7 +102,7 @@ Se uno parametro non è valido, come elencato nella tabella seguente, questa fun
 
 **_fcvt_s** potrebbe generare una violazione di accesso se il *buffer* non punta alla memoria valida e non è **null**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_fcvt_s** converte un numero a virgola mobile in una stringa di caratteri con terminazione null. Il parametro *value* è il numero a virgola mobile da convertire. **_fcvt_s** archivia le cifre del *valore* come stringa e aggiunge un carattere null (' \ 0'). Il parametro *count* specifica il numero di cifre da archiviare dopo la virgola decimale. Le cifre in eccedenza vengono arrotondate per *calcolare* le posizioni. Se sono presenti meno di un *numero* di cifre di precisione, la stringa viene riempita con zeri.
 
@@ -119,7 +120,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|Intestazione facoltativa|
+|Funzione|Intestazione obbligatoria|Intestazione facoltativa|
 |--------------|---------------------|---------------------|
 |**_fcvt_s**|\<stdlib.h>|\<errno.h>|
 
@@ -162,7 +163,7 @@ Converted value: 120000
 ## <a name="see-also"></a>Vedere anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
 [_ecvt_s](ecvt-s.md)<br/>
 [_gcvt_s](gcvt-s.md)<br/>

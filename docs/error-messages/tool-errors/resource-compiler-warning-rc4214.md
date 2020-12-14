@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore di risorse risorse RC4214'
 title: Avviso del compilatore di risorse RC4214
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - RC4214
 ms.assetid: 79a8bf0d-8cc7-4159-a6a2-d0e543749069
-ms.openlocfilehash: e8e135858f9ad0e6b504b4db0d1eae1cd037bca3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c43437c73be39ad02b84a85338183c77226fcd11
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182279"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97237062"
 ---
 # <a name="resource-compiler-warning-rc4214"></a>Avviso del compilatore di risorse RC4214
 

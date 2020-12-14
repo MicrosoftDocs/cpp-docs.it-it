@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Exit, _Exit, _exit'
 title: exit, _Exit, _exit
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - processes, terminating
 - function calls, terminating
 - process termination, calling
-ms.openlocfilehash: a1c0eeaa6d66e91b913ce7940d37409fc4f6ac29
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b2d5a95f8a110e467016be828418050d77caa984
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909673"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236035"
 ---
 # <a name="exit-_exit-_exit"></a>exit, _Exit, _exit
 
@@ -69,13 +70,13 @@ void _exit(
 *Stato*<br/>
 Codice di stato di uscita.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Le funzioni **Exit**, **_Exit** e **_exit** terminano il processo chiamante. La funzione **Exit** chiama i distruttori per gli oggetti locali del thread, quindi chiama, in ordine LIFO (Last in First out), le funzioni registrate da **atexit** e **_onexit**e quindi Scarica tutti i buffer di file prima di terminare il processo. Le funzioni **_Exit** e **_exit** terminano il processo senza eliminare gli oggetti locali del thread o elaborare funzioni **atexit** o **_onexit** e senza scaricare i buffer di flusso.
+Le funzioni **Exit**, **_Exit** e **_exit** terminano il processo chiamante. La funzione **Exit** chiama i distruttori per gli oggetti locali del thread, quindi chiama, in ordine LIFO (Last in First out), le funzioni registrate da **atexit** e **_onexit** e quindi Scarica tutti i buffer di file prima di terminare il processo. Le funzioni **_Exit** e **_exit** terminano il processo senza eliminare gli oggetti locali del thread o elaborare funzioni **atexit** o **_onexit** e senza scaricare i buffer di flusso.
 
 Sebbene le chiamate di **uscita**, **_Exit** e **_exit** non restituiscano un valore, il valore in *status* viene reso disponibile all'ambiente host o al processo di chiamata in attesa, se presente, dopo la chiusura del processo. In genere, il chiamante imposta il valore di *stato* su 0 per indicare un'uscita normale o un altro valore per indicare un errore. Il valore di *stato* è disponibile per il comando batch del sistema operativo **errorlevel** ed è rappresentato da una delle due costanti: **EXIT_SUCCESS**, che rappresenta il valore 0, o **EXIT_FAILURE**, che rappresenta il valore 1.
 
-Le funzioni **Exit**, **_Exit**, **_exit**, **quick_exit**, **_cexit**e **_c_exit** si comportano come segue.
+Le funzioni **Exit**, **_Exit**, **_exit**, **quick_exit**, **_cexit** e **_c_exit** si comportano come segue.
 
 |Funzione|Descrizione|
 |--------------|-----------------|
@@ -86,7 +87,7 @@ Le funzioni **Exit**, **_Exit**, **_exit**, **quick_exit**, **_cexit**e **_c_exi
 |**_cexit**|Esegue le procedure complete di terminazione della libreria C e torna al chiamante. Non termina il processo.|
 |**_c_exit**|Esegue le procedure minime di terminazione della libreria C e torna al chiamante. Non termina il processo.|
 
-Quando si chiama la funzione **Exit**, **_Exit** o **_exit** , i distruttori per gli oggetti temporanei o automatici presenti al momento della chiamata non vengono chiamati. Un oggetto automatico è un oggetto locale non statico definito in una funzione. Un oggetto temporaneo è un oggetto creato dal compilatore, ad esempio un valore restituito da una chiamata di funzione. Per eliminare definitivamente un oggetto automatico prima di chiamare **Exit**, **_Exit**o **_exit**, chiamare in modo esplicito il distruttore per l'oggetto, come illustrato di seguito:
+Quando si chiama la funzione **Exit**,  **_Exit** o **_exit** , i distruttori per gli oggetti temporanei o automatici presenti al momento della chiamata non vengono chiamati. Un oggetto automatico è un oggetto locale non statico definito in una funzione. Un oggetto temporaneo è un oggetto creato dal compilatore, ad esempio un valore restituito da una chiamata di funzione. Per eliminare definitivamente un oggetto automatico prima di chiamare **Exit**, **_Exit** o **_exit**, chiamare in modo esplicito il distruttore per l'oggetto, come illustrato di seguito:
 
 ```cpp
 void last_fn() {}
@@ -103,7 +104,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**Exit**, **_Exit**, **_exit**|\<process.h> o \<stdlib.h>|
 
@@ -126,7 +127,7 @@ int main( void )
 
 ## <a name="see-also"></a>Vedere anche
 
-[Process and Environment Control](../../c-runtime-library/process-and-environment-control.md) (Controllo processo e ambiente)<br/>
+[Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [interruzione](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [_cexit, _c_exit](cexit-c-exit.md)<br/>

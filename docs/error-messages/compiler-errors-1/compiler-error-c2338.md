@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2338'
 title: Errore del compilatore C2338
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2338
 ms.assetid: 49bba575-1de4-4963-86c6-ce3226a2ba51
-ms.openlocfilehash: c92a95b97cb4c57d3ad5cfbf8fe1d9980d5362cd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7bbbc7fd6240fce2def470a0d16aa0dba152a109
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221211"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234800"
 ---
 # <a name="compiler-error-c2338"></a>Errore del compilatore C2338
 
@@ -21,7 +22,7 @@ Questo errore può essere causato da un **`static_assert`** errore durante la co
 
 Questo messaggio di errore può essere generato anche da provider esterni al compilatore. Nella maggior parte dei casi, questi errori vengono segnalati da una DLL del provider di attributi, ad esempio ATLPROV. Alcune forme comuni di questo messaggio includono:
 
-- Provider di attributi ATL '*attribute*': errore*numero* ATL *messaggio*
+- Provider di attributi ATL '*attribute*': errore *numero* ATL *messaggio*
 
 - Utilizzo non corretto dell'attributo '*attribute*'
 

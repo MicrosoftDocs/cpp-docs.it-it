@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore di runtime di C da R6002'
 title: Errore di runtime di C R6002
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6002
 ms.assetid: 8fbbe65a-9c43-459e-8342-e1f6d1cef7d0
-ms.openlocfilehash: b2e617b6f7841f1aa7e6fd2f6962c0e117fab6c8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9f72b249b491ada4f143848a95ed6161695aa023
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80197418"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97237777"
 ---
 # <a name="c-runtime-error-r6002"></a>Errore di runtime di C R6002
 
@@ -32,7 +33,7 @@ La libreria a virgola mobile necessaria non è collegata.
 
 Questo errore può verificarsi nell'app quando la libreria a virgola mobile non è collegata. Verificare la presenza di una delle seguenti cause:
 
-- Una stringa di formato per una funzione `printf_s` o `scanf_s` contiene una specifica di formato a virgola mobile e il programma non contiene valori a virgola mobile o variabili. Per risolvere questo problema, usare un argomento a virgola mobile per corrispondere alla specifica di formato a virgola mobile o eseguire un'assegnazione a virgola mobile in un altro punto del programma. Questo comporta il caricamento del supporto a virgola mobile.
+- Una stringa di formato per `printf_s` una `scanf_s` funzione o contiene una specifica di formato a virgola mobile e il programma non contiene valori a virgola mobile o variabili. Per risolvere questo problema, usare un argomento a virgola mobile per corrispondere alla specifica di formato a virgola mobile o eseguire un'assegnazione a virgola mobile in un altro punto del programma. Questo comporta il caricamento del supporto a virgola mobile.
 
 - Il compilatore riduce al minimo le dimensioni di un programma caricando il supporto a virgola mobile solo quando necessario. Il compilatore non è in grado di rilevare le operazioni a virgola mobile o le specifiche di formato a virgola mobile nelle stringhe di formato, quindi non carica le routine a virgola mobile necessarie. Per risolvere questo problema, usare una specifica di formato a virgola mobile e fornire un argomento a virgola mobile oppure eseguire un'assegnazione a virgola mobile in un'altra posizione nel programma. Questo comporta il caricamento del supporto a virgola mobile.
 

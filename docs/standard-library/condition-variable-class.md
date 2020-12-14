@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: condition_variable Class'
 title: Classe condition_variable
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: eef0e7ef013b4faeb6393cade67258a09eda5551
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f5987c050dece8536aef0f91731a0848b56d3a4b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842429"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233812"
 ---
 # <a name="condition_variable-class"></a>Classe condition_variable
 
@@ -37,17 +38,17 @@ Usare la classe `condition_variable` per attendere un evento quando si ha un `mu
 class condition_variable;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="constructors"></a>Costruttori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[condition_variable](#condition_variable)|Costruisce un oggetto `condition_variable`.|
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[native_handle](#native_handle)|Restituisce il tipo specifico per l'implementazione che rappresenta l'handle condition_variable.|
 |[notify_all](#notify_all)|Sblocca tutti i thread in attesa dell'oggetto `condition_variable`.|
@@ -64,7 +65,7 @@ Costruisce un oggetto `condition_variable`.
 condition_variable();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se non è disponibile memoria sufficiente, il costruttore genera un oggetto [system_error](../standard-library/system-error-class.md) che ha un codice di errore `not_enough_memory`. Se l'oggetto non può essere costruito perché non è disponibile un'altra risorsa, il costruttore genera un oggetto `system_error` che ha un codice di errore `resource_unavailable_try_again`.
 
@@ -115,7 +116,7 @@ Oggetto [unique_lock \<mutex> ](../standard-library/unique-lock-class.md) .
 *Pred*\
 Qualsiasi espressione che restituisce **`true`** o **`false`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo metodo si blocca fino a quando l'oggetto `condition_variable` non viene segnalato da una chiamata a [notify_one](#notify_one) o [notify_all](#notify_all). Può anche riattivarsi in modo spurio.
 
@@ -160,7 +161,7 @@ Il primo metodo restituisce `cv_status::timeout` se l'attesa termina quando *Rel
 
 Il secondo metodo restituisce il valore di *predazione*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo metodo si blocca fino a quando l' `condition_variable` oggetto non viene segnalato da una chiamata a [notify_one](#notify_one) o [notify_all](#notify_all) o fino a quando non è trascorso l'intervallo di tempo *Rel_time* . Può anche riattivarsi in modo spurio.
 
@@ -218,7 +219,7 @@ I metodi che restituiscono un `cv_status` tipo restituiscono `cv_status::timeout
 
 I metodi che restituiscono un oggetto **`bool`** restituiscono il valore di *predazione*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo metodo si blocca fino a quando l'oggetto `condition_variable` non viene segnalato da una chiamata a [notify_one](#notify_one) o [notify_all](#notify_all) oppure fino a che non viene restituito `Abs_time`. Può anche riattivarsi in modo spurio.
 
@@ -234,7 +235,7 @@ return true;
 
 Il terzo e il quarto metodo usano un puntatore a un oggetto di tipo `xtime` per sostituire l'oggetto `chrono::time_point`. L'oggetto `xtime` specifica il tempo massimo di attesa di un segnale.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [<condition_variable>](../standard-library/condition-variable.md)

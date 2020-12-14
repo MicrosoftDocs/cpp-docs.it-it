@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _execvp, _wexecvp'
 title: _execvp, _wexecvp
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - wexecvp function
 - execvp function
 ms.assetid: a4db15df-b204-4987-be7c-de84c3414380
-ms.openlocfilehash: 224649abffd836667641f3c83e5f777f8752d7bd
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: eddd453479ee60214e885832479e2b7f89835094
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915926"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236126"
 ---
 # <a name="_execvp-_wexecvp"></a>_execvp, _wexecvp
 
@@ -84,7 +85,7 @@ Se l'operazione riesce, le funzioni non ritornano al processo chiamante. Il valo
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Ognuna di queste funzioni carica ed esegue un nuovo processo, passando una matrice di puntatori agli argomenti della riga di comando e usando la variabile di ambiente **path** per trovare il file da eseguire.
 
@@ -94,7 +95,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|Intestazione facoltativa|
+|Funzione|Intestazione obbligatoria|Intestazione facoltativa|
 |--------------|---------------------|---------------------|
 |**_execvp**|\<process.h>|\<errno.h>|
 |**_wexecvp**|\<process.h> o \<wchar.h>|\<errno.h>|
@@ -105,9 +106,9 @@ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runt
 
 Vedere l'esempio in [Funzioni _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Process and Environment Control](../../c-runtime-library/process-and-environment-control.md) (Controllo processo e ambiente)<br/>
+[Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_exec, funzioni _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [interruzione](abort.md)<br/>
 [atexit](atexit.md)<br/>

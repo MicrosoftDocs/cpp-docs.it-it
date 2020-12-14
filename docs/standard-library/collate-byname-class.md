@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: collate_byname Class'
 title: Classe collate_byname
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - collate_byname class
 ms.assetid: 3dc380df-867c-4763-b60e-ba62a8e63ca7
-ms.openlocfilehash: 3e9a256ac7bdb5f6d077746fe2a08990ed41e931
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 8e5ee60a2415fe6fede6db387c774151b97396dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688266"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233955"
 ---
 # <a name="collate_byname-class"></a>Classe collate_byname
 
@@ -39,22 +40,22 @@ protected:
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_Locname*
+*_Locname*\
 Impostazioni locali denominate.
 
-@No__t_1 *_Refs*
+*_Refs*\
 Conteggio di riferimento iniziale.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Il modello di classe descrive un oggetto che può essere utilizzato come [facet delle impostazioni locali](../standard-library/locale-class.md#facet_class) di tipo [COLLATE](../standard-library/collate-class.md#collate) \<CharType >. Il comportamento è determinato dalle impostazioni locali [denominate](../standard-library/locale-class.md#name) *_Locname*. Ogni costruttore inizializza l'oggetto di base con [collate](../standard-library/collate-class.md#collate)\<CharType> (`_Refs`).
+Il modello di classe descrive un oggetto che può essere utilizzato come [facet delle impostazioni locali](../standard-library/locale-class.md#facet_class) di tipo [COLLATE](../standard-library/collate-class.md#collate) \<CharType> . Il comportamento è determinato dalle impostazioni locali [denominate](../standard-library/locale-class.md#name) *_Locname*. Ogni costruttore inizializza l'oggetto di base con [COLLATE](../standard-library/collate-class.md#collate) \<CharType> ( `_Refs` ).
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<locale>
+**Intestazione:**\<locale>
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

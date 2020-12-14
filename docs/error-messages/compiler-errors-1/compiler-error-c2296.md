@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2296'
 title: Errore del compilatore C2296
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2296
 ms.assetid: 47d270f4-13ce-4c16-81e2-7d67c6c4a540
-ms.openlocfilehash: 020f046648488ca67923b7035acaa6c79ce495e4
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4c36eb5f01b970b9435b45c75232d875de5818a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759074"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235229"
 ---
 # <a name="compiler-error-c2296"></a>Errore del compilatore C2296
 
 ' operator ': operando sinistro non valido
 
-L'operando sinistro utilizzato con `operator` non è valido.
+L'operando sinistro usato con `operator` non è valido.
 
 Il compilatore, ad esempio, può visualizzare una dichiarazione in cui si intende una chiamata di funzione.
 

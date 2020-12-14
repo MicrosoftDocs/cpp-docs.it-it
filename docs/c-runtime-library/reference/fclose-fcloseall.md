@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: fclose, _fcloseall'
 title: fclose, _fcloseall
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - streams, closing
 - _fcloseall function
 ms.assetid: c3c6ea72-92c6-450a-a33e-3e568d2784a4
-ms.openlocfilehash: 3f8567f7bb01c519938f5a4e28bbb33bce09dffe
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1831eb2a2272cdddb8d9797f5329d5432bf30472
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920233"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235931"
 ---
 # <a name="fclose-_fcloseall"></a>fclose, _fcloseall
 
@@ -60,7 +61,7 @@ Puntatore alla struttura **FILE**.
 
 **fclose** restituisce 0 se il flusso è stato chiuso correttamente. **_fcloseall** restituisce il numero totale di flussi chiusi. Entrambe le funzioni restituiscono **EOF** per indicare un errore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **fclose** chiude il *flusso*. Se il *flusso* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **fclose** imposta **errno** su **EINVAL** e restituisce **EOF**. Prima di chiamare questa funzione, è consigliabile controllare sempre il puntatore di *flusso* .
 
@@ -76,7 +77,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
 |**fclose**|\<stdio.h>|
 |**_fcloseall**|\<stdio.h>|
@@ -87,7 +88,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 Vedere l'esempio per [fopen](fopen-wfopen.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
 [_close](close.md)<br/>

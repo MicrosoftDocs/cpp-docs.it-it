@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: first_is'
 title: first_is (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: 1a06206d7df4dace3f749fdc8ceae7f68aaf095c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 151a9defdde078a062f000860ebb40c3d1c9b466
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845263"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236269"
 ---
 # <a name="first_is"></a>first_is
 
@@ -28,7 +29,7 @@ Specifica l'indice del primo elemento di matrice da trasmettere.
 *expression*<br/>
 Una o più espressioni del linguaggio C. Sono consentiti slot di argomento vuoti.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'attributo **first_is** C++ ha la stessa funzionalità dell'attributo [first_is](/windows/win32/Midl/first-is) MIDL.
 
@@ -67,7 +68,7 @@ requestedit] HRESULT get_I([out, retval]long *i);
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi typedef, enum, Union e struct](typedef-enum-union-and-struct-attributes.md)<br/>

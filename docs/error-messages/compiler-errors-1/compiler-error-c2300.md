@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2300'
 title: Errore del compilatore C2300
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2300
 ms.assetid: bb8fed56-feb0-412b-ae7b-04d48b202b78
-ms.openlocfilehash: bf9bac71d3a4bd1d87ef59be512807e0ba02d1da
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7bd98d621aa07654164c63fd3e6f7165541b2a22
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80206336"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235060"
 ---
 # <a name="compiler-error-c2300"></a>Errore del compilatore C2300
 

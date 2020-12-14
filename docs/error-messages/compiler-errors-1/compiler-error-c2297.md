@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2297'
 title: Errore del compilatore C2297
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2297
 ms.assetid: 65849fe5-17e1-4b7e-b50c-f508b05ddaa4
-ms.openlocfilehash: 5f07d522f7594d78df566b6a4be47ad0dadd4b3d
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: d9843592a366054d72b3cc179aec6da85843f105
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759087"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235203"
 ---
 # <a name="compiler-error-c2297"></a>Errore del compilatore C2297
 
 ' operator ': operando destro errato
 
-L'operando di destra utilizzato con `operator` non è valido.
+L'operando di destra usato con `operator` non è valido.
 
 Il compilatore, ad esempio, può visualizzare una dichiarazione in cui si intende una chiamata di funzione.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; cmath&gt;'
 title: '&lt;cmath&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - cmath header
 ms.assetid: 80df1dba-60ca-4918-9c2e-fbf446eaa7d6
-ms.openlocfilehash: d01b02d8fa169aa7fddbc3e51d75e5328b400d2b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 193961dab5e8825e15919fd325f1f199a3ad4fb3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459272"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234098"
 ---
 # <a name="ltcmathgt"></a>&lt;cmath&gt;
 
-Include l'intestazione della libreria C standard \<math.h> e aggiunge i nomi associati allo spazio dei nomi `std`.
+Include l'intestazione della libreria C standard \<math.h> e aggiunge i nomi associati allo `std` spazio dei nomi.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -569,12 +570,12 @@ float sph_neumannf(unsigned n, float x);
 long double sph_neumannl(unsigned n, long double x);
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 L'inclusione di questa intestazione garantisce che i nomi dichiarati usando il collegamento esterno nell'intestazione della libreria C standard vengano dichiarati nello spazio dei nomi `std`.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)\
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Panoramica della libreria standard C++](../standard-library/cpp-standard-library-overview.md)\
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

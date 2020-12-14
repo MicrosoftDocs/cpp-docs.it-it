@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: gestione delle eccezioni nel runtime di concorrenza'
 title: Gestione delle eccezioni nel runtime di concorrenza
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - agents, exception handling [Concurrency Runtime]
 - task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
-ms.openlocfilehash: f85bf5c96ef31944e84473f1fedb077123801153
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4613c2b11102c3468bfb3fa5976f8aeeeeb73be3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230402"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234306"
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>Gestione delle eccezioni nel runtime di concorrenza
 
@@ -33,7 +34,7 @@ Il runtime di concorrenza utilizza la gestione delle eccezioni C++ per comunicar
 
 - Il runtime non gestisce le eccezioni per gli agenti e le attività Lightweight.
 
-## <a name="in-this-document"></a><a name="top"></a>Contenuto del documento
+## <a name="in-this-document"></a><a name="top"></a> Contenuto del documento
 
 - [Attività e continuazioni](#tasks)
 
@@ -49,7 +50,7 @@ Il runtime di concorrenza utilizza la gestione delle eccezioni C++ per comunicar
 
 - [Agenti asincroni](#agents)
 
-## <a name="tasks-and-continuations"></a><a name="tasks"></a>Attività e continuazioni
+## <a name="tasks-and-continuations"></a><a name="tasks"></a> Attività e continuazioni
 
 In questa sezione viene descritto il modo in cui il runtime gestisce le eccezioni generate dagli oggetti [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) e dalle relative continuazioni. Per ulteriori informazioni sul modello di attività e continuazione, vedere [parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
@@ -81,7 +82,7 @@ La sezione [eccezioni generate dal runtime](#runtime) in questo documento descri
 
 [All'[inizio](#top)]
 
-## <a name="task-groups-and-parallel-algorithms"></a><a name="task_groups"></a>Gruppi di attività e algoritmi paralleli
+## <a name="task-groups-and-parallel-algorithms"></a><a name="task_groups"></a> Gruppi di attività e algoritmi paralleli
 
 In questa sezione viene descritto il modo in cui il runtime gestisce le eccezioni generate dai gruppi di attività. Questa sezione si applica anche agli algoritmi paralleli, ad esempio [Concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for), perché questi algoritmi si basano sui gruppi di attività.
 
@@ -106,7 +107,7 @@ Per un esempio completo che usa la gestione delle eccezioni in un gruppo di atti
 
 [All'[inizio](#top)]
 
-## <a name="exceptions-thrown-by-the-runtime"></a><a name="runtime"></a>Eccezioni generate dal runtime
+## <a name="exceptions-thrown-by-the-runtime"></a><a name="runtime"></a> Eccezioni generate dal runtime
 
 Un'eccezione può derivare da una chiamata al runtime. La maggior parte dei tipi di eccezione, ad eccezione di [Concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md) e [Concurrency:: operation_timed_out](../../parallel/concrt/reference/operation-timed-out-class.md), indicano un errore di programmazione. Questi errori sono in genere irreversibili e pertanto non devono essere rilevati o gestiti dal codice dell'applicazione. È consigliabile rilevare o gestire solo gli errori irreversibili nel codice dell'applicazione quando è necessario diagnosticare gli errori di programmazione. Tuttavia, la comprensione dei tipi di eccezione definiti dal runtime può consentire di diagnosticare gli errori di programmazione.
 
@@ -126,7 +127,7 @@ Per evitare la chiusura anomala dell'applicazione, assicurarsi che il codice ges
 
 [All'[inizio](#top)]
 
-## <a name="multiple-exceptions"></a><a name="multiple"></a>Più eccezioni
+## <a name="multiple-exceptions"></a><a name="multiple"></a> Più eccezioni
 
 Se un'attività o un algoritmo parallelo riceve più eccezioni, il runtime esegue il marshalling di una sola di queste eccezioni nel contesto chiamante. Il runtime non garantisce quale eccezione viene sottoposta a marshalling.
 
@@ -142,19 +143,19 @@ Di seguito è riportato l'output di esempio per questo esempio.
 
 [All'[inizio](#top)]
 
-## <a name="cancellation"></a><a name="cancellation"></a>Annullamento
+## <a name="cancellation"></a><a name="cancellation"></a> Annullamento
 
 Non tutte le eccezioni indicano un errore. Ad esempio, un algoritmo di ricerca può utilizzare la gestione delle eccezioni per arrestare l'attività associata quando viene trovato il risultato. Per ulteriori informazioni sull'utilizzo dei meccanismi di annullamento nel codice, vedere [annullamento nella libreria PPL](../../parallel/concrt/cancellation-in-the-ppl.md).
 
 [All'[inizio](#top)]
 
-## <a name="lightweight-tasks"></a><a name="lwts"></a>Attività leggere
+## <a name="lightweight-tasks"></a><a name="lwts"></a> Attività leggere
 
 Un'attività leggera è un'attività che viene pianificata direttamente da un oggetto [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) . Le attività leggere comportano un sovraccarico minore rispetto alle attività comuni. Tuttavia, il runtime non rileva le eccezioni generate dalle attività leggere. L'eccezione viene invece rilevata dal gestore di eccezioni non gestite, che per impostazione predefinita termina il processo. Pertanto, utilizzare un meccanismo di gestione degli errori appropriato nell'applicazione. Per ulteriori informazioni sulle attività leggere, vedere [utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
 [All'[inizio](#top)]
 
-## <a name="asynchronous-agents"></a><a name="agents"></a>Agenti asincroni
+## <a name="asynchronous-agents"></a><a name="agents"></a> Agenti asincroni
 
 Analogamente alle attività leggere, il runtime non gestisce le eccezioni generate dagli agenti asincroni.
 
@@ -185,7 +186,7 @@ Per ulteriori informazioni sugli agenti asincroni, vedere [Asynchronous Agents](
 
 [All'[inizio](#top)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Runtime di concorrenza](../../parallel/concrt/concurrency-runtime.md)<br/>
 [Parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>

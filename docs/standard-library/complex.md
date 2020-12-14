@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; Complex&gt;'
 title: '&lt;complex&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: f63fe99238450b8dffbf459ab078a8ecf6623b77
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b16798cf1725ba6fa681b04f735d44f02a2b1b82
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831502"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233838"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -24,7 +25,7 @@ Definisce il modello di classe del contenitore `complex` e i relativi modelli di
 
 **Spazio dei nomi:** std
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un numero complesso è una coppia ordinata di numeri reali. In termini puramente geometrici, il piano complesso è il piano bidimensionale reale. Le qualità speciali del piano complesso che lo distinguono dal piano reale dipendono dal fatto che ha una struttura algebrica aggiuntiva. Questa struttura algebrica include due operazioni fondamentali:
 
@@ -44,7 +45,7 @@ L'insieme di numeri complessi con operazioni di addizione complessa e moltiplica
 
 Rappresentando un numero complesso *z* = (*a*, *b*) nel formato *z*  =  *a*  +  *bi*, dove *i*<sup>2</sup> =-1, le regole per l'algebra del set di numeri reali possono essere applicate all'insieme di numeri complessi e ai relativi componenti. Ad esempio:
 
-   (1 + 2*i*) \* (2 + 3*i*) = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2-6) + (3 + 4)*i* =-4 + 7*i*
+   (1 + 2 *i*) \* (2 + 3 *i*) = 1 \* (2 + 3 *i*) + 2 *i* \* (2 + 3 *i*) = (2 + 3 *i*) + (4 *i* + 6 *i*<sup>2</sup>) = (2-6) + (3 + 4)*i* =-4 + 7 *i*
 
 Il sistema di numeri complessi è un campo, ma non è un campo ordinato. Non esiste alcun ordinamento dei numeri complessi come per il campo dei numeri reali e dei relativi subset, pertanto non è possibile applicare le disuguaglianze ai numeri complessi così come sono i numeri reali.
 
@@ -72,7 +73,7 @@ Se non diversamente specificato, le funzioni che possono restituire più valori 
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[ABS](../standard-library/complex-functions.md#abs)|Calcola il modulo di un numero complesso.|
 |[Acos](../standard-library/complex-functions.md#acos)||
@@ -102,7 +103,7 @@ Se non diversamente specificato, le funzioni che possono restituire più valori 
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[operatore! =](../standard-library/complex-operators.md#op_neq)|Verifica la disuguaglianza tra due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.|
 |[operatore](../standard-library/complex-operators.md#op_star)|Moltiplica due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.|
@@ -115,7 +116,7 @@ Se non diversamente specificato, le funzioni che possono restituire più valori 
 
 ### <a name="classes"></a>Classi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[complesso\<double>](../standard-library/complex-double.md)|Il modello di classe specializzato in modo esplicito descrive un oggetto che archivia una coppia ordinata di oggetti, entrambi di tipo **`double`** , dove il primo rappresenta la parte reale di un numero complesso e il secondo rappresenta la parte immaginaria.|
 |[complesso\<float>](../standard-library/complex-float.md)|Il modello di classe specializzato in modo esplicito descrive un oggetto che archivia una coppia ordinata di oggetti, entrambi di tipo **`float`** , dove il primo rappresenta la parte reale di un numero complesso e il secondo rappresenta la parte immaginaria.|
@@ -126,13 +127,13 @@ Se non diversamente specificato, le funzioni che possono restituire più valori 
 
 L' \<complex> intestazione definisce i [valori letterali definiti dall'utente](../cpp/user-defined-literals-cpp.md) seguenti che creano un numero complesso con la parte reale che è zero e la parte immaginaria è il valore del parametro di input.
 
-|Dichiarazione|Descrizione|
+|Dichiarazione|Description|
 |-|-|
 |`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|Restituisce: `complex<long double>{0.0L, static_cast<long double>(d)}`|
 |`constexpr complex<double> operator""i(long double d)`<br />`constexpr complex<double> operator""i(unsigned long long d)`|Restituisce `complex<double>{0.0, static_cast<double>(d)}`.|
 |`constexpr complex<float> operator""if(long double d)`<br />`constexpr complex<float> operator""if(unsigned long long d)`|Restituisce `complex<float>{0.0f, static_cast<float>(d)}`.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
