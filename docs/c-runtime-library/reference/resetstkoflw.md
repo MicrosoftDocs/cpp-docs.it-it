@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _resetstkoflw'
 title: _resetstkoflw
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - stack, recovering
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
-ms.openlocfilehash: 6f4d5d930ebdc487c3c2bcc2f93494a25528c438
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 02eb973c63bb372e43e57c413385b8e1b13d9f38
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216778"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250348"
 ---
 # <a name="_resetstkoflw"></a>_resetstkoflw
 
@@ -53,7 +54,7 @@ int _resetstkoflw( void );
 
 Diverso da zero se la funzione ha esito positivo, zero se ha esito negativo.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_resetstkoflw** esegue il ripristino da una condizione di overflow dello stack, consentendo a un programma di continuare anziché avere esito negativo con un errore di eccezione irreversibile. Se la funzione **_resetstkoflw** non viene chiamata, non sono presenti pagine Guard dopo l'eccezione precedente. La volta successiva che si verifica un overflow dello stack, non verrà generata alcuna eccezione e il processo viene terminato senza avvisi.
 
@@ -217,7 +218,7 @@ loop #10
 resetting stack overflow
 ```
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
 Nell'esempio seguente viene illustrato l'utilizzo consigliato di **_resetstkoflw** in un programma in cui le eccezioni strutturate vengono convertite in eccezioni C++.
 
@@ -309,6 +310,6 @@ Stack overflow!
 Recovered from stack overflow and allocated 100,000 bytes using _alloca.
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [_alloca](alloca.md)<br/>

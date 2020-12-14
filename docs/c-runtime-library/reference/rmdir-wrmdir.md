@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _rmdir, _wrmdir'
 title: _rmdir, _wrmdir
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-ms.openlocfilehash: c0c5055a499614f364370b7aa90697898dc510ab
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c17324d5d2125f4f664140684c4f082181742700
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916921"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250308"
 ---
 # <a name="_rmdir-_wrmdir"></a>_rmdir, _wrmdir
 
@@ -78,7 +79,7 @@ Ognuna di queste funzioni restituisce 0 se la directory viene eliminata corretta
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_rmdir** Elimina la directory specificata da *dirname*. La directory deve essere vuota e non deve essere la directory di lavoro corrente o la directory radice.
 
@@ -109,8 +110,8 @@ Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-libr
 
 Vedere l'esempio per [_mkdir](mkdir-wmkdir.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Controllo delle directory](../../c-runtime-library/directory-control.md)<br/>
+[Controllo Directory](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>
 [_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>
