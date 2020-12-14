@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 1) C4692'
 title: Avviso del compilatore (livello 1) C4692
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4692
 ms.assetid: f6fb3acc-8228-491a-9c30-ce302d8a9c75
-ms.openlocfilehash: 0e8e951d5ea50cc755d26616cf23e48c27b2ca84
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7c38a2bd4bfd4de943f64483cd8a9e96ece0b580
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175363"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97249126"
 ---
 # <a name="compiler-warning-level-1-c4692"></a>Avviso del compilatore (livello 1) C4692
 

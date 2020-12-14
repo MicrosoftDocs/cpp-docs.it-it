@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: aggiunta di un gestore di messaggi MFC'
 title: Aggiunta di un gestore messaggi MFC
 ms.date: 09/06/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
-ms.openlocfilehash: c5ec71083c82a71c2b2aaa86a3e9dca37fc37b2b
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: c28327635e3e0cdd047c9f993b9d3d7582c0c748
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503003"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248333"
 ---
 # <a name="adding-an-mfc-message-handler"></a>Aggiunta di un gestore messaggi MFC
 
@@ -22,7 +23,7 @@ Utilizzando la **creazione guidata classe** o la finestra **proprietà** (in **V
 > [!NOTE]
 > È possibile aggiungere un gestore di messaggi a una classe ATL utilizzando la creazione guidata classe; Tuttavia, alcuni risultati possono variare. Per ulteriori informazioni, vedere l'argomento relativo all' [aggiunta di un gestore di messaggi ATL](../../atl/adding-an-atl-message-handler.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Aggiunta di una classe](../../ide/adding-a-class-visual-cpp.md)<br/>

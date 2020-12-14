@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 1) C4715'
 title: Avviso del compilatore (livello 1) C4715
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4715
 ms.assetid: 1c819bf7-0d8b-4f5e-b338-9cc292870439
-ms.openlocfilehash: 7dba86d591f18fd7c9c562078204916000d47384
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 41682beae6e32ba397f3c9dae43d57a182b09b65
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175324"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97249100"
 ---
 # <a name="compiler-warning-level-1-c4715"></a>Avviso del compilatore (livello 1) C4715
 
@@ -62,4 +63,4 @@ int glue()
 }
 ```
 
-Questo codice genera anche un avviso, perché il compilatore non sa che `fatal` mai restituito. Per evitare che il codice generi un messaggio di errore, dichiarare `fatal` utilizzando [__declspec (noreturn)](../../cpp/noreturn.md).
+Questo codice genera anche un avviso, perché il compilatore non sa che non `fatal` restituisce mai. Per evitare che il codice generi un messaggio di errore, dichiarare `fatal` utilizzando [__declspec (noreturn)](../../cpp/noreturn.md).

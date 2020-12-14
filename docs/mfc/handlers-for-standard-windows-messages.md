@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: gestori per i messaggi Windows standard'
 title: Gestori per messaggi Windows standard
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - functions [MFC], handler
 - messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
-ms.openlocfilehash: d967341cdb0197f1157ab9d253072f3d0d7aa46f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 161e4d85e702972ee178e2fe82aa2371f0560068
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223148"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248931"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>Gestori per messaggi Windows standard
 
@@ -38,6 +39,6 @@ Come determinare la modalità appropriata per eseguire l'override di un determin
 
 Per convenzione, i nomi di questi gestori iniziano con il prefisso "On". Alcuni di questi gestori non accettano argomenti, mentre altri ne accettano diversi. Alcuni hanno anche un tipo restituito diverso da **`void`** . I gestori predefiniti per tutti i messaggi di **WM_** sono documentati nel *riferimento MFC* come funzioni membro della classe i `CWnd` cui nomi iniziano con "on". Le dichiarazioni di funzione membro in `CWnd` sono precedute dal prefisso **afx_msg**.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Dichiarazione delle funzioni del gestore di messaggi](declaring-message-handler-functions.md)

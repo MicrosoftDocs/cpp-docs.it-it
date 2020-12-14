@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe FtmBase'
 title: FtmBase (classe)
 ms.date: 10/03/2018
 ms.topic: reference
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - Microsoft::WRL::FtmBase::ReleaseMarshalData method
 - Microsoft::WRL::FtmBase::UnmarshalInterface method
 ms.assetid: 275f3b71-2975-4f92-89e7-d351e96496df
-ms.openlocfilehash: b28b7ee0038e4f828f43fcc3f0d49a2d9e092315
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: dc7ae3768233dd51d34b48da8c12a2d4b6bed773
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844041"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250088"
 ---
 # <a name="ftmbase-class"></a>FtmBase (classe)
 
@@ -54,13 +55,13 @@ Per ulteriori informazioni, vedere la [classe RuntimeClass](runtimeclass-class.m
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-| Nome                         | Descrizione                                        |
+| Nome                         | Description                                        |
 | ---------------------------- | -------------------------------------------------- |
 | [FtmBase:: FtmBase](#ftmbase) | Inizializza una nuova istanza della classe `FtmBase`. |
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-| Nome                                                               | Descrizione                                                                                                                                                          |
+| Nome                                                               | Description                                                                                                                                                          |
 | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [FtmBase:: CreateGlobalInterfaceTable](#createglobalinterfacetable) | Crea una tabella di interfaccia globale (GIT).                                                                                                                              |
 | [FtmBase::D isconnectObject](#disconnectobject)                     | Rilascia forzatamente tutte le connessioni esterne a un oggetto. Il server dell'oggetto chiama l'implementazione dell'oggetto di questo metodo prima di arrestarsi.                |
@@ -72,7 +73,7 @@ Per ulteriori informazioni, vedere la [classe RuntimeClass](runtimeclass-class.m
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-| Nome                                | Descrizione                                       |
+| Nome                                | Description                                       |
 | ----------------------------------- | ------------------------------------------------- |
 | [FtmBase:: marshaller_](#marshaller) | Include un riferimento al gestore di marshalling a thread libero. |
 
@@ -105,7 +106,7 @@ Al termine di questa operazione, un puntatore a una tabella di interfaccia globa
 
 S_OK se riesce; in caso contrario, HRESULT indica un errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni, vedere [`IGlobalInterfaceTable`](/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable).
 

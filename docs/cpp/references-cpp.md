@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: riferimenti (C++)'
 title: Riferimenti (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - references, declaring
 - referencing objects, declarator syntax
 ms.assetid: 68156f7f-97a0-4b66-b26d-b25ade5e3bd8
-ms.openlocfilehash: 8a771b8bfc067966c3c054700538ebf180a5eb23
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1f49e089d8992a32f30e1a384d5f0c36fa327c0f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233613"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250049"
 ---
 # <a name="references-c"></a>Riferimenti (C++)
 
@@ -22,11 +23,11 @@ Un riferimento, analogamente a un puntatore, archivia l'indirizzo di un oggetto 
 
 È possibile dichiarare i riferimenti tramite la seguente sintassi:
 
-> \[*Storage-Class-Specifiers*] \[ *CV-Qualifiers*] *Type-Specifiers* \[ *MS-Modifier*] espressione del *dichiaratore* \[ **=** *expression*]**;**
+> \[*Storage-Class-Specifiers*] \[ *CV-Qualifiers*] *Type-Specifiers* \[ *MS-Modifier*] espressione del *dichiaratore* \[ **=** ]**;**
 
 È possibile utilizzare qualsiasi dichiaratore valido che specifica un riferimento. A meno che il riferimento non sia un riferimento al tipo di funzione o di matrice, si applica la sintassi seguente semplificata:
 
-> \[*Storage-Class-Specifiers*] \[ *CV-Qualifiers*] *Type-Specifiers* \[ **&** o **&&** ] \[ *CV-Qualifiers*] *identifier* \[ **=** *espressione*identificatore]**;**
+> \[*Storage-Class-Specifiers*] \[ *CV-Qualifiers*] *Type-Specifiers* \[ **&** o **&&** ] \[ *CV-Qualifiers*]  \[ **=** *espressione* identificatore]**;**
 
 I riferimenti vengono dichiarati tramite la seguente sequenza:
 

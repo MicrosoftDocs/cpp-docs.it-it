@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _rmtmp'
 title: _rmtmp
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-ms.openlocfilehash: ca5c693a1baed7e5f31219cdbee712b5c77f2a85
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fd87dd407b2e392d197e7eb407bc307b48ea2263
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917642"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250192"
 ---
 # <a name="_rmtmp"></a>_rmtmp
 
@@ -53,7 +54,7 @@ int _rmtmp( void );
 
 **_rmtmp** restituisce il numero di file temporanei chiusi ed eliminati.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_rmtmp** pulisce tutti i file temporanei nella directory corrente. La funzione rimuove solo i file creati da **tmpfile**; utilizzarlo solo nella stessa directory in cui sono stati creati i file temporanei.
 
@@ -75,7 +76,7 @@ Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-libr
 
 Vedere l'esempio per [tmpfile](tmpfile.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
 [_flushall](flushall.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Rewind'
 title: rewind
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - file pointers [C++], repositioning
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
-ms.openlocfilehash: 645b8bf105641b9f13a9f9fc0605e6b8526b4b56
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1b66ee84e562ebbb743413c6f76f67071c754a67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917761"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250296"
 ---
 # <a name="rewind"></a>rewind
 
@@ -53,7 +54,7 @@ void rewind(
 *flusso*<br/>
 Puntatore alla struttura **FILE**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **Rewind** riposiziona il puntatore del file associato al *flusso* all'inizio del file. Una chiamata a **rewind** è simile a
 
@@ -121,6 +122,6 @@ The values written are: 1 and -37
 The values read are: 1 and -37
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Struttura ImplementsHelper'
 title: ImplementsHelper (struttura)
 ms.date: 10/03/2018
 ms.topic: reference
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ImplementsHelper::FillArrayWithIid method
 - Microsoft::WRL::Details::ImplementsHelper::IidCount constant
 ms.assetid: b857ba80-81bd-4e53-92b6-210991954243
-ms.openlocfilehash: d7908670b67df7dbf7b2b74e98f8b59cf30f8e96
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 142cc532a89758c35c3387c398311acd077b8385
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87184943"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97249815"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper (struttura)
 
@@ -44,7 +45,7 @@ Elenco di ID di interfaccia.
 *IsDelegateToClass*<br/>
 Specificare **`true`** se l'istanza corrente di `Implements` è una classe di base del primo ID di interfaccia in *ILst*; in caso contrario, **`false`** .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Consente di implementare la struttura [Implements](implements-structure.md) .
 
@@ -54,7 +55,7 @@ Questo modello attraversa un elenco di interfacce e le aggiunge come classi base
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-Nome                                                    | Descrizione
+Nome                                                    | Description
 ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------
 [ImplementsHelper:: CanCastTo](#cancastto)               | Ottiene un puntatore all'ID di interfaccia specificato.
 [ImplementsHelper:: CastToUnknown](#casttounknown)       | Ottiene un puntatore all'interfaccia sottostante `IUnknown` per la struttura corrente `Implements` .
@@ -71,7 +72,7 @@ Nome                                                    | Descrizione
 
 **Spazio dei nomi:** Microsoft:: WRL::D etails
 
-## <a name="implementshelpercancastto"></a><a name="cancastto"></a>ImplementsHelper:: CanCastTo
+## <a name="implementshelpercancastto"></a><a name="cancastto"></a> ImplementsHelper:: CanCastTo
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -102,11 +103,11 @@ Riferimento a un ID di interfaccia.
 
 S_OK se riesce; in caso contrario, HRESULT indica un errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Ottiene un puntatore all'ID di interfaccia specificato.
 
-## <a name="implementshelpercasttounknown"></a><a name="casttounknown"></a>ImplementsHelper:: CastToUnknown
+## <a name="implementshelpercasttounknown"></a><a name="casttounknown"></a> ImplementsHelper:: CastToUnknown
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -118,11 +119,11 @@ IUnknown* CastToUnknown();
 
 Puntatore all'interfaccia sottostante `IUnknown` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Ottiene un puntatore all'interfaccia sottostante `IUnknown` per la struttura corrente `Implements` .
 
-## <a name="implementshelperfillarraywithiid"></a><a name="fillarraywithiid"></a>ImplementsHelper:: FillArrayWithIid
+## <a name="implementshelperfillarraywithiid"></a><a name="fillarraywithiid"></a> ImplementsHelper:: FillArrayWithIid
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -134,17 +135,17 @@ void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parametri
 
-*Indice*<br/>
+*index*<br/>
 Indice in base zero che indica l'elemento di matrice iniziale per questa operazione. Al termine dell'operazione, l' *Indice* viene incrementato di 1.
 
 *IID*<br/>
 Matrice di tipo IID.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Inserisce l'ID di interfaccia specificato dal parametro del modello zero corrente nell'elemento di matrice specificato.
 
-## <a name="implementshelperiidcount"></a><a name="iidcount"></a>ImplementsHelper:: IidCount
+## <a name="implementshelperiidcount"></a><a name="iidcount"></a> ImplementsHelper:: IidCount
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -152,6 +153,6 @@ Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codi
 static const unsigned long IidCount;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Include il numero di ID di interfaccia implementati nell' `Implements` oggetto corrente.

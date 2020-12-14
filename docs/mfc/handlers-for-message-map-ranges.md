@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: gestori per gli intervalli di Message-Map'
 title: Gestori per intervalli della mappa messaggi
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-ms.openlocfilehash: 44194a6e5bafea2b17c9a1d58c41bf9dc541729d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1b0f829a4c75aa8ee6148bdf3e96f6886ab07aba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231910"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248918"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Gestori per intervalli della mappa messaggi
 
@@ -53,7 +54,7 @@ Gli argomenti trattati in questo articolo includono:
 
 - [Esempio per un intervallo di ID controllo](#_core_example_for_a_range_of_control_ids)
 
-## <a name="writing-the-message-map-entry"></a><a name="_core_writing_the_message.2d.map_entry"></a>Scrittura della voce della mappa messaggi
+## <a name="writing-the-message-map-entry"></a><a name="_core_writing_the_message.2d.map_entry"></a> Scrittura della voce Message-Map
 
 Nel. File CPP, aggiungere la voce della mappa messaggi, come illustrato nell'esempio seguente:
 
@@ -83,7 +84,7 @@ La voce della mappa messaggi è costituita dagli elementi seguenti:
 
   La terza macro, `ON_CONTROL_RANGE` , accetta un primo parametro aggiuntivo: un messaggio di notifica del controllo, ad esempio **EN_CHANGE**.
 
-## <a name="declaring-the-handler-function"></a><a name="_core_declaring_the_handler_function"></a>Dichiarazione della funzione del gestore
+## <a name="declaring-the-handler-function"></a><a name="_core_declaring_the_handler_function"></a> Dichiarazione della funzione del gestore
 
 Aggiungere la dichiarazione della funzione del gestore in. File H. Il codice seguente illustra come potrebbe apparire questo aspetto, come illustrato di seguito:
 
@@ -93,7 +94,7 @@ Le funzioni del gestore per i singoli comandi normalmente non accettano parametr
 
 Per ulteriori informazioni sui requisiti dei parametri per l'aggiornamento delle funzioni del gestore, vedere [l'esempio relativo a un intervallo di ID comando](#_core_example_for_a_range_of_command_ids).
 
-## <a name="example-for-a-range-of-command-ids"></a><a name="_core_example_for_a_range_of_command_ids"></a>Esempio per un intervallo di ID comando
+## <a name="example-for-a-range-of-command-ids"></a><a name="_core_example_for_a_range_of_command_ids"></a> Esempio per un intervallo di ID comando
 
 Quando è possibile usare gli intervalli, un esempio è la gestione dei comandi come il comando zoom nel [HIERSVR](../overview/visual-cpp-samples.md)di esempio MFC. Questo comando esegue lo zoom della vista, ridimensionando il 25% e il 300% delle dimensioni normali. La classe di visualizzazione di HIERSVR usa un intervallo per gestire i comandi di zoom con una voce della mappa messaggi simile alla seguente:
 
@@ -117,7 +118,7 @@ Il caso delle funzioni del gestore di aggiornamento è simile ed è probabilment
 
 Le funzioni del gestore di aggiornamento per i singoli comandi accettano normalmente un solo parametro, *pCmdUI*, di tipo `CCmdUI*` . A differenza delle funzioni del gestore, le funzioni del gestore aggiornamenti per gli intervalli della mappa messaggi non richiedono un parametro aggiuntivo, *NID*, di tipo **uint**. L'ID di comando, necessario per specificare il comando scelto dall'utente, viene trovato nell' `CCmdUI` oggetto.
 
-## <a name="example-for-a-range-of-control-ids"></a><a name="_core_example_for_a_range_of_control_ids"></a>Esempio per un intervallo di ID controllo
+## <a name="example-for-a-range-of-control-ids"></a><a name="_core_example_for_a_range_of_control_ids"></a> Esempio per un intervallo di ID controllo
 
 Un altro caso interessante è il mapping dei messaggi di notifica del controllo per un intervallo di ID di controllo a un singolo gestore. Si supponga che l'utente possa fare clic su uno dei 10 pulsanti. Per eseguire il mapping di tutti e 10 i pulsanti a un gestore, la voce della mappa di messaggio avrà un aspetto simile al seguente:
 
@@ -145,6 +146,6 @@ Il `OnButtonClicked` gestore per un singolo messaggio di **BN_CLICKED** non acce
 
 Il codice illustrato nell'esempio è tipico: la conversione del valore passato a un oggetto **`int`** all'interno dell'intervallo di messaggi e l'asserzione di questo è il caso. È quindi possibile eseguire un'azione diversa a seconda del pulsante su cui è stato fatto clic.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Dichiarazione delle funzioni del gestore di messaggi](declaring-message-handler-functions.md)

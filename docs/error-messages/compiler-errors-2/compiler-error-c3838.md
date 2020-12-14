@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3838'
 title: Errore del compilatore C3838
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3838
 ms.assetid: d6f470c2-131a-4a8c-843a-254acd43da83
-ms.openlocfilehash: 468fc5e8cb6b3a76880f12fe0aab14810f458a90
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 9ea5f250b7a881ab9be6724f84dac418eefc705e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74741352"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97249146"
 ---
 # <a name="compiler-error-c3838"></a>Errore del compilatore C3838
 
 non è possibile ereditare in modo esplicito da' type '
 
-Il `type` specificato non può fungere da classe base in alcuna classe.
+Il parametro specificato `type` non può fungere da classe base in qualsiasi classe.
 
 ## <a name="example"></a>Esempio
 

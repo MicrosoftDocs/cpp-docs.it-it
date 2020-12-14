@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: aggiunta di elementi al controllo'
 title: Aggiunta di elementi al controllo
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CListCtrl class [MFC], adding items
 ms.assetid: 715994bd-340d-4ad2-9882-411654137830
-ms.openlocfilehash: 5cc1c7a921cf6d6ba2c0f968012b48bfcaef0658
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 44a553564aa9a98806cd8e4d9551c9474421105f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623370"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97249022"
 ---
 # <a name="adding-items-to-the-control"></a>Aggiunta di elementi al controllo
 
@@ -21,9 +22,9 @@ I membri aggiuntivi specificano il testo, l'icona, lo stato e i dati dell'elemen
 
 Le altre versioni di `InsertItem` accettano uno o più valori distinti, corrispondenti ai membri della `LVITEM` struttura, consentendo di inizializzare solo i membri che si desidera supportare. In genere, il controllo elenco gestisce l'archiviazione per gli elementi dell'elenco, ma è possibile archiviare alcune delle informazioni nell'applicazione usando "elementi di callback". Per altre informazioni, vedere [elementi di callback e maschera di callback](callback-items-and-the-callback-mask.md) in questo argomento ed [elementi di callback e maschera di callback](/windows/win32/Controls/using-list-view-controls) nel Windows SDK.
 
-Per ulteriori informazioni, vedere [aggiunta di elementi e sottoelementi della visualizzazione elenco](/windows/win32/Controls/using-list-view-controls).
+Per ulteriori informazioni, vedere [aggiunta di List-View elementi e](/windows/win32/Controls/using-list-view-controls)elementi secondari.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Utilizzo di CListCtrl](using-clistctrl.md)<br/>
 [Controlli](controls-mfc.md)
