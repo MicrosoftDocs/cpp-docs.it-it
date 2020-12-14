@@ -1,21 +1,22 @@
 ---
+description: 'Altre informazioni su: procedura: definire e installare un gestore di eccezioni globale'
 title: 'Procedura: definire e installare un gestore eccezioni globale'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-ms.openlocfilehash: 27666702a548c0c71b7e25597a1927520968b124
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 6747e0bdf95ae4d87ed667576852c282e05a7d6d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988309"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258330"
 ---
 # <a name="how-to-define-and-install-a-global-exception-handler"></a>Procedura: definire e installare un gestore eccezioni globale
 
 Nell'esempio di codice riportato di seguito viene illustrato come è possibile acquisire le eccezioni non gestite. Il form di esempio contiene un pulsante che, quando premuto, esegue un riferimento null, causando la generazione di un'eccezione. Questa funzionalità rappresenta un normale errore del codice. L'eccezione risultante viene rilevata dal gestore di eccezioni a livello di applicazione installato dalla funzione Main.
 
-Questa operazione viene eseguita associando un delegato all'evento <xref:System.Windows.Forms.Application.ThreadException>. In questo caso, le eccezioni successive vengono quindi inviate al metodo `App::OnUnhandled`.
+Questa operazione viene eseguita associando un delegato all' <xref:System.Windows.Forms.Application.ThreadException> evento. In questo caso, le eccezioni successive vengono quindi inviate al `App::OnUnhandled` metodo.
 
 ## <a name="example"></a>Esempio
 

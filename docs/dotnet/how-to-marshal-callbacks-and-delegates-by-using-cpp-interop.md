@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: procedura: effettuare il marshalling di callback e delegati utilizzando l'interoperabilità C++"
 title: "Procedura: Effettuare il marshalling di callback e delegati utilizzando l'interoperabilità C++"
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - marshaling [C++], callbacks and delegates
 - callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
-ms.openlocfilehash: 5d0427962ddb7d6409f07b99c0f618b340ee00df
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 4f32c1918dc3896e43a0055245877ddf4d030ade
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414295"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258215"
 ---
 # <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Procedura: Effettuare il marshalling di callback e delegati utilizzando l'interoperabilità C++
 
@@ -139,6 +140,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Uso dell'interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

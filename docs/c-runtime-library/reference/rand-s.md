@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: rand_s'
 title: rand_s
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: cad1740e64c7bbda553ac1a6c777d7e2295152ba
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8894248bf924ef513dc916e10e47ce8ea7e95137
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919533"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274827"
 ---
 # <a name="rand_s"></a>rand_s
 
@@ -58,7 +59,7 @@ Puntatore a un Integer in cui deve essere presente il valore generato.
 
 Zero in caso di esito positivo. In caso contrario un codice di errore. Se il puntatore di input _randomValue_ è un puntatore null, la funzione richiama un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce **EINVAL** e imposta **errno** su **EINVAL**. Se la funzione ha esito negativo per qualsiasi altro motivo, *_randomValue_ è impostato su 0.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **rand_s** scrive un Integer pseudocasuale nell'intervallo compreso tra 0 e **UINT_MAX** al puntatore di input. La funzione **rand_s** usa il sistema operativo per generare numeri casuali crittograficamente sicuri. Non usa il valore di inizializzazione generato dalla funzione [srand](srand.md) , né influisce sulla sequenza numerica casuale usata da [Rand](rand.md).
 
@@ -157,8 +158,8 @@ int main( void )
 65.0712
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[Rand](rand.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[rand](rand.md)<br/>
 [srand](srand.md)<br/>

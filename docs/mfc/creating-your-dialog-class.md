@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: creazione della classe di finestre di dialogo'
 title: Creazione della classe di finestre di dialogo
 ms.date: 09/06/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - dialog classes [MFC], Add Class Wizard
 - dialog classes [MFC], creating
 ms.assetid: d5321741-da41-47a8-bb1c-6a0e8b28c4c1
-ms.openlocfilehash: fab75268e39d75b67db435ebb8d0af6c0b8371fd
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d135d6acaefbc73f435e48db8f72add7081fdac2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620509"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309446"
 ---
 # <a name="creating-your-dialog-class"></a>Creazione della classe di finestre di dialogo
 
@@ -33,7 +34,7 @@ Nel file con estensione cpp:
 
 - Override della funzione membro [DoDataExchange](reference/cwnd-class.md#dodataexchange) . Modificare questa funzione. Viene utilizzato per le funzionalità di convalida e scambio di dati del dialogo, come descritto più avanti in [convalida e scambio di dati della finestra di dialogo](dialog-data-exchange-and-validation.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Creazione di una classe di finestre di dialogo con creazioni guidate codice](creating-a-dialog-class-with-code-wizards.md)<br/>
 [Utilizzo delle finestre di dialogo in MFC](life-cycle-of-a-dialog-box.md)

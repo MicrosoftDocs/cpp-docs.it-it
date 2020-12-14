@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: creazione del controllo calendario mensile'
 title: Creazione del controllo calendario mensile
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - month calendar controls [MFC], creating
 - month calendar controls [MFC]
 ms.assetid: 185cc642-85e9-4365-8a4c-d90b75b010f7
-ms.openlocfilehash: 49d21bd4ce5aae23d5fc4c74567bc1c1d5a43570
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 98c707e16f05a8f5e4d3b42e3c9504f74e4aca29
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616229"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309524"
 ---
 # <a name="creating-the-month-calendar-control"></a>Creazione del controllo calendario mensile
 
@@ -35,7 +36,7 @@ La modalità di creazione del controllo calendario mensile varia a seconda che i
 
 1. Chiamare la funzione membro [create](reference/cmonthcalctrl-class.md#create) del controllo, possibilmente in [OnInitialUpdate](reference/cview-class.md#oninitialupdate), probabilmente all'inizio della funzione del gestore [OnCreate](reference/cwnd-class.md#oncreate) della finestra padre (se si sta eseguendo la sottoclasse del controllo). Impostare gli stili per il controllo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso di CMonthCalCtrl](using-cmonthcalctrl.md)<br/>
+[Utilizzo di CMonthCalCtrl](using-cmonthcalctrl.md)<br/>
 [Controlli](controls-mfc.md)

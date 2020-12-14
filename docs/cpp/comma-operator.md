@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: operatore virgola:,'
 title: 'Operatore virgola: ,'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - comma operator
 ms.assetid: 38e0238e-19da-42ba-ae62-277bfdab6090
-ms.openlocfilehash: 6ea2bd5c0e7653ba7f81531a5c39df2da41662a9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1429e2ce444e0f253bffca795f36f4e6194e0395
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189767"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274775"
 ---
 # <a name="comma-operator-"></a>Operatore virgola: ,
 
@@ -63,5 +64,5 @@ int main () {
 ## <a name="see-also"></a>Vedere anche
 
 [Espressioni con operatori binari](../cpp/expressions-with-binary-operators.md)<br/>
-[Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operatori C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Operatore di valutazione sequenziale](../c-language/sequential-evaluation-operator.md)

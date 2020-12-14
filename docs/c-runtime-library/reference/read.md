@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _read'
 title: _read
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-ms.openlocfilehash: 2f43fc54a0092afc6ab5855c160a7879747faef7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f814c912c9f5d5e2dc7897cb3a2dcc8099503314
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919509"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274840"
 ---
 # <a name="_read"></a>_read
 
@@ -65,15 +66,15 @@ Numero massimo di byte da leggere.
 
 ## <a name="return-value"></a>Valore restituito
 
-**_read** restituisce il numero di byte letti, che potrebbero essere minori di *BUFFER_SIZE* se sono presenti meno di *BUFFER_SIZE* byte rimanenti nel file o se il file è stato aperto in modalità testo. In modalità testo ogni coppia `\r\n` ritorno a capo/avanzamento riga viene sostituita da un singolo carattere `\n`di avanzamento riga. Solo il carattere di avanzamento riga singolo viene conteggiato nel valore restituito. La sostituzione non influisce sul puntatore di file.
+**_read** restituisce il numero di byte letti, che potrebbero essere minori di *BUFFER_SIZE* se sono presenti meno di *BUFFER_SIZE* byte rimanenti nel file o se il file è stato aperto in modalità testo. In modalità testo ogni coppia ritorno a capo/avanzamento riga `\r\n` viene sostituita da un singolo carattere di avanzamento riga `\n` . Solo il carattere di avanzamento riga singolo viene conteggiato nel valore restituito. La sostituzione non influisce sul puntatore di file.
 
 Se la funzione tenta di leggere alla fine del file, restituisce 0. Se *FD* non è valido, il file non è aperto per la lettura o il file è bloccato, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce-1 e **errno** viene impostato su **EBADF**.
 
-Se il *buffer* è **null**o se *BUFFER_SIZE* > **INT_MAX**, viene richiamato il gestore di parametri non validi. Se l'esecuzione può continuare, la funzione restituisce-1 e **errno** viene impostato su **EINVAL**.
+Se il *buffer* è **null** o se *BUFFER_SIZE*  >  **INT_MAX**, viene richiamato il gestore di parametri non validi. Se l'esecuzione può continuare, la funzione restituisce-1 e **errno** viene impostato su **EINVAL**.
 
 Per altre informazioni su questi e su altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_read** legge un massimo di *BUFFER_SIZE* byte nel *buffer* dal file associato a *FD*. L'operazione di lettura inizia dalla posizione corrente del puntatore del file associato al file specificato. Dopo l'operazione di lettura, il puntatore del file punta al carattere successivo non letto.
 
@@ -146,9 +147,9 @@ Line two.
 Read 19 bytes from file
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[I/O a basso livello](../../c-runtime-library/low-level-i-o.md)<br/>
+[I/O di basso livello](../../c-runtime-library/low-level-i-o.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [fread](fread.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: Open Database Connectivity (ODBC)'
 title: Open Database Connectivity (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - databases [C++], ODBC
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
-ms.openlocfilehash: 12e4c0b74caa95af4dc4ed00dc77d46e47029b59
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: f28fe1dfd2d2cb4cb8d4ad70404209ae20ad1b9a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403803"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274697"
 ---
 # <a name="open-database-connectivity-odbc"></a>Open Database Connectivity (ODBC)
 
@@ -75,6 +76,6 @@ Queste attività sono basate sulle classi [ODBC](odbc-basics.md) MFC. Per ulteri
 
 - [Utilizzare recordset ODBC MFC](use-mfc-odbc-recordsets.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Programmazione dell'accesso ai dati (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
