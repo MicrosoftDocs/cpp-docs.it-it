@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; &gt; funzioni funzionali'
 title: Funzioni &lt;functional&gt;
 ms.date: 02/21/2019
 f1_keywords:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: 5e3aa35395c8fd5a42d7127d0b6072a3edf4ace5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f3ae9fca75801555c0341923d0fc42db94546cd1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838087"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232161"
 ---
 # <a name="ltfunctionalgt-functions"></a>Funzioni &lt;functional&gt;
 
@@ -77,7 +78,7 @@ Oggetto da chiamare.
 *tN*\
 Ennesimo argomento di chiamata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I tipi `FT, T1, T2, ..., TN` devono essere Copy-costruibile e `INVOKE(fn, t1, ..., tN)` deve essere un'espressione valida per alcuni valori `w1, w2, ..., wN` .
 
@@ -173,7 +174,7 @@ Valore a cui deve essere associato il primo argomento dell'oggetto funzione bina
 
 Oggetto funzione unaria risultante dall'associazione del primo argomento dell'oggetto funzione binaria al valore a *sinistra*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I Binder di funzione sono un tipo di adattatore di funzione. Poiché restituiscono oggetti funzione, possono essere usati in determinati tipi di composizione di funzioni per costruire espressioni più complesse e potenti.
 
@@ -267,7 +268,7 @@ Valore a cui deve essere associato il secondo argomento dell'oggetto funzione bi
 
 Oggetto funzione unaria risultante dall'associazione del secondo argomento dell'oggetto funzione binaria a *right*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I Binder di funzione sono un tipo di adattatore di funzione. Poiché restituiscono oggetti funzione, possono essere usati in determinati tipi di composizione di funzioni per costruire espressioni più complesse e potenti.
 
@@ -377,7 +378,7 @@ Operando destro dell'operazione AND bit per bit. Il modello non specializzato ac
 
 Risultato di `Left & Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito da `operator&`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il funtore `bit_and` è limitato ai tipi integrali per i tipi di dati di base o ai tipi definiti dall'utente che implementano un oggetto `operator&` binario.
 
@@ -407,13 +408,13 @@ struct bit_not<void>
 Tipo che supporta un oggetto `operator~` unario.
 
 *Ok*\
-Operando dell'operazione di complemento bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *Type*. Il modello specializzato esegue l'invio perfetto di un argomento di riferimento lvalue o rvalue del *tipo*dedotto.
+Operando dell'operazione di complemento bit per bit. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *Type*. Il modello specializzato esegue l'invio perfetto di un argomento di riferimento lvalue o rvalue del *tipo* dedotto.
 
 ### <a name="return-value"></a>Valore restituito
 
 Risultato di `~ Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito da `operator~`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il funtore `bit_not` è limitato ai tipi integrali per i tipi di dati di base o ai tipi definiti dall'utente che implementano un oggetto `operator~` binario.
 
@@ -454,7 +455,7 @@ Operando destro dell'operazione OR bit per bit. Il modello non specializzato acc
 
 Risultato di `Left | Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito da `operator|`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il funtore `bit_or` è limitato ai tipi integrali per i tipi di dati di base o ai tipi definiti dall'utente che implementano `operator|`.
 
@@ -495,7 +496,7 @@ Operando destro dell'operazione XOR bit per bit. Il modello non specializzato ac
 
 Risultato di `Left ^ Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito da `operator^`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il funtore `bit_xor` è limitato ai tipi integrali per i tipi di dati di base o ai tipi definiti dall'utente che implementano un oggetto `operator^` binario.
 
@@ -519,7 +520,7 @@ Tipo di argomento di cui eseguire il wrapping.
 *ARG*\
 Argomento di cui eseguire il wrapping.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La prima funzione restituisce `reference_wrapper<const Ty>(arg.get())`. Usarla per eseguire il wrapping di un riferimento const. La seconda funzione restituisce `reference_wrapper<const Ty>(arg)`. Usarla per eseguire nuovamente il wrapping di un riferimento già sottoposto a wrapping come riferimento const.
 
@@ -582,9 +583,9 @@ Argomenti della chiamata.
 *Specifica*\
 **`noexcept`** Specifica `std::is_nothrow_invocable_v<Callable, Args>)` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Richiama l'oggetto chiamabile *FN* usando gli *argomenti*dei parametri. In realtà, `INVOKE(std::forward<Callable>(fn), std::forward<Args>(args)...)` , dove la pseudo-funzione `INVOKE(f, t1, t2, ..., tN)` indica una delle operazioni seguenti:
+Richiama l'oggetto chiamabile *FN* usando gli *argomenti* dei parametri. In realtà, `INVOKE(std::forward<Callable>(fn), std::forward<Args>(args)...)` , dove la pseudo-funzione `INVOKE(f, t1, t2, ..., tN)` indica una delle operazioni seguenti:
 
 - `(t1.*f)(t2, ..., tN)` quando `f` è un puntatore alla funzione membro di classe `T` e `t1` è un oggetto di tipo `T`, un riferimento a un oggetto di tipo `T` o un riferimento a un oggetto di un tipo derivato da `T`. Ovvero quando `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` è true.
 
@@ -693,7 +694,7 @@ Tipo restituito della funzione di cui è stato eseguito il wrapping.
 *Ty*\
 Tipo di puntatore a funzione membro.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione modello restituisce un wrapper di chiamata semplice `cw` , con un tipo di risultato debole, in modo che l'espressione `cw(t, a2, ..., aN)` sia uguale a `INVOKE(pm, t, a2, ..., aN)` . Non genera alcuna eccezione.
 
@@ -949,7 +950,7 @@ Predicato unario da negare.
 
 Predicato unario che è la negazione del predicato unario modificato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se un oggetto `unary_negate` viene costruito da un predicato unario `predicate(x)` , restituisce `!predicate(x)` .
 
@@ -1021,7 +1022,7 @@ Predicato binario da negare.
 
 Predicato binario che è la negazione del predicato binario modificato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se `binary_negate` viene costruito un oggetto da un predicato binario `binary_predicate(x, y)` , viene restituito `!binary_predicate(x, y)` .
 
@@ -1093,7 +1094,7 @@ template <class Callable>
 *Func*\
 Oggetto chiamabile usato per costruire il wrapper della chiamata di invio.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione modello restituisce un wrapper di chiamata `return call_wrapper(std::forward<Callable>(func))` , ad esempio, in base a questa classe solo esposizione:
 
@@ -1202,7 +1203,7 @@ La prima funzione di modello restituisce la funzione unaria [pointer_to_unary_fu
 
 La seconda funzione di modello restituisce la funzione binaria [pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md) \<**Arg1**, **Arg2**, **Result**> ( \* `pfunc` ).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un puntatore a funzione è un oggetto funzione. Può essere passato a qualsiasi algoritmo che prevede una funzione come parametro, ma non è adattabile. Le informazioni sui tipi annidati sono necessarie per utilizzarlo con un adattatore, ad esempio per associarvi un valore o per negarlo. La conversione dei puntatori a funzioni unarie e binarie mediante la funzione helper `ptr_fun` consente agli adattatori di funzione di interagire con tali puntatori.
 
@@ -1322,7 +1323,7 @@ Primo oggetto funzione.
 *F2*\
 Secondo oggetto funzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione restituisce `f1.swap(f2)`.
 

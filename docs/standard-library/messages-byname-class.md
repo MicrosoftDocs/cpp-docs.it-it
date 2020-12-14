@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: messages_byname Class'
 title: Classe messages_byname
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - messages_byname class
 ms.assetid: c6c64841-3e80-43c8-b54c-fed41833ad6b
-ms.openlocfilehash: 56d8931cb404d9c0f3f5113f8b2ca0f1158209f2
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 960db9dd411e4ac42f81a0027e91ae1001b7877d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689338"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230523"
 ---
 # <a name="messages_byname-class"></a>Classe messages_byname
 
@@ -39,22 +40,22 @@ protected:
 
 ### <a name="parameters"></a>Parametri
 
-@No__t_1 *_Locname*
+*_Locname*\
 Impostazioni locali denominate.
 
-@No__t_1 *_Refs*
+*_Refs*\
 Conteggio di riferimento iniziale.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Il comportamento è determinato dalle impostazioni locali denominate *_Locname*. Ogni costruttore inizializza l'oggetto di base con [messages](../standard-library/messages-class.md#messages)\<CharType>( `_Refs`).
+Il comportamento è determinato dalle impostazioni locali denominate *_Locname*. Ogni costruttore inizializza l'oggetto di base con [messages](../standard-library/messages-class.md#messages) \<CharType> ( `_Refs` ).
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<locale>
+**Intestazione:**\<locale>
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

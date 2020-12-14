@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Struttura ImplementsBase'
 title: ImplementsBase (struttura)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ImplementsBase structure
 ms.assetid: f898eb17-136d-4c87-b3ea-771319314641
-ms.openlocfilehash: ffc006521d4f5131d7e387c1b2df79a358ad7def
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4269e08c4e96f0dec455c33cdd1372464b7e7de8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213889"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229119"
 ---
 # <a name="implementsbase-structure"></a>ImplementsBase (struttura)
 
@@ -40,6 +41,6 @@ La struttura **ImplementsBase** è vuota dalla progettazione.
 
 **Spazio dei nomi:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi Microsoft::WRL::Details](microsoft-wrl-details-namespace.md)
+[Spazio dei nomi Microsoft:: WRL::D etails](microsoft-wrl-details-namespace.md)

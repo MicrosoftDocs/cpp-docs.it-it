@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: STACKSIZE'
 title: STACKSIZE
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - STACKSIZE .def file statement
 ms.assetid: 4d8c79bd-1cb4-4e4d-90f2-b5a7a4d20e7a
-ms.openlocfilehash: 2d27b4fd596098f4abc5bb0d804d87bd08f70a60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5d52bccc09979084b9023d380e86fe90e4def32
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318356"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230341"
 ---
 # <a name="stacksize"></a>STACKSIZE
 
@@ -21,12 +22,12 @@ Imposta le dimensioni in byte dello stack.
 STACKSIZE reserve[,commit]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Un modo equivalente per impostare lo stack è con il [allocazioni Stack](stack-stack-allocations.md) (/stack) opzione. Vedere la documentazione relativa all'opzione per informazioni dettagliate *riservare* e `commit` argomenti.
+Un modo equivalente per impostare lo stack è con l'opzione [allocazioni dello stack](stack-stack-allocations.md) (/stack). Per informazioni dettagliate sulla *riserva* e sugli argomenti, vedere la documentazione relativa a tale opzione `commit` .
 
-Questa opzione ha effetto sulle DLL.
+Questa opzione non ha alcun effetto sulle dll.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Regole relative alle istruzioni di definizione dei moduli](rules-for-module-definition-statements.md)
+[Regole per Module-Definition istruzioni](rules-for-module-definition-statements.md)

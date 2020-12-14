@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: mersenne_twister_engine Class'
 title: Classe mersenne_twister_engine
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
-ms.openlocfilehash: 24663b12efaef66f29c7f755ab45df5ef973755c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7f5a2d74493194cb07bb4dd628cf3e483b1fd99b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846420"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230627"
 ---
 # <a name="mersenne_twister_engine-class"></a>Classe mersenne_twister_engine
 
@@ -69,11 +70,11 @@ Tipo di risultato Unsigned Integer. Per i tipi possibili, vedere [\<random>](../
 
 Per ulteriori informazioni sui membri del motore, vedere [\<random>](../standard-library/random.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questo modello di classe descrive un motore di numeri casuali, restituendo valori nell'intervallo chiuso [ `0` , `2` <sup>W</sup>  -  `1` ]. Contiene un valore integrale di grandi dimensioni con `W * (N - 1) + R` bit. Estrae *W* bit alla volta da questo valore elevato e quando ha usato tutti i bit, esegue il Twist del valore di grandi dimensioni spostando e combinando i bit in modo da avere un nuovo set di bit da estrarre. Lo stato del motore è `N` `W` costituito dagli ultimi valori di bit usati se `operator()` è stato chiamato almeno *N* volte, in caso contrario i `M` `W` valori a-bit che sono stati usati e gli ultimi `N - M` valori del valore di inizializzazione.
 
-Il generatore torce il valore di grandi dimensioni che possiede usando un registro di spostamento di feedback generalizzato, definito dai valori MAIUSC *N* e *M*, un valore di torsione *R*e una maschera XOR condizionale *a*. Inoltre, i bit del registro di spostamento non elaborato vengono codificati in base a una matrice di distorsione dei bit definita dai valori *U*, *D*, *S*, *B*, *T*, *C*e *L*.
+Il generatore torce il valore di grandi dimensioni che possiede usando un registro di spostamento di feedback generalizzato, definito dai valori MAIUSC *N* e *M*, un valore di torsione *R* e una maschera XOR condizionale *a*. Inoltre, i bit del registro di spostamento non elaborato vengono codificati in base a una matrice di distorsione dei bit definita dai valori *U*, *D*, *S*, *B*, *T*, *C* e *L*.
 
 L'argomento del modello `UIntType` deve essere sufficientemente grande da contenere valori fino a `2` <sup>W</sup>  -  `1` . I valori degli altri argomenti del modello devono soddisfare i requisiti seguenti: `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.
 

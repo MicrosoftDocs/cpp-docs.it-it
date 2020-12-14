@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/TC,/TP,/TC,/TP (specifica il tipo di file di origine)
 title: /Tc, /Tp, /TC, /TP (Specifica il tipo di file di origine)
 ms.date: 01/11/2018
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - Tc compiler option [C++]
 - /Tp compiler option [C++]
 - -Tp compiler option [C++]
-ms.openlocfilehash: fa35249983284261252c8ada65e79ed1cb6ec79a
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 23aed145c8dd9ac36f26bcebe2ea2aab1c39e586
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825392"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230029"
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc, /Tp, /TC, /TP (Specifica il tipo di file di origine)
 
@@ -29,8 +30,8 @@ L'opzione **/TC** specifica che il relativo argomento filename è un file di ori
 
 ## <a name="syntax"></a>Sintassi
 
-> **/Tc** _Nome file_ /TC\
-> **/Tp** _Nome file_ /TP\
+>  _Nome file_ /TC\
+>  _Nome file_ /TP\
 > **/TC**\
 > **/TP**
 
@@ -39,7 +40,7 @@ L'opzione **/TC** specifica che il relativo argomento filename è un file di ori
 *filename*<br/>
 Un file di origine C o C++.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, **CL** presuppone che i file con estensione c siano file di origine c e che i file con estensione cpp o cxx siano file di origine C++.
 
@@ -49,7 +50,7 @@ Quando si specifica l'opzione **TC** o **TC** , qualsiasi specifica dell'opzione
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la pagina delle proprietà**Avanzate** della finestra di **dialogo Proprietà** > di configurazione**C/C++** > .
+1. Selezionare la pagina delle proprietà avanzate della finestra di **dialogo proprietà di configurazione**  >  **C/C++**  >   .
 
 1. Modificare la proprietà **Compila come** . Scegliere **OK** o **applica** per applicare le modifiche.
 
@@ -57,7 +58,7 @@ Quando si specifica l'opzione **TC** o **TC** , qualsiasi specifica dell'opzione
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAs%2A>.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Questa riga di comando CL specifica che MAIN. c, TEST. prg e COLLATE. PRG sono tutti file di origine C. CL non è in grado di riconoscere PRINT. prg.
 
@@ -67,7 +68,7 @@ Questa riga di comando CL specifica che TEST1. c, TEST2. cxx, TEST3. huh e TEST4
 
 > UN CL TEST1. C TEST2. TEST3 CXX. EH TEST4. O/TC TEST5. /TP Z
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe Function'
 title: Classe function
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: 052cbba69aa99d33de963a3e360e6951a6006bec
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 30e81e297791691ba5736b4e116fc08ab4229f0a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831463"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232174"
 ---
 # <a name="function-class"></a>Classe function
 
@@ -85,7 +86,7 @@ Tipo di funzione di cui eseguire il wrapping.
 *Ax*\
 Funzione allocatore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il modello di classe è un wrapper di chiamata la cui firma di chiamata è `Ret(T1, T2, ..., TN)` . Usarla per racchiudere una vasta gamma di oggetti chiamabili in un wrapper uniforme.
 
@@ -107,19 +108,19 @@ Un oggetto `function` vuoto non include un oggetto chiamabile o un riferimento a
 
 ### <a name="constructors"></a>Costruttori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[function](#function)|Costruisce un wrapper vuoto o in cui è archiviato un oggetto chiamabile di tipo arbitrario con una firma fissa.|
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[result_type](#result_type)|Tipo restituito dell'oggetto chiamabile archiviato.|
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[assign](#assign)|Assegna un oggetto chiamabile a questo oggetto funzione.|
 |[scambio](#swap)|Scambia due oggetti chiamabili.|
@@ -128,7 +129,7 @@ Un oggetto `function` vuoto non include un oggetto chiamabile o un riferimento a
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[operatore non specificato](#op_unspecified)|Verifica se è presente un oggetto chiamabile archiviato.|
 |[operatore ()](#op_call)|Chiama un oggetto chiamabile.|
@@ -161,7 +162,7 @@ Wrapper di riferimento che contiene un oggetto chiamabile.
 *Ax*\
 Un oggetto allocatore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le funzioni membro sostituiscono il `callable object` contenuto di **`*this`** con l'oggetto chiamabile passato come `operand` . Entrambi allocano memoria con l'oggetto allocatore *ax*.
 
@@ -208,7 +209,7 @@ Allocatore.
 *_Fnref*\
 Riferimento all'oggetto chiamabile di cui eseguire il wrapping.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I primi due costruttori costruiscono un oggetto `function` vuoto. I tre costruttori successivi costruiscono un oggetto `function` che include l'oggetto chiamabile passato come operando. Gli ultimi due costruttori allocano memoria con l'oggetto allocatore Ax.
 
@@ -290,7 +291,7 @@ Verifica se è presente un oggetto chiamabile archiviato.
 operator unspecified();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'operatore restituisce un valore convertibile in **`bool`** con un valore true solo se l'oggetto non è vuoto. Può essere usato per verificare se l'oggetto è vuoto.
 
@@ -343,7 +344,7 @@ Tipo dell'ennesimo argomento di chiamata.
 *tN*\
 Ennesimo argomento di chiamata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce `INVOKE(fn, t1, t2, ..., tN, Ret)` , dove `fn` è l'oggetto di destinazione archiviato in **`*this`** . Usarla per chiamare l'oggetto chiamabile di cui è stato eseguito il wrapping.
 
@@ -402,7 +403,7 @@ Oggetto chiamabile di cui eseguire il wrapping.
 *fnref*\
 Riferimento all'oggetto chiamabile di cui eseguire il wrapping.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Ogni operatore sostituisce l'oggetto chiamabile mantenuto da **`*this`** con l'oggetto chiamabile passato come operando.
 
@@ -465,7 +466,7 @@ Tipo restituito dell'oggetto chiamabile archiviato.
 typedef Ret result_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il typedef è un sinonimo del tipo `Ret` nella firma di chiamata del modello. Usarlo per determinare il tipo restituito dell'oggetto chiamabile di cui è stato eseguito il wrapping.
 
@@ -512,7 +513,7 @@ void swap(function& right);
 *Ok*\
 Oggetto funzione con cui eseguire lo scambio.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro scambia gli oggetti di destinazione tra **`*this`** e *right*. Esegue tale operazione in un tempo costante e non genera eccezioni.
 
@@ -574,7 +575,7 @@ template <class Fty2>
 *Fty2*\
 Tipo di oggetto chiamabile di destinazione da verificare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo *Fty2* deve essere richiamabile per i tipi di argomento `T1, T2, ..., TN` e il tipo restituito `Ret` . Se `target_type() == typeid(Fty2)`, la funzione modello membro restituisce l'indirizzo dell'oggetto di destinazione; in caso contrario, restituisce 0.
 
@@ -627,7 +628,7 @@ Ottiene le informazioni sui tipi per l'oggetto chiamabile.
 const std::type_info& target_type() const;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce `typeid(void)` se **`*this`** è vuoto, in caso contrario restituisce `typeid(T)` , dove `T` è il tipo dell'oggetto di destinazione.
 

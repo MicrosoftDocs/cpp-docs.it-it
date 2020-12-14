@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; &gt; funzioni future'
 title: Funzioni &lt;future&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::make_error_code [C++]
 - std::make_error_condition [C++]
 - std::swap [C++]
-ms.openlocfilehash: d419984243d3970533f30814fe0ff451199afb34
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 56a43ecec155f580d8f798917ea6e53ce41bdd76
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837970"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232109"
 ---
 # <a name="ltfuturegt-functions"></a>Funzioni &lt;future&gt;
 
@@ -48,11 +49,11 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 *politica*\
 Valore [launch](../standard-library/future-enums.md#launch).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Definizioni delle abbreviazioni:
 
-|Abbreviazione|Descrizione|
+|Abbreviazione|Description|
 |-|-|
 |*DFN*|Risultato della chiamata a `decay_copy(forward<Fn>(fn))`.|
 |*dargs*|Risultati delle chiamate `decay_copy(forward<ArgsTypes>(args...))`.|

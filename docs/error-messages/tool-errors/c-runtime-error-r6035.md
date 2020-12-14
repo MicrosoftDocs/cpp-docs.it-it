@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore di runtime di C R6035'
 title: Errore di runtime di C R6035
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6035
 ms.assetid: f8fb50b8-18bf-4258-b96a-b0a9de468d16
-ms.openlocfilehash: 9b92b1e2e123201d4f50422754b77f62b2ec943b
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: f316586bbfb5aa9d8b3fb1d30b5dea65bff19d26
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404398"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97228391"
 ---
 # <a name="c-runtime-error-r6035"></a>Errore di runtime di C R6035
 
@@ -68,6 +69,6 @@ In questo caso, DllEntryPoint non è protetto da sovraccarichi del buffer (non c
 > [!NOTE]
 > Il messaggio di errore R6035 viene generato solo dalla libreria CRT di debug x86 e solo per la gestione delle eccezioni strutturata, ma la condizione è un errore in tutte le piattaforme e per tutte le forme di gestione delle eccezioni, ad esempio C++ EH.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Funzionalità di sicurezza in MSVC](https://devblogs.microsoft.com/cppblog/security-features-in-microsoft-visual-c/)

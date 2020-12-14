@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: money_base Class'
 title: Classe money_base
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - money_base class
 ms.assetid: 1a303c15-9272-4f26-ae16-dcf43a0fd38a
-ms.openlocfilehash: c614832b0cbb1cc23e42ecb3a939ccf1334a5cea
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 295984cfed4d6fdd47c772e29765c1484f52d32a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689316"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230471"
 ---
 # <a name="money_base-class"></a>Classe money_base
 
@@ -26,26 +27,26 @@ struct pattern
 };
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'enumerazione `part` descrive i valori possibili negli elementi del campo di matrice nel modello della struttura. I valori di `part` sono:
 
 - `none` per trovare la corrispondenza con zero o più spazi oppure non generare alcun elemento.
 
-- `sign` per trovare la corrispondenza o generare un segno positivo o negativo.
+- `sign` per trovare una corrispondenza o generare un segno positivo o negativo.
 
-- `space` per trovare la corrispondenza con zero o più spazi o per generare uno spazio.
+- `space` per trovare la corrispondenza con zero o più spazi o generare uno spazio.
 
-- `symbol` la corrispondenza o la generazione di un simbolo di valuta.
+- `symbol` per trovare una corrispondenza o generare un simbolo di valuta.
 
-- `value` la corrispondenza o la generazione di un valore monetario.
+- `value` per trovare una corrispondenza o generare un valore monetario.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<locale>
+**Intestazione:**\<locale>
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

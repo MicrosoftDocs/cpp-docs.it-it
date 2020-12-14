@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: `/Yu` (USA il file di intestazione precompilata)'
 title: /Yu (Usa il file di intestazione precompilata)
 ms.date: 07/31/2020
 f1_keywords:
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - .pch files, use existing
 - precompiled header files, use existing
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
-ms.openlocfilehash: 8cccce39949f23e4ceb72807ecaef3597ab733c4
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 7076a3a4dd9183a3a0072fa6211acbb0b95a4865
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520462"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229963"
 ---
-# <a name="yu-use-precompiled-header-file"></a>`/Yu`(USA il file di intestazione precompilata)
+# <a name="yu-use-precompiled-header-file"></a>`/Yu` (USA il file di intestazione precompilata)
 
 Indica al compilatore di utilizzare un file di intestazione precompilata ( *`.pch`* ) esistente nella compilazione corrente.
 
@@ -53,7 +54,7 @@ Poiché *`.pch`* i file contengono informazioni sull'ambiente del computer e le 
 
 Per ulteriori informazioni sulle intestazioni precompilate, vedere:
 
-- [`/Y`(Intestazioni precompilate)](y-precompiled-headers.md)
+- [`/Y` (Intestazioni precompilate)](y-precompiled-headers.md)
 
 - [File di intestazione precompilati](../creating-precompiled-header-files.md)
 
@@ -63,7 +64,7 @@ Per ulteriori informazioni sulle intestazioni precompilate, vedere:
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare le **proprietà di configurazione**  >  pagina delle proprietà intestazioni precompilate**C/C++**  >  **Precompiled Headers** .
+1. Selezionare le **proprietà di configurazione**  >  pagina delle proprietà intestazioni precompilate **C/C++**  >   .
 
 1. Modificare la proprietà dell' **intestazione precompilata** , la proprietà **Crea/Usa PCH tramite file** o la proprietà **Crea/Usa intestazione precompilata** .
 
@@ -92,7 +93,7 @@ CL /YuMYAPP.H /FpMYPCH.pch PROG.CPP
 
 Questo comando specifica un file di intestazione precompilato denominato *`MYPCH.pch`* . Il compilatore usa il relativo contenuto per ripristinare lo stato precompilato di tutti i file di intestazione fino a includere *`MYAPP.h`* . Il compilatore compila quindi il codice che si verifica dopo la `#include "MYAPP.h"` direttiva *.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
 [Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/SUBSYSTEM
 title: /SUBSYSTEM
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: 708bfcce3e6d6616116bcc08441f374b46914c82
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 24c334099eca93fc0f6e5790e78ed99049c572a3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438868"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230237"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -25,7 +26,7 @@ Specifica l'ambiente di esecuzione richiesto dall'immagine eseguibile.
         NATIVE|POSIX|WINDOWS|WINDOWSCE}[,major[.minor]]
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questa opzione modifica l'immagine per indicare il sottosistema che il sistema operativo deve richiamare per l'esecuzione.
 
@@ -69,6 +70,6 @@ La scelta del sottosistema influisce sull'indirizzo iniziale predefinito per il 
 
 Per ulteriori informazioni, inclusi i valori minimo e predefinito per i numeri di versione principale e secondaria per ogni sottosistema, vedere l'opzione del linker [/Subsystem](subsystem-specify-subsystem.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Opzioni di EDITBIN](editbin-options.md)
+[Opzioni di EDITBIN)](editbin-options.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: struct Minus'
 title: minus (struct)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - minus struct
 - minus class
 ms.assetid: 7bce784e-2be6-413a-b516-004e9ecb2a39
-ms.openlocfilehash: e57023c78f944a038e94d851abdbf7909545295c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: fe9fb343a49fb8097322b687326d3c986ba25ee5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246780"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230497"
 ---
 # <a name="minus-struct"></a>minus (struct)
 
@@ -39,14 +40,14 @@ struct minus<void>
 
 ### <a name="parameters"></a>Parametri
 
-*Tipo di*, *T*, *U*\
+*Digitare*, *T*, *U*\
 Tipo che supporta un `operator-` binario che accetta gli operandi dei tipi specificati o dedotti.
 
-*A sinistra*\
-Operando sinistro dell'operazione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *T*.
+*Sinistra*\
+Operando sinistro dell'operazione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *Type*. Il modello specializzato esegue l'avanzamento perfetto degli argomenti di riferimento lvalue e rvalue del tipo derivato *T*.
 
 *Ok*\
-Operando destro dell'operazione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *U*.
+Operando destro dell'operazione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *Type*. Il modello specializzato esegue l'avanzamento perfetto degli argomenti di riferimento lvalue e rvalue del tipo derivato *U*.
 
 ## <a name="return-value"></a>Valore restituito
 

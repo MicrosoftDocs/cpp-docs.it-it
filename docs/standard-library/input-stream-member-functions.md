@@ -1,22 +1,23 @@
 ---
+description: 'Altre informazioni su: funzioni membro del flusso di input'
 title: Funzioni membro del flusso di input
 ms.date: 07/19/2019
 helpviewer_keywords:
 - input stream objects
 - input streams, member functions
 ms.assetid: b4b9465d-0da9-4ccf-859d-72a68418982e
-ms.openlocfilehash: 8aa211a03bb6e9b1d910db360066b4a2ca76571a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8b75470d39e5c376da497f721c725eaad8424b3d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233171"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231602"
 ---
 # <a name="input-stream-member-functions"></a>Funzioni membro del flusso di input
 
 Le funzioni membro del flusso di input vengono usate per l'input del disco.
 
-## <a name="open"></a><a name="vclrftheopenfunctionforinputstreamsanchor11"></a>aprire
+## <a name="open"></a><a name="vclrftheopenfunctionforinputstreamsanchor11"></a> aprire
 
 Se si usa un flusso di file di input ( `ifstream` ), è necessario associare tale flusso a un file su disco specifico. Questa operazione può essere eseguita nel costruttore oppure è possibile utilizzare la `open` funzione. In entrambi i casi, gli argomenti sono identici.
 
@@ -31,7 +32,7 @@ if (ifile.fail())
 // The file does not exist ...
 ```
 
-## <a name="get"></a><a name="vclrfthegetfunctionanchor12"></a>Ottieni
+## <a name="get"></a><a name="vclrfthegetfunctionanchor12"></a> Ottieni
 
 La funzione membro non formattato `get` funziona come l' `>>` operatore con due eccezioni. In primo luogo, la `get` funzione include spazi vuoti, mentre l'estrazione esclude gli spazi vuoti quando il `skipws` flag è impostato (impostazione predefinita). In secondo luogo, `get` è meno probabile che la funzione provochi lo scaricamento di un flusso di output associato `cout` , ad esempio.
 
@@ -66,7 +67,7 @@ int main()
 1234
 ```
 
-## <a name="getline"></a><a name="vclrfthegetlinefunctionanchor13"></a>getline
+## <a name="getline"></a><a name="vclrfthegetlinefunctionanchor13"></a> getline
 
 La `getline` funzione membro è simile alla `get` funzione. Entrambe le funzioni accettano un terzo argomento che specifica il carattere di terminazione per l'input. Il valore predefinito è il carattere di nuova riga. Entrambe le funzioni riservano un singolo carattere per il carattere di terminazione obbligatorio. Tuttavia, `get` lascia il carattere di terminazione nel flusso e `getline` rimuove il carattere di terminazione.
 
@@ -93,7 +94,7 @@ int main( )
 test
 ```
 
-## <a name="read"></a><a name="vclrfthereadfunctionanchor14"></a>lettura
+## <a name="read"></a><a name="vclrfthereadfunctionanchor14"></a> lettura
 
 La `read` funzione membro legge i byte da un file in un'area di memoria specificata. L'argomento length determina il numero di byte letti. Se non si include tale argomento, la lettura si interrompe quando viene raggiunta la fine di file fisica o, nel caso di un file in modalità testo, quando viene letto un carattere `EOF` incorporato.
 
@@ -125,7 +126,7 @@ int main()
 
 Il programma presuppone che i record di dati siano formattati esattamente come specificato dalla struttura senza caratteri di ritorno a capo o avanzamento riga.
 
-## <a name="seekg-and-tellg"></a><a name="vclrftheseekgandtellgfunctionsanchor7"></a>seekg e tellg
+## <a name="seekg-and-tellg"></a><a name="vclrftheseekgandtellgfunctionsanchor7"></a> seekg e tellg
 
 I flussi di file di input mantengono un puntatore interno alla posizione nel file in cui dovrà essere eseguita la successiva lettura di dati. Questo puntatore viene impostato con la funzione `seekg`, come illustrato di seguito:
 
@@ -180,10 +181,10 @@ int main( )
 }
 ```
 
-## <a name="close"></a><a name="vclrftheclosefunctionforinputstreamsanchor15"></a>vicino
+## <a name="close"></a><a name="vclrftheclosefunctionforinputstreamsanchor15"></a> vicino
 
 La `close` funzione membro chiude il file su disco associato a un flusso di file di input e libera l'handle di file del sistema operativo. Il [`ifstream`](../standard-library/basic-ifstream-class.md) distruttore chiude il file per l'utente, ma è possibile usare la `close` funzione se è necessario aprire un altro file per lo stesso oggetto flusso.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Flussi di input](../standard-library/input-streams.md)

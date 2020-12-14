@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 1) C4744'
 title: Avviso del compilatore (livello 1) C4744
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4744
 ms.assetid: f2a7d0b5-afd5-4926-abc3-cfbd367e3ff5
-ms.openlocfilehash: 38a05c04181efb95ec3e7549c40056b8d223e128
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: d7be7c44d0e5abb1d0e3618ffa6ed1778a6410c7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685554"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97228456"
 ---
 # <a name="compiler-warning-level-1-c4744"></a>Avviso del compilatore (livello 1) C4744
 
@@ -24,7 +25,7 @@ C4744 viene generato solo quando i file vengono compilati con/GL.  Per altre inf
 > [!NOTE]
 > C4744 di solito si verifica nei file C (non C++), perché in C++ un nome di variabile è decorato con le informazioni sul tipo.  Quando l'esempio (sotto) viene compilato come C++, si otterrà l'errore del linker LNK2019.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Questo esempio contiene la prima definizione.
 

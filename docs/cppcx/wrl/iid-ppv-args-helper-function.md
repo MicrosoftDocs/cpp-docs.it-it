@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Funzione IID_PPV_ARGS_Helper'
 title: IID_PPV_ARGS_Helper (funzione)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IID_PPV_ARGS_Helper function
 ms.assetid: afee9b23-8df1-4575-903f-e9ba748418f0
-ms.openlocfilehash: 6b1ab2e8e93fda194532fbc8d6f484aaa91249d8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7003a3270a6fdb2070055e0059b106f55324c63e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212969"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229145"
 ---
 # <a name="iid_ppv_args_helper-function"></a>IID_PPV_ARGS_Helper (funzione)
 
@@ -42,7 +43,7 @@ Puntatore A doppia indiretta.
 
 Viene *eseguito il* cast dell'argomento in un puntatore a un puntatore a **`void`** .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Viene generato un errore in fase di compilazione se il parametro di modello *T* non deriva da `IUnknown` .
 

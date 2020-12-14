@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: is_pointer Class'
 title: Classe is_pointer
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - is_pointer class
 - is_pointer
 ms.assetid: 44e0a403-7241-4e0a-8922-32877bcb9a4c
-ms.openlocfilehash: 3429875f53d65de0161c4d6f87fde7a335bb369e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 003f25a40edd3f4c0b80a8402d38027cd81949cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222342"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230640"
 ---
 # <a name="is_pointer-class"></a>Classe is_pointer
 
@@ -30,7 +31,7 @@ struct is_pointer;
 *Ty*\
 Tipo su cui eseguire una query.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un'istanza del predicato di tipo include true se il tipo *Ty* è un puntatore a **`void`** , un puntatore a un oggetto o un puntatore a una funzione oppure un `cv-qualified` form di uno di essi; in caso contrario, include false. Si noti che `is_pointer` include false se *Ty* è un puntatore a un membro o un puntatore a una funzione membro.
 
@@ -78,7 +79,7 @@ is_pointer<int *> == true
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Classe is_member_pointer](../standard-library/is-member-pointer-class.md)\

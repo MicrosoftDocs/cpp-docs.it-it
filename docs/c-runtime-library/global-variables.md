@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: variabili globali'
 title: Variabili globali
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,33 +9,33 @@ helpviewer_keywords:
 - variables, global
 - global variables, Microsoft run-time library
 ms.assetid: 01d1551c-2f0c-4f72-935c-6442caccf84f
-ms.openlocfilehash: dfa78bd2c7aae7cc6059443066cbef58512755ce
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 8029f058b39cb2e069c83279b361b79f3c8f5515
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744363"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229886"
 ---
 # <a name="global-variables"></a>Variabili globali
 
 La libreria di runtime Microsoft C fornisce le macro o le variabili globali seguenti. Molte di queste variabili globali o macro sono deprecate a favore di versioni funzionali più sicure ed è consigliabile usare queste ultime invece delle variabili globali.
 
-|Variabile|Description|
+|Variabile|Descrizione|
 |--------------|-----------------|
-|[__argc, \__argv, \__wargv](../c-runtime-library/argc-argv-wargv.md)|Contiene gli argomenti della riga di comando.|
-|[_daylight, _dstbias, _timezone e _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)|Deprecato. Usare invece `_get_daylight`, `_get_dstbias`, `_get_timezone` e `_get_tzname`.<br /><br /> Rettifica l'ora locale. È usata in alcune funzioni di data e ora.|
-|[errno, _doserrno, _sys_errlist e _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)|Deprecato. Usare invece `_get_errno`, `_set_errno`, `_get_doserrno`, `_set_doserrno`, `perror` e `strerror`.<br /><br /> Archivia i codici di errore e le informazioni correlate.|
+|[__argc, \_ _argv, \_ _wargv](../c-runtime-library/argc-argv-wargv.md)|Contiene gli argomenti della riga di comando.|
+|[_daylight, _dstbias, _timezone, and _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)|Deprecato. Usare invece `_get_daylight`, `_get_dstbias`, `_get_timezone` e `_get_tzname`.<br /><br /> Rettifica l'ora locale. È usata in alcune funzioni di data e ora.|
+|[errno, _doserrno, _sys_errlist, and _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)|Deprecato. Usare invece `_get_errno`, `_set_errno`, `_get_doserrno`, `_set_doserrno`, `perror` e `strerror`.<br /><br /> Archivia i codici di errore e le informazioni correlate.|
 |[_environ, _wenviron](../c-runtime-library/environ-wenviron.md)|Deprecato. Usare invece `getenv_s`, `_wgetenv_s`, `_dupenv_s`, `_wdupenv_s`, `_putenv_s` e `_wputenv_s`.<br /><br /> Puntatori a matrici di puntatori alle stringhe dell'ambiente di elaborazione. Inizializzata all'avvio.|
 |[_fmode](../c-runtime-library/fmode.md)|Deprecato. Usare invece `_get_fmode` o `_set_fmode`.<br /><br /> Imposta la modalità di conversione di file predefinita.|
 |[_iob](../c-runtime-library/iob.md)|Matrice di strutture di controllo di I/O per console, file e dispositivi.|
 |[_pctype, _pwctype, _wctype, _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md)|Contiene informazioni usate dalle funzioni di classificazione dei caratteri.|
 |[_pgmptr, _wpgmptr](../c-runtime-library/pgmptr-wpgmptr.md)|Deprecato. Usare invece `_get_pgmptr` o `_get_wpgmptr`.<br /><br /> Inizializzata all'avvio del programma sul percorso completo o relativo del programma, il nome del programma completo o il nome del programma senza l'estensione del nome file, a seconda del modo in cui è stato richiamato il programma.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimenti della libreria di runtime di C](../c-runtime-library/c-run-time-library-reference.md)<br/>
+[Informazioni di riferimento sulla libreria C Run-Time](../c-runtime-library/c-run-time-library-reference.md)<br/>
 [Costanti globali](../c-runtime-library/global-constants.md)<br/>
-[__argc, \__argv, \__wargv](../c-runtime-library/argc-argv-wargv.md)<br/>
+[__argc, \_ _argv, \_ _wargv](../c-runtime-library/argc-argv-wargv.md)<br/>
 [_get_daylight](../c-runtime-library/reference/get-daylight.md)<br/>
 [_get_dstbias](../c-runtime-library/reference/get-dstbias.md)<br/>
 [_get_timezone](../c-runtime-library/reference/get-timezone.md)<br/>

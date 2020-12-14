@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/TLBOUT (nome. File TLB)
 title: /TLBOUT (Assegna un nome al file TLB)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - .tlb files, renaming
 - -TLBOUT linker option
 ms.assetid: 0df6d078-2e48-46c9-a1a5-02674d85dce8
-ms.openlocfilehash: 62913eaadd0f0a88f05ce347a6778062a1e66f17
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4e99f3b5a036ddbc424732e771f7bab27aeb228d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509339"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230003"
 ---
 # <a name="tlbout-name-tlb-file"></a>/TLBOUT (Assegna un nome al file TLB)
 
@@ -32,7 +33,7 @@ Specifica del percorso assoluto o relativo per la posizione in cui deve essere c
 *filename*<br/>
 Specifica il nome del file con estensione TLB creato dal compilatore MIDL. Non viene presupposta alcuna estensione di file; specificare *filename*. tlb se si desidera un'estensione tlb.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'opzione/TLBOUT specifica il nome e l'estensione del file tlb.
 
@@ -54,7 +55,7 @@ Se/TLBOUT non è specificato, il file con estensione TLB otterrà il nome da [/I
 
 1. Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TypeLibraryFile%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Informazioni di riferimento sul linker MSVC](linking.md)<br/>
 [Opzioni del linker MSVC](linker-options.md)<br/>

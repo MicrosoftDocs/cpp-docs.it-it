@@ -1,19 +1,20 @@
 ---
+description: 'Altre informazioni su: Sincronizza le modifiche tra Xcode e Visual Studio'
 title: Sincronizzare le modifiche tra Xcode e Visual Studio
 ms.date: 10/17/2019
 ms.assetid: c71a4d7c-120e-4559-a114-3a99c4b860a9
-ms.openlocfilehash: ab941551c519acee49f658d8a8ff1b9fe0e4ba49
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 60ce41e41f5b6a2a9f877501eaef0d84306dde07
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177535"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229054"
 ---
 # <a name="sync-changes-between-xcode-and-visual-studio"></a>Sincronizzare le modifiche tra Xcode e Visual Studio
 
-Lo sviluppo di applicazioni C++ per dispositivi mobili con componenti in Visual Studio include funzionalità remote per sincronizzare il lavoro tra il PC e il Mac. Quando si abbinano i computer Visual Studio e Mac, sono disponibili nuove opzioni per i progetti di applicazioni iOS in Visual Studio che è possibile usare per aprire il progetto in Xcode, spostare il codice tra Xcode e Visual Studio e pulire la directory temporanea del progetto Xcode.
+I componenti per lo sviluppo di app per dispositivi mobili con C++ in Visual Studio includono funzionalità remote per sincronizzare il lavoro tra il PC e il Mac. Quando si abbinano i computer Visual Studio e Mac, sono disponibili nuove opzioni per i progetti di applicazioni iOS in Visual Studio che è possibile usare per aprire il progetto in Xcode, spostare il codice tra Xcode e Visual Studio e pulire la directory temporanea del progetto Xcode.
 
-Per usare le opzioni Computer remoto, il progetto deve essere un progetto di applicazione iOS e Visual Studio deve essere associato al Mac. Per informazioni sui prerequisiti e istruzioni su come eseguire l'associazione di un Mac, vedere [Installare e configurare gli strumenti per la compilazione con iOS](../cross-platform/install-and-configure-tools-to-build-using-ios.md).
+Per usare le opzioni Computer remoto, il progetto deve essere un progetto di applicazione iOS e Visual Studio deve essere associato al Mac. Per i prerequisiti e le istruzioni su come associare un Mac, vedere [installare e configurare gli strumenti per la compilazione con iOS](../cross-platform/install-and-configure-tools-to-build-using-ios.md).
 
 ## <a name="the-remote-machine-menu"></a>Menu Computer remoto
 
@@ -25,7 +26,7 @@ Questi comandi consentono di aprire il progetto in Xcode, spostare le modifiche 
 
 ## <a name="open-in-xcode"></a>Apri in Xcode
 
-Per aprire il progetto in Xcode da Visual Studio, nel sottomenu **computer remoto** scegliere **Apri in Xcode** per aprire il progetto selezionato nel computer remoto associato. Il server di `vcremote` viene usato per aprire Xcode nel Mac e passare a una directory temporanea creata nel Mac che contiene una copia del progetto. Verrà visualizzata una finestra di dialogo di Visual Studio che mostra la directory temporanea usata per il progetto. Le azioni eseguite nel computer remoto sono anche indicate nella finestra **Output** di Visual Studio. Per visualizzarle, può essere necessario selezionare **Computer remoto Visual C++** nell'elenco a discesa **Mostra output di**, disponibile nella parte superiore della finestra **Output**.
+Per aprire il progetto in Xcode da Visual Studio, nel sottomenu **computer remoto** scegliere **Apri in Xcode** per aprire il progetto selezionato nel computer remoto associato. Il `vcremote` Server viene usato per aprire Xcode nel Mac e passare a una directory temporanea creata nel Mac che contiene una copia del progetto. Verrà visualizzata una finestra di dialogo di Visual Studio che mostra la directory temporanea usata per il progetto. Le azioni eseguite nel computer remoto sono anche indicate nella finestra **Output** di Visual Studio. Per visualizzarle, può essere necessario selezionare **Computer remoto Visual C++** nell'elenco a discesa **Mostra output di**, disponibile nella parte superiore della finestra **Output**.
 
 ![La finestra output Mostra le azioni del computer remoto.](../cross-platform/media/cppmdd-u2-remotemachine-output.png "La finestra output Mostra le azioni del computer remoto")
 

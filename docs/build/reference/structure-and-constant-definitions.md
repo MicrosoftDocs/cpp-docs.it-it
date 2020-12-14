@@ -1,17 +1,18 @@
 ---
+description: 'Altre informazioni su: struttura e definizioni di costanti'
 title: Struttura e definizioni di costanti
 ms.date: 11/04/2016
 ms.assetid: 1df7cf46-b853-4788-a257-100d5c37997f
-ms.openlocfilehash: ea7aa1ec25bcd0e8531ef63848de26da164da668
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a9e372815e25883cf69497c77388002a7015572
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317861"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230328"
 ---
 # <a name="structure-and-constant-definitions"></a>Struttura e definizioni di costanti
 
-Nella routine dell'helper predefinito Usa diverse strutture per comunicare con le funzioni di hook e durante le eccezioni. Ecco i valori di notifica e non riuscite, le strutture delle informazioni e il tipo di puntatore a funzione hook passati agli hook:
+La routine di supporto predefinita usa diverse strutture per comunicare con le funzioni hook e durante qualsiasi eccezione. Ecco i valori di notifica e di errore, le strutture di informazioni e il tipo di funzione puntatore a gancio passato agli hook:
 
 ```
 //
@@ -69,6 +70,6 @@ typedef struct ImgDelayDescr {
     } ImgDelayDescr, * PImgDelayDescr;
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Informazioni sulla funzione di supporto](understanding-the-helper-function.md)
+[Informazioni sulla funzione helper](understanding-the-helper-function.md)

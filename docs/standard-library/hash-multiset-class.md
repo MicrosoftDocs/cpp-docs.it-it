@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: hash_multiset Class'
 title: Classe hash_multiset
 ms.date: 11/04/2016
 f1_keywords:
@@ -86,12 +87,12 @@ helpviewer_keywords:
 - stdext::hash_multiset::upper_bound
 - stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
-ms.openlocfilehash: d4722a9c535207b21098db4e33810340d99e6b6a
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 567eef22098b99cf3a3109bfd911ecbcd518876b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561440"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231810"
 ---
 # <a name="hash_multiset-class"></a>Classe hash_multiset
 
@@ -118,7 +119,7 @@ Tipo che include due oggetti funzione, uno della classe compare che è un predic
 *Allocatore*\
 Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione dell'hash_multiset e alla deallocazione della memoria. Questo argomento è facoltativo e il valore predefinito è `allocator<Key>`.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'hash_multiset è:
 
@@ -154,7 +155,7 @@ L'iteratore fornito dalla classe hash_multiset è un iteratore bidirezionale, ma
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome tipo|Descrizione|
+|Nome tipo|Description|
 |-|-|
 |[allocator_type](#allocator_type)|Tipo che rappresenta la classe `allocator` per l'oggetto `hash_multiset`.|
 |[const_iterator](#const_iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere un **`const`** elemento in `hash_multiset` .|
@@ -186,7 +187,7 @@ L'iteratore fornito dalla classe hash_multiset è un iteratore bidirezionale, ma
 |[emplace](#emplace)|Inserisce un elemento costruito sul posto in un `hash_multiset`.|
 |[emplace_hint](#emplace_hint)|Inserisce un elemento costruito sul posto in un `hash_multiset`, con un suggerimento sulla posizione.|
 |[empty](#empty)|Verifica se un `hash_multiset` è vuoto.|
-|[fine](#end)|Restituisce un iteratore che punta alla posizione successiva all'ultimo elemento di un `hash_multiset`.|
+|[end](#end)|Restituisce un iteratore che punta alla posizione successiva all'ultimo elemento di un `hash_multiset`.|
 |[equal_range](#equal_range)|Restituisce una coppia di iteratori rispettivamente al primo elemento di un `hash_multiset` con una chiave maggiore di una chiave specificata e al primo elemento di `hash_multiset` con una chiave uguale o maggiore di tale chiave.|
 |[erase](#erase)|Rimuove un elemento o un intervallo di elementi di un `hash_multiset` dalle posizioni specificate oppure rimuove gli elementi che corrispondono a una chiave specificata.|
 |[find](#find)|Restituisce un iteratore che punta alla posizione di un elemento in un `hash_multiset` che dispone di una chiave equivalente a una chiave specificata.|
@@ -246,7 +247,7 @@ iterator begin();
 
 Iteratore bidirezionale che punta al primo elemento dell'oggetto hash_multiset o alla posizione successiva a un oggetto hash_multiset vuoto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il valore restituito di `begin` viene assegnato a un `const_iterator` , gli elementi nell'oggetto hash_multiset non possono essere modificati. Se il valore restituito di `begin` viene assegnato a un `iterator` , gli elementi dell'oggetto hash_multiset possono essere modificati.
 
@@ -305,7 +306,7 @@ const_iterator cbegin() const;
 
 Iteratore bidirezionale const che punta al primo elemento dell'oggetto [hash_multiset](../standard-library/hash-multiset-class.md) o alla posizione successiva a un oggetto `hash_multiset` vuoto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Con il valore restituito di `cbegin`, gli elementi dell'oggetto `hash_multiset` non possono essere modificati.
 
@@ -352,7 +353,7 @@ const_iterator cend() const;
 
 Iteratore bidirezionale const che punta alla posizione successiva all'ultimo elemento di un oggetto [hash_multiset](../standard-library/hash-multiset-class.md). Se l'oggetto `hash_multiset` è vuoto, `hash_multiset::cend == hash_multiset::begin`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `cend` viene usato per verificare se un iteratore ha raggiunto la fine del relativo oggetto `hash_multiset`. Non è consigliabile dereferenziare il valore restituito da `cend`.
 
@@ -396,7 +397,7 @@ Cancella tutti gli elementi di un oggetto hash_multiset.
 void clear();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ### <a name="example"></a>Esempio
 
@@ -440,7 +441,7 @@ Tipo che fornisce un iteratore bidirezionale in grado di leggere un **`const`** 
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_iterator const_iterator;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un tipo `const_iterator` non può essere usato per modificare il valore di un elemento.
 
@@ -459,7 +460,7 @@ Tipo che fornisce un puntatore a un **`const`** elemento in un hash_multiset.
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un tipo `const_pointer` non può essere usato per modificare il valore di un elemento.
 
@@ -476,7 +477,7 @@ Tipo che fornisce un riferimento a un **`const`** elemento archiviato in un hash
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ### <a name="example"></a>Esempio
 
@@ -523,7 +524,7 @@ Tipo che fornisce un iteratore bidirezionale in grado di leggere qualsiasi **`co
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_reverse_iterator const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un tipo `const_reverse_iterator` non può modificare il valore di un elemento e viene usato per eseguire l'iterazione sull'oggetto hash_multiset in ordine inverso.
 
@@ -551,7 +552,7 @@ La chiave degli elementi per cui trovare un corrispondenza nell'hash_multiset.
 
 Il numero di elementi nell'hash_multiset con la chiave specificata dal parametro.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce il numero di elementi nell'intervallo seguente:
 
@@ -609,7 +610,7 @@ const_reverse_iterator crbegin() const;
 
 Iteratore bidirezionale const inverso che punta al primo elemento di un oggetto [hash_multiset](../standard-library/hash-multiset-class.md) invertito o a quello che è stato l'ultimo elemento dell'oggetto `hash_multiset` non invertito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `crbegin` viene usato con un oggetto `hash_multiset` invertito proprio come [hash_multiset::begin](#begin) viene usato con un oggetto `hash_multiset`.
 
@@ -661,7 +662,7 @@ const_reverse_iterator crend() const;
 
 Iteratore bidirezionale const inverso che punta alla posizione successiva all'ultimo elemento di un oggetto [hash_multiset](../standard-library/hash-multiset-class.md) invertito, ovvero la posizione che precedeva il primo elemento dell'oggetto `hash_multiset` non invertito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `crend` viene usato con un oggetto `hash_multiset` invertito proprio come [hash_multiset::end](#end) viene usato con un oggetto `hash_multiset`.
 
@@ -710,7 +711,7 @@ Tipo Signed Integer che specifica la differenza tra due iteratori che puntano a 
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `difference_type` è il tipo restituito quando si sottrae o si incrementa tramite gli iteratori del contenitore. `difference_type` viene in genere usato per rappresentare il numero di elementi nell'intervallo [ `first`, `last`) tra gli iteratori `first` e `last`, includendo l'elemento a cui punta `first` e l'intervallo di elementi fino all'elemento a cui punta `last`, escluso tale elemento.
 
@@ -800,7 +801,7 @@ Valore di un elemento da inserire nell'oggetto [hash_multiset](../standard-libra
 
 La funzione membro `emplace` restituisce un iteratore che punta alla posizione in cui è stato inserito il nuovo elemento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ### <a name="example"></a>Esempio
 
@@ -854,7 +855,7 @@ Posizione in cui iniziare a cercare il punto di inserimento corretto. (L'inserim
 
 La funzione membro [hash_multiset::emplace](#emplace) restituisce un iteratore che punta alla posizione in cui il nuovo elemento è stato inserito nell'oggetto `hash_multiset`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'inserimento può essere eseguito in un tempo costante ammortizzato, invece che in tempo logaritmico, se il punto di inserimento segue immediatamente *dove*.
 
@@ -899,7 +900,7 @@ bool empty() const;
 
 **`true`** Se il hash_multiset è vuoto; **`false`** se il hash_multiset non è vuoto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ### <a name="example"></a>Esempio
 
@@ -950,7 +951,7 @@ iterator end();
 
 Iteratore bidirezionale che punta alla posizione successiva all'ultimo elemento di un oggetto hash_multiset. Se l'oggetto hash_multiset è vuoto, hash_multiset::end == hash_multiset::begin.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `end` viene usato per verificare se un iteratore ha raggiunto la fine del relativo hash_multiset. Non è consigliabile dereferenziare il valore restituito da `end`.
 
@@ -1116,7 +1117,7 @@ La chiave degli elementi da rimuovere dall'hash_multiset.
 
 Per le prime due funzioni, iteratore bidirezionale che definisce il primo elemento rimanente successivo a tutti gli elementi eliminati o un puntatore al termine dell'hash_multiset se tali elementi non sono presenti. Per la terza funzione membro, il numero di elementi rimossi dall'hash_multiset.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le funzioni membro non generano mai un'eccezione.
 
@@ -1228,7 +1229,7 @@ Chiave dell'argomento per cui trovare una corrispondenza in base alla chiave di 
 
 Tipo [iterator](#iterator) o [const_iterator](#const_iterator) che punta alla posizione di un elemento equivalente a una chiave specificata o che punta alla posizione successiva all'ultimo elemento dell'oggetto hash_multiset se non viene trovata alcuna corrispondenza per la chiave.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce un iteratore che punta a un elemento nel hash_multiset la cui chiave `equivalent` di ordinamento corrisponde alla chiave dell'argomento in un predicato binario che provoca un ordinamento basato su una relazione di comparabilità minore di.
 
@@ -1301,7 +1302,7 @@ Allocatore usato dall'oggetto hash_multiset per gestire la memoria, che corrispo
 
 Per altre informazioni su `Allocator`, vedere la sezione Note dell'argomento [Classe hash_multiset](../standard-library/hash-multiset-class.md).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli allocatori per la classe hash_multiset specificano il modo in cui la classe gestisce la memoria. Gli allocatori predefiniti forniti con le classi dei contenitori della libreria standard C++ sono sufficienti per la maggior parte delle esigenze di programmazione. Scrivere e usare una classe allocator personalizzata è un argomento di C++ avanzato.
 
@@ -1429,7 +1430,7 @@ Posizione del primo elemento oltre l'intervallo di elementi da copiare.
 *IList*\
 initializer_list che contiene gli elementi da copiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Tutti i costruttori archiviano un tipo di oggetto allocatore che gestisce la memoria per l'oggetto `hash_multiset` e che può essere restituito in un secondo momento chiamando [hash_multiset::get_allocator](#get_allocator). Il parametro allocator viene spesso omesso nelle dichiarazioni di classe e vengono usate macro di pre-elaborazione per introdurre allocatori alternativi.
 
@@ -1512,7 +1513,7 @@ Le tre funzioni membro successive usano un oggetto initializer_list.
 
 La terza funzione membro inserisce la sequenza di valori di elemento in un oggetto hash_multiset che corrisponde a ogni elemento interessato da un iteratore nell'intervallo [ `first`, `last`) di un oggetto hash_multiset specificato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'inserimento può essere eseguito in un tempo costante ammortizzato per la versione del suggerimento di inserimento, invece dell'ora logaritmica, se il punto di inserimento segue immediatamente *dove*.
 
@@ -1527,7 +1528,7 @@ Tipo che fornisce un iteratore bidirezionale in grado di leggere o modificare qu
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::iterator iterator;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un tipo `iterator` può essere usato per modificare il valore di un elemento.
 
@@ -1548,11 +1549,11 @@ key_compare key_comp() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce i *tratti*del parametro di modello hash_multiset, che contiene gli oggetti funzione utilizzati per eseguire l'hashing e ordinare gli elementi del contenitore.
+Restituisce i *tratti* del parametro di modello hash_multiset, che contiene gli oggetti funzione utilizzati per eseguire l'hashing e ordinare gli elementi del contenitore.
 
 Per ulteriori informazioni sui *tratti* , vedere l'argomento relativo alla [classe hash_multiset](../standard-library/hash-multiset-class.md) .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'oggetto archiviato definisce una funzione membro:
 
@@ -1622,9 +1623,9 @@ Tipo che fornisce due oggetti funzione, un predicato binario della classe compar
 typedef Traits key_compare;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-`key_compare` è un sinonimo dei *tratti*di parametro di modello.
+`key_compare` è un sinonimo dei *tratti* di parametro di modello.
 
 Per ulteriori informazioni sui *tratti* , vedere l'argomento relativo alla [classe hash_multiset](../standard-library/hash-multiset-class.md) .
 
@@ -1645,9 +1646,9 @@ Tipo che fornisce un oggetto funzione in grado di confrontare chiavi di ordiname
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-`key_type` è un sinonimo della *chiave*del parametro di modello.
+`key_type` è un sinonimo della *chiave* del parametro di modello.
 
 Si noti che `key_type` e [value_type](../standard-library/hash-set-class.md#value_type) sono sinonimi per il parametro di modello *Key*. Entrambi i tipi vengono forniti per le classi set e multiset, dove sono identici, per la compatibilità con le classi map e multimap, dove sono distinti.
 
@@ -1679,7 +1680,7 @@ Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordina
 
 Tipo [iterator](#iterator) o [const_iterator](#const_iterator) che punta alla posizione del primo elemento di un oggetto hash_multiset con una chiave uguale o maggiore della chiave dell'argomento o che punta alla posizione successiva all'ultimo elemento dell'oggetto hash_multiset se non viene trovata alcuna corrispondenza per la chiave.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ### <a name="example"></a>Esempio
 
@@ -1739,7 +1740,7 @@ size_type max_size() const;
 
 Lunghezza massima possibile dell'oggetto hash_multiset.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ### <a name="example"></a>Esempio
 
@@ -1780,7 +1781,7 @@ hash_multiset& operator=(hash_multiset&& right);
 *Ok*\
 [Classe hash_multiset](../standard-library/hash-multiset-class.md) copiata nell'oggetto `hash_multiset`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Dopo la cancellazione di tutti gli elementi esistenti in un oggetto `hash_multiset` , `operator=` copia o sposta il contenuto di *direttamente* in `hash_multiset` .
 
@@ -1833,7 +1834,7 @@ Tipo che fornisce un puntatore a un elemento di un oggetto hash_multiset.
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::pointer pointer;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un tipo `pointer` può essere usato per modificare il valore di un elemento.
 
@@ -1856,7 +1857,7 @@ reverse_iterator rbegin();
 
 Iteratore bidirezionale inverso che punta al primo elemento di un oggetto hash_multiset invertito o a quello che è stato l'ultimo elemento dell'oggetto hash_multiset non invertito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `rbegin` viene usato con un oggetto hash_multiset invertito proprio come [begin](#begin) viene usato con un oggetto hash_multiset.
 
@@ -1933,7 +1934,7 @@ Tipo che fornisce un riferimento a un elemento archiviato in un oggetto hash_mul
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::reference reference;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ### <a name="example"></a>Esempio
 
@@ -1989,7 +1990,7 @@ reverse_iterator rend();
 
 Iteratore bidirezionale const inverso che punta alla posizione successiva all'ultimo elemento di un oggetto hash_multiset invertito, ovvero la posizione che precedeva il primo elemento dell'oggetto hash_multiset non invertito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `rend` viene usato con un oggetto hash_multiset invertito proprio come [end](#end) viene usato con un oggetto hash_multiset.
 
@@ -2069,7 +2070,7 @@ Tipo che fornisce un iteratore bidirezionale in grado di leggere o modificare un
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::reverse_iterator reverse_iterator;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un tipo `reverse_iterator` viene usato per eseguire l'iterazione sull'oggetto hash_multiset in ordine inverso.
 
@@ -2092,7 +2093,7 @@ size_type size() const;
 
 Lunghezza corrente dell'oggetto hash_multiset.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ### <a name="example"></a>Esempio
 
@@ -2135,7 +2136,7 @@ Tipo Unsigned Integer in grado di rappresentare il numero di elementi di un ogge
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::size_type size_type;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ### <a name="example"></a>Esempio
 
@@ -2157,7 +2158,7 @@ void swap(hash_multiset& right);
 *Ok*\
 Argomento di tipo hash_multiset che fornisce gli elementi da scambiare con l'oggetto hash_multiset di destinazione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro non invalida riferimenti, puntatori o iteratori che designano gli elementi dei due oggetti hash_multiset di cui vengono scambiati gli elementi.
 
@@ -2237,7 +2238,7 @@ Chiave dell'argomento per cui trovare una corrispondenza con la chiave di ordina
 
 Tipo [iterator](#iterator) o [const_iterator](#const_iterator) che punta alla posizione del primo elemento di un oggetto hash_multiset con una chiave maggiore della chiave dell'argomento o che punta alla posizione successiva all'ultimo elemento dell'oggetto hash_multiset se non viene trovata alcuna corrispondenza per la chiave.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ### <a name="example"></a>Esempio
 
@@ -2306,11 +2307,11 @@ value_compare value_comp() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce i *tratti*del parametro di modello hash_multiset, che contiene gli oggetti funzione utilizzati per eseguire l'hashing e ordinare gli elementi del contenitore.
+Restituisce i *tratti* del parametro di modello hash_multiset, che contiene gli oggetti funzione utilizzati per eseguire l'hashing e ordinare gli elementi del contenitore.
 
 Per ulteriori informazioni sui *tratti* , vedere l'argomento relativo alla [classe hash_multiset](../standard-library/hash-multiset-class.md) .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'oggetto archiviato definisce una funzione membro:
 
@@ -2385,13 +2386,13 @@ Tipo che fornisce due oggetti funzione, un predicato binario della classe compar
 typedef key_compare value_compare;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-`value_compare` è un sinonimo dei *tratti*di parametro di modello.
+`value_compare` è un sinonimo dei *tratti* di parametro di modello.
 
 Per ulteriori informazioni sui *tratti* , vedere l'argomento relativo alla [classe hash_multiset](../standard-library/hash-multiset-class.md) .
 
-Si noti che sia [key_compare](#key_compare) che `value_compare` sono sinonimi per i *tratti*del parametro di modello. Entrambi i tipi vengono forniti per le classi set e multiset, dove sono identici, per la compatibilità con le classi map e multimap, dove sono distinti.
+Si noti che sia [key_compare](#key_compare) che `value_compare` sono sinonimi per i *tratti* del parametro di modello. Entrambi i tipi vengono forniti per le classi set e multiset, dove sono identici, per la compatibilità con le classi map e multimap, dove sono distinti.
 
 ### <a name="example"></a>Esempio
 

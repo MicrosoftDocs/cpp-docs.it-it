@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: is_placeholder Class'
 title: Classe is_placeholder
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_placeholder class
 ms.assetid: 2b21a792-96d1-4bb8-b911-0db796510835
-ms.openlocfilehash: 9fa7d4aaade6244fe26f89f3a667598d39471a47
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 84d73da6ffe2446a8448b0ff5f30604d259493b1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245165"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230653"
 ---
-# <a name="isplaceholder-class"></a>Classe is_placeholder
+# <a name="is_placeholder-class"></a>Classe is_placeholder
 
 Verifica se il tipo è un segnaposto.
 
@@ -21,7 +22,7 @@ Verifica se il tipo è un segnaposto.
 
 struct is_placeholder {static const int value;};
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Il valore costante `value` è 0 se il tipo `Ty` non è un segnaposto; in caso contrario, il relativo valore corrisponde alla posizione dell'argomento della chiamata di funzione a cui è associato. Usarlo per determinare il valore `N` per l'ennesimo segnaposto `_N`.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; type_traits&gt;'
 title: '&lt;type_traits&gt;'
 ms.date: 02/21/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: 42c94daf331fd9a17e050067e4c4e495af180b0c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: cf7bb4a5bf73eb49526926c151ffbbd0b55fda5b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841701"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226493"
 ---
 # <a name="lttype_traitsgt"></a>&lt;type_traits&gt;
 
@@ -80,7 +81,7 @@ Questi sono gli alias forniti per i `type` membri:
 
 Classi helper e typedef
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[integral_constant](../standard-library/integral-constant-class-bool-constant-class.md)|Crea una costante integrale da un tipo e da un valore.|
 |[true_type](../standard-library/type-traits-typedefs.md#true_type)|Include la costante integrale con valore true.|
@@ -88,7 +89,7 @@ Classi helper e typedef
 
 Categorie di tipi primari
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[is_void](../standard-library/is-void-class.md)|Verifica se il tipo è **`void`** .|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|Verifica se il tipo è `std::nullptr_t`.|
@@ -107,7 +108,7 @@ Categorie di tipi primari
 
 Categorie di tipi compositi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[is_reference](../standard-library/is-reference-class.md)|Verifica se il tipo è un riferimento.|
 |[is_arithmetic](../standard-library/is-arithmetic-class.md)|Verifica se il tipo è aritmetico.|
@@ -119,7 +120,7 @@ Categorie di tipi compositi
 
 Proprietà del tipo
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[is_const](../standard-library/is-const-class.md)|Verifica se il tipo è **`const`** .|
 |[is_volatile](../standard-library/is-volatile-class.md)|Verifica se il tipo è **`volatile`** .|
@@ -172,7 +173,7 @@ Proprietà del tipo
 
 Query sulle proprietà del tipo
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[alignment_of](../standard-library/alignment-of-class.md)|Ottiene l'allineamento di un tipo.|
 |[Rank](../standard-library/rank-class.md)|Ottiene il numero di dimensioni della matrice.|
@@ -180,7 +181,7 @@ Query sulle proprietà del tipo
 
 Relazioni tra i tipi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[is_same](../standard-library/is-same-class.md)|Verifica se due tipi sono uguali.|
 |[is_base_of](../standard-library/is-base-of-class.md)|Verifica se un tipo è una base di un altro tipo.|
@@ -188,7 +189,7 @@ Relazioni tra i tipi
 
 Modifiche costante-volatile
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[add_const](../standard-library/add-const-class.md)|Produce un **`const`** tipo dal tipo.|
 |[add_volatile](../standard-library/add-volatile-class.md)|Produce un **`volatile`** tipo dal tipo.|
@@ -199,7 +200,7 @@ Modifiche costante-volatile
 
 Modifiche dei riferimenti
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[add_lvalue_reference](../standard-library/add-lvalue-reference-class.md)|Genera un riferimento al tipo dal tipo.|
 |[add_rvalue_reference](../standard-library/add-rvalue-reference-class.md)|Genera un riferimento rvalue al tipo dal tipo.|
@@ -207,28 +208,28 @@ Modifiche dei riferimenti
 
 Modifiche della firma
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[make_signed](../standard-library/make-signed-class.md)|Genera il tipo se con segno, ovvero il più piccolo tipo con segno di dimensioni maggiori o uguali al tipo.|
 |[make_unsigned](../standard-library/make-unsigned-class.md)|Genera il tipo se senza segno, ovvero il più piccolo tipo senza segno di dimensioni maggiori o uguali al tipo.|
 
 Modifiche delle matrici
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[remove_all_extents](../standard-library/remove-all-extents-class.md)|Genera un tipo non matrice da un tipo matrice.|
 |[remove_extent](../standard-library/remove-extent-class.md)|Genera il tipo di elemento da un tipo matrice.|
 
 Modifiche dei puntatori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[add_pointer](../standard-library/add-pointer-class.md)|Genera un puntatore al tipo dal tipo.|
 |[remove_pointer](../standard-library/remove-pointer-class.md)|Genera un tipo da un puntatore al tipo.|
 
 Altre trasformazioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[aligned_storage](../standard-library/aligned-storage-class.md)|Alloca memoria non inizializzata per un tipo allineato.|
 |[aligned_union](../standard-library/aligned-union-class.md)|Alloca memoria non inizializzata per un'unione allineata con un costruttore o un distruttore non semplice.|
@@ -242,7 +243,7 @@ Altre trasformazioni
 
 Tratti dell'operatore logico
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[unione](../standard-library/conjunction-class.md)||
 |[disgiunzione](../standard-library/disjunction-class.md)||

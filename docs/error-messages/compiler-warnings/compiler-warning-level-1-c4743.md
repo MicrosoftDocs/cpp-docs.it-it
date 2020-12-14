@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 1) C4743'
 title: Avviso del compilatore (livello 1) C4743
 ms.date: 05/13/2019
 f1_keywords:
@@ -6,28 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4743
 ms.assetid: 2ee76ea3-77f3-4c2f-9a57-0751823c89fd
-ms.openlocfilehash: 53ead0e34b55eca44399cee09f1947a12e1eadd3
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: a8c8bcd4ef0e4d7084da34e033be4194da11727f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611838"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97228482"
 ---
 # <a name="compiler-warning-level-1-c4743"></a>Avviso del compilatore (livello 1) C4743
 
-«*tipo*'ha una diversa dimensione '*file1*"e"*file2*': *numero* e *numero* byte
+'*Type*' ha dimensioni diverse in '*file1*' è *file2*': *numero* e byte *numerici*
 
-Una variabile esterna riferimenti o definizione in due file ha tipi diversi in tali file, ed è stato determinato che la dimensione della variabile nello *file1* differisce dalla dimensione della variabile nel *file2*.
+Una variabile esterna a cui viene fatto riferimento o definita in due file ha tipi diversi in tali file e il compilatore ha determinato che le dimensioni della variabile in *file1* differiscono dalle dimensioni della variabile in *file2*.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-C'è un importante caso quando questo avviso può essere creato per C++. Se si dichiarano gli stessi tipi con lo stesso nome in due diversi file, se tali dichiarazioni contengono funzioni virtuali e le dichiarazioni non sono uguali, il compilatore può generare avviso C4744 per le tabelle di funzione virtuale. L'avviso si verifica perché sono presenti due tabelle di dimensioni diverse funzioni virtuali per lo stesso tipo e il linker deve stabilire uno di essi da incorporare nell'eseguibile.  È possibile che ciò può comportare il programma chiami la funzione virtuale non corretta.
+Quando è possibile emettere questo avviso per C++, c'è un caso importante. Se si dichiarano gli stessi tipi con lo stesso nome in due file diversi, se tali dichiarazioni contengono funzioni virtuali e se le dichiarazioni non sono uguali, il compilatore può generare un avviso C4744 per le tabelle delle funzioni virtuali. L'avviso viene generato perché sono presenti due tabelle di funzioni virtuali di dimensioni diverse per lo stesso tipo e il linker deve scegliere una di esse da incorporare nel file eseguibile.  È possibile che il programma chiami la funzione virtuale errata.
 
-Per risolvere questo problema, usare la stessa definizione di tipo o usare nomi diversi per i tipi o le variabili.
+Per risolvere il problema, usare la stessa definizione di tipo o usare nomi diversi per i tipi o le variabili.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4743. Per compilare un'applicazione, posizionare entrambi i file nella stessa cartella, quindi eseguire  
+L'esempio seguente genera l'C4743. Per compilarlo, inserire entrambi i file nella stessa cartella, quindi eseguire  
 
 ```cmd
 cl /EHsc /W1 /GL /O2 C4743a.cpp C4743b.cpp

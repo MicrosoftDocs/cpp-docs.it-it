@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3278'
 title: Errore del compilatore C3278
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3278
 ms.assetid: 56f818f5-85a6-4792-843b-54fe16327658
-ms.openlocfilehash: ec51064853afa37f75022042c8c6121b6c5248a4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cdbb53b4f11357ae9058d9a5ebc3882c8701fc88
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80201435"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97228963"
 ---
 # <a name="compiler-error-c3278"></a>Errore del compilatore C3278
 
 > la chiamata diretta del metodo di interfaccia o puro '*Method*' avrà esito negativo in fase di esecuzione
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 È stata effettuata una chiamata a un metodo di interfaccia o a un metodo puro, che non è consentita.
 

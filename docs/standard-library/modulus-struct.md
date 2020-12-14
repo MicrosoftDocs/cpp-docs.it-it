@@ -1,5 +1,6 @@
 ---
-title: modulus (struct)
+description: 'Altre informazioni su: struct modulo'
+title: Struct modulus
 ms.date: 11/04/2016
 f1_keywords:
 - functional/std::modulus
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - modulus class
 - modulus struct
 ms.assetid: 86d342f7-b7b1-46a4-b0bb-6b7ae827369b
-ms.openlocfilehash: 20f2070c5b835d67e06d64a0a1b05141f08cf373
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: f14edbcdb73a09fb9d44ff8d3dbd29bc0cdd2cdc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246785"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230484"
 ---
-# <a name="modulus-struct"></a>modulus (struct)
+# <a name="modulus-struct"></a>Struct modulus
 
-Un oggetto funzione predefinito che esegue l'operazione di divisione modulo (`operator%`) sui relativi argomenti.
+Oggetto funzione predefinito che esegue l'operazione di divisione del modulo ( `operator%` ) sui relativi argomenti.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -39,20 +40,20 @@ struct modulus<void>
 
 ### <a name="parameters"></a>Parametri
 
-*Tipo di*, *T*, *U*\
+*Digitare*, *T*, *U*\
 Qualsiasi tipo che supporta un `operator%` che accetta gli operandi dei tipi specificati o dedotti.
 
-*A sinistra*\
-Operando sinistro dell'operazione modulo. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *T*.
+*Sinistra*\
+Operando sinistro dell'operazione modulo. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *Type*. Il modello specializzato esegue l'avanzamento perfetto degli argomenti di riferimento lvalue e rvalue del tipo derivato *T*.
 
 *Ok*\
-Operando destro dell'operazione modulo. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *U*.
+Operando destro dell'operazione modulo. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *Type*. Il modello specializzato esegue l'avanzamento perfetto degli argomenti di riferimento lvalue e rvalue del tipo derivato *U*.
 
 ## <a name="return-value"></a>Valore restituito
 
 Risultato di `Left % Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito da `operator%`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Il funtore `modulus` è limitato ai tipi integrali per i tipi di dati di base o ai tipi definiti dall'utente che implementano `operator%`.
 

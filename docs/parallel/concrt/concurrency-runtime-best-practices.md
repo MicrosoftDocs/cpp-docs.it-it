@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: runtime di concorrenza procedure consigliate'
 title: Procedure consigliate del runtime di concorrenza
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,20 +8,20 @@ helpviewer_keywords:
 - practices to avoid [Concurrency Runtime]
 - Concurrency Runtime, best practices
 ms.assetid: 7231d4be-d1e3-401d-8b66-94fd51b587c9
-ms.openlocfilehash: 21bca441a29e6e152cb912139db1b9f56b988edd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aecbe69dba716ad98c209f2a87a3bbfe9b25be8c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414022"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226558"
 ---
 # <a name="concurrency-runtime-best-practices"></a>Procedure consigliate del runtime di concorrenza
 
-Questa sezione descrive le procedure consigliate che consentono di ottimizzare l'uso del runtime di concorrenza. Si applicano le seguenti procedure consigliate per la [Parallel Patterns Library](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL), il [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)e il [utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
+Questa sezione descrive le procedure consigliate che consentono di ottimizzare l'uso del runtime di concorrenza. Queste procedure consigliate si applicano alla libreria PPL ( [Parallel Patterns Library](../../parallel/concrt/parallel-patterns-library-ppl.md) ), alla [libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md)e al [utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
-[Procedure consigliate nella libreria PPL (Parallel Patterns Library)](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br/>
+[Procedure consigliate nella libreria di modelli paralleli](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br/>
 Descrive le procedure consigliate da seguire quando si usa la libreria PPL (Parallel Patterns Library).
 
 [Procedure consigliate nella libreria di agenti asincroni](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)<br/>
@@ -37,10 +38,10 @@ Introduce il runtime di concorrenza, un framework di concorrenza per C++.
 [PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 Descrive come usare i vari modelli paralleli, ad esempio gli algoritmi paralleli, nelle applicazioni.
 
-[Libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md)<br/>
+[libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 Descrive come usare gli agenti asincroni nelle applicazioni.
 
-[Strutture di dati di sincronizzazione](../../parallel/concrt/synchronization-data-structures.md)<br/>
+[Strutture dei dati di sincronizzazione](../../parallel/concrt/synchronization-data-structures.md)<br/>
 Descrive le varie primitive di sincronizzazione fornite dal runtime di concorrenza.
 
 [Utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>

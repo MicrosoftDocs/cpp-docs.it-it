@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: gamma_distribution Class'
 title: Classe gamma_distribution
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-ms.openlocfilehash: 37b4661cf14fe4302d50557472ce03c120eb2741
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b010a5fc74f98d27c50377bf6b5f84fb84b7bb75
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837924"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232096"
 ---
 # <a name="gamma_distribution-class"></a>Classe gamma_distribution
 
@@ -76,7 +77,7 @@ Il tipo di risultato a virgola mobile, il valore predefinito è **`double`** . P
 *GENERATORE URNG*\
 Motore di generazione di numeri casuali uniformi. Per i tipi possibili, vedere [\<random>](../standard-library/random.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il modello di classe descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente o di tipo **`double`** se non ne viene fornito alcuno, distribuiti in base alla distribuzione gamma. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
@@ -206,7 +207,7 @@ Parametro di distribuzione `beta`.
 *parm*\
 Struttura di parametri usata per costruire la distribuzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:** `0.0 < alpha` e `0.0 < beta`
 
@@ -241,7 +242,7 @@ Parametro di distribuzione `beta`.
 *Ok*\
 Istanza `param_type` con cui eseguire il confronto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:** `0.0 < alpha` e `0.0 < beta`
 

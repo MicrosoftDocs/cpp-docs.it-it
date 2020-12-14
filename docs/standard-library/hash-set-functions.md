@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: &lt; &gt; funzioni hash_set'
 title: Funzioni &lt;hash_set&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - hash_set/std::swap
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
-ms.openlocfilehash: 1774b0b29c7750e716f1f56def5d29ac329abec0
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7040325f3af26052306b1ebd90f1919d96dcbf19
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845809"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231796"
 ---
 # <a name="lthash_setgt-functions"></a>Funzioni &lt;hash_set&gt;
 
@@ -38,7 +39,7 @@ Il hash_set che fornisce gli elementi da scambiare o i hash_set i cui elementi d
 *sinistra*\
 Hash_set i cui elementi devono essere scambiati con quelli del hash_set *diritto*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La `swap` funzione modello è un algoritmo specializzato sulla classe contenitore hash_set per eseguire la funzione membro `left.` [swap](../standard-library/hash-set-class.md#swap)( `right` ). Si tratta di un'istanza dell'ordinamento parziale dei modelli di funzione eseguito dal compilatore. Quando le funzioni modello sono sottoposte a overload in modo tale che la corrispondenza del modello con la chiamata di funzione non è univoca, il compilatore seleziona la versione più specializzata della funzione modello. La versione generale della funzione modello
 
@@ -69,7 +70,7 @@ Il hash_multiset che fornisce gli elementi da scambiare o i hash_multiset i cui 
 *sinistra*\
 Hash_multiset i cui elementi devono essere scambiati con quelli del hash_multiset *diritto*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La `swap` funzione modello è un algoritmo specializzato sulla classe contenitore hash_multiset per eseguire la funzione membro `left.` [swap](../standard-library/hash-multiset-class.md#swap)( `right` ). Si tratta di un'istanza dell'ordinamento parziale dei modelli di funzione eseguito dal compilatore. Quando le funzioni modello sono sottoposte a overload in modo tale che la corrispondenza del modello con la chiamata di funzione non è univoca, il compilatore seleziona la versione più specializzata della funzione modello. La versione generale della funzione modello
 
@@ -81,6 +82,6 @@ nella classe algoritmo viene eseguita in base ad assegnazione ed è un'operazion
 
 Vedere l'esempio di codice relativo alla classe membro [hash_multiset::swap](../standard-library/hash-multiset-class.md#swap) per indicazioni su come usare la versione modello di `swap`.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<hash_set>](../standard-library/hash-set.md)

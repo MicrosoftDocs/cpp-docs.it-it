@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: convenzioni di iostreams'
 title: Convenzioni di iostream
 ms.date: 11/04/2016
 helpviewer_keywords:
 - iostream header
 - C++ Standard Library, iostreams
 ms.assetid: 9fe5ded0-37a1-48d1-9671-c81ffc4760ad
-ms.openlocfilehash: 7bfc497ec7c55a611d29cd62d076c0ac2e9b6e9f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3676c6aa14a5ebac1d39ed50821449caa7313e40
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845458"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231394"
 ---
 # <a name="iostreams-conventions"></a>Convenzioni di iostream
 
@@ -33,7 +34,7 @@ L'uso più semplice di iostreams richiede solo l'inclusione dell'intestazione [\
 
 Le intestazioni rimanenti forniscono servizi di supporto, in genere di interesse solo per gli utenti esperti in classi iostream.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Panoramica della libreria standard C++](../standard-library/cpp-standard-library-overview.md)\
 [Programmazione di iostream](../standard-library/iostream-programming.md)\

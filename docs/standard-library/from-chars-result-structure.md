@@ -1,19 +1,20 @@
 ---
-title: struct from_chars_result
+description: 'Altre informazioni su: from_chars_result struct'
+title: Struct from_chars_result
 ms.date: 7/23/2020
 f1_keywords:
 - std::from_chars_result
 helpviewer_keywords:
 - from_chars_result class
 - from_chars_result structure
-ms.openlocfilehash: 5a5dcfe6e5b59644e6ebf55d68ce43975e7d3c9d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 894a687a4395e22538b384675af5b4ce57731f78
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215764"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232278"
 ---
-# <a name="from_chars_result-struct"></a>struct from_chars_result
+# <a name="from_chars_result-struct"></a>Struct from_chars_result
 
 ## <a name="syntax"></a>Sintassi
 
@@ -29,7 +30,7 @@ struct from_chars_result {
 |`ptr`| Se `ec` è uguale a `errc{}` , la conversione ha avuto esito positivo e `ptr` punta al primo carattere che non fa parte del numero riconosciuto. |
 |`ec` | Codice di errore di conversione. Per i codici di errore specifici, vedere [`errc`](system-error-enums.md#errc) .|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un esempio: l'analisi `"1729cats"` come un numero intero decimale avrà esito positivo e punterà `ptr` a `'c'` che è la prima non cifra ed è anche un passato al termine di `"1729"` .
 
@@ -47,6 +48,6 @@ Se il valore analizzato non è adatto all'intervallo per il tipo di conversione 
 
 **Opzione del compilatore:** /std: c++ 17 o versione successiva è obbligatorio
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [from_chars](charconv-functions.md#from_chars)

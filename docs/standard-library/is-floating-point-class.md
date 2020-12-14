@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: is_floating_point Class'
 title: Classe is_floating_point
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - is_floating_point class
 - is_floating_point
 ms.assetid: 070679c1-115b-4ee4-8ab7-f52e5d9e157f
-ms.openlocfilehash: 8da613bca165f68ef2e15e2be6291485a89222de
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e1ace01a88c103646e9daa6ece82b9c3c3c2978a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222394"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230978"
 ---
 # <a name="is_floating_point-class"></a>Classe is_floating_point
 
@@ -30,7 +31,7 @@ struct is_floating_point;
 *Ty*\
 Tipo su cui eseguire una query.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un'istanza del predicato di tipo include true se il tipo *Ty* è un tipo a virgola mobile o un `cv-qualified` form di un tipo a virgola mobile; in caso contrario, il valore è false.
 
@@ -74,7 +75,7 @@ is_floating_point<float> == true
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Classe is_integral](../standard-library/is-integral-class.md)

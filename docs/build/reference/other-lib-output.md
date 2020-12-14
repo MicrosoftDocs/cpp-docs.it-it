@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: altro output di LIB'
 title: Altri output di LIB
 ms.date: 11/04/2016
 helpviewer_keywords:
 - output files, LIB
 ms.assetid: 656864a6-0b7a-4633-8dc6-ee3b1766d836
-ms.openlocfilehash: 4152795c2f1cc2acbeb7a55d0d5ee3419fe6f789
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 76f60f4fdd7797550257186361673039c8fc408d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439170"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226337"
 ---
 # <a name="other-lib-output"></a>Altri output di LIB
 
@@ -17,10 +18,10 @@ Nella modalità predefinita è possibile utilizzare l'opzione/LIST per visualizz
 
 LIB Visualizza un messaggio di copyright e di versione e restituisce i file di comando, a meno che non venga utilizzata l'opzione/NOLOGO.
 
-Quando si digita `lib` senza altro input, LIB Visualizza un'istruzione Usage che riepiloga le opzioni.
+Quando si digita `lib` senza altro input, lib Visualizza un'istruzione Usage che riepiloga le opzioni.
 
-I messaggi di errore e di avviso rilasciati da LIB hanno il formato LNK*nnnn*. Anche gli strumenti collegamento, DUMPBIN e EDITBIN) utilizzano questo intervallo di errori. Per la guida è possibile selezionare l'errore nella finestra di output e premere F1.
+I messaggi di errore e di avviso rilasciati da LIB hanno il formato LNK *nnnn*. Anche gli strumenti collegamento, DUMPBIN e EDITBIN) utilizzano questo intervallo di errori. Per la guida è possibile selezionare l'errore nella finestra di output e premere F1.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Panoramica di LIB](overview-of-lib.md)
+[Cenni preliminari su LIB](overview-of-lib.md)
