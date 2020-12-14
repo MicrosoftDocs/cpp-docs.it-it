@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 1) C4503'
 title: Avviso del compilatore (livello 1) C4503
 ms.date: 05/14/2018
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4503
 ms.assetid: 7c5a98ae-5b6d-41d8-b881-12d3ffd5e392
-ms.openlocfilehash: 1d3af2b5629906679db46f6f669084c11a41f7ca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4ff438c3ae9e698bdaaf476d022b8914add4169e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233249"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97294899"
 ---
 # <a name="compiler-warning-level-1-c4503"></a>Avviso del compilatore (livello 1) C4503
 
 > '*Identifier*': lunghezza del nome decorata superata. il nome è stato troncato
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questo avviso del compilatore è obsoleto e non viene generato nei compilatori Visual Studio 2017 e versioni successive.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: GetChar, getwchar'
 title: getchar, getwchar
 ms.date: 06/23/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-ms.openlocfilehash: c6a02f16c3ee3d3e3bc4f86026719a1bd2885416
-ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
+ms.openlocfilehash: d8480d179cc31d30d68c07fbe92bf389226ccd53
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334968"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256757"
 ---
 # <a name="getchar-getwchar"></a>getchar, getwchar
 
@@ -55,7 +56,7 @@ wint_t getwchar();
 
 Restituisce il carattere letto. Queste funzioni attendono l'input e non vengono restituite fino a quando non è disponibile l'input.
 
-Per indicare una condizione di errore di lettura o di fine file, **GetChar** restituisce **EOF**e **getwchar** restituisce **WEOF**. Per **GetChar**, usare **Ferrer** o **feof** per verificare la presenza di un errore o della fine del file.
+Per indicare una condizione di errore di lettura o di fine file, **GetChar** restituisce **EOF** e **getwchar** restituisce **WEOF**. Per **GetChar**, usare **Ferrer** o **feof** per verificare la presenza di un errore o della fine del file.
 
 ## <a name="remarks"></a>Commenti
 
@@ -78,7 +79,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |**GetChar**|\<stdio.h>|
 |**getwchar**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout**e **stderr**devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout** e **stderr** devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

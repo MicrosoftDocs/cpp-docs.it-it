@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: type_info Class'
 title: Classe type_info
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - class type_info
 - type_info class
 ms.assetid: 894ddda2-7de4-4da3-9404-d2c74e356c16
-ms.openlocfilehash: 7a016fe8fee4e5765e6172184bfa9c90eecbc687
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6be4d6774842ad015b34e771455026ca27e6539b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160671"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295315"
 ---
 # <a name="type_info-class"></a>Classe type_info
 
 La classe **type_info** descrive le informazioni sul tipo generate all'interno del programma dal compilatore. Gli oggetti di questa classe consentono di archiviare un puntatore a un nome per il tipo. La classe **type_info** archivia anche un valore codificato adatto per confrontare due tipi per verificarne l'uguaglianza o l'ordine di ordinamento. Le regole di codifica e la sequenza di ordinamento per i tipi non sono specificate e possono variare in base al programma.
 
-Per usare la classe **type_info** , è necessario includere il file di intestazione `<typeinfo>`. L'interfaccia per la classe **type_info** è:
+Il `<typeinfo>` file di intestazione deve essere incluso per usare la classe **type_info** . L'interfaccia per la classe **type_info** è:
 
 ```cpp
 class type_info {
@@ -40,16 +41,16 @@ Non è possibile creare direttamente istanze di oggetti della classe **type_info
 
 `type_info::hash_code` definisce una funzione hash adatta per il mapping di valori di tipo **TypeInfo** a una distribuzione di valori di indice.
 
-È possibile utilizzare gli operatori `==` e `!=` per confrontare l'uguaglianza e la disuguaglianza con altri oggetti **type_info** , rispettivamente.
+Gli operatori `==` e `!=` possono essere utilizzati per confrontare l'uguaglianza e la disuguaglianza con altri oggetti **type_info** rispettivamente.
 
-Non esiste alcun collegamento tra l'ordinamento dei tipi e le relazioni di ereditarietà. Utilizzare la funzione membro `type_info::before` per determinare la sequenza di ordinamento dei tipi. Non esiste alcuna garanzia che `type_info::before` produrrà lo stesso risultato in programmi diversi o anche in esecuzioni diverse dello stesso programma. In questo modo, `type_info::before` è simile all'operatore address-of `(&)`.
+Non esiste alcun collegamento tra l'ordinamento dei tipi e le relazioni di ereditarietà. Utilizzare la `type_info::before` funzione membro per determinare la sequenza di ordinamento dei tipi. Non esiste alcuna garanzia che produrrà `type_info::before` lo stesso risultato in programmi diversi o anche in esecuzioni diverse dello stesso programma. In questo modo, `type_info::before` è simile all'operatore address-of `(&)` .
 
-La funzione membro `type_info::name` restituisce una `const char*` a una stringa con terminazione null che rappresenta il nome leggibile del tipo. La memoria a cui si fa riferimento viene memorizzata nella cache e non deve essere mai direttamente deallocata.
+La `type_info::name` funzione membro restituisce un oggetto `const char*` a una stringa con terminazione null che rappresenta il nome leggibile del tipo. La memoria a cui si fa riferimento viene memorizzata nella cache e non deve essere mai direttamente deallocata.
 
-La funzione membro `type_info::raw_name` restituisce una `const char*` a una stringa con terminazione null che rappresenta il nome decorato del tipo di oggetto. Il nome viene archiviato nel formato decorato per risparmiare spazio. Di conseguenza, questa funzione è più veloce di `type_info::name` perché non è necessario dedecorare il nome. La stringa restituita dalla funzione `type_info::raw_name` è utile nelle operazioni di confronto, ma non è leggibile. Se è necessaria una stringa leggibile, usare invece la funzione `type_info::name`.
+La `type_info::raw_name` funzione membro restituisce un `const char*` oggetto a una stringa con terminazione null che rappresenta il nome decorato del tipo di oggetto. Il nome viene archiviato nel formato decorato per risparmiare spazio. Di conseguenza, questa funzione è più veloce di `type_info::name` perché non è necessario dedecorare il nome. La stringa restituita dalla `type_info::raw_name` funzione è utile nelle operazioni di confronto, ma non è leggibile. Se è necessaria una stringa leggibile, usare invece la `type_info::name` funzione.
 
-Le informazioni sul tipo vengono generate per le classi polimorfiche solo se è specificata l'opzione del compilatore [/gr (Abilita informazioni sui tipi in fase di esecuzione)](../build/reference/gr-enable-run-time-type-information.md) .
+Le informazioni sul tipo vengono generate per le classi polimorfiche solo se è specificata l'opzione del compilatore [/gr (Abilita informazioni sul tipo di Run-Time)](../build/reference/gr-enable-run-time-type-information.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Informazioni sui tipi di runtime](../cpp/run-time-type-information.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 3) C4580'
 title: Avviso del compilatore (livello 3) C4580
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4580
 ms.assetid: fef6e8e0-0d6a-44fa-b22a-2fe7ba2ef379
-ms.openlocfilehash: 28d8534dad5fc1b234c180b879ad0645f05cfd65
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0bda682526081023c9208d548023f7c8b7316db9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198614"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97294717"
 ---
 # <a name="compiler-warning-level-3-c4580"></a>Avviso del compilatore (livello 3) C4580
 

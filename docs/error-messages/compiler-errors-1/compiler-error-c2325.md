@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2325'
 title: Errore del compilatore C2325
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2325
 ms.assetid: e6b0a186-3f2a-4adf-beae-fadd75492bf7
-ms.openlocfilehash: 4ed0ca7403ff88ddcd0bd71123b1cbead7d020e1
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 899031fcd5bfe0e924232a05f3481f3bc65d0e63
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74747813"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312059"
 ---
 # <a name="compiler-error-c2325"></a>Errore del compilatore C2325
 

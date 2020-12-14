@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: limiti per Floating-Point costanti'
 title: Limiti sulle costanti a virgola mobile
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - limits, floating-point constants
 - floating-point numbers, floating limits
 ms.assetid: 2d975868-2af6-45d7-a8af-db79f2c6b67b
-ms.openlocfilehash: df39ee719a4474f6dfd55d31a2848169a1168390
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 345e57348843a62b99b1565b8966df682d5fed8c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325585"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257160"
 ---
 # <a name="limits-on-floating-point-constants"></a>Limiti sulle costanti a virgola mobile
 
@@ -24,7 +25,7 @@ I limiti sui valori delle costanti a virgola mobile sono indicati nella tabella 
 
 ### <a name="limits-on-floating-point-constants"></a>Limiti sulle costanti a virgola mobile
 
-|Costante|Significato|valore|
+|Costante|Significato|Valore|
 |--------------|-------------|-----------|
 |**FLT_DIG**<br />**DBL_DIG**<br />**LDBL_DIG**|Numero di cifre, *q*, in modo che un numero a virgola mobile con *q* cifre decimali possa essere arrotondato in una rappresentazione a virgola mobile e viceversa senza perdita di precisione.|6<br />15<br />15|
 |**FLT_EPSILON**<br />**DBL_EPSILON**<br />**LDBL_EPSILON**|Minor numero positivo *x* tale che *x* + 1 non sia uguale a 1|1.192092896e-07F<br />2.2204460492503131e-016<br />2.2204460492503131e-016|
@@ -44,6 +45,6 @@ Si noti che le informazioni contenute nella tabella precedente possono variare n
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Costanti C a virgola mobile](../c-language/c-floating-point-constants.md)
+[Costanti Floating-Point C](../c-language/c-floating-point-constants.md)

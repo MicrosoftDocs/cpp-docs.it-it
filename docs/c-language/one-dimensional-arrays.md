@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: matrici di One-Dimensional'
 title: Matrici unidimensionali
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - square brackets [ ], arrays
 - subscript expressions
 ms.assetid: e28536e5-3b77-46b5-97fd-9b938c771816
-ms.openlocfilehash: c310d610b4e4cfc5ae5620d38337a5b8fd5243ef
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6c75d4b8d9a64f95f3698e6953949a71df60cad6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226353"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256900"
 ---
 # <a name="one-dimensional-arrays"></a>Matrici unidimensionali
 
@@ -59,6 +60,6 @@ Si supponga, ad esempio, che l'identificatore faccia `line` riferimento a una ma
 
 L'espressione di indice `line[0]` rappresenta il valore del primo elemento della riga, poiché l'offset dall'indirizzo rappresentato da `line` è 0. Analogamente, un'espressione come `line[5]` fa riferimento all'offset dell'elemento cinque posizioni dalla riga o al sesto elemento della matrice.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Operatore di indice:](../cpp/subscript-operator.md)

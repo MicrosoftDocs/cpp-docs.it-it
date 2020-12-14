@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _msize_dbg'
 title: _msize_dbg
 ms.date: 11/04/2016
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - _msize_dbg function
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
-ms.openlocfilehash: 7fa12689a35beaad0727c14327d1b948a62c29d0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8ead0257e990322e88e20ce6111ff590dbc71686
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951483"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256393"
 ---
 # <a name="_msize_dbg"></a>_msize_dbg
 
@@ -56,13 +57,13 @@ Tipo del blocco di memoria specificato: **_CLIENT_BLOCK** o **_NORMAL_BLOCK**.
 
 ## <a name="return-value"></a>Valore restituito
 
-Al termine, **_msize_dbg** restituisce le dimensioni (in byte) del blocco di memoria specificato. in caso contrario, restituisce **null**.
+Al completamento, **_msize_dbg** restituisce le dimensioni (in byte) del blocco di memoria specificato. in caso contrario, restituisce **null**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-**_msize_dbg** è una versione di debug della funzione _[msize](msize.md) . Quando _ [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **_msize_dbg** viene ridotta a una chiamata a **_msize**. Sia **_msize** che **_msize_dbg** calcolano le dimensioni di un blocco di memoria nell'heap di base, ma **_msize_dbg** aggiunge due funzionalità di debug: Include i buffer su entrambi i lati della parte utente del blocco di memoria nelle dimensioni restituite e consente i calcoli delle dimensioni per tipi di blocchi specifici.
+**_msize_dbg** è una versione di debug della funzione _ [msize](msize.md) . Quando [_DEBUG](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **_msize_dbg** viene ridotta a una chiamata a **_msize**. Sia **_msize** che **_msize_dbg** calcolano le dimensioni di un blocco di memoria nell'heap di base, ma **_msize_dbg** aggiunge due funzionalità di debug: include i buffer su entrambi i lati della parte utente del blocco di memoria nelle dimensioni restituite e consente i calcoli delle dimensioni per tipi di blocchi specifici.
 
-Per informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Per informazioni sui tipi di blocchi di allocazione e su come vengono usati, vedere [Tipi di blocchi sull'heap di debug](/visualstudio/debugger/crt-debug-heap-details). Per informazioni sulle differenze tra chiamare una funzione standard dell'heap e la sua versione di debug nella build di debug di un'applicazione, vedere [Versioni di debug di funzioni di allocazione heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
+Per informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Per informazioni sui tipi di blocchi di allocazione e su come vengono usati, vedere [tipi di blocchi sull'heap di debug](/visualstudio/debugger/crt-debug-heap-details). Per informazioni sulle differenze tra chiamare una funzione standard dell'heap e la sua versione di debug nella build di debug di un'applicazione, vedere [Versioni di debug di funzioni di allocazione heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
 Questa funzione convalida il relativo parametro. Se *memblock* è un puntatore null, **_msize** richiama un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'errore viene gestito, la funzione imposta **errno** su **EINVAL** e restituisce-1.
 
@@ -72,7 +73,7 @@ Questa funzione convalida il relativo parametro. Se *memblock* è un puntatore n
 |-------------|---------------------|
 |**_msize_dbg**|\<crtdbg.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 
@@ -137,7 +138,7 @@ Size of block after _malloc_dbg of 40 longs: 160
 Size of block after _realloc_dbg of 40 more longs: 320
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Routine di debug](../../c-runtime-library/debug-routines.md)<br/>
 [_malloc_dbg](malloc-dbg.md)<br/>

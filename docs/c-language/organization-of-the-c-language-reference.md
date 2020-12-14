@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: organizzazione dei riferimenti al linguaggio C'
 title: Organizzazione dei riferimenti al linguaggio C
 ms.date: 11/04/2016
 ms.assetid: 7e42daa4-9c9e-4c2d-bbc4-e45405803c20
-ms.openlocfilehash: 864cef5fe7a6fc2a737d5cc0e850e3db760bddc6
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 7631b3dd115e0766895a958c966ead8ce7f89b11
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343187"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256887"
 ---
 # <a name="organization-of-the-c-language-reference"></a>Organizzazione dei riferimenti al linguaggio C
 
@@ -25,8 +26,8 @@ ms.locfileid: "64343187"
 
 - [Riepilogo della sintassi del linguaggio C](../c-language/c-language-syntax-summary.md)
 
-- [Comportamento definito in fase di implementazione](../c-language/implementation-defined-behavior.md)
+- [Comportamento definito dall'implementazione](../c-language/implementation-defined-behavior.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimenti per il linguaggio C](../c-language/c-language-reference.md)

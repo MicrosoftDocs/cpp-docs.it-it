@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore irreversibile C1509'
 title: Errore irreversibile C1509
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1509
 ms.assetid: 40dd100d-c6ba-451c-bd26-2c99ec1c36d6
-ms.openlocfilehash: 0d1d7255dd64239a6a76bb15a1f309b43eac0d4b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: dc2483ae96f599912b3ba6d1594257fec81ac251
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80202956"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97276348"
 ---
 # <a name="fatal-error-c1509"></a>Errore irreversibile C1509
 

@@ -1,28 +1,29 @@
 ---
+description: 'Altre informazioni su: integer'
 title: Integer
 ms.date: 11/04/2016
 helpviewer_keywords:
 - integers
 ms.assetid: 4ea91011-5b88-41f8-ab3c-c0bca57c6987
-ms.openlocfilehash: e78436958372db49202e6deaf6fd0840b5bcdd13
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 200aa284d2148b944807455a702c908c4065c01f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344185"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257212"
 ---
 # <a name="integers"></a>Integer
 
-- [Intervallo di valori interi](../c-language/range-of-integer-values.md)
+- [Intervallo di valori integer](../c-language/range-of-integer-values.md)
 
-- [Abbassamento di livello degli interi](../c-language/demotion-of-integers.md)
+- [Abbassamento di numero di numeri interi](../c-language/demotion-of-integers.md)
 
-- [Operazioni bit per bit con segno](../c-language/signed-bitwise-operations.md)
+- [Operazioni bit per bit firmate](../c-language/signed-bitwise-operations.md)
 
 - [Resti](../c-language/remainders.md)
 
 - [Spostamenti a destra](../c-language/right-shifts.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Comportamento definito in fase di implementazione](../c-language/implementation-defined-behavior.md)
+[Comportamento definito dall'implementazione](../c-language/implementation-defined-behavior.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Nan, nanf (, nAnL'
 title: nan, nanf, nanl
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-ms.openlocfilehash: 77e933b971312097ec9eddd342b3b4dc2df34204
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3fd5fcb004058baf8d216385cde023033f29f08f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914581"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256328"
 ---
 # <a name="nan-nanf-nanl"></a>nan, nanf, nanl
 
@@ -62,7 +63,7 @@ Valore stringa.
 
 Le funzioni **NaN** restituiscono un valore NaN non interattiva.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le funzioni **NaN** restituiscono un valore a virgola mobile che corrisponde a un valore NaN non interattivo (senza segnalazione). Il valore di *input* viene ignorato. Per informazioni sulla rappresentazione di un valore NaN per l'output, vedere [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
@@ -70,13 +71,13 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione C|Intestazione C++|
+|Funzione|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
 |**NaN**, **nanf (**, **nAnL**|\<math.h>|\<cmath> o \<math.h>|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>

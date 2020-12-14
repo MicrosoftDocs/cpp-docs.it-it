@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _msize'
 title: _msize
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - msize function
 - _msize function
 ms.assetid: 02b1f89e-d0d7-4f12-938a-9eeba48a0f88
-ms.openlocfilehash: cc8eef0d28f649340715edbf4b1ebdfea85c2ff2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e1a913f008037673bf8c10e73095a898610039d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914615"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256354"
 ---
 # <a name="_msize"></a>_msize
 
@@ -57,9 +58,9 @@ Puntatore al blocco di memoria.
 
 **_msize** restituisce le dimensioni (in byte) come Unsigned Integer.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **_msize** restituisce le dimensioni, in byte, del blocco di memoria allocato da una chiamata a **calloc**, **malloc**o **realloc**.
+La funzione **_msize** restituisce le dimensioni, in byte, del blocco di memoria allocato da una chiamata a **calloc**, **malloc** o **realloc**.
 
 Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, **_msize** risolve [_msize_dbg](msize-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).
 
@@ -83,9 +84,9 @@ Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-libr
 
 Vedere l'esempio per [realloc](realloc.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Allocazione della memoria](../../c-runtime-library/memory-allocation.md)<br/>
+[Allocazione di memoria](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
 [_expand](expand.md)<br/>
 [malloc](malloc.md)<br/>

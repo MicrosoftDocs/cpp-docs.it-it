@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: forme obsolete di dichiarazioni e definizioni di funzioni'
 title: Forme obsolete di dichiarazioni e definizioni di funzioni
 ms.date: 11/04/2016
 helpviewer_keywords:
 - old style function declarations
 ms.assetid: 67c5038f-0529-4f29-9d0f-c27580977b50
-ms.openlocfilehash: 3311fc846ad0f4f80c2e3b61508edd626a13fbb2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7cd66ba1600d4a5fd381819f4b1d3f0beeb30f0a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218793"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256913"
 ---
 # <a name="obsolete-forms-of-function-declarations-and-definitions"></a>Forme obsolete di dichiarazioni e definizioni di funzioni
 
@@ -49,6 +50,6 @@ Anche le dichiarazioni di funzione obsolete generano avvisi se, in un secondo mo
 
 Nella sezione successiva, [Definizioni di funzioni C](../c-language/c-function-definitions.md), viene illustrata la sintassi per le definizioni di funzioni, inclusa la sintassi obsoleta. Il non terminale per l'elenco dei parametri nella sintassi obsoleta è *identifier-list*.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Panoramica delle funzioni](../c-language/overview-of-functions.md)

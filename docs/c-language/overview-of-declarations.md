@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: Cenni preliminari sulle dichiarazioni'
 title: Cenni preliminari sulle dichiarazioni
 ms.date: 11/04/2016
 helpviewer_keywords:
 - declarations, about declarations
 - type qualifiers
 ms.assetid: fcd2364c-c2a5-4fbf-9027-19dac4144cb5
-ms.openlocfilehash: 066c0fd307c7562d70c57c31dff23960a6305f2c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 53b8c808771aa3bb455655e6e0c5b06ff1fa9acd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217077"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256848"
 ---
 # <a name="overview-of-declarations"></a>Cenni preliminari sulle dichiarazioni
 
@@ -57,7 +58,7 @@ Tutte le definizioni sono implicitamente dichiarazioni, ma non tutte le dichiara
 
 Una classe o un tipo di archiviazione (o entrambi) è necessaria nelle dichiarazioni delle variabili. Ad eccezione di **`__declspec`** , in una dichiarazione è consentito un solo identificatore di classi di archiviazione e non tutti gli identificatori della classe di archiviazione sono consentiti in ogni contesto. La **`__declspec`** classe di archiviazione è consentita con altri identificatori di classi di archiviazione ed è consentita più di una volta. L'identificatore di classi di archiviazione di una dichiarazione incide sulla modalità di archiviazione e inizializzazione dell'elemento dichiarato e su quali parti di un programma possono fare riferimento all'elemento.
 
-I *`storage-class-specifier`* terminali definiti in C includono **`auto`** ,,, **`extern`** **`register`** **`static`** e **`typedef`** . Microsoft C include anche il *`storage-class-specifier`* terminale **`__declspec`** . Tutti i *`storage-class-specifier`* terminali eccetto **`typedef`** e **`__declspec`** sono descritti in classi di [archiviazione](../c-language/c-storage-classes.md). Per informazioni su **`typedef`** , vedere [ `typedef` dichiarazioni](../c-language/typedef-declarations.md). Per informazioni su **`__declspec`** , vedere [attributi estesi della classe di archiviazione](../c-language/c-extended-storage-class-attributes.md).
+I *`storage-class-specifier`* terminali definiti in C includono **`auto`** ,,, **`extern`** **`register`** **`static`** e **`typedef`** . Microsoft C include anche il *`storage-class-specifier`* terminale **`__declspec`** . Tutti i *`storage-class-specifier`* terminali eccetto **`typedef`** e **`__declspec`** sono descritti in classi di [archiviazione](../c-language/c-storage-classes.md). Per informazioni su **`typedef`** , vedere [ `typedef` dichiarazioni](../c-language/typedef-declarations.md). Per informazioni su **`__declspec`** , vedere [attributi di Storage-Class estese](../c-language/c-extended-storage-class-attributes.md).
 
 La posizione della dichiarazione all'interno del programma di origine e la presenza o l'assenza di altre dichiarazioni della variabile sono fattori importanti nel determinare la durata delle variabili. Possono esserci più ridichiarazioni, ma una sola definizione. Tuttavia, una definizione può apparire in più unità di conversione. Per oggetti con collegamento interno, questa regola di applica separatamente a ogni unità di conversione, perché gli oggetti collegati internamente sono univoci di un'unità di conversione. Per gli oggetti con collegamenti esterni, questa regola si applica all'intero programma. Per ulteriori informazioni sulla visibilità, vedere [durata, ambito, visibilità e collegamento](../c-language/lifetime-scope-visibility-and-linkage.md).
 
@@ -65,7 +66,7 @@ Gli identificatori di tipi forniscono alcune informazioni sui tipi di dati degli
 
 Sono disponibili due *`type-qualifier`* terminali: **`const`** e **`volatile`** . Questi qualificatori specificano le proprietà aggiuntive dei tipi pertinenti solo durante l'accesso agli oggetti di tale tipo attraverso le espressioni l-value. Per ulteriori informazioni su **`const`** e **`volatile`** , vedere [qualificatori di tipo](../c-language/type-qualifiers.md). Per una definizione di l-value, vedere [Espressioni L-Value e R-Value](../c-language/l-value-and-r-value-expressions.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riepilogo della sintassi del linguaggio C](../c-language/c-language-syntax-summary.md)<br/>
 [Dichiarazioni e tipi](../c-language/declarations-and-types.md)<br/>

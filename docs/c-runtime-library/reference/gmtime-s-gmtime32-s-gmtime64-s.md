@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: gmtime_s, _gmtime32_s, _gmtime64_s'
 title: gmtime_s, _gmtime32_s, _gmtime64_s
 ms.date: 4/2/2020
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - _gmtime_s function
 - _gmtime32_s function
 ms.assetid: 261c7df0-2b0c-44ba-ba61-cb83efaec60f
-ms.openlocfilehash: 8cebd2eab1c0a5b650f33ccca1e87a0a8cad1e08
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bffe11bd655ed8cfead6b862abf0237270c3af20
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213554"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296459"
 ---
 # <a name="gmtime_s-_gmtime32_s-_gmtime64_s"></a>gmtime_s, _gmtime32_s, _gmtime64_s
 
@@ -91,7 +92,7 @@ Zero in caso di esito positivo. Il valore restituito è un codice di errore se s
 
 Nel caso delle prime due condizioni di errore viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono **EINVAL**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_gmtime32_s** suddivide il valore *sourceTime* e lo archivia in una struttura di tipo **TM**, definita in time. h. L'indirizzo della struttura viene passato in *tmDest*. Il valore di *sourceTime* viene in genere ottenuto da una chiamata alla funzione [Time](time-time32-time64.md) .
 
@@ -100,7 +101,7 @@ La funzione **_gmtime32_s** suddivide il valore *sourceTime* e lo archivia in un
 
 Ognuno dei campi della struttura è di tipo **`int`** , come illustrato nella tabella seguente.
 
-|Campo|Descrizione|
+|Campo|Description|
 |-|-|
 |**tm_sec**|Secondi dopo il minuto (0-59).|
 |**tm_min**|Minuti dopo l'ora (0-59).|
@@ -114,7 +115,7 @@ Ognuno dei campi della struttura è di tipo **`int`** , come illustrato nella ta
 
 **_gmtime64_s**, che usa la struttura **__time64_t** , consente di esprimere le date fino a 23:59:59, 31 dicembre 3000, UTC; mentre **gmtime32_s** rappresentano solo le date fino 23:59:59 del 18 gennaio 2038, UTC. La mezzanotte del 1 gennaio 1970 è il limite inferiore dell'intervallo di date per entrambe queste funzioni.
 
-**gmtime_s** è una funzione inline che restituisce **_gmtime64_s** e **time_t** equivale a **__time64_t**. Se è necessario forzare il compilatore a interpretare **time_t** come la precedente **time_t**a 32 bit, è possibile definire **_USE_32BIT_TIME_T**. Questa operazione causerà l'inline **gmtime_s** **_gmtime32_s**. Questa operazione non è consigliabile perché potrebbero verificarsi errori per l'applicazione dopo il 18 gennaio 2038 e l'uso non è consentito in piattaforme a 64 bit.
+**gmtime_s** è una funzione inline che restituisce **_gmtime64_s** e **time_t** equivale a **__time64_t**. Se è necessario forzare il compilatore a interpretare **time_t** come la precedente **time_t** a 32 bit, è possibile definire **_USE_32BIT_TIME_T**. Questa operazione causerà l'inline **gmtime_s** **_gmtime32_s**. Questa operazione non è consigliabile perché potrebbero verificarsi errori per l'applicazione dopo il 18 gennaio 2038 e l'uso non è consentito in piattaforme a 64 bit.
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 

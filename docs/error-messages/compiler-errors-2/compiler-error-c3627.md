@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3627'
 title: Errore del compilatore C3627
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3627
 ms.assetid: 905ad0a0-8c49-4187-b66e-b375f5a1fae5
-ms.openlocfilehash: abed75e679aaf2b244667916a9725a09c46c80e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: acd2dc0ca969b9954979c63613996ff83ef63a4c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221750"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97294964"
 ---
 # <a name="compiler-error-c3627"></a>Errore del compilatore C3627
 
-Solo un tipo di valore può essere sottoposto a boxing
+Solo un tipo valore può essere boxed
 
-Solo le classi di valore possono essere sottoposto a boxing.
+È possibile sottoporre a Boxing solo le classi valore.

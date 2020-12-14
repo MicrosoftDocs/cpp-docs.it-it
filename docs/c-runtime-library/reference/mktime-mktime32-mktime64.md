@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: mktime, _mktime32, _mktime64'
 title: mktime, _mktime32, _mktime64
 ms.date: 4/2/2020
 api_name:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - _mktime64 function
 - time, converting
 ms.assetid: 284ed5d4-7064-48a2-bd50-15effdae32cf
-ms.openlocfilehash: 48d1104d9680fe8ab88f0f73bfc179f3e4cf45a6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: aebb12324de5a18dfac6ab84b3b7b2c3da15a2ad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919076"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256419"
 ---
 # <a name="mktime-_mktime32-_mktime64"></a>mktime, _mktime32, _mktime64
 
@@ -73,7 +74,7 @@ Puntatore alla struttura temporale. Vedere [asctime](asctime-wasctime.md).
 
 **_mktime64** restituirà-1 cast al tipo **__time64_t** se *timeptr* fa riferimento a una data successiva 23:59:59, 31 dicembre 3000, UTC.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le funzioni **mktime**, **_mktime32** e **_mktime64** convertono la struttura temporale fornita (probabilmente incompleta) a cui punta *timeptr* in una struttura completamente definita con valori normalizzati, quindi la converte in un valore di tempo di **time_t** calendario. L'ora convertita ha la stessa codifica usata per i valori restituiti dalla funzione [time](time-time32-time64.md). I valori originali dei componenti **tm_wday** e **tm_yday** della struttura *timeptr* vengono ignorati e i valori originali degli altri componenti non sono limitati ai relativi intervalli normali.
 
@@ -91,7 +92,7 @@ Queste funzioni possono essere usate per convalidare e compilare una struttura t
 
 La libreria di runtime C determinerà le impostazioni relative al comportamento dell'ora legale in base alla variabile di ambiente [TZ](tzset.md). Se **TZ** non è impostato, viene usata la chiamata API Win32 [GetTimeZoneInformation](/windows/win32/api/timezoneapi/nf-timezoneapi-gettimezoneinformation) per ottenere le informazioni sull'ora legale dal sistema operativo. Se anche questo metodo non riesce, la libreria presupporrà l'uso delle regole relative agli Stati Uniti per implementare il calcolo dell'ora legale. **tm_isdst** è un campo obbligatorio. Se non impostato, il relativo valore resta non definito e il valore restituito da queste funzioni è imprevedibile. Se *timeptr* punta a una struttura **TM** restituita da una precedente chiamata [a asctime](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md)o [localtime](localtime-localtime32-localtime64.md) (o varianti di queste funzioni), il campo **tm_isdst** contiene il valore corretto.
 
-Si noti che **gmtime** e **localtime** ( **e _gmtime32**, **_gmtime64**, **_localtime32**e **_localtime64**) usano un singolo buffer per thread per la conversione. Se si fornisce questo buffer a **mktime**, **_mktime32** o **_mktime64**, il contenuto precedente viene eliminato definitivamente.
+Si noti che **gmtime** e **localtime** ( **e _gmtime32**, **_gmtime64**, **_localtime32** e **_localtime64**) usano un singolo buffer per thread per la conversione. Se si fornisce questo buffer a **mktime**, **_mktime32** o **_mktime64**, il contenuto precedente viene eliminato definitivamente.
 
 Queste funzioni convalidano il proprio parametro. Se *timeptr* è un puntatore Null, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono-1 e impostano **errno** su **EINVAL**.
 
@@ -152,7 +153,7 @@ Current time is Fri Apr 25 13:34:07 2003
 In 20 days the time will be Thu May 15 13:34:07 2003
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione del tempo](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _ismbbtrail, _ismbbtrail_l'
 title: _ismbbtrail, _ismbbtrail_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _ismbbtrail_l function
 - ismbbtrail function
 ms.assetid: dfdd0292-960b-4c1d-bf11-146e0fc80247
-ms.openlocfilehash: 08229b4a35634193810f7c24a3f8749fba034872
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 4c9737cb0d4c3e4d1acf35e0c0cbea18ccba3f69
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918683"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256432"
 ---
 # <a name="_ismbbtrail-_ismbbtrail_l"></a>_ismbbtrail, _ismbbtrail_l
 
@@ -69,7 +70,7 @@ Impostazioni locali da usare.
 
 **_ismbbtrail** restituisce un valore diverso da zero se l'integer *c* è il secondo byte di un carattere multibyte. Ad esempio, solo nella tabella codici 932, gli intervalli validi sono da 0x40 a 0x7E e da 0x80 a 0xFC.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 **_ismbbtrail** usa le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. **_ismbbtrail_l** è identico, ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
@@ -86,7 +87,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Classificazione per byte](../../c-runtime-library/byte-classification.md)<br/>
+[Classificazione byte](../../c-runtime-library/byte-classification.md)<br/>
 [Routine di _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

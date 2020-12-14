@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Norm, normf, Normal'
 title: norm, normf, norml
 ms.date: 04/05/2018
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - normf function
 - norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
-ms.openlocfilehash: 38e7283ca5acd5571589d3ef0b19c626806e4bca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 175cff5f9c0e31a56a86a96c3262e2c3c546fe4a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234055"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256302"
 ---
 # <a name="norm-normf-norml"></a>norm, normf, norml
 
@@ -66,7 +67,7 @@ Numero complesso.
 
 Grandezza quadrata della *z*.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Poiché C++ consente l'overload, è possibile chiamare gli overload di **Norm** che accettano valori **_Fcomplex** o **_Lcomplex** e restituiscono **`float`** **`long double`** valori o. In un programma C, **Norm** accetta sempre un valore **_Dcomplex** e restituisce un **`double`** valore.
 
@@ -76,9 +77,9 @@ Poiché C++ consente l'overload, è possibile chiamare gli overload di **Norm** 
 |-------------|--------------|------------------|
 |**norma**, **normf**, **Normal**|\<complex.h>|\<complex.h>|
 
-I tipi **_Fcomplex**, **_Dcomplex**e **_Lcomplex** sono equivalenti specifici di Microsoft dei tipi C99 nativi non implementati **float _Complex**, **Double _Complex**e **long double _Complex**, rispettivamente.  Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
+I tipi **_Fcomplex**, **_Dcomplex** e **_Lcomplex** sono equivalenti specifici di Microsoft dei tipi C99 nativi non implementati **float _Complex**, **Double _Complex** e **long double _Complex**, rispettivamente.  Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>
