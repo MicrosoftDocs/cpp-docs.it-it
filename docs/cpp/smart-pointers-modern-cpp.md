@@ -1,14 +1,15 @@
 ---
+description: 'Altre informazioni su: puntatori intelligenti (C++ moderno)'
 title: Puntatori intelligenti (C++ moderno)
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
-ms.openlocfilehash: e511cc513cdb35b06b976ce022c5e4edea35040b
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: b26b038b040f1bed5197fc1cd9b5518249c0ad95
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500687"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221215"
 ---
 # <a name="smart-pointers-modern-c"></a>Puntatori intelligenti (C++ moderno)
 
@@ -114,8 +115,8 @@ Classe che incapsula una matrice di elementi `CAutoPtr`.
 [Classe CAutoPtrList](../atl/reference/cautoptrlist-class.md)<br/>
 Classe che incapsula metodi per modificare un elenco di nodi `CAutoPtr`.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Pointers](pointers-cpp.md)<br/>
+[Puntatori](pointers-cpp.md)<br/>
 [Riferimenti per il linguaggio C++](../cpp/cpp-language-reference.md)<br/>
 [Libreria standard C++](../standard-library/cpp-standard-library-reference.md)

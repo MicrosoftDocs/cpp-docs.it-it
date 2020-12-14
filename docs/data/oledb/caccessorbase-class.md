@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Classe CAccessorBase'
 title: Classe CAccessorBase
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: 81b0ecd8ded7acb0c0e376d0869decb2bfcb590e
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 43d3f507f8ee003605cf2b3f964b06a3c1088233
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509118"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221176"
 ---
 # <a name="caccessorbase-class"></a>Classe CAccessorBase
 
@@ -46,7 +47,7 @@ Tutte le funzioni di accesso nei modelli di OLE DB derivano da questa classe. `C
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |--|--|
 | [Close](#close) | Chiude le funzioni di accesso. |
 | [GetHAccessor](#geth) | Recupera l'handle della funzione di accesso. |
@@ -143,11 +144,11 @@ in Puntatore a un' `IUnknown` interfaccia per l'oggetto com per il quale sono st
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamata eseguita da [CAccessorRowset:: Close](./caccessorrowset-class.md#close).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

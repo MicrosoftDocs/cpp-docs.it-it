@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: mappe sink di evento'
 title: Mappe sink di evento
 ms.date: 11/04/2016
 helpviewer_keywords:
 - event sink maps [MFC]
 ms.assetid: a9757eb2-5f4a-45ec-a2cd-ce5eec85b16f
-ms.openlocfilehash: 2cbfbc70ae14ccda95c377cb1587bf9d2a1ad3e6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: df18cdbba849ff0c8d7be5b038f997b6cc5df849
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837264"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219837"
 ---
 # <a name="event-sink-maps"></a>Mappe sink di evento
 
@@ -17,7 +18,7 @@ Quando un controllo OLE incorporato genera un evento, il contenitore del control
 
 ### <a name="event-sink-maps"></a>Mappe sink di evento
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[BEGIN_EVENTSINK_MAP](#begin_eventsink_map)|Avvia la definizione di una mappa di sink di evento.|
 |[DECLARE_EVENTSINK_MAP](#declare_eventsink_map)|Dichiara una mappa di sink di evento.|
@@ -45,7 +46,7 @@ Specifica il nome della classe del controllo il cui mapping di sink di evento è
 *baseClass*<br/>
 Specifica il nome della classe di base di *theClass*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Nel file di implementazione (. cpp) che definisce le funzioni membro per la classe, avviare la mappa di sink di evento con la macro BEGIN_EVENTSINK_MAP, quindi aggiungere le voci della macro per ogni evento a cui ricevere una notifica e completare la mappa di sink di evento con la macro END_EVENTSINK_MAP.
 
@@ -63,7 +64,7 @@ Un contenitore OLE può fornire una mappa di sink di evento per specificare gli 
 DECLARE_EVENTSINK_MAP()
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare la macro DECLARE_EVENTSINK_MAP alla fine della dichiarazione di classe. Quindi, in. File CPP che definisce le funzioni membro per la classe, usa la macro BEGIN_EVENTSINK_MAP, le voci della macro per ogni evento di cui ricevere una notifica e la macro END_EVENTSINK_MAP per dichiarare la fine dell'elenco di sink di evento.
 
@@ -110,7 +111,7 @@ Puntatore a una funzione membro che gestisce l'evento. Questa funzione deve aver
 *vtsParams*<br/>
 Sequenza di **VTS_** costanti che specifica i tipi dei parametri per l'evento. Si tratta delle stesse costanti utilizzate nelle voci della mappa di invio, ad esempio DISP_FUNCTION.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'argomento *vtsParams* è un elenco separato da spazi dei valori delle costanti **VTS_** . Uno o più valori separati da spazi (non virgole) specificano l'elenco di parametri della funzione. Ad esempio:
 
@@ -152,7 +153,7 @@ Puntatore a una funzione membro che gestisce l'evento. Questa funzione deve aver
 *vtsParams*<br/>
 Sequenza di **VTS_** costanti che specifica i tipi dei parametri per l'evento. La prima costante deve essere di tipo VTS_I4, per l'ID del controllo. Si tratta delle stesse costanti utilizzate nelle voci della mappa di invio, ad esempio DISP_FUNCTION.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'argomento *vtsParams* è un elenco separato da spazi dei valori delle costanti **VTS_** . Uno o più valori separati da spazi (non virgole) specificano l'elenco di parametri della funzione. Ad esempio:
 
@@ -198,7 +199,7 @@ Puntatore a una funzione membro che gestisce l'evento. Questa funzione deve aver
 *vtsParams*<br/>
 Sequenza di **VTS_** costanti che specifica i tipi dei parametri per l'evento. Si tratta delle stesse costanti utilizzate nelle voci della mappa di invio, ad esempio DISP_FUNCTION.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'argomento *vtsParams* è un elenco separato da spazi dei valori delle costanti **VTS_** .
 
@@ -239,7 +240,7 @@ Puntatore a una funzione membro che gestisce la `OnRequestEdit` notifica per que
 *pfnChanged*<br/>
 Puntatore a una funzione membro che gestisce la `OnChanged` notifica per questa proprietà. La funzione deve avere un tipo restituito BOOL e un parametro UINT. La funzione deve restituire TRUE per indicare che la notifica è stata gestita. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'argomento *vtsParams* è un elenco separato da spazi dei valori delle costanti **VTS_** . Uno o più valori separati da spazi (non virgole) specificano l'elenco di parametri della funzione. Ad esempio:
 
@@ -309,6 +310,6 @@ Puntatore a una funzione membro che gestisce la `OnChanged` notifica per questa 
 
   **Intestazione** afxdisp. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)

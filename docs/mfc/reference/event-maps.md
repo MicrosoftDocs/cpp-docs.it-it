@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: mappe eventi'
 title: Mappe eventi
 ms.date: 09/07/2019
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: aa11dbe1a0a3dc45893d1a05cda0ef1addb9e665
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f3a6e949a4dc40927fc8946610707fbb404a400b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837346"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219850"
 ---
 # <a name="event-maps"></a>Mappe eventi
 
@@ -29,7 +30,7 @@ Per supportare le mappe eventi, MFC fornisce le seguenti macro:
 
 ### <a name="event-map-declaration-and-demarcation"></a>Dichiarazione e delimitazione della mappa eventi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[DECLARE_EVENT_MAP](#declare_event_map)|Consente di dichiarare che una mappa eventi verrà utilizzata in una classe per eseguire il mapping degli eventi alle funzioni che generano eventi (deve essere utilizzata nella dichiarazione di classe).|
 |[BEGIN_EVENT_MAP](#begin_event_map)|Consente di iniziare la definizione di una mappa eventi (che sarà utilizzata nell'implementazione della classe).|
@@ -37,14 +38,14 @@ Per supportare le mappe eventi, MFC fornisce le seguenti macro:
 
 ### <a name="event-mapping-macros"></a>Macro per il mapping degli eventi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[EVENT_CUSTOM](#event_custom)|Indica quale funzione che genera eventi genererà l'evento specificato.|
 |[EVENT_CUSTOM_ID](#event_custom_id)|Indica quale funzione che genera eventi genererà l'evento specificato, con un ID invio designato.|
 
 ### <a name="message-mapping-macros"></a>Macro per il mapping di messaggi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[ON_OLEVERB](#on_oleverb)|Indica un verbo personalizzato gestito dal controllo OLE.|
 |[ON_STDOLEVERB](#on_stdoleverb)|Consente di eseguire l'override di un mapping dei verbi standard del controllo OLE.|
@@ -57,7 +58,7 @@ Ogni `COleControl` classe derivata da nel programma può fornire una mappa event
 DECLARE_EVENT_MAP()
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare la macro DECLARE_EVENT_MAP alla fine della dichiarazione di classe. Quindi, nel file cpp che definisce le funzioni membro per la classe, usare la macro BEGIN_EVENT_MAP, le voci di macro per ogni evento del controllo e la macro END_EVENT_MAP per dichiarare la fine dell'elenco di eventi.
 
@@ -83,7 +84,7 @@ Specifica il nome della classe del controllo il cui mapping dell'evento è.
 *baseClass*<br/>
 Specifica il nome della classe di base di *theClass*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Nel file di implementazione (. cpp) che definisce le funzioni membro per la classe, avviare la mappa eventi con la macro BEGIN_EVENT_MAP, quindi aggiungere le voci della macro per ogni evento e completare la mappa eventi con la macro END_EVENT_MAP.
 
@@ -124,7 +125,7 @@ Nome della funzione di generazione eventi.
 *vtsParams*<br/>
 Elenco separato da spazi di una o più costanti che specificano l'elenco di parametri della funzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il parametro *vtsParams* è un elenco di valori separati da spazi delle `VTS_` costanti. Uno o più valori separati da spazi (non virgole) specificano l'elenco di parametri della funzione. Ad esempio:
 
@@ -143,7 +144,7 @@ Le `VTS_` costanti e i relativi significati sono i seguenti:
 |VTS_COLOR|OLE_COLOR|
 |VTS_CY|CURRENCY|
 |VTS_DATE|DATE|
-|VTS_BSTR|**`const`**__carattere \* __|
+|VTS_BSTR|**`const`**__carattere \*__|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_FONT|`IFontDispatch*`|
 |VTS_HANDLE|HANDLE|
@@ -197,7 +198,7 @@ Nome della funzione di generazione eventi.
 *vtsParams*<br/>
 Elenco variabile di parametri passati al contenitore di controlli quando viene generato l'evento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'argomento *vtsParams* è un elenco di valori separati da spazi delle `VTS_` costanti. Uno o più valori separati da spazi, non virgole, specificano l'elenco di parametri della funzione. Ad esempio:
 
@@ -227,7 +228,7 @@ ID della risorsa di stringa del nome del verbo.
 *memberFxn*<br/>
 Funzione chiamata dal framework quando viene richiamato il verbo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'editor di risorse può essere usato per creare nomi di verbi personalizzati aggiunti alla tabella delle stringhe.
 
@@ -240,7 +241,7 @@ BOOL memberFxn(
    LPCRECT  lpRect);
 ```
 
-I valori dei parametri *lpMsg*, *hwndParent*e *lpRect* vengono ricavati dai parametri corrispondenti della `IOleObject::DoVerb` funzione membro.
+I valori dei parametri *lpMsg*, *hwndParent* e *lpRect* vengono ricavati dai parametri corrispondenti della `IOleObject::DoVerb` funzione membro.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -262,7 +263,7 @@ Indice del verbo standard per il verbo sottoposto a override.
 *memberFxn*<br/>
 Funzione chiamata dal framework quando viene richiamato il verbo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'indice del verbo standard è nel formato `OLEIVERB_` , seguito da un'azione. OLEIVERB_SHOW, OLEIVERB_HIDE e OLEIVERB_UIACTIVATE sono alcuni esempi di verbi standard.
 
@@ -272,6 +273,6 @@ Per una descrizione del prototipo di funzione da usare come parametro *memberFxn
 
 **Intestazione** AFXOLE. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)

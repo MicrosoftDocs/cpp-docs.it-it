@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Delegate e interfacce mappa macro'
 title: Macro della mappa di delegati e interfacce (MFC)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - event map macros [MFC]
 - interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
-ms.openlocfilehash: 01f5cbfb1f751823d218761410bc9091b73cb0a3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 222625514fa0d6d1d683a6ee4098812298f7ed72
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837450"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220149"
 ---
 # <a name="delegate-and-interface-map-macros"></a>Macro per le mappe di interfaccia e delegati
 
 MFC supporta queste macro per le mappe di delegato e di interfaccia:
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[BEGIN_DELEGATE_MAP](#begin_delegate_map)|Inizia una mappa di delegati.|
 |[BEGIN_INTERFACE_MAP](#begin_interface_map)|Inizia la definizione della mappa interfaccita.|
@@ -43,7 +44,7 @@ BEGIN_DELEGATE_MAP(  CLASS );
 *CLASSE*<br/>
 Classe in cui è ospitato il controllo gestito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa macro contrassegna l'inizio di un elenco di voci Delegate, che compongono una mappa di delegati. Per un esempio di utilizzo di questa macro, vedere [EVENT_DELEGATE_ENTRY](#event_delegate_entry).
 
@@ -69,7 +70,7 @@ Classe in cui deve essere definita la mappa dell'interfaccia
 *baseClass*<br/>
 Classe da cui deriva *theClass* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ogni interfaccia implementata, è presente una o più chiamate a INTERFACE_PART macro. Per ogni aggregazione utilizzata dalla classe, esiste una chiamata INTERFACE_AGGREGATE macro.
 
@@ -94,7 +95,7 @@ delegate void CommandHandler(  UINT^ cmdID  );
 *cmdID*<br/>
 ID di comando.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo delegato registra i metodi di callback con un comando di origine. Quando si aggiunge un delegato all'oggetto origine del comando, il metodo di callback diventa un gestore per i comandi provenienti dall'origine specificata.
 
@@ -124,7 +125,7 @@ ID di comando.
 *cmdUI*<br/>
 ID del messaggio di comando.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo delegato registra i metodi di callback con un messaggio di comando di aggiornamento dell'interfaccia utente. `CommandUIHandler` è simile a [CommandHandler](#commandhandler) , con la differenza che questo delegato viene usato con i comandi di aggiornamento dell'oggetto dell'interfaccia utente. I comandi di aggiornamento dell'interfaccia utente devono essere mappati uno-a-uno con i metodi di gestione messaggi.
 
@@ -191,7 +192,7 @@ Primo argomento del metodo del gestore eventi gestito, ad esempio `Object^` .
 *ARG1*<br/>
 Secondo argomento del metodo del gestore eventi gestito, ad esempio `EventArgs^` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Ogni voce della mappa del delegato corrisponde a un delegato del gestore eventi gestito creato da [MAKE_DELEGATE](#make_delegate).
 
@@ -228,7 +229,7 @@ IID di cui deve essere eseguito il mapping alla classe incorporata.
 *localClass*<br/>
 Nome della classe locale.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Consente di eseguire il mapping di un IID a un membro della classe indicata da *theClass* e *localClass*.
 
@@ -256,9 +257,9 @@ Tipo del delegato del gestore eventi gestito, ad esempio [EventHandler](/dotnet/
 *MEMBRO*<br/>
 Nome del metodo del gestore eventi da associare al controllo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Questa macro crea un delegato del gestore eventi gestito di tipo *delegate* e del *membro*Name. Il delegato del gestore eventi gestito consente a una classe nativa di gestire gli eventi gestiti.
+Questa macro crea un delegato del gestore eventi gestito di tipo *delegate* e del *membro* Name. Il delegato del gestore eventi gestito consente a una classe nativa di gestire gli eventi gestiti.
 
 ### <a name="example"></a>Esempio
 
@@ -278,7 +279,7 @@ void CMyView::OnInitialUpdate()
 
 **Intestazione:** msclr\event.h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Procedura: sink di eventi Windows Forms da classi C++ native](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)<br/>
 [Procedura: aggiungere il routing dei comandi al controllo Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>

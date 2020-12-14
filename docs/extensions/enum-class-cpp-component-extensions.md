@@ -1,14 +1,15 @@
 ---
+description: 'Altre informazioni su: classe enum (C++/CLI e C++/CX)'
 title: enum class (C++/CLI e C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: 9acf93976b2f7751e85bf3ed0ddd2735c29e121c
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 309a1defa7288ec13ca058cc366d9cb8deac01ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590316"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220669"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>enum class (C++/CLI e C++/CX)
 

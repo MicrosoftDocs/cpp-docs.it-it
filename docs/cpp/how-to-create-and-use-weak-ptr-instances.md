@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: procedura: creare e usare istanze di weak_ptr'
 title: 'Procedura: Creare e usare istanze weak_ptr'
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
-ms.openlocfilehash: d7caea7cfd13b3a41a1cd20f88a9914267cf9677
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c1a68d8027e29cced7fb1a767d5a986ab0677ec8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187855"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221241"
 ---
 # <a name="how-to-create-and-use-weak_ptr-instances"></a>Procedura: Creare e usare istanze weak_ptr
 
@@ -84,6 +85,6 @@ Press any key
 
 Come esperimento, modificare il vettore `others` in modo che sia un `vector<shared_ptr<Controller>>` e quindi nell'output si noti che non viene richiamato alcun distruttore quando viene `TestRun` restituito.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Puntatori intelligenti (C++ moderno)](../cpp/smart-pointers-modern-cpp.md)

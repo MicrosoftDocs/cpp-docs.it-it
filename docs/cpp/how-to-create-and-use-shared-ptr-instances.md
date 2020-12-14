@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: procedura: creare e usare istanze di shared_ptr'
 title: 'Procedura: Creare e usare istanze shared_ptr'
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 44d375f72cf409df1e67b72dd76e196051dacf93
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b98a9a349f7f33805bd86c58e854b1d988733da2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187959"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221254"
 ---
 # <a name="how-to-create-and-use-shared_ptr-instances"></a>Procedura: creare e utilizzare istanze di shared_ptr
 
@@ -116,6 +117,6 @@ Nell'esempio riportato di seguito viene illustrato come `shared_ptr` esegue l'ov
 
 [!code-cpp[stl_smart_pointers#3](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_6.cpp)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Puntatori intelligenti (C++ moderno)](smart-pointers-modern-cpp.md)

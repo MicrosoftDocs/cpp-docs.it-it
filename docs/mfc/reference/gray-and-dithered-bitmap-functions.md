@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: funzioni bitmap grigie e dimostrate'
 title: funzioni di bitmap grige e retinate
 ms.date: 11/19/2018
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: 57f163fd36c0f25508d94a84495fcaf1956e277d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 20391f0ee7227827e1d9d6e18c2379be1fd43612
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837203"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219733"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>funzioni di bitmap grige e retinate
 
@@ -24,7 +25,7 @@ MFC fornisce due funzioni visualizzare una bitmap con l'aspetto di un controllo 
 
 ![Confronto delle versioni di icone grigie e originali](../../mfc/reference/media/vcgraybitmap.gif "Confronto delle versioni di icone grigie e originali")
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[AfxDrawGrayBitmap](#afxdrawgraybitmap)|Disegna una versione in grigio di una bitmap.|
 |[AfxGetGrayBitmap](#afxgetgraybitmap)|Copia una versione in grigio di una bitmap.|
@@ -35,7 +36,7 @@ MFC fornisce anche due funzioni per la sostituzione dello sfondo di una bitmap c
 
 ![Confronto delle versioni di icone con dithering e originali](../../mfc/reference/media/vcditheredbitmap.gif "Confronto delle versioni di icone con dithering e originali")
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|Disegna una bitmap con uno sfondo con dithering.|
 |[AfxGetDitheredBitmap](#afxgetditheredbitmap)|Copia una bitmap con uno sfondo con dithering.|
@@ -70,7 +71,7 @@ Bitmap di origine.
 *crBackground*<br/>
 Nuovo colore di sfondo (in genere grigio, ad esempio COLOR_MENU).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La bitmap disegnata con `AfxDrawGrayBitmap` avrà l'aspetto di un controllo disabilitato.
 
@@ -106,7 +107,7 @@ Bitmap di destinazione.
 *crBackground*<br/>
 Nuovo colore di sfondo (in genere grigio, ad esempio COLOR_MENU).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La bitmap copiata con `AfxGetGrayBitmap` avrà l'aspetto di un controllo disabilitato.
 
@@ -154,7 +155,7 @@ Uno dei due colori di dithering, in genere bianco.
 *CR2*<br/>
 Altro colore di dithering, in genere grigio chiaro (COLOR_MENU).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La bitmap di origine viene disegnata sul controller di dominio di destinazione con un modello con controllo a due colori (*CR1* e *CR2*) che sostituisce lo sfondo della bitmap. Lo sfondo della bitmap di origine viene definito come pixel bianchi e tutti i pixel che corrispondono al colore del pixel nell'angolo superiore sinistro della bitmap.
 
@@ -194,7 +195,7 @@ Uno dei due colori di dithering, in genere bianco.
 *CR2*<br/>
 Altro colore di dithering, in genere grigio chiaro (COLOR_MENU).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La bitmap di origine viene copiata nella bitmap di destinazione con un modello con controllo a due colori (*CR1* e *CR2*) che sostituisce lo sfondo della bitmap di origine. Lo sfondo della bitmap di origine viene definito come pixel bianchi e tutti i pixel che corrispondono al colore del pixel nell'angolo superiore sinistro della bitmap.
 
@@ -208,6 +209,6 @@ La bitmap di origine viene copiata nella bitmap di destinazione con un modello c
 
 **Intestazione:** afxwin.h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)

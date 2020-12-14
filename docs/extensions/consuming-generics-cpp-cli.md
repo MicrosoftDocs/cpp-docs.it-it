@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: utilizzo di generics (C++/CLI)'
 title: Utilizzo dei generics (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - generics [C++], consuming from .NET languages
 ms.assetid: e6330ef5-e907-432e-b527-7a22f5899639
-ms.openlocfilehash: 9abe97e3ec2b04bf631dcad7644f3c7dd668440e
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3ecfd9f98a8397f96b18ff916bdf9eafe6444a33
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505993"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220682"
 ---
 # <a name="consuming-generics-ccli"></a>Utilizzo dei generics (C++/CLI)
 
@@ -18,7 +19,7 @@ I generics creati con un linguaggio .NET (o per la piattaforma UWP) possono esse
 
 ## <a name="example-generic-class-defined-in-c"></a>Esempio: classe generica definita in C #
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
 In questo esempio viene illustrata una classe generica definita in C#.
 
@@ -82,7 +83,7 @@ public class CircularList<ItemType> {
 
 ## <a name="example-consume-assembly-authored-in-c"></a>Esempio: utilizzo dell'assembly creato in C #
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>Description
 
 In questo viene utilizzato l'assembly creato in C#.
 
@@ -118,6 +119,6 @@ int main() {
 10
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Generics](generics-cpp-component-extensions.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe Platform:: Collections:: Vector'
 title: Classe Platform::Collections::Vector
 ms.date: 12/04/2019
 ms.topic: reference
@@ -21,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: dc467b8db3cd6ec88395554eef7f109877f10d41
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b13221c6280e0e94572cb4b6710bb59fbd7db4c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839088"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221189"
 ---
 # <a name="platformcollectionsvector-class"></a>Classe Platform::Collections::Vector
 
@@ -47,7 +48,7 @@ Tipo degli elementi contenuti nell'oggetto Vector.
 *E*<br/>
 Specifica un predicato binario per verificare l'uguaglianza con valori di tipo *T*. Il valore predefinito è `std::equal_to<T>` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I tipi consentiti sono:
 
@@ -69,13 +70,13 @@ Se si tenta di usare un tipo **vector** in un valore restituito pubblico o in un
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Vector:: Vector](#ctor)|Inizializza una nuova istanza della classe Vector.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Vector::Append](#append)|Inserisce l'elemento specificato dopo l'ultimo elemento nel vettore corrente.|
 |[Vector:: Clear](#clear)|Elimina tutti gli elementi nell'oggetto Vector corrente.|
@@ -93,7 +94,7 @@ Se si tenta di usare un tipo **vector** in un valore restituito pubblico o in un
 
 ### <a name="events"></a>Eventi
 
-| Nome | Descrizione |
+| Nome | Description |
 |--|--|
 | evento [Windows:: Foundation:: Collection:: VectorChangedEventHandler \<T> ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1) | Si verifica quando l'oggetto Vector subisce delle modifiche. |
 
@@ -146,7 +147,7 @@ virtual Windows::Foundation::Collections::IIterator <T>^ First();
 
 Iteratore che fa riferimento al primo elemento in Vector.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un modo pratico per conservare l'iteratore restituito da First () consiste nell'assegnare il valore restituito a una variabile dichiarata con la **`auto`** parola chiave di deduzione del tipo. Ad esempio: `auto x = myVector->First();`. Questo iteratore conosce la lunghezza della raccolta.
 
@@ -195,7 +196,7 @@ Matrice allocata dal chiamante di elementi che iniziano in corrispondenza dell'e
 
 Numero di elementi recuperati.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione non deve essere usata direttamente dal codice client. Viene usato internamente nella [funzione to_vector](../cppcx/to-vector-function.md) per consentire una conversione efficiente di Platform:: Vector istanze in istanze std:: Vector.
 
@@ -237,7 +238,7 @@ Il parametro *index* è 0 se l'elemento è il primo elemento del vettore o se l'
 
 **`true`** Se l'elemento specificato viene trovato; in caso contrario, **`false`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 IndexOf usa std::find_if per trovare l'elemento. I tipi di elemento personalizzati dovrebbero quindi essere in rapporto di overload con l'operatore == e != in modo da abilitare i confronti di eguaglianza necessari per find_if.
 
@@ -389,7 +390,7 @@ Primo elemento di una sequenza di oggetti utilizzati per inizializzare l'oggetto
 *last*<br/>
 Ultimo elemento di una sequenza di oggetti utilizzati per inizializzare l'oggetto Vector corrente. Il tipo dell' *ultimo* viene passato per mezzo dell' *invio perfetto*. Per altre informazioni, vedere [Dichiaratore di riferimento rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Raccolte (C++/CX)](collections-c-cx.md)<br/>
 [Spazio dei nomi Platform](platform-namespace-c-cx.md)<br/>
