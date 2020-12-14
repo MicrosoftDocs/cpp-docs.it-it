@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: directory_iterator Class'
 title: Classe directory_iterator
 ms.date: 09/10/2018
 f1_keywords:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator*
 - std::experimental::filesystem::directory_iterator::operator-&gt;
 - std::experimental::filesystem::directory_iterator::operator++
-ms.openlocfilehash: a7ccc2a941da079e14092af5b81dc537db4a48c0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1bc0ac1d2d7816986bca1f48a41316270e547834
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215777"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232785"
 ---
 # <a name="directory_iterator-class"></a>Classe directory_iterator
 
@@ -81,7 +82,7 @@ class directory_iterator;
 
 **Spazio dei nomi:** std::experimental::filesystem
 
-## <a name="directory_iteratordirectory_iterator"></a><a name="directory_iterator"></a>directory_iterator::d irectory_iterator
+## <a name="directory_iteratordirectory_iterator"></a><a name="directory_iterator"></a> directory_iterator::d irectory_iterator
 
 Il primo costruttore produce un iteratore di fine sequenza. Il secondo e il terzo costruttore archiviano *pval* in `mydir` , quindi tentano di aprire e leggere `mydir` come una directory. Se l'esito è positivo, archiviano il primo nome file nella directory in. in `myentry` caso contrario, producono un iteratore di fine sequenza.
 
@@ -107,7 +108,7 @@ Codice di errore dello stato.
 *directory_iterator*\
 Oggetto archiviato.
 
-## <a name="directory_iteratorincrement"></a><a name="increment"></a>directory_iterator:: Increment
+## <a name="directory_iteratorincrement"></a><a name="increment"></a> directory_iterator:: Increment
 
 La funzione prova a avanzare al nome file successivo nella directory. Se ha esito positivo, archivia il nome del file in `myentry` ; in caso contrario, produce un iteratore di fine sequenza.
 
@@ -115,7 +116,7 @@ La funzione prova a avanzare al nome file successivo nella directory. Se ha esit
 directory_iterator& increment(error_code& ec) noexcept;
 ```
 
-## <a name="directory_iteratoroperator"></a><a name="op_neq"></a>directory_iterator:: operator! =
+## <a name="directory_iteratoroperator"></a><a name="op_neq"></a> directory_iterator:: operator! =
 
 L'operatore membro restituisce `!(*this == right)`.
 
@@ -128,7 +129,7 @@ bool operator!=(const directory_iterator& right) const;
 *Ok*\
 [Directory_iterator](../standard-library/directory-iterator-class.md) da confrontare con `directory_iterator` .
 
-## <a name="directory_iteratoroperator"></a><a name="op_as"></a>directory_iterator:: operator =
+## <a name="directory_iteratoroperator"></a><a name="op_as"></a> directory_iterator:: operator =
 
 Gli operatori di assegnazione membro impostati come predefiniti si comportano come previsto.
 
@@ -142,7 +143,7 @@ directory_iterator& operator=(directory_iterator&&) noexcept = default;
 *Ok*\
 [Directory_iterator](../standard-library/directory-iterator-class.md) copiato nell'oggetto `directory_iterator` .
 
-## <a name="directory_iteratoroperator"></a><a name="op_eq"></a>directory_iterator:: operator = =
+## <a name="directory_iteratoroperator"></a><a name="op_eq"></a> directory_iterator:: operator = =
 
 L'operatore membro restituisce **`true`** solo se sia **`*this`** che *right* sono iteratori di fine sequenza o se entrambi non sono iteratori di fine sequenza.
 
@@ -155,7 +156,7 @@ bool operator==(const directory_iterator& right) const;
 *Ok*\
 [Directory_iterator](../standard-library/directory-iterator-class.md) da confrontare con `directory_iterator` .
 
-## <a name="directory_iteratoroperator"></a><a name="op_star"></a>directory_iterator:: operator *
+## <a name="directory_iteratoroperator"></a><a name="op_star"></a> directory_iterator:: operator *
 
 L'operatore membro restituisce `myentry`.
 
@@ -163,7 +164,7 @@ L'operatore membro restituisce `myentry`.
 const directory_entry& operator*() const;
 ```
 
-## <a name="directory_iteratoroperator-"></a><a name="op_cast"></a>directory_iterator:: operator->
+## <a name="directory_iteratoroperator-"></a><a name="op_cast"></a> directory_iterator:: operator->
 
 La funzione membro restituisce`&**this`.
 
@@ -171,7 +172,7 @@ La funzione membro restituisce`&**this`.
 const directory_entry * operator->() const;
 ```
 
-## <a name="directory_iteratoroperator"></a><a name="op_increment"></a>directory_iterator:: operator + +
+## <a name="directory_iteratoroperator"></a><a name="op_increment"></a> directory_iterator:: operator + +
 
 La prima funzione membro chiama `increment()` , quindi restituisce **`*this`** . La seconda funzione membro esegue una copia dell'oggetto, chiama `increment()` e quindi restituisce la copia.
 
@@ -185,7 +186,7 @@ directory_iterator& operator++(int);
 *int*\
 Il numero di incrementi.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [\<filesystem>](../standard-library/filesystem.md)\

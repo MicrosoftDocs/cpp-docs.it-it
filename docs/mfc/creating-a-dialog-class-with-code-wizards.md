@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: creazione di una classe di finestre di dialogo con creazioni guidate codice'
 title: Creazione di una classe di finestre di dialogo con creazioni guidate codice
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - code wizards
 - dialog classes [MFC], creating
 ms.assetid: a7157b9d-f1a8-4381-a4cf-180cd2c7f1b2
-ms.openlocfilehash: 5c534219ec656318e2e70a47df8536ddfbe26ab7
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 06015f72e051a8bac9d20fa802378ada0092328e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616331"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310083"
 ---
 # <a name="creating-a-dialog-class-with-code-wizards"></a>Creazione di una classe di finestre di dialogo con creazioni guidate codice
 
 Nella tabella seguente sono elencate le attività relative alla finestra di dialogo che consentono di gestire le creazioni guidate codice.
 
-### <a name="dialog-related-tasks"></a>Attività correlate alla finestra di dialogo
+### <a name="dialog-related-tasks"></a>Attività Dialog-Related
 
 |Attività|Applicare a. . .|
 |----------|--------------------|
@@ -30,13 +31,13 @@ Nella tabella seguente sono elencate le attività relative alla finestra di dial
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-- [Creazione della classe di finestre di dialogo](creating-your-dialog-class.md)
+- [Creazione della classe di finestra di dialogo](creating-your-dialog-class.md)
 
 - [Gestione dei messaggi di Windows nella finestra di dialogo](handling-windows-messages-in-your-dialog-box.md)
 
 - [Convalida e scambio di dati della finestra di dialogo](dialog-data-exchange-and-validation.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Finestre di dialogo](dialog-boxes.md)<br/>
 [Utilizzo delle finestre di dialogo in MFC](life-cycle-of-a-dialog-box.md)

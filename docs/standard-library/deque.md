@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; deque&gt;'
 title: '&lt;deque&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - deque header
 ms.assetid: 4521fe92-5a91-4853-9e9f-59600bf9e46f
-ms.openlocfilehash: 8ecfb85fb77c6b70d1c89aa0cfe1ce76c5d60ab6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: dfd8224dfc46418f3fbba67e4cae0e90e899fee2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838568"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232824"
 ---
 # <a name="ltdequegt"></a>&lt;deque&gt;
 
@@ -28,7 +29,7 @@ Definisce la deque del modello della classe del contenitore e diversi modelli di
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[operatore! =](../standard-library/deque-operators.md#op_neq)|Verifica se l'oggetto deque sul lato sinistro dell'operatore non è uguale all'oggetto deque sul lato destro.|
 |[operatore<](../standard-library/deque-operators.md#op_lt)|Verifica se l'oggetto deque sul lato sinistro dell'operatore è minore dell'oggetto deque sul lato destro.|
@@ -39,17 +40,17 @@ Definisce la deque del modello della classe del contenitore e diversi modelli di
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[scambio](../standard-library/deque-functions.md#swap)|Scambia gli elementi di due deque.|
 
 ### <a name="classes"></a>Classi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[Classe deque](../standard-library/deque-class.md)|Modello di classe di contenitori di sequenza che organizzano gli elementi di un determinato tipo in una disposizione lineare e, come i vettori, consentono l'accesso casuale veloce a qualsiasi elemento e l'inserimento e l'eliminazione efficienti sul retro del contenitore.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

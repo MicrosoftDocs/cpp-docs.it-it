@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: pagina delle proprietà riferimenti Web'
 title: Pagina delle proprietà Riferimenti Web
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - Web references, properties
 ms.assetid: b80f7c77-af88-4551-9943-99748ebacf09
-ms.openlocfilehash: 9e33fc1d53253c3da09e812110015cfdfdbe2d02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 371642cd7ffcac9cccaea980f7790f729c8e74b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316470"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259162"
 ---
 # <a name="web-references-property-page"></a>Pagina delle proprietà Riferimenti Web
 
@@ -38,8 +39,8 @@ La pagina delle proprietà **Riferimenti Web** include le proprietà seguenti:
 
    Specifica le DLL aggiuntive a cui fa riferimento la DLL proxy.
 
-Per informazioni su come accedere al **riferimento Web** pagina delle proprietà, vedere [delle proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+Per informazioni su come accedere alla pagina delle proprietà dei **riferimenti Web** , vedere [impostare le proprietà di compilazione e compilatore C++ in Visual Studio](../working-with-project-properties.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimento alla pagina di proprietà progetto C++](property-pages-visual-cpp.md)
+[Riferimento alla pagina delle proprietà del progetto C++](property-pages-visual-cpp.md)

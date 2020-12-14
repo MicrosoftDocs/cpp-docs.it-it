@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: creazione di un controllo casella combinata estesa'
 title: Creazione di un controllo casella combinata estesa
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - CComboBoxEx class [MFC], creating extended combo box controls
 - extended combo boxes [MFC], creating
 ms.assetid: a964267e-97b6-4e77-9f89-55bb5c68913f
-ms.openlocfilehash: 554085304f5330ac9cd99a5b814af26ce3a9c7e6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 93b4a24cfe4bf191e092d2456c5b6a62f79acc78
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616290"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309979"
 ---
 # <a name="creating-an-extended-combo-box-control"></a>Creazione di un controllo casella combinata estesa
 
@@ -35,7 +36,7 @@ La modalità di creazione del controllo casella combinata estesa varia a seconda
 
 1. Chiamare la funzione membro [create](reference/ctabctrl-class.md#create) del controllo, possibilmente in [OnInitialUpdate](reference/cview-class.md#oninitialupdate), probabilmente all'inizio della funzione del gestore [OnCreate](reference/cwnd-class.md#oncreate) della finestra padre. Impostare gli stili per il controllo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso di CComboBoxEx](using-ccomboboxex.md)<br/>
+[Utilizzo di CComboBoxEx](using-ccomboboxex.md)<br/>
 [Controlli](controls-mfc.md)

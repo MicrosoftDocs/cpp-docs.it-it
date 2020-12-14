@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: creazione di un'applicazione contenitore di documenti attivi"
 title: Creazione di un'applicazione contenitore di documenti attivi
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - MFC COM, active document containment
 - applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
-ms.openlocfilehash: 860a8531a96a0671c808dba13523b492026eafe0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9bf00a73e7520cde45d4e43ae79813896d4c1129
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616346"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309992"
 ---
 # <a name="creating-an-active-document-container-application"></a>Creazione di un'applicazione contenitore di documenti attivi
 
@@ -21,7 +22,7 @@ Il modo più semplice e consigliato per creare un'applicazione contenitore di do
 
 #### <a name="to-create-an-active-document-container-application"></a>Per creare un'applicazione contenitore di documenti attivi
 
-1. Dal menu **file** scegliere **progetto**dal sottomenu **nuovo** .
+1. Dal menu **file** scegliere **progetto** dal sottomenu **nuovo** .
 
 1. Nel riquadro sinistro fare clic su **Visual C++** tipo di progetto.
 
@@ -41,7 +42,7 @@ Il modo più semplice e consigliato per creare un'applicazione contenitore di do
 
    - *MyProjview.cpp*
 
-1. In *file MyProjview. cpp*apportare le modifiche seguenti:
+1. In *file MyProjview. cpp* apportare le modifiche seguenti:
 
    - In `CMyProjView::OnPreparePrinting` sostituire il contenuto della funzione con il seguente codice:
 
@@ -61,6 +62,6 @@ Il modo più semplice e consigliato per creare un'applicazione contenitore di do
 
 1. Aggiungere qualsiasi implementazione personalizzata e compilare l'applicazione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Contenimento dei documenti attivi](active-document-containment.md)
+[Contenimento del documento attivo](active-document-containment.md)

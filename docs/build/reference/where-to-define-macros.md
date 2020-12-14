@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: dove definire le macro'
 title: Definizione delle macro
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,21 +7,21 @@ helpviewer_keywords:
 - macros, NMAKE
 - NMAKE program, defining macros
 ms.assetid: 0fc59ec5-5f58-4644-b7da-7b021f7001af
-ms.openlocfilehash: dc03644adea4619b3eabe33c481d71f704a9f410
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5fc7d6e1fd8247816993929791bf734596d00e6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316366"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259201"
 ---
 # <a name="where-to-define-macros"></a>Definizione delle macro
 
-Definizione delle macro in una riga di comando, file di comando, makefile o file Tools. ini.
+Definire le macro in una riga di comando, un file di comando, un makefile o il file di Tools.ini.
 
-In un makefile o nel file Tools, ogni definizione di macro deve essere inserito su una riga separata e non può iniziare con uno spazio o una scheda. Vengono ignorate gli spazi o tabulazioni prima e dopo il segno di uguale. Tutti i [stringa di caratteri](defining-an-nmake-macro.md) sono valori letterali, inclusi le virgolette e spazi vuoti.
+In un makefile o nel file di Tools.ini, ogni definizione di macro deve essere visualizzata in una riga separata e non può iniziare con uno spazio o una scheda. Gli spazi o le tabulazioni intorno al segno di uguale vengono ignorati. Tutti i [caratteri stringa](defining-an-nmake-macro.md) sono valori letterali, incluse le virgolette circostanti e gli spazi incorporati.
 
-In una riga di comando o un file di comando, spazi e tabulazioni delimitano gli argomenti e non è possibile racchiudere il segno di uguale. Se `string` sono contenuti spazi o tabulazioni, racchiudere la stringa o l'intera macro tra virgolette doppie ("").
+In una riga di comando o un file di comando, spazi e tabulazioni delimitano gli argomenti e non possono racchiudere il segno di uguale. Se `string` contiene spazi o schede incorporate, racchiudere la stringa stessa o l'intera macro racchiusa tra virgolette doppie ("").
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Definizione di una macro di NMAKE](defining-an-nmake-macro.md)

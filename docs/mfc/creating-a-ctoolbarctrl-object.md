@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: creazione di un oggetto CToolBarCtrl'
 title: Creazione di un oggetto CToolBarCtrl
 ms.date: 11/04/2016
 helpviewer_keywords:
 - toolbar controls [MFC], creating
 - CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: a4f6bf0c-0195-4dbf-a09e-aee503e19dc3
-ms.openlocfilehash: 2627f9aaceeab7760e15b23435233e124c5ea6f0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 2ea6f1c170fd82a18d4ceb9d5ca9e7fbadfcdbc5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618995"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310109"
 ---
 # <a name="creating-a-ctoolbarctrl-object"></a>Creazione di un oggetto CToolBarCtrl
 
@@ -30,7 +31,7 @@ Per utilizzare un oggetto `CToolBarCtrl`, in genere vengono effettuate le seguen
 
 1. Se si desidera che l'utente sia in grado di personalizzare la barra degli strumenti, gestire i messaggi di notifica della personalizzazione nella finestra proprietaria come descritto in [gestione delle notifiche di personalizzazione](handling-customization-notifications.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Utilizzo di CToolBarCtrl](using-ctoolbarctrl.md)<br/>
 [Controlli](controls-mfc.md)

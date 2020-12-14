@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: discrete_distribution Class'
 title: Classe discrete_distribution
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: 5dcac516da088a55d2ddc176275ec25941ad8949
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b84d174a653efdeba47fb0356c903b8c7dd2a8d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846277"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232759"
 ---
 # <a name="discrete_distribution-class"></a>Classe discrete_distribution
 
@@ -75,7 +76,7 @@ public:
 *IntType*\
 Il tipo di risultato Integer, il valore predefinito è **`int`** . Per i tipi possibili, vedere [\<random>](../standard-library/random.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questa distribuzione di campionamento ha intervalli di larghezza uniforme e probabilità uniforme in ogni intervallo. Per informazioni su altre distribuzioni di campionamento, vedere [piecewise_linear_distribution Class](../standard-library/piecewise-linear-distribution-class.md) (Classe piecewise_linear_distribution) e [piecewise_constant_distribution Class](../standard-library/piecewise-constant-distribution-class.md) (Classe piecewise_constant_distribution).
 
@@ -222,7 +223,7 @@ Oggetto che rappresenta la funzione di probabilità per la distribuzione. Il par
 *parm*\
 Struttura `param_type` usata per costruire la distribuzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il costruttore predefinito costruisce un oggetto il cui valore di probabilità archiviato presenta un elemento con valore 1. Questo darà luogo a una distribuzione che genera sempre uno zero.
 
@@ -233,7 +234,7 @@ Il costruttore dell'elenco di inizializzatori che dispone di un parametro *Weigh
 Il costruttore con i parametri *count*, *low*, *high* e *weightfunc* costruisce un oggetto di distribuzione inizializzato in base alle regole seguenti:
 
 - Se *count* < 1, **n** = 1 e come tale è equivalente al costruttore predefinito, viene sempre generato zero.
-- Se *count* > 0, **n** = *count*. Fornito **d** = (*High*  -  *low*)/ **n** è maggiore di zero, con **d** l'utilizzo di intervalli secondari uniformi, ogni peso viene assegnato come segue: `weight[k] = weightfunc(x)` , dove **x**  =  *bassa*  +  **k**  *  **d**  +  **d** /2, per **k** = 0,..., **n** -1.
+- Se *count* > 0, **n** = *count*. Fornito **d** = (*High*  -  *low*)/ **n** è maggiore di zero, con  l'utilizzo di intervalli secondari uniformi, ogni peso viene assegnato come segue: `weight[k] = weightfunc(x)` , dove **x**  =  *bassa*  +  **k**  *  **d**  +   /2, per **k** = 0,..., **n** -1.
 
 Il costruttore con un parametro `param_type`*parm* costruisce un oggetto di distribuzione usando *parm* come struttura del parametro archiviato.
 
@@ -290,7 +291,7 @@ Oggetto che rappresenta la funzione di probabilità per la distribuzione. Il par
 *Ok*\
 Oggetto `param_type` da confrontare con questo oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo pacchetto di parametri può essere passato a `operator()` per generare il valore restituito.
 

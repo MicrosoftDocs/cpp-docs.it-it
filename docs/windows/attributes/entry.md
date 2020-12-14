@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: voce'
 title: entry (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - entry attribute
 ms.assetid: ba4843e3-d7ad-4b86-9a15-0b4192f0f698
-ms.openlocfilehash: 63e5ccebb1d3844af8dd11b4b094abe96e3e257c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fbceea4c23d730ceba780ce68398a9d78fa9c33b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845315"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259227"
 ---
 # <a name="entry"></a>entry
 
@@ -28,7 +29,7 @@ Specifica una funzione o una costante esportata in un modulo identificando il pu
 *id*<br/>
 ID del punto di ingresso.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La **voce** C++ attribute ha la stessa funzionalità della [voce](/windows/win32/Midl/entry) attributo MIDL.
 
@@ -47,6 +48,6 @@ Vedere l'esempio per [idl_module](idl-module.md) per un esempio di utilizzo dell
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)

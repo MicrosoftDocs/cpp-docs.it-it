@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/volatile (interpretazione di parole chiave volatile)
 title: /volatile (interpretazione della parole chiave volatile)
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - volatile compiler option
 - -volatile compiler option [C++]
 ms.assetid: 9d08fcc6-5bda-44c8-8151-8d8d54f164b8
-ms.openlocfilehash: 7c2c1cd477b424f56e66bd9246e7bde76ad06120
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e75a9932cff59748cf75b89a3a85e89130de84f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223785"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259214"
 ---
 # <a name="volatile-volatile-keyword-interpretation"></a>/volatile (interpretazione della parole chiave volatile)
 
@@ -36,7 +37,7 @@ Seleziona **`volatile`** una semantica rigida in base a quanto definito dal ling
 **/volatile: ms**<br/>
 Seleziona la **`volatile`** semantica estesa Microsoft, che aggiunge le garanzie di ordinamento della memoria oltre il linguaggio C++ standard ISO. La semantica di acquisizione/rilascio è garantita negli accessi volatili. Tuttavia, questa opzione impone anche al compilatore di generare barriere di memoria hardware, che potrebbero comportare un sovraccarico significativo su ARM e altre architetture di ordinamento della memoria debole. Se il compilatore è destinato a qualsiasi piattaforma eccetto ARM, si tratta dell'interpretazione predefinita di **`volatile`** .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Si consiglia di usare **/volatile: ISO** con le primitive di sincronizzazione esplicite e le funzioni intrinseche del compilatore quando si tratta di una memoria condivisa tra i thread. Per ulteriori informazioni, vedere [volatile](../../cpp/volatile-cpp.md).
 
@@ -48,12 +49,12 @@ Non esiste alcun `#pragma` equivalente per controllare questa opzione.
 
 1. Aprire la finestra di dialogo **pagine delle proprietà** per il progetto. Per altre informazioni, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la pagina delle proprietà di **configurazione**proprietà della riga di comando di  >  **c/C++**  >  **Command Line** .
+1. Selezionare la pagina delle proprietà di **configurazione** proprietà della riga di comando di  >  **c/C++**  >   .
 
 1. Nella casella **Opzioni aggiuntive** aggiungere **/volatile: ISO** o **/volatile: ms** , quindi scegliere **OK** o **applica** per salvare le modifiche.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [volatile](../../cpp/volatile-cpp.md)<br/>
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

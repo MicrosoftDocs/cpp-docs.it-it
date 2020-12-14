@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: errore degli strumenti del linker LNK2038'
 title: Errore degli strumenti del linker LNK2038
 ms.date: 12/15/2017
 f1_keywords:
 - LNK2038
 helpviewer_keywords:
 - LNK2038
-ms.openlocfilehash: ea1509d846c0bc5a85f0f0252b611dfd38496bcb
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 17fa86010b4248b68234292dd909fe50f6379c7e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506012"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275659"
 ---
 # <a name="linker-tools-error-lnk2038"></a>Errore degli strumenti del linker LNK2038
 
@@ -40,6 +41,6 @@ Assicurarsi che i valori di questi simboli siano coerenti in tutti i progetti de
 
 Se questo errore viene visualizzato quando si tenta di configurare una libreria di terze parti come parte della compilazione, è consigliabile usare [vcpkg](../../build/vcpkg.md), una gestione pacchetti C++, per installare e compilare la libreria. vcpkg supporta un [elenco di librerie di terze parti di](https://github.com/Microsoft/vcpkg/tree/master/ports)grandi dimensioni e in continua crescita e imposta tutte le proprietà di configurazione e le dipendenze necessarie per le compilazioni riuscite come parte del progetto.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Errori e avvisi degli strumenti del linker](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)

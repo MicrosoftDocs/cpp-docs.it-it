@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: supporto degli iteratori di debug'
 title: Debug Iterator Support
 ms.date: 09/13/2018
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: a5773add9a26d647df6678ffa4f2681b73cff44f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bd2de8423cb7235fdb54a3d0cfe852081ea32b18
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231585"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232954"
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 
@@ -148,7 +149,7 @@ int main() {
 
 ## <a name="destructors-for-debug-iterators"></a>Distruttori per gli iteratori di debug
 
-Gli iteratori di debug hanno distruttori non semplici. Se un distruttore non viene eseguito ma viene liberata la memoria dell'oggetto, potrebbero verificarsi violazioni di accesso e danneggiamento dei dati. Considerare questo esempio:
+Gli iteratori di debug hanno distruttori non semplici. Se un distruttore non viene eseguito ma viene liberata la memoria dell'oggetto, potrebbero verificarsi violazioni di accesso e danneggiamento dei dati. Prendere in considerazione questo esempio:
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -173,6 +174,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Panoramica della libreria standard C++](../standard-library/cpp-standard-library-overview.md)

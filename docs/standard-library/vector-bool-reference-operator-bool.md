@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Vector &lt; bool &gt; :: Reference:: operator bool'
 title: Bool vector&lt;bool&gt;::reference::operator
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - BOOL operator
 - reference::operator bool
 ms.assetid: b0e57869-18cc-4296-9061-da502f30120d
-ms.openlocfilehash: bb757fee9d6ec824a99557c409b1c4f02f48db5d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9b12df8711664aae80d8ed85340b0852b91969ea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215387"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259318"
 ---
 # <a name="vectorltboolgtreferenceoperator-bool"></a>Bool vector&lt;bool&gt;::reference::operator
 
@@ -31,7 +32,7 @@ operator bool() const;
 
 Valore booleano dell'elemento dell'oggetto [vector \<bool> ](../standard-library/vector-bool-class.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'oggetto `vector<bool>` non può essere modificato da questo operatore.
 
@@ -41,7 +42,7 @@ L'oggetto `vector<bool>` non può essere modificato da questo operatore.
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [\<bool>classe Vector:: Reference](../standard-library/vector-bool-reference-class.md)\
 [Riferimenti per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

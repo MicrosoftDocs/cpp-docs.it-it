@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: default_delete struct'
 title: Struct default_delete
 ms.date: 04/04/2019
 f1_keywords:
 - memory/std::default_delete
 helpviewer_keywords:
 - default_delete struct
-ms.openlocfilehash: 8baa9f5d294cf083fd55414cd529e438f328d1a1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5b7d652dbb556957acf96ba63ac9ce14b628fb7e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845081"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232967"
 ---
 # <a name="default_delete-struct"></a>Struct default_delete
 
@@ -33,13 +34,13 @@ template <class T>
 
 ### <a name="constructors"></a>Costruttori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[default_delete](#default_delete)|Costruttore per oggetti di tipo `default_delete`.|
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[operatore ()](#op_paren)|Operatore di riferimento a cui accedere `default_delete` .|
 
