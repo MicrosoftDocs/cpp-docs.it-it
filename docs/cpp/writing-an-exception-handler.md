@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: scrittura di un gestore di eccezioni'
 title: Scrittura di un gestore di eccezioni
 ms.date: 11/04/2016
 helpviewer_keywords:
 - structured exception handling [C++], exception handlers
 - exception handling [C++], exception handlers
 ms.assetid: 71473fee-f773-4a34-bf12-82a3af79579c
-ms.openlocfilehash: 201dcaa6a90584d1f9535df11d5722a37bdceb89
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 174ab77240fc405e7c1175806167b6ec68f08c82
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187284"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302803"
 ---
 # <a name="writing-an-exception-handler"></a>Scrittura di un gestore di eccezioni
 
@@ -28,8 +29,8 @@ I gestori delle eccezioni utilizzano l'istruzione try-except.
 
 - [Eccezioni hardware](../cpp/hardware-exceptions.md)
 
-- [Restrizioni relative ai gestori di eccezioni](../cpp/restrictions-on-exception-handlers.md)
+- [Limitazioni ai gestori di eccezioni](../cpp/restrictions-on-exception-handlers.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Gestione strutturata delle eccezioni (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

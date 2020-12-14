@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3541'
 title: Errore del compilatore C3541
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3541
 ms.assetid: 252cfd4c-5fd2-415e-a17d-6b0c254350db
-ms.openlocfilehash: 2d6179657462325a30de0c4548becff4b4cf86c9
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: b579697de98556aa99077e43d28e6de828741fb5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508075"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97315166"
 ---
 # <a name="compiler-error-c3541"></a>Errore del compilatore C3541
 
@@ -35,7 +36,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Parola chiave auto](../../cpp/auto-cpp.md)<br/>
 [/Zc: auto (deduce il tipo di variabile)](../../build/reference/zc-auto-deduce-variable-type.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: procedura: effettuare il marshalling di stringhe Unicode usando l'interoperabilità C++"
 title: "Procedura: Effettuare il marshalling di stringhe Unicode utilizzando l'interoperabilità C++"
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
-ms.openlocfilehash: da320dbd41e7158e3bc2482b96a73c1f4728a01b
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 7aa21acc912aafec7d3fccd78f7e9f1ab216ea86
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414308"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302517"
 ---
 # <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Procedura: Effettuare il marshalling di stringhe Unicode utilizzando l'interoperabilità C++
 
@@ -95,6 +96,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Uso dell'interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3499'
 title: Errore del compilatore C3499
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3499
 ms.assetid: 6717de5c-ae0f-4024-bdf2-b5598009e7b6
-ms.openlocfilehash: b49c868b696df75a5b5148d32fb286019c6293e4
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: e4e572be1b5e39ccec6bf1ca64eaf62a3e44ef28
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686137"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97315478"
 ---
 # <a name="compiler-error-c3499"></a>Errore del compilatore C3499
 
@@ -27,7 +28,7 @@ Il compilatore genera questo errore quando un'espressione lambda che specifica *
 
 - Combinare le istruzioni che costituiscono il corpo dell'espressione lambda in una singola istruzione.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 L'esempio seguente genera un errore C3499 perché il corpo di un'espressione lambda contiene più istruzioni e restituisce un valore, ma l'espressione lambda non specifica il tipo restituito:
 
@@ -58,6 +59,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Espressioni lambda](../../cpp/lambda-expressions-in-cpp.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: Array e WriteOnlyArray (C++/CX)'
 title: Array e WriteOnlyArray (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-ms.openlocfilehash: 1980fbcd1e2fa8cdaa48e00d2e7de9e45ac96a92
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4c4f9415f401f1180786608288e33691c82fbdfa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231026"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302790"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array e WriteOnlyArray (C++/CX)
 
@@ -21,7 +22,7 @@ I seguenti tipi di matrice possono essere passati attraverso l'ABI:
 
 1. `Platform::WriteOnlyArray`
 
-1. valore restituito di`Platform::Array^`
+1. valore restituito di `Platform::Array^`
 
 Questi tipi di matrici vengono usati per implementare i tre tipi di modelli di matrice definiti dal Windows Runtime.
 
@@ -90,7 +91,7 @@ Il frammento di codice seguente mostra come copiare i risultati di un' [`DataRea
 
 In generale, evita di esporre un tipo `Platform::Array` come proprietà in una classe di riferimento poiché l'intera matrice viene restituita anche quando il codice client tenta semplicemente di accedere a un singolo elemento. Quando è necessario esporre un contenitore di sequenza come proprietà in una classe di riferimento pubblica, [`Windows::Foundation::IVector`](/uwp/api/windows.foundation.collections.ivector-1) rappresenta una scelta migliore. Nelle API private o interne (non pubblicate nei metadati), considerare l'uso di un contenitore C++ standard, ad esempio [`std::vector`](../standard-library/vector-class.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Sistema di tipi](../cppcx/type-system-c-cx.md)<br/>
 [Riferimenti per il linguaggio C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>

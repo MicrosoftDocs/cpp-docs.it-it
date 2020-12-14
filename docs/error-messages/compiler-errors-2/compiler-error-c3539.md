@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3539'
 title: Errore del compilatore C3539
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3539
 ms.assetid: 34a33a0f-d1b6-498f-b312-ffad2d4799b3
-ms.openlocfilehash: e30ea0713229bfd8da395baef710571f8dfd49e9
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: a944a2e6af03e030434cf41e2b6009be82ad9239
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508143"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97315244"
 ---
 # <a name="compiler-error-c3539"></a>Errore del compilatore C3539
 
@@ -38,6 +39,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Parola chiave auto](../../cpp/auto-cpp.md)

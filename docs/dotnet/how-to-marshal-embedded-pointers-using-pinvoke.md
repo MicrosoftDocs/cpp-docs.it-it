@@ -1,5 +1,6 @@
 ---
-title: 'Procedura: Effettuare il marshalling di puntatori incorporati tramite PInvoke'
+description: 'Altre informazioni su: procedura: effettuare il marshalling di puntatori incorporati mediante PInvoke'
+title: 'Procedura: Effettuare il marshalling di puntatori incorporati utilizzando PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,22 +10,22 @@ helpviewer_keywords:
 - marshaling [C++], embedded pointers
 - data marshaling [C++], embedded pointers
 ms.assetid: f12c1b9a-4f82-45f8-83c8-3fc9321dbb98
-ms.openlocfilehash: 943a1a2784a37353157cd38da7ebdc9827006fe5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d31660a9a8ba345b380d442bb4484e332fe9d7cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325208"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302556"
 ---
-# <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>Procedura: Effettuare il marshalling di puntatori incorporati tramite PInvoke
+# <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>Procedura: Effettuare il marshalling di puntatori incorporati utilizzando PInvoke
 
-Funzioni che sono implementate nella DLL non gestite possono essere chiamate da codice gestito tramite la funzionalità Platform Invoke (P/Invoke). Se il codice sorgente per la DLL non è disponibile, P/Invoke è l'unica opzione per l'interoperabilità. Tuttavia, a differenza di altri linguaggi .NET, Visual C++ offre un'alternativa al P/Invoke. Per altre informazioni, vedere [con funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md) e [come: Effettuare il marshalling dei puntatori incorporati utilizzando l'interoperabilità C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
+Le funzioni implementate nelle dll non gestite possono essere chiamate dal codice gestito utilizzando la funzionalità Platform Invoke (P/Invoke). Se il codice sorgente per la DLL non è disponibile, P/Invoke è l'unica opzione per l'interoperabilità. Tuttavia, a differenza di altri linguaggi .NET, Visual C++ fornisce un'alternativa a P/Invoke. Per ulteriori informazioni, vedere [utilizzo dell'interoperabilità c++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md) e [procedura: effettuare il marshalling di puntatori incorporati utilizzando l'interoperabilità c++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
 
 ## <a name="example"></a>Esempio
 
-Passaggio di strutture in codice nativo, è necessario che viene creata una struttura gestita equivalente in termini di layout dei dati per la struttura nativa. Tuttavia, le strutture che contengono puntatori richiedono una gestione speciale. Per ogni indicatore di misura incorporato nella struttura nativa, la versione gestita della struttura deve contenere un'istanza di <xref:System.IntPtr> tipo. Inoltre, della memoria per queste istanze devono essere allocate in modo esplicito, inizializzato e liberata usando il <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A>, <xref:System.Runtime.InteropServices.Marshal.StructureToPtr%2A>, e <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> metodi.
+Il passaggio di strutture al codice nativo richiede la creazione di una struttura gestita equivalente in termini di layout di dati alla struttura nativa. Tuttavia, le strutture che contengono puntatori richiedono una gestione speciale. Per ogni puntatore incorporato nella struttura nativa, la versione gestita della struttura deve contenere un'istanza del <xref:System.IntPtr> tipo. Inoltre, la memoria per queste istanze deve essere allocata, inizializzata e rilasciata in modo esplicito usando i <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A> <xref:System.Runtime.InteropServices.Marshal.StructureToPtr%2A> metodi, e <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> .
 
-Il codice seguente è costituito da una funzione non gestita e un modulo gestito. Il modulo non gestito è una DLL che definisce una funzione che accetta una struttura denominata ListString che contiene un puntatore e una funzione denominata TakesListStruct. Il modulo gestito è un'applicazione della riga di comando che importa la funzione TakesListStruct e definisce una struttura denominata MListStruct equivale al ListStruct nativa ad eccezione del fatto che la doppia * è rappresentata con un <xref:System.IntPtr> istanza. Prima di chiamare TakesListStruct, la funzione principale alloca e inizializza la memoria a cui fa riferimento a questo campo.
+Il codice seguente è costituito da un modulo non gestito e da un modulo gestito. Il modulo non gestito è una DLL che definisce una funzione che accetta una struttura denominata ListString che contiene un puntatore e una funzione denominata TakesListStruct. Il modulo gestito è un'applicazione della riga di comando che importa la funzione TakesListStruct e definisce una struttura denominata MListStruct equivalente al ListStruct nativo, ad eccezione del fatto che Double * è rappresentato da un' <xref:System.IntPtr> istanza di. Prima di chiamare TakesListStruct, la funzione Main alloca e inizializza la memoria a cui fa riferimento questo campo.
 
 ```cpp
 // TraditionalDll6.cpp
@@ -98,8 +99,8 @@ int main() {
 }
 ```
 
-Si noti che nessuna parte della DLL viene esposta al codice gestito usando le tradizionali #include (direttiva). In effetti, la DLL è accessibile in fase di esecuzione, quindi problemi con le funzioni importate con <xref:System.Runtime.InteropServices.DllImportAttribute> non viene rilevato in fase di compilazione.
+Si noti che nessuna parte della DLL viene esposta al codice gestito utilizzando la tradizionale direttiva #include. In realtà, l'accesso alla DLL viene eseguito solo in fase di esecuzione, quindi i problemi con le funzioni importate con <xref:System.Runtime.InteropServices.DllImportAttribute> non verranno rilevati in fase di compilazione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso esplicito di PInvoke in C++ (attributo DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+[Utilizzo di PInvoke esplicito in C++ (attributo DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

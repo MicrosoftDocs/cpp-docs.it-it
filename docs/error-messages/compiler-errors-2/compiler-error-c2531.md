@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2531'
 title: Errore del compilatore C2531
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2531
 ms.assetid: c49afe15-55f8-4dc8-ac01-bf653622a7db
-ms.openlocfilehash: 4247e026f6680adab45ceebe2b395ad781ccfc7e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 1ab3f18ca91f1dd77a1d06ee43adcb1cc52e05e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74737114"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302234"
 ---
 # <a name="compiler-error-c2531"></a>Errore del compilatore C2531
 
