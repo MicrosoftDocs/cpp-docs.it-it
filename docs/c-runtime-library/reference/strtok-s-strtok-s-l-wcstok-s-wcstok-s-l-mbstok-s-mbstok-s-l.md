@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l'
 title: strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 ms.date: 4/2/2020
 api_name:
@@ -56,12 +57,12 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-ms.openlocfilehash: 52c998f14fee080efc1d288abbba012752757632
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fb02682abac8655964051d780e9e84e644256aa2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912675"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288711"
 ---
 # <a name="strtok_s-_strtok_s_l-wcstok_s-_wcstok_s_l-_mbstok_s-_mbstok_s_l"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
@@ -115,7 +116,7 @@ unsigned char* _mbstok_s_l(
 
 ### <a name="parameters"></a>Parametri
 
-*Str*<br/>
+*str*<br/>
 Stringa contenente il token o i token da trovare.
 
 *delimitatori*<br/>
@@ -133,7 +134,7 @@ Restituisce un puntatore al token successivo trovato in *Str*. Restituisce **nul
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*Str*|*delimitatori*|*context*|Valore restituito|**errno**|
+|*str*|*delimitatori*|*context*|Valore restituito|**errno**|
 |----------------|------------------|---------------|------------------|-------------|
 |**NULL**|any|puntatore a un puntatore Null|**NULL**|**EINVAL**|
 |any|**NULL**|any|**NULL**|**EINVAL**|
@@ -141,13 +142,13 @@ Restituisce un puntatore al token successivo trovato in *Str*. Restituisce **nul
 
 Se *Str* è **null** ma *context* è un puntatore a un puntatore di contesto valido, non si verifica alcun errore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La famiglia di funzioni **strtok_s** trova il token successivo in *Str*. Il set di caratteri nei *delimitatori* specifica i possibili delimitatori del token da trovare in *Str* sulla chiamata corrente. **wcstok_s** e **_mbstok_s** sono versioni a caratteri wide e a caratteri multibyte di **strtok_s**. Gli argomenti e i valori restituiti di **wcstok_s** e **_wcstok_s_l** sono stringhe a caratteri wide. i **_mbstok_s** e **_mbstok_s_l** sono stringhe di caratteri multibyte. A parte ciò, queste funzioni si comportano in modo identico.
 
 Questa funzione convalida i relativi parametri. Quando si verifica una condizione di errore, come nella tabella delle condizioni di errore, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono **null**.
 
-Alla prima chiamata a **strtok_s**, la funzione ignora i delimitatori iniziali e restituisce un puntatore al primo token in *Str*, terminando il token con un carattere null. Più token possono essere suddivisi dal resto di *Str* da una serie di chiamate a **strtok_s**. Ogni chiamata a **strtok_s** modifica *Str* inserendo un carattere null dopo il token restituito dalla chiamata. Il puntatore di *contesto* tiene traccia della stringa da leggere e della posizione della stringa in cui deve essere letto il token successivo. Per leggere il token successivo da *Str*, chiamare **strtok_s** con un valore **null** per l'argomento *STR* e passare lo stesso parametro di *contesto* . L'argomento *Str* **null** fa in modo che **strtok_s** cerchi il token successivo nello *STR*modificato. L'argomento *Delimiters* può assumere qualsiasi valore da una chiamata al successivo, in modo che il set di delimitatori possa variare.
+Alla prima chiamata a **strtok_s**, la funzione ignora i delimitatori iniziali e restituisce un puntatore al primo token in *Str*, terminando il token con un carattere null. Più token possono essere suddivisi dal resto di *Str* da una serie di chiamate a **strtok_s**. Ogni chiamata a **strtok_s** modifica *Str* inserendo un carattere null dopo il token restituito dalla chiamata. Il puntatore di *contesto* tiene traccia della stringa da leggere e della posizione della stringa in cui deve essere letto il token successivo. Per leggere il token successivo da *Str*, chiamare **strtok_s** con un valore **null** per l'argomento *STR* e passare lo stesso parametro di *contesto* . L'argomento *Str* **null** fa in modo che **strtok_s** cerchi il token successivo nello *STR* modificato. L'argomento *Delimiters* può assumere qualsiasi valore da una chiamata al successivo, in modo che il set di delimitatori possa variare.
 
 Poiché il parametro di *contesto* sostituisce i buffer statici usati in **strtok** e **_strtok_l**, è possibile analizzare due stringhe contemporaneamente nello stesso thread.
 
@@ -170,7 +171,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
-|Routine TCHAR.H|\_UNICODE & \_MBCS non definito|\_MBCS definito|_UNICODE definito|
+|Routine TCHAR.H|\_UNICODE & \_ MBCS non definito|\_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstok_s**|**strtok_s**|**_mbstok_s**|**wcstok_s**|
 |**_tcstok_s_l**|**_strtok_s_l**|**_mbstok_s_l**|**_wcstok_s_l**|
@@ -244,7 +245,7 @@ tokens
 ## <a name="see-also"></a>Vedere anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

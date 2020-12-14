@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: strtold, _strtold_l, wcstold, _wcstold_l'
 title: strtold, _strtold_l, wcstold, _wcstold_l
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ f1_keywords:
 - _strtold_l
 - wcstold
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-ms.openlocfilehash: 14d67153eda851edc543e6eb2ad441ef35132ee5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c20550e93d45838c39e799a2ebf2f2cd368d059c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213489"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288659"
 ---
 # <a name="strtold-_strtold_l-wcstold-_wcstold_l"></a>strtold, _strtold_l, wcstold, _wcstold_l
 
@@ -88,7 +89,7 @@ Impostazioni locali da usare.
 
 Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Ogni funzione converte la stringa di input *strSource* in un oggetto **`long double`** . La funzione **strtold** interrompe la lettura della stringa *strSource* al primo carattere che non riconosce come parte di un numero. Questo può essere il carattere Null di terminazione. La versione a caratteri wide di **strtold** è **wcstold**; il relativo argomento *strSource* è una stringa di caratteri wide. In caso contrario, il comportamento di queste funzioni è identico.
 
@@ -155,7 +156,7 @@ string = 3.1415926535898This stopped it
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
 [Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [Funzioni da stringa a valore numerico](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>

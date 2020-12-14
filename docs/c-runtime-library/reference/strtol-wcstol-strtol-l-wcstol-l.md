@@ -1,15 +1,16 @@
 ---
-title: ':::no-loc(strtol):::, :::no-loc(wcstol):::, :::no-loc(_strtol_l):::, :::no-loc(_wcstol_l):::'
+description: 'Ulteriori informazioni su: strtol , wcstol , _strtol_l , _wcstol_l'
+title: strtol, wcstol, _strtol_l, _wcstol_l
 ms.date: 4/2/2020
 api_name:
-- ':::no-loc(strtol):::'
-- ':::no-loc(wcstol):::'
-- ':::no-loc(_strtol_l):::'
-- ':::no-loc(_wcstol_l):::'
-- '_o_:::no-loc(_strtol_l):::'
-- '_o_:::no-loc(_wcstol_l):::'
-- '_o_:::no-loc(strtol):::'
-- '_o_:::no-loc(wcstol):::'
+- strtol
+- wcstol
+- _strtol_l
+- _wcstol_l
+- _o__strtol_l
+- _o__wcstol_l
+- _o_strtol
+- _o_wcstol
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -28,86 +29,86 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- ':::no-loc(_wcstol_l):::'
-- ':::no-loc(strtol):::'
-- ':::no-loc(_tcstol):::'
-- ':::no-loc(wcstol):::'
-- ':::no-loc(_strtol_l):::'
-- ':::no-loc(_tcstol_l):::'
+- _wcstol_l
+- strtol
+- _tcstol
+- wcstol
+- _strtol_l
+- _tcstol_l
 helpviewer_keywords:
-- ':::no-loc(wcstol)::: function'
-- :::no-loc(wcstol):::_l function
-- ':::no-loc(_tcstol)::: function'
+- wcstol function
+- wcstol_l function
+- _tcstol function
 - string conversion, to integers
 - tcstol function
-- :::no-loc(strtol):::_l function
-- ':::no-loc(_wcstol_l)::: function'
-- ':::no-loc(_strtol_l)::: function'
-- ':::no-loc(strtol)::: function'
+- strtol_l function
+- _wcstol_l function
+- _strtol_l function
+- strtol function
 ms.assetid: 1787c96a-f283-4a83-9325-33cfc1c7e240
 no-loc:
-- ':::no-loc(strtol):::'
-- ':::no-loc(wcstol):::'
-- ':::no-loc(_strtol_l):::'
-- ':::no-loc(_wcstol_l):::'
-- ':::no-loc(LONG_MAX):::'
-- ':::no-loc(LONG_MIN):::'
-- ':::no-loc(errno):::'
-- ':::no-loc(ERANGE):::'
-- ':::no-loc(EINVAL):::'
-- ':::no-loc(LC_NUMERIC):::'
-- ':::no-loc(_tcstol):::'
-- ':::no-loc(_tcstol_l):::'
-- ':::no-loc(localeconv):::'
-- ':::no-loc(setlocale):::'
-- ':::no-loc(_wsetlocale):::'
-- ':::no-loc(strtod):::'
-- ':::no-loc(_strtod_l):::'
-- ':::no-loc(wcstod):::'
-- ':::no-loc(_wcstod_l):::'
-- ':::no-loc(strtoll):::'
-- ':::no-loc(_strtoll_l):::'
-- ':::no-loc(wcstoll):::'
-- ':::no-loc(_wcstoll_l):::'
-- ':::no-loc(strtoul):::'
-- ':::no-loc(_strtoul_l):::'
-- ':::no-loc(wcstoul):::'
-- ':::no-loc(_wcstoul_l):::'
-- ':::no-loc(atof):::'
-- ':::no-loc(_atof_l):::'
-- ':::no-loc(_wtof):::'
-- ':::no-loc(_wtof_l):::'
-ms.openlocfilehash: a5265b434f14f299532d6f5ebb65c83d75ea63ca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+- strtol
+- wcstol
+- _strtol_l
+- _wcstol_l
+- LONG_MAX
+- LONG_MIN
+- errno
+- ERANGE
+- EINVAL
+- LC_NUMERIC
+- _tcstol
+- _tcstol_l
+- localeconv
+- setlocale
+- _wsetlocale
+- strtod
+- _strtod_l
+- wcstod
+- _wcstod_l
+- strtoll
+- _strtoll_l
+- wcstoll
+- _wcstoll_l
+- strtoul
+- _strtoul_l
+- wcstoul
+- _wcstoul_l
+- atof
+- _atof_l
+- _wtof
+- _wtof_l
+ms.openlocfilehash: 8dd175929335533f8ade91450608db7f39bc0cc3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232404"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288672"
 ---
-# <a name="no-locstrtol-no-locwcstol-no-loc_strtol_l-no-loc_wcstol_l"></a>:::no-loc(strtol):::, :::no-loc(wcstol):::, :::no-loc(_strtol_l):::, :::no-loc(_wcstol_l):::
+# <a name="no-locstrtol-no-locwcstol-no-loc_strtol_l-no-loc_wcstol_l"></a>strtol, wcstol, _strtol_l, _wcstol_l
 
 Converte le stringhe in un **`long`** valore integer.
 
 ## <a name="syntax"></a>Sintassi
 
 ```C
-long :::no-loc(strtol):::(
+long strtol(
    const char *string,
    char **end_ptr,
    int base
 );
-long :::no-loc(wcstol):::(
+long wcstol(
    const wchar_t *string,
    wchar_t **end_ptr,
    int base
 );
-long :::no-loc(_strtol_l):::(
+long _strtol_l(
    const char *string,
    char **end_ptr,
    int base,
    _locale_t locale
 );
-long :::no-loc(_wcstol_l):::(
+long _wcstol_l(
    const wchar_t *string,
    wchar_t **end_ptr,
    int base,
@@ -131,19 +132,19 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**:::no-loc(strtol):::**, **:::no-loc(wcstol):::** , **:::no-loc(_strtol_l):::** e **:::no-loc(_wcstol_l):::** restituiscono il valore rappresentato nella *stringa*. Restituiscono 0 se non è possibile alcuna conversione. Quando la rappresentazione provocherebbe un overflow, restituiscono **:::no-loc(LONG_MAX):::** o **:::no-loc(LONG_MIN):::** .
+**strtol**, **wcstol** , **_strtol_l** e **_wcstol_l** restituiscono il valore rappresentato nella *stringa*. Restituiscono 0 se non è possibile alcuna conversione. Quando la rappresentazione provocherebbe un overflow, restituiscono **LONG_MAX** o **LONG_MIN** .
 
-**:::no-loc(errno):::** viene impostato su **:::no-loc(ERANGE):::** se si verifica un overflow o un underflow. Viene impostato su **:::no-loc(EINVAL):::** se la *stringa* è **null**. Oppure se *base* è diverso da zero e minore di 2 o maggiore di 36. Per ulteriori informazioni su **:::no-loc(ERANGE):::** , **:::no-loc(EINVAL):::** e altri codici restituiti, vedere [_dos :::no-loc(errno)::: , :::no-loc(errno)::: , _sys_errlist e _sys_nerr](../../c-runtime-library/:::no-loc(errno):::-dos:::no-loc(errno):::-sys-errlist-and-sys-nerr.md).
+**errno** viene impostato su **ERANGE** se si verifica un overflow o un underflow. Viene impostato su **EINVAL** se la *stringa* è **null**. Oppure se *base* è diverso da zero e minore di 2 o maggiore di 36. Per ulteriori informazioni su **ERANGE** , **EINVAL** e altri codici restituiti, vedere [_dos errno , errno , _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Le **:::no-loc(strtol):::** **:::no-loc(wcstol):::** funzioni,, **:::no-loc(_strtol_l):::** e **:::no-loc(_wcstol_l):::** convertono la *stringa* in un oggetto **`long`** . Arrestano la lettura della *stringa* in corrispondenza del primo carattere non riconosciuto come parte di un numero. Può trattarsi del carattere di terminazione null oppure il primo carattere alfanumerico maggiore o uguale alla *base*.
+Le **strtol** **wcstol** funzioni,, **_strtol_l** e **_wcstol_l** convertono la *stringa* in un oggetto **`long`** . Arrestano la lettura della *stringa* in corrispondenza del primo carattere non riconosciuto come parte di un numero. Può trattarsi del carattere di terminazione null oppure il primo carattere alfanumerico maggiore o uguale alla *base*.
 
-**:::no-loc(wcstol):::** e **:::no-loc(_wcstol_l):::** sono versioni a caratteri wide di **:::no-loc(strtol):::** e **:::no-loc(_strtol_l):::** . Il relativo argomento *stringa* è una stringa di caratteri wide. Queste funzioni si comportano in modo identico a **:::no-loc(strtol):::** e **:::no-loc(_strtol_l):::** in caso contrario. L'impostazione della categoria delle impostazioni locali **:::no-loc(LC_NUMERIC):::** determina il riconoscimento del carattere radice (il marcatore frazionario o il separatore decimale) nella *stringa*. Le funzioni **:::no-loc(strtol):::** e **:::no-loc(wcstol):::** usano le impostazioni locali correnti. **:::no-loc(_strtol_l):::** e **:::no-loc(_wcstol_l):::** usano invece le impostazioni locali passate. Per ulteriori informazioni, vedere [ :::no-loc(setlocale)::: ] e [impostazioni locali](../../c-runtime-library/locale.md).
+**wcstol** e **_wcstol_l** sono versioni a caratteri wide di **strtol** e **_strtol_l** . Il relativo argomento *stringa* è una stringa di caratteri wide. Queste funzioni si comportano in modo identico a **strtol** e **_strtol_l** in caso contrario. L'impostazione della categoria delle impostazioni locali **LC_NUMERIC** determina il riconoscimento del carattere radice (il marcatore frazionario o il separatore decimale) nella *stringa*. Le funzioni **strtol** e **wcstol** usano le impostazioni locali correnti. **_strtol_l** e **_wcstol_l** usano invece le impostazioni locali passate. Per ulteriori informazioni, vedere [ setlocale ] e [impostazioni locali](../../c-runtime-library/locale.md).
 
 Quando *end_ptr* è **null**, viene ignorato. In caso contrario, un puntatore al carattere che ha interrotto l'analisi viene archiviato nella posizione a cui punta *end_ptr*. Non è possibile alcuna conversione se non vengono trovate cifre valide o viene specificata una base non valida. Il valore della *stringa* viene quindi archiviato nella posizione a cui punta *end_ptr*.
 
-**:::no-loc(strtol):::** prevede che la *stringa* punti a una stringa nel formato seguente:
+**strtol** prevede che la *stringa* punti a una stringa nel formato seguente:
 
 > [*spazi vuoti*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*alfanumerici*]
 
@@ -155,32 +156,32 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**:::no-loc(_tcstol):::**|**:::no-loc(strtol):::**|**:::no-loc(strtol):::**|**:::no-loc(wcstol):::**|
-|**:::no-loc(_tcstol_l):::**|**:::no-loc(_strtol_l):::**|**:::no-loc(_strtol_l):::**|**:::no-loc(_wcstol_l):::**|
+|**_tcstol**|**strtol**|**strtol**|**wcstol**|
+|**_tcstol_l**|**_strtol_l**|**_strtol_l**|**_wcstol_l**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**:::no-loc(strtol):::**|\<stdlib.h>|
-|**:::no-loc(wcstol):::**|\<stdlib.h> o \<wchar.h>|
-|**:::no-loc(_strtol_l):::**|\<stdlib.h>|
-|**:::no-loc(_wcstol_l):::**|\<stdlib.h> o \<wchar.h>|
+|**strtol**|\<stdlib.h>|
+|**wcstol**|\<stdlib.h> o \<wchar.h>|
+|**_strtol_l**|\<stdlib.h>|
+|**_wcstol_l**|\<stdlib.h> o \<wchar.h>|
 
-Le **:::no-loc(_strtol_l):::** **:::no-loc(_wcstol_l):::** funzioni e sono specifiche di Microsoft, non parte della libreria C standard. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../compatibility.md).
+Le **_strtol_l** **_wcstol_l** funzioni e sono specifiche di Microsoft, non parte della libreria C standard. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../compatibility.md).
 
 ## <a name="example"></a>Esempio
 
-Vedere l'esempio per [:::no-loc(strtod):::](:::no-loc(strtod):::-:::no-loc(strtod):::-l-:::no-loc(wcstod):::-:::no-loc(wcstod):::-l.md) .
+Vedere l'esempio per [strtod](strtod-strtod-l-wcstod-wcstod-l.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Conversione dei dati](../data-conversion.md)\
 [Locale](../locale.md)\
-[:::no-loc(localeconv):::](:::no-loc(localeconv):::.md)\
-[:::no-loc(setlocale):::, :::no-loc(_wsetlocale):::](:::no-loc(setlocale):::-w:::no-loc(setlocale):::.md)\
+[localeconv](localeconv.md)\
+[setlocale, _wsetlocale](setlocale-wsetlocale.md)\
 [Funzioni da stringa a valore numerico](../string-to-numeric-value-functions.md)\
-[:::no-loc(strtod):::, :::no-loc(_strtod_l):::, :::no-loc(wcstod):::, :::no-loc(_wcstod_l):::](:::no-loc(strtod):::-:::no-loc(strtod):::-l-:::no-loc(wcstod):::-:::no-loc(wcstod):::-l.md)\
-[:::no-loc(strtoll):::, :::no-loc(_strtoll_l):::, :::no-loc(wcstoll):::, :::no-loc(_wcstoll_l):::](:::no-loc(strtoll):::-:::no-loc(strtoll):::-l-:::no-loc(wcstoll):::-:::no-loc(wcstoll):::-l.md)\
-[:::no-loc(strtoul):::, :::no-loc(_strtoul_l):::, :::no-loc(wcstoul):::, :::no-loc(_wcstoul_l):::](:::no-loc(strtoul):::-:::no-loc(strtoul):::-l-:::no-loc(wcstoul):::-:::no-loc(wcstoul):::-l.md)\
-[:::no-loc(atof):::, :::no-loc(_atof_l):::, :::no-loc(_wtof):::, :::no-loc(_wtof_l):::](:::no-loc(atof):::-:::no-loc(atof):::-l-wtof-wtof-l.md)
+[strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)\
+[strtoll, _strtoll_l, wcstoll, _wcstoll_l](strtoll-strtoll-l-wcstoll-wcstoll-l.md)\
+[strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)\
+[atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)

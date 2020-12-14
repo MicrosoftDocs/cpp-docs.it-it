@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _set_fmode'
 title: _set_fmode
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - file translation [C++], setting mode
 - set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-ms.openlocfilehash: 6d72baeecefb117f0d7b8258728ec299a31f710a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8f33a0024ad2746974440166f564f8dd41756de5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913034"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288789"
 ---
 # <a name="_set_fmode"></a>_set_fmode
 
@@ -58,7 +59,7 @@ Modalità di conversione file desiderata: **_O_TEXT** o **_O_BINARY**.
 
 Restituisce zero in caso di esito positivo, un codice di errore in caso di esito negativo. Se la *modalità* non **è _O_TEXT** o **_O_BINARY** o **_O_WTEXT**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **EINVAL**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione imposta la variabile globale [_fmode](../../c-runtime-library/fmode.md). Questa variabile specifica la modalità di conversione file predefinita per le operazioni di I/O dei file **_open** e **_pipe**.
 
