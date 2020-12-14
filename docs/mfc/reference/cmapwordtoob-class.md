@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CMapWordToOb'
 title: Classe CMapWordToOb
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - CMapWordToOb [MFC], RemoveKey
 - CMapWordToOb [MFC], SetAt
 ms.assetid: 9c9bcd76-456f-4cf9-b03c-dd28b49d5e4f
-ms.openlocfilehash: f360760bb5c04400ed77ef49c5968f8e9e7a6e59
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: da21902c3789f1547055baffae5650fcb6b8c789
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222992"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336704"
 ---
 # <a name="cmapwordtoob-class"></a>Classe CMapWordToOb
 
@@ -51,7 +52,7 @@ Supporta mappe di puntatori `CObject` con chiave fornita da parole a 16 bit.
 class CMapWordToOb : public CObject
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 Le funzioni membro di `CMapWordToOb` sono simili alle funzioni membro della classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CMapStringToOb`. Quando si visualizza un oggetto `CString` o un **`const`** puntatore a **`char`** come un parametro di funzione o un valore restituito, sostituire Word.
 
@@ -63,13 +64,13 @@ ad esempio, si converte in
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CMapWordToOb::CMapWordToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Costruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CMapWordToOb:: GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Restituisce il numero di elementi in questa mappa.|
 |[CMapWordToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Determina il numero corrente di elementi nella tabella hash.|
@@ -87,13 +88,13 @@ ad esempio, si converte in
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[Operatore \[ CMapWordToOb::\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserisce un elemento nella mappa, ovvero la sostituzione dell'operatore per `SetAt` .|
+|[Operatore \[ CMapWordToOb:: \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserisce un elemento nella mappa, ovvero la sostituzione dell'operatore per `SetAt` .|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-`CMapWordToOb`incorpora la macro IMPLEMENT_SERIAL per supportare la serializzazione e il dump dei relativi elementi. Ogni elemento viene serializzato a sua volta se una mappa viene archiviata in un archivio, con l'operatore di inserimento ( **<<** ) di overload o con la `Serialize` funzione membro.
+`CMapWordToOb` incorpora la macro IMPLEMENT_SERIAL per supportare la serializzazione e il dump dei relativi elementi. Ogni elemento viene serializzato a sua volta se una mappa viene archiviata in un archivio, con l'operatore di inserimento ( **<<** ) di overload o con la `Serialize` funzione membro.
 
 Se è necessario un dump di singoli elementi di WORD `CObject` , è necessario impostare la profondità del contesto di dump su 1 o su un valore superiore.
 
@@ -111,7 +112,7 @@ Per ulteriori informazioni su `CMapWordToOb` , vedere le [raccolte](../../mfc/co
 
 **Intestazione:** AFXCOLL. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)

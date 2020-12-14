@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: classe CListCtrl'
 title: Classe CListCtrl
 ms.date: 06/13/2019
 f1_keywords:
@@ -264,12 +265,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: a1fa9f4bb7ba844dd2f0300cf007a786e8fde902
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: a72cc336a6f962eb5129bec15ccb3ed2fe748e10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562480"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333494"
 ---
 # <a name="clistctrl-class"></a>Classe CListCtrl
 
@@ -281,17 +282,17 @@ Incapsula la funzionalità di un "controllo di visualizzazione elenco" che mostr
 class CListCtrl : public CWnd
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CListCtrl:: CListCtrl](#clistctrl)|Costruisce un oggetto `CListCtrl`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CListCtrl:: ApproximateViewRect](#approximateviewrect)|Determina la larghezza e l'altezza necessarie per visualizzare gli elementi di un controllo di visualizzazione elenco.|
 |[CListCtrl:: Arrange](#arrange)|Allinea gli elementi in una griglia.|
@@ -422,7 +423,7 @@ class CListCtrl : public CWnd
 |[CListCtrl:: SubItemHitTest](#subitemhittest)|Determina quale elemento della visualizzazione elenco, se presente, si trova in una posizione specificata.|
 |[CListCtrl:: Update](#update)|Impone al controllo di ridisegnare un elemento specificato.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Oltre a un'icona e un'etichetta, ogni elemento può avere informazioni visualizzate in colonne a destra dell'icona e dell'etichetta. Questo controllo (e pertanto la `CListCtrl` classe) è disponibile solo per i programmi in esecuzione in windows 95/98 e Windows NT versione 3,51 e successive.
 
@@ -538,7 +539,7 @@ Numero di elementi da visualizzare nel controllo. Se questo parametro è-1, il F
 
 `CSize`Oggetto che contiene la larghezza e l'altezza approssimative necessarie per visualizzare gli elementi, in pixel.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento della macro Win32, [ListView_ApproximateViewRect](/windows/win32/api/commctrl/nf-commctrl-listview_approximateviewrect), come descritto nel Windows SDK.
 
@@ -567,7 +568,7 @@ Specifica lo stile di allineamento per gli elementi. Può essere uno dei valori 
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il parametro *nCode* specifica lo stile di allineamento.
 
@@ -588,7 +589,7 @@ Annulla l'operazione di modifica del testo dell'elemento.
 void CancelEditLabel();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_CANCELEDITLABEL](/windows/win32/Controls/lvm-canceleditlabel) , come descritto nel Windows SDK.
 
@@ -630,7 +631,7 @@ Specifica l'ID del controllo elenco.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si costruisce un `CListCtrl` in due passaggi. Chiamare innanzitutto il costruttore e quindi chiamare `Create` , che crea il controllo visualizzazione elenco e lo collega all' `CListCtrl` oggetto.
 
@@ -678,7 +679,7 @@ ID della finestra figlio del controllo.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare `CreateEx` anziché [create](#create) per applicare gli stili estesi di Windows, specificati dall'introduzione allo stile esteso di Windows **WS_EX_**.
 
@@ -706,7 +707,7 @@ Indirizzo di una struttura di [punti](/windows/win32/api/windef/ns-windef-point)
 
 Puntatore all'elenco di immagini di trascinamento in caso di esito positivo; in caso contrario, NULL.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L' `CImageList` oggetto è permanente ed è necessario eliminarlo al termine dell'operazione. Ad esempio:
 
@@ -809,7 +810,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 *lpDrawItemStruct*<br/>
 Puntatore lungo a una `DRAWITEMSTRUCT` struttura che contiene informazioni sul tipo di disegno necessario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il `itemAction` membro della struttura [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) definisce l'azione di disegno da eseguire.
 
@@ -834,7 +835,7 @@ Indice dell'elemento della visualizzazione elenco da modificare.
 
 In caso di esito positivo, puntatore all' `CEdit` oggetto utilizzato per modificare il testo dell'elemento; in caso contrario, null.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un controllo di visualizzazione elenco con lo stile della finestra LVS_EDITLABELS consente a un utente di modificare le etichette degli elementi sul posto. L'utente inizia la modifica facendo clic sull'etichetta di un elemento con lo stato attivo.
 
@@ -875,7 +876,7 @@ Restituisce uno dei valori seguenti:
 
 - **-1** Operazione non riuscita.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_ENABLEGROUPVIEW](/windows/win32/Controls/lvm-enablegroupview) , come descritto nel Windows SDK.
 
@@ -901,7 +902,7 @@ Specifica se la visibilità parziale è accettabile.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se necessario, viene eseguito lo scorrimento del controllo visualizzazione elenco. Se il parametro *bPartialOK* è diverso da zero, non si verifica alcuno scorrimento se l'elemento è parzialmente visibile.
 
@@ -936,7 +937,7 @@ Indice dell'elemento da cui iniziare la ricerca oppure-1 per iniziare dall'inizi
 
 Indice dell'elemento in caso di esito positivo o-1 in caso contrario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il parametro *pFindInfo* punta a una `LVFINDINFO` struttura che contiene le informazioni usate per cercare un elemento della visualizzazione elenco.
 
@@ -989,7 +990,7 @@ Puntatore a una `LVBKIMAGE` struttura che contiene l'immagine di sfondo corrente
 
 Restituisce un valore diverso da zero se ha esito positivo oppure zero in caso contrario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo implementa il comportamento della macro Win32, [ListView_GetBkImage](/windows/win32/api/commctrl/nf-commctrl-listview_getbkimage), come descritto nel Windows SDK.
 
@@ -1020,7 +1021,7 @@ UINT GetCallbackMask() const;
 
 Maschera di callback del controllo visualizzazione elenco.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un "elemento di callback" è un elemento della visualizzazione elenco per il quale l'applicazione, anziché il controllo, archivia il testo, l'icona o entrambi. Anche se un controllo visualizzazione elenco è in grado di archiviare questi attributi, può essere utile usare gli elementi di callback se l'applicazione gestisce già alcune di queste informazioni. La maschera di callback specifica quali bit dello stato dell'elemento vengono gestiti dall'applicazione e si applica all'intero controllo anziché a un elemento specifico. Per impostazione predefinita, la maschera di callback è zero, il che significa che il controllo tiene traccia di tutti gli Stati degli elementi. Se un'applicazione usa elementi di callback o specifica una maschera di callback diversa da zero, deve essere in grado di fornire attributi dell'elemento della visualizzazione elenco su richiesta.
 
@@ -1045,7 +1046,7 @@ Indice in base zero di un elemento del controllo elenco.
 
 Diverso da zero se l'elemento è selezionato; in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento della macro Win32, [ListView_GetCheckState](/windows/win32/api/commctrl/nf-commctrl-listview_getcheckstate), come descritto nel Windows SDK.
 
@@ -1075,7 +1076,7 @@ Indirizzo di una struttura [LVCOLUMN](/windows/win32/api/commctrl/ns-commctrl-lv
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La `LVCOLUMN` struttura contiene informazioni su una colonna in visualizzazione report.
 
@@ -1116,7 +1117,7 @@ Numero di colonne nel controllo visualizzazione elenco. Se questo parametro è-1
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento della macro Win32, [ListView_GetColumnOrderArray](/windows/win32/api/commctrl/nf-commctrl-listview_getcolumnorderarray), come descritto nel Windows SDK.
 
@@ -1228,7 +1229,7 @@ CString GetEmptyText() const;
 
 Oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.md) che contiene il testo da visualizzare se il controllo è vuoto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [LVM_GETEMPTYTEXT](/windows/win32/Controls/lvm-getemptytext) , descritto nel Windows SDK.
 
@@ -1244,7 +1245,7 @@ DWORD GetExtendedStyle();
 
 Combinazione degli stili estesi attualmente in uso dal controllo di visualizzazione elenco. Per un elenco descrittivo di questi stili estesi, vedere l'articolo relativo agli [stili di visualizzazione elenco esteso](/windows/win32/Controls/extended-list-view-styles) nel Windows SDK.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento della macro Win32, [ListView_GetExtendedListViewStyle](/windows/win32/api/commctrl/nf-commctrl-listview_getextendedlistviewstyle), come descritto nel Windows SDK.
 
@@ -1297,7 +1298,7 @@ int GetFocusedGroup() const;
 
 Indice del gruppo il cui stato è LVGS_FOCUSED, se è presente un gruppo di questo tipo. in caso contrario,-1.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [LVM_GETFOCUSEDGROUP](/windows/win32/Controls/lvm-getfocusedgroup) , descritto nel Windows SDK. Per ulteriori informazioni, vedere il valore LVGS_FOCUSED del `state` membro della struttura [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) .
 
@@ -1313,7 +1314,7 @@ int GetGroupCount()const;
 
 Numero di gruppi nel controllo elenco-visualizzazione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [LVM_GETGROUPCOUNT](/windows/win32/Controls/lvm-getgroupcount) , descritto nella > Windows SDK.
 
@@ -1339,7 +1340,7 @@ Puntatore a [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) contenent
 
 Restituisce l'ID del gruppo, se ha esito positivo, oppure-1 in caso contrario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_GETGROUPINFO](/windows/win32/Controls/lvm-getgroupinfo) , come descritto nel Windows SDK.
 
@@ -1365,7 +1366,7 @@ out Puntatore a una struttura [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [LVM_GETGROUPINFOBYINDEX](/windows/win32/controls/lvm-getgroupinfobyindex) , descritto nella > Windows SDK.
 
@@ -1423,7 +1424,7 @@ void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
 *pGroupMetrics*<br/>
 Puntatore a un [LVGROUPMETRICS](/windows/win32/api/commctrl/ns-commctrl-lvgroupmetrics) contenente le informazioni sulle metriche di gruppo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_GETGROUPMETRICS](/windows/win32/Controls/lvm-getgroupmetrics) , come descritto nel Windows SDK.
 
@@ -1459,7 +1460,7 @@ in Specifica le coordinate del rettangolo da recuperare. Usare uno dei valori se
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il chiamante è responsabile dell'allocazione della struttura [Rect](/windows/win32/api/windef/ns-windef-rect) a cui punta il parametro *pRect* .
 
@@ -1516,7 +1517,7 @@ in Maschera che specifica il valore di stato da recuperare per il gruppo specifi
 
 Stato richiesto per il gruppo specificato oppure 0 se non è possibile trovare il gruppo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore restituito è il risultato di un'operazione AND bit per bit sul parametro *dwMask* e il valore del `state` membro di una struttura [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) che rappresenta il controllo di visualizzazione elenco corrente.
 
@@ -1534,7 +1535,7 @@ CHeaderCtrl* GetHeaderCtrl();
 
 Puntatore al controllo intestazione, utilizzato dal controllo di visualizzazione elenco.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento della macro Win32, [ListView_GetHeader](/windows/win32/api/commctrl/nf-commctrl-listview_getheader), come descritto nel Windows SDK.
 
@@ -1554,7 +1555,7 @@ HCURSOR GetHotCursor();
 
 Handle per la risorsa di cursore attivo corrente utilizzata dal controllo visualizzazione elenco.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento della macro Win32, [ListView_GetHotCursor](/windows/win32/api/commctrl/nf-commctrl-listview_gethotcursor), come descritto nel Windows SDK. Il cursore attivo, visibile solo quando è abilitata la selezione del passaggio del mouse, viene visualizzato quando il cursore passa su un elemento della visualizzazione elenco. La selezione del passaggio del mouse è abilitata impostando il LVS_EX_TRACKSELECT stile esteso.
 
@@ -1579,7 +1580,7 @@ int GetHotItem();
 
 Indice dell'elemento attivo corrente del controllo di visualizzazione elenco.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento della macro Win32, [ListView_GetHotItem](/windows/win32/api/commctrl/nf-commctrl-listview_gethotitem), come descritto nel Windows SDK. L'elemento attivo è definito come elemento attualmente selezionato quando è abilitata la funzionalità di rilevamento a caldo (e la selezione del passaggio del mouse).
 
@@ -1606,7 +1607,7 @@ DWORD GetHoverTime() const;
 
 Restituisce il ritardo, in millisecondi, con cui il cursore del mouse deve passare il puntatore del mouse su un elemento prima che sia selezionato. Se il valore restituito è-1, l'ora del passaggio del mouse corrisponde al valore predefinito per il passaggio del mouse.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento della macro Win32, [ListView_GetHoverTime](/windows/win32/api/commctrl/nf-commctrl-listview_gethovertime), come descritto nel Windows SDK.
 
@@ -1667,7 +1668,7 @@ Puntatore a una struttura [LVINSERTMARK](/windows/win32/api/commctrl/ns-commctrl
 
 Restituisce TRUE se l'operazione ha esito positivo o FALSE in caso contrario. Viene restituito FALSE se la dimensione del `cbSize` membro della struttura non `LVINSERTMARK` corrisponde alla dimensione effettiva della struttura.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_GETINSERTMARK](/windows/win32/Controls/lvm-getinsertmark) , come descritto nel Windows SDK.
 
@@ -1683,7 +1684,7 @@ COLORREF GetInsertMarkColor() const;
 
 Restituisce una struttura [COLORREF](/windows/win32/gdi/colorref) che contiene il colore del punto di inserimento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_GETINSERTMARKCOLOR](/windows/win32/Controls/lvm-getinsertmarkcolor) , come descritto nel Windows SDK.
 
@@ -1708,7 +1709,7 @@ Restituisce uno dei valori seguenti:
 
 - **1** punto di inserimento trovato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_GETINSERTMARKRECT](/windows/win32/Controls/lvm-getinsertmarkrect) , come descritto nel Windows SDK.
 
@@ -1729,7 +1730,7 @@ Puntatore a una struttura [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvite
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La `LVITEM` struttura specifica o riceve gli attributi di un elemento della visualizzazione elenco.
 
@@ -1766,7 +1767,7 @@ Indice dell'elemento di elenco i cui dati devono essere recuperati.
 
 Valore specifico dell'applicazione a 32 bit associato all'elemento specificato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo valore è il `lParam` membro della struttura [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) , come descritto nella Windows SDK
 
@@ -1819,7 +1820,7 @@ out Puntatore a una struttura [Rect](/windows/win32/api/windef/ns-windef-rect) c
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [LVM_GETITEMINDEXRECT](/windows/win32/Controls/lvm-getitemindexrect) , descritto nel Windows SDK. Per ulteriori informazioni, vedere [ListView_GetItemIndexRect macro](/windows/win32/api/commctrl/nf-commctrl-listview_getitemindexrect).
 
@@ -1989,7 +1990,7 @@ out Contiene la spaziatura verticale tra gli elementi.
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [LVM_GETITEMSPACING](/windows/win32/Controls/lvm-getitemspacing) , descritto nel Windows SDK.
 
@@ -2015,7 +2016,7 @@ Maschera che specifica quale dei flag di stato dell'elemento restituire.
 
 Flag di stato per l'elemento della visualizzazione elenco specificato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Lo stato di un elemento è specificato dal `state` membro della struttura [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) , come descritto nell'Windows SDK. Quando si specifica o si modifica lo stato di un elemento, il `stateMask` membro specifica quali bit di stato si desidera modificare.
 
@@ -2059,7 +2060,7 @@ La versione restituita **`int`** restituisce la lunghezza della stringa recupera
 
 La versione restituendo `CString` restituisce il testo dell'elemento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se *nSubItem* è zero, questa funzione recupera l'etichetta dell'elemento; Se *nSubItem* è diverso da zero, viene recuperato il testo dell'elemento secondario. Per ulteriori informazioni sull'argomento dell'elemento secondario, vedere la descrizione della struttura [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) nel Windows SDK.
 
@@ -2127,7 +2128,7 @@ in Combinazione bit per bit (o) di flag che specificano come eseguire la ricerca
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il chiamante è responsabile dell'allocazione e dell'impostazione dei membri della `LVITEMINDEX` struttura a cui punta il parametro *pItemIndex* .
 
@@ -2143,14 +2144,14 @@ int GetNextSelectedItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Riferimento a un valore di posizione restituito da una chiamata precedente a `GetNextSelectedItem` o `GetFirstSelectedItemPosition` . Il valore viene aggiornato alla posizione successiva da questa chiamata.
 
 ### <a name="return-value"></a>Valore restituito
 
 Indice dell'elemento di elenco identificato da *pos*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È possibile usare `GetNextSelectedItem` in un ciclo di iterazione in diretta se si stabilisce la posizione iniziale con una chiamata a `GetFirstSelectedItemPosition` .
 
@@ -2189,7 +2190,7 @@ UINT GetNumberOfWorkAreas() const;
 
 Non usato in questo momento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento della macro Win32, [ListView_GetNumberOfWorkAreas](/windows/win32/api/commctrl/nf-commctrl-listview_getnumberofworkareas), come descritto nel Windows SDK.
 
@@ -2232,7 +2233,7 @@ COLORREF GetOutlineColor() const;
 
 Restituisce una struttura [COLORREF](/windows/win32/gdi/colorref) contenente il colore del contorno.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_GETOUTLINECOLOR](/windows/win32/Controls/lvm-getoutlinecolor) , come descritto nel Windows SDK.
 
@@ -2265,7 +2266,7 @@ UINT GetSelectedColumn() const;
 
 Indice della colonna selezionata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_GETSELECTEDCOLUMN](/windows/win32/Controls/lvm-getselectedcolumn) , come descritto nel Windows SDK.
 
@@ -2311,7 +2312,7 @@ int GetSelectionMark();
 
 Contrassegno di selezione in base zero oppure-1 se non è presente alcun contrassegno di selezione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento della macro Win32, [ListView_GetSelectionMark](/windows/win32/api/commctrl/nf-commctrl-listview_getselectionmark), come descritto nel Windows SDK.
 
@@ -2341,7 +2342,7 @@ Indirizzo di una stringa con terminazione null di cui è necessario determinare 
 
 Larghezza, in pixel, della stringa a cui punta *lpsz*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La larghezza restituita tiene conto dei margini correnti del tipo di carattere e della colonna del controllo, ma non della larghezza di un'icona piccola.
 
@@ -2390,14 +2391,14 @@ Determina la parte del rettangolo di delimitazione (dell'elemento secondario del
 
 - LVIR_LABEL restituisce il rettangolo di delimitazione dell'intero elemento, inclusi l'icona e l'etichetta. Questo è identico a LVIR_BOUNDS.
 
-*Ref*<br/>
+*ref*<br/>
 Riferimento a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) che contiene le coordinate del rettangolo di delimitazione dell'elemento secondario.
 
 ### <a name="return-value"></a>Valore restituito
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento della macro Win32, [ListView_GetSubItemRect](/windows/win32/api/commctrl/nf-commctrl-listview_getsubitemrect), come descritto nel Windows SDK.
 
@@ -2450,7 +2451,7 @@ Puntatore a una struttura [LVTILEINFO](/windows/win32/api/commctrl/ns-commctrl-l
 
 Il valore restituito non viene utilizzato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_GETTILEINFO](/windows/win32/Controls/lvm-gettileinfo) , come descritto nel Windows SDK.
 
@@ -2471,7 +2472,7 @@ Puntatore a una struttura [LVTILEVIEWINFO](/windows/win32/api/commctrl/ns-commct
 
 Il valore restituito non viene utilizzato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_GETTILEVIEWINFO](/windows/win32/Controls/lvm-gettileviewinfo) , come descritto nel Windows SDK.
 
@@ -2487,7 +2488,7 @@ CToolTipCtrl* GetToolTips() const;
 
 Puntatore a un oggetto [CToolTipCtrl](ctooltipctrl-class.md) che deve essere utilizzato dal controllo elenco. Se la funzione membro [create](#create) usa lo stile LVS_NOTOOLTIPS, non viene usata alcuna descrizione comando e viene restituito null.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [LVM_GETTOOLTIPS](/windows/win32/Controls/lvm-gettooltips)del messaggio Win32, come descritto nel Windows SDK. L'implementazione MFC di `GetToolTips` restituisce un `CToolTipCtrl` oggetto, che viene utilizzato dal controllo elenco, anziché da un handle per un controllo ToolTip.
 
@@ -2543,7 +2544,7 @@ DWORD GetView() const;
 
 Visualizzazione corrente del controllo di visualizzazione elenco.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_GETVIEW](/windows/win32/Controls/lvm-getview) , come descritto nel Windows SDK.
 
@@ -2564,7 +2565,7 @@ Indirizzo di una struttura [Rect](/windows/win32/api/windef/ns-windef-rect) .
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La visualizzazione elenco deve trovarsi nella visualizzazione icone o nella visualizzazione icona piccola.
 
@@ -2586,7 +2587,7 @@ Numero di `RECT` strutture contenute nella matrice *pRect* .
 *pRect*<br/>
 Puntatore a una matrice di `RECT` strutture (o oggetti [CRect](../../atl-mfc-shared/reference/crect-class.md) ) che ricevono le aree di lavoro del controllo visualizzazione elenco. I valori in queste strutture si trovano nelle coordinate del client.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento della macro Win32, [ListView_GetWorkAreas](/windows/win32/api/commctrl/nf-commctrl-listview_getworkareas), come descritto nel Windows SDK.
 
@@ -2611,7 +2612,7 @@ Identificatore del gruppo richiesto.
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_HASGROUP](/windows/win32/Controls/lvm-hasgroup) , come descritto nel Windows SDK.
 
@@ -2642,7 +2643,7 @@ Puntatore a un intero che riceve informazioni sui risultati del test. Vedere la 
 
 Indice dell'elemento in corrispondenza della posizione specificata da *pHitTestInfo*, se presente, oppure-1 in caso contrario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È possibile utilizzare i valori LVHT_ABOVE, LVHT_BELOW, LVHT_TOLEFT e LVHT_TORIGHT del membro della struttura `flag` per determinare se scorrere il contenuto di un controllo di visualizzazione elenco. Due di questi flag possono essere combinati, ad esempio, se la posizione è sopra e a sinistra dell'area client.
 
@@ -2711,7 +2712,7 @@ Indice dell'elemento secondario associato alla colonna. Se questo parametro è-1
 
 Indice della nuova colonna se ha esito positivo o-1 in caso contrario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La colonna più a sinistra in un controllo visualizzazione elenco deve essere allineata a sinistra.
 
@@ -2739,7 +2740,7 @@ Puntatore a una struttura [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgr
 
 Restituisce l'indice dell'elemento a cui è stato aggiunto il gruppo oppure-1 se l'operazione non è riuscita.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_INSERTGROUP](/windows/win32/Controls/lvm-insertgroup) , come descritto nel Windows SDK.
 
@@ -2760,7 +2761,7 @@ Puntatore a una struttura [LVINSERTGROUPSORTED](/windows/win32/api/commctrl/ns-c
 
 Il valore restituito non viene utilizzato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_INSERTGROUPSORTED](/windows/win32/Controls/lvm-insertgroupsorted) , come descritto nel Windows SDK.
 
@@ -2820,7 +2821,7 @@ Valore specifico dell'applicazione a 32 bit associato all'elemento. Se questo pa
 
 Indice del nuovo elemento se ha esito positivo o-1 in caso contrario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La chiamata a questo metodo può causare l'invio del messaggio di LVM_INSERTITEM alla finestra del controllo. Il gestore di messaggi associato per il controllo potrebbe non riuscire a impostare il testo dell'elemento in determinate condizioni, ad esempio utilizzando stili di finestra come LVS_OWNERDRAW. Per ulteriori informazioni su queste condizioni, vedere [LVM_INSERTITEM](/windows/win32/Controls/lvm-insertitem) nel Windows SDK.
 
@@ -2870,7 +2871,7 @@ Puntatore a una struttura [LVINSERTMARK](/windows/win32/api/commctrl/ns-commctrl
 
 Punto di inserimento più vicino al punto specificato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_INSERTMARKHITTEST](/windows/win32/Controls/lvm-insertmarkhittest) , come descritto nel Windows SDK.
 
@@ -2886,7 +2887,7 @@ BOOL IsGroupViewEnabled() const;
 
 Restituisce TRUE se la visualizzazione gruppo è abilitata o FALSE in caso contrario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_ISGROUPVIEWENABLED](/windows/win32/Controls/lvm-isgroupviewenabled) , come descritto nel Windows SDK.
 
@@ -2907,7 +2908,7 @@ in Indice in base zero di un elemento nel controllo di visualizzazione elenco co
 
 TRUE se l'elemento specificato è visibile; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [LVM_ISITEMVISIBLE](/windows/win32/Controls/lvm-isitemvisible) , descritto nel Windows SDK.
 
@@ -2928,7 +2929,7 @@ in ID univoco di un elemento.
 
 Indice corrente per l'ID specificato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un controllo di visualizzazione elenco tiene traccia interna degli elementi in base all'indice. Questo può presentare problemi perché gli indici possono cambiare durante la durata del controllo. Il controllo elenco-visualizzazione consente di contrassegnare un elemento con un ID quando l'elemento viene creato ed è possibile usare questo ID per garantire l'univocità durante il ciclo di vita del controllo visualizzazione elenco.
 
@@ -2953,7 +2954,7 @@ in Indice in base zero di un elemento.
 
 ID univoco per l'elemento specificato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un controllo di visualizzazione elenco tiene traccia interna degli elementi in base all'indice. Questo può presentare problemi perché gli indici possono cambiare durante la durata del controllo. Il controllo elenco-visualizzazione consente di contrassegnare un elemento con un ID quando viene creato l'elemento. È possibile usare questo ID per accedere a un elemento specifico per la durata del controllo di visualizzazione elenco.
 
@@ -3023,7 +3024,7 @@ Indice in base zero in cui deve essere spostato il gruppo.
 
 Il valore restituito non viene utilizzato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_MOVEGROUP](/windows/win32/Controls/lvm-movegroup) , come descritto nel Windows SDK.
 
@@ -3045,7 +3046,7 @@ in Indice dell'elemento da spostare.
 *idGroupTo*<br/>
 in Identificatore del gruppo in cui verrà spostato l'elemento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 > [!NOTE]
 > Questo metodo non è attualmente implementato.
@@ -3074,7 +3075,7 @@ Indice dell'ultimo elemento da ridisegnare.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli elementi specificati non vengono effettivamente ridisegnati fino a quando la finestra visualizzazione elenco non riceve un messaggio di WM_PAINT. Per ridisegnare immediatamente, chiamare la funzione [UpdateWindow](/windows/win32/api/winuser/nf-winuser-updatewindow) di Windows dopo aver usato questa funzione.
 
@@ -3086,7 +3087,7 @@ Rimuove tutti i gruppi da un controllo di visualizzazione elenco.
 void RemoveAllGroups();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_REMOVEALLGROUPS](/windows/win32/Controls/lvm-removeallgroups) , come descritto nel Windows SDK.
 
@@ -3107,7 +3108,7 @@ Identificatore del gruppo da rimuovere.
 
 Restituisce l'indice del gruppo, se ha esito positivo, oppure-1 in caso contrario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_REMOVEGROUP](/windows/win32/Controls/lvm-removegroup) , come descritto nel Windows SDK.
 
@@ -3198,7 +3199,7 @@ Offset, in pixel, del bordo superiore dell'immagine, dall'origine del controllo 
 
 Restituisce un valore diverso da zero se ha esito positivo oppure zero in caso contrario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 > [!NOTE]
 > Poiché `CListCtrl::SetBkImage` utilizza la funzionalità OLE com, è necessario inizializzare le librerie OLE prima di utilizzare `SetBkImage` . Si consiglia di inizializzare le librerie COM quando l'applicazione viene inizializzata e di annullare l'inizializzazione delle librerie quando l'applicazione termina. Questa operazione viene eseguita automaticamente nelle applicazioni MFC che usano la tecnologia ActiveX, l'automazione OLE, il collegamento OLE/incorporamento o le operazioni ODBC/DAO.
@@ -3321,7 +3322,7 @@ Numero di colonne nel controllo visualizzazione elenco.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento della macro Win32, [ListView_SetColumnOrderArray](/windows/win32/api/commctrl/nf-commctrl-listview_setcolumnorderarray), come descritto nel Windows SDK.
 
@@ -3368,7 +3369,7 @@ Combinazione di stili estesi che devono essere utilizzati dal controllo di visua
 
 Combinazione degli stili estesi precedenti utilizzati dal controllo di visualizzazione elenco.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento della macro Win32, [ListView_SetExtendedListViewStyle](/windows/win32/api/commctrl/nf-commctrl-listview_setextendedlistviewstyle), come descritto nel Windows SDK.
 
@@ -3402,7 +3403,7 @@ Puntatore a una struttura [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgr
 
 ID del gruppo se il metodo ha esito positivo; in caso contrario,-1.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [LVM_SETGROUPINFO](/windows/win32/Controls/lvm-setgroupinfo) , descritto nel Windows SDK.
 
@@ -3419,7 +3420,7 @@ void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
 *pGroupMetrics*<br/>
 Puntatore a una struttura [LVGROUPMETRICS](/windows/win32/api/commctrl/ns-commctrl-lvgroupmetrics) contenente le informazioni sulle metriche di gruppo da impostare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_SETGROUPMETRICS](/windows/win32/Controls/lvm-setgroupmetrics) , come descritto nel Windows SDK.
 
@@ -3440,7 +3441,7 @@ Handle per una risorsa di cursore, utilizzato per rappresentare il cursore attiv
 
 Handle per la risorsa di cursore attivo precedente utilizzata dal controllo visualizzazione elenco.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento della macro Win32, [ListView_SetHotCursor](/windows/win32/api/commctrl/nf-commctrl-listview_sethotcursor), come descritto nel Windows SDK.
 
@@ -3467,7 +3468,7 @@ Indice in base zero dell'elemento da impostare come elemento attivo.
 
 Indice in base zero dell'elemento attivo precedentemente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento della macro Win32, [ListView_SetHotItem](/windows/win32/api/commctrl/nf-commctrl-listview_sethotitem), come descritto nel Windows SDK.
 
@@ -3492,7 +3493,7 @@ Nuovo ritardo, in millisecondi, in base al quale il cursore del mouse deve passa
 
 Tempo di passaggio precedente, in millisecondi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento della macro Win32, [ListView_SetHoverTime](/windows/win32/api/commctrl/nf-commctrl-listview_sethovertime), come descritto nel Windows SDK.
 
@@ -3527,7 +3528,7 @@ Distanza (in pixel) tra le icone sull'asse y.
 
 Oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) che contiene i valori precedenti per la spaziatura delle icone.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento della macro Win32, [ListView_SetIconSpacing](/windows/win32/api/commctrl/nf-commctrl-listview_seticonspacing), come descritto nel Windows SDK.
 
@@ -3587,7 +3588,7 @@ Puntatore a una struttura [LVFSETINFOTIP](/windows/win32/api/commctrl/ns-commctr
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_SETINFOTIP](/windows/win32/Controls/lvm-setinfotip) , come descritto nel Windows SDK.
 
@@ -3608,7 +3609,7 @@ Puntatore a una struttura [LVINSERTMARK](/windows/win32/api/commctrl/ns-commctrl
 
 Restituisce TRUE se l'operazione ha esito positivo o FALSE in caso contrario. Viene restituito FALSE se la dimensione del `cbSize` membro della struttura non `LVINSERTMARK` corrisponde alla dimensione effettiva della struttura o quando un punto di inserimento non è applicabile nella visualizzazione corrente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_SETINSERTMARK](/windows/win32/Controls/lvm-setinsertmark) , come descritto nel Windows SDK.
 
@@ -3629,7 +3630,7 @@ Struttura [COLORREF](/windows/win32/gdi/colorref) che specifica il colore per im
 
 Restituisce una `COLORREF` struttura che contiene il colore precedente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_SETINSERTMARKCOLOR](/windows/win32/Controls/lvm-setinsertmarkcolor) , come descritto nel Windows SDK.
 
@@ -3698,7 +3699,7 @@ Larghezza, in pixel, del rientro. Se *nIndent* è minore della larghezza minima 
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I `iItem` `iSubItem` membri e della `LVITEM` struttura e i parametri *nitet* e *nSubItem* identificano l'elemento e l'elemento secondario i cui attributi devono essere impostati.
 
@@ -3725,11 +3726,11 @@ void SetItemCount(int nItems);
 *nItems*<br/>
 Numero di elementi che il controllo conterrà infine.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per impostare il numero di elementi per un controllo visualizzazione elenco virtuale, vedere [CListCtrl:: SetItemCountEx](#setitemcountex).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento della macro Win32, [ListView_SetItemCount](/windows/win32/api/commctrl/nf-commctrl-listview_setitemcount), come descritto nel Windows SDK.
 
@@ -3774,7 +3775,7 @@ Specifica il comportamento del controllo visualizzazione elenco dopo la reimpost
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento della macro Win32, [ListView_SetItemCountEx](/windows/win32/api/commctrl/nf-commctrl-listview_setitemcountex), come descritto in Windows SDKand dovrebbe essere chiamato solo per le visualizzazioni elenco virtuale.
 
@@ -3817,7 +3818,7 @@ Valore a 32 bit da associare all'elemento.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo valore è il `lParam` membro della struttura [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) , come descritto nell'Windows SDK.
 
@@ -3857,7 +3858,7 @@ in Maschera dei bit validi dello stato specificato dal parametro *dwState* . Spe
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni sul parametro *dwState* , vedere [gli Stati degli elementi della visualizzazione elenco](/windows/win32/Controls/list-view-item-states).
 
@@ -3887,7 +3888,7 @@ Struttura di [punti](/windows/win32/api/windef/ns-windef-point) che specifica la
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il controllo deve essere in una visualizzazione icona o piccola.
 
@@ -3930,7 +3931,7 @@ Maschera che specifica quali bit di stato modificare. Questo valore corrisponde 
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 "State" di un elemento è un valore che specifica la disponibilità dell'elemento, indica le azioni dell'utente o riflette in altro modo lo stato dell'elemento. Un controllo visualizzazione elenco modifica alcuni bit di stato, ad esempio quando l'utente seleziona un elemento. Un'applicazione potrebbe modificare altri bit di stato per disabilitare o nascondere l'elemento oppure per specificare un'immagine sovrapposta o un'immagine di stato.
 
@@ -3964,7 +3965,7 @@ Puntatore a una stringa che contiene il testo del nuovo elemento.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo non è destinato all'uso con controlli che contengono lo stile della finestra LVS_OWNERDATA (in effetti, questa operazione causerà un'asserzione nelle compilazioni di debug). Per altre informazioni su questo stile di controllo elenco, vedere [Cenni preliminari sui controlli List-View](/windows/win32/Controls/list-view-controls-overview).
 
@@ -3989,7 +3990,7 @@ Nuova struttura [COLORREF](/windows/win32/gdi/colorref) contenente il colore del
 
 Struttura precedente `COLORREF` contenente il colore del contorno
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_SETOUTLINECOLOR](/windows/win32/Controls/lvm-setoutlinecolor) , come descritto nel Windows SDK.
 
@@ -4010,7 +4011,7 @@ Indice della colonna da selezionare.
 
 Il valore restituito non viene utilizzato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_SETSELECTEDCOLUMN](/windows/win32/Controls/lvm-setselectedcolumn) , come descritto nel Windows SDK.
 
@@ -4031,7 +4032,7 @@ Indice in base zero del primo elemento in una selezione multipla.
 
 Contrassegno di selezione precedente oppure-1 se non è presente alcun contrassegno di selezione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento della macro Win32, [ListView_SetSelectionMark](/windows/win32/api/commctrl/nf-commctrl-listview_setselectionmark), come descritto nel Windows SDK.
 
@@ -4109,7 +4110,7 @@ Puntatore a una struttura [LVTILEINFO](/windows/win32/api/commctrl/ns-commctrl-l
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_SETTILEINFO](/windows/win32/Controls/lvm-settileinfo) , come descritto nel Windows SDK.
 
@@ -4130,7 +4131,7 @@ Puntatore a una struttura [LVTILEVIEWINFO](/windows/win32/api/commctrl/ns-commct
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_SETTILEVIEWINFO](/windows/win32/Controls/lvm-settileviewinfo) , come descritto nel Windows SDK.
 
@@ -4151,7 +4152,7 @@ Puntatore a un `CToolTipCtrl` oggetto che il controllo elenco utilizzerà.
 
 Puntatore a un oggetto [CToolTipCtrl](ctooltipctrl-class.md) contenente la descrizione comando utilizzata in precedenza dal controllo o null se non è stata utilizzata in precedenza alcuna descrizione comando.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [LVM_SETTOOLTIPS](/windows/win32/Controls/lvm-settooltips)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -4174,7 +4175,7 @@ Visualizzazione da selezionare.
 
 Restituisce 1 se ha esito positivo oppure-1 in caso contrario. Se, ad esempio, la vista non è valida, viene restituito-1.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_SETVIEW](/windows/win32/Controls/lvm-setview) , come descritto nel Windows SDK.
 
@@ -4196,7 +4197,7 @@ Numero di `RECT` strutture (o oggetti [CRect](../../atl-mfc-shared/reference/cre
 *lpRect*<br/>
 Indirizzo di una matrice di `RECT` strutture (o `CRect` oggetti) che specificano le nuove aree di lavoro del controllo visualizzazione elenco. Queste aree devono essere specificate nelle coordinate del client. Se questo parametro è NULL, l'area di lavoro verrà impostata sull'area client del controllo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento della macro Win32, [ListView_SetWorkAreas](/windows/win32/api/commctrl/nf-commctrl-listview_setworkareas), come descritto nel Windows SDK.
 
@@ -4229,7 +4230,7 @@ Puntatore void.
 
 Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro emula la funzionalità del messaggio di [LVM_SORTGROUPS](/windows/win32/Controls/lvm-sortgroups) , come descritto nel Windows SDK.
 
@@ -4257,7 +4258,7 @@ in Valore definito dall'applicazione passato alla funzione di confronto.
 
 TRUE se il metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo modifica l'indice di ogni elemento in modo da riflettere la nuova sequenza.
 
@@ -4319,7 +4320,7 @@ in Valore definito dall'applicazione passato alla funzione di confronto.
 
 TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo modifica l'indice di ogni elemento in modo da riflettere la nuova sequenza.
 
@@ -4401,7 +4402,7 @@ Puntatore alla struttura [LVHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl
 
 Indice in base uno dell'elemento, o sottoelemento, sottoposto a test, se presente, oppure-1 in caso contrario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento della macro Win32, [ListView_SubItemHitTest](/windows/win32/api/commctrl/nf-commctrl-listview_subitemhittest), come descritto nel Windows SDK.
 
@@ -4442,7 +4443,7 @@ Indice dell'elemento da aggiornare.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione dispone inoltre il controllo di visualizzazione elenco se dispone dello stile LVS_AUTOARRANGE.
 

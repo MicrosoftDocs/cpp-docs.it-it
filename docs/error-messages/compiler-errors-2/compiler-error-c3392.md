@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3392'
 title: Errore del compilatore C3392
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
-ms.openlocfilehash: 31975d39d67697573af7f9142326660acc4f7226
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c64b49bee05079fd2d1b468d807af5b1fd89ba26
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80201045"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316336"
 ---
 # <a name="compiler-error-c3392"></a>Errore del compilatore C3392
 
 'type_arg': argomento di tipo non valido per il parametro generico 'param' del 'generic_type' generico. Deve avere un costruttore pubblico senza parametri
 
-L'istanza di un tipo generico è stata creata in modo non corretto. Controllare la definizione del tipo. Per ulteriori informazioni, vedere [generics](../../extensions/generics-cpp-component-extensions.md).
+L'istanza di un tipo generico è stata creata in modo non corretto. Controllare la definizione del tipo. Per ulteriori informazioni, vedere  [generics](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene C# usato per creare un componente che contiene un tipo generico con determinati vincoli non supportati per la creazione di tipi generici in C++/cli. Per altre informazioni, vedere [Vincoli sui parametri di tipo](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
+Nell'esempio seguente viene usato C# per creare un componente che contiene un tipo generico con determinati vincoli non supportati per la creazione di tipi generici in C++/CLI. Per altre informazioni, vedere [Vincoli sui parametri di tipo](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
 
 ```csharp
 // C3392.cs
@@ -33,7 +34,7 @@ where V : struct
 where N : new() {}
 ```
 
-Quando il componente C3392. dll è disponibile, l'esempio seguente genera l'C3392.
+Quando il componente C3392.dll è disponibile, l'esempio seguente genera l'C3392.
 
 ```cpp
 // C3392_b.cpp

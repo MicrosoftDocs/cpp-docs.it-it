@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura: accedere ai caratteri in System:: String'
 title: 'Procedura: accedere ai caratteri in System::String'
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: cb62eb0fecbee202e4d01635a60da565241822ee
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 1959293cc7a984cdce2e1258b2dc6fab0d832267
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686795"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335429"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Procedura: accedere ai caratteri in System::String
 
 È possibile accedere ai caratteri di un <xref:System.String> oggetto per le chiamate a prestazioni elevate a funzioni non gestite che accettano `wchar_t*` stringhe. Il metodo produce un puntatore interno al primo carattere dell' <xref:System.String> oggetto. Questo puntatore può essere modificato direttamente o aggiunto e passato a una funzione che prevede una stringa ordinata **`wchar_t`** .
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 `PtrToStringChars` Restituisce un oggetto <xref:System.Char> , che è un puntatore interno (noto anche come `byref` ). Di conseguenza, è soggetto a Garbage Collection. Non è necessario aggiungere questo puntatore a meno che non lo si passi a una funzione nativa.
 
@@ -95,6 +96,6 @@ void deleteNode( ListNode ^ list, Int32 e ) {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Uso dell'interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

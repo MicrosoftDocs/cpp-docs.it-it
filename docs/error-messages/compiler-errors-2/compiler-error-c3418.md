@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3418'
 title: Errore del compilatore C3418
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3418
 ms.assetid: 54042c04-3c45-41c1-bad7-90f9ee05a21b
-ms.openlocfilehash: 21023bfb551a1894e25cc4940892dde0f0440a0e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 38082b7fe9ffa0ebcc7b4857e77395664a9f0c42
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200882"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316232"
 ---
 # <a name="compiler-error-c3418"></a>Errore del compilatore C3418
 

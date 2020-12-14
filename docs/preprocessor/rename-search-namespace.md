@@ -1,38 +1,39 @@
 ---
-title: attributo di importazione rename_search_namespace
+description: 'Altre informazioni su: rename_search_namespace attributo Import'
+title: rename_search_namespace attributo Import
 ms.date: 08/29/2019
 f1_keywords:
 - rename_search_namespace
 helpviewer_keywords:
 - rename_search_namespace attribute
 ms.assetid: 47c9d7fd-59dc-4c62-87a1-9011a0040167
-ms.openlocfilehash: 42c6edb6aa34b441db8041dd2974728c138b2c82
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 36bbb96c23e729bb5294a75f52b65b3ec60219cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216630"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342309"
 ---
-# <a name="rename_search_namespace-import-attribute"></a>attributo di importazione rename_search_namespace
+# <a name="rename_search_namespace-import-attribute"></a>rename_search_namespace attributo Import
 
-**C++Specifico**
+**Sezione specifica C++**
 
-Ha la stessa funzionalità dell'attributo [rename_namespace](../preprocessor/rename-namespace.md) , ma viene usata nelle librerie dei tipi in cui si usa `#import` la direttiva insieme all'attributo [auto_search](../preprocessor/auto-search.md) .
+Ha la stessa funzionalità dell'attributo [rename_namespace](../preprocessor/rename-namespace.md) , ma viene usato nelle librerie dei tipi in cui si usa la `#import` direttiva insieme all'attributo [auto_search](../preprocessor/auto-search.md) .
 
 ## <a name="syntax"></a>Sintassi
 
-> **#import** *libreria di tipi* **rename_search_namespace (** "*newname*" **)**
+> **#import** rename_search_namespace della *libreria di tipi* **(** "*newname*" **)**
 
 ### <a name="parameters"></a>Parametri
 
 *NewName*\
 Nuovo nome dello spazio dei nomi.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-**Specifico C++ finale**
+**Fine sezione specifica C++**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [attributi di #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Altre informazioni su: programma multithread C di esempio'
 title: Programma multithread di esempio in linguaggio C
 ms.date: 08/09/2019
 ms.assetid: 4706f6cd-ff9c-4dbf-99a2-1c999b568f17
-ms.openlocfilehash: 355024b995dc638b89a335983bd2e0f2cb0d96ce
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: a46bd370a309a29c6877eacaea428ff9fc42902e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924761"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342335"
 ---
 # <a name="sample-multithread-c-program"></a>Programma multithread di esempio in linguaggio C
 
@@ -21,9 +22,9 @@ Per impostazione predefinita, i programmi vengono compilati come multithreading.
 
 ::: moniker range=">=msvc-160"
 
-1. Nel menu **File** , scegliere **Nuovo** > **Progetto** .
+1. Nel menu **File**, scegliere **Nuovo** > **Progetto**.
 
-1. Nella finestra di dialogo **Crea un nuovo progetto** selezionare il modello **applicazione console** con i tag **C++** , **Windows** e **console** . Scegliere **Avanti** per continuare.
+1. Nella finestra di dialogo **Crea un nuovo progetto** selezionare il modello **applicazione console** con i tag **C++**, **Windows** e **console** . Scegliere **Avanti** per continuare.
 
 1. Nella finestra di dialogo **Configura nuovo progetto** immettere un nome per il progetto, ad esempio "rimbalzo". Scegliere **Crea** per continuare.
 
@@ -31,7 +32,7 @@ Per impostazione predefinita, i programmi vengono compilati come multithreading.
 
 1. Nella finestra modifica eliminare il codice sorgente esistente e sostituirlo con il codice di esempio.
 
-1. Scegliere **Compila soluzione** dal menu **Compila** .
+1. Scegliere **Compila soluzione** dal menu **Compila**.
 
 1. Premere **F5** per avviare il programma nel debugger.
 
@@ -39,7 +40,7 @@ Per impostazione predefinita, i programmi vengono compilati come multithreading.
 
 ::: moniker range="<=msvc-150"
 
-1. Nel menu **File** , scegliere **Nuovo** > **Progetto** .
+1. Nel menu **File**, scegliere **Nuovo** > **Progetto**.
 
 1. Nella finestra di dialogo **nuovo progetto** selezionare **Visual C++** nel riquadro sinistro, quindi selezionare **progetto vuoto** nel riquadro centrale.
 
@@ -264,6 +265,6 @@ void ClearScreen(void)
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Multithreading con C e Win32](multithreading-with-c-and-win32.md)

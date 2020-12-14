@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CMFCOutlookBarTabCtrl'
 title: CMFCOutlookBarTabCtrl Class
 ms.date: 10/18/2018
 f1_keywords:
@@ -44,17 +45,17 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-ms.openlocfilehash: 9c5d7d5135c3b207bbf113970deb8cbeb186bcca
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: b969fbb592fc3098dc8d287004fab90da6f30111
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749575"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333479"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 
 Controllo Struttura a schede che presenta l'aspetto visivo del **Riquadro di navigazione** in Microsoft Outlook.
-Per ulteriori dettagli, vedere il codice sorgente che si trova nella cartella **\\\\mfc di VC atlmfc\\** dell'installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella **cartella \\ \\ \\ MFC atlmfc src di VC** per l'installazione di Visual Studio.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -62,55 +63,55 @@ Per ulteriori dettagli, vedere il codice sorgente che si trova nella cartella **
 class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`CMFCOutlookBarTabCtrl::CMFCOutlookBarTabCtrl`|Costruttore predefinito.|
 |`CMFCOutlookBarTabCtrl::~CMFCOutlookBarTabCtrl`|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CMFCOutlookBarTabCtrlCtrl::AddControl](#addcontrol)|Aggiunge un controllo di Windows come nuova scheda nella barra di Outlook.|
-|`CMFCOutlookBarTabCtrl::CalcRectEdit`|Chiamato dal framework per determinare le dimensioni della casella di modifica visualizzata `CMFCBaseTabCtrl::CalcRectEdit`quando un utente rinomina una scheda.|
-|[CMFCOutlookBarTabCtrlCtrl::CanShowFewerPageButtons](#canshowfewerpagebuttons)|Chiamato dal framework durante le operazioni di ridimensionamento per determinare se è possibile visualizzare un numero inferiore di pulsanti della scheda della barra di Outlook rispetto a quelli attualmente visibili.|
-|[CMFCOutlookBarTabCtrlCtrl::CanShowMorePageButtons](#canshowmorepagebuttons)|Chiamato dal framework durante le operazioni di ridimensionamento per determinare se è possibile visualizzare più pulsanti della scheda della barra di Outlook rispetto a quelli attualmente visibili.|
-|[CMFCOutlookBarTabCtrl::Crea](#create)|Crea il controllo struttura a schede della barra di Outlook.|
+|[CMFCOutlookBarTabCtrl:: AddControl](#addcontrol)|Aggiunge un controllo Windows come una nuova scheda nella barra di Outlook.|
+|`CMFCOutlookBarTabCtrl::CalcRectEdit`|Chiamata eseguita dal Framework per determinare le dimensioni della casella di modifica visualizzata quando un utente rinomina una tabulazione. (esegue l'override di `CMFCBaseTabCtrl::CalcRectEdit` ).|
+|[CMFCOutlookBarTabCtrl:: CanShowFewerPageButtons](#canshowfewerpagebuttons)|Chiamata eseguita dal Framework durante le operazioni di ridimensionamento per determinare se è possibile visualizzare un numero inferiore di pulsanti della scheda della barra di Outlook rispetto al momento visibile.|
+|[CMFCOutlookBarTabCtrl:: CanShowMorePageButtons](#canshowmorepagebuttons)|Chiamata eseguita dal Framework durante le operazioni di ridimensionamento per determinare se è possibile visualizzare più pulsanti della scheda della barra di Outlook che attualmente sono visibili.|
+|[CMFCOutlookBarTabCtrl:: create](#create)|Crea il controllo scheda della barra di Outlook.|
 |`CMFCOutlookBarTabCtrl::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|
-|[CMFCOutlookBarTabCtrlCtrl::EnableAnimation](#enableanimation)|Specifica se l'animazione che si verifica durante il passaggio tra le schede attive è abilitata.|
-|[CMFCOutlookBarTabCtrlCtrl::EnableInPlaceModifica](#enableinplaceedit)|Specifica se un utente può modificare le etichette di testo sui pulsanti delle schede della barra di Outlook. (Esegue l'override di [CMFCBaseTabCtrl::EnableInPlaceEdit](../../mfc/reference/cmfcbasetabctrl-class.md#enableinplaceedit).)|
-|[CMFCOutlookBarTabCtrlCtrl::EnableScrollButtons](#enablescrollbuttons)|Chiamato dal framework per abilitare i pulsanti che consentono all'utente di scorrere i pulsanti nel riquadro della barra di Outlook.|
-|`CMFCOutlookBarTabCtrl::FindTargetWnd`|Identifica il riquadro contenente un punto specificato. (Esegue l'override di [CMFCBaseTabCtrl::FindTargetWnd.)](../../mfc/reference/cmfcbasetabctrl-class.md#findtargetwnd)|
-|[CMFCOutlookBarTabCtrlCtrl::GetBorderSize](#getbordersize)|Restituisce la dimensione del bordo del controllo struttura a schede di Outlook.|
-|`CMFCOutlookBarTabCtrl::GetTabArea`|Recupera le dimensioni e la posizione dell'area delle schede del controllo Struttura a schede. (Esegue l'override [di CMFCBaseTabCtrl::GetTabArea.)](../../mfc/reference/cmfcbasetabctrl-class.md#gettabarea)|
-|`CMFCOutlookBarTabCtrl::GetThisClass`|Utilizzato dal framework per ottenere un puntatore all'oggetto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) associato a questo tipo di classe.|
-|[CMFCOutlookBarTabCtrlCtrl::GetVisiblePageButtons](#getvisiblepagebuttons)||
-|[CMFCOutlookBarTabCtrlCtrl::IsAnimation](#isanimation)|Determina se l'animazione che si verifica durante il passaggio tra le schede attive è abilitata.|
-|[CMFCOutlookBarTabCtrlCtrl::IsMode2003](#ismode2003)|Determina se il controllo struttura a schede della barra di Outlook è in una modalità che emula Microsoft Outlook 2003.|
-|`CMFCOutlookBarTabCtrl::IsPtInTabArea`|Determina se un punto è all'interno dell'area delle schede. (Esegue l'override di [CMFCBaseTabCtrl::IsPtInTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#isptintabarea).)|
-|`CMFCOutlookBarTabCtrl::IsTabDetachable`|Determina se una scheda è rimovibile. (Esegue l'override di [CMFCBaseTabCtrl::IsTabDetachable](../../mfc/reference/cmfcbasetabctrl-class.md#istabdetachable).)|
-|`CMFCOutlookBarTabCtrl::OnChangeTabs`|Chiamato dal framework quando una scheda viene inserita o rimossa. Esegue l'override di `CMFCBaseTabCtrl::OnChangeTabs`.|
-|[CMFCOutlookBarTabCtrlCtrl::OnShowFewerPageButtons](#onshowfewerpagebuttons)|Chiamato dal framework per ridurre il numero di pulsanti di scheda visibili.|
-|[CMFCOutlookBarTabCtrlCtrl::OnShowMorePageButtons](#onshowmorepagebuttons)|Chiamato dal framework per aumentare il numero di pulsanti di scheda visibili.|
-|[CMFCOutlookBarTabCtrlCtrl::OnShowOptions](#onshowoptions)|Visualizza la finestra di **dialogo Opzioni riquadro di spostamento.**|
-|`CMFCOutlookBarTabCtrl::RecalcLayout`|Ricalcola il layout interno del controllo Struttura a schede. (Esegue l'override di [CMFCBaseTabCtrl::RecalcLayout.)](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout)|
-|[CMFCOutlookBarTabCtrlCtrl::SetActiveTab](#setactivetab)|Imposta la scheda attiva . [(OverrideS CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|
-|[CMFCOutlookBarTabCtrlCtrl::SetBorderSize](#setbordersize)|Imposta la dimensione del bordo del controllo struttura a schede di Outlook.|
-|[CMFCOutlookBarTabCtrlCtrl::SetPageButtonTextAlign](#setpagebuttontextalign)|Imposta l'allineamento delle etichette di testo sui pulsanti delle schede della barra di Outlook.|
-|[CMFCOutlookBarTabCtrlCtrl::SetToolbarImageList](#settoolbarimagelist)|Imposta la bitmap che contiene le icone visualizzate nella parte inferiore della barra di Outlook in modalità Outlook 2003 (vedere [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md)).|
-|[CMFCOutlookBarTabCtrlCtrl::SetVisiblePageButtons](#setvisiblepagebuttons)||
+|[CMFCOutlookBarTabCtrl:: EnableAnimation](#enableanimation)|Specifica se l'animazione che si verifica durante l'opzione tra le schede attive è abilitata.|
+|[CMFCOutlookBarTabCtrl:: EnableInPlaceEdit](#enableinplaceedit)|Specifica se un utente può modificare le etichette di testo nei pulsanti di tabulazione della barra di Outlook. Esegue l'override di [CMFCBaseTabCtrl:: EnableInPlaceEdit](../../mfc/reference/cmfcbasetabctrl-class.md#enableinplaceedit).|
+|[CMFCOutlookBarTabCtrl:: EnableScrollButtons](#enablescrollbuttons)|Chiamata eseguita dal Framework per abilitare i pulsanti che consentono all'utente di scorrere i pulsanti nel riquadro della barra di Outlook.|
+|`CMFCOutlookBarTabCtrl::FindTargetWnd`|Identifica il riquadro contenente un punto specificato. Esegue l'override di [CMFCBaseTabCtrl:: FindTargetWnd](../../mfc/reference/cmfcbasetabctrl-class.md#findtargetwnd).|
+|[CMFCOutlookBarTabCtrl:: GetBorderSize](#getbordersize)|Restituisce la dimensione del bordo del controllo scheda di Outlook.|
+|`CMFCOutlookBarTabCtrl::GetTabArea`|Recupera le dimensioni e la posizione dell'area delle schede del controllo Struttura a schede. Esegue l'override di [CMFCBaseTabCtrl:: GetTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#gettabarea).|
+|`CMFCOutlookBarTabCtrl::GetThisClass`|Utilizzato dal Framework per ottenere un puntatore all'oggetto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) associato a questo tipo di classe.|
+|[CMFCOutlookBarTabCtrl:: GetVisiblePageButtons](#getvisiblepagebuttons)||
+|[CMFCOutlookBarTabCtrl:: l'animazione](#isanimation)|Determina se l'animazione che si verifica durante l'opzione tra le schede attive è abilitata.|
+|[CMFCOutlookBarTabCtrl:: IsMode2003](#ismode2003)|Determina se il controllo scheda della barra di Outlook si trova in una modalità che emula Microsoft Outlook 2003.|
+|`CMFCOutlookBarTabCtrl::IsPtInTabArea`|Determina se un punto è all'interno dell'area delle schede. Esegue l'override di [CMFCBaseTabCtrl:: IsPtInTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#isptintabarea).|
+|`CMFCOutlookBarTabCtrl::IsTabDetachable`|Determina se una scheda è rimovibile. Esegue l'override di [CMFCBaseTabCtrl:: IsTabDetachable](../../mfc/reference/cmfcbasetabctrl-class.md#istabdetachable).|
+|`CMFCOutlookBarTabCtrl::OnChangeTabs`|Chiamata eseguita dal framework quando viene inserita o rimossa una scheda. Esegue l'override di `CMFCBaseTabCtrl::OnChangeTabs`.|
+|[CMFCOutlookBarTabCtrl:: OnShowFewerPageButtons](#onshowfewerpagebuttons)|Chiamata eseguita dal Framework per ridurre il numero di pulsanti della scheda visualizzati.|
+|[CMFCOutlookBarTabCtrl:: OnShowMorePageButtons](#onshowmorepagebuttons)|Chiamata eseguita dal Framework per aumentare il numero di pulsanti della scheda visualizzati.|
+|[CMFCOutlookBarTabCtrl:: OnShowOptions](#onshowoptions)|Consente di visualizzare la finestra di dialogo **Opzioni riquadro di spostamento** .|
+|`CMFCOutlookBarTabCtrl::RecalcLayout`|Ricalcola il layout interno del controllo Struttura a schede. Esegue l'override di [CMFCBaseTabCtrl:: RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).|
+|[CMFCOutlookBarTabCtrl:: SetActiveTab](#setactivetab)|Imposta la scheda attiva. esegue l'override di [CMFCBaseTabCtrl:: SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).|
+|[CMFCOutlookBarTabCtrl:: SetBorderSize](#setbordersize)|Imposta la dimensione del bordo del controllo scheda di Outlook.|
+|[CMFCOutlookBarTabCtrl:: SetPageButtonTextAlign](#setpagebuttontextalign)|Imposta l'allineamento delle etichette di testo nei pulsanti di tabulazione della barra di Outlook.|
+|[CMFCOutlookBarTabCtrl:: SetToolbarImageList](#settoolbarimagelist)|Imposta la bitmap che contiene le icone visualizzate nella parte inferiore della barra di Outlook in modalità Outlook 2003 (vedere la [Classe CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)).|
+|[CMFCOutlookBarTabCtrl:: SetVisiblePageButtons](#setvisiblepagebuttons)||
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Per creare una barra di Outlook con `CMFCOutlookBar` supporto per l'ancoraggio, utilizzare un oggetto per ospitare il controllo struttura a schede della barra di Outlook. Per ulteriori informazioni, vedere [Classe CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md).
+Per creare una barra di Outlook con supporto di ancoraggio, usare un `CMFCOutlookBar` oggetto per ospitare il controllo scheda della barra di Outlook. Per ulteriori informazioni, vedere la [Classe CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md).
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio riportato di `CMFCOutlookBarTabCtrl` seguito viene illustrato `CMFCOutlookBarTabCtrl` come inizializzare un oggetto e utilizzare vari metodi nella classe. Nell'esempio viene illustrato come abilitare la modifica sul posto dell'etichetta di testo sui pulsanti della scheda della barra di Outlook, abilitare l'animazione, abilitare i quadratini di ridimensionamento che consentono all'utente di scorrere i pulsanti nel riquadro della barra di Outlook, impostare le dimensioni del bordo del controllo struttura a schede di Outlook e impostare l'allineamento delle etichette di testo sui pulsanti di tabulazione della barra di Outlook. Questo frammento di codice fa parte dell'esempio Demo di [Outlook.](../../overview/visual-cpp-samples.md)
+Nell'esempio seguente viene illustrato come inizializzare un `CMFCOutlookBarTabCtrl` oggetto e utilizzare vari metodi nella `CMFCOutlookBarTabCtrl` classe. Nell'esempio viene illustrato come abilitare la modifica sul posto dell'etichetta di testo nei pulsanti della scheda della barra di Outlook, abilitare l'animazione, abilitare gli handle di scorrimento che consentono all'utente di scorrere i pulsanti nel riquadro della barra di Outlook, impostare le dimensioni del bordo del controllo scheda di Outlook e impostare l'allineamento delle etichette di testo nei pulsanti della scheda della barra di Outlook. Questo frammento di codice fa parte dell' [esempio di demo di Outlook](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_1.cpp)]
 [!code-cpp[NVC_MFC_OutlookDemo#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_2.cpp)]
@@ -129,11 +130,11 @@ Nell'esempio riportato di `CMFCOutlookBarTabCtrl` seguito viene illustrato `CMFC
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxoutlookbartabctrl.h
+**Intestazione:** afxoutlookbartabctrl. h
 
-## <a name="cmfcoutlookbartabctrladdcontrol"></a><a name="addcontrol"></a>CMFCOutlookBarTabCtrlCtrl::AddControl
+## <a name="cmfcoutlookbartabctrladdcontrol"></a><a name="addcontrol"></a> CMFCOutlookBarTabCtrl:: AddControl
 
-Aggiunge un controllo di Windows come nuova scheda nella barra di Outlook.
+Aggiunge un controllo Windows come una nuova scheda nella barra di Outlook.
 
 ```cpp
 void AddControl(
@@ -146,38 +147,38 @@ void AddControl(
 
 ### <a name="parameters"></a>Parametri
 
-*pWndCtrl (in modo intalo a int*<br/>
-[in] Puntatore a un controllo da aggiungere.
+*pWndCtrl*<br/>
+in Puntatore a un controllo da aggiungere.
 
 *lpszName*<br/>
-[in] Specifica il nome della scheda.
+in Specifica il nome della scheda.
 
 *bDetachable*<br/>
-[in] Se TRUE, la pagina verrà creata come rimovibile.
+in Se TRUE, la pagina verrà creata come scollegabile.
 
-*nImageID (ID immagine)*<br/>
-[in] Indice immagine nell'elenco immagini interno per l'immagine da visualizzare nella nuova scheda.
+*nImageID*<br/>
+in Indice dell'immagine nell'elenco di immagini interne per l'immagine da visualizzare nella nuova scheda.
 
-*dwControlBarStyle (stile dwControlBarStyle)*<br/>
-[in] Specifica lo stile AFX_ CBRS_ per i riquadri di ancoraggio di cui è stato eseguito il wrapping.
+*dwControlBarStyle*<br/>
+in Specifica lo stile CBRS_ * AFX_ per i riquadri di ancoraggio di cui è stato eseguito il wrapper.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Utilizzare questa funzione per aggiungere un controllo come nuova pagina di una barra di Outlook.
+Usare questa funzione per aggiungere un controllo come nuova pagina di una barra di Outlook.
 
-Questa funzione chiama internamente su [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab).
+Questa funzione chiama internamente su [CMFCBaseTabCtrl:: AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab).
 
-Se si imposta *bDetachable* su TRUE, `AddControl` internamente crea un `CDockablePaneAdapter` oggetto ed esegue il wrapping del controllo aggiunto. Imposta automaticamente la classe di runtime della finestra `CMFCOutlookBar` a schede sulla classe di `CMultiPaneFrameWnd`runtime di e sulla classe di runtime del frame mobile su .
+Se si imposta *bDetachable* su true, `AddControl` crea internamente un `CDockablePaneAdapter` oggetto ed esegue il wrapping del controllo aggiunto. Imposta automaticamente la classe runtime della finestra a schede sulla classe di runtime di `CMFCOutlookBar` e la classe di runtime del frame mobile su `CMultiPaneFrameWnd` .
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio `CMFCOutlookBarTabCtrl` riportato di `AddControl` seguito viene illustrato come utilizzare il metodo nella classe . Questo frammento di codice fa parte dell'esempio Demo di [Outlook.](../../overview/visual-cpp-samples.md)
+Nell'esempio seguente viene illustrato come utilizzare il `AddControl` metodo nella `CMFCOutlookBarTabCtrl` classe. Questo frammento di codice fa parte dell' [esempio di demo di Outlook](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_3.cpp)]
 
-## <a name="cmfcoutlookbartabctrlcanshowfewerpagebuttons"></a><a name="canshowfewerpagebuttons"></a>CMFCOutlookBarTabCtrlCtrl::CanShowFewerPageButtons
+## <a name="cmfcoutlookbartabctrlcanshowfewerpagebuttons"></a><a name="canshowfewerpagebuttons"></a> CMFCOutlookBarTabCtrl:: CanShowFewerPageButtons
 
-Chiamato dal framework durante le operazioni di ridimensionamento per determinare se è possibile visualizzare meno pulsanti della scheda della barra di Outlook rispetto a quelli attualmente visibili.
+Chiamata eseguita dal Framework durante il ridimensionamento delle operazioni per determinare se è possibile visualizzare un minor numero di pulsanti della scheda della barra di Outlook rispetto al momento visibile.
 
 ```
 virtual BOOL CanShowFewerPageButtons() const;
@@ -185,15 +186,15 @@ virtual BOOL CanShowFewerPageButtons() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe è presente più di un pulsante. in caso contrario, FALSE.
+TRUE se è presente più di un pulsante; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Il controllo struttura a schede della barra di Outlook aggiunge o rimuove dinamicamente le schede dal display a seconda della quantità di spazio disponibile. Questo metodo viene utilizzato dal framework per facilitare tale processo.
+Il controllo scheda barra di Outlook aggiunge o rimuove in modo dinamico le schede dalla visualizzazione a seconda della quantità di spazio disponibile. Questo metodo viene utilizzato dal Framework per semplificare il processo.
 
-## <a name="cmfcoutlookbartabctrlcanshowmorepagebuttons"></a><a name="canshowmorepagebuttons"></a>CMFCOutlookBarTabCtrlCtrl::CanShowMorePageButtons
+## <a name="cmfcoutlookbartabctrlcanshowmorepagebuttons"></a><a name="canshowmorepagebuttons"></a> CMFCOutlookBarTabCtrl:: CanShowMorePageButtons
 
-Chiamato dal framework durante le operazioni di ridimensionamento per determinare se è possibile visualizzare più pulsanti della scheda della barra di Outlook rispetto a quelli attualmente visibili.
+Chiamata eseguita dal Framework durante il ridimensionamento delle operazioni per determinare se è possibile visualizzare più pulsanti della scheda della barra di Outlook che attualmente sono visibili.
 
 ```
 virtual BOOL CanShowMorePageButtons() const;
@@ -201,15 +202,15 @@ virtual BOOL CanShowMorePageButtons() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe sono presenti pulsanti che non sono attualmente visibili; in caso contrario, FALSE.
+TRUE se sono presenti pulsanti che non sono attualmente visibili; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Il controllo struttura a schede della barra di Outlook aggiunge o rimuove dinamicamente le schede dalla visualizzazione, a seconda della quantità di spazio disponibile. Questo metodo viene utilizzato dal framework per facilitare tale processo.
+Il controllo scheda barra di Outlook aggiunge o rimuove in modo dinamico le schede dallo schermo, a seconda della quantità di spazio disponibile. Questo metodo viene utilizzato dal Framework per semplificare il processo.
 
-## <a name="cmfcoutlookbartabctrlcreate"></a><a name="create"></a>CMFCOutlookBarTabCtrl::Crea
+## <a name="cmfcoutlookbartabctrlcreate"></a><a name="create"></a> CMFCOutlookBarTabCtrl:: create
 
-Crea il controllo struttura a schede della barra di Outlook.
+Crea il controllo scheda della barra di Outlook.
 
 ```
 virtual BOOL Create(
@@ -221,25 +222,25 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametri
 
 *Rect*<br/>
-[in] Specifica le dimensioni e la posizione iniziali, in pixel.
+in Specifica le dimensioni e la posizione iniziali, in pixel.
 
-*pParentWnd (informazioni in due)*<br/>
-[in] Punta alla finestra padre. Non deve essere NULL.
+*pParentWnd*<br/>
+in Punta alla finestra padre. Non può essere NULL.
 
 *nID*<br/>
-[in] ID del controllo.
+in ID del controllo.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se il controllo è stato creato correttamente; in caso contrario 0.
+Diverso da zero se il controllo è stato creato correttamente; in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-In genere, i controlli scheda della barra di Outlook vengono creati quando [CMFCOutlookBar classe](../../mfc/reference/cmfcoutlookbar-class.md) controlla il WM_CREATE messaggio del processo.
+In genere, i controlli della scheda della barra di Outlook vengono creati quando la [Classe CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md) controlla la WM_CREATE messaggio del processo.
 
-## <a name="cmfcoutlookbartabctrlenableanimation"></a><a name="enableanimation"></a>CMFCOutlookBarTabCtrlCtrl::EnableAnimation
+## <a name="cmfcoutlookbartabctrlenableanimation"></a><a name="enableanimation"></a> CMFCOutlookBarTabCtrl:: EnableAnimation
 
-Specifica se l'animazione che si verifica durante il passaggio tra le schede attive è abilitata.
+Specifica se l'animazione che si verifica durante l'opzione tra le schede attive è abilitata.
 
 ```
 static void EnableAnimation(BOOL bEnable=TRUE);
@@ -248,17 +249,17 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 ### <a name="parameters"></a>Parametri
 
 *bEnable*<br/>
-[in] Specifica se l'animazione deve essere abilitata o disabilitata.
+in Specifica se l'animazione deve essere abilitata o disabilitata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamare questa funzione per abilitare e disabilitare l'animazione. Quando l'utente apre una scheda, la didascalia della pagina scorre verso l'alto o verso il basso se l'animazione è abilitata. Se l'animazione è disabilitata, la pagina diventa immediatamente attiva.
 
 Per impostazione predefinita, l'animazione è abilitata.
 
-## <a name="cmfcoutlookbartabctrlenableinplaceedit"></a><a name="enableinplaceedit"></a>CMFCOutlookBarTabCtrlCtrl::EnableInPlaceModifica
+## <a name="cmfcoutlookbartabctrlenableinplaceedit"></a><a name="enableinplaceedit"></a> CMFCOutlookBarTabCtrl:: EnableInPlaceEdit
 
-Specifica se un utente può modificare le etichette di testo sui pulsanti della scheda della barra di Outlook.
+Specifica se un utente può modificare le etichette di testo nei pulsanti della pagina della scheda della barra di Outlook.
 
 ```
 virtual void EnableInPlaceEdit(BOOL bEnable);
@@ -269,13 +270,13 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 *bEnable*<br/>
 Se TRUE, abilitare la modifica sul posto dell'etichetta di testo. Se FALSE, disabilitare la modifica sul posto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Chiamare questa funzione per abilitare o disabilitare la modifica sul posto delle etichette di testo sui pulsanti della scheda. Per impostazione predefinita, la modifica sul posto è disabilitata.
+Chiamare questa funzione per abilitare o disabilitare la modifica sul posto delle etichette di testo nei pulsanti della scheda. Per impostazione predefinita, la modifica sul posto è disabilitata.
 
-## <a name="cmfcoutlookbartabctrlenablescrollbuttons"></a><a name="enablescrollbuttons"></a>CMFCOutlookBarTabCtrlCtrl::EnableScrollButtons
+## <a name="cmfcoutlookbartabctrlenablescrollbuttons"></a><a name="enablescrollbuttons"></a> CMFCOutlookBarTabCtrl:: EnableScrollButtons
 
-Chiamato dal framework per abilitare gli handle di scorrimento che consentono all'utente di scorrere i pulsanti nel riquadro della barra di Outlook.
+Chiamata eseguita dal Framework per abilitare gli handle di scorrimento che consentono all'utente di scorrere i pulsanti nel riquadro della barra di Outlook.
 
 ```cpp
 void EnableScrollButtons(
@@ -287,21 +288,21 @@ void EnableScrollButtons(
 ### <a name="parameters"></a>Parametri
 
 *bEnable*<br/>
-[in] Determina se i pulsanti di scorrimento vengono visualizzati.
+in Determina se i pulsanti di scorrimento vengono visualizzati.
 
 *bIsUp*<br/>
-[in] Determina se la barra di scorrimento superiore è visualizzata.
+in Determina se la barra di scorrimento superiore viene visualizzata.
 
-*bIsGiù*<br/>
-[in] Determina se la barra di scorrimento inferiore è visualizzata.
+*bIsDown*<br/>
+in Determina se la barra di scorrimento inferiore viene visualizzata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Abilita la visualizzazione dei pulsanti di scorrimento. Questo metodo viene chiamato dal framework quando la scheda attiva viene modificata per ripristinare i pulsanti di scorrimento.
+Consente di visualizzare i pulsanti di scorrimento. Questo metodo viene chiamato dal framework quando la scheda attiva viene modificata per ripristinare i pulsanti di scorrimento.
 
-## <a name="cmfcoutlookbartabctrlgetbordersize"></a><a name="getbordersize"></a>CMFCOutlookBarTabCtrlCtrl::GetBorderSize
+## <a name="cmfcoutlookbartabctrlgetbordersize"></a><a name="getbordersize"></a> CMFCOutlookBarTabCtrl:: GetBorderSize
 
-Restituisce la dimensione del bordo del controllo struttura a schede di Outlook.
+Restituisce la dimensione del bordo del controllo scheda di Outlook.
 
 ```
 int GetBorderSize() const;
@@ -309,9 +310,9 @@ int GetBorderSize() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Dimensione del bordo, in pixel.
+Dimensioni del bordo, in pixel.
 
-## <a name="cmfcoutlookbartabctrlgetvisiblepagebuttons"></a><a name="getvisiblepagebuttons"></a>CMFCOutlookBarTabCtrlCtrl::GetVisiblePageButtons
+## <a name="cmfcoutlookbartabctrlgetvisiblepagebuttons"></a><a name="getvisiblepagebuttons"></a> CMFCOutlookBarTabCtrl:: GetVisiblePageButtons
 
 ```
 int GetVisiblePageButtons() const;
@@ -319,11 +320,11 @@ int GetVisiblePageButtons() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cmfcoutlookbartabctrlisanimation"></a><a name="isanimation"></a>CMFCOutlookBarTabCtrlCtrl::IsAnimation
+## <a name="cmfcoutlookbartabctrlisanimation"></a><a name="isanimation"></a> CMFCOutlookBarTabCtrl:: l'animazione
 
-Specifica se l'animazione che si verifica durante il passaggio tra le schede attive è abilitata.
+Specifica se l'animazione che si verifica durante l'opzione tra le schede attive è abilitata.
 
 ```
 static BOOL IsAnimation();
@@ -331,15 +332,15 @@ static BOOL IsAnimation();
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se l'animazione è abilitata; in caso contrario 0.
+Diverso da zero se l'animazione è abilitata; in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Chiamare la funzione [CMFCOutlookBarTabCtrl::EnableAnimation](#enableanimation) per abilitare o disabilitare l'animazione.
+Chiamare la funzione [CMFCOutlookBarTabCtrl:: EnableAnimation](#enableanimation) per abilitare o disabilitare l'animazione.
 
-## <a name="cmfcoutlookbartabctrlismode2003"></a><a name="ismode2003"></a>CMFCOutlookBarTabCtrlCtrl::IsMode2003
+## <a name="cmfcoutlookbartabctrlismode2003"></a><a name="ismode2003"></a> CMFCOutlookBarTabCtrl:: IsMode2003
 
-Determina se il controllo struttura a schede della barra di Outlook è in una modalità che emula Microsoft Outlook 2003.
+Determina se il controllo scheda della barra di Outlook si trova in una modalità che emula Microsoft Outlook 2003.
 
 ```
 BOOL IsMode2003() const;
@@ -347,53 +348,53 @@ BOOL IsMode2003() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe il controllo struttura a schede della barra di Outlook è in modalità Outlook 2003. in caso contrario, FALSE;
+TRUE se il controllo scheda della barra di Outlook è in modalità Outlook 2003; in caso contrario, FALSE;
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Questo valore viene impostato da [CMFCOutlookBar::SetMode2003](../../mfc/reference/cmfcoutlookbar-class.md#setmode2003).
+Questo valore viene impostato da [CMFCOutlookBar:: SetMode2003](../../mfc/reference/cmfcoutlookbar-class.md#setmode2003).
 
-## <a name="cmfcoutlookbartabctrlonshowfewerpagebuttons"></a><a name="onshowfewerpagebuttons"></a>CMFCOutlookBarTabCtrlCtrl::OnShowFewerPageButtons
+## <a name="cmfcoutlookbartabctrlonshowfewerpagebuttons"></a><a name="onshowfewerpagebuttons"></a> CMFCOutlookBarTabCtrl:: OnShowFewerPageButtons
 
-Chiamato dal framework per ridurre il numero di pulsanti di scheda visibili.
+Chiamata eseguita dal Framework per ridurre il numero di pulsanti della scheda visualizzati.
 
 ```
 virtual void OnShowFewerPageButtons();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Questo metodo regola il numero di pulsanti di tabulazione pagina visibili quando il controllo viene ridimensionato.
+Questo metodo regola il numero di pulsanti della scheda pagina visibile quando il controllo viene ridimensionato.
 
-## <a name="cmfcoutlookbartabctrlonshowmorepagebuttons"></a><a name="onshowmorepagebuttons"></a>CMFCOutlookBarTabCtrlCtrl::OnShowMorePageButtons
+## <a name="cmfcoutlookbartabctrlonshowmorepagebuttons"></a><a name="onshowmorepagebuttons"></a> CMFCOutlookBarTabCtrl:: OnShowMorePageButtons
 
-Chiamato dal framework per aumentare il numero di pulsanti di scheda visibili.
+Chiamata eseguita dal Framework per aumentare il numero di pulsanti della scheda visualizzati.
 
 ```
 virtual void OnShowMorePageButtons();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Questo metodo regolare il numero di pulsanti di scheda che sono visibili quando il controllo viene ridimensionato.
+Questo metodo regola il numero di pulsanti della scheda che sono visibili quando il controllo viene ridimensionato.
 
-## <a name="cmfcoutlookbartabctrlonshowoptions"></a><a name="onshowoptions"></a>CMFCOutlookBarTabCtrlCtrl::OnShowOptions
+## <a name="cmfcoutlookbartabctrlonshowoptions"></a><a name="onshowoptions"></a> CMFCOutlookBarTabCtrl:: OnShowOptions
 
-Visualizza la finestra di dialogo **Opzioni riquadro di spostamento.**
+Consente di visualizzare la finestra di dialogo **Opzioni riquadro di spostamento** .
 
 ```
 virtual void OnShowOptions();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-La finestra di dialogo **Opzioni riquadro** di spostamento consente all'utente di selezionare i pulsanti della scheda da visualizzare e l'ordine in cui vengono visualizzati.
+La finestra di dialogo **Opzioni riquadro di spostamento** consente all'utente di selezionare i pulsanti della scheda da visualizzare e l'ordine in cui vengono visualizzati.
 
-Questo metodo viene chiamato dal framework quando l'utente seleziona la voce di menu **Opzioni riquadro** di spostamento dal menu di personalizzazione del controllo.
+Questo metodo viene chiamato dal framework quando l'utente seleziona la voce di menu **Opzioni riquadro di spostamento** dal menu di personalizzazione del controllo.
 
-## <a name="cmfcoutlookbartabctrlsetactivetab"></a><a name="setactivetab"></a>CMFCOutlookBarTabCtrlCtrl::SetActiveTab
+## <a name="cmfcoutlookbartabctrlsetactivetab"></a><a name="setactivetab"></a> CMFCOutlookBarTabCtrl:: SetActiveTab
 
-Imposta la scheda attiva. La scheda attiva è quella aperta, con il suo contenuto visibile.
+Imposta la scheda attiva. La scheda attiva è quella aperta, con il relativo contenuto visibile.
 
 ```
 virtual BOOL SetActiveTab(int iTab);
@@ -402,19 +403,19 @@ virtual BOOL SetActiveTab(int iTab);
 ### <a name="parameters"></a>Parametri
 
 *iTab*<br/>
-[in] Indice in base zero di una scheda da aprire.
+in Indice in base zero di una scheda da aprire.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se la scheda specificata è stata aperta correttamente; in caso contrario 0.
+Diverso da zero se la scheda specificata è stata aperta correttamente; in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-L'effetto visivo dell'impostazione della scheda attiva dipende dall'abilitazione o meno dell'animazione. Per ulteriori informazioni, vedere [CMFCOutlookBarTabCtrl::EnableAnimation](#enableanimation).
+L'effetto visivo dell'impostazione della scheda attiva dipende dal fatto che sia stata abilitata l'animazione. Per ulteriori informazioni, vedere [CMFCOutlookBarTabCtrl:: EnableAnimation](#enableanimation).
 
-## <a name="cmfcoutlookbartabctrlsetbordersize"></a><a name="setbordersize"></a>CMFCOutlookBarTabCtrlCtrl::SetBorderSize
+## <a name="cmfcoutlookbartabctrlsetbordersize"></a><a name="setbordersize"></a> CMFCOutlookBarTabCtrl:: SetBorderSize
 
-Imposta la dimensione del bordo del controllo struttura a schede di Outlook.
+Imposta la dimensione del bordo del controllo scheda di Outlook.
 
 ```cpp
 void SetBorderSize(int nBorderSize);
@@ -422,16 +423,16 @@ void SetBorderSize(int nBorderSize);
 
 ### <a name="parameters"></a>Parametri
 
-*nBorderSize (informazioni in base ai bordi)*<br/>
-[in] Specifica le nuove dimensioni del bordo in pixel.
+*nBorderSize*<br/>
+in Specifica le nuove dimensioni del bordo in pixel.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Imposta le nuove dimensioni del bordo e ricalcola il layout della finestra di Outlook.
 
-## <a name="cmfcoutlookbartabctrlsetpagebuttontextalign"></a><a name="setpagebuttontextalign"></a>CMFCOutlookBarTabCtrlCtrl::SetPageButtonTextAlign
+## <a name="cmfcoutlookbartabctrlsetpagebuttontextalign"></a><a name="setpagebuttontextalign"></a> CMFCOutlookBarTabCtrl:: SetPageButtonTextAlign
 
-Imposta l'allineamento delle etichette di testo sui pulsanti delle schede della barra di Outlook.
+Imposta l'allineamento delle etichette di testo nei pulsanti di tabulazione della barra di Outlook.
 
 ```cpp
 void SetPageButtonTextAlign(
@@ -441,17 +442,17 @@ void SetPageButtonTextAlign(
 
 ### <a name="parameters"></a>Parametri
 
-*uiAlign (interfaccia utente)*<br/>
-[in] Specifica l'allineamento del testo.
+*uiAlign*<br/>
+in Specifica l'allineamento del testo.
 
 *bRedraw*<br/>
-[in] Se TRUE, la finestra di Outlook verrà ridisegnata.
+in Se TRUE, la finestra di Outlook verrà ridisegnato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Utilizzare questa funzione per modificare l'allineamento del testo per i pulsanti di pagina.
 
-*uiAlign* può essere uno dei seguenti valori:
+*uiAlign* può essere uno dei valori seguenti:
 
 |Costante|Significato|
 |--------------|-------------|
@@ -461,7 +462,7 @@ Utilizzare questa funzione per modificare l'allineamento del testo per i pulsant
 
 Il valore predefinito è TA_CENTER.
 
-## <a name="cmfcoutlookbartabctrlsettoolbarimagelist"></a><a name="settoolbarimagelist"></a>CMFCOutlookBarTabCtrlCtrl::SetToolbarImageList
+## <a name="cmfcoutlookbartabctrlsettoolbarimagelist"></a><a name="settoolbarimagelist"></a> CMFCOutlookBarTabCtrl:: SetToolbarImageList
 
 Imposta la bitmap che contiene le icone visualizzate nella parte inferiore della barra di Outlook in modalità Outlook 2003.
 
@@ -475,25 +476,25 @@ BOOL SetToolbarImageList(
 ### <a name="parameters"></a>Parametri
 
 *uiID*<br/>
-[in] Specifica l'ID risorsa dell'immagine da caricare.
+in Specifica l'ID risorsa dell'immagine da caricare.
 
-*Cx*<br/>
-[in] Specifica la larghezza di un'immagine nell'elenco immagini, in pixel.
+*CX*<br/>
+in Specifica la larghezza in pixel di un'immagine nell'elenco di immagini.
 
 *clrTransp*<br/>
-[in] Valore RGB che specifica il colore trasparente.
+in Valore RGB che specifica il colore trasparente.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce TRUE se ha esito positivo; in caso contrario restituisce FALSE.
+Restituisce TRUE se l'operazione ha esito positivo; in caso contrario, restituisce FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Utilizzare questa funzione per allegare un elenco immagini le cui immagini verranno visualizzate sui pulsanti della barra degli strumenti in modalità Microsoft Office 2003. Gli indici di immagine devono corrispondere agli indici di pagina.
+Usare questa funzione per alleghi un elenco di immagini le cui immagini verranno visualizzate sui pulsanti della barra degli strumenti in modalità Microsoft Office 2003. Gli indici di immagini devono corrispondere agli indici di pagina.
 
-Questo metodo non deve essere chiamato se non è in modalità Microsoft Office 2003. Per ulteriori informazioni, vedere [Classe CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md).
+Questo metodo non deve essere chiamato se non è in modalità Microsoft Office 2003. Per ulteriori informazioni, vedere la [Classe CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md).
 
-## <a name="cmfcoutlookbartabctrlsetvisiblepagebuttons"></a><a name="setvisiblepagebuttons"></a>CMFCOutlookBarTabCtrlCtrl::SetVisiblePageButtons
+## <a name="cmfcoutlookbartabctrlsetvisiblepagebuttons"></a><a name="setvisiblepagebuttons"></a> CMFCOutlookBarTabCtrl:: SetVisiblePageButtons
 
 ```cpp
 void SetVisiblePageButtons(int nVisiblePageButtons);
@@ -501,14 +502,14 @@ void SetVisiblePageButtons(int nVisiblePageButtons);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *nVisiblePageButtons*<br/>
+in *nVisiblePageButtons*<br/>
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md)<br/>
+[Classe CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)<br/>
 [Classe CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)<br/>
-[CMFCOutlookBarPane (classe)](../../mfc/reference/cmfcoutlookbarpane-class.md)
+[Classe CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md)

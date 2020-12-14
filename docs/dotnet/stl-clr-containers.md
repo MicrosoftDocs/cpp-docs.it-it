@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: contenitori STL/CLR'
 title: Contenitori STL/CLR
 ms.date: 09/18/2018
 ms.topic: reference
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: 04ba56bf4f134ac5e9b906f7f84563c00ffe1b96
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 945533f616abe37763d9963d46d87f02a3c077fa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214867"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335336"
 ---
 # <a name="stlclr-containers"></a>Contenitori STL/CLR
 
@@ -310,6 +311,6 @@ I contenitori in STL/CLR lavorano sulla semantica del valore. Ogni volta che si 
 
 Quando si chiama il metodo clear o il metodo erase di un contenitore di oggetti handle, gli oggetti a cui gli handle fanno riferimento non vengono rimossi dalla memoria. È necessario eliminare esplicitamente l'oggetto, oppure, poiché questi oggetti risiedono nell'heap gestito, consentire a Garbage Collector di liberare la memoria una volta determinato che l'oggetto non viene più utilizzato.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimenti per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

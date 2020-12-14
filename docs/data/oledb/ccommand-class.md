@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CCommand'
 title: Classe CCommand
 ms.date: 11/04/2016
 f1_keywords:
@@ -49,12 +50,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: 109998dd742828b3c41672fa2afa8716e4687f6a
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 150d543b666896964794503d185637680e6da8fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91501010"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335515"
 ---
 # <a name="ccommand-class"></a>Classe CCommand
 
@@ -91,7 +92,7 @@ Per usare un OLE DB comando che può restituire più risultati, specificare [CMu
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[Close](#close)|Chiude il comando corrente.|
 |[GetNextResult](#getnextresult)|Recupera il risultato successivo durante l'utilizzo di più set di risultati.|
@@ -104,12 +105,12 @@ Per usare un OLE DB comando che può restituire più risultati, specificare [CMu
 |[Creare](#create)|Crea un nuovo comando per la sessione specificata, quindi imposta il testo del comando.|
 |[CreateCommand](#createcommand)|Crea un nuovo comando.|
 |[GetParameterInfo](#getparameterinfo)|Ottiene un elenco di parametri, i relativi nomi e tipi del comando.|
-|[Preparazione](#prepare)|Convalida e ottimizza il comando corrente.|
+|[Preparare](#prepare)|Convalida e ottimizza il comando corrente.|
 |[ReleaseCommand](#releasecommand)|Rilascia la funzione di accesso parametro se necessario, quindi rilascia il comando.|
 |[SetParameterInfo](#setparameterinfo)|Specifica il tipo nativo di ogni parametro di comando.|
 |[Unprepare](#unprepare)|Rimuove il piano di esecuzione corrente dei comandi.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Usare questa classe quando è necessario eseguire un'operazione basata su parametri o eseguire un comando. Se è sufficiente aprire un set di righe semplice, usare invece [CTable](../../data/oledb/ctable-class.md) .
 
@@ -164,7 +165,7 @@ in Specifica se associare il comando automaticamente dopo l'esecuzione. Il valor
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se un set di risultati è stato recuperato in precedenza, questa funzione rilascia il set di risultati precedente e Annulla l'associazione delle colonne. Se *bBind* è **`true`** , associa le nuove colonne.
 
@@ -222,13 +223,13 @@ in Uguale a *wszCommand* , con la differenza che questo parametro accetta una st
 in Puntatore a una matrice di strutture [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) che contiene le proprietà e i valori da impostare. Vedere [set di proprietà e gruppi di proprietà](/previous-versions/windows/desktop/ms713696(v=vs.85)) nella Guida *di riferimento per programmatori OLE DB* nel Windows SDK.
 
 *pRowsAffected*<br/>
-[in/out] Puntatore alla memoria in cui viene restituito il numero di righe interessate da un comando. Se * \* PROWSAFFECTED* è null, non viene restituito alcun conteggio delle righe. In caso contrario, `Open` imposta * \* pRowsAffected* in base alle condizioni seguenti:
+[in/out] Puntatore alla memoria in cui viene restituito il numero di righe interessate da un comando. Se *\* PROWSAFFECTED* è null, non viene restituito alcun conteggio delle righe. In caso contrario, `Open` imposta *\* pRowsAffected* in base alle condizioni seguenti:
 
 |Se|Risultato|
 |--------|----------|
-|L' `cParamSets` elemento di `pParams` è maggiore di 1|* \* pRowsAffected* rappresenta il numero totale di righe interessate da tutti i set di parametri specificati nell'esecuzione.|
-|Il numero di righe interessate non è disponibile|* \* pRowsAffected* è impostato su-1.|
-|Il comando non aggiorna, Elimina o inserisce righe|* \* pRowsAffected* non è definito.|
+|L' `cParamSets` elemento di `pParams` è maggiore di 1|*\* pRowsAffected* rappresenta il numero totale di righe interessate da tutti i set di parametri specificati nell'esecuzione.|
+|Il numero di righe interessate non è disponibile|*\* pRowsAffected* è impostato su-1.|
+|Il comando non aggiorna, Elimina o inserisce righe|*\* pRowsAffected* non è definito.|
 
 *guidCommand*<br/>
 in GUID che specifica la sintassi e le regole generali del provider da utilizzare per l'analisi del testo del comando. Per informazioni dettagliate, vedere [ICommandText:: GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) e [ICommandText:: CommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)) in *OLE DB Programmer ' s Reference* .
@@ -243,7 +244,7 @@ in Numero di strutture [DBPROPSET](/previous-versions/windows/desktop/ms714367(v
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le prime tre forme di `Open` accettano una sessione, creano un comando ed eseguono il comando, associando tutti i parametri necessari.
 
@@ -292,7 +293,7 @@ in GUID che specifica la sintassi e le regole generali del provider da utilizzar
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo form di `Create` accetta una stringa di comando Unicode. Il secondo formato `Create` accetta una stringa di comando ANSI, fornita per compatibilità con le versioni precedenti delle applicazioni ANSI esistenti.
 
@@ -315,7 +316,7 @@ in `CSession` Oggetto da associare al nuovo comando.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo crea un comando utilizzando l'oggetto sessione specificato.
 
@@ -358,7 +359,7 @@ in Il numero di volte in cui si prevede di eseguire il comando.
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo esegue il wrapping del metodo OLE DB [ICommandPrepare::P ripare](/previous-versions/windows/desktop/ms718370(v=vs.85)).
 
@@ -410,11 +411,11 @@ HRESULT CCommandBase::Unprepare() throw();
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo esegue il wrapping del metodo OLE DB [ICommandPrepare:: Unprep](/previous-versions/windows/desktop/ms719635(v=vs.85)).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

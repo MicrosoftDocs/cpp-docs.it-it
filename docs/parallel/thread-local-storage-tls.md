@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: archiviazione thread-local (TLS)'
 title: Archiviazione thread-local (TLS)
 ms.date: 08/09/2019
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: f677d7382a9747df63023bd83b104a6bb3b74c1f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1259f0c3af84f90fcd82483d3891124d1553eeb9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222654"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342322"
 ---
 # <a name="thread-local-storage-tls"></a>Archiviazione thread-local (TLS)
 
 L'archiviazione thread-local è il metodo attraverso il quale ogni thread incluso in un processo multithreading specifico può allocare posizioni in cui archiviare dati specifici del thread. I dati specifici del thread in fase di esecuzione sono supportati tramite l'API TLS ([TlsAlloc](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc)). Win32 e il compilatore Microsoft C++ supportano ora i dati associati in modo statico (tempo di caricamento) per thread oltre all'implementazione API esistente.
 
-## <a name="compiler-implementation-for-tls"></a><a name="_core_compiler_implementation_for_tls"></a>Implementazione del compilatore per TLS
+## <a name="compiler-implementation-for-tls"></a><a name="_core_compiler_implementation_for_tls"></a> Implementazione del compilatore per TLS
 
 **C++ 11:**  L' **`thread_local`** identificatore di classe di archiviazione è il metodo consigliato per specificare l'archiviazione locale di thread per oggetti e membri di classe. Per altre informazioni, vedere [classi di archiviazione (C++)](../cpp/storage-classes-cpp.md).
 
@@ -106,6 +107,6 @@ Le linee guida seguenti devono essere osservate quando si dichiarano variabili e
 
 - Nei sistemi operativi Windows precedenti a Windows Vista, `__declspec( thread )` presenta alcune limitazioni. Se una DLL dichiara qualsiasi dato o oggetto come `__declspec( thread )` , può causare un errore di protezione se caricato dinamicamente. Quando la DLL viene caricata con [LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw), causa un errore di sistema ogni volta che il codice fa riferimento ai `__declspec( thread )` dati. Poiché lo spazio delle variabili globali per un thread viene allocato in fase di esecuzione, le dimensioni di questo spazio sono basate sul calcolo dei requisiti dell'applicazione sommati ai requisiti di tutte le DLL collegate staticamente. Quando si usa `LoadLibrary` , non è possibile estendere questo spazio per consentire le variabili locali di thread dichiarate con `__declspec( thread )` . Usare le API TLS, ad esempio [TlsAlloc](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc), nella dll per allocare TLS se la dll può essere caricata con `LoadLibrary` .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Multithreading con C e Win32](multithreading-with-c-and-win32.md)
