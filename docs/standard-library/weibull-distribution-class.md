@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: weibull_distribution Class'
 title: Classe weibull_distribution
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: d16c1f7f864d52222a7fd4e1e2a5e543b8c21809
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d6ab60a4c5442e13a00ff559cbc58e207335e5ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831697"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187793"
 ---
 # <a name="weibull_distribution-class"></a>Classe weibull_distribution
 
@@ -73,7 +74,7 @@ class weibull_distribution
 *RealType*\
 Il tipo di risultato a virgola mobile, il valore predefinito è **`double`** . Per i tipi possibili, vedere [\<random>](../standard-library/random.md) .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il modello di classe descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente o di tipo **`double`** se non ne viene fornito alcuno, distribuiti in base alla distribuzione di Weibull. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
@@ -229,7 +230,7 @@ Parametro di distribuzione `b`.
 *parm*\
 Struttura `param_type` usata per costruire la distribuzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:** `0.0 < a` e `0.0 < b`
 
@@ -264,7 +265,7 @@ Parametro di distribuzione `b`.
 *Ok*\
 Oggetto `param_type` da confrontare con questo oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 **Precondizione:** `0.0 < a` e `0.0 < b`
 

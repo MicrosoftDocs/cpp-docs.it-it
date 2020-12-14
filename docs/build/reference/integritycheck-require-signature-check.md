@@ -1,13 +1,14 @@
 ---
+description: Altre informazioni su:/INTEGRITYCHECK (Richiedi il controllo della firma)
 title: /INTEGRITYCHECK (richiede controllo della firma)
 ms.date: 11/04/2016
 ms.assetid: 9e738825-2c98-40cd-8ad2-5d0d9c14893e
-ms.openlocfilehash: 1732c612501b66753635b272f94764975c555f75
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 650b5d6ae121a5e776f16797a869dfa15f443bf1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492842"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191264"
 ---
 # <a name="integritycheck-require-signature-check"></a>/INTEGRITYCHECK (richiede controllo della firma)
 
@@ -17,7 +18,7 @@ Specifica che la firma digitale dell'immagine binaria deve essere controllata in
 /INTEGRITYCHECK[:NO]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, **/INTEGRITYCHECK** è disattivato.
 
@@ -33,9 +34,9 @@ L'opzione **/INTEGRITYCHECK** imposta, nell'intestazione PE del file dll o del f
 
 1. Selezionare la pagina delle proprietà **riga di comando** .
 
-1. In **Opzioni aggiuntive**immettere `/INTEGRITYCHECK` o `/INTEGRITYCHECK:NO`.
+1. In **Opzioni aggiuntive** immettere `/INTEGRITYCHECK` o `/INTEGRITYCHECK:NO` .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Informazioni di riferimento sul linker MSVC](linking.md)<br/>
 [Opzioni del linker MSVC](linker-options.md)<br/>

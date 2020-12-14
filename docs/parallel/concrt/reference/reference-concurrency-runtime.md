@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: riferimento (runtime di concorrenza)'
 title: Riferimento (runtime di concorrenza)
 ms.date: 11/04/2016
 f1_keywords:
@@ -452,25 +453,25 @@ helpviewer_keywords:
 - LPSECURITY_ATTRIBUTES typedef
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
-ms.openlocfilehash: e1ae4616400069b44e23e30e3df69aae6dec6592
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f5d07f856c37417da1ceddbbefa772b2e7f11fff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446287"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188924"
 ---
 # <a name="reference-concurrency-runtime"></a>Riferimento (runtime di concorrenza)
 
 Questa sezione contiene informazioni di riferimento per il runtime di concorrenza.
 
 > [!Note]
-> Lo C++ standard del linguaggio riserva l'utilizzo di identificatori che iniziano con un carattere di sottolineatura (_) per le implementazioni come le librerie. Non usare questi nomi nel codice. Il comportamento degli elementi di codice i cui nomi seguono questa convenzione non è garantito ed è soggetto a modifiche nelle future versioni. Per questi motivi, tali elementi di codice vengono omessi dalla documentazione runtime di concorrenza.
+> Lo standard del linguaggio C++ riserva l'utilizzo di identificatori che iniziano con un carattere di sottolineatura (_) per le implementazioni come le librerie. Non usare questi nomi nel codice. Il comportamento degli elementi di codice i cui nomi seguono questa convenzione non è garantito ed è soggetto a modifiche nelle future versioni. Per questi motivi, tali elementi di codice vengono omessi dalla documentazione runtime di concorrenza.
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)<br/>
-Lo spazio dei nomi Concurrency fornisce le classi e le funzioni che consentono di accedere al runtime di concorrenza, un Framework C++di programmazione simultaneo per. Per altre informazioni, vedere [Concurrency Runtime](../concurrency-runtime.md) (Runtime di concorrenza).
+[Spazio dei nomi Concurrency](concurrency-namespace.md)<br/>
+Lo spazio dei nomi Concurrency fornisce le classi e le funzioni che consentono di accedere al runtime di concorrenza, un Framework di programmazione simultaneo per C++. Per altre informazioni, vedere [Concurrency Runtime](../concurrency-runtime.md).
 
-[spazio dei nomi std](std-namespace.md)
+[Spazio dei nomi std](std-namespace.md)
 
-[spazio dei nomi STDX](stdx-namespace.md)
+[Spazio dei nomi stdx](stdx-namespace.md)

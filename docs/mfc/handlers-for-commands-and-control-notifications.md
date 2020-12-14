@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: gestori per comandi e notifiche dei controlli'
 title: Gestori per comandi e notifiche dei controlli
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - notifications [MFC], handlers for control
 - handlers [MFC], command
 ms.assetid: 20f57f4a-f577-4c09-80a2-43faf32a1c2e
-ms.openlocfilehash: cc89cbfde0a1eba5dc736b40c178d4a4fde37a4d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 1e5e3284d5898d1e6349765dc7a1bcdc864c80ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625776"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189184"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>Gestori per comandi e notifiche dei controlli
 
@@ -35,6 +36,6 @@ Inoltre, la Convenzione suggerisce che un gestore per il messaggio di notifica *
 
 Entrambe le categorie di messaggi non accettano argomenti e non restituiscono valori.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Dichiarazioni di funzioni gestore messaggi](declaring-message-handler-functions.md)
+[Dichiarazione delle funzioni del gestore di messaggi](declaring-message-handler-functions.md)

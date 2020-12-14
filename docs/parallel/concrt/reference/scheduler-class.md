@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe di utilità di pianificazione'
 title: Classe Scheduler
 ms.date: 11/04/2016
 f1_keywords:
@@ -21,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-ms.openlocfilehash: 77ad876b8352ab1ae86fde622b05712ec5f2cea9
-ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
+ms.openlocfilehash: 2a509017c84f7f6c845c153c8c187f5885839035
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92274719"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188898"
 ---
 # <a name="scheduler-class"></a>Classe Scheduler
 
@@ -42,14 +43,14 @@ class Scheduler;
 
 ### <a name="protected-constructors"></a>Costruttori protetti
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Utilità di pianificazione](#ctor)|Un oggetto della `Scheduler` classe può essere creato solo usando metodi factory o in modo implicito.|
 |[~ Distruttore utilità di pianificazione](#dtor)|Un oggetto della `Scheduler` classe viene eliminato in modo implicito quando tutti i riferimenti esterni a esso cessano di esistere.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Attach](#attach)|Connette l'utilità di pianificazione al contesto chiamante. Dopo la restituzione di questo metodo, il contesto chiamante viene gestito dall'utilità di pianificazione e l'utilità di pianificazione diventa l'utilità di pianificazione corrente.|
 |[Creare](#create)|Crea una nuova utilità di pianificazione il cui comportamento è descritto dal `_Policy` parametro, inserisce un riferimento iniziale nell'utilità di pianificazione e restituisce un puntatore a tale utilità.|
@@ -65,7 +66,7 @@ class Scheduler;
 |[ScheduleTask](#scheduletask)|Di overload. Pianifica un'attività leggera all'interno dell'utilità di pianificazione. L'attività leggera sarà posizionata in un gruppo di pianificazione determinato dal runtime. La versione che accetta il parametro `_Placement` comporta che per l'attività venga data priorità all'esecuzione nella posizione specificata.|
 |[SetDefaultSchedulerPolicy](#setdefaultschedulerpolicy)|Consente di usare un criterio definito dall'utente per creare l'utilità di pianificazione predefinita. Questo metodo può essere chiamato solo quando nel processo non è presente alcuna utilità di pianificazione predefinita. Dopo aver impostato un criterio predefinito, rimane attivo fino alla successiva chiamata valida al `SetDefaultSchedulerPolicy` metodo o al metodo [ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy) .|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'utilità di pianificazione runtime di concorrenza usa i contesti di esecuzione, che eseguono il mapping ai contesti di esecuzione del sistema operativo, ad esempio un thread, per eseguire il lavoro in coda da parte dell'applicazione. In qualsiasi momento, il livello di concorrenza di un'utilità di pianificazione è uguale al numero di processore virtuale concesso dal Gestione risorse. Un processore virtuale è un'astrazione per una risorsa di elaborazione e viene mappato a un thread hardware sul sistema sottostante. È possibile eseguire un solo contesto dell'utilità di pianificazione in un processore virtuale in un determinato momento.
 
@@ -89,7 +90,7 @@ Connette l'utilità di pianificazione al contesto chiamante. Dopo la restituzion
 virtual void Attach() = 0;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se si connette un'utilità di pianificazione, viene inserito in modo implicito un riferimento nell'utilità di pianificazione.
 
@@ -116,7 +117,7 @@ Criteri dell'utilità di pianificazione che descrivono il comportamento dell'uti
 
 Puntatore a un'utilità di pianificazione appena creata. `Scheduler`Per questo oggetto è stato inserito un conteggio di riferimenti iniziale.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Dopo aver creato un'utilità di pianificazione con il `Create` metodo, è necessario chiamare il `Release` metodo in un momento successivo per rimuovere il conteggio dei riferimenti iniziale e consentire l'arresto dell'utilità di pianificazione.
 
@@ -143,7 +144,7 @@ Un riferimento a un percorso in cui le attività all'interno del gruppo di piani
 
 Puntatore al gruppo di pianificazione appena creato. `ScheduleGroup`Per questo oggetto è stato inserito un conteggio di riferimenti iniziale.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Al termine della pianificazione del lavoro, è necessario richiamare il metodo [Release](schedulegroup-class.md#release) in un gruppo di pianificazione. L'utilità di pianificazione eliminerà il gruppo pianificato dopo il completamento di tutto il lavoro in coda.
 
@@ -202,7 +203,7 @@ Riferimento alla posizione in cui eseguire una query sull'utilità di pianificaz
 
 Indica se il percorso specificato dall' `_Placement` argomento è o meno disponibile nell'utilità di pianificazione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si noti che il valore restituito è un campionamento istantaneo dell'eventuale disponibilità della posizione specificata. In presenza di più utilità di pianificazione, tramite la gestione delle risorse dinamiche è possibile aggiungere o sottrarre risorse dalle utilità di pianificazione in qualsiasi punto. In questo caso, la disponibilità della posizione specificata può cambiare.
 
@@ -218,7 +219,7 @@ virtual unsigned int Reference() = 0 ;
 
 Conteggio dei riferimenti appena incrementato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa operazione viene in genere utilizzata per gestire la durata dell'utilità di pianificazione per la composizione. Quando il conteggio di riferimenti di un'utilità di pianificazione scende a zero, l'utilità di pianificazione si arresterà e si distruggerà dopo che tutto il lavoro nell'utilità di pianificazione sarà stato completato.
 
@@ -249,7 +250,7 @@ virtual unsigned int Release() = 0;
 
 Conteggio dei riferimenti appena decrementato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa operazione viene in genere utilizzata per gestire la durata dell'utilità di pianificazione per la composizione. Quando il conteggio di riferimenti di un'utilità di pianificazione scende a zero, l'utilità di pianificazione si arresterà e si distruggerà dopo che tutto il lavoro nell'utilità di pianificazione sarà stato completato.
 
@@ -261,7 +262,7 @@ Reimposta i criteri dell'utilità di pianificazione predefiniti sul valore prede
 static void __cdecl ResetDefaultSchedulerPolicy();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo può essere chiamato mentre un'utilità di pianificazione predefinita esiste nel processo. Non avrà alcun effetto sui criteri dell'utilità di pianificazione predefinita esistente. Tuttavia, se l'utilità di pianificazione predefinita è stata arrestata ed è stato creato un nuovo valore predefinito in un secondo momento, la nuova utilità di pianificazione utilizzerà le impostazioni predefinite dei criteri di Runtime.
 
@@ -273,7 +274,7 @@ Un oggetto della `Scheduler` classe può essere creato solo usando metodi factor
 Scheduler();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'utilità di pianificazione predefinita del processo viene creata in modo implicito quando si utilizzano molte delle funzioni di runtime che richiedono che un'utilità di pianificazione venga collegata al contesto chiamante. I metodi all'interno della `CurrentScheduler` classe e delle funzionalità dei livelli ppl e Agents eseguono in genere un allegato implicito.
 
@@ -326,11 +327,11 @@ static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 *_Policy*<br/>
 Criterio da impostare come criterio dell'utilità di pianificazione predefinito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il `SetDefaultSchedulerPolicy` metodo viene chiamato quando un'utilità di pianificazione predefinita esiste già nel processo, il runtime genererà un'eccezione [default_scheduler_exists](default-scheduler-exists-class.md) .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Concurrency](concurrency-namespace.md)<br/>
 [Classe Scheduler](scheduler-class.md)<br/>

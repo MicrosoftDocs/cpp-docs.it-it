@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: static_partitioner Class'
 title: Classe static_partitioner
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - static_partitioner class
 ms.assetid: 2b3dbdf0-6eb9-49f6-8639-03df1d974143
-ms.openlocfilehash: 7a58daa27bc7a2f51f78a3068a2f152979ffdd72
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: f75d2e620a66e0ed347d39d429f59e3e2715369a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142686"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188495"
 ---
 # <a name="static_partitioner-class"></a>Classe static_partitioner
 
@@ -29,10 +30,10 @@ class static_partitioner;
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[static_partitioner](#ctor)|Costruisce un oggetto `static_partitioner`.|
-|[Distruttore ~ static_partitioner](#dtor)|Elimina un oggetto `static_partitioner`.|
+|[Distruttore ~ static_partitioner](#dtor)|Elimina un oggetto `static_partitioner` .|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -44,15 +45,15 @@ class static_partitioner;
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="dtor"></a>~ static_partitioner
+## <a name="static_partitioner"></a><a name="dtor"></a> ~ static_partitioner
 
-Elimina un oggetto `static_partitioner`.
+Elimina un oggetto `static_partitioner` .
 
 ```cpp
 ~static_partitioner();
 ```
 
-## <a name="ctor"></a>static_partitioner
+## <a name="static_partitioner"></a><a name="ctor"></a> static_partitioner
 
 Costruisce un oggetto `static_partitioner`.
 
@@ -60,6 +61,6 @@ Costruisce un oggetto `static_partitioner`.
 static_partitioner();
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)
+[Spazio dei nomi Concurrency](concurrency-namespace.md)

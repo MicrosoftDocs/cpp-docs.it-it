@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2440'
 title: Errore del compilatore C2440
 ms.date: 03/28/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
-ms.openlocfilehash: 74c5032338b3f4cf30bdb75bdf070cee7b67ce58
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 918f071f7d7ecc294ddab92764c03da98ad86555
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742112"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189743"
 ---
 # <a name="compiler-error-c2440"></a>Errore del compilatore C2440
 
@@ -21,7 +22,7 @@ Il compilatore non può eseguire il cast da `type1` a `type2` .
 
 C2440 può essere generato se si tenta di inizializzare un oggetto non const **`char*`** (o `wchar_t*` ) utilizzando un valore letterale stringa nel codice C++, quando viene impostata l'opzione di conformità del compilatore [/Zc: strictStrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) . In C, il tipo di valore letterale stringa è una matrice di **`char`** , ma in C++ è una matrice di `const char` .
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Questo esempio genera C2440:
 

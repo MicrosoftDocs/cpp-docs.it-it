@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: task_handle Class'
 title: Classe task_handle
 ms.date: 03/27/2019
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-ms.openlocfilehash: a61e72f14448d5033d5be9069ffeec7d3bb08061
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 21fa2a1782fad200061deb1e85bf052613354a34
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142549"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188222"
 ---
 # <a name="task_handle-class"></a>Classe task_handle
 
@@ -31,32 +32,32 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
 ### <a name="parameters"></a>Parametri
 
 *_Function*<br/>
-Tipo dell'oggetto funzione che verrà richiamato per eseguire il lavoro rappresentato dall'oggetto `task_handle`.
+Tipo dell'oggetto funzione che verrà richiamato per eseguire il lavoro rappresentato dall' `task_handle` oggetto.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[task_handle](#task_handle)|Costruisce un oggetto `task_handle` nuovo. Il lavoro dell'attività viene eseguito richiamando la funzione specificata come parametro per il costruttore.|
-|[distruttore ~ task_handle](#dtor)|Elimina definitivamente l'oggetto `task_handle`.|
+|[distruttore ~ task_handle](#dtor)|Elimina definitivamente l' `task_handle` oggetto.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[operator()](#task_handle__operator_call)|Operatore di chiamata di funzione richiamato dal runtime per eseguire il lavoro dell'handle dell'attività.|
+|[operatore ()](#task_handle__operator_call)|Operatore di chiamata di funzione richiamato dal runtime per eseguire il lavoro dell'handle dell'attività.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-per scomporre il lavoro in attività parallele, è possibile usare gli oggetti `task_handle` insieme a una `structured_task_group` o a un oggetto `task_group` più generale. Per altre informazioni, vedere [parallelismo delle attività](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
+`task_handle` gli oggetti possono essere usati insieme a un `structured_task_group` oggetto o a un `task_group` oggetto più generale per scomporre il lavoro in attività parallele. Per altre informazioni, vedere [parallelismo delle attività](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
-Si noti che il creatore di un oggetto `task_handle` è responsabile della gestione della durata dell'oggetto `task_handle` creato fino a quando non è più necessario per il runtime di concorrenza. In genere, ciò significa che l'oggetto `task_handle` non deve essere distrutto finché non viene chiamato il metodo `wait` o `run_and_wait` del `task_group` o `structured_task_group` in cui è accodato.
+Si noti che l'autore di un `task_handle` oggetto è responsabile della gestione della durata dell' `task_handle` oggetto creato fino a quando non è più richiesto dal runtime di concorrenza. In genere, ciò significa che l' `task_handle` oggetto non deve essere distrutto finché `wait` non `run_and_wait` viene chiamato il metodo o di `task_group` o `structured_task_group` in cui è in coda.
 
-gli oggetti `task_handle` vengono in genere utilizzati insieme C++ alle espressioni lambda. Poiché non si conosce il tipo true dell'espressione lambda, la funzione [make_task](concurrency-namespace-functions.md#make_task) viene in genere utilizzata per creare un oggetto `task_handle`.
+`task_handle` gli oggetti vengono in genere utilizzati insieme alle espressioni lambda C++. Poiché non si conosce il tipo true dell'espressione lambda, la funzione [make_task](concurrency-namespace-functions.md#make_task) viene in genere utilizzata per creare un `task_handle` oggetto.
 
-Il runtime crea una copia della funzione lavoro passata a un oggetto `task_handle`. Pertanto, qualsiasi modifica dello stato che si verifica in un oggetto funzione passato a un oggetto `task_handle` non verrà visualizzata nella copia dell'oggetto funzione.
+Il runtime crea una copia della funzione lavoro passata a un `task_handle` oggetto. Pertanto, qualsiasi modifica dello stato che si verifica in un oggetto funzione passato a un `task_handle` oggetto non verrà visualizzata nella copia dell'oggetto funzione.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -68,7 +69,7 @@ Il runtime crea una copia della funzione lavoro passata a un oggetto `task_handl
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="task_handle__operator_call"></a>operatore ()
+## <a name="operator"></a><a name="task_handle__operator_call"></a> operatore ()
 
 Operatore di chiamata di funzione richiamato dal runtime per eseguire il lavoro dell'handle dell'attività.
 
@@ -76,7 +77,7 @@ Operatore di chiamata di funzione richiamato dal runtime per eseguire il lavoro 
 void operator()() const;
 ```
 
-## <a name="task_handle"></a>task_handle
+## <a name="task_handle"></a><a name="task_handle"></a> task_handle
 
 Costruisce un oggetto `task_handle` nuovo. Il lavoro dell'attività viene eseguito richiamando la funzione specificata come parametro per il costruttore.
 
@@ -87,22 +88,22 @@ task_handle(const _Function& _Func);
 ### <a name="parameters"></a>Parametri
 
 *_Func*<br/>
-Funzione che verrà richiamata per eseguire il lavoro rappresentato dall'oggetto `task_handle`. Questo può essere un functor lambda, un puntatore a una funzione o qualsiasi oggetto che supporta una versione dell'operatore di chiamata di funzione con la firma `void operator()()`.
+Funzione che verrà richiamata per eseguire il lavoro rappresentato dall' `task_handle` oggetto. Questo può essere un functor lambda, un puntatore a una funzione o qualsiasi oggetto che supporta una versione dell'operatore di chiamata di funzione con la firma `void operator()()` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Il runtime crea una copia della funzione lavoro passata al costruttore. Pertanto, qualsiasi modifica dello stato che si verifica in un oggetto funzione passato a un oggetto `task_handle` non verrà visualizzata nella copia dell'oggetto funzione.
+Il runtime crea una copia della funzione lavoro passata al costruttore. Pertanto, qualsiasi modifica dello stato che si verifica in un oggetto funzione passato a un `task_handle` oggetto non verrà visualizzata nella copia dell'oggetto funzione.
 
-## <a name="dtor"></a>~ task_handle
+## <a name="task_handle"></a><a name="dtor"></a> ~ task_handle
 
-Elimina definitivamente l'oggetto `task_handle`.
+Elimina definitivamente l' `task_handle` oggetto.
 
 ```cpp
 ~task_handle();
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)<br/>
+[Spazio dei nomi Concurrency](concurrency-namespace.md)<br/>
 [Classe task_group](task-group-class.md)<br/>
 [Classe structured_task_group](structured-task-group-class.md)

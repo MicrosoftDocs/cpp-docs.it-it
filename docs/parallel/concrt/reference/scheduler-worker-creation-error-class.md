@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: scheduler_worker_creation_error Class'
 title: Classe scheduler_worker_creation_error
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_worker_creation_error class
 ms.assetid: 4aec1c3e-c32a-41b2-899d-2d898f23b3c7
-ms.openlocfilehash: e7f2763d7244be9e5e5b006b31b97c08e213a4f2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: f0fbb0aed19738bb88e4cbfe3a72580627c4fca9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142762"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188716"
 ---
 # <a name="scheduler_worker_creation_error-class"></a>Classe scheduler_worker_creation_error
 
@@ -29,11 +30,11 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[scheduler_worker_creation_error](#ctor)|Di overload. Costruisce un oggetto `scheduler_worker_creation_error`.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questa eccezione viene generata soprattutto nel caso in cui una chiamata al sistema operativo per creare contesti di esecuzione nel runtime di concorrenza abbia esito negativo. I contesti di esecuzione sono thread tramite cui vengono eseguite attività nel runtime di concorrenza. Il codice di errore generalmente restituito da una chiamata al metodo Win32 `GetLastError` viene convertito in un valore di tipo `HRESULT` e può essere recuperato utilizzando il metodo della classe base `get_error_code`.
 
@@ -51,7 +52,7 @@ Questa eccezione viene generata soprattutto nel caso in cui una chiamata al sist
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="ctor"></a>scheduler_worker_creation_error
+## <a name="scheduler_worker_creation_error"></a><a name="ctor"></a> scheduler_worker_creation_error
 
 Costruisce un oggetto `scheduler_worker_creation_error`.
 
@@ -70,8 +71,8 @@ explicit _CRTIMP scheduler_worker_creation_error(
 Messaggio descrittivo dell'errore.
 
 *_Hresult*<br/>
-Valore `HRESULT` dell'errore che ha causato l'eccezione.
+`HRESULT`Valore dell'errore che ha causato l'eccezione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)
+[Spazio dei nomi Concurrency](concurrency-namespace.md)

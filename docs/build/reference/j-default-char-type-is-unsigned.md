@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/J (il tipo char predefinito è senza segno)
 title: /J (Il tipo char predefinito è unsigned)
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - J compiler option [C++]
 - default char type is unsigned
 ms.assetid: 50973667-6638-491e-9c41-bff73acae19f
-ms.openlocfilehash: d95fed3d9af81d89ac03a52a1e6433786118430e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0e6f09a05925fd0248f1e777d578570cd7b44946
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223837"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191225"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (Il tipo char predefinito è unsigned)
 
@@ -43,7 +44,7 @@ ANSI C e C++ non richiedono un'implementazione specifica del **`char`** tipo. Qu
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. In **Esplora soluzioni**aprire il menu di scelta rapida per il progetto, quindi scegliere **Proprietà**.
+1. In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto, quindi scegliere **Proprietà**.
 
 1. Nella finestra di **dialogo Pagine delle proprietà** del progetto, nel riquadro sinistro in proprietà di **configurazione**, espandere **C/C++** e quindi selezionare **riga di comando**.
 
@@ -53,8 +54,8 @@ ANSI C e C++ non richiedono un'implementazione specifica del **`char`** tipo. Qu
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DefaultCharIsUnsigned%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)<br/>
 [Impostare il compilatore e le proprietà di compilazione C++ in Visual Studio](../working-with-project-properties.md)

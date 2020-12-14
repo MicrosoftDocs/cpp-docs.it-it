@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; &gt; funzioni Vector'
 title: Funzioni &lt;vector&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 ms.assetid: 6cdcf043-eef6-4330-83f0-4596fb9f968a
 helpviewer_keywords:
 - std::swap [vector]
-ms.openlocfilehash: bf28e44b4f603b1e4d6a87f0c28b42d6cc159980
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c59e2626a2062be90d2cb8201b058d5ee148ef55
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224552"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187884"
 ---
 # <a name="ltvectorgt-functions"></a>Funzioni &lt;vector&gt;
 
-## <a name="swap"></a><a name="swap"></a>scambio
+## <a name="swap"></a><a name="swap"></a> scambio
 
 Scambia gli elementi di due vettori.
 
@@ -32,7 +33,7 @@ Vettore che fornisce gli elementi da scambiare o vettore i cui elementi devono e
 *sinistra*\
 Vettore i cui elementi devono essere scambiati con quelli del vettore a *destra*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione modello è un algoritmo specializzato sulla classe contenitore vector per eseguire la funzione membro `left` . [vector:: swap](../standard-library/vector-class.md) *(Right*). Si tratta di istanze di ordinamento parziale dei modelli di funzione da parte del compilatore. Quando le funzioni modello sono sottoposte a overload in modo tale che la corrispondenza del modello con la chiamata di funzione non è univoca, il compilatore seleziona la versione più specializzata della funzione modello. La versione generale della funzione modello, **`template`** \< **class T**> **void swap**( **t&**, **t&**), nella classe Algorithm funziona per assegnazione ed è un'operazione lenta. La versione specializzata presente in ogni contenitore è molto più veloce, dal momento che funziona con la rappresentazione interna della classe contenitore.
 

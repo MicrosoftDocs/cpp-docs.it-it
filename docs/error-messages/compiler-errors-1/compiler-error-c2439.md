@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2439'
 title: Errore del compilatore C2439
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2439
 ms.assetid: 3c5dbe5c-b7d3-4bb0-8619-92f6e280461e
-ms.openlocfilehash: 99f3644869f6c5395684643f0e7802f3a01baa62
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6493fb634581646c20a8d856658fe728ae27364c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80205361"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189808"
 ---
 # <a name="compiler-error-c2439"></a>Errore del compilatore C2439
 
@@ -19,7 +20,7 @@ ms.locfileid: "80205361"
 
 Impossibile inizializzare una classe, una struttura o un membro di Unione.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolvere il problema, verificare le seguenti cause possibili:
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili
 
 1. Tentativo di inizializzare una struttura o una classe base indiretta.
 

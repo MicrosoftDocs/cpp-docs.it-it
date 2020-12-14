@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: scheduler_resource_allocation_error Class'
 title: Classe scheduler_resource_allocation_error
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_resource_allocation_error class
 ms.assetid: 8b40449a-7abb-4d0a-bb85-c0e9a495ae97
-ms.openlocfilehash: 2955320b443fb61f26d9f07ca336a45c620e2aa9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 50f84cbf76d30a415e2393797baa7d6cfa1e89f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143330"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188729"
 ---
 # <a name="scheduler_resource_allocation_error-class"></a>Classe scheduler_resource_allocation_error
 
@@ -30,17 +31,17 @@ class scheduler_resource_allocation_error : public std::exception;
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[scheduler_resource_allocation_error](#ctor)|Di overload. Costruisce un oggetto `scheduler_resource_allocation_error`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[get_error_code](#get_error_code)|Restituisce il codice di errore che ha causato l'eccezione.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questa eccezione viene in genere generata quando una chiamata al sistema operativo all'interno del runtime di concorrenza ha esito negativo. Il codice di errore generalmente restituito da una chiamata al metodo Win32 `GetLastError` viene convertito in un valore di tipo `HRESULT` e può essere recuperato utilizzando il metodo `get_error_code`.
 
@@ -56,7 +57,7 @@ Questa eccezione viene in genere generata quando una chiamata al sistema operati
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="get_error_code"></a>get_error_code
+## <a name="get_error_code"></a><a name="get_error_code"></a> get_error_code
 
 Restituisce il codice di errore che ha causato l'eccezione.
 
@@ -66,9 +67,9 @@ HRESULT get_error_code() const throw();
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore `HRESULT` dell'errore che ha causato l'eccezione.
+`HRESULT`Valore dell'errore che ha causato l'eccezione.
 
-## <a name="ctor"></a>scheduler_resource_allocation_error
+## <a name="scheduler_resource_allocation_error"></a><a name="ctor"></a> scheduler_resource_allocation_error
 
 Costruisce un oggetto `scheduler_resource_allocation_error`.
 
@@ -87,8 +88,8 @@ explicit _CRTIMP scheduler_resource_allocation_error(
 Messaggio descrittivo dell'errore.
 
 *_Hresult*<br/>
-Valore `HRESULT` dell'errore che ha causato l'eccezione.
+`HRESULT`Valore dell'errore che ha causato l'eccezione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)
+[Spazio dei nomi Concurrency](concurrency-namespace.md)

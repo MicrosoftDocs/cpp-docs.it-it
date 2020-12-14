@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: wbuffer_convert Class'
 title: Classe wbuffer_convert
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - wbuffer_convert class
 ms.assetid: 4a56f9bf-4138-4612-b516-525fea401358
-ms.openlocfilehash: ba8c98075741ae6cb8db0ecdfcb1e18cf4f4f89c
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 1aa7258c3cc0a4f78a749f655e9cfb7cd4957378
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561115"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187845"
 ---
 # <a name="wbuffer_convert-class"></a>Classe wbuffer_convert
 
@@ -36,7 +37,7 @@ Tipo di elemento a caratteri "wide".
 *Tratti*\
 Tratti associati a *Elem*.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questo modello di classe descrive un buffer del flusso che controlla la trasmissione di elementi di tipo `_Elem` , i cui tratti di carattere sono descritti dalla classe `Traits` , verso e da un buffer del flusso di byte di tipo `std::streambuf` .
 

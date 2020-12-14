@@ -1,27 +1,28 @@
 ---
+description: 'Altre informazioni su: caricamento di tutte le importazioni per una DLL di Delay-Loaded'
 title: Caricamento di tutte le importazioni per una DLL a caricamento ritardato
 ms.date: 11/04/2016
 helpviewer_keywords:
 - __HrLoadAllImportsForDll linker option
 ms.assetid: 975fcd97-1a56-4a16-9698-e1a249d2d592
-ms.openlocfilehash: e855b648dc7a9ee0670c3704a11aa1897a238403
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f1334f30568e4722bd97579145ddcae9851b901
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301669"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190921"
 ---
 # <a name="loading-all-imports-for-a-delay-loaded-dll"></a>Caricamento di tutte le importazioni per una DLL a caricamento ritardato
 
-Il **HrLoadAllImportsForDll** , la funzione definita in cpp, indica al linker per caricare tutte le importazioni da una DLL che è stata specificata con il [/DELAYLOAD fa](delayload-delay-load-import.md) l'opzione del linker.
+La funzione **__HrLoadAllImportsForDll** , definita in delayhlp. cpp, indica al linker di caricare tutte le importazioni da una DLL specificata con l'opzione del linker [/DELAYLOAD](delayload-delay-load-import.md) .
 
-Il caricamento di tutte le importazioni consente di inserire in un'unica posizione nel codice di gestione degli errori e non è necessario utilizzare intorno alle chiamate effettive per le importazioni di gestione delle eccezioni. Inoltre evita una situazione in cui l'applicazione ha esito negativo parzialmente tramite un processo in seguito il codice helper relativo al mancato caricamento di un'importazione.
+Il caricamento di tutte le importazioni consente di inserire la gestione degli errori in un'unica posizione nel codice e non è necessario utilizzare la gestione delle eccezioni per le chiamate effettive alle importazioni. Viene inoltre evitata una situazione in cui l'applicazione ha esito negativo parzialmente tramite un processo, a causa del mancato caricamento di un'importazione da parte del codice di supporto.
 
-La chiamata **HrLoadAllImportsForDll** non modifica il comportamento di errore e hook gestisce; vedere [gestione degli errori e notifica](error-handling-and-notification.md) per altre informazioni.
+La chiamata di **__HrLoadAllImportsForDll** non comporta la modifica del comportamento degli hook e della gestione degli errori. Per ulteriori informazioni, vedere la pagina relativa alla [gestione degli errori e alla notifica](error-handling-and-notification.md) .
 
-Il nome della DLL passato a **HrLoadAllImportsForDll** viene confrontato con il nome archiviato all'interno della DLL stessa e tra maiuscole e minuscole.
+Il nome della DLL passato a **__HrLoadAllImportsForDll** viene confrontato con il nome archiviato nella dll e fa distinzione tra maiuscole e minuscole.
 
-Nell'esempio seguente viene illustrato come chiamare **HrLoadAllImportsForDll**:
+Nell'esempio seguente viene illustrato come chiamare **__HrLoadAllImportsForDll**:
 
 ```
 if (FAILED(__HrLoadAllImportsForDll("delay1.dll"))) {
@@ -30,6 +31,6 @@ if (FAILED(__HrLoadAllImportsForDll("delay1.dll"))) {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Supporto per le DLL a caricamento ritardato nel linker](linker-support-for-delay-loaded-dlls.md)
+[Supporto del linker per le DLL di Delay-Loaded](linker-support-for-delay-loaded-dlls.md)

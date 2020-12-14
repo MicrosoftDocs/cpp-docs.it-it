@@ -1,15 +1,16 @@
 ---
+description: "Altre informazioni su: criteri dell'utilità di pianificazione"
 title: Criteri dell'utilità di pianificazione
 ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-ms.openlocfilehash: a962c00d23c41d97087e705d395b601afc7b1910
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 42b5fa951c320fcc3bab8fe5abe3bb4988e6c368
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042043"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188014"
 ---
 # <a name="scheduler-policies"></a>Criteri dell'utilità di pianificazione
 

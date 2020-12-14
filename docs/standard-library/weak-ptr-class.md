@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: weak_ptr Class'
 title: Classe weak_ptr
 ms.date: 07/29/2019
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - std::weak_ptr [C++], swap
 - std::weak_ptr [C++], use_count
 ms.assetid: 2db4afb2-c7be-46fc-9c20-34ec2f8cc7c2
-ms.openlocfilehash: 5a4989b9ac29e6a35e50479343d6bcf5a39ae1b0
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a0434c57a70c40fc1fa1ae6b39837fd6112ba696
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831736"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187806"
 ---
 # <a name="weak_ptr-class"></a>Classe weak_ptr
 
@@ -50,7 +51,7 @@ template<class T> class weak_ptr;
 *T*\
 Tipo controllato dal puntatore debole.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il modello di classe descrive un oggetto che punta a una risorsa gestita da uno o più oggetti [shared_ptr](shared-ptr-class.md) . Gli `weak_ptr` oggetti che puntano a una risorsa non influiscono sul conteggio dei riferimenti della risorsa. Quando l'ultimo `shared_ptr` oggetto che gestisce la risorsa viene eliminato definitivamente, la risorsa verrà liberata, anche se sono presenti `weak_ptr` oggetti che puntano a tale risorsa. Questo comportamento è essenziale per evitare cicli nelle strutture di dati.
 
@@ -62,7 +63,7 @@ Si verifica un ciclo quando due o più risorse controllate da oggetti `shared_pt
 
 ## <a name="members"></a>Membri
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 | **Costruttori** | |
 |[weak_ptr](#weak_ptr)|Costruisce un oggetto `weak_ptr`.|
@@ -89,7 +90,7 @@ typedef T element_type; // through C++17
 using element_type = remove_extent_t<T>; // C++20
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del parametro di modello `T`.
 
@@ -125,7 +126,7 @@ Verifica se la proprietà è scaduta, ovvero se l'oggetto a cui si fa riferiment
 bool expired() const noexcept;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce **`true`** se **`*this`** è scaduto; in caso contrario, **`false`** .
 
@@ -174,7 +175,7 @@ Ottiene un oggetto `shared_ptr` che condivide la proprietà di una risorsa.
 shared_ptr<T> lock() const noexcept;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce un oggetto [shared_ptr](shared-ptr-class.md) vuoto se **`*this`** è scaduto. in caso contrario, restituisce un `shared_ptr<T>` oggetto proprietario della risorsa **`*this`** a cui punta. Restituisce un valore equivalente all'esecuzione atomica di `expired() ? shared_ptr<T>() : shared_ptr<T>(*this)` .
 
@@ -237,7 +238,7 @@ Tipo controllato dal puntatore condiviso o debole dell'argomento.
 *PTR*\
 Puntatore debole o puntatore condiviso da copiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Tutti gli operatori rilasciano la risorsa a cui punta attualmente **`*this`** e assegnano la proprietà della risorsa denominata da *ptr* a **`*this`** . Se un operatore ha esito negativo, lascia **`*this`** invariato. Ogni operatore ha un effetto equivalente a `weak_ptr(ptr).swap(*this)` .
 
@@ -290,7 +291,7 @@ bool owner_before(const weak_ptr<Other>& ptr) const noexcept;
 *PTR*\
 Riferimento lvalue a un oggetto `shared_ptr` o `weak_ptr` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro di modello restituisce **`true`** se **`*this`** è ordinato prima di *ptr*.
 
@@ -302,7 +303,7 @@ Rilascia la risorsa di proprietà.
 void reset() noexcept;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro rilascia la risorsa a cui punta **`*this`** e viene convertito **`*this`** in un `weak_ptr` oggetto vuoto.
 
@@ -356,9 +357,9 @@ void swap(weak_ptr<T>& a, weak_ptr<T>& b) noexcept;
 *WP*\
 Puntatore debole da scambiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Dopo un oggetto `swap` , alla risorsa a cui fa riferimento originariamente **`*this`** viene fatto riferimento da *WP*e la risorsa a cui fa riferimento *WP* viene puntata da **`*this`** . La funzione non modifica i conteggi dei riferimenti per le due risorse e non genera alcuna eccezione. L'effetto della specializzazione del modello è equivalente a `a.swap(b)` .
+Dopo un oggetto `swap` , alla risorsa a cui fa riferimento originariamente **`*this`** viene fatto riferimento da *WP* e la risorsa a cui fa riferimento *WP* viene puntata da **`*this`** . La funzione non modifica i conteggi dei riferimenti per le due risorse e non genera alcuna eccezione. L'effetto della specializzazione del modello è equivalente a `a.swap(b)` .
 
 ### <a name="example"></a>Esempio
 
@@ -413,7 +414,7 @@ Conta il numero di `shared_ptr` oggetti che possiedono la risorsa condivisa.
 long use_count() const noexcept;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce il numero di `shared_ptr` oggetti che possiedono la risorsa a cui punta **`*this`** .
 
@@ -477,7 +478,7 @@ Puntatore debole da copiare.
 *SP*\
 Puntatore condiviso da copiare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il costruttore predefinito costruisce un `weak_ptr` oggetto vuoto. I costruttori che accettano un argomento ogni costrutto di un `weak_ptr` oggetto vuoto se il puntatore dell'argomento è vuoto. In caso contrario, costruiscono un `weak_ptr` oggetto che punta alla risorsa denominata dall'argomento. Il conteggio dei riferimenti dell'oggetto condiviso non è stato modificato.
 
@@ -522,11 +523,11 @@ Elimina un oggetto `weak_ptr`.
 ~weak_ptr();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il distruttore Elimina questa operazione `weak_ptr` , ma non ha alcun effetto sul conteggio dei riferimenti dell'oggetto a cui punta il puntatore archiviato.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento ai file di intestazione](cpp-standard-library-header-files.md)\
 [\<memory>](memory.md)\

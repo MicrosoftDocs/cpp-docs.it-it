@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/LN (Crea modulo MSIL)
 title: /LN (Crea modulo MSIL)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - -LN compiler option [C++]
 - /LN compiler option [C++]
 ms.assetid: 4f38f4f4-3176-4caf-8200-5c7585dc1ed3
-ms.openlocfilehash: 2dbd5ae5ddf802185912c49caf37aa61c6a7d4c3
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 63b6f47fe6bef24341d3c19a6ad96ac3808e486e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446265"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190919"
 ---
 # <a name="ln-create-msil-module"></a>/LN (Crea modulo MSIL)
 
@@ -24,31 +25,31 @@ Specifica che un manifesto dell'assembly non deve essere inserito nel file di ou
 /LN
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita **/LN** non è attiva (un manifesto dell'assembly viene inserito nel file di output).
+Per impostazione predefinita, **/LN** non è attivo (un manifesto dell'assembly viene inserito nel file di output).
 
-Quando **/LN** viene usato uno del [/clr (compilazione Common Language Runtime)](clr-common-language-runtime-compilation.md) devono essere utilizzate anche opzioni.
+Quando si usa **/LN** , è necessario usare anche una delle opzioni [/CLR (Common Language Runtime Compilation)](clr-common-language-runtime-compilation.md) .
 
-Un programma gestito non dispone di un assembly di metadati nel manifesto viene chiamato un modulo. Se esegue la compilazione con [/c (compila senza collegamenti)](c-compile-without-linking.md) e **/LN**, specificare [/NOASSEMBLY (Crea un modulo MSIL)](noassembly-create-a-msil-module.md) nella fase del linker per creare il file di output.
+Un programma gestito senza metadati dell'assembly nel manifesto è detto modulo. Se si esegue la compilazione con [/c (compila senza collegamento)](c-compile-without-linking.md) e **/LN**, specificare [/NOASSEMBLY (creare un modulo MSIL)](noassembly-create-a-msil-module.md) nella fase del linker per creare il file di output.
 
-È possibile creare moduli, se si desidera adottare un approccio basato su componenti per la generazione di assembly.  Vale a dire, è possibile modificare i tipi e compilarle in moduli.  Quindi, è possibile generare un assembly da uno o più moduli.  Per altre informazioni sulla creazione di assembly da moduli, vedere [file con estensione netmodule come Input del Linker](netmodule-files-as-linker-input.md) oppure [Al.exe (Assembly Linker)](/dotnet/framework/tools/al-exe-assembly-linker).
+Si consiglia di creare moduli se si desidera adottare un approccio basato su componenti per la compilazione di assembly.  Ovvero è possibile creare tipi e compilarli in moduli.  Quindi, è possibile generare un assembly da uno o più moduli.  Per altre informazioni sulla creazione di assembly dai moduli, vedere [file con estensione netmodule come input del linker](netmodule-files-as-linker-input.md) o [Al.exe (assembly linker)](/dotnet/framework/tools/al-exe-assembly-linker).
 
 L'estensione di file predefinita per un modulo è netmodule.
 
-Nelle versioni precedenti di Visual Studio 2005, un modulo è stato creato con **/CLR: noAssembly**.
+Nelle versioni precedenti a Visual Studio 2005, è stato creato un modulo con **/CLR: noAssembly**.
 
-Il linker MSVC accetta file con estensione netmodule come input e il file di output generato dal linker sarà un assembly o file con estensione netmodule con alcuna dipendenza dalla fase di esecuzione in uno qualsiasi dei netmodule che sono stati introdotti nel linker.  Per altre informazioni, vedere [File con estensione netmodule come input del linker](netmodule-files-as-linker-input.md).
+Il linker MSVC accetta i file con estensione netmodule come input e il file di output prodotto dal linker sarà un assembly o un file con estensione netmodule senza dipendenze in fase di esecuzione da nessuno dei file con estensione netmodule che sono stati inseriti nel linker.  Per altre informazioni, vedere [File con estensione netmodule come input del linker](netmodule-files-as-linker-input.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-- Specificare [/NOASSEMBLY (Crea un modulo MSIL)](noassembly-create-a-msil-module.md) nella fase del linker per creare il file di output.
+- Specificare [/NOASSEMBLY (crea un modulo MSIL)](noassembly-create-a-msil-module.md) nella fase del linker per creare il file di output.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 
 - Questa opzione del compilatore non può essere modificata a livello di codice.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

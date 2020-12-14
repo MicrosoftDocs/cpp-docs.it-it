@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: dipendenti dedotti e regole'
 title: Dipendenti dedotti e regole
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,27 +8,27 @@ helpviewer_keywords:
 - inferred rules in NMAKE
 - dependents, inferred
 ms.assetid: 9381e74a-53d9-445c-836d-0ff7ef6112d9
-ms.openlocfilehash: b9c3055db0cc173999e1737986166eb334dcf96c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f4c1d14d18c9c693a7bd71f9207ff36aede8e22
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269908"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191277"
 ---
 # <a name="inferred-dependents-and-rules"></a>Dipendenti dedotti e regole
 
-Se esiste una regola di inferenza applicabile, si presuppone un dipendente dedotto per una destinazione. Se viene applicata una regola:
+In NMAKE si presuppone una dipendenza dedotta per una destinazione se esiste una regola di inferenza applicabile. Una regola si applica se:
 
 - *toext* corrisponde all'estensione della destinazione.
 
-- *fromext* corrispondenze l'estensione di un file con nome di base di destinazione e che esiste nella directory correnti o specificate.
+- *fromext* corrisponde all'estensione di un file con il nome di base della destinazione e presente nella directory corrente o specificata.
 
-- *fromext* è in [. I SUFFISSI](dot-directives.md); nessun altro *fromext* in una regola di corrispondenza ha un livello più elevato **. I SUFFISSI** priorità.
+- *fromext* è in [. SUFFISSi](dot-directives.md); nessun altro *fromext* in una regola di corrispondenza ha un valore superiore **. Priorità SUFFISSi** .
 
-- Nessun dipendente esplicito ha un livello più elevato **. I SUFFISSI** priorità.
+- Nessun dipendente esplicito ha un valore superiore **. Priorità SUFFISSi** .
 
-Dipendenti dedotti possono causare effetti collaterali imprevisti. Se i blocchi di descrizione della destinazione contiene i comandi, vengono eseguiti tali comandi invece i comandi NMAKE nella regola.
+I dipendenti dedotti possono causare effetti collaterali imprevisti. Se il blocco di descrizione della destinazione contiene comandi, NMAKE li esegue anziché i comandi nella regola.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Regole di inferenza](inference-rules.md)

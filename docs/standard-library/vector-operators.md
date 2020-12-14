@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; vector &gt; Operators'
 title: operatori &lt;vector&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - std::operator&lt; (vector)
 - std::operator&lt;= (vector)
 - std::operator== (vector)
-ms.openlocfilehash: 6e3b78a7b7176be917da5a3e44e9bf54efc0b08c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a7a03d3ef843c995970552201e63d2df3cb3161d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224539"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187897"
 ---
 # <a name="ltvectorgt-operators"></a>operatori &lt;vector&gt;
 
-## <a name="operator"></a><a name="op_neq"></a>operatore! =
+## <a name="operator"></a><a name="op_neq"></a> operatore! =
 
 Verifica se l'oggetto a sinistra dell'operatore non è uguale all'oggetto a destra.
 
@@ -45,7 +46,7 @@ Oggetto di tipo `vector`.
 
 **`true`** Se i vettori non sono uguali; **`false`** se i vettori sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Due vettori sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -76,7 +77,7 @@ int main( )
 Vectors not equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>operatore&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> operatore&lt;
 
 Verifica se l'oggetto a sinistra dell'operatore è minore dell'oggetto a destra.
 
@@ -127,7 +128,7 @@ int main( )
 Vector v1 is less than vector v2.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>operatore&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> operatore&lt;=
 
 Verifica se l'oggetto a sinistra dell'operatore è minore o uguale all'oggetto a destra.
 
@@ -178,7 +179,7 @@ int main( )
 Vector v1 is less than or equal to vector v2.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operatore = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operatore = =
 
 Verifica se l'oggetto a sinistra dell'operatore è uguale all'oggetto a destra.
 
@@ -198,7 +199,7 @@ Oggetto di tipo `vector`.
 
 **`true`** Se il vettore a sinistra dell'operatore è uguale al vettore a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Due vettori sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
@@ -229,7 +230,7 @@ int main( )
 Vectors equal.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>operatore&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> operatore&gt;
 
 Verifica se l'oggetto a sinistra dell'operatore è maggiore dell'oggetto a destra.
 
@@ -281,7 +282,7 @@ int main( )
 Vector v1 is greater than vector v2.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>operatore&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> operatore&gt;=
 
 Verifica se l'oggetto a sinistra dell'operatore è maggiore o uguale all'oggetto a destra.
 

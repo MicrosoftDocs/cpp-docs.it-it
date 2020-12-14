@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: Panoramica del runtime di concorrenza'
 title: Cenni preliminari sul runtime di concorrenza
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-ms.openlocfilehash: 11035f9e202d964ae91378560b9244cde6d1828b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b6ff531b1961b32056a7232b62eca05d7a8793b9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87194615"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189158"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Cenni preliminari sul runtime di concorrenza
 
 Questo documento fornisce i cenni preliminari sul runtime di concorrenza. Illustra i vantaggi del runtime di concorrenza, quando usarlo e che modo i relativi componenti interagiscono tra loro e con il sistema operativo e le applicazioni.
 
-## <a name="sections"></a><a name="top"></a>Sezioni
+## <a name="sections"></a><a name="top"></a> Sezioni
 
 Questo documento contiene le seguenti sezioni:
 
@@ -30,9 +31,9 @@ Questo documento contiene le seguenti sezioni:
 
 - [Espressioni lambda C++](#lambda)
 
-- [Requisiti](#requirements)
+- [Requirements](#requirements)
 
-## <a name="concurrency-runtime-implementation-history"></a><a name="dlls"></a>Cronologia di implementazione di runtime di concorrenza
+## <a name="concurrency-runtime-implementation-history"></a><a name="dlls"></a> Cronologia di implementazione di runtime di concorrenza
 
 In Visual Studio 2010 fino a 2013, il runtime di concorrenza è stato incorporato entro msvcr100.dll tramite msvcr120.dll.  Quando il refactoring di UCRT si è verificato in Visual Studio 2015, la DLL è stata sottoposta a refactoring in tre parti:
 
@@ -44,7 +45,7 @@ In Visual Studio 2010 fino a 2013, il runtime di concorrenza è stato incorporat
 
 In Visual Studio 2015 e versioni successive, l'Utilità di pianificazione del runtime di concorrenza non è più l'utilità di pianificazione per la classe di attività e i tipi correlati in ppltasks. Tali tipi ora usano il pool di thread di Windows per migliorare le prestazioni e l'interoperabilità con le primitive di sincronizzazione di Windows.
 
-## <a name="why-a-runtime-for-concurrency-is-important"></a><a name="runtime"></a>Perché un runtime per la concorrenza è importante
+## <a name="why-a-runtime-for-concurrency-is-important"></a><a name="runtime"></a> Perché un runtime per la concorrenza è importante
 
 Un runtime di concorrenza fornisce uniformità e prevedibilità alle applicazioni e ai componenti dell'applicazione eseguiti simultaneamente. Due esempi dei vantaggi della runtime di concorrenza sono la *pianificazione cooperativa delle attività* e il *blocco cooperativo*.
 
@@ -103,7 +104,7 @@ Gestione risorse funge da astrazione sulle risorse di elaborazione e interagisce
 
 [All'[inizio](#top)]
 
-## <a name="c-lambda-expressions"></a><a name="lambda"></a>Espressioni lambda C++
+## <a name="c-lambda-expressions"></a><a name="lambda"></a> Espressioni lambda C++
 
 Molti dei tipi e degli algoritmi definiti dal runtime di concorrenza vengono implementati come modelli C++.  Alcuni di questi tipi e algoritmi accettano come parametro una routine che esegue il lavoro. Questo parametro può essere una funzione lambda, un oggetto funzione o un puntatore a funzione. Queste entità sono denominate anche *funzioni* di lavoro o *routine di lavoro*.
 

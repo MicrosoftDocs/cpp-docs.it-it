@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: task_options Class (runtime di concorrenza)'
 title: Classe task_options (runtime di concorrenza)
 ms.date: 11/04/2016
 f1_keywords:
 - ppltasks/concurrency::task_options
 ms.assetid: f93d146b-70f7-46ec-8c2f-c33b8bb0af69
-ms.openlocfilehash: e79dd7979b587ae807c8984a04b79be362b03758
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3752d23e68096df22d076afc5c07dc3d66cc881a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368602"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188209"
 ---
 # <a name="task_options-class-concurrency-runtime"></a>Classe task_options (runtime di concorrenza)
 
@@ -21,17 +22,17 @@ Rappresenta le opzioni consentite per la creazione di un'attività
 class task_options;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Costruttore task_options::task_options (runtime di concorrenza)](#ctor)|Di overload. Elenco predefinito delle opzioni di creazione di attività|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Metodo task_options::get_cancellation_token (runtime di concorrenza)](#get_cancellation_token)|Restituisce il token di annullamento|
 |[Metodo task_options::get_continuation_context (runtime di concorrenza)](#get_continuation_context)|Restituisce il contesto di continuazione|
@@ -47,11 +48,11 @@ class task_options;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** ppltasks.h
+**Intestazione:** ppltasks. h
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="task_optionsget_cancellation_token-method-concurrency-runtime"></a><a name="get_cancellation_token"></a>Metodo task_options::get_cancellation_token (Runtime di concorrenza)
+## <a name="task_optionsget_cancellation_token-method-concurrency-runtime"></a><a name="get_cancellation_token"></a> Metodo task_options:: get_cancellation_token (runtime di concorrenza)
 
 Restituisce il token di annullamento
 
@@ -61,7 +62,7 @@ cancellation_token get_cancellation_token() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-## <a name="task_optionsget_continuation_context-method-concurrency-runtime"></a><a name="get_continuation_context"></a>Metodo task_options::get_continuation_context (Runtime di concorrenza)
+## <a name="task_optionsget_continuation_context-method-concurrency-runtime"></a><a name="get_continuation_context"></a> Metodo task_options:: get_continuation_context (runtime di concorrenza)
 
 Restituisce il contesto di continuazione
 
@@ -71,7 +72,7 @@ task_continuation_context get_continuation_context() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-## <a name="task_optionsget_scheduler-method-concurrency-runtime"></a><a name="get_scheduler"></a>Metodo task_options::get_scheduler (Runtime di concorrenza)task_options::get_scheduler Method (Concurrency Runtime)
+## <a name="task_optionsget_scheduler-method-concurrency-runtime"></a><a name="get_scheduler"></a> Metodo task_options:: get_scheduler (runtime di concorrenza)
 
 Restituisce l'utilità di pianificazione
 
@@ -81,7 +82,7 @@ scheduler_ptr get_scheduler() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-## <a name="task_optionshas_cancellation_token-method-concurrency-runtime"></a><a name="has_cancellation_token"></a>Metodo task_options::has_cancellation_token (Runtime di concorrenza)Task_options::has_cancellation_token Method (Concurrency Runtime)
+## <a name="task_optionshas_cancellation_token-method-concurrency-runtime"></a><a name="has_cancellation_token"></a> Metodo task_options:: has_cancellation_token (runtime di concorrenza)
 
 Indica se un token di annullamento è stato specificato dall'utente
 
@@ -91,7 +92,7 @@ bool has_cancellation_token() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-## <a name="task_optionshas_scheduler-method-concurrency-runtime"></a><a name="has_scheduler"></a>Metodo task_options::has_scheduler (Runtime di concorrenza)task_options::has_scheduler Method (Concurrency Runtime)
+## <a name="task_optionshas_scheduler-method-concurrency-runtime"></a><a name="has_scheduler"></a> Metodo task_options:: has_scheduler (runtime di concorrenza)
 
 Indica se un'utilità di pianificazione è stata specificata dall'utente
 
@@ -101,7 +102,7 @@ bool has_scheduler() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-## <a name="task_optionsset_cancellation_token-method-concurrency-runtime"></a><a name="set_cancellation_token"></a>Metodo task_options::set_cancellation_token (Runtime di concorrenza)Task_options::set_cancellation_token Method (Concurrency Runtime)
+## <a name="task_optionsset_cancellation_token-method-concurrency-runtime"></a><a name="set_cancellation_token"></a> Metodo task_options:: set_cancellation_token (runtime di concorrenza)
 
 Imposta il token specificato nelle opzioni
 
@@ -113,7 +114,7 @@ void set_cancellation_token(cancellation_token _Token);
 
 `_Token`
 
-## <a name="task_optionsset_continuation_context-method-concurrency-runtime"></a><a name="set_continuation_context"></a>Metodo task_options::set_continuation_context (Runtime di concorrenza)
+## <a name="task_optionsset_continuation_context-method-concurrency-runtime"></a><a name="set_continuation_context"></a> Metodo task_options:: set_continuation_context (runtime di concorrenza)
 
 Imposta il contesto di continuazione specificato nelle opzioni
 
@@ -125,7 +126,7 @@ void set_continuation_context(task_continuation_context _ContinuationContext);
 
 `_ContinuationContext`
 
-## <a name="task_optionstask_options-constructor-concurrency-runtime"></a><a name="ctor"></a>Costruttore task_options::task_options (Runtime di concorrenza)
+## <a name="task_optionstask_options-constructor-concurrency-runtime"></a><a name="ctor"></a> Costruttore task_options:: task_options (runtime di concorrenza)
 
 Elenco predefinito delle opzioni di creazione di attività
 
@@ -168,6 +169,6 @@ task_options(
 
 `_TaskOptions`
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)
+[Spazio dei nomi Concurrency](concurrency-namespace.md)

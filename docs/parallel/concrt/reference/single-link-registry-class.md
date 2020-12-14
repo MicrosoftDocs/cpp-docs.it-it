@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: single_link_registry Class'
 title: Classe single_link_registry
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-ms.openlocfilehash: 24f89a6b2fb998ba5e5a82dbb470accb45d0fd9f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 415dcaf8062eaf47a3e92cf4a949790eb364d0c4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219547"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188638"
 ---
 # <a name="single_link_registry-class"></a>Classe single_link_registry
 
@@ -40,14 +41,14 @@ Tipo di dati Block archiviato nell' `single_link_registry` oggetto.
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[single_link_registry](#ctor)|Costruisce un oggetto `single_link_registry`.|
 |[Distruttore ~ single_link_registry](#dtor)|Elimina definitivamente l' `single_link_registry` oggetto.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[add](#add)|Aggiunge un collegamento all' `single_link_registry` oggetto. Esegue l'override di [network_link_registry:: Add](network-link-registry-class.md#add).|
 |[iniziare](#begin)|Restituisce un iteratore al primo elemento dell' `single_link_registry` oggetto. Esegue l'override di [network_link_registry:: Begin](network-link-registry-class.md#begin).|
@@ -67,7 +68,7 @@ Tipo di dati Block archiviato nell' `single_link_registry` oggetto.
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="add"></a><a name="add"></a>aggiungere
+## <a name="add"></a><a name="add"></a> aggiungere
 
 Aggiunge un collegamento all' `single_link_registry` oggetto.
 
@@ -80,11 +81,11 @@ virtual void add(_EType _Link);
 *_Link*<br/>
 Puntatore a un blocco da aggiungere.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il metodo genera un'eccezione [invalid_link_target](invalid-link-target-class.md) se è già presente un collegamento nel registro di sistema.
 
-## <a name="begin"></a><a name="begin"></a>iniziare
+## <a name="begin"></a><a name="begin"></a> iniziare
 
 Restituisce un iteratore al primo elemento dell' `single_link_registry` oggetto.
 
@@ -96,11 +97,11 @@ virtual iterator begin();
 
 Iteratore che punta al primo elemento dell' `single_link_registry` oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Lo stato finale è indicato da un `NULL` collegamento.
 
-## <a name="contains"></a><a name="contains"></a>contiene
+## <a name="contains"></a><a name="contains"></a> contiene
 
 Cerca `single_link_registry` un blocco specificato nell'oggetto.
 
@@ -117,7 +118,7 @@ Puntatore a un blocco da cercare nell' `single_link_registry` oggetto.
 
 **`true`** Se il collegamento è stato trovato; **`false`** in caso contrario,.
 
-## <a name="count"></a><a name="count"></a>conteggio
+## <a name="count"></a><a name="count"></a> conteggio
 
 Conta il numero di elementi nell' `single_link_registry` oggetto.
 
@@ -129,7 +130,7 @@ virtual size_t count();
 
 Il numero di elementi nell'oggetto `single_link_registry`.
 
-## <a name="remove"></a><a name="remove"></a>rimuovere
+## <a name="remove"></a><a name="remove"></a> rimuovere
 
 Rimuove un collegamento dall' `single_link_registry` oggetto.
 
@@ -146,7 +147,7 @@ Puntatore a un blocco da rimuovere, se trovato.
 
 **`true`** Se il collegamento è stato trovato e rimosso; **`false`** in caso contrario,.
 
-## <a name="single_link_registry"></a><a name="ctor"></a>single_link_registry
+## <a name="single_link_registry"></a><a name="ctor"></a> single_link_registry
 
 Costruisce un oggetto `single_link_registry`.
 
@@ -154,7 +155,7 @@ Costruisce un oggetto `single_link_registry`.
 single_link_registry();
 ```
 
-## <a name="single_link_registry"></a><a name="dtor"></a>~ single_link_registry
+## <a name="single_link_registry"></a><a name="dtor"></a> ~ single_link_registry
 
 Elimina definitivamente l' `single_link_registry` oggetto.
 
@@ -162,11 +163,11 @@ Elimina definitivamente l' `single_link_registry` oggetto.
 virtual ~single_link_registry();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il metodo genera un'eccezione [invalid_operation](invalid-operation-class.md) se viene chiamata prima della rimozione del collegamento.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Concurrency](concurrency-namespace.md)<br/>
 [Classe multi_link_registry](multi-link-registry-class.md)
