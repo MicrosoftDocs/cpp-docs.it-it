@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: argomenti'
 title: Argomenti
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - function arguments
 - function calls, arguments
 ms.assetid: 14cf0389-2265-41f0-9a96-f2223eb406ca
-ms.openlocfilehash: e1c88034044c74a542384873454f993b6bce3244
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 02c8d7e9f6f4ef09bcfdce11c3bd0d88c21ab141
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232664"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280079"
 ---
 # <a name="arguments"></a>Argomenti
 
 Gli argomenti in una chiamata di funzione hanno formato seguente:
 
-> *espressione* **(** *expression-list*<SUB>opt</SUB> **)** /* chiamata di funzione */
+> *espressione* **(** *expression-list*<SUB>opt</SUB> **)**  /* chiamata di funzione */
 
 In una chiamata di funzione, *expression-list* è un elenco di espressioni (separate da virgole). I valori di queste ultime espressioni sono gli argomenti passati alla funzione. Se la funzione non accetta argomenti, *expression-list* deve contenere la parola chiave **`void`** .
 
@@ -77,6 +78,6 @@ l'indirizzo di `x` viene archiviato in `num1`, mentre l'indirizzo di `y` viene a
 
 Il compilatore esegue il controllo dei tipi sugli argomenti in relazione a `swap` poiché il prototipo `swap` include i tipi di argomento per ogni parametro. Gli identificatori tra parentesi del prototipo e della definizione possono essere uguali o diversi. L'aspetto importante è che i tipi degli argomenti corrispondano a quelli degli elenchi di parametri sia nel prototipo che nella definizione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Chiamate di funzione](../c-language/function-calls.md)

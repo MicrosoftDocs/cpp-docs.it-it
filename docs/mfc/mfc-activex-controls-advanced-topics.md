@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: controlli ActiveX MFC: argomenti avanzati'
 title: 'Controlli ActiveX MFC: argomenti avanzati'
 ms.date: 09/12/2018
 helpviewer_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-ms.openlocfilehash: 5ae29ed40d9cc5b78945fb9846a36d6b5a0b27d7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1b37c3621c515153f068633b8272420a68a06c4e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225033"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280742"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>Controlli ActiveX MFC: argomenti avanzati
 
-Questo articolo illustra gli argomenti avanzati correlati allo sviluppo di controlli ActiveX. Sono inclusi:
+Questo articolo illustra gli argomenti avanzati correlati allo sviluppo di controlli ActiveX. Queste includono:
 
 - [Utilizzo di classi di database nei controlli ActiveX](#_core_using_database_classes_in_activex_controls)
 
@@ -36,7 +37,7 @@ Questo articolo illustra gli argomenti avanzati correlati allo sviluppo di contr
 >[!IMPORTANT]
 > ActiveX è una tecnologia legacy che non deve essere usata per nuove attività di sviluppo. Per ulteriori informazioni sulle tecnologie moderne che sostituiscono ActiveX, vedere [controlli ActiveX](activex-controls.md).
 
-## <a name="using-database-classes-in-activex-controls"></a><a name="_core_using_database_classes_in_activex_controls"></a>Utilizzo di classi di database nei controlli ActiveX
+## <a name="using-database-classes-in-activex-controls"></a><a name="_core_using_database_classes_in_activex_controls"></a> Utilizzo di classi di database nei controlli ActiveX
 
 Poiché le classi di controlli ActiveX fanno parte della libreria di classi, è possibile applicare le stesse procedure e regole per l'utilizzo di classi di database in un'applicazione MFC standard allo sviluppo di controlli ActiveX che utilizzano le classi di database MFC.
 
@@ -45,7 +46,7 @@ Per una panoramica generale delle classi di database MFC, vedere [classi di data
 > [!NOTE]
 > DAO è supportato tramite Office 2013. DAO 3,6 è la versione finale ed è considerata obsoleta. L'ambiente Visual C++ e le procedure guidate non supportano DAO (sebbene le classi DAO siano incluse ed è comunque possibile usarle). Microsoft consiglia di utilizzare [OLE DB modelli](../data/oledb/ole-db-programming.md) o [ODBC e MFC](../data/odbc/odbc-and-mfc.md) per i nuovi progetti. È consigliabile utilizzare solo DAO per la gestione delle applicazioni esistenti.
 
-## <a name="implementing-a-parameterized-property"></a><a name="_core_implementing_a_parameterized_property"></a>Implementazione di una proprietà con parametri
+## <a name="implementing-a-parameterized-property"></a><a name="_core_implementing_a_parameterized_property"></a> Implementazione di una proprietà con parametri
 
 Una proprietà con parametri (talvolta denominata matrice di proprietà) è un metodo per esporre una raccolta omogenea di valori come una singola proprietà del controllo. Ad esempio, è possibile usare una proprietà con parametri per esporre una matrice o un dizionario come proprietà. In Visual Basic, è possibile accedere a tale proprietà utilizzando la notazione di matrice:
 
@@ -99,7 +100,7 @@ Infine, le implementazioni delle `GetArray` funzioni e `SetArray` vengono aggiun
 
 Affinché questa proprietà risulti utile, è possibile dichiarare una variabile membro della matrice bidimensionale nella classe del controllo, di tipo **`short`** , per archiviare i valori per la proprietà con parametri. È quindi possibile modificare la funzione Get per restituire il valore archiviato in corrispondenza della riga e della colonna corrette, come indicato dai parametri, e modificare la funzione set per aggiornare il valore a cui fanno riferimento i parametri di riga e colonna.
 
-## <a name="handling-errors-in-your-activex-control"></a><a name="_core_handling_errors_in_your_activex_control"></a>Gestione degli errori nel controllo ActiveX
+## <a name="handling-errors-in-your-activex-control"></a><a name="_core_handling_errors_in_your_activex_control"></a> Gestione degli errori nel controllo ActiveX
 
 Se si verificano condizioni di errore nel controllo, potrebbe essere necessario segnalare l'errore al contenitore del controllo. Esistono due metodi per segnalare gli errori, a seconda della situazione in cui si verifica l'errore. Se l'errore si verifica all'interno di una funzione Get o set di una proprietà o nell'implementazione di un metodo di automazione OLE, il controllo deve chiamare [COleControl:: ThrowError](reference/colecontrol-class.md#throwerror), che segnala all'utente del controllo che si è verificato un errore. Se l'errore si verifica in qualsiasi altro momento, il controllo deve chiamare [COleControl:: FireError (](reference/colecontrol-class.md#fireerror), che genera un evento di errore di azione.
 
@@ -156,7 +157,7 @@ Se necessario, usare la macro CUSTOM_CTL_SCODE per definire un codice di errore 
 
 Se si sta creando un controllo ActiveX per sostituire un controllo VBX esistente, definire i codici di errore del controllo ActiveX con gli stessi valori numerici usati dal controllo VBX per assicurarsi che i codici di errore siano compatibili.
 
-## <a name="handling-special-keys-in-the-control"></a><a name="_core_handling_special_keys_in_your_control"></a>Gestione di chiavi speciali nel controllo
+## <a name="handling-special-keys-in-the-control"></a><a name="_core_handling_special_keys_in_your_control"></a> Gestione di chiavi speciali nel controllo
 
 In alcuni casi è possibile che si desideri gestire determinate combinazioni di tasti in modo particolare. inserire, ad esempio, una nuova riga quando si preme il tasto invio in un controllo casella di testo su più righe o spostarsi tra un gruppo di controlli di modifica quando si preme un ID di chiave direzionale.
 
@@ -168,7 +169,7 @@ Nell'esempio di codice seguente viene illustrata una possibile modalità di gest
 
 Per ulteriori informazioni sulla gestione delle interfacce della tastiera per un controllo ActiveX, vedere la documentazione di ActiveX SDK.
 
-## <a name="accessing-dialog-controls-that-are-invisible-at-run-time"></a><a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a>Accesso ai controlli della finestra di dialogo invisibili in fase di esecuzione
+## <a name="accessing-dialog-controls-that-are-invisible-at-run-time"></a><a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a> Accesso ai controlli della finestra di dialogo invisibili in fase di esecuzione
 
 È possibile creare controlli della finestra di dialogo che non dispongono di interfaccia utente e che sono invisibili in fase di esecuzione. Se si aggiunge un controllo ActiveX invisibile in fase di esecuzione a una finestra di dialogo e si utilizza [CWnd:: GetDlgItem](reference/cwnd-class.md#getdlgitem) per accedere al controllo, il controllo non funzionerà correttamente. È invece consigliabile usare una delle tecniche seguenti per ottenere un oggetto che rappresenta il controllo:
 
@@ -180,6 +181,6 @@ Per ulteriori informazioni sulla gestione delle interfacce della tastiera per un
 
    [!code-cpp[NVC_MFC_AxCont#19](codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli ActiveX MFC](mfc-activex-controls.md)

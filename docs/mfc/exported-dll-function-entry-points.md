@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: punti di ingresso delle funzioni DLL esportate'
 title: Punti di ingresso delle funzioni DLL esportate
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - MFC, managing state data
 - state management [MFC], exported DLLs
 ms.assetid: 3268666e-d24b-44f2-80e8-7c80f73b93ca
-ms.openlocfilehash: c521cad666864c728fd871b460cf0c92b815e414
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ea30a36507e22beed1f36727b8e7b582d51929b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622638"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314594"
 ---
 # <a name="exported-dll-function-entry-points"></a>Punti di ingresso delle funzioni DLL esportate
 
@@ -31,6 +32,6 @@ I problemi con le risorse nelle DLL si verificheranno se non viene utilizzata la
 
 `AFX_MANAGE_STATE` non deve essere necessariamente collocato in ogni funzione nella DLL. Ad esempio, `InitInstance` può essere chiamato dal codice MFC nell'applicazione senza `AFX_MANAGE_STATE` perché MFC scambia automaticamente lo stato del modulo prima di `InitInstance` e quindi lo cambia nuovamente dopo che `InitInstance` completa la sua esecuzione. Lo stesso vale per tutti i gestori della mappa messaggi. Le normali DLL MFC hanno effettivamente una speciale routine della finestra master che cambia automaticamente lo stato del modulo prima di instradare qualsiasi messaggio.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Gestione dei dati dello stato dei moduli MFC](managing-the-state-data-of-mfc-modules.md)
+[Gestione dei dati sullo stato dei moduli MFC](managing-the-state-data-of-mfc-modules.md)

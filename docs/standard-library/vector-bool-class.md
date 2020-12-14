@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Vector &lt; bool &gt; Class'
 title: Classe vector&lt;bool&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-ms.openlocfilehash: 24a18197c6b335172b88d2db37e8ac7ed57f58b8
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ecc7c083825a92aca429f9418d35ff9d4cf7dcca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845419"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280508"
 ---
 # <a name="vectorltboolgt-class"></a>Classe vector&lt;bool&gt;
 
@@ -37,7 +38,7 @@ Le operazioni che gestiscono il **`bool`** tipo corrispondono ai valori nell'arc
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome tipo|Descrizione|
+|Nome tipo|Description|
 |-|-|
 |[const_pointer](#const_pointer)|typedef di un `const_iterator` che può essere utilizzato come puntatore costante a un elemento Boolean di `vector<bool>`.|
 |[const_reference](#const_reference)|Typedef per **`bool`** . Dopo l'inizializzazione, non rileva gli aggiornamenti al valore originale.|
@@ -56,7 +57,7 @@ Le operazioni che gestiscono il **`bool`** tipo corrispondono ai valori nell'arc
 
 ### <a name="proxy-class"></a>Classe proxy
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[\<bool>classe Vector Reference](#reference_class)|Classe che funge da proxy per simulare il comportamento di `bool&` e i cui oggetti possono fornire riferimenti agli elementi (singoli bit) all'interno di un oggetto `vector<bool>`.|
 
@@ -82,7 +83,7 @@ Tipo che descrive un oggetto che può essere utilizzato come riferimento costant
 typedef bool const_reference;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni ed esempi di codice, vedere [vector&lt;bool&gt;::reference::operator=](#reference_operator_eq).
 
@@ -145,7 +146,7 @@ Oggetto [vector: \<bool> : Reference](#reference_class) o [vector \<bool> :: con
 
 Se la posizione specificata è maggiore o uguale alla dimensione del contenitore, il risultato sarà non definito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se si compila con _ITERATOR_DEBUG_LEVEL set, si verifica un errore di run-time se si tenta di accedere a un elemento all'esterno dei limiti del vettore.  Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md).
 
@@ -192,7 +193,7 @@ typedef iterator pointer;
 
 La `vector<bool>::reference` classe è una classe proxy fornita dalla [ \<bool> classe Vector](../standard-library/vector-bool-class.md) per simulare `bool&` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È necessario un riferimento simulato perché C++ non consente riferimenti diretti ai bit a livello nativo. `vector<bool>` utilizza un solo bit per elemento, a cui è possibile fare riferimento tramite questa classe proxy. Tuttavia, la simulazione dei riferimenti non è completata perché alcune assegnazioni non sono valide. Ad esempio, poiché l'indirizzo dell' `vector<bool>::reference` oggetto non può essere accettato, il codice seguente che usa [vector \<bool> :: operator&#91;&#93;](#op_at) non è corretto:
 
@@ -262,7 +263,7 @@ operator bool() const;
 
 Valore booleano dell'elemento dell' \<bool> oggetto Vector.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 L'oggetto `vector<bool>` non può essere modificato da questo operatore.
 
@@ -372,11 +373,11 @@ Elemento da scambiare con l'elemento a *destra* .
 *Ok*\
 Elemento da scambiare con l'elemento a *sinistra* .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Tale overload supporta i requisiti di proxy speciali di `vector<bool>`. [vector](../standard-library/vector-class.md)::swap ha la stessa funzionalità dell'overload con singolo argomento di `vector<bool>::swap()`.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Riferimenti per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

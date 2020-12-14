@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: COM MFC'
 title: MFC COM
 ms.date: 09/12/2018
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Active technology [MFC]
 - COM [MFC], MFC support
 ms.assetid: 7646bdcb-3a06-4ed5-9386-9b00f3979dcb
-ms.openlocfilehash: da194510938e3fe02eba5993182e811fdf2e1b7c
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a7f4387aa692eb0610052f85870127ac54761437
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618017"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280664"
 ---
 # <a name="mfc-com"></a>MFC COM
 
@@ -50,7 +51,7 @@ Per informazioni su ciò che viene ancora chiamato OLE rispetto a quello che ora
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
-[Contenimento dei documenti attivi](active-document-containment.md)
+[Contenimento del documento attivo](active-document-containment.md)
 
 [Automazione](automation.md)
 
@@ -58,6 +59,6 @@ Per informazioni su ciò che viene ancora chiamato OLE rispetto a quello che ora
 
 [Controlli ActiveX MFC](mfc-activex-controls.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Concetti](mfc-concepts.md)

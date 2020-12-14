@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: gruppi a schede MDI'
 title: Gruppi a schede MDI
 ms.date: 11/04/2016
 helpviewer_keywords:
 - mdi [MFC], tabbed groups
 - tabbed grous [MFC]
 ms.assetid: 0a464f36-39b7-4e68-8b67-ec175de28377
-ms.openlocfilehash: 0c1bf925003d5081b2cdc837012a57585b1ace60
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b859445c5cc1e14f19ec91c31b4d618237cfb9a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624366"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280768"
 ---
 # <a name="mdi-tabbed-groups"></a>Gruppi a schede MDI
 
@@ -60,7 +61,7 @@ Le seguenti attività vengono in genere eseguite con i gruppi MDI a schede:
 
 - Per salvare il layout dei gruppi MDI a schede in un'applicazione, chiamare `CMDIFrameWndEx::SaveMDIState`. Per caricare il profilo di un gruppo MDI a schede precedentemente salvato, chiamare `CMDIFrameWndEx::LoadMDIState`. È inoltre possibile chiamare questi metodi per caricare o salvare l'elenco dei documenti aperti in un'applicazione MDI. Per ulteriori informazioni sul salvataggio e il caricamento dello stato MDI, vedere [CMDIFrameWndEx:: LoadMDIState](reference/cmdiframewndex-class.md#loadmdistate).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Elementi dell'interfaccia utente](user-interface-elements-mfc.md)<br/>
 [Classe CMDIFrameWndEx](reference/cmdiframewndex-class.md)<br/>

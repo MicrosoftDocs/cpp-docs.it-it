@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: modifica del controllo dello stato di avanzamento'
 title: Modifica del controllo Progress
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - controlling progress controls [MFC]
 - CProgressCtrl class [MFC], using
 ms.assetid: 9af561d1-980b-4003-a6da-ff79be15bf23
-ms.openlocfilehash: 3e3521a82854a85062f9b06bc33eb268d4b9c7a6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cfb89dee0047d910fb983546c71e4a1e4a618f56
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622427"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97281093"
 ---
 # <a name="manipulating-the-progress-control"></a>Modifica del controllo Progress
 
@@ -32,11 +33,11 @@ Esistono tre modi per modificare la posizione corrente di un controllo Progress 
 1. Usare la funzione membro [StepIt](reference/cprogressctrl-class.md#stepit) per incrementare la posizione. In questo modo il controllo viene ridisegnato automaticamente.
 
     > [!NOTE]
-    >  `StepIt`provocherà il wrapping della posizione. Ad esempio, dato un intervallo di 1 -100, un passaggio di 20 e una posizione di 90, `StepIt` imposta la posizione su 10.
+    >  `StepIt` provocherà il wrapping della posizione. Ad esempio, dato un intervallo di 1 -100, un passaggio di 20 e una posizione di 90, `StepIt` imposta la posizione su 10.
 
 ### <a name="to-change-the-position-by-an-arbitrary-amount"></a>Per modificare la posizione di un importo arbitrario
 
-1. Utilizzare la funzione membro [OffsetPos](reference/cprogressctrl-class.md#offsetpos) per modificare la posizione. `OffsetPos`accetterà i valori negativi.
+1. Utilizzare la funzione membro [OffsetPos](reference/cprogressctrl-class.md#offsetpos) per modificare la posizione. `OffsetPos` accetterà i valori negativi.
 
     > [!NOTE]
     >  `OffsetPos`, diversamente da `StepIt` , non esegue il wrapping della posizione. La nuova posizione viene regolata in modo da rimanere nell'intervallo.
@@ -47,7 +48,7 @@ Esistono tre modi per modificare la posizione corrente di un controllo Progress 
 
 In genere, il controllo dello stato di avanzamento viene utilizzato solo per l'output. Per ottenere la posizione corrente senza specificare un nuovo valore, usare [GetPos](reference/cprogressctrl-class.md#getpos).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Utilizzo di CProgressCtrl](using-cprogressctrl.md)<br/>
 [Controlli](controls-mfc.md)

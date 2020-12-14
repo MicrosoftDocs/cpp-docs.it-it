@@ -1,14 +1,15 @@
 ---
+description: 'Ulteriori informazioni su: concetti relativi a MFC'
 title: Concetti relativi a MFC
 ms.date: 01/09/2018
 f1_keywords:
 - Concepts
-ms.openlocfilehash: b6f5e6bf84900a17b10104dbe9baf4b580ae5396
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 13d5b0b1943eb68e7b73fc5e935b98b0d104ab07
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615505"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280599"
 ---
 # <a name="mfc-concepts"></a>Concetti relativi a MFC
 
@@ -19,7 +20,7 @@ In questa sezione vengono forniti argomenti concettuali e basati sulle attività
 [Argomenti MFC generali](general-mfc-topics.md)<br/>
 Vengono illustrati i dettagli tecnici della libreria MFC.
 
-[Uso di CObject](using-cobject.md)<br/>
+[Utilizzo di CObject](using-cobject.md)<br/>
 Fornisce collegamenti all'utilizzo di `CObject` , la classe di base per la maggior parte delle classi in MFC.
 
 [raccolte](collections.md)<br/>

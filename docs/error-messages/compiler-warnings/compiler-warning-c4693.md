@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore C4693'
 title: Avviso del compilatore C4693
 ms.date: 10/25/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4693
 ms.assetid: 72d8db01-5e6f-4794-8731-76107e8f064a
-ms.openlocfilehash: 71c3db18b400ce94bff3c643d6728a6613061039
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 114809e1f73eb3d4e3481f0baa348d5eb478f4f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165132"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97315101"
 ---
 # <a name="compiler-warning-c4693"></a>Avviso del compilatore C4693
 

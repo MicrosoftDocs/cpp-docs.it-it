@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classi MFC per la creazione di applicazioni client Internet'
 title: Classi MFC per la creazione di applicazioni client Internet
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - Internet client applications [MFC], MFC
 - Internet applications [MFC], MFC
 ms.assetid: 67d34117-9839-4f4b-8bb8-0e4a9471c606
-ms.openlocfilehash: d65a2e8b373f26fe928e4c3e7c0193aec4edf2d6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c68110182b01d9c425090a926ee1e352ca3d3bdf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618044"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280677"
 ---
 # <a name="mfc-classes-for-creating-internet-client-applications"></a>Classi MFC per la creazione di applicazioni client Internet
 
-MFC fornisce le classi e le funzioni globali seguenti per la scrittura di applicazioni client Internet. Il rientro indica che una classe è derivata dalla classe non rientrata. `CGopherFile`e `CHttpFile` derivano da `CInternetFile` , ad esempio. Queste classi e funzioni globali sono dichiarate in AFXINET. H, eccetto `CFileFind` , dichiarato in AFX. H.
+MFC fornisce le classi e le funzioni globali seguenti per la scrittura di applicazioni client Internet. Il rientro indica che una classe è derivata dalla classe non rientrata. `CGopherFile` e `CHttpFile` derivano da `CInternetFile` , ad esempio. Queste classi e funzioni globali sono dichiarate in AFXINET. H, eccetto `CFileFind` , dichiarato in AFX. H.
 
 ## <a name="classes"></a>Classi
 
@@ -55,8 +56,8 @@ MFC fornisce le classi e le funzioni globali seguenti per la scrittura di applic
 
 - [AfxThrowInternetException](reference/internet-url-parsing-globals.md#afxthrowinternetexception)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Estensioni Internet Win32 (WinInet)](win32-internet-extensions-wininet.md)<br/>
 [Prerequisiti per le classi client Internet](prerequisites-for-internet-client-classes.md)<br/>
-[Scrittura di un'applicazione client Internet con classi WinInet MFC](writing-an-internet-client-application-using-mfc-wininet-classes.md)
+[Scrittura di un'applicazione client Internet con classi WinInet di MFC](writing-an-internet-client-application-using-mfc-wininet-classes.md)

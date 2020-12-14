@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: controlli ActiveX MFC: creazione di un server di automazione'
 title: 'Controlli ActiveX MFC: creazione di un server di automazione'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], Automation server
 - MFC ActiveX controls [MFC], Automation server
 ms.assetid: e0c24ed2-d61c-49ad-a4fa-4e1098d1d39b
-ms.openlocfilehash: f2c941e43e810845560b4c35c558ec70248c21ed
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ffac05d48a17e0f8b40f268709393fff392a3b95
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622375"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280729"
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>Controlli ActiveX MFC: creazione di un server di automazione
 
@@ -47,6 +48,6 @@ ms.locfileid: "84622375"
 
 Se si aggiungono metodi al controllo ActiveX dopo averlo usato in un'applicazione, è possibile iniziare a usare la versione più recente del controllo nell'applicazione eliminando i file creati durante l'importazione della libreria dei tipi. Quindi importare nuovamente la libreria dei tipi.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli ActiveX MFC](mfc-activex-controls.md)
