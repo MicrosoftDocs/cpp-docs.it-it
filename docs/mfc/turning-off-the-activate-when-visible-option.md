@@ -1,29 +1,30 @@
 ---
+description: "Altre informazioni su: disattivazione dell'opzione attiva quando visibile"
 title: Disattivazione dell'opzione Attivo quando visibile
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], activate options
 - Activate When Visible option [MFC]
 ms.assetid: 8f7ddc5a-a7a6-4da8-bcb9-1b569f0ecb48
-ms.openlocfilehash: a7afe9617aa356916fe184828d7684f228293e39
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcb5f7ef0518cbf257ef9ee7a659c9617092b7d8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181497"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263868"
 ---
 # <a name="turning-off-the-activate-when-visible-option"></a>Disattivazione dell'opzione Attivo quando visibile
 
 Un controllo presenta due stati di base: attivo e inattivo. Tradizionalmente, questi stati si distinguevano a seconda che il controllo avesse o meno una finestra. Un controllo attivo aveva una finestra; un controllo inattivo invece no. Con l'introduzione dell'attivazione senza finestra, questa differenza non è più universale, ma è ancora valida per molti controlli.
 
-Confrontato con il resto dell'inizializzazione generalmente eseguita da un controllo ActiveX, la creazione di una finestra è un'operazione estremamente complessa. In teoria, un controllo creasse relativa finestra fino a quando non è assolutamente necessario.
+Rispetto al resto dell'inizializzazione generalmente eseguita da un controllo ActiveX, la creazione di una finestra è un'operazione estremamente costosa. Idealmente, un controllo rinvia la creazione della finestra fino a quando non è assolutamente necessario.
 
-Molti controlli non sono necessario essere attivi l'intera ora che sono visibili in un contenitore. Spesso, un controllo può rimanere nello stato inattivo fino a quando l'utente esegue un'operazione che richiede lo rende attivo (ad esempio, facendo clic con il mouse o premendo il tasto TAB). Affinché un controllo deve rimanere inattivo fino a quando il contenitore deve per attivarlo, rimuovere il **OLEMISC_ACTIVATEWHENVISIBLE** flag dal flag del controllo:
+Molti controlli non devono essere attivi per tutto il tempo in cui sono visibili in un contenitore. Spesso, un controllo può rimanere nello stato inattivo fino a quando l'utente non esegue un'operazione che ne richiede l'attivazione (ad esempio, facendo clic con il mouse o premendo il tasto TAB). Per fare in modo che un controllo rimanga inattivo fino a quando non è necessario che il contenitore lo attivi, rimuovere il flag di **OLEMISC_ACTIVATEWHENVISIBLE** dai flag vari del controllo:
 
 [!code-cpp[NVC_MFC_AxOpt#9](../mfc/codesnippet/cpp/turning-off-the-activate-when-visible-option_1.cpp)]
 
-Il **OLEMISC_ACTIVATEWHENVISIBLE** flag viene omesso automaticamente se si sceglie di disattivare il **attivo quando visibile** opzione il [impostazioni di controllo](../mfc/reference/control-settings-mfc-activex-control-wizard.md) pagina dei controlli ActiveX di MFC Creazione guidata controllo quando si crea il controllo.
+Il flag di **OLEMISC_ACTIVATEWHENVISIBLE** viene omesso automaticamente se si disattiva l'opzione **attiva quando visibile** nella pagina [Impostazioni controllo](../mfc/reference/control-settings-mfc-activex-control-wizard.md) della creazione guidata controllo ActiveX MFC quando si crea il controllo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli ActiveX MFC: ottimizzazione](../mfc/mfc-activex-controls-optimization.md)

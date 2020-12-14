@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: Type-Safe l'accesso ai controlli con creazioni guidate codice"
 title: Accesso indipendente dai tipi a controlli con creazioni guidate codice
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], access to controls
 - dialog box controls [MFC], accessing
 ms.assetid: b8874393-ee48-4124-8d78-e3648a7e29b9
-ms.openlocfilehash: ee7c49f75dcdc2b6c32f2b391ace7260b46d197b
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: b68331df61c1586f4cc63413f162ac1af107ce88
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507889"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263803"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>Accesso indipendente dai tipi a controlli con creazioni guidate codice
 
@@ -33,7 +34,7 @@ Qui la variabile membro *m_Checkbox* svolge lo stesso scopo della funzione membr
 
 Per ulteriori informazioni sui controlli, vedere [controlli](../mfc/controls-mfc.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Accesso indipendente dai tipi ai controlli in una finestra di dialogo](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)<br/>
 [Utilizzo delle finestre di dialogo in MFC](../mfc/life-cycle-of-a-dialog-box.md)<br/>

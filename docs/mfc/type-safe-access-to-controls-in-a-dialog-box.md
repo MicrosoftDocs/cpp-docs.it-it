@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: Type-Safe l'accesso ai controlli in una finestra di dialogo"
 title: Accesso indipendente dai tipi ai controlli in una finestra di dialogo
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - type-safe access to dialog box controls
 - MFC dialog boxes [MFC], type-safe access to controls
 ms.assetid: 67021025-dd93-4d6a-8bed-a1348fe50685
-ms.openlocfilehash: 9b8e5aef61d1a7c7277f2a6bd37b81bd156bb837
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c8b3482ee723e95142c9cd19fa6068f32f4ebd0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181618"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263829"
 ---
 # <a name="type-safe-access-to-controls-in-a-dialog-box"></a>Accesso indipendente dai tipi ai controlli in una finestra di dialogo
 
@@ -27,6 +28,6 @@ Sono disponibili due approcci per stabilire una connessione tra un controllo in 
 
 - [Con creazioni guidate codice](../mfc/type-safe-access-to-controls-with-code-wizards.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Finestre di dialogo](../mfc/dialog-boxes.md)

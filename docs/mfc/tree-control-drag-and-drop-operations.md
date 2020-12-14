@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: operazioni di trascinamento e rilascio del controllo Tree'
 title: Operazioni di trascinamento e rilascio del controllo Tree
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - drag and drop [MFC], CTreeCtrl
 - tree controls [MFC], drag and drop operations
 ms.assetid: 3cf78b4c-4579-4fe1-9bc9-c5ab876e4af1
-ms.openlocfilehash: 5d2c5aa511844a3d7cbe64d9a15f8ffb46046b29
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 000255ad4aa6801cbe27676603a3f42d0abbef30
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510911"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264180"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>Operazioni di trascinamento e rilascio del controllo Tree
 
@@ -23,9 +24,9 @@ Un controllo albero ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) Invia una
 
 Se gli elementi in un controllo struttura ad albero sono gli obiettivi di un'operazione di trascinamento della selezione, è necessario stabilire quando il cursore del mouse si trova su un elemento di destinazione. È possibile scoprire chiamando la funzione membro [HitTest](../mfc/reference/ctreectrl-class.md#hittest) . È possibile specificare un punto e un intero oppure l'indirizzo di una struttura [TVHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-tvhittestinfo) che contiene le coordinate correnti del cursore del mouse. Quando la funzione restituisce, l'intero o la struttura contiene un flag che indica la posizione del cursore del mouse rispetto al controllo albero. Se il cursore è posizionato su un elemento nel controllo struttura ad albero, la struttura contiene anche l'handle dell'elemento.
 
-È possibile indicare che un elemento è la destinazione di un'operazione di trascinamento della selezione chiamando la funzione membro [SetItem](../mfc/reference/ctreectrl-class.md#setitem) per impostare lo stato `TVIS_DROPHILITED` sul valore. Un elemento con questo stato viene disegnato nello stile usato per indicare una destinazione di trascinamento della selezione.
+È possibile indicare che un elemento è la destinazione di un'operazione di trascinamento della selezione chiamando la funzione membro [SetItem](../mfc/reference/ctreectrl-class.md#setitem) per impostare lo stato sul `TVIS_DROPHILITED` valore. Un elemento con questo stato viene disegnato nello stile usato per indicare una destinazione di trascinamento della selezione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso di CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
+[Utilizzo di CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Controlli](../mfc/controls-mfc.md)
