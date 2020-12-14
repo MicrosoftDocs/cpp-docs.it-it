@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errori del compilatore C3500 tramite C3999'
 title: Errori del compilatore da C3500 a C3999
 ms.date: 04/21/2019
 f1_keywords:
@@ -246,12 +247,12 @@ f1_keywords:
 - C3998
 - C3999
 ms.assetid: bd6f23ad-b300-4e07-8e35-9661cab1585f
-ms.openlocfilehash: eddadeeeb014c6b64376554f7ff025a06e8935c9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: bf0075e9064b7e03c0b733119300ee90d77884fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446943"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97238570"
 ---
 # <a name="compiler-errors-c3500-through-c3999"></a>Errori del compilatore da C3500 a C3999
 
@@ -259,16 +260,16 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-## <a name="error-messages"></a>messaggi di errore
+## <a name="error-messages"></a>Messaggi di errore
 
 |Errore|Message|
 |-----------|-------------|
 |[Errore del compilatore C3500](compiler-error-c3500.md)|ProgID '*ProgID*' non valido|
 |[Errore del compilatore C3501](compiler-error-c3501.md)|Nessun TypeLib registrato per il ProgID '*ProgID*'|
 |Errore del compilatore C3502|Impossibile ottenere LIBID per il ProgID '*ProgID*'|
-|Errore del compilatore C3503|il carattere ' 0x*value*' non è consentito in un valore letterale stringa non elaborata|
+|Errore del compilatore C3503|il carattere ' 0x *value*' non è consentito in un valore letterale stringa non elaborata|
 |Errore del compilatore C3504|non è possibile creare il GUID dalla stringa '*String*'|
-|[Errore del compilatore errore C3505](compiler-error-c3505.md)|Impossibile caricare la libreria dei tipi '*Library*'|
+|[Errore del compilatore C3505](compiler-error-c3505.md)|Impossibile caricare la libreria dei tipi '*Library*'|
 |[Errore del compilatore C3506](compiler-error-c3506.md)|nessuna libreria dei tipi registrata per LIBID '*Library*'|
 |[Errore del compilatore C3507](compiler-error-c3507.md)|un ProgID non può contenere più di 39 caratteri:'*ProgID*'; né contengono segni di punteggiatura oltre a' .'; né iniziare con una cifra|
 |[Errore del compilatore C3508](compiler-error-c3508.md)|'*Type*': non è un tipo di automazione valido|
@@ -297,7 +298,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Errore del compilatore C3531](compiler-error-c3531.md)|'*Identifier*': un simbolo il cui tipo contiene '*Type*' deve avere un inizializzatore|
 |[Errore del compilatore C3532](compiler-error-c3532.md)|il tipo di elemento di una matrice non può essere un tipo che contiene '*Type*'|
 |[Errore del compilatore C3533](compiler-error-c3533.md)|un parametro non può avere un tipo che contiene '*Type*'|
-|Errore del compilatore C3534|Obsoleto.|
+|Errore del compilatore C3534|Obsoleta.|
 |[Errore del compilatore C3535](compiler-error-c3535.md)|non è possibile dedurre il tipo per '*tipo1*' da'*tipo2*'|
 |[Errore del compilatore C3536](compiler-error-c3536.md)|'*Identifier*': non può essere usato prima dell'inizializzazione|
 |[Errore del compilatore C3537](compiler-error-c3537.md)|non è possibile eseguire il cast a un tipo che contiene '*Type*'|
@@ -320,15 +321,15 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Errore del compilatore C3554](compiler-error-c3554.md)|'*Type*' non può essere combinato con qualsiasi altro identificatore di tipo|
 |[Errore del compilatore C3555](compiler-error-c3555.md)|argomento di 'decltype' non corretto|
 |[Errore del compilatore C3556](compiler-error-c3556.md)|'*Expression*': argomento non corretto per ' decltype '|
-|Errore del compilatore C3557|Obsoleto.|
-|Errore del compilatore C3558|Obsoleto.|
+|Errore del compilatore C3557|Obsoleta.|
+|Errore del compilatore C3558|Obsoleta.|
 |Errore del compilatore C3559|chiamata ricorsiva a'*Function*': ricorsione rilevata durante la compilazione del grafico delle chiamate per la concorrenza::p arallel_for_each in:'*Function*'|
 |Errore del compilatore C3560|'*Function*': il non è disponibile durante la compilazione del grafico delle chiamate per la concorrenza::p arallel_for_each in:'*Function*'|
 |Errore del compilatore C3561|operazione di barriera del riquadro trovata nel flusso di controllo che non è uniforme nell'affiancamento durante la compilazione del grafico delle chiamate per la concorrenza::p arallel_for_each in:'*Function*'|
 |Errore del compilatore C3562|la funzione intrinseca '*Function*' è limitata a non avere più di un *numero* di parametri|
 |Errore del compilatore C3563|Rilevato ciclo infinito durante la compilazione del grafico delle chiamate per la concorrenza::p arallel_for_each in:'*Function*'|
 |Errore del compilatore C3564|lettura di un valore non inizializzato durante la compilazione del grafico delle chiamate per la concorrenza::p arallel_for_each in:'*Function*'|
-|Errore del compilatore C3565|La quantità totale di memoria tile_static (byte*numero* ) supera il limite di byte *numerici* durante la compilazione del grafico delle chiamate per la concorrenza::p arallel_for_each|
+|Errore del compilatore C3565|La quantità totale di memoria tile_static (byte *numero* ) supera il limite di byte *numerici* durante la compilazione del grafico delle chiamate per la concorrenza::p arallel_for_each|
 |Errore del compilatore C3566|blocchi con effetti collaterali annidati troppo profondamente durante la compilazione del grafico delle chiamate per la concorrenza::p arallel_for_each in:'*Function*'|
 |Errore del compilatore C3567|divisione o mod per zero rilevato durante la compilazione del grafico delle chiamate per la concorrenza::p arallel_for_each in:'*Function*'|
 |Errore del compilatore C3568|la somma dei registri supera il limite di *numero* durante la compilazione del grafico delle chiamate per la concorrenza::p arallel_for_each. Semplifica il programma|
@@ -337,16 +338,16 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |Errore del compilatore C3571|'*Type*': argomento di dominio di calcolo non valido; non è un tipo di classe|
 |Errore del compilatore C3572|'*Type*': argomento di dominio di calcolo non valido; membro pubblico mancante:' static const int Rank ' o valore di pertinenza non positivo|
 |Errore del compilatore C3573|Il numero di istanze di concurrency:: graphics:: Sampler passato alla concorrenza::p arallel_for_each non può superare il *numero*|
-|Errore del compilatore C3574|'*Type*': extent di sezione non validi: deve essere positivo e (1) Z < = *numero*; (2) Z*Y*X < = *numero*|
-|Errore del compilatore C3575|'*Type*': argomento di dominio di calcolo non valido; membro pubblico mancante:' concurrency:: index <*number*> _map_index (const Concurrency:: index <*Number*> &) Restrict (amp)'|
+|Errore del compilatore C3574|'*Type*': extent di sezione non validi: deve essere positivo e (1) Z <= *numero*; (2) Z *Y* X <= *numero*|
+|Errore del compilatore C3575|'*Type*': argomento di dominio di calcolo non valido; membro pubblico mancante:' concurrency:: index<*number*> _map_index (const Concurrency:: index<*Number*>&) Restrict (amp)'|
 |Errore del compilatore C3576|'*Type*': Concurrency::d etails:: _Parallel_for_each argomento #*Number* con tipo non supportato|
 |Errore del compilatore C3577|concorrenza: l'argomento del kernel di:p arallel_for_each non è valido: non è possibile risolvere la chiamata al membro ' void operator () (*tipo*) Restrict (amp)'|
 |Errore del compilatore C3578|Dimensioni dell'oggetto funzione passate alla concorrenza::p arallel_for_each non possono superare i byte *numerici*|
 |Errore del compilatore C3579|Il numero di istanze di sola lettura di concurrency:: Array e Concurrency:: graphics:: texture passate a Concurrency::p arallel_for_each non può superare il *numero*|
 |Errore del compilatore C3580|Il numero di istanze scrivibili di concurrency:: Array e Concurrency:: graphics:: texture passate a Concurrency::p arallel_for_each non può superare il *numero*|
 |Errore del compilatore C3581|'*Type*': tipo non supportato in codice con restrizioni amp|
-|Errore del compilatore C3582|Obsoleto.|
-|Errore del compilatore C3583|'*Identifier*': la dimensione della variabile (*numero* byte) è maggiore della dimensione massima (byte*numero* ) supportata nel codice con restrizioni amp|
+|Errore del compilatore C3582|Obsoleta.|
+|Errore del compilatore C3583|'*Identifier*': la dimensione della variabile (*numero* byte) è maggiore della dimensione massima (byte *numero* ) supportata nel codice con restrizioni amp|
 |Errore del compilatore C3584|utilizzo non supportato di tile_static su'*Identifier*'|
 |Errore del compilatore C3585|'*Identifier*' ha una classe di archiviazione non supportata in codice con restrizioni amp|
 |Errore del compilatore C3586|'*Identifier*': l'uso di variabili globali o statiche non è supportato in codice con restrizioni amp|
@@ -363,15 +364,15 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |Errore del compilatore C3597|'*Parameter*':'*Identifier*' non può essere acquisito per valore se l'espressione lambda è con restrizioni amp|
 |Errore del compilatore C3598|l'istruzione label non è supportata in codice con restrizioni amp|
 |Errore del compilatore C3599|'*operator*': non è possibile eseguire l'aritmetica dei puntatori su un puntatore a bool in codice con restrizioni amp|
-|Errore del compilatore C3600|'*Function*': uso del riquadro\_memoria statica rilevata durante la compilazione del grafico delle chiamate per la concorrenza non di affiancamento::p arallel\_for_each in:'*Function*'|
+|Errore del compilatore C3600|'*Function*': uso della \_ memoria statica del riquadro rilevata durante la compilazione del grafico delle chiamate per la concorrenza non di affiancamento::p arallel \_ for_each in:'*Function*'|
 |Errore del compilatore C3601|'*Type*': tipo di argomento non valido per la funzione di diagnostica amp '*Function*'|
 |Errore del compilatore C3602|Rilevato flusso di controllo non supportato durante la compilazione del grafico delle chiamate per la concorrenza::p arallel_for_each in:'*Function*'|
 |[Errore del compilatore C3603](compiler-error-c3603.md)|'*Symbol*': tipo '*Type*' non ancora supportato|
 |Errore del compilatore C3604|'*Identifier*': può creare solo un oggetto gestito nell'heap GC|
 |Errore del compilatore C3605|Il numero totale di campionatori (*numero* acquisito e *numero* predefinito) supera il *numero* durante la compilazione del grafico delle chiamate per la concorrenza::p arallel_for_each in:'*Function*'|
-|Errore del compilatore C3606|Obsoleto.|
-|Errore del compilatore C3607|Obsoleto.|
-|Errore del compilatore C3608|Obsoleto.|
+|Errore del compilatore C3606|Obsoleta.|
+|Errore del compilatore C3607|Obsoleta.|
+|Errore del compilatore C3608|Obsoleta.|
 |[Errore del compilatore C3609](compiler-error-c3609.md)|'*Identifier*': una funzione ' sealed/final ' deve essere virtuale|
 |[Errore del compilatore C3610](compiler-error-c3610.md)|'*Identifier*': il tipo di valore deve essere ' boxed ' prima che sia possibile chiamare il metodo '*Method*'|
 |[Errore del compilatore C3611](compiler-error-c3611.md)|'*Identifier*': una funzione sealed non può avere un identificatore pure|
@@ -379,8 +380,8 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |Errore del compilatore C3613|manca il tipo restituito dopo '->' (si presuppone ' int ')|
 |Errore del compilatore C3614|Valori diversi per le dimensioni del pacchetto all'interno della stessa classe; Previous è'*value*', il nuovo valore è'*value*'|
 |[Errore del compilatore C3615](compiler-error-c3615.md)|la funzione constExpr '*Function*' non può produrre un'espressione costante|
-|Errore del compilatore C3616|Obsoleto.|
-|Errore del compilatore C3617|Obsoleto.|
+|Errore del compilatore C3616|Obsoleta.|
+|Errore del compilatore C3617|Obsoleta.|
 |[Errore del compilatore C3618](compiler-error-c3618.md)|'*Declaration*': Impossibile definire un metodo contrassegnato dllimport|
 |[Errore del compilatore C3619](compiler-error-c3619.md)|Impossibile dichiarare un modello all'interno di un tipo gestito/WinRT|
 |Errore del compilatore C3620|'*Type*': l'impostazione dell'allineamento non è consentita per i tipi WinRT|
@@ -402,15 +403,15 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |Errore del compilatore C3636|'*Identifier*': Impossibile applicare a questo tipo|
 |[Errore del compilatore C3637](compiler-error-c3637.md)|'*Function*': una definizione di funzione Friend non può essere una specializzazione di un modello di funzione/generico|
 |[Errore del compilatore C3638](compiler-error-c3638.md)|'*operator*': non è possibile ridefinire gli operatori di conversione boxing e unboxing standard|
-|Errore del compilatore C3639|Obsoleto.|
+|Errore del compilatore C3639|Obsoleta.|
 |[Errore del compilatore C3640](compiler-error-c3640.md)|'*member*': è necessario definire una funzione membro virtuale o di riferimento di una classe locale|
 |[Errore del compilatore C3641](compiler-error-c3641.md)|'*Function*': Convenzione di chiamata non valida '*Convention*' per la funzione compilata con/CLR: pure o/CLR: safe|
 |[Errore del compilatore C3642](compiler-error-c3642.md)|'*Function*': Impossibile chiamare una funzione con __clrcall convenzione di chiamata dal codice nativo|
-|Errore del compilatore C3643|Obsoleto.|
+|Errore del compilatore C3643|Obsoleta.|
 |[Errore del compilatore C3644](compiler-error-c3644.md)|'*Function*': Impossibile compilare la funzione per generare codice gestito|
 |[Errore del compilatore C3645](compiler-error-c3645.md)|'*Function*': non è possibile usare __clrcall per le funzioni compilate in codice nativo|
 |[Errore del compilatore C3646](compiler-error-c3646.md)|'*Identifier*': identificatore di override sconosciuto|
-|Errore del compilatore C3647|Obsoleto.|
+|Errore del compilatore C3647|Obsoleta.|
 |[Errore del compilatore C3648](compiler-error-c3648.md)|Questa sintassi di override esplicita non è supportata per i tipi gestiti|
 |Errore del compilatore C3649|Questa sintassi di override esplicita non è consentita con/ZW|
 |[Errore del compilatore C3650](compiler-error-c3650.md)|'*member*': non può essere usato come override esplicito. deve essere una funzione membro virtuale di una classe base|
@@ -421,12 +422,12 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Errore del compilatore C3655](compiler-error-c3655.md)|'*member*': funzione già sottoposta a override in modo esplicito|
 |[Errore del compilatore C3656](compiler-error-c3656.md)|'*keyword*': Impossibile ripetere l'identificatore di override|
 |[Errore del compilatore C3657](compiler-error-c3657.md)|un distruttore o un finalizzatore non può eseguire l'override esplicito o eseguire l'override esplicito|
-|Errore del compilatore C3658|Obsoleto.|
+|Errore del compilatore C3658|Obsoleta.|
 |Errore del compilatore C3659|'*member*': identificatore di override '*keyword*' non supportato|
 |Errore del compilatore C3660|'*member1*': nasconde il membro ereditato '*membro2*'|
 |[Errore del compilatore C3661](compiler-error-c3661.md)|l'elenco di override esplicito non ha trovato metodi di cui eseguire l'override|
 |[Errore del compilatore C3662](compiler-error-c3662.md)|'*member*': identificatore di override '*keyword*' consentito solo su funzioni membro di classi gestite/WinRT|
-|Errore del compilatore C3663|Obsoleto.|
+|Errore del compilatore C3663|Obsoleta.|
 |Errore del compilatore C3664|'*member*': non può essere usato come override esplicito. deve avere accessibilità' Public ' o ' protected '|
 |[Errore del compilatore C3665](compiler-error-c3665.md)|'*member*': identificatore di override '*keyword*' non consentito in un distruttore/finalizzatore|
 |[Errore del compilatore C3666](compiler-error-c3666.md)|'*Constructor*': identificatore di override '*keyword*' non consentito in un costruttore|
@@ -455,15 +456,15 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |Errore del compilatore C3689|' operator *Identifier*': il modello di operatore literal/literal deve trovarsi in un ambito globale o dello spazio dei nomi|
 |Errore del compilatore C3690|è previsto un valore letterale stringa, ma è stato trovato un valore letterale stringa definito dall'utente|
 |Errore del compilatore C3691|prefisso letterale '*Prefix*' non valido|
-|Errore del compilatore C3692|Obsoleto.|
-|Errore del compilatore C3693|Obsoleto.|
-|Errore del compilatore C3694|Obsoleto.|
-|Errore del compilatore C3695|Obsoleto.|
+|Errore del compilatore C3692|Obsoleta.|
+|Errore del compilatore C3693|Obsoleta.|
+|Errore del compilatore C3694|Obsoleta.|
+|Errore del compilatore C3695|Obsoleta.|
 |Errore del compilatore C3696|'*keyword*': Impossibile utilizzare questo qualificatore in '%'|
 |[Errore del compilatore C3697](compiler-error-c3697.md)|'*keyword*': Impossibile utilizzare questo qualificatore in ' ^'|
 |[Errore del compilatore C3698](compiler-error-c3698.md)|'*Type*': non è possibile usare questo tipo come argomento di '*operator*'|
 |[Errore del compilatore C3699](compiler-error-c3699.md)|'*operator*': non è possibile usare questo riferimento indiretto nel tipo '*Type*'|
-|Errore del compilatore C3700|Obsoleto.|
+|Errore del compilatore C3700|Obsoleta.|
 |[Errore del compilatore C3701](compiler-error-c3701.md)|'*Function*': l'origine evento non ha eventi|
 |[Errore del compilatore C3702](compiler-error-c3702.md)|ATL è necessario per gli eventi COM|
 |[Errore del compilatore C3703](compiler-error-c3703.md)|'*event_handler*': un metodo del gestore eventi deve avere la stessa classe di archiviazione dell'origine '*Event*'|
@@ -479,32 +480,32 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Errore del compilatore C3713](compiler-error-c3713.md)|'*event_handler*': un metodo del gestore eventi deve avere gli stessi parametri di funzione dell'origine '*Event*'|
 |[Errore del compilatore C3714](compiler-error-c3714.md)|'*event_handler*': un metodo del gestore eventi deve avere la stessa convenzione di chiamata dell'origine '*Event*'|
 |[Errore del compilatore C3715](compiler-error-c3715.md)|'*pointer*': deve essere un puntatore a'*Type*'|
-|Errore del compilatore C3716|Obsoleto.|
+|Errore del compilatore C3716|Obsoleta.|
 |[Errore del compilatore C3717](compiler-error-c3717.md)|'*member*': non è possibile definire un metodo che genera eventi|
-|[Errore del compilatore C3718](compiler-error-c3718.md)|è possibile chiamare ' _ _*keyword*' solo nel contesto di una funzione membro della classe ricevente|
+|[Errore del compilatore C3718](compiler-error-c3718.md)|è possibile chiamare ' _ _ *keyword*' solo nel contesto di una funzione membro della classe ricevente|
 |[Errore del compilatore C3719](compiler-error-c3719.md)|'*member*': un'origine evento basata su interfaccia può essere usata solo per gli eventi com|
 |Errore del compilatore C3720|'*Type*': può implementare IDispatch solo su un'interfaccia dispatch o duale|
 |[Errore del compilatore C3721](compiler-error-c3721.md)|'*Signature*': firma non compatibile per l'evento|
 |[Errore del compilatore C3722](compiler-error-c3722.md)|evento generico non consentito|
 |[Errore del compilatore C3723](compiler-error-c3723.md)|'*Function*': Impossibile risolvere l'evento|
-|[Errore del compilatore C3724](compiler-error-c3724.md)|è necessario #include \<> Windows. h per utilizzare il multithreading con gli eventi|
-|Errore del compilatore C3725|Obsoleto.|
-|Errore del compilatore C3726|Obsoleto.|
+|[Errore del compilatore C3724](compiler-error-c3724.md)|deve #include \<windows.h> usare il multithreading con gli eventi|
+|Errore del compilatore C3725|Obsoleta.|
+|Errore del compilatore C3726|Obsoleta.|
 |[Errore del compilatore C3727](compiler-error-c3727.md)|'*Event*': un evento gestito deve essere una funzione membro o un membro dati che è un puntatore a un delegato|
 |[Errore del compilatore C3728](compiler-error-c3728.md)|'*Event*': l'evento non ha un metodo Raise|
-|Errore del compilatore C3729|Obsoleto.|
-|Errore del compilatore C3730|Obsoleto.|
+|Errore del compilatore C3729|Obsoleta.|
+|Errore del compilatore C3730|Obsoleta.|
 |[Errore del compilatore C3731](compiler-error-c3731.md)|evento '*Event*' e gestore '*event_handler*' incompatibili; l'origine evento e il gestore eventi devono avere lo stesso tipo di evento|
 |[Errore del compilatore C3732](compiler-error-c3732.md)|'*Interface*': un'interfaccia personalizzata che genera eventi com non può ereditare da IDispatch|
 |[Errore del compilatore C3733](compiler-error-c3733.md)|'*Event*': sintassi non corretta per la specifica di un evento com; si è omesso ' __interface '?|
 |[Errore del compilatore C3734](compiler-error-c3734.md)|'*Class*': una classe gestita/WinRT non può essere una coclasse|
-|Errore del compilatore C3735|Obsoleto.|
+|Errore del compilatore C3735|Obsoleta.|
 |[Errore del compilatore C3736](compiler-error-c3736.md)|'*member*': deve essere un metodo o, nel caso di eventi gestiti, facoltativamente un membro dati|
 |[Errore del compilatore C3737](compiler-error-c3737.md)|'*Identifier*': un delegato non può avere una convenzione di chiamata esplicita|
 |[Errore del compilatore C3738](compiler-error-c3738.md)|'*Convention*': la convenzione di chiamata della creazione di istanza esplicita deve corrispondere a quella del modello di cui viene creata un'istanza|
-|[Errore del compilatore C3739](compiler-error-c3739.md)|'*Class*': la sintassi è supportata solo quando il parametro ' layout\_dipendente ' di event_receiver è true|
+|[Errore del compilatore C3739](compiler-error-c3739.md)|'*Class*': la sintassi è supportata solo quando il parametro ' layout \_ dipendente ' di event_receiver è true|
 |[Errore del compilatore C3740](compiler-error-c3740.md)|'*template*': i modelli non possono avere origine o ricevere eventi|
-|[Errore del compilatore C3741](compiler-error-c3741.md)|'*Class*': deve essere una coclasse quando il parametro ' layout\_dipendente ' di event_receiver è true|
+|[Errore del compilatore C3741](compiler-error-c3741.md)|'*Class*': deve essere una coclasse quando il parametro ' layout \_ dipendente ' di event_receiver è true|
 |Errore del compilatore C3742|'*token1*': sequenza di token sbilanciata nell'argomento Attribute di '*attribute*'. previsto '*token2*'|
 |[Errore del compilatore C3743](compiler-error-c3743.md)|può solo collegare o scollegare un'intera interfaccia quando il parametro ' layout_dependent ' di event_receiver è true|
 |[Errore del compilatore C3744](compiler-error-c3744.md)|__unhook deve avere almeno 3 argomenti per gli eventi gestiti|
@@ -519,7 +520,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Errore del compilatore C3753](compiler-error-c3753.md)|Proprietà generica non consentita|
 |[Errore del compilatore C3754](compiler-error-c3754.md)|Costruttore di delegato: non è possibile chiamare la funzione membro '*member*' su un'istanza di tipo '*Type*'|
 |[Errore del compilatore C3755](compiler-error-c3755.md)|'*Identifier*': non è possibile definire un delegato|
-|Errore del compilatore C3756|Obsoleto.|
+|Errore del compilatore C3756|Obsoleta.|
 |Errore del compilatore C3757|'*Type*': tipo non consentito per la funzione ' constExpr '|
 |Errore del compilatore C3758|'*member*': la funzione virtuale non può essere dichiarata come ' constExpr '|
 |Errore del compilatore C3759|'*member*': la funzione membro di tipo non letterale non può essere dichiarata come ' constExpr '|
@@ -530,7 +531,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Errore del compilatore C3764](compiler-error-c3764.md)|'*member*': Impossibile eseguire l'override del metodo della classe base '*member*'|
 |[Errore del compilatore C3765](compiler-error-c3765.md)|'*Event*': non è possibile definire un evento in una classe/struct '*Type*' contrassegnata come event_receiver|
 |[Errore del compilatore C3766](compiler-error-c3766.md)|'*Type*' deve fornire un'implementazione per il metodo di interfaccia '*Function*'|
-|[Errore del compilatore l'errore C3767](compiler-error-c3767.md)|'*Function*': funzione o funzioni candidate non accessibili|
+|[Errore del compilatore C3767](compiler-error-c3767.md)|'*Function*': funzione o funzioni candidate non accessibili|
 |[Errore del compilatore C3768](compiler-error-c3768.md)|Impossibile prendere l'indirizzo di una funzione vararg virtuale in codice gestito pure|
 |[Errore del compilatore C3769](compiler-error-c3769.md)|'*Identifier*': una classe annidata non può avere lo stesso nome della classe che lo contiene immediatamente|
 |Errore del compilatore C3770|'*Type*': non è una classe di base valida|
@@ -551,45 +552,45 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |Errore del compilatore C3785|il primo argomento del modello di ' std:: integer_sequence ' deve essere un tipo Integer|
 |Errore del compilatore C3786|il secondo argomento di modello di ' std:: make_integer_sequence ' deve essere una costante integer maggiore o uguale a zero|
 |Errore del compilatore C3787|non è possibile dedurre il tipo restituito di questa coroutine|
-|Errore del compilatore C3788|Obsoleto.|
-|Errore del compilatore C3789|Obsoleto.|
-|Errore del compilatore C3790|Obsoleto.|
-|Errore del compilatore C3791|Obsoleto.|
-|Errore del compilatore C3792|Obsoleto.|
-|Errore del compilatore C3793|Obsoleto.|
-|Errore del compilatore C3794|Obsoleto.|
-|Errore del compilatore C3795|Obsoleto.|
-|Errore del compilatore C3796|Obsoleto.|
+|Errore del compilatore C3788|Obsoleta.|
+|Errore del compilatore C3789|Obsoleta.|
+|Errore del compilatore C3790|Obsoleta.|
+|Errore del compilatore C3791|Obsoleta.|
+|Errore del compilatore C3792|Obsoleta.|
+|Errore del compilatore C3793|Obsoleta.|
+|Errore del compilatore C3794|Obsoleta.|
+|Errore del compilatore C3795|Obsoleta.|
+|Errore del compilatore C3796|Obsoleta.|
 |[Errore del compilatore C3797](compiler-error-c3797.md)|'*keyword*': la dichiarazione di evento non può avere un identificatore di override (deve essere posizionata in metodi Add/Remove/Raise di evento)|
 |[Errore del compilatore C3798](compiler-error-c3798.md)|'*keyword*': la dichiarazione di proprietà non può avere un identificatore di override (deve essere inserita in metodi get/set di proprietà)|
 |[Errore del compilatore C3799](compiler-error-c3799.md)|la proprietà indicizzata non può avere un elenco di parametri vuoto|
 |[Errore del compilatore C3800](compiler-error-c3800.md)|'*Declaration*': Impossibile combinare proprietà ed eventi|
 |Errore del compilatore C3801|'*attribute*': l'attributo non può avere una clausola argument|
-|Errore del compilatore C3802|Obsoleto.|
-|[Errore del compilatore C3803](compiler-error-c3803.md)|'*Property*': la proprietà ha un tipo non compatibile con una delle relative funzioni di accesso '*funzione*di accesso '|
+|Errore del compilatore C3802|Obsoleta.|
+|[Errore del compilatore C3803](compiler-error-c3803.md)|'*Property*': la proprietà ha un tipo non compatibile con una delle relative funzioni di accesso '*funzione* di accesso '|
 |[Errore del compilatore C3804](compiler-error-c3804.md)|'*member*': i metodi della funzione di accesso per una proprietà devono essere tutti statici o tutti non statici|
 |[Errore del compilatore C3805](compiler-error-c3805.md)|'*token*': token imprevisto. previsto '}' o ','|
 |Errore del compilatore C3806|'*token*': token imprevisto. previsto ' {' o un inizializzatore di membro|
 |[Errore del compilatore C3807](compiler-error-c3807.md)|'*Type*': una classe con l'attributo ComImport non può derivare da'*Type*'. è consentita solo l'implementazione dell'interfaccia|
 |[Errore del compilatore C3808](compiler-error-c3808.md)|'*Type*': una classe con l'attributo ComImport non può definire il membro '*member*'. sono consentite solo le funzioni abstract o dllimport|
 |[Errore del compilatore C3809](compiler-error-c3809.md)|'*Type*': un tipo gestito/WinRT non può avere funzioni/classi/interfacce friend|
-|Errore del compilatore C3810|Obsoleto.|
-|Errore del compilatore C3811|Obsoleto.|
+|Errore del compilatore C3810|Obsoleta.|
+|Errore del compilatore C3811|Obsoleta.|
 |[Errore del compilatore C3812](compiler-error-c3812.md)|' __property ' deve essere il primo token in una dichiarazione di proprietà|
 |[Errore del compilatore C3813](compiler-error-c3813.md)|una dichiarazione di proprietà può essere presente solo all'interno della definizione di un tipo gestito/WinRT|
-|Errore del compilatore C3814|Obsoleto.|
+|Errore del compilatore C3814|Obsoleta.|
 |[Errore del compilatore C3815](compiler-error-c3815.md)|il tipo restituito del metodo '*member*' deve corrispondere al tipo dell'ultimo parametro di un setter|
 |[Errore del compilatore C3816](compiler-error-c3816.md)|' Class/struct *member*' è stato dichiarato o definito in precedenza con un modificatore gestito/WinRT diverso|
 |[Errore del compilatore C3817](compiler-error-c3817.md)|'*Declaration*': la proprietà può essere applicata solo a una funzione|
 |[Errore del compilatore C3818](compiler-error-c3818.md)|la dichiarazione di proprietà'*Property*' della matrice non deve eseguire l'overload di una proprietà di indice '*Property*'|
-|Errore del compilatore C3819|Obsoleto.|
+|Errore del compilatore C3819|Obsoleta.|
 |[Errore del compilatore C3820](compiler-error-c3820.md)|'*Identifier*': gli inizializzatori devono essere gestiti|
 |[Errore del compilatore C3821](compiler-error-c3821.md)|'*Function*': Impossibile utilizzare un tipo o una funzione gestita in una funzione non gestita|
-|Errore del compilatore C3822|Obsoleto.|
-|Errore del compilatore C3823|Obsoleto.|
+|Errore del compilatore C3822|Obsoleta.|
+|Errore del compilatore C3823|Obsoleta.|
 |[Errore del compilatore C3824](compiler-error-c3824.md)|'*Type*': questo tipo non può essere presente in questo contesto (parametro di funzione, tipo restituito o membro statico)|
 |[Errore del compilatore C3825](compiler-error-c3825.md)|'*Type*': una classe gestita/WinRT può supportare solo eventi gestiti/WinRT|
-|Errore del compilatore C3826|Obsoleto.|
+|Errore del compilatore C3826|Obsoleta.|
 |Errore del compilatore C3827|l'attributo standard ' deprecated ' può non contenere argomenti o un valore letterale stringa che descrive il motivo|
 |[Errore del compilatore C3828](compiler-error-c3828.md)|non è possibile specificare gli argomenti di posizionamento per un'espressione '*keyword*' per il tipo '*Type*'|
 |Errore del compilatore C3829|l'attributo standard ' noreturn ' può essere applicato solo alle funzioni|
@@ -598,19 +599,19 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Errore del compilatore C3832](compiler-error-c3832.md)|'*typelib*': la libreria dei tipi appare come se fosse stata compilata per puntatori a 32 bit; modificare il qualificatore ' ptrsize '|
 |[Errore del compilatore C3833](compiler-error-c3833.md)|'*Type*': tipo di destinazione non valido per l' *identificatore*|
 |[Errore del compilatore C3834](compiler-error-c3834.md)|cast esplicito non valido a un puntatore di blocco; usare invece una variabile locale bloccata|
-|Errore del compilatore C3835|Obsoleto.|
+|Errore del compilatore C3835|Obsoleta.|
 |[Errore del compilatore C3836](compiler-error-c3836.md)|un costruttore statico non può avere un elenco di inizializzatori di membri|
 |Errore del compilatore C3837|attributi non consentiti in questo contesto|
 |[Errore del compilatore C3838](compiler-error-c3838.md)|Impossibile ereditare da'*Type*'|
 |[Errore del compilatore C3839](compiler-error-c3839.md)|Impossibile modificare l'allineamento in un tipo gestito/WinRT|
-|Errore del compilatore C3840|Obsoleto.|
-|Errore del compilatore C3841|Obsoleto.|
+|Errore del compilatore C3840|Obsoleta.|
+|Errore del compilatore C3841|Obsoleta.|
 |[Errore del compilatore C3842](compiler-error-c3842.md)|'*Identifier*': qualificatori ' const ' è volatile ' su funzioni membro di tipi gestiti/WinRT non supportati|
 |Errore del compilatore C3843|'*Identifier*': i qualificatori di riferimento per le funzioni membro di tipi gestiti/WinRT non sono supportati|
 |Errore del compilatore C3844|'*Identifier*': non è possibile importare il simbolo da'*source*': perché'*Identifier*' esiste già nell'ambito corrente|
-|Errore del compilatore C3845|Obsoleto.|
+|Errore del compilatore C3845|Obsoleta.|
 |[Errore del compilatore C3846](compiler-error-c3846.md)|'*Identifier*': Impossibile importare il simbolo da'*source*': perché'*Identifier*' è già stato importato da un altro assembly '*assembly*'|
-|Errore del compilatore C3847|Obsoleto.|
+|Errore del compilatore C3847|Obsoleta.|
 |[Errore del compilatore C3848](compiler-error-c3848.md)|l'espressione con tipo '*Type*' potrebbe perdere alcuni qualificatori const-volatile per chiamare '*Identifier*'|
 |[Errore del compilatore C3849](compiler-error-c3849.md)|la chiamata di tipo funzione su un'espressione di tipo '*Type*' comporta la perdita di qualificatori const e/o volatili per tutti gli overload di operatori disponibili per tutti i *numeri*|
 |[Errore del compilatore C3850](compiler-error-c3850.md)|'*token*': un nome di caratteri universali specifica un carattere non valido|
@@ -622,12 +623,12 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Errore del compilatore C3856](compiler-error-c3856.md)|'*Class*': la classe non è un modello di classe/generico|
 |[Errore del compilatore C3857](compiler-error-c3857.md)|'*template*': non sono consentiti più elenchi di modelli/parametri generici|
 |[Errore del compilatore C3858](compiler-error-c3858.md)|'*Identifier*': non può essere ridichiarato nell'ambito corrente|
-|[Errore del compilatore C3859](compiler-error-c3859.md)|è stato superato l'intervallo di memoria virtuale per PCH; ricompilare con un'opzione della riga di comando di '-ZM*Number*' o versione successiva|
+|[Errore del compilatore C3859](compiler-error-c3859.md)|è stato superato l'intervallo di memoria virtuale per PCH; ricompilare con un'opzione della riga di comando di '-ZM *Number*' o versione successiva|
 |[Errore del compilatore C3860](compiler-error-c3860.md)|elenco di argomenti generici/modello seguente il modello di classe o il nome generico deve elencare i parametri nell'ordine usato nell'elenco di parametri di modello/generico|
 |[Errore del compilatore C3861](compiler-error-c3861.md)|'*Identifier*': identificatore non trovato|
 |[Errore del compilatore C3862](compiler-error-c3862.md)|'*Function*': Impossibile compilare una funzione non gestita con/CLR: pure o/CLR: safe|
 |Errore del compilatore C3863|il tipo di matrice '*Type*' non è assegnabile|
-|Errore del compilatore C3864|Obsoleto.|
+|Errore del compilatore C3864|Obsoleta.|
 |[Errore del compilatore C3865](compiler-error-c3865.md)|'*keyword*': può essere usato solo su funzioni membro Native|
 |[Errore del compilatore C3866](compiler-error-c3866.md)|elenco di argomenti mancanti nella chiamata al distruttore/finalizzatore|
 |[Errore del compilatore C3867](compiler-error-c3867.md)|'*Function*': sintassi non standard; usare ' &' per creare un puntatore al membro|
@@ -635,13 +636,13 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Errore del compilatore C3869](compiler-error-c3869.md)|nel vincolo gcnew manca l'elenco di parametri vuoto ' ()'|
 |Errore del compilatore C3870|'*Parameter*':' __declspec (*identificatore*)' può essere applicato solo a parametri di tipo integrale|
 |Errore del compilatore C3871|'*Parameter*':' __declspec (Guard (overflow))' è supportato solo nei primi 64 parametri di una funzione|
-|[Errore del compilatore C3872](compiler-error-c3872.md)|' 0x*value*': questo carattere non è consentito in un identificatore|
-|[Errore del compilatore C3873](compiler-error-c3873.md)|' 0x*value*': questo carattere non è consentito come primo carattere di un identificatore|
+|[Errore del compilatore C3872](compiler-error-c3872.md)|' 0x *value*': questo carattere non è consentito in un identificatore|
+|[Errore del compilatore C3873](compiler-error-c3873.md)|' 0x *value*': questo carattere non è consentito come primo carattere di un identificatore|
 |[Errore del compilatore C3874](compiler-error-c3874.md)|il tipo restituito di '*Identifier*' deve essere '*tipo1*' anziché'*tipo2*'|
 |Errore del compilatore C3875|chiamata della funzione membro non statica mancante nell'elenco di argomenti|
-|Errore del compilatore C3876|Obsoleto.|
-|Errore del compilatore C3877|Obsoleto.|
-|Errore del compilatore C3878|Obsoleto.|
+|Errore del compilatore C3876|Obsoleta.|
+|Errore del compilatore C3877|Obsoleta.|
+|Errore del compilatore C3878|Obsoleta.|
 |Errore del compilatore C3879|'*member*': non può essere un membro dati initonly|
 |[Errore del compilatore C3880](compiler-error-c3880.md)|'*member*': non può essere un membro dati literal|
 |Errore del compilatore C3881|può solo ereditare il costruttore dalla base diretta|
@@ -651,8 +652,8 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |Errore del compilatore C3885|'*Type*': non è possibile inizializzare una matrice di dimensioni sconosciute con un elenco di inizializzatori vuoto|
 |[Errore del compilatore C3886](compiler-error-c3886.md)|'*member*': un membro dati literal deve essere inizializzato|
 |[Errore del compilatore C3887](compiler-error-c3887.md)|'*member*': l'inizializzatore per un membro dati literal deve essere un'espressione costante|
-|[Errore del compilatore C3888](compiler-error-c3888.md)|'*member*': l'espressione const associata a questo membro dati literal non è supportata C++da/CLI|
-|Errore del compilatore C3889|Obsoleto.|
+|[Errore del compilatore C3888](compiler-error-c3888.md)|'*member*': l'espressione const associata a questo membro dati literal non è supportata da C++/CLI|
+|Errore del compilatore C3889|Obsoleta.|
 |[Errore del compilatore C3890](compiler-error-c3890.md)|'*member*': impossibile prendere l'indirizzo di un membro dati literal|
 |[Errore del compilatore C3891](compiler-error-c3891.md)|'*member*': Impossibile utilizzare un membro dati literal come l-value|
 |[Errore del compilatore C3892](compiler-error-c3892.md)|'*Variable*': non è possibile assegnare a una variabile const|
@@ -660,7 +661,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Errore del compilatore C3894](compiler-error-c3894.md)|'*member*': utilizzo l-value del membro dati statico initonly consentito solo nel costruttore della classe '*Class*'|
 |[Errore del compilatore C3895](compiler-error-c3895.md)|'*member*': i membri dati di *tipo* non possono essere ' volatile '|
 |[Errore del compilatore C3896](compiler-error-c3896.md)|'*member*': inizializzatore non corretto: questo membro dati literal può essere inizializzato solo con ' nullptr '|
-|Errore del compilatore C3897|Obsoleto.|
+|Errore del compilatore C3897|Obsoleta.|
 |[Errore del compilatore C3898](compiler-error-c3898.md)|'*member*': i membri dati di *tipo* possono essere solo membri di tipi gestiti|
 |[Errore del compilatore C3899](compiler-error-c3899.md)|'*member*': utilizzo l-value del membro dati initonly non consentito direttamente in un'area parallela della classe '*Class*'|
 |[Errore del compilatore C3900](compiler-error-c3900.md)|'*member*': non consentito nell'ambito corrente|
@@ -670,7 +671,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Errore del compilatore C3904](compiler-error-c3904.md)|'*Property*': è necessario specificare i parametri *numerici*|
 |Errore del compilatore C3905|accessi non allineati non supportati per il tipo intrinseco '*Type*'|
 |Errore del compilatore C3906|il tipo intrinseco '*Type*' non è un tipo restituito o di argomento supportato per le funzioni vararg o senza prototipo|
-|Errore del compilatore C3907|Obsoleto.|
+|Errore del compilatore C3907|Obsoleta.|
 |[Errore del compilatore C3908](compiler-error-c3908.md)|livello di accesso meno restrittivo di quello di '*Identifier*'|
 |[Errore del compilatore C3909](compiler-error-c3909.md)|una dichiarazione di evento gestito/WinRT deve verificarsi in un tipo gestito/WinRT|
 |[Errore del compilatore C3910](compiler-error-c3910.md)|'*Event*': deve definire il membro '*member*'|
@@ -679,23 +680,23 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Errore del compilatore C3913](compiler-error-c3913.md)|una proprietà predefinita deve essere indicizzata|
 |[Errore del compilatore C3914](compiler-error-c3914.md)|una proprietà predefinita non può essere statica|
 |[Errore del compilatore C3915](compiler-error-c3915.md)|'*Identifier*' non ha una proprietà indicizzata predefinita (indicizzatore di classe)|
-|Errore del compilatore C3916|Obsoleto.|
+|Errore del compilatore C3916|Obsoleta.|
 |[Errore del compilatore C3917](compiler-error-c3917.md)|'*token*': stile di Dichiarazione *costrutto* obsoleto (si intendeva usare ' ['']'?)|
 |[Errore del compilatore C3918](compiler-error-c3918.md)|per l'utilizzo è necessario che "*Identifier*" sia un membro dati|
 |[Errore del compilatore C3919](compiler-error-c3919.md)|'*Function*': la funzione deve avere il tipo '*return_type* (*Type*)'|
 |[Errore del compilatore C3920](compiler-error-c3920.md)|'*operator*': non è possibile definire un operatore CLR/WinRT di incremento/decremento suffisso che chiama l'operatore suffisso CLR/WinRT chiamerà il prefisso corrispondente operatore CLR/WinRT (op_Increment/op_Decrement), ma con la semantica suffissa|
-|Errore del compilatore C3921|Obsoleto.|
-|Errore del compilatore C3922|Obsoleto.|
+|Errore del compilatore C3921|Obsoleta.|
+|Errore del compilatore C3922|Obsoleta.|
 |[Errore del compilatore C3923](compiler-error-c3923.md)|'*member*': le definizioni di classe, struct o Union locali non sono consentite in una funzione membro di una classe gestita/WinRT|
 |Errore del compilatore C3924|errore nell'argomento #*numero* della chiamata al costruttore di delegato '*Constructor*':|
 |Errore del compilatore C3925|previsto un ciclo (for, while o do) dopo la direttiva '*Directive*'|
 |Errore del compilatore C3926|costante non valida nella direttiva ' Parallel '|
 |Errore del compilatore C3927|'->': il tipo restituito finale non è consentito dopo un dichiaratore non di funzione|
 |Errore del compilatore C3928|'->': il tipo restituito finale non è consentito dopo un dichiaratore tra parentesi|
-|Errore del compilatore C3929|Obsoleto.|
+|Errore del compilatore C3929|Obsoleta.|
 |Errore del compilatore C3930|'*Function*': nessuna funzione in overload presenta indicatori di restrizione compatibili con il contesto di ambiente '*context*'|
 |Errore del compilatore C3931|'*Type*': Impossibile chiamare una funzione con indicatori di restrizione non compatibili con il contesto di ambiente|
-|Errore del compilatore C3932|Obsoleto.|
+|Errore del compilatore C3932|Obsoleta.|
 |Errore del compilatore C3933|'*Class*': gli identificatori di restrizione del distruttore devono coprire l'Unione delle restrizioni in tutti i costruttori|
 |Errore del compilatore C3934|una funzione in qualsiasi formato di ' Main ' non può avere identificatori di restrizione diversi da restrict (CPU)|
 |Errore del compilatore C3935|'*Identifier*': ridefinizione. identificatori di restrizione sovrapposti|
@@ -703,27 +704,27 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |Errore del compilatore C3937|identificatore di restrizione vuoto non consentito|
 |Errore del compilatore C3938|'*Identifier*': più identificatori di restrizione non supportati nelle funzioni \042C\042 extern|
 |Errore del compilatore C3939|'*Identifier*': puntatore a funzioni membro, puntatori a funzione, riferimenti a funzioni con identificatore di restrizione ' amp ' non consentiti|
-|Errore del compilatore C3940|'*Identifier*': identificatore non trovato-possibile mancata corrispondenza tra le versioni del compilatore e della libreria. Verificare che vccorlib. h/. lib, vccorlib120. dll e c1xx. dll corrispondano|
+|Errore del compilatore C3940|'*Identifier*': identificatore non trovato-possibile mancata corrispondenza tra le versioni del compilatore e della libreria. Verificare che vccorlib. h/. lib, vccorlib120.dll e c1xx.dll corrispondano|
 |Errore del compilatore C3941|'*Condition*': richiede l'opzione della riga di comando '/CLR '|
-|Errore del compilatore C3942|Obsoleto.|
-|Errore del compilatore C3943|Obsoleto.|
-|Errore del compilatore C3944|Obsoleto.|
+|Errore del compilatore C3942|Obsoleta.|
+|Errore del compilatore C3943|Obsoleta.|
+|Errore del compilatore C3944|Obsoleta.|
 |Errore del compilatore C3945|'*Type*': non è possibile generare o intercettare un oggetto WinRT che non deriva da Platform:: Exception|
 |Errore del compilatore C3946|'*Type*': typeid non può essere applicato a questo tipo|
 |Errore del compilatore C3947|'*typeid*': typeid non può essere applicato a un'espansione di pacchetto|
 |Errore del compilatore C3948|'*keyword*': un'espansione di pacchetto non può essere presente in questo contesto|
 |Errore del compilatore C3949|un'espansione di pacchetto,'.. .', non può comparire in un dichiaratore astratto tra parentesi|
-|Errore del compilatore C3950|Obsoleto.|
+|Errore del compilatore C3950|Obsoleta.|
 |Errore del compilatore C3951|Non è possibile usare il puntatore a membro nel tipo WinRT proiettato '*Type*'. Usare invece un delegato.|
-|Errore del compilatore C3952|'*Type*': WinRT non supporta le matrici ' in/out '. Usare ' const array\<T > ^' per ' in ' è WriteOnlyArray\<T >' o ' Array\<T > ^ *' per ' out ' nelle API pubbliche|
-|Errore del compilatore C3953|Non è possibile usare la classe gestità*Type*' nel modulo WinRT.|
-|Errore del compilatore C3954|'*Type*': una matrice restituita da un metodo pubblicato in un tipo WinRT deve utilizzare il formato ' Array\<t > ^'|
-|Errore del compilatore C3955|'*Type*': un costruttore pubblico non può contenere un parametro ' out ' o ' WriteOnlyArray\<t >'|
+|Errore del compilatore C3952|'*Type*': WinRT non supporta le matrici ' in/out '. Usare ' const array \<T> ^' per ' in ' è WriteOnlyArray \<T> ' o ' array \<T> ^ *' per ' out ' nelle API pubbliche|
+|Errore del compilatore C3953|Non è possibile usare la classe gestità *Type*' nel modulo WinRT.|
+|Errore del compilatore C3954|'*Type*': una matrice restituita da un metodo pubblicato in un tipo WinRT deve utilizzare il formato ' array \<T> ^'|
+|Errore del compilatore C3955|'*Type*': un costruttore pubblico non può contenere un parametro ' out ' o ' WriteOnlyArray \<T> '|
 |Errore del compilatore C3956|'*Type*': il tipo è contrassegnato come esclusivo di '*Type*' e non può essere usato come base di '*derived_type*'|
 |Errore del compilatore C3957|'*Type*': non è possibile usare ' New ' in un tipo WinRT; USA invece ' ref new '|
 |Errore del compilatore C3958|'*Type*': non è possibile usare ' gcnew ' in un tipo WinRT. USA invece ' ref new '|
 |Errore del compilatore C3959|' ref new ' può essere utilizzato solo per creare un oggetto con tipo WinRT|
-|Errore del compilatore C3960|Obsoleto.|
+|Errore del compilatore C3960|Obsoleta.|
 |Errore del compilatore C3961|Costruttore statico non supportato|
 |Errore del compilatore C3962|classe generica non supportata|
 |Errore del compilatore C3963|matrice multidimensionale non supportata|
@@ -732,12 +733,12 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |Errore del compilatore C3966|'*Function*': funzione generica non supportata|
 |Errore del compilatore C3967|errore durante l'importazione di '*Identifier*' dal modulo '*Module*'|
 |Errore del compilatore C3968|il token '*token*' non è valido come separatore del nome del modulo. usare invece il punto (' .')|
-|Errore del compilatore C3969|nomi di modulo incoerenti:'*Module1*' è*Module1*'|
+|Errore del compilatore C3969|nomi di modulo incoerenti:'*Module1*' è *Module1*'|
 |Errore del compilatore C3970|'*Identifier*':'*keyword*' può essere applicato solo a' ref class ' o a' ref struct ' nell'ambito globale o nello spazio dei nomi|
 |Errore del compilatore C3971|'*Type*': la definizione parziale non può comparire dopo la definizione completa|
 |Errore del compilatore C3972|'*Type*':' Partial ' può essere applicato solo a definizioni o dichiarazioni di classe|
-|Errore del compilatore C3973|Obsoleto.|
-|Errore del compilatore C3974|Obsoleto.|
+|Errore del compilatore C3973|Obsoleta.|
+|Errore del compilatore C3974|Obsoleta.|
 |Errore del compilatore C3975|' Class/struct *Identifier*' è stato dichiarato o definito in precedenza con un modificatore diverso|
 |Errore del compilatore C3976|'*identificatore1*' deve essere dichiarato come ' Public ' per poter usare '*identifier2*'|
 |Errore del compilatore C3977|L'utilizzo richiede un riferimento a un assembly che definisce '*Identifier*'|
@@ -759,11 +760,11 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |Errore del compilatore C3993|'*Type*': un tipo di valore deve contenere almeno un campo pubblico|
 |Errore del compilatore C3994|'*Type*': un tipo di valore non può implementare interfacce o avere funzioni virtuali|
 |Errore del compilatore C3995|'*Type*': un tipo di valore non può avere membri di evento '*Identifier*'|
-|Errore del compilatore C3996|Obsoleto.|
-|Errore del compilatore C3998|' c++*Version*': C++ versione non supportata. impostazione predefinita su' c++*Version*'|
-|Errore del compilatore C3999|ERRORE sconosciuto per altre informazioni, scegliere supporto C++ tecnico dal menu? o aprire il file della Guida relativo al supporto tecnico|
+|Errore del compilatore C3996|Obsoleta.|
+|Errore del compilatore C3998|' c++*Version*': versione c++ non supportata. impostazione predefinita su' c++*Version*'|
+|Errore del compilatore C3999|ERRORE sconosciuto per ulteriori informazioni, scegliere supporto tecnico dal menu? di Visual C++ o aprire il file della Guida relativo al supporto tecnico|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Errori eC++ avvisi di C/compilatore e strumenti di compilazione](../compiler-errors-1/c-cpp-build-errors.md) \
-[Errori del compilatore C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)
+[Errori e avvisi degli strumenti di compilazione e compilatore C/C++](../compiler-errors-1/c-cpp-build-errors.md) \
+[Errori del compilatore da C2000 a C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

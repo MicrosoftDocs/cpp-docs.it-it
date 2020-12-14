@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3723'
 title: Errore del compilatore C3723
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3723
 ms.assetid: ef0fb1ff-3f9a-4093-a6b6-894d1ab0c4b9
-ms.openlocfilehash: 2948b9af50179082e61a222484053bcf3858f454
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9df2c13598ee634964b519be104eb406ab078ea7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220171"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97238999"
 ---
 # <a name="compiler-error-c3723"></a>Errore del compilatore C3723
 
 > ' Function ': Impossibile risolvere l'evento
 
-`function`non è stato possibile risolvere l'evento da chiamare.
+`function` non è stato possibile risolvere l'evento da chiamare.
 
 L'esempio seguente genera l'C3723:
 

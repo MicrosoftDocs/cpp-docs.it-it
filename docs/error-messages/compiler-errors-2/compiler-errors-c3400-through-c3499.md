@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errori del compilatore C3400 tramite C3499'
 title: Errori del compilatore da C3400 a C3499
 ms.date: 04/21/2019
 f1_keywords:
@@ -94,12 +95,12 @@ helpviewer_keywords:
 - C3494
 - C3497
 ms.assetid: a5651dfb-c402-4e01-b3ae-28f371e51d6a
-ms.openlocfilehash: f4aff80178033d34cf051a14d89736b2b8347dd0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a6aaf04c397232195749512c6943cc096350d444
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446843"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97238583"
 ---
 # <a name="compiler-errors-c3400-through-c3499"></a>Errori del compilatore da C3400 a C3499
 
@@ -107,11 +108,11 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-## <a name="error-messages"></a>messaggi di errore
+## <a name="error-messages"></a>Messaggi di errore
 
 |Errore|Message|
 |-----------|-------------|
-|[Errore del compilatore C3400](compiler-error-c3400.md)|dipendenza di vincolo circolare che comprende '*vincolo1*' è*vincolo2*'|
+|[Errore del compilatore C3400](compiler-error-c3400.md)|dipendenza di vincolo circolare che comprende '*vincolo1*' è *vincolo2*'|
 |Errore del compilatore C3401|'*specifier*': identificatore di accesso assembly non valido. nei modelli di classe è consentito solo ' private '|
 |Errore del compilatore C3402|'*Function*': Impossibile risolvere l'overload tranne che nell'ambito corrente|
 |Errore del compilatore C3403|non è possibile usare thread_local con/CLR: pure o/CLR: safe|
@@ -121,20 +122,20 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |Errore del compilatore C3407|'*Type*' non può essere usato in questo contesto|
 |[Errore del compilatore C3408](compiler-error-c3408.md)|'*attribute*': attributo non consentito nelle definizioni di modello|
 |[Errore del compilatore C3409](compiler-error-c3409.md)|blocco di attributi vuoto non consentito|
-|Errore del compilatore C3410|'*Identifier*': il tipo della creazione di istanza esplicità*Type*' non corrisponde al tipo del modello di variabile '*Type*'|
+|Errore del compilatore C3410|'*Identifier*': il tipo della creazione di istanza esplicità *Type*' non corrisponde al tipo del modello di variabile '*Type*'|
 |Errore del compilatore C3411|'*Type*' non è valido come dimensione di una matrice perché non è un tipo Integer|
 |[Errore del compilatore C3412](compiler-error-c3412.md)|'*specializzazione*': impossibile specializzare un modello nell'ambito corrente|
 |[Errore del compilatore C3413](compiler-error-c3413.md)|'*template*': creazione di un'istanza esplicita non valida|
 |[Errore del compilatore C3414](compiler-error-c3414.md)|'*Function*': Impossibile definire la funzione membro importata|
-|[Errore del compilatore C3415](compiler-error-c3415.md)|trovate più sezioni '*Section*' con attributi diversi (' 0x*value*')|
-|Errore del compilatore C3416|Obsoleto.|
+|[Errore del compilatore C3415](compiler-error-c3415.md)|trovate più sezioni '*Section*' con attributi diversi (' 0x *value*')|
+|Errore del compilatore C3416|Obsoleta.|
 |[Errore del compilatore C3417](compiler-error-c3417.md)|'*dichiaratore*': i tipi di valore non possono contenere funzioni membro speciali definite dall'utente|
 |[Errore del compilatore C3418](compiler-error-c3418.md)|l'identificatore di accesso '*specifier*' non è supportato|
-|Errore del compilatore C3419|Obsoleto.|
+|Errore del compilatore C3419|Obsoleta.|
 |[Errore del compilatore C3420](compiler-error-c3420.md)|'*Function*': un finalizzatore non può essere virtuale|
 |[Errore del compilatore C3421](compiler-error-c3421.md)|'*Function*': Impossibile chiamare il finalizzatore per questa classe perché non è accessibile o non esiste|
-|Errore del compilatore C3422|'*Declaration*': tipi '*Type*' è*Type*' non corrispondenti|
-|Errore del compilatore C3423|Obsoleto.|
+|Errore del compilatore C3422|'*Declaration*': tipi '*Type*' è *Type*' non corrispondenti|
+|Errore del compilatore C3423|Obsoleta.|
 |Errore del compilatore C3424|'*Type*': non sono consentiti cast di tipo funzione a un tipo di matrice|
 |Errore del compilatore C3425|non è possibile generare un puntatore a un oggetto di tipo incompleto '*Type*'|
 |Errore del compilatore C3426|non è possibile generare l'oggetto di tipo incompleto '*Type*'|
@@ -153,21 +154,21 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |Errore del compilatore C3439|layout_version (*numero*): numero di versione non valido|
 |Errore del compilatore C3440|'*Declaration*': layout_version (*numero*) incompatibile con una dichiarazione precedente|
 |Errore del compilatore C3441|'*Declaration*':'*keyword*' non può essere applicato dopo la definizione della classe|
-|Errore del compilatore C3442|Inizializzazione di più membri dell'Unione:'*member1*' è*membro2*'|
+|Errore del compilatore C3442|Inizializzazione di più membri dell'Unione:'*member1*' è *membro2*'|
 |Errore del compilatore C3443|L'inizializzatore di membro predefinito per '*Class*' è ricorsivo|
-|Errore del compilatore C3444|La classe di aggregazione vuota '*Class*' deve essere inizializzata con '{}'|
+|Errore del compilatore C3444|La classe di aggregazione vuota '*Class*' deve essere inizializzata con ' {} '|
 |[Errore del compilatore C3445](compiler-error-c3445.md)|l'inizializzazione dell'elenco di copie di '*Type*' non può usare un costruttore esplicito|
 |[Errore del compilatore C3446](compiler-error-c3446.md)|'*Class*': un inizializzatore di membro predefinito non è consentito per un membro di una classe di valori|
-|Errore del compilatore C3447|Obsoleto.|
-|Errore del compilatore C3448|Obsoleto.|
-|Errore del compilatore C3449|Obsoleto.|
+|Errore del compilatore C3447|Obsoleta.|
+|Errore del compilatore C3448|Obsoleta.|
+|Errore del compilatore C3449|Obsoleta.|
 |[Errore del compilatore C3450](compiler-error-c3450.md)|'*Type*': non è un attributo; Impossibile specificare [System:: AttributeUsageAttribute]/[Windows:: Foundation:: Metadata:: AttributeUsageAttribute]|
 |[Errore del compilatore C3451](compiler-error-c3451.md)|'*attribute*': Impossibile applicare l'attributo non gestito a'*Type*'|
 |[Errore del compilatore C3452](compiler-error-c3452.md)|membro argomento di elenco non costante|
 |[Errore del compilatore C3453](compiler-error-c3453.md)|'*attribute*': attributo non applicato perché il qualificatore '*Qualifier*' non corrisponde|
 |[Errore del compilatore C3454](compiler-error-c3454.md)|[attribute] non consentito in una dichiarazione di classe|
 |[Errore del compilatore C3455](compiler-error-c3455.md)|'*attribute*': nessuno dei costruttori di attributo corrispondente agli argomenti|
-|[Errore del compilatore C3456](compiler-error-c3456.md)|[Source\_annotation_attribute] non consentito nella dichiarazione di classe gestita/WinRT|
+|[Errore del compilatore C3456](compiler-error-c3456.md)|[Source \_ annotation_attribute] non consentito nella dichiarazione di classe gestita/WinRT|
 |[Errore del compilatore C3457](compiler-error-c3457.md)|'*attribute*': l'attributo non supporta argomenti senza nome|
 |[Errore del compilatore C3458](compiler-error-c3458.md)|' [*attribute*]': attributo ' [*attribute*]' già specificato per '*Identifier*'|
 |[Errore del compilatore C3459](compiler-error-c3459.md)|' [*attribute*]': attributo consentito solo nell'indicizzatore di classe (proprietà indicizzata predefinita)|
@@ -197,8 +198,8 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Errore del compilatore C3483](compiler-error-c3483.md)|'*Identifier*' fa già parte dell'elenco di acquisizione delle espressioni lambda|
 |[Errore del compilatore C3484](compiler-error-c3484.md)|errore di sintassi: previsto '->' prima del tipo restituito|
 |[Errore del compilatore C3485](compiler-error-c3485.md)|una definizione di espressione lambda non può contenere qualificatori di tipo const o volatile|
-|Errore del compilatore C3486|Obsoleto.|
-|[Errore del compilatore C3487](compiler-error-c3487.md)|'*Type*': tutte le espressioni restituite devono essere dedotte dallo stesso tipo. in precedenza erà*Type*'|
+|Errore del compilatore C3486|Obsoleta.|
+|[Errore del compilatore C3487](compiler-error-c3487.md)|'*Type*': tutte le espressioni restituite devono essere dedotte dallo stesso tipo. in precedenza erà *Type*'|
 |[Errore del compilatore C3488](compiler-error-c3488.md)|' &*Identifier*' non è consentito quando la modalità di acquisizione predefinita è per riferimento|
 |[Errore del compilatore C3489](compiler-error-c3489.md)|' &*identificatore*' è obbligatorio quando la modalità di acquisizione predefinita è per copia|
 |[Errore del compilatore C3490](compiler-error-c3490.md)|Impossibile modificare '*Identifier*' perché è accessibile tramite un oggetto const|
@@ -212,7 +213,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Errore del compilatore C3498](compiler-error-c3498.md)|'*Identifier*': Impossibile acquisire una variabile con un tipo gestito/WinRT|
 |[Errore del compilatore C3499](compiler-error-c3499.md)|un'espressione lambda specificata in modo che il tipo restituito sia void non può restituire un valore|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Errori eC++ avvisi di C/compilatore e strumenti di compilazione](../compiler-errors-1/c-cpp-build-errors.md) \
-[Errori del compilatore C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)
+[Errori e avvisi degli strumenti di compilazione e compilatore C/C++](../compiler-errors-1/c-cpp-build-errors.md) \
+[Errori del compilatore da C2000 a C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

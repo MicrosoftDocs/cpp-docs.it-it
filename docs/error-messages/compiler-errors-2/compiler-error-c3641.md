@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3641'
 title: Errore del compilatore C3641
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3641
 ms.assetid: e8d3613e-5e8d-46fe-a516-eb7d1de7cd21
-ms.openlocfilehash: 44356fb1a1818a02102d23e6b308457f2f39506b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 391994a5207fe27cea0b33e6d03e5a1fdc30f6c0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200512"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239103"
 ---
 # <a name="compiler-error-c3641"></a>Errore del compilatore C3641
 
 > '*Function*': Convenzione di chiamata ' calling_convention ' non valida per la funzione compilata con/CLR: pure o/CLR: safe
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le opzioni del compilatore **/CLR: pure** e **/CLR: safe** sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
 

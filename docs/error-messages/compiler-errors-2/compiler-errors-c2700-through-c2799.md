@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errori del compilatore C2700 tramite C2799'
 title: Errori del compilatore da C2700 a C2799
 ms.date: 04/21/2019
 f1_keywords:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - C2796
 - C2799
 ms.assetid: 6ee257bb-94bc-42b9-af2c-3c73926afba4
-ms.openlocfilehash: 174f6a9c8ec9e44deadfca090ba492cb32d53e9f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f9093c7cbdc884b23bef77fb8206a80e081dc4f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87197514"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97238856"
 ---
 # <a name="compiler-errors-c2700-through-c2799"></a>Errori del compilatore da C2700 a C2799
 
@@ -71,7 +72,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Errore del compilatore C2711](compiler-error-c2711.md)|'*Function*': questa funzione non può essere compilata come gestita. provare a usare #pragma non gestita|
 |[Errore del compilatore C2712](compiler-error-c2712.md)|Impossibile utilizzare __try in funzioni che richiedono la rimozione di oggetti|
 |[Errore del compilatore C2713](compiler-error-c2713.md)|È consentita una sola forma di gestione delle eccezioni per ogni funzione|
-|[Errore del compilatore C2714](compiler-error-c2714.md)| `alignof(void)`non è consentito|
+|[Errore del compilatore C2714](compiler-error-c2714.md)| `alignof(void)` non è consentito|
 |[Errore del compilatore C2715](compiler-error-c2715.md)|'*Type*': non è possibile generare o intercettare questo tipo|
 |Errore del compilatore C2716|Obsoleta.|
 |Errore del compilatore C2717|Obsoleta.|
@@ -142,7 +143,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Errore del compilatore C2782](compiler-error-c2782.md)|'*Declaration*': il parametro template/Generic '*Parameter*' è ambiguo|
 |[Errore del compilatore C2783](compiler-error-c2783.md)|'*Declaration*': non è stato possibile dedurre l'argomento Template/Generic per '*Identifier*'|
 |[Errore del compilatore C2784](compiler-error-c2784.md)|'*Declaration*': non è stato possibile dedurre l'argomento Template/Generic per '*tipo1*' da'*tipo2*'|
-|[Errore del compilatore C2785](compiler-error-c2785.md)|'*dichiarazione1*' è*dichiarazione2*' hanno tipi restituiti diversi|
+|[Errore del compilatore C2785](compiler-error-c2785.md)|'*dichiarazione1*' è *dichiarazione2*' hanno tipi restituiti diversi|
 |[Errore del compilatore C2786](compiler-error-c2786.md)|'*Type*': operando non valido per __uuidof|
 |[Errore del compilatore C2787](compiler-error-c2787.md)|'*Identifier*': nessun GUID associato a questo oggetto|
 |[Errore del compilatore C2788](compiler-error-c2788.md)|'*Identifier*': più di un GUID associato a questo oggetto|
@@ -158,7 +159,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Errore del compilatore C2798](compiler-error-c2798.md)|' Super::*Identifier*' è ambiguo|
 |Errore del compilatore C2799|'*Identifier*': è necessario inizializzare un oggetto di tipo classe qualificato da const senza un costruttore predefinito fornito dall'utente|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Errori e avvisi degli strumenti di compilazione e compilatore C/C++](../compiler-errors-1/c-cpp-build-errors.md) \
 [Errori del compilatore da C2000 a C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)
