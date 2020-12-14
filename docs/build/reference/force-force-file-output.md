@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/FORCE (forza l'output del file)
 title: /FORCE (Forza l'output del file)
 ms.date: 07/19/2019
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - /FORCE linker option
 - -FORCE linker option
 ms.assetid: b1e9a218-a5eb-4e60-a4a4-65b4be15e5da
-ms.openlocfilehash: d1d85174290faa95e73c63a25f7d80c554e83ace
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: d84810828eef85c4db3558b70953630c70f8f82e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079622"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200455"
 ---
 # <a name="force-force-file-output"></a>/FORCE (Forza l'output del file)
 
@@ -23,7 +24,7 @@ ms.locfileid: "80079622"
 /FORCE:[MULTIPLE|UNRESOLVED]
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'opzione/FORCE indica al linker di creare un file exe o una DLL valida anche se viene fatto riferimento a un simbolo, ma non è definito o è definito in modo multiplo.
 
@@ -55,7 +56,7 @@ Per altre informazioni, vedere [Impostare il compilatore e le proprietà di comp
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Informazioni di riferimento sul linker MSVC](linking.md)<br/>
 [Opzioni del linker MSVC](linker-options.md)

@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: file della guida (WinHelp)'
 title: File della Guida (WinHelp)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], WinHelp files
 ms.assetid: 4fdcbd66-66b0-4866-894a-fd7b4c2557e4
-ms.openlocfilehash: 6810b3f608b9fa7892b686d72056994fb98c92db
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 77d00154db762d11e064fe91681b81fbe859e7be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707463"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200052"
 ---
 # <a name="help-files-winhelp"></a>File della Guida (WinHelp)
 
@@ -29,10 +30,10 @@ I file seguenti vengono creati quando si aggiunge il tipo di Guida WinHelp del s
 |Nome file|Directory|Esplora soluzioni|Description|
 |---------------|------------------------|--------------------------------|-----------------|
 |*Projname*.hpj|*Projname*\hlp|File di origine|File di progetto usato dal compilatore della Guida per creare il file del controllo o del programma.|
-|*Projname*.rtf|*Projname*\hlp|Progetto|Contiene gli argomenti del modello che è possibile modificare e le informazioni sulla personalizzazione del file con estensione hpj.|
+|*Projname*.rtf|*Projname*\hlp|Project|Contiene gli argomenti del modello che è possibile modificare e le informazioni sulla personalizzazione del file con estensione hpj.|
 |Makehelp.bat|*Projname*|File di origine|Viene usato dal sistema per compilare il progetto della Guida al momento della compilazione.|
 |Bullet.bmp|*Projname*|File di risorse|Usato dagli argomenti dei file della Guida standard per rappresentare elenchi puntati.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Tipi di file creati per i progetti di Visual Studio C++](file-types-created-for-visual-cpp-projects.md)

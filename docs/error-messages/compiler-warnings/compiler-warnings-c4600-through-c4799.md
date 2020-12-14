@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avvisi del compilatore C4600 tramite C4799'
 title: Avvisi del compilatore da C4600 a C4799
 ms.date: 04/21/2019
 f1_keywords:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - C4767
 - C4770
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
-ms.openlocfilehash: 638af32b27f8d66086f3a39b74ecd46fdbb4649d
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 9290f01d24e628ead4649c28ecbfacfec0803591
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438177"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197998"
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>Avvisi del compilatore da C4600 a C4799
 
@@ -61,12 +62,12 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Avviso del compilatore (livello 1) C4602](compiler-warning-level-1-c4602.md)|#pragma pop_macro:' nome macro ' nessun push_macro #pragma precedente per questo identificatore|
 |[Avviso del compilatore (livello 1) C4603](compiler-warning-level-1-c4603.md)|'*Identifier*': la macro non è definita o la definizione è diversa dopo l'uso dell'intestazione precompilata|
 |Avviso del compilatore (livello 1) C4604|'*Type*': il passaggio di un argomento per valore tra i confini nativi e gestiti richiede un costruttore di copia valido. In caso contrario, il comportamento di runtime non è definito|
-|Avviso del compilatore (livello 1) C4605|'/D*macro*' specificato nella riga di comando corrente, ma non è stato specificato quando è stata compilata l'intestazione precompilata|
+|Avviso del compilatore (livello 1) C4605|'/D *macro*' specificato nella riga di comando corrente, ma non è stato specificato quando è stata compilata l'intestazione precompilata|
 |[Avviso del compilatore (livello 1) C4606](../../error-messages/compiler-warnings/compiler-warning-level-1-c4606.md)|avviso #pragma:' numero di avviso ' ignorato; Gli avvisi di analisi del codice non sono associati ai livelli di avviso|
 |[Avviso del compilatore (livello 3) C4608](../../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md)|'union_member' è già stato inizializzato dal membro di un'altra unione nell'elenco degli inizializzatori, 'union_member'|
 |Avviso del compilatore (livello 3, errore) C4609|"*tipo1*" deriva dall'interfaccia predefinita "*Interface*" sul tipo "*tipo2*". Utilizzare un'interfaccia predefinita diversa per '*tipo1*' o interrompere la relazione di base/derivata.|
 |[Avviso del compilatore (livello 4) C4610](../../error-messages/compiler-warnings/compiler-warning-level-4-c4610.md)|non è possibile creare un'istanza dell'oggetto ' Class ': il costruttore definito dall'utente è obbligatorio|
-|[Avviso del compilatore (livello 4) C4611](../../error-messages/compiler-warnings/compiler-warning-level-4-c4611.md)|l'interazione tra' Function ' C++ e la distruzione di oggetti non è portabile|
+|[Avviso del compilatore (livello 4) C4611](../../error-messages/compiler-warnings/compiler-warning-level-4-c4611.md)|l'interazione tra' Function ' e la distruzione di oggetti C++ non è portabile|
 |[Avviso del compilatore (livello 1) C4612](compiler-warning-level-1-c4612.md)|errore nel nome del file di inclusione|
 |[Avviso del compilatore (livello 1) C4613](compiler-warning-level-1-c4613.md)|'*Symbol*': Impossibile modificare la classe del segmento|
 |[Avviso del compilatore (livello 1) C4615](../../error-messages/compiler-warnings/compiler-warning-level-1-c4615.md)|avviso #pragma: tipo di avviso utente sconosciuto|
@@ -80,7 +81,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Avviso del compilatore (livello 1) C4624](../../error-messages/compiler-warnings/compiler-warning-level-1-c4624.md)|' Derived Class ': il distruttore è stato definito in modo implicito come eliminato perché un distruttore della classe base non è accessibile o è stato eliminato|
 |[Avviso del compilatore (livello 4) C4625](../../error-messages/compiler-warnings/compiler-warning-level-4-c4625.md)|' Derived Class ': il costruttore di copia è stato definito in modo implicito come eliminato perché un costruttore di copia della classe base non è accessibile o è stato eliminato|
 |[Avviso del compilatore (livello 4) C4626](../../error-messages/compiler-warnings/compiler-warning-level-4-c4626.md)|' Derived Class ': l'operatore di assegnazione è stato definito in modo implicito come eliminato perché un operatore di assegnazione della classe base è inaccessibile o è stato eliminato|
-|[Avviso del compilatore (livello 1) C4627](../../error-messages/compiler-warnings/compiler-warning-level-1-c4627.md)|'\<Identifier >': ignorato durante la ricerca dell'utilizzo di intestazioni precompilate|
+|[Avviso del compilatore (livello 1) C4627](../../error-messages/compiler-warnings/compiler-warning-level-1-c4627.md)|' \<identifier> ': ignorato durante la ricerca dell'utilizzo di intestazioni precompilate|
 |[Avviso del compilatore (livello 1) C4628](../../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md)|digraph non supportati con -Ze. Sequenza di caratteri ' digraph ' non interpretata come token alternativo per '% s'|
 |[Avviso del compilatore (livello 4) C4629](compiler-warning-level-4-c4629.md)|utilizzato digraph; la sequenza di caratteri 'digraph' è stata interpretata come token 'char' (se non è corretto, inserire uno spazio tra i due caratteri)|
 |[Avviso del compilatore (livello 1) C4630](../../error-messages/compiler-warnings/compiler-warning-level-1-c4630.md)|' symbol ': identificatore classe di archiviazione ' extern ' non valido nella definizione del membro|
@@ -90,7 +91,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Avviso del compilatore (livello 4) C4634](compiler-warning-level-4-c4634.md)|Destinazione commento al documento XML: Impossibile applicare: motivo|
 |[Avviso del compilatore (livello 3) C4635](compiler-warning-level-3-c4635.md)|commento al documento XML di destinazione: XML in formato non valido: motivo|
 |[Avviso del compilatore (livello 3) C4636](compiler-warning-level-3-c4636.md)|Commento al documento XML applicato al costrutto: il tag richiede un attributo ' attribute ' non vuoto.|
-|[Avviso del compilatore (livello 3 e livello 4) C4637](compiler-warning-level-3-c4637.md)|Destinazione commento al documento XML: \<includere tag > eliminati. Motivo|
+|[Avviso del compilatore (livello 3 e livello 4) C4637](compiler-warning-level-3-c4637.md)|Destinazione commento al documento XML: \<include> tag scartato. Motivo|
 |[Avviso del compilatore (livello 3) C4638](compiler-warning-level-3-c4638.md)|Destinazione commento documento XML: riferimento al simbolo sconosciuto ' symbol '.|
 |[Avviso del compilatore (livello 4) C4639](../../error-messages/compiler-warnings/compiler-warning-level-4-c4639.md)|Errore MSXML, i commenti ai documenti XML non verranno elaborati. Motivo|
 |[Avviso del compilatore (livello 3) C4640](../../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md)|'istanza': la costruzione di oggetti statici locali non è thread-safe|
@@ -141,7 +142,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Avviso del compilatore (livello 1, errore) C4694](../../error-messages/compiler-warnings/compiler-warning-c4694.md)|' Class ': una classe astratta sealed non può avere una classe base ' base_class '|
 |Avviso del compilatore (livello 1) C4695|#pragma execution_character_set:' set di caratteri ' non è un argomento supportato. attualmente è supportato solo ' UTF-8'|
 |Avviso del compilatore (livello 1) C4696|Opzione/ZBvalue1 non compresa nell'intervallo; presumendo ' value2'|
-|[Avviso del compilatore (livello 1 e livello 4) C4700](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md)|utilizzata variabile locale ' name ' non inizializzata|
+|[Avviso del compilatore (livelli 1 e 4) C4700](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md)|utilizzata variabile locale ' name ' non inizializzata|
 |[Avviso del compilatore (livello 4) C4701](../../error-messages/compiler-warnings/compiler-warning-level-4-c4701.md)|è stata usata la variabile locale ' name ' potenzialmente non inizializzata|
 |[Avviso del compilatore (livello 4) C4702](../../error-messages/compiler-warnings/compiler-warning-level-4-c4702.md)|codice non eseguibile|
 |[Avviso del compilatore (livello 4) C4703](../../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md)|è stata usata la variabile puntatore locale '% s'potenzialmente non inizializzata|
@@ -174,7 +175,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Avviso del compilatore (livello 1) C4742](../../error-messages/compiler-warnings/compiler-warning-level-1-c4742.md)|' var ' ha un allineamento diverso in ' file1' è file2': numero e numero|
 |[Avviso del compilatore (livello 1) C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|' type ' ha dimensioni diverse in ' file1' è file2': numero e byte numerici|
 |[Avviso del compilatore (livello 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|' var ' ha un tipo diverso in ' file1' è file2':' tipo1' è tipo2'|
-|[Avviso del compilatore C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|l'accesso volatile di '*Expression*' è soggetto a/volatile:\<&#124;ISO MS > impostazione. provare a usare __iso_volatile_load funzioni intrinseche/Store|
+|[Avviso del compilatore C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|l'accesso volatile di '*Expression*' è soggetto a/volatile: \<iso&#124;ms> setting. provare a usare __iso_volatile_load funzioni intrinseche/Store|
 |[Avviso del compilatore (livello 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|Chiamata a' EntryPoint ' gestito: il codice gestito non può essere eseguito con il blocco del caricatore, incluso il EntryPoint della DLL e le chiamate raggiunte dal EntryPoint della DLL|
 |Avviso del compilatore (livello 4) C4749|supportato in modo condizionale: offsetof applicato al tipo di layout non standard '*Type*'|
 |[Avviso del compilatore (livello 1) C4750](compiler-warning-level-1-c4750.md)|'identifier': funzione con _alloca() resa inline in un ciclo|
@@ -198,11 +199,11 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Avviso del compilatore (livello 1) C4788](../../error-messages/compiler-warnings/compiler-warning-level-1-c4788.md)|' Identifier ': identificatore troncato a' Number ' caratteri|
 |[Avviso del compilatore (livello 1) C4789](../../error-messages/compiler-warnings/compiler-warning-level-1-c4789.md)|verrà eseguito l'overrun del buffer 'identifier' di dimensioni pari a N byte; M byte verranno scritti a partire dall'offset L|
 |Avviso del compilatore (livello 2) C4792|funzione '% s'dichiarata utilizzando sysimport e a cui viene fatto riferimento dal codice nativo; libreria di importazione obbligatoria per il collegamento|
-|[Avviso del compilatore (livello 1 e 3) C4793](../../error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793.md)|' Function ': funzione compilata come nativa: \ n\t ' Reason '|
+|[Avviso del compilatore (livelli 1 e 3) C4793](../../error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793.md)|' Function ': funzione compilata come nativa: \ n\t ' Reason '|
 |[Avviso del compilatore (livello 1) C4794](compiler-warning-level-1-c4794.md)|il segmento della variabile di archiviazione locale del thread '% s'è stato modificato da '% s'a '% s'|
 |[Avviso del compilatore (livello 1) C4799](../../error-messages/compiler-warnings/compiler-warning-level-1-c4799.md)|per la funzione ' Function ' non è disponibile alcuna istruzione EMMS|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Errori eC++ avvisi di C/compilatore e strumenti di compilazione](../compiler-errors-1/c-cpp-build-errors.md) \
-[Avvisi del compilatore C4000-C5999](compiler-warnings-c4000-c5999.md)
+[Errori e avvisi degli strumenti di compilazione e compilatore C/C++](../compiler-errors-1/c-cpp-build-errors.md) \
+[Avvisi del compilatore da C4000 a C5999](compiler-warnings-c4000-c5999.md)

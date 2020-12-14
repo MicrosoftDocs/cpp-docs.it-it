@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Struttura EventTraits'
 title: EventTraits (struttura)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - EventTraits structure
 ms.assetid: 2cf308a4-50e3-4321-bafc-4c7c0364e148
-ms.openlocfilehash: abd4bc2e6debae2e7681fc53c9fc4f86a8219cdb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 062438c945c3df2da88d6026febfaf2f91247a7d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214019"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198550"
 ---
 # <a name="eventtraits-structure"></a>EventTraits (struttura)
 
-Definisce le caratteristiche di un handle di classe `Event`.
+Definisce le caratteristiche di un `Event` handle di classe.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -38,6 +39,6 @@ struct EventTraits : HANDLENullTraits;
 
 **Spazio dei nomi:** Microsoft:: WRL:: Wrappers:: HandleTraits
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi Microsoft::WRL::Wrappers::HandleTraits](microsoft-wrl-wrappers-handletraits-namespace.md)
+[Spazio dei nomi Microsoft:: WRL:: Wrappers:: HandleTraits](microsoft-wrl-wrappers-handletraits-namespace.md)

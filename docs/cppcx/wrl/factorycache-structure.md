@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: struttura FactoryCache'
 title: FactoryCache (struttura)
 ms.date: 09/21/2018
 ms.topic: reference
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::FactoryCache::cookie data member
 - Microsoft::WRL::Details::FactoryCache::factory data member
 ms.assetid: 624544e6-0989-47f6-a3e9-edb60e1ee6d4
-ms.openlocfilehash: 507d35179b9fa86399e56b18171800f41eaf1f10
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3e9ee084a063eb8094c309dee412a8793801921b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371503"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198551"
 ---
 # <a name="factorycache-structure"></a>FactoryCache (struttura)
 
-Supporta l'infrastruttura della libreria di modelli di Windows Runtime di C, non è destinato a essere utilizzato direttamente dal codice.
+Supporta l'infrastruttura della libreria di modelli C++ Windows Runtime e non può essere utilizzata direttamente dal codice.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -30,16 +31,16 @@ struct FactoryCache;
 
 ## <a name="remarks"></a>Osservazioni
 
-Contiene il percorso di una class factory e un valore che identifica un oggetto classe COM o wrt registrato.
+Contiene la posizione di un class factory e un valore che identifica un oggetto della classe WRT o COM registrato.
 
 ## <a name="members"></a>Membri
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-Nome                              | Descrizione
+Nome                              | Description
 --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------
-[FactoryCache::cookie](#cookie)   | Contiene un valore che identifica un oggetto di classe COM o Windows Runtime registrato e viene successivamente utilizzato per annullare la registrazione dell'oggetto.
-[FactoryCache::factoryFactoryCache::factory](#factory) | Punta a una class factory di Windows Runtime o COM.
+[FactoryCache:: cookie](#cookie)   | Contiene un valore che identifica un oggetto Windows Runtime o una classe COM registrato e viene usato in seguito per annullare la registrazione dell'oggetto.
+[FactoryCache:: Factory](#factory) | Punta a un Windows Runtime o a un class factory COM.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -47,13 +48,13 @@ Nome                              | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** module.h
+**Intestazione:** Module. h
 
-**Spazio dei nomi:** Microsoft::WRL::Details
+**Spazio dei nomi:** Microsoft:: WRL::D etails
 
-## <a name="factorycachecookie"></a><a name="cookie"></a>FactoryCache::cookie
+## <a name="factorycachecookie"></a><a name="cookie"></a> FactoryCache:: cookie
 
-Supporta l'infrastruttura della libreria di modelli di Windows Runtime di C, non è destinato a essere utilizzato direttamente dal codice.
+Supporta l'infrastruttura della libreria di modelli C++ Windows Runtime e non può essere utilizzata direttamente dal codice.
 
 ```cpp
 union {
@@ -62,18 +63,18 @@ union {
 } cookie;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Contiene un valore che identifica un oggetto di classe COM o Windows Runtime registrato e viene successivamente utilizzato per annullare la registrazione dell'oggetto.
+Contiene un valore che identifica un oggetto Windows Runtime o una classe COM registrato e viene usato in seguito per annullare la registrazione dell'oggetto.
 
-## <a name="factorycachefactory"></a><a name="factory"></a>FactoryCache::factoryFactoryCache::factory
+## <a name="factorycachefactory"></a><a name="factory"></a> FactoryCache:: Factory
 
-Supporta l'infrastruttura della libreria di modelli di Windows Runtime di C, non è destinato a essere utilizzato direttamente dal codice.
+Supporta l'infrastruttura della libreria di modelli C++ Windows Runtime e non può essere utilizzata direttamente dal codice.
 
 ```cpp
 IUnknown* factory;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Punta a una class factory di Windows Runtime o COM.
+Punta a un Windows Runtime o a un class factory COM.

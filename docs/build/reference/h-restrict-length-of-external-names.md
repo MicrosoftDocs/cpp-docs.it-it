@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/H (limita la lunghezza dei nomi esterni)
 title: /H (Limita la lunghezza dei nomi esterni)
 ms.date: 09/05/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - external names
 - -H compiler option [C++]
 ms.assetid: de701dd3-ed04-4c88-8195-960d2520ec2e
-ms.openlocfilehash: 9a8976700cfb0f333c2715c573aa2d239e2a8e3a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5df4c4765cc4917e6914eab0b4818c34fceea853
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218988"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200078"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (Limita la lunghezza dei nomi esterni)
 
@@ -23,14 +24,14 @@ Deprecato. Limita la lunghezza dei nomi esterni.
 
 ## <a name="syntax"></a>Sintassi
 
-> **/H**<em>Numero</em> /h
+> <em>Numero</em> /h
 
 ## <a name="arguments"></a>Argomenti
 
 *number*<br/>
 Specifica la lunghezza massima dei nomi esterni consentiti in un programma.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, la lunghezza dei nomi esterni (pubblici) è di 2.047 caratteri. Questo vale per i programmi C e C++. L'utilizzo di **/h** può ridurre solo la lunghezza massima consentita degli identificatori, non aumentarlo. Uno spazio tra **/h** e *Number* è facoltativo.
 
@@ -76,7 +77,7 @@ L'opzione **/h** è deprecata a partire da Visual Studio 2005; sono stati aument
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la pagina delle proprietà di **configurazione**proprietà della riga di comando di  >  **c/C++**  >  **Command Line** .
+1. Selezionare la pagina delle proprietà di **configurazione** proprietà della riga di comando di  >  **c/C++**  >   .
 
 1. Immettere l'opzione del compilatore nella casella **Opzioni aggiuntive** .
 
@@ -84,7 +85,7 @@ L'opzione **/h** è deprecata a partire da Visual Studio 2005; sono stati aument
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

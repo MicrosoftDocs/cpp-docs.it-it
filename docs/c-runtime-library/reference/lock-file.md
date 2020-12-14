@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _lock_file'
 title: _lock_file
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: e4f99203d5330a44b89239911e4a035a7958bf0b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1eba161b5083235c1ef0724284e74e6f0f7df0cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911533"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198830"
 ---
 # <a name="_lock_file"></a>_lock_file
 
@@ -51,7 +52,7 @@ void _lock_file( FILE* file );
 *file*<br/>
 Handle di file.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_lock_file** blocca l'oggetto **file** specificato dal *file*. Il file sottostante non è bloccato da **_lock_file**. Usare [unlock_file](unlock-file.md) per rilasciare il blocco sul file. È necessario trovare una corrispondenza tra le chiamate a **_lock_file** e **_unlock_file** in un thread.
 
@@ -142,7 +143,7 @@ eFciornsdt
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione dei file](../../c-runtime-library/file-handling.md)<br/>
+[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>
 [_unlock_file](unlock-file.md)<br/>

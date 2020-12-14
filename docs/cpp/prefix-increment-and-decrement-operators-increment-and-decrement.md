@@ -1,4 +1,5 @@
 ---
+description: 'Per altre informazioni, vedere operatori di incremento e decremento prefisso: + + e--'
 title: 'Operatori di incremento e decremento in forma prefissa: ++ e --'
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - decrement operators [C++], syntax
 - decrement operators [C++]
 ms.assetid: 45ea7fc7-f279-4be9-a216-1d9a0ef9eb7b
-ms.openlocfilehash: 0b84360f41c665707a03ad453909c054ac741405
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e484dde59a2bb58e7c408ad28242fc0ab4290051
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231156"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198642"
 ---
 # <a name="prefix-increment-and-decrement-operators--and---"></a>Operatori di incremento e decremento in forma prefissa: ++ e --
 
@@ -54,7 +55,7 @@ int main() {
 
 Un operando di tipo integrale o mobile viene incrementato o decrementato dell'intero 1. Il tipo del risultato è uguale al tipo di operando. Un operando di tipo puntatore viene incrementato o decrementato alle dimensioni dell'oggetto che indirizza. Un puntatore incrementato punta all'oggetto successivo; mentre un puntatore decrementato punta all'oggetto precedente.
 
-Poiché gli operatori di incremento e decremento presentano effetti collaterali, l'utilizzo di espressioni con operatori di incremento o decremento in una [macro del preprocessore](../preprocessor/macros-c-cpp.md) può produrre risultati indesiderati. Considerare questo esempio:
+Poiché gli operatori di incremento e decremento presentano effetti collaterali, l'utilizzo di espressioni con operatori di incremento o decremento in una [macro del preprocessore](../preprocessor/macros-c-cpp.md) può produrre risultati indesiderati. Prendere in considerazione questo esempio:
 
 ```cpp
 // expre_Increment_and_Decrement_Operators2.cpp
@@ -78,7 +79,7 @@ Se `i` è maggiore o uguale a `j` o minore di `j` di 1, verrà incrementato due 
 > [!NOTE]
 > Le funzioni inline C++ sono preferibili rispetto alle macro in molti casi perché eliminano gli effetti collaterali come quelli qui riportati, consentono inoltre al linguaggio di eseguire un controllo del tipo più completo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Espressioni con operatori unari](../cpp/expressions-with-unary-operators.md)<br/>
 [Operatori C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

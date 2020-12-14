@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CBulkRowset'
 title: Classe CBulkRowset
 ms.date: 11/04/2016
 f1_keywords:
@@ -95,12 +96,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: 5c1c7bc381d30f701bad123807689b08ea47f65d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 106a8ffb3d70a021adbdb03b426e53ca39285b02
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838464"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198375"
 ---
 # <a name="cbulkrowset-class"></a>Classe CBulkRowset
 
@@ -126,7 +127,7 @@ Classe della funzione di accesso.
 
 ### <a name="methods"></a>Metodi
 
-| Nome | Descrizione |
+| Nome | Description |
 |-|-|
 |[AddRefRows](#addrefrows)|Incrementa il conteggio dei riferimenti.|
 |[CBulkRowset](#cbulkrowset)|Costruttore.|
@@ -271,7 +272,7 @@ in Denominatore utilizzato per determinare la posizione frazionaria da cui recup
 
 Valore HRESULT standard.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `MoveToRatio` Recupera approssimativamente le righe in base alla formula seguente:
 
@@ -308,11 +309,11 @@ void SetRows(DBROWCOUNT nRows) throw();
 *nRows*<br/>
 in Nuova dimensione del set di righe (numero di righe).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se si chiama questa funzione, è necessario che sia prima dell'apertura del set di righe.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Modelli di consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimento ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

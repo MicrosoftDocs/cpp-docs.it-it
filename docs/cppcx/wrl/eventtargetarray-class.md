@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Classe EventTargetArray'
 title: Classe EventTargetArray
 ms.date: 10/03/2018
 ms.topic: reference
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::EventTargetArray::Length method
 - Microsoft::WRL::Details::EventTargetArray::~EventTargetArray, destructor
 ms.assetid: e3cadb7c-2160-4cbb-a2f8-c28733d1e96d
-ms.openlocfilehash: 9ea8800aa22a6b5cae0b3342cf337786fb53fc76
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ac3199d2374a47e94705f8f51672bfedd0b7bf20
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371486"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198583"
 ---
 # <a name="eventtargetarray-class"></a>Classe EventTargetArray
 
@@ -44,25 +45,25 @@ class EventTargetArray :
 
 Rappresenta una matrice di gestori eventi.
 
-I gestori eventi associati a un [oggetto EventSource](eventsource-class.md) vengono archiviati in un membro dati protetti. `EventTargetArray`
+I gestori eventi associati a un oggetto [EventSource](eventsource-class.md) vengono archiviati in un `EventTargetArray` membro dati protetto.
 
 ## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-Nome                                                           | Descrizione
+Nome                                                           | Description
 -------------------------------------------------------------- | -----------------------------------------------------------
-[EventTargetArray::EventTargetArray](#eventtargetarray)        | Inizializza una nuova istanza della classe `EventTargetArray`.
-[EventTargetArray:: EventTargetArray](#tilde-eventtargetarray) | Deinizializza la `EventTargetArray` classe corrente.
+[EventTargetArray:: EventTargetArray](#eventtargetarray)        | Inizializza una nuova istanza della classe `EventTargetArray`.
+[EventTargetArray:: ~ EventTargetArray](#tilde-eventtargetarray) | Deinizializza la `EventTargetArray` classe corrente.
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-Nome                                  | Descrizione
+Nome                                  | Description
 ------------------------------------- | ---------------------------------------------------------------------------------------
-[EventTargetArray::AddTail](#addtail) | Aggiunge il gestore eventi specificato alla fine della matrice interna di gestori eventi.
-[EventTargetArray::Begin](#begin)     | Ottiene l'indirizzo del primo elemento nella matrice interna di gestori eventi.
-[EventTargetArray::Fine](#end)         | Ottiene l'indirizzo dell'ultimo elemento nella matrice interna di gestori eventi.
-[EventTargetArray::Lunghezza](#length)   | Ottiene il numero corrente di elementi nella matrice interna di gestori eventi.
+[EventTargetArray:: AddTail](#addtail) | Aggiunge il gestore eventi specificato alla fine della matrice interna di gestori eventi.
+[EventTargetArray:: Begin](#begin)     | Ottiene l'indirizzo del primo elemento nella matrice interna di gestori eventi.
+[EventTargetArray:: end](#end)         | Ottiene l'indirizzo dell'ultimo elemento nella matrice interna di gestori eventi.
+[EventTargetArray:: length](#length)   | Ottiene il numero corrente di elementi nella matrice interna di gestori eventi.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -70,11 +71,11 @@ Nome                                  | Descrizione
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** event.h
+**Intestazione:** Event. h
 
-**Spazio dei nomi:** Microsoft::WRL::Details
+**Spazio dei nomi:** Microsoft:: WRL::D etails
 
-## <a name="eventtargetarrayeventtargetarray"></a><a name="tilde-eventtargetarray"></a>EventTargetArray:: EventTargetArray
+## <a name="eventtargetarrayeventtargetarray"></a><a name="tilde-eventtargetarray"></a> EventTargetArray:: ~ EventTargetArray
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -82,11 +83,11 @@ Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codi
 ~EventTargetArray();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Deinizializza la `EventTargetArray` classe corrente.
 
-## <a name="eventtargetarrayaddtail"></a><a name="addtail"></a>EventTargetArray::AddTail
+## <a name="eventtargetarrayaddtail"></a><a name="addtail"></a> EventTargetArray:: AddTail
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -98,16 +99,16 @@ void AddTail(
 
 ### <a name="parameters"></a>Parametri
 
-*Elemento*<br/>
-Puntatore al gestore eventi da aggiungere.
+*elemento*<br/>
+Puntatore al gestore eventi da accodare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Aggiunge il gestore eventi specificato alla fine della matrice interna di gestori eventi.
 
-`AddTail()`è destinato ad essere utilizzato `EventSource` internamente solo dalla classe.
+`AddTail()` è progettato per essere usato internamente solo dalla `EventSource` classe.
 
-## <a name="eventtargetarraybegin"></a><a name="begin"></a>EventTargetArray::Begin
+## <a name="eventtargetarraybegin"></a><a name="begin"></a> EventTargetArray:: Begin
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -117,13 +118,13 @@ ComPtr<IUnknown>* Begin();
 
 ### <a name="return-value"></a>Valore restituito
 
-Indirizzo del primo elemento nella matrice interna dei gestori eventi.
+Indirizzo del primo elemento nella matrice interna di gestori eventi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Ottiene l'indirizzo del primo elemento nella matrice interna di gestori eventi.
 
-## <a name="eventtargetarrayend"></a><a name="end"></a>EventTargetArray::Fine
+## <a name="eventtargetarrayend"></a><a name="end"></a> EventTargetArray:: end
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -133,13 +134,13 @@ ComPtr<IUnknown>* End();
 
 ### <a name="return-value"></a>Valore restituito
 
-Indirizzo dell'ultimo elemento nella matrice interna dei gestori eventi.
+Indirizzo dell'ultimo elemento nella matrice interna di gestori eventi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Ottiene l'indirizzo dell'ultimo elemento nella matrice interna di gestori eventi.
 
-## <a name="eventtargetarrayeventtargetarray"></a><a name="eventtargetarray"></a>EventTargetArray::EventTargetArray
+## <a name="eventtargetarrayeventtargetarray"></a><a name="eventtargetarray"></a> EventTargetArray:: EventTargetArray
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -152,28 +153,28 @@ EventTargetArray(
 
 ### <a name="parameters"></a>Parametri
 
-*hr*<br/>
-Dopo queste operazioni del costruttore, il parametro *hr* indica se l'allocazione della matrice ha avuto esito positivo o negativo. Nell'elenco seguente vengono illustrati i valori possibili per *hr*.
+*h*<br/>
+Al termine di questa operazione del costruttore, il parametro *HR* indica se l'allocazione della matrice ha avuto esito positivo o negativo. L'elenco seguente mostra i valori possibili per *HR*.
 
 - S_OK<br/>
   Operazione completata.
 
 - E_OUTOFMEMORY<br/>
-  Impossibile allocare memoria per la matrice.
+  Non è stato possibile allocare memoria per la matrice.
 
 - S_FALSE<br/>
-  Elementi *items* di parametro è minore o uguale a zero.
+  *Gli elementi* del parametro sono minori o uguali a zero.
 
-*Elementi*<br/>
-Numero di elementi della matrice da allocare.
+*items*<br/>
+Numero di elementi di matrice da allocare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Inizializza una nuova istanza della classe `EventTargetArray`.
 
-`EventTargetArray`viene utilizzato per mantenere una matrice `EventSource` di gestori eventi in un oggetto.
+`EventTargetArray` viene usato per contenere una matrice di gestori eventi in un `EventSource` oggetto.
 
-## <a name="eventtargetarraylength"></a><a name="length"></a>EventTargetArray::Lunghezza
+## <a name="eventtargetarraylength"></a><a name="length"></a> EventTargetArray:: length
 
 Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.
 
@@ -185,6 +186,6 @@ size_t Length();
 
 Numero corrente di elementi nella matrice interna di gestori eventi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Ottiene il numero corrente di elementi nella matrice interna di gestori eventi.

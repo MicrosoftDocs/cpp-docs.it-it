@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/GENPROFILE,/FASTGENPROFILE (genera la compilazione instrumentata di profilatura)
 title: /GENPROFILE, /FASTGENPROFILE (Generare la build instrumentata di profilatura)
 ms.date: 03/14/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - GENPROFILE
 - FASTGENPROFILE
 ms.assetid: deff5ce7-46f5-448a-b9cd-a7a83a6864c6
-ms.openlocfilehash: a0d1678cd400801f4cb809ec3e93d333fbc6416a
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 7bb0f9b1c7a6036c5e721f79b438bf9dd6504111
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041198"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200234"
 ---
 # <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/GENPROFILE, /FASTGENPROFILE (Generare la build instrumentata di profilatura)
 
@@ -36,7 +37,7 @@ Usare **COUNTER32** per specificare l'uso dei contatori di probe a 32 bit e **CO
 **Esatta** &#124; **noexact**<br/>
 Usare **exact** per specificare incrementi Interlocked thread-safe per i probe. **Noexact** specifica le operazioni di incremento non protette per i probe. Il valore predefinito è **noexact**.
 
-**MEMMAX** = *valore*, **MEMMIN** = *valore* MEMMIN<br/>
+**MEMMAX** = *valore*,  = *valore* MEMMIN<br/>
 Usare **MEMMAX** e **MEMMIN** per specificare le dimensioni di prenotazione massime e minime per i dati di training in memoria. Il valore è la quantità di memoria da riservare in byte. Per impostazione predefinita, questi valori vengono determinati da un approccio euristico interno.
 
 **Percorso**  &#124; **NOPATH** <br/>
@@ -60,7 +61,7 @@ Le informazioni di profilatura vengono acquisite quando si esegue l'app instrume
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la **Configuration Properties**  >  pagina delle proprietà della riga di comando del**linker**proprietà di configurazione  >  **Command Line** .
+1. Selezionare la   >  pagina delle proprietà della riga di comando del **linker** proprietà di configurazione  >   .
 
 1. Immettere le opzioni **/GENPROFILE** o **/FASTGENPROFILE** e gli argomenti nella casella **Opzioni aggiuntive** . Scegliere **OK** per salvare le modifiche.
 

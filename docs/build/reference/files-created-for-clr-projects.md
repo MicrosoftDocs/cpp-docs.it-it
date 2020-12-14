@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: file creati per i progetti CLR'
 title: File creati per progetti CLR
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Visual Studio C++ projects, CLR programming
 - .NET applications, C++
 ms.assetid: 59ae9020-5f26-4ad0-bbdd-97c2e2023a20
-ms.openlocfilehash: 45295a3395f19d32dbf29948e1cbd15cd844adb4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 14aa07d891a75307f119f33ace5c32dbb2aa18db
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169006"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200525"
 ---
 # <a name="files-created-for-clr-projects"></a>File creati per progetti CLR
 

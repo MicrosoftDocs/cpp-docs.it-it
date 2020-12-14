@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: sostituzione macro'
 title: Sostituzione di macro
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - macros, NMAKE
 - substitution macros in NMAKE
 ms.assetid: 47465cfe-fd92-49db-aebe-7c2d7ecceb73
-ms.openlocfilehash: 43dc9133c53b1c436c0df8c3db66ae8f18604222
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e1531afb210b4671632bca2540bfc7562653139
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321819"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199181"
 ---
 # <a name="macro-substitution"></a>Sostituzione di macro
 
-Quando *nomemacro* viene richiamata, ogni occorrenza di *string1* nella definizione dell'espressione stringa viene sostituita da *string2*.
+Quando si richiama *macroname* , ogni occorrenza di *String1* nella relativa stringa di definizione viene sostituita da *string2*.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,12 +24,12 @@ Quando *nomemacro* viene richiamata, ogni occorrenza di *string1* nella definizi
 $(macroname:string1=string2)
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Sostituzione di macro distinzione maiuscole / minuscole e un valore letterale; *string1* e *string2* non è possibile richiamare le macro. Sostituzione non modifica la definizione originale. È possibile sostituire il testo in tutte le macro predefinite, ad eccezione [ $$@ ](filename-macros.md).
+La sostituzione della macro fa distinzione tra maiuscole e minuscole ed è letterale *String1* e *string2* non possono richiamare macro. La sostituzione non modifica la definizione originale. È possibile sostituire il testo in qualsiasi macro predefinita eccetto [$$@](filename-macros.md) .
 
-Spazi o tabulazioni non precedono i due punti; After i due punti vengono interpretati come valore letterale. Se *string2* è null, tutte le occorrenze dei *string1* vengono eliminati dalla stringa di definizione della macro.
+Nessun spazio o tabulazione precede i due punti; qualsiasi dopo i due punti viene interpretato come valore letterale. Se *string2* è null, tutte le occorrenze di *String1* vengono eliminate dalla stringa di definizione della macro.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso di una macro di NMAKE](using-an-nmake-macro.md)
+[Utilizzo di una macro NMAKE](using-an-nmake-macro.md)

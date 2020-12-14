@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 1) C4835'
 title: Avviso del compilatore (livello 1) C4835
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4835
 ms.assetid: d2e44c62-7b0e-4a45-943d-97903e27ed9d
-ms.openlocfilehash: a298eb0c55f96289a0043f3a996b09798745c92d
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: ee5d91883bafcac3412962f7e314f2ee00ea8278
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684222"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197985"
 ---
 # <a name="compiler-warning-level-1-c4835"></a>Avviso del compilatore (livello 1) C4835
 
@@ -19,7 +20,7 @@ ms.locfileid: "90684222"
 
 Quando si accede ai dati tra componenti gestiti, è consigliabile non utilizzare meccanismi di importazione ed esportazione nativi di C++. Dichiarare invece i membri dati all'interno di un tipo gestito e fare riferimento ai metadati con `#using` nel client. Per altre informazioni, vedere [Direttiva #using](../../preprocessor/hash-using-directive-cpp.md).
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 L'esempio seguente genera l'C4835.
 

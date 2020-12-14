@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: strspn, wcsspn, _mbsspn, _mbsspn_l'
 title: strspn, wcsspn, _mbsspn, _mbsspn_l
 ms.date: 4/2/2020
 api_name:
@@ -47,12 +48,12 @@ helpviewer_keywords:
 - mbsspn_l function
 - _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
-ms.openlocfilehash: b63ca5f7d22b6522ca3e3c58ea5486d612b671ae
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 366e6f306c119ae7bc712fb3a97db6fbe210b5a2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911097"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198843"
 ---
 # <a name="strspn-wcsspn-_mbsspn-_mbsspn_l"></a>strspn, wcsspn, _mbsspn, _mbsspn_l
 
@@ -85,7 +86,7 @@ size_t _mbsspn_l(
 
 ### <a name="parameters"></a>Parametri
 
-*Str*<br/>
+*str*<br/>
 Stringa con terminazione Null in cui eseguire la ricerca.
 
 *strCharSet*<br/>
@@ -98,7 +99,7 @@ Impostazioni locali da usare.
 
 Restituisce un valore integer che specifica la lunghezza della sottostringa in *Str* costituita interamente da caratteri in *strCharSet*. Se *Str* inizia con un carattere non in *strCharSet*, la funzione restituisce 0.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **strspn** restituisce l'indice del primo carattere in *Str* che non appartiene al set di caratteri in *strCharSet*. La ricerca non include i caratteri Null di terminazione.
 
@@ -155,8 +156,8 @@ The portion of 'cabbage' containing only a, b, or c is 5 bytes long
 ## <a name="see-also"></a>Vedere anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l](strspnp-wcsspnp-mbsspnp-mbsspnp-l.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>

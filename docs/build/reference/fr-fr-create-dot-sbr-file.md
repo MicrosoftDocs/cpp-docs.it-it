@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/FR,/fr (create. File SBR)
 title: /FR, /Fr (Crea file sbr)
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - FR compiler option [C++]
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
-ms.openlocfilehash: 58f55811f5d2bb81bc77da38a87c35bae91ce6cb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9142e7afedb55a7b0f4ed0cdb56e4288524d7afc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320515"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200416"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR, /Fr (Crea file sbr)
 
@@ -61,9 +62,9 @@ Se non si specifica `filename`, al file SBR viene assegnato lo stesso nome di ba
 
 - Controllare <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformation%2A> e <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformationFile%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del file di output (/F)](output-file-f-options.md)<br/>
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVCMSVC Compiler Command-Line Syntax](compiler-command-line-syntax.md)<br/>
-[Specifica del nome del percorso](specifying-the-pathname.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[Specifica del percorso](specifying-the-pathname.md)

@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/GD,/gr,/Gv,/gz (convenzione di chiamata)
 title: /Gd, /Gr, /Gv, /Gz (Convenzione di chiamata)
 ms.date: 09/05/2018
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: e1617b7c158e9705a6211310fa7873f667a62ba5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dd343466efd0b3b0d93fc783cd7e4305c2295ef3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234367"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200325"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (Convenzione di chiamata)
 
@@ -100,7 +101,7 @@ Per C, la **`__vectorcall`** convenzione di denominazione usa il nome della funz
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la pagina delle proprietà avanzate di **C/C++**  >  **Advanced** .
+1. Selezionare la pagina delle proprietà avanzate di **C/C++**  >   .
 
 1. Modificare la proprietà **Convenzione di chiamata**.
 
@@ -108,7 +109,7 @@ Per C, la **`__vectorcall`** convenzione di denominazione usa il nome della funz
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CallingConvention%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Opzioni del compilatore MSVC](compiler-options.md)
-- [Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+- [Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

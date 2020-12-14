@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/FX (merge del codice inserito)
 title: /Fx (Esegue il merge del codice)
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - merging injected code
 - /Fx compiler option [C++]
 ms.assetid: 14f0e301-3bab-45a3-bbdf-e7ce66f20560
-ms.openlocfilehash: b928ca63171f0f6d28859d049a1ed5008b908686
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 0c0aeea4c3a72f37848615d80c5ee6a5a807d838
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500103"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200351"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx (Esegue il merge del codice)
 
@@ -74,8 +75,8 @@ Se il programma include un file di intestazione che usa il codice inserito, **/F
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ExpandAttributedSource%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del file di output (/F)](output-file-f-options.md)<br/>
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

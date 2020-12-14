@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: espressioni nella pre-elaborazione di makefile'
 title: Espressioni nella pre-elaborazione di makefile
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,25 +7,25 @@ helpviewer_keywords:
 - expressions [C++], makefile preprocessing
 - makefiles, preprocessing
 ms.assetid: 37f0f413-97e0-452c-a83f-3c9002c44c92
-ms.openlocfilehash: 3d668492441eb2fc09be378dbebfe2b18c1b5753
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b30900db493a2a87e0527e6f3c062185bb4ab43
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271307"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200793"
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>Espressioni nella pre-elaborazione di makefile
 
-Il **! IF** o **! Se INVECE** `constantexpression` consiste di costanti integer (in notazione decimale o del linguaggio C), le costanti di stringa o i comandi. Utilizzare le parentesi per raggruppare le espressioni. Le espressioni usare tipo C unsigned long integer aritmetico; i numeri sono in forma di 32 bit in complemento a due nell'intervallo - 2147483648 e 2147483647.
+Il **. SE** o **! In caso contrario** `constantexpression` , se è costituito da costanti Integer (in notazione decimale o C-Language), costanti stringa o comandi. Usare le parentesi per raggruppare le espressioni. Le espressioni usano l'aritmetica di tipo long integer con segno C; i numeri sono nel formato a complemento a due bit a 32 bit nell'intervallo compreso tra-2147483648 e 2147483647.
 
-Le espressioni possono usare operatori che agiscono sui valori delle costanti, i codici di uscita dai comandi, le stringhe, macro e percorsi del file system.
+Le espressioni possono usare operatori che agiscono sui valori costanti, i codici di uscita dai comandi, le stringhe, le macro e i percorsi del file System.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni
 
 [Operatori di pre-elaborazione di makefile](makefile-preprocessing-operators.md)
 
-[Esecuzione di un programma di pre-elaborazione](executing-a-program-in-preprocessing.md)
+[Esecuzione di un programma durante la pre-elaborazione](executing-a-program-in-preprocessing.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Pre-elaborazione di makefile](makefile-preprocessing.md)

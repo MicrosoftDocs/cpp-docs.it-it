@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/ENTRY (simbolo del punto di ingresso)
 title: /ENTRY (Simbolo del punto di ingresso)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - /ENTRY linker option
 - ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
-ms.openlocfilehash: 80833980b64e8fdd2a2f57b2dc40eb21c784b6f9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e4966ef44922a3a90d5abb5a7ac23460d4155f92
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232703"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201014"
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY (Simbolo del punto di ingresso)
 
@@ -25,10 +26,10 @@ ms.locfileid: "87232703"
 
 ## <a name="arguments"></a>Argomenti
 
-*funzione*<br/>
+*function*<br/>
 Funzione che specifica un indirizzo iniziale definito dall'utente per un file exe o una DLL.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'opzione/ENTRY specifica una funzione del punto di ingresso come indirizzo iniziale per un file exe o una DLL.
 
@@ -39,8 +40,8 @@ Per impostazione predefinita, l'indirizzo iniziale è un nome di funzione della 
 |Nome della funzione|Predefinito per|
 |-------------------|-----------------|
 |**mainCRTStartup** (o **wmainCRTStartup**)|Un'applicazione che usa/SUBSYSTEM: CONSOLE; chiamate `main` (o `wmain` )|
-|**WinMainCRTStartup** (o **wWinMainCRTStartup**)|Un'applicazione che usa/SUBSYSTEM:**Windows**; chiama `WinMain` (o `wWinMain` ), che deve essere definito per l'utilizzo di**`__stdcall`**|
-|**_DllMainCRTStartup**|UNA DLL; chiama `DllMain` se esiste, che deve essere definito per l'utilizzo di**`__stdcall`**|
+|**WinMainCRTStartup** (o **wWinMainCRTStartup**)|Un'applicazione che usa/SUBSYSTEM:**Windows**; chiama `WinMain` (o `wWinMain` ), che deve essere definito per l'utilizzo di **`__stdcall`**|
+|**_DllMainCRTStartup**|UNA DLL; chiama `DllMain` se esiste, che deve essere definito per l'utilizzo di **`__stdcall`**|
 
 Se non si specifica l'opzione [/dll](dll-build-a-dll.md) o [/Subsystem](subsystem-specify-subsystem.md) , il linker seleziona un sottosistema e un punto di ingresso a seconda che sia `main` `WinMain` definito o.
 
@@ -64,7 +65,7 @@ Per informazioni su come definire un punto di `DllMain` ingresso personalizzato,
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EntryPointSymbol%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Informazioni di riferimento sul linker MSVC](linking.md)<br/>
 [Opzioni del linker MSVC](linker-options.md)

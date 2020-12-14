@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: conversioni aritmetiche consuete'
 title: Conversioni aritmetiche comuni
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - conversions [C++], arithmetic
 - arithmetic operators [C++], type conversions
 ms.assetid: bfa49803-0efd-45d0-b987-111412a140d7
-ms.openlocfilehash: 7e28c8a234ff840a16228416720ac48763fccc76
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 443d61b3ff295431a5c1507886cb0821a1f5b205
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231416"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198895"
 ---
 # <a name="usual-arithmetic-conversions"></a>Conversioni aritmetiche comuni
 
@@ -58,6 +59,6 @@ dVal = ulVal + fVal; /* ulVal converted to float
                       */
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Operatori C](../c-language/c-operators.md)

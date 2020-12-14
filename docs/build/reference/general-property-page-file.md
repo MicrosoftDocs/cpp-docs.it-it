@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: pagina delle proprietà generale (file)'
 title: Pagina delle proprietà Generale (File)
 ms.date: 08/30/2019
 f1_keywords:
 - VC.Project.VCFileConfiguration.ExcludedFromBuild
 - VC.Project.VCFileConfiguration.Tool
 ms.assetid: 26e3711e-9e7d-4e8d-bc4c-2474538efdad
-ms.openlocfilehash: 7626e161e6f59de32d426b558827c423a0bb050d
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 03b91a028bce5423bcf80fab24153a36eb7435e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041380"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200338"
 ---
 # <a name="general-property-page-file"></a>Pagina delle proprietà Generale (File)
 
@@ -26,7 +27,7 @@ Quando si fa clic con il pulsante destro del mouse su un nodo di file **Esplora 
 
 - **Contenuto** (si applica solo alle app UWP). Specifica se il file contiene contenuto da includere nel pacchetto dell'app.
 
-- **Tipo di elemento**
+- **Item Type**
 
    Il **tipo di elemento** specifica lo strumento che verrà usato per elaborare il file durante il processo di compilazione. [I file la cui estensione è nota a Visual Studio](/visualstudio/extensibility/visual-cpp-project-extensibility#project-items) hanno un valore predefinito in questa proprietà. È possibile specificare uno strumento personalizzato qui se si dispone di un tipo di file personalizzato o si desidera eseguire l'override dello strumento predefinito per un tipo di file noto. Vedere [Specifica di strumenti di compilazione personalizzata](../specifying-custom-build-tools.md) per altre informazioni. È anche possibile usare questa pagina delle proprietà per specificare che un file non fa parte del processo di compilazione.
 
@@ -51,7 +52,7 @@ Quando si fa clic con il pulsante destro del mouse su un nodo di file **Esplora 
     |. appxmanifest|Manifesto del pacchetto dell'app|[Pacchetto di app](/windows/win32/appxpkg/make-appx-package--makeappx-exe-)|
     |.obj|Oggetto|[Linker C/C++ (link.exe)](cl-invokes-the-linker.md)|
     |.ttf|Carattere|n/d|
-    |.txt|Text|n/d|
+    |.txt|Testo|n/d|
     |n/d|Strumento di compilazione personalizzato|Route definite dall'utente|
     |n/d|Copia file|n/d|
     |. packagelayout|Layout del pacchetto dell'app|[Pacchetto di app](/windows/win32/appxpkg/make-appx-package--makeappx-exe-)|

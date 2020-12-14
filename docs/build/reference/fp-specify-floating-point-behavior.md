@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/FP (specifica il comportamento della virgola mobile)
 title: /fp (Specifica il comportamento della virgola mobile)
 ms.date: 11/09/2018
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: 7a8ae885bbbf00ae916505bf5df646b32268a17a
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 5d57bae24af9cd415a2dcfde073e276f51ce3ea3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040912"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200442"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (Specifica il comportamento della virgola mobile)
 
@@ -35,7 +36,7 @@ Per impostazione predefinita, il compilatore usa il `/fp:precise` comportamento.
 Con `/fp:precise` il compilatore vengono conservate le proprietà di ordinamento e arrotondamento delle espressioni di origine del codice a virgola mobile quando viene generato e ottimizzato il codice oggetto per il computer di destinazione. Il compilatore Arrotonda alla precisione del codice sorgente in quattro punti specifici durante la valutazione dell'espressione: in corrispondenza di assegnazioni, in cast, quando un argomento a virgola mobile viene passato a una chiamata di funzione e quando un valore a virgola mobile viene restituito da una chiamata di funzione. I calcoli intermedi possono essere eseguiti alla precisione del computer. Cast può essere usato per arrotondare in modo esplicito i calcoli intermedi.
 
 Il compilatore non esegue trasformazioni algebriche sulle espressioni a virgola mobile, ad esempio la riassociazione o la distribuzione, a meno che non sia garantita la produzione di un risultato identico bit per bit.
-Le espressioni che coinvolgono valori speciali (NaN, + Infinity,-Infinity,-0,0) vengono elaborate in base alle specifiche IEEE-754. Ad esempio, `x != x` restituisce **`true`** se x è NaN. Le *contrazioni*a virgola mobile, ovvero le istruzioni del computer che combinano operazioni a virgola mobile, possono essere generate in `/fp:precise` .
+Le espressioni che coinvolgono valori speciali (NaN, + Infinity,-Infinity,-0,0) vengono elaborate in base alle specifiche IEEE-754. Ad esempio, `x != x` restituisce **`true`** se x è NaN. Le *contrazioni* a virgola mobile, ovvero le istruzioni del computer che combinano operazioni a virgola mobile, possono essere generate in `/fp:precise` .
 
 Il compilatore genera codice progettato per l'esecuzione nell' [ambiente a virgola mobile predefinito](#the-default-floating-point-environment) e presuppone che l'ambiente a virgola mobile non sia accessibile o modificato in fase di esecuzione. Ciò significa che il codice non annulla il mascheramento delle eccezioni a virgola mobile, i registri di stato a virgola mobile in lettura o scrittura o la modifica delle modalità di arrotondamento.
 
@@ -69,7 +70,7 @@ Si noti che non `/fp:except` Abilita alcuna eccezione a virgola mobile, ma è ne
 
 L'opzione [/za](za-ze-disable-language-extensions.md) (compatibilità ANSI) non è compatibile con `/fp` .
 
-### <a name="using-compiler-directives-to-control-floating-point-behavior"></a>Uso delle direttive del compilatore per controllare il comportamento della virgola mobile
+### <a name="using-compiler-directives-to-control-floating-point-behavior"></a>Uso delle direttive del compilatore per controllare il comportamento di Floating-Point
 
 Il compilatore fornisce tre direttive pragma per eseguire l'override del comportamento a virgola mobile specificato nella riga di comando: [float_control](../../preprocessor/float-control.md), [fenv_access](../../preprocessor/fenv-access.md)e [fp_contract](../../preprocessor/fp-contract.md). È possibile usare queste direttive per controllare il comportamento della virgola mobile a livello di funzione, non all'interno di una funzione. Si noti che queste direttive non corrispondono direttamente alle `/fp` Opzioni. In questa tabella viene illustrato il `/fp` mapping tra le direttive Options e pragma. Per ulteriori informazioni, vedere la documentazione per le singole opzioni e le direttive pragma.
 
@@ -258,7 +259,7 @@ Quando viene compilato tramite `/O2` `/fp:precise` o `/O2` `/fp:strict` , è pos
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la pagina delle proprietà di **configurazione**delle  >  proprietà di generazione del codice**C/C++**  >  **Code Generation** .
+1. Selezionare la pagina delle proprietà di **configurazione** delle  >  proprietà di generazione del codice **C/C++**  >   .
 
 1. Modificare la proprietà del **modello a virgola mobile** .
 
@@ -269,4 +270,4 @@ Quando viene compilato tramite `/O2` `/fp:precise` o `/O2` `/fp:strict` , è pos
 ## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)<br/>

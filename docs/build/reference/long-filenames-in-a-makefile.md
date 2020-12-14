@@ -1,25 +1,26 @@
 ---
+description: 'Altre informazioni su: nomi file lunghi in un makefile'
 title: Nomi file lunghi in un makefile
 ms.date: 11/04/2016
 helpviewer_keywords:
 - NMAKE program, long filenames
 - long filenames
 ms.assetid: 626d56fc-8879-46ba-9c2d-dd386c78cccc
-ms.openlocfilehash: 758f81e2e1b822c00b54cdaedfe996c9c7db2ef2
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 4a432fbdfb9ee66d46451082067f9fea161b9444
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342283"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199116"
 ---
 # <a name="long-filenames-in-a-makefile"></a>Nomi file lunghi in un makefile
 
-Racchiudere i nomi file lunghi in virgolette doppie, come indicato di seguito:
+Racchiudere tra virgolette doppie i nomi di file lunghi, come indicato di seguito:
 
 ```
 all : "VeryLongFileName.exe"
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Contenuto di un makefile](contents-of-a-makefile.md)

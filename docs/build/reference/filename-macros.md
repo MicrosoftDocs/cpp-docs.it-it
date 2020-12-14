@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: macro filename'
 title: Macro di nomi file
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,35 +7,35 @@ helpviewer_keywords:
 - filename macros in NMAKE
 - NMAKE program, filename macros
 ms.assetid: 20afd6b3-5b6c-4e33-9d01-309ce98ef9db
-ms.openlocfilehash: 54527c6f06bee396fdc7419647c607f8979c6a38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b10d021d27eedf008a143472715ee8e0cbecde5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271242"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200572"
 ---
 # <a name="filename-macros"></a>Macro di nomi file
 
-Macro di nomi file sono predefinite come i nomi file specificati nella dipendenza (specifiche non il nome del file su disco). Queste macro non sono necessario essere racchiuso tra parentesi quando viene richiamato. specificare un solo simbolo $, come illustrato.
+Le macro del nome file sono predefinite come nomi file specificati nella dipendenza (non le specifiche del nome file completo sul disco). Queste macro non devono essere racchiuse tra parentesi quando vengono richiamate; specificare solo $ come illustrato.
 
 |Macro|Significato|
 |-----------|-------------|
-|**$\@**|Nome completo del destinazione corrente (percorso, nome di base, estensione), come specificato.|
-|**$$\@**|Nome completo del destinazione corrente (percorso, nome di base, estensione), come specificato. Valido solo come dipendente da una dipendenza.|
-|**$&#42;**|Del destinazione corrente percorso e base nome senza l'estensione file.|
+|**$\@**|Nome completo della destinazione corrente (percorso, nome di base, estensione), come attualmente specificato.|
+|**$$\@**|Nome completo della destinazione corrente (percorso, nome di base, estensione), come attualmente specificato. Valido solo come dipendente in una dipendenza.|
+|**$&#42;**|Il percorso e il nome di base della destinazione corrente meno l'estensione di file.|
 |**$&#42;&#42;**|Tutti i dipendenti della destinazione corrente.|
-|**$?**|Tutti i dipendenti con un timestamp successivo a quello di destinazione corrente.|
-|**$<**|File dipendente con un timestamp successivo a quello di destinazione corrente. Valido solo nei comandi nelle regole di inferenza.|
+|**$?**|Tutti i dipendenti con un timestamp successivo rispetto alla destinazione corrente.|
+|**$<**|File dipendente con un timestamp successivo rispetto alla destinazione corrente. Valido solo nei comandi nelle regole di inferenza.|
 
-Per specificare una parte di una macro nome file predefinito, aggiungere un modificatore di macro e racchiudere tra parentesi la macro modificata.
+Per specificare parte di una macro di nome file predefinita, aggiungere un modificatore di macro e racchiudere la macro modificata tra parentesi.
 
 |Modificatore|Parte del nome file risultante|
 |--------------|-----------------------------|
-|**D**|Unità e directory|
+|**D**|Directory più unità|
 |**B**|Nome di base|
-|**F**|Nome base e l'estensione|
-|**R**|Unità più directory più nome di base|
+|**F**|Nome di base e estensione|
+|**R**|Nome di unità più directory e nome base|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro speciali di NMAKE](special-nmake-macros.md)

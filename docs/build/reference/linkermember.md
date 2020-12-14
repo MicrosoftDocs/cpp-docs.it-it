@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/LINKERMEMBER
 title: /LINKERMEMBER
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - LINKERMEMBER dumpbin option
 - -LINKERMEMBER dumpbin option
 ms.assetid: c96868c1-d70e-4651-ae36-c55b58b16406
-ms.openlocfilehash: a0456fd9ed1729b4a6cfa200a54ba211a64e94ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76c842bcc2299b4245847e7d4e9a64656e88d2d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216585"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199389"
 ---
 # <a name="linkermember"></a>/LINKERMEMBER
 
@@ -21,12 +22,12 @@ ms.locfileid: "62216585"
 /LINKERMEMBER[:{1|2}]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Questa opzione consente di visualizzare i simboli pubblici definiti in una libreria. Specificare l'1 argomento per visualizzare i simboli in base all'oggetto, insieme ai relativi offset. Specificare l'argomento 2 per visualizzare gli offset e i numeri di indice degli oggetti e quindi elencare i simboli in ordine alfabetico, insieme all'indice di oggetto per ognuno. Per ottenere entrambi gli output, specificare /LINKERMEMBER senza l'argomento del numero.
+Questa opzione consente di visualizzare i simboli pubblici definiti in una libreria. Specificare l'argomento 1 per visualizzare i simboli nell'ordine degli oggetti, insieme ai relativi offset. Specificare l'argomento 2 per visualizzare gli offset e i numeri di indice degli oggetti, quindi elencare i simboli in ordine alfabetico, insieme all'indice dell'oggetto per ciascuno di essi. Per ottenere entrambi gli output, specificare/LINKERMEMBER senza l'argomento number.
 
-Solo le [/HEADERS](headers.md) (opzione dumpbin) è disponibile per l'uso con i file generati con la [/GL](gl-whole-program-optimization.md) opzione del compilatore.
+Solo l'opzione [/HEADERS](headers.md) DUMPBIN può essere usata nei file generati con l'opzione del compilatore [/GL](gl-whole-program-optimization.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni di DUMPBIN](dumpbin-options.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: attivazione (C++)'
 title: Attivazione (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - activation [MFC], embedded OLE items
 - OLE activation [MFC]
 ms.assetid: ed8357d9-e487-4aaa-aa6b-2edc4de25dfa
-ms.openlocfilehash: 47640a59180348bd3513013b65029a775545e211
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 726c64344f684c8ca9e79d9296daea80882af08f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619177"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197724"
 ---
 # <a name="activation-c"></a>Attivazione (C++)
 
@@ -31,7 +32,7 @@ In questo articolo viene illustrato il ruolo di attivazione nella modifica visiv
 
 È anche possibile modificare gli elementi OLE incorporati in una finestra separata. Questo problema si verifica se il contenitore o l'applicazione server non supporta l'attivazione sul posto. In questo caso, quando l'utente fa doppio clic su un elemento incorporato, l'applicazione server viene avviata in una finestra separata e l'elemento incorporato viene visualizzato come documento. L'utente modifica l'elemento in questa finestra. Al termine della modifica, l'utente chiude l'applicazione server e torna all'applicazione contenitore.
 
-In alternativa, l'utente può scegliere "Apri modifica" con il comando ** \<object> Apri** nel menu **modifica** . Verrà aperto l'oggetto in una finestra separata.
+In alternativa, l'utente può scegliere "Apri modifica" con il comando **\<object> Apri** nel menu **modifica** . Verrà aperto l'oggetto in una finestra separata.
 
 > [!NOTE]
 > La modifica di elementi incorporati in una finestra separata è il comportamento standard della versione 1 di OLE e alcune applicazioni OLE possono supportare solo questo stile di modifica.
@@ -42,7 +43,7 @@ MFC non supporta l'attivazione sul posto nidificata. Se si compila un'applicazio
 
 Cosa accade a un elemento incorporato quando l'utente fa doppio clic su di esso dipende dai verbi definiti per l'elemento. Per informazioni, vedere [attivazione: verbi](activation-verbs.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [OLE](ole-in-mfc.md)<br/>
 [Contenitori](containers.md)<br/>

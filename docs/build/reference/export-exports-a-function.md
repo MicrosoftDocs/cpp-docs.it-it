@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/EXPORT (Esporta una funzione)
 title: /EXPORT (Esporta una funzione)
 ms.date: 09/05/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-ms.openlocfilehash: a55b2a4ce72de644fe426894ab389f62bd29b204
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a52ea79d0569d31c26eabd06d51ef58a10567119
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232690"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200806"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (Esporta una funzione)
 
@@ -22,9 +23,9 @@ Esporta una funzione in base al nome, al numero ordinale o ai dati dal programma
 
 ## <a name="syntax"></a>Sintassi
 
-> **/Export:**<em>entryname</em>[**, \@ **<em>ordinale</em>[**, NoName**]] [**, dati**]
+> **/Export:**<em>entryname</em>[**, \@**<em>ordinale</em>[**, NoName**]] [**, dati**]
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'opzione **/Export** specifica una funzione o un elemento dati da esportare dal programma in modo che altri programmi possano chiamare la funzione o usare i dati. Le esportazioni vengono in genere definite in una DLL.
 
@@ -60,7 +61,7 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la **Configuration Properties**  >  pagina delle proprietà della riga di comando del**linker**proprietà di configurazione  >  **Command Line** .
+1. Selezionare la   >  pagina delle proprietà della riga di comando del **linker** proprietà di configurazione  >   .
 
 1. Immettere l'opzione nella casella **Opzioni aggiuntive** .
 
@@ -68,7 +69,7 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Informazioni di riferimento sul linker MSVC](linking.md)<br/>
 [Opzioni del linker MSVC](linker-options.md)
