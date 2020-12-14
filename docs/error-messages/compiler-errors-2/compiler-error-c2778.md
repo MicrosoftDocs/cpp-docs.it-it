@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2778'
 title: Errore del compilatore C2778
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2778
 ms.assetid: b24cb732-2914-42cc-8928-e2d87b393428
-ms.openlocfilehash: 247aba1b4dfe6b6d6db1e2b8f46f2aa08abf1a79
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: e614ed5ee94a4876a687bfa8257abc5bcd9d8587
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74739987"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298071"
 ---
 # <a name="compiler-error-c2778"></a>Errore del compilatore C2778
 
@@ -28,7 +29,7 @@ struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};
 struct __declspec(uuid("{00000000-0000-0000-0000-000000000000}")) B{};
 ```
 
-L'attributo esteso `uuid` accetta le stringhe riconosciute da [CLSIDFromString](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromstring), con o senza delimitatori di parentesi graffe.
+L' `uuid` attributo esteso accetta le stringhe riconosciute da [CLSIDFromString](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromstring), con o senza delimitatori di parentesi graffe.
 
 L'esempio seguente genera l'C2778:
 

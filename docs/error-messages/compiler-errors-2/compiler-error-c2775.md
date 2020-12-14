@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2775'
 title: Errore del compilatore C2775
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2775
 ms.assetid: 9c488508-ade0-48f1-b94f-d538d15f807a
-ms.openlocfilehash: be858c7508aa520f78ec144b02738af02099b49b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f7a24cfa3b868d08c86a08deaa13ec6067f4a9eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74740052"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298162"
 ---
 # <a name="compiler-error-c2775"></a>Errore del compilatore C2775
 
 ' Identifier ': nessun metodo ' Get ' associato a questa proprietà
 
-Un membro dati dichiarato con l'attributo esteso della [Proprietà](../../cpp/property-cpp.md) non dispone di una funzione `get` specificata, ma un'espressione tenta di recuperare il relativo valore.
+Un membro dati dichiarato con l'attributo esteso della [Proprietà](../../cpp/property-cpp.md) non dispone di una `get` funzione specificata, ma un'espressione tenta di recuperare il relativo valore.
 
 L'esempio seguente genera l'C2775:
 

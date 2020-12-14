@@ -1,19 +1,20 @@
 ---
+description: 'Altre informazioni su: modelli di funzioni relazionali'
 title: Modelli di funzioni relazionali
 ms.date: 11/04/2016
 helpviewer_keywords:
 - relational function templates
 ms.assetid: 57893a51-9adb-41fc-941d-2ca97687db2a
-ms.openlocfilehash: db5091ca8fd29235ea1a0f70410a05ffcb9d7a65
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ebdb1a8522536cd4d863e74c1cf79f33bae3a930
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188181"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252428"
 ---
 # <a name="relational-function-templates"></a>Modelli di funzioni relazionali
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -82,12 +83,12 @@ Puntatore a interfaccia raw.
 *p*<br/>
 Un puntatore intelligente.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questi modelli di funzione consentono il confronto con un puntatore intelligente a destra dell'operatore di confronto. Queste non sono funzioni membro di `_com_ptr_t`.
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe _com_ptr_t](../cpp/com-ptr-t-class.md)

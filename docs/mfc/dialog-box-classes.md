@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classi della finestra di dialogo'
 title: Classi di finestre di dialogo
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-ms.openlocfilehash: 2399b27fc081dcc810277079729b0e62ef80d603
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5c178bc6895e338bf4b2876be5233c1b80007abc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616947"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261554"
 ---
 # <a name="dialog-box-classes"></a>Classi di finestre di dialogo
 
@@ -60,7 +61,7 @@ Incapsula i servizi forniti dalla finestra di dialogo Imposta pagina comune di W
 OLE aggiunge diverse finestre di dialogo comuni a Windows. Queste classi incapsulano le finestre di dialogo comuni OLE.
 
 [COleDialog](reference/coledialog-class.md)<br/>
-Utilizzato dal Framework per includere implementazioni comuni per tutte le finestre di dialogo OLE. Tutte le classi della finestra di dialogo nella categoria interfaccia utente sono derivate da questa classe di base. `COleDialog`non può essere utilizzato direttamente.
+Utilizzato dal Framework per includere implementazioni comuni per tutte le finestre di dialogo OLE. Tutte le classi della finestra di dialogo nella categoria interfaccia utente sono derivate da questa classe di base. `COleDialog` non può essere utilizzato direttamente.
 
 [COleInsertDialog](reference/coleinsertdialog-class.md)<br/>
 Consente di visualizzare la finestra di dialogo Inserisci oggetto, l'interfaccia utente standard per l'inserimento di nuovi elementi collegati o incorporati OLE.
@@ -129,6 +130,6 @@ Fornisce una visualizzazione form connessa direttamente a un oggetto recordset O
 [CPrintInfo](reference/cprintinfo-structure.md)<br/>
 Struttura che contiene informazioni su un processo di stampa o di anteprima di stampa. Utilizzato dall'architettura di stampa di [CView](reference/cview-class.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Cenni preliminari sulle classi](class-library-overview.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: annotazione del comportamento di blocco'
 title: Annotazione del comportamento di blocco
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -27,12 +28,12 @@ f1_keywords:
 - _Lock_level_order_
 - _Lock_kind_event_
 ms.assetid: 07769c25-9b97-4ab7-b175-d1c450308d7a
-ms.openlocfilehash: 371422275b965fd2ce12995b55221a011a4edae6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c26f33b9e2464f91786a6607cea9c3520b971824
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232365"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97279624"
 ---
 # <a name="annotating-locking-behavior"></a>Annotazione del comportamento di blocco
 
@@ -62,7 +63,7 @@ Alcune regole sulla proprietà dei thread da tenere in considerazione:
 
 Nella tabella seguente sono elencate le annotazioni di blocco.
 
-|Annotazione|Descrizione|
+|Annotazione|Description|
 |----------------|-----------------|
 |`_Acquires_exclusive_lock_(expr)`|Annota una funzione e indica lo stato successivo della funzione incrementando di uno il conteggio dei blocchi esclusivi dell'oggetto di blocco denominato da `expr`.|
 |`_Acquires_lock_(expr)`|Annota una funzione e indica lo stato successivo della funzione incrementando di uno il conteggio dei blocchi dell'oggetto di blocco denominato da `expr`.|
@@ -87,7 +88,7 @@ Nella tabella seguente sono elencate le annotazioni di blocco.
 
 Determinati oggetti Lock non vengono esposti dall'implementazione delle funzioni di blocco associate.  Nella tabella seguente sono elencate le variabili intrinseche SAL che abilitano le annotazioni sulle funzioni che operano sugli oggetti di blocco non esposti.
 
-|Annotazione|Descrizione|
+|Annotazione|Description|
 |----------------|-----------------|
 |`_Global_cancel_spin_lock_`|Viene descritto lo spin lock di annullamento.|
 |`_Global_critical_region_`|Viene descritta l'area critica.|
@@ -98,7 +99,7 @@ Determinati oggetti Lock non vengono esposti dall'implementazione delle funzioni
 
 Nella tabella seguente sono elencate le annotazioni per l'accesso ai dati condivisi.
 
-|Annotazione|Descrizione|
+|Annotazione|Description|
 |----------------|-----------------|
 |`_Guarded_by_(expr)`|Annota una variabile e indica se la variabile è accessibile, il conteggio dei blocchi dell'oggetto di blocco denominato da `expr` è di almeno uno.|
 |`_Interlocked_`|Annota una variabile ed è equivalente a `_Guarded_by_(_Global_interlock_)` .|
@@ -109,7 +110,7 @@ Nella tabella seguente sono elencate le annotazioni per l'accesso ai dati condiv
 
 I blocchi intelligenti in genere avvolgono i blocchi nativi e ne gestiscono la durata. La tabella seguente elenca le annotazioni che possono essere usate con i blocchi intelligenti e i modelli di codifica RAII con il supporto per la `move` semantica.
 
-|Annotazione|Descrizione|
+|Annotazione|Description|
 |----------------|-----------------|
 |`_Analysis_assume_smart_lock_acquired_`|Indica all'analizzatore di presumere che sia stato acquisito uno Smart Lock. Questa annotazione prevede un tipo di blocco di riferimento come parametro.|
 |`_Analysis_assume_smart_lock_released_`|Indica all'analizzatore di presumere che sia stato rilasciato uno Smart Lock. Questa annotazione prevede un tipo di blocco di riferimento come parametro.|
@@ -118,7 +119,7 @@ I blocchi intelligenti in genere avvolgono i blocchi nativi e ne gestiscono la d
 |`_Swaps_locks_(left, right)`|Descrive il `swap` comportamento standard che presuppone che gli oggetti `left` e `right` scambino il proprio stato. Lo stato scambiato include il conteggio dei blocchi e la destinazione di alias, se presenti. Gli alias che puntano agli `left` `right` oggetti e rimangono invariati.|
 |`_Detaches_lock_(detached, lock)`|Descrive uno scenario in cui un tipo di wrapper di blocco consente la dissociazione con la relativa risorsa contenuta. Questo approccio è simile al `std::unique_ptr` funzionamento con il puntatore interno: consente ai programmatori di estrarre il puntatore e lasciare il contenitore del puntatore intelligente in uno stato pulito. Una logica simile è supportata da `std::unique_lock` e può essere implementata nei wrapper di blocco personalizzati. Il blocco scollegato mantiene il proprio stato (se presente, il numero di blocchi e la destinazione di aliasing), mentre il wrapper viene reimpostato in modo da contenere zero blocchi e nessuna destinazione di alias, mantenendo i propri alias. Non viene eseguita alcuna operazione sui conteggi dei blocchi (rilascio e acquisizione). Questa annotazione si comporta esattamente come `_Moves_lock_` ad eccezione del fatto che l'argomento scollegato deve essere **`return`** anziché **`this`** .|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Uso delle annotazioni SAL per ridurre gli errori del codice C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [Informazioni su SAL](../code-quality/understanding-sal.md)

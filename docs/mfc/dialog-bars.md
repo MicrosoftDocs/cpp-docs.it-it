@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: barre di dialogo'
 title: Barra di finestra di dialogo
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - dialog bars
 - dialog bars [MFC], about dialog bars
 ms.assetid: 485c8055-6bb0-4051-8417-dd2971499321
-ms.openlocfilehash: 052e0b8a085c052f73d3c6540521f57fdfbb9c51
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 701954dc9ec682bd95258b26d7af1290ea2da521
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624891"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261632"
 ---
 # <a name="dialog-bars"></a>Barra di finestra di dialogo
 
@@ -30,7 +31,7 @@ Uno dei vantaggi delle barre di dialogo è che possono includere controlli diver
 
 Sebbene sia normale derivare le proprie classi di finestre di dialogo da `CDialog` , in genere non si deriva una classe personalizzata per una barra di dialogo. Le barre della finestra di dialogo sono estensioni a una finestra principale e qualsiasi messaggio di notifica del controllo della barra di dialogo, ad esempio **BN_CLICKED** o **EN_CHANGE**, verranno inviate all'elemento padre della barra della finestra di dialogo, la finestra principale.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Elementi dell'interfaccia utente](user-interface-elements-mfc.md)<br/>
 [Esempio](../overview/visual-cpp-samples.md)

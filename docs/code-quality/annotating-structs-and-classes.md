@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: annotazione di struct e classi'
 title: Annotazioni di struct e classi
 ms.date: 06/28/2019
 ms.topic: conceptual
@@ -19,12 +20,12 @@ f1_keywords:
 - _Field_size_full_opt_
 - _Field_z_
 ms.assetid: b8278a4a-c86e-4845-aa2a-70da21a1dd52
-ms.openlocfilehash: fe177e6afea088b59b16bfbd0bff6fa00b526222
-ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
+ms.openlocfilehash: b8e9a0cf3826de2beeb0a93f420216751d05d53e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765121"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97279611"
 ---
 # <a name="annotating-structs-and-classes"></a>Annotazioni di struct e classi
 
@@ -104,7 +105,7 @@ Note per questo esempio:
 - `_Field_range_` per `bufferSize` specifica che il valore di `bufferSize` deve essere compreso tra 1 e `MaxBufferSize` (inclusi).
 - I risultati finali delle `_Struct_size_bytes_` `_Field_size_` annotazioni e sono equivalenti. Per le strutture o le classi che presentano un layout simile, `_Field_size_` è più facile da leggere e gestire, perché contiene meno riferimenti e calcoli rispetto all' `_Struct_size_bytes_` annotazione equivalente. `_Field_size_` non richiede la conversione in dimensioni in byte. Se le dimensioni in byte sono l'unica opzione, ad esempio per un campo puntatore void, `_Field_size_bytes_` può essere utilizzato. Se sia `_Struct_size_bytes_` che `_Field_size_` esistono, entrambi saranno disponibili per gli strumenti di. Se le due annotazioni non sono consentite, è possibile utilizzare lo strumento.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Uso delle annotazioni SAL per ridurre gli errori del codice C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [Informazioni su SAL](../code-quality/understanding-sal.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 4) C4100'
 title: Avviso del compilatore (livello 4) C4100
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4100
 ms.assetid: 478ed97d-e502-49e4-9afb-ac2a6c61194b
-ms.openlocfilehash: bcd51c66359d0553b7657d85f5b45ee22d4648ff
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 753be5e6e56e4ad94d6b742454fe62e303d430dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991656"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261996"
 ---
 # <a name="compiler-warning-level-4-c4100"></a>Avviso del compilatore (livello 4) C4100
 
-'identificatore': parametro formale senza riferimenti
+' Identifier ': parametro formale senza riferimenti
 
-Al parametro formale non viene fatto riferimento nel corpo della funzione. Il parametro senza riferimenti viene ignorato.
+Nel corpo della funzione non viene fatto riferimento al parametro formale. Il parametro senza riferimenti viene ignorato.
 
-C4100 può essere generato anche quando il codice chiama un distruttore su un parametro di tipo primitivo senza riferimenti.  Si tratta di una limitazione del compilatore C++ Microsoft.
+C4100 può essere emesso anche quando il codice chiama un distruttore su un parametro altrimenti senza riferimenti di tipo primitivo.  Si tratta di una limitazione del compilatore Microsoft C++.
 
-Il seguente codice di esempio genera l'avviso C4100:
+L'esempio seguente genera l'C4100:
 
 ```cpp
 // C4100.cpp

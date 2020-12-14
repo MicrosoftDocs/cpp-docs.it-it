@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: contesti di dispositivo'
 title: Contesti di dispositivo
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - drawing [MFC], directly into windows
 - painting and device context
 ms.assetid: d0cd51f1-f778-4c7e-bf50-d738d10433c7
-ms.openlocfilehash: a5be2e57302e597e9c65b7bc966a5ff0ecaf855a
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 725387ad3aa3f099c72c82aecd14d89bad7168bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620357"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261593"
 ---
 # <a name="device-contexts"></a>Contesti di dispositivo
 
@@ -61,7 +62,7 @@ In tal caso, è possibile usare un oggetto del contesto di dispositivo [CClientD
 
 - [Disegno in una visualizzazione](drawing-in-a-view.md)
 
-- [Interpretazione dell'input utente attraverso una visualizzazione](interpreting-user-input-through-a-view.md)
+- [Interpretazione dell'input utente tramite una visualizzazione](interpreting-user-input-through-a-view.md)
 
 - [Linee e curve](/windows/win32/gdi/lines-and-curves)
 
@@ -73,6 +74,6 @@ In tal caso, è possibile usare un oggetto del contesto di dispositivo [CClientD
 
 - [Spazi di coordinate e trasformazioni](/windows/win32/gdi/coordinate-spaces-and-transformations)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Oggetti finestra](window-objects.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: finestre di dialogo in OLE'
 title: Finestre di dialogo in OLE
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], OLE
 - Insert object
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
-ms.openlocfilehash: b59ba16e6e68df2a539232636e8fe710750e3214
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 39353e75fafd65af1f3e5665afce28e3495a978b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616902"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261502"
 ---
 # <a name="dialog-boxes-in-ole"></a>Finestre di dialogo in OLE
 
@@ -30,7 +31,7 @@ Questa finestra di dialogo consente all'utente di controllare il formato utilizz
 *Cambia icona*<br/>
 Questa finestra di dialogo consente all'utente di selezionare l'icona visualizzata per rappresentare l'elemento collegato o incorporato. Visualizza questa finestra di dialogo quando l'utente sceglie icona modifica dal menu modifica oppure sceglie il pulsante Cambia icona nelle finestre di dialogo Incolla speciale o Converti. Visualizzarla anche quando l'utente apre la finestra di dialogo Inserisci oggetto e sceglie Visualizza come icona. Utilizzare la classe [COleChangeIconDialog](reference/colechangeicondialog-class.md) per visualizzare questa finestra di dialogo.
 
-*Convertire*<br/>
+*Converti*<br/>
 Questa finestra di dialogo consente all'utente di modificare il tipo di un elemento incorporato o collegato. Se, ad esempio, è stato incorporato un metafile in un documento composto e in seguito si desidera utilizzare un'altra applicazione per modificare il metafile incorporato, è possibile utilizzare la finestra di dialogo Converti. Questa finestra di dialogo viene in genere visualizzata scegliendo oggetto *tipo di elemento* dal menu modifica, quindi scegliere Converti dal menu a cascata. Utilizzare la classe [COleConvertDialog](reference/coleconvertdialog-class.md) per visualizzare questa finestra di dialogo. Per un esempio, eseguire l'esempio OLE MFC [OCLIENT](../overview/visual-cpp-samples.md).
 
 *Modificare i collegamenti o aggiornare i collegamenti*<br/>
@@ -39,7 +40,7 @@ La finestra di dialogo Modifica collegamenti consente all'utente di modificare l
 *Server occupato o server non in risposta*<br/>
 La finestra di dialogo Server occupato viene visualizzata quando l'utente tenta di attivare un elemento e il server non è attualmente in grado di gestire la richiesta, in genere perché il server è utilizzato da un altro utente o da un'altra attività. La finestra di dialogo Server che non risponde viene visualizzata se il server non risponde alla richiesta di attivazione. Queste finestre di dialogo vengono visualizzate tramite `COleMessageFilter` , in base a un'implementazione dell'interfaccia OLE `IMessageFilter` , e l'utente può decidere se tentare nuovamente la richiesta di attivazione. Utilizzare la classe [COleBusyDialog](reference/colebusydialog-class.md) per visualizzare questa finestra di dialogo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Finestre di dialogo](dialog-boxes.md)<br/>
 [Utilizzo delle finestre di dialogo in MFC](life-cycle-of-a-dialog-box.md)<br/>

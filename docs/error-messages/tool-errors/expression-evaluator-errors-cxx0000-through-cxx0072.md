@@ -1,17 +1,18 @@
 ---
+description: "Altre informazioni su: errori dell'analizzatore di espressioni (CXXxxxx)"
 title: Errori dell'analizzatore di espressioni
 ms.date: 04/16/2019
 ms.assetid: a47a9866-7fb2-4b21-978c-2b77402c7105
-ms.openlocfilehash: 04b0dde3fe60d2a00e9bb788386d6a242e210a52
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 58cdae5ab7e8df0d8581e1afbbca888d220ece8f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857188"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261762"
 ---
 # <a name="expression-evaluator-errors-cxxxxxx"></a>Errori dell'analizzatore di espressioni (CXXxxxx)
 
-In questa sezione è un riferimento per gli errori generati dagli strumenti di debug e diagnostica. Questi strumenti generano errori del modulo CXX*xxxx* alternativa possibile*xxxx*, dove *xxxx* è un numero a quattro cifre.
+Questa sezione è un riferimento agli errori generati dal debugger e dagli strumenti di diagnostica. Questi strumenti generano errori nel formato CXX *xxxx* oppure possono *xxxx*, dove *xxxx* è un numero a quattro cifre.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -85,6 +86,6 @@ In questa sezione è un riferimento per gli errori generati dagli strumenti di d
 [Errore dell'analizzatore di espressioni CXX0069](expression-evaluator-error-cxx0069.md) \
 [Errore dell'analizzatore di espressioni CXX0072](expression-evaluator-error-cxx0072.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[C /C++ del compilatore e compilazione di errori e avvisi degli strumenti](../compiler-errors-1/c-cpp-build-errors.md)
+[Errori e avvisi di strumenti di compilazione e compilatori C/C++](../compiler-errors-1/c-cpp-build-errors.md)

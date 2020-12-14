@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2777'
 title: Errore del compilatore C2777
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2777
 ms.assetid: 5fe158c0-2a65-488a-aca2-61d4a8b32d43
-ms.openlocfilehash: 67132f0acbee3614d8032685ae454386d97b8fb1
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 301dadd8a62826455c0cdd7b7d9d8d9d3832d666
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74740013"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298123"
 ---
 # <a name="compiler-error-c2777"></a>Errore del compilatore C2777
 
 è possibile specificare un solo metodo ' Put ' per proprietà
 
-Un modificatore declspec della [Proprietà](../../cpp/property-cpp.md) ha più di una proprietà `put`.
+Un modificatore declspec della [Proprietà](../../cpp/property-cpp.md) ha più di una `put` Proprietà.
 
 L'esempio seguente genera l'C2777:
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Dialog-Box componenti nel Framework'
 title: Componenti della finestra di dialogo nel framework
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - dialog templates [MFC], MFC framework
 - MFC dialog boxes [MFC], dialog resource
 ms.assetid: 592db160-0a8a-49be-ac72-ead278aca53f
-ms.openlocfilehash: b3290107337f60854e6abbd2f744aaa38af0b741
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 406ffda122c6663d698f008a25164f8836221a2f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616916"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261541"
 ---
 # <a name="dialog-box-components-in-the-framework"></a>Componenti della finestra di dialogo nel framework
 
@@ -27,7 +28,7 @@ Nel framework MFC una finestra di dialogo include due componenti:
 
    Una finestra di dialogo è una finestra che verrà collegata a una finestra di Windows, se visibile. Quando viene creata la finestra di dialogo, la risorsa modello di finestra di dialogo viene utilizzata come modello per la creazione di controlli finestra figlio per la finestra di dialogo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Finestre di dialogo](dialog-boxes.md)<br/>
 [Utilizzo delle finestre di dialogo in MFC](life-cycle-of-a-dialog-box.md)

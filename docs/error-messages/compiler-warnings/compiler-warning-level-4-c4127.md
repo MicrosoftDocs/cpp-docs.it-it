@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 4) C4127'
 title: Avviso del compilatore (livello 4) C4127
 ms.date: 10/16/2019
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4127
 ms.assetid: f59ded9e-5227-45bd-ac43-2aa861581363
-ms.openlocfilehash: afca92602aa6033c56869d3f84192ca0f029a23e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 54c319c6894c0a82c99100c736498466a1c7c135
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218117"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261892"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>Avviso del compilatore (livello 4) C4127
 
 > espressione condizionale costante
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'espressione di controllo di un' **`if`** istruzione o di un **`while`** ciclo restituisce una costante. A causa dell'utilizzo comune di tipo idiomatiche, a partire da Visual Studio 2015 Update 3, le costanti semplici come 1 o non **`true`** attivano l'avviso, a meno che non siano il risultato di un'operazione in un'espressione.
 

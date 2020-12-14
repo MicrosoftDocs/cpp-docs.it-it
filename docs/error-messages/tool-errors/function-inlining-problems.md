@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: problemi di incorporamento delle funzioni'
 title: Problemi di inline di funzioni
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -Ob2 C++ compiler option
 - function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
-ms.openlocfilehash: cb4653bd2f03683b9abad1eea0e9ffa88222090e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3c9c82c8b948acf7a64600c46fe87e17294fa844
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80184242"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261736"
 ---
 # <a name="function-inlining-problems"></a>Problemi di inline di funzioni
 
@@ -54,9 +55,9 @@ int main() {
 }
 ```
 
-Se si utilizza la direttiva del compilatore `#pragma inline_depth`, assicurarsi che sia impostato un valore di 2 o maggiore. Un valore pari a zero disabilita l'incorporamento. Assicurarsi anche di usare le opzioni del compilatore **/OB1** o **/Ob2** .
+Se si utilizza la `#pragma inline_depth` direttiva del compilatore, verificare che sia impostato un valore pari a 2 o superiore. Un valore pari a zero disabilita l'incorporamento. Assicurarsi anche di usare le opzioni del compilatore **/OB1** o **/Ob2** .
 
-La combinazione di opzioni di compilazione inline e non inline in moduli diversi può a volte causare problemi. Se viene C++ creata una libreria con la funzione incorporata inline attivata ([/OB1](../../build/reference/ob-inline-function-expansion.md) o [/Ob2](../../build/reference/ob-inline-function-expansion.md)), ma il file di intestazione corrispondente che descrive le funzioni presenta l'inlining disattivato (nessuna opzione), si otterrà l'errore LNK2001. Le funzioni non vengono inline nel codice del file di intestazione, ma poiché non sono presenti nel file di libreria, non esiste alcun indirizzo per risolvere il riferimento.
+La combinazione di opzioni di compilazione inline e non inline in moduli diversi può a volte causare problemi. Se viene creata una libreria C++ con l'incorporamento della funzione attivata ([/OB1](../../build/reference/ob-inline-function-expansion.md) o [/Ob2](../../build/reference/ob-inline-function-expansion.md)), ma il file di intestazione corrispondente che descrive le funzioni presenta l'inline disattivato (nessuna opzione), si otterrà l'errore LNK2001. Le funzioni non vengono inline nel codice del file di intestazione, ma poiché non sono presenti nel file di libreria, non esiste alcun indirizzo per risolvere il riferimento.
 
 Analogamente, un progetto che usa la funzione inline definisce ancora le funzioni in un file con estensione cpp invece che nel file di intestazione, otterrà anche LNK2019. Il file di intestazione è incluso ovunque considerato appropriato, ma le funzioni sono inline solo quando il file con estensione cpp passa attraverso il compilatore. il linker vede pertanto le funzioni come External non risolte se utilizzate in altri moduli.
 
@@ -91,6 +92,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Errore degli strumenti del linker LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)
