@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: gestione della memoria: allocazione di frame'
 title: 'Gestione della memoria: allocazione di frame'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - frame variables [MFC]
 ms.assetid: 945a211a-6f4f-4679-bb6a-b0f2a0d4a6c1
-ms.openlocfilehash: cb66a0c0aea16f7e6831b6a1aff1a125df355210
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1763d332275f17ee082b891830641ebc61cad054
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225046"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193435"
 ---
 # <a name="memory-management-frame-allocation"></a>Gestione della memoria: allocazione di frame
 
@@ -39,6 +40,6 @@ Quando un oggetto viene definito come una variabile di frame, il relativo costru
 
 Il vantaggio principale dell'allocazione di oggetti nel frame è che vengono eliminati automaticamente. Quando si allocano gli oggetti nel frame, non è necessario preoccuparsi degli oggetti dimenticati che provocano perdite di memoria. Per informazioni dettagliate sulle perdite di memoria, vedere l'articolo [rilevamento di perdite di memoria in MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476(v=vs.100)). Uno svantaggio dell'allocazione dei frame è che non è possibile usare le variabili di frame al di fuori dell'ambito. Un altro fattore nella scelta dell'allocazione di frame e dell'allocazione dell'heap è che per strutture e oggetti di grandi dimensioni è spesso preferibile usare l'heap invece dello stack per l'archiviazione perché lo spazio dello stack è spesso limitato.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione della memoria](memory-management.md)

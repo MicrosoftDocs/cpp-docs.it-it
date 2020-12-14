@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: classi documento attivo'
 title: Classi documento attivo
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Active document classes [MFC]
 ms.assetid: cc20af37-b658-406d-8148-7670737f4c03
-ms.openlocfilehash: d0ae51c959ef87ad7002dc6e06eb1a9156d3741d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f09deaac1ac6227b2e74fd879a4409710fe9a36d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616587"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197686"
 ---
 # <a name="active-document-classes"></a>Classi documento attivo
 
@@ -24,6 +25,6 @@ Implementa i verbi del server OLE in modo specifico per i server di documenti at
 [COleDocObjectItem](reference/coledocobjectitem-class.md)<br/>
 Implementa Active Document Containment.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Cenni preliminari sulle classi](class-library-overview.md)

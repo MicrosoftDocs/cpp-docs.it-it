@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: contenitori di controlli ActiveX: visualizzazione e modifica delle proprietà dei controlli'
 title: 'Contenitori di controlli ActiveX: visualizzazione e modifica delle proprietà dei controlli'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], properties
 - controls [MFC], properties
 ms.assetid: 14ce5152-742b-4e0d-a9ab-c7b456e32918
-ms.openlocfilehash: 052da13619fae5004ee573bd4957266a545d8335
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 27de4773bfb42b7caf759a64bbbfc0c6b81bcdba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507911"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197660"
 ---
 # <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>Contenitori di controlli ActiveX: visualizzazione e modifica delle proprietà dei controlli
 
@@ -39,6 +40,6 @@ Il primo passaggio per visualizzare le proprietà del controllo consiste nell'ag
 
 Utilizzare la finestra di dialogo **Proprietà** per modificare e testare immediatamente le nuove proprietà.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Contenitori di controlli ActiveX](activex-control-containers.md)

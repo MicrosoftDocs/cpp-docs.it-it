@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: &lt; ostream &gt; Operators'
 title: Operatori &lt;ostream&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - ostream/std::operator&lt;&lt;
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
-ms.openlocfilehash: a4dfee6c70f068e5a61294e6b2863a8a12a9c378
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 51422031de786d560b70a8ccaf8a072151630bbe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039768"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193058"
 ---
 # <a name="ltostreamgt-operators"></a>Operatori &lt;ostream&gt;
 
@@ -113,7 +114,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-determina la lunghezza N = `traits_type::` [length](../standard-library/char-traits-struct.md#length)( `str` ) della sequenza che inizia con *STR*e inserisce la sequenza. Se N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), la funzione inserisce anche una ripetizione di caratteri di riempimento `_Ostr.width` - N. La ripetizione precede la sequenza se ( `_Ostr` . [flags](../standard-library/ios-base-class.md#flags)  &  flag `adjustfield` ! = [Left](../standard-library/ios-functions.md#left). In caso contrario, la ripetizione segue la sequenza. La funzione restituisce *_Ostr*.
+determina la lunghezza N = `traits_type::` [length](../standard-library/char-traits-struct.md#length)( `str` ) della sequenza che inizia con *STR* e inserisce la sequenza. Se N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), la funzione inserisce anche una ripetizione di caratteri di riempimento `_Ostr.width` - N. La ripetizione precede la sequenza se ( `_Ostr` . [](../standard-library/ios-base-class.md#flags)  &  flag `adjustfield` ! = [Left](../standard-library/ios-functions.md#left). In caso contrario, la ripetizione segue la sequenza. La funzione restituisce *_Ostr*.
 
 La funzione modello
 

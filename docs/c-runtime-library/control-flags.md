@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: flag di controllo'
 title: Flag di controllo
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - heap allocation, control flags
 - debug heap, control flags
 ms.assetid: 8dbd24a5-0633-42d1-9771-776db338465f
-ms.openlocfilehash: 7ac5f239ea4d242618fb23ba617a3a6539492053
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 6b49bfa49e2e231a64af8d88739778964ce8ed21
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750114"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195736"
 ---
 # <a name="control-flags"></a>Flag di controllo
 
 La versione di debug della libreria di runtime C Microsoft utilizza i seguenti flag per controllare l'allocazione dell'heap ed il processo di creazione rapporti. Per altre informazioni, vedere [Tecniche di debug CRT](/visualstudio/debugger/crt-debugging-techniques).
 
-|Flag|Description|
+|Flag|Descrizione|
 |----------|-----------------|
 |[_CRTDBG_MAP_ALLOC](../c-runtime-library/crtdbg-map-alloc.md)|Esegue il mapping delle funzioni degli heap di base alle rispettive controparti di versione di debug|
 |[_DEBUG](../c-runtime-library/debug.md)|Consente l'utilizzo delle versioni di debug delle funzioni di runtime|
@@ -27,6 +28,6 @@ La versione di debug della libreria di runtime C Microsoft utilizza i seguenti f
 
 Questi flag possono essere definiti con un'opzione della riga di comando /D o con una direttiva `#define`. Quando il flag è definito con `#define`, la direttiva deve essere visualizzata prima che il file di intestazione includa l'istruzione per le dichiarazioni di routine.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Variabili globali e tipi standard](../c-runtime-library/global-variables-and-standard-types.md)

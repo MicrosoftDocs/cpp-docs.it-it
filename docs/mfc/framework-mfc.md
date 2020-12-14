@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Framework (MFC)'
 title: Framework (MFC)
 ms.date: 09/17/2019
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-ms.openlocfilehash: b02d5a1862a278f46591895f20f58a97367b5ab2
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 12e5a28e231dfadec867213ebf1cea6fd6ae7300
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618794"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193487"
 ---
 # <a name="framework-mfc"></a>Framework (MFC)
 
@@ -31,24 +32,24 @@ Incapsulamento significa che la classe C++ `CWnd` , ad esempio, contiene una var
 
 [SDI e MDI](sdi-and-mdi.md)
 
-[Documenti, visualizzazioni e framework](documents-views-and-the-framework.md)
+[Documenti, visualizzazioni e Framework](documents-views-and-the-framework.md)
 
 [Procedure guidate ed editor di risorse](wizards-and-the-resource-editors.md)
 
 ## <a name="in-related-sections"></a>Sezioni correlate
 
-[Compilazione nel framework](building-on-the-framework.md)
+[Compilazione nel Framework](building-on-the-framework.md)
 
-[Chiamate del codice dal framework](how-the-framework-calls-your-code.md)
+[Come il Framework chiama il codice](how-the-framework-calls-your-code.md)
 
 [CWinApp: classe Application](cwinapp-the-application-class.md)
 
-[Modelli di documenti e processo di creazione documento/visualizzazione](document-templates-and-the-document-view-creation-process.md)
+[Modelli di documento e processo di creazione documento/visualizzazione](document-templates-and-the-document-view-creation-process.md)
 
 [Gestione e mapping dei messaggi](message-handling-and-mapping.md)
 
 [Oggetti finestra](window-objects.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso delle classi per la creazione di applicazioni per Windows](using-the-classes-to-write-applications-for-windows.md)
+[Utilizzo delle classi per scrivere applicazioni per Windows](using-the-classes-to-write-applications-for-windows.md)

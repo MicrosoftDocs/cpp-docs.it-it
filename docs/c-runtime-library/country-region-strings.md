@@ -1,19 +1,20 @@
 ---
+description: 'Altre informazioni su: stringhe di paese/area geografica'
 title: Stringhe di paesi e aree geografiche
 ms.date: 11/04/2016
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-ms.openlocfilehash: d5d8c10e30886c1b34bb5dc95296bc594acda1a4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d865c3a6a8f505eea7878df379db30224511d51c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831853"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195697"
 ---
 # <a name="countryregion-strings"></a>stringhe relative a paesi
 
-Le stringhe di paese e area geografica possono essere combinate con una stringa di lingua per creare una specifica delle impostazioni locali per le funzioni `setlocale`, `_wsetlocale`, `_create_locale`e `_wcreate_locale` . Per gli elenchi di nomi di paese e di area supportati da varie versioni del sistema operativo Windows, vedere le colonne **Language**, **location**e **Tag Language** della tabella in [appendice a: comportamento del prodotto](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) in \[ MS-LCID]: informazioni di riferimento sull'identificatore del codice lingua (LCID) di Windows. Per un esempio di codice che enumera i nomi delle impostazioni locali disponibili e i valori correlati, vedere [NLS: Name-based APIs Sample](/windows/win32/intl/nls--name-based-apis-sample) (NLS: esempio di API basate sui nomi).
+Le stringhe di paese e area geografica possono essere combinate con una stringa di lingua per creare una specifica delle impostazioni locali per le funzioni `setlocale`, `_wsetlocale`, `_create_locale`e `_wcreate_locale` . Per gli elenchi di nomi di paese e di area supportati da varie versioni del sistema operativo Windows, vedere le colonne **Language**, **location** e **Tag Language** della tabella in [appendice a: comportamento del prodotto](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) in \[ MS-LCID]: informazioni di riferimento sull'identificatore del codice lingua (LCID) di Windows. Per un esempio di codice che enumera i nomi delle impostazioni locali disponibili e i valori correlati, vedere [NLS: Name-based APIs Sample](/windows/win32/intl/nls--name-based-apis-sample) (NLS: esempio di API basate sui nomi).
 
 ## <a name="additional-supported-country-and-region-strings"></a>Altre stringhe di paese e area geografica supportate
 
@@ -21,7 +22,7 @@ L'implementazione della libreria di runtime Microsoft C supporta anche le seguen
 
 |Stringa paese/area geografica|Abbreviazione|Nome equivalente delle impostazioni locali|
 |----------------------------|------------------|----------------------------|
-|america|USA|it-IT|
+|america|USA|en-US|
 |britain|GBR|en-GB|
 |china|CHN|zh-CN|
 |czech|CZE|cs-CZ|
@@ -42,10 +43,10 @@ L'implementazione della libreria di runtime Microsoft C supporta anche le seguen
 |trinidad & tobago|TTO|en-TT|
 |uk|GBR|en-GB|
 |united-kingdom|GBR|en-GB|
-|united-states|USA|it-IT|
-|us|USA|it-IT|
+|united-states|USA|en-US|
+|us|USA|en-US|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Nomi delle impostazioni locali, lingue e stringhe di paese/area geografica](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [Stringhe relative a lingue](../c-runtime-library/language-strings.md)<br/>

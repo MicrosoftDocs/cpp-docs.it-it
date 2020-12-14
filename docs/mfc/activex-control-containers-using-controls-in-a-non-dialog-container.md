@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: contenitori di controlli ActiveX: utilizzo di controlli in un contenitore non di finestra di dialogo'
 title: 'Contenitori di controlli ActiveX: utilizzo di controlli in un contenitore diverso da una finestra di dialogo'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], non-dialog containers
 - ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
-ms.openlocfilehash: f3f0bc7c89ff2bea1c344f2c876e1624ba82fb87
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 699f1faa5c88eb965a320c210de6e5e6c2ee94ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214165"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197673"
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>Contenitori di controlli ActiveX: utilizzo di controlli in un contenitore diverso da una finestra di dialogo
 
@@ -61,6 +62,6 @@ L'implementazione di questa funzionalità è un processo in quattro fasi.
 
 1. Ricompilare il progetto. Un controllo Circ verrà creato dinamicamente ogni volta che viene creata la vista dell'applicazione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Contenitori di controlli ActiveX](activex-control-containers.md)

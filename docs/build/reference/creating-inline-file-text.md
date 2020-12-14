@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: creazione di testo di file inline'
 title: Creazione del testo di un file inline
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - NMAKE program, inline files
 - text, inline file
 ms.assetid: b8a332ed-8244-4ff8-89e6-029d7f659725
-ms.openlocfilehash: a45aa526ca99af93cda86a2a8e0580d4d036ca6d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 849273fff4ca0853e4589a38096cbb067c380aae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272321"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196854"
 ---
 # <a name="creating-inline-file-text"></a>Creazione del testo di un file inline
 
-File inline possono essere temporaneo o permanente.
+I file inline sono temporanei o permanenti.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -27,12 +28,12 @@ inlinetext
 <<[KEEP | NOKEEP]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Specificare *inlinetext* sulla prima riga dopo il comando. Contrassegnare la fine con doppie parentesi angolari (<<) all'inizio di una riga separata. Il file contiene tutti *inlinetext* prima di delimitazione tra parentesi quadre. Il *inlinetext* può contenere espansioni della macro e le sostituzioni, ma non le direttive o commenti makefile. Gli spazi, tabulazioni e caratteri di nuova riga vengono trattati in modo letterale.
+Specificare *inlinetext* nella prima riga dopo il comando. Contrassegnare la fine con parentesi quadre doppie (<<) all'inizio di una riga separata. Il file contiene tutti *inlinetext* prima delle parentesi di delimitazione. *Inlinetext* può includere espansioni e sostituzioni di macro, ma non direttive o commenti Makefile. Spazi, tabulazioni e caratteri di nuova riga vengono trattati letteralmente.
 
-Un file temporaneo esisterà per la durata della sessione e può essere riutilizzato da altri comandi. Specificare **mantenere** dopo le parentesi acute chiusura per conservare il file al termine della sessione NMAKE; un file senza nome verrà mantenuto su disco con il nome del file generato. Specificare **NOKEEP** o nessun segno per un file temporaneo. **MANTIENI** e **NOKEEP** non sono tra maiuscole e minuscole.
+Un file temporaneo esiste per la durata della sessione e può essere riutilizzato da altri comandi. Specificare **Mantieni** dopo le parentesi angolari di chiusura per mantenere il file dopo la sessione NMAKE; un file senza nome viene mantenuto su disco con il nome file generato. Specificare **nokeep** o Nothing per un file temporaneo. **Keep** e **nokeep** non fanno distinzione tra maiuscole e minuscole.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [File inline in un makefile](inline-files-in-a-makefile.md)

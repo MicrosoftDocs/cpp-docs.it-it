@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: dichiarazioni di puntatore'
 title: Dichiarazioni di puntatori
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - const keyword [C]
 - pointers, declarations
 ms.assetid: 8b3b7fc7-f44d-480d-b6f9-cebe4e5462a6
-ms.openlocfilehash: 31d7e30859537fed1b18f6d30302d83248e17e74
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3c1670d1dd86e7df7f164e357ff99f3ed31e7339
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211762"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195918"
 ---
 # <a name="pointer-declarations"></a>Dichiarazioni di puntatori
 
@@ -48,7 +49,7 @@ Il *qualificatore di tipo* può essere **`const`** o o **`volatile`** entrambi. 
 
 È possibile dichiarare un puntatore a un tipo di struttura, unione o enumerazione prima di definire il tipo di struttura, unione o enumerazione. Il puntatore viene dichiarato tramite il tag di unione o della struttura come illustrato negli esempi riportati di seguito. Tali dichiarazioni sono consentite perché non è necessario che il compilatore conosca le dimensioni della struttura o dell'unione per allocare lo spazio per la variabile puntatore.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Negli esempi riportati di seguito vengono illustrate le dichiarazioni di puntatore:
 
@@ -112,8 +113,8 @@ struct id
 } record;
 ```
 
-Il *record* della variabile ha l' *ID*del tipo di struttura. Si noti che *pname* è dichiarato come puntatore a un altro tipo di struttura denominato *Name*. Questa dichiarazione può essere visualizzata prima che venga definito il tipo *name*.
+Il *record* della variabile ha l' *ID* del tipo di struttura. Si noti che *pname* è dichiarato come puntatore a un altro tipo di struttura denominato *Name*. Questa dichiarazione può essere visualizzata prima che venga definito il tipo *name*.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Dichiaratori e dichiarazioni di variabili](../c-language/declarators-and-variable-declarations.md)

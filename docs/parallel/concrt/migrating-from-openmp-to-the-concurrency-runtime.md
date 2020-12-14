@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: migrazione da OpenMP a runtime di concorrenza'
 title: Migrazione da OpenMP al runtime di concorrenza
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 081d0ae8b312d827a0af98dd45c62f7563e81677
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: ab9b50f0cdebcc8fc601565dd19c5c2704c17d95
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507757"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193084"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrazione da OpenMP al runtime di concorrenza
 
@@ -61,7 +62,7 @@ Dato un ciclo OpenMP [Parallel](../../parallel/concrt/how-to-use-parallel-invoke
 [Procedura: convertire un ciclo OpenMP che usa una variabile di riduzione per usare la runtime di concorrenza](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
 Dato un ciclo OpenMP [Parallel](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[for](../openmp/reference/openmp-directives.md#for-openmp) che usa la clausola [Reduction](../openmp/reference/openmp-clauses.md#reduction) , viene illustrato come convertirlo per usare la runtime di concorrenza.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Runtime di concorrenza](../../parallel/concrt/concurrency-runtime.md)<br/>
 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)<br/>

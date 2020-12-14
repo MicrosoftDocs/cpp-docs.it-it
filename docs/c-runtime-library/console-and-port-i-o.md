@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: I/O console e porta'
 title: I/O console e porta
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - I/O [CRT], port
 - I/O routines, console and port I/O
 ms.assetid: 0eee1c92-9b3d-41e0-a43a-257e546eeec8
-ms.openlocfilehash: 5b4dc2a081ea11bd84d932f55b5b247de81f296a
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 99419db614d4b4493f0fc5de3febb522c8bbb3dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443453"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195788"
 ---
 # <a name="console-and-port-io"></a>I/O console e porta
 
@@ -22,7 +23,7 @@ Queste routine eseguono la lettura e la scrittura sulla console o sulla porta sp
 
 ## <a name="console-and-port-io-routines"></a>Routine di I/O console e porta
 
-|Routine|Uso|
+|Routine|Usa|
 |-------------|---------|
 |[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md), [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|Leggere una stringa dalla console|
 |[_cprintf, _cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md), [_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l](../c-runtime-library/reference/cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)|Scrivere dati formattati nella console|
@@ -40,7 +41,7 @@ Queste routine eseguono la lettura e la scrittura sulla console o sulla porta sp
 |[_putch, _putwch](../c-runtime-library/reference/putch-putwch.md)|Scrivere un carattere nella console|
 |[_ungetch, _ungetwch](../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)|Annullare l'ottenimento dell'ultimo carattere letto dalla console, convertendolo nel successivo carattere letto|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Input e output](../c-runtime-library/input-and-output.md)<br/>
 [Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>

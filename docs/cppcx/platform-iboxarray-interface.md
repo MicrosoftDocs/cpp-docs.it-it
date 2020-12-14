@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: interfaccia Platform:: IBoxArray'
 title: Interfaccia Platform::IBoxArray
 ms.date: 12/30/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::IBoxArray
 ms.assetid: 6cd82c9e-4230-4147-9edb-7a652875dbf1
-ms.openlocfilehash: 493770cab092c2bb719d47e5d3a9d6a9f0646489
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8b87a00d709bec8af016de4532c7c4ec759d72fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444163"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195144"
 ---
 # <a name="platformiboxarray-interface"></a>Interfaccia Platform::IBoxArray
 
@@ -31,11 +32,11 @@ interface class IBoxArray
 *T*<br/>
 Tipo di valore boxed in ogni elemento della matrice.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-`IBoxArray` è il C++nome del/CX di `Windows::Foundation::IReferenceArray`.
+`IBoxArray` è il nome C++/CX per `Windows::Foundation::IReferenceArray` .
 
-### <a name="members"></a>Members
+### <a name="members"></a>Membri
 
 L'interfaccia `IBoxArray` eredita dall'interfaccia `IValueType` . `IBoxArray` dispone anche di questi membri:
 
@@ -43,7 +44,7 @@ L'interfaccia `IBoxArray` eredita dall'interfaccia `IValueType` . `IBoxArray` di
 |------------|-----------------|
 |[Valore](#value)|Restituisce la matrice di tipo unboxed archiviata in precedenza in questa istanza di `IBoxArray` .|
 
-## <a name="value"></a>Proprietà IBoxArray:: value
+## <a name="iboxarrayvalue-property"></a><a name="value"></a> Proprietà IBoxArray:: value
 
 Restituisce il valore memorizzato in origine in questo oggetto.
 
@@ -62,10 +63,10 @@ Tipo del valore boxed.
 
 Restituisce il valore memorizzato in origine in questo oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per un esempio, vedere [Boxing](../cppcx/boxing-c-cx.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Array e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

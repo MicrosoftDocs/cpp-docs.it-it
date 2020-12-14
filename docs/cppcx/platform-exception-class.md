@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe Platform:: Exception'
 title: Platform::Exception (classe)
 ms.date: 12/30/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-ms.openlocfilehash: bfdd8b3df720073e6b4a19cdb5b34db23e659fd0
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 1b6ad35e04ae239d90dbfceecaaf72223ae6a7ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90741969"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195216"
 ---
 # <a name="platformexception-class"></a>Platform::Exception (classe)
 
@@ -89,7 +90,7 @@ Stringa che descrive l'errore.
 
 Eccezione che rappresenta il valore HRESULT dell'errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Utilizza questo metodo per creare un'eccezione da un valore HRESULT restituito, ad esempio, da una chiamata a un metodo di un'interfaccia COM. Puoi utilizzare l'overload che accetta un parametro String^ per fornire un messaggio personalizzato.
 
@@ -129,7 +130,7 @@ public:
 
 Valore HRESULT.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La maggior parte delle eccezioni inizia come errori COM, che vengono restituiti come valori HRESULT. C++/CX converte questi valori in oggetti Platform::Exception^ e la proprietà archivia il valore del codice di errore originale.
 
@@ -147,10 +148,10 @@ public:property String^ Message;
 
 Nelle eccezioni originate da Windows Runtime, si tratta di una descrizione dell'errore fornita dal sistema.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 In Windows 8, questa proprietà è di sola lettura perché le eccezioni in tale versione del Windows Runtime vengono trasferite nell'interfaccia ABI solo come HRESULT. In Windows 8.1 e versioni successive le informazioni sull'eccezione più dettagliate viene trasportate tramite ABI ed puoi fornire un messaggio personalizzato a cui altri componenti possono accedere a livello di codice. Per ulteriori informazioni, vedere [eccezioni (C++/CX)](../cppcx/exceptions-c-cx.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Platform](../cppcx/platform-namespace-c-cx.md)

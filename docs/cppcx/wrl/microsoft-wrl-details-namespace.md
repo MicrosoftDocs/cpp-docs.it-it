@@ -1,14 +1,15 @@
 ---
+description: 'Altre informazioni su: Microsoft:: WRL::D etails spazio dei nomi'
 title: Spazio dei nomi Microsoft::WRL::Details
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: d71fe149-d804-4c6f-961d-43fe21ef8630
-ms.openlocfilehash: 50208242d77d7b54951bcb44608f1a20b5147efc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c82d7389c80d35aa041dccc7c6bc8d202fba9c29
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223473"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195112"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Spazio dei nomi Microsoft::WRL::Details
 
@@ -20,11 +21,11 @@ Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codi
 namespace Microsoft::WRL::Details;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="classes"></a>Classi
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Classe ComPtrRef](comptrref-class.md)|Rappresenta un riferimento a un oggetto di tipo ComPtr \<T> .|
 |[Classe ComPtrRefBase](comptrrefbase-class.md)|Rappresenta la classe di base per la classe [ComPtrRef](comptrref-class.md) .|
@@ -37,11 +38,11 @@ namespace Microsoft::WRL::Details;
 
 ### <a name="structures"></a>Strutture
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[ArgTraits (struttura)](argtraits-structure.md)|Dichiara un'interfaccia del delegato specificata e una funzione membro anonima con un numero specificato di parametri.|
 |[Struttura ArgTraitsHelper](argtraitshelper-structure.md)|Consente di definire le caratteristiche comuni degli argomenti del delegato.|
-|[BoolStruct (struttura)](boolstruct-structure.md)|Definisce se un `ComPtr` oggetto gestisce la durata degli oggetti di un'interfaccia. `BoolStruct`viene usato internamente dall'operatore [BoolType ()](comptr-class.md#operator-microsoft-wrl-details-booltype) .|
+|[BoolStruct (struttura)](boolstruct-structure.md)|Definisce se un `ComPtr` oggetto gestisce la durata degli oggetti di un'interfaccia. `BoolStruct` viene usato internamente dall'operatore [BoolType ()](comptr-class.md#operator-microsoft-wrl-details-booltype) .|
 |[CreatorMap (struttura)](creatormap-structure.md)|Sono incluse informazioni su come inizializzare, registrare e annullare la registrazione di oggetti.|
 |[DerefHelper (struttura)](derefhelper-structure.md)|Rappresenta un puntatore dereferenziato al `T*` parametro di modello.|
 |[EnableIf (struttura)](enableif-structure.md)|Definisce un membro dati del tipo specificato dal secondo parametro di modello se il primo parametro di modello restituisce **`true`** .|
@@ -63,13 +64,13 @@ namespace Microsoft::WRL::Details;
 
 ### <a name="enumerations"></a>Enumerazioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[AsyncStatusInternal (enumerazione)](asyncstatusinternal-enumeration.md)|Specifica un mapping tra enumerazioni interne per lo stato delle operazioni asincrone e dell' `Windows::Foundation::AsyncStatus` enumerazione.|
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[ActivationFactoryCallback (funzione)](activationfactorycallback-function.md)|Ottiene la factory di attivazione per l'ID di attivazione specificato.|
 |[Move (funzione)](move-function.md)|Sposta l'argomento specificato da una posizione a un'altra.|
@@ -83,7 +84,7 @@ namespace Microsoft::WRL::Details;
 
 **Spazio dei nomi:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Microsoft:: WRL](microsoft-wrl-namespace.md)<br/>
 [Spazio dei nomi Microsoft:: WRL:: Wrappers](microsoft-wrl-wrappers-namespace.md)

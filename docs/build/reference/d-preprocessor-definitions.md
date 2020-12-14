@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/D (definizioni preprocessore)
 title: /D (definizioni preprocessore)
 ms.date: 09/18/2019
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-ms.openlocfilehash: 7c8a500820c8cc4655c409f4628d72a69acafa5a
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 6ae7dcd81e1821d4c3a8a2f6d5c1b711c0faa9f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040938"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196828"
 ---
 # <a name="d-preprocessor-definitions"></a>/D (definizioni preprocessore)
 
@@ -26,8 +27,8 @@ Definisce un simbolo di pre-elaborazione per un file di origine.
 
 ## <a name="syntax"></a>Sintassi
 
-> **/D** \[ ]_nome_ \[ `=` \| `#` \[ { *string* \| *numero* stringa}]] \
-> **/D** \[ ] `"` _nome_ \[ `=` \| `#` \[ { *string* \| *numero* stringa}]]`"`
+> **/D** \[ ]_nome_ \[ `=` \| `#` \[ {  \| *numero* stringa}]] \
+> **/D** \[ ] `"` _nome_ \[ `=` \| `#` \[ {  \| *numero* stringa}]]`"`
 
 ## <a name="remarks"></a>Commenti
 
@@ -107,7 +108,7 @@ TEST defined 1
 ## <a name="see-also"></a>Vedere anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)\
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)\
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)\
 [/FI (nome file di inclusione forzata)](fi-name-forced-include-file.md)\
 [/U,/u (annullare la definizione dei simboli)](u-u-undefine-symbols.md)\
 [Direttiva #undef (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)\
