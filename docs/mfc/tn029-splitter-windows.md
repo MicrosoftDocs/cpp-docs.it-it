@@ -1,5 +1,6 @@
 ---
-title: 'TN029: Finestre con separatore'
+description: 'Altre informazioni su: TN029: finestre con separatore'
+title: 'TN029: finestre con separatore'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.windows.splitter
@@ -7,70 +8,70 @@ helpviewer_keywords:
 - TN029
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
-ms.openlocfilehash: 6c2f619d9cd619ca598c66ca657faa1b9dccaaa2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1079adf403b64aa47f5aae00aa32f7da702ddcf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305710"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215638"
 ---
-# <a name="tn029-splitter-windows"></a>TN029: Finestre con separatore
+# <a name="tn029-splitter-windows"></a>TN029: finestre con separatore
 
-Questa nota descrive le MFC [classe CSplitterWnd](../mfc/reference/csplitterwnd-class.md), che fornisce finestra divide e gestisce il ridimensionamento di altre finestre del riquadro.
+Questa nota descrive la [classe CSPLITTERWND](../mfc/reference/csplitterwnd-class.md)MFC, che fornisce le divisioni della finestra e gestisce il ridimensionamento di altre finestre del riquadro.
 
-## <a name="splitter-styles"></a>Stili barra di divisione
+## <a name="splitter-styles"></a>Stili Splitter
 
-Oggetto `CSplitterWnd` supporta due stili diversi di suddivisione di windows.
+Un `CSplitterWnd` supporta due stili diversi per suddividere le finestre.
 
-In "separatori statici", la finestra con separatore crea i riquadri al momento della creazione. L'ordine e il numero di riquadri mai essere modificati. Barre di divisione vengono usate per ridimensionare i riquadri diversi. È possibile utilizzare questo stile di visualizzazione per visualizzare una classe di visualizzazione diverso in ogni riquadro. L'editor di immagini di Visual C++ e la gestione di File di Windows sono esempi di programmi che utilizzano questo stile barra di divisione. Questo stile di finestra con separatore non utilizza finestre con separatore.
+In "static Splitters", la finestra con separatore crea i riquadri al momento della creazione. L'ordine e il numero di riquadri non cambiano mai. Le barre con separatore vengono utilizzate per ridimensionare i diversi riquadri. È possibile utilizzare questo stile per visualizzare un'altra classe di visualizzazione in ogni riquadro. Il Visual C++ editor di grafica e gestione file di Windows sono esempi di programmi che usano questo stile Splitter. Questo stile della finestra con separatore non usa le caselle di divisione.
 
-In "dinamici con separatori," altri riquadri vengono creati e distrutti come utente divisioni e annullare la divisioni nuove visualizzazioni. Questa barra di divisione che inizia con una singola visualizzazione e sono disponibili finestre con separatore per l'utente di avviare la suddivisione. Finestra con separatore crea un nuovo oggetto di visualizzazione in modo dinamico durante la visualizzazione è suddivisa in una sola direzione. Questo nuovo oggetto di visualizzazione rappresenta il nuovo riquadro. Se la visualizzazione è suddivisa in due direzioni usando l'interfaccia della tastiera, la finestra con separatore crea tre nuovi oggetti di visualizzazione per i tre nuovi riquadri. Mentre la divisione è attiva, Windows consente di visualizzare la finestra con separatore come una barra di divisione tra i riquadri. Windows elimina definitivamente gli oggetti di visualizzazione aggiuntive quando l'utente rimuove una divisione, ma l'originale rimane vista fino alla finestra con separatore stesso viene eliminato definitivamente. Microsoft Excel e Microsoft Word sono esempi di applicazioni che usano lo stile con separatore dinamico.
+In "Splitter dinamici", i riquadri aggiuntivi vengono creati ed eliminati quando l'utente divide e Annulla la suddivisione delle nuove visualizzazioni. Questa barra di divisione inizia con una singola visualizzazione e fornisce caselle di divisione per l'avvio della suddivisione da parte dell'utente. La finestra con separatore crea dinamicamente un nuovo oggetto visualizzazione quando la visualizzazione è divisa in una direzione. Questo nuovo oggetto visualizzazione rappresenta il nuovo riquadro. Se la visualizzazione è divisa in due direzioni usando l'interfaccia della tastiera, la finestra con separatore crea tre nuovi oggetti visualizzazione per i tre nuovi riquadri. Mentre la divisione è attiva, in Windows viene visualizzata la casella di divisione come barra di divisione tra i riquadri. Windows elimina gli oggetti di visualizzazione aggiuntivi quando l'utente rimuove una divisione, ma la visualizzazione originale rimane fino a quando la finestra con separatore non viene distrutta. Microsoft Excel e Microsoft Word sono esempi di applicazioni che utilizzano lo stile di separatore dinamico.
 
-Quando si crea qualsiasi tipo di finestra con separatore, è necessario specificare il numero massimo di righe e colonne che gestirà la barra di divisione. Un separatore statico creerà i riquadri per riempire tutte le righe e colonne. Una barra di divisione dinamica verrà creato solo il primo riquadro quando il `CSplitterWnd` viene creato.
+Quando si crea uno dei due tipi di finestra con separatore, è necessario specificare il numero massimo di righe e colonne che saranno gestite dalla barra di divisione. Un separatore statico creerà dei riquadri per riempire tutte le righe e le colonne. Un separatore dinamico creerà solo il primo riquadro quando `CSplitterWnd` viene creato.
 
-Il numero massimo di riquadri che è possibile specificare per finestre con separatore statici è 16 righe in base a 16 colonne. Le configurazioni consigliate sono:
+Il numero massimo di riquadri che è possibile specificare per i separatori statici è 16 righe per 16 colonne. Le configurazioni consigliate sono:
 
-- le colonne 1 riga x 2: in genere con diversi riquadri
+- 1 riga x 2 colonne: in genere con riquadri non simili
 
-- colonna 2 righe x 1: in genere con diversi riquadri
+- 2 righe x 1: in genere con riquadri non simili
 
-- le colonne di 2 righe x 2: in genere con riquadri simile
+- 2 righe x 2 colonne: in genere con riquadri simili
 
-Il numero massimo di riquadri che è possibile specificare per finestre con separatore dinamici è 2 righe in base a 2 colonne. Le configurazioni consigliate sono:
+Il numero massimo di riquadri che è possibile specificare per i separatori dinamici è 2 righe per due colonne. Le configurazioni consigliate sono:
 
-- le colonne 1 riga x 2: per i dati a colonne
+- 1 riga x 2 colonne: per i dati a colonne
 
-- colonna 2 righe x 1: testuale o altri dati
+- 2 righe x 1 colonna: per i dati di testo o altri dati
 
-- le colonne di 2 righe x 2: orientata ai servizi dati di tabella o della griglia
+- 2 righe x 2 colonne: per i dati orientati alla griglia o alla tabella
 
-## <a name="splitter-examples"></a>Esempi di divisione
+## <a name="splitter-examples"></a>Esempi di Splitter
 
-Finestre con separatore molti dei programmi di esempio MFC usano direttamente o indirettamente. L'esempio MFC generale [2x1 viene](../overview/visual-cpp-samples.md) illustrati diversi utilizzi delle finestre con separatore statici, incluse le procedure inserire una barra di divisione in una barra di divisione.
+Molti dei programmi di esempio MFC utilizzano le finestre con separatore direttamente o indirettamente. Il [Sample](../overview/visual-cpp-samples.md) di esempio generale MFC illustra diversi usi dei separatori statici, inclusa la modalità di inserimento di una barra di divisione in una barra di divisione.
 
-È anche possibile usare ClassWizard per creare un nuovo più documenti (MDI) interfaccia figlio classe finestra cornice che contiene una finestra con separatore. Per altre informazioni su finestre con separatore, vedere [tipi di documenti multipli, visualizzazioni e Frame Windows](../mfc/multiple-document-types-views-and-frame-windows.md).
+È anche possibile usare ClassWizard per creare una nuova classe della finestra cornice figlio MDI (Multiple Document Interface) che contiene una finestra con separatore. Per ulteriori informazioni sulle finestre con separatore, vedere [tipi di documenti multipli, visualizzazioni e finestre cornice](../mfc/multiple-document-types-views-and-frame-windows.md).
 
 ## <a name="terminology-used-by-implementation"></a>Terminologia utilizzata dall'implementazione
 
-Ecco un elenco di termini specifici di finestre con separatore:
+Di seguito è riportato un elenco di termini specifici per le finestre con separatore:
 
-`CSplitterWnd`: Una finestra che fornisce i controlli di divisione riquadro e le barre di scorrimento che vengono condivise tra tutti i riquadri in una riga o colonna. Specificare righe e colonne con i numeri in base zero (il primo riquadro è riga = 0 e alla colonna = 0).
+`CSplitterWnd`: Finestra che fornisce controlli di suddivisione del riquadro e barre di scorrimento condivise tra tutti i riquadri in una riga o una colonna. È possibile specificare righe e colonne con numeri in base zero (il primo riquadro è Row = 0 e Column = 0).
 
-Riquadro: Una finestra specifica dell'applicazione che un `CSplitterWnd` gestisce. Un riquadro in genere è un oggetto derivato dal [classe CView](../mfc/reference/cview-class.md), ma può essere qualsiasi [CWnd](../mfc/reference/cwnd-class.md) oggetto con l'ID di finestra figlio appropriate.
+Riquadro: finestra specifica dell'applicazione gestita da un oggetto `CSplitterWnd` . Un riquadro è in genere un oggetto derivato dalla [classe CView](../mfc/reference/cview-class.md), ma può essere qualsiasi oggetto [CWND](../mfc/reference/cwnd-class.md) con l'ID della finestra figlio appropriato.
 
-Usare un `CWnd`-derivato dell'oggetto, viene passato il RUNTIME_CLASS dell'oggetto dal `CreateView` funzionano come si farebbe se si usasse un `CView`-classe derivata. La classe deve usare IMPLEMENT_DYNCREATE e DECLARE_DYNCREATE perché il framework utilizza la creazione dinamica in fase di esecuzione. Anche se è presente una grande quantità di codice nel `CSplitterWnd` che è specifico per il `CView` (classe), [CObject:: IsKindOf](../mfc/reference/cobject-class.md#iskindof) viene sempre utilizzato prima che vengano eseguite tali azioni.
+Per usare un `CWnd` oggetto derivato da, passare il RUNTIME_CLASS dell'oggetto alla `CreateView` funzione come se si utilizzasse una `CView` classe derivata da. La classe deve usare DECLARE_DYNCREATE e IMPLEMENT_DYNCREATE perché il Framework usa la creazione dinamica in fase di esecuzione. Sebbene sia presente una grande quantità di codice in `CSplitterWnd` specifico per la `CView` classe, [CObject:: IsKindOf](../mfc/reference/cobject-class.md#iskindof) viene sempre utilizzato prima di eseguire tali azioni.
 
-Barra di divisione: Controllo che viene inserito tra righe e colonne di riquadri. Può essere usata per regolare le dimensioni delle righe o colonne di riquadri.
+Barra di divisione: un controllo che viene inserito tra le righe e le colonne dei riquadri. Può essere utilizzato per regolare le dimensioni delle righe o delle colonne dei riquadri.
 
-Finestra con separatore: Un controllo in una dinamica `CSplitterWnd` che è possibile usare per creare nuove righe o colonne di riquadri. Si trova nella parte superiore della barra di scorrimento verticale o a sinistra delle barre di scorrimento orizzontale.
+Splitter Box: un controllo in una dinamica `CSplitterWnd` che è possibile usare per creare nuove righe o colonne di riquadri. Si trova nella parte superiore delle barre di scorrimento verticali o a sinistra delle barre di scorrimento orizzontali.
 
-Intersezione di barra di divisione: L'intersezione di una barra di divisione verticale e una barra di divisione orizzontale. È possibile trascinarlo per regolare le dimensioni di una riga e colonna dei riquadri contemporaneamente.
+Intersezione tra Splitter: intersezione tra una barra di divisione verticale e una barra di divisione orizzontale. È possibile trascinarlo per regolare le dimensioni di una riga e una colonna di riquadri simultaneamente.
 
-## <a name="shared-scroll-bars"></a>Le barre di scorrimento condiviso
+## <a name="shared-scroll-bars"></a>Barre di scorrimento condivise
 
-Il `CSplitterWnd` classe supporta anche le barre di scorrimento condiviso. Questi controlli barra di scorrimento sono elementi figlio del `CSplitterWnd` e vengono condivise con i diversi riquadri nella barra di divisione.
+La `CSplitterWnd` classe supporta anche le barre di scorrimento condivise. Questi controlli della barra di scorrimento sono elementi figlio di `CSplitterWnd` e vengono condivisi con i diversi riquadri nella barra di divisione.
 
-Ad esempio, in una finestra di colonna 1 riga x 2, è possibile specificare WS_VSCROLL quando si crea il `CSplitterWnd`. Windows crea un controllo barra di scorrimento speciali che verrà condivisi tra i due riquadri.
+Ad esempio, in una finestra a 1 riga x 2 colonna è possibile specificare WS_VSCROLL durante la creazione di `CSplitterWnd` . Windows crea un controllo barra di scorrimento speciale condiviso tra i due riquadri.
 
 ```
 [      ][      ][^]
@@ -78,37 +79,37 @@ Ad esempio, in una finestra di colonna 1 riga x 2, è possibile specificare WS_V
 [      ][      ][v]
 ```
 
-Quando l'utente sposta la barra di scorrimento, i messaggi WM_VSCROLL verranno inviati a entrambe le visualizzazioni. Quando una visualizzazione imposta la posizione della barra di scorrimento, verrà impostata la barra di scorrimento condiviso.
+Quando l'utente sposta la barra di scorrimento, WM_VSCROLL messaggi verranno inviati a entrambe le visualizzazioni. Quando una vista imposta la posizione della barra di scorrimento, viene impostata la barra di scorrimento condivisa.
 
-Si noti che le barre di scorrimento condiviso sono entrambe particolarmente utili per gli oggetti vista simile. Se si combinano le visualizzazioni dei diversi tipi in una barra di divisione, quindi è possibile scrivere codice speciale per coordinare le posizioni di scorrimento. Eventuali `CView`-classe derivata che utilizza il `CWnd` barra di scorrimento API eseguirà una delega alla barra di scorrimento condiviso se esistente. Il `CScrollView` implementazione è un esempio di un `CView` condivisi di classe che supporta le barre di scorrimento. Classi non derivate da `CView`, le classi che si basano sulle barre di scorrimento di controllo non o le classi che usano le implementazioni di Windows standard (ad esempio, `CEditView`) non funziona con la funzionalità di barra di scorrimento condiviso di `CSplitterWnd`.
+Si noti che le barre di scorrimento condivise sono particolarmente utili con oggetti visualizzazione simili. Se si combinano viste di tipi diversi in una barra di divisione, potrebbe essere necessario scrivere codice speciale per coordinare le posizioni di scorrimento. Eventuali `CView` classi derivate da che usano le `CWnd` API della barra di scorrimento delegheranno alla barra di scorrimento condivisa, se esistente. L' `CScrollView` implementazione è un esempio di una `CView` classe che supporta le barre di scorrimento condivise. Le classi che non sono derivate da `CView` , le classi basate su barre di scorrimento non di controllo o le classi che usano implementazioni standard di Windows (ad esempio, `CEditView` ) non funzioneranno con la funzionalità della barra di scorrimento condivisa di `CSplitterWnd` .
 
 ## <a name="minimum-sizes"></a>Dimensioni minime
 
-Per ogni riga è disponibile un'altezza minima della riga, e per ogni colonna è disponibile una larghezza minima della colonna. In questo modo si garantisce che un riquadro non è troppo piccolo per essere illustrato in dettaglio.
+Per ogni riga è presente un'altezza minima della riga e per ogni colonna è presente una larghezza minima della colonna. Questo minimo garantisce che un riquadro non sia troppo piccolo per essere visualizzato in dettaglio.
 
-Per una finestra con separatore statico, la larghezza minima della riga iniziale di altezza e la colonna è 0. Per una finestra con separatore dinamico, la larghezza minima della riga iniziale di altezza e alla colonna vengono impostati per il *sizeMin* parametro del `CSplitterWnd::Create` (funzione).
+Per una finestra con separatore statico, l'altezza minima della riga iniziale e la larghezza della colonna sono pari a 0. Per una finestra con separatore dinamico, l'altezza minima della riga iniziale e la larghezza di colonna vengono impostate dal parametro *sizeMin* della `CSplitterWnd::Create` funzione.
 
-È possibile modificare queste dimensioni minime usando le [CSplitterWnd::SetRowInfo](../mfc/reference/csplitterwnd-class.md#setrowinfo) e [CSplitterWnd::SetColumnInfo](../mfc/reference/csplitterwnd-class.md#setcolumninfo) funzioni.
+È possibile modificare queste dimensioni minime usando le funzioni [CSplitterWnd:: SetColumnInfo](../mfc/reference/csplitterwnd-class.md#setrowinfo) e [CSplitterWnd:: SetRowInfo](../mfc/reference/csplitterwnd-class.md#setcolumninfo) .
 
-## <a name="actual-vs-ideal-sizes"></a>Visual Studio effettivo. Dimensioni ideali
+## <a name="actual-vs-ideal-sizes"></a>Dimensioni effettive rispetto a quelle ideali
 
-Il layout dei riquadri nella finestra con separatore dipende dalle dimensioni della pagina che li contiene. Quando un utente ridimensiona il frame che lo contiene, di `CSplitterWnd` Riposiziona e ridimensiona i riquadri in modo che rientrino miglior modo possibile.
+Il layout dei riquadri nella finestra con separatore dipende dalle dimensioni del frame che li contiene. Quando un utente ridimensiona il frame contenitore, il `CSplitterWnd` riposiziona e ridimensiona i riquadri in modo da adattarli al meglio possibile.
 
-L'utente può impostare manualmente la riga le dimensioni di larghezza di altezza e la colonna o il programma può impostare le dimensioni ideali utilizzando il `CSplitterWnd` classe. Le dimensioni effettive possono essere più piccoli o superiori rispetto a quella ideale. Se non c'è spazio sufficiente per visualizzare le dimensioni ideali o se è presente una quantità eccessiva spazio vuoto a destra o a parte inferiore della finestra con separatore, Windows regolerà la dimensione effettiva.
+L'utente può impostare manualmente l'altezza della riga e le dimensioni della larghezza delle colonne oppure il programma può impostare la dimensione ideale usando la `CSplitterWnd` classe. Il valore delle dimensioni effettive può essere minore o maggiore del valore ideale. Windows modificherà le dimensioni effettive se non è disponibile spazio sufficiente per visualizzare le dimensioni ideali o se è presente un numero eccessivo di spazio vuoto a destra o in basso nella finestra con separatore.
 
 ## <a name="custom-controls"></a>Controlli personalizzati
 
-È possibile eseguire l'override di molte funzioni per fornire un comportamento personalizzato e un'interfaccia personalizzata. È possibile eseguire l'override di questo primo insieme per fornire immagini alternative per i vari componenti di con interfaccia grafici di una finestra con separatore.
+È possibile eseguire l'override di molte funzioni per fornire un comportamento personalizzato e un'interfaccia personalizzata. È possibile eseguire l'override di questo primo set per fornire immagini alternative per i vari componenti grafici di una finestra con separatore.
 
 - `virtual void OnDrawSpltter(CDC* pDC, ESplitType nType, const CRect& rect);`
 
 - `virtual void OnInvertTracker(const CRect& rect);`
 
-Si chiama questa funzione per creare un controllo barra di scorrimento condiviso. È possibile eseguirne l'override per creare controlli aggiuntivi accanto alla barra di scorrimento.
+Questa funzione viene chiamata per creare un controllo barra di scorrimento condiviso. È possibile eseguirne l'override per creare controlli aggiuntivi accanto alla barra di scorrimento.
 
 - `virtual BOOL CreateScrollBarCtrl(DWORD dwStyle, UINT nID);`
 
-Queste funzioni implementano la logica della finestra con separatore dinamico. È possibile eseguire l'override di questi strumenti per fornire più avanzate per la logica con separatore.
+Queste funzioni implementano la logica della finestra con separatore dinamico. È possibile eseguire l'override di questi per fornire una logica di barra di divisione più avanzata.
 
 - `virtual void DeleteView(int row, int col);`
 
@@ -122,21 +123,21 @@ Queste funzioni implementano la logica della finestra con separatore dinamico. �
 
 ## <a name="cview-functionality"></a>Funzionalità CView
 
-Il `CView` classe utilizza i seguenti comandi di alto livelli per delegare il `CSplitterWnd` implementazione. Poiché questi comandi sono virtuali, lo standard `CView` implementazione non richiederà l'intera `CSplitterWnd` da collegare nell'implementazione. Per le applicazioni che usano `CView` ma non `CSplitterWnd`, il `CSplitterWnd` implementazione non sarà collegata con l'applicazione.
+La `CView` classe usa i comandi di alto livello seguenti per delegare all' `CSplitterWnd` implementazione. Poiché si tratta di comandi virtuali, l' `CView` implementazione standard non richiede il collegamento dell'intera `CSplitterWnd` implementazione in. Per le applicazioni che usano `CView` ma non `CSplitterWnd` , l' `CSplitterWnd` implementazione non sarà collegata all'applicazione.
 
 - `virtual BOOL CanActivateNext(BOOL bPrev = FALSE);`
 
-   Controlla se ID_NEXT_PANE o ID_PREV_PANE è attualmente possibile.
+   Verifica se è attualmente possibile ID_NEXT_PANE o ID_PREV_PANE.
 
 - `virtual void ActivateNext(BOOL bPrev = FALSE);`
 
-   Esegue il comando "Riquadro successivo" o "Riquadro precedente".
+   Esegue il comando "riquadro successivo" o "riquadro precedente".
 
 - `virtual BOOL DoKeyboardSplit();`
 
-   Esegue il comando, in genere "Dividi finestra" di divisione tastiera.
+   Esegue il comando di suddivisione della tastiera, in genere "Window Split".
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
 [Note tecniche per categoria](../mfc/technical-notes-by-category.md)

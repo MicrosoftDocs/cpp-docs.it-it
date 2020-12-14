@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: dichiaratori astratti C'
 title: Dichiaratori astratti C
 ms.date: 11/04/2016
 helpviewer_keywords:
 - declarators, abstract
 - abstract declarations
 ms.assetid: 6a556ad7-0555-421a-aa02-294d77cda8b5
-ms.openlocfilehash: 540b938e2c4121f189216942bc06630fc61ee19c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9af51d96ac50222b9148060147812aecdf114b7d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220860"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211609"
 ---
 # <a name="c-abstract-declarators"></a>Dichiaratori astratti C
 
@@ -45,6 +46,6 @@ int (*const []) ( unsigned int, ... )
 > [!NOTE]
 > Il dichiaratore astratto composto da un set di parentesi vuote **( )** non è consentito perché è ambiguo. È impossibile determinare se l'identificatore implicito appartiene all'interno delle parentesi (in questo caso è un tipo non modificato) oppure le precede (in questo caso è un tipo di funzione).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Dichiaratori e dichiarazioni di variabili](../c-language/declarators-and-variable-declarations.md)

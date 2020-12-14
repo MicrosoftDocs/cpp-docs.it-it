@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _amsg_exit'
 title: _amsg_exit
 ms.date: 11/04/2016
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - _amsg_exit
 ms.assetid: 146d4faf-d763-43a4-b264-12711196456b
-ms.openlocfilehash: 31979a3181dc57644f1e6877277884e55cebf733
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d00283f3222a217db8337129f66b377f7c0d494e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170936"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211401"
 ---
 # <a name="_amsg_exit"></a>_amsg_exit
 
@@ -45,7 +46,7 @@ void _amsg_exit ( int rterrnum );
 *rterrnum*<br/>
 Numero di identificazione di un messaggio di errore di runtime definito dal sistema.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questa funzione genera il messaggio di errore di runtime in **stderr** per le applicazioni di console oppure visualizza il messaggio in una finestra di messaggio per le applicazioni Windows. In modalità di debug, è possibile richiamare il debugger prima di chiudere l'applicazione.
 

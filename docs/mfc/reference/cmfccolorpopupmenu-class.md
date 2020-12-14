@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CMFCColorPopupMenu'
 title: Classe CMFCColorPopupMenu
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], GetMenuBar
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
-ms.openlocfilehash: 2964f250b25ad6c77c70e8f10cd92cca0c7d11da
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1668064fa253ea17bdce1ba393bd892ef8769b71
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844561"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211830"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>Classe CMFCColorPopupMenu
 
@@ -31,18 +32,18 @@ Rappresenta un menu a comparsa utilizzato dagli utenti per selezionare i colori 
 class CMFCColorPopupMenu : public CMFCPopupMenu
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[CMFCColorPopupMenu:: CMFCColorPopupMenu](#cmfccolorpopupmenu)|Costruisce un oggetto `CMFCColorPopupMenu`.|
 |`CMFCColorPopupMenu::~CMFCColorPopupMenu`|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[CMFCColorPopupMenu:: CreateTearOffBar](#createtearoffbar)|Crea una barra di colore tear-off ancorabile. Esegue l'override di [CMFCPopupMenu:: CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar).|
 |[CMFCColorPopupMenu:: getbarra dei menu](#getmenubar)|Restituisce il [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) incorporato nel menu a comparsa. Esegue l'override di [CMFCPopupMenu:: Getbarra dei menu](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar).|
@@ -51,12 +52,12 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 ### <a name="data-members"></a>Membri dei dati
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |`m_bEnabledInCustomizeMode`|Valore booleano che determina se visualizzare la barra dei colori.|
 |`m_wndColorBar`|`CMFCColorBar`Oggetto che fornisce la selezione dei colori.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa classe eredita la funzionalità del menu popup della `CMFCPopupMenu` classe e gestisce un `CMFCColorBar` oggetto che fornisce la selezione dei colori. Quando il Framework della barra degli strumenti è in modalità di personalizzazione e il `m_bEnabledInCustomizeMode` membro è impostato su false, l'oggetto della barra dei colori non viene visualizzato. Per ulteriori informazioni sulla modalità di personalizzazione, vedere [CMFCToolBar:: IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)
 
@@ -170,7 +171,7 @@ in Puntatore a un pulsante padre.
 *nID*<br/>
 in ID di comando.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Ogni costruttore di overload imposta il `m_bEnabledInCustomizeMode` membro su false.
 
@@ -206,7 +207,7 @@ in Testo della finestra della barra di strappo.
 
 Puntatore al nuovo oggetto della barra di controllo tear-off.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo crea un oggetto della [classe CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) e ne esegue il cast a un puntatore della [classe CPane](../../mfc/reference/cpane-class.md) . È possibile eseguire il cast di questo valore a un puntatore della [classe CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) usando una delle macro di cast descritte nel [cast dei tipi di oggetti della classe MFC](../../mfc/reference/type-casting-of-mfc-class-objects.md).
 
@@ -222,7 +223,7 @@ virtual CMFCPopupMenuBar* GetMenuBar();
 
 Puntatore all'oggetto incorporato `CMFCPopupMenuBar` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il menu a comparsa colori include un oggetto [classe CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) incorporato. Eseguire l'override di questo metodo in una classe derivata se l'applicazione usa un tipo incorporato diverso.
 
@@ -239,7 +240,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 *pWndList*<br/>
 in Puntatore a un oggetto controllo griglia Proprietà.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)

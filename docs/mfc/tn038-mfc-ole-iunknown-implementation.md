@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: TN038: implementazione di IUnknown MFC/OLE'
 title: 'TN038: implementazione di IUnknown MFC-OLE'
 ms.date: 06/28/2018
 helpviewer_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - END_INTERFACE_PART macro [MFC]
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
-ms.openlocfilehash: 83166b32a20b8d24f748f85946caa01dbc76d4d0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 64a921fec560c375440f0430d4804aa78e533c6c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230441"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215404"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038: implementazione di IUnknown MFC/OLE
 
@@ -102,7 +103,7 @@ class CPrintObj : public CPrintInterface
 };
 ```
 
-Le implementazioni di [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) e [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) sarebbero esattamente le stesse implementate in precedenza. `CPrintObj::QueryInterface`avrà un aspetto simile al seguente:
+Le implementazioni di [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) e [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) sarebbero esattamente le stesse implementate in precedenza. `CPrintObj::QueryInterface` avrà un aspetto simile al seguente:
 
 ```cpp
 HRESULT CPrintObj::QueryInterface(REFIID iid, void FAR* FAR* ppvObj)
@@ -256,7 +257,7 @@ Le mappe dell'interfaccia supportano anche queste funzionalità avanzate:
 
 Per ulteriori informazioni sull'aggregazione, vedere l'argomento [aggregazione](/windows/win32/com/aggregation) .
 
-Il supporto delle mappe dell'interfaccia di MFC è radicato nella classe `CCmdTarget`. `CCmdTarget`il conteggio dei riferimenti "*has-a*" e tutte le funzioni membro associate all'implementazione di [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) (il conteggio dei riferimenti ad esempio è in `CCmdTarget` ). Per creare una classe che supporta OLE COM, è necessario derivare una classe da `CCmdTarget` e usare diverse macro e funzioni membro di `CCmdTarget` per implementare le interfacce desiderate. L'implementazione di MFC usa classi annidate per definire l'implementazione di ogni interfaccia in modo molto simile all'esempio precedente. Questa operazione viene resa più semplice con un'implementazione standard di IUnknown e con alcune macro che eliminano parte del codice ripetitivo.
+Il supporto delle mappe dell'interfaccia di MFC è radicato nella classe `CCmdTarget`. `CCmdTarget` il conteggio dei riferimenti "*has-a*" e tutte le funzioni membro associate all'implementazione di [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) (il conteggio dei riferimenti ad esempio è in `CCmdTarget` ). Per creare una classe che supporta OLE COM, è necessario derivare una classe da `CCmdTarget` e usare diverse macro e funzioni membro di `CCmdTarget` per implementare le interfacce desiderate. L'implementazione di MFC usa classi annidate per definire l'implementazione di ogni interfaccia in modo molto simile all'esempio precedente. Questa operazione viene resa più semplice con un'implementazione standard di IUnknown e con alcune macro che eliminano parte del codice ripetitivo.
 
 ## <a name="interface-map-basics"></a>Nozioni di base sulle mappe dell'interfaccia
 
@@ -443,7 +444,7 @@ Questa sezione descrive ogni macro e le API usate per implementare queste funzio
 void EnableAggregation();
 ```
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Chiamare questa funzione nel costruttore della classe derivata se si vuole supportare l'aggregazione OLE per oggetti di questo tipo. Questa funzione prepara una speciale implementazione di IUnknown necessaria per gli oggetti aggregabili.
 
@@ -464,7 +465,7 @@ Puntatore far a un IID (primo argomento per QueryInterface)
 *ppvObj*<br/>
 Puntatore a IUnknown* (secondo argomento per QueryInterface)
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Chiamare questa funzione nell'implementazione di IUnknown per ogni interfaccia implementata dalla classe. Questa funzione fornisce l'implementazione basata sui dati standard di QueryInterface in base alla mappa dell'interfaccia dell'oggetto. È necessario eseguire il cast del valore restituito in HRESULT. Se l'oggetto è aggregato, questa funzione chiamerà l'interfaccia "IUnknown di controllo" invece di usare la mappa dell'interfaccia locale.
 
@@ -474,7 +475,7 @@ Chiamare questa funzione nell'implementazione di IUnknown per ogni interfaccia i
 DWORD ExternalAddRef();
 ```
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Chiamare questa funzione nell'implementazione di IUnknown::AddRef per ogni interfaccia implementata dalla classe. Il valore restituito è il nuovo conteggio dei riferimenti nell'oggetto CCmdTarget. Se l'oggetto è aggregato, questa funzione chiama l'interfaccia "IUnknown di controllo" invece di modificare il conteggio dei riferimenti locale.
 
@@ -484,7 +485,7 @@ Chiamare questa funzione nell'implementazione di IUnknown::AddRef per ogni inter
 DWORD ExternalRelease();
 ```
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Chiamare questa funzione nell'implementazione di IUnknown::Release per ogni interfaccia implementata dalla classe. Il valore restituito indica il nuovo conteggio dei riferimenti nell'oggetto. Se l'oggetto è aggregato, questa funzione chiama l'interfaccia "IUnknown di controllo" invece di modificare il conteggio dei riferimenti locale.
 
@@ -494,7 +495,7 @@ Chiamare questa funzione nell'implementazione di IUnknown::Release per ogni inte
 DECLARE_INTERFACE_MAP
 ```
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Usare questa macro in qualsiasi classe derivata da `CCmdTarget` che avrà una mappa dell'interfaccia. Utilizzato in modo molto simile a DECLARE_MESSAGE_MAP. La chiamata di questa macro deve essere inserita nella definizione della classe, in genere nel file di intestazione (con estensione H). Una classe con DECLARE_INTERFACE_MAP deve definire la mappa dell'interfaccia nel file di implementazione (. CPP) con le macro BEGIN_INTERFACE_MAP e END_INTERFACE_MAP.
 
@@ -513,7 +514,7 @@ Nome della classe che implementa l'interfaccia
 *iface*<br/>
 Nome dell'interfaccia implementata dalla classe
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Per ogni interfaccia che sarà implementata dalla classe, è necessario disporre di una coppia BEGIN_INTERFACE_PART e END_INTERFACE_PART. Queste macro definiscono una classe locale derivata dall'interfaccia OLE specificata, nonché una variabile membro incorporata della classe. I membri [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref), [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)e [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) sono dichiarati automaticamente. È necessario includere le dichiarazioni per le altre funzioni membro che fanno parte dell'interfaccia implementata (tali dichiarazioni vengono inserite tra le macro BEGIN_INTERFACE_PART e END_INTERFACE_PART).
 
@@ -553,7 +554,7 @@ Classe in cui deve essere definita la mappa dell'interfaccia
 *baseClass*<br/>
 Classe da cui deriva *theClass* .
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Le macro BEGIN_INTERFACE_MAP e END_INTERFACE_MAP vengono usate nel file di implementazione per definire effettivamente la mappa dell'interfaccia. Per ogni interfaccia implementata è presente una o più chiamate INTERFACE_PART macro. Per ogni aggregazione utilizzata dalla classe, esiste una chiamata INTERFACE_AGGREGATE macro.
 
@@ -574,7 +575,7 @@ Nome della classe che contiene la mappa dell'interfaccia.
 *localClass*<br/>
 Nome della classe locale (meno la "X").
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Questa macro viene utilizzata tra la macro BEGIN_INTERFACE_MAP e la macro END_INTERFACE_MAP per ogni interfaccia che verrà supportata dall'oggetto. Consente di eseguire il mapping di un IID a un membro della classe indicata da *theClass* e *localClass*. ' M_x ' verrà aggiunto automaticamente a *localClass* . Si noti che a un singolo membro possono essere associati più `IID`. Questo comportamento è molto utile quando si implementa solo un'interfaccia "più derivata" e si vuole fornire anche tutte le interfacce intermedie. Un esempio valido è l'interfaccia `IOleInPlaceFrameWindow`. La gerarchia ha questo aspetto:
 
@@ -619,11 +620,11 @@ Nome della classe che contiene la mappa dell'interfaccia.
 *theAggr*<br/>
 Nome della variabile membro che deve essere aggregata.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Questa macro viene usata per indicare al framework che la classe usa un oggetto aggregato. Deve comparire tra le macro BEGIN_INTERFACE_PART e END_INTERFACE_PART. Un oggetto aggregato è un oggetto separato, derivato da [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown). Utilizzando un'aggregazione e la macro INTERFACE_AGGREGATE, è possibile fare in modo che tutte le interfacce supportate dall'aggregazione risultino direttamente supportate dall'oggetto. L'argomento *theAggr* è semplicemente il nome di una variabile membro della classe derivata da [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) , direttamente o indirettamente. Tutte le macro di INTERFACE_AGGREGATE devono seguire le macro INTERFACE_PART quando vengono inserite in una mappa dell'interfaccia.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
 [Note tecniche per categoria](../mfc/technical-notes-by-category.md)

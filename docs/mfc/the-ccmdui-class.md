@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CCmdUI'
 title: Classe CCmdUI
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - update handlers [MFC]
 - toolbars [MFC], updating
 ms.assetid: 2f2bae62-8c29-45a4-bbce-490eb01907d5
-ms.openlocfilehash: 105aa7ad6c5cc6a5563dbde8145327a2b3d066a1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 5fae6d2dda948fd3720a29d502d7f050e388bceb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447150"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97216132"
 ---
 # <a name="the-ccmdui-class"></a>Classe CCmdUI
 
@@ -21,8 +22,8 @@ Quando indirizza un comando di aggiornamento al gestore, il framework passa al g
 
 [!code-cpp[NVC_MFCDocView#3](../mfc/codesnippet/cpp/the-ccmdui-class_1.cpp)]
 
-Questo gestore chiama la funzione membro `Enable` di un oggetto con accesso alla voce di menu. `Enable` rende l'elemento disponibile per l'utilizzo.
+Questo gestore chiama la `Enable` funzione membro di un oggetto con accesso alla voce di menu. `Enable` rende l'elemento disponibile per l'utilizzo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Procedura: Aggiornare oggetti dell'interfaccia utente](../mfc/how-to-update-user-interface-objects.md)
+[Procedura: aggiornare oggetti User-Interface](../mfc/how-to-update-user-interface-objects.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _set_SSE2_enable'
 title: _set_SSE2_enable
 ms.date: 04/05/2018
 api_name:
@@ -27,16 +28,16 @@ helpviewer_keywords:
 - Streaming SIMD Extensions 2 instructions
 - set_SSE2_enable function
 ms.assetid: 55db895d-fc1e-475a-9110-b781a9bb51c5
-ms.openlocfilehash: 8838282db851c6811a3f24c75a03b31c5870e6d3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a9c82b2f17d90bc158ac77b8d7ad9625491856aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948371"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211206"
 ---
 # <a name="_set_sse2_enable"></a>_set_SSE2_enable
 
-Abilita o Disabilita l'uso di istruzioni Streaming SIMD Extensions 2 (SSE2) nelle routine matematiche CRT. (Questa funzione non è disponibile nelle architetture x64 perché SSE2 è abilitato per impostazione predefinita).
+Abilita o disabilita l'utilizzo di istruzioni Streaming SIMD Extensions 2 (SSE2) nelle routine matematiche CRT. (Questa funzione non è disponibile nelle architetture x64 perché SSE2 è abilitato per impostazione predefinita).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -55,17 +56,17 @@ int _set_SSE2_enable(
 
 Diverso da zero se l'implementazione SSE2 è abilitata; zero se l'implementazione SSE2 è disabilitata.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Le funzioni seguenti dispongono di implementazioni SSE2 che possono essere abilitate tramite **_set_SSE2_enable**:
 
-- [atan](atan-atanf-atanl-atan2-atan2f-atan2l.md)
+- [Atan](atan-atanf-atanl-atan2-atan2f-atan2l.md)
 
 - [ceil](ceil-ceilf-ceill.md)
 
 - [exp](exp-expf.md)
 
-- [floor](floor-floorf-floorl.md)
+- [Floor](floor-floorf-floorl.md)
 
 - [log](log-logf-log10-log10f.md)
 
@@ -73,7 +74,7 @@ Le funzioni seguenti dispongono di implementazioni SSE2 che possono essere abili
 
 - [modf](modf-modff-modfl.md)
 
-- [pow](pow-powf-powl.md)
+- [POW](pow-powf-powl.md)
 
 Le implementazioni SSE2 di queste funzioni potrebbero fornire risposte leggermente diverse dalle implementazioni predefinite, poiché i valori intermedi SSE2 sono quantità a virgola mobile a 64 bit, ma i valori intermedi di un'implementazione predefinita sono quantità a virgola mobile a 80 bit.
 
@@ -88,7 +89,7 @@ L'implementazione SSE2 viene utilizzata solo se tutte le eccezioni sono maschera
 |-------------|---------------------|
 |**_set_SSE2_enable**|\<math.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

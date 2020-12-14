@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: TN055: migrazione di applicazioni di classi di database ODBC MFC a classi DAO MFC'
 title: 'TN055: migrazione di applicazioni classi di database ODBC MFC a classi DAO MFC'
 ms.date: 09/17/2019
 helpviewer_keywords:
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - porting ODBC database applications to DAO
 - migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
-ms.openlocfilehash: 744e1c71476ccfbe6ea8f8359dcdb9a29efc995e
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: d1afd599384bd6e5c3083abf661a7128c0154b22
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74305371"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214884"
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: migrazione di applicazioni classi di database ODBC MFC a classi DAO MFC
 
 > [!NOTE]
-> DAO viene usato con i database di Access ed è supportato tramite Office 2013. DAO 3,6 è la versione finale ed è considerata obsoleta. Gli ambienti C++ visivi e le procedure guidate non supportano DAO (sebbene le classi DAO siano incluse ed è comunque possibile usarle). Microsoft consiglia di utilizzare [OLE DB modelli](../data/oledb/ole-db-templates.md) o [ODBC e MFC](../data/odbc/odbc-and-mfc.md) per i nuovi progetti. È consigliabile utilizzare solo DAO per la gestione delle applicazioni esistenti.
+> DAO viene usato con i database di Access ed è supportato tramite Office 2013. DAO 3,6 è la versione finale ed è considerata obsoleta. L'ambiente Visual C++ e le procedure guidate non supportano DAO (sebbene le classi DAO siano incluse ed è comunque possibile usarle). Microsoft consiglia di utilizzare [OLE DB modelli](../data/oledb/ole-db-templates.md) o [ODBC e MFC](../data/odbc/odbc-and-mfc.md) per i nuovi progetti. È consigliabile utilizzare solo DAO per la gestione delle applicazioni esistenti.
 
 ## <a name="overview"></a>Panoramica
 
@@ -74,12 +75,12 @@ Probabilmente la maggior parte delle differenze più ovvie tra le classi consist
 ||`DFX_Currency`|
 |`RFX_Single`|`DFX_Single`|
 |`RFX_Double`|`DFX_Double`|
-|`RFX_Date`<sup>1</sup>|`DFX_Date` (basata su`COleDateTime`)|
+|`RFX_Date`<sup>1</sup>|`DFX_Date` ( `COleDateTime` basato su)|
 |`RFX_Text`|`DFX_Text`|
 |`RFX_Binary`|`DFX_Binary`|
 |`RFX_LongBinary`|`DFX_LongBinary`|
 
-<sup>1</sup> la funzione `RFX_Date` si basa su `CTime` e `TIMESTAMP_STRUCT`.
+<sup>1</sup> la `RFX_Date` funzione è basata su `CTime` e `TIMESTAMP_STRUCT` .
 
 Le modifiche essenziali alle funzionalità che possono influenzare l'applicazione e che richiedono più di una semplice ridenominazione sono elencate di seguito.
 
@@ -87,7 +88,7 @@ Le modifiche essenziali alle funzionalità che possono influenzare l'applicazion
 
    Con le classi ODBC, in MFC è necessario definire queste opzioni tramite macro o tipi enumerati.
 
-   Con le classi DAO, DAO fornisce la definizione di queste opzioni in un file di intestazione (DBDAOINT.H). Pertanto il tipo del recordset è un membro enumerato di `CRecordset`, ma con DAO è una costante. È ad esempio possibile utilizzare lo **snapshot** quando si specifica il tipo di `CRecordset` in ODBC, ma **DB_OPEN_SNAPSHOT** quando si specifica il tipo di `CDaoRecordset`.
+   Con le classi DAO, DAO fornisce la definizione di queste opzioni in un file di intestazione (DBDAOINT.H). Pertanto il tipo del recordset è un membro enumerato di `CRecordset`, ma con DAO è una costante. È ad esempio possibile utilizzare lo **snapshot** quando si specifica il tipo di `CRecordset` in ODBC, ma **DB_OPEN_SNAPSHOT** quando si specifica il tipo di `CDaoRecordset` .
 
 - Il tipo di recordset predefinito per `CRecordset` è **snapshot** mentre il tipo di recordset predefinito per `CDaoRecordset` è **Dynaset** (vedere la nota di seguito per un ulteriore problema relativo agli snapshot della classe ODBC).
 
@@ -99,12 +100,12 @@ Le modifiche essenziali alle funzionalità che possono influenzare l'applicazion
 
 - La classe Exception è stata modificata. `CDBExceptions` vengono generate nelle classi ODBC e `CDaoExceptions` nelle classi DAO.
 
-- `RFX_Date` utilizza `CTime` e `TIMESTAMP_STRUCT` oggetti mentre `DFX_Date` utilizza `COleDateTime`. Il `COleDateTime` è quasi identico a `CTime`, ma si basa su una **Data** OLE a 8 byte anziché su un **time_t** a 4 byte, in modo che possa conservare un intervallo di dati molto più ampio.
+- `RFX_Date` USA `CTime` `TIMESTAMP_STRUCT` oggetti e durante l'uso di `DFX_Date` `COleDateTime` . `COleDateTime`È quasi identico a `CTime` , ma si basa su una **Data** OLE a 8 byte anziché su un **time_t** a 4 byte, in modo da poter mantenere un intervallo di dati molto più ampio.
 
    > [!NOTE]
-   > Gli snapshot di DAO (`CDaoRecordset`) sono di sola lettura mentre gli snapshot di ODBC (`CRecordset`) possono essere aggiornati in base al driver e all'utilizzo della libreria di cursori ODBC. Se si utilizza la libreria di cursori, gli snapshot `CRecordset` sono aggiornabili. Se si utilizza uno dei driver Microsoft da Desktop Driver Pack 3.0 senza la libreria di cursori ODBC, gli snapshot `CRecordset` sono di sola lettura. Se si utilizza un altro driver, controllare la documentazione del driver per verificare se gli snapshot (`STATIC_CURSORS`) sono di sola lettura.
+   > Gli snapshot di DAO (`CDaoRecordset`) sono di sola lettura mentre gli snapshot di ODBC (`CRecordset`) possono essere aggiornati in base al driver e all'utilizzo della libreria di cursori ODBC. Se si utilizza la libreria di cursori, gli snapshot `CRecordset` sono aggiornabili. Se si utilizza uno dei driver Microsoft da Desktop Driver Pack 3.0 senza la libreria di cursori ODBC, gli snapshot `CRecordset` sono di sola lettura. Se si utilizza un altro driver, controllare la documentazione del driver per verificare se gli snapshot ( `STATIC_CURSORS` ) sono di sola lettura.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
 [Note tecniche per categoria](../mfc/technical-notes-by-category.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Per altre informazioni, vedere Procedura: convertire un ciclo OpenMP parallel for per usare la runtime di concorrenza'
 title: "Procedura: Convertire un ciclo OpenMP parallel for per l'utilizzo del runtime di concorrenza"
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - parallel for loops, converting from OpenMP to the Concurrency Runtime
 - parallel loops, converting from OpenMP to the Concurrency Runtime
 ms.assetid: d8a7b656-f86c-456e-9c5d-a7d52f94646e
-ms.openlocfilehash: 4f523f9f6de7f1ffb4c3b578b60de587239dffb6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 76164886b0b812b32a8b9263bb79d7ca1441f148
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507882"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209893"
 ---
 # <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>Procedura: Convertire un ciclo OpenMP parallel for per l'utilizzo del runtime di concorrenza
 
@@ -51,7 +52,7 @@ Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure
 
 > **cl.exe/EHsc/OpenMP concrt-omp-count-primes. cpp**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Migrazione da OpenMP al runtime di concorrenza](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [Algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md)<br/>

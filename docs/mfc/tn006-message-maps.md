@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: TN006: mappe messaggi'
 title: 'TN006: mappe messaggi'
 ms.date: 06/25/2018
 f1_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - ON_COMMAND_EX macro [MFC]
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
-ms.openlocfilehash: 6b387b851f5a76cd0d11957a87e57307d624759e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f9331e5523015a670a2a874c9e9b3021d41eed09
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228531"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97216054"
 ---
 # <a name="tn006-message-maps"></a>TN006: mappe messaggi
 
@@ -70,7 +71,7 @@ Questo è il formato generato da Creazione guidata applicazioni e ClassWizard qu
 
 La tabella della mappa messaggi viene definita utilizzando un set di macro che si espandono in voci della mappa messaggi. Una tabella inizia con una chiamata a [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) macro, che definisce la classe gestita da questa mappa messaggi e la classe padre a cui vengono passati i messaggi non gestiti. La tabella termina con la chiamata di [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map) macro.
 
-Tra queste due chiamate macro è presente una voce per ogni messaggio che deve essere gestito da questa mappa messaggi. Ogni messaggio standard di Windows presenta una macro del modulo ON_WM_*MESSAGE_NAME* che genera una voce per quel messaggio.
+Tra queste due chiamate macro è presente una voce per ogni messaggio che deve essere gestito da questa mappa messaggi. Ogni messaggio standard di Windows presenta una macro del modulo ON_WM_ *MESSAGE_NAME* che genera una voce per quel messaggio.
 
 È stata definita una firma di funzione standard per decomprimere i parametri di ogni messaggio di Windows e garantire l'indipendenza dai tipi. Queste firme sono reperibili nel file AFXWIN. h nella dichiarazione di [CWnd](../mfc/reference/cwnd-class.md). Ognuna di esse è contrassegnata con la parola chiave **afx_msg** per facilitarne l'identificazione.
 
@@ -239,7 +240,7 @@ Per l'utilizzo avanzato [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#o
 
 I controlli comuni di Windows utilizzano le [WM_NOTIFY](/windows/win32/controls/wm-notify) più potenti per le notifiche di controllo complesse. Questa versione di MFC dispone del supporto diretto per questo nuovo messaggio usando le macro ON_NOTIFY e ON_NOTIFY_RANGE. Per ulteriori informazioni su queste macro, vedere la documentazione del prodotto.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
 [Note tecniche per categoria](../mfc/technical-notes-by-category.md)

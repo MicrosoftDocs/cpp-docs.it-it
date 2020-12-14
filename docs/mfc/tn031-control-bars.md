@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: TN031: barre di controllo'
 title: 'TN031: barre di controllo'
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,23 +15,23 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-ms.openlocfilehash: 37c3a15c281018260e65508dee3799ab0011dbfe
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42dddf1afabdf2ab04ba8441208e7109eeacbd65
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370297"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215547"
 ---
 # <a name="tn031-control-bars"></a>TN031: barre di controllo
 
 > [!NOTE]
 > La seguente nota tecnica non è stata aggiornata da quando è stata inclusa per la prima volta nella documentazione online. Di conseguenza, alcune procedure e argomenti potrebbero essere non aggiornati o errati. Per le informazioni più recenti, è consigliabile cercare l'argomento di interesse nell'indice della documentazione online.
 
-In questa nota vengono descritte le classi delle barre di controllo in MFC: [CControlBar](#_mfcnotes_ccontrolbar)generale , [CStatusBar](#_mfcnotes_cstatusbar), [CToolBar](#_mfcnotes_ctoolbar), [CDialogBar](#_mfcnotes_cdialogbar)e `CDockBar`.
+Questa nota descrive le classi di barre di controllo in MFC: il generale [CControlBar](#_mfcnotes_ccontrolbar), [CStatusBar](#_mfcnotes_cstatusbar), [CToolBar](#_mfcnotes_ctoolbar), [CDialogBar](#_mfcnotes_cdialogbar)e `CDockBar` .
 
 ## <a name="ccontrolbar"></a><a name="_mfcnotes_ccontrolbar"></a> CControlBar
 
-A `ControlBar` è `CWnd`una classe derivata che:A is a-derived class that:
+Un oggetto `ControlBar` è una `CWnd` classe derivata da che:
 
 - È allineata con il lato superiore o inferiore di una finestra cornice.
 
@@ -38,11 +39,11 @@ A `ControlBar` è `CWnd`una classe derivata che:A is a-derived class that:
 
 Le barre di controllo supportano gli stili aggiuntivi:
 
-- CBRS_TOP (Impostazione predefinita) pin la barra di controllo verso l'alto.
+- CBRS_TOP (impostazione predefinita) consente di aggiungere la barra di controllo alla parte superiore.
 
-- CBRS_BOTTOM Pin la barra di controllo verso il basso.
+- CBRS_BOTTOM aggiungere la barra di controllo alla parte inferiore.
 
-- CBRS_NOALIGN Non riposizionare la barra di controllo quando l'elemento padre viene ridimensionato.
+- CBRS_NOALIGN non riposizionare la barra di controllo quando l'elemento padre viene ridimensionato.
 
 Le classi derivate da `CControlBar` offrono altre implementazioni interessanti:
 
@@ -52,7 +53,7 @@ Le classi derivate da `CControlBar` offrono altre implementazioni interessanti:
 
 - `CDialogBar` Un frame simile alla barra degli strumenti contenente controlli Windows standard (creato da una risorsa modello di finestra di dialogo).
 
-- `CDockBar`Area di ancoraggio generalizzata per altri `CControlBar` oggetti derivati. Le variabili e le funzioni membro specifiche disponibili in questa classe potrebbero essere soggette a modifiche nelle future versioni.
+- `CDockBar` Area di ancoraggio generalizzata per altri `CControlBar` oggetti derivati. Le variabili e le funzioni membro specifiche disponibili in questa classe potrebbero essere soggette a modifiche nelle future versioni.
 
 Tutti gli oggetti/finestre della barra di controllo saranno finestre figlio di una finestra cornice padre. In genere vengono aggiunti come elemento di pari livello all'area client del frame (ad esempio, una visualizzazione o un client MDI). L'ID della finestra figlio di una barra di controllo è importante. Il layout predefinito della barra di controllo funziona solo per le barre di controllo con ID compreso nell'intervallo da AFX_IDW_CONTROLBAR_FIRST a AFX_IDW_CONTROLBAR_LAST. Si noti che anche se c'è un intervallo di 256 ID di barre di controllo, i primi 32 ID sono speciali perché sono supportati direttamente dall'architettura dell'anteprima di stampa.
 
@@ -67,7 +68,7 @@ La classe `CControlBar` assicura l'implementazione standard per:
 In genere gli oggetti della barra di controllo C++ vengono incorporati come membri di una classe derivata `CFrameWnd` e vengono eliminati quando l'oggetto e l' `HWND` padre vengono eliminati in modo permanente. Se è necessario allocare un oggetto della barra di controllo sull'heap, è possibile impostare semplicemente il membro *m_bAutoDestruct* su **TRUE** per far in modo che la barra di controllo "**lo elimini**" quando `HWND` viene eliminato in modo permanente.
 
 > [!NOTE]
-> Se si crea `CControlBar`una classe derivata da un'unica classe, `CStatusBar`anziché utilizzare una delle classi derivate di MFC, ad esempio , `CToolBar`, o `CDialogBar`, sarà necessario impostare il membro dati *m_dwStyle.* Questo può essere fatto `Create`nell'override di :
+> Se si crea `CControlBar` una classe derivata da personalizzata, anziché utilizzare una delle classi derivate di MFC, ad esempio `CStatusBar` , `CToolBar` o `CDialogBar` , sarà necessario impostare il membro dati *m_dwStyle* . Questa operazione può essere eseguita nell'override di `Create` :
 
 ```
 // CMyControlBar is derived from CControlBar
@@ -89,9 +90,9 @@ L'algoritmo di layout della barra di controllo è molto semplice. La finestra co
 
 Per altre informazioni, vedere `CWnd::RepositionBars` e `CFrameWnd::RecalcLayout` .
 
-I messaggi privati di Windows MFC, inclusi WM_SIZEPARENT, sono documentati nella [nota tecnica 24](../mfc/tn024-mfc-defined-messages-and-resources.md).
+I messaggi di Windows privati MFC, inclusi WM_SIZEPARENT, sono documentati nella [Nota tecnica 24](../mfc/tn024-mfc-defined-messages-and-resources.md).
 
-## <a name="cstatusbar"></a><a name="_mfcnotes_cstatusbar"></a>Controllo Dati CStatusBar
+## <a name="cstatusbar"></a><a name="_mfcnotes_cstatusbar"></a> CStatusBar
 
 Una barra di stato è una barra di controllo contenente una riga di riquadri di output di testo. Esistono due modi comuni per usare i riquadri di output di testo:
 
@@ -116,21 +117,21 @@ I colori usati nella barra di stato sono coerenti anche con l'indicazione della 
 
 **Supporto CCmdUI per CStatusBar**
 
-Il modo in cui gli indicatori sono di solito aggiornati è attraverso il meccanismo ON_UPDATE_COMMAND_UI. Nel tempo di inattività, la barra di stato chiamerà il gestore di ON_UPDATE_COMMAND_UI con l'ID stringa del riquadro dell'indicatore.
+Il modo in cui gli indicatori vengono in genere aggiornati tramite il meccanismo ON_UPDATE_COMMAND_UI. In fase di inattività, la barra di stato chiamerà il gestore di ON_UPDATE_COMMAND_UI con l'ID stringa del riquadro indicatore.
 
-Il gestore di ON_UPDATE_COMMAND_UI può chiamare:The ON_UPDATE_COMMAND_UI handler can call:
+Il gestore di ON_UPDATE_COMMAND_UI può chiamare:
 
-- `Enable`: per abilitare o disabilitare il riquadro. Un riquadro disabilitato è identico a un riquadro abilitato ma il testo è invisibile (ovvero viene disattivato l'indicatore di testo).
+- `Enable`: Per abilitare o disabilitare il riquadro. Un riquadro disabilitato è identico a un riquadro abilitato ma il testo è invisibile (ovvero viene disattivato l'indicatore di testo).
 
-- `SetText`: per modificare il testo. Se si usa questo metodo, prestare attenzione perché il riquadro non verrà ridimensionato automaticamente.
+- `SetText`: Per modificare il testo. Se si usa questo metodo, prestare attenzione perché il riquadro non verrà ridimensionato automaticamente.
 
 Fare riferimento alla classe [CStatusBar](../mfc/reference/cstatusbar-class.md) nei *Riferimenti della libreria di classi* per informazioni sulle API di creazione e personalizzazione della `CStatusBar` . La maggior parte delle personalizzazioni delle barre di stato deve essere eseguita prima che la barra di stato venga inizialmente resa visibile.
 
 La barra di stato supporta un solo riquadro estendibile, in genere il primo. Le dimensioni di questo riquadro sono davvero minime. Se la barra di stato supera la dimensione minima di tutti i pannelli, la larghezza in eccesso verrà attribuita al riquadro estendibile. L'applicazione predefinita con una barra di stato ha indicatori allineati a destra per MA, NUM e BLOC SCORR poiché il primo riquadro è estendibile.
 
-## <a name="ctoolbar"></a><a name="_mfcnotes_ctoolbar"></a>Ctoolbar
+## <a name="ctoolbar"></a><a name="_mfcnotes_ctoolbar"></a> CToolBar
 
-Una barra degli strumenti è una barra di controllo con una riga di pulsanti con bitmap che può includere separatori. Sono supportati due stili di pulsanti: pulsanti di comando e pulsanti della casella di controllo. La funzionalità del gruppo di pulsanti di opzione può essere creata con pulsanti di casella di controllo e ON_UPDATE_COMMAND_UI.
+Una barra degli strumenti è una barra di controllo con una riga di pulsanti con bitmap che può includere separatori. Sono supportati due stili di pulsanti: pulsanti di comando e pulsanti della casella di controllo. La funzionalità del gruppo di radio può essere compilata con i pulsanti della casella di controllo e ON_UPDATE_COMMAND_UI.
 
 Tutti i pulsanti con bitmap nella barra degli strumenti provengono da una singola bitmap. Questa bitmap deve contenere un'immagine o un glifo per ogni pulsante. In genere l'ordine di immagini/glifi nella bitmap è lo stesso con cui verranno disegnati sullo schermo. (Questo può essere modificato usando le API di personalizzazione).
 
@@ -161,11 +162,11 @@ Le API di personalizzazione possono essere usate per modificare ID, stili, largh
 
 ## <a name="ccmdui-support-for-ctoolbar"></a>Supporto CCmdUI per CToolBar
 
-Il modo in cui i pulsanti della barra degli strumenti vengono sempre aggiornati è attraverso il meccanismo ON_UPDATE_COMMAND_UI. In tempo di inattività, la barra degli strumenti chiamerà il gestore di ON_UPDATE_COMMAND_UI con l'ID di comando di tale pulsante. ON_UPDATE_COMMAND_UI non viene chiamato per i separatori, ma viene chiamato per i pulsanti e pulsanti di casella di controllo.
+Il modo in cui i pulsanti della barra degli strumenti vengono sempre aggiornati tramite il meccanismo ON_UPDATE_COMMAND_UI. In fase di inattività, la barra degli strumenti chiamerà il gestore di ON_UPDATE_COMMAND_UI con l'ID comando del pulsante. ON_UPDATE_COMMAND_UI non viene chiamata per i separatori, ma viene chiamata per i pulsanti e i pulsanti della casella di controllo.
 
-Il gestore di ON_UPDATE_COMMAND_UI può chiamare:The ON_UPDATE_COMMAND_UI handler can call:
+Il gestore di ON_UPDATE_COMMAND_UI può chiamare:
 
-- `Enable`: per attivare o disattivare il pulsante. Questo metodo è applicabile sia ai pulsanti della casella di controllo sia ai pulsanti di comando.
+- `Enable`: Per abilitare o disabilitare il pulsante. Questo metodo è applicabile sia ai pulsanti della casella di controllo sia ai pulsanti di comando.
 
 - `SetCheck`: per impostare lo stato di selezione di un pulsante. Se la chiamata viene eseguita per un pulsante della barra degli strumenti, questo verrà convertito in un pulsante della casella di controllo. `SetCheck` accetta un parametro che può essere 0 (non selezionato), 1 (selezionato) o 2 (indeterminato)
 
@@ -173,9 +174,9 @@ Il gestore di ON_UPDATE_COMMAND_UI può chiamare:The ON_UPDATE_COMMAND_UI handle
 
 I pulsanti della casella di controllo sono pulsanti "AUTO" ovvero, quando premuti, cambiano immediatamente stato. Lo stato selezionato è lo stato attivo o premuto. Non è possibile impostare lo stato "indeterminato" tramite un'interfaccia utente incorporata. Tale modifica deve essere eseguita tramite codice.
 
-Le API di personalizzazione consentono di modificare lo stato di un determinato pulsante della barra degli strumenti, preferibilmente è consigliabile modificare questi stati nel gestore ON_UPDATE_COMMAND_UI per il comando rappresentato dal pulsante della barra degli strumenti. Tenere presente che l'elaborazione inattiva modificherà lo stato dei pulsanti della barra degli strumenti con il gestore di ON_UPDATE_COMMAND_UI, pertanto eventuali modifiche a questi stati apportate tramite SetButtonStyle potrebbero andare perse dopo l'inattività successiva.
+Le API di personalizzazione consentono di modificare lo stato di un determinato pulsante della barra degli strumenti, preferibilmente è consigliabile modificare questi stati nel gestore ON_UPDATE_COMMAND_UI per il comando rappresentato dal pulsante della barra degli strumenti. Tenere presente che l'elaborazione inattiva cambierà lo stato dei pulsanti della barra degli strumenti con il gestore di ON_UPDATE_COMMAND_UI, quindi le modifiche apportate a questi stati tramite SetButtonStyle potrebbero andare perse dopo il successivo inattività.
 
-I pulsanti della barra degli strumenti invieranno WM_COMMAND messaggi come i normali pulsanti o voci di menu e vengono in genere gestiti da un gestore di ON_COMMAND nella stessa classe che fornisce il gestore di ON_UPDATE_COMMAND_UI.
+I pulsanti della barra degli strumenti invieranno messaggi WM_COMMAND come i pulsanti normali o le voci di menu e in genere vengono gestiti da un gestore ON_COMMAND nella stessa classe che fornisce il gestore ON_UPDATE_COMMAND_UI.
 
 Esistono quattro stili dei pulsanti della barra degli strumenti (TBBS_ valori) usati per gli stati di visualizzazione:
 
@@ -191,13 +192,13 @@ I sei stili ufficiali dei pulsanti indicati nella Windows Interface Application 
 
 - Non selezionato = 0
 
-- Mouse Giù - TBBS_PRESSED (&#124; qualsiasi altro stile)
+- Pulsante freccia giù = TBBS_PRESSED (&#124; qualsiasi altro stile)
 
 - Disabilitato = TBBS_DISABLED
 
 - Selezionato = TBBS_CHECKED
 
-- Giù Disattivato - TBBS_DISABLED TBBS_CHECKED &#124;
+- Disattivato disabilitato = TBBS_CHECKED &#124; TBBS_DISABLED
 
 - Indeterminato = TBBS_INDETERMINATE
 
@@ -213,9 +214,9 @@ Le notifiche dei controlli per `CDialogBar` vengono inviate all'elemento padre d
 
 ## <a name="ccmdui-support-for-cdialogbar"></a>Supporto CCmdUI per CDialogBar
 
-I pulsanti della barra della finestra di dialogo devono essere aggiornati tramite il meccanismo del gestore di ON_UPDATE_COMMAND_UI. In fase di inattività, la barra della finestra di dialogo chiamerà il gestore di ON_UPDATE_COMMAND_UI con l'ID di comando di tutti i pulsanti che hanno un ID >0x8000 (ovvero, nell'intervallo di ID di comando).
+I pulsanti della barra della finestra di dialogo devono essere aggiornati tramite il meccanismo del gestore ON_UPDATE_COMMAND_UI. Al tempo di inattività, la barra della finestra di dialogo chiamerà il gestore di ON_UPDATE_COMMAND_UI con l'ID di tutti i pulsanti con ID >= 0x8000, ovvero nell'intervallo di ID comando.
 
-Il gestore di ON_UPDATE_COMMAND_UI può chiamare:The ON_UPDATE_COMMAND_UI handler can call:
+Il gestore di ON_UPDATE_COMMAND_UI può chiamare:
 
 - Enable: per abilitare o disabilitare il pulsante.
 
@@ -223,7 +224,7 @@ Il gestore di ON_UPDATE_COMMAND_UI può chiamare:The ON_UPDATE_COMMAND_UI handle
 
 La personalizzazione può essere eseguita tramite le API di gestione delle finestre standard.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
 [Note tecniche per categoria](../mfc/technical-notes-by-category.md)

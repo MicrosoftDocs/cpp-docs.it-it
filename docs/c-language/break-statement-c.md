@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: istruzione break (C)'
 title: Istruzione break (C)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C]
 ms.assetid: 015627c7-0924-49b2-a4d1-c77edf5eae6a
-ms.openlocfilehash: 5322f8cb5218882d891e2cd66704f9dbfd1bc149
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 54f20de08661073a65ee0b8c50cf877e719aadcf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90683468"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211648"
 ---
 # <a name="break-statement-c"></a>Istruzione break (C)
 
@@ -43,6 +44,6 @@ int main() {
 } // Loop exits only when 'Q' is pressed
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Break (istruzione)](../cpp/break-statement-cpp.md)

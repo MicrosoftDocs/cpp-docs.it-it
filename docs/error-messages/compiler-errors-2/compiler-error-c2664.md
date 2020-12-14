@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2664'
 title: Errore del compilatore C2664
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
-ms.openlocfilehash: d4368358b88e5334a4aa70d1dd51450ce3dbb27e
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: cacf799288c343b267bfa9307ec88c60f81e6e50
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743230"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97210842"
 ---
 # <a name="compiler-error-c2664"></a>Errore del compilatore C2664
 
@@ -33,7 +34,7 @@ L'errore C2664 può inoltre verificarsi se una classe nasconde un membro in una 
 
 Per altre informazioni, vedere [procedura: convertire System:: String in wchar_t * o char \* ](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md).
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 L'esempio seguente genera l'errore C2664 e mostra come risolverlo.
 

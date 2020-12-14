@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: TN016: utilizzo dell'ereditarietà multipla C++ con MFC"
 title: "TN016: utilizzo dell'ereditarietà multipla C++ con MFC"
 ms.date: 06/28/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - MI (Multiple Inheritance)
 - multiple inheritance, MFC support for
 ms.assetid: 4ee27ae1-1410-43a5-b111-b6af9b84535d
-ms.openlocfilehash: c44639e713f6d0b26d5b74e9f645f60c8627e0c8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ac4b082a5dc33e93098453714acd25fbd0c18438
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231767"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215950"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016: utilizzo dell'ereditarietà multipla C++ con MFC
 
@@ -35,7 +36,7 @@ In alternativa, è possibile usare l' **`dynamic_cast`** operatore. Il cast di u
 
 ## <a name="cobject---the-root-of-all-classes"></a>CObject-radice di tutte le classi
 
-Tutte le classi significative derivano direttamente o indirettamente dalla classe `CObject` . `CObject`non contiene dati membro, ma dispone di alcune funzionalità predefinite. Quando si usa MI, in genere si eredita da due o più `CObject` classi derivate da. Nell'esempio seguente viene illustrato il modo in cui una classe può ereditare da un oggetto [CFrameWnd](../mfc/reference/cframewnd-class.md) e da un [CObList](../mfc/reference/coblist-class.md):
+Tutte le classi significative derivano direttamente o indirettamente dalla classe `CObject` . `CObject` non contiene dati membro, ma dispone di alcune funzionalità predefinite. Quando si usa MI, in genere si eredita da due o più `CObject` classi derivate da. Nell'esempio seguente viene illustrato il modo in cui una classe può ereditare da un oggetto [CFrameWnd](../mfc/reference/cframewnd-class.md) e da un [CObList](../mfc/reference/coblist-class.md):
 
 ```cpp
 class CListWnd : public CFrameWnd, public CObList
@@ -80,7 +81,7 @@ public:
 
 Potrebbe sembrare che l'ereditarietà virtuale `CObject` possa risolvere il problema dell'ambiguità della funzione, ma ciò non è vero. Poiché non sono presenti dati membro in `CObject` , non è necessaria l'ereditarietà virtuale per impedire più copie di dati dei membri di una classe base. Nel primo esempio illustrato in precedenza, il `Dump` metodo virtuale è ancora ambiguo perché viene implementato in modo diverso in `CFrameWnd` e `CObList` . Il modo migliore per rimuovere l'ambiguità consiste nel seguire i consigli presentati nella sezione precedente.
 
-## <a name="cobjectiskindof-and-run-time-typing"></a>CObject:: IsKindOf e tipizzazione in fase di esecuzione
+## <a name="cobjectiskindof-and-run-time-typing"></a>CObject:: IsKindOf e digitazione Run-Time
 
 Il meccanismo di tipizzazione della fase di esecuzione supportato da MFC in `CObject` Usa le macro DECLARE_DYNAMIC, IMPLEMENT_DYNAMIC, DECLARE_DYNCREATE, IMPLEMENT_DYNCREATE, DECLARE_SERIAL e IMPLEMENT_SERIAL. Queste macro possono eseguire un controllo dei tipi in fase di esecuzione per garantire downcast sicure.
 
@@ -182,7 +183,7 @@ BOOL CHelloAppAndFrame::InitInstance()
 CHelloAppAndFrame theHelloAppAndFrame;
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
 [Note tecniche per categoria](../mfc/technical-notes-by-category.md)

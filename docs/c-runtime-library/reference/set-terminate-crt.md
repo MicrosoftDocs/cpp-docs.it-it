@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: set_terminate (CRT)'
 title: set_terminate (CRT)
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-ms.openlocfilehash: 70ed4adb7ceada53205fd69f111c8976fe95c711
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6b25e141bc9299389c80e629ff6eb03d7deba23c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234016"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211102"
 ---
 # <a name="set_terminate-crt"></a>set_terminate (CRT)
 
@@ -54,7 +55,7 @@ Puntatore a una funzione di terminazione personalizzata.
 
 Restituisce un puntatore alla funzione precedente registrata da **set_terminate** in modo che la funzione precedente possa essere ripristinata in un secondo momento. Se non è stata impostata alcuna funzione precedente, il valore restituito può essere utilizzato per ripristinare il comportamento predefinito; Questo valore può essere **null**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **set_terminate** installa *termFunction* come funzione chiamata da **Terminate**. **set_terminate** viene utilizzata con la gestione delle eccezioni C++ e può essere chiamata in qualsiasi punto del programma prima che venga generata l'eccezione. **terminare** le chiamate [Abort](abort.md) per impostazione predefinita. È possibile modificare questa impostazione predefinita scrivendo una funzione di terminazione personalizzata e chiamando **set_terminate** con il nome della funzione come argomento. **Terminate** chiama l'ultima funzione specificata come argomento per **set_terminate**. Dopo aver eseguito le attività di pulizia desiderate, *termFunction* deve uscire dal programma. Se non termina (se restituisce al chiamante), viene chiamato [Abort](abort.md) .
 
@@ -85,10 +86,10 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 Vedere l'esempio per [terminate](terminate-crt.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Routine di gestione delle eccezioni](../../c-runtime-library/exception-handling-routines.md)<br/>
-[abort](abort.md)<br/>
+[interruzione](abort.md)<br/>
 [_get_terminate](get-terminate.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
 [terminare](terminate-crt.md)<br/>

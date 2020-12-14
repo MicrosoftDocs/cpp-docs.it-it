@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: TN041: migrazione da MFC/OLE1 a MFC/OLE 2'
 title: 'TN041: MFC-OLE1 migrazione a MFC-OLE 2'
 ms.date: 10/18/2018
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - upgrading Visual C++ applications [MFC], OLE1 to OLE2
 - TN041
 ms.assetid: 67f55552-4b04-4ddf-af0b-4d9eaf5da957
-ms.openlocfilehash: 7d0381983481278b1410ae0ff11463519d4cbb34
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 83bb9869d61ca9d2c92780fc6bed55ce3c3ff798
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743152"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215378"
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041: migrazione da MFC/OLE1 a MFC/OLE 2
 
@@ -168,7 +169,7 @@ BOOL CRectItem::CanActivate()
 \oclient\rectitem.cpp(84) : error C2064: term does not evaluate to a function
 ```
 
-In MFC/OLE1, `COleClientItem::GetBounds` e `SetBounds` sono stati usati per eseguire query e manipolare l'extent di un elemento (i `left` `top` membri e erano sempre zero). In MFC/OLE 2 questo è più direttamente supportato da `COleClientItem::GetExtent` e `SetExtent` , che occupano invece **SIZE** una dimensione `CSize` .
+In MFC/OLE1, `COleClientItem::GetBounds` e `SetBounds` sono stati usati per eseguire query e manipolare l'extent di un elemento (i `left` `top` membri e erano sempre zero). In MFC/OLE 2 questo è più direttamente supportato da `COleClientItem::GetExtent` e `SetExtent` , che occupano invece  una dimensione `CSize` .
 
 Il codice per le nuove chiamate SetItemRectToServer e UpdateItemRectFromServer ha un aspetto simile al seguente:
 
@@ -684,7 +685,7 @@ A questo punto si dispone di un server OLE abilitato in modo minimo per l'attiva
 
 L'esempio HIERSVR in MFC 3,0 USA anche una progettazione leggermente diversa per gli elementi del server. Questo consente di conservare la memoria e rende più flessibili i collegamenti. Con la versione 2,0 di HIERSVR ogni nodo della struttura ad albero *è-a* `COleServerItem` . `COleServerItem` comporta un sovraccarico maggiore rispetto a quanto è strettamente necessario per ognuno di questi nodi, ma `COleServerItem` per ogni collegamento attivo è necessario un oggetto. Tuttavia, nella maggior parte dei casi, vi sono pochissimi collegamenti attivi in un determinato momento. Per rendere questa operazione più efficiente, il HIERSVR in questa versione di MFC separa il nodo da `COleServerItem` . Dispone sia di CServerNode che di una `CServerItem` classe. `CServerItem`(Derivato da `COleServerItem` ) viene creato solo se necessario. Quando il contenitore (o i contenitori) smette di usare quel particolare collegamento a quel particolare nodo, viene eliminato l'oggetto CServerItem associato al CServerNode. Questa progettazione è più efficiente e flessibile. La sua flessibilità si presenta quando si gestiscono più collegamenti di selezione. Nessuna di queste due versioni di HIERSVR supporta la selezione multipla, ma sarebbe molto più semplice aggiungere (e per supportare collegamenti a tali selezioni) con la versione MFC 3,0 di HIERSVR, poiché `COleServerItem` è separato dai dati nativi.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
 [Note tecniche per categoria](../mfc/technical-notes-by-category.md)

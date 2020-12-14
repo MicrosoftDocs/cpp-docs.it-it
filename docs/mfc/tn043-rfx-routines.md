@@ -1,5 +1,6 @@
 ---
-title: 'TN043: Routine RFX'
+description: 'Altre informazioni su: TN043: routine RFX'
+title: 'TN043: routine RFX'
 ms.date: 06/28/2018
 f1_keywords:
 - RFX
@@ -8,23 +9,23 @@ helpviewer_keywords:
 - TN043
 - RFX (record field exchange)
 ms.assetid: f552d0c1-2c83-4389-b472-42c9940aa713
-ms.openlocfilehash: 18820c7d17ddea355490ee32679d5d690ec3533e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e5ac8271739e5cab80b79cb915b07e7d25622cf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305398"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215222"
 ---
-# <a name="tn043-rfx-routines"></a>TN043: Routine RFX
+# <a name="tn043-rfx-routines"></a>TN043: routine RFX
 
 > [!NOTE]
 > La seguente nota tecnica non è stata aggiornata da quando è stata inclusa per la prima volta nella documentazione online. Di conseguenza, alcune procedure e argomenti potrebbero essere non aggiornati o errati. Per le informazioni più recenti, è consigliabile cercare l'argomento di interesse nell'indice della documentazione online.
 
-In questa nota descrive l'architettura di campi di record (RFX) di exchange. Viene inoltre descritto come si scrive un' **RFX_** procedure.
+Questa nota descrive l'architettura di trasferimento di campi di record (RFX). Viene inoltre descritto come scrivere una procedura **RFX_** .
 
-## <a name="overview-of-record-field-exchange"></a>Panoramica dei campi di record
+## <a name="overview-of-record-field-exchange"></a>Panoramica dello scambio di campi di record
 
-Tutte le funzioni di campo recordset vengono eseguite con il codice C++. Non esistono risorse speciali o macro magiche. Il cuore del meccanismo è una funzione virtuale che deve essere sottoposto a override in ogni classe derivata recordset. Si è sempre presente in questo formato:
+Tutte le funzioni di campo del recordset vengono eseguite con il codice C++. Non sono disponibili risorse speciali o macro magiche. Il fulcro del meccanismo è una funzione virtuale che deve essere sottoposta a override in ogni classe recordset derivata. Si trova sempre nel formato seguente:
 
 ```cpp
 void CMySet::DoFieldExchange(CFieldExchange* pFX)
@@ -36,79 +37,79 @@ void CMySet::DoFieldExchange(CFieldExchange* pFX)
 }
 ```
 
-I commenti AFX formato speciale consentono ClassWizard individuare e modificare il codice all'interno di questa funzione. Il codice che non è compatibile con la creazione guidata classe debba essere posizionato all'esterno i commenti di formato speciale.
+I commenti AFX in formato speciale consentono a ClassWizard di individuare e modificare il codice all'interno di questa funzione. Il codice non compatibile con ClassWizard deve essere inserito all'esterno dei commenti in formato speciale.
 
-Nell'esempio precedente, \<recordset_exchange_field_type_call > è nel formato:
+Nell'esempio precedente il \<recordset_exchange_field_type_call> formato è:
 
 ```cpp
 pFX->SetFieldType(CFieldExchange::outputColumn);
 ```
 
-e \<recordset_exchange_function_call > è nel formato:
+e \<recordset_exchange_function_call> è nel formato:
 
 ```cpp
 RFX_Custom(pFX, "Col2", m_Col2);
 ```
 
-La maggior parte degli **RFX_** funzioni hanno tre argomenti, come illustrato in precedenza, ma alcuni (ad esempio `RFX_Text` e `RFX_Binary`) dispongono di argomenti aggiuntivi facoltativi.
+La maggior parte delle funzioni **RFX_** dispone di tre argomenti, come illustrato in precedenza, ma alcuni (ad esempio `RFX_Text` e `RFX_Binary` ) dispongono di argomenti facoltativi aggiuntivi.
 
-Più di un **RFX_** potrebbero essere inclusi in ogni `DoDataExchange` (funzione).
+In ogni funzione è possibile includere più di un **RFX_** `DoDataExchange` .
 
-Vedere 'AFXDB. h' per un elenco di tutte le routine di exchange campo recordset disponibili in MFC.
+Vedere ' AFXDB. h ' per un elenco di tutte le routine di scambio dei campi del recordset fornite con MFC.
 
-Le chiamate di campo recordset sono un modo di registrazione di posizioni di memoria (in genere membri di dati) per archiviare i dati di campo per un `CMySet` classe.
+Le chiamate ai campi del recordset sono un modo per registrare le posizioni di memoria (in genere membri dati) per archiviare i dati dei campi per una `CMySet` classe.
 
 ## <a name="notes"></a>Note
 
-Funzioni di campi di recordset sono progettate per funzionare solo con il `CRecordset` classi. Non sono in genere utilizzabile da un'altra classe MFC.
+Le funzioni di campo del recordset sono progettate per funzionare solo con le `CRecordset` classi. Non sono generalmente utilizzabili da altre classi MFC.
 
-I valori iniziali dei dati sono impostati nel costruttore C++ standard, in genere in un blocco con `//{{AFX_FIELD_INIT(CMylSet)` e `//}}AFX_FIELD_INIT` commenti.
+I valori iniziali dei dati vengono impostati nel costruttore C++ standard, in genere in un blocco con i `//{{AFX_FIELD_INIT(CMylSet)` `//}}AFX_FIELD_INIT` commenti e.
 
-Ciascuna **RFX_** funzione deve supportare varie operazioni, che vanno da restituendo lo stato di modificato del campo per campo in preparazione per la modifica del campo di archiviazione.
+Ogni funzione **RFX_** deve supportare varie operazioni, a partire dalla restituzione dello stato dirty del campo per archiviare il campo in preparazione per la modifica del campo.
 
-Ogni funzione che chiama `DoFieldExchange` (ad esempio `SetFieldNull`, `IsFieldDirty`), esegue la propria inizializzazione nella chiamata alla `DoFieldExchange`.
+Ogni funzione che chiama, `DoFieldExchange` ad esempio `SetFieldNull` , `IsFieldDirty` esegue una propria inizializzazione sulla chiamata a `DoFieldExchange` .
 
-## <a name="how-does-it-work"></a>Come funziona
+## <a name="how-does-it-work"></a>Funzionamento
 
-Non devi comprendere quanto segue per poter usare i campi di record. Tuttavia, comprendere a fondo il funzionamento dietro le quinte verrà è scrivere proprie routine di exchange.
+Non è necessario comprendere quanto segue per poter usare lo scambio di campi di record. Tuttavia, per comprendere il funzionamento di questo scenario, è possibile scrivere una procedura di scambio personalizzata.
 
-Il `DoFieldExchange` funzione membro è analogo a quello di `Serialize` funzione membro, ovvero è responsabile di ottenere o impostare i dati da e verso un modulo esterno (in questo caso colonne dal risultato di una query ODBC) da/verso i dati dei membri della classe. Il *pFX* parametro è il contesto per eseguire lo scambio di dati ed è simile al *CArchive* parametro `CObject::Serialize`. Il *pFX* (un `CFieldExchange` oggetto) dispone di un indicatore di operazione, che è simile, ma una generalizzazione delle *CArchive* flag di direzione. Una funzione RFX potrebbe avere supportare le operazioni seguenti:
+La `DoFieldExchange` funzione membro è molto simile alla `Serialize` funzione membro: è responsabile di ottenere o impostare dati da e verso un form esterno (in questo caso colonne dal risultato di una query ODBC) da/verso i dati dei membri della classe. Il parametro *PFX* è il contesto per lo scambio di dati ed è simile al parametro *CArchive* a `CObject::Serialize` . Il file *PFX* ( `CFieldExchange` oggetto) ha un indicatore di operazione, che è simile a, ma una generalizzazione del flag di direzione *CArchive* . Una funzione RFX può dover supportare le operazioni seguenti:
 
-- `BindParam` : Indica dove ODBC deve recuperare i dati dei parametri
+- `BindParam` : Indica la posizione in cui ODBC deve recuperare i dati dei parametri
 
-- `BindFieldToColumn` : Indica dove ODBC deve recuperare/deposito outputColumn dati
+- `BindFieldToColumn` : Indica la posizione in cui ODBC deve recuperare/depositare i dati di outputColumn
 
-- `Fixup` -Imposta `CString/CByteArray` lunghezze, impostare lo stato NULL di tipo bit
+- `Fixup` -Imposta `CString/CByteArray` lunghezze, imposta bit stato null
 
-- `MarkForAddNew` Ovvero contrassegnare dirty valore è stato modificato dopo la chiamata dei metodi AddNew
+- `MarkForAddNew` -Contrassegnare Dirty se il valore è stato modificato dopo la chiamata a AddNew
 
-- `MarkForUpdate` Ovvero contrassegnare dirty valore è stato modificato dopo chiamare modifica
+- `MarkForUpdate` -Contrassegnare Dirty se il valore è stato modificato dopo la chiamata di modifica
 
-- `Name` : Aggiungere i nomi dei campi per i campi contrassegnati come dirty
+- `Name` : Aggiunge i nomi di campo per i campi contrassegnati come Dirty
 
-- `NameValue` : Aggiungere "\<nome colonna > =" per i campi contrassegnati come dirty
+- `NameValue` -Accoda " \<column name> =" per i campi contrassegnati come Dirty
 
-- `Value` : Aggiungere "" seguito dal separatore, ad esempio ',' o ' '
+- `Value` -Accodare "" seguito dal separatore, ad esempio ',' o ''
 
-- `SetFieldDirty` -Consente di impostare lo stato bit (vale a dire modificati) dei campi modificati
+- `SetFieldDirty` : Impostare il campo stato dirty bit (ad esempio, changed)
 
-- `SetFieldNull` -Imposta i bit di stato che indica un valore null per campo
+- `SetFieldNull` : Imposta il bit di stato che indica il valore null per il campo
 
-- `IsFieldDirty` : Valore restituito di bit dirty dello stato
+- `IsFieldDirty` -Valore restituito del bit di stato dirty
 
-- `IsFieldNull` : Valore del bit di stato null restituito
+- `IsFieldNull` : Valore restituito del bit di stato null
 
-- `IsFieldNullable` : Restituisce TRUE se il campo può contenere valori NULL
+- `IsFieldNullable` : Restituisce TRUE se il campo può conservare valori NULL
 
-- `StoreField` Ovvero valore del campo archivio
+- `StoreField` -Valore campo Archivio
 
-- `LoadField` : Valore campo archiviati ricaricare
+- `LoadField` -Ricarica valore campo archiviato
 
 - `GetFieldInfoValue` : Restituisce le informazioni generali su un campo
 
 - `GetFieldInfoOrdinal` : Restituisce le informazioni generali su un campo
 
-## <a name="user-extensions"></a>Estensioni per utente
+## <a name="user-extensions"></a>Estensioni utente
 
 Esistono diversi modi per estendere il meccanismo RFX predefinito. È possibile
 
@@ -118,7 +119,7 @@ Esistono diversi modi per estendere il meccanismo RFX predefinito. È possibile
     CBookmark
     ```
 
-- Aggiungere le nuove procedure exchange (RFX_).
+- Aggiungere nuove procedure di Exchange (RFX_).
 
     ```cpp
     void AFXAPI RFX_Bigint(CFieldExchange* pFX,
@@ -126,7 +127,7 @@ Esistono diversi modi per estendere il meccanismo RFX predefinito. È possibile
         BIGINT& value);
     ```
 
-- Dispone il `DoFieldExchange` funzione membro includono in modo condizionale le chiamate aggiuntive RFX o tutte le altre istruzioni di C++ validi.
+- Fare in modo che la `DoFieldExchange` funzione membro includa in modo condizionale chiamate RFX aggiuntive o altre istruzioni C++ valide.
 
     ```cpp
     while (posExtraFields != NULL)
@@ -138,27 +139,27 @@ Esistono diversi modi per estendere il meccanismo RFX predefinito. È possibile
     ```
 
 > [!NOTE]
-> Tale codice non può essere modificato da ClassWizard e deve essere utilizzato solo all'esterno di commenti formato speciale.
+> Tale codice non può essere modificato da ClassWizard e deve essere utilizzato solo all'esterno dei commenti in formato speciale.
 
-## <a name="writing-a-custom-rfx"></a>La scrittura di un RFX personalizzato
+## <a name="writing-a-custom-rfx"></a>Scrittura di un RFX personalizzato
 
-Per scrivere una funzione personalizzata RFX, si consiglia di copiare una funzione RFX esistente e modificarlo in base alle esigenze specifiche. Selezionando il RFX a destra per copiare può semplificare il processo. Alcune funzioni RFX hanno alcune proprietà univoco che è necessario tenere conto quando si decide quale copiare.
+Per scrivere una funzione RFX personalizzata, si consiglia di copiare una funzione RFX esistente e di modificarla nel modo desiderato. La selezione del RFX corretto da copiare può semplificare notevolmente il processo. Alcune funzioni RFX hanno alcune proprietà univoche che è opportuno tenere in considerazione quando si decide quale copiare.
 
-`RFX_Long` e `RFX_Int`: Si tratta delle funzioni RFX più semplice. Il valore dei dati non è necessario alcun interpretazione speciale e la dimensione dei dati è fissa.
+`RFX_Long` e `RFX_Int` : queste sono le funzioni RFX più semplici. Il valore dei dati non necessita di alcuna interpretazione speciale e le dimensioni dei dati sono fisse.
 
-`RFX_Single` e `RFX_Double`: Come RFX_Long e RFX_Int riportato sopra, queste funzioni sono semplici e possono rendere ampiamente Usa l'implementazione predefinita. Sono archiviati in dbflt.cpp anziché dbrfx.cpp, tuttavia, per abilitare il caricamento del runtime di libreria in virgola mobile solo quando sono esplicitamente riferimento.
+`RFX_Single` e `RFX_Double` : come RFX_Long e RFX_Int precedenti, queste funzioni sono semplici e possono usare ampiamente l'implementazione predefinita. Tuttavia, vengono archiviati in dbflt. cpp invece che in DBRFX. cpp, per consentire il caricamento della libreria a virgola mobile di runtime solo quando sono riferimenti espliciti.
 
-`RFX_Text` e `RFX_Binary`: Queste due funzioni preallocare un buffer statico per contenere le informazioni di stringa/binario e devono registrare tali buffer con ODBC SQLBindCol anziché la registrazione di & valore. Per questo motivo, queste due funzioni hanno una grande quantità di codice speciale.
+`RFX_Text` e `RFX_Binary` : queste due funzioni preallocano un buffer statico per memorizzare le informazioni stringa/binarie e devono registrare questi buffer con ODBC SQLBindCol invece di registrare &valore. Per questo motivo, queste due funzioni includono un numero elevato di codice del case speciale.
 
-`RFX_Date`: ODBC restituisce informazioni su data e ora nella propria struttura di data TIMESTAMP_STRUCT. Questa funzione alloca dinamicamente un TIMESTAMP_STRUCT come un "proxy" per inviare e ricevere i dati di ora di inizio. Varie operazioni devono trasferire le informazioni sulla data e ora tra il C++ `CTime` oggetto e il proxy TIMESTAMP_STRUCT. Ciò complica notevolmente questa funzione, ma è un buon esempio di come usare un proxy per il trasferimento dei dati.
+`RFX_Date`: ODBC restituisce le informazioni sulla data e l'ora nella struttura dei dati TIMESTAMP_STRUCT. Questa funzione alloca dinamicamente un TIMESTAMP_STRUCT come "proxy" per l'invio e la ricezione di dati relativi alla data e ora. Diverse operazioni devono trasferire le informazioni sulla data e l'ora tra l' `CTime` oggetto C++ e il proxy TIMESTAMP_STRUCT. Questa funzione è notevolmente complicata, ma è un valido esempio di come usare un proxy per il trasferimento dei dati.
 
-`RFX_LongBinary`: Si tratta della libreria di classi solo alle funzioni RFX che non utilizzano l'associazione di colonna per ricevere e inviare i dati. Questa funzione ignora l'operazione BindFieldToColumn invece durante l'operazione di correzione, alloca memoria per contenere i dati in ingresso SQL_LONGVARCHAR o SQL_LONGVARBINARY, quindi esegue una chiamata di SQLGetData per recuperare il valore nella risorsa di archiviazione allocato. Quando si prepara a inviare nuovamente i valori dei dati all'origine dati (ad esempio, operazioni di nome e valore), questa funzione utilizza le funzionalità DATA_AT_EXEC di ODBC. Visualizzare [Nota tecnica 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md) per altre informazioni sull'uso di SQL_LONGVARBINARY e SQL_LONGVARCHARs.
+`RFX_LongBinary`: Questa è l'unica funzione RFX della libreria di classi che non usa l'associazione di colonna per ricevere e inviare dati. Questa funzione ignora l'operazione BindFieldToColumn e, al contrario, durante l'operazione di correzione alloca lo spazio di archiviazione in modo che contenga i dati SQL_LONGVARCHAR o SQL_LONGVARBINARY in ingresso, quindi esegue una chiamata SQLGetData per recuperare il valore nell'archiviazione allocata. Quando si prepara a inviare nuovamente i valori di dati all'origine dati, ad esempio le operazioni NameValue e value, questa funzione utilizza la funzionalità DATA_AT_EXEC di ODBC. Per ulteriori informazioni sull'utilizzo di SQL_LONGVARBINARY e SQL_LONGVARCHARs, vedere la [Nota tecnica 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md) .
 
-Quando si scrive il proprio **RFX_** funzione, spesso è possibile usare `CFieldExchange::Default` per implementare un'operazione specificata. Esaminare l'implementazione del valore predefinito per l'operazione in questione. Se esegue l'operazione sarebbe necessario scrivere **RFX_** è possibile delegare alla funzione il `CFieldExchange::Default`. È possibile visualizzare esempi della chiamata al metodo `CFieldExchange::Default` in dbrfx.cpp
+Quando si scrive una funzione **RFX_** personalizzata, sarà spesso possibile usare `CFieldExchange::Default` per implementare una determinata operazione. Esaminare l'implementazione di default per l'operazione in questione. Se esegue l'operazione da scrivere nella funzione di **RFX_** , è possibile delegare a `CFieldExchange::Default` . È possibile vedere esempi di chiamata `CFieldExchange::Default` a in DBRFX. cpp
 
-È importante chiamare `IsFieldType` all'inizio della funzione RFX e restituire immediatamente se restituisce FALSE. Questo meccanismo mantiene le operazioni di parametro da in esecuzione nella *outputColumns*e viceversa (simile alla chiamata `BindParam` su un *outputColumn*). È inoltre `IsFieldType` automaticamente tiene traccia del numero di *outputColumns* (*m_nFields*) e params (*m_nParams*).
+È importante chiamare `IsFieldType` all'inizio della funzione RFX e restituire immediatamente se restituisce false. Questo meccanismo impedisce l'esecuzione delle operazioni sui parametri in *outputColumns* e viceversa (ad esempio, chiamando `BindParam` in un *outputColumn*). Inoltre, `IsFieldType` tiene automaticamente traccia del conteggio di *outputColumns* (*m_nFields*) e params (*m_nParams*).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
 [Note tecniche per categoria](../mfc/technical-notes-by-category.md)

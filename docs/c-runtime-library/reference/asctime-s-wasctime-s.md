@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: asctime_s, _wasctime_s'
 title: asctime_s, _wasctime_s
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 529663a8c36a1b934a4dd99852aee19fb1a1e6e6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d743aea81abdba2e1aa2b470f71081cb92e6fc64
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217012"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211323"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s, _wasctime_s
 
@@ -100,11 +101,11 @@ Zero in caso di esito positivo. In caso di esito negativo, viene richiamato il g
 > [!NOTE]
 > Le condizioni di errore per **wasctime_s** sono simili a **asctime_s** con l'eccezione che il limite delle dimensioni viene misurato in parole.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **asctime** converte un'ora archiviata come una struttura in una stringa di caratteri. Il valore *tmSource* viene in genere ottenuto da una chiamata a **gmtime** o **localtime**. Entrambe le funzioni possono essere usate per compilare una struttura **TM** , come definito nel tempo. H.
+La funzione **asctime** converte un'ora archiviata come una struttura in una stringa di caratteri. Il valore *tmSource* viene in genere ottenuto da una chiamata a **gmtime** o **localtime**. Entrambe le funzioni possono essere usate per compilare una struttura **TM** , come definito in time. H.
 
-|membro timeptr|valore|
+|membro timeptr|Valore|
 |--------------------|-----------|
 |**tm_hour**|Ore dalla mezzanotte (0-23)|
 |**tm_isdst**|Positivo se è in vigore l'ora legale. 0 se l'ora legale non è in vigore. Negativo se lo stato dell'ora legale è sconosciuto. La libreria di runtime C presuppone le regole relative agli Stati Uniti per implementare il calcolo dell'ora legale (DST).|
@@ -141,7 +142,7 @@ In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli 
 |**asctime_s**|\<time.h>|
 |**_wasctime_s**|\<time.h> o \<wchar.h>|
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicurezza
 
 Se il puntatore del buffer non è **null** e il puntatore non punta a un buffer valido, la funzione sovrascriverà qualsiasi altra posizione. Questo può comportare anche una violazione di accesso.
 
@@ -183,7 +184,7 @@ int main( void )
 Current date and time: Wed May 14 15:30:17 2003
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Gestione del tempo](../../c-runtime-library/time-management.md)<br/>
 [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)<br/>

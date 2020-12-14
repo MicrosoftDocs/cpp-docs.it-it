@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avvisi del compilatore C4000 tramite C4199'
 title: Avvisi del compilatore da C4000 a C4199
 ms.date: 04/21/2019
 f1_keywords:
@@ -19,12 +20,12 @@ f1_keywords:
 - C4196
 - C4199
 ms.assetid: 426f495a-43af-4906-ad2b-6e5822c09965
-ms.openlocfilehash: 45b3e1bfcfb5913d455fb2726a30aca827760cfd
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: afcf2458db12cbd5ae33418b24de7eb36b06b0ff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446572"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97212077"
 ---
 # <a name="compiler-warnings-c4000-through-c4199"></a>Avvisi del compilatore da C4000 a C4199
 
@@ -36,7 +37,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 
 |Avviso|Message|
 |-------------|-------------|
-|Avviso del compilatore C4000|AVVISO SCONOSCIUTO<br /><br /> Scegliere il comando supporto tecnico nell'oggetto visivoC++<br /><br /> Menu? o aprire il file della Guida relativo al supporto tecnico per ulteriori informazioni|
+|Avviso del compilatore C4000|AVVISO SCONOSCIUTO<br /><br /> Scegliere il comando supporto tecnico nella Visual C++<br /><br /> Menu? o aprire il file della Guida relativo al supporto tecnico per ulteriori informazioni|
 |[Avviso del compilatore (livello 4) C4001](../../error-messages/compiler-warnings/compiler-warning-level-4-c4001.md)|è stata usata l'estensione non standard ' commento a riga singola '|
 |[Avviso del compilatore (livello 1) C4002](compiler-warning-level-1-c4002.md)|troppi parametri effettivi per la macro 'identifier'|
 |[Avviso del compilatore (livello 1) C4003](../../error-messages/compiler-warnings/compiler-warning-level-1-c4003.md)|parametri effettivi insufficienti per la macro 'identifier'|
@@ -149,7 +150,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Avviso del compilatore (livello 1) C4155](compiler-warning-level-1-c4155.md)|eliminazione di un'espressione di matrice senza utilizzare 'delete' nella forma usata per le matrici|
 |[Avviso del compilatore (livello 2) C4156](../../error-messages/compiler-warnings/compiler-warning-level-2-c4156.md)|eliminazione di un'espressione di matrice senza utilizzare il formato di matrice ' Delete '; form di matrice sostituito|
 |[Avviso del compilatore (livello 1) C4157](../../error-messages/compiler-warnings/compiler-warning-level-1-c4157.md)|Pragma ignorato dal compilatore C|
-|[Avviso del compilatore (livello 1) C4158](compiler-warning-level-1-c4158.md)|assuming #pragma pointers_to_members(full_generality, 'inheritance_type')|
+|[Avviso del compilatore (livello 1) C4158](compiler-warning-level-1-c4158.md)|Supponendo #pragma pointers_to_members (full_generality,' inheritance_type ')|
 |[Avviso del compilatore (livello 3) C4159](../../error-messages/compiler-warnings/compiler-warning-level-3-c4159.md)|#pragma ' pragma ' (pop,...): è stato estratto l'identificatore ' Identifier ' precedentemente inserito|
 |[Avviso del compilatore (livello 1) C4160](compiler-warning-level-1-c4160.md)|#pragma ' pragma ' (pop,...): non è stato trovato l'identificatore ' Identifier ' precedentemente inserito|
 |[Avviso del compilatore (livello 3) C4161](compiler-warning-level-3-c4161.md)|#pragma ' pragma ' (pop...): più estrazioni che push|
@@ -166,7 +167,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Avviso del compilatore (livello 1) C4176](compiler-warning-level-1-c4176.md)|' SubComponent ': sottocomponente sconosciuto per #pragma browser componenti|
 |[Avviso del compilatore (livello 1) C4177](compiler-warning-level-1-c4177.md)|#pragma ' pragma ' deve essere usato solo nell'ambito globale o nell'ambito dello spazio dei nomi|
 |[Avviso del compilatore (livello 1) C4178](compiler-warning-level-1-c4178.md)|la costante di case 'constant' è troppo grande per il tipo dell'espressione switch|
-|[Avviso del compilatore (livello 4) C4179](compiler-warning-level-1-c4179.md)|'//*': analizzato come '/' è/\*': confusione con i commenti '//' standard|
+|[Avviso del compilatore (livello 4) C4179](compiler-warning-level-1-c4179.md)|'//*': analizzato come '/' è/ \* ': confusione con i commenti '//' standard|
 |[Avviso del compilatore (livello 1) C4180](compiler-warning-level-1-c4180.md)|il qualificatore applicato al tipo della funzione è privo di significato. È stato ignorato.|
 |Avviso del compilatore C4181|qualificatore applicato al tipo di riferimento; ignorato|
 |[Avviso del compilatore (livello 1) C4182](compiler-warning-level-1-c4182.md)|#include livello di annidamento è' nest_count ' Deep; possibile ricorsione infinita|
@@ -186,7 +187,7 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |[Avviso del compilatore (livello 3) C4197](../../error-messages/compiler-warnings/compiler-warning-level-3-c4197.md)|' type ': volatile di primo livello nel cast ignorato|
 |Avviso del compilatore (livello 1, livello 2, livello 3 e livello 4) C4199|%s|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Errori eC++ avvisi di C/compilatore e strumenti di compilazione](../compiler-errors-1/c-cpp-build-errors.md) \
-[Avvisi del compilatore C4000-C5999](compiler-warnings-c4000-c5999.md)
+[Errori e avvisi degli strumenti di compilazione e compilatore C/C++](../compiler-errors-1/c-cpp-build-errors.md) \
+[Avvisi del compilatore da C4000 a C5999](compiler-warnings-c4000-c5999.md)

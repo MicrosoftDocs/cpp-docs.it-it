@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _rotl8, _rotl16'
 title: _rotl8, _rotl16
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - _rotl8 intrinsic
 - _rotl16 intrinsic
 ms.assetid: 8c519ab6-aef9-4f07-a387-daee8408368f
-ms.openlocfilehash: 5dffde2d3f830b6ec4ad43865648c27b1defb593
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 71ef10bb6af750fc08955fbdf82975b1ed32fa94
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218036"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211908"
 ---
 # <a name="_rotl8-_rotl16"></a>_rotl8, _rotl16
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Ruotare i valori di input a sinistra del bit più significativo (MSB) di un numero specificato di posizioni di bit.
 
@@ -36,7 +37,7 @@ unsigned short _rotl16(
 
 ### <a name="parameters"></a>Parametri
 
-*value*\
+*valore*\
 in Valore da ruotare.
 
 *MAIUSC*\
@@ -48,14 +49,14 @@ Il valore ruotato.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`_rotl8`|x86, ARM, x64, ARM64|
 |`_rotl16`|x86, ARM, x64, ARM64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Diversamente da un'operazione di spostamento a sinistra, quando si esegue una rotazione a sinistra, i bit più significativi che rientrano nell'estremità alta vengono spostati nelle posizioni dei bit meno significativi.
 
@@ -98,9 +99,9 @@ Rotating 0x41 left by 7 bits gives 0xa0
 Rotating unsigned short 0x12 left by 10 bits gives 0x4800
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [_rotr8, _rotr16](../intrinsics/rotr8-rotr16.md)\
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

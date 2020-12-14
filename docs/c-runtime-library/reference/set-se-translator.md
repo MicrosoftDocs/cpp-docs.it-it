@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _set_se_translator'
 title: _set_se_translator
 ms.date: 02/21/2018
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - exception handling, changing
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
-ms.openlocfilehash: 9de0c62b9e9a0bca0753d31ef64396e00c379253
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 5ba0f0816b7876f24dfc010c83711e9ca652edad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008628"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211232"
 ---
 # <a name="_set_se_translator"></a>_set_se_translator
 
@@ -230,7 +231,7 @@ int main() {
 Caught SE_Exception, error c0000094
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Routine di gestione delle eccezioni](../../c-runtime-library/exception-handling-routines.md)<br/>
 [set_terminate](set-terminate-crt.md)<br/>

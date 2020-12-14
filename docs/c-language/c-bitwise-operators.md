@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: operatori bit per bit C'
 title: Operatori bit per bit C
 ms.date: 01/29/2018
 helpviewer_keywords:
@@ -12,22 +13,22 @@ helpviewer_keywords:
 - ^ operator
 - '& operator, bitwise operators'
 ms.assetid: e22127b1-9a2d-4876-b01d-c8f72cec3317
-ms.openlocfilehash: 50be8ae38f21d0a9f46c180abf179e1358b707cd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8cbdb5309d5351f77306007e8acd1675be5e2a35
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168773"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211583"
 ---
 # <a name="c-bitwise-operators"></a>Operatori bit per bit C
 
-Gli operatori bit per bit eseguono operazioni AND**&** bit per bit (), OR bit**^** per bit-esclusivo () e bit per bit inclusivo (**&#124;**).
+Gli operatori bit per bit eseguono operazioni AND bit per bit (), OR bit per bit **&** -esclusivo ( **^** ) e bit per bit inclusivo (**&#124;**).
 
 ## <a name="syntax"></a>Sintassi
 
-*And-Expression*: &nbsp; &nbsp;uguaglianza *-espressione* &nbsp; &nbsp; *e-* **&** espressione *uguaglianza-* espressione
+*And-Expression*: uguaglianza &nbsp; &nbsp; *-espressione* &nbsp; &nbsp; *e-* espressione **&** *uguaglianza-* espressione
 
-*exclusive-or-* Expression &nbsp; &nbsp; *: and-Expression* &nbsp; &nbsp; *exclusive-or-* **^** Expression *and-Expression*
+*exclusive-or-* Expression: &nbsp; &nbsp; *and-Expression* &nbsp; &nbsp; *exclusive-or-* Expression **^** *and-Expression*
 
 *inclusive-or-Expression*: &nbsp; &nbsp; *exclusive-or-Expression* &nbsp; &nbsp; *inclusive-or-Expression* &#124; *exclusive-or-* Expression
 
@@ -41,7 +42,7 @@ Gli operatori bit per bit C sono descritti di seguito:
 |**^**|L'operatore OR bit per bit esclusivo confronta ogni bit del primo operando con il bit corrispondente del secondo operando. Se un bit ha valore 0 e l'altro 1, il bit del risultato corrispondente verrà impostato su 1. altrimenti verrà impostato su 0.|
 |**&#124;**|L'operatore OR bit per bit inclusivo confronta ogni bit del primo operando con il bit corrispondente del secondo operando. Se uno dei due bit ha valore 1, il bit del risultato verrà impostato su 1, altrimenti verrà impostato su 0.|
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Queste dichiarazioni vengono usate per gli esempi seguenti:
 
@@ -78,8 +79,8 @@ Il risultato dell'operazione AND bit per bit è 96 decimale.
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Operatore AND bit per bit (&)](../cpp/bitwise-and-operator-amp.md)<br/>
-[Operatore OR bit per bit esclusivo: ^](../cpp/bitwise-exclusive-or-operator-hat.md)<br/>
+[Operatore OR esclusivo bit per bit: ^](../cpp/bitwise-exclusive-or-operator-hat.md)<br/>
 [Operatore OR bit per bit inclusivo: &#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)
