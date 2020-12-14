@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avvisi degli strumenti del linker LNK4221'
 title: Avviso degli strumenti del linker LNK4221
 ms.date: 08/19/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4221
 ms.assetid: 8e2eb2de-9532-4b85-908a-8c9ff5c4cccb
-ms.openlocfilehash: f18224150232384adbf8ee7cc31af7bb7678eae5
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: d7aee041536afc1da0c4fd8a6e520ceb5e99e57a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92919202"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222632"
 ---
 # <a name="linker-tools-warning-lnk4221"></a>Avviso degli strumenti del linker LNK4221
 
@@ -33,7 +34,7 @@ int function()
 }
 ```
 
-Per compilare i file e creare due file oggetto, eseguire **cl/c a. cpp b. cpp** al prompt dei comandi. Se si collegano i file oggetto eseguendo il **collegamento/lib/out: test. lib a. obj b. obj** , verrà visualizzato l'avviso LNK4221. Se si collegano gli oggetti eseguendo il **collegamento/lib/out: test. lib b. obj a. obj** , non verrà visualizzato alcun avviso.
+Per compilare i file e creare due file oggetto, eseguire **cl/c a. cpp b. cpp** al prompt dei comandi. Se si collegano i file oggetto eseguendo il **collegamento/lib/out: test. lib a. obj b. obj**, verrà visualizzato l'avviso LNK4221. Se si collegano gli oggetti eseguendo il **collegamento/lib/out: test. lib b. obj a. obj**, non verrà visualizzato alcun avviso.
 
 Nel secondo scenario non viene emesso alcun avviso perché il linker opera in modalità LIFO (Last-in First-out). Nel primo scenario, b. obj viene elaborato prima di un. obj e un. obj non contiene nuovi simboli da aggiungere. Indicando al linker di elaborare prima un. obj, è possibile evitare l'avviso.
 
@@ -49,4 +50,4 @@ Una causa comune di questo errore è rappresentata dal caso in cui due file di o
 
 ::: moniker-end
 
-Un modo per risolvere questo problema consiste nel verificare che per ogni intestazione precompilata sia presente un solo file di origine che lo includa con **/YC** . Per tutti gli altri file di origine devono essere usate intestazioni precompilate. Per ulteriori informazioni su come modificare questa impostazione, vedere [/Yu (utilizza il file di intestazione precompilata)](../../build/reference/yu-use-precompiled-header-file.md).
+Un modo per risolvere questo problema consiste nel verificare che per ogni intestazione precompilata sia presente un solo file di origine che lo includa con **/YC**. Per tutti gli altri file di origine devono essere usate intestazioni precompilate. Per ulteriori informazioni su come modificare questa impostazione, vedere [/Yu (utilizza il file di intestazione precompilata)](../../build/reference/yu-use-precompiled-header-file.md).

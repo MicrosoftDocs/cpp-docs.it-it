@@ -1,21 +1,22 @@
 ---
+description: 'Altre informazioni su: riferimento alfabetico alle funzioni UCRT'
 title: Riferimento alfabetico alle funzioni UCRT
 ms.date: 01/31/2019
 f1_keywords:
 - vc.tables.runtime
 ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
-ms.openlocfilehash: 73fd08ffa58aabfd9a40e0296b21d4a5baea8750
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: af75a52dcc6659e80ae1155ffe4de2c8c1dee4bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499399"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221605"
 ---
 # <a name="ucrt-alphabetical-function-reference"></a>Riferimento alfabetico alle funzioni UCRT
 
 La documentazione di riferimento della libreria Universal C Runtime (UCRT, spesso solo CRT) è disposta in ordine alfabetico in base alla routine. Per trovare una routine CRT in base alla funzionalità, vedere [routine di runtime C universali per categoria](../../c-runtime-library/run-time-routines-by-category.md).
 
-## <a name="a"></a>A
+## <a name="a"></a>Una
 
 [interruzione](abort.md)
 
@@ -319,7 +320,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [_clearfp](clear87-clearfp.md)
 
-[clock](clock.md)
+[orologio](clock.md)
 
 [intasare](clog-clogf-clogl.md)
 
@@ -1967,7 +1968,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 ## <a name="n"></a>N
 
-[Nan](nan-nanf-nanl.md)
+[nan](nan-nanf-nanl.md)
 
 [nanf](nan-nanf-nanl.md)
 
@@ -3487,7 +3488,7 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 ## <a name="x"></a>X
 
-[xor](xor.md)
+[XOR](xor.md)
 
 [xor_eq](xor-eq.md)
 
@@ -3505,6 +3506,6 @@ La documentazione di riferimento della libreria Universal C Runtime (UCRT, spess
 
 [yn](y0-y1-yn.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimenti alla libreria di runtime C](../../c-runtime-library/c-run-time-library-reference.md)<br/>
+[Informazioni di riferimento sulla libreria C Run-Time](../../c-runtime-library/c-run-time-library-reference.md)<br/>

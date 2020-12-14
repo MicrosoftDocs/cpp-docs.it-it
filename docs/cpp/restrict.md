@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: limita'
 title: restrict
 ms.date: 02/09/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], restrict
 - restrict __declspec keyword
 ms.assetid: f39cf632-68d8-4362-a497-2d4c15693689
-ms.openlocfilehash: a0108cff3d6b98fd929b7888d2ad718e7b6b3a64
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e2900e46d3b8e452661800c1c511418f936a5b0c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213255"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97223711"
 ---
 # <a name="restrict"></a>restrict
 
@@ -22,9 +23,9 @@ Quando viene applicato a una dichiarazione di funzione o a una definizione che r
 
 ## <a name="syntax"></a>Sintassi
 
-> **`__declspec(restrict)`***pointer_return_type* *funzione*pointer_return_type ();
+> **`__declspec(restrict)`** *funzione* pointer_return_type ();
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il compilatore viene propagato **`__declspec(restrict)`** . La funzione CRT, ad esempio, `malloc` ha un **`__declspec(restrict)`** effetto e pertanto il compilatore presuppone che i puntatori inizializzati per le posizioni di memoria da `malloc` non siano anche alias da puntatori già esistenti.
 
@@ -111,7 +112,7 @@ int main()
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Parole chiave](../cpp/keywords-cpp.md)<br/>
 [__declspec](../cpp/declspec.md)<br/>

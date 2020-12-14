@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: procedura dettagliata: compilazione di un progetto (C++)'
 title: 'Procedura dettagliata: Compilazione di un progetto (C++)'
 ms.date: 04/25/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: d23412bcc740cbbda4227e0271842b4d44b436af
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
-ms.translationtype: HT
+ms.openlocfilehash: f606a0ead796916fa41f7669852e67d58ae3b17c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400983"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222541"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Procedura dettagliata: Compilazione di un progetto (C++)
 
@@ -29,19 +30,19 @@ In questa procedura dettagliata si introdurrà deliberatamente un errore di sint
 
    `return 0`
 
-1. Nella barra dei menu scegliere **Compila** > **Compila soluzione**.
+1. Sulla barra dei menu scegliere **Compila**  >  **Compila soluzione**.
 
 1. Un messaggio nella finestra **Elenco errori** indica che si è verificato un errore nella compilazione del progetto. La descrizione è simile al messaggio di errore:
 
    `error C2143: syntax error: missing ';' before '}'`
 
-   Per visualizzare le informazioni della Guida su questo errore, evidenziarlo nella finestra **Elenco errori** e quindi premere **F1**.
+   Per visualizzare le informazioni della guida relative a questo errore, evidenziarlo nella finestra di **Elenco errori** , quindi premere il tasto **F1** .
 
 1. Aggiungere il punto e virgola alla fine della riga che include l'errore di sintassi:
 
    `return 0;`
 
-1. Nella barra dei menu scegliere **Compila** > **Compila soluzione**.
+1. Sulla barra dei menu scegliere **Compila**  >  **Compila soluzione**.
 
    Un messaggio visualizzato nella finestra **Output** indica che il progetto è stato compilato correttamente.
 
@@ -54,10 +55,10 @@ In questa procedura dettagliata si introdurrà deliberatamente un errore di sint
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-**Precedente:** [Procedura dettagliata: Uso di progetti e soluzioni (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)<br/>
-**Successivo:** [Procedura dettagliata: Test di un progetto (C++)](../ide/walkthrough-testing-a-project-cpp.md)
+**Precedente:** [Procedura dettagliata: utilizzo di progetti e soluzioni (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)<br/>
+**Successivo:** [Procedura dettagliata: verifica di un progetto (C++)](../ide/walkthrough-testing-a-project-cpp.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
+[Riferimenti per il linguaggio C++](../cpp/cpp-language-reference.md)<br/>
 [Progetti e sistemi di compilazione](../build/projects-and-build-systems-cpp.md)<br/>

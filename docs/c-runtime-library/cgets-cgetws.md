@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _cgets, _cgetws'
 title: _cgets, _cgetws
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-ms.openlocfilehash: 9ae7baaa01029dcf2c02f6ea80b6e816bb671596
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ac712c7ee51c3f06dfe1dd4e881630768a7e6b20
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917439"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221683"
 ---
 # <a name="_cgets-_cgetws"></a>_cgets, _cgetws
 
@@ -78,7 +79,7 @@ Percorso di archiviazione per i dati.
 
 `_cgets` e `_cgetws` restituiscono un puntatore all'inizio della stringa, in corrispondenza di `buffer[2]`. Se `buffer` è **NULL**, queste funzioni richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, restituiscono **NULL** e impostano `errno` su `EINVAL`.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Queste funzioni leggono una stringa di caratteri dalla console e archiviano la stringa e la relativa lunghezza nella posizione indicata da `buffer`. Il parametro `buffer` deve essere un puntatore a una matrice di caratteri. Il primo elemento della matrice, `buffer[0]`, deve contenere la lunghezza massima in caratteri della stringa da leggere. La matrice deve contenere un numero tale di elementi per contenere la stringa, un carattere Null di terminazione ('\0') e due byte aggiuntivi. La funzione legge i caratteri finché non viene letta una combinazione di ritorno a capo con avanzamento riga (CR-LF) oppure il numero specificato di caratteri. La stringa viene archiviata a partire da `buffer[2]`. Se la funzione legge una combinazione CR-LF, archivia il carattere Null ('\0'). La funzione archivia quindi la lunghezza effettiva della stringa nel secondo elemento della matrice, `buffer[1]`.
 

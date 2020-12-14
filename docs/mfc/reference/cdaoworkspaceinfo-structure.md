@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: struttura CDaoWorkspaceInfo'
 title: Struttura CDaoWorkspaceInfo
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - CDaoWorkspaceInfo structure [MFC]
 - DAO (Data Access Objects), Workspaces collection
 ms.assetid: a1f4b25e-f9c6-4196-b075-d1df99c54124
-ms.openlocfilehash: afbc73c079a6deec3f3e1b7455f9f2dbface5025
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b89e8787c2103244535e9458650f1f104478b748
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253633"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222203"
 ---
 # <a name="cdaoworkspaceinfo-structure"></a>Struttura CDaoWorkspaceInfo
 
-Il `CDaoWorkspaceInfo` struttura contiene informazioni su un'area di lavoro definito per l'accesso al database di data access Object (DAO).
+La `CDaoWorkspaceInfo` struttura contiene informazioni su un'area di lavoro definita per l'accesso al database DAO (Data Access Objects).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -32,25 +33,25 @@ struct CDaoWorkspaceInfo
 #### <a name="parameters"></a>Parametri
 
 *m_strName*<br/>
-Identifica in modo univoco l'oggetto dell'area di lavoro. Per recuperare direttamente il valore di questa proprietà, chiamare l'oggetto di querydef [GetName](../../mfc/reference/cdaoquerydef-class.md#getname) funzione membro. Per altre informazioni, vedere l'argomento "Proprietà di nome" nella Guida di DAO.
+Assegna un nome univoco all'oggetto dell'area di lavoro. Per recuperare direttamente il valore di questa proprietà, chiamare la funzione membro [GetName](../../mfc/reference/cdaoquerydef-class.md#getname) dell'oggetto QueryDef. Per ulteriori informazioni, vedere l'argomento relativo alla proprietà Name nella Guida di DAO.
 
 *m_strUserName*<br/>
-Un valore che rappresenta il proprietario di un oggetto dell'area di lavoro. Per informazioni correlate, vedere l'argomento "Proprietà UserName" nella Guida di DAO.
+Valore che rappresenta il proprietario di un oggetto dell'area di lavoro. Per informazioni correlate, vedere l'argomento "proprietà UserName" nella Guida di DAO.
 
 *m_bIsolateODBCTrans*<br/>
-Un valore che indica se più transazioni che coinvolgono lo stesso database ODBC sono isolate. Per altre informazioni, vedere [CDaoWorkspace::SetIsolateODBCTrans](../../mfc/reference/cdaoworkspace-class.md#setisolateodbctrans). Per informazioni correlate, vedere l'argomento "Proprietà IsolateODBCTrans" nella Guida di DAO.
+Valore che indica se sono isolate più transazioni che coinvolgono lo stesso database ODBC. Per ulteriori informazioni, vedere [CDaoWorkspace:: SetIsolateODBCTrans](../../mfc/reference/cdaoworkspace-class.md#setisolateodbctrans). Per informazioni correlate, vedere l'argomento "Proprietà IsolateODBCTrans" nella Guida di DAO.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-L'area di lavoro è un oggetto della classe [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md). I riferimenti al database primario, secondario e tutti sopra indicano la modalità in cui vengono restituite le informazioni per il [funzione membro GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo) funzione di membro nella classe `CDaoWorkspace`.
+L'area di lavoro è un oggetto della classe [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md). I riferimenti a primary, Secondary e all sopra indicati indicano il modo in cui le informazioni vengono restituite dalla funzione membro [GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo) nella classe `CDaoWorkspace` .
 
-Le informazioni recuperate dal [CDaoWorkspace::GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo) le funzioni membro vengono archiviate un `CDaoWorkspaceInfo` struttura. `CDaoWorkspaceInfo` definisce inoltre un `Dump` compila la funzione membro in modalità debug. È possibile usare `Dump` per scaricare il contenuto di un `CDaoWorkspaceInfo` oggetto.
+Le informazioni recuperate dalla funzione membro [CDaoWorkspace:: GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo) vengono archiviate in una `CDaoWorkspaceInfo` struttura. `CDaoWorkspaceInfo` definisce inoltre una `Dump` funzione membro nelle compilazioni di debug. È possibile utilizzare `Dump` per eseguire il dump del contenuto di un `CDaoWorkspaceInfo` oggetto.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxdao. h
+**Intestazione:** AFXDAO. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [Classe CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)

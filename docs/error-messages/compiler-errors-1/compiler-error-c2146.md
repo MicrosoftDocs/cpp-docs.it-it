@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2146'
 title: Errore del compilatore C2146
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2146
 ms.assetid: 6bfb7de6-6723-4486-9350-c66ef88d7a64
-ms.openlocfilehash: ff9dc9861643afa364db4b6364fa5e7bb33e8c8c
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: ccca0099401838a918ad5443ce8194df853184bb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742619"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97223503"
 ---
 # <a name="compiler-error-c2146"></a>Errore del compilatore C2146
 
 errore di sintassi:' token ' mancante prima dell'identificatore ' Identifier '
 
-Il compilatore prevedeva ed è stato `token` trovato `identifier` .  Possibili cause:
+Il compilatore prevedeva ed è stato `token` trovato `identifier` .  Cause possibili:
 
 1. Errore di ortografia o di maiuscole.
 
@@ -25,7 +26,7 @@ Il compilatore prevedeva ed è stato `token` trovato `identifier` .  Possibili c
 
 Questo errore può essere causato da un errore tipografico. Errore [C2065](../../error-messages/compiler-errors-1/compiler-error-c2065.md) in genere precede l'errore.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 L'esempio seguente genera l'C2146.
 

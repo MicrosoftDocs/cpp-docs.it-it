@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __movsb'
 title: __movsb
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - rep movsb instruction
 - __movsb intrinsic
 ms.assetid: ba5469f6-f797-4cd2-bee8-74c7666c26d4
-ms.openlocfilehash: ca06fc9114f6e824a690cc4e612c21d705a485cd
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6e4a9ba7482f7f614b80bd0596111874f0087c86
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217271"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222450"
 ---
 # <a name="__movsb"></a>__movsb
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
-Genera un'istruzione Move String`rep movsb`().
+Genera un'istruzione Move String ( `rep movsb` ).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -36,7 +37,7 @@ void __movsb(
 *Destinazione*\
 out Puntatore alla destinazione della copia.
 
-*Source*\
+*Origine*\
 in Puntatore all'origine della copia.
 
 *Conteggio*\
@@ -44,15 +45,15 @@ in Numero di byte da copiare.
 
 ## <a name="requirements"></a>Requisiti
 
-|Funzione intrinseca|Architettura|
+|Intrinsic|Architettura|
 |---------------|------------------|
 |`__movsb`|x86, x64|
 
-**File di intestazione** \<> intrin. h
+**File di intestazione** \<intrin.h>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Il risultato è che i primi `Count` byte `Source` a cui puntano vengono copiati `Destination` nella stringa.
+Il risultato è che i primi `Count` byte a cui puntano `Source` vengono copiati nella `Destination` stringa.
 
 Questa routine è disponibile solo come funzione intrinseca.
 
@@ -80,8 +81,8 @@ int main()
 A big black dog. A big black dog.
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

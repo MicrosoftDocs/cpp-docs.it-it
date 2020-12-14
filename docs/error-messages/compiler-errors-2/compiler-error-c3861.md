@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3861'
 title: Errore del compilatore C3861
 ms.date: 03/23/2018
 f1_keywords:
@@ -6,32 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - C3861
 ms.assetid: 0a1eee30-b3db-41b1-b1e5-35949c3924d7
-ms.openlocfilehash: 4ebfd3b0129e25cf543cac803a3b33fb074f3d70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bba259496de09e86b59f9cad1ac1bf89a697a1da
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302412"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222905"
 ---
 # <a name="compiler-error-c3861"></a>Errore del compilatore C3861
 
-> «*identificatore*': identificatore non trovato
+> '*Identifier*': identificatore non trovato
 
 Il compilatore non è riuscito a risolvere un riferimento a un identificatore, nemmeno usando la ricerca dipendente dall'argomento.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Per correggere questo errore, confrontare l'uso del *identificatore* per la dichiarazione dell'identificatore case ed errori di ortografia. Verificare che [definire l'ambito degli operatori di risoluzione](../../cpp/scope-resolution-operator.md) e spazio dei nomi [direttive using](../../cpp/namespaces-cpp.md#using_directives) siano usati correttamente. Se l'identificatore è dichiarato in un file di intestazione, verificare che l'intestazione venga inclusa prima che l'identificatore viene fatto riferimento. Se l'identificatore deve essere visibile esternamente, assicurarsi che sia dichiarato in qualsiasi file di origine che lo utilizza. Controllare anche che la dichiarazione dell'identificatore o la definizione non è escluso dal [direttive di compilazione condizionale](../../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).
+Per correggere l'errore, confrontare l'uso dell' *identificatore* con la dichiarazione dell'identificatore per la distinzione tra maiuscole e minuscole. Verificare che [gli operatori di risoluzione dell'ambito](../../cpp/scope-resolution-operator.md) e le [direttive using](../../cpp/namespaces-cpp.md#using_directives) dello spazio dei nomi siano utilizzati correttamente. Se l'identificatore viene dichiarato in un file di intestazione, verificare che l'intestazione sia inclusa prima che venga fatto riferimento all'identificatore. Se l'identificatore deve essere visibile esternamente, assicurarsi che sia dichiarato in qualsiasi file di origine che lo usi. Verificare inoltre che la dichiarazione o la definizione dell'identificatore non sia esclusa dalle [direttive di compilazione condizionale](../../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).
 
-Le modifiche apportate da rimuovere funzioni obsolete dalla libreria di Runtime C in Visual Studio 2015 possono causare C3861. Per risolvere questo errore, rimuovere i riferimenti a queste funzioni o sostituirli con le alternative sicure, se presente. Per altre informazioni, vedere [funzioni Obsolete](../../c-runtime-library/obsolete-functions.md).
+Le modifiche per rimuovere le funzioni obsolete dalla libreria di runtime C in Visual Studio 2015 possono causare C3861. Per correggere l'errore, rimuovere i riferimenti a queste funzioni o sostituirli con le alternative sicure, se presenti. Per altre informazioni, vedere [funzioni obsolete](../../c-runtime-library/obsolete-functions.md).
 
-Se viene visualizzato l'errore C3861 dopo la migrazione dei progetti da versioni precedenti del compilatore, si potrebbero presentare problemi relativi alle versioni supportate di Windows. Visual C++ non supporta più i sistemi operativi Windows 95, Windows 98, Windows ME, Windows NT o Windows 2000. Se le macro **WINVER** o **_WIN32_WINNT** vengono assegnate a una di queste versioni di Windows, è necessario modificarle. Per altre informazioni, vedere [modifica di WINVER e _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
+Se il C3861 di errore viene visualizzato dopo la migrazione del progetto da versioni precedenti del compilatore, è possibile che si verifichino problemi relativi alle versioni di Windows supportate. Visual C++ non supporta più i sistemi operativi Windows 95, Windows 98, Windows ME, Windows NT o Windows 2000. Se le macro **WINVER** o **_WIN32_WINNT** vengono assegnate a una di queste versioni di Windows, è necessario modificarle. Per ulteriori informazioni, vedere [modifica di WINVER e _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 ### <a name="undefined-identifier"></a>Identificatore non definito
 
-L'esempio seguente genera l'errore C3861 perché l'identificatore non è definito.
+L'esempio seguente genera l'oggetto C3861 perché l'identificatore non è definito.
 
 ```cpp
 // C3861.cpp
@@ -42,9 +43,9 @@ int main() {
 }
 ```
 
-### <a name="identifier-not-in-scope"></a>Identificatore non è nell'ambito
+### <a name="identifier-not-in-scope"></a>Identificatore non nell'ambito
 
-L'esempio seguente genera l'errore C3861 perché un identificatore viene visualizzato solo in ambito di file della definizione, a meno che non è stato dichiarato in altri file di origine che lo usano.
+L'esempio seguente genera l'errore C3861 perché un identificatore è visibile solo nell'ambito del file della relativa definizione, a meno che non sia dichiarato in altri file di origine che lo usano.
 
 ```cpp
 // C3861_a1.cpp
@@ -64,9 +65,9 @@ int f() {  // declared and defined here
 }
 ```
 
-### <a name="namespace-qualification-required"></a>Qualifica Namespace necessaria
+### <a name="namespace-qualification-required"></a>Qualificazione spazio dei nomi obbligatoria
 
-Classi di eccezioni nella libreria Standard C++ richiedono la `std` dello spazio dei nomi.
+Per le classi di eccezioni nella libreria standard C++ è necessario lo `std` spazio dei nomi.
 
 ```cpp
 // C3861_b.cpp
@@ -84,9 +85,9 @@ int main() {
 }
 ```
 
-### <a name="obsolete-function-called"></a>Chiamata di funzione obsoleta
+### <a name="obsolete-function-called"></a>Funzione obsoleta chiamata
 
-Funzioni obsolete sono state rimosse dalla libreria CRT.
+Le funzioni obsolete sono state rimosse dalla libreria CRT.
 
 ```cpp
 // C3861_c.cpp
@@ -99,9 +100,9 @@ int main() {
 }
 ```
 
-### <a name="adl-and-friend-functions"></a>Funzioni friend e ADL
+### <a name="adl-and-friend-functions"></a>Funzioni ADL e Friend
 
-L'esempio seguente genera l'errore C3767 perché il compilatore non è possibile usare la ricerca dipendente dall'argomento per `FriendFunc`:
+L'esempio seguente genera l'errore C3767 perché il compilatore non può usare la ricerca dipendente dall'argomento per `FriendFunc` :
 
 ```cpp
 namespace N {
@@ -119,7 +120,7 @@ int main() {
 }
 ```
 
-Per correggere l'errore, dichiarare la funzione friend nell'ambito della classe e definirla nell'ambito dello spazio dei nomi:
+Per correggere l'errore, dichiarare l'elemento Friend nell'ambito della classe e definirlo nell'ambito dello spazio dei nomi:
 
 ```cpp
 class MyClass {

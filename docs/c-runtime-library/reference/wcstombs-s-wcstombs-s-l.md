@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: wcstombs_s, _wcstombs_s_l'
 title: wcstombs_s, _wcstombs_s_l
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 105f2d33-221a-4f6d-864c-23c1865c42af
-ms.openlocfilehash: 7254df673694bf4d91679f1a41837c10f61d28e2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0b30272f87aaed878a294d19e7d64191e6a7400b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910614"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224140"
 ---
 # <a name="wcstombs_s-_wcstombs_s_l"></a>wcstombs_s, _wcstombs_s_l
 
@@ -116,7 +117,7 @@ Zero in caso di esito positivo, un codice di errore in caso di esito negativo.
 
 Se si verifica una di queste condizioni, viene richiamata l'eccezione di parametro non valido come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce un codice di errore e imposta **errno** come indicato nella tabella.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **wcstombs_s** converte una stringa di caratteri wide a cui punta *wcstr* in caratteri multibyte archiviati nel buffer a cui punta *mbstr*. La conversione continuerà per ogni carattere fino a quando non viene soddisfatta una delle seguenti condizioni:
 
@@ -128,11 +129,11 @@ La funzione **wcstombs_s** converte una stringa di caratteri wide a cui punta *w
 
 La stringa di destinazione termina sempre con Null, anche in caso di errore.
 
-Se *count* è il valore speciale [_TRUNCATE](../../c-runtime-library/truncate.md), **wcstombs_s** converte la maggior parte della stringa che rientrerà nel buffer di destinazione, lasciando però spazio per un carattere di terminazione null. Se la stringa viene troncata, il valore restituito è **STRUNCATE**e la conversione viene considerata corretta.
+Se *count* è il valore speciale [_TRUNCATE](../../c-runtime-library/truncate.md), **wcstombs_s** converte la maggior parte della stringa che rientrerà nel buffer di destinazione, lasciando però spazio per un carattere di terminazione null. Se la stringa viene troncata, il valore restituito è **STRUNCATE** e la conversione viene considerata corretta.
 
 Se **wcstombs_s** converte correttamente la stringa di origine, inserisce la dimensione in byte della stringa convertita, incluso il terminatore null, in *&#42;PReturnValue* (il *pReturnValue* specificato non è **null**). Ciò si verifica anche se l'argomento *mbstr* è **null** e fornisce un modo per determinare le dimensioni del buffer richieste. Si noti che se *mbstr* è **null**, *count* viene ignorato.
 
-Se **wcstombs_s** rileva un carattere wide, non può essere convertito in un carattere multibyte, inserisce 0 in *&#42;pReturnValue*, imposta il buffer di destinazione su una stringa vuota, imposta **errno** su **EILSEQ**e restituisce **EILSEQ**.
+Se **wcstombs_s** rileva un carattere wide, non può essere convertito in un carattere multibyte, inserisce 0 in *&#42;pReturnValue*, imposta il buffer di destinazione su una stringa vuota, imposta **errno** su **EILSEQ** e restituisce **EILSEQ**.
 
 Se le sequenze a cui puntano *wcstr* e *mbstr* si sovrappongono, il comportamento di **wcstombs_s** non è definito.
 
@@ -198,10 +199,10 @@ Convert wide-character string:
     Multibyte character: Hello, world.
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

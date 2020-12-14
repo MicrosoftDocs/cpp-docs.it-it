@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: funzionale (STL/CLR)'
 title: functional (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -63,12 +64,12 @@ helpviewer_keywords:
 - unary_delegate_noreturn function [STL/CLR]
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
-ms.openlocfilehash: 00d719df2fdba892d1d9362da2b2172bac9ca16f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 48db11b7a30ae46eb52ff73cd961759e6be93fc5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499710"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97223568"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
@@ -88,7 +89,7 @@ Includere l'intestazione STL/CLR `<cliext/functional>` per definire un numero di
 
 ## <a name="declarations"></a>Dichiarazioni
 
-|Delegato|Descrizione|
+|Delegato|Description|
 |--------------|-----------------|
 |[binary_delegate (STL/CLR)](#binary_delegate)|Delegato a due argomenti.|
 |[binary_delegate_noreturn (STL/CLR)](#binary_delegate_noreturn)|Delegato a due argomenti che restituisce **`void`** .|
@@ -150,7 +151,7 @@ Tipo del secondo argomento.
 *Risultato*<br/>
 Tipo restituito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il delegato genereic descrive una funzione a due argomenti.
 
@@ -222,7 +223,7 @@ Tipo del primo argomento.
 *Arg2*<br/>
 Tipo del secondo argomento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il delegato genereic descrive una funzione a due argomenti che restituisce **`void`** .
 
@@ -324,7 +325,7 @@ Tipo del functor archiviato.
 |operator()|Calcola la funzione desiderata.|
 |operatore delegate_type ^ ()|Esegue il cast del functore a un delegato.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La classe modello descrive un functor a due argomenti che archivia un altro functor a due argomenti. Definisce l'operatore membro in `operator()` modo che, quando l'oggetto viene chiamato come funzione, restituisca l'oggetto logico Not del functor archiviato chiamato con i due argomenti.
 
@@ -415,7 +416,7 @@ Functore di cui eseguire il wrapping.
 *sinistra*<br/>
 Primo argomento di cui eseguire il wrapping.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello restituisce [binder1st (STL/CLR)](#binder1st) `<Fun>(functor, left)` . Viene usato come modo pratico per eseguire il wrapping di un functor a due argomenti e il primo argomento in un functor a un solo argomento che lo chiama con un secondo argomento.
 
@@ -496,7 +497,7 @@ Functore di cui eseguire il wrapping.
 *Ok*<br/>
 Secondo argomento di cui eseguire il wrapping.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello restituisce [binder2nd (STL/CLR)](#binder2nd) `<Fun>(functor, right)` . Viene usato come modo pratico per eseguire il wrapping di un functor a due argomenti e il secondo argomento in un functor a un solo argomento che lo chiama con un primo argomento.
 
@@ -599,7 +600,7 @@ Tipo del functor archiviato.
 |operator()|Calcola la funzione desiderata.|
 |operatore delegate_type ^ ()|Esegue il cast del functore a un delegato.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La classe modello descrive un functor a un argomento che archivia un functor a due argomenti e un primo argomento. Definisce l'operatore membro in `operator()` modo che, quando l'oggetto viene chiamato come funzione, restituisca il risultato della chiamata al functor archiviato con il primo argomento archiviato e il secondo argomento fornito.
 
@@ -704,7 +705,7 @@ Tipo del functor archiviato.
 |operator()|Calcola la funzione desiderata.|
 |operatore delegate_type ^ ()|Esegue il cast del functore a un delegato.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La classe modello descrive un functor a un argomento che archivia un functor a due argomenti e un secondo argomento. Definisce l'operatore membro in `operator()` modo che, quando l'oggetto viene chiamato come funzione, restituisca il risultato della chiamata al functor archiviato con il primo argomento fornito e il secondo argomento archiviato.
 
@@ -808,7 +809,7 @@ Tipo degli argomenti e valore restituito.
 |operator()|Calcola la funzione desiderata.|
 |operatore delegate_type ^ ()|Esegue il cast del functore a un delegato.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La classe modello descrive un functor a due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca il primo argomento diviso per il secondo.
 
@@ -909,7 +910,7 @@ Tipo degli argomenti.
 |operator()|Calcola la funzione desiderata.|
 |operatore delegate_type ^ ()|Esegue il cast del functore a un delegato.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La classe modello descrive un functor a due argomenti. Definisce l'operatore membro in `operator()` modo che, quando l'oggetto viene chiamato come funzione, restituisca true solo se il primo argomento è uguale al secondo.
 
@@ -1010,7 +1011,7 @@ Tipo degli argomenti.
 |operator()|Calcola la funzione desiderata.|
 |operatore delegate_type ^|Esegue il cast del functore a un delegato.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La classe modello descrive un functor a due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca true solo se il primo argomento è maggiore del secondo.
 
@@ -1111,7 +1112,7 @@ Tipo degli argomenti.
 |operator()|Calcola la funzione desiderata.|
 |operatore delegate_type ^|Esegue il cast del functore a un delegato.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La classe modello descrive un functor a due argomenti. Definisce l'operatore membro in `operator()` modo che, quando l'oggetto viene chiamato come funzione, restituisca true solo se il primo argomento è maggiore o uguale al secondo.
 
@@ -1212,7 +1213,7 @@ Tipo degli argomenti.
 |operator()|Calcola la funzione desiderata.|
 |operatore delegate_type ^|Esegue il cast del functore a un delegato.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La classe modello descrive un functor a due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca true solo se il primo argomento è minore del secondo.
 
@@ -1313,7 +1314,7 @@ Tipo degli argomenti.
 |operator()|Calcola la funzione desiderata.|
 |operatore delegate_type ^|Esegue il cast del functore a un delegato.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La classe modello descrive un functor a due argomenti. Definisce l'operatore membro in `operator()` modo che, quando l'oggetto viene chiamato come funzione, restituisca true solo se il primo argomento è minore o uguale al secondo.
 
@@ -1414,7 +1415,7 @@ Tipo degli argomenti.
 |operator()|Calcola la funzione desiderata.|
 |operatore delegate_type ^|Esegue il cast del functore a un delegato.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La classe modello descrive un functor a due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca true solo se il primo argomento e il secondo test sono true.
 
@@ -1512,7 +1513,7 @@ Tipo degli argomenti.
 |operator()|Calcola la funzione desiderata.|
 |operatore delegate_type ^|Esegue il cast del functore a un delegato.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La classe modello descrive un functor a un argomento. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca true solo se il relativo argomento viene testato come false.
 
@@ -1605,7 +1606,7 @@ Tipo degli argomenti.
 |operator()|Calcola la funzione desiderata.|
 |operatore delegate_type ^|Esegue il cast del functore a un delegato.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La classe modello descrive un functor a due argomenti. Definisce l'operatore membro in `operator()` modo che, quando l'oggetto viene chiamato come funzione, restituisca true solo se il primo argomento o il secondo test è true.
 
@@ -1706,7 +1707,7 @@ Tipo degli argomenti e valore restituito.
 |operator()|Calcola la funzione desiderata.|
 |operatore delegate_type ^|Esegue il cast del functore a un delegato.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La classe modello descrive un functor a due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca il primo argomento meno il secondo.
 
@@ -1807,7 +1808,7 @@ Tipo degli argomenti e valore restituito.
 |operator()|Calcola la funzione desiderata.|
 |operatore delegate_type ^|Esegue il cast del functore a un delegato.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La classe modello descrive un functor a due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca il primo argomento modulo il secondo.
 
@@ -1908,7 +1909,7 @@ Tipo degli argomenti e valore restituito.
 |operator()|Calcola la funzione desiderata.|
 |operatore delegate_type ^|Esegue il cast del functore a un delegato.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La classe modello descrive un functor a due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca il primo argomento per il secondo.
 
@@ -2006,7 +2007,7 @@ Tipo degli argomenti.
 |operator()|Calcola la funzione desiderata.|
 |operatore delegate_type ^|Esegue il cast del functore a un delegato.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La classe modello descrive un functor a un argomento. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisce il relativo argomento negato.
 
@@ -2099,7 +2100,7 @@ Tipo degli argomenti.
 |operator()|Calcola la funzione desiderata.|
 |operatore delegate_type ^|Esegue il cast del functore a un delegato.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La classe modello descrive un functor a due argomenti. Definisce l'operatore membro in `operator()` modo che, quando l'oggetto viene chiamato come funzione, restituisca true solo se il primo argomento non è uguale al secondo.
 
@@ -2171,7 +2172,7 @@ Tipo del functor.
 *funtore*<br/>
 Functore di cui eseguire il wrapping.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello restituisce [unary_negate (STL/CLR)](#unary_negate) `<Fun>(functor)` . Viene usato come un modo pratico per eseguire il wrapping di un functor a un solo argomento in un functor che fornisce il proprio NOT logico.
 
@@ -2243,7 +2244,7 @@ Tipo del functor.
 *funtore*<br/>
 Functore di cui eseguire il wrapping.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello restituisce [binary_negate (STL/CLR)](#negate) `<Fun>(functor)` . Viene usato come modo pratico per eseguire il wrapping di un functor a due argomenti in un functor che fornisce il proprio NOT logico.
 
@@ -2353,7 +2354,7 @@ Tipo degli argomenti e valore restituito.
 |operator()|Calcola la funzione desiderata.|
 |operatore delegate_type ^|Esegue il cast del functore a un delegato.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La classe modello descrive un functor a due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca il primo argomento più il secondo.
 
@@ -2424,7 +2425,7 @@ Il tipo di argomento.
 *Risultato*<br/>
 Tipo restituito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il delegato genereic descrive una funzione a un solo argomento.
 
@@ -2486,7 +2487,7 @@ generic<typename Arg>
 *ARG*<br/>
 Il tipo di argomento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il delegato genereic descrive una funzione a un solo argomento che restituisce **`void`** .
 
@@ -2581,7 +2582,7 @@ Tipo del functor archiviato.
 |operator()|Calcola la funzione desiderata.|
 |delegate_type ^|Esegue il cast del functore a un delegato.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La classe modello descrive un functor a un argomento che archivia un altro functor a un argomento. Definisce l'operatore membro in `operator()` modo che, quando l'oggetto viene chiamato come funzione, restituisca l'oggetto logico Not del functor archiviato chiamato con l'argomento.
 
