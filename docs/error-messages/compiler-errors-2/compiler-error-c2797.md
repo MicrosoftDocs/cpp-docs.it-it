@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C2797'
 title: Errore del compilatore C2797
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2797
 ms.assetid: 9fb26d35-eb5c-46fc-9ff5-756fba5bdaff
-ms.openlocfilehash: 9973ddcccc69e85bdf79e0623fa4bcc1d6689032
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c10b0acf550a3bbce81210df60dca75a7b2db704
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80202080"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97297564"
 ---
 # <a name="compiler-error-c2797"></a>Errore del compilatore C2797
 
 Obsoleto L'inizializzazione dell'elenco all'interno dell'elenco di inizializzatori dei membri o dell'inizializzatore di membro dati non statici non è implementa
 
-Questo avviso è obsoleto in Visual Studio 2015. In Visual Studio 2013 e versioni precedenti, il compilatore C++ Microsoft non implementa l'inizializzazione dell'elenco all'interno di un elenco di inizializzatori di membri o di un inizializzatore di membro dati non statici. Prima di Visual Studio 2013 Update 3, questo veniva convertito automaticamente in una chiamata di funzione, il che potrebbe condurre a una generazione di codice errata. Visual Studio 2013 Update 3 segnala questo come errore.
+Questo avviso è obsoleto in Visual Studio 2015. In Visual Studio 2013 e versioni precedenti, il compilatore Microsoft C++ non implementa l'inizializzazione dell'elenco all'interno di un elenco di inizializzatori di membri o di un inizializzatore di membro dati non statici. Prima di Visual Studio 2013 Update 3, questo veniva convertito automaticamente in una chiamata di funzione, il che potrebbe condurre a una generazione di codice errata. Visual Studio 2013 Update 3 segnala questo come errore.
 
 Questo esempio genera C2797:
 
