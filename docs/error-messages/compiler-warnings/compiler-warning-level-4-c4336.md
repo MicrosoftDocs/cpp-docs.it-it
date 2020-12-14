@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 4) C4336'
 title: Avviso del compilatore (livello 4) C4336
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4336
 ms.assetid: 93f199dd-d6dd-42c0-82d8-c12d101a7235
-ms.openlocfilehash: e83bac9028980bdf3ef7449fbef065a8c9316d2d
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: d41ca5584864327b3012e79af97f2857e3f93d42
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991329"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257719"
 ---
 # <a name="compiler-warning-level-4-c4336"></a>Avviso del compilatore (livello 4) C4336
 
 importa la libreria dei tipi a cui si fa riferimento incrociato ' type_lib1' prima di importare ' type_lib2'
 
-È stato fatto riferimento a una libreria dei tipi con la direttiva [#import](../../preprocessor/hash-import-directive-cpp.md) . Tuttavia, la libreria dei tipi contiene un riferimento a un'altra libreria dei tipi a cui non è stato fatto riferimento con `#import`. Questo altro file con estensione tlb è stato trovato dal compilatore.
+È stato fatto riferimento a una libreria dei tipi con la direttiva [#import](../../preprocessor/hash-import-directive-cpp.md) . Tuttavia, la libreria dei tipi contiene un riferimento a un'altra libreria dei tipi a cui non è stato fatto riferimento con `#import` . Questo altro file con estensione tlb è stato trovato dal compilatore.
 
-Date due librerie dei tipi su disco create dai due file seguenti (compilati con MIDL. exe):
+Date due librerie dei tipi su disco create dai due file seguenti (compilati con midl.exe):
 
 ```
 // c4336a.idl
