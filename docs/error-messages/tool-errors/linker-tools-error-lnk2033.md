@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore degli strumenti del linker LNK2033'
 title: Errore degli strumenti del linker LNK2033
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2033
 ms.assetid: d61db467-9328-4788-bf54-e2a20537f13f
-ms.openlocfilehash: 407f5eaf94a0e2da43425c3bbdd1955a88c95f14
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 46ee94e0aff4379a6d28a508ed1394e90ef9a96d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991184"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275646"
 ---
 # <a name="linker-tools-error-lnk2033"></a>Errore degli strumenti del linker LNK2033
 
@@ -23,7 +24,7 @@ LNK2033 può verificarsi quando si esegue la compilazione con **/CLR: safe** e d
 
 Il tipo deve essere definito in **/CLR: safe**.
 
-Per altre informazioni, vedere [/clr (Compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+Per altre informazioni, vedere [/CLR (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Esempio
 

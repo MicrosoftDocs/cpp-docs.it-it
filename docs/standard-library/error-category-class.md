@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: error_category Class'
 title: Classe error_category
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-ms.openlocfilehash: 218596ff5b81e99f4787efe2582fdc2752533cec
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 25ad7f6acfe50cdcc0c4b9df44fb3b8b6244f569
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840167"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232655"
 ---
 # <a name="error_category-class"></a>Classe error_category
 
@@ -45,13 +46,13 @@ Due oggetti predefiniti implementano `error_category`: [generic_category](../sta
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[value_type](#value_type)|Tipo che rappresenta il valore del codice di errore archiviato.|
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[default_error_condition](#default_error_condition)|Archivia il valore di codice di errore per un oggetto condizione di errore.|
 |[equivalente](#equivalent)|Restituisce un valore che specifica se gli oggetti di errore sono equivalenti.|
@@ -62,7 +63,7 @@ Due oggetti predefiniti implementano `error_category`: [generic_category](../sta
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[operatore =](#op_as)|Operatore di assegnazione.|
 |[operatore = =](#op_eq_eq)|Verifica l'uguaglianza tra oggetti `error_category`.|
@@ -86,7 +87,7 @@ Valore del codice di errore da archiviare nella [error_condition](../standard-li
 
 Restituisce `error_condition(_Errval, *this)`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ### <a name="equivalent"></a><a name="equivalent"></a> equivalente
 
@@ -115,7 +116,7 @@ L'oggetto [error_code](../standard-library/error-code-class.md) da confrontare.
 
 **`true`** Se la categoria e il valore sono uguali. in caso contrario, **`false`** .
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 La prima funzione membro restituisce `*this == _Cond.category() && _Cond.value() == _Errval`.
 
@@ -144,7 +145,7 @@ Il valore del codice di errore da confrontare.
 
 Restituisce un nome descrittivo del codice di errore *Val* per la categoria. Se il codice di errore non è riconosciuto, restituisce `"unknown error"` .
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 ### <a name="name"></a>Nome in <a name="name"></a>
 
@@ -181,7 +182,7 @@ Oggetto di cui verificare l'uguaglianza.
 
 **`true`** Se gli oggetti sono uguali; **`false`** se gli oggetti non sono uguali.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Questo operatore membro restituisce `this == &right`.
 
@@ -202,7 +203,7 @@ L'oggetto di cui verificare la disuguaglianza.
 
 **`true`** Se l' `error_category` oggetto non è uguale all' `error_category` oggetto passato a *destra*; in caso contrario, **`false`** .
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 L'operatore membro restituisce `(!*this == right)`.
 
@@ -223,7 +224,7 @@ L'oggetto `error_category` da confrontare.
 
 **`true`** Se l' `error_category` oggetto è minore dell' `error_category` oggetto passato per il confronto. In caso contrario, **`false`** .
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 L'operatore membro restituisce `this < &right`.
 
@@ -241,6 +242,6 @@ Tipo che rappresenta il valore del codice di errore archiviato.
 typedef int value_type;
 ```
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Questa definizione di tipo è un sinonimo di **`int`** .

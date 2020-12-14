@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _cexit, _c_exit'
 title: _cexit, _c_exit
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _cexit function
 - c_exit function
 ms.assetid: f3072045-9924-4b1a-9fef-b0dcd6d12663
-ms.openlocfilehash: 78675ef91c2ab68e18f6111b4908886017ae1f79
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e901e7d7e37c8702efaae8b3b70e98a400f48ef1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917153"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275100"
 ---
 # <a name="_cexit-_c_exit"></a>_cexit, _c_exit
 
@@ -54,9 +55,9 @@ void _c_exit( void );
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_cexit** chiama, in ordine LIFO (Last-in, First-out), le funzioni registrate da **atexit** e **_onexit**. Quindi **_cexit** Scarica tutti i buffer di i/O e chiude tutti i flussi aperti prima della restituzione. **_c_exit** è uguale a **_exit** ma ritorna al processo chiamante senza elaborare **atexit** o **_onexit** o scaricare buffer di flusso. Il comportamento di **Exit**, **_exit**, **_cexit**e **_c_exit** è illustrato nella tabella seguente.
+La funzione **_cexit** chiama, in ordine LIFO (Last-in, First-out), le funzioni registrate da **atexit** e **_onexit**. Quindi **_cexit** Scarica tutti i buffer di i/O e chiude tutti i flussi aperti prima della restituzione. **_c_exit** è uguale a **_exit** ma ritorna al processo chiamante senza elaborare **atexit** o **_onexit** o scaricare buffer di flusso. Il comportamento di **Exit**, **_exit**, **_cexit** e **_c_exit** è illustrato nella tabella seguente.
 
-|Function|Comportamento|
+|Funzione|Comportamento|
 |--------------|--------------|
 |**exit**|Esegue le procedure complete di terminazione della libreria C, termina il processo ed esce con il codice di stato specificato.|
 |**_exit**|Esegue le procedure rapide di terminazione della libreria C, termina il processo ed esce con il codice di stato specificato.|
@@ -80,9 +81,9 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Process and Environment Control](../../c-runtime-library/process-and-environment-control.md) (Controllo processo e ambiente)<br/>
+[Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [interruzione](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [_exec, funzioni _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>

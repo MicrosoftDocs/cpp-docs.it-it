@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classi di automazione OLE'
 title: Classi di automazione OLE
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Automation classes [MFC]
 - OLE Automation [MFC]
 ms.assetid: 96e5372b-ff8a-4da1-933b-4d9bbf4dceb3
-ms.openlocfilehash: 04cb93b8ce3699b579342d33c0dae77176878379
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 588c684d17eb358183097cd4ed62432f334e3f0f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625303"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275568"
 ---
 # <a name="ole-automation-classes"></a>Classi di automazione OLE
 
@@ -25,6 +26,6 @@ Usato per chiamare i server di automazione dal client di automazione. Quando si 
 [COleDispatchException](reference/coledispatchexception-class.md)<br/>
 Eccezione generata da un errore durante l'automazione OLE. Le eccezioni di automazione sono generate dai server di automazione e vengono acquisite dai client di automazione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Cenni preliminari sulle classi](class-library-overview.md)

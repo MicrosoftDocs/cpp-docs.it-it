@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: costanti del tipo di dati'
 title: Costanti del tipo di dati
 ms.date: 06/25/2018
 f1_keywords:
@@ -139,12 +140,12 @@ helpviewer_keywords:
 - SIZE_MAX constant
 - RSIZE_MAX constant
 ms.assetid: c0f1c405-0465-41d5-b5ff-e81cdb6f1622
-ms.openlocfilehash: d9d053611fb733d55424d01be2bab030fc49e6e0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eb1c16cb730ea40a60a5929867fa8a36b17190ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215166"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258837"
 ---
 # <a name="data-type-constants"></a>Costanti del tipo di dati
 
@@ -161,15 +162,15 @@ Queste costanti specificano gli intervalli per i tipi di dati integrali. Per usa
 > [!NOTE]
 > L' [`/J`](../build/reference/j-default-char-type-is-unsigned.md) opzione del compilatore modifica il **`char`** tipo predefinito da **`signed char`** a **`unsigned char`** .
 
-|Costante|valore|Descrizione|
+|Costante|Valore|Description|
 |--------------|-----------|-------------|
-|**CHAR_BIT**|8|Numero di bit in un oggetto**`char`**|
+|**CHAR_BIT**|8|Numero di bit in un oggetto **`char`**|
 |**SCHAR_MIN**|(-128)|**`signed char`** Valore minimo|
 |**SCHAR_MAX**|127|**`signed char`** Valore massimo|
 |**UCHAR_MAX**|255 (0xff)|**`unsigned char`** Valore massimo|
 |**CHAR_MIN**|(-128) (0 se è stata **`/J`** usata l'opzione)|**`char`** Valore minimo|
 |**CHAR_MAX**|127 (opzione 255 if **`/J`** utilizzata)|**`char`** Valore massimo|
-|**MB_LEN_MAX**|5|Numero massimo di byte in multibyte**`char`**|
+|**MB_LEN_MAX**|5|Numero massimo di byte in multibyte **`char`**|
 |**SHRT_MIN**|-32768|**`signed short`** Valore minimo|
 |**SHRT_MAX**|32767|**`signed short`** Valore massimo|
 |**USHRT_MAX**|65535 (0xffff)|**`unsigned short`** Valore massimo|
@@ -208,7 +209,7 @@ Le costanti seguenti forniscono l'intervallo e altre caratteristiche dei tipi di
 #include <float.h>
 ```
 
-|Costante|valore|Descrizione|
+|Costante|Valore|Description|
 |--------------|-----------|-----------------|
 |**DBL_DECIMAL_DIG**|17|N. di cifre decimali di approssimazione di arrotondamento|
 |**DBL_DIG**|15|N. di cifre decimali di precisione|
@@ -250,6 +251,6 @@ Le costanti seguenti forniscono l'intervallo e altre caratteristiche dei tipi di
 |**LDBL_TRUE_MIN**|4.9406564584124654e-324|Valore subnormale positivo minimo|
 |**DECIMAL_DIG**|uguale a **DBL_DECIMAL_DIG**|Cifre decimali (double) predefinite di approssimazione di arrotondamento|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Costanti globali](../c-runtime-library/global-constants.md)

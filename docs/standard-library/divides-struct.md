@@ -1,5 +1,6 @@
 ---
-title: divides (struct)
+description: 'Altre informazioni su: struct divide'
+title: Struct divides
 ms.date: 11/04/2016
 f1_keywords:
 - functional/std::divides
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - divides struct
 - divides class
 ms.assetid: b9cf8e9c-6981-43a6-a6a3-8f761987dd7a
-ms.openlocfilehash: 6c7297fa7c31470591b473ab5eadcde54e8c3b34
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: eae6054ea485a05747f8e282849b1fe282a89439
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244141"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232746"
 ---
-# <a name="divides-struct"></a>divides (struct)
+# <a name="divides-struct"></a>Struct divides
 
-Un oggetto funzione predefinito che esegue l'operazione di divisione (`operator/`) sui relativi argomenti.
+Oggetto funzione predefinito che esegue l'operazione di divisione ( `operator/` ) sui relativi argomenti.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -39,14 +40,14 @@ struct divides<void>
 
 ### <a name="parameters"></a>Parametri
 
-*Tipo di*, *T*, *U*\
+*Digitare*, *T*, *U*\
 Tipo che supporta un oggetto `operator/` che accetta gli operandi dei tipi specificati o dedotti.
 
-*A sinistra*\
-Operando sinistro dell'operatore di divisione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *T*.
+*Sinistra*\
+Operando sinistro dell'operatore di divisione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *Type*. Il modello specializzato esegue l'avanzamento perfetto degli argomenti di riferimento lvalue e rvalue del tipo derivato *T*.
 
 *Ok*\
-Operando destro dell'operatore di divisione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *U*.
+Operando destro dell'operatore di divisione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *Type*. Il modello specializzato esegue l'avanzamento perfetto degli argomenti di riferimento lvalue e rvalue del tipo derivato *U*.
 
 ## <a name="return-value"></a>Valore restituito
 

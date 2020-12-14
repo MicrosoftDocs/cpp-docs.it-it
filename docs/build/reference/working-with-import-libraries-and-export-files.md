@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: utilizzo di librerie di importazione e di esportazione di file'
 title: Utilizzo di librerie di importazione e file di esportazione
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,23 +9,23 @@ helpviewer_keywords:
 - export files
 - import libraries, creating
 ms.assetid: d8175596-9773-4c2f-959d-b05b065a5161
-ms.openlocfilehash: 6f6f2d5c48c63ba6d8a8a7f67a98b949b32a8afa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6e1664aedf5fa87d269e0ff250e6c52d9d18259
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316522"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258798"
 ---
 # <a name="working-with-import-libraries-and-export-files"></a>Utilizzo di librerie di importazione e file di esportazione
 
-È possibile utilizzare LIB con l'opzione /DEF per creare una libreria di importazione e un file di esportazione. COLLEGAMENTO viene utilizzato il file di esportazione per compilare un programma che contiene esportazioni (in genere un collegamento dinamico (DLL)) e Usa la libreria di importazione per risolvere i riferimenti a queste esportazioni in altri programmi.
+È possibile utilizzare LIB con l'opzione/DEF per creare una libreria di importazione e un file di esportazione. Il collegamento utilizza il file di esportazione per compilare un programma che contiene esportazioni, in genere una libreria a collegamento dinamico (DLL), e utilizza la libreria di importazione per risolvere i riferimenti a tali esportazioni in altri programmi.
 
-Si noti che se si crea la libreria di importazione in un passaggio preliminare, prima di creare la DLL, è necessario passare lo stesso set di file oggetto quando si compila il file DLL, come è stato passato quando si compila la libreria di importazione.
+Si noti che se si crea la libreria di importazione in un passaggio preliminare, prima di creare il file con estensione dll, è necessario passare lo stesso set di file oggetto quando si compila la libreria di importazione.
 
-Nella maggior parte dei casi, non occorre usare LIB per creare la libreria di importazione. Quando si collega un programma (un file eseguibile o una DLL) che contiene esportazioni, verrà creata automaticamente una libreria di importazione che descrive le esportazioni. In un secondo momento, quando si collega un programma che fa riferimento a queste esportazioni, specificare la libreria di importazione.
+Nella maggior parte dei casi, non è necessario utilizzare LIB per creare la libreria di importazione. Quando si collega un programma, ovvero un file eseguibile o una DLL, che contiene esportazioni, il collegamento crea automaticamente una libreria di importazione che descrive le esportazioni. Successivamente, quando si collega un programma che fa riferimento a tali esportazioni, si specifica la libreria di importazione.
 
-Tuttavia, quando si esporta un programma che importa anche da una DLL, se direttamente o indirettamente, è necessario utilizzare LIB per creare una delle librerie di importazione. Quando LIB crea una libreria di importazione, crea anche un file di esportazione. Durante il collegamento di una DLL, è necessario usare il file di esportazione.
+Tuttavia, quando una DLL viene esportata in un programma da cui importa anche, direttamente o indirettamente, è necessario usare LIB per creare una delle librerie di importazione. Quando LIB crea una libreria di importazione, viene creato anche un file di esportazione. Per il collegamento di una delle dll, è necessario utilizzare il file di esportazione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Riferimento a LIB](lib-reference.md)
+[Guida di riferimento a LIB](lib-reference.md)

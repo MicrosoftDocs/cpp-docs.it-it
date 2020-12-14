@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: dichiarazioni di Unione'
 title: Dichiarazioni di unione
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - union keyword [C], declarations
 - variant records
 ms.assetid: 978c6165-e0ae-4196-afa7-6d94e24f62f7
-ms.openlocfilehash: 3414a478ec741351f1e1540a214cca38c029749f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c544a4d92f452415fdd03ccef51d49f69e2b5dae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213697"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258824"
 ---
 # <a name="union-declarations"></a>Dichiarazioni di unione
 
@@ -20,7 +21,7 @@ Una "Dichiarazione di unione" specifica un set di valori variabili e, facoltativ
 ## <a name="syntax"></a>Sintassi
 
 *struct-or-Union-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;identificatore *struct-or-Union* *identifier*<sub>opz</sub> **{** *struct-declaration-list* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;identificatore *struct-or-Union* <sub>opz</sub> **{** *struct-declaration-list* **}**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*
 
 *struct-or-union*:<br/>
@@ -53,7 +54,7 @@ Una dichiarazione del tipo di unione è solo un modello. La memoria non viene ri
 > [!NOTE]
 > Se viene dichiarata un'unione di due tipi e viene archiviato un valore, ma l'accesso all'unione viene eseguito con l'altro tipo, i risultati sono inaffidabili. Ad esempio, **`float`** **`int`** viene dichiarata un'Unione di e. **`float`** Viene archiviato un valore, ma in seguito il programma accede al valore come **`int`** . In una situazione di questo tipo, il valore dipende dall'archiviazione interna dei **`float`** valori. L'Integer non sarebbe affidabile.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Di seguito sono riportati alcuni esempi di unioni:
 
@@ -121,6 +122,6 @@ Per informazioni sui riferimenti alle unioni, vedere [Membri di struttura e di u
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Dichiaratori e dichiarazioni di variabili](../c-language/declarators-and-variable-declarations.md)

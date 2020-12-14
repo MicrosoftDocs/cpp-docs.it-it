@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: sfondo OLE: strategie di implementazione'
 title: 'Sfondo OLE: strategie di implementazione'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - OLE applications [MFC], implementing OLE
 - applications [OLE], implementing OLE
 ms.assetid: 0875ddae-99df-488c-82c6-164074a81058
-ms.openlocfilehash: 90517f9b37872dd7de0ce1a2d08da94c93e6f8f8
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: fe492adf755f9163586832f5c7aa7dfc5470349f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619894"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275477"
 ---
 # <a name="ole-background-implementation-strategies"></a>Sfondo OLE: strategie di implementazione
 
@@ -35,7 +36,7 @@ A seconda dell'applicazione, esistono quattro strategie di implementazione possi
 
 Una volta decisa la strategia, è necessario leggere gli articoli [contenitori](containers.md) o [Server](servers.md) (a seconda del tipo di applicazione che si sta scrivendo) o esaminare i programmi di esempio o entrambi. Gli esempi OLE MFC [OCLIENT](../overview/visual-cpp-samples.md) e [HIERSVR](../overview/visual-cpp-samples.md) illustrano come implementare rispettivamente i vari aspetti di contenitori e server. In vari punti in questi articoli verrà fatto riferimento ad alcune funzioni riportate in questi esempi come esempi delle tecniche che vengono trattate.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Sfondo OLE](ole-background.md)<br/>
 [Contenitori: implementazione di un contenitore](containers-implementing-a-container.md)<br/>

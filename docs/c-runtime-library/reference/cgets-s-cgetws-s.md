@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _cgets_s, _cgetws_s'
 title: _cgets_s, _cgetws_s
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-ms.openlocfilehash: 6e48602eee3d2135d4624b28d88661ac00f65542
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 827f3c8b155f58fe13396f5dc0c66e8999b5f942
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917090"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275087"
 ---
 # <a name="_cgets_s-_cgetws_s"></a>_cgets_s, _cgetws_s
 
@@ -98,7 +99,7 @@ Il valore restituito è zero se ha esito positivo; in caso contrario si verifica
 |Not **null**|zero|any|**EINVAL**|non modificato|
 |Not **null**|any|**NULL**|**EINVAL**|stringa di lunghezza zero|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 **_cgets_s** e **_cgetws_s** leggere una stringa dalla console e copiare la stringa (con un carattere di terminazione null) in *buffer*. **_cgetws_s** è la versione a caratteri wide della funzione; Oltre alla dimensione del carattere, il comportamento di queste due funzioni è identico. La dimensione massima della stringa da leggere viene passata come parametro *NumberOfElements* . Questa dimensione deve includere un carattere aggiuntivo per la terminazione null. Il numero effettivo di caratteri letti viene inserito in *pSizeRead*.
 
@@ -125,7 +126,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [I/O console e porta](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

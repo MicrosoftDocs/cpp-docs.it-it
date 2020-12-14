@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _Cbuild, _FCbuild, _LCbuild'
 title: _Cbuild, _FCbuild, _LCbuild
 ms.date: 03/30/2018
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - _Cbuild function
 - _FCbuild function
 - _LCbuild function
-ms.openlocfilehash: d521fdb0d79e1e4ff6e6c1b01ce40941ed5c8c0a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bbca2571a10badcfc02da3e0d2f404590a1d7eb3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221965"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275229"
 ---
 # <a name="_cbuild-_fcbuild-_lcbuild"></a>_Cbuild, _FCbuild, _LCbuild
 
@@ -61,11 +62,11 @@ Parte immaginaria del numero complesso da costruire.
 
 ## <a name="return-value"></a>Valore restituito
 
-Struttura di **_Dcomplex**, **_Fcomplex**o **_Lcomplex** che rappresenta il numero complesso (*reale*e *immaginaria* \* ) per i valori del tipo a virgola mobile specificato.
+Struttura di **_Dcomplex**, **_Fcomplex** o **_Lcomplex** che rappresenta il numero complesso (*reale* e *immaginaria* \* ) per i valori del tipo a virgola mobile specificato.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Le funzioni **_Cbuild**, **_FCbuild**e **_LCbuild** semplificano la creazione di tipi complessi. Usare le funzioni [CREAL, crealf, Creall](creal-crealf-creall.md) e [Cimag, cimagf, cimagl](cimag-cimagf-cimagl.md) per recuperare le parti reali e immaginarie dei numeri complessi rappresentati.
+Le funzioni **_Cbuild**, **_FCbuild** e **_LCbuild** semplificano la creazione di tipi complessi. Usare le funzioni [CREAL, crealf, Creall](creal-crealf-creall.md) e [Cimag, cimagf, cimagl](cimag-cimagf-cimagl.md) per recuperare le parti reali e immaginarie dei numeri complessi rappresentati.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -73,9 +74,9 @@ Le funzioni **_Cbuild**, **_FCbuild**e **_LCbuild** semplificano la creazione di
 |-------------|--------------|------------------|
 |**_Cbuild**, **_FCbuild**, **_LCbuild**|\<complex.h>|\<ccomplex>|
 
-Queste funzioni sono specifiche di Microsoft. I tipi **_Dcomplex**, **_Fcomplex**e **_Lcomplex** sono equivalenti specifici di Microsoft ai tipi nativi C99 non implementati **`double _Complex`** , e, **`float _Complex`** **`long double _Complex`** rispettivamente. Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
+Queste funzioni sono specifiche di Microsoft. I tipi **_Dcomplex**, **_Fcomplex** e **_Lcomplex** sono equivalenti specifici di Microsoft ai tipi nativi C99 non implementati **`double _Complex`** , e, **`float _Complex`** **`long double _Complex`** rispettivamente. Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
 [_Cmulcc, _FCmulcc, _LCmulcc](cmulcc-fcmulcc-lcmulcc.md)<br/>

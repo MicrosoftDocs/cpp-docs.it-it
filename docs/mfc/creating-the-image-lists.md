@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: creazione degli elenchi di immagini'
 title: Creazione degli elenchi di immagini
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - image lists [MFC], creating for CListCtrl
 - lists [MFC], image
 ms.assetid: c2768515-deba-49e8-a6f3-5be6482afb19
-ms.openlocfilehash: bbba01a6a8e08ea53e164656733aa06e03dd87a7
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f2776902e7be06161bdbcfad23bd21d9188467f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625953"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309667"
 ---
 # <a name="creating-the-image-lists"></a>Creazione degli elenchi di immagini
 
@@ -24,7 +25,7 @@ Usare `CImageList` la classe per creare uno o più elenchi di immagini (per icon
 
 Chiamare [CListCtrl:: Seimagine](reference/clistctrl-class.md#setimagelist) per ogni elenco di immagini; passare un puntatore all'oggetto appropriato `CImageList` .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Utilizzo di CListCtrl](using-clistctrl.md)<br/>
 [Controlli](controls-mfc.md)
