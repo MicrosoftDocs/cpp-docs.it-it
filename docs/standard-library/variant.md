@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: &lt; Variant&gt;'
 title: '&lt;variant&gt;'
 ms.date: 04/04/2019
 f1_keywords:
 - <variant>
 helpviewer_keywords:
 - <variant>
-ms.openlocfilehash: 1a3c861c96fedb7ef95eec66f95888ddc092bed4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 994bd18a66dd78c8f6042afea10df69ff08a1487
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835662"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312469"
 ---
 # <a name="ltvariantgt"></a>&lt;variant&gt;
 
@@ -26,7 +27,7 @@ Un oggetto Variant include e gestisce un valore. Se la variante contiene un valo
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[operatore = =](../standard-library/forward-list-operators.md#op_eq_eq)|Verifica se l'oggetto variant sul lato sinistro dell'operatore è uguale all'oggetto variant a destra.|
 |[operatore! =](../standard-library/forward-list-operators.md#op_neq)|Verifica se l'oggetto variant sul lato sinistro dell'operatore non è uguale all'oggetto variant a destra.|
@@ -37,17 +38,17 @@ Un oggetto Variant include e gestisce un valore. Se la variante contiene un valo
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[get](../standard-library/variant-functions.md#get)|Ottiene la variante di un oggetto.|
 |[get_if](../standard-library/variant-functions.md#get_if)|Ottiene la variante di un oggetto, se esistente.|
 |[holds_alternative](../standard-library/variant-functions.md#holds_alternative)|Restituisce **`true`** se esiste una variante.|
 |[scambio](../standard-library/variant-functions.md#swap)|Scambia una **variante**.|
-|[visitare](../standard-library/variant-functions.md#visit)|Passa alla **variante**successiva.|
+|[visitare](../standard-library/variant-functions.md#visit)|Passa alla **variante** successiva.|
 
 ### <a name="classes"></a>Classi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[bad_variant_access](../standard-library/bad-variant-access-class.md)|Oggetti generati per segnalare accessi non validi al valore di un oggetto Variant.|
 |[variant](../standard-library/variant.md)|Oggetto per il quale è possibile mantenere un valore di uno dei tipi alternativi o nessun valore.|
@@ -64,10 +65,10 @@ Un oggetto Variant include e gestisce un valore. Se la variante contiene un valo
 
 ### <a name="objects"></a>Oggetti
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[variant_npos](../standard-library/variant-functions.md#variant_npos)||
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)

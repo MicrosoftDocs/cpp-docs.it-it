@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: documenti a più pagine'
 title: Documenti con più pagine
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - printing [MFC], pagination
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
-ms.openlocfilehash: c73692c315b07d6b690180886d494ee12f85f52d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a7824097e0d8de6dd91c3bbd73a1eea08efb6912
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621051"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97251050"
 ---
 # <a name="multipage-documents"></a>Documenti con più pagine
 
@@ -46,11 +47,11 @@ In questo articolo viene descritto il protocollo di stampa di Windows e viene il
 
 - [Impaginazione dell'ora di stampa](#_core_print.2d.time_pagination)
 
-## <a name="the-printing-protocol"></a><a name="_core_the_printing_protocol"></a>Il protocollo di stampa
+## <a name="the-printing-protocol"></a><a name="_core_the_printing_protocol"></a> Il protocollo di stampa
 
 Per stampare un documento a più pagine, il Framework e la visualizzazione interagiscono nel modo seguente. Per prima cosa, nel Framework viene visualizzata la finestra di dialogo **stampa** , viene creato un contesto di dispositivo per la stampante e viene chiamata la funzione membro [StartDoc](reference/cdc-class.md#startdoc) dell'oggetto [CDC](reference/cdc-class.md) . Quindi, per ogni pagina del documento, il Framework chiama la funzione membro [Startpage](reference/cdc-class.md#startpage) dell' `CDC` oggetto, indica all'oggetto visualizzazione di stampare la pagina e chiama la funzione membro [EndPage](reference/cdc-class.md#endpage) . Se è necessario modificare la modalità di stampa prima di avviare una pagina specifica, la vista chiama [ResetDC](reference/cdc-class.md#resetdc), che aggiorna la struttura [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) contenente le nuove informazioni sulla modalità stampante. Quando l'intero documento è stato stampato, il Framework chiama la funzione membro [EndDoc](reference/cdc-class.md#enddoc) .
 
-## <a name="overriding-view-class-functions"></a><a name="_core_overriding_view_class_functions"></a>Override delle funzioni della classe di visualizzazione
+## <a name="overriding-view-class-functions"></a><a name="_core_overriding_view_class_functions"></a> Override delle funzioni della classe di visualizzazione
 
 La classe [CView](reference/cview-class.md) definisce diverse funzioni membro chiamate dal Framework durante la stampa. Eseguendo l'override di queste funzioni nella classe di visualizzazione, vengono fornite le connessioni tra la logica di stampa del Framework e la logica di stampa della classe di visualizzazione. Nella tabella seguente sono elencate le funzioni membro.
 
@@ -71,7 +72,7 @@ Nella figura seguente vengono illustrati i passaggi necessari per il processo di
 ![Processo del ciclo di stampa](../mfc/media/vc37c71.gif "Processo del ciclo di stampa") <br/>
 Ciclo di stampa
 
-## <a name="pagination"></a><a name="_core_pagination"></a>Impaginazione
+## <a name="pagination"></a><a name="_core_pagination"></a> Paginazione
 
 Il Framework archivia gran parte delle informazioni su un processo di stampa in una struttura [CPrintInfo](reference/cprintinfo-structure.md) . Molti dei valori di `CPrintInfo` riguardano l'impaginazione; questi valori sono accessibili come illustrato nella tabella seguente.
 
@@ -87,27 +88,27 @@ Il Framework archivia gran parte delle informazioni su un processo di stampa in 
 
 I numeri di pagina iniziano da 1, ovvero la prima pagina è numerata 1, non 0. Per ulteriori informazioni su questi e altri membri di [CPrintInfo](reference/cprintinfo-structure.md), vedere la Guida di *riferimento a MFC*.
 
-All'inizio del processo di stampa, il Framework chiama la funzione membro [OnPreparePrinting](reference/cview-class.md#onprepareprinting) della vista, passando un puntatore a una `CPrintInfo` struttura. La creazione guidata applicazione fornisce un'implementazione di `OnPreparePrinting` che chiama [DoPreparePrinting](reference/cview-class.md#doprepareprinting), un'altra funzione membro di `CView` . `DoPreparePrinting`funzione che consente di visualizzare la finestra di dialogo Stampa e di creare un contesto di dispositivo stampante.
+All'inizio del processo di stampa, il Framework chiama la funzione membro [OnPreparePrinting](reference/cview-class.md#onprepareprinting) della vista, passando un puntatore a una `CPrintInfo` struttura. La creazione guidata applicazione fornisce un'implementazione di `OnPreparePrinting` che chiama [DoPreparePrinting](reference/cview-class.md#doprepareprinting), un'altra funzione membro di `CView` . `DoPreparePrinting` funzione che consente di visualizzare la finestra di dialogo Stampa e di creare un contesto di dispositivo stampante.
 
 A questo punto l'applicazione non conosce il numero di pagine presenti nel documento. USA i valori predefiniti 1 e 0xFFFF per i numeri della prima e dell'ultima pagina del documento. Se si conosce il numero di pagine del documento, eseguire l'override di `OnPreparePrinting` e chiamare [SetMaxPage]--brokenlink--(Reference/CPrintInfo-Class. MD # SetMaxPage) per la `CPrintInfo` struttura prima di inviarla a `DoPreparePrinting` . In questo modo è possibile specificare la lunghezza del documento.
 
-`DoPreparePrinting`viene quindi visualizzata la finestra di dialogo Stampa. Quando restituisce, la `CPrintInfo` struttura contiene i valori specificati dall'utente. Se l'utente desidera stampare solo un intervallo selezionato di pagine, può specificare i numeri di pagina iniziale e finale nella finestra di dialogo Stampa. Il Framework recupera questi valori usando le `GetFromPage` `GetToPage` funzioni e di [CPrintInfo](reference/cprintinfo-structure.md). Se l'utente non specifica un intervallo di pagine, il Framework chiama `GetMinPage` e `GetMaxPage` e utilizza i valori restituiti per stampare l'intero documento.
+`DoPreparePrinting` viene quindi visualizzata la finestra di dialogo Stampa. Quando restituisce, la `CPrintInfo` struttura contiene i valori specificati dall'utente. Se l'utente desidera stampare solo un intervallo selezionato di pagine, può specificare i numeri di pagina iniziale e finale nella finestra di dialogo Stampa. Il Framework recupera questi valori usando le `GetFromPage` `GetToPage` funzioni e di [CPrintInfo](reference/cprintinfo-structure.md). Se l'utente non specifica un intervallo di pagine, il Framework chiama `GetMinPage` e `GetMaxPage` e utilizza i valori restituiti per stampare l'intero documento.
 
 Per ogni pagina di un documento da stampare, il Framework chiama due funzioni membro nella classe di visualizzazione, [OnPrepareDC](reference/cview-class.md#onpreparedc) e [OnPrint](reference/cview-class.md#onprint), e passa ogni funzione due parametri: un puntatore a un oggetto [CDC](reference/cdc-class.md) e un puntatore a una `CPrintInfo` struttura. Ogni volta che il Framework chiama `OnPrepareDC` e `OnPrint` , passa un valore diverso nel membro *m_nCurPage* della `CPrintInfo` struttura. In questo modo il Framework indica alla visualizzazione quale pagina deve essere stampata.
 
-La funzione membro [OnPrepareDC](reference/cview-class.md#onpreparedc) viene usata anche per la visualizzazione dello schermo. Apporta modifiche al contesto di dispositivo prima che il disegno venga eseguita. `OnPrepareDC`funge da ruolo analogo nella stampa, ma esistono due differenze: prima l' `CDC` oggetto rappresenta un contesto di dispositivo stampante anziché un contesto di dispositivo dello schermo e, successivamente, un `CPrintInfo` oggetto viene passato come secondo parametro. Questo parametro è **null** quando `OnPrepareDC` viene chiamato per la visualizzazione dello schermo. Eseguire l'override `OnPrepareDC` di per apportare modifiche al contesto del dispositivo in base alla pagina che viene stampata. È ad esempio possibile spostare l'origine del viewport e l'area di ridimensionamento per assicurarsi che la parte appropriata del documento venga stampata.
+La funzione membro [OnPrepareDC](reference/cview-class.md#onpreparedc) viene usata anche per la visualizzazione dello schermo. Apporta modifiche al contesto di dispositivo prima che il disegno venga eseguita. `OnPrepareDC` funge da ruolo analogo nella stampa, ma esistono due differenze: prima l' `CDC` oggetto rappresenta un contesto di dispositivo stampante anziché un contesto di dispositivo dello schermo e, successivamente, un `CPrintInfo` oggetto viene passato come secondo parametro. Questo parametro è **null** quando `OnPrepareDC` viene chiamato per la visualizzazione dello schermo. Eseguire l'override `OnPrepareDC` di per apportare modifiche al contesto del dispositivo in base alla pagina che viene stampata. È ad esempio possibile spostare l'origine del viewport e l'area di ridimensionamento per assicurarsi che la parte appropriata del documento venga stampata.
 
 La funzione membro [OnPrint](reference/cview-class.md#onprint) esegue la stampa effettiva della pagina. L'articolo [come viene eseguita la stampa predefinita](how-default-printing-is-done.md) Mostra come il Framework chiama [ondisegnato](reference/cview-class.md#ondraw) con un contesto di dispositivo stampante per eseguire la stampa. Più precisamente, il Framework chiama `OnPrint` con una `CPrintInfo` struttura e un contesto di dispositivo e `OnPrint` passa il contesto di dispositivo a `OnDraw` . Eseguire l'override `OnPrint` di per eseguire qualsiasi rendering che deve essere eseguito solo durante la stampa e non per la visualizzazione dello schermo. Ad esempio, per stampare intestazioni o piè di pagina (vedere le [intestazioni e i piè](headers-and-footers.md) di pagina dell'articolo per altre informazioni). Chiamare quindi `OnDraw` dall'override di `OnPrint` per eseguire il rendering comune per la visualizzazione e la stampa dello schermo.
 
 Il fatto che `OnDraw` esegue il rendering per la visualizzazione e la stampa dello schermo significa che l'applicazione è WYSIWYG: "ciò che viene visualizzato è quello che si ottiene". Si supponga, tuttavia, che non si stia scrivendo un'applicazione WYSIWYG. Si consideri, ad esempio, un editor di testo che usa un tipo di carattere in grassetto per la stampa ma Visualizza i codici di controllo per indicare il testo in grassetto In una situazione di questo tipo, si usa `OnDraw` esclusivamente per la visualizzazione schermo. Quando si esegue l'override di `OnPrint` , sostituire la chiamata a `OnDraw` con una chiamata a una funzione di disegno separata. Questa funzione disegna il documento nel modo in cui viene visualizzato su carta, usando gli attributi che non vengono visualizzati sullo schermo.
 
-## <a name="printer-pages-vs-document-pages"></a><a name="_core_printer_pages_vs.._document_pages"></a>Pagine stampanti e pagine documento
+## <a name="printer-pages-vs-document-pages"></a><a name="_core_printer_pages_vs.._document_pages"></a> Pagine stampanti e pagine documento
 
 Quando si fa riferimento ai numeri di pagina, è talvolta necessario distinguere tra il concetto della stampante di una pagina e il concetto di pagina di un documento. Dal punto di vista della stampante, una pagina è un foglio di carta. Tuttavia, un foglio di carta non è necessariamente uguale a una pagina del documento. Se, ad esempio, si sta stampando una newsletter, in cui i fogli devono essere ridotti, un foglio di carta potrebbe contenere la prima e l'ultima pagina del documento affiancata. Analogamente, se si sta stampando un foglio di calcolo, il documento non è costituito da pagine. Al contrario, un foglio di carta potrebbe contenere le righe da 1 a 20, le colonne da 6 a 10.
 
 Tutti i numeri di pagina nella struttura [CPrintInfo](reference/cprintinfo-structure.md) si riferiscono alle pagine della stampante. Il Framework chiama `OnPrepareDC` e `OnPrint` una volta per ogni foglio di carta che passerà attraverso la stampante. Quando si esegue l'override della funzione [OnPreparePrinting](reference/cview-class.md#onprepareprinting) per specificare la lunghezza del documento, è necessario utilizzare le pagine della stampante. Se è presente una corrispondenza uno-a-uno, ovvero una pagina della stampante è uguale a una pagina del documento, questa operazione è semplice. Se, d'altra parte, le pagine di documento e le pagine della stampante non corrispondono direttamente, è necessario tradurle tra loro. Si consideri ad esempio la stampa di un foglio di calcolo. Quando si esegue l'override di `OnPreparePrinting` , è necessario calcolare il numero di fogli di carta necessari per stampare l'intero foglio di calcolo e quindi utilizzare tale valore quando si chiama la `SetMaxPage` funzione membro di `CPrintInfo` . Analogamente, quando si esegue l'override `OnPrepareDC` di, è necessario convertire *m_nCurPage* nell'intervallo di righe e colonne che verranno visualizzate in quel particolare foglio, quindi modificare l'origine del viewport di conseguenza.
 
-## <a name="print-time-pagination"></a><a name="_core_print.2d.time_pagination"></a>Impaginazione dell'ora di stampa
+## <a name="print-time-pagination"></a><a name="_core_print.2d.time_pagination"></a> Impaginazione Print-Time
 
 In alcuni casi, è possibile che la classe di visualizzazione non conosca in anticipo per quanto tempo il documento è fino a quando non è stato effettivamente stampato. Si supponga, ad esempio, che l'applicazione non sia WYSIWYG, quindi la lunghezza di un documento sullo schermo non corrisponde alla sua lunghezza quando viene stampata.
 
@@ -123,7 +124,7 @@ L'implementazione predefinita di `OnPrepareDC` imposta *M_bContinuePrinting* su 
 
 - [Allocazione di risorse GDI](allocating-gdi-resources.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Stampa](printing.md)<br/>
 [CView (classe)](reference/cview-class.md)<br/>

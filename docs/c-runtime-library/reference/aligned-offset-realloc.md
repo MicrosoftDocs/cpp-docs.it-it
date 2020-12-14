@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _aligned_offset_realloc'
 title: _aligned_offset_realloc
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - aligned_offset_realloc function
 - _aligned_offset_realloc function
 ms.assetid: e0263533-991e-41b0-acc9-1b8a51ab9ecd
-ms.openlocfilehash: c719f62a089b1c233bac193f3431d0375af826eb
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0e61a1425d495b2ab7019eee9f42dbe26989312e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910254"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312468"
 ---
 # <a name="_aligned_offset_realloc"></a>_aligned_offset_realloc
 
@@ -66,11 +67,11 @@ Offset nell'allocazione di memoria per imporre l'allineamento.
 
 ## <a name="return-value"></a>Valore restituito
 
-**_aligned_offset_realloc** restituisce un puntatore void al blocco di memoria riallocato (e possibilmente spostato). Il valore restituito è **null** se la dimensione è zero e l'argomento del buffer non è **null**o se la memoria disponibile non è sufficiente per espandere il blocco alla dimensione specificata. Nel primo caso il blocco originale viene liberato. Nel secondo caso il blocco originale resta invariato. Il valore restituito punta a uno spazio di archiviazione che garantisce il corretto allineamento per l'archiviazione di qualsiasi tipo di oggetto. Per ottenere un puntatore a un tipo diverso da void, usare un cast del tipo sul valore restituito.
+**_aligned_offset_realloc** restituisce un puntatore void al blocco di memoria riallocato (e possibilmente spostato). Il valore restituito è **null** se la dimensione è zero e l'argomento del buffer non è **null** o se la memoria disponibile non è sufficiente per espandere il blocco alla dimensione specificata. Nel primo caso il blocco originale viene liberato. Nel secondo caso il blocco originale resta invariato. Il valore restituito punta a uno spazio di archiviazione che garantisce il corretto allineamento per l'archiviazione di qualsiasi tipo di oggetto. Per ottenere un puntatore a un tipo diverso da void, usare un cast del tipo sul valore restituito.
 
-**_aligned_offset_realloc** è contrassegnato `__declspec(noalias)` come `__declspec(restrict)`e, pertanto la funzione non modifica le variabili globali e il puntatore restituito non viene associato a un alias. Per altre informazioni, vedere [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
+**_aligned_offset_realloc** è contrassegnato `__declspec(noalias)` `__declspec(restrict)` come e, pertanto la funzione non modifica le variabili globali e il puntatore restituito non viene associato a un alias. Per altre informazioni, vedere [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Analogamente a [_aligned_offset_malloc](aligned-offset-malloc.md), **_aligned_offset_realloc** consente l'allineamento di una struttura a un offset all'interno della struttura.
 
@@ -90,6 +91,6 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni, vedere [_aligned_malloc](aligned-malloc.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Allineamento dati](../../c-runtime-library/data-alignment.md)<br/>

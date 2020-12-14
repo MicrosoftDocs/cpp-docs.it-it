@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Struttura CDaoDatabaseInfo'
 title: Struttura CDaoDatabaseInfo
 ms.date: 09/17/2019
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - CDaoDatabaseInfo structure [MFC]
 - DAO (Data Access Objects), Databases collection
 ms.assetid: 68e9e0da-8382-4fc6-8115-1b1519392ddb
-ms.openlocfilehash: 60972aa3ecaef4d38c9a0d0ecc70477796aa37aa
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 9c516821ce401f390538537233ec465f3f520458
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74304250"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250985"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>Struttura CDaoDatabaseInfo
 
-La struttura `CDaoDatabaseInfo` contiene informazioni su un oggetto di database definito per DAO (Data Access Objects). DAO 3,6 è la versione finale ed è considerata obsoleta.
+La `CDaoDatabaseInfo` struttura contiene informazioni su un oggetto di database definito per DAO (Data Access Objects). DAO 3,6 è la versione finale ed è considerata obsoleta.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -48,43 +49,43 @@ Indica se un'origine dati supporta le transazioni, ovvero la registrazione di un
 Indica la versione del motore di database di Microsoft Jet. Per recuperare direttamente il valore di questa proprietà, chiamare la funzione membro [GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion) dell'oggetto di database. Per informazioni dettagliate, vedere l'argomento "proprietà Version" nella Guida di DAO.
 
 *m_lCollatingOrder*<br/>
-Specifica la sequenza di ordinamento nel testo per il confronto o l'ordinamento delle stringhe. I valori possibili includono:
+Specifica la sequenza di ordinamento nel testo per il confronto o l'ordinamento delle stringhe. I valori possibili sono:
 
-- `dbSortGeneral` utilizzare il tipo di ordinamento generale (inglese, francese, tedesco, portoghese, italiano e spagnolo moderno).
+- `dbSortGeneral` Utilizzare il tipo di ordinamento generale (inglese, francese, tedesco, portoghese, italiano e spagnolo moderno).
 
-- `dbSortArabic` utilizzare l'ordinamento arabo.
+- `dbSortArabic` Usare l'ordinamento arabo.
 
-- `dbSortCyrillic` utilizzare l'ordinamento russo.
+- `dbSortCyrillic` Usare l'ordinamento russo.
 
-- `dbSortCzech` utilizzare l'ordinamento ceco.
+- `dbSortCzech` Utilizzare l'ordinamento ceco.
 
-- `dbSortDutch` utilizzare l'ordinamento olandese.
+- `dbSortDutch` Usare l'ordinamento olandese.
 
-- `dbSortGreek` utilizzare l'ordinamento greco.
+- `dbSortGreek` Usare l'ordinamento greco.
 
-- `dbSortHebrew` utilizzare l'ordinamento ebraico.
+- `dbSortHebrew` Utilizzare l'ordinamento ebraico.
 
-- `dbSortHungarian` utilizzare l'ordinamento ungherese.
+- `dbSortHungarian` Usare l'ordinamento ungherese.
 
-- `dbSortIcelandic` utilizzare l'ordinamento islandese.
+- `dbSortIcelandic` Usare l'ordinamento islandese.
 
-- `dbSortNorwdan` utilizzare l'ordinamento norvegese o danese.
+- `dbSortNorwdan` Usare l'ordinamento norvegese o danese.
 
-- `dbSortPDXIntl` utilizzare il tipo di ordinamento internazionale Paradox.
+- `dbSortPDXIntl` Usare il tipo di ordinamento internazionale Paradox.
 
-- `dbSortPDXNor` utilizzare l'ordinamento Paradox norvegese o danese.
+- `dbSortPDXNor` Utilizzare l'ordinamento Paradox norvegese o danese.
 
-- `dbSortPDXSwe` utilizzare l'ordinamento Paradox svedese o finlandese.
+- `dbSortPDXSwe` Utilizzare l'ordinamento Paradox svedese o finlandese.
 
-- `dbSortPolish` utilizzare l'ordinamento polacco.
+- `dbSortPolish` Usare l'ordinamento polacco.
 
-- `dbSortSpanish` utilizzare l'ordinamento spagnolo.
+- `dbSortSpanish` Utilizzare l'ordinamento spagnolo.
 
-- `dbSortSwedFin` utilizzare l'ordinamento svedese o finlandese.
+- `dbSortSwedFin` Utilizzare l'ordinamento svedese o finlandese.
 
-- `dbSortTurkish` utilizzare l'ordinamento turco.
+- `dbSortTurkish` Usare l'ordinamento turco.
 
-- `dbSortUndefined` l'ordinamento non è definito o è sconosciuto.
+- `dbSortUndefined` L'ordinamento non è definito o è sconosciuto.
 
 Per ulteriori informazioni, vedere l'argomento "personalizzazione delle impostazioni del registro di sistema di Windows per l'accesso ai dati" nella Guida di DAO.
 
@@ -94,18 +95,18 @@ Il numero di secondi di attesa del motore di database di Microsoft Jet prima che
 *m_strConnect*<br/>
 Fornisce informazioni sull'origine di un database aperto. Per informazioni sulle stringhe di connessione e per informazioni sul recupero diretto del valore di questa proprietà, vedere la funzione membro [CDaoDatabase:: GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) . Per ulteriori informazioni, vedere l'argomento "Connect Property" nella Guida di DAO.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Il database è un oggetto DAO sottostante un oggetto MFC della classe [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md). I riferimenti a primary, Secondary e all sopra indicati indicano il modo in cui le informazioni vengono restituite dalla funzione membro [CDaoWorkspace:: GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) .
 
-Le informazioni recuperate dalla funzione membro [CDaoWorkspace:: GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) vengono archiviate in una struttura `CDaoDatabaseInfo`. Chiamare `GetDatabaseInfo` per l'oggetto `CDaoWorkspace` nella cui raccolta di database è archiviato l'oggetto di database. `CDaoDatabaseInfo` definisce anche una funzione membro `Dump` nelle compilazioni di debug. È possibile utilizzare `Dump` per eseguire il dump del contenuto di un oggetto `CDaoDatabaseInfo`.
+Le informazioni recuperate dalla funzione membro [CDaoWorkspace:: GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) vengono archiviate in una `CDaoDatabaseInfo` struttura. Chiamare `GetDatabaseInfo` per l' `CDaoWorkspace` oggetto nella cui raccolta di database è archiviato l'oggetto di database. `CDaoDatabaseInfo` definisce inoltre una `Dump` funzione membro nelle compilazioni di debug. È possibile utilizzare `Dump` per eseguire il dump del contenuto di un `CDaoDatabaseInfo` oggetto.
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** AFXDAO. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [Classe CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)<br/>
-[Classe CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)
+[CDaoDatabase (classe)](../../mfc/reference/cdaodatabase-class.md)

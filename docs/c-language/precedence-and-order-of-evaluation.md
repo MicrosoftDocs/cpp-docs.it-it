@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: precedenza e ordine di valutazione'
 title: Precedenza e ordine di valutazione
 ms.date: 07/11/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], operator precedence
 - operators [C++], precedence
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
-ms.openlocfilehash: c1a5feb4552dd43b26263ebd3080e18adef6cb32
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2e0046b8fefab99c29ac9c47322b7547ec573e63
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211736"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312435"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Precedenza e ordine di valutazione
 
@@ -25,8 +26,8 @@ Nella tabella seguente vengono riepilogati la precedenza e l'associatività (l'o
 | Simbolo <sup>1</sup> | Tipo di operazione | Associatività |
 |-------------|-----------------------|-------------------|
 | `[` `]` `(` `)` `.` `->`<br/>`++``--`(suffisso) | Expression | Da sinistra a destra |
-| **`sizeof`** `&` `*` `+` `-` `~` `!`<br/>`++``--`(prefisso) | Unaria | Da destra a sinistra |
-| *cast di tipo* | Unaria | Da destra a sinistra |
+| **`sizeof`** `&` `*` `+` `-` `~` `!`<br/>`++``--`(prefisso) | Unario | Da destra a sinistra |
+| *cast di tipo* | Unario | Da destra a sinistra |
 | `*` `/` `%` | Moltiplicazione | Da sinistra a destra |
 | `+` `-` | Additive | Da sinistra a destra |
 | `<<` `>>` | Spostamento bit per bit | Da sinistra a destra |
@@ -55,7 +56,7 @@ Anche gli operatori logici garantiscono la valutazione dei propri operandi da si
 
 il secondo operando, `y++`, viene valutato solo se `x` è true (diverso da zero). Di conseguenza, `y` non viene incrementato se `x` è false (0).
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Nell'elenco seguente viene mostrato il modo in cui il compilatore associa automaticamente diverse espressioni di esempio:
 
@@ -81,6 +82,6 @@ In questa espressione, l'operatore di uguaglianza (`==`) ha la precedenza più a
 
 `( p == 0 ) ? ( p += 1 ) : ( p += 2 )`
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Operatori C](c-operators.md)

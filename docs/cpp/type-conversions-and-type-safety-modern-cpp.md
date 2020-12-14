@@ -1,14 +1,15 @@
 ---
+description: 'Altre informazioni su: conversioni di tipi e indipendenza dai tipi'
 title: Conversioni di tipi e indipendenza dai tipi
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-ms.openlocfilehash: 28adbc261b5b4376f947e00695fe66650739438d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ce83837a8aec06063b2a4e50c445fe7756b5c076
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223538"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312189"
 ---
 # <a name="type-conversions-and-type-safety"></a>Conversioni di tipi e indipendenza dai tipi
 
@@ -26,11 +27,11 @@ Quando un'espressione contiene operandi di tipi diversi incorporati e non sono p
 
 In una conversione di ampliamento un valore in una variabile più piccola viene assegnato a una variabile più grande senza perdita di dati. Poiché le conversioni di ampliamento sono sempre sicure, vengono eseguite automaticamente senza generare avvisi. Le seguenti conversioni sono di ampliamento.
 
-|From|A|
+|Da|A|
 |----------|--------|
-|Qualsiasi **`signed`** **`unsigned`** tipo integrale o ad eccezione di **`long long`** o**`__int64`**|**`double`**|
-|**`bool`** o**`char`**|Qualsiasi altro tipo predefinito|
-|**`short`** o**`wchar_t`**|**`int`**, **`long`**, **`long long`**|
+|Qualsiasi **`signed`** **`unsigned`** tipo integrale o ad eccezione di **`long long`** o **`__int64`**|**`double`**|
+|**`bool`** o **`char`**|Qualsiasi altro tipo predefinito|
+|**`short`** o **`wchar_t`**|**`int`**, **`long`**, **`long long`**|
 |**`int`**, **`long`**|**`long long`**|
 |**`float`**|**`double`**|
 
@@ -176,7 +177,7 @@ L'operatore di cast di tipo C è identico all'operatore di chiamata () e quindi 
 
    Per ulteriori informazioni, vedere [ `reinterpret_cast` operator](../cpp/reinterpret-cast-operator.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Sistema di tipi C++](../cpp/cpp-type-system-modern-cpp.md)<br/>
 [C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
