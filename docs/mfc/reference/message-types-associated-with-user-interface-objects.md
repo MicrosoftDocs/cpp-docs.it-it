@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: tipi di messaggi associati a oggetti User-Interface'
 title: Tipi di messaggi associati a oggetti dell'interfaccia utente
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - message types and user interface objects [MFC]
 ms.assetid: 681ee1a7-f6e6-4ea0-9fc6-1fb53a35516e
-ms.openlocfilehash: 37638d12c65986d40e7df9f0fbfdef4b8207e418
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: 78ddb9e5290d17f92714d6b50a57ac097bbf104c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741579"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219278"
 ---
 # <a name="message-types-associated-with-user-interface-objects"></a>Tipi di messaggi associati a oggetti dell'interfaccia utente
 
-Nella tabella seguente illustra i tipi di oggetti con cui si usa e i tipi di messaggi associati ad essi.
+La tabella seguente illustra i tipi di oggetti con cui si lavora e i tipi di messaggi associati.
 
-### <a name="user-interface-objects-and-associated-messages"></a>Oggetti dell'interfaccia utente e i messaggi associati
+### <a name="user-interface-objects-and-associated-messages"></a>Oggetti dell'interfaccia utente e messaggi associati
 
-|ID oggetto|Messages|
+|ID dell'oggetto.|Messaggi|
 |---------------|--------------|
-|Nome della classe, che rappresenta la finestra che lo contiene|Messaggi di Windows appropriati a un [CWnd](../../mfc/reference/cwnd-class.md)-classe derivata: una finestra di dialogo, finestra, finestra figlio, finestra figlio MDI o finestra cornice di primo livello.|
-|Identificatore del menu di scelta o tasto di scelta rapida|-Messaggio di comando (viene eseguita la funzione di programma).<br />-Messaggio UPDATE_COMMAND_UI (aggiorna dinamicamente la voce di menu).|
-|Identificatore del controllo|Controllare i messaggi di notifica per il tipo di controllo selezionato.|
+|Nome della classe che rappresenta la finestra che lo contiene|Messaggi di Windows appropriati a una classe derivata da [CWnd](../../mfc/reference/cwnd-class.md): una finestra di dialogo, una finestra, una finestra figlio, una finestra figlio MDI o una finestra cornice in primo piano.|
+|Menu o identificatore dell'acceleratore|-Message COMMAND (esegue la funzione Program).<br />-UPDATE_COMMAND_UI messaggio (Aggiorna in modo dinamico la voce di menu).|
+|Identificatore di controllo|Controllare i messaggi di notifica per il tipo di controllo selezionato.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Mapping di messaggi a funzioni](../../mfc/reference/mapping-messages-to-functions.md)<br/>
 [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>

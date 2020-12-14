@@ -1,16 +1,17 @@
 ---
+description: 'Ulteriori informazioni su: pagine delle proprietà (MFC)'
 title: Pagine delle proprietà (MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 9a04395aec8c2eb968e5cefaf410643a1ce03e32
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fa395272ba74c6b3900d5a1500d4cf47ade4e535
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843586"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218966"
 ---
 # <a name="property-pages-mfc"></a>Pagine delle proprietà (MFC)
 
@@ -20,7 +21,7 @@ Questo meccanismo di mapping dei dati esegue il mapping dei controlli della pagi
 
 ### <a name="property-page-data-transfer"></a>Trasferimento dati della pagina delle proprietà
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[DDP_CBIndex](#ddp_cbindex)|Collega l'indice della stringa selezionata in una casella combinata con la proprietà di un controllo.|
 |[DDP_CBString](#ddp_cbstring)|Collega la stringa selezionata in una casella combinata con la proprietà di un controllo. La stringa selezionata può iniziare con le stesse lettere del valore della proprietà, ma non è necessario che corrisponda completamente.|
@@ -39,7 +40,7 @@ Di seguito è riportato un elenco di macro utilizzate per creare e gestire pagin
 
 ### <a name="property-pages"></a>Pagine delle proprietà
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[BEGIN_PROPPAGEIDS](#begin_proppageids)|Inizia l'elenco degli ID della pagina delle proprietà.|
 |[END_PROPPAGEIDS](#end_proppageids)|Termina l'elenco di ID della pagina delle proprietà.|
@@ -71,7 +72,7 @@ Variabile membro associata al controllo della pagina delle proprietà specificat
 *pszPropName*<br/>
 Nome della proprietà del controllo da scambiare con il controllo casella combinata specificato dall' *ID*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione deve essere chiamata prima della corrispondente chiamata di funzione `DDX_CBIndex`.
 
@@ -105,7 +106,7 @@ Variabile membro associata al controllo della pagina delle proprietà specificat
 *pszPropName*<br/>
 Nome della proprietà del controllo da scambiare con la stringa della casella combinata specificata dall' *ID*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione deve essere chiamata prima della corrispondente chiamata di funzione `DDX_CBString`.
 
@@ -139,7 +140,7 @@ Variabile membro associata al controllo della pagina delle proprietà specificat
 *pszPropName*<br/>
 Nome della proprietà del controllo da scambiare con la stringa della casella combinata specificata dall' *ID*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione deve essere chiamata prima della corrispondente chiamata di funzione `DDX_CBStringExact`.
 
@@ -173,7 +174,7 @@ Variabile membro associata al controllo della pagina delle proprietà specificat
 *pszPropName*<br/>
 Nome della proprietà del controllo da scambiare con il controllo casella di controllo specificato dall' *ID*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione deve essere chiamata prima della corrispondente chiamata di funzione `DDX_Check`.
 
@@ -207,7 +208,7 @@ Variabile membro associata al controllo della pagina delle proprietà specificat
 *pszPropName*<br/>
 Nome della proprietà del controllo da scambiare con la stringa della casella di riepilogo specificata in base all' *ID*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione deve essere chiamata prima della corrispondente chiamata di funzione `DDX_LBIndex`.
 
@@ -241,7 +242,7 @@ Variabile membro associata al controllo della pagina delle proprietà specificat
 *pszPropName*<br/>
 Nome della proprietà del controllo da scambiare con la stringa della casella di riepilogo specificata in base all' *ID*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione deve essere chiamata prima della corrispondente chiamata di funzione `DDX_LBString`.
 
@@ -275,7 +276,7 @@ Variabile membro associata al controllo della pagina delle proprietà specificat
 *pszPropName*<br/>
 Nome della proprietà del controllo da scambiare con la stringa della casella di riepilogo specificata in base all' *ID*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione deve essere chiamata prima della corrispondente chiamata di funzione `DDX_LBStringExact`.
 
@@ -296,7 +297,7 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 *pDX*<br/>
 Puntatore a un oggetto `CDataExchange`. Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione deve essere chiamata dopo il completamento di tutte le funzioni di scambio di dati. Ad esempio:
 
@@ -332,7 +333,7 @@ Variabile membro associata al controllo della pagina delle proprietà specificat
 *pszPropName*<br/>
 Nome della proprietà del controllo da scambiare con il controllo pulsante di opzione specificato dall' *ID*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione deve essere chiamata prima della corrispondente chiamata di funzione `DDX_Radio`.
 
@@ -408,7 +409,7 @@ Variabile membro associata al controllo della pagina delle proprietà specificat
 *pszPropName*<br/>
 Nome della proprietà del controllo da scambiare con il controllo specificato da *ID*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione deve essere chiamata prima della corrispondente chiamata di funzione `DDX_Text`.
 
@@ -432,7 +433,7 @@ Nome della classe del controllo per cui vengono specificate le pagine delle prop
 *count*<br/>
 Numero di pagine delle proprietà utilizzate dalla classe del controllo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Nel file di implementazione (. cpp) che definisce le funzioni membro per la classe, avviare l'elenco della pagina delle proprietà con la macro BEGIN_PROPPAGEIDS, quindi aggiungere le voci della macro per ogni pagina delle proprietà e completare l'elenco di pagine delle proprietà con la macro END_PROPPAGEIDS.
 
@@ -469,10 +470,10 @@ PROPPAGEID(clsid)
 
 ### <a name="parameters"></a>Parametri
 
-*clsid*<br/>
+*CLSID*<br/>
 ID di classe univoco di una pagina delle proprietà.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Tutte le macro PROPPAGEID devono essere inserite tra le macro BEGIN_PROPPAGEIDS e END_PROPPAGEIDS nel file di implementazione del controllo.
 
@@ -480,6 +481,6 @@ Tutte le macro PROPPAGEID devono essere inserite tra le macro BEGIN_PROPPAGEIDS 
 
   **Intestazione** afxctl. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)

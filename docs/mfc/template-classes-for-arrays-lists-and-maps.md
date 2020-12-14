@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classi modello per matrici, elenchi e mappe'
 title: Classi modello per matrici, elenchi e mappe
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,37 +11,37 @@ helpviewer_keywords:
 - map classes [MFC]
 - template classes [MFC]
 ms.assetid: a8331c4b-068a-48f8-a629-b8449601e121
-ms.openlocfilehash: be5639802f6f4a11a29326efd71d9634797c9f5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a63614988953cfe736ec98df1756fb76ffb9d32
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306327"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97216275"
 ---
 # <a name="template-classes-for-arrays-lists-and-maps"></a>Classi modello per matrici, elenchi e mappe
 
-Queste classi di raccolta sono modelli i cui parametri determinano i tipi di oggetti archiviati nelle funzioni di aggregazione. Il `CArray`, `CMap`, e `CList` classi usano funzioni di supporto globale che in genere devono essere personalizzate. Per altre informazioni su queste funzioni helper, vedere [supporti delle classi Collection](../mfc/reference/collection-class-helpers.md). Le classi di puntatore tipizzato sono wrapper per le altre classi di libreria di classi. Usando questi wrapper, eseguire l'integrazione del compilatore-controllo dei tipi che consentono di evitare errori. Per altre informazioni sull'uso di queste classi, vedere [raccolte](../mfc/collections.md).
+Queste classi di raccolta sono modelli i cui parametri determinano i tipi degli oggetti archiviati nelle aggregazioni. Le `CArray` `CMap` classi, e `CList` usano funzioni helper globali che in genere devono essere personalizzate. Per ulteriori informazioni su queste funzioni helper, vedere [helper della classe Collection](../mfc/reference/collection-class-helpers.md). Le classi del puntatore tipizzato sono wrapper per le altre classi nella libreria di classi. Usando questi wrapper, si integra il controllo dei tipi del compilatore per evitare errori. Per ulteriori informazioni sull'utilizzo di queste classi, vedere [Collections](../mfc/collections.md).
 
-Queste classi forniscono modelli che è possibile usare per creare matrici, elenchi e mappe usando qualsiasi tipo desiderato.
+Queste classi forniscono modelli che è possibile usare per creare matrici, elenchi e mappe usando qualsiasi tipo.
 
 [CArray](../mfc/reference/carray-class.md)<br/>
-Classe di modello per rendere le matrici di tipi arbitrari.
+Classe modello per la creazione di matrici di tipi arbitrari.
 
 [CList](../mfc/reference/clist-class.md)<br/>
-Classe di modello per la creazione di elenchi di tipi arbitrari.
+Classe modello per la creazione di elenchi di tipi arbitrari.
 
 [CMap](../mfc/reference/cmap-class.md)<br/>
-Classe di modello per rendere le mappe con tipi di chiave e valore arbitrari.
+Classe modello per la creazione di mappe con tipi di chiave e valore arbitrari.
 
 [CTypedPtrArray](../mfc/reference/ctypedptrarray-class.md)<br/>
-Classe di modello per matrici indipendenti dai tipi di puntatori.
+Classe modello per matrici indipendenti dai tipi di puntatori.
 
 [CTypedPtrList](../mfc/reference/ctypedptrlist-class.md)<br/>
-Classe di modello per gli elenchi indipendente dai tipi di puntatori.
+Classe modello per elenchi di puntatori indipendenti dai tipi.
 
 [CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md)<br/>
-Classe di modello per le mappe indipendente dai tipi con i puntatori.
+Classe modello per mapping indipendenti dai tipi con puntatori.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Panoramica della classe](../mfc/class-library-overview.md)
+[Cenni preliminari sulle classi](../mfc/class-library-overview.md)

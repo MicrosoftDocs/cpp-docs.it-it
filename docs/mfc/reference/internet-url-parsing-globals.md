@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: Globals e helper di analisi degli URL Internet'
 title: Globals e helper di analisi URL Internet
 ms.date: 04/03/2017
 helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-ms.openlocfilehash: c7ce6eeee6deb4537d09e102b925a742ada04650
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4dca0946686759a3880c73aa425edcc724d8772d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837164"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219499"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Globals e helper di analisi URL Internet
 
@@ -18,14 +19,14 @@ Quando un client invia una query al server Internet, è possibile usare una dell
 
 ## <a name="internet-url-parsing-globals"></a>Funzioni globali di analisi degli URL Internet
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[AfxParseURL](#afxparseurl)|Analizza una stringa URL e restituisce il tipo di servizio e i relativi componenti.|
 |[AfxParseURLEx](#afxparseurlex)|Analizza una stringa URL e restituisce il tipo di servizio e i relativi componenti, oltre a fornire il nome utente e la password.|
 
 ## <a name="other-internet-helpers"></a>Altri helper Internet
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[AfxThrowInternetException](#afxthrowinternetexception)|Genera un'eccezione correlata alla connessione Internet.|
 |[AfxGetInternetHandleType](#afxgetinternethandletype)|Determina il tipo di un handle Internet.|
@@ -94,7 +95,7 @@ Determinato dalle parti del server o dell'oggetto dell'URL, se esistente.
 
 Diverso da zero se l'URL è stato analizzato correttamente. in caso contrario, 0 se è vuoto o non contiene un tipo di servizio Internet noto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Analizza una stringa URL e restituisce il tipo di servizio e i relativi componenti.
 
@@ -201,7 +202,7 @@ Se si usa l'impostazione predefinita MFC, che non è un flag, la funzione conver
 
 Diverso da zero se l'URL è stato analizzato correttamente. in caso contrario, 0 se è vuoto o non contiene un tipo di servizio Internet noto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Analizza una stringa URL e restituisce il tipo di servizio e i relativi componenti, oltre a fornire il nome e la password dell'utente. I flag indicano come vengono gestiti i caratteri non sicuri.
 
@@ -231,7 +232,7 @@ Handle per una query Internet.
 
 Qualsiasi tipo di servizio Internet definito da WININET. H. Per un elenco di questi servizi Internet, vedere la sezione Osservazioni. Se l'handle è NULL o non riconosciuto, la funzione restituisce AFX_INET_SERVICE_UNK.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Nell'elenco seguente sono inclusi i tipi Internet possibili restituiti da `AfxGetInternetHandleType` .
 
@@ -286,7 +287,7 @@ Identificatore di contesto per l'operazione che ha causato l'errore. Il valore p
 *dwError*<br/>
 Errore che ha causato l'eccezione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'utente è responsabile di determinare la causa in base al codice di errore del sistema operativo.
 
@@ -297,7 +298,7 @@ L'utente è responsabile di determinare la causa in base al codice di errore del
 
 **Intestazione:** AFXINET. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro e funzioni globali](mfc-macros-and-globals.md)<br/>
 [Classe CInternetException](cinternetexception-class.md)<br/>

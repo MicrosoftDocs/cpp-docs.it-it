@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: creazione guidata classe MFC'
 title: Creazione guidata classe MFC
 ms.date: 09/06/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Class Wizard
 ms.assetid: 8b0dd867-5d07-4214-99be-2a1c1995e6d9
-ms.openlocfilehash: be829156d8fea8188a217b2c0a189ac5d6057a7e
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: ba82cabd13fb242f5201243cd9f06c44df8141ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907987"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219187"
 ---
 # <a name="mfc-class-wizard"></a>Creazione guidata classe MFC
 
@@ -19,13 +20,13 @@ Utilizzare la **creazione guidata classe** per creare nuove classi MFC o aggiung
 
 Sono disponibili tre modi per aprire la **creazione guidata classe**:
 
-- Scegliere **creazione guidata classe**dal menu **progetto** .
-- Digitare **CTRL** > MAIUSCX > .
-- In **Visualizzazione classi**fare clic con il pulsante destro del mouse su una classe o sul nodo del progetto e scegliere **creazione guidata classe**.
+- Scegliere **creazione guidata classe** dal menu **progetto** .
+- Digitare **CTRL**  >  **MAIUSC**  >  **X**.
+- In **Visualizzazione classi** fare clic con il pulsante destro del mouse su una classe o sul nodo del progetto e scegliere **creazione guidata classe**.
 
 ![Creazione guidata classe](media/class-wizard.png "Creazione guidata classe MFC")
 
-## <a name="uielement-list"></a>Elenco UIElement
+## <a name="uielement-list"></a>Elenco degli elementi di interfaccia
 
 - **Progetto**
 
@@ -43,11 +44,11 @@ Sono disponibili tre modi per aprire la **creazione guidata classe**:
 
    Consente di aggiungere una nuova classe al progetto MFC.
 
-- **Classe base**
+- **Classe di base**
 
    Classe di base della classe visualizzata nel **nome della classe**.
 
-- **Dichiarazione di classe**
+- **dichiarazione di classe**
 
    Classe in cui viene dichiarata la classe del **nome della classe** .
 
@@ -63,17 +64,17 @@ Sono disponibili tre modi per aprire la **creazione guidata classe**:
 
    È possibile selezionare un file di implementazione diverso facendo clic sulla freccia. Nella tabella seguente sono elencate le opzioni disponibili.
 
-   |Opzione|Descrizione|
+   |Opzione|Description|
    |------------|-----------------|
    |**Apri file**|Chiude la creazione guidata classe e apre il file di implementazione della classe corrente.|
-   |**Apri cartella contenitore**|Apre la cartella che contiene il file di implementazione della classe corrente.|
+   |**Apri cartella superiore**|Apre la cartella che contiene il file di implementazione della classe corrente.|
    |**Copia percorso completo negli Appunti**|Copia il percorso del file di implementazione corrente negli Appunti.|
 
 - **Comandi**
 
    Consente di aggiungere, eliminare, modificare o cercare un comando e il relativo gestore messaggi.
 
-   Per aggiungere un gestore, fare clic su **Aggiungi gestore**oppure fare doppio clic su un elemento nell'elenco **ID oggetto** o **messaggi** . Il nome, l'ID e il messaggio della funzione risultante vengono visualizzati nell'elenco delle **funzioni membro** .
+   Per aggiungere un gestore, fare clic su **Aggiungi gestore** oppure fare doppio clic su un elemento nell'elenco **ID oggetto** o **messaggi** . Il nome, l'ID e il messaggio della funzione risultante vengono visualizzati nell'elenco delle **funzioni membro** .
 
    Per eliminare un gestore, selezionare un elemento nell'elenco **funzioni membro** , quindi fare clic su **Elimina gestore**.
 
@@ -83,7 +84,7 @@ Sono disponibili tre modi per aprire la **creazione guidata classe**:
 
    Consente di aggiungere, eliminare, modificare o cercare un messaggio e il relativo gestore messaggi.
 
-   Per aggiungere un gestore, fare clic su **Aggiungi gestore**oppure fare doppio clic su un elemento nell'elenco **messaggi** .
+   Per aggiungere un gestore, fare clic su **Aggiungi gestore** oppure fare doppio clic su un elemento nell'elenco **messaggi** .
 
    Per aggiungere un messaggio personalizzato, fare clic su **Aggiungi messaggio personalizzato** o premere il tasto invio, quindi specificare i valori nella finestra di dialogo **Aggiungi messaggio personalizzato** . In tale finestra di dialogo è inoltre possibile selezionare un **messaggio registrato** per gestire un messaggio di finestra che garantisce l'univocità per tutto il sistema operativo.
 
@@ -99,7 +100,7 @@ Sono disponibili tre modi per aprire la **creazione guidata classe**:
 
    Consente di aggiungere, eliminare o cercare un metodo, nonché di passare alla definizione o alla dichiarazione di un metodo.
 
-   Per aggiungere un metodo, fare clic su **Aggiungi metodo**e quindi specificare i valori nella finestra di dialogo **Aggiungi metodo** .
+   Per aggiungere un metodo, fare clic su **Aggiungi metodo** e quindi specificare i valori nella finestra di dialogo **Aggiungi metodo** .
 
    Per eliminare un metodo, selezionare un elemento nell'elenco dei **Metodi** e quindi fare clic su **Elimina metodo**.
 
@@ -107,6 +108,6 @@ Sono disponibili tre modi per aprire la **creazione guidata classe**:
 
    Per visualizzare una definizione, fare doppio clic su un elemento nell'elenco dei **Metodi** . In alternativa, selezionare un elemento nell'elenco dei **Metodi** e quindi fare clic sul pulsante **Vai a definizione** .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Aggiunta di una classe](../../ide/adding-a-class-visual-cpp.md)

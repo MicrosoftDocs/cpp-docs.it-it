@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: routine di convalida dei dati della finestra di dialogo standard'
 title: Routine di convalida dei dati della finestra di dialogo standard
 ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-ms.openlocfilehash: 19d1858d67802a7c464a9be783e4c1fb96fe3fae
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d2b39381610c51f661e98256c39b580df256ebaa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844483"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218849"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Routine di convalida dei dati della finestra di dialogo standard
 
@@ -20,7 +21,7 @@ Questo argomento elenca le routine di convalida dei dati delle finestre di dialo
 
 ### <a name="ddv-functions"></a>Funzioni DDV
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[DDV_MaxChars](#ddv_maxchars)|Verifica che il numero di caratteri in un valore di controllo specificato non superi un valore massimo specificato.|
 |[DDV_MinMaxByte](#ddv_minmaxbyte)|Verifica che un valore di controllo specificato non superi un intervallo di **byte** specificato.|
@@ -60,7 +61,7 @@ Riferimento a una variabile membro della finestra di dialogo, della visualizzazi
 *nChars*<br/>
 Numero massimo di caratteri consentiti.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni su DDV, vedere [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
@@ -94,7 +95,7 @@ Valore minimo (di tipo BYTE) consentito.
 *maxVal*<br/>
 Consentito valore massimo (di tipo BYTE).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni su DDV, vedere [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
@@ -134,7 +135,7 @@ Valore di data/ora minimo consentito.
 *refMaxRange*<br/>
 Valore di data/ora massimo consentito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni su DDV, vedere [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
@@ -168,7 +169,7 @@ Valore minimo (di tipo **`double`** ) consentito.
 *maxVal*<br/>
 Valore massimo consentito (di tipo **`double`** ).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni su DDV, vedere [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
@@ -202,7 +203,7 @@ Valore minimo (di tipo DWORD) consentito.
 *maxVal*<br/>
 Valore massimo consentito (di tipo DWORD).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni su DDV, vedere [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
@@ -236,7 +237,7 @@ Valore minimo (di tipo **`float`** ) consentito.
 *maxVal*<br/>
 Valore massimo consentito (di tipo **`float`** ).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni su DDV, vedere [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
@@ -270,7 +271,7 @@ Valore minimo (di tipo **`int`** ) consentito.
 *maxVal*<br/>
 Valore massimo consentito (di tipo **`int`** ).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni su DDV, vedere [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
@@ -304,7 +305,7 @@ Valore minimo (di tipo **`long`** ) consentito.
 *maxVal*<br/>
 Valore massimo consentito (di tipo **`long`** ).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni su DDV, vedere [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
@@ -338,7 +339,7 @@ Valore minimo (di tipo LONGLONG) consentito.
 *maxVal*<br/>
 Valore massimo (di tipo LONGLONG) consentito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni su DDV, vedere [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
@@ -378,7 +379,7 @@ Valore di data/ora minimo consentito.
 *refMaxRange*<br/>
 Valore di data/ora massimo consentito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni su DDV, vedere [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
@@ -412,7 +413,7 @@ Valore minimo (di tipo **`short`** ) consentito.
 *maxVal*<br/>
 Valore massimo consentito (di tipo **`short`** ).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni su DDV, vedere [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
@@ -446,7 +447,7 @@ Valore minimo consentito.
 *maxVal*<br/>
 Valore massimo consentito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni su DDV, vedere [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). Per informazioni sui controlli dispositivo di scorrimento, vedere [uso di CSliderCtrl](../../mfc/using-csliderctrl.md).
 
@@ -480,7 +481,7 @@ Valore minimo (di tipo UINT) consentito.
 *maxVal*<br/>
 Valore massimo (di tipo UINT) consentito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni su DDV, vedere [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
@@ -514,7 +515,7 @@ Valore minimo (di tipo ULONGLONG) consentito.
 *maxVal*<br/>
 Valore massimo (di tipo ULONGLONG) consentito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni su DDV, vedere [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
@@ -550,7 +551,7 @@ Valore minimo (di tipo **`unsigned`** ) consentito.
 *maxVal*<br/>
 Valore massimo consentito (di tipo **`unsigned`** ).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni su DDV, vedere [Dialog Data Exchange and Validation](../dialog-data-exchange-and-validation.md).
 
@@ -558,7 +559,7 @@ Per ulteriori informazioni su DDV, vedere [Dialog Data Exchange and Validation](
 
 **Intestazione:** afxdd_. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Routine di scambio di dati della finestra di dialogo standard](standard-dialog-data-exchange-routines.md)<br/>
 [Macro e funzioni globali](mfc-macros-and-globals.md)<br/>

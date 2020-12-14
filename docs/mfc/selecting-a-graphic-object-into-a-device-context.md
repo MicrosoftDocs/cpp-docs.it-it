@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: selezione di un oggetto grafico in un contesto di dispositivo'
 title: Selezione di un oggetto grafico in un contesto di dispositivo
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,24 +10,24 @@ helpviewer_keywords:
 - device contexts, selecting graphic objects into
 - device contexts, graphic objects [MFC]
 ms.assetid: cf54a330-63ef-421f-83eb-90ec7bd82eef
-ms.openlocfilehash: 7fb1507c1200da4cdf44627557ff6993e927d51e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc2aabbcb1614fc77e5eadf9e6fba13ba377a4c7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308530"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97217679"
 ---
 # <a name="selecting-a-graphic-object-into-a-device-context"></a>Selezione di un oggetto grafico in un contesto di dispositivo
 
-Questo argomento si applica all'utilizzo di oggetti grafici nel contesto di dispositivo di una finestra. Dopo aver [creare un oggetto drawing](../mfc/one-stage-and-two-stage-construction-of-objects.md), è necessario selezionarlo nel contesto di dispositivo anziché l'oggetto predefinito archiviato vengono eliminati:
+Questo argomento si applica all'uso di oggetti grafici nel contesto di dispositivo di una finestra. Dopo aver [creato un oggetto Drawing](../mfc/one-stage-and-two-stage-construction-of-objects.md), è necessario selezionarlo nel contesto di dispositivo al posto dell'oggetto predefinito archiviato:
 
 [!code-cpp[NVC_MFCDocViewSDI#7](../mfc/codesnippet/cpp/selecting-a-graphic-object-into-a-device-context_1.cpp)]
 
 ## <a name="lifetime-of-graphic-objects"></a>Durata degli oggetti grafici
 
-L'oggetto grafico restituito da [SelectObject](../mfc/reference/cdc-class.md#selectobject) è "temporaneo". Vale a dire, verranno eliminato entro il [OnIdle](../mfc/reference/cwinapp-class.md#onidle) funzione membro di classe `CWinApp` la volta successiva che il programma ottiene inattivo ora. Purché si utilizzino l'oggetto restituito da `SelectObject` in una singola funzione senza restituire il controllo al ciclo di messaggi principale, non si otterrà alcun problema.
+L'oggetto grafico restituito da [SelezionaOggetto](../mfc/reference/cdc-class.md#selectobject) è "Temporary". Ovvero verrà eliminato dalla funzione membro [OnIdle](../mfc/reference/cwinapp-class.md#onidle) della classe `CWinApp` la volta successiva che il programma otterrà il tempo di inattività. Fino a quando si utilizza l'oggetto restituito da `SelectObject` in una singola funzione senza restituire il controllo al ciclo di messaggi principale, non si verifica alcun problema.
 
-### <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+### <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
 - [Oggetti grafici](../mfc/graphic-objects.md)
 
@@ -36,6 +37,6 @@ L'oggetto grafico restituito da [SelectObject](../mfc/reference/cdc-class.md#sel
 
 - [Disegno in una visualizzazione](../mfc/drawing-in-a-view.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Oggetti grafici](../mfc/graphic-objects.md)

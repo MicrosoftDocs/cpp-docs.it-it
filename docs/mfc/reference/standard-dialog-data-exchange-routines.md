@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: routine di scambio di dati della finestra di dialogo standard'
 title: Routine DDX (Dialog Data Exchange) standard
 ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-ms.openlocfilehash: bed60094b25bcc3b1994aa904a8c20324be2abae
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f1d5cb0726168b90e0ba2a7891ce0ffa55b73f10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844496"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218862"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Routine DDX (Dialog Data Exchange) standard
 
@@ -20,7 +21,7 @@ In questo argomento vengono elencate le routine DDX (Dialog Data Exchange) stand
 
 ### <a name="ddx-functions"></a>Funzioni DDX
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[DDX_CBIndex](#ddx_cbindex)|Inizializza o recupera l'indice della selezione corrente di un controllo casella combinata.|
 |[DDX_CBString](#ddx_cbstring)|Inizializza o Recupera il contenuto corrente del campo di modifica di un controllo casella combinata.|
@@ -61,7 +62,7 @@ ID risorsa del controllo casella combinata associato alla proprietà del control
 *index*<br/>
 Riferimento a una variabile membro della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo con cui vengono scambiati i dati.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando `DDX_CBIndex` viene chiamato il metodo, *index* viene impostato sull'indice della selezione della casella combinata corrente. Se non è selezionato alcun elemento, *index* viene impostato su 0.
 
@@ -93,7 +94,7 @@ ID risorsa del controllo casella combinata associato alla proprietà del control
 *value*<br/>
 Riferimento a una variabile membro della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo con cui vengono scambiati i dati.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando `DDX_CBString` viene chiamato il metodo, il *valore* viene impostato sulla selezione della casella combinata corrente. Se non è selezionato alcun elemento, il *valore* viene impostato su una stringa di lunghezza zero.
 
@@ -128,7 +129,7 @@ ID risorsa del controllo casella combinata associato alla proprietà del control
 *value*<br/>
 Riferimento a una variabile membro della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo con cui vengono scambiati i dati.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando `DDX_CBStringExact` viene chiamato il metodo, il *valore* viene impostato sulla selezione della casella combinata corrente. Se non è selezionato alcun elemento, il *valore* viene impostato su una stringa di lunghezza zero.
 
@@ -163,7 +164,7 @@ ID risorsa del controllo casella di controllo associato alla proprietà del cont
 *value*<br/>
 Riferimento a una variabile membro della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo con cui vengono scambiati i dati.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando `DDX_Check` viene chiamato il metodo, il *valore* viene impostato sullo stato corrente del controllo casella di controllo. Per un elenco dei valori di stato possibili, vedere [BM_GETCHECK](/windows/win32/Controls/bm-getcheck) nel Windows SDK.
 
@@ -195,7 +196,7 @@ ID risorsa del controllo da sottoclassare.
 *rControl*<br/>
 Riferimento a una variabile membro della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo correlato al controllo specificato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'oggetto *PDX* viene fornito dal framework quando `DoDataExchange` viene chiamata la funzione. Pertanto, `DDX_Control` deve essere chiamato solo all'interno dell'override di `DoDataExchange` .
 
@@ -237,7 +238,7 @@ ID risorsa del controllo selezione data e ora associato alla variabile membro.
 *value*<br/>
 Nelle prime due versioni, un riferimento a una `CTime` variabile membro o, una finestra di `COleDateTime` dialogo, una visualizzazione form o un oggetto visualizzazione controllo con cui vengono scambiati i dati. Nella terza versione, un riferimento a un `CString` oggetto visualizzazione controllo del membro dati.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando `DDX_DateTimeCtrl` viene chiamato il metodo, *value* viene impostato sullo stato corrente del controllo selezione data e ora oppure il controllo è impostato su *value*, a seconda della direzione dello scambio.
 
@@ -274,7 +275,7 @@ ID risorsa del controllo associato alla proprietà del controllo.
 *control*<br/>
 Riferimento a un oggetto della [classe CWinFormsControl](cwinformscontrol-class.md) .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `DDX_ManagedControl` chiama [CWinFormsControl:: CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) per creare un controllo che corrisponde all'ID di controllo della risorsa. Usare `DDX_ManagedControl` per creare controlli dagli ID risorsa in [CDialog:: OnInitDialog](cdialog-class.md#oninitdialog). Per lo scambio di dati, non è necessario utilizzare le funzioni DDX/DDV con controlli Windows Forms.
 
@@ -315,7 +316,7 @@ Riferimento a DWORD che contiene il valore a quattro campi del controllo dell'in
 
 Utilizzare il [IPM_GETADDRESS](/windows/win32/Controls/ipm-getaddress) Win32 per leggere il valore oppure utilizzare [IPM_SETADDRESS](/windows/win32/Controls/ipm-setaddress) per inserire il valore. Questi messaggi vengono descritti nella Windows SDK.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando `DDX_IPAddress` viene chiamato il metodo, il *valore* viene letto dal controllo degli indirizzi IP oppure il *valore* viene scritto nel controllo, a seconda della direzione dello scambio.
 
@@ -347,7 +348,7 @@ ID risorsa del controllo casella di riepilogo associato alla proprietà del cont
 *index*<br/>
 Riferimento a una variabile membro della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo con cui vengono scambiati i dati.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando `DDX_LBIndex` viene chiamato il metodo, *index* viene impostato sull'indice della selezione della casella di riepilogo corrente. Se non è selezionato alcun elemento, *index* viene impostato su-1.
 
@@ -379,7 +380,7 @@ ID risorsa del controllo casella di riepilogo associato alla proprietà del cont
 *value*<br/>
 Riferimento a una variabile membro della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo con cui vengono scambiati i dati.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando `DDX_LBString` viene chiamato per trasferire i dati a un controllo casella di riepilogo, viene selezionato il primo elemento del controllo il cui *valore* iniziale corrisponde a. (Per trovare la corrispondenza con l'intero elemento anziché con un solo prefisso, usare [DDX_LBStringExact](#ddx_lbstringexact)). Se non sono presenti corrispondenze, non è selezionato alcun elemento. La corrispondenza non fa distinzione tra maiuscole e minuscole.
 
@@ -416,7 +417,7 @@ ID risorsa del controllo casella di riepilogo associato alla proprietà del cont
 *value*<br/>
 Riferimento a una variabile membro della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo con cui vengono scambiati i dati.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando `DDX_LBStringExact` viene chiamato per trasferire i dati a un controllo casella di riepilogo, viene selezionato il primo elemento nel controllo che corrisponde al *valore* . (Per trovare la corrispondenza con un solo prefisso anziché l'intero elemento, usare [DDX_LBString](#ddx_lbstring)). Se non sono presenti corrispondenze, non è selezionato alcun elemento. La corrispondenza non fa distinzione tra maiuscole e minuscole.
 
@@ -458,7 +459,7 @@ ID risorsa del controllo calendario mensile associato alla variabile membro.
 *value*<br/>
 Riferimento a una `CTime` `COleDateTime` variabile membro o della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo con cui vengono scambiati i dati.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 > [!NOTE]
 > Il controllo gestisce solo un valore di data. I campi di tempo nell'oggetto ora sono impostati in modo da riflettere l'ora di creazione della finestra del controllo o qualsiasi tempo impostato nel controllo con una chiamata a `CMonthCalCtrl::SetCurSel` .
@@ -493,7 +494,7 @@ ID risorsa del primo controllo radio nel gruppo.
 *value*<br/>
 Riferimento a una variabile membro della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo con cui vengono scambiati i dati.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando `DDX_Radio` viene chiamato il metodo, il *valore* viene impostato sullo stato corrente del gruppo di controllo radio. Il valore viene impostato come un indice in base 0 del controllo radio che è attualmente selezionato oppure-1 se non è selezionato alcun controllo radio.
 
@@ -527,7 +528,7 @@ ID risorsa del controllo barra di scorrimento associato alla proprietà del cont
 *value*<br/>
 Riferimento a una variabile membro della finestra di dialogo, alla visualizzazione form o all'oggetto visualizzazione controllo con cui vengono scambiati dati.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando `DDX_Scroll` viene chiamato il metodo, il *valore* viene impostato sulla posizione corrente del cursore del controllo. Per ulteriori informazioni sui valori associati alla posizione corrente del cursore del controllo, vedere [GetScrollPos](/windows/win32/api/winuser/nf-winuser-getscrollpos) nel Windows SDK.
 
@@ -559,7 +560,7 @@ ID risorsa del controllo dispositivo di scorrimento.
 *value*<br/>
 Riferimento al valore da scambiare. Questo parametro contiene o imposta la posizione corrente del controllo dispositivo di scorrimento.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando `DDX_Slider` viene chiamato il metodo, il *valore* viene impostato sulla posizione corrente del cursore del controllo oppure il valore riceve la posizione, a seconda della direzione dello scambio.
 
@@ -641,7 +642,7 @@ ID di un controllo di modifica nella finestra di dialogo, nella visualizzazione 
 *value*<br/>
 Riferimento a un membro dati nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo. Il tipo di dati del *valore* dipende da quale delle versioni di overload di `DDX_Text` si utilizza.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
@@ -649,7 +650,7 @@ Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](.
 
   **Intestazione** afxdd_. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Routine di convalida dei dati della finestra di dialogo standard](standard-dialog-data-validation-routines.md)<br/>
 [Macro e funzioni globali](mfc-macros-and-globals.md)<br/>

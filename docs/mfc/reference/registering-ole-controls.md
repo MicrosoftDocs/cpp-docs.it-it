@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: registrazione di controlli OLE'
 title: Registrazione di controlli OLE
 ms.date: 11/04/2016
 helpviewer_keywords:
 - registering OLE controls
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
-ms.openlocfilehash: 5468f3d4b730cc0b81a6ab814d495b061d292f20
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2556d67e509f7c4217a726ed097bbb69788af7fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843573"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218927"
 ---
 # <a name="registering-ole-controls"></a>Registrazione di controlli OLE
 
@@ -20,7 +21,7 @@ Le funzioni seguenti consentono di aggiungere e rimuovere la classe del controll
 
 ### <a name="registering-ole-controls"></a>Registrazione di controlli OLE
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[AfxOleRegisterControlClass](#afxoleregistercontrolclass)|Aggiunge la classe del controllo al database di registrazione.|
 |[AfxOleRegisterPropertyPageClass](#afxoleregisterpropertypageclass)|Aggiunge una pagina delle proprietà del controllo al database di registrazione.|
@@ -53,7 +54,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 *hInstance*<br/>
 Handle dell'istanza del modulo associato alla classe del controllo.
 
-*clsid*<br/>
+*CLSID*<br/>
 ID univoco della classe del controllo.
 
 *pszProgID*<br/>
@@ -133,7 +134,7 @@ Numero della versione secondaria della classe del controllo.
 
 Diverso da zero se la classe del controllo è stata registrata. in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 In questo modo il controllo può essere usato dai contenitori che sono compatibili con il controllo OLE. `AfxOleRegisterControlClass` Aggiorna il registro di sistema con il nome e il percorso del controllo nel sistema e imposta anche il modello di threading supportato dal controllo nel registro di sistema. Per ulteriori informazioni, vedere la [Nota tecnica 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Threading del modello di Apartment nei controlli OLE" e [informazioni sui processi e sui thread](/windows/win32/ProcThread/about-processes-and-threads) nel Windows SDK.
 
@@ -168,7 +169,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
 *hInstance*<br/>
 Handle dell'istanza del modulo associato alla classe della pagina delle proprietà.
 
-*clsid*<br/>
+*CLSID*<br/>
 ID di classe univoco della pagina delle proprietà.
 
 *idTypeName*<br/>
@@ -186,7 +187,7 @@ Può contenere il flag:
 
 Diverso da zero se la classe del controllo è stata registrata. in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Ciò consente di utilizzare la pagina delle proprietà per i contenitori che sono compatibili con il controllo OLE. `AfxOleRegisterPropertyPageClass` Aggiorna il registro di sistema con il nome della pagina delle proprietà e il relativo percorso nel sistema e imposta anche il modello di threading supportato dal controllo nel registro di sistema. Per ulteriori informazioni, vedere la [Nota tecnica 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Threading del modello di Apartment nei controlli OLE" e [informazioni sui processi e sui thread](/windows/win32/ProcThread/about-processes-and-threads) nel Windows SDK.
 
@@ -224,7 +225,7 @@ Nome della directory in cui è disponibile il file della Guida della libreria de
 
 Diverso da zero se la libreria dei tipi è stata registrata; in caso contrario, 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione aggiorna il Registro di sistema con il nome della libreria dei tipi e il relativo percorso nel sistema.
 
@@ -287,6 +288,6 @@ Diverso da zero se la registrazione della libreria dei tipi è stata completata.
 
   **Intestazione** afxdisp. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)

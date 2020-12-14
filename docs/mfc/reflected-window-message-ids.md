@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: ID messaggio finestra riflesso'
 title: ID messaggi finestra riflessi
 ms.date: 11/04/2016
 f1_keywords:
@@ -46,18 +47,18 @@ helpviewer_keywords:
 - OCM_NOTIFY message [MFC]
 - reflected messages
 ms.assetid: 3417ff51-ff9f-458c-bff4-17c200f00d96
-ms.openlocfilehash: 6d4ee3483bdfeb88951071bddb748671897a424b
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: ff6151c6f4c79d7086eb16e7fadeac0b75ac531a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754386"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218238"
 ---
 # <a name="reflected-window-message-ids"></a>ID messaggi finestra riflessi
 
-Un modo rapido per creare un controllo ActiveX o un altro controllo specializzato consiste nel creare una sottoclasse di una finestra. Per ulteriori informazioni, vedere [Controlli ActiveX MFC: creazione di sottoclassi di un controllo Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
+Un modo rapido per creare un controllo ActiveX o un altro controllo specializzato consiste nel creare una sottoclasse di una finestra. Per ulteriori informazioni, vedere [controlli ActiveX MFC: sottoclasse di un controllo Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
 
-Per impedire al contenitore del controllo di ricevere i messaggi della finestra inviati da un controllo Windows sottoclassato, [COleControl](../mfc/reference/colecontrol-class.md) crea una finestra "riflettore" per intercettare determinati messaggi di finestra e inviarli al controllo. Il controllo, nella relativa routine della finestra, può quindi elaborare questi messaggi riflessi intraprendendo azioni appropriate per un controllo ActiveX.
+Per impedire al contenitore del controllo di ricevere i messaggi della finestra inviati da un controllo Windows sottoclassato, [COleControl](../mfc/reference/colecontrol-class.md) crea una finestra di "riflettore" per intercettare determinati messaggi della finestra e inviarli di nuovo al controllo. Il controllo, nella relativa routine della finestra, può quindi elaborare questi messaggi riflessi intraprendendo azioni appropriate per un controllo ActiveX.
 
 Nella tabella seguente vengono mostrati i messaggi che vengono intercettati e i messaggi corrispondenti che invia la finestra riflettore.
 
@@ -82,9 +83,9 @@ Nella tabella seguente vengono mostrati i messaggi che vengono intercettati e i 
 |[WM_NOTIFY](/windows/win32/controls/wm-notify)|OCM_NOTIFY|
 
 > [!NOTE]
-> Se il controllo viene eseguito in un sistema\* Win32, esistono diversi tipi di messaggi di WM_CTLCOLOR che potrebbe ricevere. Per ulteriori informazioni, vedere WM_CTLCOLORBTN, WM_CTLCOLORDLG, WM_CTLCOLOREDIT, WM_CTLCOLORLISTBOX, WM_CTLCOLORMSGBOX, WM_CTLCOLORSCROLLBAR, WM_CTLCOLORSTATIC.
+> Se il controllo viene eseguito in un sistema Win32, sono disponibili diversi tipi di \* messaggi di WM_CTLCOLOR che potrebbero ricevere. Per ulteriori informazioni, vedere WM_CTLCOLORBTN, WM_CTLCOLORDLG, WM_CTLCOLOREDIT, WM_CTLCOLORLISTBOX, WM_CTLCOLORMSGBOX, WM_CTLCOLORSCROLLBAR, WM_CTLCOLORSTATIC.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Controlli ActiveX MFC: creazione di una sottoclasse per un controllo Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
-[TN062: reflection messaggi per controlli Windows](../mfc/tn062-message-reflection-for-windows-controls.md)
+[Controlli ActiveX MFC: sottoclasse di un controllo Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
+[TN062: reflection dei messaggi per i controlli Windows](../mfc/tn062-message-reflection-for-windows-controls.md)

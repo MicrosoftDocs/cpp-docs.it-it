@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: procedura guidata Aggiungi classe MFC'
 title: Creazione guidata aggiunta classe MFC
 ms.date: 09/06/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - MFC Add Class Wizard
 - wizards [MFC]
 ms.assetid: ad3b0989-d307-43b2-9417-3f9a78889024
-ms.openlocfilehash: 2c82e084de2123c579299ca6490bdfcfdac5d255
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 3f405b0f5523a183fd546790e0823e7a5e6bbbea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70908019"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219252"
 ---
 # <a name="mfc-add-class-wizard"></a>Creazione guidata aggiunta classe MFC
 
@@ -26,9 +27,9 @@ In questa pagina specificare il nome della classe, la classe base e i nomi file 
 
 - **Nome classe**
 
-  Specifica il nome della nuova classe e fornisce la base predefinita per i nomi di ID e file in questa pagina. C++le classi iniziano in genere con "C", quindi, ad esempio, "CMyClass" diventa "MyClass. h" e così via.
+  Specifica il nome della nuova classe e fornisce la base predefinita per i nomi di ID e file in questa pagina. Le classi C++ iniziano in genere con "C", quindi, ad esempio, "CMyClass" diventa "MyClass. h" e così via.
 
-- **Classe base**
+- **Classe di base**
 
   Specifica il nome della classe di base per la nuova classe. Per impostazione predefinita, la classe base è [CWnd](../../mfc/reference/cwnd-class.md). La classe base selezionata determina se le altre caselle della pagina sono attive.
 
@@ -43,13 +44,13 @@ In questa pagina specificare il nome della classe, la classe base e i nomi file 
   Per le classi che richiedono un ID finestra di dialogo, potrebbe risultare più efficiente usare l' [Editor risorse](../../windows/resource-editors.md) per creare la risorsa finestra di dialogo, assegnare il relativo ID nella [creazione guidata classe](mfc-class-wizard.md)e quindi creare una classe associata all'ID risorsa. Per ulteriori informazioni sulla creazione di una finestra di dialogo standard di Windows, vedere [creazione di una nuova](../../windows/creating-a-new-dialog-box.md) finestra di dialogo.
 
   > [!NOTE]
-  > Se si crea prima una risorsa finestra di dialogo e si deriva la nuova `CDHtmlDialog`classe da, eliminare i pulsanti Windows **OK** e **Annulla** standard visualizzati nella finestra di dialogo predefinita. La finestra di dialogo standard di Windows ospita il formato DHTML, che contiene i pulsanti **OK** e **Annulla** .
+  > Se si crea prima una risorsa finestra di dialogo e si deriva la nuova classe da `CDHtmlDialog` , eliminare i pulsanti Windows **OK** e **Annulla** standard visualizzati nella finestra di dialogo predefinita. La finestra di dialogo standard di Windows ospita il formato DHTML, che contiene i pulsanti **OK** e **Annulla** .
 
   Sebbene la finestra di dialogo possa contenere sia controlli Windows che controlli DHTML, non è consigliabile.
 
 - **ID finestra di dialogo**
 
-  Specifica l'ID della finestra di dialogo, se è `CDialog`stata selezionata `CPropertyPage`l'opzione `CDHtmlDialog` , `CFormView`, o come **classe di base**.
+  Specifica l'ID della finestra di dialogo, se è stata selezionata l'opzione `CDialog` ,, `CFormView` `CPropertyPage` o `CDHtmlDialog` come **classe di base**.
 
 - **File con estensione h**
 
@@ -95,7 +96,7 @@ In questa pagina specificare il nome della classe, la classe base e i nomi file 
 
   - `CSocket`
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Aggiunta di una classe](../../ide/adding-a-class-visual-cpp.md)

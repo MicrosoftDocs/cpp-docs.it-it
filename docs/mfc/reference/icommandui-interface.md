@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: interfaccia ICommandUI'
 title: Interfaccia ICommandUI
 ms.date: 09/07/2019
 f1_keywords:
@@ -14,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: 0c185e873f526403e86cb5a80f6e0631f8654284
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 26ddd4366994c9e0cecba2b4902a36e1038896c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743438"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219538"
 ---
 # <a name="icommandui-interface"></a>Interfaccia ICommandUI
 
@@ -35,7 +36,7 @@ interface class ICommandUI
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[icommandui__Check](#check)|Imposta l'elemento dell'interfaccia utente per questo comando sullo stato di selezione appropriato.|
 |[ICommandUI:: ContinueRouting](#continuerouting)|Indica al meccanismo di routing del comando di continuare a indirizzare il messaggio corrente alla catena di gestori.|
@@ -45,7 +46,7 @@ interface class ICommandUI
 |[ICommandUI:: Radio](#radio)|Imposta l'elemento dell'interfaccia utente per questo comando sullo stato di selezione appropriato.|
 |[ICommandUI:: Text](#text)|Imposta il testo dell'elemento dell'interfaccia utente per questo comando.|
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa interfaccia fornisce i metodi e le proprietà che gestiscono i comandi dell'interfaccia utente. `ICommandUI` è simile alla [classe CCmdUI](../../mfc/reference/ccmdui-class.md), ad eccezione `ICommandUI` del fatto che viene usato per le applicazioni MFC che interagiscono con i componenti .NET.
 
@@ -65,7 +66,7 @@ Imposta l'elemento dell'interfaccia utente per questo comando sullo stato di sel
 property UICheckState Check;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa proprietà imposta l'elemento dell'interfaccia utente per questo comando sullo stato di selezione appropriato. Impostare controlla sui valori seguenti:
 
@@ -81,7 +82,7 @@ Indica al meccanismo di routing dei comandi di continuare il routing del messagg
 void ContinueRouting();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si tratta di una funzione membro avanzata da usare insieme a un gestore di ON_COMMAND_EX che restituisce FALSE. Per ulteriori informazioni, vedere la nota tecnica TN006: mappe messaggi.
 
@@ -93,7 +94,7 @@ Abilita o Disabilita l'elemento dell'interfaccia utente per questo comando.
 property bool Enabled;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa proprietà Abilita o Disabilita l'elemento dell'interfaccia utente per questo comando. Impostare Enabled su TRUE per abilitare l'elemento, FALSE per disabilitarlo.
 
@@ -105,7 +106,7 @@ Ottiene l'ID dell'oggetto interfaccia utente rappresentato dall'oggetto ICommand
 property unsigned int ID;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa proprietà ottiene l'ID (un handle) della voce di menu, il pulsante della barra degli strumenti o un altro oggetto dell'interfaccia utente rappresentato dall'oggetto ICommandUI.
 
@@ -117,7 +118,7 @@ Ottiene l'indice dell'oggetto interfaccia utente rappresentato dall'oggetto ICom
 property unsigned int Index;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa proprietà ottiene l'indice (un handle) della voce di menu, il pulsante della barra degli strumenti o un altro oggetto dell'interfaccia utente rappresentato dall'oggetto ICommandUI.
 
@@ -129,7 +130,7 @@ Imposta l'elemento dell'interfaccia utente per questo comando sullo stato di sel
 property bool Radio;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa proprietà imposta l'elemento dell'interfaccia utente per questo comando sullo stato di selezione appropriato. Impostare radio su TRUE per abilitare l'elemento; in caso contrario, FALSE.
 
@@ -141,7 +142,7 @@ Imposta il testo dell'elemento dell'interfaccia utente per questo comando.
 property String^ Text;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa proprietà imposta il testo dell'elemento dell'interfaccia utente per questo comando. Imposta il testo su un handle di stringa di testo.
 
@@ -149,6 +150,6 @@ Questa proprietà imposta il testo dell'elemento dell'interfaccia utente per que
 
 **Intestazione:** afxwinforms. h (definita nell'assembly atlmfc\lib\mfcmifc80.dll)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CCmdUI](../../mfc/reference/ccmdui-class.md)

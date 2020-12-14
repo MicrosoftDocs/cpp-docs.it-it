@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: struttura HSE_VERSION_INFO'
 title: Struttura HSE_VERSION_INFO
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - HSE_VERSION_INFO structure [MFC]
 ms.assetid: 4837312d-68c8-4d05-9afa-1934d7d49b20
-ms.openlocfilehash: 97f34bebae8a486a825d04b23c5a92fbd4aefa42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe03f3c4e00f9af62398993838927ce75410f17b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322114"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219629"
 ---
-# <a name="hseversioninfo-structure"></a>Struttura HSE_VERSION_INFO
+# <a name="hse_version_info-structure"></a>Struttura HSE_VERSION_INFO
 
-Questa struttura viene fatto riferimento tramite il *pVer* parametro nel `CHttpServer::GetExtensionVersion` funzione membro. Fornisce il numero di versione ISA e una descrizione testuale dell'ISA.
+Questa struttura è indicata dal parametro *pVer* nella `CHttpServer::GetExtensionVersion` funzione membro. Fornisce il numero di versione ISA e una descrizione di testo di ISA.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -29,15 +30,15 @@ typedef struct _HSE_VERSION_INFO {
 #### <a name="parameters"></a>Parametri
 
 *dwExtensionVersion*<br/>
-Il numero di versione dell'ISA.
+Numero di versione di ISA.
 
 *lpszExtensionDesc*<br/>
-La descrizione testuale dell'ISA. L'implementazione predefinita fornisce il testo segnaposto; eseguire l'override `CHttpServer::GetExtensionVersion` per fornire una propria descrizione.
+Descrizione del testo di ISA. L'implementazione predefinita fornisce testo segnaposto; eseguire l'override `CHttpServer::GetExtensionVersion` di per fornire una descrizione personalizzata.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** httpext.h
+**Intestazione:** Httpext. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)

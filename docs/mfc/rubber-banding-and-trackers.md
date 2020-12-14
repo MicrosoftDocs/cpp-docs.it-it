@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Rubber-Banding e tracker'
 title: Selezione e tracker
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - rubber banding [MFC]
 - WM_LBUTTONDOWN [MFC]
 ms.assetid: 0d0fa64c-6418-4baf-ab7f-2d16ca039230
-ms.openlocfilehash: 095f3c15546466c6a495f6aa348990ed69b04a9e
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 5d641e7553a2891e0319484558f025c6998f9693
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127366"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97217835"
 ---
 # <a name="rubber-banding-and-trackers"></a>Selezione e tracker
 
@@ -29,7 +30,7 @@ Se si vuole consentire l'orientamento reversibile dello strumento di rilevamento
 
 Per altre informazioni, vedere [elementi client contenitore](../mfc/containers-client-items.md) e [trascinamento della selezione OLE: personalizzare il trascinamento della selezione](../mfc/drag-and-drop-ole.md#customize-drag-and-drop).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Tracker: implementazione di tracker nell'applicazione OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)<br/>
 [Classe CRectTracker](../mfc/reference/crecttracker-class.md)

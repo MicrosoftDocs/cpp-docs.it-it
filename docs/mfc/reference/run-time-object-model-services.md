@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: Run-Time servizi del modello a oggetti'
 title: Servizi modelli a oggetti runtime
 ms.date: 03/27/2019
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: 63a82e3b05100f273be04a8718f2ecbb1510f06f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5457b34b13d53a6fbf76a74b893958b03b1d63de
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844509"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218888"
 ---
 # <a name="run-time-object-model-services"></a>Servizi modelli a oggetti runtime
 
@@ -23,11 +24,11 @@ La creazione di oggetti dinamici consente di creare un oggetto di una classe spe
 
 Nella tabella seguente sono elencate le macro MFC che supportano le informazioni sulle classi in fase di esecuzione, la serializzazione e la creazione dinamica.
 
-Per ulteriori informazioni su questi servizi oggetto e la serializzazione in fase di esecuzione, vedere l'articolo relativo alla [classe CObject: accesso alle informazioni sulle classi in fase di esecuzione](../../mfc/accessing-run-time-class-information.md).
+Per ulteriori informazioni su questi servizi oggetto e la serializzazione in fase di esecuzione, vedere l'articolo relativo alla [classe CObject: accesso alle informazioni sulla classe Run-Time](../../mfc/accessing-run-time-class-information.md).
 
-### <a name="run-time-object-model-services-macros"></a>Macro servizi modello a oggetti in fase di esecuzione
+### <a name="run-time-object-model-services-macros"></a>Run-Time le macro dei servizi del modello a oggetti
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[DECLARE_DYNAMIC](#declare_dynamic)|Consente l'accesso alle informazioni sulle classi in fase di esecuzione (deve essere utilizzato nella dichiarazione di classe).|
 |[DECLARE_DYNCREATE](#declare_dyncreate)|Consente la creazione dinamica e l'accesso alle informazioni sulle classi in fase di esecuzione (devono essere utilizzate nella dichiarazione di classe).|
@@ -43,7 +44,7 @@ Il libreria Microsoft Foundation Class fornisce due macro specifiche di OLE.
 
 ### <a name="dynamic-creation-of-ole-objects"></a>Creazione dinamica di oggetti OLE
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)|Determina se la libreria di controlli comuni implementa l'API specificata.|
 |[AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)|Determina se la libreria di controlli comuni implementa l'API specificata.|
@@ -69,7 +70,7 @@ AFX_COMCTL32_IF_EXISTS(  proc );
 *proc*<br/>
 Puntatore a una stringa con terminazione null che contiene il nome della funzione o specifica il valore ordinale della funzione. Se questo parametro è un valore ordinale, deve trovarsi nella parola di ordine inferiore; la parola di ordine superiore deve essere zero. Questo parametro deve essere in formato Unicode.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per determinare se i controlli comuni eseguono la libreria della funzione specificata da *proc* , anziché chiamare [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress).
 
@@ -92,7 +93,7 @@ AFX_COMCTL32_IF_EXISTS2( proc );
 *proc*<br/>
 Puntatore a una stringa con terminazione null che contiene il nome della funzione o specifica il valore ordinale della funzione. Se questo parametro è un valore ordinale, deve trovarsi nella parola di ordine inferiore; la parola di ordine superiore deve essere zero. Questo parametro deve essere in formato Unicode.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare questa macro per determinare se i controlli comuni eseguono la libreria della funzione specificata da *proc* , anziché chiamare [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress). Questa macro è la versione Unicode di AFX_COMCTL32_IF_EXISTS.
 
@@ -113,7 +114,7 @@ DECLARE_DYNAMIC(class_name)
 *class_name*<br/>
 Nome effettivo della classe.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Aggiungere la macro DECLARE_DYNAMIC al modulo di intestazione (. h) per la classe, quindi includere il modulo in tutti i moduli cpp che devono accedere agli oggetti di questa classe.
 
@@ -144,7 +145,7 @@ DECLARE_DYNCREATE(class_name)
 *class_name*<br/>
 Nome effettivo della classe.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il Framework utilizza questa funzionalità per creare nuovi oggetti in modo dinamico. Ad esempio, la nuova vista creata quando si apre un nuovo documento. Le classi Document, View e frame devono supportare la creazione dinamica perché il Framework deve crearle dinamicamente.
 
@@ -180,7 +181,7 @@ DECLARE_OLECTLTYPE( class_name )
 *class_name*<br/>
 Nome della classe del controllo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `GetUserTypeNameID` e `GetMiscStatus` sono funzioni virtuali pure, dichiarate in `COleControl` . Poiché queste funzioni sono virtuali pure, è necessario eseguirne l'override nella classe del controllo. Oltre a DECLARE_OLECTLTYPE, è necessario aggiungere la macro IMPLEMENT_OLECTLTYPE alla dichiarazione della classe del controllo.
 
@@ -203,7 +204,7 @@ DECLARE_PROPPAGEIDS( class_name )
 *class_name*<br/>
 Nome della classe del controllo che possiede le pagine delle proprietà.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare la `DECLARE_PROPPAGEIDS` macro alla fine della dichiarazione di classe. Quindi, nel file con estensione cpp che definisce le funzioni membro per la classe, usare la `BEGIN_PROPPAGEIDS` macro, le voci di macro per ogni pagina delle proprietà del controllo e la `END_PROPPAGEIDS` macro per dichiarare la fine dell'elenco di pagine delle proprietà.
 
@@ -226,7 +227,7 @@ DECLARE_SERIAL(class_name)
 *class_name*<br/>
 Nome effettivo della classe.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La serializzazione è il processo di scrittura o lettura del contenuto di un oggetto in e da un file.
 
@@ -266,7 +267,7 @@ Nome effettivo della classe.
 *base_class_name*<br/>
 Nome della classe base.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare la macro IMPLEMENT_DYNAMIC in un modulo cpp, quindi collegare il codice oggetto risultante una sola volta.
 
@@ -298,7 +299,7 @@ Nome effettivo della classe.
 *base_class_name*<br/>
 Nome effettivo della classe di base.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il Framework utilizza questa funzionalità per creare in modo dinamico nuovi oggetti, ad esempio quando legge un oggetto dal disco durante la serializzazione. Aggiungere la macro IMPLEMENT_DYNCREATE nel file di implementazione della classe. Per ulteriori informazioni, vedere [argomenti della classe CObject](../../mfc/using-cobject.md).
 
@@ -348,14 +349,14 @@ Contiene uno o più dei flag seguenti:
 
 componenti *l*, *W1*, *W2*, *B1*, *B2*, *B3*, *B4*, *B5*, *B6*, *B7*, *B8* del CLSID della classe.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 > [!NOTE]
 > Se si utilizza IMPLEMENT_OLECREATE_FLAGS, è possibile specificare il modello di threading supportato dall'oggetto utilizzando il parametro *nFlags* . Se si desidera supportare solo il modello a battistrada singolo, utilizzare IMPLEMENT_OLECREATE.
 
 Il nome esterno è l'identificatore esposto ad altre applicazioni. Le applicazioni client utilizzano il nome esterno per richiedere un oggetto di questa classe da un server di automazione.
 
-L'ID della classe OLE è un identificatore univoco a 128 bit per l'oggetto. È costituito da **`long`** una, **due parole**s e otto **byte**, come rappresentato da *l*, *W1*, *W2*e *B1* tramite *B8* nella descrizione della sintassi. La creazione guidata applicazione e le creazioni guidate codice creano ID di classi OLE univoche come richiesto.
+L'ID della classe OLE è un identificatore univoco a 128 bit per l'oggetto. È costituito da **`long`** una, **due parole** s e otto **byte**, come rappresentato da *l*, *W1*, *W2* e *B1* tramite *B8* nella descrizione della sintassi. La creazione guidata applicazione e le creazioni guidate codice creano ID di classi OLE univoche come richiesto.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -382,7 +383,7 @@ ID risorsa di una stringa contenente il nome esterno del controllo.
 *dwOleMisc*<br/>
 Enumerazione contenente uno o più flag. Per ulteriori informazioni su questa enumerazione, vedere [OLEMISC](/windows/win32/api/oleidl/ne-oleidl-olemisc) nel Windows SDK.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Oltre a IMPLEMENT_OLECTLTYPE, è necessario aggiungere la macro DECLARE_OLECTLTYPE alla dichiarazione della classe del controllo.
 
@@ -414,7 +415,7 @@ Nome della classe base.
 *wSchema*<br/>
 Un "numero di versione" UINT che verrà codificato nell'archivio per consentire a un programma di deserializzazione di identificare e gestire i dati creati dalle versioni precedenti del programma. Il numero dello schema della classe non deve essere-1.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare la macro IMPLEMENT_SERIAL in un modulo. cpp; quindi collegare il codice oggetto risultante una sola volta.
 
@@ -445,7 +446,7 @@ RUNTIME_CLASS(class_name)
 *class_name*<br/>
 Nome effettivo della classe (non racchiuso tra virgolette).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 RUNTIME_CLASS restituisce un puntatore a una struttura [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) per la classe specificata da *class_name*. Solo `CObject` le classi derivate da dichiarate con DECLARE_DYNAMIC, DECLARE_DYNCREATE o DECLARE_SERIAL restituiranno puntatori a una `CRuntimeClass` struttura.
 
@@ -472,7 +473,7 @@ DECLARE_OLECREATE(class_name)
 *class_name*<br/>
 Nome effettivo della classe.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa macro consente ad altre applicazioni abilitate per OLE di creare oggetti di questo tipo.
 
@@ -502,20 +503,20 @@ Nome dell'oggetto esposto ad altre applicazioni (racchiuso tra virgolette).
 
 componenti *l*, *W1*, *W2*, *B1*, *B2*, *B3*, *B4*, *B5*, *B6*, *B7*, *B8* del CLSID della classe.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 > [!NOTE]
 > Se si utilizza IMPLEMENT_OLECREATE, per impostazione predefinita si supporta solo il modello a thread singolo. Se si utilizza IMPLEMENT_OLECREATE_FLAGS, è possibile specificare il modello di threading supportato dall'oggetto utilizzando il parametro *nFlags* .
 
 Il nome esterno è l'identificatore esposto ad altre applicazioni. Le applicazioni client utilizzano il nome esterno per richiedere un oggetto di questa classe da un server di automazione.
 
-L'ID della classe OLE è un identificatore univoco a 128 bit per l'oggetto. È costituito da **`long`** una, **due parole**s e otto **byte**, come rappresentato da *l*, *W1*, *W2*e *B1* tramite *B8* nella descrizione della sintassi. La creazione guidata applicazione e le creazioni guidate codice creano ID di classi OLE univoche come richiesto.
+L'ID della classe OLE è un identificatore univoco a 128 bit per l'oggetto. È costituito da **`long`** una, **due parole** s e otto **byte**, come rappresentato da *l*, *W1*, *W2* e *B1* tramite *B8* nella descrizione della sintassi. La creazione guidata applicazione e le creazioni guidate codice creano ID di classi OLE univoche come richiesto.
 
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione**: afxdisp. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Macro e funzioni globali](mfc-macros-and-globals.md)<br/>
 [Isolamento della libreria di controlli comuni MFC](../isolation-of-the-mfc-common-controls-library.md)<br/>
