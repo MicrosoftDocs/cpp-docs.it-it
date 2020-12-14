@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _get_pgmptr'
 title: _get_pgmptr
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - pgmptr global variable
 - _pgmptr global variable
 ms.assetid: 29f16a9f-a685-4721-add3-7fad4f67eece
-ms.openlocfilehash: a4a9bddfa861727e174325dc639868e3529162cd
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 440bc7221f00d5ce04f4583666a76a0fadfee288
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918207"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296589"
 ---
 # <a name="_get_pgmptr"></a>_get_pgmptr
 
@@ -58,7 +59,7 @@ Puntatore a una stringa da riempire con il valore corrente della variabile **_pg
 
 Restituisce zero se ha esito positivo; un codice di errore se ha esito negativo. Se *pValue* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **EINVAL**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Chiamare **_get_pgmptr** solo se il programma dispone di un punto di ingresso limitato, ad esempio **Main ()** o **WinMain ()**. La variabile globale **_pgmptr** contiene il percorso completo dell'eseguibile associato al processo. Per altre informazioni, vedere [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).
 
@@ -72,6 +73,6 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [_get_wpgmptr](get-wpgmptr.md)<br/>

@@ -1,22 +1,23 @@
 ---
+description: 'Altre informazioni su: &lt; system_error &gt; enums'
 title: Enumerazioni &lt;system_error&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - system_error/std::errc
 - system_error/std::io_errc
 ms.assetid: b21321b7-404a-40de-8777-a85b77c6fa58
-ms.openlocfilehash: cff8a58545409c4358cd303e41d27520edd5d552
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 63126c8fde91d44dbecf52cca1240c4f8b44b88a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422360"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259448"
 ---
 # <a name="ltsystem_errorgt-enums"></a>Enumerazioni &lt;system_error&gt;
 
-## <a name="errc"></a>ERRC
+## <a name="errc"></a><a name="errc"></a> ERRC
 
-Fornisce nomi simbolici per tutte le macro di codice di errore definite da POSIX in `<errno.h>`.
+Fornisce nomi simbolici per tutte le macro di codice di errore definite da POSIX in `<errno.h>` .
 
 ```cpp
 class errc {
@@ -101,11 +102,11 @@ class errc {
 };
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="io_errc"></a>io_errc
+## <a name="io_errc"></a><a name="io_errc"></a> io_errc
 
-Fornisce nomi simbolici per le condizioni di errore in \<iostream>. Può essere usata creare gli oggetti [error_condition](../standard-library/error-condition-class.md) da confrontare con il valore restituito dalla funzione [ios_base::failure](../standard-library/ios-base-class.md#failure)`code()`.
+Fornisce nomi simbolici per le condizioni di errore in \<iostream> . Può essere usata creare gli oggetti [error_condition](../standard-library/error-condition-class.md) da confrontare con il valore restituito dalla funzione [ios_base::failure](../standard-library/ios-base-class.md#failure)`code()`.
 
 ```cpp
 class io_errc {
@@ -113,7 +114,7 @@ class io_errc {
 };
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Sia [std::make_error_code()](../standard-library/system-error-functions.md#make_error_code) che [std::make_error_condition()](../standard-library/system-error-functions.md#make_error_condition) sono sottoposti a overload per questa enumerazione.
 

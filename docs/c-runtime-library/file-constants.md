@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: costanti file'
 title: Costanti file
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - O_RDONLY constant
 - _O_WRONLY constant
 ms.assetid: c8fa5548-9ac2-4217-801d-eb45e86f2fa4
-ms.openlocfilehash: f0bf85dc8f27fca1720cde7f5a8b2029a791849c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: a174a9bd8924f4d209f937187614863ce7111b3b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739971"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296602"
 ---
 # <a name="file-constants"></a>Costanti file
 
@@ -46,7 +47,7 @@ L'espressione integer formata da una o più di queste costanti determina il tipo
 
 Le costanti di file sono le seguenti:
 
-|Costante|Description|
+|Costante|Descrizione|
 |-|-|
 | `_O_APPEND`  | Riposiziona il puntatore di file alla fine del file prima di ogni operazione di scrittura.  |
 | `_O_CREAT`  | Crea e apre un nuovo file per la scrittura; ciò non ha effetto se esiste il file specificato da *filename*.  |
@@ -56,7 +57,7 @@ Le costanti di file sono le seguenti:
 | `_O_TRUNC`  | Apre e tronca un file esistente a lunghezza zero; il file deve avere l'autorizzazione di scrittura. Il contenuto del file viene eliminato. Se questo flag viene fornito, non è possibile specificare `_O_RDONLY`.  |
 | `_O_WRONLY`  | Apre il file in sola scrittura; se questo flag viene fornito, né `_O_RDONLY` né `_O_RDWR` possono essere forniti.  |
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [_open, _wopen](../c-runtime-library/reference/open-wopen.md)<br/>
 [_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>

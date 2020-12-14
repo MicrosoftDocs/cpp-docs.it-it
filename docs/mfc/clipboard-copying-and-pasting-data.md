@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: Appunti: copia e incolla di dati'
 title: 'Appunti: copiare e incollare dati'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: ed3056ec4fb3d3098870a03522d3bf17f41fbe34
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: fdc102cf7a92bc78df83419269bb5de828dc9d19
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620698"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97251232"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Appunti: copiare e incollare dati
 
@@ -18,7 +19,7 @@ In questo argomento vengono descritte le operazioni minime necessarie per implem
 
 Prima di poter implementare la copia o incolla, è necessario innanzitutto fornire funzioni per gestire le opzioni copia, taglia e incolla nel menu Modifica.
 
-## <a name="copying-or-cutting-data"></a><a name="_core_copying_or_cutting_data"></a>Copia o taglio dei dati
+## <a name="copying-or-cutting-data"></a><a name="_core_copying_or_cutting_data"></a> Copia o taglio dei dati
 
 #### <a name="to-copy-data-to-the-clipboard"></a>Per copiare i dati negli Appunti
 
@@ -34,7 +35,7 @@ Prima di poter implementare la copia o incolla, è necessario innanzitutto forni
 
 Per visualizzare un esempio di questa sequenza, vedere le `OnEditCut` `OnEditCopy` funzioni e nei programmi di esempio OLE MFC [OCLIENT](../overview/visual-cpp-samples.md) e [HIERSVR](../overview/visual-cpp-samples.md). Si noti che questi esempi mantengono un puntatore ai dati attualmente selezionati, quindi il passaggio 1 è già completato.
 
-## <a name="pasting-data"></a><a name="_core_pasting_data"></a>Incollare dati
+## <a name="pasting-data"></a><a name="_core_pasting_data"></a> Incollare dati
 
 Incollare i dati è più complicato rispetto alla copia perché è necessario scegliere il formato da usare per incollare i dati nell'applicazione.
 
@@ -67,6 +68,6 @@ Per gestire l'opzione Incolla speciale dal menu modifica, vedere l'argomento [fi
 
 - [OLE](ole-background.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Appunti: uso del meccanismo degli Appunti OLE](clipboard-using-the-ole-clipboard-mechanism.md)
+[Appunti: utilizzo del meccanismo degli Appunti OLE](clipboard-using-the-ole-clipboard-mechanism.md)

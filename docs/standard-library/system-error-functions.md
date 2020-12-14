@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; &gt; funzioni system_error'
 title: Funzioni &lt;system_error&gt;
 ms.date: 03/15/2019
 f1_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - std::make_error_code
 - std::make_error_condition
 - std::system_category
-ms.openlocfilehash: 2ddeb256c974294e2e46d516219a6b5b0cac3ae2
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 6d0283ca2a094e6257841569fcf7043b51ba4b1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076353"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259435"
 ---
 # <a name="ltsystem_errorgt-functions"></a>Funzioni &lt;system_error&gt;
 
-## <a name="generic_category"></a><a name="generic_category"></a>generic_category
+## <a name="generic_category"></a><a name="generic_category"></a> generic_category
 
 Rappresenta la categoria di errori generici.
 
@@ -29,25 +30,25 @@ Rappresenta la categoria di errori generici.
 const error_category& generic_category() noexcept;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-L'oggetto `generic_category` è un'implementazione di [error_category](../standard-library/error-category-class.md).
+L' `generic_category` oggetto è un'implementazione di [error_category](../standard-library/error-category-class.md).
 
-## <a name="is_error_code_enum_v"></a><a name="is_error_code_enum_v"></a>is_error_code_enum_v
+## <a name="is_error_code_enum_v"></a><a name="is_error_code_enum_v"></a> is_error_code_enum_v
 
 ```cpp
 template <class T>
     inline constexpr bool is_error_code_enum_v = is_error_code_enum<T>::value;
 ```
 
-## <a name="is_error_condition_enum_v"></a><a name="is_error_condition_enum_v"></a>is_error_condition_enum_v
+## <a name="is_error_condition_enum_v"></a><a name="is_error_condition_enum_v"></a> is_error_condition_enum_v
 
 ```cpp
 template <class T>
     inline constexpr bool is_error_condition_enum_v = is_error_condition_enum<T>::value;
 ```
 
-## <a name="make_error_code"></a><a name="make_error_code"></a>make_error_code
+## <a name="make_error_code"></a><a name="make_error_code"></a> make_error_code
 
 Crea un oggetto codice di errore.
 
@@ -58,15 +59,15 @@ error_code make_error_code(std::errc error) noexcept;
 ### <a name="parameters"></a>Parametri
 
 *errore*\
-Il `std::errc` valore di enumerazione da archiviare nell'oggetto codice di errore.
+`std::errc`Valore di enumerazione da archiviare nell'oggetto codice di errore.
 
 ### <a name="return-value"></a>Valore restituito
 
 Oggetto codice di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="make_error_condition"></a><a name="make_error_condition"></a>make_error_condition
+## <a name="make_error_condition"></a><a name="make_error_condition"></a> make_error_condition
 
 Crea un oggetto condizione di errore.
 
@@ -77,15 +78,15 @@ error_condition make_error_condition(std::errc error) noexcept;
 ### <a name="parameters"></a>Parametri
 
 *errore*\
-Il `std::errc` valore di enumerazione da archiviare nell'oggetto codice di errore.
+`std::errc`Valore di enumerazione da archiviare nell'oggetto codice di errore.
 
 ### <a name="return-value"></a>Valore restituito
 
 Oggetto condizione di errore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="system_category"></a><a name="system_category"></a>system_category
+## <a name="system_category"></a><a name="system_category"></a> system_category
 
 Rappresenta la categoria di errori causati da un overflow di basso livello del sistema.
 
@@ -93,6 +94,6 @@ Rappresenta la categoria di errori causati da un overflow di basso livello del s
 const error_category& system_category() noexcept;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-L'oggetto `system_category` è un'implementazione di [error_category](../standard-library/error-category-class.md).
+L' `system_category` oggetto è un'implementazione di [error_category](../standard-library/error-category-class.md).

@@ -1,5 +1,6 @@
 ---
-title: '&lt;variante&gt; operatori'
+description: 'Altre informazioni su: &lt; &gt; operatori Variant'
+title: '&lt;&gt;operatori Variant'
 ms.date: 04/04/2019
 f1_keywords:
 - variant/std::operator!=
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (variant)
 - std::operatoroperator&lt; (variant)
 - std::operatoroperator&lt;= (variant)
-ms.openlocfilehash: 0c4042ca1d89f9835b32924b268ef17a56619009
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3315c73ea529ad7ade4f32be3784a43bda07ac26
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268563"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312826"
 ---
-# <a name="ltvariantgt-operators"></a>&lt;variante&gt; operatori
+# <a name="ltvariantgt-operators"></a>&lt;&gt;operatori Variant
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="operator"></a><a name="op_eq_eq"></a> operatore = =
 
 Verifica se l'oggetto elenco di inoltro a sinistra dell'operatore è uguale all'oggetto elenco di inoltro a destra.
 
@@ -33,7 +34,7 @@ template <class... Types>
     constexpr bool operator==(const variant<Types...>&, const variant<Types...>&);
 ```
 
-## <a name="op_neq"></a> operatore! =
+## <a name="operator"></a><a name="op_neq"></a> operatore! =
 
 Verifica se l'oggetto elenco di inoltro a sinistra dell'operatore non è uguale all'oggetto elenco di inoltro a destra.
 
@@ -42,7 +43,7 @@ template <class... Types>
     constexpr bool operator!=(const variant<Types...>&, const variant<Types...>&);
 ```
 
-## <a name="op_lt"></a> Operatore&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> operatore&lt;
 
 Verifica se l'oggetto elenco di inoltro a sinistra dell'operatore è minore dell'oggetto elenco di inoltro a destra.
 
@@ -51,7 +52,7 @@ template <class... Types>
     constexpr bool operator<(const variant<Types...>&, const variant<Types...>&);
 ```
 
-## <a name="op_lt_eq"></a> Operatore&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> operatore&lt;=
 
 Verifica se l'oggetto elenco di inoltro a sinistra dell'operatore è minore o uguale all'oggetto elenco di inoltro a destra.
 
@@ -60,7 +61,7 @@ template <class... Types>
     constexpr bool operator<=(const variant<Types...>&, const variant<Types...>&);
 ```
 
-## <a name="op_gt"></a> Operatore&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> operatore&gt;
 
 Verifica se l'oggetto elenco di inoltro a sinistra dell'operatore è maggiore dell'oggetto elenco di inoltro a destra.
 
@@ -69,7 +70,7 @@ template <class... Types> constexpr
     bool operator>(const variant<Types...>&, const variant<Types...>&);
 ```
 
-## <a name="op_gt_eq"></a> Operatore&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> operatore&gt;=
 
 Verifica se l'oggetto elenco di inoltro a sinistra dell'operatore è maggiore o uguale all'oggetto elenco di inoltro a destra.
 
