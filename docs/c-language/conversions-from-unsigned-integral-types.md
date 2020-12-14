@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: conversioni da tipi integrali senza segno'
 title: Conversioni dai tipi integrali senza segno
 ms.date: 10/02/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-ms.openlocfilehash: 08b88b1343f56f8d79fc39c53505b26caecfe3c4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bb8f208a323083afeb4b5b88bc8d6514e1f8c99f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226464"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293144"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>Conversioni dai tipi integrali senza segno
 
@@ -43,7 +44,7 @@ Nella tabella seguente sono riepilogate le conversioni dai tipi integrali senza 
 
 ## <a name="table-of-conversions-from-unsigned-integral-types"></a>Tabella delle conversioni dai tipi integrali senza segno
 
-|From|A|Metodo|
+|Da|A|Metodo|
 |----------|--------|------------|
 |**`unsigned char`**|**`char`**|Viene mantenuto lo schema di bit; il bit più significativo diventa il bit di segno|
 |**`unsigned char`**|**`short`**|Estensione zero|
@@ -52,9 +53,9 @@ Nella tabella seguente sono riepilogate le conversioni dai tipi integrali senza 
 |**`unsigned char`**|**`unsigned short`**|Estensione zero|
 |**`unsigned char`**|**`unsigned long`**|Estensione zero|
 |**`unsigned char`**|**`unsigned long long`**|Estensione zero|
-|**`unsigned char`**|**`float`**|Conversione in **`long`** ; conversione **`long`** in**`float`**|
-|**`unsigned char`**|**`double`**|Conversione in **`long`** ; conversione **`long`** in**`double`**|
-|**`unsigned char`**|**`long double`**|Conversione in **`long`** ; conversione **`long`** in**`double`**|
+|**`unsigned char`**|**`float`**|Conversione in **`long`** ; conversione **`long`** in **`float`**|
+|**`unsigned char`**|**`double`**|Conversione in **`long`** ; conversione **`long`** in **`double`**|
+|**`unsigned char`**|**`long double`**|Conversione in **`long`** ; conversione **`long`** in **`double`**|
 |**`unsigned short`**|**`char`**|Mantenimento del byte meno significativo|
 |**`unsigned short`**|**`short`**|Viene mantenuto lo schema di bit; il bit più significativo diventa il bit di segno|
 |**`unsigned short`**|**`long`**|Estensione zero|
@@ -62,9 +63,9 @@ Nella tabella seguente sono riepilogate le conversioni dai tipi integrali senza 
 |**`unsigned short`**|**`unsigned char`**|Mantenimento del byte meno significativo|
 |**`unsigned short`**|**`unsigned long`**|Estensione zero|
 |**`unsigned short`**|**`unsigned long long`**|Estensione zero|
-|**`unsigned short`**|**`float`**|Conversione in **`long`** ; conversione **`long`** in**`float`**|
-|**`unsigned short`**|**`double`**|Conversione in **`long`** ; conversione **`long`** in**`double`**|
-|**`unsigned short`**|**`long double`**|Conversione in **`long`** ; conversione **`long`** in**`double`**|
+|**`unsigned short`**|**`float`**|Conversione in **`long`** ; conversione **`long`** in **`float`**|
+|**`unsigned short`**|**`double`**|Conversione in **`long`** ; conversione **`long`** in **`double`**|
+|**`unsigned short`**|**`long double`**|Conversione in **`long`** ; conversione **`long`** in **`double`**|
 |**`unsigned long`**|**`char`**|Mantenimento del byte meno significativo|
 |**`unsigned long`**|**`short`**|Mantenimento della parola meno significativa|
 |**`unsigned long`**|**`long`**|Viene mantenuto lo schema di bit; il bit più significativo diventa il bit di segno|
@@ -72,9 +73,9 @@ Nella tabella seguente sono riepilogate le conversioni dai tipi integrali senza 
 |**`unsigned long`**|**`unsigned char`**|Mantenimento del byte meno significativo|
 |**`unsigned long`**|**`unsigned short`**|Mantenimento della parola meno significativa|
 |**`unsigned long`**|**`unsigned long long`**|Estensione zero|
-|**`unsigned long`**|**`float`**|Conversione in **`long`** ; conversione **`long`** in**`float`**|
-|**`unsigned long`**|**`double`**|Converti direttamente in**`double`**|
-|**`unsigned long`**|**`long double`**|Conversione in **`long`** ; conversione **`long`** in**`double`**|
+|**`unsigned long`**|**`float`**|Conversione in **`long`** ; conversione **`long`** in **`float`**|
+|**`unsigned long`**|**`double`**|Converti direttamente in **`double`**|
+|**`unsigned long`**|**`long double`**|Conversione in **`long`** ; conversione **`long`** in **`double`**|
 |**`unsigned long long`**|**`char`**|Mantenimento del byte meno significativo|
 |**`unsigned long long`**|**`short`**|Mantenimento della parola meno significativa|
 |**`unsigned long long`**|**`long`**|Mantieni valore DWORD di ordine inferiore|
@@ -82,10 +83,10 @@ Nella tabella seguente sono riepilogate le conversioni dai tipi integrali senza 
 |**`unsigned long long`**|**`unsigned char`**|Mantenimento del byte meno significativo|
 |**`unsigned long long`**|**`unsigned short`**|Mantenimento della parola meno significativa|
 |**`unsigned long long`**|**`unsigned long`**|Mantieni valore DWORD di ordine inferiore|
-|**`unsigned long long`**|**`float`**|Conversione in **`long`** ; conversione **`long`** in**`float`**|
-|**`unsigned long long`**|**`double`**|Converti direttamente in**`double`**|
-|**`unsigned long long`**|**`long double`**|Conversione in **`long`** ; conversione **`long`** in**`double`**|
+|**`unsigned long long`**|**`float`**|Conversione in **`long`** ; conversione **`long`** in **`float`**|
+|**`unsigned long long`**|**`double`**|Converti direttamente in **`double`**|
+|**`unsigned long long`**|**`long double`**|Conversione in **`long`** ; conversione **`long`** in **`double`**|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Conversioni di assegnazione](../c-language/assignment-conversions.md)

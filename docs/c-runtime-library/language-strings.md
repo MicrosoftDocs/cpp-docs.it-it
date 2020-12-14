@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: stringhe di linguaggio'
 title: Language Strings
 ms.date: 11/04/2016
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-ms.openlocfilehash: dd0c55091d3dff641993fa593e656e2825da7c73
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 077a440981c9e39e87356310c40ae9b249d4662e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839250"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246578"
 ---
 # <a name="language-strings"></a>Language Strings
 
@@ -21,9 +22,9 @@ L'implementazione della libreria di runtime Microsoft C supporta anche queste st
 
 |Stringa lingua|Nome equivalente delle impostazioni locali|
 |---------------------|----------------------------|
-|american|it-IT|
-|inglese americano|it-IT|
-|inglese americano|it-IT|
+|american|en-US|
+|inglese americano|en-US|
+|inglese americano|en-US|
 |australian|en-AU|
 |belgian|nl-BE|
 |canadian|en-CA|
@@ -35,7 +36,7 @@ L'implementazione della libreria di runtime Microsoft C supporta anche queste st
 |cinese singapore|zh-SG|
 |cinese tradizionale|zh-TW|
 |olandese belga|nl-BE|
-|inglese americano|it-IT|
+|inglese americano|en-US|
 |inglese aus|en-AU|
 |inglese belize|en-BZ|
 |inglese can|en-CA|
@@ -46,8 +47,8 @@ L'implementazione della libreria di runtime Microsoft C supporta anche queste st
 |inglese sudafrica|en-ZA|
 |inglese trinidad y tobago|en-TT|
 |inglese regno unito|en-GB|
-|inglese stati uniti|it-IT|
-|inglese stati uniti|it-IT|
+|inglese stati uniti|en-US|
+|inglese stati uniti|en-US|
 |francese belga|fr-BE|
 |francese canadese|fr-CA|
 |francese lussemburgo|fr-LU|
@@ -58,7 +59,7 @@ L'implementazione della libreria di runtime Microsoft C supporta anche queste st
 |tedesco svizzero|de-CH|
 |irlandese inglese|en-IE|
 |italiano svizzero|it-CH|
-|norwegian|no|
+|norwegian|No|
 |norvegese bokmål|nb-NO|
 |norvegese nynorsk|nn-NO|
 |portoghese brasile|pt-BR|
@@ -84,10 +85,10 @@ L'implementazione della libreria di runtime Microsoft C supporta anche queste st
 |svedese finlandia|sv-FI|
 |swiss|de-CH|
 |uk|en-GB|
-|us|it-IT|
-|usa|it-IT|
+|us|en-US|
+|usa|en-US|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Nomi delle impostazioni locali, lingue e stringhe di paese/area geografica](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [Stringhe di paese/area geografica](../c-runtime-library/country-region-strings.md)<br/>

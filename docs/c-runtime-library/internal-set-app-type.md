@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __set_app_type'
 title: __set_app_type
 ms.date: 11/04/2016
 api_name:
@@ -22,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - __set_app_type
 ms.assetid: f0ac0f4d-70e6-4e96-9e43-eb9d1515490c
-ms.openlocfilehash: 8efe2159618f728cfaad33493dd482fbdd5375f7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 19aafebc4f7fd848804e21193332fb693af56010
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171489"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246761"
 ---
 # <a name="__set_app_type"></a>__set_app_type
 
@@ -46,7 +47,7 @@ void __set_app_type (
 *at*<br/>
 Un valore che indica il tipo di applicazione. I valori possibili sono:
 
-|valore|Descrizione|
+|Valore|Description|
 |-----------|-----------------|
 |_UNKNOWN_APP|Tipo di applicazione sconosciuto.|
 |_CONSOLE_APP|Applicazione console (riga di comando).|

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: is, ISW routines'
 title: is, isw Routines
 ms.date: 11/04/2016
 api_location:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - is routines
 - isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
-ms.openlocfilehash: 632bd371f8a6da4b57eeb1ce88e2a37eb6923355
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d9229d2437ea7a7e57178acc5fd40ba2afea043b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839387"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246708"
 ---
 # <a name="is-isw-routines"></a>is, isw Routines
 
@@ -51,7 +52,7 @@ ms.locfileid: "88839387"
    :::column-end:::
 :::row-end:::
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Queste routine verificano che i caratteri soddisfino le condizioni specificate.
 
@@ -350,10 +351,10 @@ int main( void )
 7f            AS  C                              .
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classificazione caratteri](../c-runtime-library/character-classification.md)<br/>
 [Impostazioni locali](../c-runtime-library/locale.md)<br/>
 [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [Funzioni to](../c-runtime-library/to-functions.md)

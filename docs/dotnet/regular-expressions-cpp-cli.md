@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: espressioni regolari (C++/CLI)'
 title: Espressioni regolari (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -28,22 +29,22 @@ helpviewer_keywords:
 - data [C++], formatting
 - regular expressions [C++], validating data formatting
 ms.assetid: 838bab49-0dbc-4089-a604-ef146269ef5a
-ms.openlocfilehash: 24a278e4d5b208c5d8e3b95b9f5a0bd0306dbab3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 429a121ec7acad46437a344b089f5c6a1ce4243b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384662"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97245811"
 ---
 # <a name="regular-expressions-ccli"></a>Espressioni regolari (C++/CLI)
 
-Illustra diverse operazioni di stringa usando le classi di espressioni regolari in .NET Framework.
+Vengono illustrate varie operazioni di stringa utilizzando le classi di espressioni regolari nell'.NET Framework.
 
-Gli argomenti seguenti illustrano l'uso di .NET Framework <xref:System.Text.RegularExpressions> dello spazio dei nomi (e in un caso di <xref:System.String.Split%2A?displayProperty=fullName> (metodo)) per eseguire ricerche, analizzare e modificare le stringhe.
+Negli argomenti seguenti viene illustrato l'utilizzo dello <xref:System.Text.RegularExpressions> spazio dei nomi .NET Framework (e in un caso il <xref:System.String.Split%2A?displayProperty=fullName> metodo) per la ricerca, l'analisi e la modifica delle stringhe.
 
-## <a name="parse_regex"></a> Analizzare le stringhe mediante espressioni regolari
+## <a name="parse-strings-using-regular-expressions"></a><a name="parse_regex"></a> Analizza stringhe con espressioni regolari
 
-Esempio di codice seguente illustra l'analisi delle stringhe semplici usando il <xref:System.Text.RegularExpressions.Regex> classe la <xref:System.Text.RegularExpressions?displayProperty=fullName> dello spazio dei nomi. Viene creata una stringa che contiene più tipi di descrittori di parole. La stringa viene quindi analizzata tramite il <xref:System.Text.RegularExpressions.Regex> classe in combinazione con il <xref:System.Text.RegularExpressions.Match> classe. Quindi, ogni parola della frase viene visualizzato separatamente.
+Nell'esempio di codice seguente viene illustrata l'analisi semplice delle stringhe utilizzando la <xref:System.Text.RegularExpressions.Regex> classe nello <xref:System.Text.RegularExpressions?displayProperty=fullName> spazio dei nomi. Viene costruita una stringa contenente più tipi di delimitatori di parola. La stringa viene quindi analizzata usando la <xref:System.Text.RegularExpressions.Regex> classe insieme alla <xref:System.Text.RegularExpressions.Match> classe. Ogni parola nella frase viene quindi visualizzata separatamente.
 
 ### <a name="example"></a>Esempio
 
@@ -79,9 +80,9 @@ int main( )
 }
 ```
 
-## <a name="parse_split"></a> Analizzare le stringhe usando il metodo Split
+## <a name="parse-strings-using-the-split-method"></a><a name="parse_split"></a> Analizzare le stringhe tramite il metodo Split
 
-Esempio di codice seguente illustra l'uso di <xref:System.String.Split%2A?displayProperty=fullName> metodo per estrarre le parole da una stringa. Stringa che contiene più tipi di descrittori di parole viene costruita e quindi analizzata chiamando <xref:System.String.Split%2A> con un elenco di descrittori. Quindi, ogni parola della frase viene visualizzato separatamente.
+Nell'esempio di codice riportato di seguito viene illustrato l'utilizzo del <xref:System.String.Split%2A?displayProperty=fullName> metodo per estrarre ogni parola da una stringa. Una stringa contenente più tipi di delimitatori di parola viene costruita e quindi analizzata chiamando <xref:System.String.Split%2A> con un elenco di delimitatori. Ogni parola nella frase viene quindi visualizzata separatamente.
 
 ### <a name="example"></a>Esempio
 
@@ -108,9 +109,9 @@ int main()
 }
 ```
 
-## <a name="regex_simple"></a> Usare espressioni regolari per la corrispondenza semplice
+## <a name="use-regular-expressions-for-simple-matching"></a><a name="regex_simple"></a> Usare espressioni regolari per la corrispondenza semplice
 
-Esempio di codice seguente usa le espressioni regolari per cercare le corrispondenze esatte di sottostringhe. La ricerca viene eseguita da statico <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> un metodo, che accetta due stringhe come input. La prima è la stringa da cercare e il secondo è il motivo per cui eseguire la ricerca.
+Nell'esempio di codice seguente vengono utilizzate espressioni regolari per cercare corrispondenze esatte della sottostringa. La ricerca viene eseguita dal metodo statico <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> , che accetta due stringhe come input. Il primo è la stringa in cui eseguire la ricerca e il secondo è il modello di cui eseguire la ricerca.
 
 ### <a name="example"></a>Esempio
 
@@ -146,9 +147,9 @@ int main()
 }
 ```
 
-## <a name="regex_extract"></a> Usare espressioni regolari per estrarre campi dati
+## <a name="use-regular-expressions-to-extract-data-fields"></a><a name="regex_extract"></a> Usare espressioni regolari per estrarre campi dati
 
-Esempio di codice seguente viene illustrato l'utilizzo delle espressioni regolari per estrarre dati da una stringa formattata. Il codice seguente viene illustrato come utilizzare il <xref:System.Text.RegularExpressions.Regex> classe per specificare un modello che corrisponde a un indirizzo di posta elettronica. In questo modello include identificatori del campo che possono essere utilizzati per recuperare l'utente e ospitano parti di nome di ogni indirizzo di posta elettronica. Il <xref:System.Text.RegularExpressions.Match> classe viene utilizzata per eseguire la ricerca effettiva. Se l'indirizzo di posta elettronica specificato è valido, il nome utente e i nomi host sono estratte e visualizzati.
+Nell'esempio di codice seguente viene illustrato l'utilizzo di espressioni regolari per estrarre i dati da una stringa formattata. Nell'esempio di codice seguente viene usata la <xref:System.Text.RegularExpressions.Regex> classe per specificare un modello che corrisponde a un indirizzo di posta elettronica. Questo picchiettio include gli identificatori dei campi che possono essere utilizzati per recuperare le parti di ogni indirizzo di posta elettronica dell'utente e del nome host. La <xref:System.Text.RegularExpressions.Match> classe viene utilizzata per eseguire i criteri di ricerca effettivi. Se l'indirizzo di posta elettronica specificato è valido, verranno estratti e visualizzati il nome utente e i nomi host.
 
 ### <a name="example"></a>Esempio
 
@@ -193,11 +194,11 @@ int main()
 }
 ```
 
-## <a name="regex_rearrange"></a> Usare espressioni regolari per ridisporre i dati
+## <a name="use-regular-expressions-to-rearrange-data"></a><a name="regex_rearrange"></a> Usare espressioni regolari per ridisporre i dati
 
-Esempio di codice seguente viene illustrato come utilizzare il supporto di espressioni regolari di .NET Framework per ridisporre o riformattare i dati. Il codice seguente viene illustrato come utilizzare il <xref:System.Text.RegularExpressions.Regex> e <xref:System.Text.RegularExpressions.Match> classi per estrarre i nomi e cognomi da una stringa e quindi visualizzare questi elementi di nome in ordine inverso.
+Nell'esempio di codice riportato di seguito viene illustrato come usare il supporto delle espressioni regolari .NET Framework per ridisporre o riformattare i dati. Nell'esempio di codice seguente vengono utilizzate le <xref:System.Text.RegularExpressions.Regex> <xref:System.Text.RegularExpressions.Match> classi e per estrarre i nomi e i cognomi da una stringa e quindi visualizzare questi elementi nome in ordine inverso.
 
-Il <xref:System.Text.RegularExpressions.Regex> classe viene utilizzata per costruire un'espressione regolare che descrive il formato corrente dei dati. I due nomi si presuppone che siano separati da una virgola e possono usare qualsiasi quantità di spazio intorno alla virgola. Il <xref:System.Text.RegularExpressions.Match> metodo viene quindi utilizzato per analizzare ogni stringa. Se ha esito positivo, nomi e cognomi vengono recuperati dal <xref:System.Text.RegularExpressions.Match> dell'oggetto e visualizzati.
+La <xref:System.Text.RegularExpressions.Regex> classe viene utilizzata per costruire un'espressione regolare che descrive il formato corrente dei dati. Si presuppone che i due nomi siano separati da una virgola e possano usare qualsiasi quantità di spazio vuoto intorno alla virgola. Il <xref:System.Text.RegularExpressions.Match> metodo viene quindi utilizzato per analizzare ogni stringa. In caso di esito positivo, il nome e il cognome vengono recuperati dall' <xref:System.Text.RegularExpressions.Match> oggetto e visualizzati.
 
 ### <a name="example"></a>Esempio
 
@@ -237,11 +238,11 @@ int main()
 }
 ```
 
-## <a name="regex_search"></a> Usare espressioni regolari di ricerca e sostituzione
+## <a name="use-regular-expressions-to-search-and-replace"></a><a name="regex_search"></a> Usare espressioni regolari per la ricerca e la sostituzione
 
-L'esempio di codice seguente illustra come la classe di espressioni regolari <xref:System.Text.RegularExpressions.Regex> può essere utilizzato per eseguire la ricerca e sostituzione. Questa operazione viene eseguita con il <xref:System.Text.RegularExpressions.Regex.Replace%2A> (metodo). La versione usata accetta due stringhe come input: la stringa da modificare e la stringa da inserire al posto di sezioni (se presente) corrispondenti al criterio specificato per il <xref:System.Text.RegularExpressions.Regex> oggetto.
+Nell'esempio di codice riportato di seguito viene illustrato come utilizzare la classe di espressioni regolari <xref:System.Text.RegularExpressions.Regex> per eseguire ricerche e sostituzioni. Questa operazione viene eseguita con il <xref:System.Text.RegularExpressions.Regex.Replace%2A> metodo. La versione utilizzata accetta due stringhe come input: la stringa da modificare e la stringa da inserire al posto delle sezioni (se presenti) che corrispondono al modello assegnato all' <xref:System.Text.RegularExpressions.Regex> oggetto.
 
-Questo codice sostituisce tutte le cifre in una stringa con caratteri di sottolineatura (_) e quindi sostituisce quelle con una stringa vuota, in modo efficace di rimuoverli. Lo stesso effetto può essere eseguito in un unico passaggio, ma due passaggi sono qui usati a scopo dimostrativo.
+Questo codice sostituisce tutte le cifre di una stringa con caratteri di sottolineatura (_) e quindi li sostituisce con una stringa vuota, rimuovendo effettivamente tali cifre. Lo stesso effetto può essere eseguito in un unico passaggio, ma in questo caso vengono usati due passaggi a scopo dimostrativo.
 
 ### <a name="example"></a>Esempio
 
@@ -269,9 +270,9 @@ int main()
 }
 ```
 
-## <a name="regex_validate"></a> Usare espressioni regolari per convalidare la formattazione dei dati
+## <a name="use-regular-expressions-to-validate-data-formatting"></a><a name="regex_validate"></a> Usare espressioni regolari per convalidare la formattazione dei dati
 
-Esempio di codice seguente viene illustrato l'utilizzo delle espressioni regolari per verificare la formattazione della stringa. Nell'esempio di codice seguente, la stringa deve contenere un numero di telefono valido. Esempio di codice seguente usa la stringa "\d{3}-\d{3}-\d{4}" per indicare che ogni campo rappresenta un numero di telefono valido. "D" nella stringa indica una cifra e l'argomento dopo ciascuna "d" indica il numero di cifre che deve essere presente. In questo caso, il numero è obbligatorio per essere separati da trattini.
+Nell'esempio di codice riportato di seguito viene illustrato l'utilizzo di espressioni regolari per verificare la formattazione di una stringa. Nell'esempio di codice seguente, la stringa deve contenere un numero di telefono valido. Nell'esempio di codice seguente viene usata la stringa "\d {3} -\d {3} -\d {4} " per indicare che ogni campo rappresenta un numero di telefono valido. La "d" nella stringa indica una cifra e l'argomento dopo ogni "d" indica il numero di cifre che devono essere presenti. In questo caso, è necessario che il numero sia separato da trattini.
 
 ### <a name="example"></a>Esempio
 
@@ -316,6 +317,6 @@ int main()
 
 [Espressioni regolari di .NET Framework](/dotnet/standard/base-types/regular-expressions)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Programmazione .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

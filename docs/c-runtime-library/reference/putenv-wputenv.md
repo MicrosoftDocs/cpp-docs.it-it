@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _putenv, _wputenv'
 title: _putenv, _wputenv
 ms.date: 4/2/2020
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - _tputenv function
 - environment variables, modifying
 ms.assetid: 9ba9b7fd-276e-45df-8420-d70c4204b8bd
-ms.openlocfilehash: a86b58b868c96b6f77af8bfa32036d1a56b2a7cf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 117250553eba7b2c8c1249140b610dc064e6b1fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918862"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258603"
 ---
 # <a name="_putenv-_wputenv"></a>_putenv, _wputenv
 
@@ -74,7 +75,7 @@ Definizione della stringa di ambiente.
 
 Restituisce 0 se ha esito positivo o-1 in caso di errore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_putenv** aggiunge nuove variabili di ambiente o modifica i valori delle variabili di ambiente esistenti. Le variabili di ambiente definiscono l'ambiente in cui viene eseguito un processo (ad esempio, il percorso di ricerca predefinito per le librerie da collegare a un programma). **_wputenv** è una versione a caratteri wide di **_putenv**; l'argomento *stringaamb* per **_wputenv** è una stringa di caratteri wide.
 
@@ -86,9 +87,9 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tputenv**|**_putenv**|**_putenv**|**_wputenv**|
 
-L'argomento *stringaamb* deve essere un puntatore a una stringa nel formato *VarName*=*value_string*, dove *VarName* è il nome della variabile di ambiente da aggiungere o modificare e *value_string* è il valore della variabile. Se *VarName* fa già parte dell'ambiente, il valore viene sostituito da *value_string*; in caso contrario, la nuova variabile *VarName* e il relativo valore *value_string* vengono aggiunti all'ambiente. È possibile rimuovere una variabile dall'ambiente specificando un *value_string*vuoto o, in altre parole, specificando solo *VarName*=.
+L'argomento *stringaamb* deve essere un puntatore a una stringa nel formato *VarName* = *value_string*, dove *VarName* è il nome della variabile di ambiente da aggiungere o modificare e *value_string* è il valore della variabile. Se *VarName* fa già parte dell'ambiente, il valore viene sostituito da *value_string*; in caso contrario, la nuova variabile *VarName* e il relativo valore *value_string* vengono aggiunti all'ambiente. È possibile rimuovere una variabile dall'ambiente specificando un *value_string* vuoto o, in altre parole, specificando solo *VarName*=.
 
-**_putenv** e **_wputenv** hanno effetto solo sull'ambiente locale rispetto al processo corrente. non è possibile usarli per modificare l'ambiente a livello di comando. Questo significa che le funzioni agiscono solo su strutture di dati accessibili dalla libreria di runtime e non nel segmento di ambiente creato per un processo dal sistema operativo. Al termine del processo corrente, l'ambiente viene ripristinato al livello del processo chiamante, ovvero nella maggior parte dei casi il livello del sistema operativo. Tuttavia, l'ambiente modificato può essere passato a tutti i nuovi processi creati da **_spawn**, **_exec**o **System**e questi nuovi processi ottengono tutti i nuovi elementi aggiunti da **_putenv** e **_wputenv**.
+**_putenv** e **_wputenv** hanno effetto solo sull'ambiente locale rispetto al processo corrente. non è possibile usarli per modificare l'ambiente a livello di comando. Questo significa che le funzioni agiscono solo su strutture di dati accessibili dalla libreria di runtime e non nel segmento di ambiente creato per un processo dal sistema operativo. Al termine del processo corrente, l'ambiente viene ripristinato al livello del processo chiamante, ovvero nella maggior parte dei casi il livello del sistema operativo. Tuttavia, l'ambiente modificato può essere passato a tutti i nuovi processi creati da **_spawn**, **_exec** o **System** e questi nuovi processi ottengono tutti i nuovi elementi aggiunti da **_putenv** e **_wputenv**.
 
 Non modificare direttamente una voce di ambiente: usare invece **_putenv** o **_wputenv** per modificarla. In particolare, la liberazione diretta di elementi della matrice globale **_environ []** potrebbe causare l'indirizzamento di una memoria non valida.
 
@@ -110,8 +111,8 @@ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runt
 
 Per un esempio di come usare **_putenv**, vedere [getenv, _wgetenv](getenv-wgetenv.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Process and Environment Control](../../c-runtime-library/process-and-environment-control.md) (Controllo processo e ambiente)<br/>
+[Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [getenv, _wgetenv](getenv-wgetenv.md)<br/>
 [_searchenv, _wsearchenv](searchenv-wsearchenv.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: conversioni dai tipi integrali con segno'
 title: Conversioni dai tipi integrali con segno
 ms.date: 10/02/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - data type conversion [C++], signed and unsigned integers
 - type conversion [C++], signed and unsigned integers
 ms.assetid: 5eea32f8-8b14-413d-acac-c063b3d118d7
-ms.openlocfilehash: d41d2fd205a87f9f2be2179ffd8e38256a96e4f7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 25ee07f0b3bac9cd954bc217a4a71e579e4eacda
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226477"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293157"
 ---
 # <a name="conversions-from-signed-integral-types"></a>Conversioni dai tipi integrali con segno
 
@@ -43,35 +44,35 @@ Nel compilatore Microsoft **`int`** e **`long`** sono tipi Distinct ma equivalen
 
 ## <a name="table-of-conversions-from-signed-integral-types"></a>Tabella delle conversioni dai tipi integrali con segno
 
-|From|A|Metodo|
+|Da|A|Metodo|
 |----------|--------|------------|
 |**`char`**<sup>1</sup>|**`short`**|Estensione del segno|
 |**`char`**|**`long`**|Estensione del segno|
 |**`char`**|**`long long`**|Estensione del segno|
 |**`char`**|**`unsigned char`**|Mantenimento del modello; il bit più significativo perde la funzione come bit di segno|
-|**`char`**|**`unsigned short`**|Estensione del segno a **`short`** ; conversione **`short`** in**`unsigned short`**|
-|**`char`**|**`unsigned long`**|Estensione del segno a **`long`** ; conversione **`long`** in**`unsigned long`**|
-|**`char`**|**`unsigned long long`**|Estensione del segno a **`long long`** ; conversione **`long long`** in**`unsigned long long`**|
-|**`char`**|**`float`**|Estensione del segno a **`long`** ; conversione **`long`** in**`float`**|
-|**`char`**|**`double`**|Estensione del segno a **`long`** ; conversione **`long`** in**`double`**|
-|**`char`**|**`long double`**|Estensione del segno a **`long`** ; conversione **`long`** in**`double`**|
+|**`char`**|**`unsigned short`**|Estensione del segno a **`short`** ; conversione **`short`** in **`unsigned short`**|
+|**`char`**|**`unsigned long`**|Estensione del segno a **`long`** ; conversione **`long`** in **`unsigned long`**|
+|**`char`**|**`unsigned long long`**|Estensione del segno a **`long long`** ; conversione **`long long`** in **`unsigned long long`**|
+|**`char`**|**`float`**|Estensione del segno a **`long`** ; conversione **`long`** in **`float`**|
+|**`char`**|**`double`**|Estensione del segno a **`long`** ; conversione **`long`** in **`double`**|
+|**`char`**|**`long double`**|Estensione del segno a **`long`** ; conversione **`long`** in **`double`**|
 |**`short`**|**`char`**|Mantenimento del byte meno significativo|
 |**`short`**|**`long`**|Estensione del segno|
 |**`short`**|**`long long`**|Estensione del segno|
 |**`short`**|**`unsigned char`**|Mantenimento del byte meno significativo|
 |**`short`**|**`unsigned short`**|Mantenimento del modello di bit; il bit più significativo perde la funzione come bit di segno|
-|**`short`**|**`unsigned long`**|Estensione del segno a **`long`** ; conversione **`long`** in**`unsigned long`**|
-|**`short`**|**`unsigned long long`**|Estensione del segno a **`long long`** ; conversione **`long long`** in**`unsigned long long`**|
-|**`short`**|**`float`**|Estensione del segno a **`long`** ; conversione **`long`** in**`float`**|
-|**`short`**|**`double`**|Estensione del segno a **`long`** ; conversione **`long`** in**`double`**|
-|**`short`**|**`long double`**|Estensione del segno a **`long`** ; conversione **`long`** in**`double`**|
+|**`short`**|**`unsigned long`**|Estensione del segno a **`long`** ; conversione **`long`** in **`unsigned long`**|
+|**`short`**|**`unsigned long long`**|Estensione del segno a **`long long`** ; conversione **`long long`** in **`unsigned long long`**|
+|**`short`**|**`float`**|Estensione del segno a **`long`** ; conversione **`long`** in **`float`**|
+|**`short`**|**`double`**|Estensione del segno a **`long`** ; conversione **`long`** in **`double`**|
+|**`short`**|**`long double`**|Estensione del segno a **`long`** ; conversione **`long`** in **`double`**|
 |**`long`**|**`char`**|Mantenimento del byte meno significativo|
 |**`long`**|**`short`**|Mantenimento della parola meno significativa|
 |**`long`**|**`long long`**|Estensione del segno|
 |**`long`**|**`unsigned char`**|Mantenimento del byte meno significativo|
 |**`long`**|**`unsigned short`**|Mantenimento della parola meno significativa|
 |**`long`**|**`unsigned long`**|Mantenimento del modello di bit; il bit più significativo perde la funzione come bit di segno|
-|**`long`**|**`unsigned long long`**|Estensione del segno a **`long long`** ; conversione **`long long`** in**`unsigned long long`**|
+|**`long`**|**`unsigned long long`**|Estensione del segno a **`long long`** ; conversione **`long long`** in **`unsigned long long`**|
 |**`long`**|**`float`**|Rappresentare come **`float`** . Se **`long`** non può essere rappresentato esattamente, la precisione viene persa.|
 |**`long`**|**`double`**|Rappresentare come **`double`** . Se **`long`** non può essere rappresentato esattamente come un **`double`** , viene persa una certa precisione.|
 |**`long`**|**`long double`**|Rappresentare come **`double`** . Se **`long`** non può essere rappresentato esattamente come un **`double`** , viene persa una certa precisione.|
@@ -88,6 +89,6 @@ Nel compilatore Microsoft **`int`** e **`long`** sono tipi Distinct ma equivalen
 
 <sup>1</sup> tutte **`char`** le voci presuppongono che il **`char`** tipo sia firmato per impostazione predefinita.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Conversioni di assegnazione](../c-language/assignment-conversions.md)

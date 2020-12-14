@@ -1,60 +1,61 @@
 ---
-title: /USEPROFILE (dati di utilizzo PGO con LTCG)
+description: Altre informazioni su:/USEPROFILE (eseguire PGO in modalità thread-safe)
+title: /USEPROFILE (USA i dati PGO con LTCG)
 ms.date: 03/14/2018
 f1_keywords:
 - USEPROFILE
-ms.openlocfilehash: 7bc0033ae5ef512cbd2e2063c5cb9bd9b061c180
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6c293b8467ea308dc2f7b4a4cd916cc5d9ac4c9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317133"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247046"
 ---
-# <a name="useprofile-run-pgo-in-thread-safe-mode"></a>/USEPROFILE (PGO eseguito in modalità provvisoria thread)
+# <a name="useprofile-run-pgo-in-thread-safe-mode"></a>/USEPROFILE (esecuzione di PGO in modalità thread-safe)
 
-Questa opzione del linker assieme [/LTCG (generazione di codice in fase di collegamento](ltcg-link-time-code-generation.md) indica al linker per compilare usando dati di training di ottimizzazione PGO (PGO).
+Questa opzione del linker insieme a [/LTCG (generazione di codice in fase di collegamento](ltcg-link-time-code-generation.md) indica al linker di eseguire la compilazione usando i dati di training per l'ottimizzazione PGO (PGO).
 
 ## <a name="syntax"></a>Sintassi
 
-> **/USEPROFILE**[**:**{**AGGRESSIVE**|**PGD=**_filename_}]
+> **/USEPROFILE**[**:**{**aggressive** | **PGD =**_filename_}]
 
 ### <a name="arguments"></a>Argomenti
 
 **AGGRESSIVA**<br/>
-Questo argomento facoltativo consente di specificare che le ottimizzazioni aggressiva velocità devono essere utilizzate durante la generazione del codice ottimizzato.
+Questo argomento facoltativo specifica che le ottimizzazioni di velocità aggressive devono essere usate durante la generazione di codice ottimizzato.
 
-**PGD**=*nomefile*<br/>
-Specifica un nome del file di base per il file PGD. Per impostazione predefinita, il linker Usa il nome base file eseguibile con estensione pgd.
+**PGD** = *nome file*<br/>
+Specifica un nome del file di base per il file PGD. Per impostazione predefinita, il linker usa il nome del file eseguibile di base con estensione PGD.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Il **/USEPROFILE** viene usata in combinazione con l'opzione del linker **/LTCG** per generare o aggiornare una build ottimizzata basata sui dati di training PGO. È l'equivalente di deprecate **/LTCG: PGUPDATE** e **/LTCG: PGOPTIMIZE** opzioni.
+L'opzione del linker **/USEPROFILE** viene utilizzata insieme a **/LTCG** per generare o aggiornare una compilazione ottimizzata in base ai dati di training di PGO. È l'equivalente delle opzioni deprecate **/LTCG: PGUPDATE** e **/LTCG: PGOPTIMIZE** .
 
-L'opzione facoltativa **stile di Guida AGGRESSIVO** argomento disabilita l'euristica correlati alla dimensione per tentare di ottimizzare la velocità. Questo può comportare ottimizzazioni che sostanzialmente aumentare le dimensioni del file eseguibile e non possono aumentare la velocità risulta. È consigliabile profilare e confrontare i risultati dell'uso e non usa **stile di Guida AGGRESSIVO**. Questo argomento deve essere specificato in modo esplicito. non è abilitato per impostazione predefinita.
+L'argomento facoltativo **aggressivo** Disabilita l'euristica relativa alle dimensioni per tentare di ottimizzare la velocità. Questo può comportare ottimizzazioni che aumentano notevolmente le dimensioni del file eseguibile e potrebbe non aumentare la velocità risultante. È consigliabile profilare e confrontare i risultati dell'utilizzo di e non utilizzando **aggressivo**. Questo argomento deve essere specificato in modo esplicito; non è abilitato per impostazione predefinita.
 
-Il **PGD** argomento specifica un nome facoltativo per il file pgd i dati di training da usare, come in [/GENPROFILE o /fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md). È l'equivalente di deprecate **/PGD** passare. Per impostazione predefinita, o se nessun *filename* viene specificato, un file PDG che ha lo stesso nome di base viene usato il file eseguibile.
+L'argomento **PGD** specifica un nome facoltativo per il file di training data. PGD da usare, come in [/GENPROFILE o/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md). È l'equivalente dell'opzione **/PGD** deprecata. Per impostazione predefinita, o se non è specificato alcun *nome* file, viene usato un file con estensione PGD con lo stesso nome di base dell'eseguibile.
 
-Il **/USEPROFILE** l'opzione del linker è stata introdotta in Visual Studio 2015.
+L'opzione del linker **/USEPROFILE** è una novità di Visual Studio 2015.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare il **le proprietà di configurazione** > **Linker** > **ottimizzazione** pagina delle proprietà.
+1. Selezionare la   >  pagina delle proprietà di ottimizzazione del **linker** delle proprietà di configurazione  >   .
 
-1. Nel **Link Time Code Generation** proprietà, scegliere **generazione codice in fase di collegamento Usa (/ LTCG)**.
+1. Nella proprietà **generazione codice in fase di collegamento** scegliere **USA generazione codice in fase di collegamento (/LTCG)**.
 
-1. Selezionare il **le proprietà di configurazione** > **Linker** > **della riga di comando** pagina delle proprietà.
+1. Selezionare la   >  pagina delle proprietà della riga di comando del **linker** proprietà di configurazione  >   .
 
-1. Immettere il **/USEPROFILE** opzione e gli argomenti facoltativi nel **opzioni aggiuntive** casella. Scegliere **OK** per salvare le modifiche.
+1. Immettere l'opzione **/USEPROFILE** e gli argomenti facoltativi nella casella **Opzioni aggiuntive** . Scegliere **OK** per salvare le modifiche.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[/ GENPROFILE e /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
+[/GENPROFILE e/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/LTCG](ltcg-link-time-code-generation.md)<br/>
 [Ottimizzazioni PGO](../profile-guided-optimizations.md)<br/>
-[Variabili d'ambiente per le ottimizzazioni GPO](../environment-variables-for-profile-guided-optimizations.md)<br/>
+[Variabili di ambiente per le ottimizzazioni Profile-Guided](../environment-variables-for-profile-guided-optimizations.md)<br/>

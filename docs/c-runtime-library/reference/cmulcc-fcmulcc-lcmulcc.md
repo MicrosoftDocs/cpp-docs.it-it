@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _Cmulcc, _FCmulcc, _LCmulcc'
 title: _Cmulcc, _FCmulcc, _LCmulcc
 ms.date: 03/30/2018
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - _Cmulcc function
 - _FCmulcc function
 - _LCmulcc function
-ms.openlocfilehash: fc21f8cbd2103993bc2b3e36020c57c8520f04a1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e18f6ee0ab166cbce04d425ece43ef8ba2708a4c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939068"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258733"
 ---
 # <a name="_cmulcc-_fcmulcc-_lcmulcc"></a>_Cmulcc, _FCmulcc, _LCmulcc
 
@@ -61,11 +62,11 @@ Altro operando complesso da moltiplicare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Struttura **_Dcomplex**, **_Fcomplex**o **_Lcomplex** che rappresenta il prodotto complesso dei numeri complessi *x* e *y*.
+Struttura **_Dcomplex**, **_Fcomplex** o **_Lcomplex** che rappresenta il prodotto complesso dei numeri complessi *x* e *y*.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Poiché gli operatori aritmetici incorporati non funzionano nell'implementazione Microsoft dei tipi complessi, le funzioni **_Cmulcc**, **_FCmulcc**e **_LCmulcc** semplificano la moltiplicazione dei tipi complessi.
+Poiché gli operatori aritmetici incorporati non funzionano nell'implementazione Microsoft dei tipi complessi, le funzioni **_Cmulcc**, **_FCmulcc** e **_LCmulcc** semplificano la moltiplicazione dei tipi complessi.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -73,9 +74,9 @@ Poiché gli operatori aritmetici incorporati non funzionano nell'implementazione
 |-------------|--------------|------------------|
 |**_Cmulcc**, **_FCmulcc**, **_LCmulcc**|\<complex.h>|\<complex.h>|
 
-Queste funzioni sono specifiche di Microsoft. I tipi **_Dcomplex**, **_Fcomplex**e **_Lcomplex** sono equivalenti specifici di Microsoft ai tipi nativi C99 non implementati **Double _Complex**, **float _Complex**e **long double _Complex**, rispettivamente. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Queste funzioni sono specifiche di Microsoft. I tipi **_Dcomplex**, **_Fcomplex** e **_Lcomplex** sono equivalenti specifici di Microsoft ai tipi nativi C99 non implementati, rispettivamente **Double _Complex**, **float _Complex** e **long double _Complex**. Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
 [_Cbuild, _FCbuild, _LCbuild](cbuild-fcbuild-lcbuild.md)<br/>

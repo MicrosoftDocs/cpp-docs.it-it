@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _chmod, _wchmod'
 title: _chmod, _wchmod
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-ms.openlocfilehash: b1bc89ce51fff44a847111d68cac8e8b3f58a635
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 601510c1f326282d48d2824b055ee3e80d9db0ca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916999"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275035"
 ---
 # <a name="_chmod-_wchmod"></a>_chmod, _wchmod
 
@@ -65,17 +66,17 @@ Impostazione di autorizzazione per il file.
 
 Queste funzioni restituiscono 0 se l'impostazione di autorizzazione viene modificata. Il valore restituito-1 indica un errore. Se il file specificato non è stato trovato, **errno** viene impostato su **ENOENT**; Se un parametro non è valido, **errno** viene impostato su **EINVAL**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_chmod** modifica l'impostazione di autorizzazione del file specificato da *filename*. L'impostazione di autorizzazione controlla l'accesso in lettura e scrittura al file. L'espressione integer *pmode* contiene una o entrambe le costanti manifeste seguenti, definite in SYS\Stat.h.
 
 | *pmode* | Significato |
 |-|-|
-| **\_iRead\_S** | Solo lettura consentita. |
-| **\_IWRITE\_S** | Scrittura consentita. (In effetti, consente la lettura e la scrittura) |
-| **\_S\_iRead** &#124; ** \_s\_IWRITE** | Lettura e scrittura consentite. |
+| **\_\_iRead S** | Solo lettura consentita. |
+| **\_\_IWRITE S** | Scrittura consentita. (In effetti, consente la lettura e la scrittura) |
+| **\_ S \_ iRead** &#124; **\_ s \_ IWRITE** | Lettura e scrittura consentite. |
 
-Quando vengono specificate entrambe le costanti, queste vengono unite con l'operatore OR bit**\|** per bit (). Se non viene concessa l'autorizzazione in scrittura, il file è di sola lettura. Si noti che tutti i file sono sempre leggibili. Non è possibile concedere l'autorizzazione di sola scrittura. Pertanto, le modalità **_S_IWRITE** e **_S_IREAD** \| **_S_IWRITE** sono equivalenti.
+Quando vengono specificate entrambe le costanti, queste vengono unite con l'operatore OR bit per bit ( **\|** ). Se non viene concessa l'autorizzazione in scrittura, il file è di sola lettura. Si noti che tutti i file sono sempre leggibili. Non è possibile concedere l'autorizzazione di sola scrittura. Pertanto, le modalità **_S_IWRITE** e **_S_IREAD** \| **_S_IWRITE** sono equivalenti.
 
 **_wchmod** è una versione a caratteri wide di **_chmod**; l'argomento *filename* per **_wchmod** è una stringa di caratteri wide. **_wchmod** e **_chmod** si comportano in modo identico.
 
@@ -176,7 +177,7 @@ Mode set to read/write
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione dei file](../../c-runtime-library/file-handling.md)<br/>
+[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>

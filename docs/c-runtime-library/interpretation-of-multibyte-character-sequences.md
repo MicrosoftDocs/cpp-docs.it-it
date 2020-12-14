@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: interpretazione di sequenze di caratteri multibyte'
 title: Interpretazione di sequenze di caratteri multibyte
 ms.date: 10/22/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - MBCS [C++], locale code page
 ms.assetid: da9150de-70ea-4d2f-90e6-ddb9202dd80b
-ms.openlocfilehash: 7431f0c63df60414af192ea38103318c775c430d
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: 86ef62637e87fd204233ab87fa337c99c5d47a2d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811082"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246709"
 ---
 # <a name="interpretation-of-multibyte-character-sequences"></a>Interpretazione di sequenze di caratteri multibyte
 
-La maggior parte delle routine di caratteri multibyte nella libreria di runtime Microsoft riconoscono le sequenze di caratteri multibyte relative a una tabella codici multibyte. Il valore di output è influenzato dall'impostazione della categoria **LC_CTYPE** delle impostazioni locali. Per altre informazioni, vedere [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **suffisso** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali anziché le impostazioni locali correnti.
+La maggior parte delle routine di caratteri multibyte nella libreria di runtime Microsoft riconoscono le sequenze di caratteri multibyte relative a una tabella codici multibyte. Il valore di output è influenzato dall'impostazione dell'impostazione di categoria **LC_CTYPE** delle impostazioni locali. Per altre informazioni, vedere [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_L** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali anziché le impostazioni locali correnti.
 
 ## <a name="locale-dependent-multibyte-routines"></a>Routine multibyte dipendenti dalle impostazioni locali
 
@@ -35,7 +36,7 @@ La maggior parte delle routine di caratteri multibyte nella libreria di runtime 
 |[mbrtoc16, mbrtoc32](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)|Converte un carattere UTF-8 multibyte in un carattere UTF-16 o UTF-32 equivalente|
 |[c16rtomb, c32rtomb](../c-runtime-library/reference/c16rtomb-c32rtomb1.md)|Converte un carattere UTF-16 o UTF-32 in un carattere multibyte UTF-8 equivalente|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Internazionalizzazione](../c-runtime-library/internationalization.md)\
 [Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)

@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: creazione del controllo elenco'
 title: Creazione del controllo List
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CListCtrl class [MFC], creating control
 - list controls [MFC]
 ms.assetid: a4cb1729-31b6-4d2b-a44b-367474848a39
-ms.openlocfilehash: c9ba379611c44b5eae8d02b908ba71e3dbd66481
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5be1a9ce7a2cd8279d576dfc41e44c810c433515
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617103"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309576"
 ---
 # <a name="creating-the-list-control"></a>Creazione del controllo List
 
@@ -32,7 +33,7 @@ Il modo in cui viene creato il controllo elenco ([CListCtrl](reference/clistctrl
 
 1. Chiamare la funzione membro [create](reference/clistctrl-class.md#create) del controllo, possibilmente in [OnInitialUpdate](reference/cview-class.md#oninitialupdate), probabilmente all'inizio della funzione del gestore [OnCreate](reference/cwnd-class.md#oncreate) della finestra padre (se si sta eseguendo la sottoclasse del controllo). Impostare gli stili per il controllo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Utilizzo di CListCtrl](using-clistctrl.md)<br/>
 [Controlli](controls-mfc.md)

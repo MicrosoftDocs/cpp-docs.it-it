@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe Platform:: Collections:: MapView'
 title: Classe Platform::Collections::MapView
 ms.date: 12/30/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: 693854499dafd23752337652ef298907fdecbcc2
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: 6011948bb3708329f7dcce0841f2bc34879760a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610894"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258486"
 ---
 # <a name="platformcollectionsmapview-class"></a>Classe Platform::Collections::MapView
 
@@ -44,7 +45,7 @@ Tipo di valore nella coppia chiave-valore.
 *C*<br/>
 Tipo che fornisce un oggetto funzione che può confrontare due valori di elementi come chiavi di ordinamento per determinare l'ordine relativo in MapView. Per impostazione predefinita, [std:: \<K> less](../standard-library/less-struct.md).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 MapView è un'implementazione concreta di C++ dell'interfaccia [Windows:: Foundation:: Collections \<K,V> :: IMapView](/uwp/api/windows.foundation.collections.imapview-2) passata attraverso l'interfaccia ABI (Application Binary Interface). Per ulteriori informazioni, vedi [Raccolte (C++/CX)](../cppcx/collections-c-cx.md).
 
@@ -52,13 +53,13 @@ MapView è un'implementazione concreta di C++ dell'interfaccia [Windows:: Founda
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[MapView:: MapView](#ctor)|Inizializza una nuova istanza della classe MapView.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[MapView:: First](#first)|Restituisce un iteratore che viene inizializzato al primo elemento nella visualizzazione della mappa.|
 |[MapView:: HasKey](#haskey)|Determina se l'oggetto MapView corrente contiene la chiave specificata.|
@@ -91,7 +92,7 @@ virtual Windows::Foundation::Collections::IIterator<
 
 Iteratore che specifica il primo elemento nella visualizzazione della mappa.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un modo pratico per conservare l'iteratore restituito da First () consiste nell'assegnare il valore restituito a una variabile dichiarata con la **`auto`** parola chiave di deduzione del tipo. Ad esempio: `auto x = myMapView->First();`.
 
@@ -213,10 +214,10 @@ Prima parte dell'oggetto MapView originale.
 *secondPartition*<br/>
 Seconda parte dell'oggetto MapView originale.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo non è operativo; non esegue alcuna operazione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Platform](platform-namespace-c-cx.md)

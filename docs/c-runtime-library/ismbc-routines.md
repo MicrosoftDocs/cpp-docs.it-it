@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: routine di _ismbc'
 title: Routines _ismbc
 ms.date: 11/04/2016
 api_location:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - ismbc routines
 - _ismbc routines
 ms.assetid: b8995391-7857-4ac3-9a1e-de946eb4464d
-ms.openlocfilehash: 056cc4bc5344ee8833b3f6e645616657f1958897
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 319e077d839cacb6faf0c9095d403f99a1677975
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839361"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246591"
 ---
 # <a name="_ismbc-routines"></a>Routines _ismbc
 
@@ -41,7 +42,7 @@ Ogni test della routine **_ismbc** verifica un carattere multibyte `c` per una d
    :::column-end:::
 :::row-end:::
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il risultato del test di ogni routine **_ismbc** dipende dalla tabella codici multibyte attiva. Le tabelle codici multibyte contengono caratteri alfabetici a un byte. Per impostazione predefinita, la tabella codici multibyte viene impostata sulla tabella codici ANSI predefinita del sistema, ottenuta dal sistema operativo all'avvio del programma. È possibile eseguire una query o modificare la tabella codici multibyte in uso, rispettivamente con [_getmbcp](../c-runtime-library/reference/getmbcp.md) o [_setmbcp](../c-runtime-library/reference/setmbcp.md).
 
@@ -78,7 +79,7 @@ Le routine seguenti sono specifiche per la tabella codici 932.
 
 **Specifiche per la tabella codici 932 END**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classificazione caratteri](../c-runtime-library/character-classification.md)<br/>
 [is, ISW routines](../c-runtime-library/is-isw-routines.md)<br/>

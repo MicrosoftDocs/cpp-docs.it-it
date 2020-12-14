@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: espressioni Suffisshe'
 title: Espressioni in forma suffissa
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-ms.openlocfilehash: 9a5c99c78623f2192b59a73f270f3ad5d2a34516
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c6c38fee6b2b44ab9ff390eed8d178bf40653df2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231169"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258525"
 ---
 # <a name="postfix-expressions"></a>Espressioni in forma suffissa
 
@@ -24,7 +25,7 @@ Le espressioni di suffisso sono costituite da espressioni primarie o da espressi
 |[Operatore di indice](../cpp/subscript-operator.md)|**[ ]**|
 |[Operatore di chiamata di funzione](../cpp/function-call-operator-parens.md)|**( )**|
 |[Operatore di conversione di tipi esplicita](../cpp/explicit-type-conversion-operator-parens.md)|*nome-tipo* **()**|
-|[Operatore di accesso ai membri](../cpp/member-access-operators-dot-and.md)|**.** o**->**|
+|[Operatore di accesso ai membri](../cpp/member-access-operators-dot-and.md)|**.** o **->**|
 |[Operatore di incremento suffisso](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|
 |[Operatore di decremento suffisso](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|
 
@@ -192,6 +193,6 @@ world!
 good morning, sunshine.
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Tipi di espressioni](../cpp/types-of-expressions.md)

@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: conversioni dai tipi a virgola mobile'
 title: Conversioni dai tipi a virgola mobile
 ms.date: 10/02/2019
 helpviewer_keywords:
 - converting floating point
 - floating-point conversion
 ms.assetid: 96804c8e-fa3b-4742-9006-0082ed9e57f2
-ms.openlocfilehash: 72d0f95a6e48dcf0a5e8fea3757e85f9a03bf7e4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2e2a78a68b39d9109a2304d78070bddef36e9b52
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227894"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293235"
 ---
 # <a name="conversions-from-floating-point-types"></a>Conversioni dai tipi a virgola mobile
 
@@ -40,26 +41,26 @@ Nella tabella seguente sono riepilogate le conversioni dai tipi a virgola mobile
 
 ## <a name="table-of-conversions-from-floating-point-types"></a>Tabella delle conversioni dai tipi a virgola mobile
 
-|From|A|Metodo|
+|Da|A|Metodo|
 |----------|--------|------------|
-|**`float`**|**`char`**|Conversione in **`long`** ; conversione **`long`** in**`char`**|
-|**`float`**|**`short`**|Conversione in **`long`** ; conversione **`long`** in**`short`**|
+|**`float`**|**`char`**|Conversione in **`long`** ; conversione **`long`** in **`char`**|
+|**`float`**|**`short`**|Conversione in **`long`** ; conversione **`long`** in **`short`**|
 |**`float`**|**`int`**|Troncare in corrispondenza del separatore decimale. Se il risultato è troppo grande per essere rappresentato come **`int`** , il risultato non è definito.|
 |**`float`**|**`long`**|Troncare in corrispondenza del separatore decimale. Se il risultato è troppo grande per essere rappresentato come **`long`** , il risultato non è definito.|
 |**`float`**|**`long long`**|Troncare in corrispondenza del separatore decimale. Se il risultato è troppo grande per essere rappresentato come **`long long`** , il risultato non è definito.|
-|**`float`**|**`unsigned char`**|Conversione in **`long`** ; conversione **`long`** in**`unsigned char`**|
-|**`float`**|**`unsigned short`**|Conversione in **`long`** ; conversione **`long`** in**`unsigned short`**|
+|**`float`**|**`unsigned char`**|Conversione in **`long`** ; conversione **`long`** in **`unsigned char`**|
+|**`float`**|**`unsigned short`**|Conversione in **`long`** ; conversione **`long`** in **`unsigned short`**|
 |**`float`**|**`unsigned`**|Troncare in corrispondenza del separatore decimale. Se il risultato è troppo grande per essere rappresentato come **`unsigned`** , il risultato non è definito.|
 |**`float`**|**`unsigned long`**|Troncare in corrispondenza del separatore decimale. Se il risultato è troppo grande per essere rappresentato come **`unsigned long`** , il risultato non è definito.|
 |**`float`**|**`unsigned long long`**|Troncare in corrispondenza del separatore decimale. Se il risultato è troppo grande per essere rappresentato come **`unsigned long long`** , il risultato non è definito.|
 |**`float`**|**`double`**|Rappresentare come **`double`** .|
 |**`float`**|**`long double`**|Rappresentare come **`long double`** .|
-|**`double`**|**`char`**|Conversione in **`float`** ; conversione **`float`** in**`char`**|
-|**`double`**|**`short`**|Conversione in **`float`** ; conversione **`float`** in**`short`**|
+|**`double`**|**`char`**|Conversione in **`float`** ; conversione **`float`** in **`char`**|
+|**`double`**|**`short`**|Conversione in **`float`** ; conversione **`float`** in **`short`**|
 |**`double`**|**`int`**|Troncare in corrispondenza del separatore decimale. Se il risultato è troppo grande per essere rappresentato come **`int`** , il risultato non è definito.|
 |**`double`**|**`long`**|Troncare in corrispondenza del separatore decimale. Se il risultato è troppo grande per essere rappresentato come **`long`** , il risultato non è definito.|
-|**`double`**|**`unsigned char`**|Conversione in **`long`** ; conversione **`long`** in**`unsigned char`**|
-|**`double`**|**`unsigned short`**|Conversione in **`long`** ; conversione **`long`** in**`unsigned short`**|
+|**`double`**|**`unsigned char`**|Conversione in **`long`** ; conversione **`long`** in **`unsigned char`**|
+|**`double`**|**`unsigned short`**|Conversione in **`long`** ; conversione **`long`** in **`unsigned short`**|
 |**`double`**|**`unsigned`**|Troncare in corrispondenza del separatore decimale. Se il risultato è troppo grande per essere rappresentato come **`unsigned`** , il risultato non è definito.|
 |**`double`**|**`unsigned long`**|Troncare in corrispondenza del separatore decimale. Se il risultato è troppo grande per essere rappresentato come **`unsigned long`** , il risultato non è definito.|
 |**`double`**|**`unsigned long long`**|Troncare in corrispondenza del separatore decimale. Se il risultato è troppo grande per essere rappresentato come **`unsigned long long`** , il risultato non è definito.|
@@ -68,6 +69,6 @@ Nella tabella seguente sono riepilogate le conversioni dai tipi a virgola mobile
 
 Le conversioni da **`long double`** seguono lo stesso metodo delle conversioni da **`double`** .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Conversioni di assegnazione](../c-language/assignment-conversions.md)

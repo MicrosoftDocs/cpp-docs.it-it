@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: routine di _ismbb'
 title: Routines _ismbb
 ms.date: 11/04/2016
 api_location:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - ismbb routines
 - _ismbb routines
 ms.assetid: d63c232e-3fe4-4844-aafd-2133846ece4b
-ms.openlocfilehash: b8828018040b8b6b7b13c88c08599333dc1124d0
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4eb82433c4ad7712c2d3ac40f9eeb0120e6fea07
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839374"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246610"
 ---
 # <a name="_ismbb-routines"></a>Routines _ismbb
 
@@ -50,7 +51,7 @@ Testa il valore integer specificato `c` per una determinata condizione, usando l
    :::column-end:::
 :::row-end:::
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Ogni routine nel gruppo `_ismbb` testa il valore integer specificato `c` per una determinata condizione. Il risultato del test dipende dalla tabella codici multibyte corrente. Per impostazione predefinita, la tabella codici multibyte è impostata sulla tabella codici ANSI ottenuta dal sistema operativo all'avvio del programma. È possibile usare [_getmbcp](../c-runtime-library/reference/getmbcp.md) per eseguire una query per la tabella codici multibyte in uso oppure [_setmbcp](../c-runtime-library/reference/setmbcp.md) per modificarla.
 
@@ -89,7 +90,7 @@ La tabella seguente mostra i valori ORed che costituiscono le condizioni di test
 
 Le routine `_ismbb` vengono implementate sia come funzioni che come macro. Per altre informazioni sulla scelta di un'implementazione, vedere [Suggerimenti per la scelta tra funzioni e macro](../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classificazione byte](../c-runtime-library/byte-classification.md)<br/>
 [is, ISW routines](../c-runtime-library/is-isw-routines.md)<br/>

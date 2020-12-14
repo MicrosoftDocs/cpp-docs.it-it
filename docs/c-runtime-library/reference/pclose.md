@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _pclose'
 title: _pclose
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - pclose function
 - pipes, closing
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
-ms.openlocfilehash: 6b35b8e3faa2f1a193dce102a6f8a11b9fcbb82b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 529af8ccdd1c6cc27f9039adef5d75c8b977aa54
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910381"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258707"
 ---
 # <a name="_pclose"></a>_pclose
 
@@ -62,9 +63,9 @@ Restituisce lo stato di uscita del processore del comando di terminazione oppure
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **_pclose** cerca l'ID del processo del processore dei comandi (cmd. exe) avviato dalla chiamata **_popen** associata, esegue una chiamata [_cwait](cwait.md) sul nuovo processore del comando e chiude il flusso sulla pipe associata.
+La funzione **_pclose** cerca l'ID del processo del processore dei comandi (Cmd.exe) avviato dalla chiamata **_popen** associata, esegue una chiamata [_cwait](cwait.md) sul nuovo processore dei comandi e chiude il flusso sulla pipe associata.
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -80,8 +81,8 @@ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runt
 
 Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Process and Environment Control](../../c-runtime-library/process-and-environment-control.md) (Controllo processo e ambiente)<br/>
+[Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_pipe](pipe.md)<br/>
 [_popen, _wpopen](popen-wpopen.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Per altre informazioni, vedere operatori di incremento e decremento suffisso: + + e--'
 title: 'Operatori di incremento e decremento in forma suffissa: ++ e --'
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - operators [C++], postfix
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
-ms.openlocfilehash: 8c3eeb47ec81f4073452c17f40eb2fec4911989f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 56f955fc4c8b5508c4b2c4e03c37e89f9d2d8bc0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213281"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258512"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Operatori di incremento e decremento in forma suffissa: ++ e --
 
@@ -44,7 +45,7 @@ L'effetto dell'applicazione dell'operatore di incremento suffisso ( **++** ) con
 
 Quando un operatore suffisso viene applicato a un argomento di funzione, non è garantito che il valore dell'argomento venga incrementato o decrementato prima di essere passato alla funzione.  Per ulteriori informazioni, vedere la sezione 1.9.17 in C++ standard.
 
-L'applicazione dell'operatore di incremento suffisso a un puntatore a una matrice di oggetti di tipo **`long`** aggiunge effettivamente quattro alla rappresentazione interna del puntatore. Questo comportamento fa sì che il puntatore, che in precedenza faceva riferimento all'elemento *n*della matrice, faccia riferimento all'elemento (*n*+ 1) Th.
+L'applicazione dell'operatore di incremento suffisso a un puntatore a una matrice di oggetti di tipo **`long`** aggiunge effettivamente quattro alla rappresentazione interna del puntatore. Questo comportamento fa sì che il puntatore, che in precedenza faceva riferimento all'elemento *n* della matrice, faccia riferimento all'elemento (*n*+ 1) Th.
 
 Gli operandi per gli operatori di decremento suffisso e di decremento suffisso devono essere **`const`** valori l-value modificabili di tipo aritmetico o puntatore. Il tipo del risultato corrisponde a quello dell' *espressione suffissa*, ma non è più un l-value.
 
@@ -73,7 +74,7 @@ Compass myCompass;
 for( myCompass = North; myCompass != West; myCompass++ ) // Error
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Espressioni di suffisso](../cpp/postfix-expressions.md)<br/>
 [Operatori C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

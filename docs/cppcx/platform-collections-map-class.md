@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe Platform:: Collections:: Map'
 title: Classe Platform::Collections::Map
 ms.date: 10/01/2019
 ms.topic: reference
@@ -15,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 40b7d653b21cdc2b0fab4c852c9809ab1db46a12
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8414328a178e4f9e2cfd7c4d97cca07ce7efcd9f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839140"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258499"
 ---
 # <a name="platformcollectionsmap-class"></a>Classe Platform::Collections::Map
 
@@ -49,7 +50,7 @@ Tipo che fornisce un oggetto funzione che può confrontare due valori di element
 
 *__is_valid_winrt_type ()* Funzione generata dal compilatore che convalida il tipo di *K* e *V* e fornisce un messaggio di errore descrittivo se il tipo non può essere archiviato nella mappa.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I tipi consentiti sono:
 
@@ -71,13 +72,13 @@ Per ulteriori informazioni, vedere [raccolte](../cppcx/collections-c-cx.md).
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Map:: Map](#ctor)|Inizializza una nuova istanza della classe Map.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[Map:: Clear](#clear)|Rimuove tutte le coppie chiave-valore dall'oggetto Map corrente.|
 |[Map:: First](#first)|Restituisce un iteratore che specifica il primo elemento nella mappa.|
@@ -90,7 +91,7 @@ Per ulteriori informazioni, vedere [raccolte](../cppcx/collections-c-cx.md).
 
 ### <a name="events"></a>Eventi
 
-| Nome | Descrizione |
+| Nome | Description |
 |--|--|
 | Evento [Map:: mapchanged](#mapchanged) | Si verifica quando l'oggetto Map subisce delle modifiche. |
 
@@ -129,7 +130,7 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
 
 Iteratore che specifica il primo elemento nella mappa.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un modo pratico per conservare l'iteratore restituito da First () consiste nell'assegnare il valore restituito a una variabile dichiarata con la **`auto`** parola chiave di deduzione del tipo. Ad esempio: `auto x = myMap->First();`.
 
@@ -207,7 +208,7 @@ Chiave utilizzata per individuare un elemento in Map. Il tipo di *chiave* è Typ
 
 Valore abbinato alla *chiave*. Il tipo del valore restituito è TypeName *V*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se la chiave non esiste, viene generata un'eccezione [Platform:: OutOfBoundsException](../cppcx/platform-outofboundsexception-class.md) .
 
@@ -292,7 +293,7 @@ virtual property unsigned int Size;
 
 Numero di elementi in Map.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Raccolte (C++/CX)](collections-c-cx.md)<br/>
 [Spazio dei nomi Platform](platform-namespace-c-cx.md)<br/>
