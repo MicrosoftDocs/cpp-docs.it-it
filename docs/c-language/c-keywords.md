@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keywords [C]
 - redefining keywords
 - Microsoft-specific keywords
-ms.openlocfilehash: 1bcef118881a0596406d6ff455dd453220ff81c2
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 23a701333220ca58b6e28323fb6aced156337b3f
+ms.sourcegitcommit: be469dd87453255b0e35e333712c8207b09b3dd4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97300380"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97412440"
 ---
 # <a name="c-keywords"></a>Parole chiave C
 
@@ -63,8 +63,8 @@ Nel linguaggio C vengono utilizzate le parole chiave seguenti:
     :::column-end:::
     :::column:::
         **`while`**\
-        **`_Alignas`**<sup>2, a</sup>\
-        **`_Alignof`**<sup>2, a</sup>\
+        **[`_Alignas`](alignment-c.md#alignas-and-_alignas-c11)**<sup>2, a</sup>\
+        **[`_Alignof`](alignment-c.md#alignof-and-_alignof-c11)**<sup>2, a</sup>\
         **`_Atomic`**<sup>2, b</sup>\
         **`_Bool`**<sup>1, a</sup>\
         **`_Complex`**<sup>1, b</sup>\
@@ -134,6 +134,6 @@ Le estensioni Microsoft sono attivate per impostazione predefinita. Per semplifi
 
 Quando le estensioni Microsoft sono abilitate, è possibile utilizzare le parole chiave elencate in precedenza nei programmi. Per la conformità agli standard, la maggior parte di queste parole chiave è preceduta da un doppio carattere di sottolineatura. Le quattro eccezioni,,, **`dllexport`** **`dllimport`** **`naked`** e **`thread`** , vengono utilizzate solo con **`__declspec`** e non richiedono un doppio carattere di sottolineatura iniziali. Ai fini della compatibilità con le versioni precedenti, sono supportate le versioni con singolo carattere di sottolineatura delle parole chiave rimanenti.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Elementi di C](../c-language/elements-of-c.md)
