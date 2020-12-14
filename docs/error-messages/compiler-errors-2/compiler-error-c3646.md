@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3646'
 title: Errore del compilatore C3646
 ms.date: 06/14/2018
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3646
 ms.assetid: 4391ead2-9637-4ca3-aeda-5a991b18d66d
-ms.openlocfilehash: 5c11133fbf28cfb98de1367955c00c899e8b1042
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0c6f731a09612e6c128756de8d0690c922047e49
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214529"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203783"
 ---
 # <a name="compiler-error-c3646"></a>Errore del compilatore C3646
 
 > ' specifier ': identificatore di override sconosciuto
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Il compilatore ha trovato un token nella posizione in cui era prevista la ricerca di un identificatore di override, ma il token non è stato riconosciuto dal compilatore.
 

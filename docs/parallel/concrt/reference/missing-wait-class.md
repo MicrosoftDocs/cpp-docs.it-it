@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: missing_wait Class'
 title: Classe missing_wait
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - missing_wait class
 ms.assetid: ff981875-bd43-47e3-806f-b03c9f418b18
-ms.openlocfilehash: cf81d1ee6c144da210da5b1f37aca7910ae37bc8
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: bfbfdf4c2a52573d08c048bac278386aed1dc5a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142385"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202184"
 ---
 # <a name="missing_wait-class"></a>Classe missing_wait
 
@@ -29,13 +30,13 @@ class missing_wait : public std::exception;
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[missing_wait](#ctor)|Di overload. Costruisce un oggetto `missing_wait`.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Flusso di eccezioni assente, si è responsabili della chiamata al metodo `wait` o `run_and_wait` di un oggetto `task_group` o `structured_task_group` prima di consentire l'oggetto da distruggere. Il runtime genera questa eccezione come indicazione che è stato dimenticato di chiamare il metodo `wait` o `run_and_wait`.
+Flusso di eccezioni assente, si è responsabili della chiamata `wait` al `run_and_wait` metodo o di `task_group` un `structured_task_group` oggetto o prima di consentire l'oggetto da distruggere. Il runtime genera questa eccezione come indicazione che è stato dimenticato di chiamare il `wait` `run_and_wait` metodo o.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -49,7 +50,7 @@ Flusso di eccezioni assente, si è responsabili della chiamata al metodo `wait` 
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="ctor"></a>missing_wait
+## <a name="missing_wait"></a><a name="ctor"></a> missing_wait
 
 Costruisce un oggetto `missing_wait`.
 
@@ -64,9 +65,9 @@ missing_wait() throw();
 *_Message*<br/>
 Messaggio descrittivo dell'errore.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Spazio dei nomi concurrency](concurrency-namespace.md)<br/>
+[Spazio dei nomi Concurrency](concurrency-namespace.md)<br/>
 [Classe task_group](task-group-class.md)<br/>
 [attendere](task-group-class.md)<br/>
 [run_and_wait](task-group-class.md)<br/>

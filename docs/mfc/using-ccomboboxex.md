@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso di CComboBoxEx'
 title: Utilizzo di CComboBoxEx
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - combo boxes [MFC], CComboBoxEx class
 - CComboBox class [MFC], extended
 ms.assetid: c23cbfe8-75d2-4f98-a753-c942416eda52
-ms.openlocfilehash: a9f3ca623ca729837da56c5b8a8be92b29a5c913
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: bd8a31a44b74671465ec817d32aa69f9d17369ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447092"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202600"
 ---
 # <a name="using-ccomboboxex"></a>Utilizzo di CComboBoxEx
 
@@ -24,12 +25,12 @@ Utilizzare questo controllo per fornire la funzionalità di una casella combinat
 
 - [Creazione di un controllo casella combinata estesa](../mfc/creating-an-extended-combo-box-control.md)
 
-- [Uso degli elenchi di immagini in un controllo casella combinata estesa](../mfc/using-image-lists-in-an-extended-combo-box-control.md)
+- [Uso di elenchi di immagini in un controllo casella combinata estesa](../mfc/using-image-lists-in-an-extended-combo-box-control.md)
 
 - [Impostazione delle immagini per un singolo elemento](../mfc/setting-the-images-for-an-individual-item.md)
 
 - [Elaborazione dei messaggi di notifica nei controlli casella combinata estesa](../mfc/processing-notification-messages-in-extended-combo-box-controls.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli](../mfc/controls-mfc.md)

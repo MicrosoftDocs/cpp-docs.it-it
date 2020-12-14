@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3163'
 title: Errore del compilatore C3163
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3163
 ms.assetid: 17dcafa3-f416-4e04-a232-f9569218ba75
-ms.openlocfilehash: 29f810ab1ab1608ab9c0492c9f88b8edfe042168
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 53d0135e3083de7727b2a6c7f51a3f75e7314405
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87390026"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203952"
 ---
 # <a name="compiler-error-c3163"></a>Errore del compilatore C3163
 
@@ -38,6 +39,6 @@ using namespace System;
 // [CLSCompliant(true)] void f() {}
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Annotazioni SAL](../../c-runtime-library/sal-annotations.md)

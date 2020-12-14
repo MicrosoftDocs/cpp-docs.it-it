@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: multi_link_registry Class'
 title: Classe multi_link_registry
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-ms.openlocfilehash: 777b3f5206b4a595b5dcac653d608255e92f4ef6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a5d5e6c7e837f76a422c3f2879f74d1af36d64d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231702"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202132"
 ---
 # <a name="multi_link_registry-class"></a>Classe multi_link_registry
 
@@ -41,14 +42,14 @@ Tipo di dati Block archiviato nell' `multi_link_registry` oggetto.
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[multi_link_registry](#ctor)|Costruisce un oggetto `multi_link_registry`.|
 |[Distruttore ~ multi_link_registry](#dtor)|Elimina definitivamente l' `multi_link_registry` oggetto.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[add](#add)|Aggiunge un collegamento all' `multi_link_registry` oggetto. Esegue l'override di [network_link_registry:: Add](network-link-registry-class.md#add).|
 |[iniziare](#begin)|Restituisce un iteratore al primo elemento dell' `multi_link_registry` oggetto. Esegue l'override di [network_link_registry:: Begin](network-link-registry-class.md#begin).|
@@ -69,7 +70,7 @@ Tipo di dati Block archiviato nell' `multi_link_registry` oggetto.
 
 **Spazio dei nomi:** Concurrency
 
-## <a name="add"></a><a name="add"></a>aggiungere
+## <a name="add"></a><a name="add"></a> aggiungere
 
 Aggiunge un collegamento all' `multi_link_registry` oggetto.
 
@@ -82,11 +83,11 @@ virtual void add(_EType _Link);
 *_Link*<br/>
 Puntatore a un blocco da aggiungere.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il metodo genera un'eccezione [invalid_link_target](invalid-link-target-class.md) se il collegamento è già presente nel registro di sistema o se è già stato impostato un binding con la `set_bound` funzione e dopo che è stato rimosso un collegamento.
 
-## <a name="begin"></a><a name="begin"></a>iniziare
+## <a name="begin"></a><a name="begin"></a> iniziare
 
 Restituisce un iteratore al primo elemento dell' `multi_link_registry` oggetto.
 
@@ -98,11 +99,11 @@ virtual iterator begin();
 
 Iteratore che punta al primo elemento dell' `multi_link_registry` oggetto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Lo stato finale è indicato da un `NULL` collegamento.
 
-## <a name="contains"></a><a name="contains"></a>contiene
+## <a name="contains"></a><a name="contains"></a> contiene
 
 Cerca `multi_link_registry` un blocco specificato nell'oggetto.
 
@@ -119,7 +120,7 @@ Puntatore a un blocco da cercare nell' `multi_link_registry` oggetto.
 
 **`true`** Se il blocco specificato è stato trovato; **`false`** in caso contrario,.
 
-## <a name="count"></a><a name="count"></a>conteggio
+## <a name="count"></a><a name="count"></a> conteggio
 
 Conta il numero di elementi nell' `multi_link_registry` oggetto.
 
@@ -131,7 +132,7 @@ virtual size_t count();
 
 Il numero di elementi nell'oggetto `multi_link_registry`.
 
-## <a name="multi_link_registry"></a><a name="ctor"></a>multi_link_registry
+## <a name="multi_link_registry"></a><a name="ctor"></a> multi_link_registry
 
 Costruisce un oggetto `multi_link_registry`.
 
@@ -139,7 +140,7 @@ Costruisce un oggetto `multi_link_registry`.
 multi_link_registry();
 ```
 
-## <a name="multi_link_registry"></a><a name="dtor"></a>~ multi_link_registry
+## <a name="multi_link_registry"></a><a name="dtor"></a> ~ multi_link_registry
 
 Elimina definitivamente l' `multi_link_registry` oggetto.
 
@@ -147,11 +148,11 @@ Elimina definitivamente l' `multi_link_registry` oggetto.
 virtual ~multi_link_registry();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il metodo genera un'eccezione [invalid_operation](invalid-operation-class.md) se viene chiamato prima della rimozione di tutti i collegamenti.
 
-## <a name="remove"></a><a name="remove"></a>rimuovere
+## <a name="remove"></a><a name="remove"></a> rimuovere
 
 Rimuove un collegamento dall' `multi_link_registry` oggetto.
 
@@ -168,7 +169,7 @@ Puntatore a un blocco da rimuovere, se trovato.
 
 **`true`** Se il collegamento è stato trovato e rimosso; **`false`** in caso contrario,.
 
-## <a name="set_bound"></a><a name="set_bound"></a>set_bound
+## <a name="set_bound"></a><a name="set_bound"></a> set_bound
 
 Imposta un limite superiore per il numero di collegamenti che l' `multi_link_registry` oggetto può mantenere.
 
@@ -181,11 +182,11 @@ void set_bound(size_t _MaxLinks);
 *_MaxLinks*<br/>
 Numero massimo di collegamenti che l' `multi_link_registry` oggetto può mantenere.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Una volta impostato un limite, lo scollegamento di una voce comporta l'impostazione dello stato non modificabile per l'oggetto `multi_link_registry`, pertanto tramite le chiamate successive a `add` verrà generata un'eccezione `invalid_link_target`.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Concurrency](concurrency-namespace.md)<br/>
 [Classe single_link_registry](single-link-registry-class.md)

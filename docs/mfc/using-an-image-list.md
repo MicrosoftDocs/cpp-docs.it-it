@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: uso di un elenco di immagini'
 title: Utilizzo di un elenco di immagini
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - CImageList class [MFC], using
 - image lists [MFC]
 ms.assetid: e0aed188-a1e6-400e-9f51-033d61c5541f
-ms.openlocfilehash: 710831ea8ef6b52292ba3e8eb84a69575c6c7508
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 92587bd80a4f613a04cae22322ab258e9869d247
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226828"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202691"
 ---
 # <a name="using-an-image-list"></a>Utilizzo di un elenco di immagini
 
@@ -28,7 +29,7 @@ L'utilizzo tipico di un elenco di immagini segue il modello seguente:
 > [!NOTE]
 > Se l'elenco immagini è stato creato con l' **`new`** operatore, è necessario eliminare definitivamente l' `CImageList` oggetto al termine dell'operazione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Utilizzo di CImageList](../mfc/using-cimagelist.md)<br/>
 [Controlli](../mfc/controls-mfc.md)

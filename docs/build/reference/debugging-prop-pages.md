@@ -1,5 +1,6 @@
 ---
-title: C++Pagine delle proprietà di debug
+description: 'Altre informazioni su: pagine delle proprietà di debug C++'
+title: Pagine delle proprietà di debug C++
 ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 78115a6b-3799-4515-814e-8566b5bdc55d
@@ -35,16 +36,16 @@ f1_keywords:
 - VC.Project.IVCWebSvcDebugPageObject.HttpUrl
 - VC.Project.IVCWebSvcDebugPageObject.DebuggerType
 - VC.Project.IVCWebSvcDebugPageObject.SQLDebugging
-ms.openlocfilehash: c2190c4406e165cfec1915234b688c598f228777
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 16a7fec317485dd20a430baab9a413586f913fa3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169708"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201742"
 ---
-# <a name="c-debugging-property-pages"></a>C++Pagine delle proprietà di debug
+# <a name="c-debugging-property-pages"></a>Pagine delle proprietà di debug C++
 
-Queste pagine delle proprietà si trovano in **progetto** > **Proprietà** > **proprietà di configurazione** > **debug**. Scegliere il tipo di debugger nel controllo a discesa. Per altre informazioni sul debug C++ del codice, vedere [esercitazione: informazioni sul C++ debug del codice con Visual Studio](/visualstudio/debugger/getting-started-with-the-debugger-cpp) e [debug del codice nativo](/visualstudio/debugger/debugging-native-code).
+Queste pagine delle proprietà si trovano nel debug delle proprietà di configurazione delle proprietà del **progetto**  >    >    >  . Scegliere il tipo di debugger nel controllo a discesa. Per altre informazioni sul debug del codice C++, vedere [esercitazione: informazioni su come eseguire il debug di codice c++ con Visual Studio](/visualstudio/debugger/getting-started-with-the-debugger-cpp) e [debug del codice nativo](/visualstudio/debugger/debugging-native-code).
 
 ## <a name="local-windows-debugger-property-page"></a>Pagina delle proprietà del debugger Windows locale
 
@@ -60,7 +61,7 @@ Argomenti della riga di comando da passare all'applicazione.
 
 Directory di lavoro dell'applicazione. Per impostazione predefinita, la directory che contiene il file di progetto.
 
-### <a name="attach"></a>Collegamento
+### <a name="attach"></a>Allega
 
 Specifica se il debugger deve tentare di connettersi a un processo esistente all'avvio del debug.
 
@@ -75,9 +76,9 @@ Specifica il tipo di debugger da utilizzare. Se impostato su automatico, il tipo
 - Misto **misto**
 - **Auto-auto**
 - **Script-script**
-- **Solo GPU (C++ amp** )-solo GPU (C++ amp)
+- **Solo GPU (C++ amp)** -solo gpu (C++ amp)
 
-### <a name="environment"></a>Environment
+### <a name="environment"></a>Ambiente
 
 Specifica l'ambiente per il programma di cui eseguire il debug o le variabili da unire con l'ambiente esistente.
 
@@ -104,11 +105,11 @@ Alleghi il debugger SQL.
 
 ### <a name="amp-default-accelerator"></a>Tasto di scelta rapida predefinito AMP
 
-Esegue C++ l'override della selezione dell'acceleratore predefinito di amp. La proprietà non si applica quando si esegue il debug di codice gestito.
+Esegue l'override della selezione dell'acceleratore predefinito C++ AMP. La proprietà non si applica quando si esegue il debug di codice gestito.
 
 ## <a name="remote-windows-debugger-property-page"></a>Pagina delle proprietà del debugger Windows remoto
 
-Per altre informazioni sul debug remoto, vedere [debug remoto di un C++ progetto Visual Studio in Visual Studio](/visualstudio/debugger/remote-debugging-cpp).
+Per altre informazioni sul debug remoto, vedere [debug remoto di un progetto di Visual C++ in Visual Studio](/visualstudio/debugger/remote-debugging-cpp).
 
 ### <a name="remote-command"></a>Comando remoto
 
@@ -126,7 +127,7 @@ Directory di lavoro dell'applicazione. Per impostazione predefinita, la director
 
 Specifica il nome di un server remoto.
 
-### <a name="connection"></a>Connessione
+### <a name="connection"></a>Connessioni
 
 Specifica il tipo di connessione.
 
@@ -146,9 +147,9 @@ Specifica il tipo di debugger da utilizzare. Se impostato su automatico, il tipo
 - Misto **misto**
 - **Auto-auto**
 - **Script-script**
-- **Solo GPU (C++ amp** )-solo GPU (C++ amp)
+- **Solo GPU (C++ amp)** -solo gpu (C++ amp)
 
-### <a name="environment"></a>Environment
+### <a name="environment"></a>Ambiente
 
 Specifica l'ambiente per il programma di cui eseguire il debug o le variabili da unire con l'ambiente esistente.
 
@@ -165,7 +166,7 @@ Imposta la frequenza con cui il debugger GPU si interrompe.
 - **Interrompi una volta per ogni curva di distorsione** una volta per distorsione
 - **Interrompi per ogni thread (ad esempio, comportamento della CPU)** -Interrompi per ogni thread (ad esempio, comportamento della CPU)
 
-### <a name="attach"></a>Collegamento
+### <a name="attach"></a>Allega
 
 Specifica se il debugger deve tentare di connettersi a un processo esistente all'avvio del debug.
 
@@ -187,7 +188,7 @@ Specifica se distribuire le librerie di runtime di debug per la piattaforma atti
 
 ### <a name="amp-default-accelerator"></a>Tasto di scelta rapida predefinito AMP
 
-Esegue C++ l'override della selezione dell'acceleratore predefinito di amp. La proprietà non si applica quando si esegue il debug di codice gestito.
+Esegue l'override della selezione dell'acceleratore predefinito C++ AMP. La proprietà non si applica quando si esegue il debug di codice gestito.
 
 ## <a name="web-browser-debugger-property-page"></a>Pagina delle proprietà del debugger del Web browser
 

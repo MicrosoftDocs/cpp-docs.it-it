@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: utilizzo di controlli comuni in una finestra di dialogo'
 title: Utilizzo di controlli comuni in una finestra di dialogo
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - dialog box controls [MFC], common controls
 - Windows common controls [MFC], in dialog boxes
 ms.assetid: 17713caf-09f8-484a-bf54-5f48bf09cce9
-ms.openlocfilehash: 1a3dcb7151952b52affcfeb838ced15f0d116fce
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 73395ae5b3542f338f3783fd5f0c41116821fed6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500341"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202405"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>Utilizzo di controlli comuni in una finestra di dialogo
 
@@ -42,7 +43,7 @@ I controlli comuni di Windows possono essere usati nelle [finestre di dialogo](.
     > [!NOTE]
     >  È inoltre possibile utilizzare Dialog Data Exchange per impostare o recuperare i valori dai controlli in una finestra di dialogo.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'aggiunta di alcuni controlli comuni a una finestra di dialogo interromperà il funzionamento della finestra di dialogo. Per ulteriori informazioni sulla gestione di questa situazione, vedere l'articolo relativo all' [aggiunta di controlli a una finestra di dialogo](../windows/adding-editing-or-deleting-controls.md) .
 
@@ -58,7 +59,7 @@ L'aggiunta di alcuni controlli comuni a una finestra di dialogo interromperà il
 
 - [Utilizzare Dialog Data Exchange (DDX)](../mfc/dialog-data-exchange-and-validation.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Creazione e utilizzo di controlli](../mfc/making-and-using-controls.md)<br/>
 [Controlli](../mfc/controls-mfc.md)

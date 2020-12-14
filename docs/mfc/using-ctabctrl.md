@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: uso di CTabCtrl'
 title: Utilizzo di CTabCtrl
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CTabCtrl class [MFC], using
 - tab controls [MFC], using
 ms.assetid: 6bda6798-0085-4c09-a5ea-fe0e97af5c95
-ms.openlocfilehash: af61b33d592589f557afe13a319696a0f0f5f456
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6bb88d5446731248a2e7d83644f7f8c340105f4b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442260"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202353"
 ---
 # <a name="using-ctabctrl"></a>Utilizzo di CTabCtrl
 
@@ -24,16 +25,16 @@ Per ulteriori informazioni sui controlli struttura a schede, vedere [Tab Control
 
 - [Schede e attributi del controllo Tab](../mfc/tabs-and-tab-control-attributes.md)
 
-- [Creazione di schede create dal proprietario](../mfc/making-owner-drawn-tabs.md)
+- [Creazione di schede Owner-Drawn](../mfc/making-owner-drawn-tabs.md)
 
-- [Uso di un controllo Tab](../mfc/working-with-a-tab-control.md)
+- [Utilizzo di un controllo struttura a schede](../mfc/working-with-a-tab-control.md)
 
 - [Creazione del controllo Tab](../mfc/creating-the-tab-control.md)
 
-- [Aggiunta di schede a un controllo Tab](../mfc/adding-tabs-to-a-tab-control.md)
+- [Aggiunta di schede a un controllo struttura a schede](../mfc/adding-tabs-to-a-tab-control.md)
 
-- [Elaborazione dei messaggi di notifica dei controlli Tab](../mfc/processing-tab-control-notification-messages.md)
+- [Elaborazione dei messaggi di notifica del controllo Tab](../mfc/processing-tab-control-notification-messages.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Controlli](../mfc/controls-mfc.md)

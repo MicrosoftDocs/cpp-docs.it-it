@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: uso di CToolTipCtrl per creare e modificare un oggetto CToolTipCtrl'
 title: Utilizzo di CToolTipCtrl per creare e modificare un oggetto CToolTipCtrl
 ms.date: 11/04/2016
 helpviewer_keywords:
 - tool tips [MFC], creating
 - CToolTipCtrl class [MFC], using
 ms.assetid: 0a34583f-f66d-46a1-a239-31b80ea395ad
-ms.openlocfilehash: 37dc7bc5a411ebab3737b87fd6977b26cff68178
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 363d46ce078b71cf88d742ae390ab674a73ab935
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442211"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202340"
 ---
 # <a name="using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object"></a>Utilizzo di CToolTipCtrl per creare e modificare un oggetto CToolTipCtrl
 
@@ -20,7 +21,7 @@ Di seguito è riportato un esempio di utilizzo di [CToolTipCtrl](../mfc/referenc
 
 1. Costruire l'oggetto `CToolTipCtrl`.
 
-1. Chiamare [create](../mfc/reference/ctooltipctrl-class.md#create) per creare il controllo comune di descrizione comandi di Windows e collegarlo all'oggetto `CToolTipCtrl`.
+1. Chiamare [create](../mfc/reference/ctooltipctrl-class.md#create) per creare il controllo comune di descrizione comandi di Windows e collegarlo all' `CToolTipCtrl` oggetto.
 
 1. Chiamare [AddTool](../mfc/reference/ctooltipctrl-class.md#addtool) per registrare uno strumento con il controllo descrizione comando, in modo che le informazioni archiviate nella descrizione comandi vengano visualizzate quando il cursore si trova sullo strumento.
 
@@ -32,7 +33,7 @@ Di seguito è riportato un esempio di utilizzo di [CToolTipCtrl](../mfc/referenc
 
 1. Chiamare [GetToolCount](../mfc/reference/ctooltipctrl-class.md#gettoolcount) per recuperare un conteggio degli strumenti registrati con il controllo descrizione comando.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Uso di CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
+[Utilizzo di CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
 [Controlli](../mfc/controls-mfc.md)

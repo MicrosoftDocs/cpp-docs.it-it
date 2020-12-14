@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; operatori facoltativi &gt;'
 title: '&lt;operatori facoltativi &gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (optional)
 - std::operatoroperator&lt; (optional)
 - std::operatoroperator&lt;= (optional)
-ms.openlocfilehash: c7eca76f71f12e7f7fe0e60c0a4cfe456d54c374
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3c61f62ff87ab285dfeb5b26f1d22de86ef50fee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224682"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201859"
 ---
 # <a name="ltoptionalgt-operators"></a>&lt;operatori facoltativi &gt;
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operatore = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operatore = =
 
 Verifica se l'oggetto `optional` sul lato sinistro dell'operatore è uguale all'oggetto `optional` sul lato destro.
 
@@ -45,7 +46,7 @@ Oggetto di tipo `optional` , `nullopt_t` o `T` .
 *Ok*\
 Oggetto di tipo `optional` , `nullopt_t` o `T` .
 
-## <a name="operator"></a><a name="op_neq"></a>operatore! =
+## <a name="operator"></a><a name="op_neq"></a> operatore! =
 
 Verifica se l'oggetto `optional` sul lato sinistro dell'operatore non è uguale all'oggetto `optional` sul lato destro.
 
@@ -65,11 +66,11 @@ Oggetto di tipo `optional` , `nullopt_t` o `T` .
 *Ok*\
 Oggetto di tipo `optional` , `nullopt_t` o `T` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione modello restituisce `!(left == right)`.
 
-## <a name="operatorlt"></a><a name="op_lt"></a>operatore&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> operatore&lt;
 
 Verifica se l'oggetto `optional` sul lato sinistro dell'operatore è minore dell'oggetto `optional` sul lato destro.
 
@@ -93,7 +94,7 @@ Oggetto di tipo `optional` , `nullopt_t` o `T` .
 
 **`true`** Se l'elenco sul lato sinistro dell'operatore è minore ma non uguale all'elenco a destra dell'operatore; in caso contrario **`false`** ,.
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>operatore&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> operatore&lt;=
 
 Verifica se l'oggetto `optional` sul lato sinistro dell'operatore è minore o uguale all'oggetto `optional` sul lato destro.
 
@@ -117,11 +118,11 @@ Oggetto di tipo `optional` , `nullopt_t` o `T` .
 
 **`true`** Se l'elenco sul lato sinistro dell'operatore è minore o uguale all'elenco a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione modello restituisce `!(right < left)`.
 
-## <a name="operatorgt"></a><a name="op_gt"></a>operatore&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> operatore&gt;
 
 Verifica se l'oggetto `optional` sul lato sinistro dell'operatore è maggiore dell'oggetto `optional` sul lato destro.
 
@@ -145,11 +146,11 @@ Oggetto di tipo `optional` , `nullopt_t` o `T` .
 
 **`true`** Se l'elenco sul lato sinistro dell'operatore è maggiore dell'elenco a destra dell'operatore; in caso contrario **`false`** ,.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione modello restituisce `right < left`.
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>operatore&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> operatore&gt;=
 
 Verifica se l'oggetto `optional` sul lato sinistro dell'operatore è maggiore o uguale all'oggetto `optional` sul lato destro.
 
@@ -173,6 +174,6 @@ Oggetto di tipo `optional` , `nullopt_t` o `T` .
 
 **`true`** Se l'oggetto `optional` sul lato sinistro dell'operatore è maggiore o uguale all'oggetto a `optional` destra; in caso contrario, **`false`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione modello restituisce `!(left < right)`.

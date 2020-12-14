@@ -1,4 +1,5 @@
 ---
+description: Ulteriori informazioni su:/DEBUG (genera informazioni di debug)
 title: /DEBUG (Genera informazioni di debug)
 ms.date: 05/16/2019
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - debugging [C++], linker option
 - program databases [C++]
 ms.assetid: 1af389ae-3f8b-4d76-a087-1cdf861e9103
-ms.openlocfilehash: 2ec466a6356ace437d32eb517bf2da291938f5db
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: b0ef30fe7cb5eb5af0c46d6f6a8f3533d2e7d6ea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837150"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201820"
 ---
 # <a name="debug-generate-debug-info"></a>/DEBUG (Genera informazioni di debug)
 
@@ -29,7 +30,7 @@ ms.locfileid: "65837150"
 /DEBUG[:{FASTLINK|FULL|NONE}]
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'opzione **/DEBUG** crea le informazioni di debug per l'eseguibile.
 
@@ -69,7 +70,7 @@ Non è possibile creare un file EXE o una DLL che contenga le informazioni di de
 
 1. Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateDebugInformation%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Informazioni di riferimento sul linker MSVC](linking.md)<br/>
 [Opzioni del linker MSVC](linker-options.md)

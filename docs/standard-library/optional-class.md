@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe facoltativa'
 title: Classe facoltativa
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - optional/std::optional::reset
 - optional/std::optional::value
 - optional/std::optional::value_or
-ms.openlocfilehash: b1e77325cc485da1caec91316ce5d46cfa6357dc
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fc0f14eb8bffc55c10db73b9b2f1ea5bcfdf6995
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841935"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201937"
 ---
 # <a name="optional-class"></a>Classe facoltativa
 
@@ -42,11 +43,11 @@ class optional
 template<class T> optional(T) -> optional<T>;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="constructors"></a>Costruttori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 | **Costruttori e distruttori** | |
 |[opzionale](#optional) | Costruisce un oggetto di tipo `optional`. |
@@ -109,7 +110,7 @@ Elenco di inizializzatori da cui creare il valore contenuto.
 *args*\
 Elenco di argomenti da cui creare il valore contenuto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `constexpr optional() noexcept;`
 `constexpr optional(nullopt_t nullopt) noexcept;` Questi costruttori costruiscono un oggetto `optional` che non contiene un valore.
@@ -136,7 +137,7 @@ Elimina qualsiasi valore contenuto non facilmente distruttibile, se presente, ri
 ~optional();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se `T` è facilmente distruttibile, può essere facilmente `optional<T>` distruttibile.
 
