@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _mbsnbicmp, _mbsnbicmp_l'
 title: _mbsnbicmp, _mbsnbicmp_l
 ms.date: 4/2/2020
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - mbsnbicmp function
 - _wcsnicmp function
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
-ms.openlocfilehash: e84e6b367c428dc26a1864db80f6828f7ec9c176
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9cc833061ceca899af78da4c50610ed101dcd2d1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911825"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240273"
 ---
 # <a name="_mbsnbicmp-_mbsnbicmp_l"></a>_mbsnbicmp, _mbsnbicmp_l
 
@@ -76,7 +77,7 @@ Numero di byte da confrontare.
 
 Il valore restituito indica la relazione ordinale tra le sottostringhe.
 
-|Valore restituito|Description|
+|Valore restituito|Descrizione|
 |------------------|-----------------|
 |< 0|sottostringa *String1* minore della sottostringa *string2* .|
 |0|sottostringa *String1* identica alla sottostringa *string2* .|
@@ -84,11 +85,11 @@ Il valore restituito indica la relazione ordinale tra le sottostringhe.
 
 In un errore, **_mbsnbicmp** restituisce **_NLSCMPERROR**, che è definito in String. h e mbstring. h.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_mbsnbicmp** esegue un confronto ordinale al massimo dei primi byte di *conteggio* di *String1* e *string2*. Il confronto viene eseguito convertendo ogni carattere in minuscolo; [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) è una versione con distinzione tra maiuscole e minuscole di **_mbsnbicmp**. Il confronto termina se viene raggiunto un carattere di terminazione null in entrambe le stringhe prima che vengano confrontati i caratteri di *conteggio* . Se le stringhe sono uguali quando viene raggiunto un carattere di terminazione null in entrambe le stringhe prima che vengano confrontati i caratteri di *conteggio* , la stringa più corta è minore.
 
-**_mbsnbicmp** è simile a [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), ad eccezione del fatto che confronta le stringhe fino al *conteggio* dei byte anziché in base ai caratteri.
+**_mbsnbicmp**  è simile a [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), ad eccezione del fatto che confronta le stringhe fino al *conteggio* dei byte anziché in base ai caratteri.
 
 Due stringhe che contengono caratteri compresi tra "Z" e "a" nella tabella ASCII ('[', '\\', ']', '^', '_' e '\`') vengono confrontate in modo diverso, a seconda della combinazione di maiuscole e minuscole. Ad esempio, le due stringhe "ABCDe" e "ABCD ^" vengono confrontate in un modo se il confronto è in minuscolo ("abcde" > "abcd ^") e viceversa ("ABCDe" < "ABCD ^") se è maiuscolo.
 
@@ -117,7 +118,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runt
 
 Vedere l'esempio per [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

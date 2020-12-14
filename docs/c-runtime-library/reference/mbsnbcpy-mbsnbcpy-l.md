@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _mbsnbcpy, _mbsnbcpy_l'
 title: _mbsnbcpy, _mbsnbcpy_l
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - mbsnbcpy_l function
 - tcsncpy function
 ms.assetid: 83d17b50-3cbf-4df9-bce8-3b6d52f85d04
-ms.openlocfilehash: ea89458a51360b8781cb713fc9412239d2e03c78
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 24c82e432b1ababf703ff0cf6061c807f116d0e9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911901"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240416"
 ---
 # <a name="_mbsnbcpy-_mbsnbcpy_l"></a>_mbsnbcpy, _mbsnbcpy_l
 
@@ -99,7 +100,7 @@ Impostazioni locali da usare.
 
 **_mbsnbcpy** restituisce un puntatore alla stringa di caratteri di destinazione. Nessun valore restituito è riservato per indicare un errore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_mbsnbcpy** copia i byte del *conteggio* da *strSource* a *strDest*. Se *count* supera la dimensione di *strDest* o le stringhe di origine e di destinazione si sovrappongono, il comportamento di **_mbsnbcpy** non è definito.
 
@@ -130,7 +131,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

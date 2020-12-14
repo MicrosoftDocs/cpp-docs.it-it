@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: tipo float'
 title: Tipo float
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - IEEE floating-point representation
 - lengths, exponent
 ms.assetid: 706e332b-17a0-4a30-b7d8-5d6cd372524b
-ms.openlocfilehash: 61bfd094801165e0c3e41e5de6fcbfb0c5e59504
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d2245db663885d084ee231d10b7dc944016ea4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346327"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97242834"
 ---
 # <a name="type-float"></a>Tipo float
 
@@ -29,7 +30,7 @@ I numeri a virgola mobile utilizzano il formato IEEE (Institute of Electrical an
 
 ### <a name="floating-point-types"></a>Tipi a virgola mobile
 
-|Type|Cifre significative|Numero di byte|
+|Tipo|Cifre significative|Numero di byte|
 |----------|------------------------|---------------------|
 |float|6 - 7|4|
 |double|15 - 16|8|
@@ -40,7 +41,7 @@ Nella tabella riportata di seguito viene indicato il numero di bit allocati alla
 
 ### <a name="lengths-of-exponents-and-mantissas"></a>Lunghezza degli esponenti e delle mantisse
 
-|Type|Lunghezza degli esponenti|Lunghezza delle mantisse|
+|Tipo|Lunghezza degli esponenti|Lunghezza delle mantisse|
 |----------|---------------------|---------------------|
 |float|8 bit|23 bit|
 |double|11 bit|52 bit|
@@ -51,11 +52,11 @@ La mantissa viene archiviata come frazione binaria maggiore o uguale a 1 e minor
 
 A differenza del metodo di archiviazione appena descritto, il pacchetto a virgola mobile può archiviare i numeri binari a virgola mobile come numeri denormalizzati. I "numeri denormalizzati" sono numeri a virgola mobile diversi da zero con valori dell'esponente riservati in cui il bit più significativo della mantissa è 0. Utilizzando il formato denormalizzato, l'intervallo di un numero a virgola mobile può essere esteso a discapito di una minore precisione. Non è possibile determinare se un numero a virgola mobile venga rappresentato in forma normalizzata o denormalizzata; il pacchetto a virgola mobile determina la rappresentazione. Il pacchetto a virgola mobile non utilizza mai una forma denormalizzata a meno che l'esponente non diventi inferiore al valore minimo rappresentabile in forma normalizzata.
 
-Nella tabella seguente vengono riportati i valori minimo e massimo che è possibile archiviare nelle variabili di ciascun tipo a virgola mobile. I valori elencati in questa tabella sono applicabili solo ai numeri a virgola mobile normalizzati; i numeri a virgola mobile denormalizzati hanno un valore minimo inferiore. Si noti che i numeri mantenuti nei registri 80*x*87 vengono sempre rappresentati in forma normalizzata a 80 bit. I numeri possono essere rappresentati in forma denormalizzata solo quando sono archiviati nelle variabili a virgola mobile a 32 o 64 bit (variabili di tipo float e long).
+Nella tabella seguente vengono riportati i valori minimo e massimo che è possibile archiviare nelle variabili di ciascun tipo a virgola mobile. I valori elencati in questa tabella sono applicabili solo ai numeri a virgola mobile normalizzati; i numeri a virgola mobile denormalizzati hanno un valore minimo inferiore. Si noti che i numeri mantenuti nei registri 80 *x* 87 vengono sempre rappresentati in forma normalizzata a 80 bit. I numeri possono essere rappresentati in forma denormalizzata solo quando sono archiviati nelle variabili a virgola mobile a 32 o 64 bit (variabili di tipo float e long).
 
 ### <a name="range-of-floating-point-types"></a>Intervallo dei tipi a virgola mobile
 
-|Type|Valore minimo|Valore massimo|
+|Tipo|Valore minimo|Valore massimo|
 |----------|-------------------|-------------------|
 |float|1,175494351 E - 38|3,402823466 E + 38|
 |double|2,2250738585072014 E - 308|1,7976931348623158 E + 308|
@@ -80,6 +81,6 @@ Nell'esempio riportato di seguito (che utilizza le dichiarazioni dell'esempio pr
 f_longer = f_short * f_short;
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Archiviazione di tipi di base](../c-language/storage-of-basic-types.md)

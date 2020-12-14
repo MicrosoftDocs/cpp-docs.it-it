@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/YC (crea il file di intestazione precompilata)
 title: /Yc (Crea il file di intestazione precompilato)
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - /Yc compiler option [C++]
 - Yc compiler option [C++]
 ms.assetid: 47c2e555-b4f5-46e6-906e-ab5cf21f0678
-ms.openlocfilehash: 71a05df3adc74edfd814bb6dc15121e4a343dc4d
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: eba045c3148d0caceee3ca6f9d5352ea61726757
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825756"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243649"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (Crea il file di intestazione precompilato)
 
@@ -29,14 +30,14 @@ Indica al compilatore di creare un file di intestazione precompilata (PCH) che r
 ## <a name="syntax"></a>Sintassi
 
 > __/YC__\
-> __/Yc__*Nome file* /YC
+> *Nome file* /YC
 
 ## <a name="arguments"></a>Argomenti
 
 *filename*<br/>
 Specifica un file di intestazione (. h). Quando si usa questo argomento, il compilatore compila tutto il codice fino al file con estensione h.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Quando **/YC** viene specificato senza un argomento, il compilatore compila tutto il codice fino alla fine del file di origine di base o fino al punto nel file di base in cui si verifica una direttiva [hdrstop](../../preprocessor/hdrstop.md) . Il file con estensione PCH risultante ha lo stesso nome di base del file di origine di base, a meno che non si specifichi un nome file diverso usando il pragma **hdrstop** o l'opzione **/FP** .
 
@@ -48,7 +49,7 @@ Se le opzioni __/YC__*filename* e __/Yu__*filename* sono presenti nella stessa r
 
 Per ulteriori informazioni sulle intestazioni precompilate, vedere:
 
-- [/Y (Intestazioni precompilate)](y-precompiled-headers.md)
+- [/Y (intestazioni precompilate)](y-precompiled-headers.md)
 
 - [File di intestazione precompilata](../creating-precompiled-header-files.md)
 
@@ -70,7 +71,7 @@ Per ulteriori informazioni sulle intestazioni precompilate, vedere:
 
 ## <a name="example"></a>Esempio
 
-Esaminare il codice seguente:
+Osservare il codice seguente:
 
 ```cpp
 // prog.cpp
@@ -81,10 +82,10 @@ Esaminare il codice seguente:
 // ...
 ```
 
-Quando questo codice viene compilato con il comando `CL /YcMYAPP.H PROG.CPP`, il compilatore salva tutta la pre-elaborazione per AFXWIN. h, Resource. h e MyApp. h in un file di intestazione precompilato denominato MyApp. pch.
+Quando questo codice viene compilato con il comando `CL /YcMYAPP.H PROG.CPP` , il compilatore salva tutta la pre-elaborazione per AFXWIN. h, Resource. h e MyApp. h in un file di intestazione precompilato denominato MyApp. pch.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)<br/>
 [File di intestazione precompilata](../creating-precompiled-header-files.md)

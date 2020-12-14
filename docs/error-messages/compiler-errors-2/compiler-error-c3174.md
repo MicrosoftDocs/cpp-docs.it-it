@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3174'
 title: Errore del compilatore C3174
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3174
 ms.assetid: fe6b3b5a-8196-485f-a45f-0b2e51df4086
-ms.openlocfilehash: a14b59168e0723ea25eefa9ec33a3131837a3aa4
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 28a2daae597e93d8aa3745ad16eed491e3ea2e87
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508272"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97242093"
 ---
 # <a name="compiler-error-c3174"></a>Errore del compilatore C3174
 

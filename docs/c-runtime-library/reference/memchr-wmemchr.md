@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: memchr, wmemchr'
 title: memchr, wmemchr
 ms.date: 03/31/2019
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: b4640004526eda4ff26e9601e15298bcb8ba3c79
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 695973fd9551758de6c0638493057b31e9a74aab
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232469"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240000"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
@@ -88,9 +89,9 @@ Numero di caratteri da controllare.
 
 Se ha esito positivo, restituisce un puntatore alla prima posizione di *c* nel *buffer*. In caso contrario, restituisce NULL.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-`memchr`e `wmemchr` cercano la prima occorrenza di *c* nei primi caratteri di *conteggio* del *buffer*. Si interrompe quando viene trovato *c* o quando sono stati controllati i primi caratteri di *conteggio* .
+`memchr` e `wmemchr` cercano la prima occorrenza di *c* nei primi caratteri di *conteggio* del *buffer*. Si interrompe quando viene trovato *c* o quando sono stati controllati i primi caratteri di *conteggio* .
 
 In C queste funzioni accettano un **`const`** puntatore per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore a **`const`** restituisce un puntatore a **`const`** ; la versione che accetta un puntatore a non **`const`** restituisce un puntatore a non- **`const`** . Gli overload della macro \_ CRT \_ const \_ corretti \_ vengono definiti se **`const`** sono disponibili entrambe le versioni e non le **`const`** versioni di queste funzioni. Se è necessario il comportamento non- **`const`** per entrambi gli overload c++ in c++, definire il simbolo \_ const \_ return.
 
@@ -150,7 +151,7 @@ Search char: r
 Result:      r found at position 12
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Manipolazione del buffer](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: identificatore finale'
 title: Identificatore final
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - final Identifier
 ms.assetid: 649866d0-79d4-449f-ab74-f84b911b79a3
-ms.openlocfilehash: 93e8d9b0b445d1120ec15911eb763ae1d7d2d359
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5fd6ee3c23a455c4316593cc089c26c34477709d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188657"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97242612"
 ---
 # <a name="final-specifier"></a>Identificatore final
 
@@ -62,7 +63,7 @@ class DerivedClass: public BaseClass // compiler error: BaseClass is
 };
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Parole chiave](../cpp/keywords-cpp.md)<br/>
-[Identificatore override](../cpp/override-specifier.md)
+[Identificatore di override](../cpp/override-specifier.md)

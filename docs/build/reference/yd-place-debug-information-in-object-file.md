@@ -1,4 +1,5 @@
 ---
+description: Ulteriori informazioni su:/YD (inserire le informazioni di debug nel file oggetto)
 title: /Yd (Inserisce le informazioni di debug nel file oggetto)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - debugging [C++], debug information files
 - Yd compiler option [C++]
 ms.assetid: c5a699fe-65ce-461e-964c-7f5eb2a8320a
-ms.openlocfilehash: e6719226d28088d10da6c4f0e6caf3bdb78bea27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7716d5ca1893faefac9186f97e2f7439a3887343
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316171"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243588"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (Inserisce le informazioni di debug nel file oggetto)
 
-Pazi completa in tutti i file oggetto informazioni di debug creato da un file di intestazione precompilata (PCH) se usato con il [/Yc](yc-create-precompiled-header-file.md) e [/Z7](z7-zi-zi-debug-information-format.md) opzioni. Deprecato.
+Consente di completare le informazioni di debug in tutti i file oggetto creati da un file di intestazione precompilata (PCH) se utilizzato con le opzioni [/YC](yc-create-precompiled-header-file.md) e [/Z7](z7-zi-zi-debug-information-format.md) . Deprecato.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,17 +27,17 @@ Pazi completa in tutti i file oggetto informazioni di debug creato da un file di
 /Yd
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-**/Yd** è deprecato. Visual C++ supporta ora più oggetti, la scrittura in un unico file PDB, usare **/Zi** invece. Per un elenco di opzioni del compilatore deprecate, vedere **deprecate o rimosse le opzioni del compilatore** nelle [opzioni del compilatore elencate per categoria](compiler-options-listed-by-category.md).
+**/YD** è deprecato; Visual C++ supporta ora più oggetti che scrivono in un unico file con estensione PDB, utilizzare **/Zi** in alternativa. Per un elenco delle opzioni del compilatore deprecate, vedere Opzioni del compilatore **deprecate e rimosse** nelle [Opzioni del compilatore elencate per categoria](compiler-options-listed-by-category.md).
 
-A meno che non è necessario distribuire le informazioni di debug contenente una libreria, usare il [/Zi](z7-zi-zi-debug-information-format.md) opzione invece **/Z7** e **/Yd**.
+A meno che non sia necessario distribuire una libreria contenente le informazioni di debug, utilizzare l'opzione [/Zi](z7-zi-zi-debug-information-format.md) anziché **/Z7** e **/YD**.
 
-L'archiviazione delle informazioni di debug complete in tutti i file con estensione obj è necessaria solo per distribuire le librerie che contengono informazioni di debug. Rallenta la compilazione e richiede spazio su disco considerevole. Quando **/Yc** e **/Z7** vengono usate senza **/Yd**, il compilatore archivia le informazioni di debug comuni nel primo file con estensione obj creato dal file con estensione pch. Il compilatore non inserire queste informazioni in file con estensione obj creati successivamente dal file pch. Inserisce riferimenti incrociati per le informazioni. Indipendentemente dal numero di file con estensione obj Usa il file con estensione pch, un solo file con estensione obj contiene le informazioni di debug comuni.
+L'archiviazione delle informazioni di debug complete in ogni file obj è necessaria solo per distribuire le librerie che contengono informazioni di debug. Il rallentamento della compilazione richiede una notevole quantità di spazio su disco. Quando **/YC** e **/Z7** vengono usati senza **/YD**, il compilatore archivia le informazioni di debug comuni nel primo file con estensione obj creato dal file PCH. Il compilatore non inserisce queste informazioni nei file obj creati successivamente dal file PCH; inserisce riferimenti incrociati alle informazioni. Indipendentemente dal numero di file con estensione obj che usano il file PCH, solo un file con estensione obj contiene le informazioni di debug comuni.
 
-Sebbene questo comportamento predefinito determini più velocemente i tempi di compilazione e riduca le esigenze di spazio su disco, non è auspicabile se una piccola modifica richiede la ricompilazione del file obj contenente le informazioni di debug comuni. In questo caso, il compilatore deve ricompilare tutti i file con estensione obj contenente riferimenti incrociati al file con estensione obj originale. Inoltre, se un file con estensione pch comune viene utilizzato da progetti diversi, è difficile dipendenza dai riferimenti incrociati a un singolo file obj.
+Anche se questo comportamento predefinito comporta tempi di compilazione più rapidi e riduce le richieste di spazio su disco, non è auspicabile se una modifica di piccole dimensioni richiede la ricompilazione del file con estensione obj contenente le informazioni di debug comuni. In questo caso, il compilatore deve ricompilare tutti i file con estensione obj contenenti riferimenti incrociati al file obj originale. Inoltre, se un file con estensione PCH comune viene usato da progetti diversi, è difficile affidarsi a riferimenti incrociati a un singolo file obj.
 
-Per altre informazioni sulle intestazioni precompilate, vedere:
+Per ulteriori informazioni sulle intestazioni precompilate, vedere:
 
 - [/Y (intestazioni precompilate)](y-precompiled-headers.md)
 
@@ -44,7 +45,7 @@ Per altre informazioni sulle intestazioni precompilate, vedere:
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -56,32 +57,32 @@ Per altre informazioni sulle intestazioni precompilate, vedere:
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
-Si supponga di avere due file di base, f. cpp e g. cpp, ognuno dei quali contiene questi **#include** istruzioni:
+Si supponga di avere due file di base, F. cpp e G. cpp, ognuno dei quali contiene le istruzioni **#include** :
 
 ```
 #include "windows.h"
 #include "etc.h"
 ```
 
-Il comando seguente crea l'intestazione precompilata file etc. pch e file oggetto obj:
+Il comando seguente crea il file di intestazione precompilata e così via. pch e il file oggetto F. obj:
 
 ```
 CL /YcETC.H /Z7 F.CPP
 ```
 
-Il file oggetto obj include tipo e informazioni sui simboli di Windows. h ed etc. h (e qualsiasi altro file di intestazione che inclusi). A questo punto è possibile utilizzare l'intestazione precompilata, etc. pch per compilare il file di origine g. cpp:
+Il file oggetto F. obj include informazioni sul tipo e sui simboli per WINDOWS. h e così via. h (e qualsiasi altro file di intestazione incluso). È ora possibile usare l'intestazione precompilata e così via PCH per compilare il file di origine G. cpp:
 
 ```
 CL /YuETC.H /Z7 G.CPP
 ```
 
-Il file oggetto g. obj non include le informazioni di debug per l'intestazione precompilata ma semplicemente fa riferimento a tali informazioni nel file obj. Si noti che è necessario collegarlo con il file obj.
+Il file oggetto G. obj non include le informazioni di debug per l'intestazione precompilata, ma fa semplicemente riferimento a tali informazioni nel file F. obj. Si noti che è necessario collegare il file F. obj.
 
-Se l'intestazione precompilata non è stato compilato con **/Z7**, è comunque possibile utilizzarlo nelle compilazioni successive mediante **/Z7**. Tuttavia, le informazioni di debug viene inserite nel file dell'oggetto corrente e simboli locali per le funzioni e tipi definiti nell'intestazione precompilata non sono disponibili al debugger.
+Se l'intestazione precompilata non è stata compilata con **/Z7**, è comunque possibile utilizzarla nelle compilazioni successive utilizzando **/Z7**. Tuttavia, le informazioni di debug vengono inserite nel file oggetto corrente e i simboli locali per le funzioni e i tipi definiti nell'intestazione precompilata non sono disponibili per il debugger.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

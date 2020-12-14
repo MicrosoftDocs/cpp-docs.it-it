@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: editor di risorse (C++)'
 title: Editor di risorse (C++)
 ms.date: 02/14/2019
 f1_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: f854f3cc6e61e3022e784befc738bf28c1adeb6c
-ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
+ms.openlocfilehash: b867f34c5195864a22212ec079bf0de8ace20407
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765241"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247241"
 ---
 # <a name="resource-editors-c"></a>Editor di risorse (C++)
 
@@ -73,7 +74,7 @@ Le risorse possono anche essere modificate all'esterno del progetto senza aprire
 
 #### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>Per visualizzare una risorsa Win32 in un editor di risorse
 
-1. Vai a menu **Visualizza**  >  **altre**  >  **visualizzazione risorse**di Windows.
+1. Vai a menu **Visualizza**  >  **altre**  >  **visualizzazione risorse** di Windows.
 
 1. Se la finestra **visualizzazione risorse** non è la finestra in primo piano, selezionare la scheda **visualizzazione risorse** per portarla nella parte superiore.
 
@@ -85,7 +86,7 @@ Le risorse possono anche essere modificate all'esterno del progetto senza aprire
 
 #### <a name="to-delete-an-existing-win32-resource"></a>Per eliminare una risorsa Win32 esistente
 
-1. In **visualizzazione risorse**espandere il nodo per un tipo di risorsa.
+1. In **visualizzazione risorse** espandere il nodo per un tipo di risorsa.
 
 1. Fare clic con il pulsante destro del mouse sulla risorsa che si desidera eliminare e scegliere **Elimina**.
 
@@ -96,9 +97,9 @@ Le risorse possono anche essere modificate all'esterno del progetto senza aprire
 
 Poiché i progetti gestiti non usano file di script di risorse, è necessario aprire le risorse da **Esplora soluzioni**. Utilizzare l' [editor di immagini](../windows/image-editor-for-icons.md) e l' [editor binario](binary-editor.md) per utilizzare i file di risorse nei progetti gestiti. Tutte le risorse gestite che si desidera modificare devono essere risorse collegate e gli editor di risorse di Visual Studio non supportano la modifica delle risorse incorporate.
 
-- Per visualizzare una risorsa gestita in un editor di risorse, in **Esplora soluzioni**fare doppio clic sulla risorsa, ad esempio *Bitmap1.bmp*, e la risorsa viene aperta nell'editor appropriato.
+- Per visualizzare una risorsa gestita in un editor di risorse, in **Esplora soluzioni** fare doppio clic sulla risorsa, ad esempio *Bitmap1.bmp*, e la risorsa viene aperta nell'editor appropriato.
 
-- Per eliminare una risorsa gestita esistente, in **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla risorsa che si desidera eliminare e scegliere **Elimina**.
+- Per eliminare una risorsa gestita esistente, in **Esplora soluzioni** fare clic con il pulsante destro del mouse sulla risorsa che si desidera eliminare e scegliere **Elimina**.
 
 ## <a name="preview-resources"></a>Anteprima risorse
 
@@ -118,7 +119,7 @@ Le risorse seguenti non forniscono un'anteprima visiva: acceleratore, manifesto,
 1. Nella [finestra Proprietà](/visualstudio/ide/reference/properties-window)selezionare il pulsante **pagine delle proprietà** .
 
    > [!TIP]
-   > Utilizzare un collegamento, passare a **visualizzazione**menu  >  **pagine delle proprietà**.
+   > Utilizzare un collegamento, passare a **visualizzazione** menu  >  **pagine delle proprietà**.
 
    Viene visualizzata la pagina delle **Proprietà** per la risorsa che visualizza un'anteprima di tale risorsa. È possibile utilizzare i tasti freccia **su** e **giù** per spostarsi nel controllo albero **visualizzazione risorse** o nella finestra del documento. La pagina delle **Proprietà** rimarrà aperta e mostrerà tutte le risorse che hanno lo stato attivo e che possono essere visualizzate in anteprima.
 
@@ -126,7 +127,7 @@ Le risorse seguenti non forniscono un'anteprima visiva: acceleratore, manifesto,
 
 Nessuno
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Uso di file di risorse](../windows/working-with-resource-files.md)<br/>
 [File di risorse](../windows/resource-files-visual-studio.md)<br/>

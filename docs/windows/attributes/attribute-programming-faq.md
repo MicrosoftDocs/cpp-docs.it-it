@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: domande frequenti sulla programmazione degli attributi'
 title: Domande frequenti sulla programmazione con attributi
 ms.date: 10/02/2018
 ms.topic: conceptual
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-ms.openlocfilehash: 70fbcc47884214fb998eb63ebfe50e445dbe95b8
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7a3bdfc8749297d11c5bc33b706265a1f5913a69
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843144"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240429"
 ---
 # <a name="attribute-programming-faq"></a>Domande frequenti sulla programmazione con attributi
 
@@ -272,6 +273,6 @@ Se si intende creare una dichiarazione con l'interfaccia con attributi, è neces
 
 No, l'uso di attributi in una classe derivata da una classe che usa anche attributi non è supportato.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi di C++ per COM e .NET](cpp-attributes-com-net.md)

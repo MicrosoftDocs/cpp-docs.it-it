@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: regex_traits &lt; &gt; classe Char'
 title: Classe regex_traits&lt;char&gt;
 ms.date: 09/10/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - regex_traits<char> class
 ms.assetid: ce95ebcd-3687-4ad5-bf1d-b89fdc633675
-ms.openlocfilehash: 2395c3120006f32aa2cae35465f2dbfcd1b0401c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c05511eda53df9861da3d9800dba74ca6a9bc140
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217571"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243822"
 ---
 # <a name="regex_traitsltchargt-class"></a>Classe regex_traits&lt;char&gt;
 
@@ -34,14 +35,14 @@ La classe è una specializzazione esplicita del modello di classe [regex_traits]
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [\<regex>](../standard-library/regex.md)\
 [Classe regex_constants](../standard-library/regex-constants-class.md)\
 [Classe regex_error](../standard-library/regex-error-class.md)\
-[\<regex>funzioni](../standard-library/regex-functions.md)\
+[\<regex> funzioni](../standard-library/regex-functions.md)\
 [Classe regex_iterator](../standard-library/regex-iterator-class.md)\
-[\<regex>operatori](../standard-library/regex-operators.md)\
+[\<regex> operatori](../standard-library/regex-operators.md)\
 [Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
 [Classe regex_traits](../standard-library/regex-traits-class.md)\
-[\<regex>typedef](../standard-library/regex-typedefs.md)
+[\<regex> typedef](../standard-library/regex-typedefs.md)

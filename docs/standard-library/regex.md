@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; Regex&gt;'
 title: '&lt;regex&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - regex header
 ms.assetid: 5dd4ef74-6063-4dbc-b692-1960bb736f0b
-ms.openlocfilehash: 60548e96e0922fdcff00456b03bf9fa15bb7e3b3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 33eefd09c74731b36d3a8f104e2380944da2f43f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841480"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243770"
 ---
 # <a name="ltregexgt"></a>&lt;regex&gt;
 
@@ -52,7 +53,7 @@ Per modificare i dettagli della grammatica delle espressioni regolari, scrivere 
 
 ### <a name="type-definitions"></a>Definizioni dei tipi
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[cmatch](../standard-library/regex-typedefs.md#cmatch)|Definizione del tipo per **`char`** `match_results` .|
 |[cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator)|Definizione del tipo per **`char`** `regex_iterator` .|
@@ -94,7 +95,7 @@ Per modificare i dettagli della grammatica delle espressioni regolari, scrivere 
 |[operatore>=](../standard-library/regex-operators.md#op_gt_eq)|Confronto tra vari oggetti, maggiore o uguale a.|
 |[operatore<<](../standard-library/regex-operators.md#op_lt_lt)|Inserisce una `sub_match` in un flusso.|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Espressioni regolari (C++)](../standard-library/regular-expressions-cpp.md)\
 [Classe regex_constants](../standard-library/regex-constants-class.md)\

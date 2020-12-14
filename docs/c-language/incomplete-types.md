@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: tipi incompleti'
 title: Tipi incompleti
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - void keyword [C]
 - structures, incomplete
 ms.assetid: 01bc0cf6-9fa7-458c-9371-ecbe54ea6aee
-ms.openlocfilehash: 192a6556fd8a5d3039598b883ed7c870fc01ad12
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b85d7a703d6687ad7ec1b0476b8b8a43930330dc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229649"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243575"
 ---
 # <a name="incomplete-types"></a>Tipi incompleti
 
@@ -56,6 +57,6 @@ Il **`void`** tipo è un tipo incompleto che non può essere completato. Per com
     char a[25]; /* a now has complete type */
     ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Dichiarazioni e tipi](../c-language/declarations-and-types.md)

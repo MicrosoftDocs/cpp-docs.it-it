@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: unique_lock Class'
 title: Classe unique_lock
 ms.date: 11/04/2016
 f1_keywords:
 - mutex/std::unique_lock
 ms.assetid: f4ed8ba9-c8af-446f-8ef0-0b356bad14bd
-ms.openlocfilehash: be53f66296612f1b44790393907028bfc4d062ff
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6e7f5ddadce00814196e630b27570e21176c0e62
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834219"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243718"
 ---
 # <a name="unique_lock-class"></a>Classe unique_lock
 
@@ -32,20 +33,20 @@ Internamente, un `unique_lock` oggetto archivia un puntatore a un `mutex` oggett
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |`mutex_type`|Sinonimo dell'argomento di modello `Mutex`.|
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[unique_lock](#unique_lock)|Costruisce un oggetto `unique_lock`.|
 |[distruttore ~ unique_lock](#dtorunique_lock_destructor)|Rilascia qualsiasi risorsa associata all'oggetto `unique_lock`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[blocco](#lock)|Blocca il thread di chiamata finché questo non ottiene la proprietà dell'oggetto `mutex` associato.|
 |[mutex](#mutex)|Recupera un puntatore all'oggetto `mutex` associato.|
@@ -59,7 +60,7 @@ Internamente, un `unique_lock` oggetto archivia un puntatore a un `mutex` oggett
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[operatore bool](#op_bool)|Specifica se il thread di chiamata è proprietario dell'oggetto `mutex` associato.|
 |[operatore =](#op_eq)|Copia il puntatore `mutex` archiviato e lo stato di proprietà associato da un oggetto specificato.|
@@ -82,7 +83,7 @@ Blocca il thread di chiamata finché questo non ottiene la proprietà dell'ogget
 void lock();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il `mutex` puntatore archiviato è null, questo metodo genera un' [system_error](../standard-library/system-error-class.md) con codice di errore `operation_not_permitted` .
 
@@ -127,7 +128,7 @@ Un oggetto `unique_lock`.
 
 `*this`
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il thread di chiamata è proprietario dell'oggetto `mutex` associato in precedenza, prima di chiamare il metodo `unlock` sull'oggetto `mutex` assegna i nuovi valori.
 
@@ -157,7 +158,7 @@ mutex_type *release() noexcept;
 
 Valore precedente del puntatore `mutex` archiviato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo imposta il valore del puntatore archiviato `mutex` su 0 e imposta il flag interno `mutex` di proprietà su **`false`** .
 
@@ -186,7 +187,7 @@ bool try_lock() noexcept;
 
 **`true`** Se il metodo ottiene correttamente la proprietà di `mutex` ; in caso contrario, **`false`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il `mutex` puntatore archiviato è null, il metodo genera un [system_error](../standard-library/system-error-class.md) con codice di errore `operation_not_permitted` .
 
@@ -211,7 +212,7 @@ Oggetto [chrono::duration](../standard-library/duration-class.md) che specifica 
 
 **`true`** Se il metodo ottiene correttamente la proprietà di `mutex` ; in caso contrario, **`false`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il `mutex` puntatore archiviato è null, il metodo genera un [system_error](../standard-library/system-error-class.md) con codice di errore `operation_not_permitted` .
 
@@ -237,7 +238,7 @@ Momento specifico che indica la soglia oltre la quale il metodo non tenta più d
 
 **`true`** Se il metodo ottiene correttamente la proprietà di `mutex` ; in caso contrario, **`false`** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il `mutex` puntatore archiviato è null, il metodo genera un [system_error](../standard-library/system-error-class.md) con codice di errore `operation_not_permitted` .
 
@@ -285,7 +286,7 @@ Momento specifico che indica la soglia oltre la quale il metodo non tenta più d
 *Altri*\
 Un oggetto `unique_lock`.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo costruttore crea un oggetto con un valore del puntatore mutex associato pari a 0.
 
@@ -293,7 +294,7 @@ Il secondo costruttore sposta lo stato mutex associato da *altro*. Dopo lo spost
 
 I costruttori rimanenti archiviano & *MTX* come `mutex` puntatore archiviato. La proprietà dell'oggetto `mutex` è determinata dal secondo argomento, se esistente.
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |`No argument`|La proprietà viene ottenuta mediante una chiamata al metodo `lock` sull'oggetto `mutex` associato.|
 |`Adopt`|Si presuppone la proprietà. Quando viene chiamato il costruttore, `Mtx` deve essere bloccato.|
@@ -310,7 +311,7 @@ Rilascia qualsiasi risorsa associata all'oggetto `unique_lock`.
 ~unique_lock() noexcept;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il thread di chiamata è proprietario dell'oggetto `mutex` associato, il distruttore rilascia la proprietà mediante una chiamata al metodo unlock sull'oggetto `mutex`.
 
@@ -322,13 +323,13 @@ Rilascia la proprietà dell'oggetto `mutex` associato.
 void unlock();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se il thread di chiamata non è proprietario dell'oggetto `mutex` associato, questo metodo genera un [system_error](../standard-library/system-error-class.md) con codice di errore `operation_not_permitted`.
 
 In caso contrario, questo metodo chiama `unlock` sull'oggetto associato `mutex` e imposta il flag di proprietà del thread interno su **`false`** .
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [\<mutex>](../standard-library/mutex.md)

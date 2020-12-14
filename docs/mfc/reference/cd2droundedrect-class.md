@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Classe CD2DRoundedRect'
 title: Classe CD2DRoundedRect
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DRoundedRect [MFC], CD2DRoundedRect
 ms.assetid: 06207fb5-e92b-41c0-bceb-b45d8f466531
-ms.openlocfilehash: 5189f3d824c008845570eac6eead4a35be1e483d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 13c1b0910c9d78f615d64e3eecba8bb813916413
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369083"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240663"
 ---
 # <a name="cd2droundedrect-class"></a>Classe CD2DRoundedRect
 
@@ -25,13 +26,13 @@ Wrapper per `D2D1_ROUNDED_RECT`.
 class CD2DRoundedRect : public D2D1_ROUNDED_RECT;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CD2DRoundedRect::CD2DRoundedRect](#cd2droundedrect)|Di overload. Costruisce un `CD2DRoundedRect` oggetto `D2D1_ROUNDED_RECT` dall'oggetto.|
+|[CD2DRoundedRect:: CD2DRoundedRect](#cd2droundedrect)|Di overload. Costruisce un `CD2DRoundedRect` oggetto da un `D2D1_ROUNDED_RECT` oggetto.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -41,9 +42,9 @@ class CD2DRoundedRect : public D2D1_ROUNDED_RECT;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxrendertarget.h
+**Intestazione:** afxrendertarget. h
 
-## <a name="cd2droundedrectcd2droundedrect"></a><a name="cd2droundedrect"></a>CD2DRoundedRect::CD2DRoundedRect
+## <a name="cd2droundedrectcd2droundedrect"></a><a name="cd2droundedrect"></a> CD2DRoundedRect:: CD2DRoundedRect
 
 Costruisce un oggetto CD2DRoundedRect dall'oggetto CD2DRectF.
 
@@ -58,12 +59,12 @@ CD2DRoundedRect(const D2D1_ROUNDED_RECT* rectIn);
 
 ### <a name="parameters"></a>Parametri
 
-*RettoIn*<br/>
+*rectin*<br/>
 rettangolo di origine
 
 *sizeRadius*<br/>
-dimensione del raggio
+Dimensioni raggio
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classi](../../mfc/reference/mfc-classes.md)

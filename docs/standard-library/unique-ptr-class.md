@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: unique_ptr Class'
 title: Classe unique_ptr
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - std::unique_ptr [C++], reset
 - std::unique_ptr [C++], swap
 ms.assetid: acdf046b-831e-4a4a-83aa-6d4ee467db9a
-ms.openlocfilehash: 4e6c7d8dd9835545c4aaa677a39f5e3149743d14
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 888229c4e07a0b2189e46bcecd562e0177cfd67e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835675"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243692"
 ---
 # <a name="unique_ptr-class"></a>Classe unique_ptr
 
@@ -109,7 +110,7 @@ Funzione di `deleter` associata a un `unique_ptr`.
 
 Non viene generata alcuna eccezione da `unique_ptr`.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La classe `unique_ptr` sostituisce `auto_ptr` e può essere utilizzata come elemento dei contenitori della libreria standard C++.
 
@@ -125,13 +126,13 @@ Il puntatore archiviato in una risorsa di proprietà, `stored_ptr` è di tipo `p
 
 ### <a name="constructors"></a>Costruttori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[unique_ptr](#unique_ptr)|Esistono sette costruttori per `unique_ptr`.|
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[deleter_type](#deleter_type)|Sinonimo del parametro di modello `Del`.|
 |[element_type](#element_type)|Sinonimo del parametro di modello `T`.|
@@ -139,7 +140,7 @@ Il puntatore archiviato in una risorsa di proprietà, `stored_ptr` è di tipo `p
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |[get](#get)|Restituisce `stored_ptr`.|
 |[get_deleter](#get_deleter)|Restituisce un riferimento a `stored_deleter`.|
@@ -149,7 +150,7 @@ Il puntatore archiviato in una risorsa di proprietà, `stored_ptr` è di tipo `p
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Descrizione|
+|Nome|Description|
 |-|-|
 |**operatore bool**|L'operatore restituisce un valore di un tipo convertibile in **`bool`** . Il risultato della conversione a **`bool`** è **`true`** quando `get() != pointer()` , in caso contrario, **`false`** .|
 |`operator->`|La funzione membro restituisce`stored_ptr`.|
@@ -164,7 +165,7 @@ Il tipo è un sinonimo del parametro di modello `Del`.
 typedef Del deleter_type;
 ```
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del parametro di modello `Del`.
 
@@ -176,7 +177,7 @@ Il tipo è un sinonimo del parametro di modello `Type`.
 typedef Type element_type;
 ```
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo del parametro di modello `Ty`.
 
@@ -188,7 +189,7 @@ Restituisce `stored_ptr`.
 pointer get() const;
 ```
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce`stored_ptr`.
 
@@ -202,7 +203,7 @@ Del& get_deleter();
 const Del& get_deleter() const;
 ```
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 La funzione membro restituisce un riferimento a `stored_deleter`.
 
@@ -221,7 +222,7 @@ unique_ptr& operator=(pointer-type);
 
 Un riferimento `unique_ptr` usato per assegnare il valore dell'oggetto `unique_ptr` corrente.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Le funzioni membro chiamano `reset(right.release())` e spostano `right.stored_deleter` in `stored_deleter` , quindi restituiscono **`*this`** .
 
@@ -233,7 +234,7 @@ Sinonimo di `Del::pointer` se definito, in caso contrario, `Type *`.
 typedef T1 pointer;
 ```
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Il tipo è un sinonimo di `Del::pointer` se definito, in caso contrario, `Type *`.
 
@@ -245,7 +246,7 @@ Rilascia la proprietà del puntatore archiviato restituito al chiamante e impost
 pointer release();
 ```
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Usare `release` per acquisire la proprietà del puntatore non elaborato archiviato da `unique_ptr`. Il chiamante è responsabile dell'eliminazione del puntatore restituito. `unique-ptr` è impostato sullo stato costruito in modo predefinito vuoto. È possibile assegnare un altro puntatore di tipo compatibile a `unique_ptr` dopo la chiamata a `release`.
 
@@ -311,7 +312,7 @@ void reset(nullptr_t ptr);
 *PTR*\
 Puntatore alla risorsa di cui acquisire la proprietà.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Utilizzare `reset` per modificare il [puntatore](#pointer) archiviato di proprietà di `unique_ptr` in *ptr* , quindi eliminare il puntatore archiviato originale. Se l'oggetto `unique_ptr` non è vuoto, `reset` richiama la funzione deleter restituita da [get_deleter](#get_deleter) nel puntatore archiviato originale.
 
@@ -330,7 +331,7 @@ void swap(unique_ptr& right);
 *Ok*\
 `unique_ptr` usato a puntatori swap.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 La funzione membro scambia `stored_ptr` con `right.stored_ptr` e `stored_deleter` con `right.stored_deleter`.
 
@@ -368,7 +369,7 @@ Un oggetto `deleter` da assegnare a un oggetto `unique_ptr`.
 *Ok*\
 Un oggetto `rvalue reference` a un oggetto `unique_ptr` da cui i campi `unique_ptr` vengono assegnati all'oggetto `unique_ptr` appena costruito.
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 I primi due costruttori costruiscono un oggetto che non gestisce alcuna risorsa. Il terzo costruttore archivia *ptr* in `stored_ptr` . Il quarto costruttore archivia *ptr* in `stored_ptr` e `deleter` in `stored_deleter` .
 
@@ -382,6 +383,6 @@ Il distruttore per `unique_ptr` distribuisce un oggetto `unique_ptr`.
 ~unique_ptr();
 ```
 
-#### <a name="remarks"></a>Osservazioni
+#### <a name="remarks"></a>Commenti
 
 Il distruttore chiama `get_deleter()(stored_ptr)`.

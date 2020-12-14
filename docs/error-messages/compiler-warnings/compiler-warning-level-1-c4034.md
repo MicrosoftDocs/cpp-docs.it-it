@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: avviso del compilatore (livello 1) C4034'
 title: Avviso del compilatore (livello 1) C4034
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4034
 ms.assetid: 1d2f598d-bdfc-4a95-9617-424b591ed3e8
-ms.openlocfilehash: f63987cd9ce4aa778de58748848ef5c01e80b6f6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ad497aaa60e3d429100cdd1c615e4d9a729c40e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230740"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97241378"
 ---
 # <a name="compiler-warning-level-1-c4034"></a>Avviso del compilatore (livello 1) C4034
 

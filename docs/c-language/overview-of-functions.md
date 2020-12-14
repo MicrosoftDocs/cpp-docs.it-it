@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: Panoramica delle funzioni'
 title: Cenni preliminari sulle funzioni
 ms.date: 11/04/2016
 helpviewer_keywords:
 - functions [C++]
 - control flow, function calls
 ms.assetid: b6f4637f-02b9-49d8-8601-1f886bd2cfb9
-ms.openlocfilehash: 89c9f24b049ee8e9a33557f3262cd6abcc624957
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b68591d9300cb1a2f63c37c78f4cc03406e9d68f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217064"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243146"
 ---
 # <a name="overview-of-functions"></a>Cenni preliminari sulle funzioni
 
@@ -22,6 +23,6 @@ Il compilatore utilizza il prototipo per confrontare i tipi di argomenti nelle s
 
 Una chiamata di funzione passa il controllo di esecuzione dalla funzione chiamante alla funzione chiamata. Gli argomenti, se presenti, vengono passati in base al valore della funzione chiamata. L'esecuzione di un' **`return`** istruzione nella funzione chiamata restituisce il controllo ed eventualmente un valore alla funzione chiamante.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Funzioni](../c-language/functions-c.md)

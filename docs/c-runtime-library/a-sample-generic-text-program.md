@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: un programma di Generic-Text di esempio'
 title: Programma di testo generico di esempio
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - TCHAR type
 - TCHAR.H data types, mapping
 ms.assetid: a03de0db-8118-4bd9-a03f-640e8dfc5ed3
-ms.openlocfilehash: bc339bb11d0910eea2ef115a8f9013fa5c0270a7
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 0c8b9e0d201cf4891f74e54a1f5ee929d864f6b4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738102"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97242782"
 ---
 # <a name="a-sample-generic-text-program"></a>Programma di testo generico di esempio
 
-**Sezione specifica Microsoft**
+**Specifico di Microsoft**
 
 Il seguente programma, GENTEXT.C, fornisce un'illustrazione più dettagliata dell'uso delle mappature di testo generico definite in TCHAR.H:
 
@@ -172,12 +173,12 @@ int __cdecl main(int argc, char **argv, char **envp)
 }
 ```
 
-**Fine sezione specifica Microsoft**
+**TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Mapping di testo generico](../c-runtime-library/generic-text-mappings.md)<br/>
 [Mapping dei tipi di dati](../c-runtime-library/data-type-mappings.md)<br/>
 [Mapping di costanti e variabili globali](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>
 [Mapping di routine](../c-runtime-library/routine-mappings.md)<br/>
-[Using Generic-Text Mappings](../c-runtime-library/using-generic-text-mappings.md) (Uso di mapping di testo generico)
+[Uso di mapping di Generic-Text](../c-runtime-library/using-generic-text-mappings.md)

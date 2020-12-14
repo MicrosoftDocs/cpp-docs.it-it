@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: mbtowc, _mbtowc_l'
 title: mbtowc, _mbtowc_l
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: 9502de7b12394277b01a18caca48a7e783efaf4e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8f6ffbd6596e987cd0ec6ba560e4e44da13cf7b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232482"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240104"
 ---
 # <a name="mbtowc-_mbtowc_l"></a>mbtowc, _mbtowc_l
 
@@ -61,7 +62,7 @@ int _mbtowc_l(
 
 ### <a name="parameters"></a>Parametri
 
-*WCHAR*<br/>
+*wchar*<br/>
 Indirizzo di un carattere wide (tipo **`wchar_t`** ).
 
 *mbchar*<br/>
@@ -77,7 +78,7 @@ Impostazioni locali da usare.
 
 Se **mbchar** non è **null** e se l'oggetto *mbchar* fa riferimento a un carattere multibyte valido, **mbtowc** restituisce la lunghezza in byte del carattere multibyte. Se *mbchar* è **null** o l'oggetto a cui punta è un carattere null Wide (L'\ 0'), la funzione restituisce 0. Se l'oggetto a cui fa riferimento *mbchar* non forma un carattere multibyte valido entro i primi caratteri di *conteggio* , viene restituito-1.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **mbtowc** converte il *numero* o un numero minore di byte a cui punta *mbchar*, se *mbchar* non è **null**, in un carattere wide corrispondente. **mbtowc** archivia il carattere wide risultante in *WCHAR,* se *WCHAR* non è **null**. **mbtowc** non esamina più di **MB_CUR_MAX** byte. **mbtowc** usa le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali; **_mbtowc_l** è identico, ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
@@ -157,7 +158,7 @@ Attempt to convert a NULL pointer to a wide character:
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
 [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [Impostazioni locali](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: mbsrtowcs_s'
 title: mbsrtowcs_s
 ms.date: 4/2/2020
 api_name:
@@ -26,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbsrtowcs_s function
 ms.assetid: 4ee084ec-b15d-4e5a-921d-6584ec3b5a60
-ms.openlocfilehash: 72a20396b2f0f75d79baa64619deef8a0c1e00ba
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c7c53d3213bbe552dd63eb527a635660e803e9a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915492"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240169"
 ---
 # <a name="mbsrtowcs_s"></a>mbsrtowcs_s
 
@@ -91,7 +92,7 @@ Se la conversione viene eseguita correttamente restituisce zero, in caso contrar
 
 Se si verifica una di queste condizioni, viene richiamata l'eccezione di parametro non valido come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce un codice di errore e imposta **errno** come indicato nella tabella.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **mbsrtowcs_s** converte una stringa di caratteri multibyte a cui punta indirettamente *mbstr* in caratteri wide archiviati nel buffer a cui punta *wcstr*, usando lo stato di conversione contenuto in *mbstate*. La conversione continuerà per ogni carattere fino a quando non viene soddisfatta una delle seguenti condizioni:
 
@@ -111,7 +112,7 @@ Se *wcstr* non è un puntatore null, all'oggetto puntatore a cui punta *mbstr* v
 
 Se *mbstate* è un puntatore null, viene utilizzato l'oggetto statico della libreria **mbstate_t** stato di conversione. Poiché questo oggetto statico interno non è thread-safe, è consigliabile passare il proprio valore *mbstate* .
 
-Se **mbsrtowcs_s** rileva un carattere multibyte non valido nelle impostazioni locali correnti, inserisce-1 in *&#42;pReturnValue*, imposta il buffer di destinazione *wcstr* su una stringa vuota, imposta **errno** su **EILSEQ**e restituisce **EILSEQ**.
+Se **mbsrtowcs_s** rileva un carattere multibyte non valido nelle impostazioni locali correnti, inserisce-1 in *&#42;pReturnValue*, imposta il buffer di destinazione *wcstr* su una stringa vuota, imposta **errno** su **EILSEQ** e restituisce **EILSEQ**.
 
 Se le sequenze a cui puntano *mbstr* e *wcstr* si sovrappongono, il comportamento di **mbsrtowcs_s** non è definito. **mbsrtowcs_s** è influenzato dalla categoria LC_TYPE delle impostazioni locali correnti.
 
@@ -134,11 +135,11 @@ La funzione **mbsrtowcs_s** è multithread safe se nessuna funzione nel thread c
 |-------------|---------------------|
 |**mbsrtowcs_s**|\<wchar.h>|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbrtowc](mbrtowc.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [mbstowcs_s, _mbstowcs_s_l](mbstowcs-s-mbstowcs-s-l.md)<br/>

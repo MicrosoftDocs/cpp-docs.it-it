@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: gestione di menu, barre di controllo e acceleratori'
 title: Gestione di menu, barre di controllo e tasti di scelta rapida
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - frame windows [MFC], updating
 - status bars [MFC], updating
 ms.assetid: 97ca1997-06df-4373-b023-4f7ecd81047b
-ms.openlocfilehash: 9945dc68ffd46bbf5e114a79467299e4b67e3659
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 21c3791bff00c33db50efbe391863169606fde80
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621324"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97244173"
 ---
 # <a name="managing-menus-control-bars-and-accelerators"></a>Gestione di menu, barre di controllo e tasti di scelta rapida
 
@@ -25,7 +26,7 @@ La finestra cornice gestisce l'aggiornamento degli oggetti dell'interfaccia uten
 
 ## <a name="managing-menus"></a>Gestione dei menu
 
-La finestra cornice partecipa all'aggiornamento degli elementi dell'interfaccia utente usando il meccanismo di ON_UPDATE_COMMAND_UI descritto in [come aggiornare gli oggetti dell'interfaccia utente](how-to-update-user-interface-objects.md). I pulsanti sulle barre degli strumenti e altre barre di controllo vengono aggiornati durante il ciclo di inattività. Le voci di menu nei menu a discesa della barra dei menu vengono aggiornate immediatamente prima della disattivazione del menu.
+La finestra cornice partecipa all'aggiornamento degli elementi dell'interfaccia utente usando il meccanismo di ON_UPDATE_COMMAND_UI descritto in [come aggiornare User-Interface oggetti](how-to-update-user-interface-objects.md). I pulsanti sulle barre degli strumenti e altre barre di controllo vengono aggiornati durante il ciclo di inattività. Le voci di menu nei menu a discesa della barra dei menu vengono aggiornate immediatamente prima della disattivazione del menu.
 
 Per le applicazioni MDI, la finestra cornice MDI gestisce la barra dei menu e la didascalia. Una finestra cornice MDI è proprietaria di un menu predefinito utilizzato come barra dei menu quando non sono presenti finestre figlio MDI attive. Quando sono presenti elementi figlio attivi, la barra dei menu della finestra cornice MDI viene rilevata dal menu per la finestra figlio MDI attiva. Se un'applicazione MDI supporta più tipi di documenti, ad esempio i documenti Chart e Worksheet, ogni tipo inserisce i propri menu sulla barra dei menu e modifica la didascalia della finestra cornice principale.
 
@@ -41,6 +42,6 @@ La finestra cornice posiziona anche la barra di stato all'interno dell'area clie
 
 Ogni finestra cornice gestisce automaticamente una tabella di tasti di scelta rapida che consente la conversione del tasto di scelta rapida. Questo meccanismo semplifica la definizione dei tasti di scelta rapida (detti anche tasti di scelta rapida) che richiamano i comandi di menu.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Utilizzo di finestre cornice](using-frame-windows.md)
+[Uso di finestre cornice](using-frame-windows.md)

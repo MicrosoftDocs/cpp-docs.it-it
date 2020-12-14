@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: mbsrtowcs'
 title: mbsrtowcs
 ms.date: 4/2/2020
 api_name:
@@ -26,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbsrtowcs function
 ms.assetid: f3a29de8-e36e-425b-a7fa-a258e6d7909d
-ms.openlocfilehash: fc9310a95165944b7f516c1f8c48d8d4d1e56117
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 83979058e33ffc3874f26cb8ef70f888195e6644
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915487"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240182"
 ---
 # <a name="mbsrtowcs"></a>mbsrtowcs
 
@@ -73,7 +74,7 @@ Puntatore a un oggetto **mbstate_t** stato di conversione. Se questo valore è u
 
 Restituisce il numero di caratteri convertito correttamente, escluso il carattere di terminazione Null, se presente. Restituisce (size_t) (-1) se si è verificato un errore e imposta **errno** su EILSEQ.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **mbsrtowcs** converte una stringa di caratteri multibyte a cui punta indirettamente da *mbstr*, in caratteri wide archiviati nel buffer a cui punta *wcstr*, usando lo stato di conversione contenuto in *mbstate*. La conversione continua per ogni carattere fino a quando non viene rilevato un carattere multibyte di terminazione null, viene rilevata una sequenza multibyte che non corrisponde a un carattere valido nelle impostazioni locali correnti o fino alla conversione dei caratteri di *conteggio* . Se **mbsrtowcs** rileva il carattere multibyte null (' \ 0') prima o quando si verifica il *conteggio* , lo converte in un carattere di terminazione null a 16 bit e si arresta.
 
@@ -101,11 +102,11 @@ La funzione **mbsrtowcs** è multithread safe a condizione che nessuna funzione 
 |-------------|---------------------|
 |**mbsrtowcs**|\<wchar.h>|
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbrtowc](mbrtowc.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>

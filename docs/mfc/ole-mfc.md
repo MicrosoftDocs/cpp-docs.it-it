@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: OLE (MFC)'
 title: OLE (MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - user interfaces, OLE
 - applications [OLE], user interface
 ms.assetid: 61cb5d3e-1108-4e9b-b301-a8d8fcc586cb
-ms.openlocfilehash: ce35bad80a348bc89ce67065d26f9a82f2feba52
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7ff0a2a1446caa85d08aa5d708ed9c2ca8e05757
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624213"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97244082"
 ---
 # <a name="ole-mfc"></a>OLE (MFC)
 
@@ -34,6 +35,6 @@ Per altre informazioni, vedere:
 
 - [Tracker](trackers.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Elementi dell'interfaccia utente](user-interface-elements-mfc.md)

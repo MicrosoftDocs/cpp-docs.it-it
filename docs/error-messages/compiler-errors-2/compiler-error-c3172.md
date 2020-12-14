@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3172'
 title: Errore del compilatore C3172
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3172
 ms.assetid: 1834e2fd-6036-4c33-aff2-b51bc7c99441
-ms.openlocfilehash: ca0eab35f6e60d81a324156905619ceb7ace8830
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: d8ce88960e725266723c3c37cd9bfbbbd342027b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508288"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97242171"
 ---
 # <a name="compiler-error-c3172"></a>Errore del compilatore C3172
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _mbsnbcpy_s, _mbsnbcpy_s_l'
 title: _mbsnbcpy_s, _mbsnbcpy_s_l
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - _mbsnbcpy_s_l function
 - _tcsncpy_s function
 ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
-ms.openlocfilehash: 670055ca67e8196805851767596f56028350e32a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 12233d0f83094934250a04b18582feff0cb7310e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911880"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240286"
 ---
 # <a name="_mbsnbcpy_s-_mbsnbcpy_s_l"></a>_mbsnbcpy_s, _mbsnbcpy_s_l
 
@@ -104,7 +105,7 @@ Impostazioni locali da usare.
 
 Zero in caso di esito positivo; **EINVAL** se è stato passato un parametro non valido.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **_mbsnbcpy_s** copia i byte del *conteggio* da *strSource* a *strDest*. Se *count* supera la dimensione di *strDest*, una delle stringhe di input è un puntatore null o *sizeInBytes* o *count* è 0, la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, la funzione restituisce **EINVAL**. Se le stringhe di origine e di destinazione si sovrappongono, il comportamento di **_mbsnbcpy_s** non è definito.
 
@@ -135,7 +136,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

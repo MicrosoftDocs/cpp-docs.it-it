@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _mbsnbset_s, _mbsnbset_s_l'
 title: _mbsnbset_s, _mbsnbset_s_l
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - _tcsnset_s function
 - tcsnset_s_l function
 ms.assetid: 811f92c9-cc31-4bbd-8017-2d1bfc6fb96f
-ms.openlocfilehash: b4880e774d6ad1b07052529461910ceff6897351
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e8500de308d564b9e16ba5de29af67ee65b260e6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915541"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240195"
 ---
 # <a name="_mbsnbset_s-_mbsnbset_s_l"></a>_mbsnbset_s, _mbsnbset_s_l
 
@@ -85,7 +86,7 @@ errno_t _mbsnbset_s_l(
 
 ### <a name="parameters"></a>Parametri
 
-*Str*<br/>
+*str*<br/>
 Stringa da modificare.
 
 *size*<br/>
@@ -104,7 +105,7 @@ Impostazioni locali da usare.
 
 Zero in caso di esito positivo; in caso contrario un codice di errore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Le funzioni **_mbsnbset_s** e **_mbsnbset_s_l** impostano, al massimo, il primo *numero* di byte da *STR* a *c*. Se *count* è maggiore della lunghezza di *Str*, viene utilizzata la lunghezza di *Str* anziché *count*. Se *c* è un carattere multibyte e non può essere impostato interamente nell'ultimo byte specificato da *count*, l'ultimo byte viene riempito con un carattere vuoto. **_mbsnbset_s** e **_mbsnbset_s_l** non inseriscono un null di terminazione alla fine di *Str*.
 
@@ -160,7 +161,7 @@ Before: This is a test
 After:  **** is a test
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

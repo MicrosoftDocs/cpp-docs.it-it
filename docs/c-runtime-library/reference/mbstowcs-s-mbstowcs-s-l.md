@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: mbstowcs_s, _mbstowcs_s_l'
 title: mbstowcs_s, _mbstowcs_s_l
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - mbstowcs_s function
 - mbstowcs_s_l function
 ms.assetid: 2fbda953-6918-498f-b440-3e7b21ed65a4
-ms.openlocfilehash: 4a6e86e1122a7392862fa34a59042c32560fd69d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 800cb64c62498cfea93c6fc600207ad1e2309b98
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915463"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240117"
 ---
 # <a name="mbstowcs_s-_mbstowcs_s_l"></a>mbstowcs_s, _mbstowcs_s_l
 
@@ -111,7 +112,7 @@ Zero in caso di esito positivo, un codice di errore in caso di esito negativo.
 
 Se si verifica una di queste condizioni, viene richiamata l'eccezione di parametro non valido come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce un codice di errore e imposta **errno** come indicato nella tabella.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **mbstowcs_s** converte una stringa di caratteri multibyte a cui punta *mbstr* in caratteri wide archiviati nel buffer a cui punta *wcstr*. La conversione continuerà per ogni carattere fino a quando non viene soddisfatta una delle seguenti condizioni:
 
@@ -127,7 +128,7 @@ Se *count* è il valore speciale [_TRUNCATE](../../c-runtime-library/truncate.md
 
 Se **mbstowcs_s** converte correttamente la stringa di origine, inserisce la dimensione in caratteri wide della stringa convertita, incluso il terminatore null, in *&#42;PReturnValue* (il *pReturnValue* specificato non è **null**). Ciò si verifica anche se l'argomento *wcstr* è **null** e fornisce un modo per determinare le dimensioni del buffer richieste. Si noti che se *wcstr* è **null**, *count* viene ignorato e *sizeInWords* deve essere 0.
 
-Se **mbstowcs_s** rileva un carattere multibyte non valido, inserisce 0 in *&#42;pReturnValue*, imposta il buffer di destinazione su una stringa vuota, imposta **errno** su **EILSEQ**e restituisce **EILSEQ**.
+Se **mbstowcs_s** rileva un carattere multibyte non valido, inserisce 0 in *&#42;pReturnValue*, imposta il buffer di destinazione su una stringa vuota, imposta **errno** su **EILSEQ** e restituisce **EILSEQ**.
 
 Se le sequenze a cui puntano *mbstr* e *wcstr* si sovrappongono, il comportamento di **mbstowcs_s** non è definito.
 
@@ -149,12 +150,12 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
 [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>

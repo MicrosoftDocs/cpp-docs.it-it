@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: call_as'
 title: call_as (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: 9ae620ed6f2b01cc52e4a9c76217f044db925f11
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: de407da1401479327185c6133c625d61e1e221cf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838920"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247449"
 ---
 # <a name="call_as"></a>call_as
 
@@ -28,7 +29,7 @@ Consente di eseguire il mapping di una funzione [locale](local-cpp.md) a una fun
 *function*<br/>
 Funzione locale che si desidera chiamare quando viene richiamata una funzione remota.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 L'attributo **call_as** C++ ha la stessa funzionalità dell'attributo [call_as](/windows/win32/Midl/call-as) MIDL.
 
@@ -59,7 +60,7 @@ __interface IMInterface {
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di metodo](method-attributes.md)<br/>

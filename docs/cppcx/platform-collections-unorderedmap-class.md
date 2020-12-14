@@ -1,20 +1,21 @@
 ---
+description: 'Altre informazioni su: classe Platform:: Collections:: UnorderedMap'
 title: Classe Platform::Collections::UnorderedMap
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: ec458f5d4a47b6eced939c4fe346d5d0414ea7c2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 51acfa7e411f96addd8a33024224779c32ebcda0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839127"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97242535"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Classe Platform::Collections::UnorderedMap
 
-Rappresenta una *mappa*non ordinata, che è una raccolta di coppie chiave-valore.
+Rappresenta una *mappa* non ordinata, che è una raccolta di coppie chiave-valore.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -38,7 +39,7 @@ Tipo di valore nella coppia chiave-valore.
 *C*<br/>
 Tipo che fornisce un oggetto funzione che può confrontare due valori di elementi come chiavi di ordinamento per determinare l'ordine relativo nella mappa. Per impostazione predefinita, [std:: \<K> equal_to](../standard-library/equal-to-struct.md).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I tipi consentiti sono:
 
@@ -60,13 +61,13 @@ Per ulteriori informazioni, vedere [raccolte](../cppcx/collections-c-cx.md).
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[UnorderedMap:: UnorderedMap](#ctor)|Inizializza una nuova istanza della classe Map.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[UnorderedMap:: Clear](#clear)|Rimuove tutte le coppie chiave-valore dall'oggetto Map corrente.|
 |[UnorderedMap:: First](#first)|Restituisce un iteratore che specifica il primo elemento nella mappa.|
@@ -79,7 +80,7 @@ Per ulteriori informazioni, vedere [raccolte](../cppcx/collections-c-cx.md).
 
 ### <a name="events"></a>Eventi
 
-| Nome | Descrizione |
+| Nome | Description |
 |--|--|
 | Evento [Map:: mapchanged](#mapchanged) | Si verifica quando l'oggetto Map subisce delle modifiche. |
 
@@ -119,7 +120,7 @@ virtual Windows::Foundation::Collections::IIterator<
 
 Iteratore che specifica il primo elemento nella mappa.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un modo pratico per conservare l'iteratore restituito da First () consiste nell'assegnare il valore restituito a una variabile dichiarata con la **`auto`** parola chiave di deduzione del tipo. Ad esempio: `auto x = myUnorderedMap->First();`.
 
@@ -360,7 +361,7 @@ Iteratore di input del primo elemento in un intervallo di elementi usato per ini
 *last*<br/>
 Iteratore di input del primo elemento dopo un intervallo di elementi usato per inizializzare l'oggetto UnorderedMap corrente.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Spazio dei nomi Platform](platform-namespace-c-cx.md)<br/>
 [Spazio dei nomi Platform:: Collections](../cppcx/platform-collections-namespace.md)<br/>

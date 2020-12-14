@@ -1,5 +1,6 @@
 ---
-title: attributo (attributo COM C++)
+description: 'Altre informazioni su: attributo'
+title: attribute (attributo COM C++)
 ms.date: 10/03/2018
 f1_keywords:
 - vc-attr.attribute
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - attribute attribute
 - attributes [C++/CLI], custom
 ms.assetid: 8cb3489f-65c4-44ea-b0aa-3c3c6b15741d
-ms.openlocfilehash: d865f96d2e116f09a29cb78f410c4c19d6104a82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 391dcdd36bf2ccc2d6dd5ee8ec4989a975b629c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148380"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240481"
 ---
 # <a name="attribute"></a>Attributo
 
 > [!NOTE]
-> Il **attributo** attributo è deprecato.  Usare l'attributo di runtime del linguaggio comune `System.Attribute` a direttamente alla creazione di attributi definiti dall'utente. Per altre informazioni, vedere [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
+> L'attributo **attribute** è ora deprecato.  Utilizzare l'attributo Common Language Runtime `System.Attribute` direttamente per creare attributi definiti dall'utente. Per altre informazioni, vedere [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimento alfabetico agli attributi](attributes-alphabetical-reference.md)

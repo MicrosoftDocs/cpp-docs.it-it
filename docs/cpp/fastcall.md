@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: __fastcall'
 title: __fastcall
 ms.date: 12/17/2018
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - __fastcall keyword [C++]
 ms.assetid: bb5b9c8a-dfad-450c-9119-0ac2bc59544f
-ms.openlocfilehash: 420552dd62c46ab5c2fa7e201387f258617f8453
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6f4c4f533f0d2337323d486cc9c433898a19e6a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227478"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97242600"
 ---
 # <a name="__fastcall"></a>__fastcall
 
@@ -72,7 +73,7 @@ typedef BOOL (__fastcall *funcname_ptr)(void * arg1, const char * arg2, DWORD fl
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Passaggio di argomenti e convenzioni di denominazione](../cpp/argument-passing-and-naming-conventions.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)

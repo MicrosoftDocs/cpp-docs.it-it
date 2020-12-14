@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _memccpy'
 title: _memccpy
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _memccpy function
 - memccpy function
 ms.assetid: 9a2337df-6e85-4eba-b247-dd0532f45ddb
-ms.openlocfilehash: 097cefb504ffcdbfbe6bf131d5e8b1837d11a47a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f3cbfbd1e112c724d6223a6c6d28f0915dcd7ca0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951971"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240091"
 ---
 # <a name="_memccpy"></a>_memccpy
 
@@ -65,7 +66,7 @@ Numero di caratteri.
 
 Se il carattere *c* viene copiato, **_memccpy** restituisce un puntatore a char in *dest* che segue immediatamente il carattere. Se *c* non viene copiato, viene restituito **null**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 La funzione **_memccpy** copia 0 o più caratteri di *src* in *dest*, che si interrompe quando il carattere *c* è stato copiato o quando sono stati copiati i caratteri di *conteggio* , a seconda di quale si verifica per primo.
 
@@ -77,7 +78,7 @@ La funzione **_memccpy** copia 0 o più caratteri di *src* in *dest*, che si int
 |-------------|---------------------|
 |**_memccpy**|\<memory.h> o \<string.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 
@@ -117,9 +118,9 @@ Result: The quick brown dog jumps
 Length: 25 characters
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Modifica del buffer](../../c-runtime-library/buffer-manipulation.md)<br/>
+[Manipolazione del buffer](../../c-runtime-library/buffer-manipulation.md)<br/>
 [memchr, wmemchr](memchr-wmemchr.md)<br/>
 [memcmp, wmemcmp](memcmp-wmemcmp.md)<br/>
 [memcpy, wmemcpy](memcpy-wmemcpy.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3714'
 title: Errore del compilatore C3714
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3714
 ms.assetid: 17718f75-5a37-4e42-912b-487e91008a95
-ms.openlocfilehash: 1078bf8a97f6cb7afeaf7046489fe262c0bb0199
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a01544558a156b746c16e731584e30bab7a77825
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74753328"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97241625"
 ---
 # <a name="compiler-error-c3714"></a>Errore del compilatore C3714
 
 ' Method ': un metodo del gestore eventi deve avere la stessa convenzione di chiamata dell'origine ' Method '
 
-È stato definito un metodo del gestore eventi che non usa la stessa convenzione di chiamata del metodo dell'evento di origine. Per correggere l'errore, assegnare al metodo del gestore dell'evento le stesse convenzioni di chiamata di quelle del metodo dell'evento di origine. Nel codice riportato di seguito, ad esempio, le convenzioni di chiamata di `handler1` e `event1` corrispondono ([__cdecl](../../cpp/cdecl.md) o [__stdcall](../../cpp/stdcall.md) o altri). La rimozione delle parole chiave della convenzione di chiamata da entrambe le dichiarazioni consente anche di risolvere il problema e causare l'impostazione predefinita `event1` e `handler1` alla convenzione di chiamata [thiscall](../../cpp/thiscall.md) . Per ulteriori informazioni, vedere [convenzioni di chiamata](../../cpp/calling-conventions.md) .
+È stato definito un metodo del gestore eventi che non usa la stessa convenzione di chiamata del metodo dell'evento di origine. Per correggere l'errore, assegnare al metodo del gestore dell'evento le stesse convenzioni di chiamata di quelle del metodo dell'evento di origine. Nel codice riportato di seguito, ad esempio, le convenzioni di chiamata di `handler1` e `event1` corrispondono ([__cdecl](../../cpp/cdecl.md) o [__stdcall](../../cpp/stdcall.md) o altri). La rimozione delle parole chiave della convenzione di chiamata da entrambe le dichiarazioni consente inoltre di risolvere il problema, causando `event1` e `handler1` per impostazione predefinita sulla convenzione di chiamata [thiscall](../../cpp/thiscall.md) . Per ulteriori informazioni, vedere [convenzioni di chiamata](../../cpp/calling-conventions.md) .
 
 L'esempio seguente genera l'C3714:
 

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: associabile'
 title: Bindable (attributo COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 27f44259401a42dcef7e2add370d95091d10879d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2427becd3353488cc1b62347c04d7ed62e523352
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838971"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247488"
 ---
 # <a name="bindable"></a>bindable
 
@@ -29,7 +30,7 @@ L'attributo C++ **associabile** ha la stessa funzionalità dell'attributo MIDL [
 
 Negli esempi MFC seguenti viene illustrato l'utilizzo di **Bindable**:
 
-- [Esempi di controlli: controlli ActiveX basati su MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Esempi di controlli: MFC-Based controlli ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 - [Esempio CIRC: controllo ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
@@ -69,7 +70,7 @@ __interface IPropDemo : IDispatch {
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di metodo](method-attributes.md)<br/>

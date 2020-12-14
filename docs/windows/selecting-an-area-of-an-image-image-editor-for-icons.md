@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: procedura: modificare un'immagine"
 title: "Procedura: modificare un'immagine"
 ms.date: 02/15/2019
 f1_keywords:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: ecfd69594c05c210743e0c22c804a4713a8229ef
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 8d03e53ccdcb7978b1708765483cabac281ae08b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509641"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247150"
 ---
 # <a name="how-to-edit-an-image"></a>Procedura: modificare un'immagine
 
@@ -61,7 +62,7 @@ Per modificare un'immagine, vedere come:
 
 ### <a name="to-select-an-image"></a>Per selezionare un'immagine
 
-1. Utilizzare la barra degli strumenti dell' **editor di immagini** o passare a **Image**  >  **strumenti** immagine menu e scegliere lo strumento di selezione desiderato.
+1. Utilizzare la barra degli strumenti dell' **editor di immagini** o passare a   >  **strumenti** immagine menu e scegliere lo strumento di selezione desiderato.
 
 1. Spostare il punto di inserimento in un angolo dell'area dell'immagine che si desidera selezionare. Quando il punto di inserimento è posizionato sull'immagine, vengono visualizzati i peli incrociati.
 
@@ -108,7 +109,7 @@ Vai a menu **modifica**  >  **Elimina**.
    L'area originale della selezione viene riempita con il colore di sfondo corrente.
 
 > [!NOTE]
-> È possibile accedere ai comandi **taglia**, **copia**, **Incolla**ed **Elimina** facendo clic con il pulsante destro del mouse nella finestra **visualizzazione risorse** .
+> È possibile accedere ai comandi **taglia**, **copia**, **Incolla** ed **Elimina** facendo clic con il pulsante destro del mouse nella finestra **visualizzazione risorse** .
 
 #### <a name="to-move-the-selection"></a>Per spostare la selezione
 
@@ -124,11 +125,11 @@ Per ulteriori informazioni sul disegno con una selezione, vedere [creazione di u
 
 È possibile capovolgere o ruotare un'immagine per creare un'immagine speculare dell'originale, capovolgere l'immagine oppure ruotare l'immagine a destra di 90 gradi alla volta.
 
-- Per capovolgere orizzontalmente l'immagine (immagine speculare), passare all' **immagine**del menu  >  **Capovolgi orizzontalmente**.
+- Per capovolgere orizzontalmente l'immagine (immagine speculare), passare all' **immagine** del menu  >  **Capovolgi orizzontalmente**.
 
 - Per capovolgere l'immagine verticalmente (a discesa), passare a menu **immagine**  >  **Capovolgi verticale**.
 
-- Per ruotare l'immagine di 90 gradi, passare all' **immagine**del menu  >  **ruotare 90 gradi**.
+- Per ruotare l'immagine di 90 gradi, passare all' **immagine** del menu  >  **ruotare 90 gradi**.
 
    > [!NOTE]
    > È anche possibile usare i [tasti](../windows/accelerator-keys-image-editor-for-icons.md) di scelta rapida per questi comandi oppure accedere ai comandi dal menu di scelta rapida (selezionare all'esterno dell'immagine nell' **editor di immagini**).
@@ -190,7 +191,7 @@ In genere, l' **editor di immagini** seleziona o ingrandisce un'immagine quando 
 
 È possibile aprire e modificare le immagini nell'ambiente di sviluppo analogamente a qualsiasi applicazione grafica, ad esempio aprendo una bitmap per la modifica autonoma. Le immagini utilizzate non devono far parte di un progetto di Visual Studio.
 
-1. Scegliere Apri dal menu **file**  >  **Open**.
+1. Scegliere Apri dal menu **file**  >  .
 
 1. Nella casella **file di tipo** selezionare **tutti i file**.
 
@@ -206,7 +207,7 @@ In genere, l' **editor di immagini** seleziona o ingrandisce un'immagine quando 
 
    |Proprietà|Descrizione|
    |--------------|-----------------|
-   |**Colori**|Specifica la combinazione di colori per l'immagine. Selezionare **monocromatico**, **16**o **256**o **true color**.<br/><br/>Se l'immagine è già stata disegnata con una tavolozza a 16 colori, la selezione di **monocromie** causa le sostituzioni di nero e bianco per i colori nell'immagine. Il contrasto non viene sempre mantenuto: ad esempio, le aree adiacenti di rosso e verde sono entrambe convertite in nero.|
+   |**Colori**|Specifica la combinazione di colori per l'immagine. Selezionare **monocromatico**, **16** o **256** o **true color**.<br/><br/>Se l'immagine è già stata disegnata con una tavolozza a 16 colori, la selezione di **monocromie** causa le sostituzioni di nero e bianco per i colori nell'immagine. Il contrasto non viene sempre mantenuto: ad esempio, le aree adiacenti di rosso e verde sono entrambe convertite in nero.|
    |**Filename**|Specifica il nome del file di immagine.<br/><br/>Per impostazione predefinita, Visual Studio assegna un nome file di base creato rimuovendo i primi quattro caratteri ("IDB_") dall'identificatore di risorsa predefinito (IDB_BITMAP1) e aggiungendo l'estensione appropriata. Il nome del file per l'immagine in questo esempio verrebbe *BITMAP1.bmp*. È possibile rinominarlo *MYBITMAP1.bmp*.|
    |**Altezza**|Imposta l'altezza dell'immagine in pixel. Il valore predefinito è 48.<br/><br/>L'immagine viene ritagliata o viene aggiunto uno spazio vuoto sotto l'immagine esistente.|
    |**ID**|Imposta l'identificatore della risorsa.<br/><br/>Per un'immagine, Microsoft Visual Studio, per impostazione predefinita, assegna il successivo identificatore disponibile in una serie: IDB_BITMAP1, IDB_BITMAP2 e così via. Per le icone e i cursori vengono utilizzati nomi simili.|
@@ -218,7 +219,7 @@ In genere, l' **editor di immagini** seleziona o ingrandisce un'immagine quando 
 
 Nessuno
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Editor di immagini per le icone](../windows/image-editor-for-icons.md)<br/>
 [Procedura: creare un'icona o un'altra immagine](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>

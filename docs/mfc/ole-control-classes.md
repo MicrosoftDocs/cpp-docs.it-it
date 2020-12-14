@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classi di controlli OLE'
 title: Classi di controlli OLE
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - OLE control classes [MFC]
 - reusable component classes [MFC]
 ms.assetid: 96495ec3-319e-4163-b839-1af0428ed9dd
-ms.openlocfilehash: 5aa3899dca5a42cf789dc6dfd4701547495ec618
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: da59fcd66fa21602ad864deecac9f568bd5123bc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617770"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97244147"
 ---
 # <a name="ole-control-classes"></a>Classi di controlli OLE
 
@@ -62,6 +63,6 @@ Consente a un documento attivo di ricevere comandi che provengono dall'interfacc
 [COleSafeArray](reference/colesafearray-class.md)<br/>
 Funziona con matrici di tipo e dimensione arbitrari.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Cenni preliminari sulle classi](class-library-overview.md)

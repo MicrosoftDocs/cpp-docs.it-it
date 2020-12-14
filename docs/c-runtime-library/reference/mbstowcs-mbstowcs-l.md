@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: mbstowcs, _mbstowcs_l'
 title: mbstowcs, _mbstowcs_l
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - mbstowcs_l function
 - mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
-ms.openlocfilehash: 23dd4f2c98f99c0c526cb29553793574f2b7f7d3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3b830da1b69ed72e6cbea4f818a90900122c2219
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915465"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240156"
 ---
 # <a name="mbstowcs-_mbstowcs_l"></a>mbstowcs, _mbstowcs_l
 
@@ -93,13 +94,13 @@ Se **mbstowcs** converte correttamente la stringa di origine, restituisce il num
 > [!IMPORTANT]
 > Verificare che *wcstr* e *mbstr* non si sovrappongano e che il *conteggio* rispecchi correttamente il numero di caratteri multibyte da convertire.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **mbstowcs** converte fino a un numero massimo di caratteri multibyte di *conteggio* a cui punta *mbstr* in una stringa di caratteri wide corrispondenti determinati dalle impostazioni locali correnti. Archivia la stringa di caratteri wide risultante nell'indirizzo rappresentato da *wcstr*. Il risultato è simile a una serie di chiamate a [mbtowc](mbtowc-mbtowc-l.md). Se **mbstowcs** rileva il carattere null a byte singolo (' \ 0') prima o quando si verifica il *conteggio* , il carattere null viene convertito in un carattere null Wide (L'\ 0') e viene arrestato. In questo modo, la stringa di caratteri wide in *wcstr* è con terminazione null solo se viene rilevato un carattere null durante la conversione. Se le sequenze a cui puntano *wcstr* e *mbstr* si sovrappongono, il comportamento non è definito.
 
 Se l'argomento *wcstr* è **null**, **mbstowcs** restituisce il numero di caratteri wide risultante dalla conversione senza includere un terminatore null. La stringa di origine deve avere terminazione Null perché venga restituito il valore corretto. Se è necessario che la stringa di caratteri wide risultante abbia terminazione Null, aggiungere un carattere di terminazione Null al valore restituito.
 
-Se l'argomento *mbstr* è **null**o se *count* è > **INT_MAX**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, errno viene impostato su **EINVAL** e la funzione restituisce-1.
+Se l'argomento *mbstr* è **null** o se *count* è > **INT_MAX**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, errno viene impostato su **EINVAL** e la funzione restituisce-1.
 
 **mbstowcs** usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali; **_mbstowcs_l** è identico, ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
@@ -214,8 +215,8 @@ Convert back to wide-character string:
 ## <a name="see-also"></a>Vedere anche
 
 [Conversione dati](../../c-runtime-library/data-conversion.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>

@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: aritmetica dei puntatori'
 title: Puntatore aritmetico
 ms.date: 11/04/2016
 helpviewer_keywords:
 - pointer arithmetic
 - arithmetic pointer
 ms.assetid: eb924a29-59d3-48a5-9d62-9424790730eb
-ms.openlocfilehash: c1b3e31561bedece6a6180fbeb13473153a46ab6
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 37ee9fd696f874d1faa84b5d656317cf67f75a6c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343131"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243120"
 ---
 # <a name="pointer-arithmetic"></a>Puntatore aritmetico
 
@@ -20,6 +21,6 @@ Questa ipotesi è valida per membri della matrice. Per definizione, una matrice 
 
 Analogamente, quando due valori di puntatore vengono sottratti, la conversione suppone che solo valori dello stesso tipo, senza spazi vuoti, rientrino tra gli indirizzi forniti dagli operandi.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Operatori di addizione C](../c-language/c-additive-operators.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Gestore OnCmdMsg'
 title: Gestore OnCmdMsg
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - handlers, OnCmdMessage [MFC]
 - OnCmdMessage method [MFC]
 ms.assetid: 8df07024-506f-47e7-bba9-1c3bc5ad8ab6
-ms.openlocfilehash: 5114fe53a5bac345eb6a55fb6c371f7bc1f698ef
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 69dfbd7ccc52a6d90b57ef9cedf0f896d65057b2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624021"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243965"
 ---
 # <a name="oncmdmsg-handler"></a>Gestore OnCmdMsg
 
@@ -25,6 +26,6 @@ Ogni classe di destinazione comando può eseguire l'override della `OnCmdMsg` fu
 
 L' `CCmdTarget` implementazione predefinita di `OnCmdMsg` Usa la mappa messaggi della classe di destinazione del comando per cercare una funzione del gestore per ogni messaggio di comando ricevuto, nello stesso modo in cui vengono cercati i messaggi standard. Se viene trovata una corrispondenza, viene chiamato il gestore. La ricerca della mappa messaggi è illustrata nel modo in cui [il Framework cerca le mappe messaggi](how-the-framework-searches-message-maps.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Chiamata di un gestore dal framework](how-the-framework-calls-a-handler.md)
+[Modalità di chiamata di un gestore da parte del Framework](how-the-framework-calls-a-handler.md)
