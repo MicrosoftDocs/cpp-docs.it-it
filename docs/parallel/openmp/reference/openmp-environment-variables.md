@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: variabili di ambiente OpenMP'
 title: Variabili di ambiente OpenMP
 ms.date: 03/20/2019
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - OMP_NUM_THREADS OpenMP environment variable
 - OMP_SCHEDULE OpenMP environment variable
 ms.assetid: 2178ce2b-ffa1-45ec-a455-64437711d15d
-ms.openlocfilehash: 3f9117c531bdf0c5a0c94e0b18a055591f431036
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 58ca563033906f4e5e7e9d59089dc463396aa91c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503746"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342387"
 ---
 # <a name="openmp-environment-variables"></a>Variabili di ambiente OpenMP
 
@@ -42,7 +43,7 @@ Specifica se il tempo di esecuzione OpenMP può regolare il numero di thread in 
 set OMP_DYNAMIC[=TRUE | =FALSE]
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La `OMP_DYNAMIC` variabile di ambiente può essere sottoposta a override dalla funzione [omp_set_dynamic](openmp-functions.md#omp-set-dynamic) .
 
@@ -72,7 +73,7 @@ Specifica se il parallelismo annidato è abilitato, a meno che il parallelismo a
 set OMP_NESTED[=TRUE | =FALSE]
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La `OMP_NESTED` variabile di ambiente può essere sottoposta a override dalla funzione [omp_set_nested](openmp-functions.md#omp-set-nested) .
 
@@ -107,7 +108,7 @@ set OMP_NUM_THREADS[=num]
 *num*<br/>
 Numero massimo di thread desiderati nell'area parallela, fino a 64 nell'implementazione del Visual C++.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 `OMP_NUM_THREADS`È possibile eseguire l'override della variabile di ambiente tramite la funzione [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) o [num_threads](openmp-clauses.md#num-threads).
 
@@ -145,7 +146,7 @@ Opzionale Specifica le dimensioni delle iterazioni. la *dimensione* deve essere 
 *type*<br/>
 Tipo di pianificazione, ovvero,, `dynamic` `guided` `runtime` o `static` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il valore predefinito nell'implementazione Visual C++ dello standard OpenMP è `OMP_SCHEDULE=static,0` .
 

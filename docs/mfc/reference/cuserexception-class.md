@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CUserException'
 title: Classe CUserException
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - operations [MFC]
 - throwing exceptions [MFC], stopping user operations
 ms.assetid: 2156ba6d-2cce-415a-9000-6f02c26fcd7d
-ms.openlocfilehash: 72d8537616792859a2b00a1a5cd880ce5eb452bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6104aa2883a80f88aed03634f09ad1947e9c6794
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323437"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344965"
 ---
 # <a name="cuserexception-class"></a>Classe CUserException
 
@@ -28,17 +29,17 @@ Generata per arrestare un'operazione dell'utente finale.
 class CUserException : public CSimpleException
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Usare `CUserException` quando si desidera utilizzare il meccanismo delle eccezioni catch/throw per eccezioni specifiche dell'applicazione. "User" nel nome della classe può essere interpretato come "l'utente ha eseguito un'operazione che devo gestire eccezionali."
+Utilizzare `CUserException` quando si desidera utilizzare il meccanismo di eccezione throw/catch per le eccezioni specifiche dell'applicazione. "User" nel nome della classe può essere interpretato come "l'utente ha fatto qualcosa di eccezionale che devo gestire".
 
-Oggetto `CUserException` viene solitamente generato dopo la chiamata la funzione globale `AfxMessageBox` per notificare all'utente che un'operazione non riuscita. Quando si scrive un gestore di eccezioni, gestire l'eccezione in modo speciale in quanto l'utente in genere ha già ricevuto alcuna notifica dell'errore. In alcuni casi, il framework genera questa eccezione. Per generare una `CUserException` manualmente, avvisa l'utente e quindi chiamare la funzione globale `AfxThrowUserException`.
+Un oggetto `CUserException` viene in genere generato dopo aver chiamato la funzione globale `AfxMessageBox` per notificare all'utente che un'operazione non è riuscita. Quando si scrive un gestore di eccezioni, gestire l'eccezione in modo specifico perché l'utente in genere ha già ricevuto una notifica dell'errore. In alcuni casi, il Framework genera questa eccezione. Per generare un `CUserException` utente, avvisare l'utente e quindi chiamare la funzione globale `AfxThrowUserException` .
 
-Nell'esempio seguente, una funzione che contiene le operazioni che possono generare errori avvisa l'utente e genera un `CUserException`. La funzione chiamante rileva l'eccezione e viene gestita in modo speciale:
+Nell'esempio riportato di seguito, una funzione che contiene operazioni che potrebbero non essere in grado di avvisare l'utente e genera un'eccezione `CUserException` . La funzione chiamante intercetta l'eccezione e la gestisce in modo specifico:
 
 [!code-cpp[NVC_MFCExceptions#24](../../mfc/codesnippet/cpp/cuserexception-class_1.cpp)]
 
-Per altre informazioni sull'uso `CUserException`, vedere l'articolo [gestione delle eccezioni (MFC)](../../mfc/exception-handling-in-mfc.md).
+Per ulteriori informazioni sull'utilizzo di `CUserException` , vedere l'articolo [gestione delle eccezioni (MFC)](../../mfc/exception-handling-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -54,7 +55,7 @@ Per altre informazioni sull'uso `CUserException`, vedere l'articolo [gestione de
 
 **Intestazione:** afxwin.h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classe CException](../../mfc/reference/cexception-class.md)

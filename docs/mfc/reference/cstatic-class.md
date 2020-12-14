@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CStatic'
 title: Classe CStatic
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - CStatic [MFC], SetEnhMetaFile
 - CStatic [MFC], SetIcon
 ms.assetid: e7c94cd9-5ebd-428a-aa30-b3e51f8efb95
-ms.openlocfilehash: 1f6aac50b2143a4d5296baac906b1ebd0ef542f5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fa151382cc1342151e937662781a625739e82bd3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215959"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342660"
 ---
 # <a name="cstatic-class"></a>Classe CStatic
 
@@ -45,17 +46,17 @@ Fornisce la funzionalità di un controllo statico di Windows.
 class CStatic : public CWnd
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CStatic:: CStatic](#cstatic)|Costruisce un oggetto `CStatic`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CStatic:: create](#create)|Crea il controllo statico di Windows e lo collega all' `CStatic` oggetto.|
 |[CStatic::D rawItem](#drawitem)|Eseguire l'override di per disegnare un controllo statico creato dal proprietario.|
@@ -68,7 +69,7 @@ class CStatic : public CWnd
 |[CStatic:: SetEnhMetaFile](#setenhmetafile)|Specifica un metafile migliorato da visualizzare nel controllo statico.|
 |[CStatic:: seicon](#seticon)|Specifica un'icona da visualizzare nel controllo statico.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un controllo statico Visualizza una stringa di testo, box, rettangolo, icona, cursore, bitmap o Enhanced Metafile. Può essere usato per etichettare, box o separare altri controlli. Un controllo statico normalmente non accetta input e non fornisce alcun output. Tuttavia, può notificare al padre i clic del mouse se viene creato con SS_NOTIFY stile.
 
@@ -92,7 +93,7 @@ Se si crea un `CStatic` oggetto all'interno di una finestra, potrebbe essere nec
 
 **Intestazione:** afxwin.h
 
-## <a name="cstaticcreate"></a><a name="create"></a>CStatic:: create
+## <a name="cstaticcreate"></a><a name="create"></a> CStatic:: create
 
 Crea il controllo statico di Windows e lo collega all' `CStatic` oggetto.
 
@@ -126,7 +127,7 @@ Specifica l'ID del controllo del controllo statico.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Costruire un `CStatic` oggetto in due passaggi. Chiamare innanzitutto il costruttore `CStatic` , quindi chiamare `Create` , che crea il controllo statico di Windows e lo collega all' `CStatic` oggetto.
 
@@ -154,7 +155,7 @@ Per i cursori, le bitmap o le icone, è anche possibile usare lo stile seguente:
 
 [!code-cpp[NVC_MFC_CStatic#1](../../mfc/reference/codesnippet/cpp/cstatic-class_1.cpp)]
 
-## <a name="cstaticcstatic"></a><a name="cstatic"></a>CStatic:: CStatic
+## <a name="cstaticcstatic"></a><a name="cstatic"></a> CStatic:: CStatic
 
 Costruisce un oggetto `CStatic`.
 
@@ -166,7 +167,7 @@ CStatic();
 
 [!code-cpp[NVC_MFC_CStatic#2](../../mfc/reference/codesnippet/cpp/cstatic-class_2.cpp)]
 
-## <a name="cstaticdrawitem"></a><a name="drawitem"></a>CStatic::D rawItem
+## <a name="cstaticdrawitem"></a><a name="drawitem"></a> CStatic::D rawItem
 
 Chiamata eseguita dal Framework per disegnare un controllo statico creato dal proprietario.
 
@@ -179,11 +180,11 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 *lpDrawItemStruct*<br/>
 Puntatore a una struttura [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) . La struttura contiene informazioni sull'elemento da disegnare e il tipo di disegno necessario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Eseguire l'override di questa funzione per implementare il disegno per un `CStatic` oggetto creato dal proprietario (il controllo ha lo stile SS_OWNERDRAW).
 
-## <a name="cstaticgetbitmap"></a><a name="getbitmap"></a>CStatic:: GetBitmap
+## <a name="cstaticgetbitmap"></a><a name="getbitmap"></a> CStatic:: GetBitmap
 
 Ottiene l'handle della bitmap, precedentemente impostata con la [bitmap](#setbitmap), associata a `CStatic` .
 
@@ -199,7 +200,7 @@ Handle per la bitmap corrente o NULL se non è stata impostata alcuna bitmap.
 
 [!code-cpp[NVC_MFC_CStatic#3](../../mfc/reference/codesnippet/cpp/cstatic-class_3.cpp)]
 
-## <a name="cstaticgetcursor"></a><a name="getcursor"></a>CStatic:: GetCursor
+## <a name="cstaticgetcursor"></a><a name="getcursor"></a> CStatic:: GetCursor
 
 Ottiene l'handle del cursore, precedentemente impostato con il [cursore](#setcursor), associato a `CStatic` .
 
@@ -215,7 +216,7 @@ Handle per il cursore corrente o NULL se non è stato impostato alcun cursore.
 
 [!code-cpp[NVC_MFC_CStatic#4](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]
 
-## <a name="cstaticgetenhmetafile"></a><a name="getenhmetafile"></a>CStatic:: GetEnhMetaFile
+## <a name="cstaticgetenhmetafile"></a><a name="getenhmetafile"></a> CStatic:: GetEnhMetaFile
 
 Ottiene l'handle del metafile migliorato, precedentemente impostato con [SetEnhMetafile](#setenhmetafile), associato a `CStatic` .
 
@@ -231,7 +232,7 @@ Handle per il metafile avanzato corrente o NULL se non è stato impostato alcun 
 
 [!code-cpp[NVC_MFC_CStatic#5](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]
 
-## <a name="cstaticgeticon"></a><a name="geticon"></a>CStatic:: GetIcon
+## <a name="cstaticgeticon"></a><a name="geticon"></a> CStatic:: GetIcon
 
 Ottiene l'handle dell'icona, impostata in precedenza con l' [icona](#seticon)a cui è associato `CStatic` .
 
@@ -247,7 +248,7 @@ Handle per l'icona corrente o NULL se non è stata impostata alcuna icona.
 
 [!code-cpp[NVC_MFC_CStatic#6](../../mfc/reference/codesnippet/cpp/cstatic-class_6.cpp)]
 
-## <a name="cstaticsetbitmap"></a><a name="setbitmap"></a>CStatic:: sebitmap
+## <a name="cstaticsetbitmap"></a><a name="setbitmap"></a> CStatic:: sebitmap
 
 Associa una nuova bitmap al controllo statico.
 
@@ -264,7 +265,7 @@ Handle della bitmap da disegnare nel controllo statico.
 
 Handle della bitmap associata in precedenza al controllo statico o NULL se non è stata associata alcuna bitmap al controllo statico.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La bitmap verrà disegnata automaticamente nel controllo statico. Per impostazione predefinita, verrà disegnato nell'angolo superiore sinistro e il controllo statico verrà ridimensionato in base alle dimensioni della bitmap.
 
@@ -276,7 +277,7 @@ La bitmap verrà disegnata automaticamente nel controllo statico. Per impostazio
 
 - MFC fornisce la classe `CBitmap` , che è possibile utilizzare quando è necessario eseguire altre operazioni con un'immagine bitmap anziché chiamare semplicemente la funzione Win32 `LoadBitmap` . `CBitmap`, che contiene un tipo di oggetto GDI, viene spesso utilizzato in collaborazione con `CStatic` , ovvero una `CWnd` classe utilizzata per la visualizzazione di un oggetto grafico come controllo statico.
 
-`CImage`è una classe ATL/MFC che consente di lavorare più facilmente con le bitmap indipendenti dal dispositivo (DIB). Per ulteriori informazioni, vedere [classe CImage](../../atl-mfc-shared/reference/cimage-class.md).
+`CImage` è una classe ATL/MFC che consente di lavorare più facilmente con le bitmap indipendenti dal dispositivo (DIB). Per ulteriori informazioni, vedere [classe CImage](../../atl-mfc-shared/reference/cimage-class.md).
 
 - L'utilizzo tipico consiste nel fornire `CStatic::SetBitmap` un oggetto GDI restituito dall'operatore HBITMAP di un `CBitmap` `CImage` oggetto o. Il codice per eseguire questa operazione è simile alla riga seguente.
 
@@ -290,7 +291,7 @@ Nell'esempio seguente vengono creati due `CStatic` oggetti nell'heap. Viene quin
 
 [!code-cpp[NVC_MFC_CStatic#3](../../mfc/reference/codesnippet/cpp/cstatic-class_3.cpp)]
 
-## <a name="cstaticsetcursor"></a><a name="setcursor"></a>CStatic:: secursor
+## <a name="cstaticsetcursor"></a><a name="setcursor"></a> CStatic:: secursor
 
 Associa una nuova immagine del cursore al controllo statico.
 
@@ -307,7 +308,7 @@ Handle del cursore da disegnare nel controllo statico.
 
 Handle del cursore associato in precedenza al controllo statico o NULL se al controllo statico non è associato alcun cursore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il cursore verrà automaticamente disegnato nel controllo statico. Per impostazione predefinita, verrà disegnato nell'angolo superiore sinistro e il controllo statico verrà ridimensionato in base alle dimensioni del cursore.
 
@@ -321,7 +322,7 @@ Il cursore verrà automaticamente disegnato nel controllo statico. Per impostazi
 
 [!code-cpp[NVC_MFC_CStatic#4](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]
 
-## <a name="cstaticsetenhmetafile"></a><a name="setenhmetafile"></a>CStatic:: SetEnhMetaFile
+## <a name="cstaticsetenhmetafile"></a><a name="setenhmetafile"></a> CStatic:: SetEnhMetaFile
 
 Associa una nuova immagine Metafile avanzata al controllo statico.
 
@@ -338,7 +339,7 @@ Handle del metafile migliorato da disegnare nel controllo statico.
 
 Handle del metafile migliorato precedentemente associato al controllo statico o NULL se non è stato associato alcun metafile avanzato al controllo statico.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il metafile migliorato verrà automaticamente disegnato nel controllo statico. Il metafile migliorato viene ridimensionato per adattarsi alle dimensioni del controllo statico.
 
@@ -350,7 +351,7 @@ Il metafile migliorato verrà automaticamente disegnato nel controllo statico. I
 
 [!code-cpp[NVC_MFC_CStatic#5](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]
 
-## <a name="cstaticseticon"></a><a name="seticon"></a>CStatic:: seicon
+## <a name="cstaticseticon"></a><a name="seticon"></a> CStatic:: seicon
 
 Associa una nuova immagine icona al controllo statico.
 
@@ -367,7 +368,7 @@ Handle dell'icona da disegnare nel controllo statico.
 
 Handle dell'icona precedentemente associata al controllo statico oppure NULL se nessuna icona è stata associata al controllo statico.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'icona verrà disegnata automaticamente nel controllo statico. Per impostazione predefinita, verrà disegnato nell'angolo superiore sinistro e il controllo statico verrà ridimensionato in base alle dimensioni dell'icona.
 

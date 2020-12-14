@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: creazione di un contenitore di controlli ActiveX MFC'
 title: Creazione di un contenitore di controlli ActiveX MFC
 ms.date: 09/12/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - containers [MFC], creating
 - OLE controls [MFC], containers
 ms.assetid: ec70e137-7c14-4940-bd0e-fd4edcc63ea5
-ms.openlocfilehash: 27f229a23595d4842a77409a3cedc7a57aa43e6c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 221edf8cfaefb55b919c1117becc074cdfd880ab
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079432"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343192"
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>Creazione di un contenitore di controlli ActiveX MFC
 
@@ -35,8 +36,8 @@ La creazione di un programma contenitore MFC mediante la [creazione guidata appl
 
 1. [Modifica visiva](../../mfc/ole-mfc.md)
 
-1. [Controlli ActiveX MFC](../../mfc/mfc-activex-controls.md)
+1. [controlli ActiveX MFC](../../mfc/mfc-activex-controls.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Tipi di progetto C++ in Visual Studio](../../build/reference/visual-cpp-project-types.md)

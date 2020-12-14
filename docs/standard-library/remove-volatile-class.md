@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: remove_volatile Class'
 title: Classe remove_volatile
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - remove_volatile class
 - remove_volatile
 ms.assetid: 8b87e2c2-a581-4eb3-8691-c5603910d61d
-ms.openlocfilehash: 19514d1839fa6e0afcecb690dcb12657a85f3c2e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 45f0ba9ba4685a471f13d0d36ae5080eb667a9f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451269"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344874"
 ---
-# <a name="removevolatile-class"></a>Classe remove_volatile
+# <a name="remove_volatile-class"></a>Classe remove_volatile
 
 Crea un tipo non volatile dal tipo.
 
@@ -33,9 +34,9 @@ using remove_volatile_t = typename remove_volatile<T>::type;
 *T*\
 Tipo da modificare.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Un'istanza di `remove_volatile<T>` include un tipo modificato che è `T1` quando *T* è nel formato `volatile T1`; in caso contrario, *t*.
+Un'istanza di `remove_volatile<T>` include un tipo modificato che è `T1` quando *T* è nel formato `volatile T1` ; in caso contrario, *t*.
 
 ## <a name="example"></a>Esempio
 
@@ -61,11 +62,11 @@ remove_volatile_t<volatile int> == int
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<type_traits>
+**Intestazione:**\<type_traits>
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Classe add_volatile](../standard-library/add-volatile-class.md)

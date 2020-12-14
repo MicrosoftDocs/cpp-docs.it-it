@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: creazione di un'applicazione MFC Forms-Based"
 title: Creazione di un'applicazione MFC basata su form
 ms.date: 09/09/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - applications [MFC], forms-based
 - forms-based applications [MFC]
 ms.assetid: 048d2f7d-b60d-4386-ad8e-71d49af9c05e
-ms.openlocfilehash: 1dbbc5c29f85ced846cb3e07a02a5d6a55c94b20
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 2023f4f2c074ef1d0e3adf936cd4c31bd334b795
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70908048"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343238"
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>Creazione di un'applicazione MFC basata su form
 
@@ -28,11 +29,11 @@ SDI, MDI e più applicazioni di documento di primo livello sono basate su form e
 
 Qualsiasi applicazione basata su finestre di dialogo, per definizione, è basata su form. Un'applicazione basata su finestre di dialogo non utilizza l'architettura documento/visualizzazione, pertanto è necessario gestire i metodi di creazione e accesso per i moduli aggiuntivi.
 
-La classe base per le applicazioni basate su form è [CFormView](cformview-class.md). Se l'applicazione dispone del supporto per i database, è anche possibile selezionare qualsiasi classe che derivi `CFormView`da. Un modulo è qualsiasi finestra derivata da `CFormView` o da qualsiasi classe che eredita da `CFormView`.
+La classe base per le applicazioni basate su form è [CFormView](cformview-class.md). Se l'applicazione dispone del supporto per i database, è anche possibile selezionare qualsiasi classe che derivi da `CFormView` . Un modulo è qualsiasi finestra derivata da `CFormView` o da qualsiasi classe che eredita da `CFormView` .
 
-Anche se si usa una classe di base come [CView](cview-class.md), in un secondo momento è possibile rendere le applicazioni basate su moduli [aggiungendo una classe MFC](adding-an-mfc-class.md) derivata da `CFormView`.
+Anche se si usa una classe di base come [CView](cview-class.md), in un secondo momento è possibile rendere le applicazioni basate su moduli [aggiungendo una classe MFC](adding-an-mfc-class.md) derivata da `CFormView` .
 
-Una volta completata la procedura guidata, il progetto viene aperto e, se è `CFormView` stata selezionata (o una classe che `CFormView`eredita da) come classe di base o se è stata creata un'applicazione basata su C++ finestre di dialogo, l'oggetto visivo apre l'editor finestre. A questo punto, è possibile progettare il primo form.
+Una volta completata la procedura guidata, il progetto viene aperto e, se è stata selezionata l'opzione `CFormView` (o una classe che eredita da `CFormView` ) come classe di base o se è stata creata un'applicazione basata su finestre di dialogo, Visual C++ apre l'editor finestre. A questo punto, è possibile progettare il primo form.
 
 ### <a name="to-begin-creating-a-forms-based-mfc-executable"></a>Per iniziare a creare un eseguibile MFC basato su form
 
@@ -40,10 +41,10 @@ Una volta completata la procedura guidata, il progetto viene aperto e, se è `CF
 
 1. Nella pagina [tipo di applicazione](application-type-mfc-application-wizard.md) della creazione guidata applicazione MFC, selezionare la casella di controllo **supporto architettura documento/visualizzazione** .
 
-1. Selezionare un **singolo documento**, **più documenti**o **più documenti di primo livello**.
+1. Selezionare un **singolo documento**, **più documenti** o **più documenti di primo livello**.
 
     > [!NOTE]
-    >  Se per impostazione predefinita `CView` è stata scelta un'applicazione SDI, MDI o più di livello principale per l'interfaccia di documento, viene impostata come classe di base per la visualizzazione dell'applicazione nella pagina [classi generate](generated-classes-mfc-application-wizard.md) della procedura guidata. Per creare un'applicazione basata su form, è necessario selezionare `CFormView` come classe di base per la visualizzazione dell'applicazione. Si noti che la procedura guidata non fornisce alcun supporto per la stampa di un'applicazione basata su form.
+    >  Se per impostazione predefinita è stata scelta un'applicazione SDI, MDI o più di livello principale per l'interfaccia di documento, `CView` viene impostata come classe di base per la visualizzazione dell'applicazione nella pagina [classi generate](generated-classes-mfc-application-wizard.md) della procedura guidata. Per creare un'applicazione basata su form, è necessario selezionare `CFormView` come classe di base per la visualizzazione dell'applicazione. Si noti che la procedura guidata non fornisce alcun supporto per la stampa di un'applicazione basata su form.
 
 1. Impostare eventuali altre opzioni di progetto desiderate nelle altre pagine della procedura guidata.
 
@@ -57,9 +58,9 @@ Per altre informazioni, vedere:
 
 - [Scelte di progettazione delle applicazioni](../application-design-choices.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Creazione guidata applicazione MFC](mfc-application-wizard.md)<br/>
-[Visualizzazioni form](../form-views-mfc.md)<br/>
-[Creazione di un'applicazione MFC di tipo Esplora file](creating-a-file-explorer-style-mfc-application.md)<br/>
-[Creazione di un'applicazione MFC di tipo browser Web](creating-a-web-browser-style-mfc-application.md)
+[Visualizzazioni Maschera](../form-views-mfc.md)<br/>
+[Creazione di un file Explorer-Style applicazione MFC](creating-a-file-explorer-style-mfc-application.md)<br/>
+[Creazione di un'applicazione MFC Browser-Style Web](creating-a-web-browser-style-mfc-application.md)

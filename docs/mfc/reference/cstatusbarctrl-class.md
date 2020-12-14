@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CStatusBarCtrl'
 title: Classe CStatusBarCtrl
 ms.date: 11/04/2016
 f1_keywords:
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: d2440eb05a1367b7d4980494e3d7f5de646d5fd0
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 424edbd2d78fc82c7c78315dea1d430c6ea9459d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562649"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342634"
 ---
 # <a name="cstatusbarctrl-class"></a>Classe CStatusBarCtrl
 
@@ -61,17 +62,17 @@ Fornisce la funzionalità del controllo barra di stato comune di Windows.
 class CStatusBarCtrl : public CWnd
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CStatusBarCtrl:: CStatusBarCtrl](#cstatusbarctrl)|Costruisce un oggetto `CStatusBarCtrl`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CStatusBarCtrl:: create](#create)|Crea un controllo barra di stato e lo collega a un `CStatusBarCtrl` oggetto.|
 |[CStatusBarCtrl:: CreateEx](#createex)|Crea un controllo barra di stato con gli stili estesi di Windows specificati e lo collega a un `CStatusBarCtrl` oggetto.|
@@ -92,7 +93,7 @@ class CStatusBarCtrl : public CWnd
 |[CStatusBarCtrl:: SetText](#settext)|Imposta il testo nella parte specificata di un controllo barra di stato.|
 |[CStatusBarCtrl:: SetTipText](#settiptext)|Imposta il testo della descrizione comando per un riquadro in una barra di stato.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Un "controllo barra di stato" è una finestra orizzontale, in genere visualizzata nella parte inferiore di una finestra padre, in cui un'applicazione può visualizzare vari tipi di informazioni sullo stato. Il controllo barra di stato può essere diviso in parti per visualizzare più di un tipo di informazioni.
 
@@ -144,7 +145,7 @@ Specifica l'ID del controllo barra di stato.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si costruisce un `CStatusBarCtrl` in due passaggi. Chiamare innanzitutto il costruttore, quindi chiamare `Create` , che crea il controllo barra di stato e lo collega all' `CStatusBarCtrl` oggetto.
 
@@ -190,7 +191,7 @@ ID della finestra figlio del controllo.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare `CreateEx` anziché [create](#create) per applicare gli stili estesi di Windows, specificati dall'introduzione allo stile esteso di Windows **WS_EX_**.
 
@@ -215,7 +216,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 *lpDrawItemStruct*<br/>
 Puntatore long a una struttura [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) contenente informazioni sul tipo di disegno necessario.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il `itemAction` membro della `DRAWITEMSTRUCT` struttura definisce l'azione di disegno da eseguire.
 
@@ -254,7 +255,7 @@ Riferimento a un intero che riceve la larghezza del bordo tra i rettangoli.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questi bordi determinano la spaziatura tra il bordo esterno del controllo e i rettangoli all'interno del controllo che contengono testo.
 
@@ -279,7 +280,7 @@ in Indice in base zero della parte che contiene l'icona da recuperare. Se questo
 
 Handle per l'icona se il metodo ha esito positivo; in caso contrario, NULL.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo invia il messaggio di [SB_GETICON](/windows/win32/Controls/sb-geticon) , descritto nel Windows SDK.
 
@@ -319,7 +320,7 @@ Indirizzo di una matrice di interi con lo stesso numero di elementi del numero d
 
 Numero di parti nel controllo in caso di esito positivo; in caso contrario, zero.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro recupera anche la coordinata del bordo destro del numero specificato di parti.
 
@@ -446,7 +447,7 @@ Indice in base zero del riquadro della barra di stato per ricevere il testo dell
 
 Oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.md) contenente il testo da utilizzare nella descrizione comando.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [SB_GETTIPTEXT](/windows/win32/Controls/sb-gettiptext)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -466,7 +467,7 @@ BOOL IsSimple() const;
 
 Diverso da zero se il controllo della finestra di stato è in modalità semplice; in caso contrario, zero.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [SB_ISSIMPLE](/windows/win32/Controls/sb-issimple)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -487,7 +488,7 @@ Valore COLORREF che specifica il nuovo colore di sfondo. Specificare il valore C
 
 Valore [COLORREF](/windows/win32/gdi/colorref) che rappresenta il colore di sfondo predefinito precedente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [SB_SETBKCOLOR](/windows/win32/Controls/sb-setbkcolor)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -517,7 +518,7 @@ Handle per l'icona da impostare. Se questo valore è NULL, l'icona viene rimossa
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [SB_SETICON](/windows/win32/Controls/sb-seticon)del messaggio Win32, come descritto nel Windows SDK.
 
@@ -538,7 +539,7 @@ void SetMinHeight(int nMin);
 *nMin*<br/>
 Altezza minima, in pixel, del controllo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 L'altezza minima è la somma di *nmin* e il doppio della larghezza, in pixel, del bordo verticale del controllo barra di stato.
 
@@ -589,7 +590,7 @@ in Flag di tipo di visualizzazione. Se questo parametro è TRUE, il controllo Vi
 
 Restituisce sempre 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se l'applicazione modifica il controllo della barra di stato da non semplice a semplice o viceversa, il sistema riestrae immediatamente il controllo.
 
@@ -619,7 +620,7 @@ Tipo di operazione di disegno. Per un elenco di valori possibili, vedere [SB_SET
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il messaggio invalida la parte del controllo che è stata modificata, causando la visualizzazione del nuovo testo quando il controllo riceve il messaggio di WM_PAINT.
 
@@ -645,7 +646,7 @@ Indice in base zero del riquadro della barra di stato per ricevere il testo dell
 *pszTipText*<br/>
 Puntatore a una stringa contenente il testo della descrizione comando.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questa funzione membro implementa il comportamento del [SB_SETTIPTEXT](/windows/win32/Controls/sb-settiptext)del messaggio Win32, come descritto nel Windows SDK.
 

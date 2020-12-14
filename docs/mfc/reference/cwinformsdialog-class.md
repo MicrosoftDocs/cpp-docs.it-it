@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CWinFormsDialog'
 title: Classe CWinFormsDialog
 ms.date: 03/27/2019
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - CWinFormsDialog [MFC], GetControlHandle
 - CWinFormsDialog [MFC], OnInitDialog
 ms.assetid: e3cec000-a578-448e-b06a-8af256312f61
-ms.openlocfilehash: a25823982b9276309e99a2a26cef8d6fe2e764bd
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 501f9c354bd6f0b7a628aabb93f4680155f74a69
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040665"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342621"
 ---
 # <a name="cwinformsdialog-class"></a>Classe CWinFormsDialog
 
@@ -38,17 +39,17 @@ class CWinFormsDialog :
 *TManagedControl*<br/>
 Il .NET Framework controllo utente da visualizzare nell'applicazione MFC.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CWinFormsDialog:: CWinFormsDialog](#cwinformsdialog)|Costruisce un oggetto `CWinFormsDialog`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CWinFormsDialog:: GetControl](#getcontrol)|Recupera un riferimento al controllo utente Windows Forms.|
 |[CWinFormsDialog:: GetControlHandle](#getcontrolhandle)|Recupera un handle di finestra per il controllo utente Windows Forms.|
@@ -56,7 +57,7 @@ Il .NET Framework controllo utente da visualizzare nell'applicazione MFC.
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-|
 |[Operatore CWinFormsDialog:: operator-&gt;](#operator_-_gt)|Sostituisce [CWinFormsDialog:: GetControl](#getcontrol) nelle espressioni.|
 |[CWinFormsDialog:: operator TManagedControl ^](#operator-tmanagedcontrol-hat)|Esegue il cast di un tipo come riferimento a un controllo utente Windows Forms.|

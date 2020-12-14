@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: direttive OpenMP'
 title: Direttive OpenMP
 ms.date: 03/20/2019
 f1_keywords:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - single OpenMP directive
 - threadprivate OpenMP directive
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
-ms.openlocfilehash: 21270e8cdeb17b6d06d903d328962435c627759f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 03730b1f5cda0972dbf86b345c6e44bdad4e949b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503833"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342400"
 ---
 # <a name="openmp-directives"></a>Direttive OpenMP
 
@@ -42,7 +43,7 @@ Visual C++ supporta le direttive OpenMP seguenti.
 
 Per la condivisione di lavoro parallela:
 
-|Direttiva|Descrizione|
+|Direttiva|Description|
 |---------|-----------|
 |[parallelo](#parallel)|Definisce un'area parallela, ovvero codice che verrà eseguito da più thread in parallelo.|
 |[for](#for-openmp)|Fa in modo che il lavoro eseguito in un `for` ciclo all'interno di un'area parallela venga diviso tra i thread.|
@@ -51,7 +52,7 @@ Per la condivisione di lavoro parallela:
 
 Per il master e la sincronizzazione:
 
-|Direttiva|Descrizione|
+|Direttiva|Description|
 |---------|-----------|
 |[master](#master)|Specifica che solo il thread master deve eseguire una sezione del programma.|
 |[critico](#critical)|Specifica che il codice viene eseguito solo in un thread alla volta.|
@@ -62,7 +63,7 @@ Per il master e la sincronizzazione:
 
 Per l'ambiente dati:
 
-|Direttiva|Descrizione|
+|Direttiva|Description|
 |---------|-----------|
 |[threadprivate](#threadprivate)|Specifica che una variabile è privata per un thread.|
 
@@ -80,7 +81,7 @@ Specifica la posizione di memoria che verrà aggiornata atomicamente.
 *expression*<br/>
 Istruzione con *lvalue*, la cui posizione di memoria si vuole proteggere da più di una scrittura.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La `atomic` direttiva non supporta clausole.
 
@@ -119,7 +120,7 @@ Sincronizza tutti i thread in un team; tutti i thread vengono sospesi alla barri
 #pragma omp barrier
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La `barrier` direttiva non supporta clausole.
 
@@ -145,7 +146,7 @@ Specifica che il codice viene eseguito solo in un thread alla volta.
 *nome*<br/>
 Opzionale Nome per identificare il codice critico. Il nome deve essere racchiuso tra parentesi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La `critical` direttiva non supporta clausole.
 
@@ -222,7 +223,7 @@ Specifica che tutti i thread hanno la stessa visualizzazione della memoria per t
 *var*<br/>
 Opzionale Elenco delimitato da virgole di variabili che rappresentano gli oggetti che si desidera sincronizzare. Se *var* non è specificato, viene scaricata tutta la memoria.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La `flush` direttiva non supporta clausole.
 
@@ -302,11 +303,11 @@ Opzionale Zero o più clausole, vedere la sezione **osservazioni** .
 *for_statement*<br/>
 Un `for` ciclo. Se il codice utente nel `for` ciclo modifica la variabile di indice, si otterrà un comportamento non definito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La `for` direttiva supporta le clausole seguenti:
 
-- [private](openmp-clauses.md#private-openmp)
+- [privata](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
 - [lastprivate](openmp-clauses.md#lastprivate)
 - [riduzione](openmp-clauses.md#reduction)
@@ -393,7 +394,7 @@ Specifica che solo il thread master deve eseguire una sezione del programma.
 }
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La `master` direttiva non supporta clausole.
 
@@ -453,9 +454,9 @@ Specifica che il codice in un ciclo in parallelo `for` deve essere eseguito come
    structured-block
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-La `ordered` direttiva deve rientrare nell'extent dinamico di un [for](#for-openmp) `parallel for` costrutto for o con una `ordered` clausola.
+La `ordered` direttiva deve rientrare nell'extent dinamico di un [](#for-openmp) `parallel for` costrutto for o con una `ordered` clausola.
 
 La `ordered` direttiva non supporta clausole.
 
@@ -531,12 +532,12 @@ Definisce un'area parallela, ovvero codice che verrà eseguito da più thread in
 *clausole*<br/>
 Opzionale Zero o più clausole, vedere la sezione **osservazioni** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La `parallel` direttiva supporta le clausole seguenti:
 
 - [if](openmp-clauses.md#if-openmp)
-- [private](openmp-clauses.md#private-openmp)
+- [privata](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
 - [default](openmp-clauses.md#default-openmp)
 - [condiviso](openmp-clauses.md#shared-openmp)
@@ -593,13 +594,13 @@ Identifica le sezioni di codice che devono essere divise tra tutti i thread.
 *clausole*<br/>
 Opzionale Zero o più clausole, vedere la sezione **osservazioni** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La `sections` direttiva può contenere zero o più `section` direttive.
 
 La `sections` direttiva supporta le clausole seguenti:
 
-- [private](openmp-clauses.md#private-openmp)
+- [privata](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
 - [lastprivate](openmp-clauses.md#lastprivate)
 - [riduzione](openmp-clauses.md#reduction)
@@ -648,11 +649,11 @@ Consente di specificare che una sezione di codice deve essere eseguita in un sin
 *clausole*<br/>
 Opzionale Zero o più clausole, vedere la sezione **osservazioni** .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La `single` direttiva supporta le clausole seguenti:
 
-- [private](openmp-clauses.md#private-openmp)
+- [privata](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
 - [copyprivate](openmp-clauses.md#copyprivate)
 - [NOWAIT](openmp-clauses.md#nowait)
@@ -706,7 +707,7 @@ Specifica che una variabile è privata per un thread.
 *var*<br/>
 Elenco delimitato da virgole di variabili che si desidera rendere private a un thread. *var* deve essere una variabile con ambito globale o con ambito spazio dei nomi o una variabile locale statica.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La `threadprivate` direttiva non supporta clausole.
 

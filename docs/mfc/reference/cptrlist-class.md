@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CPtrList'
 title: Classe CPtrList
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - CPtrList class [MFC]
 - generic lists
 ms.assetid: 4139a09c-4338-4f42-9eea-51336120b43c
-ms.openlocfilehash: d7da4fe52d25d9ffdf6371aa40f41d7082f1165c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 27849db4687860ab68feb548de1ed8ad209b73a6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226841"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343251"
 ---
 # <a name="cptrlist-class"></a>Classe CPtrList
 
@@ -25,7 +26,7 @@ Supporta elenchi di puntatori void.
 class CPtrList : public CObject
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 Le funzioni membro di `CPtrList` sono simili alle funzioni membro della classe [CObList](../../mfc/reference/coblist-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CObList`. Quando viene visualizzato un `CObject` puntatore come parametro di funzione o valore restituito, sostituire un puntatore a **`void`** .
 
@@ -35,9 +36,9 @@ ad esempio, si converte in
 
 `void*& CPtrList::GetHead() const;`
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-`CPtrList`incorpora la macro IMPLEMENT_DYNAMIC per supportare l'accesso ai tipi in fase di esecuzione e il dump a un `CDumpContext` oggetto. Se è necessario un dump di singoli elementi dell'elenco di puntatori, è necessario impostare la profondità del contesto di dump su 1 o su un valore superiore.
+`CPtrList` incorpora la macro IMPLEMENT_DYNAMIC per supportare l'accesso ai tipi in fase di esecuzione e il dump a un `CDumpContext` oggetto. Se è necessario un dump di singoli elementi dell'elenco di puntatori, è necessario impostare la profondità del contesto di dump su 1 o su un valore superiore.
 
 Gli elenchi di puntatori non possono essere serializzati.
 
@@ -55,7 +56,7 @@ Per ulteriori informazioni sull'utilizzo di `CPtrList` , vedere le [raccolte](..
 
 **Intestazione:** AFXCOLL. h
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
