@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Dialog Data Exchange'
 title: DDX (Dialog Data Exchange)
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - UpdateData method [MFC]
 - retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
-ms.openlocfilehash: c12953ab0b9922788747246a97115188b2f686ed
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7ed592e8e6a452d4c6958c3c5f7b573c1be7fe07
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616816"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261476"
 ---
 # <a name="dialog-data-exchange"></a>DDX (Dialog Data Exchange)
 
@@ -37,7 +38,7 @@ Nella figura seguente viene illustrato lo scambio di dati della finestra di dial
 ![DDX (Dialog Data Exchange)](../mfc/media/vc379d1.gif "DDX (Dialog Data Exchange)") <br/>
 DDX (Dialog Data Exchange)
 
-`UpdateData`funziona in entrambe le direzioni, come specificato dal parametro **bool** passato. Per eseguire lo scambio, `UpdateData` imposta un `CDataExchange` oggetto e chiama l'override della classe di finestra di dialogo `CDialog` della `DoDataExchange` funzione membro. `DoDataExchange`accetta un argomento di tipo `CDataExchange` . L' `CDataExchange` oggetto passato a `UpdateData` rappresenta il contesto dello scambio, definendo tali informazioni come direzione dello scambio.
+`UpdateData` funziona in entrambe le direzioni, come specificato dal parametro **bool** passato. Per eseguire lo scambio, `UpdateData` imposta un `CDataExchange` oggetto e chiama l'override della classe di finestra di dialogo `CDialog` della `DoDataExchange` funzione membro. `DoDataExchange` accetta un argomento di tipo `CDataExchange` . L' `CDataExchange` oggetto passato a `UpdateData` rappresenta il contesto dello scambio, definendo tali informazioni come direzione dello scambio.
 
 Quando si esegue l'override di o di una creazione guidata codice `DoDataExchange` , si specifica una chiamata a una funzione DDX per membro dati (controllo). Ogni funzione DDX sa come scambiare dati in entrambe le direzioni in base al contesto fornito dall' `CDataExchange` argomento passato a `DoDataExchange` da `UpdateData` .
 
@@ -49,8 +50,8 @@ Le `DDX_` `DDV_` linee e sono un mapping dei dati. Le funzioni DDX e DDV di esem
 
 Se l'utente annulla una finestra di dialogo modale, la `OnCancel` funzione membro termina la finestra di dialogo e `DoModal` restituisce il valore **IDCANCEL**. In tal caso, non viene scambiato alcun dato tra la finestra di dialogo e l'oggetto finestra di dialogo.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Convalida e DDX (Dialog Data Exchange)](dialog-data-exchange-and-validation.md)<br/>
+[Convalida e scambio di dati della finestra di dialogo](dialog-data-exchange-and-validation.md)<br/>
 [Utilizzo delle finestre di dialogo in MFC](life-cycle-of-a-dialog-box.md)<br/>
-[Convalida dei dati delle finestre di dialogo](dialog-data-validation.md)
+[Convalida dei dati della finestra di dialogo](dialog-data-validation.md)

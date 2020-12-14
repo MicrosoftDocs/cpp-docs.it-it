@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: finestre di dialogo'
 title: Finestre di dialogo
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - CDialog class [MFC], MFC dialog boxes
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
-ms.openlocfilehash: da6a2eca7c2366e519b9bf2e809b042dc3ee2e50
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 4ae034c1eaf6d0cf1842218ecb09a96cd35e3ffc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616862"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261450"
 ---
 # <a name="dialog-boxes"></a>Finestre di dialogo
 
@@ -35,7 +36,7 @@ Le finestre delle [Proprietà](property-sheets-mfc.md), note anche come finestre
 
 - [Esempio: visualizzazione di una finestra di dialogo tramite un comando di menu](example-displaying-a-dialog-box-via-a-menu-command.md)
 
-- [Componenti della finestra di dialogo nel Framework](dialog-box-components-in-the-framework.md)
+- [Componenti delle finestre di dialogo nel framework](dialog-box-components-in-the-framework.md)
 
 - [Finestre di dialogo modali e non modali](modal-and-modeless-dialog-boxes.md)
 
@@ -51,7 +52,7 @@ Le finestre delle [Proprietà](property-sheets-mfc.md), note anche come finestre
 
 - [Accesso indipendente dai tipi ai controlli in una finestra di dialogo](type-safe-access-to-controls-in-a-dialog-box.md)
 
-- [Mapping dei messaggi di Windows alla classe](mapping-windows-messages-to-your-class.md)
+- [Mapping di messaggi di Windows alle classi](mapping-windows-messages-to-your-class.md)
 
 - [Funzioni membro comunemente sottoposte a override](commonly-overridden-member-functions.md)
 
@@ -65,6 +66,6 @@ Le finestre delle [Proprietà](property-sheets-mfc.md), note anche come finestre
 
 - [Esempi](dialog-sample-list.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Elementi dell'interfaccia utente](user-interface-elements-mfc.md)
