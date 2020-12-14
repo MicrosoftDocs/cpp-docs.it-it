@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/ZS (solo controllo della sintassi)
 title: /Zs (Solo controllo della sintassi)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - Zs compiler option
 - /Zs compiler option [C++]
 ms.assetid: b4b41e6a-3f41-4d09-9cb6-fde5aa2cfecf
-ms.openlocfilehash: e3713312b71c4cd539d40e09a3eaa821a2e5caed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4f5e2227104003a637db1d921fd959ea0a11ad7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315417"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224296"
 ---
 # <a name="zs-syntax-check-only"></a>/Zs (Solo controllo della sintassi)
 
-Indica al compilatore di controllare solo la sintassi dei file di origine nella riga di comando.
+Indica al compilatore di verificare solo la sintassi dei file di origine nella riga di comando.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,15 +27,15 @@ Indica al compilatore di controllare solo la sintassi dei file di origine nella 
 /Zs
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Quando si usa questa opzione, viene creato alcun file di output e messaggi di errore vengono scritte all'output standard.
+Quando si usa questa opzione, non viene creato alcun file di output e i messaggi di errore vengono scritti nell'output standard.
 
-Il **/Zs** opzione offre un modo rapido per trovare e correggere gli errori di sintassi prima di compilare e collegare un file di origine.
+L'opzione **/ZS** fornisce un modo rapido per individuare e correggere gli errori di sintassi prima di compilare e collegare un file di origine.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -46,7 +47,7 @@ Il **/Zs** opzione offre un modo rapido per trovare e correggere gli errori di s
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

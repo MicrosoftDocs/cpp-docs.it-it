@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: Stati di flusso'
 title: Stati di flusso
 ms.date: 11/19/2018
 helpviewer_keywords:
 - streams, states
 ms.assetid: 5f28c968-f132-403f-968c-8417ff315e52
-ms.openlocfilehash: f725fa16e8d669975dbc02c6eefd727085bbeb7c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: c691c1fd01feb9f78ff0929775505f08cb625ecc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743359"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224179"
 ---
 # <a name="stream-states"></a>Stati di flusso
 
@@ -19,7 +20,7 @@ Gli stati validi e le transizioni di stato per un flusso vengono illustrati nell
 
 Ognuno dei cerchi indica uno stato stabile. Ognuna delle righe indica una transizione che può verificarsi come risultato di una chiamata di funzione che opera nel flusso. Cinque gruppi di funzioni possono causare transizioni di stato.
 
-Le funzioni nei primi tre gruppi sono dichiarate in \<stdio.h>:
+Le funzioni nei primi tre gruppi sono dichiarate in \<stdio.h> :
 
 - Funzioni di lettura dei byte - [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md), [fgets](../c-runtime-library/reference/fgets-fgetws.md), [fread](../c-runtime-library/reference/fread.md), [fscanf](../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md), [getc](../c-runtime-library/reference/getc-getwc.md), [getchar](../c-runtime-library/reference/getc-getwc.md), [gets](../c-runtime-library/gets-getws.md), [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) e [ungetc](../c-runtime-library/reference/ungetc-ungetwc.md)
 
@@ -27,7 +28,7 @@ Le funzioni nei primi tre gruppi sono dichiarate in \<stdio.h>:
 
 - Funzioni di posizionamento - [fflush](../c-runtime-library/reference/fflush.md), [fseek](../c-runtime-library/reference/fseek-fseeki64.md), [fsetpos](../c-runtime-library/reference/fsetpos.md) e [rewind](../c-runtime-library/reference/rewind.md)
 
-Le funzioni nei due gruppi rimanenti sono dichiarate in \<wchar.h>:
+Le funzioni nei due gruppi rimanenti sono dichiarate in \<wchar.h> :
 
 - Funzioni di lettura dei caratteri wide - [fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md), [fgetws](../c-runtime-library/reference/fgets-fgetws.md), [fwscanf](../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md), [getwc](../c-runtime-library/reference/getc-getwc.md), [getwchar](../c-runtime-library/reference/getc-getwc.md), [ungetwc](../c-runtime-library/reference/ungetc-ungetwc.md) e [wscanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md),
 
@@ -41,6 +42,6 @@ Il diagramma di stato indica che è necessario chiamare una delle funzioni di po
 
 Infine, il diagramma di stato mostra che un'operazione di posizionamento non riduce mai il numero di chiamate di funzione valide che possono seguire.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [File e flussi](../c-runtime-library/files-and-streams.md)

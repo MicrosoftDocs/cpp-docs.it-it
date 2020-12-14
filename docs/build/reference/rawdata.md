@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/RAWDATA
 title: /RAWDATA
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -RAWDATA dumpbin option
 - /RAWDATA dumpbin option
 ms.assetid: 41cba845-5e1f-415e-9fe4-604a52235983
-ms.openlocfilehash: 02af8df04d80c20c5d7629b51abab6295a21f5e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efe2001c0170b8539b98902591849dedaf0fb819
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319513"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225375"
 ---
 # <a name="rawdata"></a>/RAWDATA
 
@@ -22,21 +23,21 @@ ms.locfileid: "62319513"
 /RAWDATA[:{1|2|4|8|NONE[,number]]
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Questa opzione consente di visualizzare il contenuto non elaborato di ogni sezione nel file. Gli argomenti di controllano il formato di visualizzazione, come illustrato di seguito:
+Questa opzione consente di visualizzare il contenuto non elaborato di ogni sezione del file. Gli argomenti controllano il formato della visualizzazione, come mostrato di seguito:
 
 |Argomento|Risultato|
 |--------------|------------|
-|1|Valore predefinito. Contenuto viene visualizzato in byte esadecimali e anche come caratteri ASCII, se hanno una rappresentazione stampata.|
-|2|Contenuto viene visualizzato come valori esadecimali a 2 byte.|
-|4|Contenuto viene visualizzato come valori a 4 byte esadecimali.|
-|8|Contenuto viene visualizzato come valori a 8 byte esadecimali.|
-|NESSUNO|Dati non elaborati sono stati eliminati. Questo argomento è utile per controllare l'output di /all.|
-|*Numero*|Le righe visualizzate sono impostate su una larghezza che contiene `number` valori per ogni riga.|
+|1|Valore predefinito. I contenuti vengono visualizzati in byte esadecimali e anche come caratteri ASCII se hanno una rappresentazione stampata.|
+|2|I contenuti vengono visualizzati come valori esadecimali a 2 byte.|
+|4|I contenuti vengono visualizzati come valori esadecimali a 4 byte.|
+|8|I contenuti vengono visualizzati come valori esadecimali a 8 byte.|
+|NONE|I dati non elaborati vengono eliminati. Questo argomento è utile per controllare l'output di/ALL.|
+|*Number*|Le righe visualizzate sono impostate su una larghezza che include `number` valori per riga.|
 
-Solo le [/HEADERS](headers.md) (opzione dumpbin) è disponibile per l'uso con i file generati con la [/GL](gl-whole-program-optimization.md) opzione del compilatore.
+Solo l'opzione [/HEADERS](headers.md) DUMPBIN può essere usata nei file generati con l'opzione del compilatore [/GL](gl-whole-program-optimization.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni di DUMPBIN](dumpbin-options.md)

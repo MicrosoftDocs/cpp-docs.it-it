@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: parole riservate'
 title: Parole riservate
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - linker [C++], reserved words
 - reserved words [C++]
 ms.assetid: 9b9f49e5-0739-45ab-a37e-81e3915ceb25
-ms.openlocfilehash: 62893d4af1633bc2c89d2d6a0fa71309a0411ad5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6d5c5971d8d01dffa1dcd1e7f6a5228fb239d4dc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836842"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225193"
 ---
 # <a name="reserved-words"></a>Parole riservate
 
@@ -102,7 +103,7 @@ Le parole seguenti sono riservate al linker. Questi nomi possono essere utilizza
 
 <sup>2</sup> il linker ignora questa parola ma non emette alcun avviso.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Informazioni di riferimento sul linker MSVC](linking.md)
 - [Opzioni del linker MSVC](linker-options.md)

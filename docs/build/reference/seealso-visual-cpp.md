@@ -1,5 +1,6 @@
 ---
-title: '&lt;> seealso (C++ commenti sulla documentazione)'
+description: 'Altre informazioni su: &lt; seealso&gt;'
+title: '&lt;> seealso (commenti sulla documentazione C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - <seealso>
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - seealso C++ XML tag
 - <seealso> C++ XML tag
 ms.assetid: cb33d100-9c50-4485-8d0c-573429eff155
-ms.openlocfilehash: 698db2df462f561acd897d0d0e56b3106a915466
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 70f5f0147ff56dd6327e99f073f80c28a7cce539
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988614"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224725"
 ---
 # <a name="ltseealsogt"></a>&lt;seealso&gt;
 
-Il tag \<seealso> consente di specificare il testo da visualizzare in una sezione Vedere anche. Usare [\<see>](see-visual-cpp.md) per specificare un collegamento nel testo.
+Il \<seealso> tag consente di specificare il testo che potrebbe essere necessario visualizzare in una sezione vedere anche. Usare [\<see>](see-visual-cpp.md) per specificare un collegamento dall'interno del testo.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -32,13 +33,13 @@ Riferimento a un membro o a un campo disponibile per essere chiamato dall'ambien
 
 Il compilatore verifica l'esistenza dell'elemento di codice specificato e risolve `member` nel nome dell'elemento nel file XML di output.  Il compilatore genera un avviso se non trova `member`.
 
-Per informazioni su come creare un riferimento cref a un tipo generico, vedere [\<see>](see-visual-cpp.md).
+Per informazioni su come creare un riferimento cref a un tipo generico, vedere [\<see>](see-visual-cpp.md) .
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Compilare con [/doc](doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.
 
-Per un esempio d'uso di \<seealso>, vedere [\<summary>](summary-visual-cpp.md).
+[\<summary>](summary-visual-cpp.md)Per un esempio dell'utilizzo di \<seealso> , vedere.
 
 Il compilatore MSVC tenterà di risolvere i riferimenti CREF in un passaggio attraverso i commenti della documentazione.  Pertanto, se si utilizzano le regole di ricerca di C++, un simbolo non viene trovato dal compilatore e il riferimento verrà contrassegnato come non risolto.
 
@@ -68,6 +69,6 @@ public ref struct B {
 };
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Documentazione di XML](xml-documentation-visual-cpp.md)
+[Documentazione XML](xml-documentation-visual-cpp.md)

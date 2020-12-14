@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/ZP (allineamento membri struct)
 title: /Zp (Allineamento membri struct)
 ms.date: 04/04/2019
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: c78e670303bde68299725e18c6f588f5e410a971
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b2029ebded53bcae1b44b5cd72bf59494e58ec4b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234302"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224309"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (Allineamento membri struct)
 
@@ -26,9 +27,9 @@ Controlla il modo in cui i membri di una struttura vengono compressi in memoria 
 
 > **`/Zp`**[**`1`**|**`2`**|**`4`**|**`8`**|**`16`**]
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-L' **`/ZpN`** opzione indica al compilatore dove archiviare ogni membro della struttura. Il compilatore archivia i membri dopo il primo in un limite minore della dimensione del tipo di membro o di un limite di *N*byte.
+L' **`/ZpN`** opzione indica al compilatore dove archiviare ogni membro della struttura. Il compilatore archivia i membri dopo il primo in un limite minore della dimensione del tipo di membro o di un limite di *N* byte.
 
 I valori di compressione disponibili sono descritti nella tabella seguente:
 
@@ -49,17 +50,17 @@ Non usare questa opzione a meno che non siano previsti requisiti di allineamento
 
 - [`align`](../../cpp/align-cpp.md)
 
-- [`alignof`Operatore](../../cpp/alignof-operator.md)
+- [`alignof` Operatore](../../cpp/alignof-operator.md)
 
 - [`__unaligned`](../../cpp/unaligned.md)
 
-- [`/ALIGN`(Allineamento sezione)](align-section-alignment.md)
+- [`/ALIGN` (Allineamento sezione)](align-section-alignment.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la pagina delle proprietà di **configurazione**delle  >  proprietà di generazione del codice**C/C++**  >  **Code Generation** .
+1. Selezionare la pagina delle proprietà di **configurazione** delle  >  proprietà di generazione del codice **C/C++**  >   .
 
 1. Modificare la proprietà **Allineamento membri struct** .
 
@@ -67,7 +68,7 @@ Non usare questa opzione a meno che non siano previsti requisiti di allineamento
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StructMemberAlignment%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md) \
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

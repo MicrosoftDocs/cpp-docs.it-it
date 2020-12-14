@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: caratteri speciali in un makefile'
 title: Caratteri speciali in un makefile
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,27 +8,27 @@ helpviewer_keywords:
 - special characters, in NMAKE macros
 - macros, special characters
 ms.assetid: 92c34ab5-ca6b-4fc0-bcf4-3172eaeda9f0
-ms.openlocfilehash: d915b182d72b4251f416433642cd8b1832b80e08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22b8f6dd82191c88a23eaf1dabb551d468293a42
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318576"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224673"
 ---
 # <a name="special-characters-in-a-makefile"></a>Caratteri speciali in un makefile
 
-Per usare un carattere speciale NMAKE come carattere letterale, inserire un accento circonflesso (^) trovano davanti. NMAKE Ignora accenti circonflessi che precedono gli altri caratteri. I caratteri speciali sono:
+Per usare un carattere speciale di NMAKE come carattere letterale, posizionare un accento circonflesso (^) in primo piano. NMAKE ignora i carrier che precedono altri caratteri. I caratteri speciali sono:
 
 `:  ;  #  (  )  $  ^  \  {  }  !  @  —`
 
-Un accento circonflesso (^) all'interno di una stringa tra virgolette viene considerato come un valore letterale del carattere. Un punto di inserimento alla fine di una riga viene inserito un carattere letterale in una stringa o una macro.
+Un accento circonflesso (^) all'interno di una stringa racchiusa tra virgolette viene considerato come un carattere di accento letterale. Un punto di inserimento alla fine di una riga inserisce un carattere di nuova riga letterale in una stringa o in una macro.
 
-Nelle macro, una barra rovesciata (\\) seguito da un carattere di nuova riga viene sostituito da uno spazio.
+Nelle macro, una barra rovesciata ( \\ ) seguita da un carattere di nuova riga viene sostituita da uno spazio.
 
-Nei comandi, un simbolo di percentuale (%) è un identificatore di file. Per rappresentare % letteralmente in un comando, specificare un simbolo di percentuale doppio (%) al posto di uno solo. In altre situazioni, viene interpretato letteralmente un singolo %, ma viene sempre interpretato un valore double % % come oggetto % singolo. Pertanto, per rappresentare un valore letterale % %, specificare entrambi tre segni di percentuale, % % %, o segni di percentuale di quattro, % % % c'.
+Nei comandi, un simbolo di percentuale (%) è un identificatore di file. Per rappresentare% letteralmente in un comando, specificare un segno di percentuale doppio (%%) al posto di una sola. In altre situazioni, NMAKE interpreta letteralmente un solo%, ma interpreta sempre il doppio%% come una singola percentuale. Pertanto, per rappresentare un valore letterale%%, specificare i tre segni di percentuale,%%% o i segni del 4%,%%%%.
 
-Per utilizzare il segno di dollaro ($) come carattere letterale in un comando, specificare due simboli del dollaro ($$). Questo metodo può essere utilizzato anche in altre situazioni in cui ^ $ works.
+Per usare il segno di dollaro ($) come carattere letterale in un comando, specificare due simboli di dollaro ($ $). Questo metodo può essere utilizzato anche in altre situazioni in cui ^ $ funziona.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Contenuto di un makefile](contents-of-a-makefile.md)

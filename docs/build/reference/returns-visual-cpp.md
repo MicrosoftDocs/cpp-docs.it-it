@@ -1,5 +1,6 @@
 ---
-title: '&lt;restituisce > (C++ commenti per la documentazione)'
+description: 'Altre informazioni su: &lt; Returns&gt;'
+title: '&lt;Restituisce> (commenti in formato documentazione C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - returns
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - returns C++ XML tag
 - <returns> C++ XML tag
 ms.assetid: 5e3b0ed9-838d-4953-a93e-76d2d0a19fb9
-ms.openlocfilehash: 1315ec09271c2c97f7bcaf3fb6f9c75f514b5d2d
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: c07439610fa0259a38a4c1993ead7f0f06023e5e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988639"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225050"
 ---
 # <a name="ltreturnsgt"></a>&lt;returns&gt;
 
-Il tag \<returns> deve essere usato nel commento per una dichiarazione di metodo per descrivere il valore restituito.
+Il \<returns> tag deve essere usato nel commento per una dichiarazione di metodo per descrivere il valore restituito.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -30,7 +31,7 @@ Il tag \<returns> deve essere usato nel commento per una dichiarazione di metodo
 *description*<br/>
 Descrizione del valore restituito.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Compilare con [/doc](doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.
 
@@ -51,4 +52,4 @@ public:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Documentazione di XML](xml-documentation-visual-cpp.md)
+[Documentazione XML](xml-documentation-visual-cpp.md)

@@ -1,5 +1,6 @@
 ---
-title: '&lt;param > (commenti relativi alla documentazione di C++)'
+description: 'Altre informazioni su: &lt; param&gt;'
+title: '&lt;param> (commenti in formato documentazione C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - param
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - param C++ XML tag
 - <param> C++ XML tag
 ms.assetid: 66c1a1c3-4f98-4bcf-8c7d-9a40308982fb
-ms.openlocfilehash: d8ea4feddbe1ec2d5898f8ef698cc2d69d255933
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c3baabc6aef9a4cabdd7c7a9023fb628bd53793
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320006"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226142"
 ---
 # <a name="ltparamgt"></a>&lt;param&gt;
 
-Il tag \<param> viene usato nel commento di una dichiarazione di metodo per descrivere uno dei parametri del metodo.
+Il \<param> tag deve essere usato nel commento per una dichiarazione di metodo per descrivere uno dei parametri per il metodo.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -27,15 +28,15 @@ Il tag \<param> viene usato nel commento di una dichiarazione di metodo per desc
 
 #### <a name="parameters"></a>Parametri
 
-*name*<br/>
+*nome*<br/>
 Nome di un parametro di metodo.  Racchiudere il nome tra virgolette singole o doppie.  Il compilatore genera un avviso se non trova `name`.
 
 *description*<br/>
 Descrizione del parametro.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-Il testo del tag \<param> verrà visualizzato in IntelliSense, nel [Visualizzatore oggetti](/visualstudio/ide/viewing-the-structure-of-code) e nel report Web sui commenti del codice.
+Il testo del \<param> tag verrà visualizzato in IntelliSense, nel [Visualizzatore oggetti](/visualstudio/ide/viewing-the-structure-of-code)e nel report Web di commenti sul codice.
 
 Compilare con [/doc](doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.
 
@@ -55,4 +56,4 @@ public ref class MyClass {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Documentazione di XML](xml-documentation-visual-cpp.md)
+[Documentazione XML](xml-documentation-visual-cpp.md)

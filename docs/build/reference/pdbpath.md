@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: Specificando/PDBPATH'
 title: /PDBPATH
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - PDBPATH dumpbin option
 - PDB files, path
 ms.assetid: ccf67dcd-0b23-4250-ad47-06c48acbe82b
-ms.openlocfilehash: f29b8e61fbfbdb0f373e3e7510cb3f1fe0b9cc2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41207d7cfce3d72ecb9517d9ad3af8bcd3f901d7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319850"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226051"
 ---
 # <a name="pdbpath"></a>/PDBPATH
 
@@ -26,30 +27,30 @@ ms.locfileid: "62319850"
 ### <a name="parameters"></a>Parametri
 
 *filename*<br/>
-Il nome del file con estensione dll o .exe per cui si desidera trovare il file con estensione PDB corrispondente.
+Nome del file con estensione dll o exe per il quale si desidera trovare il file con estensione PDB corrispondente.
 
-**:VERBOSE**<br/>
-(Facoltativo) Segnala tutte le directory in cui è stato effettuato un tentativo per individuare il file con estensione pdb.
+**: VERBOse**<br/>
+Opzionale Segnala tutte le directory in cui è stato effettuato un tentativo di individuare il file con estensione pdb.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
-/PDBPATH cercherà nel computer negli stessi percorsi che il debugger esegue una ricerca di un file con estensione pdb e segnalerà che, se presente, i file con estensione pdb corrispondono al file specificato *filename*.
+Specificando/PDBPATH cercherà nel computer gli stessi percorsi in cui il debugger cerca un file con estensione PDB e segnalerà i file PDB corrispondenti al file specificato in *filename*.
 
-Quando si usa il debugger di Visual Studio, è possibile che si verifichi un problema dovuto al fatto che il debugger sta utilizzando un file con estensione PDB per una versione diversa del file di cui che si esegue il debug.
+Quando si usa il debugger di Visual Studio, è possibile che si verifichi un problema a causa del fatto che il debugger usa un file con estensione PDB per una versione diversa del file di cui si esegue il debug.
 
-/PDBPATH eseguirà la ricerca dei file PDB nei percorsi seguenti:
+Specificando/PDBPATH cercherà i file con estensione PDB lungo i percorsi seguenti:
 
-- Controllare il percorso in cui si trova il file eseguibile.
+- Controllare la posizione in cui risiede il file eseguibile.
 
-- Controllare il percorso del file PDB scritto nel file eseguibile. Si tratta in genere il percorso al momento che del collegamento dell'immagine.
+- Controllare la posizione del PDB scritto nel file eseguibile. Si tratta in genere del percorso nel momento in cui l'immagine è stata collegata.
 
 - Controllare lungo il percorso di ricerca configurato nell'IDE di Visual Studio.
 
-- Controllare i percorsi NT_SYMBOL_PATH e NT_ALT_SYMBOL_PATH le variabili di ambiente.
+- Controllare lungo i percorsi nelle variabili di ambiente _NT_SYMBOL_PATH e _NT_ALT_SYMBOL_PATH.
 
-- Verificare nella directory di Windows.
+- Archiviare la directory di Windows.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni di DUMPBIN](dumpbin-options.md)<br/>
-[/PDBALTPATH (usa percorso PDB alternativo)](pdbaltpath-use-alternate-pdb-path.md)
+[/PDBALTPATH. (USA percorso PDB alternativo)](pdbaltpath-use-alternate-pdb-path.md)

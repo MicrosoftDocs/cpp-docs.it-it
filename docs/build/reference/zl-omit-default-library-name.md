@@ -1,4 +1,5 @@
 ---
+description: Altre informazioni su:/ZL (omette il nome della libreria predefinita)
 title: /Zl (Omette il nome della libreria predefinita)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - /Zl compiler option [C++]
 - default libraries, omitting names
 ms.assetid: b27d39d0-44d6-498c-84ae-27c1326fee59
-ms.openlocfilehash: c72377314abf755469075c7a4b431f4b8a64ee7f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: eaf39b7bfe1a2b7f2d2c7754cccf8061543e4c7c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438628"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224426"
 ---
 # <a name="zl-omit-default-library-name"></a>/Zl (Omette il nome della libreria predefinita)
 
@@ -30,7 +31,7 @@ Omette il nome della libreria di runtime C predefinita dal file obj. Per imposta
 
 ## <a name="remarks"></a>Osservazioni
 
-Per ulteriori informazioni sulla libreria predefinita, vedere [utilizzare la libreria di runtime](md-mt-ld-use-run-time-library.md).
+Per ulteriori informazioni sulla libreria predefinita, vedere [Use Run-Time Library](md-mt-ld-use-run-time-library.md).
 
 È possibile usare **/ZL** per compilare i file con estensione obj che si prevede di inserire in una libreria. Anche se omettere il nome della libreria Salva solo una piccola quantità di spazio per un singolo file obj, lo spazio totale salvato è significativo in una raccolta che contiene molti moduli oggetto.
 
@@ -40,7 +41,7 @@ Usare [/NODEFAULTLIB (Ignora librerie)](nodefaultlib-ignore-libraries.md). per i
 
 Per altre informazioni, vedere [Funzionalità libreria CRT](../../c-runtime-library/crt-library-features.md).
 
-Quando si esegue la compilazione con **/ZL**, viene definito `_VC_NODEFAULTLIB`.  Ad esempio:
+Quando si esegue la compilazione con **/ZL**, `_VC_NODEFAULTLIB` viene definito.  Ad esempio:
 
 ```cpp
 // vc_nodefaultlib.cpp
@@ -56,7 +57,7 @@ void Test() {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare le proprietà del compilatore e di compilazione C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -68,7 +69,7 @@ void Test() {
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OmitDefaultLibName%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)
