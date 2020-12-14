@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore del compilatore C3248'
 title: Errore del compilatore C3248
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3248
 ms.assetid: d00b9d7d-b6be-4a5b-bb52-48174ea71fc4
-ms.openlocfilehash: 1a5a88e7623fd96aefe8d838ab17ba576320aa41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 283d7b98a7e12bf318a696812cbf6ad05911c517
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182470"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307174"
 ---
 # <a name="compiler-error-c3248"></a>Errore del compilatore C3248
 
@@ -19,4 +20,4 @@ ms.locfileid: "62182470"
 
 Una classe derivata ha tentato di eseguire l'override di un metodo virtuale **__sealed** .
 
-C3248 è raggiungibile tramite l'opzione del compilatore obsolete solo **/CLR: oldSyntax**.
+C3248 è raggiungibile solo usando l'opzione del compilatore obsolete **/CLR: oldSyntax**.

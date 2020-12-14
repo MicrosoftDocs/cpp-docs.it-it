@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _tzset'
 title: _tzset
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-ms.openlocfilehash: 0791fe6002b751906c6bc6f83dafe1ccf202bc8b
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 3841acf0a0fa13b23a8c41dcf955feec76bc82d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562025"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304532"
 ---
 # <a name="_tzset"></a>_tzset
 
@@ -50,7 +51,7 @@ void _tzset( void );
 
 ## <a name="remarks"></a>Osservazioni
 
-La funzione **_tzset** usa l'impostazione corrente della variabile di ambiente **TZ** per assegnare valori a tre variabili globali: **_daylight**, **_timezone**e **_tzname**. Queste variabili vengono usate dalle funzioni [_ftime](ftime-ftime32-ftime64.md) e [localtime](localtime-localtime32-localtime64.md) per apportare correzioni dall'ora UTC (Coordinated Universal Time) all'ora locale e dalla funzione [Time](time-time32-time64.md) per calcolare l'ora UTC dall'ora di sistema. Usare la sintassi seguente per impostare la variabile di ambiente **TZ** :
+La funzione **_tzset** usa l'impostazione corrente della variabile di ambiente **TZ** per assegnare valori a tre variabili globali: **_daylight**, **_timezone** e **_tzname**. Queste variabili vengono usate dalle funzioni [_ftime](ftime-ftime32-ftime64.md) e [localtime](localtime-localtime32-localtime64.md) per apportare correzioni dall'ora UTC (Coordinated Universal Time) all'ora locale e dalla funzione [Time](time-time32-time64.md) per calcolare l'ora UTC dall'ora di sistema. Usare la sintassi seguente per impostare la variabile di ambiente **TZ** :
 
 > **set TZ =**_tzn_ \[ **+**&#124;**-** ]*HH* \[ **:**_mm_ \[ **:**_SS_]] [*DZN*]
 
@@ -80,7 +81,7 @@ Questo comando usa GST per indicare l'ora solare tedesca, presuppone che l'ora U
 
 Se il valore **TZ** non è impostato, **_tzset** tenta di usare le informazioni sul fuso orario specificate dal sistema operativo. Nel sistema operativo Windows, queste informazioni vengono specificate nell'applicazione Data/Ora nel Pannello di controllo. Se **_tzset** non è in grado di ottenere queste informazioni, per impostazione predefinita USA PST8PDT, che indica il fuso orario del Pacifico.
 
-In base al valore della variabile di ambiente **TZ** , i valori seguenti vengono assegnati alle variabili globali **_daylight**, **_timezone**e **_tzname** quando viene chiamato **_tzset** :
+In base al valore della variabile di ambiente **TZ** , i valori seguenti vengono assegnati alle variabili globali **_daylight**, **_timezone** e **_tzname** quando viene chiamato **_tzset** :
 
 |Variabile globale|Descrizione|Valore predefinito|
 |---------------------|-----------------|-------------------|

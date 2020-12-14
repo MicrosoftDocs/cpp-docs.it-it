@@ -1,5 +1,6 @@
 ---
-title: 'Procedura: Compilare codice MFC e ATL tramite - clr'
+description: 'Ulteriori informazioni su: procedura: compilare codice MFC e ATL utilizzando/CLR'
+title: 'Procedura: compilare codice MFC e ATL tramite-CLR'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -13,71 +14,71 @@ helpviewer_keywords:
 - interop [C++], /clr compiler option
 - extension DLLs [C++], /clr compiler option
 ms.assetid: 12464bec-33a4-482c-880a-c078de7f6ea5
-ms.openlocfilehash: 9a24e82787eb0fce8ff668843e73de9f2d05e1ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67a861dac3b4c4b454f4fbde4a500c3677ce0e25
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379046"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304493"
 ---
-# <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Procedura: Compilazione /clr MFC e ATL codice tramite l'utilizzo
+# <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Procedura: compilare codice MFC e ATL tramite /clr
 
-In questo argomento viene illustrato come compilare programmi esistenti di MFC e ATL per Common Language Runtime.
+In questo argomento viene illustrato come compilare programmi MFC e ATL esistenti per la destinazione di Common Language Runtime.
 
-### <a name="to-compile-an-mfc-executable-or-regular-mfc-dll-by-using-clr"></a>Per compilare una DLL MFC regolare o eseguibili MFC con /clr
+### <a name="to-compile-an-mfc-executable-or-regular-mfc-dll-by-using-clr"></a>Per compilare un eseguibile MFC o una DLL MFC normale utilizzando/CLR
 
-1. Fare clic sul progetto in **Esplora soluzioni** e quindi fare clic su **proprietà**.
+1. Fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** , quindi scegliere **Proprietà**.
 
-1. Nel **proprietà progetto** finestra di dialogo espandere il nodo accanto a **le proprietà di configurazione** e selezionare **generale**. Nel riquadro di destra, sotto **impostazioni predefinite progetto**, impostare **supporto Common Language Runtime** al **supporto Common Language Runtime (/ Common Language Runtime)**.
+1. Nella finestra di dialogo **Proprietà progetto** espandere il nodo accanto a **proprietà di configurazione** e selezionare **generale**. Nel riquadro destro, in **impostazioni predefinite progetto**, impostare **supporto Common Language Runtime** su **supporto Common Language Runtime (/CLR)**.
 
-   Nel riquadro stesso, assicurarsi che **uso di MFC** è impostata su **Usa MFC in una DLL condivisa**.
+   Nello stesso riquadro, assicurarsi che l' **uso di MFC** sia impostato in modo da **usare MFC in una DLL condivisa**.
 
-1. Sotto **le proprietà di configurazione**, espandere il nodo accanto a **C/C++** e selezionare **generali**. Verificare che l'opzione **formato informazioni di Debug** è impostata su **/Zi Database di programma** (non **/ZI**).
+1. In **proprietà di configurazione** espandere il nodo accanto a **C/C++** e selezionare **generale**. Verificare che il **formato delle informazioni di debug** sia impostato su **database di programma/Zi** (non **/Zi**).
 
-1. Selezionare il **generazione di codice** nodo. Impostare **Abilita ricompilazione minima** al **No (/ /GM-)**. Impostare anche **controlli Runtime di base** al **predefinito**.
+1. Selezionare il nodo **generazione codice** . Impostare **Abilita ricompilazione minima** su **No (/GM-)**. Impostare anche i **controlli di runtime di base** sul **valore predefinito**.
 
-1. Sotto **le proprietà di configurazione**, selezionare **C/C++** e quindi **generazione di codice**. Verificare che l'opzione **libreria di Runtime** sia impostata su **DLL di Debug multithread (/ /MDd)** oppure **DLL multithread (/ MD)**.
+1. In **proprietà di configurazione** selezionare **C/C++** e quindi **generazione codice**. Assicurarsi che la **libreria di runtime** sia impostata su una **dll di debug multithread (/MDD)** o su **DLL multithread (/MD)**.
 
-1. In stdafx. h, aggiungere la riga seguente.
+1. In stdafx. h aggiungere la riga seguente.
 
     ```
     #using <System.Windows.Forms.dll>
     ```
 
-### <a name="to-compile-an-mfc-extension-dll-by-using-clr"></a>Per compilare una DLL di estensione MFC con /clr
+### <a name="to-compile-an-mfc-extension-dll-by-using-clr"></a>Per compilare una DLL di estensione MFC utilizzando/CLR
 
-1. Seguire la procedura descritta in "To compilare una DLL MFC regolare o eseguibili MFC con /clr".
+1. Attenersi alla procedura descritta in "per compilare un file eseguibile MFC o una DLL MFC normale utilizzando/CLR".
 
-1. Sotto **le proprietà di configurazione**, espandere il nodo accanto a **C/C++** e selezionare **intestazioni precompilate**. Impostare **Crea/Usa intestazione precompilata** al **non Usa intestazioni precompilate**.
+1. In **proprietà di configurazione** espandere il nodo accanto a **C/C++** e selezionare **intestazioni precompilate**. Impostare **Crea/Usa intestazione precompilata** su **non usando intestazioni precompilate**.
 
-   In alternativa, nella **Esplora soluzioni**, fare doppio clic su stdafx. cpp e quindi fare clic su **proprietà**. Sotto **le proprietà di configurazione**, espandere il nodo accanto a **C/C++** e selezionare **generali**. Impostare **esegue la compilazione con supporto Common Language Runtime** al **supporto Common Language Runtime No**.
+   In alternativa, in **Esplora soluzioni** fare clic con il pulsante destro del mouse su stdafx. cpp, quindi scegliere **Proprietà**. In **proprietà di configurazione** espandere il nodo accanto a **C/C++** e selezionare **generale**. Impostare **Compila con supporto Common Language Runtime** su **Nessun supporto Common Language Runtime**.
 
-1. Per il file che contiene DllMain e qualsiasi chiama, in **Esplora soluzioni**, fare doppio clic su file e quindi fare clic su **proprietà**. Sotto **le proprietà di configurazione**, espandere il nodo accanto a **C/C++** e selezionare **generali**. Nel riquadro di destra, sotto **impostazioni predefinite progetto**, impostare **esegue la compilazione con supporto Common Language Runtime** al **supporto Common Language Runtime No**.
+1. Per il file che contiene DllMain e qualsiasi elemento chiamato, fare clic con il pulsante destro del mouse sul file in **Esplora soluzioni**, quindi scegliere **Proprietà**. In **proprietà di configurazione** espandere il nodo accanto a **C/C++** e selezionare **generale**. Nel riquadro destro, in **impostazioni predefinite progetto**, impostare **Compila con supporto Common Language Runtime** su **Nessun supporto Common Language Runtime**.
 
-### <a name="to-compile-an-atl-executable-by-using-clr"></a>Per compilare un file eseguibile ATL tramite /clr
+### <a name="to-compile-an-atl-executable-by-using-clr"></a>Per compilare un eseguibile ATL utilizzando/CLR
 
-1. Nelle **Esplora soluzioni**, fare clic sul progetto e quindi fare clic su **proprietà**.
+1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto, quindi scegliere **Proprietà**.
 
-1. Nel **proprietà progetto** finestra di dialogo espandere il nodo accanto a **le proprietà di configurazione** e selezionare **generale**. Nel riquadro di destra, sotto **impostazioni predefinite progetto**, impostare **supporto Common Language Runtime** al **supporto Common Language Runtime (/ Common Language Runtime)**.
+1. Nella finestra di dialogo **Proprietà progetto** espandere il nodo accanto a **proprietà di configurazione** e selezionare **generale**. Nel riquadro destro, in **impostazioni predefinite progetto**, impostare **supporto Common Language Runtime** su **supporto Common Language Runtime (/CLR)**.
 
-1. Sotto **le proprietà di configurazione**, espandere il nodo accanto a **C/C++** e selezionare **generali**. Verificare che l'opzione **formato informazioni di Debug** è impostata su **/Zi Database di programma** (non **/ZI**).
+1. In **proprietà di configurazione** espandere il nodo accanto a **C/C++** e selezionare **generale**. Verificare che il **formato delle informazioni di debug** sia impostato su **database di programma/Zi** (non **/Zi**).
 
-1. Selezionare il **generazione di codice** nodo. Impostare **Abilita ricompilazione minima** al **No (/ /GM-)**. Impostare anche **controlli Runtime di base** al **predefinito**.
+1. Selezionare il nodo **generazione codice** . Impostare **Abilita ricompilazione minima** su **No (/GM-)**. Impostare anche i **controlli di runtime di base** sul **valore predefinito**.
 
-1. Sotto **le proprietà di configurazione**, selezionare **C/C++** e quindi **generazione di codice**. Verificare che l'opzione **libreria di Runtime** sia impostata su **DLL di Debug multithread (/ /MDd)** oppure **DLL multithread (/ MD)**.
+1. In **proprietà di configurazione** selezionare **C/C++** e quindi **generazione codice**. Assicurarsi che la **libreria di runtime** sia impostata su una **dll di debug multithread (/MDD)** o su **DLL multithread (/MD)**.
 
-1. Per ogni file generati da MIDL (file C), fare doppio clic su file in **Esplora soluzioni** e quindi fare clic su **proprietà**. Sotto **le proprietà di configurazione**, espandere il nodo accanto a **C/C++** e selezionare **generali**. Impostare **esegue la compilazione con supporto Common Language Runtime** al **supporto Common Language Runtime No**.
+1. Per ogni file generato da MIDL (file C), fare clic con il pulsante destro del mouse sul file in **Esplora soluzioni** , quindi scegliere **Proprietà**. In **proprietà di configurazione** espandere il nodo accanto a **C/C++** e selezionare **generale**. Impostare **Compila con supporto Common Language Runtime** su **Nessun supporto Common Language Runtime**.
 
-### <a name="to-compile-an-atl-dll-by-using-clr"></a>Per compilare una DLL ATL tramite /clr
+### <a name="to-compile-an-atl-dll-by-using-clr"></a>Per compilare una DLL ATL utilizzando/CLR
 
-1. Seguire i passaggi nella sezione "per compilare un eseguibile ATL tramite /clr".
+1. Attenersi alla procedura descritta nella sezione "per compilare un eseguibile ATL mediante/CLR".
 
-1. Sotto **le proprietà di configurazione**, espandere il nodo accanto a **C/C++** e selezionare **intestazioni precompilate**. Impostare **Crea/Usa intestazione precompilata** al **non Usa intestazioni precompilate**.
+1. In **proprietà di configurazione** espandere il nodo accanto a **C/C++** e selezionare **intestazioni precompilate**. Impostare **Crea/Usa intestazione precompilata** su **non usando intestazioni precompilate**.
 
-   In alternativa, nella **Esplora soluzioni**, fare doppio clic su stdafx. cpp e quindi fare clic su **proprietà**. Sotto **le proprietà di configurazione**, espandere il nodo accanto a **C/C++** e selezionare **generali**. Impostare **esegue la compilazione con supporto Common Language Runtime** al **supporto Common Language Runtime No**.
+   In alternativa, in **Esplora soluzioni** fare clic con il pulsante destro del mouse su stdafx. cpp, quindi scegliere **Proprietà**. In **proprietà di configurazione** espandere il nodo accanto a **C/C++** e selezionare **generale**. Impostare **Compila con supporto Common Language Runtime** su **Nessun supporto Common Language Runtime**.
 
-1. Per il file che contiene DllMain e qualsiasi chiama, in **Esplora soluzioni**, fare doppio clic su file e quindi fare clic su **proprietà**. Sotto **le proprietà di configurazione**, espandere il nodo accanto a **C/C++** e selezionare **generali**. Nel riquadro di destra, sotto **impostazioni predefinite progetto**, impostare **esegue la compilazione con supporto Common Language Runtime** al **supporto Common Language Runtime No**.
+1. Per il file che contiene DllMain e qualsiasi elemento chiamato, fare clic con il pulsante destro del mouse sul file in **Esplora soluzioni**, quindi scegliere **Proprietà**. In **proprietà di configurazione** espandere il nodo accanto a **C/C++** e selezionare **generale**. Nel riquadro destro, in **impostazioni predefinite progetto**, impostare **Compila con supporto Common Language Runtime** su **Nessun supporto Common Language Runtime**.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Assembly misti (nativi e gestiti)](../dotnet/mixed-native-and-managed-assemblies.md)

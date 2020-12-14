@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: implementare un punto di connessione'
 title: Implementare un punto di connessione
 ms.date: 05/14/2019
 helpviewer_keywords:
 - connection points [C++], implementing
 - implement connection point wizard [C++]
 ms.assetid: 5b37e4f9-73c9-4bef-b26d-365bc0662260
-ms.openlocfilehash: 8a75a5fbbabd20f4591e3a119c175d68cdfb1f90
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: bee04d28036ca5a2dfb0f4913adf39f1fdcca565
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "66182601"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97281158"
 ---
 # <a name="implement-a-connection-point"></a>Implementare un punto di connessione
 
@@ -34,7 +35,7 @@ Un oggetto collegabile, ovvero un'origine, può visualizzare un punto di conness
 
 1. Selezionare le interfacce dei punti di connessione per implementare le librerie di tipi appropriate e quindi selezionare **Fine**.
 
-1. In Visualizzazione classi esaminare le classi proxy create per ogni punto di connessione. Le classi vengono visualizzate come CProxy*Nomeinterfaccia*\<T> e vengono derivate da [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md).
+1. In Visualizzazione classi esaminare le classi proxy create per ogni punto di connessione. Le classi vengono visualizzate come CProxy *InterfaceName* \<T> e sono derivate da [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md).
 
 1. Fare doppio clic sulla classe del punto di connessione per visualizzare la definizione della classe del punto di connessione.
 
@@ -75,7 +76,7 @@ Per altre informazioni, vedere [Punti di connessione ATL](../atl/atl-connection-
 
   Visualizza le interfacce le cui definizioni sono incluse nella libreria dei tipi attualmente selezionata nella casella **Available type libraries** (Librerie dei tipi disponibili).
 
-  |Pulsante Trasferimento|Description|
+  |Pulsante di trasferimento|Description|
   |---------------------|-----------------|
   |**>**|Aggiunge all'elenco **Implementa punti di connessione** il nome dell'interfaccia attualmente selezionata nell'elenco **Interfacce**.|
   |**>>**|Aggiunge all'elenco **Implementa punti di connessione** i nomi di tutte le interfacce disponibili nell'elenco **Interfacce**.|

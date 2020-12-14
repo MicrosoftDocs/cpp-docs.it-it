@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore degli strumenti del linker LNK1127'
 title: Errore degli strumenti del linker LNK1127
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1127
 ms.assetid: 45404700-1420-4f24-97e1-efb7252ffd8f
-ms.openlocfilehash: 4fa060eae944b090bfc49144ddcb03bc133b5be0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 04000ef64de7d826d78f3fffc2985ebe68048549
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80195331"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97281340"
 ---
 # <a name="linker-tools-error-lnk1127"></a>Errore degli strumenti del linker LNK1127
 

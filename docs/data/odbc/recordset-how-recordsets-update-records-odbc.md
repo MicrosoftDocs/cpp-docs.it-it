@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: Recordset: aggiornamento dei record dei recordset (ODBC)'
 title: 'Recordset: aggiornamento dei record (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,69 +9,69 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
-ms.openlocfilehash: 03fb696c1fadd834962d37c8e75b5f8910af819e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c5304bd30093a203efbd9ee4d02d07b2d35b4b18
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366971"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304506"
 ---
 # <a name="recordset-how-recordsets-update-records-odbc"></a>Recordset: aggiornamento dei record (ODBC)
 
 Le informazioni contenute in questo argomento sono valide per le classi ODBC MFC.
 
-Oltre alla possibilità di selezionare record da un'origine dati, i recordset possono (facoltativamente) aggiornare o eliminare i record selezionati o aggiungere nuovi record. L'aggiornabilità di un recordset determina l'aggiornabilità di un recordset: se l'origine dati connessa è aggiornabile, le opzioni specificate quando si crea un oggetto recordset e il codice SQL creato.
+Oltre alla possibilità di selezionare record da un'origine dati, i recordset possono (facoltativamente) aggiornare o eliminare i record selezionati o aggiungere nuovi record. Tre fattori determinano l'aggiornamento di un recordset: se l'origine dati connessa è aggiornabile, le opzioni specificate durante la creazione di un oggetto recordset e l'oggetto SQL creato.
 
 > [!NOTE]
-> Il codice SQL `CRecordset` su cui si basa l'oggetto può influire sull'aggiornabilità del recordset. Ad esempio, se il codice SQL contiene un join o una clausola **GROUP BY,** MFC imposta l'aggiornabilità su FALSE.
+> Il SQL su cui `CRecordset` si basa l'oggetto può influire sull'aggiornamento del recordset. Se, ad esempio, SQL contiene una clausola join o **Group by** , MFC imposta l'aggiornamento su false.
 
 > [!NOTE]
-> Questo argomento si applica agli oggetti derivati da `CRecordset` in cui non è stato implementato il recupero di massa di righe. Se si utilizza il recupero di massa di righe, vedere [Recordset: recupero di massa di record (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Questo argomento si applica agli oggetti derivati da `CRecordset` in cui non è stato implementato il recupero di massa di righe. Se si utilizza il recupero di righe bulk, vedere [Recordset: recupero di record in blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 In questo argomento:
 
-- [Il ruolo nell'aggiornamento dei recordset](#_core_your_role_in_recordset_updating) e le operazioni eseguite dal framework.
+- [Il ruolo dell'utente nell'aggiornamento del recordset](#_core_your_role_in_recordset_updating) e il funzionamento del Framework.
 
-- [Il recordset come buffer di modifica](#_core_the_edit_buffer) e le [differenze tra dynaset e snapshot](#_core_dynasets_and_snapshots).
+- [Il recordset come buffer di modifica](#_core_the_edit_buffer) e le [differenze tra i dynaset e gli snapshot](#_core_dynasets_and_snapshots).
 
-[Recordset: come AddNew, Edit, and Delete Work (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md) descrive le azioni di queste funzioni dal punto di vista del recordset.
+[Recordset: il funzionamento di AddNew, Edit e Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md) descrive le azioni di queste funzioni dal punto di vista del recordset.
 
-[Recordset: ulteriori informazioni sugli aggiornamenti (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) completano la storia di aggiornamento del recordset spiegando in che modo le transazioni influiscono sugli aggiornamenti, come la chiusura di un recordset o lo scorrimento influisce sugli aggiornamenti in corso e come gli aggiornamenti interagiscono con gli aggiornamenti di altri utenti.
+[Recordset: ulteriori informazioni sugli aggiornamenti (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) completano la storia degli aggiornamenti dei recordset spiegando in che modo le transazioni influiscono sugli aggiornamenti, in che modo la chiusura di un recordset o lo scorrimento influisce sugli aggiornamenti in corso e su come gli aggiornamenti interagiscono con gli aggiornamenti di altri utenti.
 
-## <a name="your-role-in-recordset-updating"></a><a name="_core_your_role_in_recordset_updating"></a>Il ruolo nell'aggiornamento dell'oggetto Recordset
+## <a name="your-role-in-recordset-updating"></a><a name="_core_your_role_in_recordset_updating"></a> Ruolo nell'aggiornamento del recordset
 
-Nella tabella seguente viene illustrato il ruolo dell'utente nell'utilizzo dei recordset per aggiungere, modificare o eliminare record, insieme alle operazioni eseguite automaticamente dal framework.
+Nella tabella seguente viene illustrato il ruolo nell'utilizzo di recordset per aggiungere, modificare o eliminare record, oltre a ciò che il Framework esegue per l'utente.
 
-### <a name="recordset-updating-you-and-the-framework"></a>Aggiornamento dei recordset: tu e il framework
+### <a name="recordset-updating-you-and-the-framework"></a>Aggiornamento del recordset: l'utente e il Framework
 
-|Queste informazioni verranno usate|Framework|
+|Tu|Framework|
 |---------|-------------------|
-|Determinare se l'origine dati è aggiornabile (o appendibile).|Fornisce le funzioni membro [CDatabase](../../mfc/reference/cdatabase-class.md) per testare l'aggiornabilità o l'appendice dell'origine dati.|
-|Aprire un recordset aggiornabile (di qualsiasi tipo).||
-|Determinare se il recordset è `CRecordset` aggiornabile chiamando `CanUpdate` `CanAppend`funzioni di aggiornamento quali o .||
-|Chiamare le funzioni membro del recordset per aggiungere, modificare ed eliminare record.|Gestisce i meccanismi di scambio di dati tra l'oggetto recordset e l'origine dati.|
+|Determinare se l'origine dati è aggiornabile (o accodabile).|Fornisce funzioni membro di [CDatabase](../../mfc/reference/cdatabase-class.md) per testare l'aggiornamento o l'aggiunta dell'origine dati.|
+|Apre un recordset aggiornabile (di qualsiasi tipo).||
+|Determinare se il recordset è aggiornabile chiamando le `CRecordset` funzioni di aggiornamento, ad esempio `CanUpdate` o `CanAppend` .||
+|Chiamare le funzioni membro recordset per aggiungere, modificare ed eliminare record.|Gestisce i meccanismi di scambio dei dati tra l'oggetto recordset e l'origine dati.|
 |Facoltativamente, utilizzare le transazioni per controllare il processo di aggiornamento.|Fornisce `CDatabase` funzioni membro per supportare le transazioni.|
 
-Per ulteriori informazioni sulle transazioni, vedere [Transazione (ODBC)](../../data/odbc/transaction-odbc.md).
+Per ulteriori informazioni sulle transazioni, vedere [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).
 
-## <a name="the-edit-buffer"></a><a name="_core_the_edit_buffer"></a>Modifica buffer
+## <a name="the-edit-buffer"></a><a name="_core_the_edit_buffer"></a> Buffer di modifica
 
-Prese collettivamente, i membri dati di campo di un recordset fungono da buffer di modifica che contiene un record, ovvero il record corrente. Le operazioni di aggiornamento utilizzano questo buffer per operare sul record corrente.
+Considerati collettivamente, i membri dati del campo di un recordset vengono utilizzati come un buffer di modifica contenente un record, ovvero il record corrente. Le operazioni di aggiornamento usano questo buffer per operare sul record corrente.
 
-- Quando si aggiunge un record, il buffer di modifica viene utilizzato per creare un nuovo record. Al termine dell'aggiunta del record, il record precedentemente corrente diventa nuovamente corrente.
+- Quando si aggiunge un record, il buffer di modifica viene usato per compilare un nuovo record. Al termine dell'aggiunta del record, il record precedentemente aggiornato diventa nuovamente corrente.
 
-- Quando si aggiorna (modifica) un record, il buffer di modifica viene utilizzato per impostare i membri dati di campo del recordset su nuovi valori. Al termine dell'aggiornamento, il record aggiornato è ancora corrente.
+- Quando si aggiorna (modifica) un record, il buffer di modifica viene utilizzato per impostare i membri dati del campo del recordset su nuovi valori. Al termine dell'aggiornamento, il record aggiornato è ancora aggiornato.
 
-Quando si chiama [AddNew](../../mfc/reference/crecordset-class.md#addnew) o [Edit](../../mfc/reference/crecordset-class.md#edit), il record corrente viene archiviato in modo che possa essere ripristinato in un secondo momento in base alle esigenze. Quando si chiama [Delete](../../mfc/reference/crecordset-class.md#delete), il record corrente non viene archiviato ma contrassegnato come eliminato ed è necessario scorrere fino a un altro record.
+Quando si chiama [AddNew](../../mfc/reference/crecordset-class.md#addnew) o [Edit](../../mfc/reference/crecordset-class.md#edit), il record corrente viene archiviato in modo che possa essere ripristinato in un secondo momento, se necessario. Quando si chiama [Delete](../../mfc/reference/crecordset-class.md#delete), il record corrente non viene archiviato, ma è contrassegnato come eliminato ed è necessario scorrere fino a un altro record.
 
 > [!NOTE]
-> Il buffer di modifica non svolge alcun ruolo nell'eliminazione dei record. Quando si elimina il record corrente, il record viene contrassegnato come eliminato e il recordset è "non su un record" fino a quando non si scorre su un record diverso.
+> Il buffer di modifica non svolge alcun ruolo nell'eliminazione dei record. Quando si elimina il record corrente, il record viene contrassegnato come eliminato e il recordset è "non in un record" fino a quando non si scorre un record diverso.
 
-## <a name="dynasets-and-snapshots"></a><a name="_core_dynasets_and_snapshots"></a>Dinamidi e istantanee
+## <a name="dynasets-and-snapshots"></a><a name="_core_dynasets_and_snapshots"></a> Dynaset e snapshot
 
-[I dynaset](../../data/odbc/dynaset.md) aggiornano il contenuto di un record mentre si scorre il record. [Gli snapshot](../../data/odbc/snapshot.md) sono rappresentazioni statiche dei record, pertanto il contenuto di un record non viene aggiornato a meno che non venga chiamato [Requery](../../mfc/reference/crecordset-class.md#requery). Per utilizzare tutte le funzionalità dei dynaset, è necessario utilizzare un driver ODBC conforme al livello corretto di supporto dell'API ODBC. Per ulteriori informazioni, vedere [ODBC](../../data/odbc/odbc-basics.md) e [Dynaset](../../data/odbc/dynaset.md).
+I [Dynaset](../../data/odbc/dynaset.md) aggiornano il contenuto di un record mentre si scorre il record. Gli [snapshot](../../data/odbc/snapshot.md) sono rappresentazioni statiche dei record, quindi il contenuto di un record non viene aggiornato a meno che non si chiami [Requery](../../mfc/reference/crecordset-class.md#requery). Per utilizzare tutte le funzionalità dei dynaset, è necessario utilizzare un driver ODBC conforme al livello corretto del supporto delle API ODBC. Per ulteriori informazioni, vedere [ODBC](../../data/odbc/odbc-basics.md) e [Dynaset](../../data/odbc/dynaset.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: funzionamento dei metodi AddNew, Edit e Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)
+[Recordset: funzionamento di AddNew, Edit e Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)

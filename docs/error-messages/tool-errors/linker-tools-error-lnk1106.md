@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: errore degli strumenti del linker LNK1106'
 title: Errore degli strumenti del linker LNK1106
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1106
 ms.assetid: 528f7e65-04be-4966-b8af-9276837c7cda
-ms.openlocfilehash: 091d4e173bfb2eff8ffee2b5c30647f4d5e3bc04
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 85f353b6424cdd9ad12a99b29fec4f6119472cdb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80195370"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97281405"
 ---
 # <a name="linker-tools-error-lnk1106"></a>Errore degli strumenti del linker LNK1106
 
 il file o il disco non è pieno: non è possibile cercare nel percorso
 
-Lo strumento non è in grado di leggere o scrivere in `location` in un file mappato alla memoria.
+Lo strumento non è in grado di leggere o scrivere `location` in un file mappato alla memoria.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolvere il problema, verificare le seguenti cause possibili:
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili
 
 1. Disco pieno.
 

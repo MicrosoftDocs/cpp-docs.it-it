@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: Recordset: selezione dei record in recordset (ODBC)'
 title: 'Recordset: selezione dei record (ODBC)'
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-ms.openlocfilehash: 0aa9c082d2d04416358d948476f2ae0f9e2a35af
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 25032c1901513e0c99ddcf8018fb108eb7c1fbd2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366984"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304467"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>Recordset: selezione dei record (ODBC)
 
@@ -43,11 +44,11 @@ Nella tabella seguente sono illustrate le opzioni per la selezione dei record.
 |--------------|-------------|
 |Dichiara la classe recordset con la procedura guidata **Aggiungi classe**|Specificare la tabella da selezionare.<br /><br /> Specificare le colonne da includere.<br /><br /> Vedere [Aggiunta di un consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).|
 |Completa l'implementazione della classe recordset|Eseguire l'override di funzioni membro come `OnSetOptions` (impostazione avanzata) per impostare opzioni specifiche dell'applicazione o modificare le impostazioni predefinite. Specificare i membri dati di parametro, se si vuole un recordset con parametri.|
-|Costruire un oggetto recordset (prima di chiamare `Open`)|Specificare una condizione di ricerca (possibilmente composta) da usare in una clausola **WHERE** che filtra i record. Vedere [Recordset: applicazione di filtri ai record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).<br /><br /> Specificare un ordinamento da usare in una clausola **ORDER BY** che ordina i record. Vedere [Recordset: ordinamento dei record (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md).<br /><br /> Specificare i valori dei parametri per gli eventuali parametri aggiunti alla classe. Vedere [Recordset: applicazione di parametri a un recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).|
+|Costruire un oggetto recordset (prima di chiamare `Open`)|Specificare una condizione di ricerca (possibilmente composta) da usare in una clausola **WHERE** che filtra i record. Vedere [Recordset: filtro di record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).<br /><br /> Specificare un ordinamento da usare in una clausola **ORDER BY** che ordina i record. Vedere [Recordset: ordinamento di record (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md).<br /><br /> Specificare i valori dei parametri per gli eventuali parametri aggiunti alla classe. Vedere [Recordset: parametrizzazione un recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).|
 
-|Eseguire la query del recordset chiamando `Open`|Specificare una stringa SQL personalizzata per sostituire la stringa SQL predefinita impostata dalla procedura guidata. Vedere [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) in *Class Library Reference* e [SQL: personalizzazione dell'istruzione SQL dell'oggetto Recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+|Eseguire la query del recordset chiamando `Open`|Specificare una stringa SQL personalizzata per sostituire la stringa SQL predefinita impostata dalla procedura guidata. Vedere [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open) nei *riferimenti alla libreria di classi* e [SQL: personalizzazione dell'istruzione SQL del recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md). |
 
-|Chiamare `Requery` per ripetere la query sul recordset con i valori più recenti nell'origine dati|Specificare nuovi parametri, filtrare o ordinare i dati. Vedere [Recordset: rieseguire una query su un recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
+|Chiamare `Requery` per ripetere la query sul recordset con i valori più recenti nell'origine dati|Specificare nuovi parametri, filtrare o ordinare i dati. Vedere [Recordset: riesecuzione di una query in un recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md). |
 
 ## <a name="how-a-recordset-constructs-its-sql-statement"></a><a name="_core_how_a_recordset_constructs_its_sql_statement"></a> In che modo un recordset costruisce un'istruzione SQL
 
@@ -80,14 +81,14 @@ Oltre a specificare un filtro, un ordinamento o parametri, è possibile eseguire
 
 - Passare una stringa SQL personalizzata in *lpszSQL* quando si chiama [Open](../../mfc/reference/crecordset-class.md#open) per il recordset. Qualsiasi elemento passato in *lpsqSQL* ha la precedenza sul valore restituito dalla funzione membro [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql).
 
-   Per ulteriori informazioni, vedere [SQL: personalizzazione dell'istruzione SQL (ODBC) del recordset](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md), che descrive i tipi `Open` di istruzioni SQL (o istruzioni parziali) che è possibile passare e le operazioni eseguite dal framework.
+   Per ulteriori informazioni, vedere [SQL: personalizzazione dell'istruzione SQL del recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md), che descrive i tipi di istruzioni SQL (o istruzioni parziali) che è possibile passare a `Open` e il Framework che esegue con essi.
 
     > [!NOTE]
     >  Se la stringa personalizzata passata non inizia con "SELECT" o "{CALL", MFC presuppone che contenga un nome di tabella. Questo vale anche per l'elemento successivo.
 
 - Modificare la stringa scritta dalla procedura guidata nella funzione membro `GetDefaultSQL` del set di record. Modificare il codice della funzione per cambiare il valore restituito. Per impostazione predefinita, la procedura guidata scrive una funzione `GetDefaultSQL` che restituisce un singolo nome di tabella.
 
-   È possibile impostare `GetDefaultSQL` in modo da restituire gli elementi che è possibile passare nel parametro *lpszSQL* a `Open`. Se non si passa una stringa SQL personalizzata in *lpszSQL*, il framework usa la stringa restituita da `GetDefaultSQL`. Come minimo, `GetDefaultSQL` deve restituire un singolo nome di tabella. Tuttavia, può restituire più nomi di tabella, un'intera istruzione **SELECT**, un istruzione ODBC **CALL** e così via. Per un elenco degli elementi che è possibile `GetDefaultSQL` passare a *lpszSQL* o restituire, vedere [SQL: personalizzazione dell'istruzione SQL del recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+   È possibile impostare `GetDefaultSQL` in modo da restituire gli elementi che è possibile passare nel parametro *lpszSQL* a `Open`. Se non si passa una stringa SQL personalizzata in *lpszSQL*, il framework usa la stringa restituita da `GetDefaultSQL`. Come minimo, `GetDefaultSQL` deve restituire un singolo nome di tabella. Tuttavia, può restituire più nomi di tabella, un'intera istruzione **SELECT**, un istruzione ODBC **CALL** e così via. Per un elenco degli elementi che è possibile passare a *lpszSQL* o `GetDefaultSQL` restituire, vedere [SQL: personalizzazione dell'istruzione SQL del recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
    Se si esegue un join di due o più tabelle, riscrivere `GetDefaultSQL` per personalizzare l'elenco di tabelle usato nella clausola SQL **FROM**. Per ulteriori informazioni, vedere [Recordset: esecuzione di un join (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
 
@@ -97,10 +98,10 @@ Oltre a specificare un filtro, un ordinamento o parametri, è possibile eseguire
 
 Se si vuole basare il recordset su un'istruzione SQL complessa, è necessario usare una combinazione di queste tecniche di personalizzazione. Ad esempio, è possibile usare clausole e parole chiave SQL non direttamente supportate dal recordset o eseguire il join di più tabelle.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
-[Nozioni di base su ODBCODBC Basics](../../data/odbc/odbc-basics.md)<br/>
+[Recordset: aggiornamento di record in recordset (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
+[Nozioni fondamentali su ODBC](../../data/odbc/odbc-basics.md)<br/>
 [SQL](../../data/odbc/sql.md)<br/>
-[Recordset: blocco dei record (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[Recordset: blocco di record (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
