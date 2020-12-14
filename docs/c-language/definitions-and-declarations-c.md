@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: definizioni e dichiarazioni (C)'
 title: Definizioni e dichiarazioni (C)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - export functions
 ms.assetid: d150395a-89d4-4298-9ac4-08f84fe1261c
-ms.openlocfilehash: 0e39832f942eb1473be913112fde1d37ddf05674
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a88a0e56e68b052e3bb8759f9c40670379bd2628
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226366"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186857"
 ---
 # <a name="definitions-and-declarations-c"></a>Definizioni e dichiarazioni (C)
 
@@ -58,6 +59,6 @@ Dllimport int j;          /* a declaration. */
 
 **TERMINA specifica Microsoft**
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Funzioni di importazione ed esportazione DLL](../c-language/dll-import-and-export-functions.md)

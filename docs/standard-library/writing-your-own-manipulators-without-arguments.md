@@ -1,19 +1,20 @@
 ---
+description: 'Altre informazioni su: scrittura di manipolatori personalizzati senza argomenti'
 title: Scrittura di manipolatori personalizzati senza gli argomenti
 ms.date: 11/04/2016
 helpviewer_keywords:
 - manipulators
 ms.assetid: 2dc62d09-45b7-454d-bd9d-55f3c72c206d
-ms.openlocfilehash: 9a1f72ae3e6860d8ab532a72a1776b77c7204f48
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 593db0a3dacb54c94cc865ebc20b1e1b39d2c208
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450913"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187754"
 ---
 # <a name="writing-your-own-manipulators-without-arguments"></a>Scrittura di manipolatori personalizzati senza gli argomenti
 
-La scrittura di manipolatori che non usano argomenti non richiede né la derivazione di classi né l'uso di macro complesse. Si supponga che la stampante richieda la coppia \<ESC>[ per attivare la modalità grassetto. È possibile inserire la coppia direttamente nel flusso:
+La scrittura di manipolatori che non usano argomenti non richiede né la derivazione di classi né l'uso di macro complesse. Si supponga che la stampante richieda la coppia \<ESC> [per attivare la modalità grassetto. È possibile inserire la coppia direttamente nel flusso:
 
 ```cpp
 cout << "regular " << '\033' << '[' << "boldface" << endl;
@@ -42,6 +43,6 @@ _Myt& operator<<(ios_base& (__cdecl *_Pfn)(ios_base&))
 
 È possibile usare questa funzionalità per estendere altri operatori di overload. In questo caso, il fatto che `bold` inserisca i caratteri nel flusso è casuale. La funzione viene chiamata quando viene inserita nel flusso, non necessariamente quando i caratteri adiacenti vengono stampati. Di conseguenza, la stampa potrebbe essere ritardata a causa del buffer del flusso.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Flussi di output](../standard-library/output-streams.md)

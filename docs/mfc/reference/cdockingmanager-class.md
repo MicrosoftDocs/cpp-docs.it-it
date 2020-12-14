@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CDockingManager'
 title: Classe CDockingManager
 ms.date: 11/04/2016
 f1_keywords:
@@ -160,12 +161,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 76fd12b0817c99d0d08327f9d9156eadf3559dc5
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 5bbcc2a31739a5a81d66713bab47662b96c74e50
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753332"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185050"
 ---
 # <a name="cdockingmanager-class"></a>Classe CDockingManager
 
@@ -177,108 +178,108 @@ Implementa la funzionalità principale che controlla il layout di ancoraggio in 
 class CDockingManager : public CObject
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CDockingManager::AddDockSite](#adddocksite)|Crea un riquadro di ancoraggio e lo aggiunge all'elenco delle barre di controllo.|
-|[CDockingManager::AddHiddenMDITabbedBar](#addhiddenmditabbedbar)|Aggiunge un handle a un riquadro barra all'elenco dei riquadri a barre a schede MDI nascosti.|
-|[CDockingManager::AddMiniFrame](#addminiframe)|Aggiunge una cornice all'elenco dei mini frame.|
-|[CDockingManager::AddPane](#addpane)|Registra un riquadro con il gestore di ancoraggio.|
-|[CDockingManager::AdjustDockingLayout](#adjustdockinglayout)|Ricalcola e regola il layout di tutti i riquadri in una finestra cornice.|
-|[CDockingManager::AdjustPaneFrames](#adjustpaneframes)|Determina l'invio del messaggio di `CPaneFrameWnd` WM_NCCALCSIZE a tutti i riquadri e le finestre.|
-|[CDockingManager::AdjustRectToClientArea](#adjustrecttoclientarea)|Regola l'allineamento di un rettangolo.|
-|[CDockingManager::AlignAutoHidePane](#alignautohidepane)|Ridimensiona un riquadro ancorato in modalità Nascondi automaticamente in modo che occupi l'intera larghezza o altezza dell'area client del frame circondato da siti di ancoraggio.|
-|[CDockingManager::AutoHidePane](#autohidepane)|Crea una barra degli strumenti Nascondi automaticamente.|
-|[CDockingManager::BringBarsToTop](#bringbarstotop)|Porta le barre ancorate con l'allineamento specificato in alto.|
-|[CDockingManager::BuildPanesMenu](#buildpanesmenu)|Aggiunge i nomi dei riquadri e delle barre degli strumenti di ancoraggio a un menu.|
-|[CDockingManager::CalcExpectedDockedRect](#calcexpecteddockedrect)|Calcola il rettangolo previsto di una finestra ancorata.|
-|[CDockingManager::CreareCDockingManager::Create](#create)|Crea un gestore di ancoraggio.|
-|[CDockingManager::DeterminePaneAndStatus](#determinepaneandstatus)|Determina il riquadro che contiene un determinato punto e il relativo stato di ancoraggio.|
-|[CDockingManager::DisableRestoreDockState](#disablerestoredockstate)|Abilita o disabilita il caricamento del layout di ancoraggio dal Registro di sistema.|
-|[CDockingManager::DockPane](#dockpane)|Ancora un riquadro a un altro riquadro o a una finestra cornice.|
-|[CDockingManager::DockPaneLeftOf](#dockpaneleftof)|Ancora un riquadro a sinistra di un altro riquadro.|
-|[CDockingManager::EnableAutoHidePanes](#enableautohidepanes)|Abilita l'ancoraggio del riquadro al frame principale, crea un riquadro ancorato e lo aggiunge all'elenco delle barre di controllo.|
-|[CDockingManager::EnableDocking](#enabledocking)|Crea un riquadro ancorato e consente l'ancoraggio del riquadro al frame principale.|
-|[CDockingManager::EnableDockSiteMenu](#enabledocksitemenu)|Visualizza un pulsante aggiuntivo che consente di aprire un menu a comparsa sulle didascalie di tutti i riquadri ancorati.|
-|[CDockingManager::EnablePaneContextMenu](#enablepanecontextmenu)|Indica alla libreria di visualizzare un menu di scelta rapida speciale con un elenco di barre degli strumenti dell'applicazione e riquadri ancorati quando l'utente fa clic con il pulsante destro del mouse e la libreria sta elaborando il messaggio WM_CONTEXTMENU.|
-|[CDockingManager::FindDockSite](#finddocksite)|Recupera il riquadro della barra che si trova nella posizione specificata e che ha l'allineamento specificato.|
-|[CDockingManager::FindDockSiteByPane](#finddocksitebypane)|Restituisce il riquadro della barra con l'ID del riquadro della barra di destinazione.|
-|[CDockingManager::FindPaneByID](#findpanebyid)|Trova un riquadro in base all'ID di controllo specificato.|
-|[CDockingManager::FixupVirtualRects](#fixupvirtualrects)|Esegue il commit di tutte le posizioni correnti della barra degli strumenti in rettangoli virtuali.|
-|[CDockingManager::FrameFromPointCDockingManager::FrameFromPoint](#framefrompoint)|Restituisce il frame che contiene il punto specificato.|
-|[CDockingManager::GetClientAreaBoundsCDockingManager::GetClientAreaBounds](#getclientareabounds)|Ottiene il rettangolo che contiene i limiti dell'area client.|
-|[CDockingManager::GetDockingMode](#getdockingmode)|Restituisce la modalità di ancoraggio corrente.|
-|[CDockingManager::GetDockSiteFrameWnd](#getdocksiteframewnd)|Ottiene un puntatore alla cornice della finestra padre.|
-|[CDockingManager::GetEnabledAutoHideAlignment](#getenabledautohidealignment)|Restituisce l'allineamento abilitato dei riquadri.|
-|[CDockingManager::GetMiniFramesCDockingManager::GetMiniFrames](#getminiframes)|Ottiene un elenco di miniframe.|
-|[CDockingManager::GetOuterEdgeBoundsCDockingManager::GetOuterEdgeBounds](#getouteredgebounds)|Ottiene un rettangolo che contiene i bordi esterni della cornice.|
-|[CDockingManager::GetPaneList](#getpanelist)|Restituisce un elenco di riquadri appartenenti al gestore di ancoraggio. Sono inclusi tutti i riquadri mobili.|
-|[CDockingManager::GetSmartDockingManager](#getsmartdockingmanager)|Recupera un puntatore al gestore di ancoraggio intelligente.|
-|[CDockingManager::GetSmartDockingManagerPermanent](#getsmartdockingmanagerpermanent)|Recupera un puntatore al gestore di ancoraggio intelligente.|
-|[CDockingManager::GetSmartDockingParams](#getsmartdockingparams)|Restituisce i parametri di ancoraggio intelligente per il gestore di ancoraggio.|
-|[CDockingManager::GetSmartDockingTheme](#getsmartdockingtheme)|Metodo statico che restituisce un tema utilizzato per visualizzare gli indicatori di ancoraggio intelligente.|
-|[CDockingManager::HideAutoHidePanes](#hideautohidepanes)|Nasconde un riquadro in modalità Nascondi automaticamente.|
-|[CDockingManager::InsertDockSite](#insertdocksite)|Crea un riquadro ancorato e lo inserisce nell'elenco delle barre di controllo.|
-|[CDockingManager::InsertPane](#insertpane)|Inserisce un riquadro di controllo nell'elenco delle barre di controllo.|
-|[CDockingManager::IsDockSiteMenu](#isdocksitemenu)|Specifica se visualizzare un menu a comparsa nelle didascalie di tutti i riquadri.|
-|[CDockingManager::IsInAdjustLayout](#isinadjustlayout)|Determina se i layout di tutti i riquadri vengono regolati.|
-|[CDockingManager::IsOLEContainerMode](#isolecontainermode)|Specifica se il gestore di ancoraggio è in modalità contenitore OLE.|
-|[CDockingManager::IsPointNearDockSite](#ispointneardocksite)|Determina se un punto specificato si trova vicino al sito di ancoraggio.|
-|[CDockingManager::IsPrintPreviewValid](#isprintpreviewvalid)|Determina se è impostata la modalità di anteprima di stampa.|
-|[CDockingManager::LoadState](#loadstate)|Carica lo stato del gestore di ancoraggio dal Registro di sistema.|
-|[CDockingManager::LockUpdate](#lockupdate)|Blocca la finestra specificata.|
-|[CDockingManager::OnActivateFrame](#onactivateframe)|Chiamato dal framework quando la finestra cornice viene resa attiva o disattivata.|
-|[CDockingManager::OnClosePopupMenu](#onclosepopupmenu)|Chiamato dal framework quando un menu a comparsa attivo elabora un messaggio WM_DESTROY.|
-|[CDockingManager::OnMoveMiniFrame](#onmoveminiframe)|Chiamato dal framework per spostare una finestra cornice mini.|
-|[CDockingManager::OnPaneContextMenu](#onpanecontextmenu)|Chiamato dal framework quando compila un menu che dispone di un elenco di riquadri.|
-|[CDockingManager::PaneFromPoint](#panefrompoint)|Restituisce il riquadro che contiene il punto specificato.|
-|[CDockingManager::ProcessPaneContextMenuCommand](#processpanecontextmenucommand)|Chiamato dal framework per selezionare o deselezionare una casella di controllo per il comando specificato e ricalcolare il layout di un riquadro visualizzato.|
-|[CDockingManager::RecalcLayout](#recalclayout)|Ricalcola il layout interno dei controlli presenti nell'elenco dei controlli.|
-|[CDockingManager::ReleaseEmptyPaneContainers](#releaseemptypanecontainers)|Rilascia i contenitori del riquadro vuoto.|
-|[CDockingManager::RemoveHiddenMDITabbedBar](#removehiddenmditabbedbar)|Rimuove il riquadro della barra nascosta specificato.|
-|[CDockingManager::RemoveMiniFrame](#removeminiframe)|Rimuove un fotogramma specificato dall'elenco di mini frame.|
-|[CDockingManager::RemovePaneFromDockManager](#removepanefromdockmanager)|Annulla la registrazione di un riquadro e lo rimuove dall'elenco nel gestore di ancoraggio.|
-|[CDockingManager::ReplacePane](#replacepane)|Sostituisce un riquadro con un altro.|
-|[CDockingManager::ResortMiniFramesPerOrdine](#resortminiframesforzorder)|Ricorre i telai nell'elenco dei mini telai.|
-|[CDockingManager::SaveState](#savestate)|Salva lo stato del gestore di ancoraggio nel Registro di sistema.|
-|[CDockingManager::SendMessageToMiniFrames](#sendmessagetominiframes)|Invia il messaggio specificato a tutti i mini frame.|
-|[CDockingManager::Serialize](#serialize)|Scrive il gestore di ancoraggio in un archivio. Esegue l'override di [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).|
-|[CDockingManager::SetAutohide -Order](#setautohidezorder)|Imposta le dimensioni, la larghezza e l'altezza delle barre di controllo e del riquadro specificato.|
-|[CDockingManager::SetDockingMode](#setdockingmode)|Imposta la modalità di ancoraggio.|
-|[CDockingManager::SetDockState](#setdockstate)|Imposta lo stato di ancoraggio delle barre di controllo, dei mini frame e delle barre di nascondi automaticamente.|
-|[CDockingManager::SetPrintPreviewMode](#setprintpreviewmode)|Imposta la modalità di anteprima di stampa delle barre visualizzate nell'anteprima di stampa.|
-|[CDockingManager::SetSmartDockingParams](#setsmartdockingparams)|Imposta i parametri che definiscono il comportamento dell'ancoraggio intelligente.|
-|[CDockingManager::ShowDelayShowMiniFrames](#showdelayshowminiframes)|Mostra o nasconde le finestre dei mini fotogrammi.|
-|[CDockingManager::ShowPanes](#showpanes)|Mostra o nasconde i riquadri delle barre di controllo e Nascondi automaticamente.|
-|[CDockingManager::StartSDocking](#startsdocking)|Avvia l'ancoraggio intelligente della finestra specificata in base all'allineamento del gestore di ancoraggio intelligente.|
-|[CDockingManager::StopSDocking](#stopsdocking)|Interrompe l'aggancio intelligente.|
+|[CDockingManager:: AddDockSite](#adddocksite)|Crea un riquadro ancorato e lo aggiunge all'elenco delle barre di controllo.|
+|[CDockingManager:: AddHiddenMDITabbedBar](#addhiddenmditabbedbar)|Aggiunge un handle a un riquadro a barre all'elenco dei riquadri della barra a schede MDI nascosti.|
+|[CDockingManager:: AddMiniFrame](#addminiframe)|Aggiunge un frame all'elenco di mini frame.|
+|[CDockingManager:: AddPane](#addpane)|Registra un riquadro con il gestore di ancoraggio.|
+|[CDockingManager:: AdjustDockingLayout](#adjustdockinglayout)|Ricalcola e regola il layout di tutti i riquadri in una finestra cornice.|
+|[CDockingManager:: AdjustPaneFrames](#adjustpaneframes)|Fa in modo che il messaggio di WM_NCCALCSIZE venga inviato a tutti i riquadri e a tutte le `CPaneFrameWnd` finestre.|
+|[CDockingManager:: AdjustRectToClientArea](#adjustrecttoclientarea)|Regola l'allineamento di un rettangolo.|
+|[CDockingManager:: AlignAutoHidePane](#alignautohidepane)|Ridimensiona un riquadro ancorato in modalità Nascondi automaticamente in modo da occupare la larghezza o l'altezza completa dell'area client del frame racchiusa tra i siti di ancoraggio.|
+|[CDockingManager:: AutoHidePane](#autohidepane)|Crea una barra degli strumenti Nascondi automaticamente.|
+|[CDockingManager:: BringBarsToTop](#bringbarstotop)|Porta le barre ancorate con l'allineamento specificato nella parte superiore.|
+|[CDockingManager:: BuildPanesMenu](#buildpanesmenu)|Aggiunge i nomi dei riquadri di ancoraggio e delle barre degli strumenti a un menu.|
+|[CDockingManager:: CalcExpectedDockedRect](#calcexpecteddockedrect)|Calcola il rettangolo previsto di una finestra ancorata.|
+|[CDockingManager:: create](#create)|Crea un gestore di ancoraggio.|
+|[CDockingManager::D eterminePaneAndStatus](#determinepaneandstatus)|Determina il riquadro contenente un punto specificato e il relativo stato di ancoraggio.|
+|[CDockingManager::D isableRestoreDockState](#disablerestoredockstate)|Abilita o Disabilita il caricamento del layout di ancoraggio dal registro di sistema.|
+|[CDockingManager::D ockPane](#dockpane)|Ancora un riquadro a un altro riquadro o a una finestra cornice.|
+|[CDockingManager::D ockPaneLeftOf](#dockpaneleftof)|Ancora un riquadro a sinistra di un altro riquadro.|
+|[CDockingManager:: EnableAutoHidePanes](#enableautohidepanes)|Consente l'ancoraggio del riquadro al frame principale, crea un riquadro ancorato e lo aggiunge all'elenco delle barre di controllo.|
+|[CDockingManager:: EnableDocking](#enabledocking)|Crea un riquadro ancorato e Abilita l'ancoraggio del riquadro al frame principale.|
+|[CDockingManager:: EnableDockSiteMenu](#enabledocksitemenu)|Visualizza un pulsante aggiuntivo che consente di aprire un menu di scelta rapida nelle didascalie di tutti i riquadri ancorati.|
+|[CDockingManager:: EnablePaneContextMenu](#enablepanecontextmenu)|Indica alla libreria di visualizzare un menu di scelta rapida speciale che include un elenco di barre degli strumenti dell'applicazione e riquadri di ancoraggio quando l'utente fa clic con il pulsante destro del mouse e la libreria sta elaborando il messaggio di WM_CONTEXTMENU.|
+|[CDockingManager:: FindDockSite](#finddocksite)|Recupera il riquadro a barre in corrispondenza della posizione specificata e con l'allineamento specificato.|
+|[CDockingManager:: FindDockSiteByPane](#finddocksitebypane)|Restituisce il riquadro a barre con l'ID del riquadro della barra di destinazione.|
+|[CDockingManager:: FindPaneByID](#findpanebyid)|Trova un riquadro in base all'ID di controllo specificato.|
+|[CDockingManager:: FixupVirtualRects](#fixupvirtualrects)|Inserisce tutte le posizioni della barra degli strumenti correnti in rettangoli virtuali.|
+|[CDockingManager:: FrameFromPoint](#framefrompoint)|Restituisce il frame che contiene il punto specificato.|
+|[CDockingManager:: GetClientAreaBounds](#getclientareabounds)|Ottiene il rettangolo che contiene i limiti dell'area client.|
+|[CDockingManager:: GetDockingMode](#getdockingmode)|Restituisce la modalità di ancoraggio corrente.|
+|[CDockingManager:: GetDockSiteFrameWnd](#getdocksiteframewnd)|Ottiene un puntatore al frame della finestra padre.|
+|[CDockingManager:: GetEnabledAutoHideAlignment](#getenabledautohidealignment)|Restituisce l'allineamento abilitato dei riquadri.|
+|[CDockingManager:: GetMiniFrames](#getminiframes)|Ottiene un elenco di miniframes.|
+|[CDockingManager:: GetOuterEdgeBounds](#getouteredgebounds)|Ottiene un rettangolo che contiene i bordi esterni del frame.|
+|[CDockingManager:: getpanell](#getpanelist)|Restituisce un elenco di riquadri che appartengono al gestore di ancoraggio. Sono inclusi tutti i riquadri a virgola mobile.|
+|[CDockingManager:: GetSmartDockingManager](#getsmartdockingmanager)|Recupera un puntatore al gestore di ancoraggio intelligente.|
+|[CDockingManager:: GetSmartDockingManagerPermanent](#getsmartdockingmanagerpermanent)|Recupera un puntatore al gestore di ancoraggio intelligente.|
+|[CDockingManager:: GetSmartDockingParams](#getsmartdockingparams)|Restituisce i parametri di ancoraggio intelligente per il gestore di ancoraggio.|
+|[CDockingManager:: GetSmartDockingTheme](#getsmartdockingtheme)|Metodo statico che restituisce un tema usato per visualizzare i marcatori di ancoraggio intelligente.|
+|[CDockingManager:: HideAutoHidePanes](#hideautohidepanes)|Nasconde un riquadro in modalità Nascondi automaticamente.|
+|[CDockingManager:: InsertDockSite](#insertdocksite)|Crea un riquadro ancorato e lo inserisce nell'elenco di barre di controllo.|
+|[CDockingManager:: InsertPane](#insertpane)|Inserisce un riquadro di controllo nell'elenco delle barre di controllo.|
+|[CDockingManager:: IsDockSiteMenu](#isdocksitemenu)|Specifica se un menu a comparsa viene visualizzato nelle didascalie di tutti i riquadri.|
+|[CDockingManager:: IsInAdjustLayout](#isinadjustlayout)|Determina se i layout di tutti i riquadri vengono modificati.|
+|[CDockingManager:: IsOLEContainerMode](#isolecontainermode)|Specifica se il gestore di ancoraggio è in modalità contenitore OLE.|
+|[CDockingManager:: IsPointNearDockSite](#ispointneardocksite)|Determina se un punto specificato si trova vicino al sito di ancoraggio.|
+|[CDockingManager:: IsPrintPreviewValid](#isprintpreviewvalid)|Determina se è impostata la modalità di anteprima di stampa.|
+|[CDockingManager:: LoadState](#loadstate)|Carica lo stato del gestore di ancoraggio dal registro di sistema.|
+|[CDockingManager:: LockUpdate](#lockupdate)|Blocca la finestra specificata.|
+|[CDockingManager:: OnActivateFrame](#onactivateframe)|Chiamata eseguita dal framework quando la finestra cornice viene attivata o disattivata.|
+|[CDockingManager:: OnClosePopupMenu](#onclosepopupmenu)|Chiamato dal framework quando un menu a comparsa attivo elabora un messaggio WM_DESTROY.|
+|[CDockingManager:: OnMoveMiniFrame](#onmoveminiframe)|Chiamata eseguita dal Framework per spostare una finestra con mini-cornice.|
+|[CDockingManager:: OnPaneContextMenu](#onpanecontextmenu)|Chiamata eseguita dal Framework durante la compilazione di un menu che include un elenco di riquadri.|
+|[CDockingManager::P aneFromPoint](#panefrompoint)|Restituisce il riquadro che contiene il punto specificato.|
+|[CDockingManager::P rocessPaneContextMenuCommand](#processpanecontextmenucommand)|Chiamata eseguita dal Framework per selezionare o deselezionare una casella di controllo per il comando specificato e ricalcolare il layout di un riquadro visualizzato.|
+|[CDockingManager:: RecalcLayout](#recalclayout)|Ricalcola il layout interno dei controlli presenti nell'elenco di controlli.|
+|[CDockingManager:: ReleaseEmptyPaneContainers](#releaseemptypanecontainers)|Rilascia i contenitori dei riquadri vuoti.|
+|[CDockingManager:: RemoveHiddenMDITabbedBar](#removehiddenmditabbedbar)|Rimuove il riquadro della barra nascosta specificato.|
+|[CDockingManager:: RemoveMiniFrame](#removeminiframe)|Rimuove un frame specificato dall'elenco di mini frame.|
+|[CDockingManager:: RemovePaneFromDockManager](#removepanefromdockmanager)|Annulla la registrazione di un riquadro e lo rimuove dall'elenco nel gestore di ancoraggio.|
+|[CDockingManager:: ReplacePane](#replacepane)|Sostituisce un riquadro con un altro.|
+|[CDockingManager:: ResortMiniFramesForZOrder](#resortminiframesforzorder)|Ricorre i frame nell'elenco di mini frame.|
+|[CDockingManager:: SaveState](#savestate)|Salva lo stato del gestore di ancoraggio nel registro di sistema.|
+|[CDockingManager:: SendMessageToMiniFrames](#sendmessagetominiframes)|Invia il messaggio specificato a tutti i mini frame.|
+|[CDockingManager:: Serialize](#serialize)|Scrive l'oggetto docking Manager in un archivio. Esegue l'override di [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).|
+|[CDockingManager:: SetAutohideZOrder](#setautohidezorder)|Imposta le dimensioni, la larghezza e l'altezza delle barre di controllo e del riquadro specificato.|
+|[CDockingManager:: SetDockingMode](#setdockingmode)|Imposta la modalità di ancoraggio.|
+|[CDockingManager:: SetDockState](#setdockstate)|Imposta lo stato di ancoraggio delle barre di controllo, dei mini frame e delle barre di Nascondi automaticamente.|
+|[CDockingManager:: SetPrintPreviewMode](#setprintpreviewmode)|Imposta la modalità di anteprima di stampa delle barre visualizzate nell'anteprima di stampa.|
+|[CDockingManager:: SetSmartDockingParams](#setsmartdockingparams)|Imposta i parametri che definiscono il comportamento dell'ancoraggio intelligente.|
+|[CDockingManager:: ShowDelayShowMiniFrames](#showdelayshowminiframes)|Consente di visualizzare o nascondere le finestre dei mini frame.|
+|[CDockingManager:: ShowPanes](#showpanes)|Consente di visualizzare o nascondere i riquadri delle barre di controllo e Nascondi automaticamente.|
+|[CDockingManager:: StartSDocking](#startsdocking)|Avvia l'ancoraggio intelligente della finestra specificata in base all'allineamento del gestore di ancoraggio intelligente.|
+|[CDockingManager:: StopSDocking](#stopsdocking)|Arresta l'aggancio intelligente.|
 
 ### <a name="data-members"></a>Membri dei dati
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
-|[CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|Specifica se il gestore di ancoraggio nasconde i riquadri in modalità contenitore OLE.|
-|[CDockingManager::m_dockModeGlobal](#m_dockmodeglobal)|Specifica la modalità di ancoraggio globale.|
-|[CDockingManager::m_nDockSensitivity](#m_ndocksensitivity)|Specifica la sensibilità di ancoraggio.|
-|[CDockingManager::m_nTimeOutBeforeDockingBarDock](#m_ntimeoutbeforedockingbardock)|Specifica il tempo, in millisecondi, che deve essere ancorato a un riquadro di ancoraggio in modalità di ancoraggio immediato.|
-|[CDockingManager::m_nTimeOutBeforeToolBarDock](#m_ntimeoutbeforetoolbardock)|Specifica il tempo, in millisecondi, prima che una barra degli strumenti venga ancorata alla finestra cornice principale.|
+|[CDockingManager:: m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|Specifica se il gestore di ancoraggio nasconde i riquadri in modalità contenitore OLE.|
+|[CDockingManager:: m_dockModeGlobal](#m_dockmodeglobal)|Specifica la modalità di ancoraggio globale.|
+|[CDockingManager:: m_nDockSensitivity](#m_ndocksensitivity)|Specifica la riservatezza di ancoraggio.|
+|[CDockingManager:: m_nTimeOutBeforeDockingBarDock](#m_ntimeoutbeforedockingbardock)|Specifica il tempo, in millisecondi, prima che un riquadro ancorato venga ancorato in modalità di ancoraggio immediato.|
+|[CDockingManager:: m_nTimeOutBeforeToolBarDock](#m_ntimeoutbeforetoolbardock)|Specifica l'intervallo di tempo, in millisecondi, prima dell'ancoraggio di una barra degli strumenti alla finestra cornice principale.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La finestra cornice principale crea e inizializza automaticamente questa classe.
 
-L'oggetto gestore di ancoraggio contiene un elenco di tutti i riquadri presenti nel layout di ancoraggio e anche un elenco di tutte le finestre [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) che appartengono alla finestra cornice principale.
+L'oggetto docking Manager include un elenco di tutti i riquadri presenti nel layout di ancoraggio, oltre a un elenco di tutte le finestre [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) che appartengono alla finestra cornice principale.
 
-La `CDockingManager` classe implementa alcuni servizi che è possibile `CPaneFrameWnd` usare per trovare un riquadro o una finestra. In genere questi servizi non vengono chiamano direttamente perché ne viene eseguito il wrapping nell'oggetto finestra cornice principale. Per ulteriori informazioni, vedere [Classe CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).
+La `CDockingManager` classe implementa alcuni servizi che è possibile usare per trovare un riquadro o una `CPaneFrameWnd` finestra. In genere questi servizi non vengono chiamati direttamente perché sono racchiusi nell'oggetto finestra cornice principale. Per ulteriori informazioni, vedere la [classe CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).
 
 ## <a name="customization-tips"></a>Suggerimenti per la personalizzazione
 
-I seguenti suggerimenti `CDockingManager` si applicano agli oggetti:
+I suggerimenti seguenti si applicano agli `CDockingManager` oggetti:
 
-- [La classe CDockingManager](../../mfc/reference/cdockingmanager-class.md) supporta queste modalità di ancoraggio:CDockingManager Class supports these docking modes:
+- La [classe CDockingManager](../../mfc/reference/cdockingmanager-class.md) supporta le modalità di ancoraggio seguenti:
 
   - `AFX_DOCK_TYPE::DT_IMMEDIATE`
 
@@ -286,13 +287,13 @@ I seguenti suggerimenti `CDockingManager` si applicano agli oggetti:
 
   - `AFX_DOCK_TYPE::DT_SMART`
 
-  Queste modalità di ancoraggio sono definite da [CDockingManager::m_dockModeGlobal](#m_dockmodeglobal) e vengono impostate chiamando [CDockingManager::SetDockingMode](#setdockingmode).
+  Queste modalità di ancoraggio sono definite da [CDockingManager:: m_dockModeGlobal](#m_dockmodeglobal) e vengono impostate tramite la chiamata a [CDockingManager:: SetDockingMode](#setdockingmode).
 
-- Se si desidera creare un riquadro non mobile e non ridimensionabile, chiamare il [CDockingManager::AddPane](#addpane) metodo. Questo metodo registra il riquadro con il gestore di ancoraggio, che è responsabile del layout del riquadro.
+- Se si vuole creare un riquadro non mobile e non ridimensionabile, chiamare il metodo [CDockingManager:: AddPane](#addpane) . Questo metodo registra il riquadro con il gestore di ancoraggio, responsabile del layout del riquadro.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come `CDockingManager` utilizzare vari `CDockingManager` metodi nella classe per configurare un oggetto. Nell'esempio viene illustrato come visualizzare un pulsante aggiuntivo che apre un menu a comparsa nelle didascalie di tutti i riquadri ancorati e come impostare la modalità di ancoraggio dell'oggetto. Questo frammento di codice fa parte dell'esempio Demo di [Visual Studio.](../../overview/visual-cpp-samples.md)
+Nell'esempio seguente viene illustrato come utilizzare i vari metodi della `CDockingManager` classe per configurare un `CDockingManager` oggetto. Nell'esempio viene illustrato come visualizzare un pulsante aggiuntivo che apre un menu a comparsa nelle didascalie di tutti i riquadri ancorati e come impostare la modalità di ancoraggio dell'oggetto. Questo frammento di codice fa parte dell' [esempio demo di Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#24](../../mfc/codesnippet/cpp/cdockingmanager-class_1.cpp)]
 
@@ -304,11 +305,11 @@ Nell'esempio seguente viene illustrato come `CDockingManager` utilizzare vari `C
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxDockingManager.h
+**Intestazione:** afxDockingManager. h
 
-## <a name="cdockingmanageradddocksite"></a><a name="adddocksite"></a>CDockingManager::AddDockSite
+## <a name="cdockingmanageradddocksite"></a><a name="adddocksite"></a> CDockingManager:: AddDockSite
 
-Crea un riquadro di ancoraggio e lo aggiunge all'elenco delle barre di controllo.
+Crea un riquadro ancorato e lo aggiunge all'elenco delle barre di controllo.
 
 ```
 BOOL AddDockSite(
@@ -318,19 +319,19 @@ BOOL AddDockSite(
 
 ### <a name="parameters"></a>Parametri
 
-*Informazioni*<br/>
-[in] Riferimento a una struttura di informazioni che contiene l'allineamento del riquadro di ancoraggio.
+*info*<br/>
+in Riferimento a una struttura di informazioni che contiene l'allineamento del riquadro ancorato.
 
-*barra di controllo ppDockBar*<br/>
-[fuori] Puntatore a un puntatore al nuovo riquadro di ancoraggio.
+*ppDockBar*<br/>
+out Puntatore a un puntatore al nuovo riquadro ancorato.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe il riquadro ancorato è stato creato correttamente. FALSE in caso contrario.
+TRUE se il riquadro Dock è stato creato correttamente; In caso contrario, FALSE.
 
-## <a name="cdockingmanageraddhiddenmditabbedbar"></a><a name="addhiddenmditabbedbar"></a>CDockingManager::AddHiddenMDITabbedBar
+## <a name="cdockingmanageraddhiddenmditabbedbar"></a><a name="addhiddenmditabbedbar"></a> CDockingManager:: AddHiddenMDITabbedBar
 
-Aggiunge un handle a un riquadro barra all'elenco dei riquadri a barre a schede MDI nascosti.
+Aggiunge un handle a un riquadro a barre all'elenco dei riquadri della barra a schede MDI nascosti.
 
 ```cpp
 void AddHiddenMDITabbedBar(CDockablePane* pBar);
@@ -338,10 +339,10 @@ void AddHiddenMDITabbedBar(CDockablePane* pBar);
 
 ### <a name="parameters"></a>Parametri
 
-*pBar (Barra)*<br/>
-[in] Puntatore a un riquadro della barra
+*pBar*<br/>
+in Puntatore a un riquadro a barre
 
-## <a name="cdockingmanageraddpane"></a><a name="addpane"></a>CDockingManager::AddPane
+## <a name="cdockingmanageraddpane"></a><a name="addpane"></a> CDockingManager:: AddPane
 
 Registra un riquadro con il gestore di ancoraggio.
 
@@ -355,27 +356,27 @@ BOOL AddPane(
 
 ### <a name="parameters"></a>Parametri
 
-*pWnd (in questo stato di windows*<br/>
+*pWnd*<br/>
 [in, out] Specifica il riquadro da aggiungere al gestore di ancoraggio.
 
-*bCoda*<br/>
-[in] TRUE per aggiungere il riquadro alla fine dell'elenco di riquadri per il gestore di ancoraggio; in caso contrario, FALSE.
+*bTail*<br/>
+in TRUE per aggiungere il riquadro alla fine dell'elenco di riquadri per il gestore di ancoraggio. in caso contrario, FALSE.
 
-*bNascondi Auto*<br/>
-[in] Solo per uso interno. Utilizzare sempre il valore predefinito FALSE.
+*bAutoHide*<br/>
+in Solo per uso interno. Usare sempre il valore predefinito FALSE.
 
-*bInsertForOuterEdge (informazioni in stati intratto)*<br/>
-[in] Solo per uso interno. Utilizzare sempre il valore predefinito FALSE.
+*bInsertForOuterEdge*<br/>
+in Solo per uso interno. Usare sempre il valore predefinito FALSE.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe il riquadro è stato registrato correttamente con il gestore di ancoraggio. in caso contrario, FALSE.
+TRUE se il riquadro è stato registrato correttamente con il gestore di ancoraggio. in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Chiamare questo metodo per registrare i riquadri non mobili e non ridimensionabili con il gestore di ancoraggio. Se non si registrano i riquadri, questi non verranno visualizzati correttamente quando il gestore di ancoraggio è disposto.
+Chiamare questo metodo per registrare riquadri non a virgola mobile e non ridimensionabili con il gestore di ancoraggio. Se non si registrano i riquadri, questi non verranno visualizzati correttamente quando il gestore di ancoraggio è disposto.
 
-## <a name="cdockingmanageradjustdockinglayout"></a><a name="adjustdockinglayout"></a>CDockingManager::AdjustDockingLayout
+## <a name="cdockingmanageradjustdockinglayout"></a><a name="adjustdockinglayout"></a> CDockingManager:: AdjustDockingLayout
 
 Ricalcola e regola il layout di tutti i riquadri in una finestra cornice.
 
@@ -386,13 +387,13 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ### <a name="parameters"></a>Parametri
 
 *hdwp*<br/>
-[in] Specifica la struttura della posizione della finestra posticipata. Per altre informazioni, vedere [Tipi di dati Windows](/windows/win32/WinProg/windows-data-types).
+in Specifica la struttura della posizione della finestra posticipata. Per altre informazioni, vedere [Tipi di dati Windows](/windows/win32/WinProg/windows-data-types).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cdockingmanageraddminiframe"></a><a name="addminiframe"></a>CDockingManager::AddMiniFrame
+## <a name="cdockingmanageraddminiframe"></a><a name="addminiframe"></a> CDockingManager:: AddMiniFrame
 
-Aggiunge una cornice all'elenco dei mini frame.
+Aggiunge un frame all'elenco di mini frame.
 
 ```
 virtual BOOL AddMiniFrame(CPaneFrameWnd* pWnd);
@@ -400,24 +401,24 @@ virtual BOOL AddMiniFrame(CPaneFrameWnd* pWnd);
 
 ### <a name="parameters"></a>Parametri
 
-*pWnd (in questo stato di windows*<br/>
-[in] Puntatore a una cornice.
+*pWnd*<br/>
+in Puntatore a un frame.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe il frame non è presente nell'elenco dei mini frame ed è stato aggiunto correttamente. FALSE in caso contrario.
+TRUE se il frame non è presente nell'elenco di mini frame ed è stato aggiunto correttamente; In caso contrario, FALSE.
 
-## <a name="cdockingmanageradjustpaneframes"></a><a name="adjustpaneframes"></a>CDockingManager::AdjustPaneFrames
+## <a name="cdockingmanageradjustpaneframes"></a><a name="adjustpaneframes"></a> CDockingManager:: AdjustPaneFrames
 
-Determina l'invio del messaggio di `CPaneFrameWnd` WM_NCCALCSIZE a tutti i riquadri e le finestre.
+Fa in modo che il messaggio di WM_NCCALCSIZE venga inviato a tutti i riquadri e a tutte le `CPaneFrameWnd` finestre.
 
 ```
 virtual void AdjustPaneFrames();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cdockingmanageradjustrecttoclientarea"></a><a name="adjustrecttoclientarea"></a>CDockingManager::AdjustRectToClientArea
+## <a name="cdockingmanageradjustrecttoclientarea"></a><a name="adjustrecttoclientarea"></a> CDockingManager:: AdjustRectToClientArea
 
 Regola l'allineamento di un rettangolo.
 
@@ -429,19 +430,19 @@ virtual BOOL AdjustRectToClientArea(
 
 ### <a name="parameters"></a>Parametri
 
-*rectRisulta*<br/>
-[in] Un riferimento `CRect` a un oggetto
+*rectResult*<br/>
+in Riferimento a un `CRect` oggetto
 
-*dwAllineamento*<br/>
-[in] L'allineamento `CRect` dell'oggetto
+*dwAlignment*<br/>
+in Allineamento dell'oggetto. `CRect`
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe l'allineamento dell'oggetto `CRect` è stato modificato. FALSE in caso contrario.
+TRUE se l'allineamento dell' `CRect` oggetto è stato regolato; In caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Il parametro *dwAlignment* può avere uno dei seguenti valori:
+Il parametro *dwAlignment* può avere uno dei valori seguenti:
 
 - CBRS_ALIGN_TOP
 
@@ -451,9 +452,9 @@ Il parametro *dwAlignment* può avere uno dei seguenti valori:
 
 - CBRS_ALIGN_RIGHT
 
-## <a name="cdockingmanageralignautohidepane"></a><a name="alignautohidepane"></a>CDockingManager::AlignAutoHidePane
+## <a name="cdockingmanageralignautohidepane"></a><a name="alignautohidepane"></a> CDockingManager:: AlignAutoHidePane
 
-Ridimensiona un riquadro ancorato in modalità Nascondi automaticamente in modo che occupi l'intera larghezza o altezza dell'area client del frame circondato da siti di ancoraggio.
+Ridimensiona un riquadro ancorato in modalità Nascondi automaticamente in modo da occupare la larghezza o l'altezza completa dell'area client del frame racchiusa tra i siti di ancoraggio.
 
 ```cpp
 void AlignAutoHidePane(
@@ -463,13 +464,13 @@ void AlignAutoHidePane(
 
 ### <a name="parameters"></a>Parametri
 
-*pDefaultSlider (dispositivo di impostazione inlingua com*<br/>
-[in] Riquadro del dispositivo di scorrimento ancorato.
+*pDefaultSlider*<br/>
+in Riquadro del dispositivo di scorrimento di ancoraggio.
 
-*bIsVisibile*<br/>
-[in] TRUESe il riquadro ancorato è visibile. FALSE in caso contrario.
+*bIsVisible*<br/>
+in TRUE se il riquadro di ancoraggio è visibile; In caso contrario, FALSE.
 
-## <a name="cdockingmanagerautohidepane"></a><a name="autohidepane"></a>CDockingManager::AutoHidePane
+## <a name="cdockingmanagerautohidepane"></a><a name="autohidepane"></a> CDockingManager:: AutoHidePane
 
 Crea una barra degli strumenti Nascondi automaticamente.
 
@@ -481,19 +482,19 @@ CMFCAutoHideToolBar* AutoHidePane(
 
 ### <a name="parameters"></a>Parametri
 
-*pBar (Barra)*<br/>
-[in] Puntatore al riquadro della barra.
+*pBar*<br/>
+in Puntatore al riquadro a barre.
 
 *pCurrAutoHideToolBar*<br/>
-[in] Puntatore a una barra degli strumenti Nascondi automaticamente.
+in Puntatore a una barra degli strumenti Nascondi automaticamente.
 
 ### <a name="return-value"></a>Valore restituito
 
-NULL se la barra degli strumenti Nascondi automaticamente non è stata creata; in caso contrario, un puntatore alla nuova barra degli strumenti.
+NULL se la barra degli strumenti Nascondi automaticamente non è stata creata. in caso contrario, un puntatore alla nuova barra degli strumenti.
 
-## <a name="cdockingmanagerbringbarstotop"></a><a name="bringbarstotop"></a>CDockingManager::BringBarsToTop
+## <a name="cdockingmanagerbringbarstotop"></a><a name="bringbarstotop"></a> CDockingManager:: BringBarsToTop
 
-Porta le barre ancorate con l'allineamento specificato in alto.
+Porta le barre ancorate con l'allineamento specificato nella parte superiore.
 
 ```cpp
 void BringBarsToTop(
@@ -503,15 +504,15 @@ void BringBarsToTop(
 
 ### <a name="parameters"></a>Parametri
 
-*dwAllineamento*<br/>
-[in] L'allineamento delle barre di ancoraggio che vengono portate nella parte superiore delle altre finestre.
+*dwAlignment*<br/>
+in Allineamento delle barre di ancoraggio che vengono portate nella parte superiore di altre finestre.
 
-*bExcludeBar in stato di ebisazione*<br/>
-[in] TRUE per escludere le barre ancorate dall'essere in primo piano; in caso contrario, FALSE.
+*bExcludeDockedBars*<br/>
+in TRUE per escludere le barre ancorate dalla parte superiore; in caso contrario, FALSE.
 
-## <a name="cdockingmanagerbuildpanesmenu"></a><a name="buildpanesmenu"></a>CDockingManager::BuildPanesMenu
+## <a name="cdockingmanagerbuildpanesmenu"></a><a name="buildpanesmenu"></a> CDockingManager:: BuildPanesMenu
 
-Aggiunge i nomi dei riquadri e delle barre degli strumenti di ancoraggio a un menu.
+Aggiunge i nomi dei riquadri di ancoraggio e delle barre degli strumenti a un menu.
 
 ```cpp
 void BuildPanesMenu(
@@ -521,13 +522,13 @@ void BuildPanesMenu(
 
 ### <a name="parameters"></a>Parametri
 
-*Menu*<br/>
-[in] Un menu a cui aggiungere i nomi dei riquadri e delle barre degli strumenti di ancoraggio.
+*menu*<br/>
+in Menu a cui aggiungere i nomi dei riquadri ancorati e delle barre degli strumenti.
 
-*bToolbarsOnly (ToolbarsOnly)*<br/>
-[in] TRUE per aggiungere solo i nomi delle barre degli strumenti al menu; FALSE in caso contrario.
+*bToolbarsOnly*<br/>
+in TRUE per aggiungere solo i nomi della barra degli strumenti al menu; In caso contrario, FALSE.
 
-## <a name="cdockingmanagercalcexpecteddockedrect"></a><a name="calcexpecteddockedrect"></a>CDockingManager::CalcExpectedDockedRect
+## <a name="cdockingmanagercalcexpecteddockedrect"></a><a name="calcexpecteddockedrect"></a> CDockingManager:: CalcExpectedDockedRect
 
 Calcola il rettangolo previsto di una finestra ancorata.
 
@@ -542,26 +543,26 @@ void CalcExpectedDockedRect(
 
 ### <a name="parameters"></a>Parametri
 
-*pWnd (in questo stato di windows*<br/>
-[in] Puntatore alla finestra da ancorare.
+*pWnd*<br/>
+in Puntatore alla finestra da ancorare.
 
-*PtMouse*<br/>
-[in] Posizione del mouse.
+*ptMouse*<br/>
+in Posizione del mouse.
 
-*rectRisulta*<br/>
-[fuori] Rettangolo calcolato.
+*rectResult*<br/>
+out Rettangolo calcolato.
 
 *bDrawTab*<br/>
-[in] TRUE per disegnare una scheda; in caso contrario, FALSE.
+in TRUE per creare una scheda; in caso contrario, FALSE.
 
-*ppTargetBar (bar di applicazione)*<br/>
-[fuori] Puntatore a un puntatore al riquadro di destinazione.
+*ppTargetBar*<br/>
+out Puntatore a un puntatore al riquadro di destinazione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Questo metodo calcola il rettangolo che una finestra occuperebbe se un utente trascinasse la finestra nel punto specificato da *ptMouse* e la ancorasse lì.
+Questo metodo calcola il rettangolo che una finestra occupa se un utente ha trascinato la finestra sul punto specificato da *ptMouse* e ancorata.
 
-## <a name="cdockingmanagercreate"></a><a name="create"></a>CDockingManager::CreareCDockingManager::Create
+## <a name="cdockingmanagercreate"></a><a name="create"></a> CDockingManager:: create
 
 Crea un gestore di ancoraggio.
 
@@ -571,16 +572,16 @@ BOOL Create(CFrameWnd* pParentWnd);
 
 ### <a name="parameters"></a>Parametri
 
-*pParentWnd (informazioni in due)*<br/>
-[in] Puntatore al frame padre del gestore di ancoraggio. Questo valore non deve essere NULL.
+*pParentWnd*<br/>
+in Puntatore al frame padre del gestore di ancoraggio. Questo valore non può essere NULL.
 
 ### <a name="return-value"></a>Valore restituito
 
-VERO sempre.
+TRUE sempre.
 
-## <a name="cdockingmanagerdeterminepaneandstatus"></a><a name="determinepaneandstatus"></a>CDockingManager::DeterminePaneAndStatus
+## <a name="cdockingmanagerdeterminepaneandstatus"></a><a name="determinepaneandstatus"></a> CDockingManager::D eterminePaneAndStatus
 
-Determina il riquadro che contiene un determinato punto e il relativo stato di ancoraggio.
+Determina il riquadro contenente un punto specificato e il relativo stato di ancoraggio.
 
 ```
 virtual AFX_CS_STATUS DeterminePaneAndStatus(
@@ -595,41 +596,41 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
 ### <a name="parameters"></a>Parametri
 
 *pt*<br/>
-[in] Posizione del riquadro da controllare.
+in Posizione del riquadro da verificare.
 
-*nSensibilità*<br/>
-[in] Valore per aumentare il rettangolo della finestra di ogni riquadro selezionato. Un riquadro soddisfa i criteri di ricerca se il punto specificato si trova in questa area aumentata.
+*nSensitivity*<br/>
+in Valore per aumentare il rettangolo della finestra di ogni riquadro selezionato. Un riquadro soddisfa i criteri di ricerca se il punto specificato si trova in questa area aumentata.
 
-*dwEnabledAlignment (Allineamento dwEnabled)*<br/>
-[in] Allineamento del riquadro di ancoraggio.
+*dwEnabledAlignment*<br/>
+in Allineamento del riquadro di ancoraggio.
 
-*ppTargetBar (bar di applicazione)*<br/>
-[fuori] Puntatore a un puntatore al riquadro di destinazione.
+*ppTargetBar*<br/>
+out Puntatore a un puntatore al riquadro di destinazione.
 
 *pBarToIgnore*<br/>
-[in] Riquadro ignorato dal metodo.
+in Riquadro ignorato dal metodo.
 
-*pBarToDock (informazioni in stato di folto)*<br/>
-[in] Riquadro ancorato.
+*pBarToDock*<br/>
+in Riquadro ancorato.
 
 ### <a name="return-value"></a>Valore restituito
 
 Stato di ancoraggio.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Lo stato di ancoraggio può essere uno dei seguenti valori:
+Lo stato di ancoraggio può essere uno dei valori seguenti:
 
-|AFX_CS_STATUS valore|Significato|
+|Valore AFX_CS_STATUS|Significato|
 |---------------------------|-------------|
-|CS_NOTHING|Il puntatore non si trova su un sito di ancoraggio. Pertanto, mantenere il riquadro mobile.|
-|CS_DOCK_IMMEDIATELY|Il puntatore si trova sul sito di ancoraggio in modalità immediata (DT_IMMEDIATE stile è abilitato), pertanto il riquadro deve essere ancorato immediatamente.|
-|CS_DELAY_DOCK|Il puntatore si trova su un sito di ancoraggio che è un altro riquadro ancorato o è un bordo del frame principale.|
-|CS_DELAY_DOCK_TO_TAB|Il puntatore è posizionato su un sito di ancoraggio che fa sì che il riquadro sia ancorato in una finestra a schede. Ciò si verifica quando il mouse si trova sopra una didascalia di un altro riquadro ancorato o su un'area di tabulazione di un riquadro a schede.|
+|CS_NOTHING|Il puntatore non si trova su un sito di ancoraggio. Pertanto, è consigliabile lasciare il riquadro a virgola mobile.|
+|CS_DOCK_IMMEDIATELY|Il puntatore è posizionato sul sito dock in modalità immediata (DT_IMMEDIATE stile è abilitato), quindi il riquadro deve essere ancorato immediatamente.|
+|CS_DELAY_DOCK|Il puntatore si trova su un sito di ancoraggio che è un altro riquadro di ancoraggio o è un bordo del frame principale.|
+|CS_DELAY_DOCK_TO_TAB|Il puntatore si trova su un sito di ancoraggio che determina l'ancoraggio del riquadro in una finestra a schede. Questo errore si verifica quando il mouse si trova su una didascalia di un altro riquadro ancorato o su un'area di tabulazione di un riquadro a schede.|
 
-## <a name="cdockingmanagerdisablerestoredockstate"></a><a name="disablerestoredockstate"></a>CDockingManager::DisableRestoreDockState
+## <a name="cdockingmanagerdisablerestoredockstate"></a><a name="disablerestoredockstate"></a> CDockingManager::D isableRestoreDockState
 
-Abilita o disabilita il caricamento del layout di ancoraggio dal Registro di sistema.
+Abilita o Disabilita il caricamento del layout di ancoraggio dal registro di sistema.
 
 ```cpp
 void DisableRestoreDockState(BOOL bDisable = TRUE);
@@ -637,14 +638,14 @@ void DisableRestoreDockState(BOOL bDisable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*Bdisattivare*<br/>
-[in] TRUE per disabilitare il caricamento del layout di ancoraggio dal Registro di sistema; in caso contrario, FALSE.
+*bDisattivare*<br/>
+in TRUE per disabilitare il caricamento del layout di ancoraggio dal registro di sistema; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Chiamare questo metodo quando è necessario mantenere il layout corrente dei riquadri e delle barre degli strumenti ancorati durante il caricamento dello stato dell'applicazione.
+Chiamare questo metodo quando è necessario mantenere il layout corrente dei riquadri di ancoraggio e delle barre degli strumenti quando viene caricato lo stato dell'applicazione.
 
-## <a name="cdockingmanagerdockpane"></a><a name="dockpane"></a>CDockingManager::DockPane
+## <a name="cdockingmanagerdockpane"></a><a name="dockpane"></a> CDockingManager::D ockPane
 
 Ancora un riquadro a un altro riquadro o a una finestra cornice.
 
@@ -657,16 +658,16 @@ void DockPane(
 
 ### <a name="parameters"></a>Parametri
 
-*pBar (Barra)*<br/>
-[in] Puntatore a un riquadro della barra a cui ancorare.
+*pBar*<br/>
+in Puntatore a un riquadro a barre da ancorare a.
 
 *nDockBarID*<br/>
-[in] ID della barra da ancorare.
+in ID della barra da ancorare.
 
-*Lprect*<br/>
-[in] Rettangolo di destinazione.
+*lpRect*<br/>
+in Rettangolo di destinazione.
 
-## <a name="cdockingmanagerdockpaneleftof"></a><a name="dockpaneleftof"></a>CDockingManager::DockPaneLeftOf
+## <a name="cdockingmanagerdockpaneleftof"></a><a name="dockpaneleftof"></a> CDockingManager::D ockPaneLeftOf
 
 Ancora un riquadro a sinistra di un altro riquadro.
 
@@ -678,19 +679,19 @@ BOOL DockPaneLeftOf(
 
 ### <a name="parameters"></a>Parametri
 
-*pBarToDock (informazioni in stato di folto)*<br/>
-[in] Puntatore al riquadro da ancorare a sinistra di *pTargetBar*.
+*pBarToDock*<br/>
+in Puntatore al riquadro da ancorare a sinistra di *pTargetBar*.
 
-*pTargetBar (bar di riferimento)*<br/>
-[in] Puntatore al riquadro di destinazione.
+*pTargetBar*<br/>
+in Puntatore al riquadro di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe il riquadro è stato ancorato correttamente. in caso contrario, FALSE.
+TRUE se il riquadro è stato ancorato correttamente; in caso contrario, FALSE.
 
-## <a name="cdockingmanagerenableautohidepanes"></a><a name="enableautohidepanes"></a>CDockingManager::EnableAutoHidePanes
+## <a name="cdockingmanagerenableautohidepanes"></a><a name="enableautohidepanes"></a> CDockingManager:: EnableAutoHidePanes
 
-Abilita l'ancoraggio del riquadro al frame principale, crea un riquadro ancorato e lo aggiunge all'elenco delle barre di controllo.
+Consente l'ancoraggio del riquadro al frame principale, crea un riquadro ancorato e lo aggiunge all'elenco delle barre di controllo.
 
 ```
 BOOL EnableAutoHidePanes(DWORD dwStyle);
@@ -698,16 +699,16 @@ BOOL EnableAutoHidePanes(DWORD dwStyle);
 
 ### <a name="parameters"></a>Parametri
 
-*DwStyle (in stile dwStyle)*<br/>
-[in] Allineamento di ancoraggio.
+*dwStyle*<br/>
+in Allineamento di ancoraggio.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe il riquadro ancorato è stato creato correttamente. FALSE in caso contrario.
+TRUE se il riquadro Dock è stato creato correttamente; In caso contrario, FALSE.
 
-## <a name="cdockingmanagerenabledocking"></a><a name="enabledocking"></a>CDockingManager::EnableDocking
+## <a name="cdockingmanagerenabledocking"></a><a name="enabledocking"></a> CDockingManager:: EnableDocking
 
-Crea un riquadro ancorato e consente l'ancoraggio del riquadro al frame principale.
+Crea un riquadro ancorato e Abilita l'ancoraggio del riquadro al frame principale.
 
 ```
 BOOL EnableDocking(DWORD dwStyle);
@@ -715,16 +716,16 @@ BOOL EnableDocking(DWORD dwStyle);
 
 ### <a name="parameters"></a>Parametri
 
-*DwStyle (in stile dwStyle)*<br/>
-[in] Allineamento di ancoraggio.
+*dwStyle*<br/>
+in Allineamento di ancoraggio.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe il riquadro ancorato è stato creato correttamente. FALSE in caso contrario.
+TRUE se il riquadro Dock è stato creato correttamente; In caso contrario, FALSE.
 
-## <a name="cdockingmanagerenabledocksitemenu"></a><a name="enabledocksitemenu"></a>CDockingManager::EnableDockSiteMenu
+## <a name="cdockingmanagerenabledocksitemenu"></a><a name="enabledocksitemenu"></a> CDockingManager:: EnableDockSiteMenu
 
-Visualizza un pulsante aggiuntivo che consente di aprire un menu a comparsa sulle didascalie di tutti i riquadri ancorati.
+Visualizza un pulsante aggiuntivo che consente di aprire un menu di scelta rapida nelle didascalie di tutti i riquadri ancorati.
 
 ```
 static void EnableDockSiteMenu(BOOL bEnable = TRUE);
@@ -733,25 +734,25 @@ static void EnableDockSiteMenu(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>Parametri
 
 *bEnable*<br/>
-[in] TRUE per abilitare il menu del sito di ancoraggio; in caso contrario, FALSE.
+in TRUE per abilitare il menu del sito dock; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Nel menu del sito di ancoraggio vengono visualizzate le seguenti opzioni per modificare lo stato di ancoraggio del riquadro:
+Il menu del sito Dock Visualizza le opzioni seguenti per modificare lo stato di ancoraggio del riquadro:
 
-- `Floating`- Galleggia un riquadro
+- `Floating` -Fluttua un riquadro
 
-- `Docking`- Ancora un riquadro nel frame principale nella posizione in cui il riquadro è stato ancorato l'ultima volta
+- `Docking` -Ancora un riquadro al frame principale nella posizione in cui è stato inserito l'ultimo riquadro
 
-- `AutoHide`- Passa alla modalità Nascondi automaticamente
+- `AutoHide` -Passa il riquadro alla modalità Nascondi automaticamente
 
-- `Hide`- Nasconde un riquadro
+- `Hide` -Nasconde un riquadro
 
 Per impostazione predefinita, questo menu non viene visualizzato.
 
-## <a name="cdockingmanagerenablepanecontextmenu"></a><a name="enablepanecontextmenu"></a>CDockingManager::EnablePaneContextMenu
+## <a name="cdockingmanagerenablepanecontextmenu"></a><a name="enablepanecontextmenu"></a> CDockingManager:: EnablePaneContextMenu
 
-Indica alla libreria di visualizzare un menu di scelta rapida speciale con un elenco di barre degli strumenti dell'applicazione e riquadri ancorati quando l'utente fa clic con il pulsante destro del mouse e la libreria sta elaborando il messaggio WM_CONTEXTMENU.
+Indica alla libreria di visualizzare un menu di scelta rapida speciale che include un elenco di barre degli strumenti dell'applicazione e riquadri di ancoraggio quando l'utente fa clic con il pulsante destro del mouse e la libreria sta elaborando il messaggio di WM_CONTEXTMENU.
 
 ```cpp
 void EnablePaneContextMenu(
@@ -764,20 +765,20 @@ void EnablePaneContextMenu(
 ### <a name="parameters"></a>Parametri
 
 *bEnable*<br/>
-[in] Se TRUE, la libreria attiva il supporto per il menu di scelta rapida automatico; se FALSE la libreria disattiva il supporto per il menu di scelta rapida automatico.
+in Se TRUE, la libreria attiva il supporto per il menu di scelta rapida automatico; Se FALSE, la libreria disattiva il supporto per il menu di scelta rapida automatico.
 
-*uiCustomizeCmd (informazioni in base alla proprietà*<br/>
-[in] Un ID di comando per la voce **Personalizza** nel menu.
+*uiCustomizeCmd*<br/>
+in ID di comando per l'elemento di **personalizzazione** nel menu.
 
 *strCustomizeText*<br/>
-[in] Testo dell'elemento **Personalizza.**
+in Testo dell'elemento di **personalizzazione** .
 
-*bToolbarsOnly (ToolbarsOnly)*<br/>
-[in] Se TRUE, il menu visualizza solo un elenco di barre degli strumenti dell'applicazione; Se FALSE, la libreria aggiunge i riquadri di ancoraggio dell'applicazione a questo elenco.
+*bToolbarsOnly*<br/>
+in Se TRUE, nel menu viene visualizzato solo un elenco di barre degli strumenti dell'applicazione; Se FALSE, la libreria aggiunge i riquadri di ancoraggio dell'applicazione a questo elenco.
 
-## <a name="cdockingmanagerfinddocksite"></a><a name="finddocksite"></a>CDockingManager::FindDockSite
+## <a name="cdockingmanagerfinddocksite"></a><a name="finddocksite"></a> CDockingManager:: FindDockSite
 
-Recupera il riquadro della barra che si trova nella posizione specificata e che ha l'allineamento specificato.
+Recupera il riquadro a barre in corrispondenza della posizione specificata e con l'allineamento specificato.
 
 ```
 virtual CDockSite* FindDockSite(
@@ -787,17 +788,17 @@ virtual CDockSite* FindDockSite(
 
 ### <a name="parameters"></a>Parametri
 
-*dwAllineamento*<br/>
-[in] L'allineamento del riquadro della barra.
+*dwAlignment*<br/>
+in Allineamento del riquadro a barre.
 
-*bEsterno*<br/>
-[in] Se TRUE, recuperare la barra nella posizione head nell'elenco delle barre di controllo. In caso contrario, recuperare la barra nella posizione della coda nell'elenco delle barre di controllo.
+*bOuter*<br/>
+in Se TRUE, recuperare la barra nella posizione Head nell'elenco delle barre di controllo. In caso contrario, recuperare la barra nella posizione finale nell'elenco delle barre di controllo.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il riquadro ancorato con l'allineamento specificato; NULL in caso contrario.
+Riquadro ancorato con l'allineamento specificato. In caso contrario, NULL.
 
-## <a name="cdockingmanagerfindpanebyid"></a><a name="findpanebyid"></a>CDockingManager::FindPaneByID
+## <a name="cdockingmanagerfindpanebyid"></a><a name="findpanebyid"></a> CDockingManager:: FindPaneByID
 
 Trova un riquadro in base all'ID di controllo specificato.
 
@@ -809,21 +810,21 @@ virtual CBasePane* FindPaneByID(
 
 ### <a name="parameters"></a>Parametri
 
-*uBarID (IDbarraina)*<br/>
-[in] Specifica l'ID di controllo del riquadro da trovare.
+*uBarID*<br/>
+in Specifica l'ID di controllo del riquadro da trovare.
 
 *bSearchMiniFrames*<br/>
-[in] TRUE per includere tutti i riquadri mobili nella ricerca. FALSE per includere solo i riquadri ancorati.
+in TRUE per includere tutti i riquadri a virgola mobile nella ricerca. FALSE per includere solo i riquadri ancorati.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il [CBasePane](../../mfc/reference/cbasepane-class.md) oggetto con l'ID di controllo specificato o NULL se non è possibile trovare il riquadro specificato.
+Oggetto [CBasePane](../../mfc/reference/cbasepane-class.md) con l'ID di controllo specificato oppure null se non è possibile trovare il riquadro specificato.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cdockingmanagerfinddocksitebypane"></a><a name="finddocksitebypane"></a>CDockingManager::FindDockSiteByPane
+## <a name="cdockingmanagerfinddocksitebypane"></a><a name="finddocksitebypane"></a> CDockingManager:: FindDockSiteByPane
 
-Restituisce il riquadro della barra con l'ID del riquadro della barra di destinazione.
+Restituisce il riquadro a barre con l'ID del riquadro della barra di destinazione.
 
 ```
 virtual CDockSite* FindDockSiteByPane(CPane* pTargetBar);
@@ -831,26 +832,26 @@ virtual CDockSite* FindDockSiteByPane(CPane* pTargetBar);
 
 ### <a name="parameters"></a>Parametri
 
-*pTargetBar (bar di riferimento)*<br/>
-[in] Puntatore al riquadro della barra di destinazione.
+*pTargetBar*<br/>
+in Puntatore al riquadro della barra di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
 
-Riquadro della barra con l'ID del riquadro della barra di destinazione. NULL se tale riquadro della barra non esiste.
+Riquadro della barra con l'ID del riquadro della barra di destinazione. NULL se non esiste alcun riquadro Barra di questo tipo.
 
-## <a name="cdockingmanagerfixupvirtualrects"></a><a name="fixupvirtualrects"></a>CDockingManager::FixupVirtualRects
+## <a name="cdockingmanagerfixupvirtualrects"></a><a name="fixupvirtualrects"></a> CDockingManager:: FixupVirtualRects
 
-Esegue il commit di tutte le posizioni correnti della barra degli strumenti in rettangoli virtuali.
+Inserisce tutte le posizioni della barra degli strumenti correnti in rettangoli virtuali.
 
 ```
 virtual void FixupVirtualRects();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Quando l'utente inizia a trascinare una barra degli strumenti, l'applicazione memorizza la posizione originale nel *rettangolo virtuale.* Quando l'utente sposta una barra degli strumenti nel sito di ancoraggio, la barra degli strumenti può spostare altre barre degli strumenti. Le posizioni originali delle altre barre degli strumenti vengono archiviate nei rettangoli virtuali corrispondenti.
+Quando l'utente inizia a trascinare una barra degli strumenti, l'applicazione memorizza la posizione originale nel *rettangolo virtuale*. Quando l'utente sposta una barra degli strumenti in un sito di ancoraggio, la barra degli strumenti può spostare altre barre degli strumenti. Le posizioni originali delle altre barre degli strumenti sono archiviate nei rettangoli virtuali corrispondenti.
 
-## <a name="cdockingmanagerframefrompoint"></a><a name="framefrompoint"></a>CDockingManager::FrameFromPointCDockingManager::FrameFromPoint
+## <a name="cdockingmanagerframefrompoint"></a><a name="framefrompoint"></a> CDockingManager:: FrameFromPoint
 
 Restituisce il frame che contiene il punto specificato.
 
@@ -864,19 +865,19 @@ virtual CPaneFrameWnd* FrameFromPoint(
 ### <a name="parameters"></a>Parametri
 
 *pt*<br/>
-[in] Specifica il punto, in coordinate dello schermo, da controllare.
+in Specifica il punto, in coordinate dello schermo, da verificare.
 
 *pFrameToExclude*<br/>
-[in] Puntatore a una cornice da escludere.
+in Puntatore a un frame da escludere.
 
-*bFloatMultiOnly (opzione FloatMultiOnly)*<br/>
-[in] TRUE per escludere i frame `CMultiPaneFrameWnd`che non sono istanze di ; FALSE in caso contrario.
+*bFloatMultiOnly*<br/>
+in TRUE per escludere i frame che non sono istanze di `CMultiPaneFrameWnd` . In caso contrario, FALSE.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il frame che contiene il punto specificato; NULL in caso contrario.
+Frame che contiene il punto specificato; In caso contrario, NULL.
 
-## <a name="cdockingmanagergetclientareabounds"></a><a name="getclientareabounds"></a>CDockingManager::GetClientAreaBoundsCDockingManager::GetClientAreaBounds
+## <a name="cdockingmanagergetclientareabounds"></a><a name="getclientareabounds"></a> CDockingManager:: GetClientAreaBounds
 
 Ottiene il rettangolo che contiene i limiti dell'area client.
 
@@ -889,13 +890,13 @@ void GetClientAreaBounds(CRect& rcClient);
 ### <a name="parameters"></a>Parametri
 
 *rcClient*<br/>
-[fuori] Riferimento al rettangolo che contiene i limiti dell'area client.
+out Riferimento al rettangolo che contiene i limiti dell'area client.
 
 ### <a name="return-value"></a>Valore restituito
 
 Rettangolo che contiene i limiti dell'area client.
 
-## <a name="cdockingmanagergetdockingmode"></a><a name="getdockingmode"></a>CDockingManager::GetDockingMode
+## <a name="cdockingmanagergetdockingmode"></a><a name="getdockingmode"></a> CDockingManager:: GetDockingMode
 
 Restituisce la modalità di ancoraggio corrente.
 
@@ -905,7 +906,7 @@ static AFX_DOCK_TYPE GetDockingMode();
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore dell'enumeratore che rappresenta la modalità di ancoraggio corrente. Può essere uno dei valori seguenti:
+Valore di enumeratore che rappresenta la modalità di ancoraggio corrente. Può essere uno dei valori seguenti:
 
 - DT_STANDARD
 
@@ -913,13 +914,13 @@ Valore dell'enumeratore che rappresenta la modalità di ancoraggio corrente. Pu�
 
 - DT_SMART
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Per impostare la modalità di ancoraggio, chiamare [CDockingManager::SetDockingMode](#setdockingmode).
+Per impostare la modalità di ancoraggio, chiamare [CDockingManager:: SetDockingMode](#setdockingmode).
 
-## <a name="cdockingmanagergetdocksiteframewnd"></a><a name="getdocksiteframewnd"></a>CDockingManager::GetDockSiteFrameWnd
+## <a name="cdockingmanagergetdocksiteframewnd"></a><a name="getdocksiteframewnd"></a> CDockingManager:: GetDockSiteFrameWnd
 
-Ottiene un puntatore alla cornice della finestra padre.
+Ottiene un puntatore al frame della finestra padre.
 
 ```
 CFrameWnd* GetDockSiteFrameWnd() const;
@@ -927,9 +928,9 @@ CFrameWnd* GetDockSiteFrameWnd() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore alla cornice della finestra padre.
+Puntatore al frame della finestra padre.
 
-## <a name="cdockingmanagergetenabledautohidealignment"></a><a name="getenabledautohidealignment"></a>CDockingManager::GetEnabledAutoHideAlignment
+## <a name="cdockingmanagergetenabledautohidealignment"></a><a name="getenabledautohidealignment"></a> CDockingManager:: GetEnabledAutoHideAlignment
 
 Restituisce l'allineamento abilitato dei riquadri.
 
@@ -939,15 +940,15 @@ DWORD GetEnabledAutoHideAlignment() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Combinazione bit per bit di flag di CBRS_ALIGN_ oppure 0 se i riquadri Nascondi automaticamente non sono abilitati. Per ulteriori informazioni, vedere [CFrameWnd::EnableDocking](../../mfc/reference/cframewnd-class.md#enabledocking).
+Combinazione bit per bit di flag di CBRS_ALIGN_, oppure 0 se i riquadri di Nascondi automaticamente non sono abilitati. Per ulteriori informazioni, vedere [CFrameWnd:: EnableDocking](../../mfc/reference/cframewnd-class.md#enabledocking).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Il metodo restituisce l'allineamento abilitato per le barre di controllo di Nascondi automaticamente. Per abilitare le barre di nascondere automaticamente, chiamare [CFrameWndEx::EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes).
+Il metodo restituisce l'allineamento abilitato per le barre di controllo Nascondi automaticamente. Per abilitare le barre Nascondi automaticamente, chiamare [CFrameWndEx:: EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes).
 
-## <a name="cdockingmanagergetminiframes"></a><a name="getminiframes"></a>CDockingManager::GetMiniFramesCDockingManager::GetMiniFrames
+## <a name="cdockingmanagergetminiframes"></a><a name="getminiframes"></a> CDockingManager:: GetMiniFrames
 
-Ottiene un elenco di miniframe.
+Ottiene un elenco di miniframes.
 
 ```
 const CObList& GetMiniFrames() const;
@@ -955,11 +956,11 @@ const CObList& GetMiniFrames() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Elenco di miniframe che contengono le barre di controllo che appartengono al gestore di ancoraggio.
+Elenco di miniframes che contengono le barre di controllo che appartengono al gestore di ancoraggio.
 
-## <a name="cdockingmanagergetouteredgebounds"></a><a name="getouteredgebounds"></a>CDockingManager::GetOuterEdgeBoundsCDockingManager::GetOuterEdgeBounds
+## <a name="cdockingmanagergetouteredgebounds"></a><a name="getouteredgebounds"></a> CDockingManager:: GetOuterEdgeBounds
 
-Ottiene un rettangolo che contiene i bordi esterni della cornice.
+Ottiene un rettangolo che contiene i bordi esterni del frame.
 
 ```
 CRect GetOuterEdgeBounds() const;
@@ -967,11 +968,11 @@ CRect GetOuterEdgeBounds() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Rettangolo che contiene i bordi esterni della cornice.
+Rettangolo che contiene i bordi esterni del frame.
 
-## <a name="cdockingmanagergetpanelist"></a><a name="getpanelist"></a>CDockingManager::GetPaneList
+## <a name="cdockingmanagergetpanelist"></a><a name="getpanelist"></a> CDockingManager:: getpanell
 
-Restituisce un elenco di riquadri appartenenti al gestore di ancoraggio. Sono inclusi tutti i riquadri mobili.
+Restituisce un elenco di riquadri che appartengono al gestore di ancoraggio. Sono inclusi tutti i riquadri a virgola mobile.
 
 ```cpp
 void GetPaneList(
@@ -983,25 +984,25 @@ void GetPaneList(
 
 ### <a name="parameters"></a>Parametri
 
-*lstBar*<br/>
+*lstBars*<br/>
 [in, out] Contiene tutti i riquadri del gestore di ancoraggio corrente.
 
-*bIncludiAutohide*<br/>
-[in] TRUE per includere i riquadri in modalità Nascondi automaticamente. in caso contrario, FALSE.
+*bIncludeAutohide*<br/>
+in TRUE per includere i riquadri in modalità Nascondi automaticamente; in caso contrario, FALSE.
 
-*filtro pRTC*<br/>
-[in] Se non NULL, l'elenco restituito contiene solo riquadri della classe di runtime specificata.
+*pRTCFilter*<br/>
+in Se non è NULL, l'elenco restituito contiene riquadri solo della classe di runtime specificata.
 
-*bSchedeDiincluso*<br/>
-[in] TRUE per includere le schede; in caso contrario, FALSE.
+*bIncludeTabs*<br/>
+in TRUE per includere le schede; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Se sono presenti riquadri a schede nel gestore di ancoraggio, il metodo restituisce puntatori a [CBaseTabbedRiquadr classe](../../mfc/reference/cbasetabbedpane-class.md) oggetti ed è necessario enumerare le schede in modo esplicito.
+Se sono presenti riquadri a schede nel gestore di ancoraggio, il metodo restituisce i puntatori agli oggetti della [Classe CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md) ed è necessario enumerare le schede in modo esplicito.
 
-Utilizzare *pRTCFilter* per ottenere una particolare classe di riquadri. Ad esempio, è possibile ottenere solo le barre degli strumenti impostando questo valore in modo appropriato.
+Utilizzare *pRTCFilter* per ottenere una particolare classe di riquadri. È ad esempio possibile ottenere solo le barre degli strumenti impostando questo valore in modo appropriato.
 
-## <a name="cdockingmanagergetsmartdockingmanager"></a><a name="getsmartdockingmanager"></a>CDockingManager::GetSmartDockingManager
+## <a name="cdockingmanagergetsmartdockingmanager"></a><a name="getsmartdockingmanager"></a> CDockingManager:: GetSmartDockingManager
 
 Recupera un puntatore al gestore di ancoraggio intelligente.
 
@@ -1011,9 +1012,9 @@ CSmartDockingManager* GetSmartDockingManager();
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore al gestore di ancoraggio intelligente.
+Puntatore al gestore di ancoraggio intelligente.
 
-## <a name="cdockingmanagergetsmartdockingmanagerpermanent"></a><a name="getsmartdockingmanagerpermanent"></a>CDockingManager::GetSmartDockingManagerPermanent
+## <a name="cdockingmanagergetsmartdockingmanagerpermanent"></a><a name="getsmartdockingmanagerpermanent"></a> CDockingManager:: GetSmartDockingManagerPermanent
 
 Recupera un puntatore al gestore di ancoraggio intelligente.
 
@@ -1023,9 +1024,9 @@ CSmartDockingManager* GetSmartDockingManagerPermanent() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore al gestore di ancoraggio intelligente.
+Puntatore al gestore di ancoraggio intelligente.
 
-## <a name="cdockingmanagergetsmartdockingparams"></a><a name="getsmartdockingparams"></a>CDockingManager::GetSmartDockingParams
+## <a name="cdockingmanagergetsmartdockingparams"></a><a name="getsmartdockingparams"></a> CDockingManager:: GetSmartDockingParams
 
 Restituisce i parametri di ancoraggio intelligente per il gestore di ancoraggio.
 
@@ -1035,11 +1036,11 @@ static CSmartDockingInfo& GetSmartDockingParams();
 
 ### <a name="return-value"></a>Valore restituito
 
-Classe che contiene i parametri di ancoraggio intelligente per il gestore di ancoraggio corrente. Per ulteriori informazioni, vedere [Classe CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md).
+Classe che contiene i parametri di ancoraggio intelligente per il gestore di ancoraggio corrente. Per ulteriori informazioni, vedere la [classe CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="cdockingmanagerhideautohidepanes"></a><a name="hideautohidepanes"></a>CDockingManager::HideAutoHidePanes
+## <a name="cdockingmanagerhideautohidepanes"></a><a name="hideautohidepanes"></a> CDockingManager:: HideAutoHidePanes
 
 Nasconde un riquadro in modalità Nascondi automaticamente.
 
@@ -1052,14 +1053,14 @@ void HideAutoHidePanes(
 ### <a name="parameters"></a>Parametri
 
 *pBarToExclude*<br/>
-[in] Un puntatore a una barra da escludere dal nascondiglio.
+in Puntatore a una barra da escludere dal nascondiglio.
 
-*bImmediatamente*<br/>
-[in] TRUE per nascondere immediatamente il riquadro; FALSE per nascondere il riquadro con l'effetto Nascondi automaticamente.
+*bImmediately*<br/>
+in TRUE per nascondere immediatamente il riquadro; FALSE per nascondere il riquadro con l'effetto Nascondi automaticamente.
 
-## <a name="cdockingmanagerinsertdocksite"></a><a name="insertdocksite"></a>CDockingManager::InsertDockSite
+## <a name="cdockingmanagerinsertdocksite"></a><a name="insertdocksite"></a> CDockingManager:: InsertDockSite
 
-Crea un riquadro ancorato e lo inserisce nell'elenco delle barre di controllo.
+Crea un riquadro ancorato e lo inserisce nell'elenco di barre di controllo.
 
 ```
 BOOL InsertDockSite(
@@ -1070,20 +1071,20 @@ BOOL InsertDockSite(
 
 ### <a name="parameters"></a>Parametri
 
-*Informazioni*<br/>
-[in] Struttura che contiene le informazioni di allineamento relative al riquadro di ancoraggio.
+*info*<br/>
+in Struttura che contiene le informazioni di allineamento sul riquadro ancorato.
 
-*DwAlignToInsertAfter*<br/>
-[in] Allineamento del riquadro di ancoraggio.
+*dwAlignToInsertAfter*<br/>
+in Allineamento del riquadro ancorato.
 
-*barra di controllo ppDockBar*<br/>
-[fuori] Puntatore a un puntatore a un riquadro ancorato.
+*ppDockBar*<br/>
+out Puntatore a un puntatore a un riquadro ancorato.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe il riquadro ancorato è stato creato correttamente. FALSE in caso contrario.
+TRUE se il riquadro Dock è stato creato correttamente; In caso contrario, FALSE.
 
-## <a name="cdockingmanagerinsertpane"></a><a name="insertpane"></a>CDockingManager::InsertPane
+## <a name="cdockingmanagerinsertpane"></a><a name="insertpane"></a> CDockingManager:: InsertPane
 
 Inserisce un riquadro di controllo nell'elenco delle barre di controllo.
 
@@ -1096,26 +1097,26 @@ BOOL InsertPane(
 
 ### <a name="parameters"></a>Parametri
 
-*pControlBar (barra di controllo)*<br/>
-[in] Puntatore a un riquadro di controllo.
+*pControlBar*<br/>
+in Puntatore a un riquadro di controllo.
 
-*pTarget (Destinazione)*<br/>
-[in] Puntatore a un riquadro di destinazione.
+*pTarget*<br/>
+in Puntatore a un riquadro di destinazione.
 
 *bDopo*<br/>
-[in] TRUE per inserire il riquadro dopo la posizione del riquadro di destinazione; FALSE in caso contrario.
+in TRUE per inserire il riquadro dopo la posizione del riquadro di destinazione. In caso contrario, FALSE.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe il riquadro di controllo viene aggiunto correttamente all'elenco di barre di controllo; FALSE in caso contrario.
+TRUE se il riquadro di controllo è stato aggiunto correttamente all'elenco delle barre di controllo; In caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Questo metodo restituisce false se il riquadro di controllo è già presente nell'elenco delle barre di controllo o se il riquadro di destinazione non esiste nell'elenco delle barre di controllo.
+Questo metodo restituisce false se il riquadro di controllo è già presente nell'elenco di barre di controllo o se il riquadro di destinazione non esiste nell'elenco di barre di controllo.
 
-## <a name="cdockingmanagerisdocksitemenu"></a><a name="isdocksitemenu"></a>CDockingManager::IsDockSiteMenu
+## <a name="cdockingmanagerisdocksitemenu"></a><a name="isdocksitemenu"></a> CDockingManager:: IsDockSiteMenu
 
-Specifica se visualizzare un menu a comparsa nelle didascalie di tutti i riquadri.
+Specifica se un menu a comparsa viene visualizzato nelle didascalie di tutti i riquadri.
 
 ```
 static BOOL IsDockSiteMenu();
@@ -1123,15 +1124,15 @@ static BOOL IsDockSiteMenu();
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe un menu del sito di ancoraggio viene visualizzato nelle didascalie di tutti i riquadri ancorati; in caso contrario, FALSE.
+TRUE se viene visualizzato un menu del sito di ancoraggio nelle didascalie di tutti i riquadri ancorati; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-È possibile attivare il menu del sito di ancoraggio chiamando [CDockingManager::EnableDockSiteMenu](#enabledocksitemenu).
+È possibile abilitare il menu del sito dock chiamando [CDockingManager:: EnableDockSiteMenu](#enabledocksitemenu).
 
-## <a name="cdockingmanagerisinadjustlayout"></a><a name="isinadjustlayout"></a>CDockingManager::IsInAdjustLayout
+## <a name="cdockingmanagerisinadjustlayout"></a><a name="isinadjustlayout"></a> CDockingManager:: IsInAdjustLayout
 
-Determina se i layout di tutti i riquadri vengono regolati.
+Determina se i layout di tutti i riquadri vengono modificati.
 
 ```
 BOOL IsInAdjustLayout() const;
@@ -1139,9 +1140,9 @@ BOOL IsInAdjustLayout() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe i layout di tutti i riquadri vengono regolati. FALSE in caso contrario.
+TRUE se i layout di tutti i riquadri vengono modificati; In caso contrario, FALSE.
 
-## <a name="cdockingmanagerisolecontainermode"></a><a name="isolecontainermode"></a>CDockingManager::IsOLEContainerMode
+## <a name="cdockingmanagerisolecontainermode"></a><a name="isolecontainermode"></a> CDockingManager:: IsOLEContainerMode
 
 Specifica se il gestore di ancoraggio è in modalità contenitore OLE.
 
@@ -1151,13 +1152,13 @@ BOOL IsOLEContainerMode() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe il gestore di ancoraggio è in modalità contenitore OLE. in caso contrario, FALSE.
+TRUE se il gestore di ancoraggio è in modalità contenitore OLE; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-In modalità contenitore OLE, tutti i riquadri di ancoraggio e le barre degli strumenti dell'applicazione sono nascosti. I riquadri sono nascosti anche in questa modalità se è stato impostato [CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode) su TRUE.
+In modalità contenitore OLE tutti i riquadri ancorati e le barre degli strumenti dell'applicazione sono nascosti. I riquadri sono inoltre nascosti in questa modalità se è stato impostato [CDockingManager:: m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode) su true.
 
-## <a name="cdockingmanagerispointneardocksite"></a><a name="ispointneardocksite"></a>CDockingManager::IsPointNearDockSite
+## <a name="cdockingmanagerispointneardocksite"></a><a name="ispointneardocksite"></a> CDockingManager:: IsPointNearDockSite
 
 Determina se un punto specificato si trova vicino al sito di ancoraggio.
 
@@ -1170,20 +1171,20 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parametri
 
-*Punto*<br/>
-[in] Punto specificato.
+*punto*<br/>
+in Punto specificato.
 
-*dwBarAlignment (Allineamento dwBarAlignment)*<br/>
-[fuori] Specifica il bordo a cui si trova il punto. I valori possibili sono CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP e CBRS_ALIGN_BOTTOM.
+*dwBarAlignment*<br/>
+out Specifica il bordo vicino al punto. I valori possibili sono CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP e CBRS_ALIGN_BOTTOM.
 
-*bEdge*<br/>
-[fuori] TRUESe il punto è vicino al bordo esterno del sito di ancoraggio; FALSE in caso contrario.
+*bOuterEdge*<br/>
+out TRUE se il punto si trova vicino al bordo esterno del sito di ancoraggio. In caso contrario, FALSE.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe il punto è vicino al sito di ancoraggio; in caso contrario, FALSE.
+TRUE se il punto si trova vicino al sito di ancoraggio. in caso contrario, FALSE.
 
-## <a name="cdockingmanagerisprintpreviewvalid"></a><a name="isprintpreviewvalid"></a>CDockingManager::IsPrintPreviewValid
+## <a name="cdockingmanagerisprintpreviewvalid"></a><a name="isprintpreviewvalid"></a> CDockingManager:: IsPrintPreviewValid
 
 Determina se è impostata la modalità di anteprima di stampa.
 
@@ -1193,11 +1194,11 @@ BOOL IsPrintPreviewValid() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe è impostata la modalità di anteprima di stampa. FALSE in caso contrario.
+TRUE se è impostata la modalità di anteprima di stampa. In caso contrario, FALSE.
 
-## <a name="cdockingmanagerloadstate"></a><a name="loadstate"></a>CDockingManager::LoadState
+## <a name="cdockingmanagerloadstate"></a><a name="loadstate"></a> CDockingManager:: LoadState
 
-Carica lo stato del gestore di ancoraggio dal Registro di sistema.
+Carica lo stato del gestore di ancoraggio dal registro di sistema.
 
 ```
 virtual BOOL LoadState(
@@ -1207,17 +1208,17 @@ virtual BOOL LoadState(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszNomeprofilo (informazioni in base al profilo)*<br/>
-[in] Nome del profilo.
+*lpszProfileName*<br/>
+in Nome del profilo.
 
 *uiID*<br/>
-[in] ID del gestore di ancoraggio.
+in ID del gestore di ancoraggio.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe lo stato del gestore di ancoraggio è stato caricato correttamente. in caso contrario, FALSE.
+TRUE se lo stato del gestore di ancoraggio è stato caricato correttamente; in caso contrario, FALSE.
 
-## <a name="cdockingmanagerlockupdate"></a><a name="lockupdate"></a>CDockingManager::LockUpdate
+## <a name="cdockingmanagerlockupdate"></a><a name="lockupdate"></a> CDockingManager:: LockUpdate
 
 Blocca la finestra specificata.
 
@@ -1228,13 +1229,13 @@ void LockUpdate(BOOL bLock);
 ### <a name="parameters"></a>Parametri
 
 *Blocco*<br/>
-[in] TRUESe la finestra è bloccata. FALSE in caso contrario.
+in TRUE se la finestra è bloccata; In caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Quando una finestra è bloccata, non può essere spostata e non può essere ridisegnata.
+Quando una finestra è bloccata, non può essere spostata e non può essere ridisegnato.
 
-## <a name="cdockingmanagerm_bhidedockingbarsincontainermode"></a><a name="m_bhidedockingbarsincontainermode"></a>CDockingManager::m_bHideDockingBarsInContainerMode
+## <a name="cdockingmanagerm_bhidedockingbarsincontainermode"></a><a name="m_bhidedockingbarsincontainermode"></a> CDockingManager:: m_bHideDockingBarsInContainerMode
 
 Specifica se il gestore di ancoraggio nasconde i riquadri in modalità contenitore OLE.
 
@@ -1242,11 +1243,11 @@ Specifica se il gestore di ancoraggio nasconde i riquadri in modalità contenito
 AFX_IMPORT_DATA static BOOL m_bHideDockingBarsInContainerMode;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Impostare questo valore su FALSE se si desidera mantenere visibili tutti i riquadri ancorati al frame principale quando l'applicazione è in modalità contenitore OLE. Per impostazione predefinita, questo valore è TRUE.
+Impostare questo valore su FALSE se si desidera che tutti i riquadri ancorati al frame principale siano visibili quando l'applicazione è in modalità contenitore OLE. Per impostazione predefinita, questo valore è TRUE.
 
-## <a name="cdockingmanagerm_dockmodeglobal"></a><a name="m_dockmodeglobal"></a>CDockingManager::m_dockModeGlobal
+## <a name="cdockingmanagerm_dockmodeglobal"></a><a name="m_dockmodeglobal"></a> CDockingManager:: m_dockModeGlobal
 
 Specifica la modalità di ancoraggio globale.
 
@@ -1254,49 +1255,49 @@ Specifica la modalità di ancoraggio globale.
 AFX_IMPORT_DATA static AFX_DOCK_TYPE m_dockModeGlobal;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Per impostazione predefinita, ogni riquadro ancorato utilizza questa modalità di ancoraggio. Per ulteriori informazioni sui valori su cui è possibile impostare questo campo, vedere [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).
+Per impostazione predefinita, ogni riquadro ancorato utilizza questa modalità di ancoraggio. Per ulteriori informazioni sui valori su cui è possibile impostare questo campo, vedere [CBasePane:: GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).
 
-## <a name="cdockingmanagerm_ndocksensitivity"></a><a name="m_ndocksensitivity"></a>CDockingManager::m_nDockSensitivity
+## <a name="cdockingmanagerm_ndocksensitivity"></a><a name="m_ndocksensitivity"></a> CDockingManager:: m_nDockSensitivity
 
-Specifica la sensibilità di ancoraggio.
+Specifica la riservatezza di ancoraggio.
 
 ```
 AFX_IMPORT_DATA static int m_nDockSensitivity;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-La sensibilità di ancoraggio definisce quanto vicino un riquadro mobile può avvicinarsi a un riquadro ancorato, un sito ancorato o un altro riquadro prima che il framework ne cambi lo stato in ancorato.
+La sensibilità di ancoraggio definisce il modo in cui un riquadro a virgola mobile può avvicinarsi a un riquadro ancorato, a un sito di ancoraggio o a un altro riquadro prima che lo stato del Framework venga modificato in ancorato.
 
-## <a name="cdockingmanagerm_ntimeoutbeforedockingbardock"></a><a name="m_ntimeoutbeforedockingbardock"></a>CDockingManager::m_nTimeOutBeforeDockingBarDock
+## <a name="cdockingmanagerm_ntimeoutbeforedockingbardock"></a><a name="m_ntimeoutbeforedockingbardock"></a> CDockingManager:: m_nTimeOutBeforeDockingBarDock
 
-Specifica il tempo, in millisecondi, che deve essere ancorato a un riquadro di ancoraggio in modalità di ancoraggio immediato.
+Specifica il tempo, in millisecondi, prima che un riquadro ancorato venga ancorato in modalità di ancoraggio immediato.
 
 ```
 static UINT m_nTimeOutBeforeDockingBarDock;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Prima ancorato a un riquadro, il framework attende il periodo di tempo specificato. In questo modo si evita che il riquadro venga accidentalmente ancorato a una posizione mentre l'utente lo sta ancora trascinando.
+Prima che un riquadro venga ancorato, il framework attende il periodo di tempo specificato. In questo modo si impedisce che il riquadro venga accidentalmente ancorato a una posizione mentre l'utente lo trascina.
 
-## <a name="cdockingmanagerm_ntimeoutbeforetoolbardock"></a><a name="m_ntimeoutbeforetoolbardock"></a>CDockingManager::m_nTimeOutBeforeToolBarDock
+## <a name="cdockingmanagerm_ntimeoutbeforetoolbardock"></a><a name="m_ntimeoutbeforetoolbardock"></a> CDockingManager:: m_nTimeOutBeforeToolBarDock
 
-Specifica il tempo, in millisecondi, prima che una barra degli strumenti venga ancorata alla finestra cornice principale.
+Specifica l'intervallo di tempo, in millisecondi, prima dell'ancoraggio di una barra degli strumenti alla finestra cornice principale.
 
 ```
 static UINT m_nTimeOutBeforeToolBarDock;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Prima ancorata a una barra degli strumenti, il framework attende il periodo di tempo specificato. Ciò impedisce che la barra degli strumenti venga accidentalmente ancorata a una posizione mentre l'utente continua a trascinarla.
+Prima che una barra degli strumenti sia ancorata, il framework attende il periodo di tempo specificato. In questo modo si impedisce che la barra degli strumenti venga accidentalmente ancorata a una posizione mentre l'utente lo trascina.
 
-## <a name="cdockingmanageronactivateframe"></a><a name="onactivateframe"></a>CDockingManager::OnActivateFrame
+## <a name="cdockingmanageronactivateframe"></a><a name="onactivateframe"></a> CDockingManager:: OnActivateFrame
 
-Chiamato dal framework quando la finestra cornice viene resa attiva o disattivata.
+Chiamata eseguita dal framework quando la finestra cornice viene attivata o disattivata.
 
 ```
 virtual void OnActivateFrame(BOOL bActivate);
@@ -1305,9 +1306,9 @@ virtual void OnActivateFrame(BOOL bActivate);
 ### <a name="parameters"></a>Parametri
 
 *bActivate*<br/>
-[in] Se TRUE, la finestra cornice viene resa attiva; se FALSE, la finestra cornice viene disattivata.
+in Se TRUE, la finestra cornice viene resa attiva; Se FALSE, la finestra cornice viene disattivata.
 
-## <a name="cdockingmanageronclosepopupmenu"></a><a name="onclosepopupmenu"></a>CDockingManager::OnClosePopupMenu
+## <a name="cdockingmanageronclosepopupmenu"></a><a name="onclosepopupmenu"></a> CDockingManager:: OnClosePopupMenu
 
 Chiamato dal framework quando un menu a comparsa attivo elabora un messaggio WM_DESTROY.
 
@@ -1315,13 +1316,13 @@ Chiamato dal framework quando un menu a comparsa attivo elabora un messaggio WM_
 void OnClosePopupMenu();
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Il framework invia un messaggio di WM_DESTROY quando sta per chiudere la finestra principale corrente. Eseguire l'override di `CMFCPopupMenu` questo metodo per gestire `CMFCPopupMenu` le notifiche da oggetti che appartengono alla finestra cornice quando un oggetto elabora un messaggio di WM_DESTROY.
+Il framework invia un messaggio di WM_DESTROY quando sta per chiudere la finestra principale corrente. Eseguire l'override di questo metodo per gestire le notifiche da `CMFCPopupMenu` oggetti che appartengono alla finestra cornice quando un `CMFCPopupMenu` oggetto elabora un messaggio di WM_DESTROY.
 
-## <a name="cdockingmanageronmoveminiframe"></a><a name="onmoveminiframe"></a>CDockingManager::OnMoveMiniFrame
+## <a name="cdockingmanageronmoveminiframe"></a><a name="onmoveminiframe"></a> CDockingManager:: OnMoveMiniFrame
 
-Chiamato dal framework per spostare una finestra cornice mini.
+Chiamata eseguita dal Framework per spostare una finestra con mini-cornice.
 
 ```
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
@@ -1330,15 +1331,15 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ### <a name="parameters"></a>Parametri
 
 *pFrame*<br/>
-[in] Puntatore a una finestra cornice mini.
+in Puntatore a una finestra con mini-cornice.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe il metodo ha esito positivo. in caso contrario, FALSE.
+TRUE se il metodo ha esito positivo; in caso contrario, FALSE.
 
-## <a name="cdockingmanageronpanecontextmenu"></a><a name="onpanecontextmenu"></a>CDockingManager::OnPaneContextMenu
+## <a name="cdockingmanageronpanecontextmenu"></a><a name="onpanecontextmenu"></a> CDockingManager:: OnPaneContextMenu
 
-Chiamato dal framework quando compila un menu che dispone di un elenco di riquadri.
+Chiamata eseguita dal Framework durante la compilazione di un menu che include un elenco di riquadri.
 
 ```cpp
 void OnPaneContextMenu(CPoint point);
@@ -1346,10 +1347,10 @@ void OnPaneContextMenu(CPoint point);
 
 ### <a name="parameters"></a>Parametri
 
-*Punto*<br/>
-[in] Specifica la posizione del menu.
+*punto*<br/>
+in Specifica il percorso del menu.
 
-## <a name="cdockingmanagerpanefrompoint"></a><a name="panefrompoint"></a>CDockingManager::PaneFromPoint
+## <a name="cdockingmanagerpanefrompoint"></a><a name="panefrompoint"></a> CDockingManager::P aneFromPoint
 
 Restituisce il riquadro che contiene il punto specificato.
 
@@ -1372,38 +1373,38 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parametri
 
-*Punto*<br/>
-[in] Specifica il punto, in coordinate dello schermo, da controllare.
+*punto*<br/>
+in Specifica il punto, in coordinate dello schermo, da verificare.
 
-*nSensibilità*<br/>
-[in] Valore per gonfiare il rettangolo della finestra di ogni riquadro selezionato. Un riquadro soddisfa i criteri di ricerca se il punto specificato si trova in questa area gonfiata.
+*nSensitivity*<br/>
+in Valore per ingrandire il rettangolo della finestra di ogni riquadro selezionato. Un riquadro soddisfa i criteri di ricerca se il punto specificato si trova in questa area inflat.
 
-*bExactBar (informazioni in base alla proprietà del*<br/>
-[in] TRUE per ignorare il *nSensitivity* parametro; in caso contrario, FALSE.
+*bExactBar*<br/>
+in TRUE per ignorare il parametro *nSensitivity* . in caso contrario, FALSE.
 
-*pRTCBarType (gruppo di dati)*<br/>
-[in] Se non NULL, il metodo cerca solo i riquadri del tipo specificato.
+*pRTCBarType*<br/>
+in Se non è NULL, il metodo cerca solo i riquadri del tipo specificato.
 
-*bCheckVisibility (Controllo)*<br/>
-[in] TRUE per controllare solo i riquadri visibili; in caso contrario, FALSE.
+*bCheckVisibility*<br/>
+in TRUE per controllare solo i riquadri visibili; in caso contrario, FALSE.
 
-*dwAllineamento*<br/>
-[fuori] Se viene trovato un riquadro nel punto specificato, questo parametro contiene il lato del riquadro più vicino al punto specificato. Per altre informazioni, vedere la sezione Osservazioni.
+*dwAlignment*<br/>
+out Se viene trovato un riquadro nel punto specificato, questo parametro contiene il lato del riquadro più vicino al punto specificato. Per altre informazioni, vedere la sezione Osservazioni.
 
 *pBarToIgnore*<br/>
-[in] Se non NULL, il metodo ignora i riquadri specificati da questo parametro.
+in Se non è NULL, il metodo ignora i riquadri specificati da questo parametro.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il [CBasePane](../../mfc/reference/cbasepane-class.md)-oggetto derivato che contiene il punto specificato, o NULL se non è stato trovato alcun riquadro.
+Oggetto derivato da [CBasePane](../../mfc/reference/cbasepane-class.md)che contiene il punto specificato o null se non è stato trovato alcun riquadro.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Quando la funzione viene restituita ed è stato trovato un riquadro, *dwAlignment* contiene l'allineamento del punto specificato. Ad esempio, se il punto è più vicino alla parte superiore del riquadro, *dwAlignment* è impostato su CBRS_ALIGN_TOP.
+Quando la funzione restituisce e viene trovato un riquadro, *dwAlignment* contiene l'allineamento del punto specificato. Se, ad esempio, il punto era più vicino alla parte superiore del riquadro, *dwAlignment* è impostato su CBRS_ALIGN_TOP.
 
-## <a name="cdockingmanagerprocesspanecontextmenucommand"></a><a name="processpanecontextmenucommand"></a>CDockingManager::ProcessPaneContextMenuCommand
+## <a name="cdockingmanagerprocesspanecontextmenucommand"></a><a name="processpanecontextmenucommand"></a> CDockingManager::P rocessPaneContextMenuCommand
 
-Chiamato dal framework per selezionare o deselezionare una casella di controllo per il comando specificato e ricalcolare il layout di un riquadro visualizzato.
+Chiamata eseguita dal Framework per selezionare o deselezionare una casella di controllo per il comando specificato e ricalcolare il layout di un riquadro visualizzato.
 
 ```
 BOOL ProcessPaneContextMenuCommand(
@@ -1416,24 +1417,24 @@ BOOL ProcessPaneContextMenuCommand(
 ### <a name="parameters"></a>Parametri
 
 *nID*<br/>
-[in] ID di una barra di controllo nel menu.
+in ID di una barra di controllo nel menu.
 
-*Ncode*<br/>
-[in] Codice di notifica del comando.
+*nCode*<br/>
+in Codice di notifica del comando.
 
 *pExtra*<br/>
-[in] Puntatore a void di cui viene `CCmdUI` emesso il cast a un puntatore a se *nCode* è CN_UPDATE_COMMAND_UI.
+in Puntatore a void di cui viene eseguito il cast su un puntatore a `CCmdUI` se *nCode* è CN_UPDATE_COMMAND_UI.
 
-*pHandlerInfo (informazioni in stato in questo stato in*<br/>
-[in] Puntatore a una struttura di informazioni. Questo parametro non viene usato.
+*pHandlerInfo*<br/>
+in Puntatore a una struttura di informazioni. Questo parametro non viene usato.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUEse *pEXtra* non è NULL e *nCode* è uguale CN_UPDATE_COMMAND_UI o se è presente una barra di controllo con il *nID*specificato.
+TRUE se *pExtra* non è null e *nCode* è uguale a CN_UPDATE_COMMAND_UI oppure se è presente una barra di controllo con il *NID* specificato.
 
-## <a name="cdockingmanagerrecalclayout"></a><a name="recalclayout"></a>CDockingManager::RecalcLayout
+## <a name="cdockingmanagerrecalclayout"></a><a name="recalclayout"></a> CDockingManager:: RecalcLayout
 
-Ricalcola il layout interno dei controlli presenti nell'elenco dei controlli.
+Ricalcola il layout interno dei controlli presenti nell'elenco di controlli.
 
 ```
 virtual void RecalcLayout(BOOL bNotify = TRUE);
@@ -1441,18 +1442,18 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bNotifica*<br/>
-[in] Questo parametro non viene utilizzato.
+*bNotify*<br/>
+in Questo parametro non viene utilizzato.
 
-## <a name="cdockingmanagerreleaseemptypanecontainers"></a><a name="releaseemptypanecontainers"></a>CDockingManager::ReleaseEmptyPaneContainers
+## <a name="cdockingmanagerreleaseemptypanecontainers"></a><a name="releaseemptypanecontainers"></a> CDockingManager:: ReleaseEmptyPaneContainers
 
-Rilascia i contenitori del riquadro vuoto.
+Rilascia i contenitori dei riquadri vuoti.
 
 ```cpp
 void ReleaseEmptyPaneContainers();
 ```
 
-## <a name="cdockingmanagerremovehiddenmditabbedbar"></a><a name="removehiddenmditabbedbar"></a>CDockingManager::RemoveHiddenMDITabbedBar
+## <a name="cdockingmanagerremovehiddenmditabbedbar"></a><a name="removehiddenmditabbedbar"></a> CDockingManager:: RemoveHiddenMDITabbedBar
 
 Rimuove il riquadro della barra nascosta specificato.
 
@@ -1462,12 +1463,12 @@ void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
 
 ### <a name="parameters"></a>Parametri
 
-*pBar (Barra)*<br/>
-[in] Puntatore a un riquadro della barra da rimuovere.
+*pBar*<br/>
+in Puntatore a un riquadro a barre da rimuovere.
 
-## <a name="cdockingmanagerremoveminiframe"></a><a name="removeminiframe"></a>CDockingManager::RemoveMiniFrame
+## <a name="cdockingmanagerremoveminiframe"></a><a name="removeminiframe"></a> CDockingManager:: RemoveMiniFrame
 
-Rimuove un fotogramma specificato dall'elenco di mini frame.
+Rimuove un frame specificato dall'elenco di mini frame.
 
 ```
 virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
@@ -1475,14 +1476,14 @@ virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
 
 ### <a name="parameters"></a>Parametri
 
-*pWnd (in questo stato di windows*<br/>
-[in] Puntatore a una cornice da rimuovere.
+*pWnd*<br/>
+in Puntatore a un frame da rimuovere.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe il frame specificato viene rimosso. FALSE in caso contrario.
+TRUE se il frame specificato è stato rimosso. In caso contrario, FALSE.
 
-## <a name="cdockingmanagerremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a>CDockingManager::RemovePaneFromDockManager
+## <a name="cdockingmanagerremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a> CDockingManager:: RemovePaneFromDockManager
 
 Annulla la registrazione di un riquadro e lo rimuove dall'elenco nel gestore di ancoraggio.
 
@@ -1497,22 +1498,22 @@ void RemovePaneFromDockManager(
 
 ### <a name="parameters"></a>Parametri
 
-*pWnd (in questo stato di windows*<br/>
-[in] Puntatore a un riquadro da rimuovere.
+*pWnd*<br/>
+in Puntatore a un riquadro da rimuovere.
 
-*bDistruggi*<br/>
-[in] Se TRUE, il riquadro rimosso viene eliminato.
+*bdistrutto*<br/>
+in Se TRUE, il riquadro rimosso viene eliminato definitivamente.
 
-*bAdattare il layout*<br/>
-[in] Se TRUE, regolare immediatamente il layout di ancoraggio.
+*bAdjustLayout*<br/>
+in Se TRUE, modificare immediatamente il layout di ancoraggio.
 
-*bNascondi Auto*<br/>
-[in] Se TRUE, il riquadro viene rimosso dall'elenco delle barre di nascondere automaticamente. Se FALSE, il riquadro viene rimosso dall'elenco dei riquadri normali.
+*bAutoHide*<br/>
+in Se TRUE, il riquadro viene rimosso dall'elenco delle barre di Nascondi automaticamente. Se FALSE, il riquadro viene rimosso dall'elenco dei riquadri normali.
 
-*pBarSostituzione*<br/>
-[in] Puntatore a un riquadro che sostituisce il riquadro rimosso.
+*pBarReplacement*<br/>
+in Puntatore a un riquadro che sostituisce il riquadro rimosso.
 
-## <a name="cdockingmanagerreplacepane"></a><a name="replacepane"></a>CDockingManager::ReplacePane
+## <a name="cdockingmanagerreplacepane"></a><a name="replacepane"></a> CDockingManager:: ReplacePane
 
 Sostituisce un riquadro con un altro.
 
@@ -1524,27 +1525,27 @@ BOOL ReplacePane(
 
 ### <a name="parameters"></a>Parametri
 
-*pOriginalBar (barra originale)*<br/>
-[in] Puntatore al riquadro originale.
+*pOriginalBar*<br/>
+in Puntatore al riquadro originale.
 
-*pNewBar (informazioni in stato inquestoendo*<br/>
-[in] Puntatore al riquadro che sostituisce il riquadro originale.
+*pNewBar*<br/>
+in Puntatore al riquadro che sostituisce il riquadro originale.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe il riquadro viene sostituito correttamente. FALSE in caso contrario.
+TRUE se il riquadro viene sostituito correttamente; In caso contrario, FALSE.
 
-## <a name="cdockingmanagerresortminiframesforzorder"></a><a name="resortminiframesforzorder"></a>CDockingManager::ResortMiniFramesPerOrdine
+## <a name="cdockingmanagerresortminiframesforzorder"></a><a name="resortminiframesforzorder"></a> CDockingManager:: ResortMiniFramesForZOrder
 
-Ricorre i telai nell'elenco dei mini telai.
+Ricorre i frame nell'elenco di mini frame.
 
 ```cpp
 void ResortMiniFramesForZOrder();
 ```
 
-## <a name="cdockingmanagersavestate"></a><a name="savestate"></a>CDockingManager::SaveState
+## <a name="cdockingmanagersavestate"></a><a name="savestate"></a> CDockingManager:: SaveState
 
-Salva lo stato del gestore di ancoraggio nel Registro di sistema.
+Salva lo stato del gestore di ancoraggio nel registro di sistema.
 
 ```
 virtual BOOL SaveState(
@@ -1554,21 +1555,21 @@ virtual BOOL SaveState(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszNomeprofilo (informazioni in base al profilo)*<br/>
-[in] Percorso di una chiave del Registro di sistema.
+*lpszProfileName*<br/>
+in Percorso di una chiave del registro di sistema.
 
 *uiID*<br/>
-[in] ID del gestore di ancoraggio.
+in ID del gestore di ancoraggio.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUESe lo stato è stato salvato correttamente. in caso contrario, FALSE.
+TRUE se lo stato è stato salvato correttamente; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Il salvataggio dello stato del gestore di ancoraggio nel Registro di sistema comporta il salvataggio degli stati delle barre di controllo, degli stati delle barre di nascondere automaticamente e degli stati dei mini frame presenti nel gestore di ancoraggio.
+Il salvataggio dello stato del gestore di ancoraggio nel registro di sistema comporta il salvataggio degli Stati delle barre di controllo, degli Stati delle barre di Nascondi automaticamente e degli Stati dei fotogrammi piccoli presenti nel gestore di ancoraggio.
 
-## <a name="cdockingmanagersendmessagetominiframes"></a><a name="sendmessagetominiframes"></a>CDockingManager::SendMessageToMiniFrames
+## <a name="cdockingmanagersendmessagetominiframes"></a><a name="sendmessagetominiframes"></a> CDockingManager:: SendMessageToMiniFrames
 
 Invia il messaggio specificato a tutti i mini frame.
 
@@ -1581,22 +1582,22 @@ BOOL SendMessageToMiniFrames(
 
 ### <a name="parameters"></a>Parametri
 
-*uMessaggio*<br/>
-[in] Messaggio da inviare.
+*uMessage*<br/>
+in Messaggio da inviare.
 
 *wParam*<br/>
-[in] Informazioni aggiuntive dipendenti dal messaggio.
+in Informazioni aggiuntive sul dipendente del messaggio.
 
 *lParam*<br/>
-[in] Informazioni aggiuntive dipendenti dal messaggio.
+in Informazioni aggiuntive sul dipendente del messaggio.
 
 ### <a name="return-value"></a>Valore restituito
 
-VERO sempre.
+TRUE sempre.
 
-## <a name="cdockingmanagerserialize"></a><a name="serialize"></a>CDockingManager::Serialize
+## <a name="cdockingmanagerserialize"></a><a name="serialize"></a> CDockingManager:: Serialize
 
-Scrive il gestore di ancoraggio in un archivio.
+Scrive l'oggetto docking Manager in un archivio.
 
 ```cpp
 void Serialize(CArchive& ar);
@@ -1604,14 +1605,14 @@ void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Parametri
 
-*Ar*<br/>
-[in] Riferimento a un oggetto archivio.
+*ar*<br/>
+in Riferimento a un oggetto Archive.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-La scrittura del gestore di ancoraggio in un archivio comporta la determinazione del numero di barre di controllo e dispositivi di scorrimento ancorati e la scrittura delle barre di controllo, dei mini frame, delle barre di nascondino automatico e delle barre a schede MDI nell'archivio.
+La scrittura di docking Manager in un archivio comporta la determinazione del numero di barre di controllo e di dispositivi di scorrimento di ancoraggio e la scrittura delle barre di controllo, dei mini frame, delle barre di Nascondi automaticamente e delle barre a schede MDI nell'archivio.
 
-## <a name="cdockingmanagersetautohidezorder"></a><a name="setautohidezorder"></a>CDockingManager::SetAutohide -Order
+## <a name="cdockingmanagersetautohidezorder"></a><a name="setautohidezorder"></a> CDockingManager:: SetAutohideZOrder
 
 Imposta le dimensioni, la larghezza e l'altezza delle barre di controllo e del riquadro specificato.
 
@@ -1621,10 +1622,10 @@ void SetAutohideZOrder(CDockablePane* pAHDockingBar);
 
 ### <a name="parameters"></a>Parametri
 
-*PAHDockingBar*<br/>
-[in] Puntatore a un riquadro ancorabile.
+*pAHDockingBar*<br/>
+in Puntatore a un riquadro ancorabile.
 
-## <a name="cdockingmanagersetdockingmode"></a><a name="setdockingmode"></a>CDockingManager::SetDockingMode
+## <a name="cdockingmanagersetdockingmode"></a><a name="setdockingmode"></a> CDockingManager:: SetDockingMode
 
 Imposta la modalità di ancoraggio.
 
@@ -1636,33 +1637,33 @@ static void SetDockingMode(
 
 ### <a name="parameters"></a>Parametri
 
-*DockMode (modalità dock)*<br/>
+*dockMode*<br/>
 Specifica la nuova modalità di ancoraggio. Per altre informazioni, vedere la sezione Osservazioni.
 
-*Tema*<br/>
-Specifica il tema da utilizzare per gli indicatori di ancoraggio intelligenti. Può essere uno dei seguenti valori enumerati: AFX_SDT_DEFAULT, AFX_SDT_VS2005 AFX_SDT_VS2008.
+*tema*<br/>
+Specifica il tema da usare per i marcatori di ancoraggio intelligente. Può essere uno dei seguenti valori enumerati: AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Chiamare questo metodo statico per impostare la modalità di ancoraggio.
 
-*dockMode* può essere uno dei seguenti valori:
+*dockMode* può essere uno dei valori seguenti:
 
-- DT_STANDARD - Modalità di ancoraggio standard implementata in Visual Studio .NET 2003. I riquadri vengono trascinati senza un contesto di trascinamento.
+- Modalità di ancoraggio DT_STANDARD-standard implementata in Visual Studio .NET 2003. I riquadri vengono trascinati senza un contesto di trascinamento.
 
-- DT_IMMEDIATE - Modalità di ancoraggio immediato implementata in Microsoft Visio. I riquadri vengono trascinati con un contesto di trascinamento, ma non vengono visualizzati indicatori.
+- DT_IMMEDIATE la modalità di ancoraggio immediata come implementata in Microsoft Visio. I riquadri vengono trascinati con un contesto di trascinamento, ma non viene visualizzato alcun marcatore.
 
-- DT_SMART - Modalità di ancoraggio intelligente implementata in Visual Studio 2005. I riquadri vengono trascinati con un contesto di trascinamento e vengono visualizzati indicatori intelligenti che mostrano dove il riquadro può essere ancorato.
+- DT_SMART-modalità di ancoraggio intelligente implementata in Visual Studio 2005. I riquadri vengono trascinati con un contesto di trascinamento e vengono visualizzati indicatori intelligenti che indicano la posizione in cui è possibile ancorare il riquadro.
 
-## <a name="cdockingmanagersetdockstate"></a><a name="setdockstate"></a>CDockingManager::SetDockState
+## <a name="cdockingmanagersetdockstate"></a><a name="setdockstate"></a> CDockingManager:: SetDockState
 
-Imposta lo stato di ancoraggio delle barre di controllo, dei mini frame e delle barre di nascondi automaticamente.
+Imposta lo stato di ancoraggio delle barre di controllo, dei mini frame e delle barre di Nascondi automaticamente.
 
 ```
 virtual void SetDockState();
 ```
 
-## <a name="cdockingmanagersetprintpreviewmode"></a><a name="setprintpreviewmode"></a>CDockingManager::SetPrintPreviewMode
+## <a name="cdockingmanagersetprintpreviewmode"></a><a name="setprintpreviewmode"></a> CDockingManager:: SetPrintPreviewMode
 
 Imposta la modalità di anteprima di stampa delle barre visualizzate nell'anteprima di stampa.
 
@@ -1674,13 +1675,13 @@ void SetPrintPreviewMode(
 
 ### <a name="parameters"></a>Parametri
 
-*bAnteprima*<br/>
-[in] TRUESe è impostata la modalità di anteprima di stampa. FALSE in caso contrario.
+*bPreview*<br/>
+in TRUE se è impostata la modalità di anteprima di stampa. In caso contrario, FALSE.
 
-*pState (informazioni in stato in stato*<br/>
-[in] Puntatore a uno stato di anteprima. Questo parametro non viene usato.
+*pState*<br/>
+in Puntatore a uno stato di anteprima. Questo parametro non viene usato.
 
-## <a name="cdockingmanagersetsmartdockingparams"></a><a name="setsmartdockingparams"></a>CDockingManager::SetSmartDockingParams
+## <a name="cdockingmanagersetsmartdockingparams"></a><a name="setsmartdockingparams"></a> CDockingManager:: SetSmartDockingParams
 
 Imposta i parametri che definiscono il comportamento dell'ancoraggio intelligente.
 
@@ -1693,15 +1694,15 @@ static void SetSmartDockingParams(CSmartDockingInfo& params);
 *params*<br/>
 [in, out] Definisce i parametri per l'ancoraggio intelligente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-Chiamare questo metodo se si desidera personalizzare l'aspetto, il colore o la forma degli indicatori di ancoraggio intelligente.
+Chiamare questo metodo se si desidera personalizzare l'aspetto, il colore o la forma dei marcatori di ancoraggio intelligente.
 
-Per utilizzare l'aspetto predefinito per gli indicatori di ancoraggio intelligente, passare un'istanza non inizializzata della [classe CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) a *params*.
+Per usare la ricerca predefinita per i marcatori di ancoraggio intelligenti, passare un'istanza non inizializzata della [classe CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) a *params*.
 
-## <a name="cdockingmanagershowdelayshowminiframes"></a><a name="showdelayshowminiframes"></a>CDockingManager::ShowDelayShowMiniFrames
+## <a name="cdockingmanagershowdelayshowminiframes"></a><a name="showdelayshowminiframes"></a> CDockingManager:: ShowDelayShowMiniFrames
 
-Mostra o nasconde le finestre dei mini fotogrammi.
+Consente di visualizzare o nascondere le finestre dei mini frame.
 
 ```cpp
 void ShowDelayShowMiniFrames(BOOL bshow);
@@ -1710,11 +1711,11 @@ void ShowDelayShowMiniFrames(BOOL bshow);
 ### <a name="parameters"></a>Parametri
 
 *bShow*<br/>
-[in] TRUE per rendere attiva la finestra del frame mostrato; FALSE per nascondere la finestra del frame.
+in TRUE per rendere attiva la finestra del frame visualizzato; FALSE per nascondere la finestra del frame.
 
-## <a name="cdockingmanagershowpanes"></a><a name="showpanes"></a>CDockingManager::ShowPanes
+## <a name="cdockingmanagershowpanes"></a><a name="showpanes"></a> CDockingManager:: ShowPanes
 
-Mostra o nasconde i riquadri delle barre di controllo e Nascondi automaticamente.
+Consente di visualizzare o nascondere i riquadri delle barre di controllo e Nascondi automaticamente.
 
 ```
 virtual BOOL ShowPanes(BOOL bShow);
@@ -1723,13 +1724,13 @@ virtual BOOL ShowPanes(BOOL bShow);
 ### <a name="parameters"></a>Parametri
 
 *bShow*<br/>
-[in] TRUE per visualizzare i riquadri. FALSE per nascondere i riquadri.
+in TRUE per visualizzare i riquadri; FALSE per nascondere i riquadri.
 
 ### <a name="return-value"></a>Valore restituito
 
 Sempre FALSE.
 
-## <a name="cdockingmanagerstartsdocking"></a><a name="startsdocking"></a>CDockingManager::StartSDocking
+## <a name="cdockingmanagerstartsdocking"></a><a name="startsdocking"></a> CDockingManager:: StartSDocking
 
 Avvia l'ancoraggio intelligente della finestra specificata in base all'allineamento del gestore di ancoraggio intelligente.
 
@@ -1739,20 +1740,20 @@ void StartSDocking(CWnd* pDockingWnd);
 
 ### <a name="parameters"></a>Parametri
 
-*pDockingWnd (DockingWnd)*<br/>
-[in] Puntatore a una finestra da ancorare.
+*pDockingWnd*<br/>
+in Puntatore a una finestra da ancorare.
 
-## <a name="cdockingmanagerstopsdocking"></a><a name="stopsdocking"></a>CDockingManager::StopSDocking
+## <a name="cdockingmanagerstopsdocking"></a><a name="stopsdocking"></a> CDockingManager:: StopSDocking
 
-Interrompe l'aggancio intelligente.
+Arresta l'aggancio intelligente.
 
 ```cpp
 void StopSDocking();
 ```
 
-## <a name="cdockingmanagergetsmartdockingtheme"></a><a name="getsmartdockingtheme"></a>CDockingManager::GetSmartDockingTheme
+## <a name="cdockingmanagergetsmartdockingtheme"></a><a name="getsmartdockingtheme"></a> CDockingManager:: GetSmartDockingTheme
 
-Metodo statico che restituisce un tema utilizzato per visualizzare gli indicatori di ancoraggio intelligente.
+Metodo statico che restituisce un tema usato per visualizzare i marcatori di ancoraggio intelligente.
 
 ```
 static AFX_SMARTDOCK_THEME __stdcall GetSmartDockingTheme();
@@ -1762,13 +1763,13 @@ static AFX_SMARTDOCK_THEME __stdcall GetSmartDockingTheme();
 
 Restituisce uno dei seguenti valori enumerati: AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Classe CFrameWndEx](../../mfc/reference/cframewndex-class.md)<br/>
-[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)<br/>
+[Classe CDockablePane](../../mfc/reference/cdockablepane-class.md)<br/>
 [Classe CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; operatori di memoria &gt;'
 title: Operatori &lt;memory&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,16 +11,16 @@ f1_keywords:
 - memory/std::operator<<
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
-ms.openlocfilehash: 15762e4853cfd018c7cff997a3ed9ba7d86b3c2e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cbf52aa2af13a0eae241444d88e0eeabe7efe47b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233054"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183945"
 ---
 # <a name="ltmemorygt-operators"></a>Operatori &lt;memory&gt;
 
-## <a name="operator"></a><a name="op_neq"></a>operatore! =
+## <a name="operator"></a><a name="op_neq"></a> operatore! =
 
 Verifica la disuguaglianza tra oggetti.
 
@@ -58,7 +59,7 @@ Tipo controllato dal puntatore condiviso destro.
 
 **`true`** Se gli oggetti non sono uguali. **`false`** se gli oggetti sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo operatore modello restituisce false Tutti gli allocatori predefiniti sono uguali.
 
@@ -120,7 +121,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operatore = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operatore = =
 
 Verifica l'uguaglianza tra oggetti.
 
@@ -159,7 +160,7 @@ Tipo controllato dal puntatore condiviso destro.
 
 **`true`** Se gli oggetti sono uguali, **`false`** se gli oggetti non sono uguali.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo operatore modello restituisce true Tutti gli allocatori predefiniti sono uguali.
 
@@ -232,7 +233,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>operatore&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> operatore&gt;=
 
 Verifica se un oggetto è maggiore o uguale a un secondo oggetto.
 
@@ -262,11 +263,11 @@ Tipo controllato dal puntatore condiviso sinistro.
 *Ty2*\
 Tipo controllato dal puntatore condiviso destro.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli operatori di modello restituiscono `left.get() >= right.get()`.
 
-## <a name="operatorlt"></a><a name="op_lt"></a>operatore&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> operatore&lt;
 
 Verifica se un oggetto è minore di un secondo oggetto.
 
@@ -296,7 +297,7 @@ Tipo controllato dal puntatore sinistro.
 *Ty2*\
 Tipo controllato dal puntatore destro.
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>operatore&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> operatore&lt;=
 
 Verifica se un oggetto è minore o uguale a un secondo oggetto.
 
@@ -326,11 +327,11 @@ Tipo controllato dal puntatore condiviso sinistro.
 *Ty2*\
 Tipo controllato dal puntatore condiviso destro.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Gli operatori di modello restituiscono `left.get() <= right.get()`
 
-## <a name="operatorgt"></a><a name="op_gt"></a>operatore&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> operatore&gt;
 
 Verifica se un oggetto è maggiore di un secondo oggetto.
 
@@ -360,7 +361,7 @@ Tipo controllato dal puntatore condiviso sinistro.
 *Ty2*\
 Tipo controllato dal puntatore condiviso destro.
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>operatore&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> operatore&lt;&lt;
 
 Scrive il puntatore condiviso nel flusso.
 
@@ -387,7 +388,7 @@ Flusso di output.
 *SP*\
 Puntatore condiviso.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione modello restituisce `out << sp.get()`.
 

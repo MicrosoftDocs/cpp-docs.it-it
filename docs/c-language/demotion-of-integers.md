@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: abbassamento di numero di numeri interi'
 title: Abbassamento di livello degli interi
 ms.date: 11/04/2016
 helpviewer_keywords:
 - demoting integers
 ms.assetid: 51fb3654-60b0-4de7-80eb-bd910086c18a
-ms.openlocfilehash: aee0a5041cd37b1fbad785b760b8cefde74eb195
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d80adff34223d8aa785fa6ffa079a54af198a309
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218884"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186818"
 ---
 # <a name="demotion-of-integers"></a>Abbassamento di livello degli interi
 
@@ -33,6 +34,6 @@ assegna il valore 0x34 a `y`.
 
 Quando **`signed`** le variabili vengono convertite in **`unsigned`** e viceversa, gli schemi di bit rimangono invariati. Ad esempio, il cast di-2 (0xFE) a un **`unsigned`** valore restituisce 254 (anche 0xFE).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Interi](../c-language/integers.md)
+[Integer](../c-language/integers.md)

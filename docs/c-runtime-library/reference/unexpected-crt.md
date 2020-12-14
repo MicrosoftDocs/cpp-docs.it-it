@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: imprevisto (CRT)'
 title: unexpected (CRT)
 ms.date: 11/04/2016
 api_name:
@@ -23,16 +24,16 @@ f1_keywords:
 helpviewer_keywords:
 - unexpected function
 ms.assetid: 2f873763-15ad-4556-a924-dcf28f2b52b4
-ms.openlocfilehash: 796f5ddbf8467656b5430de1d504f162d891864d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 73c632c4dd5bfedbb1c3724e60786b348f77f0be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957814"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186636"
 ---
 # <a name="unexpected-crt"></a>unexpected (CRT)
 
-Chiama **Terminate** o la funzione specificata usando **set_unexpected**.
+Chiama **Terminate** o la funzione specificata utilizzando **set_unexpected**.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -40,23 +41,23 @@ Chiama **Terminate** o la funzione specificata usando **set_unexpected**.
 void unexpected( void );
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-La routine **imprevista** non viene utilizzata con l'implementazione corrente C++ della gestione delle eccezioni. chiamate **impreviste** **terminano** per impostazione predefinita. È possibile modificare questo comportamento predefinito scrivendo una funzione di terminazione personalizzata e chiamando **set_unexpected** con il nome della funzione come argomento. **imprevisto** chiama l'ultima funzione fornita come argomento a **set_unexpected**.
+La routine **imprevista** non viene utilizzata con l'implementazione corrente della gestione delle eccezioni C++. chiamate **impreviste** **terminano** per impostazione predefinita. È possibile modificare questo comportamento predefinito scrivendo una funzione di terminazione personalizzata e chiamando **set_unexpected** con il nome della funzione come argomento. **imprevisto** chiama l'ultima funzione specificata come argomento per **set_unexpected**.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**Imprevisto**|\<eh.h>|
+|**inaspettato**|\<eh.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Routine di gestione delle eccezioni](../../c-runtime-library/exception-handling-routines.md)<br/>
-[abort](abort.md)<br/>
+[interruzione](abort.md)<br/>
 [_set_se_translator](set-se-translator.md)<br/>
 [set_terminate](set-terminate-crt.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
-[terminate](terminate-crt.md)<br/>
+[terminare](terminate-crt.md)<br/>

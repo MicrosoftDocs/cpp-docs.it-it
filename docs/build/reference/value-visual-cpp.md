@@ -1,5 +1,6 @@
 ---
-title: valore &lt;> (C++ commenti sulla documentazione)
+description: 'Altre informazioni su: &lt; valore&gt;'
+title: '&lt;valore> (commenti sulla documentazione C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - value
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - value C++ XML tag
 - <value> C++ XML tag
 ms.assetid: 0ba0a0d5-bcd7-4862-a169-83f2721ad80e
-ms.openlocfilehash: de84d1faca59a6c8e4f82fba3605cbd54a05bd2e
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 110091607af7c973591384d44816f372f0d15b14
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988599"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187026"
 ---
-# <a name="ltvaluegt"></a>&lt;valore&gt;
+# <a name="ltvaluegt"></a>&lt;value&gt;
 
-Il tag \<value> consente di descrivere una proprietà e i metodi della funzione di accesso alle proprietà. Si noti che quando si aggiunge una proprietà tramite la procedura guidata per il codice nell'ambiente di sviluppo integrato di Visual Studio verrà aggiunto un tag [ \<summary>](summary-visual-cpp.md) per la nuova proprietà. È quindi necessario aggiungere manualmente un tag \<value> per descrivere il valore rappresentato dalla proprietà.
+Il \<value> tag consente di descrivere i metodi delle funzioni di accesso a proprietà e proprietà. Si noti che quando si aggiunge una proprietà con una creazione guidata codice in Visual Studio Integrated Development Environment, verrà aggiunto un [\<summary>](summary-visual-cpp.md) tag per la nuova proprietà. È quindi necessario aggiungere manualmente un \<value> tag per descrivere il valore rappresentato dalla proprietà.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -30,7 +31,7 @@ Il tag \<value> consente di descrivere una proprietà e i metodi della funzione 
 *property-description*<br/>
 Descrizione della proprietà.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Commenti
 
 Compilare con [/doc](doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.
 
@@ -60,4 +61,4 @@ public:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Documentazione di XML](xml-documentation-visual-cpp.md)
+[Documentazione XML](xml-documentation-visual-cpp.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: ungetch'
 title: ungetch
 ms.date: 12/16/2019
 api_name:
@@ -23,16 +24,16 @@ f1_keywords:
 helpviewer_keywords:
 - ungetch function
 ms.assetid: 6921232f-6317-41cd-948b-91d56a11bc0e
-ms.openlocfilehash: b64e3b193fb8fde986277f1bf02e26edef3fc095
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 9a84ede0deee489daaa3e0bc0d7d0d8280cc759d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301054"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186558"
 ---
 # <a name="ungetch"></a>ungetch
 
-Il nome di funzione specifico di Microsoft `ungetch` è un alias deprecato per la funzione di [_ungetch](ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md) . Per impostazione predefinita, viene generato un [Avviso del compilatore (livello 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Il nome è deprecato perché non segue le regole C standard per i nomi specifici dell'implementazione. Tuttavia, la funzione è ancora supportata.
+Il nome della funzione specifica `ungetch` di Microsoft è un alias deprecato per la funzione [_ungetch](ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md) . Per impostazione predefinita, viene generato un [Avviso del compilatore (livello 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Il nome è deprecato perché non segue le regole C standard per i nomi specifici dell'implementazione. Tuttavia, la funzione è ancora supportata.
 
 Si consiglia di usare invece [_ungetch](ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md) . In alternativa, è possibile continuare a usare il nome della funzione e disabilitare l'avviso. Per altre informazioni, vedere [disabilitare i](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) [nomi di funzione](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)di avviso e POSIX.
 

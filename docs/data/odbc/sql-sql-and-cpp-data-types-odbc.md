@@ -1,4 +1,5 @@
 ---
+description: 'Ulteriori informazioni su: SQL: tipi di dati SQL e C++ (ODBC)'
 title: 'SQL: tipi di dati SQL e C++ (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - SQL data types [C++]
 - SQL [C++], vs. C++ data types
 ms.assetid: 066e0070-d4da-435c-9c4b-f7cab3352c86
-ms.openlocfilehash: 424ae09f6462d4d34b5a847fc210f9329e76d788
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7dd0e4fe94ef61436a7a62e1bb653e803c0b6168
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218338"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185973"
 ---
 # <a name="sql-sql-and-c-data-types-odbc"></a>SQL: tipi di dati SQL e C++ (ODBC)
 
@@ -25,23 +26,23 @@ Nella tabella seguente viene eseguito il mapping dei tipi di dati SQL ANSI ai ti
 |Tipo di dati SQL ANSI|Tipo di dati C++|
 |------------------------|---------------------|
 |**CHAR**|`CString`|
-|**DECIMALE**|`CString`1|
+|**DECIMAL**|`CString` 1|
 |**SMALLINT**|**`int`**|
-|**REALE**|**`float`**|
-|**INTERO**|**`long`**|
+|**REAL**|**`float`**|
+|**INTEGER**|**`long`**|
 |**FLOAT**|**`double`**|
-|**DOPPIO**|**`double`**|
-|**NUMERICO**|`CString`1|
+|**DOUBLE**|**`double`**|
+|**NUMERIC**|`CString` 1|
 |**VARCHAR**|`CString`|
 |**LONGVARCHAR**|`CLongBinary`, `CString` 2|
-|**PO'**|**BOOL**|
+|**BIT**|**BOOL**|
 |**TINYINT**|**BYTE**|
-|**BIGINT**|`CString`1|
-|**BINARIO**|`CByteArray`|
+|**BIGINT**|`CString` 1|
+|**BINARY**|`CByteArray`|
 |**VARBINARY**|`CByteArray`|
 |**LONGVARBINARY**|`CLongBinary`, `CByteArray` 3|
-|**Data**|`CTime`, `CString`|
-|**TEMPO**|`CTime`, `CString`|
+|**DATE**|`CTime`, `CString`|
+|**ORA**|`CTime`, `CString`|
 |**TIMESTAMP**|`CTime`, `CString`|
 
 1. Il mapping **decimale** e **numerico** ANSI a `CString` perché **SQL_C_CHAR** è il tipo di trasferimento ODBC predefinito.
@@ -54,7 +55,7 @@ Se non si utilizza la libreria di cursori ODBC, è possibile che si verifichi un
 
 Se si utilizza la libreria di cursori ODBC con le classi di database ODBC MFC e il driver ODBC di Microsoft SQL Server, è possibile che venga eseguita un' **asserzione** insieme a un `CDBException` se una chiamata a `CRecordset::Update` segue una chiamata a `CRecordset::Requery` . In alternativa, chiamare `CRecordset::Close` e `CRecordset::Open` anziché `CRecordset::Requery` . Un'altra soluzione consiste nell'evitare di utilizzare la libreria di cursori ODBC, perché il SQL Server e il SQL Server driver ODBC forniscono il supporto nativo per i cursori in modo nativo e la libreria di cursori ODBC non è necessaria.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [SQL](../../data/odbc/sql.md)<br/>
 [SQL: esecuzione di chiamate SQL dirette (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

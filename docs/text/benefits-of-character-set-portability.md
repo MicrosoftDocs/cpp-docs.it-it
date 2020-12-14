@@ -1,26 +1,27 @@
 ---
+description: 'Altre informazioni su: vantaggi della portabilità dei set di caratteri'
 title: Vantaggi della portabilità dei set di caratteri
 ms.date: 11/04/2016
 helpviewer_keywords:
 - character sets [C++], benefits
 - portability [C++], character sets
 ms.assetid: bd60b925-1498-4e4f-897b-4c8ce66edcf7
-ms.openlocfilehash: 0ca7e46cabb2d98a64a244863f8574a3e9e2a456
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32d78e6a230d664970e819f766d70beb1df52a88
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410778"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187624"
 ---
 # <a name="benefits-of-character-set-portability"></a>Vantaggi della portabilità dei set di caratteri
 
-È possibile trarre vantaggio dall'utilizzo delle funzionalità di portabilità di runtime C e MFC anche se non si prevede attualmente da internazionalizzare dell'applicazione:
+È possibile trarre vantaggio dall'utilizzo delle funzionalità di portabilità del runtime C e MFC anche se attualmente non si intende internazionalizzare l'applicazione:
 
-- Scrittura di codice in modo portabile la codebase più flessibile. È in un secondo momento possibile spostarla facilmente a MBCS o Unicode.
+- La codifica portabile rende la base di codice flessibile. In un secondo momento è possibile spostarlo facilmente in Unicode o MBCS.
 
-- Utilizzo di Unicode rende più efficiente delle applicazioni per Windows. Dato che Windows Usa Unicode, le stringhe non Unicode passate da e verso il sistema operativo devono essere convertite, che comporta un sovraccarico.
+- L'uso di Unicode rende le applicazioni per Windows più efficienti. Poiché Windows utilizza Unicode, è necessario tradurre le stringhe non Unicode passate da e verso il sistema operativo, il che comporta un sovraccarico.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Unicode e MBCS](../text/unicode-and-mbcs.md)<br/>
 [Supporto per Unicode](../text/support-for-unicode.md)

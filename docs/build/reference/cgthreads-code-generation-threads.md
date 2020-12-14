@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: `/cgthreads` (thread di generazione del codice)'
 title: /cgthreads (Thread di generazione di codice)
 ms.date: 07/31/2020
 f1_keywords:
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - cgthreads compiler option (C++)
 - cgthreads
 ms.assetid: 64bc768c-6caa-4baf-9dea-7cfa1ffb01c2
-ms.openlocfilehash: 319a42ab68f02df6019ff283f1039ef3d561c4a0
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 41f1e2ab6aa9263a2faf81e83d47db953819827a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520875"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182476"
 ---
-# <a name="cgthreads-code-generation-threads"></a>`/cgthreads`(Thread di generazione del codice)
+# <a name="cgthreads-code-generation-threads"></a>`/cgthreads` (Thread di generazione del codice)
 
 Imposta il numero di thread cl.exe da usare per l'ottimizzazione e la generazione di codice.
 
@@ -46,7 +47,7 @@ L' **`cgthreads`** opzione specifica il numero massimo di thread cl.exe utilizza
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la pagina delle proprietà di **configurazione**proprietà della riga di comando di  >  **c/C++**  >  **Command Line** .
+1. Selezionare la pagina delle proprietà di **configurazione** proprietà della riga di comando di  >  **c/C++**  >   .
 
 1. Modificare la proprietà **Opzioni aggiuntive** in modo da includere **`cgthreadsN`** , dove *`N`* è un valore compreso tra 1 e 8, quindi selezionare **OK**.
 
@@ -54,7 +55,7 @@ L' **`cgthreads`** opzione specifica il numero massimo di thread cl.exe utilizza
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
 [Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

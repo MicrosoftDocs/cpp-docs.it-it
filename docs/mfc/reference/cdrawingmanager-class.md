@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: classe CDrawingManager'
 title: Classe CDrawingManager
 ms.date: 11/04/2016
 f1_keywords:
@@ -56,12 +57,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: 1cc469b63e448e964dacc4d853905b22155dfe0e
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b30218dd41e3591c4a39df078bb19e3ac653ba1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561635"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184790"
 ---
 # <a name="cdrawingmanager-class"></a>Classe CDrawingManager
 
@@ -73,18 +74,18 @@ La `CDrawingManager` classe implementa algoritmi di disegno complessi.
 class CDrawingManager : public CObject
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CDrawingManager:: CDrawingManager](#cdrawingmanager)|Costruisce un oggetto `CDrawingManager`.|
 |`CDrawingManager::~CDrawingManager`|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|Description|
 |----------|-----------------|
 |[CDrawingManager:: CreateBitmap_32](#createbitmap_32)|Crea una bitmap indipendente dal dispositivo (DIB) a 32 bit in cui le applicazioni possono scrivere direttamente.|
 |[CDrawingManager::D rawAlpha](#drawalpha)|Visualizza le bitmap con pixel trasparenti o semitrasparenti.|
@@ -112,7 +113,7 @@ class CDrawingManager : public CObject
 |[CDrawingManager:: sepixel](#setpixel)|Metodo di supporto che modifica un singolo pixel in una bitmap nel colore specificato.|
 |[CDrawingManager:: SmartMixColors](#smartmixcolors)|Combina due colori in base a un rapporto ponderato.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La `CDrawingManager` classe fornisce funzioni per disegnare ombreggiature, sfumature di colore e rettangoli evidenziati. Esegue anche la fusione alfa. È possibile usare questa classe per modificare direttamente l'interfaccia utente dell'applicazione.
 
@@ -170,7 +171,7 @@ Valore RGB che specifica il colore trasparente della bitmap originale.
 
 Handle per la bitmap DIB appena creata se questo metodo ha esito positivo; in caso contrario, NULL.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per ulteriori informazioni su come creare una bitmap DIB, vedere [CreateDIBSection](/windows/win32/api/wingdi/nf-wingdi-createdibitmap).
 
@@ -200,7 +201,7 @@ in Puntatore al contesto di dispositivo per l'origine.
 *rectSrc*<br/>
 in Rettangolo di origine.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo esegue la fusione alfa per due bitmap. Per ulteriori informazioni sulla fusione alfa, vedere [AlphaBlend](/windows/win32/api/wingdi/nf-wingdi-alphablend) nel Windows SDK.
 
@@ -226,7 +227,7 @@ in Colore usato da questo metodo per riempire l'ellisse.
 *clrLine*<br/>
 in Il colore usato da questo metodo come bordo dell'ellisse.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo restituisce senza disegnare un'ellisse se uno o più colori è impostato su-1. Restituisce anche senza disegnare un'ellisse se una delle dimensioni del rettangolo di delimitazione è 0.
 
@@ -272,7 +273,7 @@ in Colore dell'interno dell'anello.
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il rettangolo definito da *Rect* deve avere una larghezza di almeno 5 pixel e 5 pixel di altezza.
 
@@ -313,7 +314,7 @@ in Coordinata y in cui termina la riga.
 *clrLine*\
 in Colore della linea.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo ha esito negativo se *clrLine* è uguale a-1.
 
@@ -339,7 +340,7 @@ in Colore usato da questo metodo per riempire il rettangolo.
 *clrLine*<br/>
 in Colore usato da questo metodo per il bordo del rettangolo.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo restituisce senza disegnare un rettangolo se uno o più colori è impostato su-1. Restituisce anche se una delle dimensioni del rettangolo è 0.
 
@@ -389,7 +390,7 @@ in Parametro booleano che indica come viene disegnata l'ombreggiatura. Se *bRigh
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 È possibile specificare due bitmap valide per le ombreggiature in basso e a destra usando i parametri *pBmpSaveBottom* e *pBmpSaveRight*. Se a questi oggetti [CBitmap](../../mfc/reference/cbitmap-class.md) è associato un oggetto GDI, `DrawShadow` utilizzerà tali bitmap come ombreggiature. Se i `CBitmap` parametri non dispongono di un oggetto GDI collegato, `DrawShadow` Disegna l'ombreggiatura e collega le bitmap ai parametri. Nelle chiamate future a `DrawShadow` è possibile fornire tali bitmap per velocizzare il processo di disegno. Per ulteriori informazioni sulla `CBitmap` classe e sugli oggetti GDI, vedere [oggetti grafici](../../mfc/graphic-objects.md).
 
@@ -441,7 +442,7 @@ in Parametro booleano che indica se `Fill4ColorsGradient` i colori di una sfumat
 *nPercentage*<br/>
 in Intero compreso tra 0-100. Questo valore indica la percentuale del rettangolo da riempire con la prima sfumatura di colore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Quando un rettangolo viene riempito con due sfumature di colore, si trovano sopra l'uno accanto all'altro o uno accanto all'altro, a seconda del valore di *bHorz*. Ogni sfumatura di colore viene calcolata in modo indipendente con il metodo [CDrawingManager:: FillGradient](#fillgradient).
 
@@ -513,7 +514,7 @@ in Ultimo colore della sfumatura.
 *nAngle*<br/>
 in Numero intero compreso tra 0 e 360. Questo parametro specifica la direzione della sfumatura di colore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare *Nangle* per specificare la direzione della sfumatura di colore. Quando si specifica la direzione della sfumatura di colore, si specifica anche la posizione in cui viene avviata la sfumatura di colore. Il valore 0 per *Nangle* indica che la sfumatura inizia dalla parte superiore del rettangolo. Man mano che *Nangle* aumenta, la posizione iniziale per la sfumatura si sposta in senso antiorario in base all'angolo.
 
@@ -553,7 +554,7 @@ in Il colore usato da questo metodo per la desaturazione se *nPercentage* è imp
 
 TRUE se il metodo ha avuto esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Per il parametro *nPercentage*, un valore inferiore indica un colore più scuro.
 
@@ -593,7 +594,7 @@ in Colore di base per la fusione.
 
 TRUE se il metodo ha esito positivo; in caso contrario, FALSE.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se *nPercentage* è compreso tra 0 e 99, `HighlightRect` Usa l'algoritmo di fusione alfa. Per ulteriori informazioni sulla fusione alfa, vedere la pagina relativa alle [linee e ai Fill alfa](/dotnet/framework/winforms/advanced/alpha-blending-lines-and-fills). Se *nPercentage* è-1, questo metodo usa il livello di evidenziazione predefinito. Se *nPercentage* è 100, questo metodo non esegue alcuna operazione e restituisce true.
 
@@ -625,7 +626,7 @@ in Numero compreso tra 0 e 1 che indica la saturazione per il colore.
 
 Rappresentazione RGB del colore HLS fornito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un colore può essere rappresentato come HSV (Hue, Saturation, and value), HSL (Hue, Saturation, and luminosità) oppure RGB (rosso, verde e blu). Per ulteriori informazioni sulle diverse rappresentazioni dei colori, vedere [color](/windows/win32/uxguide/vis-color).
 
@@ -657,7 +658,7 @@ in Numero compreso tra 0 e 1 che indica la saturazione per il colore.
 
 Rappresentazione RGB del colore HLS fornito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un colore può essere rappresentato come HSV (Hue, Saturation, and value), HSL (Hue, Saturation, and luminosità) oppure RGB (rosso, verde e blu). Per ulteriori informazioni sulle diverse rappresentazioni dei colori, vedere [color](/windows/win32/uxguide/vis-color).
 
@@ -689,7 +690,7 @@ in Numero compreso tra 0 e 1 che indica il valore per il colore.
 
 Rappresentazione RGB del colore HSV fornito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un colore può essere rappresentato come HSV (Hue, Saturation, and value), HSL (Hue, Saturation, and luminosità) oppure RGB (rosso, verde e blu). Per ulteriori informazioni sulle diverse rappresentazioni dei colori, vedere [color](/windows/win32/uxguide/vis-color).
 
@@ -733,7 +734,7 @@ in Vedere la sezione Osservazioni.
 
 Singolo componente rosso, verde o blu per la tonalità specificata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo è un metodo helper `CDrawingManager` utilizzato dalla classe per calcolare i singoli componenti rosso, verde e blu di un colore in una rappresentazione HSV o HSL. Questo metodo non è progettato per essere chiamato direttamente dal programmatore. I parametri di input sono valori che dipendono dall'algoritmo di conversione.
 
@@ -763,7 +764,7 @@ in Rettangolo di delimitazione dell'area da capovolgere.
 *bHorz*<br/>
 in Parametro booleano che indica se il rettangolo viene invertito orizzontalmente o verticalmente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo può capovolgere qualsiasi area del contesto di dispositivo di proprietà della `CDrawingManager` classe. Se *bHorz* è impostato su true, questo metodo capovolge l'area orizzontalmente. In caso contrario, capovolge l'area verticalmente.
 
@@ -812,7 +813,7 @@ in Colore di base per il pixel.
 
 Colore finale per il pixel semitrasparente.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Si tratta di una classe helper per la colorazione di bitmap semitrasparenti e non è progettata per essere chiamata direttamente dal programmatore.
 
@@ -848,7 +849,7 @@ in Luminosità massima dell'ombreggiatura.
 
 Handle per la bitmap creata se questo metodo ha esito positivo; in caso contrario, NULL.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se *nDepth* è impostato su 0, questo metodo viene chiuso e restituisce null. Se *nDepth* è minore di 3, la larghezza e l'altezza dell'ombreggiatura sono impostate su 3 pixel.
 
@@ -878,7 +879,7 @@ out Puntatore a un valore Double in cui il metodo archivia la saturazione per il
 *L*\
 out Puntatore a un valore Double in cui il metodo archivia la luminosità per il colore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un colore può essere rappresentato come HSV (Hue, Saturation, and value), HSL (Hue, Saturation, and luminosità) oppure RGB (rosso, verde e blu). Per ulteriori informazioni sulle diverse rappresentazioni dei colori, vedere [color](/windows/win32/uxguide/vis-color).
 
@@ -910,7 +911,7 @@ out Puntatore a un valore Double in cui questo metodo archivia la saturazione ri
 *V*<br/>
 out Puntatore a un valore Double in cui questo metodo archivia il valore risultante per il colore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Un colore può essere rappresentato come HSV (Hue, Saturation, and value), HSL (Hue, Saturation, and luminosità) oppure RGB (rosso, verde e blu). Per ulteriori informazioni sulle diverse rappresentazioni dei colori, vedere [color](/windows/win32/uxguide/vis-color).
 
@@ -958,7 +959,7 @@ in Colore dell'ombreggiatura.
 *bIsRight*<br/>
 in Parametro booleano che indica il pixel da colorare. Per altre informazioni, vedere la sezione Osservazioni.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo è un metodo helper utilizzato dal metodo [CDrawingManager::D rawshadow](#drawshadow) . Si consiglia di usare invece se si vuole creare un'ombreggiatura `CDrawingManager::DrawShadow` .
 
@@ -1032,7 +1033,7 @@ in Rapporto ponderato per il secondo colore.
 
 Colore che rappresenta una combinazione ponderata dei colori forniti.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo metodo ha esito negativo e restituisce un errore se *K1* o *K2* è minore di zero. Se entrambi i parametri sono impostati su 0, il metodo restituisce `RGB(0, 0, 0)` .
 
@@ -1060,7 +1061,7 @@ Contesto del dispositivo di origine.
 *bClockWise*<br/>
 TRUE indica la rotazione + 90 gradi; FALSE indica la rotazione di 90 gradi.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 ## <a name="see-also"></a>Vedi anche
 

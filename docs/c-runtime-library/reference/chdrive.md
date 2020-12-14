@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _chdrive'
 title: _chdrive
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _chdrive function
 - chdrive function
 ms.assetid: 212a1a4b-4fa8-444e-9677-7fca4c8c47e3
-ms.openlocfilehash: a597a67c7d2083cf5860112f6ed55ff248053d17
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d3935c64d8ae67c72f8516e4c2d21a7a0aa6e21b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917013"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186688"
 ---
 # <a name="_chdrive"></a>_chdrive
 
@@ -60,9 +61,9 @@ Numero intero da 1 a 26 che specifica l'unità di lavoro corrente (1=A, 2=B e co
 
 Zero (0) se l'unità di lavoro corrente è stata modificata correttamente, in caso contrario -1.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Se l' *unità* non è compresa nell'intervallo da 1 a 26, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione **_chdrive** restituisce-1, **errno** viene impostato su **EACCES**e **_doserrno** è impostato su **ERROR_INVALID_DRIVE**.
+Se l' *unità* non è compresa nell'intervallo da 1 a 26, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione **_chdrive** restituisce-1, **errno** viene impostato su **EACCES** e **_doserrno** è impostato su **ERROR_INVALID_DRIVE**.
 
 La funzione **_chdrive** non è thread-safe poiché dipende dalla funzione **SetCurrentDirectory** che non è a sua volta thread-safe. Per usare **_chdrive** in modo sicuro in un'applicazione multithread, è necessario includere la propria sincronizzazione dei thread. Per ulteriori informazioni, vedere [SetCurrentDirectory](/windows/win32/api/winbase/nf-winbase-setcurrentdirectory).
 
@@ -82,9 +83,9 @@ Per altre informazioni, vedere [Compatibilità](../../c-runtime-library/compatib
 
 Vedere l'esempio per [_getdrive](getdrive.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Controllo delle directory](../../c-runtime-library/directory-control.md)<br/>
+[Controllo Directory](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>
 [_fullpath, _wfullpath](fullpath-wfullpath.md)<br/>
 [_getcwd, _wgetcwd](getcwd-wgetcwd.md)<br/>

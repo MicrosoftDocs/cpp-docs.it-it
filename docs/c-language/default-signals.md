@@ -1,16 +1,17 @@
 ---
+description: 'Altre informazioni su: segnali predefiniti'
 title: Segnali predefiniti
 ms.date: 11/04/2016
 helpviewer_keywords:
 - default signals
 - defaults, signals
 ms.assetid: db9fc17b-75c0-4d33-86be-c536584bbede
-ms.openlocfilehash: bb84e168d0693313373395e8d5f44be0eca9891e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44423047aa754ae991b92b1711dae5fdc3611fc5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234512"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186935"
 ---
 # <a name="default-signals"></a>Segnali predefiniti
 
@@ -18,6 +19,6 @@ ms.locfileid: "62234512"
 
 I segnali vengono impostati nello stato predefinito quando un programma inizia l'esecuzione.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Funzioni della libreria](../c-language/library-functions.md)

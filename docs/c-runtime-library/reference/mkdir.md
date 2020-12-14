@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: mkdir'
 title: mkdir
 ms.date: 12/16/2019
 api_name:
@@ -23,15 +24,15 @@ f1_keywords:
 helpviewer_keywords:
 - mkdir function
 ms.assetid: 0a212890-181e-45d0-988d-e0f301fcdeb8
-ms.openlocfilehash: c9c52954cd78e4780f2827d415a1af555dc67126
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a32fe98b6b6c60828ca1f366627c818b9dd8c29f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301158"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186662"
 ---
 # <a name="mkdir"></a>mkdir
 
-Il nome della funzione POSIX implementato da Microsoft `mkdir` è un alias deprecato per la funzione di [_mkdir](mkdir-wmkdir.md) . Per impostazione predefinita, viene generato un [Avviso del compilatore (livello 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Il nome è deprecato perché non segue le regole C standard per i nomi specifici dell'implementazione. Tuttavia, la funzione è ancora supportata.
+Il nome della funzione POSIX implementato `mkdir` da Microsoft è un alias deprecato per la funzione [_mkdir](mkdir-wmkdir.md) . Per impostazione predefinita, viene generato un [Avviso del compilatore (livello 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Il nome è deprecato perché non segue le regole C standard per i nomi specifici dell'implementazione. Tuttavia, la funzione è ancora supportata.
 
 Si consiglia di usare invece [_mkdir](mkdir-wmkdir.md) . In alternativa, è possibile continuare a usare il nome della funzione e disabilitare l'avviso. Per altre informazioni, vedere [disabilitare i](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) [nomi di funzione](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)di avviso e POSIX.

@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: _chdir, _wchdir'
 title: _chdir, _wchdir
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-ms.openlocfilehash: a54b42ee92392971fdb6979ee2dc3a3b9c65f184
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 190e9d6445417aed8c35843cb4c386d49535ebbd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917046"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186714"
 ---
 # <a name="_chdir-_wchdir"></a>_chdir, _wchdir
 
@@ -69,9 +70,9 @@ Percorso della nuova directory di lavoro.
 
 Se eseguite correttamente, queste funzioni restituiscono un valore pari a 0. Il valore restituito-1 indica un errore. Se il percorso specificato non è stato trovato, **errno** viene impostato su **ENOENT**. Se *dirname* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e la funzione restituisce-1.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **_chdir** imposta la directory di lavoro corrente sulla directory specificata da *dirname*. Il parametro *dirname* deve fare riferimento a una directory esistente. Questa funzione può modificare la directory di lavoro corrente in qualsiasi unità. Se in *dirname*viene specificata una nuova lettera di unità, viene modificata anche la lettera di unità predefinita. Ad esempio, se A è la lettera di unità predefinita e \BIN è la directory di lavoro corrente, la chiamata seguente consente di passare alla directory di lavoro corrente per l'unità C e stabilisce C come nuova unità predefinita:
+La funzione **_chdir** imposta la directory di lavoro corrente sulla directory specificata da *dirname*. Il parametro *dirname* deve fare riferimento a una directory esistente. Questa funzione può modificare la directory di lavoro corrente in qualsiasi unità. Se in *dirname* viene specificata una nuova lettera di unità, viene modificata anche la lettera di unità predefinita. Ad esempio, se A è la lettera di unità predefinita e \BIN è la directory di lavoro corrente, la chiamata seguente consente di passare alla directory di lavoro corrente per l'unità C e stabilisce C come nuova unità predefinita:
 
 ```C
 _chdir("c:\temp");
@@ -159,7 +160,7 @@ Directory of c:\windows
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controllo delle directory](../../c-runtime-library/directory-control.md)<br/>
+[Controllo Directory](../../c-runtime-library/directory-control.md)<br/>
 [_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>
 [_rmdir, _wrmdir](rmdir-wrmdir.md)<br/>
 [system, _wsystem](system-wsystem.md)<br/>

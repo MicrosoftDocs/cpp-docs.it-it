@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: ungetc, ungetwc'
 title: ungetc, ungetwc
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _ungettc function
 - ungetc function
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
-ms.openlocfilehash: 406ce7d8befd1d9e9e6a065f2549bacf46d2fd6e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c212f67bb72253bf37428d494e33bef0eedc2550
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915974"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186584"
 ---
 # <a name="ungetc-ungetwc"></a>ungetc, ungetwc
 
@@ -72,11 +73,11 @@ In caso di esito positivo, ognuna di queste funzioni restituisce l'argomento del
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **ungetc** inserisce il carattere *c* di nuovo nel *flusso* e cancella l'indicatore di fine del file. Il flusso deve essere aperto per la lettura. Una successiva operazione di lettura sul *flusso* inizia con *c*. Un tentativo di push di **EOF** nel flusso tramite **ungetc** viene ignorato.
 
-I caratteri inseriti nel flusso da **ungetc** possono essere cancellati se **fflush**, [fseek](fseek-fseeki64.md), **fsetpos**o [Rewind](rewind.md) viene chiamato prima che il carattere venga letto dal flusso. L'indicatore di posizione del file avrà il valore esistente prima del reinserimento dei caratteri. Lo spazio di archiviazione esterno corrispondente al flusso rimane invariato. In una chiamata **ungetc** riuscita su un flusso di testo, l'indicatore di posizione del file non è specificato fino a quando non vengono letti o rimossi tutti i caratteri di push-back. In ogni chiamata **ungetc** riuscita su un flusso binario, viene decrementato l'indicatore di posizione del file. Se il valore è 0 prima di una chiamata, il valore non è definito dopo la chiamata.
+I caratteri inseriti nel flusso da **ungetc** possono essere cancellati se **fflush**, [fseek](fseek-fseeki64.md), **fsetpos** o [Rewind](rewind.md) viene chiamato prima che il carattere venga letto dal flusso. L'indicatore di posizione del file avrà il valore esistente prima del reinserimento dei caratteri. Lo spazio di archiviazione esterno corrispondente al flusso rimane invariato. In una chiamata **ungetc** riuscita su un flusso di testo, l'indicatore di posizione del file non è specificato fino a quando non vengono letti o rimossi tutti i caratteri di push-back. In ogni chiamata **ungetc** riuscita su un flusso binario, viene decrementato l'indicatore di posizione del file. Se il valore è 0 prima di una chiamata, il valore non è definito dopo la chiamata.
 
 I risultati sono imprevedibili se **ungetc** viene chiamato due volte senza un'operazione di lettura o di posizionamento di file tra le due chiamate. Dopo una chiamata a **fscanf**, una chiamata a **ungetc** può avere esito negativo a meno che non sia stata eseguita un'altra operazione di lettura (ad esempio **GETC**). Questo perché **fscanf** chiama **ungetc**.
 
@@ -99,7 +100,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 |**ungetc**|\<stdio.h>|
 |**ungetwc**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout**e **stderr**devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout** e **stderr** devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

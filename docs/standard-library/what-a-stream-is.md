@@ -1,4 +1,5 @@
 ---
+description: "Altre informazioni su: che cos'è un flusso"
 title: Definizione di flusso
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - streams [C++], in iostream classes
 - streams [C++]
 ms.assetid: a7e661e9-6cd1-4543-a9a4-c58ee9fd32f3
-ms.openlocfilehash: 80f2d17d7de2ddca1ef1501cacdb44f41c06594b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3786fe05f25949129c1bce63bdbbd73a16209475
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450933"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187780"
 ---
 # <a name="what-a-stream-is"></a>Definizione di flusso
 
@@ -20,10 +21,10 @@ Analogamente a C, anche in C++ non sono presenti una funzionalità di input/outp
 
 Tramite i driver di dispositivo, il sistema operativo del disco gestisce la tastiera, lo schermo, la stampante e le porte di comunicazione come file estesi. Le classi iostream interagiscono con questi file estesi. Le classi incorporate supportano la lettura e la scrittura nella memoria con sintassi identica a quella per il disco I/O, il che semplifica la derivazione delle classi stream.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Alternative di input/output](../standard-library/input-output-alternatives.md)
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
-[Programmazione iostream](../standard-library/iostream-programming.md)
+[Programmazione di iostream](../standard-library/iostream-programming.md)

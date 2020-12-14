@@ -1,15 +1,16 @@
 ---
+description: 'Altre informazioni su: definizioni e convenzioni'
 title: Definizioni e convenzioni
 ms.date: 11/04/2016
 helpviewer_keywords:
 - nonterminals definition
 ms.assetid: f9b3cf5f-6a7c-4a10-9b18-9d4a43efdaeb
-ms.openlocfilehash: 9da9a566ef0b8d34a1a3d64dd2b8ce659194e6ce
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 892f14bfc3059406bbc192640e04c0181d06eee2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226379"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186870"
 ---
 # <a name="definitions-and-conventions"></a>Definizioni e convenzioni
 
@@ -34,6 +35,6 @@ Le convenzioni della sintassi utilizzano attributi del tipo di carattere differe
 
 I due punti (**:**) che seguono un non terminale introducono la definizione di questo. Le definizioni alternative sono elencate in righe separate, tranne quando sono precedute dalle parole "uno di".
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riepilogo della sintassi del linguaggio C](../c-language/c-language-syntax-summary.md)

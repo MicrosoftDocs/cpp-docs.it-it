@@ -1,4 +1,5 @@
 ---
+description: 'Altre informazioni su: &lt; funzioni di memoria &gt;'
 title: Funzioni &lt;memory&gt;
 ms.date: 08/05/2019
 f1_keywords:
@@ -74,16 +75,16 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: 2a22b96bf8e3f97e6592bc8aa8ec0c61dc83b7a9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 13c18ce754a3e88d7ad2ae47ead522bc21cec718
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233067"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183971"
 ---
 # <a name="ltmemorygt-functions"></a>Funzioni &lt;memory&gt;
 
-## <a name="addressof"></a><a name="addressof"></a>AddressOf
+## <a name="addressof"></a><a name="addressof"></a> AddressOf
 
 Ottiene l'indirizzo true di un oggetto.
 
@@ -110,9 +111,9 @@ Oggetto o funzione per cui ottenere l'indirizzo true.
 
 Indirizzo effettivo dell'oggetto o della funzione a cui fa riferimento il *valore*, anche se esiste un overload `operator&()` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
-## <a name="align"></a><a name="align"></a>allineare
+## <a name="align"></a><a name="align"></a> allineare
 
 Inserisce nell'archivio la dimensione specificata, allineata in base alla specifica di allineamento specificata, nel primo indirizzo possibile dell'archiviazione specificata.
 
@@ -145,7 +146,7 @@ Se `align()` ha esito negativo, questo parametro non viene modificato.
 
 Puntatore null se il buffer allineato richiesto non rientra nello spazio disponibile; in caso contrario, il nuovo valore di *ptr*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I parametri *ptr* e *Space* modificati consentono di chiamare `align()` più volte nello stesso buffer, possibilmente con valori diversi per l' *allineamento* e la *dimensione*. Nel frammento di codice riportato di seguito viene illustrato un utilizzo di `align()`.
 
@@ -172,7 +173,7 @@ while (std::align(alignment, sizeof(MyObj), ptr, space)) {
 // possible to allow more aligned storage in this buffer.
 ```
 
-## <a name="allocate_shared"></a><a name="allocate_shared"></a>allocate_shared
+## <a name="allocate_shared"></a><a name="allocate_shared"></a> allocate_shared
 
 Crea una [shared_ptr](shared-ptr-class.md) agli oggetti allocati e costruiti per un tipo specificato usando un allocatore specificato. Restituisce `shared_ptr`.
 
@@ -191,11 +192,11 @@ Allocatore utilizzato per creare oggetti.
 *args*\
 Zero o più argomenti che diventano gli oggetti.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione crea l'oggetto `shared_ptr<T>` , un puntatore a `T(args...)` come allocato e costruito da *Alloc*.
 
-## <a name="atomic_compare_exchange_strong"></a><a name="atomic_compare_exchange_strong"></a>atomic_compare_exchange_strong
+## <a name="atomic_compare_exchange_strong"></a><a name="atomic_compare_exchange_strong"></a> atomic_compare_exchange_strong
 
 ```cpp
 template<class T>
@@ -205,7 +206,7 @@ bool atomic_compare_exchange_strong(
     shared_ptr<T> w);
 ```
 
-## <a name="atomic_compare_exchange_weak"></a><a name="atomic_compare_exchange_weak"></a>atomic_compare_exchange_weak
+## <a name="atomic_compare_exchange_weak"></a><a name="atomic_compare_exchange_weak"></a> atomic_compare_exchange_weak
 
 ```cpp
 template<class T>
@@ -215,7 +216,7 @@ bool atomic_compare_exchange_weak(
     shared_ptr<T> w);
 ```
 
-## <a name="atomic_compare_exchange_strong_explicit"></a><a name="atomic_compare_exchange_strong_explicit"></a>atomic_compare_exchange_strong_explicit
+## <a name="atomic_compare_exchange_strong_explicit"></a><a name="atomic_compare_exchange_strong_explicit"></a> atomic_compare_exchange_strong_explicit
 
 ```cpp
 template<class T>
@@ -227,7 +228,7 @@ bool atomic_compare_exchange_strong_explicit(
     memory_order failure);
 ```
 
-## <a name="atomic_compare_exchange_weak_explicit"></a><a name="atomic_compare_exchange_weak_explicit"></a>atomic_compare_exchange_weak_explicit
+## <a name="atomic_compare_exchange_weak_explicit"></a><a name="atomic_compare_exchange_weak_explicit"></a> atomic_compare_exchange_weak_explicit
 
 ```cpp
 template<class T>
@@ -239,7 +240,7 @@ bool atomic_compare_exchange_weak_explicit(
     memory_order failure);
 ```
 
-## <a name="atomic_exchange"></a><a name="atomic_exchange"></a>atomic_exchange
+## <a name="atomic_exchange"></a><a name="atomic_exchange"></a> atomic_exchange
 
 ```cpp
 template<class T>
@@ -248,7 +249,7 @@ shared_ptr<T> atomic_exchange(
     shared_ptr<T> r);
 ```
 
-## <a name="atomic_exchange_explicit"></a><a name="atomic_exchange_explicit"></a>atomic_exchange_explicit
+## <a name="atomic_exchange_explicit"></a><a name="atomic_exchange_explicit"></a> atomic_exchange_explicit
 
 ```cpp
 template<class T>
@@ -258,7 +259,7 @@ shared_ptr<T> atomic_exchange_explicit(
     memory_order mo);
 ```
 
-## <a name="atomic_is_lock_free"></a><a name="atomic_is_lock_free"></a>atomic_is_lock_free
+## <a name="atomic_is_lock_free"></a><a name="atomic_is_lock_free"></a> atomic_is_lock_free
 
 ```cpp
 template<class T>
@@ -266,7 +267,7 @@ bool atomic_is_lock_free(
     const shared_ptr<T>* u);
 ```
 
-## <a name="atomic_load"></a><a name="atomic_load"></a>atomic_load
+## <a name="atomic_load"></a><a name="atomic_load"></a> atomic_load
 
 ```cpp
 template<class T>
@@ -274,7 +275,7 @@ shared_ptr<T> atomic_load(
     const shared_ptr<T>* u);
 ```
 
-## <a name="atomic_load_explicit"></a><a name="atomic_load_explicit"></a>atomic_load_explicit
+## <a name="atomic_load_explicit"></a><a name="atomic_load_explicit"></a> atomic_load_explicit
 
 ```cpp
 template<class T>
@@ -283,7 +284,7 @@ shared_ptr<T> atomic_load_explicit(
     memory_order mo);
 ```
 
-## <a name="atomic_store"></a><a name="atomic_store"></a>atomic_store
+## <a name="atomic_store"></a><a name="atomic_store"></a> atomic_store
 
 ```cpp
 template<class T>
@@ -292,7 +293,7 @@ void atomic_store(
     shared_ptr<T> r);
 ```
 
-## <a name="atomic_store_explicit"></a><a name="atomic_store_explicit"></a>atomic_store_explicit
+## <a name="atomic_store_explicit"></a><a name="atomic_store_explicit"></a> atomic_store_explicit
 
 ```cpp
 template<class T>
@@ -302,7 +303,7 @@ void atomic_store_explicit(
     memory_order mo);
 ```
 
-## <a name="const_pointer_cast"></a><a name="const_pointer_cast"></a>const_pointer_cast
+## <a name="const_pointer_cast"></a><a name="const_pointer_cast"></a> const_pointer_cast
 
 Cast const a [shared_ptr](shared-ptr-class.md).
 
@@ -327,7 +328,7 @@ Tipo controllato dal puntatore di tipo argument condiviso.
 *SP*\
 Puntatore di tipo argument condiviso.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione modello restituisce un `shared_ptr` oggetto vuoto se `const_cast<T*>(sp.get())` restituisce un puntatore null. in caso contrario, restituisce un `shared_ptr<T>` oggetto proprietario della risorsa di proprietà di *SP*. L'espressione `const_cast<T*>(sp.get())` deve essere valida.
 
@@ -356,7 +357,7 @@ int main()
 sp1 == 3
 ```
 
-## <a name="declare_no_pointers"></a><a name="declare_no_pointers"></a>declare_no_pointers
+## <a name="declare_no_pointers"></a><a name="declare_no_pointers"></a> declare_no_pointers
 
 Informa un Garbage Collector che i caratteri del blocco di memoria definito da un puntatore all'indirizzo di base e la dimensione del blocco non contengono puntatori tracciabili.
 
@@ -374,11 +375,11 @@ Indirizzo del primo carattere che non contiene più puntatori tracciabili.
 *dimensioni*\
 Dimensione del blocco che inizia in corrispondenza di *ptr* che non contiene puntatori tracciabili.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione informa qualsiasi Garbage Collector che gli indirizzi nell'intervallo `[ ptr, ptr + size)` non contengano più puntatori tracciabili. Non è necessario dereferenziare i puntatori all'archiviazione allocata, a meno che non siano raggiungibili.
 
-## <a name="declare_reachable"></a><a name="declare_reachable"></a>declare_reachable
+## <a name="declare_reachable"></a><a name="declare_reachable"></a> declare_reachable
 
 Informa un Garbage Collection che l'indirizzo indicato si riferisce all'archiviazione allocata ed è raggiungibile.
 
@@ -392,11 +393,11 @@ void declare_reachable(
 *PTR*\
 Puntatore a un'area di archiviazione raggiungibile, allocata e valida.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se *ptr* non è null, la funzione informa qualsiasi Garbage Collector che *ptr* è ora raggiungibile, ovvero fa riferimento a un archivio allocato valido.
 
-## <a name="default_delete"></a><a name="default_delete"></a>default_delete
+## <a name="default_delete"></a><a name="default_delete"></a> default_delete
 
 Elimina gli oggetti allocati con **operator new**. Adatto per l'utilizzo con [unique_ptr](unique-ptr-class.md).
 
@@ -420,11 +421,11 @@ Il puntatore dell'oggetto da eliminare.
 *Altri*\
 Il tipo di elementi nella matrice da eliminare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il modello di classe descrive un deleter che elimina gli oggetti scalari allocati con **operator new**, idonei per l'uso con il modello di classe `unique_ptr` . Include inoltre la specializzazione esplicita `default_delete<T[]>`.
 
-## <a name="destroy_at"></a><a name="destroy_at"></a>destroy_at
+## <a name="destroy_at"></a><a name="destroy_at"></a> destroy_at
 
 ```cpp
 template <class T>
@@ -434,7 +435,7 @@ void destroy_at(
 
 Uguale a `location->~T()`.
 
-## <a name="destroy"></a><a name="destroy"></a>eliminare
+## <a name="destroy"></a><a name="destroy"></a> eliminare
 
 ```cpp
 template <class ForwardIterator>
@@ -450,7 +451,7 @@ for (; first != last; ++first)
     destroy_at(addressof(*first));
 ```
 
-## <a name="destroy_n"></a><a name="destroy_n"></a>destroy_n
+## <a name="destroy_n"></a><a name="destroy_n"></a> destroy_n
 
 ```cpp
 template <class ForwardIterator, class Size>
@@ -467,7 +468,7 @@ for (; count > 0; (void)++first, --count)
 return first;
 ```
 
-## <a name="dynamic_pointer_cast"></a><a name="dynamic_pointer_cast"></a>dynamic_pointer_cast
+## <a name="dynamic_pointer_cast"></a><a name="dynamic_pointer_cast"></a> dynamic_pointer_cast
 
 Cast dinamico a [shared_ptr](shared-ptr-class.md).
 
@@ -492,7 +493,7 @@ Tipo controllato dal puntatore di tipo argument condiviso.
 *SP*\
 Puntatore di tipo argument condiviso.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione modello restituisce un `shared_ptr` oggetto vuoto se `dynamic_cast<T*>(sp.get())` restituisce un puntatore null. in caso contrario, restituisce un `shared_ptr<T>` oggetto proprietario della risorsa di proprietà di *SP*. L'espressione `dynamic_cast<T*>(sp.get())` deve essere valida.
 
@@ -532,7 +533,7 @@ int main()
 sp1->value == 3
 ```
 
-## <a name="get_deleter"></a><a name="get_deleter"></a>get_deleter
+## <a name="get_deleter"></a><a name="get_deleter"></a> get_deleter
 
 Ottenere l'oggetto Deleter da un [shared_ptr](shared-ptr-class.md).
 
@@ -553,7 +554,7 @@ Tipo controllato dal puntatore condiviso.
 *SP*\
 Puntatore condiviso.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello restituisce un puntatore all'eliminazione di tipo *Deleter* appartenente all' `shared_ptr` oggetto *SP*. Se *SP* non ha alcun Deleter o se il relativo Deleter non è di tipo *Deleter*, la funzione restituisce 0.
 
@@ -601,7 +602,7 @@ get_deleter(sp0) != 0 == false
 get_deleter(sp1) != 0 == true
 ```
 
-## <a name="get_pointer_safety"></a><a name="get_pointer_safety"></a>get_pointer_safety
+## <a name="get_pointer_safety"></a><a name="get_pointer_safety"></a> get_pointer_safety
 
 Restituisce il tipo di sicurezza dei puntatori utilizzata dal Garbage Collector.
 
@@ -609,11 +610,11 @@ Restituisce il tipo di sicurezza dei puntatori utilizzata dal Garbage Collector.
 pointer_safety get_pointer_safety() noexcept;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione restituisce il tipo di sicurezza del puntatore assunto da qualsiasi Garbage Collector automatico.
 
-## <a name="get_temporary_buffer"></a><a name="get_temporary_buffer"></a>get_temporary_buffer
+## <a name="get_temporary_buffer"></a><a name="get_temporary_buffer"></a> get_temporary_buffer
 
 Alloca lo spazio di archiviazione temporaneo per una sequenza di elementi che non supera un numero specificato di elementi.
 
@@ -632,7 +633,7 @@ Numero massimo di elementi richiesti per cui deve essere allocata la memoria.
 
 Oggetto `pair` il cui primo componente è un puntatore alla memoria allocata e il secondo componente fornisce la dimensione del buffer, per indicare il numero massimo di elementi che è possibile archiviare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione esegue una richiesta di memoria ed è possibile che tale richiesta non abbia esito positivo. Se non viene allocato alcun buffer, la funzione restituisce una coppia in cui il secondo componente è uguale a zero e il primo è uguale al puntatore null.
 
@@ -671,7 +672,7 @@ The number of elements that the allocated memory
 could store is given by: resultPair.second = 9.
 ```
 
-## <a name="make_shared"></a><a name="make_shared"></a>make_shared
+## <a name="make_shared"></a><a name="make_shared"></a> make_shared
 
 Crea e restituisce un [shared_ptr](shared-ptr-class.md) che punta agli oggetti allocati costruiti da zero o più argomenti utilizzando l'allocatore predefinito. Alloca e costruisce un oggetto del tipo specifico e `shared_ptr` per gestire la proprietà condivisa dell'oggetto e restituisce `shared_ptr`.
 
@@ -686,7 +687,7 @@ shared_ptr<T> make_shared(
 *args*\
 Zero o più argomenti del costruttore. La funzione deduce di quale costruttore eseguire l'overload per richiamare il costruttore in base agli argomenti forniti.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Usare `make_shared` come metodo semplice ed efficace per creare un oggetto e `shared_ptr` per gestire contemporaneamente l'accesso condiviso all'oggetto. Semanticamente, queste due istruzioni sono equivalenti:
 
@@ -768,7 +769,7 @@ Playing Yesterday by The Beatles, use count: 3
 Playing Blackbird by The Beatles, use count: 3
 ```
 
-## <a name="make_unique"></a><a name="make_unique"></a>make_unique
+## <a name="make_unique"></a><a name="make_unique"></a> make_unique
 
 crea e restituisce un [unique_ptr](unique-ptr-class.md) a un oggetto di tipo specificato costruito mediante gli argomenti indicati.
 
@@ -803,7 +804,7 @@ Matrice di elementi di tipo *T*.
 *dimensioni*\
 Numero di elementi per allocare spazio per la nuova matrice.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Il primo overload viene utilizzato per i singoli oggetti. Il secondo overload viene richiamato per le matrici. Il terzo overload impedisce di specificare la dimensione di una matrice nell'argomento tipo (make_unique \<T[N]> ); questa costruzione non è supportata dallo standard corrente. Quando si usa `make_unique` per creare un `unique_ptr` a una matrice, è necessario inizializzare gli elementi della matrice separatamente. Anziché utilizzare questo overload, forse una scelta migliore consiste nell'utilizzare un [std:: Vector](vector-class.md).
 
@@ -817,7 +818,7 @@ Nell'esempio riportato di seguito viene illustrato come usare `make_unique`. Per
 
 Quando viene visualizzato l'errore C2280 in relazione a `unique_ptr`, è quasi certo che sia dovuto al tentativo di richiamare il costruttore di copia, che è una funzione eliminata.
 
-## <a name="owner_less"></a><a name="owner_less"></a>owner_less
+## <a name="owner_less"></a><a name="owner_less"></a> owner_less
 
 Consente confronti misti basati sulla proprietà dei puntatori condivisi e deboli. Restituisce **`true`** se il parametro di sinistra viene ordinato prima del parametro right dalla funzione membro `owner_before` .
 
@@ -888,11 +889,11 @@ Puntatore debole non valido.
 *Ok*\
 Puntatore debole non valido.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 I modelli di classe definiscono tutti gli operatori membro come restituzione `left.owner_before(right)` .
 
-## <a name="reinterpret_pointer_cast"></a><a name="reinterpret_pointer_cast"></a>reinterpret_pointer_cast
+## <a name="reinterpret_pointer_cast"></a><a name="reinterpret_pointer_cast"></a> reinterpret_pointer_cast
 
 Crea un nuovo oggetto `shared_ptr` da un puntatore condiviso esistente utilizzando un cast.
 
@@ -911,13 +912,13 @@ shared_ptr<T> reinterpret_pointer_cast(
 *PTR*\
 Riferimento a un oggetto `shared_ptr<U>` .
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se *ptr* è vuoto, anche il nuovo oggetto `shared_ptr` è vuoto; in caso contrario, condivide la proprietà con *ptr*. Il nuovo puntatore condiviso è il risultato della valutazione di `reinterpret_cast<Y*>(ptr.get())` , dove `Y` è `typename std::shared_ptr<T>::element_type` . Il comportamento non è definito se `reinterpret_cast<T*>((U*)nullptr)` non è ben formato.
 
 La funzione di modello che accetta un riferimento lvalue è una novità di C++ 17. La funzione di modello che accetta un riferimento rvalue è una novità di C++ 20.
 
-## <a name="return_temporary_buffer"></a><a name="return_temporary_buffer"></a>return_temporary_buffer
+## <a name="return_temporary_buffer"></a><a name="return_temporary_buffer"></a> return_temporary_buffer
 
 Dealloca la memoria temporanea allocata tramite la funzione di modello `get_temporary_buffer`.
 
@@ -932,7 +933,7 @@ void return_temporary_buffer(
 *buffer*\
 Puntatore alla memoria da deallocare.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Utilizzare questa funzione solo per la memoria temporanea.
 
@@ -974,7 +975,7 @@ The number of elements that the allocated memory
 could store is given by: resultPair.second = 7.
 ```
 
-## <a name="static_pointer_cast"></a><a name="static_pointer_cast"></a>static_pointer_cast
+## <a name="static_pointer_cast"></a><a name="static_pointer_cast"></a> static_pointer_cast
 
 Cast statico da [shared_ptr](shared-ptr-class.md).
 
@@ -999,7 +1000,7 @@ Tipo controllato dal puntatore di tipo argument condiviso.
 *SP*\
 Puntatore di tipo argument condiviso.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione modello restituisce un `shared_ptr` oggetto vuoto se *SP* è un `shared_ptr` oggetto vuoto; in caso contrario, restituisce un `shared_ptr<T>` oggetto proprietario della risorsa di proprietà di *SP*. L'espressione `static_cast<T*>(sp.get())` deve essere valida.
 
@@ -1038,7 +1039,7 @@ int main()
 sp1->value == 3
 ```
 
-## <a name="swap"></a><a name="swap"></a>scambio
+## <a name="swap"></a><a name="swap"></a> scambio
 
 Scambia due oggetti [shared_ptr](shared-ptr-class.md), [unique_ptr](unique-ptr-class.md)o [weak_ptr](weak-ptr-class.md) .
 
@@ -1074,7 +1075,7 @@ Puntatore a sinistra.
 *Ok*\
 Puntatore a destra.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Le funzioni modello chiamano `left.swap(right)`.
 
@@ -1123,7 +1124,7 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="undeclare_no_pointers"></a><a name="undeclare_no_pointers"></a>undeclare_no_pointers
+## <a name="undeclare_no_pointers"></a><a name="undeclare_no_pointers"></a> undeclare_no_pointers
 
 Informa un Garbage Collector che i caratteri del blocco di memoria definito da un puntatore all'indirizzo di base e la dimensione del blocco possono contenere puntatori tracciabili.
 
@@ -1141,11 +1142,11 @@ Puntatore all'indirizzo di memoria precedentemente contrassegnato con [declare_n
 *dimensioni*\
 Numero di byte nell'intervallo di memoria. Questo valore deve essere uguale al numero usato nella `declare_no_pointers` chiamata.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione informa qualsiasi Garbage Collector che l'intervallo di indirizzi `[ptr, ptr + size)` può ora contenere puntatori tracciabili.
 
-## <a name="undeclare_reachable"></a><a name="undeclare_reachable"></a>undeclare_reachable
+## <a name="undeclare_reachable"></a><a name="undeclare_reachable"></a> undeclare_reachable
 
 Revoca una dichiarazione di raggiungibilità per una posizione di memoria specificata.
 
@@ -1160,11 +1161,11 @@ T *undeclare_reachable(
 *PTR*\
 Puntatore all'indirizzo di memoria precedentemente contrassegnato con [declare_reachable](#declare_reachable).
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Se *ptr* non è **`nullptr`** , la funzione informa qualsiasi Garbage Collector che *ptr* non è più raggiungibile. Restituisce un puntatore derivato in modo sicuro che risulta uguale a *ptr*.
 
-## <a name="uninitialized_copy"></a><a name="uninitialized_copy"></a>uninitialized_copy
+## <a name="uninitialized_copy"></a><a name="uninitialized_copy"></a> uninitialized_copy
 
 Copia gli oggetti da un intervallo di origine specificato in un intervallo di destinazione non inizializzato.
 
@@ -1201,7 +1202,7 @@ Iteratore in avanti che punta al primo elemento dell'intervallo di destinazione.
 
 Iteratore in avanti che punta alla prima posizione oltre l'intervallo di destinazione, a meno che l'intervallo di origine non sia vuoto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo algoritmo consente la separazione dell'allocazione della memoria dalla costruzione di un oggetto.
 
@@ -1284,7 +1285,7 @@ int main()
 }
 ```
 
-## <a name="uninitialized_copy_n"></a><a name="uninitialized_copy_n"></a>uninitialized_copy_n
+## <a name="uninitialized_copy_n"></a><a name="uninitialized_copy_n"></a> uninitialized_copy_n
 
 Crea una copia di un numero specificato di elementi da un iteratore di input. Le copie vengono inserite in un iteratore in avanti.
 
@@ -1321,7 +1322,7 @@ Iteratore in avanti che fa riferimento al punto in cui vengono inserite le nuove
 
 Iteratore in avanti che punta alla prima posizione oltre la destinazione. Se l'intervallo di origine è vuoto, l'iteratore viene indirizzato per *primo*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La funzione di modello esegue in modo efficace il codice seguente:
 
@@ -1336,7 +1337,7 @@ a meno che il codice non generi un'eccezione. In tal caso, tutti gli oggetti cre
 
 L'overload con criteri di esecuzione è una novità di C++ 17.
 
-## <a name="uninitialized_default_construct"></a><a name="uninitialized_default_construct"></a>uninitialized_default_construct
+## <a name="uninitialized_default_construct"></a><a name="uninitialized_default_construct"></a> uninitialized_default_construct
 
 Il valore predefinito crea oggetti degli iteratori `value_type` nell'intervallo specificato.
 
@@ -1364,7 +1365,7 @@ Iteratore che punta al primo elemento dell'intervallo da costruire.
 *Ultima*\
 Iteratore che punta a un elemento successivo all'ultimo elemento nell'intervallo da costruire.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La versione senza criteri di esecuzione è in realtà identica a quanto segue:
 
@@ -1376,11 +1377,11 @@ for (; first != last; ++first)
 
 Se viene generata un'eccezione, gli oggetti costruiti in precedenza vengono eliminati in ordine non specificato.
 
-La versione con criteri di esecuzione ha lo stesso risultato, ma viene eseguita in base ai *criteri*specificati.
+La versione con criteri di esecuzione ha lo stesso risultato, ma viene eseguita in base ai *criteri* specificati.
 
 Queste funzioni sono nuove in C++ 17.
 
-## <a name="uninitialized_default_construct_n"></a><a name="uninitialized_default_construct_n"></a>uninitialized_default_construct_n
+## <a name="uninitialized_default_construct_n"></a><a name="uninitialized_default_construct_n"></a> uninitialized_default_construct_n
 
 Il valore predefinito costruisce un numero specificato di oggetti dell'iteratore `value_type` , a partire dalla posizione specificata.
 
@@ -1412,7 +1413,7 @@ Numero di elementi nell'intervallo di destinazione da costruire.
 
 Iteratore in avanti che punta alla prima posizione oltre l'intervallo di destinazione, a meno che l'intervallo di origine non sia vuoto.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La versione senza criteri di esecuzione è in realtà identica a quanto segue:
 
@@ -1425,11 +1426,11 @@ return first;
 
 Se viene generata un'eccezione, gli oggetti costruiti in precedenza vengono eliminati in ordine non specificato.
 
-La versione con criteri di esecuzione ha lo stesso risultato, ma viene eseguita in base ai *criteri*specificati.
+La versione con criteri di esecuzione ha lo stesso risultato, ma viene eseguita in base ai *criteri* specificati.
 
 Queste funzioni sono nuove in C++ 17.
 
-## <a name="uninitialized_fill"></a><a name="uninitialized_fill"></a>uninitialized_fill
+## <a name="uninitialized_fill"></a><a name="uninitialized_fill"></a> uninitialized_fill
 
 Copia gli oggetti di un valore specificato in un intervallo di destinazione non inizializzato.
 
@@ -1462,7 +1463,7 @@ Iteratore in poi che punta all'ultimo elemento dell'intervallo di destinazione d
 *valore*\
 Valore da utilizzare per inizializzare l'intervallo di destinazione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo algoritmo consente la separazione dell'allocazione della memoria dalla costruzione di un oggetto.
 
@@ -1517,7 +1518,7 @@ int main()
 The initialized Array contains: 25 25 25 25 25 25 25 25 25 25
 ```
 
-## <a name="uninitialized_fill_n"></a><a name="uninitialized_fill_n"></a>uninitialized_fill_n
+## <a name="uninitialized_fill_n"></a><a name="uninitialized_fill_n"></a> uninitialized_fill_n
 
 Copia gli oggetti di un valore specificato nel numero specificato di elementi di un intervallo di destinazione non inizializzato.
 
@@ -1550,7 +1551,7 @@ Numero di elementi da inizializzare.
 *valore*\
 Valore da utilizzare per inizializzare l'intervallo di destinazione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 Questo algoritmo consente la separazione dell'allocazione della memoria dalla costruzione di un oggetto.
 
@@ -1599,7 +1600,7 @@ int main()
 }
 ```
 
-## <a name="uninitialized_move"></a><a name="uninitialized_move"></a>uninitialized_move
+## <a name="uninitialized_move"></a><a name="uninitialized_move"></a> uninitialized_move
 
 Sposta gli elementi di un intervallo di origine in un'area di memoria di destinazione non inizializzata.
 
@@ -1632,7 +1633,7 @@ Iteratore di input che punta a un elemento successivo all'ultimo elemento dell'i
 *dest*\
 Inizio dell'intervallo di destinazione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La versione senza criteri di esecuzione è in realtà identica a quanto segue:
 
@@ -1645,11 +1646,11 @@ return dest;
 
 Se viene generata un'eccezione, è possibile che alcuni oggetti nell'intervallo di origine rimangano in uno stato valido ma non specificato. Gli oggetti costruiti in precedenza vengono eliminati in ordine non specificato.
 
-La versione con criteri di esecuzione ha lo stesso risultato, ma viene eseguita in base ai *criteri*specificati.
+La versione con criteri di esecuzione ha lo stesso risultato, ma viene eseguita in base ai *criteri* specificati.
 
 Queste funzioni sono nuove in C++ 17.
 
-## <a name="uninitialized_move_n"></a><a name="uninitialized_move_n"></a>uninitialized_move_n
+## <a name="uninitialized_move_n"></a><a name="uninitialized_move_n"></a> uninitialized_move_n
 
 Sposta un numero specificato di elementi da un intervallo di origine a un'area di memoria di destinazione non inizializzata.
 
@@ -1682,7 +1683,7 @@ Numero di elementi nell'intervallo di origine da spostare.
 *dest*\
 Inizio dell'intervallo di destinazione.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La versione senza criteri di esecuzione è in realtà identica a quanto segue:
 
@@ -1695,11 +1696,11 @@ return {first, dest};
 
 Se viene generata un'eccezione, è possibile che alcuni oggetti nell'intervallo di origine rimangano in uno stato valido ma non specificato. Gli oggetti costruiti in precedenza vengono eliminati in ordine non specificato.
 
-La versione con criteri di esecuzione ha lo stesso risultato, ma viene eseguita in base ai *criteri*specificati.
+La versione con criteri di esecuzione ha lo stesso risultato, ma viene eseguita in base ai *criteri* specificati.
 
 Queste funzioni sono nuove in C++ 17.
 
-## <a name="uninitialized_value_construct"></a><a name="uninitialized_value_construct"></a>uninitialized_value_construct
+## <a name="uninitialized_value_construct"></a><a name="uninitialized_value_construct"></a> uninitialized_value_construct
 
 Costruisce gli oggetti degli iteratori `value_type` in base all'inizializzazione del valore, nell'intervallo specificato.
 
@@ -1727,7 +1728,7 @@ Iteratore che punta al primo elemento del costrutto range to value.
 *Ultima*\
 Iteratore che punta a un elemento successivo all'ultimo elemento del costrutto range to value.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La versione senza criteri di esecuzione è in realtà identica a quanto segue:
 
@@ -1739,13 +1740,13 @@ for (; first != last; ++first)
 
 Se viene generata un'eccezione, gli oggetti costruiti in precedenza vengono eliminati in ordine non specificato.
 
-La versione con criteri di esecuzione ha lo stesso risultato, ma viene eseguita in base ai *criteri*specificati.
+La versione con criteri di esecuzione ha lo stesso risultato, ma viene eseguita in base ai *criteri* specificati.
 
 Se si verifica un errore di allocazione della memoria, `std::bad_alloc` viene generata un'eccezione.
 
 Queste funzioni sono nuove in C++ 17.
 
-## <a name="uninitialized_value_construct_n"></a><a name="uninitialized_value_construct_n"></a>uninitialized_value_construct_n
+## <a name="uninitialized_value_construct_n"></a><a name="uninitialized_value_construct_n"></a> uninitialized_value_construct_n
 
 Costruisce un numero specificato di oggetti dell' `value_type` inizializzazione per valore dell'iteratore, a partire dalla posizione specificata.
 
@@ -1773,7 +1774,7 @@ Iteratore che punta al primo elemento dell'intervallo di destinazione da costrui
 *conteggio*\
 Numero di elementi nell'intervallo di destinazione da costruire.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Commenti
 
 La versione senza criteri di esecuzione è in realtà identica a quanto segue:
 
@@ -1786,13 +1787,13 @@ return first;
 
 Se viene generata un'eccezione, gli oggetti costruiti in precedenza vengono eliminati in ordine non specificato.
 
-La versione con criteri di esecuzione ha lo stesso risultato, ma viene eseguita in base ai *criteri*specificati.
+La versione con criteri di esecuzione ha lo stesso risultato, ma viene eseguita in base ai *criteri* specificati.
 
 Se si verifica un errore di allocazione della memoria, `std::bad_alloc` viene generata un'eccezione.
 
 Queste funzioni sono nuove in C++ 17.
 
-## <a name="uses_allocator_v"></a><a name="uses_allocator_v"></a>uses_allocator_v
+## <a name="uses_allocator_v"></a><a name="uses_allocator_v"></a> uses_allocator_v
 
 Modello di variabile helper per accedere al valore del `uses_allocator` modello.
 
