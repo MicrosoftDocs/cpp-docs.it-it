@@ -270,6 +270,8 @@
                   href: ../c-language/string-literals-in-primary-expressions.md
                 - name: Espressioni tra parentesi
                   href: ../c-language/expressions-in-parentheses.md
+                - name: Selezione generica (C11)
+                  href: ../c-language/generic_selection.md
             - name: Espressioni l-value e r-value
               href: ../c-language/l-value-and-r-value-expressions.md
             - name: Espressioni costanti C
