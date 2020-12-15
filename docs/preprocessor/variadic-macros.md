@@ -6,22 +6,22 @@ helpviewer_keywords:
 - variadic macros [C++]
 - __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-ms.openlocfilehash: 876e0ca46dd8774796c8a4f9d7572cbff5caa93c
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 74bf5b68696499ea8b1d88722d8a9e55f2ecab2d
+ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97149656"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97514584"
 ---
 # <a name="variadic-macros"></a>Macro Variadic
 
 Le macro variadic sono macro di tipo funzione che contengono un numero variabile di argomenti.
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 Per usare le macro Variadic, i puntini di sospensione possono essere specificati come argomento formale finale in una definizione di macro e l'identificatore `__VA_ARGS__` di sostituzione può essere usato nella definizione per inserire gli argomenti aggiuntivi.  `__VA_ARGS__` viene sostituito da tutti gli argomenti che corrispondono ai puntini di sospensione, incluse le virgole tra di essi.
 
-Lo standard C specifica che è necessario passare almeno un argomento ai puntini di sospensione per assicurarsi che la macro non venga risolta in un'espressione con una virgola finale. L'implementazione di Microsoft C++ tradizionale evita una virgola finale se nessun argomento viene passato ai puntini di sospensione. Quando `/experimental:preprocessor` viene impostata l'opzione del compilatore, la virgola finale non viene annullata.
+Lo standard C specifica che è necessario passare almeno un argomento ai puntini di sospensione per assicurarsi che la macro non venga risolta in un'espressione con una virgola finale. L'implementazione di Microsoft C++ tradizionale evita una virgola finale se nessun argomento viene passato ai puntini di sospensione. Quando [`/Zc:preprocessor`](../build/reference/zc-preprocessor.md) viene impostata l'opzione del compilatore, la virgola finale non viene disattivata.
 
 ## <a name="example"></a>Esempio
 

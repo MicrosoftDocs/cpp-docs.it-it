@@ -4,12 +4,12 @@ description: Elenco di riferimenti in ordine alfabetico delle opzioni della riga
 ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 81f2fbfe385e8655193c5862455e6ffca3719c96
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 532ee4aceef281f7aa52fee6cd405a3520409218
+ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520862"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97514545"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opzioni del compilatore elencate in ordine alfabetico
 
@@ -40,7 +40,7 @@ Questa tabella contiene un elenco in ordine alfabetico delle opzioni del compila
 | [`/errorReport`](errorreport-report-internal-compiler-errors.md) | Deprecato. La segnalazione degli errori è controllata dalle impostazioni di [segnalazione errori Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
 | [`/execution-charset`](execution-charset-set-execution-character-set.md) | Impostare il set di caratteri di esecuzione. |
 | [`/experimental:module`](experimental-module.md) | Abilita il supporto del modulo sperimentale. |
-| [`/experimental:preprocessor`](experimental-preprocessor.md) | Abilita il supporto per il preprocessore conforme sperimentale. |
+| [`/experimental:preprocessor`](experimental-preprocessor.md) | Deprecato. Abilita il supporto per il preprocessore conforme sperimentale. Usare [`/Zc:preprocessor`](zc-preprocessor.md) |
 | [`/F`](f-set-stack-size.md) | Imposta la dimensione dello stack. |
 | [`/favor`](favor-optimize-for-architecture-specifics.md) | Produce codice ottimizzato per un'architettura x64 specifica. Oppure, per le micro-architetture specifiche nelle architetture AMD64 ed EM64T. |
 | [`/FA`](fa-fa-listing-file.md) | Crea un file di listato. |
@@ -119,7 +119,7 @@ Questa tabella contiene un elenco in ordine alfabetico delle opzioni del compila
 | [`/Qspectre`](qspectre.md) | Specifica la generazione di istruzioni del compilatore per mitigare determinate vulnerabilità di sicurezza di Spectre variante 1. |
 | [`/Qspectre-load`](qspectre-load.md) | Specifica la generazione del compilatore di istruzioni di serializzazione per attenuare le vulnerabilità della sicurezza Spectre basate sulle istruzioni di caricamento. |
 | [`/Qspectre-load-cf`](qspectre-load-cf.md) | Specifica la generazione del compilatore di istruzioni di serializzazione per attenuare le vulnerabilità della sicurezza Spectre basate sulle istruzioni del flusso di controllo che caricano la memoria. |
-| [`/Qvec-report`(Livello di segnalazione Vectorizer automatico)](qvec-report-auto-vectorizer-reporting-level.md) | Abilita livelli di creazione rapporti per la vettorializzazione automatica. |
+| [`/Qvec-report` (Livello di segnalazione Vectorizer automatico)](qvec-report-auto-vectorizer-reporting-level.md) | Abilita livelli di creazione rapporti per la vettorializzazione automatica. |
 | [`/RTC`](rtc-run-time-error-checks.md) | Attiva il controllo degli errori di runtime. |
 | [`/sdl`](sdl-enable-additional-security-checks.md) | Abilita funzionalità e avvisi di sicurezza aggiuntivi. |
 | [`/showIncludes`](showincludes-list-include-files.md) | Visualizza un elenco di file di inclusione durante la compilazione. |

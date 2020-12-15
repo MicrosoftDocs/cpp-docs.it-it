@@ -5,18 +5,18 @@ ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: beb10404075d9541872ff4780a725e177356a3b8
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: bf12948658b5f7e3211c423b5302bc52d1b87729
+ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520953"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97514568"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opzioni del compilatore elencate per categoria
 
 In questo articolo viene fornito un elenco organizzato per categorie delle opzioni del compilatore. Per un elenco alfabetico, vedere [Opzioni del compilatore elencate in ordine alfabetico](compiler-options-listed-alphabetically.md).
 
-## <a name="optimization"></a>Ottimizzazione
+## <a name="optimization"></a>Optimization
 
 | Opzione | Scopo |
 |--|--|
@@ -209,7 +209,7 @@ Le opzioni sperimentali possono essere supportate solo da determinate versioni d
 | Opzione | Scopo |
 |--|--|
 | [`/experimental:module`](experimental-module.md) | Abilita il supporto del modulo sperimentale. |
-| [`/experimental:preprocessor`](experimental-preprocessor.md) | Abilita il supporto per il preprocessore conforme sperimentale. |
+| [`/experimental:preprocessor`](experimental-preprocessor.md) | Deprecato. Abilita il supporto per il preprocessore conforme sperimentale. Usare [`/Zc:preprocessor`](zc-preprocessor.md) |
 
 ## <a name="deprecated-and-removed-compiler-options"></a>Opzioni del compilatore deprecate e rimosse
 

@@ -1,20 +1,19 @@
 ---
 description: 'Altre informazioni su: opzioni del compilatore'
 title: Opzioni del compilatore MSVC
-ms.date: 05/06/2019
+ms.date: 12/14/2020
 helpviewer_keywords:
 - cl.exe compiler
 - x86 MSVC compiler
 - ARM MSVC compiler
 - compiler options, C++
 - x64 MSVC compiler
-ms.assetid: ed3376c8-bef4-4c9a-80e9-3b5da232644c
-ms.openlocfilehash: a6b124fa5fce68844d53c1324da48c17ef5a9ccf
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: f89695b00be4ed67a00f947c6b76943bfa5eaf59
+ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97197023"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97514571"
 ---
 # <a name="compiler-options"></a>Opzioni del compilatore
 
@@ -25,7 +24,7 @@ cl.exe è uno strumento che controlla i compilatori e il linker Microsoft C++ (M
 
 I compilatori producono file oggetto COFF (Common Object File Format) (con estensione obj). Il linker produce file eseguibili (con estensione exe) o librerie a collegamento dinamico (dll).
 
-Si noti che tutte le opzioni del compilatore fanno distinzione maiuscole/minuscole. `/` `-` Per specificare un'opzione del compilatore, è possibile usare una barra () o un trattino ().
+Tutte le opzioni del compilatore fanno distinzione tra maiuscole e minuscole. `/` `-` Per specificare un'opzione del compilatore, è possibile usare una barra () o un trattino ().
 
 Per eseguire la compilazione senza collegamento, usare l'opzione [/c](c-compile-without-linking.md) .
 
@@ -51,7 +50,7 @@ Nell'argomento relativo a ogni opzione del compilatore viene illustrato come è 
 
 Le [Opzioni del linker MSVC](linker-options.md) influiscono anche sul modo in cui viene compilato il programma.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Riferimenti alla compilazione in C/C++](c-cpp-building-reference.md)<br/>
 [CL richiama il linker](cl-invokes-the-linker.md)
