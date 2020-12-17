@@ -1,40 +1,39 @@
 ---
-description: 'Altre informazioni su: procedura: specificare informazioni aggiuntive sul codice usando _Analysis_assume'
-title: Usare _Analysis_assume per gli hint di analisi del codice
-ms.date: 11/04/2016
+description: Per ulteriori informazioni su come specificare informazioni aggiuntive sul codice, utilizzare _Analysis_assume_.
+title: Usare _Analysis_assume_ per gli hint di analisi del codice
+ms.date: 12/16/2020
 ms.topic: conceptual
 f1_keywords:
-- _Analysis_assume
+- _Analysis_assume_
 helpviewer_keywords:
-- _Analysis_assume
-ms.assetid: 51205d97-4084-4cf4-a5ed-3eeaf67deb1b
-ms.openlocfilehash: 1960fae929f1bd0ffbac4979b76541fd0d396e42
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+- _Analysis_assume_
+ms.openlocfilehash: f4244a896d4334cb6c5e857e63b39be0cd53b08b
+ms.sourcegitcommit: 387ce22a3b0137f99cbb856a772b5a910c9eba99
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97151554"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97645124"
 ---
-# <a name="how-to-specify-additional-code-information-by-using-_analysis_assume"></a>Procedura: specificare informazioni aggiuntive sul codice utilizzando _Analysis_assume
+# <a name="how-to-specify-additional-code-information-by-using-_analysis_assume_"></a>Come specificare informazioni aggiuntive sul codice usando `_Analysis_assume_`
 
-È possibile fornire suggerimenti allo strumento di analisi del codice per il codice C/C++ che consente il processo di analisi e la riduzione degli avvisi. Per fornire informazioni aggiuntive, utilizzare la funzione seguente:
+È possibile fornire suggerimenti allo strumento di analisi del codice per il codice C/C++ che consente il processo di analisi e la riduzione degli avvisi. Per fornire informazioni aggiuntive, usare la macro di funzione seguente:
 
-`_Analysis_assume(`  `expr`  `)`
+`_Analysis_assume( expr )`
 
-`expr` -qualsiasi espressione che si presuppone restituisca true.
+*`expr`* -qualsiasi espressione che si presuppone restituisca true.
 
-Lo strumento di analisi del codice presuppone che la condizione rappresentata dall'espressione sia true nel punto in cui viene visualizzata la funzione e rimanga true fino a quando l'espressione non viene modificata, ad esempio per assegnazione a una variabile.
+Lo strumento di analisi del codice presuppone che la condizione rappresentata dall'espressione *`expr`* sia true nel punto in cui la funzione viene visualizzata. E rimane true fino a quando non *`expr`* viene modificato, ad esempio, per assegnazione a una variabile.
 
 > [!NOTE]
-> `_Analysis_assume` non influisca sull'ottimizzazione del codice. Al di fuori dello strumento di analisi del codice, `_Analysis_assume` viene definito come un no-op.
+> `_Analysis_assume_` non influisca sull'ottimizzazione del codice. Al di fuori dello strumento di analisi del codice, `_Analysis_assume_` viene definito come un no-op.
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente usa `_Analysis_assume` per correggere l'avviso di analisi del codice [C6388](../code-quality/c6388.md):
+Il codice seguente usa `_Analysis_assume_` per correggere l'avviso di analisi del codice [C6388](../code-quality/c6388.md):
 
 ```cpp
-#include<windows.h>
-#include<codeanalysis\sourceannotations.h>
+#include <windows.h>
+#include <codeanalysis\sourceannotations.h>
 
 using namespace vc_attributes;
 
@@ -48,11 +47,11 @@ void test()
 {
     char pc = (char)malloc(5);
     FreeAndNull(&pc);
-    _Analysis_assume(pc == NULL);
+    _Analysis_assume_(pc == NULL);
     f(pc);
 }
 ```
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [__assume](../intrinsics/assume.md)

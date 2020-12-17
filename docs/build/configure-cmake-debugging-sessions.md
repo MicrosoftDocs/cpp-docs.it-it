@@ -1,15 +1,15 @@
 ---
 title: Configurare le sessioni di debug di CMake in Visual Studio
 description: Viene descritto come usare Visual Studio per configurare le impostazioni del debugger CMake.
-ms.date: 12/07/2020
+ms.date: 12/16/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: b289acf8d0aa89cef1d2a72c988b41d99914f828
-ms.sourcegitcommit: 102bd6f7a878d85c8ceab8f28d0359f562850ea0
+ms.openlocfilehash: 36a4d64b987c1468caa06ed8670dfaf7d44abad3
+ms.sourcegitcommit: 387ce22a3b0137f99cbb856a772b5a910c9eba99
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96862568"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97645106"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Configurare le sessioni di debug di CMake
 
@@ -21,7 +21,7 @@ Il supporto di CMake nativo è disponibile in Visual Studio 2017 e versioni succ
 
 ::: moniker range=">=msvc-150"
 
-Tutte le destinazioni CMake eseguibili sono visualizzate nell'elenco a discesa **Elemento di avvio** nella barra degli strumenti **Generale**. Selezionarne uno per avviare una sessione di debug e avviare il debugger.
+Tutte le destinazioni CMake eseguibili vengono visualizzate nell'elenco a discesa **elemento di avvio** nella barra degli strumenti. Selezionarne uno per avviare una sessione di debug e avviare il debugger.
 
 ![Elenco a discesa di elementi di avvio CMake](media/cmake-startup-item-dropdown.png "Elenco a discesa di elementi di avvio CMake")
 
@@ -112,8 +112,10 @@ In Visual Studio 2019 versione 16,6 è stata aggiunta una nuova configurazione d
 #### <a name="additional-options-allowed-with-the-gdbserver-configuration-167-or-later"></a>Opzioni aggiuntive consentite con la `gdbserver` configurazione (16,7 o versione successiva)
 
 - `program`: Il valore predefinito è `"${debugInfo.fullTargetPath}"` . Percorso UNIX dell'applicazione di cui eseguire il debug. Obbligatorio solo se diverso dall'eseguibile di destinazione nel percorso di compilazione o di distribuzione.
-> [!TIP]
-> La distribuzione non è ancora supportata per gli scenari locali di compilazione incrociata. Se si esegue la compilazione incrociata in Windows, ad esempio usando un compilatore incrociato in Windows per creare un eseguibile ARM di Linux, sarà necessario copiare manualmente il file binario nel percorso specificato da `program` nel computer ARM remoto prima del debug.
+
+  > [!TIP]
+  > La distribuzione non è ancora supportata per gli scenari locali di compilazione incrociata. Se si esegue la compilazione incrociata in Windows, ad esempio usando un compilatore incrociato in Windows per creare un eseguibile ARM di Linux, sarà necessario copiare manualmente il file binario nel percorso specificato da `program` nel computer ARM remoto prima del debug.
+
 - `remoteMachineName`: Il valore predefinito è `"${debugInfo.remoteMachineName}"` . Nome del sistema remoto che ospita il programma di cui eseguire il debug. Obbligatorio solo se diverso dal sistema di compilazione. Deve disporre di una voce esistente nella [gestione connessione](../linux/connect-to-your-remote-linux-computer.md). Premere **CTRL + barra spaziatrice** per visualizzare un elenco di tutte le connessioni remote esistenti.
 - `cwd`: Il valore predefinito è `"${debugInfo.defaultWorkingDirectory}"` . Percorso UNIX completo della directory nel sistema remoto in cui `program` viene eseguito. La directory deve esistere.
 - `gdbPath`: Il valore predefinito è `${debugInfo.vsInstalledGdb}` . Percorso completo di Windows per l'oggetto `gdb` usato per eseguire il debug. Per impostazione predefinita viene `gdb` installato con il carico di lavoro sviluppo di Linux con C/C++.
@@ -141,7 +143,7 @@ Visual Studio supporta `gdb` l'esecuzione di comandi personalizzati per interagi
 
 ### <a name="enable-logging"></a>Abilitazione della registrazione
 
-Abilitare la registrazione MIEngine per visualizzare i comandi inviati a `gdb` , l'output `gdb` restituito e il tempo necessario per ogni comando. [Altre informazioni](https://github.com/microsoft/MIEngine/wiki/Logging)
+Abilitare la registrazione MIEngine per visualizzare i comandi inviati a `gdb` , l'output `gdb` restituito e il tempo necessario per ogni comando. [Scopri di più](https://github.com/microsoft/MIEngine/wiki/Logging)
 
 ### <a name="configuration-type-cppdbg"></a>Tipo di configurazione `cppdbg`
 
@@ -163,7 +165,7 @@ Abilitare la registrazione MIEngine per visualizzare i comandi inviati a `gdb` ,
 
 - `cwd`: Il valore predefinito è `"${debugInfo.defaultWorkingDirectory}"` . Percorso UNIX completo della directory nel sistema remoto in cui `program` viene eseguito. La directory deve esistere.
 
-- `environment`: Variabili di ambiente aggiuntive passate al programma di cui è in corso il debug. ad esempio:
+- `environment`: Variabili di ambiente aggiuntive passate al programma di cui è in corso il debug. Ad esempio,
 
   ```json
     "environment": [
@@ -228,7 +230,7 @@ Abilitare la registrazione MIEngine per visualizzare i comandi inviati a `gdb` ,
 
 ::: moniker range=">=msvc-150"
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Progetti CMake in Visual Studio](cmake-projects-in-visual-studio.md)\
 [Configurare un progetto CMake per Linux](../linux/cmake-linux-project.md)\

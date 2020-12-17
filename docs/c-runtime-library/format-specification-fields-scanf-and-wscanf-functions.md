@@ -3,7 +3,7 @@ description: 'Altre informazioni su: campi di specifica di formato: funzioni sca
 title: 'Campi per la specifica di formato: funzioni scanf e wscanf'
 ms.date: 11/04/2016
 ms.topic: reference
-ms.custom: contperfq1
+ms.custom: contperf-fy21q1
 helpviewer_keywords:
 - width, specifications in scanf function
 - scanf format specifications
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - format specification fields for scanf function
 - type fields
 ms.assetid: 7e95de1b-0b71-4de3-9f81-c9560c78e039
-ms.openlocfilehash: 64d889af8200f5dcc745d628e02c388d74039bdd
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 716d8a498fe8b4bc895d48bf136e87781f0e8718
+ms.sourcegitcommit: 387ce22a3b0137f99cbb856a772b5a910c9eba99
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97303909"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97645137"
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>Campi per la specifica di formato: funzioni scanf e wscanf
 
@@ -50,7 +50,7 @@ Un asterisco (`*`) che segue il segno di percentuale elimina l'assegnazione del 
 
 Le versioni sicure (quelle con il suffisso `_s`) della famiglia di funzioni `scanf` richiedono che venga passato un parametro di dimensione del buffer immediatamente dopo ciascun parametro di tipo `c`, `C`, `s`, `S` o `[`. Per altre informazioni sulle versioni sicure della famiglia di funzioni `scanf`, vedere [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Specifica della larghezza per scanf](../c-runtime-library/scanf-width-specification.md)<br/>
 [Caratteri di campo di tipo scanf](../c-runtime-library/scanf-type-field-characters.md)<br/>

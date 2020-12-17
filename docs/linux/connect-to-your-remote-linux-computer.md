@@ -2,12 +2,12 @@
 title: Connettersi al sistema Linux di destinazione in Visual Studio
 description: Come connettersi a un computer Linux remoto o a un sottosistema Windows per Linux dall'interno di un progetto Visual Studio C++.
 ms.date: 01/17/2020
-ms.openlocfilehash: da74d1c735a29304fdf46e920eac45580f386259
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: b1907cc4c1c80a9d8ffba06849c9a80f1a8fbfbe
+ms.sourcegitcommit: 387ce22a3b0137f99cbb856a772b5a910c9eba99
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921789"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97645215"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Connettersi al sistema Linux di destinazione in Visual Studio
 
@@ -76,7 +76,7 @@ Se ssh non è già configurato e in esecuzione nel sistema Linux, attenersi alla
 
    ![Connect to Remote System (Connetti al sistema remoto)](media/connect.png)
 
-1. Immettere le seguenti informazioni:
+1. Immettere le informazioni seguenti:
 
    | Voce | Descrizione
    | ----- | ---
@@ -106,7 +106,7 @@ Se ssh non è già configurato e in esecuzione nel sistema Linux, attenersi alla
 
 ## <a name="logging-for-remote-connections"></a>Registrazione per le connessioni remote
 
-   È possibile abilitare la registrazione per risolvere i problemi di connessione. Nella barra dei menu selezionare **strumenti > opzioni** . Nella finestra di dialogo **Opzioni** selezionare **multipiattaforma > registrazione** :
+   È possibile abilitare la registrazione per risolvere i problemi di connessione. Nella barra dei menu selezionare **strumenti > opzioni**. Nella finestra di dialogo **Opzioni** selezionare **multipiattaforma > registrazione**:
 
    ![Registrazione remota](media/remote-logging-vs2019.png)
 
@@ -116,7 +116,7 @@ Se ssh non è già configurato e in esecuzione nel sistema Linux, attenersi alla
 
 ## <a name="command-line-utility-for-the-connection-manager"></a>Utilità della riga di comando per la gestione connessione  
 
-**Visual studio 2019 versione 16,5 o successiva** : ConnectionManager.exe è un'utilità da riga di comando per gestire le connessioni di sviluppo remoto all'esterno di Visual Studio. È utile per attività come il provisioning di un nuovo computer di sviluppo. In alternativa, è possibile usarlo per configurare Visual Studio per l'integrazione continua. Per esempi e un riferimento completo al comando ConnectionManager, vedere [ConnectionManager Reference](connectionmanager-reference.md).  
+**Visual studio 2019 versione 16,5 o successiva**: ConnectionManager.exe è un'utilità da riga di comando per gestire le connessioni di sviluppo remoto all'esterno di Visual Studio. È utile per attività come il provisioning di un nuovo computer di sviluppo. In alternativa, è possibile usarlo per configurare Visual Studio per l'integrazione continua. Per esempi e un riferimento completo al comando ConnectionManager, vedere [ConnectionManager Reference](connectionmanager-reference.md).  
 
 ::: moniker-end
 
@@ -124,9 +124,9 @@ Se ssh non è già configurato e in esecuzione nel sistema Linux, attenersi alla
 
 ## <a name="tcp-port-forwarding"></a>Porting porta TCP
 
-Il supporto Linux di Visual Studio presenta una dipendenza dall'invio della porta TCP. **Rsync** e **gdbserver** sono interessati se l'invio della porta TCP è disabilitato nel sistema remoto. Se si è interessati da questa dipendenza, è possibile votare questo ticket di [Suggerimento](https://developercommunity.visualstudio.com/idea/840265/dont-rely-on-ssh-tcp-port-forwarding-for-c-remote.html) sulla community degli sviluppatori.
+Il supporto Linux di Visual Studio presenta una dipendenza dall'invio della porta TCP. **Rsync** e **gdbserver** sono interessati se l'invio della porta TCP è disabilitato nel sistema remoto. Se si è interessati da questa dipendenza, è possibile votare questo ticket di [Suggerimento](https://developercommunity2.visualstudio.com/t/shDonshshtsh-shrelysh-s/840265?space=62) sulla community degli sviluppatori.
 
-rsync viene usato dai progetti Linux basati su MSBuild e dai progetti CMake per [copiare le intestazioni dal sistema remoto a Windows per l'uso da parte di IntelliSense](configure-a-linux-project.md#remote_intellisense). Quando non è possibile abilitare l'invio della porta TCP, disabilitare il download automatico delle intestazioni remote. Per disabilitarlo, utilizzare **strumenti > opzioni > multipiattaforma > gestione connessione > gestione IntelliSense per le intestazioni remote** . Se nel sistema remoto non è abilitato l'invio della porta TCP, questo errore viene visualizzato quando viene avviato il download delle intestazioni remote per IntelliSense:
+rsync viene usato dai progetti Linux basati su MSBuild e dai progetti CMake per [copiare le intestazioni dal sistema remoto a Windows per l'uso da parte di IntelliSense](configure-a-linux-project.md#remote_intellisense). Quando non è possibile abilitare l'invio della porta TCP, disabilitare il download automatico delle intestazioni remote. Per disabilitarlo, utilizzare **strumenti > opzioni > multipiattaforma > gestione connessione > gestione IntelliSense per le intestazioni remote**. Se nel sistema remoto non è abilitato l'invio della porta TCP, questo errore viene visualizzato quando viene avviato il download delle intestazioni remote per IntelliSense:
 
 ![Errore intestazioni](media/port-forwarding-headers-error.png)
 
@@ -142,7 +142,7 @@ gdbserver può essere usato per eseguire il debug su dispositivi incorporati. Se
 
 ::: moniker range="msvc-150"
 
-In Visual Studio 2017 si usano gli stessi passaggi per connettersi a WSL quando si usa per un computer Linux remoto. Usare **localhost** per **Nome host** .
+In Visual Studio 2017 si usano gli stessi passaggi per connettersi a WSL quando si usa per un computer Linux remoto. Usare **localhost** per **Nome host**.
 
 ::: moniker-end
 

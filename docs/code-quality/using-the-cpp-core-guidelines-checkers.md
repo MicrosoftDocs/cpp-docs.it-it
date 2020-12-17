@@ -1,16 +1,16 @@
 ---
 title: Uso dei correttori Linee guida di base di C++
 description: Come configurare e utilizzare le regole di analisi del codice Microsoft C++ per Linee guida di base di C++.
-ms.date: 07/27/2020
+ms.date: 12/16/2020
 ms.topic: conceptual
 dev_langs:
 - CPP
-ms.openlocfilehash: 4fb06b0f78c93e6b76e0b8d64d7dfbdc541cf299
-ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
+ms.openlocfilehash: 93b69839bc9e5ffd45a08da12e84028eea10aef4
+ms.sourcegitcommit: 387ce22a3b0137f99cbb856a772b5a910c9eba99
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94334143"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97645163"
 ---
 # <a name="use-the-c-core-guidelines-checkers"></a>Usare i controlli delle Linee guida di base di C++
 
@@ -30,7 +30,7 @@ Un subset di regole di Regole di base di C++ è incluso nel set di regole consig
 
 1. Aprire la finestra di dialogo  **pagine delle proprietà** per il progetto.
 
-1. Selezionare la pagina delle proprietà di analisi del codice delle proprietà di **configurazione** > **Code Analysis** .
+1. Selezionare la pagina delle proprietà di analisi del codice delle proprietà di **configurazione** >  .
 
 1. Selezionare la casella **di controllo Abilita analisi codice su compilazione** .
 
@@ -49,7 +49,7 @@ Un subset di regole di Regole di base di C++ è incluso nel set di regole consig
 
 1. Aprire la finestra di dialogo  **pagine delle proprietà** per il progetto.
 
-1. Selezionare la pagina delle proprietà di analisi del codice delle proprietà di **configurazione** > **Code Analysis** .
+1. Selezionare la pagina delle proprietà di analisi del codice delle proprietà di **configurazione** >  .
 
 1. Impostare le proprietà **Abilita analisi codice per compilazione** e **Abilita Microsoft Code Analysis** .
 
@@ -116,43 +116,43 @@ I Linee guida di base di C++ sono utili per scrivere codice migliore e sicuro. T
 
 Quando vengono aggiunte nuove regole al controllo Linee guida di base di C++, il numero di avvisi generati per il codice preesistente può aumentare. È possibile utilizzare set di regole predefiniti per filtrare i tipi di regole da abilitare. Per la maggior parte delle regole in [Visual Studio regole di base di C++ riferimento](code-analysis-for-cpp-corecheck.md)sono disponibili articoli di riferimento.
 
-- **Regole aritmetiche** : regole per rilevare l' [overflow](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-overflow)aritmetico, [le operazioni senza](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-unsigned)firma e la [manipolazione di bit](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-nonnegative). <sup>15,6</sup>
+- **Regole aritmetiche**: regole per rilevare l' [overflow](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-overflow)aritmetico, [le operazioni senza](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-unsigned)firma e la [manipolazione di bit](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-nonnegative). <sup>15,6</sup>
 
-- **Bounds Rules** : applica il [profilo dei limiti della linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile). <sup>15,3</sup>
+- **Bounds Rules**: applica il [profilo dei limiti della linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile). <sup>15,3</sup>
 
-- **Regole di classe** : alcune regole che si concentrano sull'utilizzo corretto di funzioni membro speciali e specifiche virtuali. Si tratta di un subset dei controlli consigliati per [le classi e le gerarchie](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-class)di classi. <sup>15,5</sup>
+- **Regole di classe**: alcune regole che si concentrano sull'utilizzo corretto di funzioni membro speciali e specifiche virtuali. Si tratta di un subset dei controlli consigliati per [le classi e le gerarchie](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-class)di classi. <sup>15,5</sup>
 
-- **Regole di concorrenza** : una singola regola, che rileva le dichiarazioni di oggetti di Guard non valido. Per altre informazioni, vedere [linee guida correlate alla concorrenza](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-concurrency). <sup>15,5</sup>
+- **Regole di concorrenza**: una singola regola, che rileva le dichiarazioni di oggetti di Guard non valido. Per altre informazioni, vedere [linee guida correlate alla concorrenza](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-concurrency). <sup>15,5</sup>
 
-- **Regole const** : impone [controlli correlati a const dal linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con-constants-and-immutability). <sup>15,3</sup>
+- **Regole const**: impone [controlli correlati a const dal linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con-constants-and-immutability). <sup>15,3</sup>
 
-- **Regole di dichiarazione** : alcune regole delle [linee guida sulle interfacce](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-interfaces) che dedicano al modo in cui vengono dichiarate le variabili globali. <sup>15,5</sup>
+- **Regole di dichiarazione**: alcune regole delle [linee guida sulle interfacce](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-interfaces) che dedicano al modo in cui vengono dichiarate le variabili globali. <sup>15,5</sup>
 
-- **Regole enum** : queste regole applicano [i controlli correlati a enum dal linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-enum). <sup>16,3</sup>
+- **Regole enum**: queste regole applicano [i controlli correlati a enum dal linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-enum). <sup>16,3</sup>
 
 - **Regole sperimentali** Si tratta di regole Regole di base di C++ sperimentali utili ma non pronte per l'uso quotidiano. Provarli e [fornire commenti e suggerimenti](https://aka.ms/feedback/suggest?space=62). <sup>16,0</sup>
 
-- **Regole di funzione** : due controlli che consentono di adottare l' **`noexcept`** identificatore. Sono parte delle linee guida per la [progettazione e l'implementazione di funzioni chiare](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-functions). <sup>15,5</sup>
+- **Regole di funzione**: due controlli che consentono di adottare l' **`noexcept`** identificatore. Sono parte delle linee guida per la [progettazione e l'implementazione di funzioni chiare](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-functions). <sup>15,5</sup>
 
-- **Regole GSL** : queste regole applicano i controlli correlati alla [libreria di supporto delle linee guida dal linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-gsl). <sup>15,7</sup>
+- **Regole GSL**: queste regole applicano i controlli correlati alla [libreria di supporto delle linee guida dal linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-gsl). <sup>15,7</sup>
 
-- **Regole di durata** : queste regole applicano il [profilo di durata del linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prolifetime-lifetime-safety-profile). <sup>15,7</sup>
+- **Regole di durata**: queste regole applicano il [profilo di durata del linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prolifetime-lifetime-safety-profile). <sup>15,7</sup>
 
-- **Regole del puntatore del proprietario** : applicare [i controlli di gestione risorse correlati al proprietario \<T> dal linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management). <sup> 15,3</sup>
+- **Regole del puntatore del proprietario**: applicare [i controlli di gestione risorse correlati al proprietario \<T> dal linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management).<sup> 15,3</sup>
 
-- **Regole del puntatore non elaborato** : applicare [i controlli di gestione risorse correlati a puntatori non elaborati dal linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management). <sup>15,3</sup>
+- **Regole del puntatore non elaborato**: applicare [i controlli di gestione risorse correlati a puntatori non elaborati dal linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management). <sup>15,3</sup>
 
-- **Regole del puntatore condiviso** : fa parte dell'applicazione delle linee guida per la [gestione delle risorse](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-resource) . <sup>15,5</sup> sono state aggiunte alcune regole specifiche per il modo in cui i puntatori condivisi vengono passati alle funzioni o utilizzati localmente.
+- **Regole del puntatore condiviso**: fa parte dell'applicazione delle linee guida per la [gestione delle risorse](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-resource) . <sup>15,5</sup> sono state aggiunte alcune regole specifiche per il modo in cui i puntatori condivisi vengono passati alle funzioni o utilizzati localmente.
 
-- **Regole STL** : queste regole applicano i controlli correlati alla [libreria standard C++ (stl) dalla linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-stdlib). <sup>15,7</sup>
+- **Regole STL**: queste regole applicano i controlli correlati alla [libreria standard C++ (stl) dalla linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-stdlib). <sup>15,7</sup>
 
-- **Regole di stile** : un controllo semplice ma importante, che vieta l'uso di [goto](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-goto). <sup>15,5</sup> è il primo passaggio per migliorare lo stile di codifica e l'uso di espressioni e istruzioni in C++.
+- **Regole di stile**: un controllo semplice ma importante, che vieta l'uso di [goto](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-goto). <sup>15,5</sup> è il primo passaggio per migliorare lo stile di codifica e l'uso di espressioni e istruzioni in C++.
 
-- **Regole di tipo** : imporre il [profilo del tipo di linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prosafety-type-safety-profile). <sup>15,3</sup>
+- **Regole di tipo**: imporre il [profilo del tipo di linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prosafety-type-safety-profile). <sup>15,3</sup>
 
-- **Regole univoche del puntatore** : imporre [controlli di gestione risorse correlati a tipi con semantica dei puntatori univoca dal linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management). <sup>15,3</sup>
+- **Regole univoche del puntatore**: imporre [controlli di gestione risorse correlati a tipi con semantica dei puntatori univoca dal linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management). <sup>15,3</sup>
 
-- **Regole di regole di base di C++** : questo set di regole contiene tutti i controlli attualmente implementati dal [linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c-core-guidelines), ad eccezione delle regole sperimentali.
+- **Regole di regole di base di C++**: questo set di regole contiene tutti i controlli attualmente implementati dal [linee guida di base di C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c-core-guidelines), ad eccezione delle regole sperimentali.
 
 <sup>15,3</sup> queste regole sono state visualizzate per la prima volta in Visual Studio 2017 versione 15,3 \
 <sup>15,5</sup> queste regole sono state visualizzate per la prima volta in Visual Studio 2017 versione 15,5 \
@@ -165,7 +165,7 @@ Quando vengono aggiunte nuove regole al controllo Linee guida di base di C++, il
 
 ::: moniker range="<=msvc-150"
 
-Per visualizzare i set di regole disponibili, aprire la finestra di dialogo delle **proprietà del progetto** . Nella finestra di dialogo **pagine delle proprietà** selezionare la **Configuration Properties**  >  **Code Analysis**  >  pagina delle proprietà **generale** analisi del codice delle proprietà di configurazione. Quindi, aprire l'elenco a discesa nella casella combinata **set di regole** per visualizzare i set di regole disponibili. Per compilare una combinazione personalizzata di set di regole, selezionare **Scegli più set di regole**. Nella finestra di dialogo **Aggiungi o Rimuovi set** di regole sono elencate le regole tra cui è possibile scegliere. Per ulteriori informazioni sull'utilizzo dei set di regole in Visual Studio, vedere [utilizzare set di regole per specificare le regole C++ da eseguire](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
+Per visualizzare i set di regole disponibili, aprire la finestra di dialogo delle **proprietà del progetto** . Nella finestra di dialogo **pagine delle proprietà** selezionare la   >    >  pagina delle proprietà **generale** analisi del codice delle proprietà di configurazione. Quindi, aprire l'elenco a discesa nella casella combinata **set di regole** per visualizzare i set di regole disponibili. Per compilare una combinazione personalizzata di set di regole, selezionare **Scegli più set di regole**. Nella finestra di dialogo **Aggiungi o Rimuovi set** di regole sono elencate le regole tra cui è possibile scegliere. Per ulteriori informazioni sull'utilizzo dei set di regole in Visual Studio, vedere [utilizzare set di regole per specificare le regole C++ da eseguire](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
 
 ::: moniker-end
 ::: moniker range=">=msvc-160"
@@ -196,7 +196,7 @@ Queste macro corrispondono ai set di regole e si espandono in un elenco separato
 #pragma warning(default: CPPCORECHECK_CONST_WARNINGS)
 ```
 
-## <a name="attributes"></a>Attributi
+## <a name="attributes"></a>Attributes
 
 Il compilatore Microsoft C++ ha un supporto limitato per l' `[[gsl::suppress]]` attributo. Può essere usato per non visualizzare avvisi sulle istruzioni Expression e Block all'interno di funzioni.
 
@@ -230,7 +230,7 @@ Invece di #pragmas, è possibile utilizzare le opzioni della riga di comando nel
 
 1. Nella casella di modifica **Opzioni aggiuntive** aggiungere *`/wd26400`* .
 
-È possibile utilizzare l'opzione della riga di comando per disabilitare temporaneamente tutte le analisi del codice per un file specificando **`/analyze-`** . Verrà visualizzato l'avviso *D9025 che esegue l'override di '/analyze ' con '/analyze-'* , che ricorda di riabilitare l'analisi del codice in un secondo momento.
+È possibile utilizzare l'opzione della riga di comando per disabilitare temporaneamente tutte le analisi del codice per un file specificando **`/analyze-`** . Verrà visualizzato l'avviso *D9025 che esegue l'override di '/analyze ' con '/analyze-'*, che ricorda di riabilitare l'analisi del codice in un secondo momento.
 
 ## <a name="enable-the-c-core-guidelines-checker-on-specific-project-files"></a><a name="corecheck_per_file"></a> Abilitare il controllo Linee guida di base di C++ in file di progetto specifici
 
@@ -246,9 +246,9 @@ A volte è utile eseguire analisi del codice mirate e continuare a usare l'IDE d
 
 1. Passare al file che si desidera analizzare con il controllo Linee guida di base di C++ e aprirne le proprietà.
 
-1. Scegliere **proprietà di configurazione**  >  **C/C++**  >  **Command Line**  >  **Opzioni aggiuntive** della riga di comando di C/C++ e Aggiungi *`/analyze:plugin EspXEngine.dll`*
+1. Scegliere **proprietà di configurazione**  >    >    >  **Opzioni aggiuntive** della riga di comando di C/C++ e Aggiungi *`/analyze:plugin EspXEngine.dll`*
 
-1. Disabilitare l'utilizzo dell'intestazione precompilata ( **proprietà di configurazione**  >  **C/C++**  >  **intestazioni precompilate** ). È necessario perché il motore delle estensioni può tentare di leggere le informazioni interne dall'intestazione precompilata (PCH). Se il PCH è stato compilato con le opzioni predefinite del progetto, non sarà compatibile.
+1. Disabilitare l'utilizzo dell'intestazione precompilata (**proprietà di configurazione**  >  **C/C++**  >  **intestazioni precompilate**). È necessario perché il motore delle estensioni può tentare di leggere le informazioni interne dall'intestazione precompilata (PCH). Se il PCH è stato compilato con le opzioni predefinite del progetto, non sarà compatibile.
 
 1. Ricompilare il progetto. I controlli prerapidi comuni devono essere eseguiti in tutti i file. Poiché il controllo Linee guida di base di C++ non è abilitato per impostazione predefinita, deve essere eseguito solo nel file configurato per usarlo.
 
@@ -308,7 +308,7 @@ L'analisi del codice richiede alcune variabili di ambiente e le opzioni della ri
 
 ## <a name="use-the-guideline-support-library"></a>Usare la libreria di supporto per le linee guida
 
-La libreria di supporto delle linee guida (GSL) è progettata per consentire di seguire le linee guida di base. Il GSL include definizioni che consentono di sostituire costrutti soggetti a errori con alternative più sicure. È ad esempio possibile sostituire una `T*, length` coppia di parametri con il `span<T>` tipo. GSL è disponibile all'indirizzo [http://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl) . La libreria è open source ed è quindi possibile visualizzare le origini, creare commenti o contribuire. Il progetto si trova in [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL) .
+La libreria di supporto delle linee guida (GSL) è progettata per consentire di seguire le linee guida di base. Il GSL include definizioni che consentono di sostituire costrutti soggetti a errori con alternative più sicure. È ad esempio possibile sostituire una `T*, length` coppia di parametri con il `span<T>` tipo. Il progetto GSL è disponibile in GitHub all'indirizzo [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL) . La libreria è open source ed è quindi possibile visualizzare le origini, creare commenti o contribuire. È anche possibile usare Gestione pacchetti [vcpkg](../build/vcpkg.md) per scaricare e installare la libreria localmente.
 
 ::: moniker range="msvc-140"
 

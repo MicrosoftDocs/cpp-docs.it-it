@@ -1,7 +1,7 @@
 ---
 title: '`main` argomenti della funzione e della riga di comando (C++)'
 description: La `main` funzione è il punto di ingresso per un programma C++.
-ms.date: 11/19/2020
+ms.date: 12/16/2020
 no-loc:
 - main
 - wmain
@@ -18,16 +18,16 @@ no-loc:
 - char
 - wchar_t
 - extern
-ms.openlocfilehash: 8a5ed43bdacf5d9d6dd2cbc5d1c56783c82b8e9a
-ms.sourcegitcommit: b02c61667ff7f38e7add266d0aabd8463f2dbfa1
+ms.openlocfilehash: a9c68f199d4169c02260542a9730472e4ab397bd
+ms.sourcegitcommit: 387ce22a3b0137f99cbb856a772b5a910c9eba99
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95483217"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97645072"
 ---
 # <a name="no-locmain-function-and-command-line-arguments"></a>`main` argomenti della funzione e della riga di comando
 
-Tutti i programmi C++ devono disporre di una `main` funzione. Se si tenta di compilare un programma C++ senza una `main` funzione, il compilatore genera un errore. (Le librerie a collegamento dinamico e le static librerie non hanno una `main` funzione). La `main` funzione è il punto in cui inizia l'esecuzione del codice sorgente, ma prima che un programma entri nella `main` funzione, tutti static i membri della classe senza inizializzatori espliciti vengono impostati su zero. In Microsoft C++, static anche gli oggetti globali vengono inizializzati prima della voce a `main` . Diverse restrizioni si applicano alla `main` funzione che non si applicano ad altre funzioni C++. La `main` funzione:
+Tutti i programmi C++ devono disporre di una `main` funzione. Se si tenta di compilare un programma C++ senza una `main` funzione, il compilatore genera un errore. (Le librerie a collegamento dinamico e le static librerie non hanno una `main` funzione). La `main` funzione è il punto in cui inizia l'esecuzione del codice sorgente, ma prima che un programma entri nella `main` funzione, tutti static i membri della classe senza inizializzatori espliciti vengono impostati su zero. In Microsoft C++, static anche gli oggetti globali vengono inizializzati prima della voce a `main` . Diverse restrizioni si applicano alla `main` funzione che non si applicano ad altre funzioni C++. La funzione `main`:
 
 - Non è possibile eseguire l'overload (vedere [Overload della funzione](./function-overloading.md)).
 - Non può essere dichiarato come **`inline`** .
@@ -109,19 +109,21 @@ Nell'esempio seguente viene illustrato come utilizzare gli *`argc`* *`argv`* arg
 #include <string.h>
 
 using namespace std;
-int main( int argc, char *argv[], char *envp[] ) {
-    int iNumberLines = 0;    // Default is no line numbers.
+int main( int argc, char *argv[], char *envp[] )
+{
+    bool numberLines = false;    // Default is no line numbers.
 
     // If /n is passed to the .exe, display numbered listing
     // of environment variables.
-
     if ( (argc == 2) && _stricmp( argv[1], "/n" ) == 0 )
-         iNumberLines = 1;
+         numberLines = true;
 
     // Walk through list of strings until a NULL is encountered.
-    for( int i = 0; envp[i] != NULL; ++i ) {
-        if( iNumberLines )
-            cout << i << ": " << envp[i] << "\n";
+    for ( int i = 0; envp[i] != NULL; ++i )
+    {
+        if ( numberLines )
+            cout << i << ": "; // Prefix with numbers if /n specified
+        cout << envp[i] << "\n";
     }
 }
 ```
@@ -198,4 +200,4 @@ Il programma potrebbe effettuare chiamate alla `spawn` `exec` famiglia di routin
 
 ## <a name="see-also"></a>Vedere anche
 
-[Concetti fondamentali](../cpp/basic-concepts-cpp.md)
+[Concetti di base](../cpp/basic-concepts-cpp.md)
