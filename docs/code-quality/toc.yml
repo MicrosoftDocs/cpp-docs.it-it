@@ -38,7 +38,7 @@
       href: ../code-quality/intrinsic-functions.md
     - name: Procedure consigliate ed esempi (SAL)
       href: ../code-quality/best-practices-and-examples-sal.md
-- name: Specificare informazioni aggiuntive sul codice usando _Analysis_assume
+- name: Specificare informazioni aggiuntive sul codice usando _Analysis_assume_
   href: ../code-quality/how-to-specify-additional-code-information-by-using-analysis-assume.md
 - name: 'Linee guida di base di C++: avvisi del controllo'
   items:
