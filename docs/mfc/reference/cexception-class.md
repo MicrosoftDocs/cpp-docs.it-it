@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: 39d3266817ee1be20acde0b01c7c5d1aa90313cb
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 5aa5377315d526102f6358f36cb9ed6a60a133be
+ms.sourcegitcommit: 6183207b11575d7b44ebd7c18918e916a0d8c63d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97184660"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97951541"
 ---
 # <a name="cexception-class"></a>Classe CException
 
@@ -34,13 +34,13 @@ class AFX_NOVTABLE CException : public CObject
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Description|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CException:: CException](#cexception)|Costruisce un oggetto `CException`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Description|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CException::D Elimina](#delete)|Elimina un `CException` oggetto.|
 |[CException:: ReportError](#reporterror)|Segnala all'utente un messaggio di errore in una finestra di messaggio.|
@@ -51,7 +51,7 @@ Poiché `CException` è una classe di base astratta, non è possibile creare `CE
 
 Di seguito sono elencate le classi derivate e le relative descrizioni:
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[CSimpleException](../../mfc/reference/csimpleexception-class.md)|Classe base per le eccezioni MFC critiche per le risorse|
 |[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|Condizione di eccezione argomento non valido|
@@ -227,9 +227,8 @@ else
 }
 ```
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Classe CObject](cobject-class.md)<br/>
 [Grafico delle gerarchie](../hierarchy-chart.md)<br/>
-[Elaborazione delle eccezioni](exception-processing.md)<br/>
-[Ricerca per categorie: creazione di classi di eccezioni personalizzate](https://go.microsoft.com/fwlink/p/?linkid=128045)
+[Elaborazione delle eccezioni](exception-processing.md)

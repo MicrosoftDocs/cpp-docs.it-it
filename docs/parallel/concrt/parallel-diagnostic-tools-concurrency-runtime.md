@@ -5,12 +5,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-ms.openlocfilehash: 44d885e8e6c7529bd15fa0aa2e7930773400361f
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: ac6afbbc2bfef3793e9685a7c9e1054b7d677bd8
+ms.sourcegitcommit: 6183207b11575d7b44ebd7c18918e916a0d8c63d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97172427"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97951521"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Strumenti di diagnostica in parallelo (runtime di concorrenza)
 
@@ -28,7 +28,7 @@ Tramite gli strumenti di profilatura vengono fornite tre visualizzazioni dati in
 
 Il runtime di concorrenza utilizza [Event Tracing for Windows](/windows/win32/ETW/event-tracing-portal) (ETW) per inviare notifiche agli strumenti di strumentazione, ad esempio i profiler, quando si verificano diversi eventi. Questi eventi includono quando un'utilità di pianificazione viene attivata o disattivata, quando un contesto inizia, termina, blocca, sblocca o produce e quando un algoritmo parallelo inizia o termina.
 
-Strumenti come il [Visualizzatore di concorrenza](/visualstudio/profiling/concurrency-visualizer) utilizzano questa funzionalità. di conseguenza, non è in genere necessario lavorare direttamente con questi eventi. Questi eventi risultano tuttavia utili quando si sviluppa un profiler personalizzato o quando si utilizzano strumenti di traccia eventi, ad esempio [Xperf](https://go.microsoft.com/fwlink/p/?linkid=160628).
+Strumenti come il [Visualizzatore di concorrenza](/visualstudio/profiling/concurrency-visualizer) utilizzano questa funzionalità. di conseguenza, non è in genere necessario lavorare direttamente con questi eventi. Questi eventi risultano tuttavia utili quando si sviluppa un profiler personalizzato o quando si utilizzano strumenti di traccia eventi come [Windows Performance Toolkit](/windows-hardware/test/wpt/).
 
 Il runtime di concorrenza genera questi eventi solo quando la traccia è abilitata. Chiamare la funzione [Concurrency:: EnableTracing](reference/concurrency-namespace-functions.md#enabletracing) per abilitare la traccia eventi e la funzione [concurrency::D isabletracing](reference/concurrency-namespace-functions.md#disabletracing) per disabilitare la traccia.
 
@@ -64,6 +64,6 @@ Nell'esempio seguente viene illustrato come abilitare la traccia per una chiamat
 
 Il runtime tiene traccia del numero di volte in cui si chiamano `EnableTracing` e `DisableTracing` . Pertanto, se si chiama `EnableTracing` più volte, è necessario chiamare `DisableTracing` lo stesso numero di volte per disabilitare la traccia.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Runtime di concorrenza](../../parallel/concrt/concurrency-runtime.md)

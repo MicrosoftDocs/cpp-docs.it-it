@@ -163,12 +163,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: e126863bebcc3cb8f878a8ece41ee8d9385c0afe
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 8b5c31138601c96ca7af530dbfb1d3517e3998a8
+ms.sourcegitcommit: 6183207b11575d7b44ebd7c18918e916a0d8c63d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97345017"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97951522"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -184,13 +184,13 @@ class CTreeCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Description|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CTreeCtrl:: CTreeCtrl](#ctreectrl)|Costruisce un oggetto `CTreeCtrl`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Description|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CTreeCtrl:: create](#create)|Crea un controllo di visualizzazione ad albero e lo collega a un `CTreeCtrl` oggetto.|
 |[CTreeCtrl:: CreateDragImage](#createdragimage)|Crea una bitmap di trascinamento per l'elemento della visualizzazione struttura ad albero specificato.|
@@ -1365,7 +1365,7 @@ Handle dell'elemento della visualizzazione struttura ad albero che occupa il pun
 
 Quando viene chiamata questa funzione, il parametro *PT* specifica le coordinate del punto da testare. La funzione restituisce l'handle dell'elemento in corrispondenza del punto specificato o NULL se nessun elemento occupa il punto. Inoltre, il parametro *pFlags* contiene un valore che indica la posizione del punto specificato. I valori possibili sono:
 
-|Valore|Description|
+|Valore|Descrizione|
 |-|-|
 |TVHT_ABOVE|Sopra l'area client.|
 |TVHT_BELOW|Sotto l'area client.|
@@ -1503,7 +1503,7 @@ Handle per un elemento della visualizzazione struttura ad albero ( `HTREEITEM` )
 
 ### <a name="remarks"></a>Commenti
 
-Gli strumenti di accessibilità sono applicazioni che consentono agli utenti con disabilità di usare i computer. Un identificatore di accessibilità viene usato dall' `IAccessible` interfaccia per specificare in modo univoco un elemento in una finestra. Per ulteriori informazioni sugli identificatori di accessibilità, cercare l'argomento "informazioni sul supporto Active Accessibility" in [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
+Gli strumenti di accessibilità sono applicazioni che consentono agli utenti con disabilità di usare i computer. Un identificatore di accessibilità viene usato dall' `IAccessible` interfaccia per specificare in modo univoco un elemento in una finestra. Per ulteriori informazioni sulle `IAccessible` API, vedere [Microsoft Active Accessibility](/windows/win32/winauto/microsoft-active-accessibility).
 
 Questo metodo invia il messaggio di [TVM_MAPACCIDTOHTREEITEM](/windows/win32/Controls/tvm-mapaccidtohtreeitem) , descritto nel Windows SDK.
 
@@ -1538,7 +1538,7 @@ Identificatore di accessibilità che corrisponde al parametro *hitet* .
 
 ### <a name="remarks"></a>Commenti
 
-Gli strumenti di accessibilità sono applicazioni che consentono agli utenti con disabilità di usare i computer. Un identificatore di accessibilità viene usato dall' `IAccessible` interfaccia per specificare in modo univoco un elemento in una finestra. Per ulteriori informazioni sugli identificatori di accessibilità, cercare l'argomento "informazioni sul supporto Active Accessibility" in [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
+Gli strumenti di accessibilità sono applicazioni che consentono agli utenti con disabilità di usare i computer. Un identificatore di accessibilità viene usato dall' `IAccessible` interfaccia per specificare in modo univoco un elemento in una finestra. Per ulteriori informazioni sulle `IAccessible` API, vedere [Microsoft Active Accessibility](/windows/win32/winauto/microsoft-active-accessibility).
 
 Questo metodo invia il messaggio di [TVM_MAPHTREEITEMTOACCID](/windows/win32/Controls/tvm-maphtreeitemtoaccid) , descritto nel Windows SDK.
 
@@ -2281,7 +2281,7 @@ in Handle per un elemento della visualizzazione struttura ad albero nel controll
 
 ### <a name="remarks"></a>Commenti
 
-Per ulteriori informazioni sulla differenza tra descrizioni comando e infotip, cercare l'argomento "tooltips and infotip" in [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
+Per ulteriori informazioni sulla differenza tra le descrizioni comandi e infotip, vedere [tooltips e infotip](/windows/win32/uxguide/ctrl-tooltips-and-infotips).
 
 Questo metodo invia il messaggio di [TVM_SHOWINFOTIP](/windows/win32/Controls/tvm-showinfotip) , descritto nel Windows SDK.
 

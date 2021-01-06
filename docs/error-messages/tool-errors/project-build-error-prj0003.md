@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-ms.openlocfilehash: cefd56e1d11da77f288333fb0e1f9c10ef684d12
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: b5ca521bdddb78c3cd7c5dd41f8999b99cb92e20
+ms.sourcegitcommit: 6183207b11575d7b44ebd7c18918e916a0d8c63d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97119408"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97951437"
 ---
 # <a name="project-build-error-prj0003"></a>Errore di compilazione progetto PRJ0003
 
@@ -22,7 +22,7 @@ Il comando della *riga di comando* creato dall'input nella finestra di dialogo *
 
 Le possibili cause di questo errore sono le seguenti:
 
-- Il progetto dipende da ATL Server. A partire da Visual Studio 2008, ATL Server non è più incluso in Visual Studio, ma è stato rilasciato come progetto di origine condiviso in CodePlex. Per scaricare il codice sorgente e gli strumenti di ATL Server, vedere [strumenti e libreria server ATL](https://go.microsoft.com/fwlink/p/?linkid=81979).
+- Il progetto dipende da ATL Server. A partire da Visual Studio 2008, ATL Server non è più incluso in Visual Studio, ma è stato rilasciato come progetto di origine condiviso in CodePlex. Per scaricare il codice sorgente e gli strumenti di ATL Server, vedere [strumenti e libreria server ATL](https://archive.codeplex.com/?p=atlserver).
 
 - Risorse di sistema insufficienti. Chiudere alcune applicazioni per risolvere questo problema.
 
@@ -32,6 +32,6 @@ Le possibili cause di questo errore sono le seguenti:
 
 - Per i progetti makefile, manca un comando da eseguire nella riga di comando di **compilazione** o nella **riga di comando di ricompilazione**.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Errori e avvisi di compilazione progetto (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)
