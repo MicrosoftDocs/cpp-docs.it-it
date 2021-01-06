@@ -68,7 +68,18 @@
     - name: Informazioni di riferimento sullo schema di configurazione predefinito di CMake
       href: ../build/cmake-predefined-configuration-reference.md
 - name: 'vcpkg: gestione pacchetti per C++'
-  href: ../build/vcpkg.md
+  expanded: false
+  items:
+    - name: 'vcpkg: gestione pacchetti per C++'
+      href: ../build/vcpkg.md
+    - name: Installare vcpkg
+      href: ../build/install-vcpkg.md
+    - name: Integrare vcpkg
+      href: ../build/integrate-vcpkg.md
+    - name: Gestire le librerie con vcpkg
+      href: ../build/manage-libraries-with-vcpkg.md
+    - name: Informazioni di riferimento sulla riga di comando vcpkg
+      href: ../build/vcpkg-command-line-reference.md
 - name: C++ Build Insights
   href: ../build-insights/get-started-with-cpp-build-insights.md
 - name: File di intestazione precompilati
