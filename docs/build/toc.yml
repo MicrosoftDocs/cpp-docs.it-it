@@ -511,7 +511,7 @@
                   href: ../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md
                 - name: /errorReport (Segnala gli errori interni del compilatore)
                   href: ../build/reference/errorreport-report-internal-compiler-errors.md
-                - name: /execution/charset (Imposta il set di caratteri di esecuzione)
+                - name: /execution-charset (Imposta il set di caratteri di esecuzione)
                   href: ../build/reference/execution-charset-set-execution-character-set.md
                 - name: '/experimental:module'
                   href: ../build/reference/experimental-module.md
