@@ -2,12 +2,12 @@
 description: 'Altre informazioni su: Panoramica delle convenzioni ABI di ARM64'
 title: Panoramica delle convenzioni ABI ARM64
 ms.date: 03/27/2019
-ms.openlocfilehash: fbdb709eaa960446bb76712962dbbc3bfb66d38a
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: d597a50b771524b69ef2f2091082d7ca4d19d453
+ms.sourcegitcommit: e71b8da6c8a357aa06bb6b36936a8f4ecae082ad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97157113"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97976336"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Panoramica delle convenzioni ABI ARM64
 
@@ -204,7 +204,13 @@ I valori integrali vengono restituiti in x0.
 
 I valori a virgola mobile vengono restituiti in S0, d0 o V0, a seconda dei casi.
 
-I valori HFA e HVA vengono restituiti in S0-S3, D0-D3 o V0-V3, a seconda dei casi.
+Un tipo viene considerato un oggetto HFA o HVA se tutti i seguenti elementi contengono:
+
+- Non è vuoto,
+- Non contiene costruttori, distruttori o operatori di assegnazione predefiniti o di copia non semplici.
+- Tutti i relativi membri hanno lo stesso tipo di HFA o HVA o sono tipi float, Double o neon che corrispondono ai tipi di HVA o HFA di altri membri.
+
+I valori HFA e HVA con quattro o meno elementi vengono restituiti in S0-S3, D0-D3 o V0-V3, a seconda dei casi.
 
 I tipi restituiti per valore vengono gestiti in modo diverso a seconda che abbiano determinate proprietà e che la funzione sia una funzione membro non statica. Tipi con tutte queste proprietà,
 
@@ -254,7 +260,7 @@ Tutte le CPU ARMv8 sono necessarie per supportare un registro del contatore di c
 
 Il contatore di cicli è un vero contatore di cicli, non un orologio a parete. La frequenza di conteggio varia in funzione della frequenza del processore. Se si ritiene che sia necessario essere a conoscenza della frequenza del contatore del ciclo, non è consigliabile utilizzare il contatore del ciclo. Si desidera invece misurare il tempo di clock, per il quale è necessario utilizzare `QueryPerformanceCounter` .
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Problemi comuni relativi alla migrazione di Visual C++ ARM](common-visual-cpp-arm-migration-issues.md)<br/>
 [Gestione delle eccezioni ARM64](arm64-exception-handling.md)
