@@ -3,17 +3,15 @@ description: 'Altre informazioni su: &lt; memoria&gt;'
 title: '&lt;memory&gt;'
 ms.date: 08/04/2019
 f1_keywords:
-- memory/std::<memory>
 - <memory>
-- std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 27aea86d8329ee37c3aa1409b7dde7091cfe43bf
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 05d5b6e87b23ea2a88e4ff5a8a11c2d6b054691f
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97183776"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126520"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -29,7 +27,7 @@ Definisce una classe, un operatore e diversi modelli che consentono di allocare 
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[AddressOf](../standard-library/memory-functions.md#addressof)|Ottiene l'indirizzo true di un oggetto.|
 |[allineare](../standard-library/memory-functions.md#align)|Restituisce un puntatore a un intervallo di dimensioni specificate in base all'allineamento e all'indirizzo iniziali forniti.|
@@ -78,7 +76,7 @@ Definisce una classe, un operatore e diversi modelli che consentono di allocare 
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[operatore! =](../standard-library/memory-operators.md#op_neq)|Verifica la disuguaglianza tra gli oggetti allocatore di una classe specificata.|
 |[operatore = =](../standard-library/memory-operators.md#op_eq_eq)|Verifica l'uguaglianza tra gli oggetti allocatore di una classe specificata.|
@@ -90,7 +88,7 @@ Definisce una classe, un operatore e diversi modelli che consentono di allocare 
 
 ### <a name="classes"></a>Classi
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|Il modello di classe descrive un oggetto che gestisce l'allocazione e la liberazione dello spazio di archiviazione per matrici di oggetti di tipo **Type**.|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|Descrive un oggetto che determina tutte le informazioni necessarie per un contenitore abilitato dall'allocatore.|
@@ -105,7 +103,7 @@ Definisce una classe, un operatore e diversi modelli che consentono di allocare 
 
 ### <a name="structures"></a>Strutture
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[allocator_arg_t](../standard-library/allocator-class.md#allocator_arg_t)||
 |[default_delete](../standard-library/default-delete-struct.md)||
@@ -115,11 +113,11 @@ Definisce una classe, un operatore e diversi modelli che consentono di allocare 
 
 ### <a name="specializations"></a>Specializzazioni
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[allocator\<void>](../standard-library/allocator-void-class.md)|Specializzazione dell'allocatore del modello di classe da digitare **`void`** , che definisce solo i tipi di membri che hanno senso in questo contesto specifico.|
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

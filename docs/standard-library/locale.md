@@ -4,17 +4,15 @@ title: '&lt;locale&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <locale>
-- locale/std::<locale>
-- std::<locale>
 helpviewer_keywords:
 - locale header
 ms.assetid: ca56f9d2-7128-44da-8df1-f4c78c17fbf2
-ms.openlocfilehash: dce8cb130269450e1b7996b61504e59dc372e3b7
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 5e699bfd580c4676ae51aeea246e318c37a82d98
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97277804"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126370"
 ---
 # <a name="ltlocalegt"></a>&lt;locale&gt;
 
@@ -80,7 +78,7 @@ Definisce le funzioni e i modelli di classe che possono essere utilizzati dai pr
 |[Classe wbuffer_convert](../standard-library/wbuffer-convert-class.md)|Descrive un buffer del flusso che controlla la trasmissione di elementi da e verso un buffer del flusso di byte.|
 |[Classe wstring_convert](../standard-library/wstring-convert-class.md)|Modello di classe che esegue le conversioni tra una stringa di caratteri "wide" e una stringa di byte.|
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Tabelle codici](../c-runtime-library/code-pages.md)\
 [Nomi delle impostazioni locali, lingue e stringhe di paese/area geografica](../c-runtime-library/locale-names-languages-and-country-region-strings.md)\

@@ -3,20 +3,20 @@ description: 'Altre informazioni su: &lt; Chrono&gt;'
 title: '&lt;chrono&gt;'
 ms.date: 05/07/2019
 f1_keywords:
+- <chrono>
 - chrono/std::chrono::nanoseconds
 - chrono/std::chrono::minutes
 - chrono/std::chrono::seconds
-- <chrono>
 - chrono/std::chrono::hours
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: a59ad0d88a1d9266e61a8ef49e7cf9184da803b3
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: cc425d99d41d23fe25d2f66888240f9ea9a93cfb
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97325141"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126663"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
@@ -34,14 +34,14 @@ A partire da Visual Studio 2015, l'implementazione di `steady_clock` è cambiata
 
 ### <a name="classes"></a>Classi
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[Classe Duration](../standard-library/duration-class.md)|Descrive un tipo che contiene un intervallo di tempo.|
 |[Classe time_point](../standard-library/time-point-class.md)|Descrive un tipo che rappresenta un punto nel tempo.|
 
 ### <a name="structs"></a>Struct
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[Struttura common_type](../standard-library/common-type-structure.md)|Descrive le specializzazioni del modello di classe [common_type](../standard-library/common-type-class.md) per le creazioni di istanze di `duration` e `time_point` .|
 |[Struttura duration_values](../standard-library/duration-values-structure.md)|Fornisce valori specifici per il parametro di modello `duration``Rep`.|
@@ -52,14 +52,14 @@ A partire da Visual Studio 2015, l'implementazione di `steady_clock` è cambiata
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[duration_cast](../standard-library/chrono-functions.md#duration_cast)|Esegue il cast di un oggetto `duration` in un tipo specificato.|
 |[time_point_cast](../standard-library/chrono-functions.md#time_point_cast)|Esegue il cast di un oggetto `time_point` in un tipo specificato.|
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[operatore](../standard-library/chrono-operators.md#operator-)|Operatore di sottrazione o negazione di oggetti `duration` e `time_point`.|
 |[operatore! =](../standard-library/chrono-operators.md#op_neq)|Operatore di disuguaglianza che viene usato con oggetti `duration` o `time_point`.|
@@ -77,7 +77,7 @@ A partire da Visual Studio 2015, l'implementazione di `steady_clock` è cambiata
 
 Per ulteriori informazioni sui tipi di rapporto utilizzati nei typedef seguenti, vedere [\<ratio>](../standard-library/ratio.md) .
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |`typedef duration<long long, nano> nanoseconds;`|Sinonimo di un `duration` tipo con un periodo di cicli di 1 nanosecondo.|
 |`typedef duration<long long, micro> microseconds;`|Sinonimo di un `duration` tipo con un periodo di cicli di 1 microsecondo.|
@@ -90,7 +90,7 @@ Per ulteriori informazioni sui tipi di rapporto utilizzati nei typedef seguenti,
 
 **(C++ 11)** L' \<chrono> intestazione definisce i [valori letterali definiti dall'utente](../cpp/user-defined-literals-cpp.md) seguenti che è possibile usare per maggiore praticità, indipendenza dai tipi e gestibilità del codice. Questi valori letterali sono definiti nello spazio dei nomi inline `literals::chrono_literals` e sono in ambito quando std::chrono è nell'ambito.
 
-|Dichiarazione|Description|
+|Dichiarazione|Descrizione|
 |-|-|
 |`hours operator "" h(unsigned long long Val)`|Specifica le ore come valore integrale.|
 |`duration<double, ratio<3600> > operator "" h(long double Val)`|Specifica le ore come valore a virgola mobile.|
@@ -113,6 +113,6 @@ constexpr auto week = 24h* 7;
 constexpr auto my_duration_unit = 108ms;
 ```
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)

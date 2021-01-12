@@ -4,16 +4,15 @@ title: '&lt;ccomplex&gt;'
 ms.date: 07/11/2019
 f1_keywords:
 - <ccomplex>
-- ccomplex
 helpviewer_keywords:
 - ccomplex header
 ms.assetid: a9fcb5f0-88e3-464b-a5fd-d1afb8cd7e6f
-ms.openlocfilehash: d657d7b0b2a203bcbad93ff1c78f6b78eb4d7707
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 6c9aa717031238681fa04bc20ab6ca93429553ec
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97325315"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126676"
 ---
 # <a name="ltccomplexgt"></a>&lt;ccomplex&gt;
 
@@ -28,11 +27,11 @@ Include l'intestazione della libreria standard C++ [\<complex>](complex.md) .
 
 **Spazio dei nomi:** std
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 Il nome `clog` , dichiarato in \<complex.h> , non è definito nello `std` spazio dei nomi a causa di potenziali conflitti con il `clog` dichiarato in [\<iostream>](iostream.md) .
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [\<complex>](complex.md)\
 [\<cmath>](cmath.md)\

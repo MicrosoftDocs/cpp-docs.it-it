@@ -4,16 +4,15 @@ title: '&lt;system_error&gt;'
 ms.date: 03/15/2019
 f1_keywords:
 - <system_error>
-- system_error
 helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-ms.openlocfilehash: 77ff4cae7d40ae4edb393e5d4f6743be1563556c
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: d2e08957933a6932e1ebb7a8c42214321cb3c406
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97259409"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126416"
 ---
 # <a name="ltsystem_errorgt"></a>&lt;system_error&gt;
 
@@ -29,7 +28,7 @@ Includere l'intestazione \<system_error> per definire la classe di eccezione `sy
 
 ### <a name="objects"></a>Oggetti
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[generic_category](../standard-library/system-error-functions.md#generic_category)|Rappresenta la categoria di errori generici.|
 |[is_error_code_enum_v](../standard-library/system-error-functions.md#is_error_code_enum_v)||
@@ -38,14 +37,14 @@ Includere l'intestazione \<system_error> per definire la classe di eccezione `sy
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[make_error_code](../standard-library/system-error-functions.md#make_error_code)|Crea un oggetto `error_code`.|
 |[make_error_condition](../standard-library/system-error-functions.md#make_error_condition)|Crea un oggetto `error_condition`.|
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[operatore = =](../standard-library/system-error-operators.md#op_eq_eq)|Verifica se l'oggetto a sinistra dell'operatore è uguale all'oggetto a destra.|
 |[operatore! =](../standard-library/system-error-operators.md#op_neq)|Verifica se l'oggetto a sinistra dell'operatore non è uguale all'oggetto a destra.|
@@ -54,13 +53,13 @@ Includere l'intestazione \<system_error> per definire la classe di eccezione `sy
 
 ### <a name="enums"></a>Enumerazioni
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[errc](../standard-library/system-error-enums.md#errc)|Fornisce nomi simbolici per tutte le macro di codice di errore definite da POSIX in `<errno.h>` .|
 
 ### <a name="classes-and-structs"></a>Classi e struct
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[error_category](../standard-library/error-category-class.md)|Rappresenta la base comune astratta per gli oggetti che descrive una categoria di codici di errore.|
 |[error_code](../standard-library/error-code-class.md)|Rappresenta gli errori di sistema di basso livello che sono specifici dell'implementazione.|
@@ -70,6 +69,6 @@ Includere l'intestazione \<system_error> per definire la classe di eccezione `sy
 |[is_error_condition_enum](../standard-library/is-error-condition-enum-class.md)|Rappresenta un predicato di tipo che verifica l'enumerazione per la classe [error_condition](../standard-library/error-condition-class.md).|
 |[system_error](../standard-library/system-error-class.md)|Rappresenta la classe di base per tutte le eccezioni generate per segnalare un overflow di basso livello del sistema.|
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)

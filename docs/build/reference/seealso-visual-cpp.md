@@ -4,17 +4,16 @@ title: '&lt;> seealso (commenti sulla documentazione C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - <seealso>
-- seealso
 helpviewer_keywords:
 - seealso C++ XML tag
 - <seealso> C++ XML tag
 ms.assetid: cb33d100-9c50-4485-8d0c-573429eff155
-ms.openlocfilehash: 70f5f0147ff56dd6327e99f073f80c28a7cce539
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 0d976d2f7e08690d1fc0209eaf399f2368930327
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97224725"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126195"
 ---
 # <a name="ltseealsogt"></a>&lt;seealso&gt;
 
@@ -35,7 +34,7 @@ Il compilatore verifica l'esistenza dell'elemento di codice specificato e risolv
 
 Per informazioni su come creare un riferimento cref a un tipo generico, vedere [\<see>](see-visual-cpp.md) .
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 Compilare con [/doc](doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.
 
@@ -69,6 +68,6 @@ public ref struct B {
 };
 ```
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Documentazione XML](xml-documentation-visual-cpp.md)

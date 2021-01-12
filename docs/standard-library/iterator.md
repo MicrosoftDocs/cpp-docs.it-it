@@ -4,16 +4,15 @@ title: '&lt;iterator&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <iterator>
-- iterator/std::<iterator>
 helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
-ms.openlocfilehash: 9c40d46c5cde45baa66c8173d2b6d8f0186d1bc9
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 9376f26acef4cfb5feda4644881d43511b3b77f6
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97112063"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126507"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
@@ -25,7 +24,7 @@ Definisce le primitive degli iteratori, gli iteratori predefiniti e gli iterator
 
 **Spazio dei nomi:** std
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 Gli iteratori costituiscono una generalizzazione dei puntatori, che astraggono dai requisiti di tali puntatori in modo da consentire al programma C++ di utilizzare strutture di dati diverse in maniera uniforme. Gli iteratori fungono da intermediari tra i contenitori e gli algoritmi generici. Anziché operare su tipi di dati specifici, gli algoritmi vengono definiti per operare su un intervallo specificato da un tipo di iteratore. L'algoritmo può operare su qualsiasi struttura di dati che soddisfa i requisiti dell'iteratore. Esistono cinque tipi o categorie di iteratori, ciascuno dotato di un proprio set di requisiti e funzionalità risultanti:
 
@@ -47,7 +46,7 @@ Sono state aggiunte estensioni agli iteratori della libreria standard C++ per su
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[anticipo](../standard-library/iterator-functions.md#advance)|Incrementa un iteratore di un numero specificato di posizioni.|
 |[back_inserter](../standard-library/iterator-functions.md#back_inserter)|Crea un iteratore in grado di inserire gli elementi nella parte finale di un contenitore specificato.|
@@ -73,7 +72,7 @@ Sono state aggiunte estensioni agli iteratori della libreria standard C++ per su
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[operatore! =](../standard-library/iterator-operators.md#op_neq)|Verifica se l'oggetto iteratore a sinistra dell'operatore non è uguale all'oggetto iteratore a destra.|
 |[operatore = =](../standard-library/iterator-operators.md#op_eq_eq)|Verifica se l'oggetto iteratore a sinistra dell'operatore è uguale all'oggetto iteratore a destra.|
@@ -86,7 +85,7 @@ Sono state aggiunte estensioni agli iteratori della libreria standard C++ per su
 
 ### <a name="classes"></a>Classi
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|Il modello di classe descrive un oggetto iteratore di output. Inserisce gli elementi in un contenitore di tipo `Container` , a cui accede tramite l'oggetto protetto `pointer` archiviato denominato contenitore.|
 |[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|Classe che fornisce un tipo restituito per una `iterator_category` funzione che rappresenta un iteratore bidirezionale.|
@@ -107,7 +106,7 @@ Sono state aggiunte estensioni agli iteratori della libreria standard C++ per su
 |[reverse_iterator](../standard-library/reverse-iterator-class.md)|Il modello di classe descrive un oggetto che si comporta come un iteratore ad accesso casuale, solo in senso inverso.|
 |[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|Classe che accede a una matrice mediante un iteratore ad accesso causale non verificato. **Nota:**  questa classe è un'estensione Microsoft della libreria standard C++. Il codice implementato mediante questa funzione non può essere trasferito negli ambienti di compilazione standard di C++ che non supportano questa estensione Microsoft.|
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

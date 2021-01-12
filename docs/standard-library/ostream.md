@@ -4,17 +4,15 @@ title: '&lt;ostream&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <ostream>
-- ostream/std::<ostream>
-- std::<ostream>
 helpviewer_keywords:
 - ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
-ms.openlocfilehash: 3b17ff221e08b9fc709f1d2c32c5862f6075e451
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: a31ffe801fca16e3b7fc1037c59613150e383933
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97193032"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126429"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
@@ -28,14 +26,14 @@ Definisce il modello di classe [basic_ostream](../standard-library/basic-ostream
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome tipo|Description|
+|Nome tipo|Descrizione|
 |-|-|
 |[ostream](../standard-library/ostream-typedefs.md#ostream)|Crea un tipo da `basic_ostream` specializzato su **`char`** e `char_traits` specializzato su **`char`** .|
 |[wostream](../standard-library/ostream-typedefs.md#wostream)|Crea un tipo da `basic_ostream` specializzato su **`wchar_t`** e `char_traits` specializzato su **`wchar_t`** .|
 
 ### <a name="manipulators"></a>Manipolatori
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[endl](../standard-library/ostream-functions.md#endl)|Termina una riga e scarica il buffer.|
 |[finisce](../standard-library/ostream-functions.md#ends)|Termina una stringa.|
@@ -54,7 +52,7 @@ Definisce il modello di classe [basic_ostream](../standard-library/basic-ostream
 |-|-|
 |[basic_ostream](../standard-library/basic-ostream-class.md)|Il modello di classe descrive un oggetto che controlla l'inserimento di elementi e oggetti codificati in un buffer di flusso.|
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

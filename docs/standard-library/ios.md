@@ -4,16 +4,15 @@ title: '&lt;ios&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <ios>
-- ios/std::<ios>
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: d9ea336c3dc36b6f9afa76d00496965bb860d1be
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 9904c91c46eb34bc278a0ce877e157f01a6f9a26
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97231407"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126039"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -28,7 +27,7 @@ Definisce diversi tipi e funzioni alla base del funzionamento delle intestazioni
 > [!NOTE]
 > La \<ios> libreria usa l' `#include <iosfwd>` istruzione.
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 Molte funzioni vengono considerate manipolatori. Un manipolatore dichiarato in \<ios> modifica i valori archiviati nel relativo oggetto Argument della classe [ios_base](../standard-library/ios-base-class.md). Altri manipolatori eseguono azioni sui flussi controllati da oggetti di un tipo derivato da questa classe, ad esempio una specializzazione di uno dei modelli di classe [basic_istream](../standard-library/basic-istream-class.md) o [basic_ostream](../standard-library/basic-ostream-class.md). Ad esempio, [noskipws](../standard-library/ios-functions.md#noskipws)(**Str**) cancella il flag di formato `ios_base::skipws` nell'oggetto `str` , che può essere di uno di questi tipi.
 
@@ -44,7 +43,7 @@ chiama [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[iOS](../standard-library/ios-typedefs.md#ios)|Supporta la classe ios dalla libreria iostream precedente.|
 |[streamoff](../standard-library/ios-typedefs.md#streamoff)|Supporta operazioni interne.|
@@ -55,15 +54,15 @@ chiama [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 ### <a name="manipulators"></a>Manipolatori
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[boolalpha](../standard-library/ios-functions.md#boolalpha)|Specifica che le variabili di tipo [bool](../cpp/bool-cpp.md) vengono visualizzate come **`true`** o **`false`** nel flusso.|
 |[Dec](../standard-library/ios-functions.md#dec)|Specifica che le variabili Integer vengano visualizzate nella notazione in base 10.|
 |[defaultfloat](../standard-library/ios-functions.md#ios_defaultfloat)|Configura i flag di un oggetto `ios_base` per usare un formato di visualizzazione predefinito per i valori float.|
 |[fissa](../standard-library/ios-functions.md#fixed)|Specifica che un numero a virgola mobile venga visualizzato nella notazione decimale fissa.|
-|[esadecimale](../standard-library/ios-functions.md#hex)|Specifica che le variabili Integer vengono visualizzate nella notazione in base 16.|
+|[hex](../standard-library/ios-functions.md#hex)|Specifica che le variabili Integer vengono visualizzate nella notazione in base 16.|
 |[hexfloat](../standard-library/ios-functions.md#hexfloat)|
-|[internal](../standard-library/ios-functions.md#internal)|Fa sì che il segno di un numero venga giustificato a sinistra e il numero a destra.|
+|[interno](../standard-library/ios-functions.md#internal)|Fa sì che il segno di un numero venga giustificato a sinistra e il numero a destra.|
 |[sinistra](../standard-library/ios-functions.md#left)|Fa sì che il testo la cui larghezza non corrisponde a quella dell'output venga visualizzato nel flusso allineato con il margine sinistro.|
 |[noboolalpha](../standard-library/ios-functions.md#noboolalpha)|Specifica che le variabili di tipo [bool](../cpp/bool-cpp.md) vengano visualizzate come 1 o 0 nel flusso.|
 |[noshowbase](../standard-library/ios-functions.md#noshowbase)|Disattiva l'indicazione della base notazionale in cui viene visualizzato un numero.|
@@ -84,7 +83,7 @@ chiama [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 ### <a name="error-reporting"></a>Segnalazione errori
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[io_errc](../standard-library/ios-functions.md#io_errc)||
 |[is_error_code_enum](../standard-library/ios-functions.md#is_error_code_enum)||
@@ -94,13 +93,13 @@ chiama [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 ### <a name="classes"></a>Classi
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[basic_ios](../standard-library/basic-ios-class.md)|Il modello di classe descrive le funzioni membro e di archiviazione comuni ai flussi di input (della classe modello [basic_istream](../standard-library/basic-istream-class.md)) e ai flussi di output (del modello di classe [basic_ostream](../standard-library/basic-ostream-class.md)) che dipendono dai parametri del modello.|
 |[fpos](../standard-library/fpos-class.md)|Il modello di classe descrive un oggetto in grado di archiviare tutte le informazioni necessarie per ripristinare un indicatore di posizione del file arbitrario all'interno di qualsiasi flusso.|
 |[ios_base](../standard-library/ios-base-class.md)|La classe descrive le funzioni membro e di archiviazione comuni ai flussi di input e di output che non dipendono dai parametri di modello.|
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

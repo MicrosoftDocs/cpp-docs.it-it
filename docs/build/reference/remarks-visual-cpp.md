@@ -3,18 +3,17 @@ description: 'Altre informazioni su: &lt; osservazioni&gt;'
 title: '&lt;> osservazioni (commenti sulla documentazione C++)'
 ms.date: 11/04/2016
 f1_keywords:
-- remarks
 - <remarks>
 helpviewer_keywords:
 - <remarks> C++ XML tag
 - remarks C++ XML tag
 ms.assetid: c820083b-3192-40ab-9ec8-1472c55b4247
-ms.openlocfilehash: 0c919ba3101282fd755450489eacc6c0800fb437
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 3e3590bff827606ad38f3772b72fa4e79563c2e1
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97225219"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126091"
 ---
 # <a name="ltremarksgt"></a>&lt;remarks&gt;
 
@@ -31,7 +30,7 @@ Il \<remarks> tag viene usato per aggiungere informazioni su un tipo, integrando
 *description*<br/>
 Descrizione del membro.
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 Compilare con [/doc](doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.
 

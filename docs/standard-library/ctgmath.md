@@ -4,16 +4,15 @@ title: '&lt;ctgmath&gt;'
 ms.date: 07/11/2019
 f1_keywords:
 - <ctgmath>
-- ctgmath
 helpviewer_keywords:
 - ctgmath header
 ms.assetid: ff521893-f445-4dc8-a2f6-699185bb7024
-ms.openlocfilehash: f1033a944699f4c124114c49e0e30f8b30804a1e
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 1968422bc32695eb15cff69c53fcaadf63ac5c14
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97324695"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126585"
 ---
 # <a name="ltctgmathgt"></a>&lt;ctgmath&gt;
 
@@ -28,11 +27,11 @@ Include in effetti le intestazioni della libreria standard C++ \<complex> e \<cm
 
 **Spazio dei nomi:** std
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 La funzionalità dell'intestazione della libreria standard C \<tgmath.h> viene fornita dagli overload in \<complex> e \<cmath> .
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [\<complex>](complex.md)\
 [\<cmath>](cmath.md)\

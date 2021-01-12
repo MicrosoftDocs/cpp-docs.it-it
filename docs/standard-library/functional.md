@@ -4,18 +4,16 @@ title: '&lt;functional&gt;'
 ms.date: 02/21/2019
 f1_keywords:
 - <functional>
-- functional/std::<functional>
-- std::<functional>
 helpviewer_keywords:
 - functors
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
-ms.openlocfilehash: a13ddeb7bdb45b02bb8b35052e34a3b9601c6fec
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: fe9a42c2992557bd9cf1237a6fe66c4fbfcc232d
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97232148"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126130"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
@@ -27,7 +25,7 @@ Definisce le funzioni della libreria standard C++ che consentono di costruire *o
 
 **Spazio dei nomi:** std
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 Gli algoritmi richiedono due tipi di oggetti funzione, ovvero *unario* e *binario*. Gli oggetti funzione di tipo unario richiedono un argomento, mentre gli oggetti funzione di tipo binario richiedono due argomenti. Un oggetto funzione e i puntatori a funzione possono essere passati come predicato a un algoritmo, ma gli oggetti funzione sono anche adattabili e aumentano l'ambito, la flessibilità e l'efficienza della libreria standard C++. Se, ad esempio, un valore deve essere associato a una funzione prima del passaggio a un algoritmo, non è possibile ad esempio utilizzare un puntatore a funzione. Gli adattatori di funzione convertono i puntatori a funzione in oggetti funzione adattabili che possono essere associati a un valore. L'intestazione \<functional> contiene anche gli adattatori di funzione membro che consentono la chiamata di funzioni membro come oggetti funzione adattabili. Le funzioni sono adattabili se le dichiarazioni di tipo corrispondenti sono annidate, ne specificano l'argomento e i tipi restituiti. Gli oggetti funzione e i relativi adattatori consentono alla libreria standard C++ di aggiornare le applicazioni esistenti, oltre a facilitare l'integrazione di tale libreria nell'ambiente di programmazione C++.
 
@@ -77,7 +75,7 @@ A ogni wrapper di chiamata è associato un costruttore di spostamento e uno di c
 
 ### <a name="classes"></a>Classi
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[bad_function_call](../standard-library/bad-function-call-class.md)|Classe che descrive un'eccezione generata per indicare che una chiamata a `operator()` su un oggetto [function](../standard-library/function-class.md) non è riuscita perché l'oggetto era vuoto.|
 |[binary_negate](../standard-library/binary-negate-class.md)|Modello di classe che fornisce una funzione membro che nega il valore restituito di una funzione binaria specificata.<br/> (Deprecato in C++ 17). |
@@ -105,7 +103,7 @@ A ogni wrapper di chiamata è associato un costruttore di spostamento e uno di c
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[bind](../standard-library/functional-functions.md#bind)|Associa gli argomenti a un oggetto richiamabile.|
 |[bind1st](../standard-library/functional-functions.md#bind1st)|Funzione di modello helper che crea un adattatore per convertire un oggetto funzione binaria in un oggetto funzione unaria associando il primo argomento della funzione binaria a un valore specificato.<br/> (Deprecato in C++ 11, rimosso in C++ 17). |
@@ -128,7 +126,7 @@ A ogni wrapper di chiamata è associato un costruttore di spostamento e uno di c
 
 ### <a name="structs"></a>Struct
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[binary_function](../standard-library/binary-function-struct.md)|Classe base vuota che definisce i tipi che possono essere ereditati da una classe derivata che fornisce un oggetto funzione binaria.<br/> (Deprecato in C++ 11, rimosso in C++ 17). |
 |[divides](../standard-library/divides-struct.md)|La classe fornisce un oggetto funzione predefinito che esegue l'operazione aritmetica di divisione sugli elementi di un tipo di valore specificato.|
@@ -150,18 +148,18 @@ A ogni wrapper di chiamata è associato un costruttore di spostamento e uno di c
 
 ### <a name="objects"></a>Oggetti
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[_1.._M](../standard-library/1-object.md)|Segnaposto per gli argomenti sostituibili.|
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[operatore = =](../standard-library/functional-operators.md#op_eq_eq)|Impedisce il confronto di uguaglianza di oggetti richiamabili.|
 |[operatore! =](../standard-library/functional-operators.md#op_neq)|Impedisce il confronto di disuguaglianza di oggetti richiamabili.|
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

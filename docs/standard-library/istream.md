@@ -3,18 +3,16 @@ description: 'Altre informazioni su: &lt; IStream&gt;'
 title: '&lt;istream&gt;'
 ms.date: 11/04/2016
 f1_keywords:
-- istream/std::<istream>
 - <istream>
-- std::<istream>
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: c897441eef935cd6ef5a8b4e9f4676d06a57e1af
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 9b9b647b044cd0333349931285c4bffce000d062
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97277817"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126533"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
@@ -28,7 +26,7 @@ Definisce il modello di classe basic_istream, che media le estrazioni per iostre
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome tipo|Description|
+|Nome tipo|Descrizione|
 |-|-|
 |[iostream](../standard-library/istream-typedefs.md#iostream)|Tipo `basic_iostream` specializzato in **`char`** .|
 |[IStream](../standard-library/istream-typedefs.md#istream)|Tipo `basic_istream` specializzato in **`char`** .|
@@ -55,7 +53,7 @@ Definisce il modello di classe basic_istream, che media le estrazioni per iostre
 |[basic_iostream](../standard-library/basic-iostream-class.md)|Classe di flusso che può eseguire operazioni sia di input sia di output.|
 |[basic_istream](../standard-library/basic-istream-class.md)|Il modello di classe descrive un oggetto che controlla l'estrazione di elementi e oggetti codificati da un buffer di flusso con elementi di tipo `Elem` , noti anche come [char_type](../standard-library/basic-ios-class.md#char_type), i cui tratti di carattere sono determinati dalla classe `Tr` , nota anche come [traits_type](../standard-library/basic-ios-class.md#traits_type).|
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programmazione di iostream](../standard-library/iostream-programming.md)\

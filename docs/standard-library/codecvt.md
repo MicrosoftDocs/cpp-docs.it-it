@@ -3,17 +3,16 @@ description: 'Altre informazioni su: &lt; codecvt&gt;'
 title: '&lt;codecvt&gt;'
 ms.date: 11/04/2016
 f1_keywords:
-- codecvt
 - <codecvt>
 helpviewer_keywords:
 - codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-ms.openlocfilehash: 454637427b4a2c058b8ee8cf4bb5b8bc99215e74
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 739389fa432a2eef86533951385078e13bc05684
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97233968"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126631"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
@@ -45,7 +44,7 @@ Per i flussi di byte (archiviati in un file, trasmessi come sequenza di byte o a
 
 ### <a name="enumerations"></a>Enumerazioni
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[codecvt_mode](../standard-library/codecvt-enums.md#codecvt_mode)|Specifica informazioni sulla configurazione per i facet delle impostazioni locali.|
 
@@ -63,6 +62,6 @@ Per i flussi di byte (archiviati in un file, trasmessi come sequenza di byte o a
 
 **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)

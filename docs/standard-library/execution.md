@@ -4,15 +4,14 @@ title: '&lt;esecuzione&gt;'
 ms.date: 04/18/2019
 f1_keywords:
 - <execution>
-- std::<execution>
 helpviewer_keywords:
 - execution header
-ms.openlocfilehash: ea444ab2f4fcf3211e85837701a8ea6a0c3ec81f
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 7603bc6a78671482f691f15f83f51439a5002870
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97324409"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126572"
 ---
 # <a name="ltexecutiongt"></a>&lt;esecuzione&gt;
 
@@ -33,7 +32,7 @@ namespace std::execution {
 
 ### <a name="classes-and-structs"></a>Classi e struct
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[Struct is_execution_policy](is-execution-policy-struct.md)|Rileva i criteri di esecuzione allo scopo di escludere le firme di funzione dalla partecipazione alla risoluzione dell'overload altrimenti ambigua.|
 |[Classe parallel_policy](parallel-policy-class.md)|Utilizzato come tipo univoco per distinguere l'overload dell'algoritmo parallelo e indicare che l'esecuzione di un algoritmo parallelo può essere parallela.|
@@ -46,7 +45,7 @@ namespace std::execution {
 
 **Spazio dei nomi:** stdext
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Guida di riferimento ai file di intestazione](cpp-standard-library-header-files.md)\
 [Thread safety nella libreria standard C++](thread-safety-in-the-cpp-standard-library.md)\

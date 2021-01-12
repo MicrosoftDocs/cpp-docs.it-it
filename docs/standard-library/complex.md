@@ -4,16 +4,15 @@ title: '&lt;complex&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <complex>
-- std::<complex>
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: b16798cf1725ba6fa681b04f735d44f02a2b1b82
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 4019b32a6bb53c2fbf820c1a3d3d70824ccc6b7f
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97233838"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126630"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -25,7 +24,7 @@ Definisce il modello di classe del contenitore `complex` e i relativi modelli di
 
 **Spazio dei nomi:** std
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 Un numero complesso è una coppia ordinata di numeri reali. In termini puramente geometrici, il piano complesso è il piano bidimensionale reale. Le qualità speciali del piano complesso che lo distinguono dal piano reale dipendono dal fatto che ha una struttura algebrica aggiuntiva. Questa struttura algebrica include due operazioni fondamentali:
 
@@ -73,7 +72,7 @@ Se non diversamente specificato, le funzioni che possono restituire più valori 
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[ABS](../standard-library/complex-functions.md#abs)|Calcola il modulo di un numero complesso.|
 |[Acos](../standard-library/complex-functions.md#acos)||
@@ -103,7 +102,7 @@ Se non diversamente specificato, le funzioni che possono restituire più valori 
 
 ### <a name="operators"></a>Operatori
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[operatore! =](../standard-library/complex-operators.md#op_neq)|Verifica la disuguaglianza tra due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.|
 |[operatore](../standard-library/complex-operators.md#op_star)|Moltiplica due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.|
@@ -116,7 +115,7 @@ Se non diversamente specificato, le funzioni che possono restituire più valori 
 
 ### <a name="classes"></a>Classi
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[complesso\<double>](../standard-library/complex-double.md)|Il modello di classe specializzato in modo esplicito descrive un oggetto che archivia una coppia ordinata di oggetti, entrambi di tipo **`double`** , dove il primo rappresenta la parte reale di un numero complesso e il secondo rappresenta la parte immaginaria.|
 |[complesso\<float>](../standard-library/complex-float.md)|Il modello di classe specializzato in modo esplicito descrive un oggetto che archivia una coppia ordinata di oggetti, entrambi di tipo **`float`** , dove il primo rappresenta la parte reale di un numero complesso e il secondo rappresenta la parte immaginaria.|
@@ -127,13 +126,13 @@ Se non diversamente specificato, le funzioni che possono restituire più valori 
 
 L' \<complex> intestazione definisce i [valori letterali definiti dall'utente](../cpp/user-defined-literals-cpp.md) seguenti che creano un numero complesso con la parte reale che è zero e la parte immaginaria è il valore del parametro di input.
 
-|Dichiarazione|Description|
+|Dichiarazione|Descrizione|
 |-|-|
 |`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|Restituisce: `complex<long double>{0.0L, static_cast<long double>(d)}`|
 |`constexpr complex<double> operator""i(long double d)`<br />`constexpr complex<double> operator""i(unsigned long long d)`|Restituisce `complex<double>{0.0, static_cast<double>(d)}`.|
 |`constexpr complex<float> operator""if(long double d)`<br />`constexpr complex<float> operator""if(unsigned long long d)`|Restituisce `complex<float>{0.0f, static_cast<float>(d)}`.|
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

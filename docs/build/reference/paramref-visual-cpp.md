@@ -1,23 +1,23 @@
 ---
-title: '&lt;> paramref (C++ commenti sulla documentazione)'
+title: '&lt;> paramref (commenti sulla documentazione C++)'
+description: Altre informazioni sul tag della documentazione XML di paramref C++.
 ms.date: 11/04/2016
 f1_keywords:
-- paramref
 - <paramref>
 helpviewer_keywords:
 - paramref C++ XML tag
 - <paramref> C++ XML tag
 ms.assetid: c5730dc2-7159-421f-b2d5-bb971e307122
-ms.openlocfilehash: 1f4e9cb0e6b39e4da78e78048342dac2ecc9deea
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 393703e7816368fb80f71d962dc190a0db1cea03
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988684"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126156"
 ---
 # <a name="ltparamrefgt"></a>&lt;paramref&gt;
 
-Il tag \<paramref > offre un modo per indicare che una parola è un parametro. Il file con estensione xml può essere elaborato per formattare questo parametro in modo specifico.
+Il \<paramref> tag consente di indicare che una parola è un parametro. Il file con estensione xml può essere elaborato per formattare questo parametro in modo specifico.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -27,10 +27,10 @@ Il tag \<paramref > offre un modo per indicare che una parola è un parametro. I
 
 #### <a name="parameters"></a>Parametri
 
-*name*<br/>
+*nome*<br/>
 Nome del parametro a cui fare riferimento.  Racchiudere il nome tra virgolette singole o doppie.  Il compilatore genera un avviso se non trova `name`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Compilare con [/doc](doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.
 
@@ -51,4 +51,4 @@ public ref class MyClass {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Documentazione di XML](xml-documentation-visual-cpp.md)
+[Documentazione XML](xml-documentation-visual-cpp.md)

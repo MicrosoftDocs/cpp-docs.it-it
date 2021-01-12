@@ -3,17 +3,16 @@ description: 'Altre informazioni su: &lt; stringa&gt;'
 title: '&lt;string&gt;'
 ms.date: 11/04/2016
 f1_keywords:
-- string/std::<string>
 - <string>
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 4a5598189be96cb15ff423f57e45fd91e2d93216
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: d0c685eae1bb05faaac55aae614fc10e60472759
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97183542"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126546"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -37,7 +36,7 @@ Il linguaggio C++ e la libreria standard C++ supportano due tipi di stringhe:
 
 ### <a name="typedefs"></a>Typedef
 
-|Nome tipo|Description|
+|Nome tipo|Descrizione|
 |-|-|
 |[string](../standard-library/string-typedefs.md#string)|Tipo che descrive una specializzazione del modello di classe `basic_string` con elementi di tipo **`char`** come `string` .|
 |[wstring](../standard-library/string-typedefs.md#wstring)|Tipo che descrive una specializzazione del modello di classe `basic_string` con elementi di tipo **`wchar_t`** come `wstring` .|
@@ -60,7 +59,7 @@ Il linguaggio C++ e la libreria standard C++ supportano due tipi di stringhe:
 
 ### <a name="specialized-template-functions"></a>Funzioni di modello specializzate
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |`hash`|Genera un hash di una stringa.|
 |[scambio](../standard-library/string-functions.md#swap)|Scambia le matrici di caratteri di due stringhe.|
@@ -89,7 +88,7 @@ Il linguaggio C++ e la libreria standard C++ supportano due tipi di stringhe:
 
 ### <a name="specializations"></a>Specializzazioni
 
-|Nome|Description|
+|Nome|Descrizione|
 |-|-|
 |[\<char>Struct char_traits](../standard-library/char-traits-char-struct.md)|Struct che rappresenta una specializzazione dello struct modello `char_traits` \<CharType> per un elemento di tipo **`char`** .|
 |[Struct char_traits<wchar_t>](../standard-library/char-traits-wchar-t-struct.md)|Struct che rappresenta una specializzazione dello struct modello `char_traits` \<CharType> per un elemento di tipo **`wchar_t`** .|
@@ -102,7 +101,7 @@ Il linguaggio C++ e la libreria standard C++ supportano due tipi di stringhe:
 
 - **Spazio dei nomi:** std
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Guida di riferimento ai file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
