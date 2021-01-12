@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 13e06cd75f1ee684c2ee1ad6239aeb77b805675e
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 15027182d632c1076c78e2e8a1335e1059ac7e3b
+ms.sourcegitcommit: 14d6ae0d527d05d153e26463d4cd5ada0f43e864
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041523"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104765"
 ---
 # <a name="zc-conformance"></a>`/Zc` Conformità
 
@@ -23,7 +23,7 @@ ms.locfileid: "90041523"
 
 > **`/Zc:`**_opzione_{,_opzione_}
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 Quando Visual Studio ha implementato un'estensione in C o C++ non compatibile con lo standard, è possibile usare un' **`/Zc`** opzione di conformità per specificare un comportamento standard o specifico di Microsoft. Per alcune opzioni, il comportamento specifico di Microsoft è l'impostazione predefinita, per evitare modifiche di rilievo su larga scala nel codice esistente. In altri casi, l'impostazione predefinita è il comportamento standard, in cui i miglioramenti in sicurezza, prestazioni o compatibilità superano i costi delle modifiche di rilievo. L'impostazione predefinita di ogni opzione di conformità può variare nelle versioni più recenti di Visual Studio. Per ulteriori informazioni su ogni opzione di conformità, vedere l'argomento relativo all'opzione specifica. L' [`/permissive-`](permissive-standards-conformance.md) opzione del compilatore imposta in modo implicito le opzioni di conformità che non sono impostate per impostazione predefinita sull'impostazione conforme.
 
@@ -33,10 +33,10 @@ Queste sono le **`/Zc`** Opzioni del compilatore:
 |--|--|
 | [`/Zc:alignedNew`](zc-alignednew.md) | Abilitare l'allocazione dinamica allineata a C++ 17 (attivato per impostazione predefinita in C++ 17). |
 | [`/Zc:auto`](zc-auto-deduce-variable-type.md) | Applicare il nuovo significato C++ standard per **`auto`** (on per impostazione predefinita). |
-| [`/Zc__cplusplus`](zc-cplusplus.md) | Abilitare la `__cplusplus` macro per segnalare lo standard supportato (disattivato per impostazione predefinita). |
+| [`/Zc:__cplusplus`](zc-cplusplus.md) | Abilitare la `__cplusplus` macro per segnalare lo standard supportato (disattivato per impostazione predefinita). |
 | [`/Zc:externConstexpr`](zc-externconstexpr.md) | Abilitare il collegamento esterno per le **`constexpr`** variabili (disattivato per impostazione predefinita). |
 | [`/Zc:forScope`](zc-forscope-force-conformance-in-for-loop-scope.md) | Applicare **`for`** le regole di ambito C++ standard (abilitata per impostazione predefinita). |
-| [`/ZcimplicitNoexcept`](zc-implicitnoexcept-implicit-exception-specifiers.md) | Abilitare implicito **`noexcept`** sulle funzioni obbligatorie (attivato per impostazione predefinita). |
+| [`/Zc:implicitNoexcept`](zc-implicitnoexcept-implicit-exception-specifiers.md) | Abilitare implicito **`noexcept`** sulle funzioni obbligatorie (attivato per impostazione predefinita). |
 | [`/Zc:inline`](zc-inline-remove-unreferenced-comdat.md) | Rimuovere la funzione o i dati senza riferimenti se è COMDAT o ha solo un collegamento interno (disattivato per impostazione predefinita). |
 | [`/Zc:noexceptTypes`](zc-noexcepttypes.md) | Applicare le regole C++ 17 (abilitata **`noexcept`** per impostazione predefinita in c++ 17 o versioni successive). |
 | [`/Zc:preprocessor`](zc-preprocessor.md) | Usare il nuovo preprocessore conforme (disattivato per impostazione predefinita, ad eccezione di C11/C17). |
@@ -53,7 +53,7 @@ Queste sono le **`/Zc`** Opzioni del compilatore:
 
 Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
-[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)

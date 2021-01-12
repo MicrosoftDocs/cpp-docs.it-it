@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: 2237c8aa3cb1b1078a8b90ba5a3ba6cba0a7134b
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 061ddac33af4b8e1587b2ab1035d9f96ba18b108
+ms.sourcegitcommit: 14d6ae0d527d05d153e26463d4cd5ada0f43e864
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97319469"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104752"
 ---
 # <a name="auto-c"></a>`auto` C++
 
@@ -28,7 +28,7 @@ Deduce il tipo di una variabile dichiarata dall'espressione di inizializzazione.
 
 > **`[](auto`***param1* **`, auto`** *param2***`) {};`**
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 La **`auto`** parola chiave indica al compilatore di usare l'espressione di inizializzazione di una variabile dichiarata o un parametro dell'espressione lambda per dedurre il tipo.
 
@@ -50,7 +50,16 @@ Casi di conversione in cui potrebbe non essere necessario usare **`auto`** :
 
 Per usare la **`auto`** parola chiave, usarla invece di un tipo per dichiarare una variabile e specificare un'espressione di inizializzazione. Inoltre, è possibile modificare la **`auto`** parola chiave utilizzando identificatori e dichiaratori come **`const`** , **`volatile`** , Pointer ( **`*`** ), Reference ( **`&`** ) e il riferimento rvalue ( **`&&`** ). Il compilatore valuta l'espressione di inizializzazione, quindi utilizza tali informazioni per dedurre il tipo della variabile.
 
-L'espressione di inizializzazione può essere un'assegnazione (sintassi del segno di uguale), un'inizializzazione diretta (sintassi di tipo funzione), un' [`operator new`](new-operator-cpp.md) espressione o l'espressione di inizializzazione può essere il parametro *for-range-declaration* in un'istruzione [basata sull'intervallo `for` (C++)](../cpp/range-based-for-statement-cpp.md) . Per ulteriori informazioni, vedere [inizializzatori](../cpp/initializers.md) e gli esempi di codice più avanti in questo documento.
+L' **`auto`** espressione di inizializzazione può assumere diverse forme:
+
+- Sintassi di inizializzazione universale, ad esempio `auto a { 42 };` .
+- Sintassi di assegnazione, ad esempio `auto b = 0;` .
+- Sintassi di assegnazione universale, che combina i due formati precedenti, ad esempio `auto c = { 3.14156 };` .
+- Inizializzazione diretta o sintassi di tipo costruttore, ad esempio `auto d( 1.41421f );` .
+
+Per ulteriori informazioni, vedere [inizializzatori](../cpp/initializers.md) e gli esempi di codice più avanti in questo documento.
+
+Quando **`auto`** si utilizza per dichiarare il parametro del ciclo in un'istruzione basata su intervalli **`for`** , viene utilizzata una sintassi di inizializzazione diversa, ad esempio `for (auto& i : iterable) do_action(i);` . Per altre informazioni, vedere [istruzione basata su intervallo `for` (C++)](../cpp/range-based-for-statement-cpp.md).
 
 La **`auto`** parola chiave è un segnaposto per un tipo, ma non è un tipo. Pertanto, la **`auto`** parola chiave non può essere utilizzata in cast o operatori, ad esempio [`sizeof`](../cpp/sizeof-operator.md) e (per C++/CLI) [`typeid`](../extensions/typeid-cpp-component-extensions.md) .
 
@@ -135,7 +144,7 @@ La tabella seguente elenca le restrizioni relative all'uso della **`auto`** paro
 |[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|Tutti i simboli in un elenco di dichiaratori dichiarati con la **`auto`** parola chiave devono essere risolti nello stesso tipo. Per altre informazioni, vedere [dichiarazioni e definizioni](declarations-and-definitions-cpp.md).|
 |[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|Gli operatori [sizeof](../cpp/sizeof-operator.md) e [typeid](../extensions/typeid-cpp-component-extensions.md) non possono essere applicati a un simbolo dichiarato con la **`auto`** parola chiave.|
 
-## <a name="examples"></a>Esempio
+## <a name="examples"></a>Esempi
 
 Questi frammenti di codice illustrano alcune modalità in cui **`auto`** è possibile usare la parola chiave.
 
@@ -219,7 +228,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Parole chiave](../cpp/keywords-cpp.md)<br/>
 [`/Zc:auto` (Deduce il tipo di variabile)](../build/reference/zc-auto-deduce-variable-type.md)<br/>

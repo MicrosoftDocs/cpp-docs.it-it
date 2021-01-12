@@ -1,7 +1,7 @@
 ---
 description: Altre informazioni su:/ZP (allineamento membri struct)
 title: /Zp (Allineamento membri struct)
-ms.date: 04/04/2019
+ms.date: 01/08/2021
 f1_keywords:
 - /zp
 - VC.Project.VCCLCompilerTool.StructMemberAlignment
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: b2029ebded53bcae1b44b5cd72bf59494e58ec4b
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 8d29c442726aff9503a42378fce6a7b8b09526ed
+ms.sourcegitcommit: 14d6ae0d527d05d153e26463d4cd5ada0f43e864
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97224309"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104778"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (Allineamento membri struct)
 
@@ -27,7 +27,7 @@ Controlla il modo in cui i membri di una struttura vengono compressi in memoria 
 
 > **`/Zp`**[**`1`**|**`2`**|**`4`**|**`8`**|**`16`**]
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 L' **`/ZpN`** opzione indica al compilatore dove archiviare ogni membro della struttura. Il compilatore archivia i membri dopo il primo in un limite minore della dimensione del tipo di membro o di un limite di *N* byte.
 
@@ -44,9 +44,9 @@ I valori di compressione disponibili sono descritti nella tabella seguente:
 Non usare questa opzione a meno che non siano previsti requisiti di allineamento specifici.
 
 > [!WARNING]
-> Le intestazioni C++ nel set di Windows SDK e presuppongono la **`/Zp8`** compressione interna. È possibile che si verifichi un danneggiamento della memoria se l' **`/Zp`** impostazione viene modificata all'interno delle intestazioni Windows SDK. Le intestazioni non sono interessate dalle **`/Zp`** opzioni impostate nella riga di comando.
+> Le intestazioni C/C++ nel Windows SDK presuppongono la **`/Zp8`** compressione interna. Non modificare l'impostazione predefinita quando si includono le intestazioni Windows SDK, usando **`/Zp`** nella riga di comando o usando `#pragma pack` . In caso contrario, l'applicazione può causare un danneggiamento della memoria in fase di esecuzione.
 
-È anche possibile usare [`pack`](../../preprocessor/pack.md) per controllare la compressione della struttura. Per ulteriori informazioni sull'allineamento, vedere:
+È anche possibile usare il [ `pack` pragma](../../preprocessor/pack.md) per controllare la compressione della struttura. Per ulteriori informazioni sull'allineamento, vedere:
 
 - [`align`](../../cpp/align-cpp.md)
 
@@ -68,7 +68,7 @@ Non usare questa opzione a meno che non siano previsti requisiti di allineamento
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StructMemberAlignment%2A>.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Opzioni del compilatore MSVC](compiler-options.md) \
 [Sintassi Command-Line del compilatore MSVC](compiler-command-line-syntax.md)
