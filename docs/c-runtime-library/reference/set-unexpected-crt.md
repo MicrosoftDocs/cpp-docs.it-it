@@ -1,7 +1,7 @@
 ---
 description: 'Altre informazioni su: set_unexpected (CRT)'
 title: set_unexpected (CRT)
-ms.date: 11/04/2016
+ms.date: 1/14/2021
 api_name:
 - set_unexpected
 api_location:
@@ -15,6 +15,7 @@ api_location:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,16 +27,16 @@ helpviewer_keywords:
 - unexpected function
 - exception handling, termination
 ms.assetid: ebcef032-4771-48e5-88aa-2a1ab8750aa6
-ms.openlocfilehash: b9665a73f87d64cd991ff8ce296a4c14957b30ed
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: b9918e152a5d27c853aef7769b932ee4efedeef8
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97211076"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98242631"
 ---
-# <a name="set_unexpected-crt"></a>set_unexpected (CRT)
+# <a name="set_unexpected-crt"></a>`set_unexpected` CRT
 
-Installa la funzione di terminazione personalizzata che verrà chiamata da **unexpected**.
+Installa la funzione di terminazione personalizzata che verrà chiamata da **`unexpected`** .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -45,44 +46,44 @@ unexpected_function set_unexpected( unexpected_function unexpFunction );
 
 ### <a name="parameters"></a>Parametri
 
-*unexpFunction*<br/>
-Puntatore a una funzione che si scrive per sostituire la funzione **imprevista** .
+*`unexpFunction`*\
+Puntatore a una funzione che si scrive per sostituire la **`unexpected`** funzione.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un puntatore alla funzione di terminazione precedente registrata da **_set_unexpected** in modo che la funzione precedente possa essere ripristinata in un secondo momento. Se non è stata impostata alcuna funzione precedente, il valore restituito può essere utilizzato per ripristinare il comportamento predefinito; Questo valore può essere **null**.
+Restituisce un puntatore alla funzione di terminazione precedente registrata da in **`_set_unexpected`** modo che la funzione precedente possa essere ripristinata in un secondo momento. Se non è stata impostata alcuna funzione precedente, il valore restituito può essere utilizzato per ripristinare il comportamento predefinito; Questo valore può essere **`NULL`** .
 
 ## <a name="remarks"></a>Commenti
 
-La funzione **set_unexpected** installa *unexpFunction* come funzione chiamata da **Unexpected**. non **è utilizzato** nell'implementazione corrente di gestione delle eccezioni C++. Il tipo di **unexpected_function** è definito in eh. H come puntatore a una funzione imprevista definita dall'utente, *unexpFunction* che restituisce **`void`** . La funzione *unexpFunction* personalizzata non deve tornare al chiamante.
+La **`set_unexpected`** funzione installa *unexpFunction* come funzione chiamata da **`unexpected`** . **`unexpected`** non viene utilizzato nell'implementazione corrente di gestione delle eccezioni C++. Il **`unexpected_function`** tipo è definito in eh. H come puntatore a una funzione imprevista definita dall'utente, *unexpFunction* che restituisce **`void`** . La funzione *unexpFunction* personalizzata non deve tornare al chiamante.
 
 ```cpp
 typedef void ( *unexpected_function )( );
 ```
 
-Per impostazione predefinita, le chiamate **impreviste** **terminano**. È possibile modificare questo comportamento predefinito scrivendo una funzione di terminazione personalizzata e chiamando **set_unexpected** con il nome della funzione come argomento. **imprevisto** chiama l'ultima funzione specificata come argomento per **set_unexpected**.
+Per impostazione predefinita, **`unexpected`** chiama **`terminate`** . È possibile modificare questo comportamento predefinito scrivendo una funzione di terminazione personalizzata e chiamando **`set_unexpected`** con il nome della funzione come argomento. **`unexpected`** chiama l'ultima funzione fornita come argomento a **`set_unexpected`** .
 
-A differenza della funzione di terminazione personalizzata installata da una chiamata a **set_terminate**, un'eccezione può essere generata dall'interno di *unexpFunction*.
+A differenza della funzione di terminazione personalizzata installata da una chiamata a **`set_terminate`** , un'eccezione può essere generata dall'interno di **`unexpFunction`** .
 
 In un ambiente multithreading, le funzioni unexpected vengono mantenute separatamente per ogni thread. Ogni nuovo thread richiede l'installazione della propria funzione unexpected. Quindi, ogni thread è responsabile della propria gestione degli eventi imprevisti.
 
-Nell'implementazione Microsoft corrente della gestione delle eccezioni C++, le chiamate **impreviste** **terminano** per impostazione predefinita e non vengono mai chiamate dalla libreria di runtime per la gestione delle eccezioni. Non vi è alcun vantaggio particolare derivante dalla chiamata di **Unexpected** anziché **terminare**.
+Nell'implementazione Microsoft corrente della gestione delle eccezioni C++, **`unexpected`** chiama **`terminate`** per impostazione predefinita e non viene mai chiamata dalla libreria di runtime per la gestione delle eccezioni. Non esiste alcun vantaggio particolare per chiamare **`unexpected`** anziché **term'inate**.
 
-È disponibile un singolo gestore di **set_unexpected** per tutte le dll o i exe collegati in modo dinamico; anche se si chiama **set_unexpected** il gestore può essere sostituito da un altro o che si sta sostituendo un gestore impostato da un altro file dll o exe.
+È disponibile un unico **`set_unexpected`** gestore per tutti i file dll o exe collegati in modo dinamico. anche se si chiama **`set_unexpected`** il gestore, è possibile che venga sostituito da un altro o che si stia sostituendo un gestore impostato da un altro file dll o exe.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**set_unexpected**|\<eh.h>|
+|**`set_unexpected`**|`<eh.h>`|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-[Routine di gestione delle eccezioni](../../c-runtime-library/exception-handling-routines.md)<br/>
-[interruzione](abort.md)<br/>
-[_get_unexpected](get-unexpected.md)<br/>
-[set_terminate](set-terminate-crt.md)<br/>
-[terminare](terminate-crt.md)<br/>
-[inaspettato](unexpected-crt.md)<br/>
+[Routine di gestione delle eccezioni](../../c-runtime-library/exception-handling-routines.md)\
+[`abort`](abort.md)\
+[`_get_unexpected`](get-unexpected.md)\
+[`set_terminate`](set-terminate-crt.md)\
+[`terminate`](terminate-crt.md)\
+[`unexpected`](unexpected-crt.md)\

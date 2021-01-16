@@ -1,7 +1,7 @@
 ---
 description: 'Altre informazioni su: _set_se_translator'
 title: _set_se_translator
-ms.date: 02/21/2018
+ms.date: 1/14/2021
 api_name:
 - _set_se_translator
 api_location:
@@ -15,6 +15,7 @@ api_location:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,14 +28,14 @@ helpviewer_keywords:
 - exception handling, changing
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
-ms.openlocfilehash: 5ba0f0816b7876f24dfc010c83711e9ca652edad
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: bde7b716bcb69f38ba6ab64151e2ec4fe93e0c9c
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97211232"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98243007"
 ---
-# <a name="_set_se_translator"></a>_set_se_translator
+# `_set_se_translator`
 
 Impostare una funzione di callback per thread per tradurre le eccezioni Win32 (eccezioni strutturate C) in eccezioni tipizzate C++.
 
@@ -48,26 +49,26 @@ _se_translator_function _set_se_translator(
 
 ### <a name="parameters"></a>Parametri
 
-*seTransFunction*<br/>
+*`seTransFunction`*\
 Puntatore a una funzione di conversione di eccezioni strutturate C scritta dall'utente.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un puntatore alla funzione di conversione precedente registrata da **_set_se_translator**, in modo che la funzione precedente possa essere ripristinata in un secondo momento. Se non è stata impostata alcuna funzione precedente, il valore restituito può essere utilizzato per ripristinare il comportamento predefinito. Questo valore può essere **`nullptr`** .
+Restituisce un puntatore alla funzione di conversione precedente registrata da **`_set_se_translator`** , in modo che la funzione precedente possa essere ripristinata in un secondo momento. Se non è stata impostata alcuna funzione precedente, il valore restituito può essere utilizzato per ripristinare il comportamento predefinito. Questo valore può essere **`nullptr`** .
 
 ## <a name="remarks"></a>Commenti
 
-La funzione **_set_se_translator** fornisce un modo per gestire le eccezioni Win32 (eccezioni strutturate C) come eccezioni tipizzate C++. Per consentire a ogni eccezione C di essere gestita da un **`catch`** gestore C++, definire innanzitutto una classe wrapper di eccezione c che può essere utilizzata o derivata da per attribuire un tipo di classe specifico a un'eccezione c. Per utilizzare questa classe, installare una funzione di conversione delle eccezioni C personalizzata che viene chiamata dal meccanismo interno di gestione delle eccezioni ogni volta che viene generata un'eccezione C. All'interno della funzione di conversione è possibile generare qualsiasi eccezione tipizzata che può essere rilevata da un gestore C++ corrispondente **`catch`** .
+La **`_set_se_translator`** funzione fornisce un modo per gestire le eccezioni Win32 (eccezioni strutturate C) come eccezioni tipizzate C++. Per consentire a ogni eccezione C di essere gestita da un **`catch`** gestore C++, definire innanzitutto una classe wrapper di eccezione c che può essere utilizzata o derivata da per attribuire un tipo di classe specifico a un'eccezione c. Per utilizzare questa classe, installare una funzione di conversione delle eccezioni C personalizzata che viene chiamata dal meccanismo interno di gestione delle eccezioni ogni volta che viene generata un'eccezione C. All'interno della funzione di conversione è possibile generare qualsiasi eccezione tipizzata che può essere rilevata da un gestore C++ corrispondente **`catch`** .
 
-È necessario usare [/EHA](../../build/reference/eh-exception-handling-model.md) quando si usa **_set_se_translator**.
+È necessario usare [`/EHa`](../../build/reference/eh-exception-handling-model.md) quando si usa **_set_se_translator**.
 
-Per specificare una funzione di conversione personalizzata, chiamare **_set_se_translator** usando il nome della funzione di conversione come argomento. La funzione di conversione che si scrive viene chiamata una volta per ogni chiamata di funzione nello stack con **`try`** blocchi. Non esiste una funzione di conversione predefinita.
+Per specificare una funzione di conversione personalizzata, chiamare **`_set_se_translator`** usando il nome della funzione di conversione come argomento. La funzione di conversione che si scrive viene chiamata una volta per ogni chiamata di funzione nello stack con **`try`** blocchi. Non esiste alcuna funzione di conversione predefinita.
 
-La funzione di conversione non dovrebbe fare altro che generare un'eccezione tipizzata C++. Se effettua altre operazioni oltre alla generazione (ad esempio, la scrittura in un file di log), il programma potrebbe non comportarsi come previsto, poiché il numero di volte in cui la funzione di conversione viene richiamata è dipendente dalla piattaforma.
+La funzione di conversione non dovrebbe fare altro che generare un'eccezione tipizzata C++. Se viene eseguita un'operazione oltre a generare, ad esempio la scrittura in un file di log, il programma potrebbe non comportarsi come previsto perché il numero di volte in cui la funzione di conversione viene richiamata è dipendente dalla piattaforma.
 
-In un ambiente con multithreading, le funzioni di conversione vengono mantenute separatamente per ogni thread. Ogni nuovo thread richiede l'installazione della propria funzione di conversione. Quindi, ogni thread è responsabile della propria gestione di conversione. **_set_se_translator** è specifico di un thread. un'altra DLL può installare una funzione di conversione diversa.
+In un ambiente con multithreading, le funzioni di conversione vengono mantenute separatamente per ogni thread. Ogni nuovo thread richiede l'installazione della propria funzione di conversione. Quindi, ogni thread è responsabile della propria gestione di conversione. **`_set_se_translator`** è specifico di un thread: un'altra DLL può installare una funzione di conversione diversa.
 
-La funzione *seTransFunction* scritta deve essere una funzione compilata nativamente (non compilata con/CLR). Deve prendere un Unsigned Integer e un puntatore a una struttura di **_EXCEPTION_POINTERS** Win32 come argomenti. Gli argomenti sono i valori restituiti delle chiamate alle funzioni API Win32 **GetExceptionCode** e **GetExceptionInformation** , rispettivamente.
+La funzione *seTransFunction* scritta deve essere una funzione compilata nativamente (non compilata con/CLR). Deve prendere un Unsigned Integer e un puntatore a una struttura Win32 **`_EXCEPTION_POINTERS`** come argomenti. Gli argomenti sono i valori restituiti delle chiamate all'API Win32 **`GetExceptionCode`** e alle **`GetExceptionInformation`** funzioni, rispettivamente.
 
 ```cpp
 typedef void (__cdecl *_se_translator_function)(unsigned int, struct _EXCEPTION_POINTERS* );
@@ -75,7 +76,7 @@ typedef void (__cdecl *_se_translator_function)(unsigned int, struct _EXCEPTION_
 
 Per **_set_se_translator**, esistono implicazioni quando si esegue il collegamento dinamico a CRT; un'altra DLL nel processo potrebbe chiamare **_set_se_translator** e sostituire il gestore con il proprio.
 
-Quando si utilizzano **_set_se_translator** da codice gestito (codice compilato con/CLR) o codice misto nativo e gestito, tenere presente che il traduttore influiscono sulle eccezioni generate solo nel codice nativo. Le eccezioni gestite generate nel codice gestito (ad esempio, quando viene generata `System::Exception`) non vengono indirizzate attraverso la funzione di conversione. Le eccezioni generate nel codice gestito utilizzando la funzione Win32 **RaiseException** o causate da un'eccezione di sistema come un'eccezione di divisione per zero vengono indirizzate attraverso il convertitore.
+Quando si utilizzano **_set_se_translator** da codice gestito (codice compilato con/CLR) o codice misto nativo e gestito, tenere presente che il traduttore influiscono sulle eccezioni generate solo nel codice nativo. Eventuali eccezioni gestite generate nel codice gestito (ad esempio durante la generazione `System::Exception` ) non vengono instradate tramite la funzione di conversione. Le eccezioni generate nel codice gestito utilizzando la funzione Win32 **RaiseException** o causate da un'eccezione di sistema come un'eccezione di divisione per zero vengono indirizzate attraverso il convertitore.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -231,10 +232,10 @@ int main() {
 Caught SE_Exception, error c0000094
 ```
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-[Routine di gestione delle eccezioni](../../c-runtime-library/exception-handling-routines.md)<br/>
-[set_terminate](set-terminate-crt.md)<br/>
-[set_unexpected](set-unexpected-crt.md)<br/>
-[terminare](terminate-crt.md)<br/>
-[inaspettato](unexpected-crt.md)<br/>
+[Routine di gestione delle eccezioni](../../c-runtime-library/exception-handling-routines.md)\
+[`set_terminate`](set-terminate-crt.md)\
+[`set_unexpected`](set-unexpected-crt.md)\
+[`terminate`](terminate-crt.md)\
+[`unexpected`](unexpected-crt.md)\
