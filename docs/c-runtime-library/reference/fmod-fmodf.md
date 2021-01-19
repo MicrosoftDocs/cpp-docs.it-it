@@ -1,12 +1,13 @@
 ---
 title: fmod, fmodf, fmodl
 description: Informazioni di riferimento sulle API per fmod, fmodf e fmodl; che calcola il resto a virgola mobile.
-ms.date: 9/1/2020
+ms.date: 1/15/2021
 api_name:
 - fmod
 - fmodf
 - fmodl
 - _o_fmod
+- _o_fmodf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -34,15 +35,14 @@ helpviewer_keywords:
 - fmodl function
 - fmod function
 - floating-point numbers, calculating remainders
-ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: 2b610dec79c98b973af09f8efb147ad6797f7946
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 8d2c3bcb0f871eb707f264478c4ce492bbb9c80c
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556086"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98563938"
 ---
-# <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
+# <a name="fmod-fmodf-fmodl"></a>`fmod`, `fmodf`, `fmodl`
 
 Calcola il resto a virgola mobile.
 
@@ -75,31 +75,31 @@ long double fmodl(
 
 ### <a name="parameters"></a>Parametri
 
-*x*, *y*\
+*`x`*, *`y`*\
 Valori a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-**fmod** restituisce il resto a virgola mobile di *x*  /  *y*. Se il valore di *y* è 0,0, **fmod** restituisce un valore NaN non interattiva. Per informazioni sulla rappresentazione di un valore NaN non interattivo da parte della famiglia **printf** , vedere [printf](printf-printf-l-wprintf-wprintf-l.md).
+**`fmod`** Restituisce il resto a virgola mobile di *`x`*  /  *`y`* . Se il valore di *`y`* è 0,0, **`fmod`** restituisce un valore NaN non interattiva. Per informazioni sulla rappresentazione di un valore NaN non interattivo da parte della **`printf`** famiglia, vedere [printf](printf-printf-l-wprintf-wprintf-l.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **fmod** calcola il resto a virgola mobile *f* di *x*  /  *y* in modo *che x*  =  *i* \* *y*  +  *f*, dove *i* è un numero intero, *f* ha lo stesso segno di *x*e il valore assoluto di *f* è minore del valore assoluto di *y*.
+La **`fmod`** funzione calcola il resto della *f* a virgola mobile di *`x`*  /  *`y`* in modo che i *`x`*  =   \* *`y`*  +  *`f`* , dove *`i`* è un numero intero, *`f`* ha lo stesso segno di *`x`* e il valore assoluto di *`f`* è minore del valore assoluto di *`y`* .
 
-C++ consente l'overload, quindi è possibile chiamare overload di **fmod** che accettano e restituiscono **`float`** **`long double`** valori e. In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **fmod** accetta sempre due **`double`** argomenti e restituisce un **`double`** .
+C++ consente l'overload, quindi è possibile chiamare gli overload di **`fmod`** che accettano e restituiscono **`float`** **`long double`** i valori e. In un programma C, a meno che non si stia usando la `<tgmath.h>` macro per chiamare questa funzione, **`fmod`** accetta sempre due **`double`** argomenti e restituisce un **`double`** .
 
-Se si usa la \<tgmath.h> `fmod()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
+Se si usa la `<tgmath.h>` `fmod()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisiti
 
-|Function|Intestazione obbligatoria|
+|Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
-|**fmod**, **fmodf**, **fmodl**|\<math.h>|
-|**fmod** (macro) | \<tgmath.h> |
+|**`fmod`**, **`fmodf`**, **`fmodl`**|`<math.h>`|
+|**`fmod`** macro | `<tgmath.h>` |
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -125,8 +125,8 @@ The remainder of -10.00 / 3.00 is -1.000000
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
-[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
-[floor, floorf, floorl](floor-floorf-floorl.md)<br/>
-[_CIfmod](../../c-runtime-library/cifmod.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)\
+[`ceil, ceilf, ceill`](ceil-ceilf-ceill.md)\
+[`fabs, fabsf, fabsl`](fabs-fabsf-fabsl.md)\
+[f`loor, floorf, floorl`](floor-floorf-floorl.md)\
+[`_CIfmod`](../../c-runtime-library/cifmod.md)

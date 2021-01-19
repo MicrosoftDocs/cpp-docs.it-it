@@ -1,12 +1,13 @@
 ---
 title: tanh, tanhf, tanhl
 description: Informazioni di riferimento sulle API per tanh, tanhf e tanhl; che calcola la tangente iperbolica di un valore a virgola mobile.
-ms.date: 08/31/2020
+ms.date: 1/15/2021
 api_name:
 - tanh
 - tanhf
 - tanhl
 - _o_tanh
+- _o_tanhf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -36,14 +37,14 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 5fa93f56ebec5e8aa06c7317534adb12ae9e68e2
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: c09655b4a86010ff6a476f7dacbce4f9f73ab3cc
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556580"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98564121"
 ---
-# <a name="tanh-tanhf-tanhl"></a>tanh, tanhf, tanhl
+# <a name="tanh-tanhf-tanhl"></a>`tanh`, `tanhf`, `tanhl`
 
 Calcola la tangente iperbolica.
 
@@ -63,22 +64,22 @@ long double tanh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*x*\
+*`x`*\
 Angolo in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **tanh** restituiscono la tangente iperbolica di *x*. Non viene restituito alcun errore.
+Le **`tanh`** funzioni restituiscono la tangente iperbolica di *`x`* . Non viene restituito alcun errore.
 
-|Input|Eccezione SEH|**Matherr** Eccezione|
+|Input|Eccezione SEH|**`Matherr`** eccezione|
 |-----------|-------------------|-------------------------|
-|± QNAN, IND|Nessuno|_DOMAIN|
+|± `QNAN`,`IND`|Nessuno|`_DOMAIN`|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **tanh** che accettano e restituiscono **`float`** **`long double`** valori o. In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **tanh** accetta e restituisce sempre **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **`tanh`** che accettano e restituiscono **`float`** valori o **`long double`** . In un programma C, a meno che non si usi la `<tgmath.h>` macro per chiamare questa funzione, **`tanh`** accetta e restituisce sempre **`double`** .
 
-Se si usa la \<tgmath.h> `tanh()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
+Se si usa la `<tgmath.h>` `tanh()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -86,10 +87,10 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine|Intestazione obbligatoria (C)|Intestazione obbligatoria (C)|
 |-------------|---------------------|-|
-|**tanh**, **tanhf**, **tanhl**|\<math.h>|\<cmath> o \<math.h>|
-|**tanh () (macro)** | \<tgmath.h> ||
+|**`tanh`**, **`tanhf`**, **`tanhl`**|`<math.h>`|`<cmath>` o `<math.h>`|
+|**`tanh()`** macro | `<tgmath.h>` ||
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -121,9 +122,9 @@ tanh( 1.000000 ) = 0.761594
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>
-[asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
-[atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
-[cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>
-[sinh, sinhf, sinhl](sinh-sinhf-sinhl.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)\
+[`acosh, acoshf, acoshl`](acosh-acoshf-acoshl.md)\
+[`asinh, asinhf, asinhl`](asinh-asinhf-asinhl.md)\
+[`atanh, atanhf, atanhl`](atanh-atanhf-atanhl.md)\
+[`cosh, coshf, coshl`](cosh-coshf-coshl.md)\
+[`sinh, sinhf, sinhl`](sinh-sinhf-sinhl.md)

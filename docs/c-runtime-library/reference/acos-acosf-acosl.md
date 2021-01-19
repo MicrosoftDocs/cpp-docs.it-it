@@ -1,12 +1,13 @@
 ---
 title: acos, acosf, acosl
-description: Riferimento API per `acos` , `acosf` e, `acosl` che calcola l'arcoseno di un valore a virgola mobile.
-ms.date: 08/31/2020
+description: Informazioni di riferimento sulle API per ARccOS, acosf e acosl; che calcola l'arcoseno di un valore a virgola mobile.
+ms.date: 1/15/2021
 api_name:
 - acosf
 - acos
 - acosl
 - _o_acos
+- _o_acosf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -36,15 +37,14 @@ helpviewer_keywords:
 - acosf function
 - trigonometric functions
 - arccosine function
-ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: eeee51cea2a81882ee1ed8b014312ee9f9095dc6
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 63a9c9577e252c506191b7a49ec9da6502968095
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89555098"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98563835"
 ---
-# <a name="acos-acosf-acosl"></a>acos, acosf, acosl
+# <a name="acos-acosf-acosl"></a>`acos`, `acosf`, `acosl`
 
 Calcola l'arcocoseno.
 
@@ -62,26 +62,26 @@ long double acos( long double x );   // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*x*\
+*`x`*\
 Valore compreso tra-1 e 1, per il quale calcolare l'arcoseno (il coseno inverso).
 
 ## <a name="return-value"></a>Valore restituito
 
-La funzione **ARccOS** restituisce l'arcoseno di *x* nell'intervallo compreso tra 0 e π radianti.
+La **`acos`** funzione restituisce l'arcoseno di *x* nell'intervallo compreso tra 0 e π radianti.
 
-Per impostazione predefinita, se *x* è minore di-1 o maggiore di 1, **ARccOS** restituisce un valore indefinito.
+Per impostazione predefinita, se *`x`* è minore di-1 o maggiore di 1, **`acos`** restituisce un valore indefinito.
 
-|Input|Eccezione SEH|Eccezione Matherr|
+|Input|`SEH` eccezione|`Matherr` eccezione|
 |-----------|-------------------|-----------------------|
-|± ∞|NON VALIDO|_DOMAIN|
-|± QNAN, IND|Nessuno|_DOMAIN|
-|&#124;x&#124;>1|NON VALIDO|_DOMAIN|
+|`± ∞`|`INVALID`|`_DOMAIN`|
+|`± QNAN, IND`|Nessuno|`_DOMAIN`|
+|&#124;`x`&#124;>1|`INVALID`|`_DOMAIN`|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **ARccOS** che accettano e restituiscono i **`float`** **`long double`** tipi e. In un programma C, a meno che non si usi la \<tgmath.h> macro per chiamare questa funzione, **ARccOS** accetta e restituisce sempre un **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **`acos`** che accettano e restituiscono i **`float`** **`long double`** tipi e. In un programma C, a meno che non si stia usando la `<tgmath.h>` macro per chiamare questa funzione, **`acos`** accetta sempre e restituisce un **`double`** .
 
-Se si usa la \<tgmath.h> `acos()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
+Se si usa la `<tgmath.h>` `acos()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -89,8 +89,8 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine|Intestazione obbligatoria|Intestazioni facoltative|
 |-------------|---------------------|----------------------|
-|**ARccOS**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
-|**ARCCOS () (macro)** | \<tgmath.h> ||
+|**`acos`**, **`acosf`**, **`acosl`**|`<math.h>`|`<errno.h>`|
+|**`acos()`** macro | `<tgmath.h>` ||
 
 ## <a name="example"></a>Esempio
 
@@ -144,10 +144,10 @@ Arccosine of 0.000000 = 1.570796
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[asin, asinf, asinl](asin-asinf-asinl.md)<br/>
-[atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
-[cos, cosf, cosl](cos-cosf-cosl.md)<br/>
-[_matherr](matherr.md)<br/>
-[sin, sinf, sinl](sin-sinf-sinl.md)<br/>
-[tan, tanf, tanl](tan-tanf-tanl.md)
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)\
+[`asin`, `asinf`, `asinl`](asin-asinf-asinl.md)\
+[`atan`, `atanf`, `atanl`, `atan2`, `atan2f`, `atan2l`](atan-atanf-atanl-atan2-atan2f-atan2l.md)\
+[`cos`, `cosf`, `cosl`](cos-cosf-cosl.md)\
+[`_matherr`](matherr.md)\
+[`sin`, `sinf`, `sinl`](sin-sinf-sinl.md)\
+[`tan`, `tanf`, `tanl`](tan-tanf-tanl.md)

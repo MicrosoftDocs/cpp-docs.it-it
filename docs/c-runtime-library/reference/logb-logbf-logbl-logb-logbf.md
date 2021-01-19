@@ -1,7 +1,7 @@
 ---
 title: logb, logbf, logbl, _logb, _logbf
 description: Informazioni di riferimento sulle API per logb, logbf, logbl, _logb e _logbf; che estrae il valore dell'esponente di un argomento a virgola mobile.
-ms.date: 9/1/2020
+ms.date: 1/15/2021
 api_name:
 - logb
 - _logb
@@ -13,6 +13,7 @@ api_name:
 - _o_logb
 - _o_logbf
 - _o_logbl
+- _o__logbf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -47,15 +48,14 @@ helpviewer_keywords:
 - floating-point functions
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
-ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: 1131fda94e4748d2fb2f2197f68966aaacc11d05
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 5d64b315a502f7d1794d7726f14a94ed66a67cd5
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556214"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98564030"
 ---
-# <a name="logb-logbf-logbl-_logb-_logbf"></a>logb, logbf, logbl, _logb, _logbf
+# <a name="logb-logbf-logbl-_logb-_logbf"></a>`logb`, `logbf`, `logbl`, `_logb`, `_logbf`
 
 Estrae il valore dell'esponente di un argomento a virgola mobile.
 
@@ -88,25 +88,25 @@ float _logbf(
 
 ### <a name="parameters"></a>Parametri
 
-*x*\
+*`x`*\
 Un valore a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-**logb** restituisce il valore dell'esponente non distorta di *x* come intero con segno rappresentato come valore a virgola mobile.
+**`logb`** Restituisce il valore dell'esponente non distorta di *`x`* come intero con segno rappresentato come valore a virgola mobile.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Le funzioni **logb** estraggono il valore esponenziale dell'argomento a virgola mobile *x*, come se le *x* fossero rappresentate con un intervallo infinito. Se l'argomento *x* viene denormalizzato, viene considerato come se fosse normalizzato.
+Le **`logb`** funzioni estraggono il valore esponenziale dell'argomento a virgola mobile *`x`* , come se *`x`* fossero rappresentate con un intervallo infinito. Se l'argomento *`x`* viene denormalizzato, viene considerato come se fosse normalizzato.
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **logb** che accettano e restituiscono **`float`** **`long double`** valori o. In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **logb** accetta sempre e restituisce un **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **`logb`** che accettano e restituiscono **`float`** valori o **`long double`** . In un programma C, a meno che non si stia usando la `<tgmath.h>` macro per chiamare questa funzione, **`logb`** accetta sempre e restituisce un **`double`** .
 
-Se si usa la \<tgmath.h> `logb()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
+Se si usa la `<tgmath.h>` `logb()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
-|Input|Eccezione SEH|Eccezione Matherr|
+|Input|Eccezione SEH|`Matherr` eccezione|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|Nessuno|_DOMAIN|
-|± 0|ZERODIVIDE|_SING|
+|`± QNAN`,`IND`|nessuno|`_DOMAIN`|
+|± 0|`ZERODIVIDE`|`_SING`|
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -114,9 +114,9 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**_logb**|\<float.h>|
-|**logb**, **logbf**, **logbl**, **_logbf**|\<math.h>|
-|**logb** (macro) | \<tgmath.h> |
+|**`_logb`**|`<float.h>`|
+|**`logb`**, **`logbf`**, **`logbl`**, **`_logbf`**|`<math.h>`|
+|**`logb`** macro | `<tgmath.h>` |
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -126,5 +126,5 @@ Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-libr
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[frexp](frexp.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)\
+[`frexp`](frexp.md)

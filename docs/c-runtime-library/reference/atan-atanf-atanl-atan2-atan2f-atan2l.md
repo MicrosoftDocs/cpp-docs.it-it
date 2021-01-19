@@ -1,7 +1,7 @@
 ---
 title: atan, atanf, atanl, atan2, atan2f, atan2l
 description: Informazioni di riferimento sulle API per atan, atanf, atanl, atan2, atan2f e atan2l; che calcola l'arcotangente di un valore a virgola mobile.
-ms.date: 08/31/2020
+ms.date: 1/15/2021
 api_name:
 - atan2f
 - atan2l
@@ -12,6 +12,7 @@ api_name:
 - _o_atan
 - _o_atan2
 - _o_atan2f
+- _o_atanf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -45,17 +46,16 @@ helpviewer_keywords:
 - arctangent function
 - trigonometric functions
 - atan2f function
-ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 1f1d33aac86d94ab3731dd5cf5b124af99ccb3f2
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: bbfc08507bd48e1b9eb0b91350b2b39948d19a5f
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89555631"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98564069"
 ---
-# <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
+# <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>`atan`, `atanf`, `atanl`, `atan2`, `atan2f`, `atan2l`
 
-Calcola il arcotangente di **x** (**atan**, **atanf**e **atanl**) o la arcotangente di **y** / **x** (**Atan2**, **atan2f**e **atan2l**).
+Calcola l'arcotangente di **`x`** ( **`atan`** , **`atanf`** e **`atanl`** ) o arcotangente di **`y`** / **`x`** ( **`atan2`** , **`atan2f`** e **`atan2l`** ).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -79,28 +79,28 @@ long double atan2( long double y, long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*x*, *y*\
+*`x`*, *`y`*\
 Qualsiasi numero.
 
 ## <a name="return-value"></a>Valore restituito
 
-**atan** restituisce il arcotangente di *x* compreso tra-π/2 e π/2 radianti. **Atan2** restituisce il arcotangente di *y* / *x* compreso tra-π e π radianti. Se *x* è 0, **atan** restituisce 0. Se entrambi i parametri di **Atan2** sono 0, la funzione restituisce 0. Tutti i risultati sono in radianti.
+**`atan`** Restituisce l'arcotangente di *`x`* nell'intervallo compreso tra-π/2 e π/2 radianti. **`atan2`** Restituisce l'arcotangente di *`y`* / *`x`* nell'intervallo da π a π radianti. Se *`x`* è 0, **`atan`** restituisce 0. Se entrambi i parametri di **`atan2`** sono 0, la funzione restituisce 0. Tutti i risultati sono in radianti.
 
-**Atan2** usa i segni di entrambi i parametri per determinare il quadrante del valore restituito.
+**`atan2`** USA i segni di entrambi i parametri per determinare il quadrante del valore restituito.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|Nessuno|**_DOMAIN**|
+|± **`QNAN`**, **`IND`**|Nessuno|**`_DOMAIN`**|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-La funzione **atan** calcola il arcotangente (funzione inversa della tangente) di *x*. **Atan2** calcola il arcotangente di *y* / *x* (se *x* è uguale a 0, **Atan2** restituisce π/2 Se *y* è positivo,-π/2 Se *y* è negativo oppure 0 se *y* è 0).
+La **`atan`** funzione calcola arcotangente (funzione inversa della tangente) di *`x`* . **`atan2`** Calcola l'arcotangente di *`y`* / *`x`* (se è *`x`* uguale a 0, **`atan2`** restituisce π/2 Se *`y`* è positivo,-π/2 Se *`y`* è negativo, o 0 se *`y`* è 0).
 
-Se si usa la \<tgmath.h> `atan()` `atan2()` macro o, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
+Se si usa la `<tgmath.h>` `atan()` `atan2()` macro o, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
-**atan** dispone di un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
+**`atan`** ha un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e restrizioni sull'utilizzo dell'implementazione SSE2, vedere [`_set_SSE2_enable`](set-sse2-enable.md) .
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **atan** e **Atan2** che accettano gli **`float`** argomenti o **`long double`** . In un programma C, a meno che non si stia usando la \<tgmath.h> macro per chiamare questa funzione, **atan** e **Atan2** accettano sempre gli **`double`** argomenti e restituiscono un oggetto **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **`atan`** e **`atan2`** che accettano gli **`float`** argomenti o **`long double`** . In un programma C, a meno che non si usi la `<tgmath.h>` macro per chiamare questa funzione, **`atan`** e **`atan2`** accettano sempre gli **`double`** argomenti e restituiscono un oggetto **`double`** .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -108,8 +108,8 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
 |-------------|---------------------|-|
-|**atan**, **Atan2**, **atanf**, **atan2f**, **atanl**, **atan2l**|\<math.h>|\<cmath> o \<math.h>|
-|**Atan ()**, macro **Atan2** | \<tgmath.h> ||
+|**`atan`**, **`atan2`**, **`atanf`**, **`atan2f`**, **`atanl`**, **`atan2l`**|`<math.h>`|`<cmath>` o `<math.h>`|
+|**`atan()`**, **`atan2`** macro | `<tgmath.h>` ||
 
 ## <a name="example"></a>Esempio
 
@@ -144,12 +144,12 @@ Arctangent of 0.500000 / 5.000000: 0.099669
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[acos, acosf, acosl](acos-acosf-acosl.md)<br/>
-[asin, asinf, asinl](asin-asinf-asinl.md)<br/>
-[cos, cosf, cosl](cos-cosf-cosl.md)<br/>
-[_matherr](matherr.md)<br/>
-[sin, sinf, sinl](sin-sinf-sinl.md)<br/>
-[tan, tanf, tanl](tan-tanf-tanl.md)<br/>
-[_CIatan](../../c-runtime-library/ciatan.md)<br/>
-[_CIatan2](../../c-runtime-library/ciatan2.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)\
+[`acos`, `acosf`, `acosl`](acos-acosf-acosl.md)\
+[`asin`, `asinf`, `asinl`](asin-asinf-asinl.md)\
+[`cos`, `cosf`, `cosl`](cos-cosf-cosl.md)\
+[`_matherr`](matherr.md)\
+[`sin`, `sinf`, `sinl`](sin-sinf-sinl.md)\
+[`tan`, `tanf`, `tanl`](tan-tanf-tanl.md)\
+[`_CIatan`](../../c-runtime-library/ciatan.md)\
+[`_CIatan2`](../../c-runtime-library/ciatan2.md)

@@ -1,12 +1,13 @@
 ---
 title: tan, tanf, tanl
 description: Informazioni di riferimento sulle API per Tan, TANF e Tanl; che calcola la tangente di un valore a virgola mobile.
-ms.date: 08/31/2020
+ms.date: 1/15/2021
 api_name:
 - tan
 - tanf
 - tanl
 - _o_tan
+- _o_tanf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -38,14 +39,14 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: 8137bf4cbce59083e8e7c09557400fbff4f6b1df
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 056afdf0bbac422c498bd54c2a154472bfd97c34
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556541"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98564056"
 ---
-# <a name="tan-tanf-tanl"></a>tan, tanf, tanl
+# <a name="tan-tanf-tanl"></a>`tan`, `tanf`, `tanl`
 
 Calcola la tangente.
 
@@ -65,23 +66,23 @@ long double tan( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*x*\
+*`x`*\
 Angolo in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le funzioni **Tan** restituiscono la tangente di *x*. Se *x* è maggiore o uguale a 263 o minore o uguale a-263, si verifica una perdita di significato nel risultato.
+Le **`tan`** funzioni restituiscono la tangente di *`x`* . Se *`x`* è maggiore o uguale a 263 o minore o uguale a-263, si verifica una perdita di significato nel risultato.
 
-|Input|Eccezione SEH|**Matherr** Eccezione|
+|Input|Eccezione SEH|**`Matherr`** eccezione|
 |-----------|-------------------|-------------------------|
-|± QNAN, IND|Nessuno|_DOMAIN|
-|± INF|**Non valido**|_DOMAIN|
+|`± QNAN`,`IND`|Nessuno|`_DOMAIN`|
+|`± INF`|**Non valido**|`_DOMAIN`|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Poiché C++ consente l'overload, è possibile chiamare gli overload di **Tan** che accettano e restituiscono **`float`** valori o **`long double`** . In un programma C, a meno che non si usi la \<tgmath.h> macro per chiamare questa funzione, **Tan** accetta e restituisce sempre **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **`tan`** che accettano e restituiscono **`float`** valori o **`long double`** . In un programma C, a meno che non si usi la `<tgmath.h>` macro per chiamare questa funzione, **`tan`** accetta e restituisce sempre **`double`** .
 
-Se si usa la \<tgmath.h> `tan()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
+Se si usa la `<tgmath.h>` `tan()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -89,10 +90,10 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
 |-------------|---------------------|-|
-|**Tan**, **TANF**, **Tanl**|\<math.h>|\<cmath> o \<math.h>|
-|**Tan () (macro)** | \<tgmath.h> ||
+|**`tan`**, **`tanf`**, **`tanl`**|`<math.h>`|`<cmath>` o `<math.h>`|
+|**`tan()`** macro | `<tgmath.h>` ||
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -120,10 +121,10 @@ tan( 0.785398 ) = 1.000000
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[acos, acosf, acosl](acos-acosf-acosl.md)<br/>
-[asin, asinf, asinl](asin-asinf-asinl.md)<br/>
-[atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
-[cos, cosf, cosl](cos-cosf-cosl.md)<br/>
-[sin, sinf, sinl](sin-sinf-sinl.md)<br/>
-[_CItan](../../c-runtime-library/citan.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)\
+[`acos, acosf, acosl`](acos-acosf-acosl.md)\
+[`asin, asinf, asinl`](asin-asinf-asinl.md)\
+[`atan, atanf, atanl, atan2, atan2f, atan2l`](atan-atanf-atanl-atan2-atan2f-atan2l.md)\
+[`cos, cosf, cosl`](cos-cosf-cosl.md)\
+[`sin, sinf, sinl`](sin-sinf-sinl.md)\
+[`_CItan`](../../c-runtime-library/citan.md)

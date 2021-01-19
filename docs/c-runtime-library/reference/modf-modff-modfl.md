@@ -1,12 +1,13 @@
 ---
 title: modf, modff, modfl
 description: Informazioni di riferimento sulle API per modf, modff e modFL; che dividono un valore a virgola mobile in parti frazionarie e intere.
-ms.date: 4/2/2020
+ms.date: 1/15/2021
 api_name:
 - modff
 - modf
 - modfl
 - _o_modf
+- _o_modff
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -36,15 +37,14 @@ helpviewer_keywords:
 - modf function
 - modff function
 - modfl function
-ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: 0d3522079acc8a9d2c8409b1cad78e7f50a7f788
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: fbc68c3369e8b992350534e3baa5f19b0f2a5e39
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556762"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98564018"
 ---
-# <a name="modf-modff-modfl"></a>modf, modff, modfl
+# <a name="modf-modff-modfl"></a>`modf`, `modff`, `modfl`
 
 Divide un valore a virgola mobile in parte frazionaria e parte intera.
 
@@ -63,23 +63,23 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
+*`x`*\
 Valore a virgola mobile.
 
-*IntPtr*<br/>
+*`intptr`*\
 Puntatore alla parte intera archiviata.
 
 ## <a name="return-value"></a>Valore restituito
 
-Questa funzione restituisce la parte frazionaria con segno di *x*. Non viene restituito alcun errore.
+Questa funzione restituisce la parte frazionaria con segno di *`x`* . Non viene restituito alcun errore.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Le funzioni **modf** suddividono il valore a virgola mobile *x* in parti frazionarie e intere, ognuna delle quali ha lo stesso segno di *x*. Viene restituita la parte frazionaria con segno di *x* . La parte intera viene archiviata come valore a virgola mobile in *IntPtr*.
+Le funzioni **modf** suddividono il valore a virgola mobile *`x`* in parti frazionarie e intere, ognuna delle quali ha lo stesso segno di *`x`* . Viene restituita la parte frazionaria con segno di *`x`* . La parte intera viene archiviata come valore a virgola mobile in *`intptr`* .
 
-**modf** dispone di un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Vedere [_set_SSE2_enable](set-sse2-enable.md) per informazioni e le restrizioni sull'uso dell'implementazione SSE2.
+**modf** dispone di un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). [`_set_SSE2_enable`](set-sse2-enable.md)Per informazioni e restrizioni sull'uso dell'implementazione SSE2, vedere.
 
-C++ consente l'overload, quindi è possibile chiamare overload di **modf** che accettano e restituiscono **`float`** **`long double`** parametri o. In un programma C **modf** accetta sempre due valori Double e restituisce un valore Double.
+C++ consente l'overload, quindi è possibile chiamare gli overload di **`modf`** che accettano e restituiscono **`float`** parametri o **`long double`** . In un programma C **`modf`** accetta sempre due valori Double e restituisce un valore Double.
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -87,9 +87,9 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**modf**, **modff**, **modFL**|C \<math.h><br /><br /> C++:, \<cmath> o \<math.h>|
+|**`modf`**, **`modff`**, **`modfl`**|C `<math.h>`<br /><br /> C++:, `<cmath>` o `<math.h>`|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -117,6 +117,6 @@ For -14.876543, the fraction is -0.876543 and the integer is -14
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[frexp](frexp.md)<br/>
-[ldexp](ldexp.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)\
+[`frexp`](frexp.md)\
+[`ldexp`](ldexp.md)

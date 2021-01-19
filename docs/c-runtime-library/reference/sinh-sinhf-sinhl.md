@@ -1,13 +1,14 @@
 ---
 title: sinh, sinhf, sinhl
 description: Informazioni di riferimento sulle API per il calcolo del seno iperbolico di un valore a virgola mobile.
-ms.date: 08/31/2020
+ms.date: 1/15/2021
 api_name:
 - sinh
 - sinhl
 - sinhf
 - sinhl
 - _o_sinh
+- _o_sinhf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -38,14 +39,14 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-ms.openlocfilehash: 6a8c9c4195eab66a46230e7a3baf6194e17c4519
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 73f7210105419c4b8cb9a6e47e5c5f0e43437738
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556177"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98563796"
 ---
-# <a name="sinh-sinhf-sinhl"></a>sinh, sinhf, sinhl
+# <a name="sinh-sinhf-sinhl"></a>`sinh`, `sinhf`, `sinhl`
 
 Calcola il seno iperbolico.
 
@@ -63,25 +64,25 @@ long double sinh(long double x);  // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*x*\
+*`x`*\
 Angolo in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-Le **funzioni di** per la funzione di stato restituiscono il seno iperbolico di *x*. Per impostazione predefinita, se il risultato è troppo grande **, il set di** **errno** viene impostato su **ERANGE** e viene restituito ±**HUGE_VAL**.
+Le **`sinh`** funzioni restituiscono il seno iperbolico di *`x`* . Per impostazione predefinita, se il risultato è troppo grande, **`sinh`** imposta **`errno`** su **`ERANGE`** e restituisce ± **`HUGE_VAL`** .
 
-|Input|Eccezione SEH|Eccezione Matherr|
+|Input|Eccezione SEH|`Matherr` eccezione|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|Nessuno|_DOMAIN|
-|&#124;x&#124; ≥ 7.104760 e + 002|OVERFLOW+INEXACT|OVERFLOW|
+|± `QNAN`,`IND`|nessuno|`_DOMAIN`|
+|&#124;x&#124; ≥ 7.104760 e + 002|`OVERFLOW+INEXACT`|`OVERFLOW`|
 
-Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Per ulteriori informazioni sui codici restituiti, vedere [ `errno` , `_doserrno` , `_sys_errlist` e `_sys_nerr` ](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
-Poiché C++ **consente l'overload** , è possibile chiamare gli overload di che accettano e restituiscono **`float`** **`long double`** valori o. In un programma C, a meno che non si usi la \<tgmath.h> macro per chiamare questa funzione **sinh** , il valore di l'operazione viene sempre eseguito e restituito da **`double`** .
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **`sinh`** che accettano e restituiscono **`float`** valori o **`long double`** . In un programma C, a meno che non si usi la `<tgmath.h>` macro per chiamare questa funzione, **`sinh`** accetta e restituisce sempre **`double`** .
 
-Se si usa la \<tgmath.h> `sinh()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
+Se si usa la `<tgmath.h>` `sinh()` macro, il tipo dell'argomento determina quale versione della funzione è selezionata. Per informazioni dettagliate, vedere la pagina relativa al [tipo generico Math](../../c-runtime-library/tgmath.md) .
 
 Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
 
@@ -89,10 +90,10 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 |Routine|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
 |-|-|-|
-|**sinh** **sinhf**, **sinhl**|\<math.h>|\<cmath> o \<math.h>|
-|**() (macro)** | \<tgmath.h> ||
+|**`sinh`**, **`sinhf`**, **`sinhl`**|`<math.h>`|`<cmath>` o `<math.h>`|
+|**`sinh()`** macro | `<tgmath.h>` ||
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -125,9 +126,9 @@ cosh( 1.570796 ) = 2.509178
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>
-[asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
-[atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
-[cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>
-[tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)<br/>
+[Supporto della virgola mobile](../../c-runtime-library/floating-point-support.md)\
+[`acosh`, `acoshf`, `acoshl`](acosh-acoshf-acoshl.md)\
+[`asinh`, `asinhf`, `asinhl`](asinh-asinhf-asinhl.md)\
+[`atanh`, `atanhf`, `atanhl`](atanh-atanhf-atanhl.md)\
+[`cosh`, `coshf`, `coshl`](cosh-coshf-coshl.md)\
+[`tanh`, `tanhf`, `tanhl`](tanh-tanhf-tanhl.md)
