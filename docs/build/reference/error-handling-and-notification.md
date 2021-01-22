@@ -1,39 +1,40 @@
 ---
-description: 'Altre informazioni su: gestione degli errori e notifica'
 title: Gestione e notifica degli errori
-ms.date: 11/04/2016
+description: 'Altre informazioni su: gestione degli errori di caricamento ritardato DLL e notifica'
+ms.date: 01/19/2021
 helpviewer_keywords:
 - error handling, and notification
-ms.assetid: b621cf60-d869-451a-b05e-dc86d78addaa
-ms.openlocfilehash: 234d50d0b4a7e8b81874d1926ac056f8cba23376
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: a0161814a07bd5bbedbaa6d13c7c32cd3aeab559
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97200988"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98666953"
 ---
 # <a name="error-handling-and-notification"></a>Gestione e notifica degli errori
 
-Per ulteriori informazioni sulla gestione degli errori e sulla notifica, vedere [informazioni sulla funzione helper](understanding-the-helper-function.md).
+Se il programma usa le dll a caricamento ritardato, deve gestire gli errori in tutta affidabilità, poiché gli errori che si verificano durante l'esecuzione del programma provocheranno eccezioni non gestite. La gestione degli errori è costituita da due parti: il recupero tramite un hook e la creazione di report tramite un'eccezione.
+
+Per ulteriori informazioni sulla gestione e sulla notifica degli errori di caricamento ritardato della DLL, vedere [informazioni sulla funzione helper](understanding-the-helper-function.md).
 
 Per ulteriori informazioni sulle funzioni hook, vedere la pagina relativa alle [definizioni di struttura e costante](structure-and-constant-definitions.md).
 
-Se il programma utilizza DLL a caricamento ritardato, è necessario che gli errori vengano gestiti in solido poiché gli errori che si verificano durante l'esecuzione del programma comporteranno eccezioni non gestite. La gestione degli errori è costituita da due parti:
+## <a name="recovery-through-a-hook"></a>Ripristino tramite hook
 
-Ripristino tramite hook.
-Se il codice deve ripristinare o fornire una libreria alternativa e/o una routine in caso di errore, è possibile fornire un hook alla funzione di supporto che può fornire o risolvere il problema. La routine hook deve restituire un valore appropriato, in modo che l'elaborazione possa continuare (HINSTANCE o FARPROC) o 0 per indicare che deve essere generata un'eccezione. Potrebbe anche generare la propria eccezione o **longjmp** fuori dall'hook. Sono presenti hook di notifica e hook di errore.
+È possibile che il codice debba essere ripristinato in caso di errore o per fornire una libreria o una routine alternativa. È possibile specificare un hook per la funzione di supporto in grado di fornire il codice alternativo o risolvere il problema. La routine hook deve restituire un valore appropriato, in modo che l'elaborazione possa continuare ( `HINSTANCE` o `FARPROC` ). In alternativa, può restituire 0 per indicare che deve essere generata un'eccezione. Potrebbe anche generare un'eccezione o un'eccezione `longjmp` . Sono presenti hook di notifica e hook di errore.
 
-Creazione di report tramite un'eccezione.
+## <a name="reporting-via-an-exception"></a>Creazione di report tramite un'eccezione
+
 Se tutto ciò che è necessario per gestire l'errore è interrompere la procedura, non è necessario alcun hook, purché il codice utente possa gestire l'eccezione.
 
-Negli argomenti seguenti vengono illustrate la gestione e la notifica degli errori:
+Gli articoli seguenti illustrano la gestione e la notifica degli errori:
 
 - [Hook di notifica](notification-hooks.md)
 
 - [Hook di errore](failure-hooks.md)
 
-- [Eccezioni](exceptions-c-cpp.md)
+- [Codici di eccezione per caricamento ritardato DLL](exceptions-c-cpp.md)
 
 ## <a name="see-also"></a>Vedi anche
 
-[Supporto del linker per le DLL di Delay-Loaded](linker-support-for-delay-loaded-dlls.md)
+[Supporto per le DLL a caricamento ritardato nel linker](linker-support-for-delay-loaded-dlls.md)

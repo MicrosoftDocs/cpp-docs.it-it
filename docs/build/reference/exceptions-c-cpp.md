@@ -1,7 +1,7 @@
 ---
-description: 'Altre informazioni su: eccezioni (C/C++)'
-title: Codici di eccezione per il caricamento di DLL (C/C++)
-ms.date: 11/19/2019
+description: 'Altre informazioni su: eccezioni di caricamento ritardato (C/C++)'
+title: Codici di eccezione per caricamento ritardato DLL
+ms.date: 01/19/2021
 f1_keywords:
 - ERROR_MOD_NOT_FOUND
 - vcppException
@@ -12,25 +12,24 @@ helpviewer_keywords:
 - delayed loading of DLLs, exceptions
 - ERROR_SEVERITY_ERROR exception
 - ERROR_MOD_NOT_FOUND exception
-ms.assetid: c03be05d-1c39-4f35-84cf-00c9af3bae9a
-ms.openlocfilehash: 53ae6ab9a21309159b29a96e58d077f45fe30e12
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 214d8514baba7b180b8d838af8a6b6c0543cc1ce
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97200845"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98667182"
 ---
-# <a name="exceptions-cc"></a>Eccezioni (C/C++)
+# <a name="dll-delay-load-exception-codes"></a>Codici di eccezione per caricamento ritardato DLL
 
-Quando vengono rilevati errori, è possibile generare due codici di eccezione:
+Quando si verificano errori, è possibile generare due codici di eccezione strutturati:
 
-- Per un errore **LoadLibrary**
+- Per un `LoadLibrary` errore
 
-- Per un errore **GetProcAddress**
+- Per un `GetProcAddress` errore
 
-Di seguito sono riportate le informazioni sull'eccezione:
+Di seguito è illustrata la macro delle informazioni sull'eccezione:
 
-```
+```C
 //
 // Exception information
 //
@@ -38,11 +37,11 @@ Di seguito sono riportate le informazioni sull'eccezione:
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)
 ```
 
-I codici di eccezione generati sono i valori VcppException (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) e VcppException (ERROR_SEVERITY_ERROR ERROR_PROC_NOT_FOUND) standard. L'eccezione passa un puntatore a una struttura **DelayLoadInfo** nel valore LPDWORD che può essere recuperato da **GetExceptionInformation** nel campo [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) structure, ExceptionInformation [0].
+I codici di eccezione generati sono i `VcppException(ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND)` valori standard e `VcppException(ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND)` . L'eccezione passa un puntatore a una `DelayLoadInfo` struttura nel `LPDWORD` valore che può essere recuperato dalla `GetExceptionInformation` [`EXCEPTION_RECORD`](/windows/win32/api/winnt/ns-winnt-exception_record) struttura, nel `ExceptionInformation[0]` campo.
 
-Inoltre, se i bit non corretti sono impostati nel campo grAttrs, viene generata l'eccezione ERROR_INVALID_PARAMETER. Questa eccezione è, per tutte le finalità e, fatale.
+Inoltre, se nel campo sono impostati bit non corretti `grAttrs` , `ERROR_INVALID_PARAMETER` viene generata l'eccezione. Questa eccezione è, per tutte le finalità e, fatale.
 
-Per ulteriori informazioni, vedere [struttura e definizioni di costanti](structure-and-constant-definitions.md) .
+Per altre informazioni, vedere [struttura e definizioni di costanti](structure-and-constant-definitions.md).
 
 ## <a name="see-also"></a>Vedi anche
 

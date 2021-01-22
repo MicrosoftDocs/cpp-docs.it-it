@@ -1,7 +1,7 @@
 ---
 description: 'Altre informazioni su: strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l'
 title: strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
-ms.date: 4/2/2020
+ms.date: 1/20/2021
 api_name:
 - strncat
 - _strncat_l
@@ -64,20 +64,19 @@ helpviewer_keywords:
 - _tcsncat_l function
 - _mbsncat_l function
 - tcsncat function
-ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: 509afe42e4fbf4cec9f0a7a077f0bf4ce0a1423e
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 4b5ae812560cb42498ebed71bb9b8791581ef332
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97344770"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98667013"
 ---
 # <a name="strncat-_strncat_l-wcsncat-_wcsncat_l-_mbsncat-_mbsncat_l"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 
-Aggiunge caratteri di una stringa. Sono disponibili versioni più sicure di queste funzioni; vedere [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md).
+Aggiunge caratteri di una stringa. Sono disponibili versioni più sicure di queste funzioni, vedere `[strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l` ] (strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.MD).
 
 > [!IMPORTANT]
-> non è possibile usare **_mbsncat** e **_mbsncat_l** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **`_mbsncat`** e **`_mbsncat_l`** non possono essere usati nelle applicazioni eseguite nella Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -132,16 +131,16 @@ unsigned char *_mbsncat_l(
 
 ### <a name="parameters"></a>Parametri
 
-*strDest*<br/>
+*`strDest`*\
 Stringa di destinazione con terminazione Null.
 
-*strSource*<br/>
+*`strSource`*\
 Stringa di origine con terminazione null.
 
-*count*<br/>
+*`count`*\
 Numero di caratteri da aggiungere.
 
-*locale*<br/>
+*`locale`*\
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
@@ -150,14 +149,14 @@ Restituisce un puntatore alla stringa di destinazione. Nessun valore restituito 
 
 ## <a name="remarks"></a>Commenti
 
-La funzione **strncat** aggiunge al massimo i primi caratteri di *conteggio* di *strSource* a *strDest*. Il carattere iniziale di *strSource* sovrascrive il carattere null di terminazione di *strDest*. Se viene visualizzato un carattere null in *strSource* prima dell'accodamento dei caratteri di *conteggio* , **strncat** aggiunge tutti i caratteri da *strSource*, fino al carattere null. Se *count* è maggiore della lunghezza di *strSource*, viene utilizzata la lunghezza di *strSource* al posto del *conteggio*. In tutti i casi, la stringa risultante termina con un carattere Null. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
+La **`strncat`** funzione aggiunge al massimo i primi *`count`* caratteri di *`strSource`* a *`strDest`* . Il carattere iniziale di *`strSource`* sovrascrive il carattere null di terminazione di *`strDest`* . Se viene visualizzato un carattere null in *`strSource`* prima dell' *`count`* aggiunta dei caratteri, **`strncat`** aggiunge tutti i caratteri da *`strSource`* fino al carattere null. Se *`count`* è maggiore della lunghezza di *`strSource`* , la lunghezza di *`strSource`* viene usata al posto di *`count`* . In tutti i casi, la stringa risultante termina con un carattere Null. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
 > [!IMPORTANT]
-> **strncat** non verifica la presenza di spazio sufficiente in *strDest*; è quindi possibile che si verifichino sovraccarichi del buffer. Tenere presente che il *conteggio* limita il numero di caratteri accodati; non è un limite per le dimensioni di *strDest*. Vedere l'esempio seguente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
+> **`strncat`** non verifica la presenza di spazio sufficiente in *`strDest`* ; è pertanto una possibile provocazione dei sovraccarichi del buffer. Tenere presente che *`count`* limita il numero di caratteri accodati; non è un limite per le dimensioni di *`strDest`* . Vedere l'esempio seguente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-**wcsncat** e **_mbsncat** sono versioni a caratteri wide e a caratteri multibyte di **strncat**. Gli argomenti di stringa e il valore restituito di **wcsncat** sono stringhe a caratteri wide. i **_mbsncat** sono stringhe di caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
+**`wcsncat`** e **`_mbsncat`** sono versioni a caratteri wide e a caratteri multibyte di **`strncat`** . Gli argomenti di stringa e il valore restituito di **`wcsncat`** sono stringhe di caratteri wide, mentre quelli di **`_mbsncat`** sono stringhe di caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
 
-La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il valore di output è influenzato dall'impostazione della **`LC_CTYPE`** categoria delle impostazioni locali. Per ulteriori informazioni, vedere [`setlocale`](setlocale-wsetlocale.md) per ulteriori informazioni. Le versioni di queste funzioni senza il **`_l`** suffisso usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il **`_l`** suffisso sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 In C++ queste funzioni presentano overload dei modelli. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).
 
@@ -165,24 +164,24 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
-|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
+|`TCHAR.H `routine|`_UNICODE & _MBCS` non definito|`_MBCS` definito|`_UNICODE` definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsncat**|**strncat**|**_mbsnbcat**|**wcsncat**|
-|**_tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
+|**`_tcsncat`**|**`strncat`**|**`_mbsnbcat`**|**`wcsncat`**|
+|**`_tcsncat_l`**|**`_strncat_l`**|**`_mbsnbcat_l`**|**`_wcsncat_l`**|
 
 > [!NOTE]
-> **_strncat_l** e **_wcsncat_l** non hanno alcuna dipendenza dalle impostazioni locali e non sono destinati a essere chiamati direttamente. Vengono fornite per uso interno da **_tcsncat_l**.
+> **`_strncat_l`** e **`_wcsncat_l`** non hanno alcuna dipendenza dalle impostazioni locali e non sono destinati a essere chiamati direttamente. Vengono fornite per uso interno da **`_tcsncat_l`** .
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**strncat**|\<string.h>|
-|**wcsncat**|\<string.h> o \<wchar.h>|
-|**_mbsncat**|\<mbstring.h>|
-|**_mbsncat_l**|\<mbstring.h>|
+|**`strncat`**|\<string.h>|
+|**`wcsncat`**|\<string.h> o \<wchar.h>|
+|**`_mbsncat`**|\<mbstring.h>|
+|**`_mbsncat_l`**|\<mbstring.h>|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -235,16 +234,16 @@ Si noti che **BadAppend** ha causato un sovraccarico del buffer.
 
 ## <a name="see-also"></a>Vedi anche
 
-[Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
-[strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
-[strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
-[strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>
-[strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
-[strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>
-[_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
-[strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
-[_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>
-[strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
-[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
-[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Manipolazione di stringhe](../../c-runtime-library/string-manipulation-crt.md)\
+[`_mbsnbcat, _mbsnbcat_l`](mbsnbcat-mbsnbcat-l.md)\
+[`strcat, wcscat, _mbscat`](strcat-wcscat-mbscat.md)\
+[`strcmp, wcscmp, _mbscmp`](strcmp-wcscmp-mbscmp.md)\
+[`strcpy, wcscpy, _mbscpy`](strcpy-wcscpy-mbscpy.md)\
+[`strncmp, wcsncmp, _mbsncmp, _mbsncmp_l`](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)\
+[`strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l`](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)\
+[`_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l`](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)\
+[`strrchr, wcsrchr, _mbsrchr, _mbsrchr_l`](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)\
+[`_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l`](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)\
+[`strspn, wcsspn, _mbsspn, _mbsspn_l`](strspn-wcsspn-mbsspn-mbsspn-l.md)\
+[Locale](../../c-runtime-library/locale.md)\
+[Interpretazione delle sequenze di Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)\

@@ -1,18 +1,21 @@
 ---
-description: 'Altre informazioni su: valori letterali Chrono'
+description: 'Altre informazioni su: `chrono` valori letterali'
 title: valori letterali chrono
-ms.date: 11/04/2016
-ms.assetid: 1a9e23b1-256f-4570-8226-5fa7364fb032
-ms.openlocfilehash: 497094d920a25635496fb0aa30295d378571418c
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+f1_keywords:
+- chrono/std::literals::chrono_literals
+- std::literals::chrono_literals
+- chrono_literals
+ms.date: 01/15/2021
+ms.openlocfilehash: 84540d111b33738c8bb1bcb4b43966e1c50682c0
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97325155"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98667551"
 ---
-# <a name="chrono-literals"></a>valori letterali chrono
+# <a name="chrono-literals"></a>`chrono` valori letterali
 
-(C++ 14) L' \<chrono> intestazione definisce 12 [valori letterali definiti dall'utente](../cpp/user-defined-literals-cpp.md) per semplificare l'utilizzo di valori letterali che rappresentano le ore, i minuti, i secondi, i millisecondi, i microsecondi e i nanosecondi. Ogni valore letterale definito dall'utente presenta un integrale e un overload a virgola mobile. I valori letterali sono definiti nello spazio dei nomi inline literals::chrono_literals che viene inserito nell'ambito automaticamente quando std::chrono rientra nell'ambito.
+(C++ 14) L' `<chrono>` intestazione definisce 12 [valori letterali definiti dall'utente](../cpp/user-defined-literals-cpp.md) che rappresentano le ore, i minuti, i secondi, i millisecondi, i microsecondi e i nanosecondi. Ogni valore letterale definito dall'utente presenta un integrale e un overload a virgola mobile. I valori letterali sono definiti nello `literals::chrono_literals` spazio dei nomi inline, introdotto automaticamente nell'ambito quando `std::chrono` è nell'ambito.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -61,11 +64,11 @@ inline namespace literals {
 
 ## <a name="return-value"></a>Valore restituito
 
-I valori letterali che accettano un **`long long`** argomento restituiscono un valore o il tipo corrispondente. I valori letterali che accettano un argomento a virgola mobile restituiscono una [durata](../standard-library/duration-class.md).
+I valori letterali che accettano un **`long long`** argomento restituiscono un valore o il tipo corrispondente. I valori letterali che accettano un argomento a virgola mobile restituiscono [`duration`](../standard-library/duration-class.md) .
 
 ## <a name="example"></a>Esempio
 
-Gli esempi seguenti mostrano come usare i valori letterali chrono.
+Negli esempi seguenti viene illustrato come utilizzare i `chrono` valori letterali.
 
 ```cpp
 constexpr auto day = 24h;

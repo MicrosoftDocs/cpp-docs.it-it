@@ -1,13 +1,13 @@
 ---
 title: Connettersi al sistema Linux di destinazione in Visual Studio
 description: Come connettersi a un computer Linux remoto o a un sottosistema Windows per Linux dall'interno di un progetto Visual Studio C++.
-ms.date: 01/17/2020
-ms.openlocfilehash: b1907cc4c1c80a9d8ffba06849c9a80f1a8fbfbe
-ms.sourcegitcommit: 387ce22a3b0137f99cbb856a772b5a910c9eba99
+ms.date: 01/8/2021
+ms.openlocfilehash: 653a1832b4aac6b87c49102440181bb0e55a45a9
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97645215"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98667587"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Connettersi al sistema Linux di destinazione in Visual Studio
 
@@ -76,7 +76,7 @@ Se ssh non è già configurato e in esecuzione nel sistema Linux, attenersi alla
 
    ![Connect to Remote System (Connetti al sistema remoto)](media/connect.png)
 
-1. Immettere le informazioni seguenti:
+1. Immettere le seguenti informazioni:
 
    | Voce | Descrizione
    | ----- | ---
@@ -103,6 +103,73 @@ Se ssh non è già configurato e in esecuzione nel sistema Linux, attenersi alla
    ::: moniker-end
 
    ::: moniker range="msvc-160"
+
+## <a name="supported-ssh-algorithms"></a>Algoritmi SSH supportati
+
+A partire da Visual Studio versione 16,9, il supporto per gli algoritmi SSH meno recenti e non sicuri usati per crittografare i dati e le chiavi di scambio è stato rimosso. Sono supportati solo gli algoritmi seguenti. Sono supportati per la comunicazione SSH da client a server e da server a client:
+
+|Tipo di algoritmo|Algoritmi supportati|
+|---|---|
+| Crittografia| AES128-CBC</br>AES128-CBC</br>aes192-cbc</br>Aes192-CTR</br>AES256-CBC</br>AES256-CTR|
+| HMAC | HMAC-SHA2-256</br>HMAC-SHA2-256 |
+| Scambio di chiave| diffie-hellman-group14-sha256</br>Diffie-Hellman-group16-SHA512</br>diffie-hellman-group-exchange-sha256</br>ecdh-sha2-nistp256</br>ECDH-SHA2-nistp384</br>ECDH-SHA2-nistp521|
+|Chiave host|ECDSA-SHA2-nistp256</br>ECDSA-SHA2-nistp384</br>ECDSA-SHA2-nistp521</br>SSH-DSS</br>SSH-RSA|
+
+### <a name="configure-the-ssh-server"></a>Configurare il server SSH
+
+Prima di tutto, un piccolo sfondo. Non è possibile selezionare l'algoritmo SSH da usare da Visual Studio. Al contrario, l'algoritmo viene determinato durante l'handshake iniziale con il server SSH. Ogni lato (client e server) fornisce un elenco di algoritmi supportati, quindi viene selezionato il primo algoritmo comune a entrambi. Finché esiste almeno un algoritmo in comune tra Visual Studio e il server per la crittografia, HMAC, lo scambio di chiave e così via, la connessione avrà esito positivo.
+
+Il file di configurazione SSH aperto (**sshd_config**) non configura l'algoritmo da usare per impostazione predefinita. Quando non viene specificato alcun algoritmo, il server SSH deve usare impostazioni predefinite sicure. Queste impostazioni predefinite dipendono dalla versione e dal fornitore del server SSH.  Se Visual Studio non supporta tali valori predefiniti o se il server SSH è configurato per l'uso di algoritmi non supportati da Visual Studio, è probabile che venga visualizzato un errore simile al seguente: **Impossibile connettersi al sistema remoto. Non è stato trovato alcun algoritmo HMAC comune da client a server.**
+
+Un server SSH predefinito nella maggior parte delle distribuzioni Linux moderne dovrebbe funzionare con Visual Studio. Tuttavia, se si esegue un server SSH precedente configurato per l'uso di algoritmi meno recenti e non sicuri, di seguito viene illustrato come eseguire l'aggiornamento a versioni più sicure.
+
+Nell'esempio seguente, il server SSH usa l' `hmac-sha1` algoritmo non sicuro, che non è supportato da Visual Studio 16,9. Se il server SSH usa OpenSSH, è possibile modificare il `/etc/ssh/sshd_config` file come illustrato di seguito per abilitare algoritmi più sicuri. Per altri server SSH, vedere la documentazione del server per informazioni su come configurarli.
+
+Verificare prima di tutto che il set di algoritmi utilizzato dal server includa gli algoritmi supportati da Visual Studio. Eseguire il comando seguente nel computer remoto per elencare gli algoritmi supportati dal server.
+
+```bash
+$ ssh -Q cipher; ssh -Q mac; ssh -Q kex; ssh -Q key
+```
+
+Verrà generato un output simile al seguente:
+
+```bash
+3des-cbc
+aes128-cbc
+aes192-cbc
+aes256-cbc
+...
+ecdsa-sha2-nistp521-cert-v01@openssh.com
+sk-ecdsa-sha2-nistp256-cert-v01@openssh.com
+```
+
+Questo output elenca tutti gli algoritmi di crittografia, HMAC, scambio di chiave e chiave host supportati dal server SSH. Se questo elenco non include gli algoritmi supportati da Visual Studio, sarà necessario aggiornare il server SSH prima di procedere.
+
+È possibile abilitare gli algoritmi supportati da Visual Studio modificando `/etc/ssh/sshd_config` nel computer remoto. Negli esempi seguenti viene illustrato come aggiungere vari tipi di algoritmi al file di configurazione.
+
+Questi esempi possono essere aggiunti in qualsiasi punto di `/etc/ssh/sshd_config` . Assicurarsi che si trovino sulle proprie righe.
+
+Dopo aver modificato il file, riavviare il server SSH ( `sudo service ssh restart` in Ubuntu) e provare a connettersi di nuovo da Visual Studio.
+
+#### <a name="cipher--example"></a>Esempio di crittografia
+
+Aggiungere `Ciphers <algorithms to enable>`  
+Ad esempio: `Ciphers aes128-cbc,aes256-cbc`
+
+#### <a name="hmac-example"></a>Esempio di HMAC
+
+Aggiungere `MACs <algorithms to enable>`  
+Ad esempio: `MACs hmac-sha2-256,hmac-sha2-512`
+
+#### <a name="key-exchange-example"></a>Esempio di scambio di chiave
+
+Aggiungere `KexAlgorithms <algorithms to enable>`  
+Ad esempio: `KexAlgorithms ecdh-sha2-nistp256,ecdh-sha2-nistp384`
+
+#### <a name="host-key-example"></a>Esempio di chiave host
+
+Aggiungere `HostKeyAlgorithms <algorithms to enable>`  
+Ad esempio: `HostKeyAlgorithms ssh-dss,ssh-rsa`
 
 ## <a name="logging-for-remote-connections"></a>Registrazione per le connessioni remote
 

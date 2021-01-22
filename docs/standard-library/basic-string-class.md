@@ -1,7 +1,7 @@
 ---
 title: Classe basic_string
 description: Informazioni di riferimento sulle API per la classe stringa C++ standard `basic_string` .
-ms.date: 10/26/2020
+ms.date: 01/15/2021
 f1_keywords:
 - xstring/std::basic_string
 - xstring/std::basic_string::allocator_type
@@ -61,6 +61,11 @@ f1_keywords:
 - xstring/std::basic_string::ends_with
 - xstring/std::basic_string::starts_with
 - xstring/std::basic_string::swap
+- xstring/std::literals::string_literals
+- std::literals::string_literals
+- string_literals
+- xstring/std::literals::string_literals::operator "s
+- std::literals::string_literals::operator s
 helpviewer_keywords:
 - std::basic_string [C++]
 - std::basic_string [C++], allocator_type
@@ -120,17 +125,16 @@ helpviewer_keywords:
 - std::basic_string [C++], ends_with
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
-ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 87eda4064ff63a22add49b2872a26c76ac15bc6a
-ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
+ms.openlocfilehash: ebd8f4c35a1e51a96f09069ed78c67345d71ab32
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94381649"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98667573"
 ---
 # <a name="basic_string-class"></a>Classe `basic_string`
 
-Le sequenze controllate da un oggetto di tipo `basic_string` sono la classe stringa C++ standard e vengono in genere definite stringhe, ma non devono essere confuse con le stringhe di tipo C con terminazione null usate in tutta la libreria standard c++. La stringa C++ standard è un contenitore che consente l'uso di stringhe come tipi normali, ad esempio come operazioni di confronto e concatenazione, iteratori, algoritmi della libreria standard C++ e copia e assegnazione con Managed Memory dell'allocatore della classe. Se è necessario convertire una stringa C++ standard in una stringa in formato C con terminazione Null, usare il membro [basic_string::c_str](#c_str).
+Le sequenze controllate da un oggetto di tipo `basic_string` sono la classe stringa C++ standard e vengono in genere definite stringhe, ma non devono essere confuse con le stringhe di tipo C con terminazione null usate in tutta la libreria standard c++. La stringa C++ standard è un contenitore che consente l'uso di stringhe come tipi normali, ad esempio operazioni di confronto e concatenazione, iteratori, algoritmi della libreria standard C++ e copia e assegnazione con la classe allocator-managed memory. Se è necessario convertire una stringa C++ standard in una stringa di tipo C con terminazione null, usare il [`basic_string::c_str`](#c_str) membro.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -190,7 +194,7 @@ Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli re
 |[`cend`](#cend)|Restituisce un iteratore const che punta alla posizione successiva all'ultimo elemento in una stringa.|
 |[`clear`](#clear)|Cancella tutti gli elementi di una stringa.|
 |[`compare`](#compare)|Confronta una stringa con una stringa specificata per determinare se le due stringhe sono uguali oppure se una è minore dell'altra a livello lessicografico.|
-|[`copy`](#copy)|Copia al massimo un numero specificato di caratteri da una posizione indicizzata all'interno di una stringa di origine in una matrice di caratteri di destinazione. Operazione deprecata. In [`basic_string::_Copy_s`](#copy_s) alternativa, usare.|
+|[`copy`](#copy)|Copia al massimo un numero specificato di caratteri da una posizione indicizzata all'interno di una stringa di origine in una matrice di caratteri di destinazione. Deprecato. In [`basic_string::_Copy_s`](#copy_s) alternativa, usare.|
 |[`crbegin`](#crbegin)|Restituisce un iteratore const che punta al primo elemento in una stringa invertita.|
 |[`crend`](#crend)|Restituisce un iteratore const che punta alla posizione successiva all'ultimo elemento in una stringa invertita.|
 |[`_Copy_s`](#copy_s)|Copia al massimo un numero specificato di caratteri da una posizione indicizzata all'interno di una stringa di origine in una matrice di caratteri di destinazione.|
@@ -206,7 +210,7 @@ Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli re
 |[`find_last_of`](#find_last_of)|Cerca in una stringa l'ultimo carattere che è un elemento di una stringa specificata.|
 |[`front`](#front)|Restituisce un riferimento al primo elemento in una stringa.|
 |[`get_allocator`](#get_allocator)|Restituisce una copia dell'oggetto `allocator` usato per costruire la stringa.|
-|[`insert`](#insert)|Inserisce un elemento, un numero di elementi o un intervallo di elementi nella stringa in una posizione specificata.|
+|[`insert`](#insert)|Inserisce un elemento, diversi elementi o un intervallo di elementi nella stringa in una posizione specificata.|
 |[`length`](#length)|Restituisce il numero corrente di elementi in una stringa.|
 |[`max_size`](#max_size)|Restituisce il numero massimo di caratteri che una stringa può contenere.|
 |[`pop_back`](#pop_back)|Cancella l'ultimo elemento della stringa.|
@@ -230,6 +234,18 @@ Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli re
 |[`operator+=`](#op_add_eq)|Aggiunge caratteri a una stringa.|
 |[`operator=`](#op_eq)|Assegna nuovi valori di caratteri al contenuto di una stringa.|
 |[`operator`&#91;&#93;](#op_at)|Fornisce un riferimento al carattere con un indice specificato in una stringa.|
+
+### <a name="literals"></a>Valori letterali
+
+Le intestazioni che definiscono definiscono `basic_string` anche i [valori letterali definiti dall'utente](../cpp/user-defined-literals-cpp.md)seguenti, che creano una stringa del tipo specificato dai parametri di input.
+
+| Dichiarazione | Descrizione |
+|--|--|
+| `inline string operator"" s(const char* str, size_t len)` | Restituisce: `string(str, len)` |
+| `inline string operator"" s(const wchar_t* str, size_t len)` | Restituisce: `wstring(str, len)` |
+| `inline basic_string<char8_t> operator"" s(const char8_t* str, size_t len)` | Restituisce: `basic_string<char8_t>(str, len)` |
+| `inline u16string operator"" s(const char16_t* str, size_t len)` | Restituisce: `u16string(str, len)` |
+| `inline u32string operator"" s(const char32_t* str, size_t len)` | Restituisce: `u32string(str, len)` |
 
 ## <a name="remarks"></a>Commenti
 
@@ -621,7 +637,7 @@ Il primo elemento della stringa ha un indice zero e gli elementi seguenti vengon
 
 Il [ `operator`&#91;&#93;](#op_at) del membro è più veloce della funzione membro `at` per fornire accesso in lettura e scrittura agli elementi di una stringa.
 
-Il membro `operator[]` non controlla se l'indice passato come parametro è valido, ma la funzione membro `at` esegue e quindi deve essere usato se la validità non è certa. Un indice non valido, ovvero un indice minore di zero o maggiore o uguale alla dimensione della stringa, passato alla funzione membro `at` genera un'eccezione di [out_of_range classe](../standard-library/out-of-range-class.md) . Un indice non valido passato a `operator[]` causa un comportamento non definito, mentre l'indice uguale alla lunghezza della stringa è un indice valido per le stringhe const e l'operatore restituisce il carattere null quando l'indice viene passato.
+Il membro `operator[]` non controlla se l'indice passato come parametro è valido, ma la funzione membro `at` esegue e quindi deve essere usato se la validità non è certa. Un indice non valido, ovvero un indice minore di zero o maggiore o uguale alla dimensione della stringa, passato alla funzione membro `at` genera un'eccezione di [ `out_of_range` classe](../standard-library/out-of-range-class.md) . Un indice non valido passato a `operator[]` causa un comportamento non definito, mentre l'indice uguale alla lunghezza della stringa è un indice valido per le stringhe const e l'operatore restituisce il carattere null quando l'indice viene passato.
 
 Il riferimento restituito può essere invalidato da riallocazioni di stringa o modifiche per le `const` stringhe non.
 
@@ -784,7 +800,7 @@ Riferimento all'oggetto stringa costruito dai costruttori.
 
 ### <a name="remarks"></a>Commenti
 
-Tutti i costruttori archiviano un oggetto [`basic_string::allocator_type`](#allocator_type) e inizializzano la sequenza controllata. L'oggetto allocatore è l'argomento `al`, se presente. Per il costruttore di copia, è `right.` [`basic_string::get_allocator`](#get_allocator) `()` . In caso contrario, l'allocatore è `Alloc()` .
+Tutti i costruttori archiviano un oggetto [`basic_string::allocator_type`](#allocator_type) e inizializzano la sequenza controllata. L'oggetto allocatore è l'argomento `al`, se presente. Per il costruttore di copia, è `right.get_allocator()` una chiamata a [`basic_string::get_allocator`](#get_allocator) . In caso contrario, l'allocatore è `Alloc()` .
 
 la sequenza controllata viene inizializzata in una copia della sequenza di operandi specificata dagli operandi rimanenti. Un costruttore senza una sequenza di operandi specifica una sequenza controllata iniziale vuota. Se `InputIterator` è un tipo integer in un costruttore di modello, la sequenza `first,  last` di operandi si comporta come `(size_type) first, (value_type) last` .
 
@@ -897,13 +913,13 @@ const value_type *c_str() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore alla versione in formato C della stringa di richiamo.  Il valore del puntatore non è valido dopo la chiamata a una `const` funzione non, incluso il distruttore, nella classe basic_string sull'oggetto.
+Puntatore alla versione in formato C della stringa di richiamo.  Il valore del puntatore non è valido dopo la chiamata a una `const` funzione non, incluso il distruttore, nella `basic_string` classe dell'oggetto.
 
 ### <a name="remarks"></a>Commenti
 
-Gli oggetti di tipo String appartenenti al modello di classe `basic_string<char>` non sono necessariamente con terminazione null. Il carattere null ' \0 ' viene usato come carattere speciale in una stringa C per contrassegnare la fine della stringa ma non ha alcun significato particolare in un oggetto di tipo string e può essere parte della stringa come qualsiasi altro carattere. Viene eseguita una conversione automatica dalle `const char *` stringhe, ma la classe String non fornisce conversioni automatiche da stringhe di tipo C a oggetti di tipo `basic_string<char>` .
+Gli oggetti di tipo String appartenenti al modello di classe `basic_string<char>` non sono necessariamente con terminazione null. Il carattere null `'\0'` viene usato come carattere speciale in una stringa C per contrassegnare la fine della stringa ma non ha alcun significato particolare in un oggetto di tipo stringa e può essere una parte della stringa come qualsiasi altro carattere. Viene eseguita una conversione automatica dalle `const char *` stringhe, ma la classe String non fornisce conversioni automatiche da stringhe di tipo C a oggetti di tipo `basic_string<char>` .
 
-Non è possibile modificare la stringa di tipo C restituita, perché potrebbe invalidare il puntatore alla stringa o eliminarla perché la stringa ha una durata limitata ed è di proprietà della classe String.
+La stringa di tipo C restituita non deve essere modificata, che può invalidare il puntatore alla stringa o eliminata, perché la stringa ha una durata limitata ed è di proprietà della classe String.
 
 ### <a name="example"></a>Esempio
 
@@ -1037,7 +1053,7 @@ Iteratore ad accesso casuale `const` che punta al primo elemento dell'intervallo
 
 Con il valore restituito di `cbegin` , gli elementi dell'intervallo non possono essere modificati.
 
-È possibile usare questa funzione membro anziché la funzione membro `begin()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, si consideri come `Container` un contenitore (non `const` ) modificabile di qualsiasi tipo che supporta `begin()` e `cbegin()` .
+È possibile usare questa funzione membro anziché la funzione membro `begin()` per garantire che il valore restituito sia `const_iterator`. Viene in genere usato insieme alla [`auto`](../cpp/auto-cpp.md) parola chiave di deduzione del tipo, come illustrato nell'esempio seguente. Nell'esempio, si consideri come `Container` un contenitore (non `const` ) modificabile di qualsiasi tipo che supporta `begin()` e `cbegin()` .
 
 ```cpp
 auto i1 = Container.begin();
@@ -1063,7 +1079,7 @@ Iteratore `const` ad accesso casuale che punta oltre la fine dell'intervallo.
 
 `cend` viene utilizzato per verificare se un iteratore ha superato la fine del relativo intervallo.
 
-È possibile usare questa funzione membro anziché la funzione membro `end()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, si consideri come `Container` un contenitore (non `const` ) modificabile di qualsiasi tipo che supporta `end()` e `cend()` .
+È possibile usare questa funzione membro anziché la funzione membro `end()` per garantire che il valore restituito sia `const_iterator`. Viene in genere usato insieme alla [`auto`](../cpp/auto-cpp.md) parola chiave di deduzione del tipo, come illustrato nell'esempio seguente. Nell'esempio, si consideri come `Container` un contenitore (non `const` ) modificabile di qualsiasi tipo che supporta `end()` e `cend()` .
 
 ```cpp
 auto i1 = Container.end();
@@ -1794,7 +1810,7 @@ bool empty() const;
 
 ### <a name="remarks"></a>Commenti
 
-La funzione membro è equivalente a [size](#size) == 0.
+La funzione membro equivale a [`size`](#size) = = 0.
 
 ### <a name="example"></a>Esempio
 
@@ -3009,7 +3025,7 @@ Allocatore usato dalla stringa.
 
 La funzione membro restituisce l'oggetto allocatore archiviato.
 
-Gli allocatori per la classe string specificano il modo in cui la classe gestisce l'archiviazione. Gli allocatori predefiniti forniti con le classi dei contenitori sono sufficienti per la maggior parte delle esigenze di programmazione. Scrivere e usare una classe allocator personalizzata è un argomento di C++ avanzato.
+Gli allocatori per la classe string specificano il modo in cui la classe gestisce l'archiviazione. Gli allocatori predefiniti forniti con le classi dei contenitori sono sufficienti per la maggior parte delle esigenze di programmazione. La scrittura e l'utilizzo della propria classe allocator sono una funzionalità avanzata di C++.
 
 ### <a name="example"></a>Esempio
 
@@ -3038,7 +3054,7 @@ int main( )
 
 ## <a name="basic_stringinsert"></a><a name="insert"></a> `basic_string::insert`
 
-Inserisce un elemento, un numero di elementi o un intervallo di elementi nella stringa in una posizione specificata.
+Inserisce un elemento, diversi elementi o un intervallo di elementi nella stringa in una posizione specificata.
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& insert(
@@ -3124,7 +3140,7 @@ Un iteratore di input, `const_pointer` o `const_iterator` che punta alla posizio
 
 ### <a name="return-value"></a>Valore restituito
 
-Riferimento all'oggetto stringa a cui la funzione membro assegna nuovi caratteri o, nel caso di inserimenti di singoli caratteri, iteratore che punta alla posizione del carattere inserito oppure nessun elemento, a seconda della funzione membro specifica.
+Un riferimento all'oggetto stringa a cui vengono assegnati nuovi caratteri dalla funzione membro o, nel caso di inserimenti di singoli caratteri, un iteratore che punta alla posizione del carattere inserito o None, a seconda della funzione membro specifica.
 
 ### <a name="example"></a>Esempio
 
@@ -3311,7 +3327,7 @@ Il numero massimo di caratteri che una stringa può contenere.
 
 ### <a name="remarks"></a>Commenti
 
-Un'eccezione di tipo [Length_error classe](../standard-library/length-error-class.md) viene generata quando un'operazione produce una stringa con una lunghezza maggiore della dimensione massima.
+Un'eccezione di tipo [ `length_error` Class](../standard-library/length-error-class.md) viene generata quando un'operazione produce una stringa con una lunghezza maggiore della dimensione massima.
 
 ### <a name="example"></a>Esempio
 
@@ -3586,15 +3602,15 @@ Un riferimento al carattere della stringa in corrispondenza della posizione spec
 
 ### <a name="remarks"></a>Commenti
 
-Il primo elemento della stringa ha un indice zero e agli elementi seguenti vengono assegnati indici basati su interi positivi consecutivi in modo che una stringa di lunghezza *n* includa un elemento *n* indicizzato con il numero *n* - 1.
+Il primo elemento della stringa ha un indice zero e gli elementi seguenti vengono indicizzati consecutivamente da numeri interi positivi. Significa che una stringa di lunghezza *n* ha un elemento *n* indicizzato dal numero *n* -1.
 
 `operator[]` è più veloce della funzione membro [`at`](#at) per fornire accesso in lettura e scrittura agli elementi di una stringa.
 
-`operator[]` non verifica se l'indice passato come parametro è valido, ma la funzione membro `at` esegue e pertanto deve essere usato nella validità non è certo. Un indice non valido, ovvero un indice minore di zero o maggiore o uguale alla dimensione della stringa, passato alla funzione membro `at` genera un'eccezione di [out_of_range classe](../standard-library/out-of-range-class.md) . Un indice non valido passato a `operator[]` causa un comportamento non definito, mentre l'indice uguale alla lunghezza della stringa è un indice valido per le stringhe const e l'operatore restituisce il carattere null quando l'indice viene passato.
+`operator[]` non verifica se l'indice passato come parametro è valido, ma la funzione membro `at` esegue e pertanto deve essere usato nella validità non è certo. Un indice non valido, ovvero un indice minore di zero o maggiore o uguale alla dimensione della stringa, passato alla funzione membro `at` genera un'eccezione di [ `out_of_range` classe](../standard-library/out-of-range-class.md) . Un indice non valido passato a `operator[]` causa un comportamento non definito, mentre l'indice uguale alla lunghezza della stringa è un indice valido per le stringhe const e l'operatore restituisce il carattere null quando l'indice viene passato.
 
 Il riferimento restituito può essere invalidato da riallocazioni di stringa o modifiche per le `const` stringhe non.
 
-Quando si esegue la compilazione con il [ \_ \_ \_ livello di debug iteratore](../standard-library/iterator-debug-level.md) impostato su 1 o 2, si verificherà un errore di runtime se si tenta di accedere a un elemento all'esterno dei limiti della stringa. Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md).
+Quando si esegue la compilazione con [`_ITERATOR_DEBUG_LEVEL`](../standard-library/iterator-debug-level.md) impostato su 1 o 2, si verificherà un errore di runtime se si tenta di accedere a un elemento all'esterno dei limiti della stringa. Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Esempio
 
@@ -3699,7 +3715,7 @@ Carattere da aggiungere alla fine della stringa.
 
 ### <a name="remarks"></a>Commenti
 
-La funzione membro chiama effettivamente [`insert`](#insert) ( [`end`](#end) , *char_value* ).
+La funzione membro chiama effettivamente `insert( end, char_value )` . Per altre informazioni, vedere [`insert`](#insert) e [`end`](#end).
 
 ### <a name="example"></a>Esempio
 
@@ -3915,7 +3931,7 @@ The string str2 is empty.
 
 ## <a name="basic_stringreplace"></a><a name="replace"></a> `basic_string::replace`
 
-Sostituisce gli elementi in una stringa in una posizione specificata con i caratteri specificati o i caratteri copiati da altri intervalli, stringhe o stringhe C.
+Sostituisce gli elementi in una stringa in una posizione specificata con i caratteri specificati oppure con caratteri copiati da altri intervalli, stringhe o stringhe C.
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& replace(
@@ -4225,9 +4241,9 @@ Il numero di caratteri per il quale viene riservata la memoria.
 
 ### <a name="remarks"></a>Commenti
 
-La disponibilità di una capacità sufficiente è importante poiché le riallocazioni richiedono tempo e invalidano tutti i riferimenti, i puntatori e gli iteratori che fanno riferimento ai caratteri in una stringa.
+Avere una capacità sufficiente è importante perché la riallocazione è un processo che richiede molto tempo. E invalida tutti i riferimenti, i puntatori e gli iteratori che fanno riferimento ai caratteri in una stringa.
 
-Il concetto di capacità per gli oggetti di tipo stringhe è identico a quello degli oggetti di tipo `vector` . Diversamente da `vector` , `reserve` è possibile chiamare la funzione membro per compattare la capacità di un oggetto. La richiesta non è vincolante e può verificarsi o meno. Poiché il valore predefinito per il parametro è zero, una chiamata di `reserve` è una richiesta non di associazione per compattare la capacità della stringa per adattarla al numero di caratteri attualmente presenti nella stringa. La capacità non viene mai ridotta al di sotto del numero di caratteri corrente.
+Il concetto di capacità per i tipi di oggetto stringa è identico a quello per gli oggetti di tipo `vector` . Diversamente da `vector` , `reserve` è possibile chiamare la funzione membro per compattare la capacità di un oggetto. La richiesta non è vincolante e può verificarsi o meno. Poiché il valore predefinito per il parametro è zero, una chiamata di `reserve` è una richiesta non di associazione per compattare la capacità della stringa per adattarla al numero di caratteri attualmente presenti nella stringa. La capacità non viene mai ridotta al di sotto del numero di caratteri corrente.
 
 La chiamata a `reserve` è il solo modo possibile per ridurre la capacità di una stringa. Tuttavia, come affermato in precedenza, questa richiesta non è vincolante e potrebbe non verificarsi.
 
@@ -4319,7 +4335,7 @@ void resize(
 La nuova dimensione della stringa.
 
 *`char_value`*\
-Valore con cui vengono inizializzati i caratteri aggiunti se sono necessari elementi aggiuntivi.
+Valore con cui vengono inizializzati i caratteri accodati, se sono necessari più elementi.
 
 ### <a name="remarks"></a>Commenti
 
@@ -4802,7 +4818,7 @@ Il numero di caratteri che devono essere copiati, se presenti.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un oggetto sottostringa che è una copia degli elementi della stringa operando che inizia nella posizione specificata dal primo argomento.
+Oggetto Substring che è una copia di elementi dell'operando stringa, a partire dalla posizione specificata dal primo argomento.
 
 ### <a name="example"></a>Esempio
 
@@ -4853,7 +4869,7 @@ void swap(
 ### <a name="parameters"></a>Parametri
 
 *`str`*\
-La stringa di origine i cui elementi sono da scambiare con quelli nella stringa di destinazione.
+Stringa di origine i cui elementi devono essere scambiati con quelli nella stringa di destinazione.
 
 ### <a name="remarks"></a>Commenti
 
@@ -4863,7 +4879,7 @@ Se le stringhe che vengono scambiate hanno lo stesso oggetto allocatore, la funz
 - Non genera alcuna eccezione.
 - Non invalida riferimenti, puntatori o iteratori che definiscono gli elementi nelle due stringhe.
 
-In caso contrario, esegue un numero di assegnazioni di elementi e chiamate al costruttore proporzionale al numero di elementi nelle due sequenze controllate.
+In caso contrario, le assegnazioni di elementi e le chiamate del costruttore proporzionale al numero di elementi nelle due sequenze controllate.
 
 ### <a name="example"></a>Esempio
 
