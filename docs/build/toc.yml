@@ -55,6 +55,8 @@
       href: ../build/cmake-projects-in-visual-studio.md
     - name: 'Esercitazione: Creare progetti multipiattaforma C++ in Visual Studio'
       href: ../build/get-started-linux-cmake.md
+    - name: 'Esercitazione: eseguire ed eseguire il debug di un progetto CMake in modalità remota'
+      href: ../build/cmake-remote-debugging.md
     - name: Clang/LLVM nei progetti CMake
       href: ../build/clang-support-cmake.md
     - name: Configurare un progetto CMake per Linux
@@ -1082,13 +1084,13 @@
           items:
             - name: Supporto per le DLL a caricamento ritardato nel linker
               href: ../build/reference/linker-support-for-delay-loaded-dlls.md
-            - name: Specifica delle DLL per il caricamento ritardato
+            - name: Specificare le dll per ritardare il caricamento
               href: ../build/reference/specifying-dlls-to-delay-load.md
-            - name: Scaricamento esplicito di una DLL a caricamento ritardato
+            - name: Scarica in modo esplicito una DLL a caricamento ritardato
               href: ../build/reference/explicitly-unloading-a-delay-loaded-dll.md
-            - name: Associazione di importazioni
+            - name: Importazioni a caricamento ritardato di binding
               href: ../build/reference/binding-imports.md
-            - name: Caricamento di tutte le importazioni per una DLL a caricamento ritardato
+            - name: Carica tutte le importazioni per una DLL a caricamento ritardato
               href: ../build/reference/loading-all-imports-for-a-delay-loaded-dll.md
             - name: Gestione e notifica degli errori
               expanded: false
@@ -1101,14 +1103,14 @@
                   href: ../build/reference/failure-hooks.md
                 - name: Codici di eccezione di caricamento DLL (C/C++)
                   href: ../build/reference/exceptions-c-cpp.md
-            - name: Dump delle importazioni a caricamento ritardato
+            - name: Dump di importazioni a caricamento ritardato
               href: ../build/reference/dumping-delay-loaded-imports.md
             - name: Vincoli delle DLL a caricamento ritardato
               href: ../build/reference/constraints-of-delay-loading-dlls.md
-            - name: Informazioni sulla funzione di supporto
+            - name: Informazioni sulla funzione di supporto del caricamento ritardato
               expanded: false
               items:
-                - name: Informazioni sulla funzione di supporto
+                - name: Informazioni sulla funzione helper
                   href: ../build/reference/understanding-the-helper-function.md
                 - name: 'Funzione di supporto del caricamento ritardato delle DLL: modifiche introdotte rispetto a Visual C++ 6.0'
                   href: ../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md
@@ -1116,11 +1118,11 @@
                   href: ../build/reference/calling-conventions-parameters-and-return-type.md
                 - name: Struttura e definizioni di costanti
                   href: ../build/reference/structure-and-constant-definitions.md
-                - name: Calcolo dei valori necessari
+                - name: Calcolare i valori necessari
                   href: ../build/reference/calculating-necessary-values.md
-                - name: Scaricamento di una DLL a caricamento ritardato
+                - name: Scarica una DLL a caricamento ritardato
                   href: ../build/reference/unloading-a-delay-loaded-dll.md
-            - name: Sviluppo di una funzione di supporto personalizzata
+            - name: Sviluppare una funzione helper personalizzata
               href: ../build/reference/developing-your-own-helper-function.md
     - name: Strumenti di compilazione aggiuntivi MSVC
       expanded: false
