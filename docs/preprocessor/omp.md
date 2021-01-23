@@ -1,33 +1,34 @@
 ---
-description: 'Altre informazioni su: OMP pragma'
-title: Pragma omp
-ms.date: 08/29/2019
+description: Altre informazioni sulla direttiva OMP pragma in Microsoft C/C++
+title: OMP pragma
+ms.date: 01/22/2021
 f1_keywords:
 - vc-pragma.omp
 - omp_CPP
 helpviewer_keywords:
-- pragmas, omp
+- pragma, omp
 - omp pragma
-ms.assetid: 652414c5-78ed-4b7f-8283-1a9fe4c5e78d
-ms.openlocfilehash: 1fdb277fa3512194b6819a95fe663b7848160558
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+no-loc:
+- pragma
+ms.openlocfilehash: a3956b8b94bd54bfc20bc768a745211f758c2efe
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97333252"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713467"
 ---
-# <a name="omp-pragma"></a>Pragma omp
+# <a name="omp-no-locpragma"></a>`omp` pragma
 
 Accetta una o più direttive OpenMP, con eventuali clausole direttive facoltative.
 
 ## <a name="syntax"></a>Sintassi
 
-> **#pragma** *direttiva* OMP
+> **`#pragma omp`***direttiva*
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 Per ulteriori informazioni, vedere [direttive OpenMP](../parallel/openmp/reference/openmp-directives.md).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-[Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direttive pragma e `__pragma` `_Pragma` parole chiave e](./pragma-directives-and-the-pragma-keyword.md)

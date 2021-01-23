@@ -1,49 +1,50 @@
 ---
-description: 'Altre informazioni su: pragma warning'
-title: warning (pragma)
-ms.date: 08/29/2019
+title: avviso pragma
+description: Altre informazioni sull'avviso pragma in Microsoft C/C++
+ms.date: 01/22/2021
 f1_keywords:
 - warning_CPP
 - vc-pragma.warning
 helpviewer_keywords:
-- pragmas, warning
+- pragma, warning
 - push pragma warning
 - pop warning pragma
 - warning pragma
-ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: ac810076d1db0c975d28bc64d0a6d761c9cec608
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+no-loc:
+- pragma
+ms.openlocfilehash: 97d48acc3c0e4651d3b05c0a6405d5c9c2031cf6
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97193107"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98712843"
 ---
-# <a name="warning-pragma"></a>warning (pragma)
+# <a name="warning-no-locpragma"></a>`warning` pragma
 
 Consente la modifica selettiva del comportamento dei messaggi di avviso del compilatore.
 
 ## <a name="syntax"></a>Sintassi
 
-> **avviso #pragma (**\
-> &nbsp;&nbsp;&nbsp;&nbsp;*avviso-identificatore* **:** *Avviso-numero-elenco*\
-> &nbsp;&nbsp;&nbsp;&nbsp;[**;** *warning-specifier* **:** *warning-number-list* ...] **)**\
-> **avviso #pragma (push** [ **,** *n* ] **)**\
-> **avviso #pragma (pop)**
+> **`#pragma warning(`**\
+> &nbsp;&nbsp;&nbsp;&nbsp;*`warning-specifier`* **`:`** *`warning-number-list`*\
+> &nbsp;&nbsp;&nbsp;&nbsp;[**`;`** *`warning-specifier`* **`:`** *`warning-number-list`* ... ] **`)`**\
+> **`#pragma warning( push`** [ **`,`** *n* ] **`)`**\
+> **`#pragma warning( pop )`**
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 Sono disponibili i seguenti parametri identificatore-avviso.
 
-|identificatore-avviso|Significato|
-|------------------------|-------------|
-|*1, 2, 3, 4*|Applica il livello specificato agli avvisi specificati. Attiva anche un avviso specificato che è disattivato per impostazione predefinita.|
-|*default*|Reimposta il comportamento dell'avviso sul valore predefinito. Attiva anche un avviso specificato che è disattivato per impostazione predefinita. L'avviso verrà generato nel suo livello predefinito e documentato.<br /><br /> Per ulteriori informazioni, vedere [avvisi del compilatore disattivati per impostazione predefinita](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
-|*disable*|Non emettere i messaggi di avviso specificati.|
-|*error*|Segnala gli avvisi specificati come errori.|
-|*una volta*|Visualizza i messaggi specificati solo una volta.|
-|*sopprimere*|Inserisce lo stato corrente del pragma nello stack, disabilita l'avviso specificato per la riga successiva, quindi estrae lo stack di avvisi in modo che venga ripristinato lo stato del pragma.|
+| identificatore-avviso | Significato |
+|--|--|
+| `1`, `2`, `3`, `4` | Applicare il livello specificato agli avvisi specificati. Attiva anche un avviso specificato che è disattivato per impostazione predefinita. |
+| `default` | Reimposta il comportamento dell'avviso sul valore predefinito. Attiva anche un avviso specificato che è disattivato per impostazione predefinita. L'avviso verrà generato nel suo livello predefinito e documentato.<br /><br /> Per ulteriori informazioni, vedere [avvisi del compilatore disattivati per impostazione predefinita](../preprocessor/compiler-warnings-that-are-off-by-default.md). |
+| `disable` | Non emettere i messaggi di avviso specificati. |
+| `error` | Segnala gli avvisi specificati come errori. |
+| `once` | Visualizza i messaggi specificati solo una volta. |
+| `suppress` | Inserisce lo stato corrente dell'oggetto nello pragma stack, Disabilita l'avviso specificato per la riga successiva, quindi estrae lo stack di avvisi in modo che lo pragma stato venga reimpostato. |
 
-Nell'istruzione di codice seguente viene illustrato che un parametro `warning-number-list` può contenere più numeri di avviso e che è possibile specificare più parametri `warning-specifier` nella stessa direttiva pragma.
+Nell'istruzione del codice seguente viene illustrato che un *`warning-number-list`* parametro può contenere più numeri di avviso e che è *`warning-specifier`* possibile specificare più parametri nella stessa pragma direttiva.
 
 ```cpp
 #pragma warning( disable : 4507 34; once : 4385; error : 164 )
@@ -64,7 +65,7 @@ Questa direttiva è funzionalmente equivalente al codice seguente:
 
 Il compilatore aggiunge 4000 a qualsiasi numero di avviso compreso tra 0 e 999.
 
-Per i numeri di avviso nell'intervallo 4700-4999, che sono quelli associati alla generazione del codice, lo stato dell'avviso in vigore quando il compilatore rileva che la definizione di funzione sarà attiva per il resto della funzione. L'utilizzo del pragma **warning** nella funzione per modificare lo stato di un numero di avviso maggiore di 4699 ha effetto solo dopo la fine della funzione. Nell'esempio seguente viene illustrata la posizione corretta dei pragma **warning** per disabilitare un messaggio di avviso di generazione del codice e quindi ripristinarlo.
+I numeri di avviso nell'intervallo 4700-4999 sono associati alla generazione del codice. Per questi avvisi, lo stato dell'avviso in vigore quando il compilatore raggiunge la definizione di funzione rimane attivo per il resto della funzione. L'uso di **`warning`** pragma nella funzione per modificare lo stato di un numero di avviso maggiore di 4699 ha effetto solo dopo la fine della funzione. Nell'esempio seguente viene illustrata la posizione corretta di un oggetto **`warning`** pragma per disabilitare un messaggio di avviso di generazione del codice e quindi ripristinarlo.
 
 ```cpp
 // pragma_warning.cpp
@@ -82,19 +83,19 @@ int main() {
 }
 ```
 
-Si noti che in tutto il corpo di una funzione, l'ultima impostazione del pragma **warning** sarà valida per l'intera funzione.
+Si noti che in tutto il corpo di una funzione, l'ultima impostazione di **`warning`** pragma sarà valida per l'intera funzione.
 
-## <a name="push-and-pop"></a>Push e pull
+## <a name="push-and-pop"></a>Push e pop
 
-Il pragma **warning** supporta anche la sintassi seguente, dove *n* rappresenta un livello di avviso (da 1 a 4).
+**`warning`** pragma Supporta inoltre la sintassi seguente, in cui il parametro *n* facoltativo rappresenta un livello di avviso (da 1 a 4).
 
 `#pragma warning( push [ , n ] )`
 
 `#pragma warning( pop )`
 
-Il pragma `warning( push )` archivia lo stato di avviso corrente per ogni avviso. Il pragma `warning( push, n )` archivia lo stato corrente per ogni avviso e imposta il livello di avviso globale su *n*.
+pragma `warning( push )` Archivia lo stato di avviso corrente per ogni avviso. pragma `warning( push, n )` Archivia lo stato corrente per ogni avviso e imposta il livello di avviso globale su *n*.
 
-Il pragma `warning( pop )` estrae l'ultimo stato di avviso inserito nello stack. Tutte le modifiche apportate allo stato di avviso tra *push* e *pop* vengono annullate. Prendere in considerazione questo esempio:
+pragma `warning( pop )` Estrae l'ultimo stato di avviso inserito nello stack. Tutte le modifiche apportate allo stato di avviso tra `push` e `pop` vengono annullate. Prendere in considerazione questo esempio:
 
 ```cpp
 #pragma warning( push )
@@ -105,9 +106,9 @@ Il pragma `warning( pop )` estrae l'ultimo stato di avviso inserito nello stack.
 #pragma warning( pop )
 ```
 
-Alla fine di questo codice, *pop* ripristina lo stato di ogni avviso (include 4705, 4706 e 4707) a quello che si trovava all'inizio del codice.
+Alla fine di questo codice, `pop` Ripristina lo stato di ogni avviso (include 4705, 4706 e 4707) a quello che si trovava all'inizio del codice.
 
-Quando si scrivono file di intestazione, è possibile usare *push* e *pop* per garantire che le modifiche dello stato di avviso apportate da un utente non impediscano la compilazione corretta delle intestazioni. Usare *push* all'inizio dell'intestazione e *pop* alla fine. Se, ad esempio, si dispone di un'intestazione che non viene compilata in modo corretto a livello di avviso 4, il codice seguente imposta il livello di avviso su 3, quindi Ripristina il livello di avviso originale alla fine dell'intestazione.
+Quando si scrivono file di intestazione, è possibile usare `push` e `pop` per garantire che le modifiche dello stato di avviso apportate da un utente non impediscano la compilazione corretta delle intestazioni. Utilizzare `push` all'inizio dell'intestazione e `pop` alla fine. Ad esempio, è possibile che si disponga di un'intestazione che non viene compilata in modo corretto a livello di avviso 4. Il codice seguente imposta il livello di avviso su 3, quindi Ripristina il livello di avviso originale alla fine dell'intestazione.
 
 ```cpp
 #pragma warning( push, 3 )
@@ -115,8 +116,8 @@ Quando si scrivono file di intestazione, è possibile usare *push* e *pop* per g
 #pragma warning( pop )
 ```
 
-Per ulteriori informazioni sulle opzioni del compilatore che consentono di non visualizzare gli avvisi, vedere [/Fi](../build/reference/fi-name-forced-include-file.md) e [/w](../build/reference/compiler-option-warning-level.md).
+Per ulteriori informazioni sulle opzioni del compilatore che consentono di non visualizzare gli avvisi, vedere [`/FI`](../build/reference/fi-name-forced-include-file.md) e [`/w`](../build/reference/compiler-option-warning-level.md) .
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-[Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direttive pragma e `__pragma` `_Pragma` parole chiave e](./pragma-directives-and-the-pragma-keyword.md)

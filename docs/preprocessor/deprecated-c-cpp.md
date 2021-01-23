@@ -1,40 +1,41 @@
 ---
-description: 'Altre informazioni su: pragma deprecated'
-title: deprecated (pragma)
-ms.date: 08/29/2019
+description: Altre informazioni sulla direttiva deprecata pragma in Microsoft C/C++
+title: deprecato pragma
+ms.date: 01/22/2021
 f1_keywords:
 - vc-pragma.deprecated
 helpviewer_keywords:
 - deprecated pragma
-- pragmas, deprecated
-ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-ms.openlocfilehash: b3f7e8bf17e98f6e6f57511f3c0c9a94a9388bf1
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+- pragma, deprecated
+no-loc:
+- pragma
+ms.openlocfilehash: 47e049f415b243a4c9959c7adc789f32f91de7ba
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97300775"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98712908"
 ---
-# <a name="deprecated-pragma"></a>deprecated (pragma)
+# <a name="deprecated-no-locpragma"></a>`deprecated` pragma
 
-Il **`deprecated`** pragma consente di indicare che una funzione, un tipo o un altro identificatore potrebbe non essere più supportato in una versione futura o non deve più essere utilizzato.
+**`deprecated`** pragma Consente di indicare che una funzione, un tipo o qualsiasi altro identificatore potrebbe non essere più supportato in una versione futura o non deve più essere utilizzato.
 
 > [!NOTE]
-> Per informazioni sull'attributo C++ 14 `[[deprecated]]` e indicazioni su quando utilizzare tale attributo anziché il `__declspec(deprecated)` modificatore Microsoft o il **`deprecated`** pragma, vedere [attributi in C++](../cpp/attributes.md).
+> Per informazioni sull'attributo C++ 14 `[[deprecated]]` e indicazioni su quando utilizzare tale attributo anziché il `__declspec(deprecated)` modificatore Microsoft o **`deprecated`** pragma , vedere [attributi in C++](../cpp/attributes.md).
 
 ## <a name="syntax"></a>Sintassi
 
-> **#pragma deprecato (** *identificatore1* [ **,** *identifier2* ...] **)**
+> **`#pragma deprecated(`***identificatore1* [ **`,`** *identifier2* ...]**`)`**
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
-Quando il compilatore rileva un identificatore specificato da un **`deprecated`** pragma, emette un avviso del compilatore [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).
+Quando il compilatore rileva un identificatore specificato da un **`deprecated`** pragma , emette un avviso del compilatore [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).
 
 È possibile deprecare i nomi di macro. Inserire il nome della macro tra virgolette, altrimenti l'espansione della macro viene eseguita.
 
 Poiché il **`deprecated`** pragma funziona su tutti gli identificatori corrispondenti e non prende in considerazione le firme, non è l'opzione migliore per deprecare versioni specifiche delle funzioni in overload. Qualsiasi nome di funzione corrispondente introdotto nell'ambito attiva l'avviso.
 
-È consigliabile usare l'attributo C++ 14 `[[deprecated]]` , quando possibile, anziché il **`deprecated`** pragma. Il modificatore di Dichiarazione [__declspec (deprecato)](../cpp/deprecated-cpp.md) specifico di Microsoft rappresenta anche la scelta migliore in molti casi rispetto al **`deprecated`** pragma. L' `[[deprecated]]` attributo e il `__declspec(deprecated)` modificatore consentono di specificare lo stato deprecato per particolari forme di funzioni in overload. L'avviso di diagnostica viene visualizzato solo sui riferimenti alla funzione di overload specifica a cui si applica l'attributo o il modificatore.
+È consigliabile usare l'attributo C++ 14 `[[deprecated]]` , quando possibile, anziché **`deprecated`** pragma . Il modificatore di dichiarazione specifico di Microsoft [`__declspec(deprecated)`](../cpp/deprecated-cpp.md) rappresenta anche la scelta migliore in molti casi rispetto a **`deprecated`** pragma . L' `[[deprecated]]` attributo e il `__declspec(deprecated)` modificatore consentono di specificare lo stato deprecato per particolari forme di funzioni in overload. L'avviso di diagnostica viene visualizzato solo sui riferimenti alla funzione di overload specifica a cui si applica l'attributo o il modificatore.
 
 ## <a name="example"></a>Esempio
 
@@ -73,6 +74,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-[Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direttive pragma e `__pragma` `_Pragma` parole chiave e](./pragma-directives-and-the-pragma-keyword.md)

@@ -1,23 +1,24 @@
 ---
-description: 'Altre informazioni su: init_seg pragma'
-title: Pragma init_seg
-ms.date: 08/29/2019
+description: Altre informazioni sulla direttiva init_seg pragma in Microsoft C/C++
+title: init_seg pragma
+ms.date: 01/22/2021
 f1_keywords:
 - vc-pragma.init_seg
 - init_seg_CPP
 helpviewer_keywords:
-- pragmas, init_seg
+- pragma, init_seg
 - init_seg pragma
 - data segment initializing [C++]
-ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-ms.openlocfilehash: cab1c82acd3e06a0ace4d55be3ce82e8fd7aed1c
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+no-loc:
+- pragma
+ms.openlocfilehash: 77ca6f2454ad18c8adcefcddc4cf1f9c0d4f4532
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97236464"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713584"
 ---
-# <a name="init_seg-pragma"></a>Pragma init_seg
+# <a name="init_seg-no-locpragma"></a>`init_seg` pragma
 
 **Sezione specifica C++**
 
@@ -25,34 +26,34 @@ Specifica una parola chiave o una sezione di codice che influisce sull'ordine in
 
 ## <a name="syntax"></a>Sintassi
 
-> **#pragma init_seg (** utente **lib del compilatore**  |    |   | "*nome-sezione*" [ **,** *Func-Name* ]} **)**
+> **`#pragma init_seg(`** { **`compiler`** | **`lib`** | **`user`** | "*nome-sezione*" [ **`,`** *Func-Name* ]} **`)`**
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 I termini *Segment* e *Section* hanno lo stesso significato in questo articolo.
 
-Poiché il codice è talvolta necessario per inizializzare gli oggetti statici globali, è necessario specificare quando creare gli oggetti. In particolare, è importante usare il pragma **init_seg** nelle librerie a collegamento dinamico (dll) o nelle librerie che richiedono l'inizializzazione.
+Poiché il codice è talvolta necessario per inizializzare gli oggetti statici globali, è necessario specificare quando creare gli oggetti. In particolare, è importante usare **`init_seg`** pragma in librerie a collegamento dinamico (dll) o in librerie che richiedono l'inizializzazione.
 
-Le opzioni per il pragma **init_seg** sono:
+Le opzioni per **`init_seg`** pragma sono:
 
-**compilatore**\
+**`compiler`**\
 Riservato per l'inizializzazione della libreria di runtime di Microsoft C Gli oggetti in questo gruppo sono costruiti per primi.
 
-**lib**\
-Disponibile per le inizializzazioni dei fornitori della libreria di classi di terze parti. Gli oggetti in questo gruppo vengono costruiti dopo quelli contrassegnati come **compilatore**, ma prima di qualsiasi altro.
+**`lib`**\
+Disponibile per le inizializzazioni dei fornitori della libreria di classi di terze parti. Gli oggetti in questo gruppo vengono costruiti dopo quelli contrassegnati come **`compiler`** , ma prima di tutti gli altri.
 
-**utente**\
+**`user`**\
 Disponibile per qualsiasi utente. Gli oggetti in questo gruppo sono costruiti per ultimi.
 
 *nome sezione*\
 Consente la specifica esplicita della sezione di inizializzazione. Gli oggetti in un nome di *sezione* specificato dall'utente non vengono costruiti in modo implicito. Tuttavia, i rispettivi indirizzi vengono inseriti nella sezione denominata da *Section-name*.
 
-Il *nome di sezione* fornito conterrà i puntatori alle funzioni helper che costruiranno gli oggetti globali dichiarati dopo il pragma in tale modulo.
+Il *nome di sezione* fornito conterrà i puntatori alle funzioni helper che costruiranno gli oggetti globali dichiarati dopo pragma in tale modulo.
 
-Per un elenco di nomi che non è consigliabile usare durante la creazione di una sezione, vedere [/Section](../build/reference/section-specify-section-attributes.md).
+Per un elenco di nomi che non è consigliabile usare durante la creazione di una sezione, vedere [`/SECTION`](../build/reference/section-specify-section-attributes.md) .
 
 *nome Func*\
-Specifica una funzione da chiamare invece di `atexit` al termine del programma. Questa funzione helper chiama anche [atexit](../c-runtime-library/reference/atexit.md) con un puntatore al distruttore per l'oggetto globale. Se si specifica un identificatore di funzione nel pragma del modulo,
+Specifica una funzione da chiamare invece di `atexit` al termine del programma. Questa funzione helper chiama anche [`atexit`](../c-runtime-library/reference/atexit.md) con un puntatore al distruttore per l'oggetto globale. Se si specifica un identificatore di funzione in nel pragma formato,
 
 ```cpp
 int __cdecl myexit (void (__cdecl *pf)(void))
@@ -64,13 +65,13 @@ Se si desidera posticiparne l'inizializzazione (ad esempio in una DLL) è possib
 
 Non ci sono virgolette che racchiudono l'identificatore per la sostituzione di `atexit`.
 
-Gli oggetti verranno comunque inseriti nelle sezioni definite dagli altri `XXX_seg` pragma.
+Gli oggetti verranno comunque inseriti nelle sezioni definite dalle altre `XXX_seg` pragma direttive.
 
 Gli oggetti dichiarati nel modulo non vengono inizializzati automaticamente dalla fase di esecuzione del linguaggio C. Il codice deve eseguire l'inizializzazione.
 
 Per impostazione predefinita, le sezioni `init_seg` sono di sola lettura. Se il nome della sezione è `.CRT` , il compilatore modifica automaticamente l'attributo in sola lettura, anche se è contrassegnato come lettura, scrittura.
 
-Non è possibile specificare **init_seg** più di una volta in un'unità di conversione.
+Non è possibile specificare **`init_seg`** più di una volta in un'unità di conversione.
 
 Anche se l'oggetto non dispone di un costruttore definito dall'utente, uno definito in modo esplicito nel codice, il compilatore potrebbe generarne uno. Ad esempio, potrebbe crearne uno per associare i puntatori della tabella v. Quando necessario, il codice chiama il costruttore generato dal compilatore.
 
@@ -157,4 +158,4 @@ A()
 
 ## <a name="see-also"></a>Vedere anche
 
-[Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direttive pragma e `__pragma` `_Pragma` parole chiave e](./pragma-directives-and-the-pragma-keyword.md)

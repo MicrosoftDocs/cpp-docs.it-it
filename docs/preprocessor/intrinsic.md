@@ -1,34 +1,35 @@
 ---
-title: Pragma intrinsic
-description: Il pragma intrinseco MSVC viene usato per specificare le funzioni intrinseche supportate da usare come intrinseci.
-ms.date: 07/08/2020
+title: intrinseco pragma
+description: La funzione intrinseca MSVC pragma viene utilizzata per specificare le funzioni intrinseche supportate da utilizzare come intrinseci.
+ms.date: 01/22/2021
 f1_keywords:
 - intrinsic_CPP
 - vc-pragma.intrinsic
 helpviewer_keywords:
 - intrinsic pragma
-- pragmas, intrinsic
-ms.assetid: 25c86ac7-ef40-47b7-a2c0-fada9c5dc3c5
-ms.openlocfilehash: 45a5a13f3bda3657b93e1a89e7a842a4465b01d5
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+- pragma, intrinsic
+no-loc:
+- pragma
+ms.openlocfilehash: 618705c42c20baf2b99f89e138b30d5633b9e592
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041107"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713545"
 ---
-# <a name="intrinsic-pragma"></a>Pragma `intrinsic`
+# <a name="intrinsic-no-locpragma"></a>`intrinsic` pragma
 
-Specifica che le chiamate alle funzioni specificate nell'elenco di argomenti del pragma sono intrinseche.
+Specifica che le chiamate alle funzioni specificate nell' pragma elenco di argomenti di sono intrinseche.
 
 ## <a name="syntax"></a>Sintassi
 
-> **`#pragma intrinsic(`** *`function1`* [**`,`** _`function2`_ ... ] **`)`**
+> **`#pragma intrinsic(`***function_1* [ **`,`** *function_2* ...]**`)`**
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
-Il **`intrinsic`** pragma indica al compilatore che una funzione ha un comportamento noto. Il compilatore può chiamare la funzione e non sostituire la chiamata di funzione con istruzioni inline, se questo può garantire prestazioni migliori.
+**`intrinsic`** pragma Indica al compilatore che una funzione ha un comportamento noto. Il compilatore può chiamare la funzione e non sostituire la chiamata di funzione con istruzioni inline, se questo può garantire prestazioni migliori.
 
-Le funzioni di libreria con formato intrinseco sono elencate di seguito. Una volta **`intrinsic`** visualizzato, un pragma viene applicato alla prima definizione di funzione che contiene una funzione intrinseca specificata. L'effetto continua fino alla fine del file di origine o all'aspetto di un `function` pragma che specifica la stessa funzione intrinseca. Il **`intrinsic`** pragma può essere utilizzato solo all'esterno di una definizione di funzione, a livello globale.
+Le funzioni di libreria con formato intrinseco sono elencate di seguito. Una volta **`intrinsic`** pragma visualizzato, viene applicato alla prima definizione di funzione che contiene una funzione intrinseca specificata. L'effetto continua fino alla fine del file di origine o all'aspetto di un oggetto che `function` pragma specifica la stessa funzione intrinseca. L'oggetto **`intrinsic`** pragma può essere utilizzato solo all'esterno di una definizione di funzione, a livello globale.
 
 Le funzioni seguenti hanno form intrinseci e i form intrinseci vengono usati quando si specificano [`/Oi`](../build/reference/oi-generate-intrinsic-functions.md) :
 
@@ -135,7 +136,7 @@ Queste funzioni a virgola mobile hanno veri formati intrinseci quando si specifi
 
 [`#pragma function`](../preprocessor/function-c-cpp.md)Per informazioni e per un esempio su come abilitare e disabilitare le funzioni intrinseche per un blocco di testo di origine, vedere.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-[Direttive pragma e `__pragma` parola chiave](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
+[Direttive pragma e `__pragma` `_Pragma` parole chiave e](./pragma-directives-and-the-pragma-keyword.md)\
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

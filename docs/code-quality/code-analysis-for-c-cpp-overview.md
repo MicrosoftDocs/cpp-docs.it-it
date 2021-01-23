@@ -17,12 +17,12 @@ helpviewer_keywords:
 - '#pragma directives, code analysis'
 - C, code analysis
 ms.assetid: 81f0c9e8-f471-4de5-aac4-99db336a8809
-ms.openlocfilehash: 4d018185e74926c880f8a174eb81cea344167782
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: a7726046e6d14607009bd077d7f021dbefb0c515
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97323301"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98712674"
 ---
 # <a name="code-analysis-for-cc-overview"></a>Cenni preliminari sull'analisi del codice per C/C++
 
@@ -46,7 +46,7 @@ C:\>cl /analyze Sample.cpp
 
 ## <a name="pragma-support"></a>supporto #pragma
 
-È possibile utilizzare la `#pragma` direttiva per considerare gli avvisi come errori, abilitare o disabilitare gli avvisi ed eliminare gli avvisi per le singole righe di codice. Per altre informazioni, vedere [Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md).
+È possibile utilizzare la `#pragma` direttiva per considerare gli avvisi come errori, abilitare o disabilitare gli avvisi ed eliminare gli avvisi per le singole righe di codice. Per ulteriori informazioni, vedere [direttive pragma e `__pragma` `_Pragma` parole chiave e](../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
 ## <a name="annotation-support"></a>Supporto delle annotazioni
 
@@ -60,7 +60,7 @@ Le annotazioni rendono più precisa l'analisi del codice, in quanto offrono info
 
 È possibile usare le funzionalità integrate del sistema di compilazione per eseguire lo strumento di analisi del codice come passaggio del processo di compilazione di Azure DevOps. Per altre informazioni, vedere [Azure Pipelines](/azure/devops/pipelines/index).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - [Guida introduttiva: Analisi codice per C/C++](quick-start-code-analysis-for-c-cpp.md)
 - [Procedura dettagliata: analizzare il codice C/C++ per i difetti](walkthrough-analyzing-c-cpp-code-for-defects.md)

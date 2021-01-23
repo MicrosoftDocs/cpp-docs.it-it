@@ -1,7 +1,7 @@
 ---
 description: 'Altre informazioni su: `/X` (Ignora percorsi di inclusione standard)'
 title: /X (Ignora percorso di inclusione standard)
-ms.date: 07/31/2020
+ms.date: 01/21/2021
 f1_keywords:
 - /x
 - VC.Project.VCCLCompilerTool.OVERWRITEStandardIncludePath
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - X compiler option
 - Ignore Standard Include Paths compiler option
 ms.assetid: 16bdf2cc-c8dc-46e4-bdcc-f3caeba5e1ef
-ms.openlocfilehash: 69936b80893de2c45622ec9973a218a94e8029a4
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 97d19027c41df7db9103c1c21d2f2d7b8d398e7e
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97261008"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98712804"
 ---
 # <a name="x-ignore-standard-include-paths"></a>`/X` (Ignora percorsi di inclusione standard)
 
-Impedisce al compilatore di cercare i file di inclusione nelle directory specificate nelle variabili di ambiente PATH e INCLUDE.
+Impedisce al compilatore di cercare i file di inclusione nelle directory specificate `PATH` nelle `INCLUDE` variabili di ambiente e.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -48,13 +48,13 @@ Impedisce al compilatore di cercare i file di inclusione nelle directory specifi
 
 ## <a name="example"></a>Esempio
 
-Nel comando seguente **`/X`** indica al compilatore di ignorare i percorsi specificati dal percorso e includere le variabili di ambiente e **`/I`** di specificare la directory in cui cercare i file di inclusione:
+Nel comando seguente **`/X`** indica al compilatore di ignorare le posizioni specificate dalle variabili di `PATH` ambiente e e `INCLUDE` **`/I`** di specificare la directory in cui cercare i file di inclusione:
 
 ```cmd
 CL /X /I \ALT\INCLUDE MAIN.C
 ```
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
 [Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

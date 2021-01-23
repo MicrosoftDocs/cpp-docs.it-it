@@ -1,60 +1,59 @@
 ---
-description: 'Altre informazioni su: vtordisp pragma'
-title: Pragma vtordisp
-ms.date: 08/29/2019
+description: Altre informazioni su vtordisp pragma in Microsoft C++
+title: vtordisp pragma
+ms.date: 01/22/2021
 f1_keywords:
 - vc-pragma.vtordisp
 - vtordisp_CPP
 helpviewer_keywords:
-- pragmas, vtordisp
+- pragma, vtordisp
 - vtordisp pragma
-ms.assetid: 05b7d73c-43fa-4b62-8c8a-170a9e427391
-ms.openlocfilehash: 2cbb8b09584224a454dfe23d5dfd4500f09a1d9b
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+no-loc:
+- pragma
+ms.openlocfilehash: f8956aa892aae0472001b007137e6f978d91500e
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97149643"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713142"
 ---
-# <a name="vtordisp-pragma"></a>Pragma vtordisp
+# <a name="vtordisp-no-locpragma"></a>`vtordisp` pragma
 
-**Sezione specifica C++**
-
-Controlla l'aggiunta del membro di `vtordisp` spostamento di costruzione/distruzione nascosto.
+Controlla l'aggiunta del membro di `vtordisp` spostamento di costruzione/distruzione nascosto. `vtordisp` pragma È specifico di C++.
 
 ## <a name="syntax"></a>Sintassi
 
-> **#pragma vtordisp (** [ **push,** ] *n* **)**\
-> **#pragma vtordisp (pop)**\
-> **#pragma vtordisp ()**\
-> **#pragma vtordisp (** [ **push,** ] { **on**  |  **off** } **)**
+> **`#pragma vtordisp(`**[ **`push,`** ] *n***`)`**\
+> **`#pragma vtordisp(pop)`**\
+> **`#pragma vtordisp()`**\
+> **`#pragma vtordisp(`** [ **`push,`** ] { **`on`** | **`off`** } **`)`**
 
 ### <a name="parameters"></a>Parametri
 
-**spingere**\
+**`push`**\
 Inserisce l'impostazione corrente nello `vtordisp` stack interno del compilatore e imposta la nuova impostazione su `vtordisp` *n*.  Se *n* non è specificato, l' `vtordisp` impostazione corrente è invariata.
 
-**popup**\
+**`pop`**\
 Rimuove il record superiore dallo stack interno del compilatore e ripristina l' `vtordisp` impostazione sul valore rimosso.
 
 *n*\
-Specifica il nuovo valore per l' `vtordisp` impostazione. I valori possibili sono 0, 1 o 2, corrispondenti alle `/vd0` `/vd1` Opzioni del compilatore, e `/vd2` . Per ulteriori informazioni, vedere [/VD (Disabilita spostamenti costruzione)](../build/reference/vd-disable-construction-displacements.md).
+Specifica il nuovo valore per l' `vtordisp` impostazione. I valori possibili sono **`0`** , **`1`** o **`2`** , corrispondenti alle **`/vd0`** Opzioni del **`/vd1`** compilatore, e **`/vd2`** . Per ulteriori informazioni, vedere [ `/vd` (Disabilita spostamenti costruzione)](../build/reference/vd-disable-construction-displacements.md).
 
-**in**\
+**`on`**\
 Equivalente a `#pragma vtordisp(1)`.
 
-**off**\
+**`off`**\
 Equivalente a `#pragma vtordisp(0)`.
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
-Il pragma **vtordisp** è applicabile solo al codice che usa basi virtuali. Se una classe derivata esegue l'override di una funzione virtuale che eredita da una classe base virtuale e se un costruttore o un distruttore per la classe derivata chiama tale funzione utilizzando un puntatore alla classe base virtuale, il compilatore potrebbe introdurre campi nascosti `vtordisp` aggiuntivi nelle classi con basi virtuali.
+**`vtordisp`** pragma È applicabile solo al codice che usa le basi virtuali. Se una classe derivata esegue l'override di una funzione virtuale che eredita da una classe base virtuale e se un costruttore o un distruttore per la classe derivata chiama tale funzione utilizzando un puntatore alla classe base virtuale, il compilatore potrebbe introdurre campi nascosti aggiuntivi `vtordisp` nelle classi con basi virtuali.
 
-Il pragma **vtordisp** influiscono sul layout delle classi che lo seguono. Le `/vd0` `/vd1` Opzioni, e `/vd2` specificano lo stesso comportamento per i moduli completi. Se si specifica 0 o **off** , i membri nascosti vengono eliminati `vtordisp` . Disattivare **vtordisp** solo se non è possibile che i costruttori e i distruttori della classe chiamino funzioni virtuali sull'oggetto a cui fa riferimento il **`this`** puntatore.
+**`vtordisp`** pragma Influiscono sul layout delle classi che lo seguono. Le **`/vd0`** **`/vd1`** Opzioni del compilatore, e **`/vd2`** specificano lo stesso comportamento per i moduli completi. Specifica **`0`** o **`off`** Disattiva i membri nascosti `vtordisp` . Disattivare **`vtordisp`** solo se non è possibile che i costruttori e i distruttori della classe chiamino funzioni virtuali sull'oggetto a cui fa riferimento il **`this`** puntatore.
 
-Se si specifica 1 o **on**, l'impostazione predefinita Abilita i `vtordisp` membri nascosti laddove sono necessari.
+**`1`** **`on`** Se si specifica o, il valore predefinito Abilita i `vtordisp` membri nascosti laddove sono necessari.
 
-Se si specifica 2, vengono abilitati i `vtordisp` membri nascosti per tutte le basi virtuali con funzioni virtuali.  `#pragma vtordisp(2)` potrebbe essere necessario per garantire le prestazioni corrette di **`dynamic_cast`** su un oggetto costruito parzialmente. Per altre informazioni, vedere [Avviso del compilatore (livello 1) C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md).
+**`2`** La specifica di Abilita i `vtordisp` membri nascosti per tutte le basi virtuali con funzioni virtuali. `#pragma vtordisp(2)` potrebbe essere necessario per garantire le prestazioni corrette di **`dynamic_cast`** su un oggetto costruito parzialmente. Per altre informazioni, vedere [Avviso del compilatore (livello 1) C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md).
 
 `#pragma vtordisp()`, senza argomenti, ripristina l'impostazione iniziale dell' `vtordisp` impostazione.
 
@@ -64,8 +63,6 @@ class GetReal : virtual public VBase { ... };
 #pragma vtordisp(pop)
 ```
 
-**Fine sezione specifica C++**
+## <a name="see-also"></a>Vedere anche
 
-## <a name="see-also"></a>Vedi anche
-
-[Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direttive pragma e `__pragma` `_Pragma` parole chiave e](./pragma-directives-and-the-pragma-keyword.md)

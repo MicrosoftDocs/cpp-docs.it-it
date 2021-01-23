@@ -1,32 +1,33 @@
 ---
-description: 'Altre informazioni su: pop_macro pragma'
-title: Pragma pop_macro
-ms.date: 08/29/2019
+description: Altre informazioni sulla direttiva pop_macro pragma in Microsoft C/C++
+title: pop_macro pragma
+ms.date: 01/22/2021
 f1_keywords:
 - vc-pragma.pop_macro
 - pop_macro_CPP
 helpviewer_keywords:
 - pop_macro pragma
-- pragmas, pop_macro
-ms.assetid: 3b5489d0-69ba-4c66-b572-2748af0f12bb
-ms.openlocfilehash: 395e107586b9534b2e9db616f30ddd88b15b93ec
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+- pragma, pop_macro
+no-loc:
+- pragma
+ms.openlocfilehash: 99b0567838bac2a683f2a31fe13dd423e2efe651
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97325706"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713363"
 ---
-# <a name="pop_macro-pragma"></a>Pragma pop_macro
+# <a name="pop_macro-no-locpragma"></a>`pop_macro` pragma
 
 Imposta il valore della macro del *Nome macro* sul valore all'inizio dello stack per la macro.
 
 ## <a name="syntax"></a>Sintassi
 
-> **#pragma pop_macro (** "*Nome-macro*" **)**
+> **`#pragma pop_macro(`** "*Nome-macro*" **`)`**
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
-Prima di poter eseguire una **pop_macro**, è necessario emettere un [push_macro](../preprocessor/push-macro.md) per il *nome della macro* .
+[`push_macro`](../preprocessor/push-macro.md)Prima di poter eseguire un'operazione, è necessario emettere un oggetto per il *nome della macro* **`pop_macro`** .
 
 ## <a name="example"></a>Esempio
 
@@ -64,4 +65,4 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direttive pragma e `__pragma` `_Pragma` parole chiave e](./pragma-directives-and-the-pragma-keyword.md)

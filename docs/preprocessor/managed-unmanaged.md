@@ -1,7 +1,7 @@
 ---
-description: 'Altre informazioni su: pragma gestiti, non gestiti'
-title: Pragma managed, unmanaged
-ms.date: 08/29/2019
+description: Altre informazioni sulle direttive gestite e non gestite pragma in Microsoft C++
+title: gestito e non gestito pragma
+ms.date: 01/22/2021
 f1_keywords:
 - vc-pragma.unmanaged
 - managed_CPP
@@ -9,45 +9,46 @@ f1_keywords:
 - vc-pragma.managed
 helpviewer_keywords:
 - managed pragma
-- pragmas, unmanaged
-- pragmas, managed
+- pragma, unmanaged
+- pragma, managed
 - unmanaged pragma
-ms.assetid: f072ddcc-e1ec-408a-8ce1-326ddb60e4a4
-ms.openlocfilehash: 10f632b009c9922f67f4321acc862142d895e7ae
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+no-loc:
+- pragma
+ms.openlocfilehash: a106e9a1370daeedb94bbf5e4d092ae85457a3d2
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97333396"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713506"
 ---
-# <a name="managed-unmanaged-pragmas"></a>Pragma managed, unmanaged
+# <a name="managed-and-unmanaged-no-locpragma"></a>`managed`e `unmanaged`pragma
 
 Abilitare il controllo a livello di funzione per compilare funzioni come gestite o non gestite.
 
 ## <a name="syntax"></a>Sintassi
 
-> **#pragma gestiti**\
-> **#pragma non gestito**\
-> **#pragma gestiti (** [ **push,** ] { **on**  |  **off** } **)**\
-> **gestione #pragma (pop)**
+> **`#pragma managed`**\
+> **`#pragma unmanaged`**\
+> **`#pragma managed(`** [ **`push,`** ] { **`on`** | **`off`** } **`)`**\
+> **`#pragma managed(pop)`**
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
-L'opzione del compilatore [/CLR](../build/reference/clr-common-language-runtime-compilation.md) fornisce il controllo a livello di modulo per la compilazione di funzioni come gestite o non gestite.
+L' [`/clr`](../build/reference/clr-common-language-runtime-compilation.md) opzione del compilatore fornisce il controllo a livello di modulo per la compilazione di funzioni come gestite o non gestite.
 
-Per la piattaforma nativa verrà compilata una funzione non gestita. L'esecuzione di tale parte del programma verrà passata alla piattaforma nativa dalla Common Language Runtime.
+Una funzione non gestita viene compilata per la piattaforma nativa. L'esecuzione di tale parte del programma verrà passata alla piattaforma nativa dalla Common Language Runtime.
 
-Le funzioni vengono compilate come gestite per impostazione predefinita quando `/clr` viene usato.
+Quando si usa, le funzioni vengono compilate come gestite per impostazione predefinita **`/clr`** .
 
-Quando si applicano questi pragma:
+Quando si applica un **`managed`** o **`unmanaged`** pragma :
 
-- Aggiungere il pragma che precede una funzione, ma non all'interno del corpo di una funzione.
+- Aggiungere la pragma funzione precedente, ma non all'interno del corpo di una funzione.
 
-- Aggiungere il pragma dopo le istruzioni `#include`. Non usare questi pragma prima delle `#include` istruzioni.
+- Aggiungere le pragma `#include` istruzioni after. Non utilizzarlo prima di qualsiasi `#include` istruzione.
 
-Il compilatore ignora i pragma **gestiti** e non **gestiti** se `/clr` non viene usato nella compilazione.
+Il compilatore ignora **`managed`** e **`unmanaged`** pragma se non viene **`/clr`** usato nella compilazione.
 
-Quando viene creata un'istanza di una funzione di modello, lo stato pragma quando viene definito il modello determina se è gestito o non gestito.
+Quando viene creata un'istanza di una funzione di modello, lo pragma stato quando viene definito il modello determina se è gestito o non gestito.
 
 Per ulteriori informazioni, vedere [inizializzazione di assembly misti](../dotnet/initialization-of-mixed-assemblies.md).
 
@@ -89,4 +90,4 @@ In unmanaged function.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direttive pragma e `__pragma` `_Pragma` parole chiave e](./pragma-directives-and-the-pragma-keyword.md)

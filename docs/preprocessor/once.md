@@ -1,21 +1,23 @@
 ---
 description: 'Altre informazioni su: una volta pragma'
-title: Pragma once
-ms.date: 01/19/2021
+title: una volta pragma
+ms.date: 01/22/2021
 f1_keywords:
 - vc-pragma.once
 - once_CPP
 helpviewer_keywords:
 - once pragma
-- pragmas, once
-ms.openlocfilehash: 87e3a87d8922868ce8ac3c48815c09de8727eba7
-ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
+- pragma, once
+no-loc:
+- pragma
+ms.openlocfilehash: 3edb5f88202ee783e587b1f886eddddf427f6133
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98667222"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713480"
 ---
-# <a name="once-pragma"></a>Pragma `once`
+# <a name="once-no-locpragma"></a>`once` pragma
 
 Specifica che il compilatore include il file di intestazione una sola volta, durante la compilazione di un file di codice sorgente.
 
@@ -53,6 +55,6 @@ Si consiglia di includere l'idioma Guard quando il codice deve essere portabile 
 
 Prestare attenzione a non usare `#pragma once` o includere l'idioma Guard nei file di intestazione progettati per essere inclusi più volte, che usano i simboli del preprocessore per controllarne gli effetti. Per un esempio di questa progettazione, vedere il \<assert.h> file di intestazione. Prestare inoltre attenzione a gestire i percorsi di inclusione per evitare di creare più percorsi per i file inclusi, in modo da evitare l'ottimizzazione dell'inclusione multipla per entrambe le protezioni e `#pragma once` .
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-[`pragma` direttive e `__pragma` parola chiave](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direttive pragma e `__pragma` `_Pragma` parole chiave e](./pragma-directives-and-the-pragma-keyword.md)

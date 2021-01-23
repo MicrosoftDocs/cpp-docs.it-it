@@ -1,40 +1,41 @@
 ---
-description: 'Altre informazioni su: fp_contract pragma'
-title: Pragma fp_contract
-ms.date: 08/29/2019
+description: Altre informazioni sulla direttiva fp_contract pragma in Microsoft C/C++
+title: fp_contract pragma
+ms.date: 01/22/2021
 f1_keywords:
 - vc-pragma.fp_contract
 - fp_contract_CPP
 helpviewer_keywords:
-- pragmas, fp_contract
+- pragma, fp_contract
 - fp_contract pragma
-ms.assetid: 15b97338-6680-4287-ba2a-2dccc5b2ccf5
-ms.openlocfilehash: cefcf0519f08b3fd68a0f8b464938ea7cdbda6d0
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+no-loc:
+- pragma
+ms.openlocfilehash: 3263d1ec9675e0f8a9402ac7da78751b988e7bdf
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97261177"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713649"
 ---
-# <a name="fp_contract-pragma"></a>Pragma fp_contract
+# <a name="fp_contract-no-locpragma"></a>`fp_contract` pragma
 
 Determina se si verifica la contrazione a virgola mobile. Una contrazione a virgola mobile è un'istruzione, ad esempio FMA (fuse-multiply-add) che combina due operazioni a virgola mobile separate in un'unica istruzione. L'uso di queste istruzioni può influire sulla precisione a virgola mobile, perché anziché arrotondare dopo ogni operazione, il processore può arrotondare solo una volta dopo entrambe le operazioni.
 
 ## <a name="syntax"></a>Sintassi
 
-> **#pragma fp_contract (** { **on**  |  **off** } **)**
+> **`#pragma fp_contract (`** { **`on`** | **`off`** } **`)`**
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
-Per impostazione predefinita, **fp_contract** è **on**. Ciò indica al compilatore di usare le istruzioni di contratto a virgola mobile laddove possibile. Impostare **fp_contract** su **off** per mantenere le singole istruzioni a virgola mobile.
+Per impostazione predefinita, **`fp_contract`** è **`on`** . Ciò indica al compilatore di usare le istruzioni di contratto a virgola mobile laddove possibile. Impostare **`fp_contract`** su **`off`** per mantenere le singole istruzioni a virgola mobile.
 
-Per ulteriori informazioni sul comportamento della virgola mobile, vedere [/FP (specifica il comportamento di Floating-Point)](../build/reference/fp-specify-floating-point-behavior.md).
+Per ulteriori informazioni sul comportamento della virgola mobile, vedere [ `/fp` (specificare il comportamento](../build/reference/fp-specify-floating-point-behavior.md)della virgola mobile).
 
-Altri pragma a virgola mobile sono i seguenti:
+Altre direttive a virgola mobile pragma includono:
 
-- [fenv_access](../preprocessor/fenv-access.md)
+- [`fenv_access`](../preprocessor/fenv-access.md)
 
-- [float_control](../preprocessor/float-control.md)
+- [`float_control`](../preprocessor/float-control.md)
 
 ## <a name="example"></a>Esempio
 
@@ -76,6 +77,6 @@ out = 3.629600000000000e+03
 out = 4.587525000000000e+03
 ```
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-[Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direttive pragma e `__pragma` `_Pragma` parole chiave e](./pragma-directives-and-the-pragma-keyword.md)

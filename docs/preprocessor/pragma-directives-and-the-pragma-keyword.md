@@ -1,6 +1,6 @@
 ---
-title: Direttive pragma e parole chiave __pragma e _Pragma
-description: Descrive le direttive pragma disponibili in Microsoft Visual C e C++ (MSVC)
+title: Direttive pragma e pragma parole chiave _ _ e _Pragma
+description: Descrive le pragma direttive disponibili in Microsoft Visual C e C++ (MSVC)
 ms.date: 01/19/2021
 f1_keywords:
 - '#pragma'
@@ -16,16 +16,18 @@ helpviewer_keywords:
 - pragmas
 - preprocessor, pragmas
 - pragma directives (#pragma)
-ms.openlocfilehash: ee518dc096143d1caca95fa1812b9ce0e45527d3
-ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
+no-loc:
+- pragma
+ms.openlocfilehash: fb6daf4c2912ea2168c38bfe2d1ae2650aaecc20
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98667206"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713350"
 ---
-# <a name="pragma-directives-and-the-__pragma-and-_pragma-keywords"></a>Direttive pragma e `__pragma` `_Pragma` parole chiave e
+# <a name="pragma-directives-and-the-__no-locpragma-and-_pragma-keywords"></a>Direttive pragma e `__pragma` `_Pragma` parole chiave e
 
-Le direttive pragma specificano funzionalità del compilatore specifiche del computer o del sistema operativo. La **`__pragma`** parola chiave, che è specifica del compilatore Microsoft, consente di codificare le direttive pragma all'interno delle definizioni di macro.
+Le direttive pragma specificano funzionalità del compilatore specifiche del computer o del sistema operativo. La **`__pragma`** parola chiave, che è specifica del compilatore Microsoft, consente di codificare le pragma direttive nelle definizioni delle macro. L' **`_Pragma`** operatore del preprocessore standard è stato introdotto in C99 e adottato da c++ 11.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -33,19 +35,19 @@ Le direttive pragma specificano funzionalità del compilatore specifiche del com
 > **`__pragma(`***stringa* **`)`** di token due caratteri di sottolineatura iniziali-estensione specifica di Microsoft \
 > **`_Pragma(`***valore letterale stringa* **`)`** C99
 
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 Ogni implementazione di C e C++ supporta alcune funzionalità esclusive del computer host o del sistema operativo di utilizzo. Alcuni programmi, ad esempio, devono esercitare un controllo preciso sulla posizione dei dati in memoria o controllare il modo in cui determinate funzioni ricevono parametri. Le **`#pragma`** direttive consentono a ogni compilatore di offrire funzionalità specifiche del sistema operativo e del computer, mantenendo al tempo stesso la compatibilità complessiva con i linguaggi C e C++.
 
-I pragma sono specifici del computer o del sistema operativo per definizione e sono in genere diversi per ogni compilatore. I pragma possono essere usati nelle direttive condizionali, per fornire nuove funzionalità del preprocessore o per fornire al compilatore informazioni definite dall'implementazione.
+Le direttive pragma sono specifiche del computer o del sistema operativo specifiche per definizione e sono in genere diverse per ogni compilatore. Un oggetto pragma può essere utilizzato in una direttiva condizionale, per fornire nuove funzionalità del preprocessore. In alternativa, usare uno per fornire al compilatore informazioni definite dall'implementazione.
 
-La *stringa di token* è una serie di caratteri che rappresentano una specifica istruzione del compilatore e gli eventuali argomenti. Il simbolo di cancelletto ( **`#`** ) deve essere il primo carattere diverso da uno spazio vuoto nella riga che contiene il pragma. Gli spazi vuoti possono separare il simbolo di cancelletto e la parola "pragma". **`#pragma`** In seguito, scrivere il testo che il convertitore può analizzare come token di pre-elaborazione. L'argomento per **`#pragma`** è soggetto all'espansione della macro.
+La *stringa di token* è una serie di caratteri che rappresentano una specifica istruzione del compilatore e gli eventuali argomenti. Il simbolo di cancelletto ( **`#`** ) deve essere il primo carattere diverso da uno spazio vuoto nella riga che contiene pragma . Gli spazi vuoti possono separare il simbolo di cancelletto e la parola " pragma ". **`#pragma`** In seguito, scrivere il testo che il convertitore può analizzare come token di pre-elaborazione. L'argomento per **`#pragma`** è soggetto all'espansione della macro.
 
 Il *valore letterale stringa* è l'input per `_Pragma` . Le virgolette esterne e gli spazi vuoti iniziali e finali vengono rimossi. `\"` viene sostituito con `"` e `\\` viene sostituito con `\` .
 
 Il compilatore genera un avviso quando rileva un pragma che non riconosce e continua la compilazione.
 
-I compilatori Microsoft C e C++ riconoscono i seguenti pragma:
+I compilatori Microsoft C e C++ riconoscono le pragma direttive seguenti:
 
 :::row:::
    :::column span="":::
@@ -63,6 +65,7 @@ I compilatori Microsoft C e C++ riconoscono i seguenti pragma:
    :::column-end:::
    :::column span="":::
       [`detect_mismatch`](../preprocessor/detect-mismatch.md)\
+      [`endregion`](../preprocessor/region-endregion.md)\
       [`fenv_access`](../preprocessor/fenv-access.md)\
       [`float_control`](../preprocessor/float-control.md)\
       [`fp_contract`](../preprocessor/fp-contract.md)\
@@ -88,7 +91,7 @@ I compilatori Microsoft C e C++ riconoscono i seguenti pragma:
    :::column span="":::
       [`pop_macro`](../preprocessor/pop-macro.md)\
       [`push_macro`](../preprocessor/push-macro.md)\
-      [`region`, endregion](../preprocessor/region-endregion.md)\
+      [`region`](../preprocessor/region-endregion.md)\
       [`runtime_checks`](../preprocessor/runtime-checks.md)\
       [`section`](../preprocessor/section.md)\
       [`setlocale`](../preprocessor/setlocale.md)\
@@ -101,9 +104,9 @@ I compilatori Microsoft C e C++ riconoscono i seguenti pragma:
 
 <sup>1</sup> supportato solo dal compilatore C++.
 
-## <a name="pragmas-and-compiler-options"></a>Pragma e opzioni del compilatore
+## <a name="pragma-directives-and-compiler-options"></a>Direttive pragma e opzioni del compilatore
 
-Alcuni pragma offrono la stessa funzionalità delle opzioni del compilatore. Quando viene rilevato un pragma nel codice sorgente, viene eseguito l'override del comportamento specificato dall'opzione del compilatore. Se, ad esempio, è stato specificato [`/Zp8`](../build/reference/zp-struct-member-alignment.md) , è possibile eseguire l'override di questa impostazione del compilatore per sezioni specifiche del codice con [`pack`](../preprocessor/pack.md) :
+Alcune pragma direttive forniscono la stessa funzionalità delle opzioni del compilatore. Quando pragma si raggiunge un oggetto nel codice sorgente, viene eseguito l'override del comportamento specificato dall'opzione del compilatore. Se, ad esempio, è stato specificato [`/Zp8`](../build/reference/zp-struct-member-alignment.md) , è possibile eseguire l'override di questa impostazione del compilatore per sezioni specifiche del codice con [`pack`](../preprocessor/pack.md) :
 
 ```cmd
 cl /Zp8 some_file.cpp
@@ -118,7 +121,7 @@ cl /Zp8 some_file.cpp
 // ...
 ```
 
-## <a name="the-__pragma-keyword"></a>La parola chiave `__pragma()`
+## <a name="the-__no-locpragma-keyword"></a>La parola chiave `__pragma()`
 
 Il compilatore supporta inoltre la **`__pragma`** parola chiave specifica di Microsoft, che ha la stessa funzionalità della **`#pragma`** direttiva. La differenza è che la **`__pragma`** parola chiave può essere utilizzata inline in una definizione di macro. La **`#pragma`** direttiva non può essere utilizzata in una definizione di macro, perché il compilatore interpreta il carattere di cancelletto (' #') nella direttiva come [operatore per (#)](../preprocessor/stringizing-operator-hash.md).
 
@@ -146,7 +149,7 @@ return _hr; \
 
 `_Pragma` è simile alla parola chiave specifica di Microsoft [`__pragma`](#the-__pragma-keyword) , ad eccezione del fatto che fa parte dello standard. È stata introdotta per C in C99. Per C++, è stato introdotto in C++ 11.
 
- Consente di inserire i pragma in una definizione di macro. Ha un carattere di sottolineatura iniziale `_` anziché due caratteri di sottolineatura iniziali `__` che la parola chiave specifica di Microsoft ha e la prima lettera è in maiuscolo.
+ Consente di inserire le pragma direttive in una definizione di macro. Ha un carattere di sottolineatura iniziale `_` anziché due caratteri di sottolineatura iniziali `__` che la parola chiave specifica di Microsoft ha e la prima lettera è in maiuscolo.
 
 Il valore letterale stringa deve essere quello che verrà altrimenti inserito in seguito a un' *`#pragma`* istruzione. Ad esempio:
 
@@ -155,11 +158,11 @@ Il valore letterale stringa deve essere quello che verrà altrimenti inserito in
 _Pragma ("message( \"the _Pragma way\")") 
 ```
 
-Le virgolette e le barre rovesciate devono essere precedute da un carattere di escape, come illustrato in precedenza. Una stringa pragma che non viene riconosciuta viene ignorata.
+Le virgolette e le barre rovesciate devono essere precedute da un carattere di escape, come illustrato in precedenza. Una pragma stringa che non viene riconosciuta viene ignorata.
 
 Nell'esempio di codice seguente viene illustrata la modalità di **`_Pragma`** utilizzo della parola chiave in una macro simile a un'asserzione quando non si desidera ricevere un avviso quando l'espressione della condizione risulta costante. 
 
-La definizione della macro usa l'idioma do/while (0) per le macro con più istruzioni, in modo che possa essere usato come se si trattasse di un'istruzione. Per ulteriori informazioni, vedere la [macro multiriga C](https://stackoverflow.com/questions/1067226/c-multi-line-macro-do-while0-vs-scope-block) in stack overflow. L'istruzione _Pragma si applica solo alla riga di codice successiva.
+La definizione della macro usa l' `do` - `while(0)` idioma per le macro con più istruzioni, in modo che possa essere usata come se si trattasse di un'istruzione. Per ulteriori informazioni, vedere la [macro multiriga C](https://stackoverflow.com/questions/1067226/c-multi-line-macro-do-while0-vs-scope-block) in stack overflow. L' **`_Pragma`** istruzione si applica solo alla riga di codice successiva.
 
 ```C
 // Compile with /W4
@@ -184,8 +187,8 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Riferimenti per il preprocessore C/C++](../preprocessor/c-cpp-preprocessor-reference.md)\
-[Pragma C](../c-language/c-pragmas.md)\
+[pragmaDirettive C](../c-language/c-pragmas.md)\
 [Parole chiave](../cpp/keywords-cpp.md)
