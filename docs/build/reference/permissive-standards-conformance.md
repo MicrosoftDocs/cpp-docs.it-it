@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: ae4ab62f6027d984217d750294f16138a6969f16
-ms.sourcegitcommit: 25f6d52eb9e5d84bd0218c46372db85572af81da
+ms.openlocfilehash: c8d654540deb492a5bebff304ef01ca4c71f044a
+ms.sourcegitcommit: 74e58bee5cffb30b66e17be6dbfde2544369638e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94448477"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98763828"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive/ (Conformità agli standard)
 
@@ -140,6 +140,8 @@ void g() {
     f(p); // Hidden friend now found via argument-dependent lookup.
 }
 ```
+
+È possibile abilitare le regole di ricerca del nome Friend nascoste indipendentemente **`/permissive`** da usando [`/Zc:hiddenFriend`](./zc-hiddenfriend.md) . Se si desidera un comportamento legacy per la ricerca nascosta del nome Friend, ma in caso contrario si desidera **`/permissive-`** utilizzare l' **`/Zc:hiddenFriend-`** opzione.
 
 #### <a name="use-scoped-enums-in-array-bounds"></a>Usare enum con ambito nei limiti della matrice
 
@@ -450,7 +452,7 @@ In Visual Studio 2017 versione 15,5 e versioni successive usare questa procedura
 
 1. Aprire la finestra di dialogo **pagine delle proprietà** del progetto.
 
-1. Selezionare la pagina delle proprietà di **configurazione** proprietà del  >  **linguaggio C/C++**  >  **Language** .
+1. Selezionare la pagina delle proprietà di **configurazione** proprietà del  >  **linguaggio C/C++**  >   .
 
 1. Modificare il valore della proprietà **modalità di conformità** in **Sì (/permissive-)**. Scegliere **OK** o **applica** per salvare le modifiche.
 
@@ -458,7 +460,7 @@ Nelle versioni precedenti a Visual Studio 2017 versione 15,5, usare questa proce
 
 1. Aprire la finestra di dialogo **pagine delle proprietà** del progetto.
 
-1. Selezionare la pagina delle proprietà di **configurazione** proprietà della riga di comando di  >  **c/C++**  >  **Command Line** .
+1. Selezionare la pagina delle proprietà di **configurazione** proprietà della riga di comando di  >  **c/C++**  >   .
 
 1. Immettere l'opzione del compilatore **/permissive-** nella casella **Opzioni aggiuntive** . Scegliere **OK** o **applica** per salvare le modifiche.
 

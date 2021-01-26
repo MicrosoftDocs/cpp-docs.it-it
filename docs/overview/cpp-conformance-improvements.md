@@ -3,12 +3,12 @@ title: Miglioramenti della conformità di C++
 description: Microsoft C++ in Visual Studio si avvicina alla conformità completa con lo standard di linguaggio C++20.
 ms.date: 11/10/2020
 ms.technology: cpp-language
-ms.openlocfilehash: ff4d75626b75c55e001601ef7005bc23be60869d
-ms.sourcegitcommit: 25f6d52eb9e5d84bd0218c46372db85572af81da
+ms.openlocfilehash: 251f4cd4add40356b14dfdb878a09418171387d2
+ms.sourcegitcommit: 74e58bee5cffb30b66e17be6dbfde2544369638e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94448490"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98763873"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Miglioramenti della conformità di C++ in Visual Studio 2017
 
@@ -341,7 +341,7 @@ std::equal(std::begin(a), std::end(a), std::begin(b), std::end(b));
 
 ### <a name="effect-of-defining-spaceship-operator-on--and-"></a>Effetto della definizione dell'operatore di spazio su `==` e `!=`
 
-Una definizione dell'operatore di spazio ( **`<=>`** ) da solo non riscriverà più le espressioni che coinvolgono **`==`** o **`!=`** a meno che l'operatore di spaziatura non sia contrassegnato come **`= default`** ( [P1185R2](https://wg21.link/p1185r2)). L'esempio seguente viene compilato in Visual Studio 2019 RTW e nella versione 16,1, ma produce C2678 in Visual Studio 2019 versione 16,2:
+Una definizione dell'operatore di spazio ( **`<=>`** ) da solo non riscriverà più le espressioni che coinvolgono **`==`** o **`!=`** a meno che l'operatore di spaziatura non sia contrassegnato come **`= default`** ([P1185R2](https://wg21.link/p1185r2)). L'esempio seguente viene compilato in Visual Studio 2019 RTW e nella versione 16,1, ma produce C2678 in Visual Studio 2019 versione 16,2:
 
 ```cpp
 #include <compare>
@@ -972,7 +972,7 @@ Sono disponibili molte correzioni possibili:
 
 A partire da Visual Studio 2019 versione 16,6, il compilatore implementa alcuni avvisi C++ preesistenti per il codice compilato come C. Gli avvisi seguenti sono ora abilitati a livelli diversi: C4060, C4061, C4062, C4063, C4064, C4065, C4808 e C4809. Gli avvisi C4065 e C4060 sono disabilitati per impostazione predefinita in C.
 
-Gli avvisi vengono attivati in **`case`** caso di istruzioni mancanti, indefinite **`enum`** e **`bool`** commutatori non validi (ovvero quelli che contengono troppi casi). Esempio:
+Gli avvisi vengono attivati in **`case`** caso di istruzioni mancanti, indefinite **`enum`** e **`bool`** commutatori non validi (ovvero quelli che contengono troppi casi). Ad esempio:
 
 ```c
 #include <stdbool.h>
@@ -1473,14 +1473,14 @@ Come prerequisito per il supporto dei moduli, **`permissive-`** è ora abilitato
 
 Per il codice compilato in precedenza in **`/std:c++latest`** e che richiede comportamenti del compilatore non conformi, **`permissive`** può essere specificato per disattivare la modalità di conformità Strict nel compilatore. L'opzione del compilatore deve essere visualizzata dopo **`/std:c++latest`** nell'elenco di argomenti della riga di comando. Tuttavia, **`permissive`** genera un errore se viene rilevato l'utilizzo dei moduli:
 
-> errore C1214: i moduli sono in conflitto con il comportamento non standard richiesto tramite ' *Option* '
+> errore C1214: i moduli sono in conflitto con il comportamento non standard richiesto tramite '*Option*'
 
 I valori più comuni per l' *opzione* sono:
 
 | Opzione | Descrizione |
 |--|--|
 | **`/Zc:twoPhase-`** | La ricerca del nome in due fasi è necessaria per i moduli C++ 20 e implicata da **`permissive-`** . |
-| **`/Zc:hiddenFriend-`** | Abilita le regole di ricerca nome Friend nascoste standard. Obbligatorio per i moduli C++ 20 e implicito da **`permissive-`** . |
+| **`/Zc:hiddenFriend-`** | Le regole di ricerca del nome Friend nascoste standard sono necessarie per i moduli C++ 20 e sono implicite in **`permissive-`** . |
 | **`/Zc:preprocessor-`** | Il preprocessore conforme è necessario solo per la creazione e l'utilizzo delle unità di intestazione C++ 20. I moduli denominati non richiedono questa opzione. |
 
 L' [`/experimental:module`](../build/reference/experimental-module.md) opzione è ancora necessaria per usare i *`std.*`* moduli forniti con Visual Studio, perché non sono ancora standardizzati.
@@ -3689,7 +3689,7 @@ public:
 
 ### <a name="offsetof-with-constant-expressions"></a>`offsetof` con espressioni costanti
 
-La macro [offsetof](../c-runtime-library/reference/offsetof-macro.md) era tradizionalmente implementata tramite una macro che richiedeva un operatore [reinterpret_cast](../cpp/reinterpret-cast-operator.md). Questo utilizzo non è valido in contesti che richiedono un'espressione costante, ma tradizionalmente il compilatore Microsoft C++ la consentiva. La macro `offsetof` in dotazione con la libreria standard usa correttamente una funzione intrinseca del compilatore ( **__builtin_offsetof** ), ma molti sviluppatori hanno usato il trucco della macro per definire una macro `offsetof` personalizzata.
+La macro [offsetof](../c-runtime-library/reference/offsetof-macro.md) era tradizionalmente implementata tramite una macro che richiedeva un operatore [reinterpret_cast](../cpp/reinterpret-cast-operator.md). Questo utilizzo non è valido in contesti che richiedono un'espressione costante, ma tradizionalmente il compilatore Microsoft C++ la consentiva. La macro `offsetof` in dotazione con la libreria standard usa correttamente una funzione intrinseca del compilatore (**__builtin_offsetof**), ma molti sviluppatori hanno usato il trucco della macro per definire una macro `offsetof` personalizzata.
 
 In Visual Studio 2017 versione 15,8, il compilatore vincola le aree che questi **`reinterpret_cast`** operatori possono visualizzare nella modalità predefinita, per consentire al codice di essere conforme al comportamento C++ standard. In [`/permissive-`](../build/reference/permissive-standards-conformance.md) i vincoli sono ancora più restrittivi. L'utilizzo del risultato di un `offsetof` in posizioni che richiedono espressioni costanti può causare il codice che genera l'avviso C4644 `usage of the macro-based offsetof pattern in constant expressions is non-standard; use offsetof defined in the C++ standard library instead` o C2975 `invalid template argument, expected compile-time constant expression` .
 
