@@ -6,12 +6,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 0b00268f09d6a4da64ab0eb8ab8e60e368bbf1b8
-ms.sourcegitcommit: 1f85841f403e76d041c34a7c77089dab389960a2
+ms.openlocfilehash: 51e68563122d11634bddd7ed75658e5012d7f8e0
+ms.sourcegitcommit: beac3ddf1a20de5e836569ae07407d5f3703f536
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94518804"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99224483"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tabella di conformità al linguaggio C++ di Microsoft
 
@@ -26,12 +26,12 @@ Per informazioni dettagliate sui miglioramenti apportati alla conformità di Vis
 
 | Funzionalità | Supportato |
 |--|--|
-| __Funzionalità del linguaggio di base C++03/11__ | __Supporto__ |
+| __Funzionalità del linguaggio di base C++03/11__ | __Supportato__ |
 | &nbsp;&nbsp;Tutti gli altri elementi | VS 2015 <sup>[A](#note_A)</sup> |
 | &nbsp;&nbsp;Ricerca del nome in due fasi | VS 2017 15.7 <sup>[B](#note_B)</sup> |
 | &nbsp;&nbsp;[`N2634 Expression SFINAE`](https://wg21.link/N2634) | VS 2017 15.7 |
 | &nbsp;&nbsp;[`N1653 C99 preprocessor`](https://wg21.link/N1653) | <sup> [C](#note_C) parziale</sup> |
-| __Funzionalità del linguaggio di base C++14__ | __Supporto__ |
+| __Funzionalità del linguaggio di base C++14__ | __Supportato__ |
 | &nbsp;&nbsp;[`N3323 Tweaked wording for contextual conversions`](https://wg21.link/N3323) | Visual Studio 2013 |
 | &nbsp;&nbsp;[`N3472 Binary literals`](https://wg21.link/N3472) | VS 2015 |
 | &nbsp;&nbsp;[`N3638 auto and decltype(auto) return types`](https://wg21.link/n3638) | VS 2015 |
@@ -43,7 +43,7 @@ Per informazioni dettagliate sui miglioramenti apportati alla conformità di Vis
 | &nbsp;&nbsp;[`N3651 Variable templates`](https://wg21.link/n3651) | VS 2015.2 |
 | &nbsp;&nbsp;[`N3652 Extended constexpr`](https://wg21.link/n3652) | VS 2017 15.0 |
 | &nbsp;&nbsp;[`N3653 Default member initializers for aggregates`](https://wg21.link/n3653) | VS 2017 15.0 |
-| __Funzionalità del linguaggio di base C++17__ | __Supporto__ |
+| __Funzionalità del linguaggio di base C++17__ | __Supportato__ |
 | &nbsp;&nbsp;[`N4086 Removing trigraphs`](https://wg21.link/n4086) | VS 2010 <sup>[14](#note_14)</sup> |
 | &nbsp;&nbsp;[`N3922 New rules for auto with braced-init-lists`](https://wg21.link/n3922) | VS 2015 <sup>[14](#note_14)</sup> |
 | &nbsp;&nbsp;[`N4051 typename in template template-parameters`](https://wg21.link/n4051) | VS 2015 <sup>[14](#note_14)</sup> |
@@ -85,7 +85,7 @@ Per informazioni dettagliate sui miglioramenti apportati alla conformità di Vis
 | &nbsp;&nbsp;[`P0145R3 Refining expression evaluation order`](https://wg21.link/p0145r3)<br/>&nbsp;&nbsp;[`P0400R0 Order of evaluation of function arguments`](https://wg21.link/p0400r0) | VS 2017 15,7 <sup> [17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0195R2 Pack expansions in using-declarations`](https://wg21.link/p0195r2) | VS 2017 15,7 <sup> [17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0283R2 Ignoring unrecognized attributes`](https://wg21.link/p0283r2) | VS 2015 <sup>[14](#note_14)</sup> |
-| __Funzionalità del linguaggio di base C++17 (report sui difetti)__ | __Supporto__ |
+| __Funzionalità del linguaggio di base C++17 (report sui difetti)__ | __Supportato__ |
 | &nbsp;&nbsp;[`P0702R1 Fixing class template argument deduction for initializer-list ctors`](https://wg21.link/p0702r1) | VS 2017 15,7 <sup> [17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0961R1 Relaxing the structured bindings customization point finding rules`](https://wg21.link/p0961r1) | VS 2019 16.0 <sup>[17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0969R0 Allowing structured bindings to accessible members`](https://wg21.link/p0969r0) | VS 2019 16.0 <sup>[17](#note_17)</sup> |
@@ -97,7 +97,7 @@ Per informazioni dettagliate sui miglioramenti apportati alla conformità di Vis
 | &nbsp;&nbsp;[`P0859R0 CWG 1581: When are constexpr member functions defined`](https://wg21.link/p0859r0) | No |
 | &nbsp;&nbsp;[`P1009R2 Array size deduction in new-expressions`](https://wg21.link/P1009R2) | VS 2019 16,7 <sup> [17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P1286R2 Contra CWG DR1778`](https://wg21.link/P1286R2) | VS 2019 16,8 <sup> [17](#note_17)</sup> |
-| __Funzionalità del linguaggio di base C++20__ | __Supporto__ |
+| __Funzionalità del linguaggio di base C++20__ | __Supportato__ |
 | &nbsp;&nbsp;[`P0704R1 Fixing const lvalue ref-qualified pointers to members`](https://wg21.link/p0704r1) | VS 2015 <sup>[14](#note_14)</sup> |
 | &nbsp;&nbsp;[`P1041R4 Make char16_t/char32_t string literals be UTF-16/32`](https://wg21.link/P1041R4) | VS 2015 <sup>[14](#note_14)</sup> |
 | &nbsp;&nbsp;[`P1330R0 Changing the active member of a union inside constexpr`](https://wg21.link/P1330R0) | VS 2017 15.0 <sup>[14](#note_14)</sup> |
@@ -170,7 +170,7 @@ Per informazioni dettagliate sui miglioramenti apportati alla conformità di Vis
 | &nbsp;&nbsp;[`P1811R0 Relaxing redefinition restrictions for re-exportation robustness`](https://wg21.link/P1811R0) | VS 2019 16,8 <sup> [20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1874R1 Dynamic Initialization Order of Non-Local Variables in Modules`](https://wg21.link/P1874R1) | VS 2019 16,8 <sup> [20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1975R0 Fixing the wording of parenthesized aggregate-initialization`](https://wg21.link/P1975R0) | VS 2019 16,8 <sup> [20](#note_20)</sup> |
-| &nbsp;&nbsp;[`P0641R2 const mismatch with defaulted copy constructor`](https://wg21.link/P0641R2) | Partial |
+| &nbsp;&nbsp;[`P0641R2 const mismatch with defaulted copy constructor`](https://wg21.link/P0641R2) | Parziale |
 | &nbsp;&nbsp;[`P1141R2 Yet another approach for constrained declarations`](https://wg21.link/P1141R2) | Parziale |
 | &nbsp;&nbsp;[`P0634R3 Down with typename!`](https://wg21.link/P0634R3) | No |
 | &nbsp;&nbsp;[`P0784R7 More constexpr containers`](https://wg21.link/P0784R7) | No |
@@ -190,7 +190,7 @@ Un elenco più dettagliato delle funzionalità della libreria standard e delle c
 
 | Funzionalità | Supportato |
 |--|--|
-| __Funzionalità della libreria standard C++20__ | __Supporto__ |
+| __Funzionalità della libreria standard C++20__ | __Supportato__ |
 | &nbsp;&nbsp;[`P0809R0 Comparing Unordered Containers`](https://wg21.link/p0809r0) | VS 2010 <sup>[14](#note_14)</sup> |
 | &nbsp;&nbsp;[`P0858R0 Constexpr Iterator Requirements`](https://wg21.link/p0858r0) | VS 2017 15.3 <sup>[17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0777R1 Avoiding Unnecessary Decay`](https://wg21.link/p0777r1) | VS 2017 15.7 <sup>[14](#note_14)</sup> |
@@ -290,11 +290,11 @@ Un elenco più dettagliato delle funzionalità della libreria standard e delle c
 | &nbsp;&nbsp;[`P1007R3 assume_aligned()`](https://wg21.link/P1007R3) | No |
 | &nbsp;&nbsp;[`P1020R1 Smart Pointer Creation With Default Initialization`](https://wg21.link/P1020R1) | No |
 | &nbsp;&nbsp;[`P1208R6 <source_location>`](https://wg21.link/P1208R6) | No |
-| &nbsp;&nbsp;[`P1285R0 Improving Completeness Requirements For Type Traits`](https://wg21.link/P1285R0) | No |
+| &nbsp;&nbsp;[`P1285R0 Improving Completeness Requirements For Type Traits`](https://wg21.link/P1285R0) | N/D |
 | &nbsp;&nbsp;[`P1502R1 Standard Library Header Units`](https://wg21.link/P1502R1) | No |
 | &nbsp;&nbsp;[`P1614R2 Adding Spaceship <=> To The Library`](https://wg21.link/P1614R2) | Parziale in VS 2019 16,7 <sup> [20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1771R1 Library support for [[nodiscard]] for constructors`](https://wg21.link/P1771R1) | No |
-| __Funzionalità della libreria standard C++17__ | __Supporto__ |
+| __Funzionalità della libreria standard C++17__ | __Supportato__ |
 | &nbsp;&nbsp;[`LWG 2221 Formatted output operator for nullptr`](https://cplusplus.github.io/LWG/issue2221) | VS 2019 16.1 |
 | &nbsp;&nbsp;[`N3911 void_t`](https://wg21.link/n3911) | VS 2015 <sup>[14](#note_14)</sup> |
 | &nbsp;&nbsp;[`N4089 Safe Conversions In unique_ptr<T[]>`](https://wg21.link/n4089) | VS 2015 <sup>[14](#note_14)</sup> |
@@ -377,7 +377,7 @@ Un elenco più dettagliato delle funzionalità della libreria standard e delle c
 | &nbsp;&nbsp;[`P0607R0 Inline Variables for the Standard Library`](https://wg21.link/p0607r0) | VS 2017 15.5 <sup>[17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0618R0 Deprecating <codecvt>`](https://wg21.link/p0618r0) | VS 2017 15.5 <sup>[17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0682R1 Repairing Elementary String Conversions`](https://wg21.link/P0682R1) | VS 2015 15.7 <sup>[17](#note_17)</sup> |
-| __Funzionalità della libreria standard C++14__ | __Supporto__ |
+| __Funzionalità della libreria standard C++14__ | __Supportato__ |
 | &nbsp;&nbsp;[`N3462 SFINAE-Friendly result_of`](https://wg21.link/n3462) | VS 2015.2 |
 | &nbsp;&nbsp;[`N3302 constexpr For <complex>`](https://wg21.link/n3302) | VS 2015 |
 | &nbsp;&nbsp;[`N3469 constexpr For <chrono>`](https://wg21.link/n3469) | VS 2015 |
@@ -484,7 +484,7 @@ Gli elementi seguenti non sono attualmente in parallelo:
 - Non ancora valutato. Il parallelismo potrà essere implementato in una versione futura e rivelarsi utile:
   - `copy_if`, `includes`, `inplace_merge`, `lexicographical_compare`, `max_element`, `merge`, `min_element`, `minmax_element`, `nth_element`, `partition_copy`, `remove_copy`, `remove_copy_if`, `replace_copy`, `replace_copy_if`, `set_symmetric_difference`, `set_union`, `stable_partition`, `unique`, `unique_copy`
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimenti per il linguaggio C++](../cpp/cpp-language-reference.md)\
 [Libreria standard C++](../standard-library/cpp-standard-library-reference.md)\
