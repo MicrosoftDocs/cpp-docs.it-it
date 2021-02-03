@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cpuid instruction
 - cpuid intrinsic
 ms.assetid: f8c344d3-91bf-405f-8622-cb0e337a6bdc
-ms.openlocfilehash: cd91207097993ec037e9b79eb27257272f06ee97
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 1f3030cc3792911cec8e7a7ef1b17dab0a9a3d6b
+ms.sourcegitcommit: 3987d9c39f5a5b4824303a48a6215984ce8949e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97337124"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99478132"
 ---
 # <a name="__cpuid-__cpuidex"></a>__cpuid, __cpuidex
 
@@ -64,7 +64,7 @@ Questa funzione intrinseca archivia le funzionalità supportate e le informazion
 
 La funzione intrinseca `__cpuid` cancella il registro ECX prima di chiamare l'istruzione `cpuid`. La funzione `__cpuidex` intrinseca imposta il valore del registro ECX su *subfunction_id* prima di generare l' `cpuid` istruzione. Consente di raccogliere informazioni aggiuntive sul processore.
 
-Per ulteriori informazioni sui parametri specifici da usare e sui valori restituiti da queste funzioni intrinseche nei processori Intel, vedere la documentazione relativa all' `cpuid` istruzione in [Intel 64 e IA-32 Architectures Software Developers Manual volume 2: riferimento al set di istruzioni](https://go.microsoft.com/fwlink/p/?LinkID=510021) e [informazioni di riferimento sulla programmazione delle estensioni del set di istruzioni Intel Architecture](https://go.microsoft.com/fwlink/p/?LinkID=506627). La documentazione di Intel usa i termini "foglia" e "sottofoglia" per la *function_id* e *subfunction_id* parametri passati in EAX e ecx.
+Per ulteriori informazioni sui parametri specifici da usare e sui valori restituiti da queste funzioni intrinseche nei processori Intel, vedere la documentazione relativa all' `cpuid` istruzione in [Intel 64 e IA-32 Architectures Software Developers Manual volume 2: riferimento al set di istruzioni](https://go.microsoft.com/fwlink/p/?LinkID=510021) e [informazioni di riferimento sulla programmazione delle estensioni del set di istruzioni Intel Architecture](https://software.intel.com/content/www/us/en/develop/download/intel-architecture-instruction-set-extensions-programming-reference.html). La documentazione di Intel usa i termini "foglia" e "sottofoglia" per la *function_id* e *subfunction_id* parametri passati in EAX e ecx.
 
 Per ulteriori informazioni sui parametri specifici da usare e sui valori restituiti da queste funzioni intrinseche nei processori AMD, vedere la documentazione relativa all' `cpuid` istruzione nel volume 3 manuale del programmatore di architettura amd64: General-Purpose e istruzioni di sistema e nelle guide di revisione per famiglie specifiche del processore. Per i collegamenti a questi documenti e altre informazioni, vedere la pagina relativa alle [guide per sviluppatori AMD, i manuali & la pagina documenti ISA](https://go.microsoft.com/fwlink/p/?LinkId=510023) . La documentazione di AMD usa i termini "numero di funzione" e "numero di funzione" per i parametri *function_id* e *SUBFUNCTION_ID* passati in EAX e ecx.
 

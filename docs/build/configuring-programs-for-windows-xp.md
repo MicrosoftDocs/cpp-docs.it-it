@@ -3,12 +3,12 @@ title: Configurazione di programmi per Windows XP
 description: Come installare e usare i set di strumenti C++ di Windows XP in Visual Studio.
 ms.date: 03/16/2020
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 09fe1a511c92f999e02646b9e606a3631a175215
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 8e81e44cbc2194f16851cf73891cae9884ed0525
+ms.sourcegitcommit: 3987d9c39f5a5b4824303a48a6215984ce8949e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92919371"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99478084"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Configurazione di programmi per Windows XP
 
@@ -24,13 +24,13 @@ Il set di strumenti V142 fornito in Visual Studio 2019 non include il supporto p
 
 ::: moniker range="<=msvc-150"
 
-Per ottenere i componenti e il set di strumenti della piattaforma Visual Studio 2017 per Windows XP e Windows Server 2003, eseguire il Programma di installazione di Visual Studio. Quando si installa inizialmente Visual Studio o quando si modifica un'installazione esistente, assicurarsi che sia selezionato il carico **di lavoro sviluppo di applicazioni desktop con C++** . Nell'elenco dei componenti facoltativi di questo carico di lavoro selezionare **Supporto Windows XP per C++** e quindi scegliere **Installa** o **Modifica** .
+Per ottenere i componenti e il set di strumenti della piattaforma Visual Studio 2017 per Windows XP e Windows Server 2003, eseguire il Programma di installazione di Visual Studio. Quando si installa inizialmente Visual Studio o quando si modifica un'installazione esistente, assicurarsi che sia selezionato il carico **di lavoro sviluppo di applicazioni desktop con C++** . Nell'elenco dei componenti facoltativi di questo carico di lavoro selezionare **Supporto Windows XP per C++** e quindi scegliere **Installa** o **Modifica**.
 
 ::: moniker-end
 
 ::: moniker range="msvc-160"
 
-Per ottenere i componenti e il set di strumenti della piattaforma v141_xp destinati a Windows XP e Windows Server 2003, eseguire il Programma di installazione di Visual Studio. Quando si installa inizialmente Visual Studio o quando si modifica un'installazione esistente, assicurarsi che sia selezionato il carico **di lavoro sviluppo di applicazioni desktop con C++** . Nella scheda **singoli componenti** , in **compilatori, strumenti di compilazione e Runtime** , scegliere **supporto C++ per Windows XP per gli strumenti di Visual Studio 2017 (V141) \[ deprecato]** , quindi scegliere **Installa** o **Modifica** .
+Per ottenere i componenti e il set di strumenti della piattaforma v141_xp destinati a Windows XP e Windows Server 2003, eseguire il Programma di installazione di Visual Studio. Quando si installa inizialmente Visual Studio o quando si modifica un'installazione esistente, assicurarsi che sia selezionato il carico **di lavoro sviluppo di applicazioni desktop con C++** . Nella scheda **singoli componenti** , in **compilatori, strumenti di compilazione e Runtime**, scegliere **supporto C++ per Windows XP per gli strumenti di Visual Studio 2017 (V141) \[ deprecato]**, quindi scegliere **Installa** o **Modifica**.
 
 ::: moniker-end
 
@@ -40,9 +40,9 @@ Il set di strumenti della piattaforma Windows XP incluso in Visual Studio è una
 
 ### <a name="to-target-windows-xp"></a>Per usare Windows XP
 
-1. In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto, quindi scegliere **Proprietà** .
+1. In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto, quindi scegliere **Proprietà**.
 
-1. Nella finestra di dialogo **pagine delle proprietà** per il progetto selezionare **proprietà di configurazione**  >  **generale** . Impostare la proprietà set di **strumenti della piattaforma** sul set di strumenti di Windows XP preferito. Ad esempio, scegliere **Visual Studio 2017 - Windows XP (v141_xp)** per creare codice per Windows XP e Windows Server 2003 usando il compilatore Microsoft C++ in Visual Studio 2017.
+1. Nella finestra di dialogo **pagine delle proprietà** per il progetto selezionare **proprietà di configurazione**  >  **generale**. Impostare la proprietà set di **strumenti della piattaforma** sul set di strumenti di Windows XP preferito. Ad esempio, scegliere **Visual Studio 2017 - Windows XP (v141_xp)** per creare codice per Windows XP e Windows Server 2003 usando il compilatore Microsoft C++ in Visual Studio 2017.
 
 ### <a name="c-runtime-support"></a>Supporto di C++ runtime
 
@@ -84,4 +84,4 @@ A causa delle differenze nel supporto della piattaforma e della libreria, l'espe
 
 - **Compilazione HLSL**
 
-   Il set di strumenti di Windows XP non compila i file del codice sorgente HLSL per impostazione predefinita. Per compilare i file HLSL, scaricare e installare DirectX SDK di giugno 2010, quindi impostare le directory VC del progetto per includerlo. Per altre informazioni, vedere la sezione "DirectX SDK Does Not Register Include/Library Paths with Visual Studio 2010" (DirectX SDK non registra i percorsi di inclusione e della libreria con Visual Studio 2010) della [pagina di download di DirectX SDK giugno 2010](https://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).
+   Il set di strumenti di Windows XP non compila i file del codice sorgente HLSL per impostazione predefinita. Per compilare i file HLSL, scaricare e installare DirectX SDK di giugno 2010, quindi impostare le directory VC del progetto per includerlo. Per altre informazioni, vedere la sezione "DirectX SDK Does Not Register Include/Library Paths with Visual Studio 2010" (DirectX SDK non registra i percorsi di inclusione e della libreria con Visual Studio 2010) della [pagina di download di DirectX SDK giugno 2010](https://download.cnet.com/DirectX-Software-Development-Kit-June-2010/3000-2069_4-75453831.html).

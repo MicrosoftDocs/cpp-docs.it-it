@@ -5,12 +5,12 @@ ms.date: 09/24/2019
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 7a89966b46efbef9800f3f3ddf836723bbb3b06f
-ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
+ms.openlocfilehash: 49ddc43757e1448e6bbd378a216eee9bcc0e84b2
+ms.sourcegitcommit: 3987d9c39f5a5b4824303a48a6215984ce8949e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94334247"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99478071"
 ---
 # <a name="how-to-report-a-problem-with-the-microsoft-c-toolset-or-documentation"></a>Come segnalare un problema con il set di strumenti o la documentazione di Microsoft C++
 
@@ -18,7 +18,7 @@ Se si riscontrano problemi con il compilatore (MSVC), il linker o altri strument
 
 ## <a name="how-to-report-a-c-toolset-issue"></a>Come segnalare un problema con il set di strumenti C++
 
-Il modo migliore per segnalare un problema è inviare un report che include una descrizione del problema individuato. Il report dovrebbe includere tutti i dettagli del modo in cui è stato compilato il programma, oltre a includere una *riproduzione del problema* , ovvero un test case completo utilizzabile per riprodurre il problema nei computer Microsoft. Queste informazioni consentono a Microsoft di verificare rapidamente se il problema riguarda il codice e non è specifico dell'ambiente locale, nonché di determinare se influisce su altre versioni del compilatore e di diagnosticarne la causa.
+Il modo migliore per segnalare un problema è inviare un report che include una descrizione del problema individuato. Il report dovrebbe includere tutti i dettagli del modo in cui è stato compilato il programma, oltre a includere una *riproduzione del problema*, ovvero un test case completo utilizzabile per riprodurre il problema nei computer Microsoft. Queste informazioni consentono a Microsoft di verificare rapidamente se il problema riguarda il codice e non è specifico dell'ambiente locale, nonché di determinare se influisce su altre versioni del compilatore e di diagnosticarne la causa.
 
 Nelle sezioni seguenti vengono presentate le caratteristiche di un buon report. Viene descritto come generare una procedura di riproduzione per il tipo di problema individuato e come inviare il report al team di prodotto. I report sono strumenti importanti per tutti gli sviluppatori. Grazie per contribuire a migliorare Microsoft C++.
 
@@ -111,9 +111,9 @@ Una procedura di riproduzione esaustiva è:
 
 - **Confronto con l'ultima versione del compiler** Le procedure di riproduzione devono usare l'aggiornamento più recente dell'ultima versione del set di strumenti quando possibile. In alternativa, usare la versione provvisoria più recente dell'aggiornamento successivo o della versione principale successiva. Spesso è possibile che i problemi che si verificano ancora nelle versioni precedenti del set di strumenti siano stati risolti nelle versioni più recenti. Il backporting delle correzioni in versioni precedenti avviene solo in casi eccezionali.
 
-- **Confronto con altri compilatori** , se pertinente. Le procedure di riproduzione che contengono codice C++ portabile devono verificare il comportamento confrontandolo con altri compilatori se possibile. Lo standard C++ stabilisce in definitiva la correttezza del programma e nessun compilatore è perfetto. Tuttavia, quando Clang e GCC accettano il codice senza una diagnostica e MSVC non lo accetta, probabilmente ciò indica un bug nel compilatore Microsoft. Altre possibilità includono differenze nel comportamento di UNIX e Windows o livelli diversi di implementazione di standard C++ e così via. Quando tutti i compilatori rifiutano il codice, è probabile che il codice non sia corretto. Analizzare messaggi di errore diversi può aiutare l'utente a diagnosticare il problema.
+- **Confronto con altri compilatori**, se pertinente. Le procedure di riproduzione che contengono codice C++ portabile devono verificare il comportamento confrontandolo con altri compilatori se possibile. Lo standard C++ stabilisce in definitiva la correttezza del programma e nessun compilatore è perfetto. Tuttavia, quando Clang e GCC accettano il codice senza una diagnostica e MSVC non lo accetta, probabilmente ciò indica un bug nel compilatore Microsoft. Altre possibilità includono differenze nel comportamento di UNIX e Windows o livelli diversi di implementazione di standard C++ e così via. Quando tutti i compilatori rifiutano il codice, è probabile che il codice non sia corretto. Analizzare messaggi di errore diversi può aiutare l'utente a diagnosticare il problema.
 
-   In [Online C++ compilers](https://isocpp.org/blog/2013/01/online-c-compilers) (Compilatori C++ online) oppure in questo elenco dettagliato [List of Online C++ Compilers](https://arnemertz.github.io/online-compilers/) (Elenco di compilatori C++ online) in GitHub sono disponibili elenchi di compilatori online per testare e confrontare il codice. Alcuni esempi specifici sono [Wandbox](https://wandbox.org/), [Compiler Explorer](https://godbolt.org/) e [Coliru](https://coliru.stacked-crooked.com/).
+   In [Online C++ compilers](https://isocpp.org/blog/2013/01/online-c-compilers) (Compilatori C++ online) oppure in questo elenco dettagliato [List of Online C++ Compilers](https://arnemertz.github.io/online-compilers/) (Elenco di compilatori C++ online) in GitHub sono disponibili elenchi di compilatori online per testare e confrontare il codice. Alcuni esempi specifici sono [Wandbox](https://wandbox.org/), [Compiler Explorer](https://godbolt.org/) e [Coliru](http://coliru.stacked-crooked.com/).
 
    > [!NOTE]
    > I siti Web dei compilatori online non sono associati a Microsoft. Molti siti Web dei compilatori online vengono eseguiti come progetti personali. Alcuni di questi siti potrebbero non essere disponibili quando si legge questo articolo, ma con una ricerca dovrebbe essere semplice trovarne altri.
@@ -314,7 +314,7 @@ Dopo aver generato i file pre-elaborati, è consigliabile verificare che il prob
 
 1. Confermare che il problema sia ancora riproducibile dal file pre-elaborato.
 
-Infine, allegare alla segnalazione i file pre-elaborati per la procedura di riproduzione ( *nomefile*.i e *nomemodulo*.i) e l'output con estensione ifc.
+Infine, allegare alla segnalazione i file pre-elaborati per la procedura di riproduzione (*nomefile*.i e *nomemodulo*.i) e l'output con estensione ifc.
 
 ### <a name="link-repros"></a>Procedure di riproduzione del collegamento
 
@@ -342,13 +342,13 @@ Una procedura di *riproduzione del collegamento* è il contenuto generato dal li
 
 Infine, creare un pacchetto per la riproduzione comprimendo l'intera directory linkrepro in un file con estensione zip o simile e alleghila al report.
 
-L'opzione del linker **/LINKREPRO** ha lo stesso effetto della variabile di ambiente di **\_ riproduzione del collegamento** . È possibile usare l'opzione [/LINKREPROTARGET](../build/reference/linkreprotarget.md) per specificare il nome da filtrare per la riproduzione del collegamento generata. Per usare **/LINKREPROTARGET** , è necessario specificare anche l'opzione **/out** del linker.
+L'opzione del linker **/LINKREPRO** ha lo stesso effetto della variabile di ambiente di **\_ riproduzione del collegamento** . È possibile usare l'opzione [/LINKREPROTARGET](../build/reference/linkreprotarget.md) per specificare il nome da filtrare per la riproduzione del collegamento generata. Per usare **/LINKREPROTARGET**, è necessario specificare anche l'opzione **/out** del linker.
 
 #### <a name="to-generate-a-link-repro-using-the-linkrepro-option"></a>Per generare una procedura di riproduzione del collegamento utilizzando l'opzione/LINKREPRO
 
 1. Creare una directory che contenga la riproduzione del collegamento. Si farà riferimento al percorso completo della directory creato come _directory-path_. Se sono inclusi spazi, utilizzare le virgolette doppie intorno al percorso.
 
-1. Aggiungere il comando **/LINKREPRO:**_directory-path_ alla riga di comando del linker. In Visual Studio aprire la finestra di dialogo **pagine delle proprietà** per il progetto. Selezionare la **Configuration Properties**  >  pagina delle proprietà della riga di comando del **linker** proprietà di configurazione  >  **Command Line** . Quindi, immettere l'opzione **/LINKREPRO:**_directory-path_ nella casella **Opzioni aggiuntive** . Scegliere **OK** per salvare le modifiche.
+1. Aggiungere il comando **/LINKREPRO:**_directory-path_ alla riga di comando del linker. In Visual Studio aprire la finestra di dialogo **pagine delle proprietà** per il progetto. Selezionare la   >  pagina delle proprietà della riga di comando del **linker** proprietà di configurazione  >   . Quindi, immettere l'opzione **/LINKREPRO:**_directory-path_ nella casella **Opzioni aggiuntive** . Scegliere **OK** per salvare le modifiche.
 
 1. Compilare il progetto della procedura di riproduzione e confermare che il problema previsto si è verificato.
 

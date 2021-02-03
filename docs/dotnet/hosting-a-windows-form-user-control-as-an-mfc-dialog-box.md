@@ -7,20 +7,20 @@ helpviewer_keywords:
 - Windows Forms [C++], hosting as MFC Dialog
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
-ms.openlocfilehash: 0139e26fee834d47bc0d513c3b64bf3c09368b22
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 885b63e17140cca7983aeeed26e56eac47091a0d
+ms.sourcegitcommit: 3987d9c39f5a5b4824303a48a6215984ce8949e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97335456"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99478058"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hosting di un controllo utente Windows Form come finestra di dialogo MFC
 
-MFC fornisce la classe modello [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) in modo che sia possibile ospitare un controllo utente Windows Forms ( <xref:System.Windows.Forms.UserControl> ) in una finestra di dialogo MFC modale o non modale. `CWinFormsDialog` viene derivato dalla classe MFC [CDialog](../mfc/reference/cdialog-class.md), quindi la finestra di dialogo può essere avviata come modale o non modale.
+MFC fornisce la classe modello [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) in modo che sia possibile ospitare un controllo utente Windows Form ( <xref:System.Windows.Forms.UserControl> ) in una finestra di dialogo MFC modale o non modale. `CWinFormsDialog` viene derivato dalla classe MFC [CDialog](../mfc/reference/cdialog-class.md), quindi la finestra di dialogo può essere avviata come modale o non modale.
 
 Il processo `CWinFormsDialog` utilizzato da per ospitare il controllo utente è simile a quello descritto in [hosting di un controllo utente Windows Form in una finestra di dialogo MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md). Tuttavia, `CWinFormsDialog` gestisce l'inizializzazione e l'hosting del controllo utente in modo che non debba essere programmato manualmente.
 
-Per un'applicazione di esempio che Mostra Windows Forms utilizzata con MFC, vedere [MFC and Windows Forms Integration](https://www.microsoft.com/download/details.aspx?id=2113).
+Per un'applicazione di esempio che Mostra Windows Form utilizzata con MFC, vedere [MFC and Windows Form Integration](https://download.cnet.com/MFC-and-WinForms-Integration/3000-2383_4-75453644.html).
 
 ### <a name="to-create-the-mfc-host-application"></a>Per creare l'applicazione host MFC
 
@@ -67,7 +67,7 @@ Per un'applicazione di esempio che Mostra Windows Forms utilizzata con MFC, vede
 
    Scegliere **Avvia senza eseguire debug** dal menu **debug** .
 
-   Successivamente, verrà aggiunto il codice per monitorare lo stato di un controllo nel Windows Forms dall'applicazione MFC.
+   Successivamente, verrà aggiunto il codice per monitorare lo stato di un controllo nel Windows Form dall'applicazione MFC.
 
 1. Aggiungere un gestore per OnInitDialog.
 
