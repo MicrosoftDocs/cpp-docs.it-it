@@ -1,21 +1,20 @@
 ---
 description: 'Altre informazioni su: _bstr_t:: Copy'
 title: _bstr_t::copy
-ms.date: 11/04/2016
+ms.date: 02/02/2021
 f1_keywords:
 - _bstr_t::copy
 helpviewer_keywords:
 - Copy method [C++]
 - BSTR object [C++], copy
-ms.assetid: 00ba7311-e82e-4a79-8106-5329fa2f869a
-ms.openlocfilehash: 29ca965730dbcc22b4b725661ece68442d39aeba
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 98726e0c3100851d1496e532310ece2209d71ae0
+ms.sourcegitcommit: c20734f18d3d49bb38b1628c68b53b54b3eeeb03
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97229340"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99522859"
 ---
-# <a name="_bstr_tcopy"></a>_bstr_t::copy
+# `_bstr_t::copy`
 
 **Specifico di Microsoft**
 
@@ -23,18 +22,18 @@ Costruisce una copia dell'oggetto `BSTR` incapsulato.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 BSTR copy( bool fCopy = true ) const;
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*fCopy*<br/>
-Se **`true`** , **Copy** restituisce una copia dell'oggetto contenuto `BSTR` ; in caso contrario, **Copy** restituisce l'oggetto BSTR effettivo.
+*`fCopy`*\
+Se **`true`** , **`copy`** restituisce una copia dell'oggetto contenuto `BSTR` ; in caso contrario, **`copy`** restituisce l'oggetto effettivo `BSTR` .
 
 ## <a name="remarks"></a>Commenti
 
-Restituisce una copia allocata dell'oggetto `BSTR` incapsulato.
+Restituisce una copia appena allocata dell'oggetto incapsulato `BSTR` o l'oggetto incapsulato, a seconda del parametro.
 
 ## <a name="example"></a>Esempio
 
@@ -48,4 +47,4 @@ STDMETHODIMP CAlertMsg::get_ConnectionStr(BSTR *pVal){ //  m_bsConStr is _bstr_t
 
 ## <a name="see-also"></a>Vedi anche
 
-[Classe _bstr_t](../cpp/bstr-t-class.md)
+[`_bstr_t` classe](../cpp/bstr-t-class.md)

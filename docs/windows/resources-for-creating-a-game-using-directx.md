@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], games
 - DirectX [C++]
 ms.assetid: 863090ed-6091-45db-aabb-7fd02f76c1df
-ms.openlocfilehash: eb0a1424969f732fb3736387a53ea05dd59427f4
-ms.sourcegitcommit: 3987d9c39f5a5b4824303a48a6215984ce8949e8
+ms.openlocfilehash: 1348a163646e28309c26edfdfe53cf35652bfdb9
+ms.sourcegitcommit: c20734f18d3d49bb38b1628c68b53b54b3eeeb03
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99478097"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99522768"
 ---
 # <a name="resources-for-creating-a-c-game-using-directx"></a>Risorse per la creazione di un gioco C++ con DirectX
 
@@ -24,7 +24,7 @@ Visual C++ è incluso in tutte le edizioni di Visual Studio, ma non è installat
 
 Per Windows 8.1 e versioni successive, DirectX SDK è incluso nella Windows SDK. Non è necessario scaricare altro materiale. Per ulteriori informazioni, vedere [la pagina relativa alla posizione di DirectX SDK](/windows/win32/directx-sdk--august-2009-).
 
-Per creare applicazioni DirectX per Windows 7, Windows Vista o Windows XP, è possibile scaricare la versione autonoma di [DirectX SDK](https://download.cnet.com/DirectX-Software-Development-Kit-June-2010/3000-2069_4-75453831.html).
+Per creare applicazioni DirectX per Windows 7, Windows Vista o Windows XP, è possibile scaricare la versione autonoma di [DirectX SDK](https://web.archive.org/web/20161026183606/https://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=6812) (collegamento di archiviazione).
 
 [Grafica e giochi DirectX](/windows/win32/directx) include informazioni ed esempi utili per iniziare a usare la programmazione DirectX.
 

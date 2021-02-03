@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC [C++], Windows Forms support
 - Windows Forms [C++], compared to MFC
 ms.assetid: f3bfcf45-cfd4-45a4-8cde-5f4dbb18ee51
-ms.openlocfilehash: abb41a64a894eed682c26b2460259fc6bbc43b56
-ms.sourcegitcommit: 3987d9c39f5a5b4824303a48a6215984ce8949e8
+ms.openlocfilehash: 75e88d18b34894f016d499b9fde309f6a26df716
+ms.sourcegitcommit: c20734f18d3d49bb38b1628c68b53b54b3eeeb03
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99478019"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99522781"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Differenze tra la programmazione con Windows Form e quella con MFC
 
@@ -22,8 +22,6 @@ Windows Form per la creazione di applicazioni Microsoft Windows nel .NET Framewo
 Tuttavia, se si è abituati a MFC, è possibile usare la creazione di determinati tipi di applicazioni che non sono ancora supportate in modo esplicito in Windows Form. Windows Form le applicazioni sono equivalenti alle applicazioni della finestra di dialogo MFC. Tuttavia, non offrono l'infrastruttura necessaria per supportare direttamente altri tipi di applicazioni MFC, ad esempio il server/contenitore del documento OLE, i documenti ActiveX, il supporto per documenti/visualizzazioni per l'interfaccia a documento singolo (SDI), l'interfaccia a documenti multipli (MDI) e l'interfaccia di livello più alto (MTI). È possibile scrivere la propria logica per creare queste applicazioni.
 
 Per ulteriori informazioni sulle applicazioni Windows Form, vedere [Introduzione a Windows Form](/dotnet/framework/winforms/windows-forms-overview).
-
-Per un'applicazione di esempio che Mostra Windows Form utilizzata con MFC, vedere [MFC and Windows Form Integration](https://download.cnet.com/MFC-and-WinForms-Integration/3000-2383_4-75453644.html).
 
 Le funzionalità seguenti per la visualizzazione MFC o il routing di documenti e comandi non hanno equivalenti in Windows Form:
 

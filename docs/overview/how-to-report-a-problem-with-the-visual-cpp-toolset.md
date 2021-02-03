@@ -5,12 +5,12 @@ ms.date: 09/24/2019
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 49ddc43757e1448e6bbd378a216eee9bcc0e84b2
-ms.sourcegitcommit: 3987d9c39f5a5b4824303a48a6215984ce8949e8
+ms.openlocfilehash: 43c965c3eccc352e740e5f5378257b344d947edb
+ms.sourcegitcommit: c20734f18d3d49bb38b1628c68b53b54b3eeeb03
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99478071"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99522365"
 ---
 # <a name="how-to-report-a-problem-with-the-microsoft-c-toolset-or-documentation"></a>Come segnalare un problema con il set di strumenti o la documentazione di Microsoft C++
 
@@ -113,7 +113,7 @@ Una procedura di riproduzione esaustiva è:
 
 - **Confronto con altri compilatori**, se pertinente. Le procedure di riproduzione che contengono codice C++ portabile devono verificare il comportamento confrontandolo con altri compilatori se possibile. Lo standard C++ stabilisce in definitiva la correttezza del programma e nessun compilatore è perfetto. Tuttavia, quando Clang e GCC accettano il codice senza una diagnostica e MSVC non lo accetta, probabilmente ciò indica un bug nel compilatore Microsoft. Altre possibilità includono differenze nel comportamento di UNIX e Windows o livelli diversi di implementazione di standard C++ e così via. Quando tutti i compilatori rifiutano il codice, è probabile che il codice non sia corretto. Analizzare messaggi di errore diversi può aiutare l'utente a diagnosticare il problema.
 
-   In [Online C++ compilers](https://isocpp.org/blog/2013/01/online-c-compilers) (Compilatori C++ online) oppure in questo elenco dettagliato [List of Online C++ Compilers](https://arnemertz.github.io/online-compilers/) (Elenco di compilatori C++ online) in GitHub sono disponibili elenchi di compilatori online per testare e confrontare il codice. Alcuni esempi specifici sono [Wandbox](https://wandbox.org/), [Compiler Explorer](https://godbolt.org/) e [Coliru](http://coliru.stacked-crooked.com/).
+   In [Online C++ compilers](https://isocpp.org/blog/2013/01/online-c-compilers) (Compilatori C++ online) oppure in questo elenco dettagliato [List of Online C++ Compilers](https://arnemertz.github.io/online-compilers/) (Elenco di compilatori C++ online) in GitHub sono disponibili elenchi di compilatori online per testare e confrontare il codice. Alcuni esempi specifici includono [Wandbox](https://wandbox.org/) ed [Esplora compilatore](https://godbolt.org/).
 
    > [!NOTE]
    > I siti Web dei compilatori online non sono associati a Microsoft. Molti siti Web dei compilatori online vengono eseguiti come progetti personali. Alcuni di questi siti potrebbero non essere disponibili quando si legge questo articolo, ma con una ricerca dovrebbe essere semplice trovarne altri.
