@@ -5,12 +5,12 @@ ms.date: 12/02/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 056ad4d1d611f2fc8b1c2d5594057a82b3e54a10
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 35434f70543b2f3241c50a005700bdf4a2564f95
+ms.sourcegitcommit: bdaa0bf20cc0fc79bc70cbab45defd55328e27d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97187572"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99588785"
 ---
 # <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>Supporto per Apri cartella per i sistemi di compilazione C++ in Visual Studio
 
@@ -85,7 +85,8 @@ Se si aggiunge la configurazione MinGW-w64, il codice JSON è simile al seguente
 
 ```json
 {
-  {
+  "configurations": [
+    {
       "inheritEnvironments": [
         "mingw_64"
       ],
@@ -107,6 +108,7 @@ Se si aggiunge la configurazione MinGW-w64, il codice JSON è simile al seguente
         }
       ]
     }
+  ]
 }
 ```
 
