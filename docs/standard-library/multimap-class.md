@@ -88,15 +88,14 @@ helpviewer_keywords:
 - std::multimap [C++], swap
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
-ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-ms.openlocfilehash: 1265e971a2d5e235f2fafd9137e7bd019d6ac4f0
-ms.sourcegitcommit: 3987d9c39f5a5b4824303a48a6215984ce8949e8
+ms.openlocfilehash: 7c5557eeb30e4fa0d1365cf83de460aae28771fc
+ms.sourcegitcommit: 651f817a6c8e92211168d34f0542350559f436d5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99478110"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99823332"
 ---
-# <a name="multimap-class"></a>Classe multimap
+# <a name="multimap-class"></a>Classe `multimap`
 
 La classe multimap della libreria standard C++ viene usata per l'archiviazione e il recupero dei dati da una raccolta in cui ogni elemento è una coppia che contiene sia un valore di dati che una chiave di ordinamento. Il valore della chiave non deve essere univoco e viene usato per ordinare automaticamente i dati. Il valore di un elemento di un multimap, a differenza del valore della chiave associata, può essere direttamente modificato. I valori invece delle chiavi associati a elementi precedenti devono essere eliminati e i valori delle nuove chiavi devono essere associati ai nuovi elementi inseriti.
 
