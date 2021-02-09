@@ -7,6 +7,8 @@
       href: ../overview/overview-of-cpp-development.md
     - name: Novità di C++ in Visual Studio
       href: ../overview/what-s-new-for-visual-cpp-in-visual-studio.md
+    - name: Novità di Microsoft C++ docs
+      href: ../overview/whats-new-cpp-docs.md
     - name: Miglioramenti della conformità di C++ in Visual Studio 2017
       href: ../overview/cpp-conformance-improvements.md
     - name: Conformità al linguaggio C++ di Microsoft
