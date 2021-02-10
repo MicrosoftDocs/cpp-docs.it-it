@@ -1,21 +1,22 @@
 ---
 title: Novità di C++ in Visual Studio
 description: Nuove funzionalità e correzioni del compilatore e degli strumenti di Microsoft C/C++ in Visual Studio.
-ms.date: 05/19/2020
+ms.date: 02/08/2021
 ms.technology: cpp-ide
-ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: db328a5806ecb3e48a934d65854c14d424e018f1
-ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
+ms.openlocfilehash: c17dd2981a455192715fb44e14e8b84d2d10e69c
+ms.sourcegitcommit: 77235bff6a7b2621c501938e30d93cb15f5733cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94334169"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100006085"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Novità di C++ in Visual Studio
 
 ::: moniker range=">=msvc-160"
 
 In Visual Studio 2019 sono stati inclusi numerosi aggiornamenti e correzioni per l'ambiente Microsoft C++. Sono stati corretti numerosi bug e problemi del compilatore e degli strumenti. Molti di questi problemi sono stati segnalati dai clienti tramite le opzioni [Segnala un problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019&preserve-view=true) e [Invia un suggerimento](https://aka.ms/feedback/suggest?space=62) in **Commenti e suggerimenti**. Microsoft ringrazia i clienti per le segnalazioni inviate. Per altre informazioni sulle novità in tutto Visual Studio, visitare la pagina [Novità in Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019). Per informazioni sulle novità per C++ in Visual Studio 2017, vedere [Novità di C++ in Visual Studio 2017](?preserve-view=true&view=msvc-150). Per informazioni sulle novità per C++ in Visual Studio 2015 e versioni precedenti, vedere [Visual C++: novità dalla versione 2003 alla 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md).
+
+Per informazioni sulle novità della documentazione di C++, vedere [documentazione di Microsoft c++:](whats-new-cpp-docs.md)novità.
 
 ## <a name="c-compiler"></a>compilatore C++
 
@@ -187,7 +188,7 @@ IncrediBuild è ora incluso come componente facoltativo nel carico di lavoro **S
 
 - Per le applicazioni C++ in esecuzione in Windows, i file PDB vengono ora caricati in un processo a 64 bit separato. Questa modifica risolve un intervallo di arresti anomali causati dal debugger che ha esaurito la memoria. Ad esempio, durante il debug di applicazioni che contengono un numero elevato di moduli e file PDB.
 
-- La ricerca è abilitata nelle finestre **Espressioni di controllo** , **Auto** e **Variabili locali**.
+- La ricerca è abilitata nelle finestre **Espressioni di controllo**, **Auto** e **Variabili locali**.
 
 ## <a name="windows-desktop-development-with-c"></a>Sviluppo per Windows Desktop con C++
 
@@ -232,7 +233,7 @@ Il componente sperimentale Clang/C2 è stato rimosso. Usare il set di strumenti 
 
 - Nuove correzioni rapide per controlli di variabili non inizializzate. Per altre informazioni, vedere [New code analysis quick fixes for uninitialized memory (C6001) and use before init (C26494) warnings](https://devblogs.microsoft.com/cppblog/new-code-analysis-quick-fixes-for-uninitialized-memory-c6001-and-use-before-init-c26494-warnings/) (Nuove correzioni rapide di analisi del codice per avvisi di memoria non inizializzata (C6001) and use-before-init (C26494)).
 
-## <a name="unit-testing"></a>Testing unità
+## <a name="unit-testing"></a>Unit test
 
 Il modello di progetto di test C++ gestito non è più disponibile. È possibile continuare a usare il framework di test C++ gestito nei progetti esistenti. Per i nuovi unit test, è consigliabile usare uno dei framework di test nativi per cui Visual Studio fornisce modelli (MSTest, Google Test) o il modello di progetto di test C# gestito.
 
@@ -343,7 +344,7 @@ In Visual Studio 2017 RTM sono disponibili ulteriori miglioramenti alla libreria
 - `propagate_on_container_swap` dell'allocatore non influisce più su `basic_string::shrink_to_fit()`.
 - `std::decay` gestisce ora i tipi di funzione abominevole, ovvero i tipi di funzione che sono qualificati CV, di riferimento o entrambi.
 - Modifica delle direttive include per l'uso corretto della distinzione tra maiuscole e minuscole e delle barre, con miglioramento della portabilità.
-- È stato corretto l'avviso C4061, relativo all'enumeratore ' *enumerator* ' nell'opzione dell'enum *enumeration* ' non gestito da un'etichetta case in modo esplicito. Questo avviso è disattivato per impostazione predefinita ed è stato risolto come eccezione alle norme generali della libreria standard per gli avvisi. La libreria standard è **`/W4`** pulita, ma non tenta di essere **`/Wall`** pulita. Molti avvisi disattivati per impostazione predefinita sono insolitamente rumorosi e non sono destinati a essere usati a intervalli regolari.
+- È stato corretto l'avviso C4061, relativo all'enumeratore '*enumerator*' nell'opzione dell'enum *enumeration*' non gestito da un'etichetta case in modo esplicito. Questo avviso è disattivato per impostazione predefinita ed è stato risolto come eccezione alle norme generali della libreria standard per gli avvisi. La libreria standard è **`/W4`** pulita, ma non tenta di essere **`/Wall`** pulita. Molti avvisi disattivati per impostazione predefinita sono insolitamente rumorosi e non sono destinati a essere usati a intervalli regolari.
 - Sono stati migliorati i controlli di debug per `std::list`. Gli iteratori di elenco controllano ora `operator->()` e `list::unique()` contrassegna ora gli iteratori come invalidati.
 - È stata corretta la metaprogrammazione uses-allocator in `tuple`.
 
@@ -508,7 +509,7 @@ CPPRestSDK, un'API Web multipiattaforma per C++, è stato aggiornato alla versio
 - Sono state riscritte diverse procedure guidate per il progetto e il codice nello stile basato su finestre di dialogo.
 - **Aggiungi classe** ora avvia direttamente la procedura guidata Aggiungi classe. Tutti gli altri elementi che in precedenza erano disponibili in questa posizione ora sono disponibili in **Aggiungi > Nuovo elemento**.
 - I progetti Win32 sono ora sotto la categoria **desktop di Windows** nella finestra di dialogo **nuovo progetto** .
-- I modelli di applicazione console e **Desktop** di **Windows** ora creano i progetti senza visualizzare una procedura guidata. Nella stessa categoria è presente una nuova **Creazione guidata applicazione desktop di Windows** , che visualizza le stesse opzioni della procedura guidata **Applicazione console Win32**.
+- I modelli di applicazione console e **Desktop** di **Windows** ora creano i progetti senza visualizzare una procedura guidata. Nella stessa categoria è presente una nuova **Creazione guidata applicazione desktop di Windows**, che visualizza le stesse opzioni della procedura guidata **Applicazione console Win32**.
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 versione 15.5
 
@@ -520,7 +521,7 @@ Diverse operazioni C++ che usano il motore IntelliSense per il refactoring e lo 
 | Modifica firma | 4.5x |
 | Trova tutti i riferimenti | 4.7x |
 
-C++ supporta ora Ctrl+ clic **Vai a definizione** , semplificando lo spostamento del mouse sulle definizioni. Anche il visualizzatore della struttura appartenente al pacchetto di strumenti di potenziamento della produttività è ora incluso nel prodotto per impostazione predefinita.
+C++ supporta ora Ctrl+ clic **Vai a definizione**, semplificando lo spostamento del mouse sulle definizioni. Anche il visualizzatore della struttura appartenente al pacchetto di strumenti di potenziamento della produttività è ora incluso nel prodotto per impostazione predefinita.
 
 ## <a name="intellisense"></a>IntelliSense
 

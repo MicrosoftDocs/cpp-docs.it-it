@@ -1,17 +1,21 @@
 ---
 title: Novità per la documentazione di C++
 description: Nuovi aggiornamenti per docs e doc per il compilatore Microsoft C/C++, ATL/MFC, il runtime C e la documentazione della libreria standard.
-ms.date: 02/05/2021
-ms.openlocfilehash: 68220fcea1efaf3f0f22885550fe405626626f03
-ms.sourcegitcommit: 651f817a6c8e92211168d34f0542350559f436d5
+ms.date: 02/08/2021
+ms.openlocfilehash: 3b6d248b99415c91b4086b00ecc54fc39d2c348a
+ms.sourcegitcommit: 77235bff6a7b2621c501938e30d93cb15f5733cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99834408"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100006035"
 ---
 # <a name="microsoft-c-docs-whats-new-for-visual-studio-168"></a>Documentazione di Microsoft C++: novità di Visual Studio 16,8
 
-Questo articolo elenca alcune delle principali modifiche apportate a docs per Visual Studio 16,8.
+Questo articolo elenca alcune delle principali modifiche apportate a docs per Visual Studio 16,8. 
+
+Per informazioni sulle novità di Visual Studio, vedere Novità di [C++ in Visual Studio](what-s-new-for-visual-cpp-in-visual-studio.md).
+
+Per lo stato di conformità di C++ più recente, vedere [miglioramenti della conformità di c++ in Visual Studio](cpp-conformance-improvements.md)
 
 ## <a name="c-language"></a>Linguaggio C
 
@@ -113,7 +117,7 @@ Questo articolo elenca alcune delle principali modifiche apportate a docs per Vi
 - [Configurare un progetto CMake per Linux in Visual Studio](../linux/cmake-linux-configure.md) : aggiornato per riflettere l'interfaccia utente più recente
 - [Distribuire, eseguire ed eseguire il debug del progetto MSBuild Linux](../linux/deploy-run-and-debug-your-linux-project.md) aggiunto `GDB Path`
 
-## <a name="microsoft-cc-compiler-and-tools-errors-and-warnings"></a>Errori e avvisi degli strumenti e del compilatore Microsoft C/C++
+## <a name="cc-compiler-and-tools-errors-and-warnings"></a>Errori e avvisi degli strumenti e del compilatore C/C++
 
 ### <a name="new-articles"></a>Nuovi articoli
 
@@ -127,7 +131,7 @@ Questo articolo elenca alcune delle principali modifiche apportate a docs per Vi
 - [Avvisi del compilatore C4800 tramite C5999](../error-messages/compiler-warnings/compiler-warnings-c4800-through-c4999.md) -avvisi 16,7 aggiornati
 - [Errore del compilatore C3381](../error-messages/compiler-errors-2/compiler-error-c3381.md) -Address cpp-docs 2493; aggiornare osservazioni ed esempi
 
-## <a name="microsoft-cc-compiler-intrinsics-and-assembly-language"></a>Intrinseci del compilatore Microsoft C/C++ e linguaggio assembly
+## <a name="cc-compiler-intrinsics-and-assembly-language"></a>Intrinseci del compilatore C/C++ e linguaggio assembly
 
 ### <a name="updated-articles"></a>Articoli aggiornati
 
@@ -136,7 +140,7 @@ Questo articolo elenca alcune delle principali modifiche apportate a docs per Vi
 - [C++ in Visual Studio](../overview/visual-cpp-in-visual-studio.md) -aggiornamento di DevCom e Microsoft Docs Q&un collegamento
 - Tabella di [conformità del linguaggio Microsoft c++](../overview/visual-cpp-language-conformance.md) -tabella di conformità della libreria c++ 20 aggiornata tabella, aggiornamento della tabella delle funzionalità della lingua per 16,7
 
-## <a name="microsoft-c-in-visual-studio"></a>Microsoft C++ in Visual Studio
+## <a name="c-in-visual-studio"></a>C++ in Visual Studio
 
 ### <a name="updated-articles"></a>Articoli aggiornati
 
@@ -144,7 +148,7 @@ Questo articolo elenca alcune delle principali modifiche apportate a docs per Vi
 - [istruzione if-else (C++)](../cpp/if-else-statement-cpp.md) -Descrizione aggiunta per la `if/else` grammatica
 - [`union`](../cpp/unions.md) -Frammento di codice corretto
 
-## <a name="microsoft-c-in-visual-studio-projects-and-build-systems"></a>Microsoft C++ nei progetti di Visual Studio e nei sistemi di compilazione
+## <a name="cc-projects-and-build-systems"></a>Progetti C/C++ e sistemi di compilazione
 
 ### <a name="new-articles"></a>Nuovi articoli
 
@@ -161,13 +165,14 @@ Questo articolo elenca alcune delle principali modifiche apportate a docs per Vi
 - [ `/clr` (Compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) -aggiunta della descrizione per`/clr`
 - [pgosweep](../build/pgosweep.md) -aggiunta di altre opzioni di pgosweep
 - [Importazione di dati `__declspec(dllimport)` tramite](../build/importing-data-using-declspec-dllimport.md) -Esempio aggiornato
-## <a name="microsoft-c-porting-and-upgrade-guide"></a>Guida all'aggiornamento e al porting di Microsoft C++
+
+## <a name="c-porting-and-upgrade-guide"></a>Guida al porting e aggiornamento in C++
 
 ### <a name="updated-articles"></a>Articoli aggiornati
 
 - [Procedura: usare codice C++ esistente in un'app piattaforma UWP (Universal Windows Platform)](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md) -rielaborare per maggiore chiarezza ed esempi aggiornati
 
-## <a name="microsoft-c-standard-library-stl-reference"></a>Informazioni di riferimento sulla libreria standard C++ Microsoft (STL)
+## <a name="c-standard-library-stl-reference"></a>Guida di riferimento alla libreria standard C++ (STL)
 
 ### <a name="new-articles"></a>Nuovi articoli
 
