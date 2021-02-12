@@ -6,16 +6,16 @@ ms.date: 08/19/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 14e1e18da5cdabae5366d4ba97a2260d5e99f076
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 2a0f605d6b415e1b827bd2d983b087bc110eddd8
+ms.sourcegitcommit: 77235bff6a7b2621c501938e30d93cb15f5733cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685321"
+ms.lasthandoff: 02/11/2021
+ms.locfileid: "100254405"
 ---
 # <a name="create-a-console-calculator-in-c"></a>Creare un calcolatore console in C++
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 In genere il punto di partenza per un programmatore C++ è un'applicazione "Hello, world!" eseguita sulla riga di comando. Questo è ciò che verrà creato prima in Visual Studio in questo articolo e quindi si passerà a qualcosa di più complesso: un'app per la calcolatrice.
 
@@ -148,7 +148,7 @@ Ora è possibile trasformare il codice contenuto in questo modello in un'app cal
 
    ![Screenshot della finestra di Esplora soluzioni di Visual Studio 2019 che Visualizza il progetto Calculator tutorial.](./media/calc-vs2019-solution-explorer.png "Esplora soluzioni")
 
-   Nell'editor verranno ora aperte tre schede: *CalculatorTutorial. cpp*, *Calculator. h*e *Calculator. cpp*. Se si chiude accidentalmente uno di essi, è possibile riaprirlo facendo doppio clic su di esso nella finestra **Esplora soluzioni** .
+   Nell'editor verranno ora aperte tre schede: *CalculatorTutorial. cpp*, *Calculator. h* e *Calculator. cpp*. Se si chiude accidentalmente uno di essi, è possibile riaprirlo facendo doppio clic su di esso nella finestra **Esplora soluzioni** .
 
 1. In **Calculator.h** rimuovere le righe `Calculator();` e `~Calculator();` generate, poiché in questa fase non sono necessarie. Successivamente, aggiungere la seguente riga di codice in modo che il file abbia questo aspetto:
 
@@ -385,7 +385,7 @@ Congratulazioni! Il codice per l'app calcolatrice è stato completato e compilat
 
 ::: moniker-end
 
-::: moniker range="<vs-2019"
+::: moniker range="<msvc-160"
 
 In genere il punto di partenza per un programmatore C++ è un'applicazione "Hello, world!" eseguita sulla riga di comando. Questo articolo illustra la procedura di creazione dell'applicazione in Visual Studio e quindi quella di un'applicazione più complessa, ovvero un'app calcolatrice.
 
@@ -514,7 +514,7 @@ Ora è possibile trasformare il codice contenuto in questo modello in un'app cal
 
    ![Screenshot della finestra di Esplora soluzioni che Visualizza il progetto Calculator tutorial.](./media/calculator-solution-explorer.png "Esplora soluzioni")
 
-   Nell'editor verranno ora aperte tre schede: *CalculatorTutorial. cpp*, *Calculator. h*e *Calculator. cpp*. Se si chiude accidentalmente uno di essi, è possibile riaprirlo facendo doppio clic su di esso nella finestra **Esplora soluzioni** .
+   Nell'editor verranno ora aperte tre schede: *CalculatorTutorial. cpp*, *Calculator. h* e *Calculator. cpp*. Se si chiude accidentalmente uno di essi, è possibile riaprirlo facendo doppio clic su di esso nella finestra **Esplora soluzioni** .
 
 1. In **Calculator.h** rimuovere le righe `Calculator();` e `~Calculator();` generate, poiché in questa fase non sono necessarie. Successivamente, aggiungere la seguente riga di codice in modo che il file abbia questo aspetto:
 
