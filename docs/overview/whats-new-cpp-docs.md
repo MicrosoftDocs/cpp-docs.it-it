@@ -1,13 +1,13 @@
 ---
 title: Novità per la documentazione di C++
 description: Nuovi aggiornamenti per docs e doc per il compilatore Microsoft C/C++, ATL/MFC, il runtime C e la documentazione della libreria standard.
-ms.date: 02/08/2021
-ms.openlocfilehash: 3b6d248b99415c91b4086b00ecc54fc39d2c348a
-ms.sourcegitcommit: 77235bff6a7b2621c501938e30d93cb15f5733cb
+ms.date: 02/17/2021
+ms.openlocfilehash: b15d286eb7bd2951ab2b8101a752de2beb57f4a4
+ms.sourcegitcommit: e99db7c3b5f25ece0e152165066c926751a7c2ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100006035"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100643573"
 ---
 # <a name="microsoft-c-docs-whats-new-for-visual-studio-168"></a>Documentazione di Microsoft C++: novità di Visual Studio 16,8
 
@@ -183,7 +183,7 @@ Per lo stato di conformità di C++ più recente, vedere [miglioramenti della con
 ### <a name="updated-articles"></a>Articoli aggiornati
 
 - [ `<ios>` typedef](../standard-library/ios-typedefs.md) -esempio aggiornato per GitHub #2514
-- [ `basic_string` Classe](../standard-library/basic-string-class.md) -aggiunta `startswith()` ,`endswith()`
+- [ `basic_string` Classe](../standard-library/basic-string-class.md) -aggiunta `_starts_with()` ,`ends_with()`
 - [`ios_base Class`](../standard-library/ios-base-class.md)
 - [`map` classe](../standard-library/map-class.md)
 - [ `multimap` Classe](../standard-library/multimap-class.md) -aggiunta`contains()`
@@ -193,7 +193,7 @@ Per lo stato di conformità di C++ più recente, vedere [miglioramenti della con
 - [ `unordered_multimap` Classe](../standard-library/unordered-multimap-class.md) -aggiunta`contains()`
 - [ `unordered_multiset` Classe](../standard-library/unordered-multiset-class.md) -aggiunta`contains()`
 - [ `unordered_set` Classe](../standard-library/unordered-set-class.md) -aggiunta`contains()`
-- [ `basic_string_view` Classe](../standard-library/basic-string-view-class.md) -aggiunta `startswith()` ,`endswith()`
+- [ `basic_string_view` Classe](../standard-library/basic-string-view-class.md) -aggiunta `starts_with()` ,`ends_with()`
 - [ `<bit>` funzioni](../standard-library/bit-functions.md) - `nodiscard` Sintassi aggiornata
 
 ## <a name="community-contributors"></a>Collaboratori della community

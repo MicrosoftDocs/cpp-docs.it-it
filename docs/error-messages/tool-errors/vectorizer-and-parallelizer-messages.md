@@ -1,24 +1,23 @@
 ---
 description: 'Altre informazioni su: messaggi Vectorizer e parallelizzazione automatica'
 title: Messaggi di vettorizzazione e parallelizzazione
-ms.date: 04/17/2019
+ms.date: 02/16/2021
 f1_keywords:
 - C5011
 - C5002
 - C5021
 - C5001
 - C5012
-ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: 54465331b3301c8f792763b9d7d1e29b8d62b1a0
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 3e2d458d177b8a7032276d29940a7ff2dac83b36
+ms.sourcegitcommit: e99db7c3b5f25ece0e152165066c926751a7c2ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97177133"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100643560"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Messaggi di vettorizzazione e parallelizzazione
 
-È possibile utilizzare le opzioni del compilatore Microsoft C++ [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) e [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) per impostare la [parallelizzazione automatica e la vettorizzazione automatica](../../parallel/auto-parallelization-and-auto-vectorization.md) per restituire i codici motivo e i messaggi informativi sulla relativa attività. In questo articolo viene illustrato il significato dei codici e dei messaggi.
+È possibile utilizzare le opzioni del compilatore Microsoft C++ [`/Qpar-report`](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) e [`/Qvec-report`](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) impostare la [parallelizzazione automatica e la vettorizzazione automatica](../../parallel/auto-parallelization-and-auto-vectorization.md) per restituire i codici motivo e i messaggi informativi relativi all'attività. In questo articolo viene illustrato il significato dei codici e dei messaggi.
 
 ## <a name="informational-messages"></a><a name="BKMK_InformationalMessages"></a> Messaggi informativi
 
@@ -26,13 +25,13 @@ A seconda del livello di creazione rapporti specificato, per ogni ciclo verrà v
 
 Per informazioni sui codici, leggere la parte successiva di questo articolo.
 
-|Messaggio informativo|Descrizione|
-|---------------------------|-----------------|
-|5001|`Loop vectorized.`|
-|5002|`Loop not vectorized due to reason '*description*'.`|
-|5011|`Loop parallelized.`|
-|5012|`Loop not parallelized due to reason '*description*'.`|
-|5021|`Unable to associate loop with pragma.`|
+| Messaggio informativo. | Descrizione |
+|--|--|
+| 5001 | Ciclo vettorizzato. |
+| 5002 | Il ciclo non è vettoriale a causa del motivo '*Description*'. |
+| 5011 | Ciclo parallelizzato. |
+| 5012 | Il ciclo non è parallelo a causa del motivo '*Description*'. |
+| 5021 | Impossibile associare il ciclo al pragma. |
 
 Nelle sezioni seguenti sono elencati i possibili codici motivo per parallelizzazione automatica e Vectorizer.
 
@@ -40,13 +39,13 @@ Nelle sezioni seguenti sono elencati i possibili codici motivo per parallelizzaz
 
 I codici 5 *XX* sono validi sia per parallelizzazione automatica che per Vectorizer.
 
-|Codice motivo|Spiegazione|
-|-----------------|-----------------|
-|500|Messaggio generico che copre diversi casi, ad esempio il ciclo include più uscite o l'intestazione del ciclo non termina con l'incremento della variabile di induzione.|
-|501|`Induction variable is not local; or upper bound is not loop-invariant.`|
-|502|`Induction variable is stepped in some manner other than a simple +1.`|
-|503|`Loop includes exception-handling or switch statements.`|
-|504|`Loop body may throw an exception that requires destruction of a C++ object.`|
+| Codice motivo | Spiegazione |
+|--|--|
+| 500 | Messaggio generico che copre diversi casi, ad esempio il ciclo include più uscite o l'intestazione del ciclo non termina con l'incremento della variabile di induzione. |
+| 501 | La variabile di induzione non è locale; il limite superiore non è invariante del ciclo. |
+| 502 | La variabile di induzione viene incrementata passo passo in modo diverso rispetto al semplice +1. |
+| 503 | Il ciclo include istruzioni switch o di gestione delle eccezioni. |
+| 504 | Il corpo del ciclo potrebbe generare un'eccezione che richiede la distruzione di un oggetto C++. |
 
 ```cpp
 void code_500(int *A)
@@ -203,19 +202,19 @@ void code_504(int *A) {
 
 I codici 10 *XX* si applicano a parallelizzazione automatica.
 
-|Codice motivo|Spiegazione|
-|-----------------|-----------------|
-|1000|`The compiler detected a data dependency in the loop body.`|
-|1001|`The compiler detected a store to a scalar variable in the loop body, and that scalar has a use beyond the loop.`|
-|1002|`The compiler tried to parallelize a loop that has an inner loop that was already parallelized.`|
-|1003|`The loop body contains an intrinsic call that may read or write to memory.`|
-|1004|`There is a scalar reduction in the loop body. Scalar reduction can occur if the loop has been vectorized.`|
-|1005|`The no_parallel pragma was specified.`|
-|1006|`This function contains openmp. Resolve this by removing any openmp in this function.`|
-|1007|`The loop induction variable or the loop bounds are not signed 32-bit numbers (int or long). Resolve this by changing the type of the induction variable.`|
-|1008|`The compiler detected that this loop does not perform enough work to warrant auto-parallelization.`|
-|1009|`The compiler detected an attempt to parallelize a "do-while" loop. The auto-parallelizer only targets "for" loops.`|
-|1010|`The compiler detected that the loop is using "not-equals" (!=) for its condition.`|
+| Codice motivo | Spiegazione |
+|--|--|
+| 1000 | Il compilatore ha rilevato una dipendenza dei dati nel corpo del ciclo. |
+| 1001 | Il compilatore ha rilevato un'archiviazione in una variabile scalare nel corpo del ciclo e tale variabile scalare prevede un utilizzo oltre il ciclo. |
+| 1002 | Il compilatore ha tentato di parallelizzare un ciclo contenente un ciclo interno già parallelizzato. |
+| 1003 | Il corpo del ciclo contiene una chiamata intrinseca che potrebbe leggere o scrivere nella memoria. |
+| 1004 | Si verifica una riduzione scalare del corpo del ciclo. La riduzione scalare può verificarsi se il ciclo è stato vettorizzato. |
+| 1005 | Il `no_parallel` pragma è stato specificato. |
+| 1006 | Questa funzione contiene OpenMP. Risolvere il problema rimuovendo qualsiasi OpenMP in questa funzione. |
+| 1007 | La variabile di induzione del ciclo o i limiti del ciclo non sono numeri a 32 bit firmati ( `int` o `long` ). Risolverlo modificando il tipo della variabile di induzione. |
+| 1008 | Il compilatore ha rilevato che questo ciclo non esegue operazioni sufficienti per giustificare la parallelizzazione automatica. |
+| 1009 | Il compilatore ha rilevato un tentativo di parallelizzare un `do` - `while` ciclo "". Il parallelizzazione automatica automatico è destinato solo ai `for` cicli "". |
+| 1010 | Il compilatore ha rilevato che il ciclo utilizza "not-equals" ( `!=` ) per la condizione. |
 
 ```cpp
 int A[1000];
@@ -412,15 +411,15 @@ void code_1010()
 
 I codici 11 *XX* si applicano a Vectorizer.
 
-|Codice motivo|Spiegazione|
-|-----------------|-----------------|
-|1100|`Loop contains control flow—for example, "if" or "?".`|
-|1101|`Loop contains datatype conversion—perhaps implicit—that cannot be vectorized.`|
-|1102|`Loop contains non-arithmetic or other non-vectorizable operations.`|
-|1103|`Loop body includes shift operations whose size might vary within the loop.`|
-|1104|`Loop body includes scalar variables.`|
-|1105|`Loop includes a unrecognized reduction operation.`|
-|1106|`Outer loop not vectorized.`|
+| Codice motivo | Spiegazione |
+|--|--|
+| 1100 | Il ciclo contiene un flusso di controllo, ad esempio " `if` " o " `?:` ". |
+| 1101 | Il ciclo contiene la conversione del tipo di dati, forse implicita, che non può essere vettoriale. |
+| 1102 | Il ciclo contiene operazioni non aritmetiche o altre operazioni non vettorizzabili. |
+| 1103 | Il corpo del ciclo include operazioni di spostamento le cui dimensioni possono variare all'interno del ciclo. |
+| 1104 | Il corpo del ciclo include variabili scalari. |
+| 1105 | Il ciclo include un'operazione di riduzione non riconosciuta. |
+| 1106 | Ciclo esterno non vettorizzato. |
 
 ```cpp
 void code_1100(int *A, int x)
@@ -560,12 +559,13 @@ void code_1106(int *A)
 
 I codici 12 *XX* si applicano a Vectorizer.
 
-|Codice motivo|Spiegazione|
-|-----------------|-----------------|
-|1200|`Loop contains loop-carried data dependences that prevent vectorization. Different iterations of the loop interfere with each other such that vectorizing the loop would produce wrong answers, and the auto-vectorizer cannot prove to itself that there are no such data dependences.`|
-|1201|`Array base changes during the loop.`|
-|1202|`Field in a struct is not 32 or 64 bits wide.`|
-|1203|`Loop body includes non-contiguous accesses into an array.`|
+| Codice motivo | Spiegazione |
+|--|--|
+| 1200 | Il ciclo contiene dipendenze di dati trasportate da cicli che impediscono la vettorizzazione. Diverse iterazioni del ciclo interferiscono tra loro, in modo che vettorizzazione il ciclo produrrebbe risposte errate e il Vectorizer automatico non può dimostrare a se stesso che non esistono dipendenze dati di questo tipo. |
+| 1201 | La base della matrice cambia durante il ciclo. |
+| 1202 | Il campo di uno struct non è 32 o 64 bit. |
+| 1203 | Il corpo del ciclo include accessi non contigui in una matrice. |
+| 1204 | Hit limite struttura dati interna del compilatore: troppi bordi di dipendenza dati. |
 
 ```cpp
 void fn();
@@ -629,20 +629,36 @@ void code_1203(int *A)
         A[i] += A[i*2+2] + 2;  // non-contiguous memory access not vectorized
     }
 }
+
+void code_1204(int *A)
+{
+    // Code 1204 is emitted when internal compiler data structures
+    // hit a limit on the number of data dependence edges recorded.
+    // Resolve this by moving the innermost loop to another function.
+
+    for (int i=0; i<1000; i++)
+        for (int j=0; j<1000; j++)
+            for (int k=0; k<1000; k++)
+                for (int l=0; l<1000; l++)
+                {
+                    for (int m=0; m<1000; m++)
+                        A[m] = A[m+i] + A[m+j] + A[m+k] + A[m+l];
+                }
+}
 ```
 
 ## <a name="13xx-reason-codes"></a><a name="BKMK_ReasonCode130x"></a> codici motivo 13xx
 
 I codici 13 *XX* si applicano a Vectorizer.
 
-|Codice motivo|Spiegazione|
-|-----------------|-----------------|
-|1300|`Loop body contains no—or very little—computation.`|
-|1301|`Loop stride is not +1.`|
-|1302|`Loop is a "do-while".`|
-|1303|`Too few loop iterations for vectorization to provide value.`|
-|1304|`Loop includes assignments that are of different sizes.`|
-|1305|`Not enough type information.`|
+| Codice motivo | Spiegazione |
+|--|--|
+| 1300 | Il corpo del ciclo è privo, o quasi, di calcolo. |
+| 1301 | Lo stride del ciclo non è + 1. |
+| 1302 | Il ciclo è " `do` - `while` ". |
+| 1303 | Numero di iterazioni insufficienti affinché la vettorizzazione fornisca un valore. |
+| 1304 | Il ciclo include assegnazioni di dimensioni diverse. |
+| 1305 | Informazioni sul tipo insufficienti. |
 
 ```cpp
 void code_1300(int *A, int *B)
@@ -767,14 +783,14 @@ void code_1305( S_1305 *s, S_1305 x)
 
 I codici 14 *XX* si verificano quando viene specificata un'opzione incompatibile con la vettorizzazione.
 
-|Codice motivo|Spiegazione|
-|-----------------|-----------------|
-|1400|`#pragma loop(no_vector) is specified.`|
-|1401|`/kernel switch is specified when targeting x86 or ARM.`|
-|1402|`/arch:SSE2 or higher switch is not specified when targeting x86.`|
-|1403|`/arch:ATOM switch is specified and the loop includes operations on doubles.`|
-|1404|`/O1 or /Os switch is specified.`|
-|1405|`Vectorization is disabled to aid in dynamic-initializer-to-static-initializer optimization.`|
+| Codice motivo | Spiegazione |
+|--|--|
+| 1400 | `#pragma loop(no_vector)`Viene specificato . |
+| 1401 | `/kernel`Viene specificata l'opzione  quando la destinazione è x86 o ARM. |
+| 1402 | `/arch:SSE2` Se la destinazione è x86, l'opzione o superiore non è specificata. |
+| 1403 | `/arch:ATOM` viene specificata l'opzione e il ciclo include operazioni sui doppi. |
+| 1404 | `/O1` il `/Os` parametro o è specificato. |
+| 1405 | La vettorizzazione è disabilitata per favorire l'ottimizzazione inizializzatore dinamico - inizializzatore statico. |
 
 ```cpp
 void code_1400(int *A)
@@ -839,14 +855,14 @@ void code_1404(int *A)
 
 I codici per i 15 *XX* si applicano all'aliasing. Si verifica una condizione di aliasing quando una posizione in memoria è accessibile da due nomi diversi
 
-|Codice motivo|Spiegazione|
-|-----------------|-----------------|
-|1500|`Possible aliasing on multi-dimensional arrays.`|
-|1501|`Possible aliasing on arrays-of-structs.`|
-|1502|`Possible aliasing and array index is other than n + K.`|
-|1503|`Possible aliasing and array index has multiple offsets.`|
-|1504|`Possible aliasing; would require too many runtime checks.`|
-|1505|`Possible aliasing, but runtime checks are too complex.`|
+| Codice motivo | Spiegazione |
+|--|--|
+| 1500 | Possibile aliasing su matrici multidimensionali. |
+| 1501 | Possibile aliasing su matrici di struct. |
+| 1502 | Possibile aliasing e l'indice di matrice è diverso da n + K. |
+| 1503 | Possibile aliasing e l'indice di matrice presenta più offset. |
+| 1504 | Possibile aliasing e richiede troppi controlli in fase di esecuzione. |
+| 1505 | Possibile aliasing, ma i controlli in fase di esecuzione sono troppo complessi. |
 
 ```cpp
 void code_1500(int A[100][100], int B[100][100])
@@ -965,10 +981,10 @@ void code_1505(int *A, int *B)
 
 ## <a name="see-also"></a>Vedi anche
 
-[Errori e avvisi degli strumenti di compilazione e compilatore C/C++](../compiler-errors-1/c-cpp-build-errors.md) 
- [Parallelizzazione automatica e vettorizzazione automatica](../../parallel/auto-parallelization-and-auto-vectorization.md) \
-[Vectorizer automatico in Visual Studio 2012-Panoramica](/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview) \
-[ciclo #pragma ()](../../preprocessor/loop.md) \
-[Opzioni/q (operazioni di basso livello)](../../build/reference/q-options-low-level-operations.md) \
-[/Qpar-report (livello di segnalazione parallelizzazione automatica automatica)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
-[/Qvec-report (livello di segnalazione Vectorizer automatica)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)
+[Errori e avvisi degli strumenti di compilazione e compilatore C/C++](../compiler-errors-1/c-cpp-build-errors.md)\
+[Parallelizzazione automatica e vettorizzazione automatica](../../parallel/auto-parallelization-and-auto-vectorization.md)\
+[Vectorizer automatico in Visual Studio 2012-Panoramica](/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview)\
+[`#pragma loop()`](../../preprocessor/loop.md)\
+[`/Q` Opzioni (operazioni di basso livello)](../../build/reference/q-options-low-level-operations.md)\
+[`/Qpar-report` (Livello di segnalazione parallelizzazione automatica automatico)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)\
+[`/Qvec-report` (Livello di segnalazione Vectorizer automatico)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)
