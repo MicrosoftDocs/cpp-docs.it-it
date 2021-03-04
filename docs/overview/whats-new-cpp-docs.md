@@ -2,12 +2,12 @@
 title: Novità per la documentazione di C++
 description: Nuovi aggiornamenti per docs e doc per il compilatore Microsoft C/C++, ATL/MFC, il runtime C e la documentazione della libreria standard.
 ms.date: 02/17/2021
-ms.openlocfilehash: b15d286eb7bd2951ab2b8101a752de2beb57f4a4
-ms.sourcegitcommit: e99db7c3b5f25ece0e152165066c926751a7c2ed
+ms.openlocfilehash: ad626dc598cd17de091801b2c313b7339db4cbc7
+ms.sourcegitcommit: 5efc34c2b98d4d0d3e41aec38b213f062c19d078
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100643573"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844533"
 ---
 # <a name="microsoft-c-docs-whats-new-for-visual-studio-168"></a>Documentazione di Microsoft C++: novità di Visual Studio 16,8
 
@@ -198,7 +198,7 @@ Per lo stato di conformità di C++ più recente, vedere [miglioramenti della con
 
 ## <a name="community-contributors"></a>Collaboratori della community
 
-Le persone seguenti hanno contribuito ai documenti C++, C e assembler durante questo periodo. Grazie! Per informazioni su come contribuire, vedere [Panoramica della guida del collaboratore Microsoft docs](https://docs.microsoft.com/contribute/) .
+Le persone seguenti hanno contribuito ai documenti C++, C e assembler durante questo periodo. Grazie! Per informazioni su come contribuire, vedere [Panoramica della guida del collaboratore Microsoft docs](/contribute/) .
 
 - [yecril71pl](https://github.com/yecril71pl) -Christopher Yeleighton (4)
 - [definedrisk](https://github.com/definedrisk) -ben (3)

@@ -8,12 +8,12 @@ f1_keywords:
 - C5021
 - C5001
 - C5012
-ms.openlocfilehash: 3e2d458d177b8a7032276d29940a7ff2dac83b36
-ms.sourcegitcommit: e99db7c3b5f25ece0e152165066c926751a7c2ed
+ms.openlocfilehash: 9cfafe9af4859a2bb4dbd7897a14003d85052f63
+ms.sourcegitcommit: 5efc34c2b98d4d0d3e41aec38b213f062c19d078
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100643560"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844546"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Messaggi di vettorizzazione e parallelizzazione
 
@@ -41,11 +41,12 @@ I codici 5 *XX* sono validi sia per parallelizzazione automatica che per Vectori
 
 | Codice motivo | Spiegazione |
 |--|--|
-| 500 | Messaggio generico che copre diversi casi, ad esempio il ciclo include più uscite o l'intestazione del ciclo non termina con l'incremento della variabile di induzione. |
+| 500 | Messaggio generico che copre diversi casi: ad esempio, il ciclo include più uscite o l'intestazione del ciclo non termina con l'incremento della variabile di induzione. |
 | 501 | La variabile di induzione non è locale; il limite superiore non è invariante del ciclo. |
 | 502 | La variabile di induzione viene incrementata passo passo in modo diverso rispetto al semplice +1. |
 | 503 | Il ciclo include istruzioni switch o di gestione delle eccezioni. |
 | 504 | Il corpo del ciclo potrebbe generare un'eccezione che richiede la distruzione di un oggetto C++. |
+| 505 | Il ciclo esterno presenta una variabile di induzione pre-incrementata. Uscita dall'analisi. |
 
 ```cpp
 void code_500(int *A)
@@ -83,7 +84,7 @@ void code_501_example1(int *A)
 {
     // Code 501 is emitted if the compiler cannot discern the
     // induction variable of this loop. In this case, when it checks
-    // the upperbound of 'i', the compiler cannot prove that the
+    // the upper bound of 'i', the compiler cannot prove that the
     // function call "bound()" returns the same value each time.
     // Also, the compiler cannot prove that the call to "bound()"
     // does not modify the values of array A.
@@ -94,7 +95,7 @@ void code_501_example1(int *A)
     }
 
     // To resolve code 501, ensure that the induction variable is
-    // a local variable, and ensure that the upperbound is a
+    // a local variable, and ensure that the upper bound is a
     // provably loop invariant value.
 
     for (int i=0, imax = bound(); i<imax; ++i)
@@ -116,7 +117,7 @@ void code_501_example2(int *A)
     }
 
     // To resolve code 501, ensure that the induction variable is
-    // a local variable, and ensure that the upperbound is a
+    // a local variable, and ensure that the upper bound is a
     // provably loop invariant value.
 
     for (int i=0; i<1000; ++i)
@@ -184,7 +185,8 @@ public:
     ~C504();
 };
 
-void code_504(int *A) {
+void code_504(int *A)
+{
     // Code 504 is emitted if a C++ object was created and
     // that object requires EH unwind tracking information under
     // /EHs or /EHsc.
@@ -195,6 +197,23 @@ void code_504(int *A) {
         A[i] = code_504_helper();
     }
 
+}
+
+void code_505(int *A)
+{
+    // Code 505 is emitted on outer loops with pre-incremented
+    // induction variables. The vectorizer/parallelizer analysis
+    // package doesn't support these loops, and they are
+    // intentionally not converted to post-increment loops to
+    // prevent a performance degradation.
+
+    // To parallelize an outer loop that causes code 505, change
+    // it to a post-incremented loop.
+
+    for (int i=100; i--; )
+        for (int j=0; j<100; j++) { // this loop is still vectorized
+            A[j] = A[j] + 1;
+        }                    
 }
 ```
 
@@ -414,7 +433,7 @@ I codici 11 *XX* si applicano a Vectorizer.
 | Codice motivo | Spiegazione |
 |--|--|
 | 1100 | Il ciclo contiene un flusso di controllo, ad esempio " `if` " o " `?:` ". |
-| 1101 | Il ciclo contiene la conversione del tipo di dati, forse implicita, che non può essere vettoriale. |
+| 1101 | Il ciclo contiene una conversione di tipo di dati (possibilmente implicita) che non può essere vettoriata. |
 | 1102 | Il ciclo contiene operazioni non aritmetiche o altre operazioni non vettorizzabili. |
 | 1103 | Il corpo del ciclo include operazioni di spostamento le cui dimensioni possono variare all'interno del ciclo. |
 | 1104 | Il corpo del ciclo include variabili scalari. |
@@ -434,7 +453,7 @@ void code_1100(int *A, int x)
 
     for (int i=0; i<1000; ++i)
     {
-        // straightline code is more amenable to vectorization
+        // straight line code is more amenable to vectorization
         if (x)
         {
             A[i] = A[i] + 1;
@@ -561,7 +580,7 @@ I codici 12 *XX* si applicano a Vectorizer.
 
 | Codice motivo | Spiegazione |
 |--|--|
-| 1200 | Il ciclo contiene dipendenze di dati trasportate da cicli che impediscono la vettorizzazione. Diverse iterazioni del ciclo interferiscono tra loro, in modo che vettorizzazione il ciclo produrrebbe risposte errate e il Vectorizer automatico non può dimostrare a se stesso che non esistono dipendenze dati di questo tipo. |
+| 1200 | Il ciclo contiene dipendenze di dati trasportate da cicli che impediscono la vettorizzazione. Diverse iterazioni del ciclo interferiscono tra loro in modo che vettorizzazione il ciclo produrrebbe risposte errate e il Vectorizer automatico non può dimostrare a se stesso che non sono presenti dipendenze di dati. |
 | 1201 | La base della matrice cambia durante il ciclo. |
 | 1202 | Il campo di uno struct non è 32 o 64 bit. |
 | 1203 | Il corpo del ciclo include accessi non contigui in una matrice. |
@@ -653,7 +672,7 @@ I codici 13 *XX* si applicano a Vectorizer.
 
 | Codice motivo | Spiegazione |
 |--|--|
-| 1300 | Il corpo del ciclo è privo, o quasi, di calcolo. |
+| 1300 | Il corpo del ciclo contiene un calcolo minimo o nullo. |
 | 1301 | Lo stride del ciclo non è + 1. |
 | 1302 | Il ciclo è " `do` - `while` ". |
 | 1303 | Numero di iterazioni insufficienti affinché la vettorizzazione fornisca un valore. |
@@ -703,7 +722,7 @@ int code_1303(int *A, int *B)
     // make vectorization profitable.
 
     // If the loop computation fits perfectly in
-    // vector registers - for example, the upperbound is 4, or 8 in
+    // vector registers - for example, the upper bound is 4, or 8 in
     // this case - then the loop _may_ be vectorized.
 
     // This loop is not vectorized because there are 5 iterations

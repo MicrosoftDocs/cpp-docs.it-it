@@ -3,12 +3,12 @@ title: 'Esercitazione: eseguire il debug di un progetto CMake in un computer Win
 ms.date: 12/4/2020
 ms.topic: tutorial
 description: Come usare Visual Studio C++ in Windows per creare e compilare un progetto CMake. Sarà quindi possibile distribuirlo ed eseguirne il debug in un computer Windows remoto.
-ms.openlocfilehash: 742ee831fc30ffe291d68ff97ad4238e57c7e21d
-ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
+ms.openlocfilehash: 575b815559cbe70384b4669c94cf003daa3ee7d7
+ms.sourcegitcommit: 5efc34c2b98d4d0d3e41aec38b213f062c19d078
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98668917"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844507"
 ---
 # <a name="tutorial-debug-a-cmake-project-on-a-remote-windows-machine"></a>Esercitazione: eseguire il debug di un progetto CMake in un computer Windows remoto
 
@@ -31,7 +31,7 @@ In questa esercitazione si apprenderà come:
 
 Per configurare Visual Studio per lo sviluppo in C++ multipiattaforma, installare gli strumenti di compilazione per l'architettura di destinazione. Per questa esercitazione, installare gli strumenti di compilazione di ARM64 seguendo questa procedura:
 
-1. Eseguire il programma di installazione di Visual Studio. Se Visual Studio non è ancora stato installato, vedere [installare Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio#:~:text=Install%20Visual%20Studio%201%20Make%20sure%20your%20computer,...%204%20Choose%20workloads.%20...%20More%20items...%20)
+1. Eseguire il programma di installazione di Visual Studio. Se Visual Studio non è ancora stato installato, vedere [installare Visual Studio](/visualstudio/install/install-visual-studio)
 1. Nella schermata iniziale del Programma di installazione di Visual Studio scegliere **modifica**.
 1. Dalle opzioni disponibili nella parte superiore scegliere **singoli componenti**.
 1. Scorrere verso il basso fino alla sezione **compilatori, strumenti di compilazione e Runtime** .
@@ -42,8 +42,8 @@ Per configurare Visual Studio per lo sviluppo in C++ multipiattaforma, installar
 
 ### <a name="on-the-remote-machine"></a>Nel computer remoto
 
-1. Installare Remote Tools nel computer remoto. Per questa esercitazione, installare gli strumenti di ARM64 seguendo le istruzioni riportate in [scaricare e installare Remote Tools](https://docs.microsoft.com/visualstudio/debugger/remote-debugging-cpp?%23download-and-install-the-remote-tools#download-and-install-the-remote-tools).
-1. Avviare e configurare il debugger remoto nel computer remoto. Per questa esercitazione, seguire le istruzioni in [configurare il debugger remoto](https://docs.microsoft.com/visualstudio/debugger/remote-debugging-cpp?%23download-and-install-the-remote-tools#BKMK_setup) nel computer Windows remoto.
+1. Installare Remote Tools nel computer remoto. Per questa esercitazione, installare gli strumenti di ARM64 seguendo le istruzioni riportate in [scaricare e installare Remote Tools](/visualstudio/debugger/remote-debugging-cpp#download-and-install-the-remote-tools).
+1. Avviare e configurare il debugger remoto nel computer remoto. Per questa esercitazione, seguire le istruzioni in [configurare il debugger remoto](/visualstudio/debugger/remote-debugging-cpp#BKMK_setup) nel computer Windows remoto.
 
 ## <a name="create-a-cmake-project"></a>Creare un progetto CMake
 
