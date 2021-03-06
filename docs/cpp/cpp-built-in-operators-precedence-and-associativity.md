@@ -13,12 +13,12 @@ helpviewer_keywords:
 - evaluation order
 - hierarchy, operator
 ms.assetid: 95c1f0ba-dad8-4034-b039-f79a904f112f
-ms.openlocfilehash: ff8ae84a62ef47449364d0815922326d7b8566d4
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 8f45b7e45597fde1deaa349db6fd098b0d7ac319
+ms.sourcegitcommit: c0c9cdae79f19655e809a4979227c51bb19cff63
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97253962"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102236764"
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>Operatori, precedenza e associatività predefiniti di C++
 
@@ -69,7 +69,7 @@ La tabella seguente illustra la precedenza e l'associatività degli operatori C+
 | **Precedenza gruppo 5, associatività da sinistra a destra** |
 | [Moltiplicazione](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`*`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
 | [Divisione](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`/`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
-| [Modulo](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`%`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
+| [Modulus](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`%`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
 | **Precedenza gruppo 6, associatività da sinistra a destra** |
 | [Oltre](../cpp/additive-operators-plus-and.md) | [`+`](../cpp/additive-operators-plus-and.md) |
 | [Sottrazione](../cpp/additive-operators-plus-and.md) | [`-`](../cpp/additive-operators-plus-and.md) |
@@ -96,7 +96,6 @@ La tabella seguente illustra la precedenza e l'associatività degli operatori C+
 | [OR logico](../cpp/logical-or-operator-pipe-pipe.md) | [`||`](../cpp/logical-or-operator-pipe-pipe.md) | **`or`** |
 | **Precedenza del gruppo 15, associazione da destra a sinistra** |
 | [Condizionale](../cpp/conditional-operator-q.md) | [`? :`](../cpp/conditional-operator-q.md) |
-| **Precedenza del gruppo 16, associazione da destra a sinistra** |
 | [Assegnazione](../cpp/assignment-operators.md) | [`=`](../cpp/assignment-operators.md) |
 | [Assegnazione di moltiplicazione](../cpp/assignment-operators.md) | [`*=`](../cpp/assignment-operators.md) |
 | [Assegnazione di divisione](../cpp/assignment-operators.md) | [`/=`](../cpp/assignment-operators.md) |
@@ -108,9 +107,8 @@ La tabella seguente illustra la precedenza e l'associatività degli operatori C+
 | [Assegnazione AND bit per bit](../cpp/assignment-operators.md) | [`&=`](../cpp/assignment-operators.md) | **`and_eq`** |
 | [Assegnazione OR inclusivo bit per bit](../cpp/assignment-operators.md) | [`|=`](../cpp/assignment-operators.md) | **`or_eq`** |
 | [Assegnazione OR esclusivo bit per bit](../cpp/assignment-operators.md) | [`^=`](../cpp/assignment-operators.md) | **`xor_eq`** |
-| **Gruppo di precedenza 17, da destra a sinistra** |
 | [espressione throw](../cpp/try-throw-and-catch-statements-cpp.md) | [`throw`](../cpp/try-throw-and-catch-statements-cpp.md) |
-| **Precedenza gruppo 18, associatività da sinistra a destra** |
+| **Precedenza gruppo 16, associatività da sinistra a destra** |
 | [Virgola](../cpp/comma-operator.md) | [,](../cpp/comma-operator.md) |
 
 ## <a name="see-also"></a>Vedi anche

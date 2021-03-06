@@ -7,18 +7,18 @@ helpviewer_keywords:
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-ms.openlocfilehash: 84fdac7010805fc4d0a429231a080ab11d5c595a
-ms.sourcegitcommit: f7fbdc39d73e1fb3793c396fccf7a1602af7248b
+ms.openlocfilehash: f817fcca35a741dac29047e214897758cdc93edb
+ms.sourcegitcommit: c0c9cdae79f19655e809a4979227c51bb19cff63
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662256"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102236712"
 ---
 # <a name="numeric-boolean-and-pointer-literals"></a>Valori letterali numerici, booleani e puntatore
 
-Un valore letterale è un elemento del programma che rappresenta direttamente un valore. Questo articolo illustra i valori letterali di tipo Integer, a virgola mobile, booleano e puntatore. Per informazioni sui valori letterali stringa e carattere, vedere [stringa e valori letterali carattere (C++)](../cpp/string-and-character-literals-cpp.md). È anche possibile definire valori letterali personalizzati in base a una di queste categorie. Per altre informazioni, vedere [valori letterali definiti dall'utente (C++)](../cpp/user-defined-literals-cpp.md)
+Un valore letterale è un elemento del programma che rappresenta direttamente un valore. Questo articolo illustra i valori letterali di tipo Integer, a virgola mobile, booleano e puntatore. Per informazioni sui valori letterali stringa e carattere, vedere [stringa e valori letterali carattere (C++)](../cpp/string-and-character-literals-cpp.md). È anche possibile definire valori letterali personalizzati in base a una di queste categorie. Per altre informazioni, vedere [valori letterali definiti dall'utente (C++)](../cpp/user-defined-literals-cpp.md).
 
-. È possibile usare i valori letterali in molti contesti, ma in genere vengono usati per inizializzare le variabili denominate e passare argomenti alle funzioni:
+È possibile usare i valori letterali in molti contesti, ma in genere vengono usati per inizializzare le variabili denominate e passare argomenti alle funzioni:
 
 ```cpp
 const int answer = 42;      // integer literal
@@ -137,7 +137,7 @@ if (num < 100)
 
 Nell'esempio precedente, una procedura consigliata consiste nell'usare una costante denominata che comunica un significato chiaro, ad esempio "MAXIMUM_ERROR_THRESHOLD". Se il valore restituito "success" viene visualizzato dagli utenti finali, potrebbe essere preferibile usare una costante di stringa denominata. È possibile tenere costanti stringa in un'unica posizione in un file che può essere localizzato in altre lingue. L'uso di costanti denominate consente a se stessi e ad altri utenti di comprendere lo scopo del codice.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Convenzioni lessicali](../cpp/lexical-conventions.md)<br/>
 [Valori letterali stringa C++](../cpp/string-and-character-literals-cpp.md)<br/>

@@ -1,7 +1,7 @@
 ---
 description: 'Altre informazioni su: fputs, fputws'
 title: fputs, fputws
-ms.date: 4/2/2020
+ms.date: 03/02/2021
 api_name:
 - fputs
 - fputws
@@ -34,15 +34,14 @@ helpviewer_keywords:
 - _fputts function
 - fputs function
 - fputts function
-ms.assetid: d48c82b8-aa17-4830-8c7d-30442ddbb326
-ms.openlocfilehash: bba51a6001d9ec27f39b590b2246a50409f5e47d
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 3b38f3c369a567c00f17a0f4d905de324100a3d4
+ms.sourcegitcommit: c0c9cdae79f19655e809a4979227c51bb19cff63
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97314113"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102236790"
 ---
-# <a name="fputs-fputws"></a>fputs, fputws
+# <a name="fputs-fputws"></a>`fputs`, `fputws`
 
 Scrive una stringa in un flusso.
 
@@ -61,40 +60,40 @@ int fputws(
 
 ### <a name="parameters"></a>Parametri
 
-*str*<br/>
+*`str`*\
 Stringa di output.
 
-*flusso*<br/>
-Puntatore alla struttura **FILE**.
+*`stream`*\
+Puntatore alla **`FILE`** struttura.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce un valore non negativo se ha esito positivo. In un errore, **fputs** e **fputws** restituiscono **EOF**. Se *Str* o *Stream* è un puntatore null, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** , quindi **fputs** restituisce **EOF** e **fputws** restituisce **WEOF**.
+Ognuna di queste funzioni restituisce un valore non negativo se ha esito positivo. In un errore **`fputs`** e **`fputws`** restituiscono **`EOF`** . Se *`str`* o *`stream`* è un puntatore null, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **`errno`** su **`EINVAL`** e quindi restituiscono **`EOF`** .
 
-Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Per ulteriori informazioni sui codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Commenti
 
-Ognuna di queste funzioni copia *Str* nel *flusso* di output nella posizione corrente. **fputws** copia l'argomento a caratteri wide *Str* in *Stream* come stringa di caratteri multibyte o una stringa di caratteri wide, a seconda che il *flusso* sia aperto in modalità testo o in modalità binaria, rispettivamente. Nessuna delle funzioni copia il carattere Null di terminazione.
+Ognuna di queste funzioni copia nell' *`str`* output *`stream`* nella posizione corrente. **`fputws`** copia l'argomento a caratteri wide *`str`* in *`stream`* come una stringa di caratteri multibyte o una stringa di caratteri wide a seconda che *`stream`* venga aperto in modalità testo o in modalità binaria, rispettivamente. Nessuna delle funzioni copia il carattere Null di terminazione.
 
-Le due funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **fputs** attualmente non supporta l'output in un flusso Unicode.
+Le due funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **`fputs`** Attualmente non supporta l'output in un flusso UNICODE.
 
-Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificare questa situazione, vedere [stato globale in CRT](../global-state.md).
+Per impostazione predefinita, lo stato globale di questa funzione ha come ambito l'applicazione. Per modificarlo, vedere [stato globale in CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_fputts**|**fputs**|**fputs**|**fputws**|
+|**`_fputts`**|**`fputs`**|**`fputs`**|**`fputws`**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
-|**fputs**|\<stdio.h>|
-|**fputws**|\<stdio.h> o \<wchar.h>|
+|**`fputs`**|\<stdio.h>|
+|**`fputws`**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, ovvero **stdin**, **stdout** e **stderr**, devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console,, **`stdin`** e, **`stdout`** **`stderr`** devono essere reindirizzati prima che le funzioni di runtime C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -117,7 +116,7 @@ Hello world from fputs.
 
 ## <a name="see-also"></a>Vedere anche
 
-[I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
-[fgets, fgetws](fgets-fgetws.md)<br/>
-[gets, _getws](../../c-runtime-library/gets-getws.md)<br/>
-[puts, _putws](puts-putws.md)<br/>
+[I/O di flusso](../../c-runtime-library/stream-i-o.md)\
+[`fgets`, `fgetws`](fgets-fgetws.md)\
+[`gets`, `_getws`](../../c-runtime-library/gets-getws.md)\
+[`puts`, `_putws`](puts-putws.md)

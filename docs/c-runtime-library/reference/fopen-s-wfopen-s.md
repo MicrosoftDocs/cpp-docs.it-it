@@ -1,7 +1,7 @@
 ---
 title: fopen_s, _wfopen_s
 description: Descrive l'API per `fopen_s` e `_wfopen_s`
-ms.date: 11/20/2020
+ms.date: 2/24/2021
 api_name:
 - _wfopen_s
 - fopen_s
@@ -39,13 +39,12 @@ helpviewer_keywords:
 - Unicode [C++], writing files
 - files [C++], opening
 - Unicode [C++], files
-ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-ms.openlocfilehash: 1d6d0b739db1177b903c0e8aa8e6f55e49c1df16
-ms.sourcegitcommit: b02c61667ff7f38e7add266d0aabd8463f2dbfa1
+ms.openlocfilehash: a034eda7ad45be30decccee50a104c0565907c41
+ms.sourcegitcommit: c0c9cdae79f19655e809a4979227c51bb19cff63
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95483165"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102236537"
 ---
 # <a name="fopen_s-_wfopen_s"></a>`fopen_s`, `_wfopen_s`
 
@@ -128,7 +127,7 @@ Nella tabella seguente sono riepilogate le modalità per i diversi *`ccs`* flag 
 
 I file aperti per la scrittura in modalità Unicode dispongono di un indicatore per l'ordine dei byte scritto automaticamente in tali file.
 
-Se *`mode`* è **`"a, ccs=` _encoding_ codifica `"`**, **`fopen_s`** tenta innanzitutto di aprire il file con accesso in lettura e in scrittura. Se ha esito positivo, la funzione legge l'indicatore per l'ordine dei byte per determinare la codifica del file. In caso contrario, la funzione usa la codifica predefinita per il file. In entrambi i casi, **`fopen_s`** riapre il file con accesso di sola scrittura. (Questo vale solo per la **`a`** modalità, non per **`a+`** ).
+Se *`mode`* è **`"a, ccs=` codifica `"`**, **`fopen_s`** tenta innanzitutto di aprire il file con accesso in lettura e in scrittura. Se ha esito positivo, la funzione legge l'indicatore per l'ordine dei byte per determinare la codifica del file. In caso contrario, la funzione usa la codifica predefinita per il file. In entrambi i casi, **`fopen_s`** riapre il file con accesso di sola scrittura. (Questo vale solo per la **`a`** modalità, non per **`a+`** ).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -152,6 +151,8 @@ Quando un file viene aperto usando il **`"a"`** tipo di **`"a+"`** accesso o, tu
 La **`"a"`** modalità non rimuove il marcatore EOF prima dell'aggiunta al file. Al termine dell'accodamento, il `TYPE` comando MS-DOS Mostra solo i dati fino al marcatore EOF originale e non i dati aggiunti al file. La **`"a+"`** modalità rimuove il marcatore EOF prima dell'aggiunta al file. Dopo l'aggiunta, il `TYPE` comando MS-DOS Mostra tutti i dati nel file. La **`"a+"`** modalità è necessaria per l'aggiunta a un file di flusso terminato con il `CTRL+Z` marcatore EOF.
 
 Quando il **`"r+"`** **`"w+"`** tipo di accesso, o **`"a+"`** viene specificato, sono consentite sia la lettura che la scrittura. (Il file viene definito aperto per "Update"). Tuttavia, quando si passa dalla lettura alla scrittura, l'operazione di input deve rientrare in un marcatore EOF. Se non è presente alcun marcatore EOF, è necessario usare una chiamata a una funzione di posizionamento di file. Le funzioni di posizionamento dei file sono **`fsetpos`** , [`fseek`](fseek-fseeki64.md) e [`rewind`](rewind.md) . Quando si passa dalla scrittura alla lettura, è necessario usare una chiamata corrispondente a **`fflush`** o a una funzione di posizionamento dei file.
+
+A partire da C11, è possibile aggiungere **`"x"`** a **`"w"`** o **`"w+"`** per provocare l'esito negativo della funzione se il file esiste, anziché sovrascriverlo.
 
 Oltre ai valori precedenti, è possibile includere i caratteri seguenti in *`mode`* per specificare la modalità di conversione per i caratteri di nuova riga:
 
@@ -177,7 +178,7 @@ Per altre informazioni sull'uso delle modalità testo e binaria in formato Unico
 | **`R`** | Specifica che la memorizzazione nella cache è ottimizzata, ma non limitata, per l'accesso casuale dal disco. |
 | **`t`** | Specifica un file come temporaneo. Se possibile, non viene scaricato su disco. |
 | **`D`** | Specifica un file come temporaneo. Viene eliminato quando viene chiuso l'ultimo puntatore del file. |
-| **`ccs=**`_codifica_ | Specifica il set di caratteri codificati da usare (uno tra **`UTF-8`** , **`UTF-16LE`** o **`UNICODE`** ) per questo file. Lasciare non specificato se si vuole la codifica ANSI. |
+| **`ccs=`**_codifica_ | Specifica il set di caratteri codificati da usare (uno tra **`UTF-8`** , **`UTF-16LE`** o **`UNICODE`** ) per questo file. Lasciare non specificato se si vuole la codifica ANSI. |
 
 I caratteri validi per la *`mode`* stringa usata in **`fopen_s`** e [`_fdopen`](fdopen-wfdopen.md) corrispondono agli *`oflag`* argomenti usati in [`_open`](open-wopen.md) e [`_sopen`](sopen-wsopen.md) , come indicato di seguito.
 
@@ -201,7 +202,7 @@ I caratteri validi per la *`mode`* stringa usata in **`fopen_s`** e [`_fdopen`](
 |**`ccs=UTF-8`**|**`_O_UTF8`**|
 |**`ccs=UTF-16LE`**|**`_O_UTF16`**|
 
-Se si usa **`rb`** la modalità, i file Win32 con mapping della memoria potrebbero anche essere un'opzione se non è necessario trasferire il codice, si prevede di leggere gran parte del file o non si è interessati alle prestazioni della rete.
+Se si usa **`rb`** la modalità, i file Win32 con mapping della memoria possono anche essere un'opzione se non è necessario trasferire il codice, si prevede di leggere gran parte del file o non si è interessati alle prestazioni della rete.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -210,7 +211,7 @@ Se si usa **`rb`** la modalità, i file Win32 con mapping della memoria potrebbe
 |**`fopen_s`**|`<stdio.h>`|
 |**`_wfopen_s`**|`<stdio.h>` o `<wchar.h>`|
 
-Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Librerie
 

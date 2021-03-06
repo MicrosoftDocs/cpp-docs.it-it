@@ -5,12 +5,12 @@ ms.date: 02/05/2021
 ms.description: Configure a Visual Studio MSBuild project to use the Clang/LLVM toolchain.
 helpviewer_keywords:
 - Clang support for C++ MSBuild projects
-ms.openlocfilehash: 7492d2c75e458fb4a8a94e009f40b49edf1a8204
-ms.sourcegitcommit: 77235bff6a7b2621c501938e30d93cb15f5733cb
+ms.openlocfilehash: 31f79280e51bcf277bd3a992c4d7d2e39e679f30
+ms.sourcegitcommit: c0c9cdae79f19655e809a4979227c51bb19cff63
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100006052"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102236621"
 ---
 # <a name="clangllvm-support-in-visual-studio-projects"></a>Supporto Clang/LLVM nei progetti di Visual Studio
 
@@ -22,15 +22,17 @@ Il supporto Clang per i progetti CMake e MSBuild è disponibile in Visual Studio
 
 ::: moniker range="msvc-160"
 
-È possibile usare Visual Studio 2019 versione 16,2 con Clang per modificare, compilare ed eseguire il debug di progetti C++ Visual Studio (MSBuild) destinati a Windows o Linux.
+È possibile usare Visual Studio 2019 versione 16,2 e successive con Clang per modificare, compilare ed eseguire il debug di progetti C++ Visual Studio (MSBuild) destinati a Windows o Linux.
 
 ## <a name="install"></a>Installazione
 
 Per il migliore supporto dell'IDE in Visual Studio, è consigliabile usare gli strumenti del compilatore Clang più recenti per Windows. Se gli strumenti non sono già disponibili, è possibile installarli aprendo il Programma di installazione di Visual Studio e scegliendo **C++ Clang Tools for Windows** in **sviluppo per desktop con** i componenti facoltativi c++. Potrebbe essere preferibile usare un'installazione Clang esistente nel computer. in tal caso, scegliere gli **strumenti di compilazione C++ Clang-CL for V142.** componente facoltativo.
 
-La libreria standard di Microsoft C++ richiede attualmente almeno 8.0.0 Clang. La versione in bundle di Clang viene aggiornata automaticamente per rimanere aggiornati con gli aggiornamenti nell'implementazione Microsoft della libreria standard.
+La libreria standard di Microsoft C++ richiede almeno 8.0.0 Clang.
 
 ![Screenshot del programma di installazione di Visual Studio con la scheda singoli componenti selezionata e i componenti C Plus Plus Clang visibili.](media/clang-install-vs2019.png)
+
+Nelle versioni successive di Visual Studio sono disponibili versioni più recenti del set di strumenti Clang. La versione in bundle di Clang viene aggiornata automaticamente per rimanere aggiornati con gli aggiornamenti nell'implementazione Microsoft della libreria standard. Ad esempio, Visual Studio 2019 versione 16,9 include Clang V11.
 
 ## <a name="configure-a-windows-project-to-use-clang-tools"></a>Configurare un progetto Windows per l'uso di strumenti Clang
 

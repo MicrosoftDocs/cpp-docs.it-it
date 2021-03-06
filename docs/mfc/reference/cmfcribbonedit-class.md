@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetTextAlign
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
-ms.openlocfilehash: 83920c9779af10861e32ce964e91af767a3d9e96
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: be88698de9f98c590efebd4e2e8780d810aa8b96
+ms.sourcegitcommit: c0c9cdae79f19655e809a4979227c51bb19cff63
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97193101"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102236563"
 ---
 # <a name="cmfcribbonedit-class"></a>Classe CMFCRibbonEdit
 
@@ -95,13 +95,13 @@ class CMFCRibbonEdit : public CMFCRibbonButton
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Description|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CMFCRibbonEdit:: CMFCRibbonEdit](#cmfcribbonedit)|Costruisce un oggetto `CMFCRibbonEdit`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Description|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CMFCRibbonEdit:: CanBeStretched](#canbestretched)|Indica se l'altezza del `CMFCRibbonEdit` controllo può aumentare verticalmente rispetto all'altezza di una riga della barra multifunzione.|
 |[CMFCRibbonEdit:: CMFCRibbonEdit](#cmfcribbonedit)|Costruisce un oggetto `CMFCRibbonEdit`.|
@@ -528,7 +528,7 @@ virtual void OnDrawOnList(
 in Puntatore a un contesto di dispositivo per il `CMFCRibbonEdit` controllo.
 
 *strText*<br/>
-in Testo visualizzato [](../../mfc/reference/cmfcribbonedit-class.md "Classe CMFCRibbonEdit") .
+[in] Testo visualizzato.
 
 *nTextOffset*<br/>
 in Distanza, in pixel, dal lato sinistro della casella di riepilogo al testo visualizzato.

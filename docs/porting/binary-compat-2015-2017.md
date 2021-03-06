@@ -4,12 +4,12 @@ description: Viene descritto il funzionamento della compatibilità binaria tra i
 ms.date: 02/17/2021
 helpviewer_keywords:
 - binary compatibility, Visual C++
-ms.openlocfilehash: d8c4c0312003496db522e59dba84a9633e94b1b4
-ms.sourcegitcommit: 5efc34c2b98d4d0d3e41aec38b213f062c19d078
+ms.openlocfilehash: a91e339e70843087adc12238edac91332c1a4453
+ms.sourcegitcommit: c0c9cdae79f19655e809a4979227c51bb19cff63
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101844520"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102236576"
 ---
 # <a name="c-binary-compatibility-between-visual-studio-2015-2017-and-2019"></a>Compatibilità binaria C++ tra Visual Studio 2015, 2017 e 2019
 
@@ -17,7 +17,7 @@ I set di strumenti del compilatore Microsoft C++ (MSVC) in Visual Studio 2013 e 
 
 Questo comportamento è stato modificato in Visual Studio 2015, 2017 e 2019. Le librerie e le app di Runtime compilate da una qualsiasi di queste versioni del compilatore sono compatibili con binario. Si riflette nel numero principale del set di strumenti C++, che inizia con 14 per tutte e tre le versioni. (La versione del set di strumenti è V140 per Visual Studio 2015, V141 per 2017 e V142 per 2019). Supponiamo di avere librerie di terze parti compilate da Visual Studio 2015. È comunque possibile usarli in un'applicazione compilata da Visual Studio 2017 o 2019. Non è necessario ricompilare con un set di strumenti corrispondente. La versione più recente di Microsoft Visual C++ pacchetto ridistribuibile (ridistribuibile) funziona per tutti.
 
-## <a name="restrictions-on-binary-compatibility"></a>Limitazioni relative alla compatibilità binaria
+## <a name="restrictions-on-binary-compatibility"></a><a name="restrictions"></a> Limitazioni relative alla compatibilità binaria
 
 Esistono tre importanti restrizioni sulla compatibilità binaria tra i set di strumenti V140, V141 e V142 e gli aggiornamenti della versione con numerazione secondaria:
 
