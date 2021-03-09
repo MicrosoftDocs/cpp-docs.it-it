@@ -31,12 +31,12 @@ helpviewer_keywords:
 - qsort_s function
 - sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
-ms.openlocfilehash: 01890db21bc1eb470b57aa796313da4c6f0c50a8
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 0f0132cbb1210d6289f676f3474683803b58a5a6
+ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97137163"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514473"
 ---
 # <a name="qsort_s"></a>qsort_s
 
@@ -95,7 +95,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|Key|base|compare|num|width|errno|
+|key|base|compare|num|width|errno|
 |---------|----------|-------------|---------|-----------|-----------|
 |**NULL**|any|any|any|any|**EINVAL**|
 |any|**NULL**|any|!= 0|any|**EINVAL**|
@@ -112,7 +112,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-**Librerie:** tutte le versioni delle [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md).
+**Librerie:** Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Esempio
 

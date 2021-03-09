@@ -17,14 +17,14 @@ helpviewer_keywords:
 - libraries [C++]
 - libraries [C++], run-time
 - linking [C++], libraries
-ms.openlocfilehash: 395158a3db37e431f0972bb35f1e5161c9f4bc81
-ms.sourcegitcommit: 6ed44d9c3fb32e965e363b9c69686739a90a2117
+ms.openlocfilehash: dab3d767865b91f8a8e567488698a197c35c9b74
+ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102465554"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514694"
 ---
-# <a name="c-runtime-crt-and-c-standard-library-lib-files"></a>Runtime C (CRT) e file di libreria standard C++ `.lib`
+# <a name="c-runtime-crt-and-c-standard-library-stl-lib-files"></a>Runtime C (CRT) e file della libreria standard C++ (STL) `.lib`
 
 Questo argomento elenca i `.lib` file di libreria di runtime di Microsoft C a cui è possibile eseguire il collegamento quando si sviluppa l'applicazione e le relative opzioni del compilatore e direttive per il preprocessore associate.
 

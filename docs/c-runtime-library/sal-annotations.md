@@ -49,12 +49,12 @@ helpviewer_keywords:
 - ecount annotation
 - bcount annotation
 ms.assetid: 81893638-010c-41a0-9cb3-666fe360f3e0
-ms.openlocfilehash: 727c81ae1b141346bb47ff92b6af76d5c45aa106
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: c4c75213daa69c433b379fb78a0649fa1473de1b
+ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590264"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514460"
 ---
 # <a name="sal-annotations"></a>Annotazioni SAL
 
@@ -64,4 +64,4 @@ Per altre informazioni sull'uso delle annotazioni SAL in Visual Studio, vedere [
 
 ## <a name="see-also"></a>Vedi anche
 
-[Funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md)
+[Runtime C (CRT) e file della libreria standard C++ (STL) `.lib`](../c-runtime-library/crt-library-features.md)

@@ -31,12 +31,12 @@ helpviewer_keywords:
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-ms.openlocfilehash: dd4d58b39d4c18f2fff7da54c5fbd0f2346dfdd4
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 62b72a9f71f967077169086371ebf36542b154ed
+ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97235879"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514447"
 ---
 # <a name="_fcvt_s"></a>_fcvt_s
 
@@ -126,7 +126,7 @@ Per impostazione predefinita, lo stato globale di questa funzione ha come ambito
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
-**Librerie:** tutte le versioni delle [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md).
+**Librerie:** Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Esempio
 

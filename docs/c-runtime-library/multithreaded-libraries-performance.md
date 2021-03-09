@@ -9,12 +9,12 @@ helpviewer_keywords:
 - performance, multithreading
 - multithreaded libraries
 ms.assetid: faa5d808-087c-463d-8f0d-8c478d137296
-ms.openlocfilehash: edfbbf3055e9023c74cf0e154577d4b1853f557b
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 39d77d52dbc8ac2e725cf46c98c5462df701e3eb
+ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590199"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514668"
 ---
 # <a name="multithreaded-libraries-performance"></a>Prestazioni librerie multithread
 
@@ -38,4 +38,4 @@ Le prestazioni delle librerie con multithreading sono state migliorate e sono vi
 
 ## <a name="see-also"></a>Vedi anche
 
-[Funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md)
+[Runtime C (CRT) e file della libreria standard C++ (STL) `.lib`](../c-runtime-library/crt-library-features.md)

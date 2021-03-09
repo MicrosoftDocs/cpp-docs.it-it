@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-ms.openlocfilehash: 963f5510350aa3be25586811889189d28a5f7b66
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 96642e5e79f9df7c0a063582408c0463600be20f
+ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91589887"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514681"
 ---
 # <a name="security-features-in-the-crt"></a>Funzionalità di sicurezza in CRT
 
@@ -90,4 +90,4 @@ Di seguito sono riportate alcune delle funzionalità di sicurezza:
 
 [Convalida di parametri](../c-runtime-library/parameter-validation.md)<br/>
 [Overload di modelli sicuri](../c-runtime-library/secure-template-overloads.md)<br/>
-[Funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md)
+[Runtime C (CRT) e file della libreria standard C++ (STL) `.lib`](../c-runtime-library/crt-library-features.md)

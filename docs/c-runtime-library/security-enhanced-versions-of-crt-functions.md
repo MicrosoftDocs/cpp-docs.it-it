@@ -7,12 +7,12 @@ helpviewer_keywords:
 - security-enhanced CRT
 - CRT, security enhancements
 ms.assetid: f87e5a01-4cb2-4379-9e8f-d4693828c55a
-ms.openlocfilehash: 95e94eb7790ef589fee3287b6cee8997faac7ab6
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: eda9a98593bb0951c9be357c35492eaf129e3582
+ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97277206"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514720"
 ---
 # <a name="security-enhanced-versions-of-crt-functions"></a>Versioni con sicurezza avanzata delle funzioni CRT
 
@@ -20,7 +20,7 @@ Sono disponibili altre versioni sicure delle routine di libreria di runtime. Per
 
 ## <a name="secure-functions"></a>Funzioni sicure
 
-|Funzione CRT|Funzione di sicurezza avanzata|Usa|
+|Funzione CRT|Funzione di sicurezza avanzata|Uso|
 |------------------|--------------------------------|---------|
 |[_access, _waccess](../c-runtime-library/reference/access-waccess.md)|[_access_s, _waccess_s](../c-runtime-library/reference/access-s-waccess-s.md)|Determina l'autorizzazione di accesso ai file|
 |[_alloca](../c-runtime-library/reference/alloca.md)|[_malloca](../c-runtime-library/reference/malloca.md)|Alloca memoria sullo stack|
@@ -102,4 +102,4 @@ Sono disponibili altre versioni sicure delle routine di libreria di runtime. Per
 
 ## <a name="see-also"></a>Vedi anche
 
-[Funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md)
+[Runtime C (CRT) e file della libreria standard C++ (STL) `.lib`](../c-runtime-library/crt-library-features.md)

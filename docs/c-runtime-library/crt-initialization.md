@@ -6,12 +6,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CRT initialization [C++]
 ms.assetid: e7979813-1856-4848-9639-f29c86b74ad7
-ms.openlocfilehash: 25f1e2a7e5b7d91c729bb45bd79ba9a8720cead1
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: e33429d63cebb34514918d059649679ed28b924c
+ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91589770"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514642"
 ---
 # <a name="crt-initialization"></a>Inizializzazione CRT
 
@@ -97,4 +97,4 @@ Quindi, la libreria CRT utilizza sia `__xc_a` che `__xc_z` per determinare l'ini
 
 ## <a name="see-also"></a>Vedi anche
 
-[Funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md)
+[Runtime C (CRT) e file della libreria standard C++ (STL) `.lib`](../c-runtime-library/crt-library-features.md)

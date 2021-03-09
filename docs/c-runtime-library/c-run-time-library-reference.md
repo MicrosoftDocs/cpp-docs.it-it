@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CRT
 - runtime libraries
 - CRT, reference
-ms.openlocfilehash: c574230d5d2861dd8734d8927f0e91402bc224bf
-ms.sourcegitcommit: 6ed44d9c3fb32e965e363b9c69686739a90a2117
+ms.openlocfilehash: f613f70ed39947605a4ce2b8524c8a0f6d069c68
+ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102465567"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514408"
 ---
 # <a name="microsoft-c-runtime-library-crt-reference"></a>Guida di riferimento alla libreria di runtime Microsoft C (CRT)
 
@@ -47,8 +47,8 @@ Vengono forniti collegamenti alle funzioni della libreria di runtime C, organizz
 [Stringhe di lingua e paese/area geografica](locale-names-languages-and-country-region-strings.md)\
 Viene descritto come utilizzare la funzione `setlocale` per impostare le stringhe lingua e paese.
 
-[Runtime C (CRT) e file di libreria standard C++ `.lib`](crt-library-features.md)\
-Vengono descritti i `.lib` file che costituiscono le librerie di runtime C e le relative opzioni del compilatore associate e le direttive per il preprocessore.
+[Runtime C (CRT) e file della libreria standard C++ (STL) `.lib`](crt-library-features.md)\
+Elenco di `.lib` file che costituiscono le librerie di runtime C e le relative opzioni del compilatore associate e le direttive per il preprocessore.
 
 ## <a name="related-sections"></a>Sezioni correlate
 

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - C++ Standard Library
 - template libraries
 - libraries, Standard C++
-ms.openlocfilehash: 11abb497582f7a07a98b1bc469a9d380da1fde92
-ms.sourcegitcommit: 6ed44d9c3fb32e965e363b9c69686739a90a2117
+ms.openlocfilehash: ba07f1625b73391f1f9f4e33210b8ba206fb012b
+ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102465541"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514564"
 ---
 # <a name="c-standard-library-reference"></a>Riferimento per la libreria standard C++
 
 Un programma C++ può chiamare un numero elevato di funzioni da questa implementazione conforme della libreria standard di C++. Queste funzioni eseguono servizi quali input e output e forniscono implementazioni efficienti delle operazioni di uso frequente.
 
-Per ulteriori informazioni sul collegamento con il file di Visual C++ runtime appropriato `.lib` , vedere [C Runtime (CRT) e C++ Standard Library. `lib` files](../c-runtime-library/crt-library-features.md).
+Per ulteriori informazioni sul collegamento con il file di Visual C++ runtime appropriato `.lib` , vedere [ `.lib` file di runtime C (CRT) e libreria standard C++ (STL)](../c-runtime-library/crt-library-features.md).
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 

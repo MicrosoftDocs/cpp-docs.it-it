@@ -8,12 +8,12 @@ helpviewer_keywords:
 - compatibility, C runtime libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: 10c21f3f471c105ac4e40bda449aaf8987edba25
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: aea87c3a7b82292a5c9c45a960a5a890a1fff3fd
+ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590043"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514616"
 ---
 # <a name="compatibility"></a>Compatibilità
 
@@ -44,4 +44,4 @@ Ad eccezione di quanto indicato nella documentazione per funzioni specifiche, UC
 |[UNIX](../c-runtime-library/unix.md)|Fornisce indicazioni per trasferire i programmi su UNIX.|
 |[Piattaforme Windows (CRT)](../c-runtime-library/windows-platforms-crt.md)|Elenca i sistemi operativi che CRT supporta.|
 |[Compatibilità con le versioni precedenti](../c-runtime-library/backward-compatibility.md)|Descrive come eseguire il mapping dei nomi CRT precedenti ai nuovi.|
-|[Funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md)|Fornisce una panoramica sui file della libreria CRT (.lib) e le opzioni del compilatore associate.|
+|[Runtime C (CRT) e file della libreria standard C++ (STL) `.lib`](../c-runtime-library/crt-library-features.md)|Fornisce una panoramica sui file della libreria CRT (.lib) e le opzioni del compilatore associate.|
