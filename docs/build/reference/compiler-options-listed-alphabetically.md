@@ -4,12 +4,12 @@ description: Elenco di riferimenti in ordine alfabetico delle opzioni della riga
 ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 532ee4aceef281f7aa52fee6cd405a3520409218
-ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
+ms.openlocfilehash: de83cd5e2d649b88de4e21f3d828f68504705dc2
+ms.sourcegitcommit: 6ed44d9c3fb32e965e363b9c69686739a90a2117
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97514545"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102465366"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opzioni del compilatore elencate in ordine alfabetico
 
@@ -56,6 +56,7 @@ Questa tabella contiene un elenco in ordine alfabetico delle opzioni del compila
 | [`/Fp`](fp-name-dot-pch-file.md) | Specifica un nome del file di intestazione precompilato. |
 | [`/FR`](fr-fr-create-dot-sbr-file.md)<br /><br /> [`/Fr`](fr-fr-create-dot-sbr-file.md) | Genera file del browser. **`/Fr`** è deprecato. |
 | [`/FS`](fs-force-synchronous-pdb-writes.md) | Forza la serializzazione di tutte le scritture nel file del database di programma (PDB) tramite MSPDBSRV.EXE. |
+| [`/fsanitize`](fsanitize.md) | Consente la compilazione di strumentazione di sanificazione, ad esempio AddressSanitizer. |
 | [`/FU`](fu-name-forced-hash-using-file.md) | Impone l'utilizzo di un nome di file come se fosse stato passato alla [`#using`](../../preprocessor/hash-using-directive-cpp.md) direttiva. |
 | [`/Fx`](fx-merge-injected-code.md) | Unisce il codice inserito al file di origine. |
 | [`/GA`](ga-optimize-for-windows-application.md) | Ottimizza il codice per l'applicazione Windows. |
@@ -175,7 +176,7 @@ Questa tabella contiene un elenco in ordine alfabetico delle opzioni del compila
 | [`/Zs`](zs-syntax-check-only.md) | Controlla solo la sintassi. |
 | [`/ZW`](zw-windows-runtime-compilation.md) | Produce un file di output da eseguire nel Windows Runtime. |
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Opzioni del compilatore MSVC](compiler-options.md)\
 [Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

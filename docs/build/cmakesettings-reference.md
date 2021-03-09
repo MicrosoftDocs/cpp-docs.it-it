@@ -5,12 +5,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 2be5edb616764d56e7c08a51be19aab11a62f227
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: e68154d84123d416aa9d9d18f538c4b62fddce18
+ms.sourcegitcommit: 6ed44d9c3fb32e965e363b9c69686739a90a2117
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97156905"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102465353"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Informazioni di riferimento sullo schema CMakeSettings.json
 
@@ -32,8 +32,8 @@ La `configurations` matrice contiene tutte le configurazioni per un progetto CMa
 
 `configuration` ha le proprietà seguenti:
 
-- `addressSanitizerEnabled`: se **`true`** Compila il programma con l'igienizzatore di indirizzi (sperimentale in Windows). In Linux compilare con-fno-omette-frame-pointer e il livello di ottimizzazione del compilatore-OS o-oo per ottenere risultati ottimali.
-- `addressSanitizerRuntimeFlags`: flag di runtime passati a AddressSanitizer tramite la variabile di ambiente ASAN_OPTIONS. Formato: organizzazione1 = valore: organizzazione2 = value2.
+- `addressSanitizerEnabled`: se **`true`** Compila il programma con [AddressSanitizer](../sanitizers/asan.md). In Linux compilare con-fno-omette-frame-pointer e il livello di ottimizzazione del compilatore-OS o-oo per ottenere risultati ottimali.
+- `addressSanitizerRuntimeFlags`: flag di runtime passati a [AddressSanitizer](../sanitizers/asan.md) tramite la variabile di ambiente ASAN_OPTIONS. Formato: organizzazione1 = valore: organizzazione2 = value2.
 - `buildCommandArgs`: specifica opzioni di compilazione nativa passate a CMake dopo --build --. Ad esempio, il passaggio di -v quando si usa il generatore Ninja forza Ninja a restituire le righe di comando. Vedere [Argomenti della riga di comando Ninja](#ninja) per altre informazioni sui comandi Ninja.
 - `buildRoot`: specifica la directory in cui CMake genera script di compilazione per il generatore selezionato.  Esegue il mapping all'opzione **-DCMAKE_BINARY_DIR** e specifica la posizione in cui verrà creato *CMakeCache.txt* . Se la cartella non esiste, verrà creata. Le macro supportate includono `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
 - `cacheGenerationCommand`: specifica uno strumento da riga di comando e gli argomenti, ad esempio *gencache.bat debug* per generare la cache. Il comando viene eseguito dalla shell nell'ambiente specificato per la configurazione quando l'utente richiede in modo esplicito la rigenerazione oppure viene modificato un CMakeLists.txt o CMakeSettings.jssul file.
@@ -281,7 +281,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|Opzione|Description|
+|Opzione|Descrizione|
 |--------------|------------|
 | --version  | versione ninja per la stampa ("1.7.1")|
 |   -C DIR   | passa a DIR prima di eseguire qualunque altra operazione|

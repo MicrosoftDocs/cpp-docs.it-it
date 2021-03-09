@@ -1,31 +1,27 @@
 ---
 title: Informazioni di riferimento sulla libreria di runtime di C
 description: Collegamenti a informazioni e informazioni di riferimento per le funzioni della libreria di runtime Microsoft C.
-ms.date: 10/05/2020
+ms.date: 3/5/2021
 f1_keywords:
 - c.runtime
 helpviewer_keywords:
 - CRT
 - runtime libraries
 - CRT, reference
-ms.assetid: a503e11c-8dca-4846-84fb-025a826c32b8
-ms.openlocfilehash: 2e5fcadca5dcca30370b0f03917650136ab46ee8
-ms.sourcegitcommit: 8caaf5e00aeb727741a273aecafa15de293426cf
+ms.openlocfilehash: c574230d5d2861dd8734d8927f0e91402bc224bf
+ms.sourcegitcommit: 6ed44d9c3fb32e965e363b9c69686739a90a2117
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91806526"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102465567"
 ---
-# <a name="c-runtime-library-reference"></a>Riferimenti alla libreria di runtime C
+# <a name="microsoft-c-runtime-library-crt-reference"></a>Guida di riferimento alla libreria di runtime Microsoft C (CRT)
 
-La libreria di runtime di Microsoft fornisce le routine per la programmazione per il sistema operativo Microsoft Windows. Queste routine automatizzano molte attività di programmazione comuni non fornite dai linguaggi C e C++.
+La libreria di runtime Microsoft fornisce le routine per la programmazione del sistema operativo Microsoft Windows. Queste routine automatizzano molte attività di programmazione comuni non fornite dai linguaggi C e C++.
 
 I programmi di esempio sono inclusi nei singoli argomenti di riferimento per la maggior parte delle routine nella libreria.
 
 ## <a name="in-this-section"></a>Contenuto della sezione
-
-[Librerie di runtime C](crt-library-features.md)\
-Vengono illustrati i file con estensione LIB che includono le librerie di runtime C.
 
 [Routine di Universal C Runtime per categoria](run-time-routines-by-category.md)\
 Fornisce collegamenti alla libreria di runtime per categoria.
@@ -50,6 +46,9 @@ Vengono forniti collegamenti alle funzioni della libreria di runtime C, organizz
 
 [Stringhe di lingua e paese/area geografica](locale-names-languages-and-country-region-strings.md)\
 Viene descritto come utilizzare la funzione `setlocale` per impostare le stringhe lingua e paese.
+
+[Runtime C (CRT) e file di libreria standard C++ `.lib`](crt-library-features.md)\
+Vengono descritti i `.lib` file che costituiscono le librerie di runtime C e le relative opzioni del compilatore associate e le direttive per il preprocessore.
 
 ## <a name="related-sections"></a>Sezioni correlate
 

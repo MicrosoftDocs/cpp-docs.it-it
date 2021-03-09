@@ -10,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 0d85361b8d4b5896d9ed7beae0d310fe28dc98e9
-ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
+ms.openlocfilehash: e426c085acdd0d7bcfeb00b17dcf733a9b856993
+ms.sourcegitcommit: 6ed44d9c3fb32e965e363b9c69686739a90a2117
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89281796"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102465314"
 ---
 # <a name="linker-options"></a>Opzioni del linker
 
@@ -83,6 +83,7 @@ Nella riga di comando le opzioni del linker non fanno distinzione tra maiuscole 
 |[/IMPLIB](implib-name-import-library.md)|Esegue l'override del nome predefinito della libreria di importazione.|
 |[/INCLUDE](include-force-symbol-references.md)|Impone di includere riferimenti al simbolo.|
 |[/INCREMENTAL](incremental-link-incrementally.md)|Controlla il collegamento incrementale.|
+|[/INFERASANLIBS](inferasanlibs.md)|Usa le librerie di sanificazione derivate.|
 |[/INTEGRITYCHECK](integritycheck-require-signature-check.md)|Specifica che il modulo richiede una verifica della firma in fase di caricamento.|
 |[/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)|Specifica un contenitore di chiavi per firmare un assembly.|
 |[/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)|Specifica una chiave o una coppia di chiavi per firmare un assembly.|
@@ -140,7 +141,7 @@ Nella riga di comando le opzioni del linker non fanno distinzione tra maiuscole 
 
 <sup>16,1</sup> questa opzione è disponibile a partire da Visual Studio 2019 versione 16,1.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimenti alla compilazione in C/C++](c-cpp-building-reference.md)\
 [Informazioni di riferimento sul linker MSVC](linking.md)

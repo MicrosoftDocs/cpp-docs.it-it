@@ -1,23 +1,22 @@
 ---
 description: "Altre informazioni su: procedura dettagliata: debug di un'applicazione C++ AMP"
 title: "Procedura dettagliata: Debug di un'applicazione C++ AMP"
-ms.date: 04/23/2019
+ms.date: 03/07/2021
 helpviewer_keywords:
 - debugging, C++ Accelerated Massive Parallelism
 - C++ AMP, debugging
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
-ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 77ae45b07967d92ba162e77dd8a9dccd696a1008
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 7073de40a3b985da89d4f0bb03046696f35c8f02
+ms.sourcegitcommit: 6ed44d9c3fb32e965e363b9c69686739a90a2117
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97344913"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102465586"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Procedura dettagliata: Debug di un'applicazione C++ AMP
 
-In questo argomento viene illustrato come eseguire il debug di un'applicazione che utilizza C++ Accelerated Massive Parallelism (C++ AMP) per sfruttare i vantaggi dell'unità di elaborazione grafica (GPU). Usa un programma di riduzione in parallelo che somma una grande matrice di numeri interi. Vengono illustrate le attività seguenti:
+Questo articolo illustra come eseguire il debug di un'applicazione che usa C++ Accelerated Massive Parallelism (C++ AMP) per sfruttare i vantaggi dell'unità di elaborazione grafica (GPU). Usa un programma di riduzione in parallelo che somma una grande matrice di numeri interi. Vengono illustrate le attività seguenti:
 
 - Avvio del debugger della GPU.
 
@@ -45,7 +44,7 @@ Prima di iniziare questa procedura dettagliata:
 
 ### <a name="to-create-the-sample-project"></a>Per creare il progetto di esempio
 
-Le istruzioni per la creazione di un progetto variano a seconda della versione di Visual Studio in uso. Verificare che sia selezionata la versione corretta nella parte superiore sinistra della pagina.
+Le istruzioni per la creazione di un progetto variano a seconda della versione di Visual Studio in uso. Verificare che sia stata selezionata la versione della documentazione corretta sopra il sommario in questa pagina.
 
 ::: moniker range="msvc-160"
 
@@ -55,7 +54,7 @@ Le istruzioni per la creazione di un progetto variano a seconda della versione d
 
 1. Nella parte superiore della finestra di dialogo impostare **Linguaggio** su **C++**, impostare **Piattaforma** su **Windows** e impostare **Tipo di progetto** su **Console**.
 
-1. Nell'elenco filtrato dei tipi di progetto scegliere **App console** e quindi scegliere **Avanti**. Nella pagina successiva immettere `AMPMapReduce` nella casella **Nome** per specificare un nome per il progetto e specificare facoltativamente il percorso del progetto.
+1. Nell'elenco filtrato dei tipi di progetto scegliere **App console** e quindi scegliere **Avanti**. Nella pagina successiva immettere `AMPMapReduce` nella casella **nome** per specificare un nome per il progetto e specificare il percorso del progetto se si desidera un altro.
 
    ![Assegnare un nome al progetto](../../build/media/mathclient-project-name-2019.png "Denominare il progetto")
 
@@ -196,7 +195,7 @@ Passaggi successivi:
         if (!passed) {
             printf("Actual (GPU): %d, Expected (CPU): %d", actual, expected);
         }
-        printf("sum: %s\n", passed  "Passed!" : "Failed!");
+        printf("sum: %s\n", passed ? "Passed!" : "Failed!");
 
         getchar();
 
@@ -228,7 +227,7 @@ In questa procedura verrà usato il debugger Windows locale per assicurarsi che 
 
 4. Impostare punti di interruzione nelle righe di codice mostrate nella figura seguente (approssimativamente linee 67 riga 70).
 
-   ![Punti di interruzione CPU](../../parallel/amp/media/campcpubreakpoints.png "Punti di interruzione CPU") <br/>
+   ![Punti di interruzione CPU contrassegnati accanto alle righe di codice nell'editor.](../../parallel/amp/media/campcpubreakpoints.png "Punti di interruzione CPU") <br/>
    Punti di interruzione CPU
 
 5. Sulla barra dei menu scegliere **debug**  >  **Avvia debug**.
@@ -251,16 +250,16 @@ Questa sezione illustra come eseguire il debug del codice GPU, che è il codice 
 
 4. Nell'elenco **tipo di debugger** verificare che sia selezionata l'opzione **automatico** .
 
-    **Auto** è il valore predefinito. Prima di Windows 10, **solo la GPU** è il valore richiesto anziché **auto**.
+    **Auto** è il valore predefinito. Nelle versioni precedenti a Windows 10, **solo GPU** è il valore richiesto anziché **auto**.
 
 5. Fare clic su **OK** .
 
 6. Impostare un punto di interruzione alla riga 30, come illustrato nella figura seguente.
 
-   ![Punti di interruzione GPU](../../parallel/amp/media/campgpubreakpoints.png "Punti di interruzione GPU") <br/>
+   ![Punti di interruzione GPU contrassegnati accanto a una riga di codice nell'editor.](../../parallel/amp/media/campgpubreakpoints.png "Punti di interruzione GPU") <br/>
    Punto di interruzione GPU
 
-7. Sulla barra dei menu scegliere **debug**  >  **Avvia debug**. I punti di interruzione nel codice della CPU alle righe 67 e 70 non vengono eseguiti durante il debug della GPU, perché tali righe di codice vengono eseguite sulla CPU.
+7. Sulla barra dei menu scegliere **debug**  >  **Avvia debug**. I punti di interruzione nel codice della CPU alle righe 67 e 70 non vengono eseguiti durante il debug della GPU, perché queste righe di codice vengono eseguite sulla CPU.
 
 ### <a name="to-use-the-gpu-threads-window"></a>Per utilizzare la finestra thread GPU
 
@@ -270,10 +269,10 @@ Questa sezione illustra come eseguire il debug del codice GPU, che è il codice 
 
 2. Ancorare la finestra **thread GPU** nella parte inferiore di Visual Studio. Scegliere il pulsante di **opzione Espandi thread** per visualizzare le caselle di testo riquadro e thread. Nella finestra **thread GPU** viene visualizzato il numero totale di thread GPU attivi e bloccati, come illustrato nella figura seguente.
 
-   ![Finestra Thread GPU con 4 thread attivi](../../parallel/amp/media/campc.png "Finestra Thread GPU con 4 thread attivi") <br/>
+   ![Finestra thread GPU con 4 thread attivi.](../../parallel/amp/media/campc.png "Finestra Thread GPU con 4 thread attivi") <br/>
    Finestra Thread GPU
 
-   Per questo calcolo sono allocate 313 riquadri. Ogni riquadro contiene 32 thread. Poiché il debug della GPU locale si verifica in un emulatore software, sono disponibili quattro thread GPU attivi. I quattro thread eseguono le istruzioni simultaneamente e quindi si spostano insieme all'istruzione successiva.
+   313 i riquadri vengono allocati per questo calcolo. Ogni riquadro contiene 32 thread. Poiché il debug della GPU locale si verifica in un emulatore software, sono disponibili quattro thread GPU attivi. I quattro thread eseguono le istruzioni simultaneamente e quindi si spostano insieme all'istruzione successiva.
 
    Nella finestra **thread GPU** sono disponibili quattro thread GPU attivi e 28 thread GPU bloccati nell'istruzione [tile_barrier:: wait](reference/tile-barrier-class.md#wait) definita a circa la riga 21 ( `t_idx.barrier.wait();` ). Tutti i thread GPU 32 appartengono al primo riquadro, `tile[0]` . Una freccia punta alla riga che include il thread corrente. Per passare a un thread diverso, usare uno dei metodi seguenti:
 
@@ -293,14 +292,14 @@ Questa sezione illustra come eseguire il debug del codice GPU, che è il codice 
 
 3. Assicurarsi che i **thread** siano selezionati nell'angolo superiore sinistro dell'elenco. Nella figura seguente, la finestra **stack in parallelo** Mostra una visualizzazione mirata dello stack di chiamate dei thread GPU che è stato visualizzato nella finestra **thread GPU** .
 
-   ![Finestra Stack in parallelo con 4 thread attivi](../../parallel/amp/media/campd.png "Finestra Stack in parallelo con 4 thread attivi") <br/>
+   ![Finestra stack in parallelo con 4 thread attivi.](../../parallel/amp/media/campd.png "Finestra Stack in parallelo con 4 thread attivi") <br/>
    Finestra Stack in parallelo
 
-   32 thread passati dall' `_kernel_stub` istruzione lambda nella `parallel_for_each` chiamata di funzione e quindi alla `sum_kernel_tiled` funzione, in cui si verifica la riduzione parallela. 28 i thread 32 sono progrediti nell'istruzione [tile_barrier:: wait](reference/tile-barrier-class.md#wait) e rimangono bloccati alla riga 22, mentre gli altri 4 thread rimangono attivi nella `sum_kernel_tiled` funzione alla riga 30.
+   32 thread passati dall' `_kernel_stub` istruzione lambda nella `parallel_for_each` chiamata di funzione e quindi alla `sum_kernel_tiled` funzione, in cui si verifica la riduzione parallela. 28 i thread 32 hanno progredito nell' [`tile_barrier::wait`](reference/tile-barrier-class.md#wait) istruzione e rimangono bloccati alla riga 22, mentre gli altri quattro thread rimangono attivi nella `sum_kernel_tiled` funzione alla riga 30.
 
-   È possibile esaminare le proprietà di un thread GPU disponibili nella finestra **thread GPU** nel DataTip completo della finestra **stack in parallelo** . A tale scopo, posizionare il puntatore del mouse sul stack frame di **sum_kernel_tiled**. La figura seguente mostra DataTip.
+   È possibile esaminare le proprietà di un thread GPU. Sono disponibili nella finestra **thread GPU** nella DataTip avanzata della finestra **stack in parallelo** . Per visualizzarli, posizionare il puntatore del mouse sul stack frame di `sum_kernel_tiled` . La figura seguente mostra DataTip.
 
-   ![Suggerimento dati per finestra Stack in parallelo](../../parallel/amp/media/campe.png "Suggerimento dati per finestra Stack in parallelo") <br/>
+   ![DataTip per la finestra stack in parallelo.](../../parallel/amp/media/campe.png "Suggerimento dati per finestra Stack in parallelo") <br/>
    DataTip thread GPU
 
    Per ulteriori informazioni sulla finestra **stack in parallelo** , vedere [utilizzo della finestra stack in parallelo](/visualstudio/debugger/using-the-parallel-stacks-window).
@@ -323,18 +322,18 @@ Questa sezione illustra come eseguire il debug del codice GPU, che è il codice 
 
    Selezionare l'intestazione di colonna **localA [localIdx [0]]** per ordinare la colonna. Nella figura seguente vengono illustrati i risultati dell'ordinamento in base a **localA [localIdx [0]]**.
 
-   ![Finestra Espressione di controllo in parallelo con risultati ordinati](../../parallel/amp/media/campf.png "Finestra Espressione di controllo in parallelo con risultati ordinati") <br/>
+   ![Finestra Espressioni di controllo parallelo con risultati ordinati.](../../parallel/amp/media/campf.png "Finestra Espressione di controllo in parallelo con risultati ordinati") <br/>
    Risultati ordinamento
 
-   È possibile esportare il contenuto nella finestra espressione di **controllo in parallelo** in Excel scegliendo il pulsante **Excel** e scegliendo **Apri in Excel**. Se nel computer di sviluppo è installato Excel, viene aperto un foglio di lavoro di Excel che contiene il contenuto.
+   È possibile esportare il contenuto nella finestra espressione di **controllo in parallelo** in Excel scegliendo il pulsante **Excel** e scegliendo **Apri in Excel**. Se nel computer di sviluppo è installato Excel, il pulsante apre un foglio di lavoro di Excel che contiene il contenuto.
 
 6. Nell'angolo superiore destro della finestra espressione di controllo in **parallelo** è disponibile un controllo filtro che è possibile usare per filtrare il contenuto usando espressioni booleane. Immettere `localA[localIdx[0]] > 20000` nella casella di testo controllo filtro, quindi premere il tasto **invio** .
 
-   La finestra contiene ora solo i thread in cui il `localA[localIdx[0]]` valore è maggiore di 20000. Il contenuto è ancora ordinato in base alla `localA[localIdx[0]]` colonna, ovvero l'operazione di ordinamento eseguita in precedenza.
+   La finestra contiene ora solo i thread in cui il `localA[localIdx[0]]` valore è maggiore di 20000. Il contenuto è ancora ordinato in base alla `localA[localIdx[0]]` colonna, che è l'azione di ordinamento scelta in precedenza.
 
 ## <a name="flagging-gpu-threads"></a>Contrassegno di thread GPU
 
-È possibile contrassegnare specifici thread GPU contrassegnando tali thread nella finestra **thread GPU** , nella finestra espressione di **controllo** in parallelo o in DataTip nella finestra **stack in parallelo** . Se una riga nella finestra thread GPU contiene più di un thread, contrassegnando la riga vengono contrassegnati tutti i thread contenuti nella riga.
+È possibile contrassegnare specifici thread GPU contrassegnando tali thread nella finestra **thread GPU** , nella finestra espressione di **controllo** in parallelo o in DataTip nella finestra **stack in parallelo** . Se una riga nella finestra thread GPU contiene più di un thread, contrassegnando la riga tutti i thread contenuti nella riga.
 
 ### <a name="to-flag-gpu-threads"></a>Per contrassegnare i thread GPU
 
@@ -346,16 +345,16 @@ Questa sezione illustra come eseguire il debug del codice GPU, che è il codice 
 
    Nella figura seguente vengono mostrati i quattro thread contrassegnati attivi nella finestra **thread GPU** .
 
-   ![Finestra Thread GPU con thread con flag](../../parallel/amp/media/campg.png "Finestra Thread GPU con thread con flag") <br/>
+   ![Finestra thread GPU con thread contrassegnati.](../../parallel/amp/media/campg.png "Finestra Thread GPU con thread con flag") <br/>
    Thread attivi nella finestra Thread GPU
 
    La finestra espressione di **controllo in parallelo** e la DataTip della finestra **stack in parallelo** indicano entrambi i thread contrassegnati.
 
-4. Se si desidera concentrarsi sui quattro thread contrassegnati, è possibile scegliere di visualizzare, nelle finestre **thread GPU**, espressione di **controllo in parallelo** e **stack in parallelo** , solo i thread contrassegnati.
+4. Se si desidera concentrarsi sui quattro thread contrassegnati, è possibile scegliere di visualizzare solo i thread contrassegnati. Limita gli elementi visualizzati nelle finestre **thread GPU**, espressione di **controllo in parallelo** e stack in **parallelo** .
 
    Scegliere il pulsante **Mostra solo con flag** in qualsiasi finestra o nella barra degli strumenti **posizione di debug** . Nella figura seguente viene illustrato il pulsante **Mostra solo con flag** nella barra degli strumenti **posizione di debug** .
 
-   ![Barra degli strumenti Posizione di debug con icona Mostra solo elementi con flag](../../parallel/amp/media/camph.png "Barra degli strumenti Posizione di debug con icona Mostra solo elementi con flag") <br/>
+   ![Barra degli strumenti posizione di debug con icona Mostra solo con flag.](../../parallel/amp/media/camph.png "Barra degli strumenti Posizione di debug con icona Mostra solo elementi con flag") <br/>
    **Mostra pulsante solo con flag**
 
    Ora le finestre **thread GPU**, espressione di **controllo in parallelo** e stack in **parallelo** visualizzano solo i thread contrassegnati.
@@ -374,7 +373,7 @@ Questa sezione illustra come eseguire il debug del codice GPU, che è il codice 
 
    La seguente illustrazione della finestra **thread GPU** Mostra che tutti e quattro i thread sono bloccati.
 
-   ![Finestre Thread GPU con thread bloccati](../../parallel/amp/media/campk.png "Finestre Thread GPU con thread bloccati") <br/>
+   ![Finestre thread GPU che mostrano i thread bloccati.](../../parallel/amp/media/campk.png "Finestre Thread GPU con thread bloccati") <br/>
    Thread bloccati nella finestra **thread GPU**
 
    Analogamente, la finestra espressione di **controllo in parallelo** Mostra che tutti e quattro i thread sono bloccati.
@@ -391,10 +390,10 @@ Questa sezione illustra come eseguire il debug del codice GPU, che è il codice 
 
    I thread nella finestra **thread GPU** sono raggruppati in base all'indirizzo. L'indirizzo corrisponde all'istruzione nel disassembly in cui si trova ogni gruppo di thread. 24 thread sono alla riga 22 in cui viene eseguito il [metodo tile_barrier:: wait](reference/tile-barrier-class.md#wait) . 12 thread sono in corrispondenza dell'istruzione per la barriera alla riga 32. Quattro di questi thread sono contrassegnati. Otto thread si trovano nel punto di interruzione alla riga 30. Quattro di questi thread sono bloccati. Nella figura seguente sono illustrati i thread raggruppati nella finestra **thread GPU** .
 
-   ![Finestra Thread GPU con thread raggruppati per indirizzo](../../parallel/amp/media/campl.png "Finestra Thread GPU con thread raggruppati per indirizzo") <br/>
+   ![Finestra thread GPU con thread raggruppati per indirizzo.](../../parallel/amp/media/campl.png "Finestra Thread GPU con thread raggruppati per indirizzo") <br/>
    Thread raggruppati nella finestra **thread GPU**
 
-2. È anche possibile eseguire l'operazione **Group by** aprendo il menu di scelta rapida per la griglia dati della finestra espressione di **controllo in parallelo** , scegliendo **raggruppa** per e quindi scegliendo la voce di menu che corrisponde a come si desidera raggruppare i thread.
+2. È anche possibile eseguire l'operazione **Group by** aprendo il menu di scelta rapida per la griglia dati della finestra espressione di **controllo in parallelo** . Selezionare **Group by**, quindi scegliere la voce di menu che corrisponde a come si desidera raggruppare i thread.
 
 ## <a name="running-all-threads-to-a-specific-location-in-code"></a>Esecuzione di tutti i thread in una posizione specifica nel codice
 
@@ -408,12 +407,12 @@ Si eseguono tutti i thread di un determinato riquadro alla riga che contiene il 
 
 3. Nel menu di scelta rapida per l' **editor di codice** scegliere **Esegui riquadro corrente fino al cursore**.
 
-   I 24 thread precedentemente bloccati alla barriera alla riga 21 sono passati alla riga 32. Questa operazione viene visualizzata nella finestra **thread GPU** .
+   I 24 thread precedentemente bloccati alla barriera alla riga 21 sono passati alla riga 32. Viene visualizzato nella finestra **thread GPU** .
 
 ## <a name="see-also"></a>Vedi anche
 
-[Panoramica di C++ AMP](../../parallel/amp/cpp-amp-overview.md)<br/>
-[Debug del codice GPU](/visualstudio/debugger/debugging-gpu-code)<br/>
-[Procedura: usare la finestra thread GPU](/visualstudio/debugger/how-to-use-the-gpu-threads-window)<br/>
-[Procedura: usare la finestra espressione di controllo in parallelo](/visualstudio/debugger/how-to-use-the-parallel-watch-window)<br/>
+[Panoramica di C++ AMP](../../parallel/amp/cpp-amp-overview.md)\
+[Debug del codice GPU](/visualstudio/debugger/debugging-gpu-code)\
+[Procedura: usare la finestra thread GPU](/visualstudio/debugger/how-to-use-the-gpu-threads-window)\
+[Procedura: utilizzare la finestra Espressioni di controllo parallela](/visualstudio/debugger/how-to-use-the-parallel-watch-window)\
 [Analisi del codice di C++ AMP con il Visualizzatore di concorrenza](/archive/blogs/nativeconcurrency/analyzing-c-amp-code-with-the-concurrency-visualizer)

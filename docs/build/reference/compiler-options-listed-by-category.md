@@ -5,12 +5,12 @@ ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: bf12948658b5f7e3211c423b5302bc52d1b87729
-ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
+ms.openlocfilehash: b892575719d97ed4a0acb061aae0182ff2d576eb
+ms.sourcegitcommit: 6ed44d9c3fb32e965e363b9c69686739a90a2117
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97514568"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102465379"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opzioni del compilatore elencate per categoria
 
@@ -162,6 +162,7 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 | [`/errorReport`](errorreport-report-internal-compiler-errors.md) | Deprecato. La segnalazione degli errori è controllata dalle impostazioni di [segnalazione errori Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
 | [`/FC`](fc-full-path-of-source-code-file-in-diagnostics.md) | Visualizza il percorso completo dei file di codice sorgente passati a *cl.exe* nel testo di diagnostica. |
 | [`/FS`](fs-force-synchronous-pdb-writes.md) | Forza le scritture nel file PDB da serializzare tramite *MSPDBSRV.EXE*. |
+| [`/fsanitize`](fsanitize.md) | Consente la compilazione di strumentazione di sanificazione, ad esempio AddressSanitizer. |
 | [`/H`](h-restrict-length-of-external-names.md) | Deprecato. Limita la lunghezza dei nomi esterni (pubblici). |
 | [`/HELP`](help-compiler-command-line-help.md) | Elenca le opzioni del compilatore. |
 | [`/J`](j-default-char-type-is-unsigned.md) | Modifica il **`char`** tipo predefinito. |
@@ -232,7 +233,7 @@ Le opzioni sperimentali possono essere supportate solo da determinate versioni d
 | [`/Ze`](za-ze-disable-language-extensions.md) | Deprecato. Attiva le estensioni del linguaggio. |
 | [`/Zg`](zg-generate-function-prototypes.md) | Rimosso in Visual Studio 2015. Genera prototipi di funzione. |
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Riferimenti alla compilazione in C/C++](c-cpp-building-reference.md)\
 [Opzioni del compilatore MSVC](compiler-options.md)\

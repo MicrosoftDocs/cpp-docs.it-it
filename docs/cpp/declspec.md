@@ -8,12 +8,12 @@ f1_keywords:
 - _declspec
 helpviewer_keywords:
 - __declspec keyword [C++]
-ms.openlocfilehash: d0567c522e0e21f70b9ed8acfa428c3374fd09f6
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 1a8644bc05319332967ffd7934e6799408c3d36d
+ms.sourcegitcommit: 6ed44d9c3fb32e965e363b9c69686739a90a2117
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97339540"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102465528"
 ---
 # `__declspec`
 
@@ -23,43 +23,44 @@ La sintassi degli attributi estesa per specificare le informazioni sulla classe 
 
 ## <a name="grammar"></a>Grammatica
 
-*`decl-specifier`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`__declspec (`**  *`extended-decl-modifier-seq`*  **`)`**
+*`decl-specifier`*:\
+&emsp;**`__declspec (`**  *`extended-decl-modifier-seq`*  **`)`**
 
-*`extended-decl-modifier-seq`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`extended-decl-modifier`*<sub>consenso esplicito</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`extended-decl-modifier`* *`extended-decl-modifier-seq`*
+*`extended-decl-modifier-seq`*:\
+&emsp;*`extended-decl-modifier`*<sub>consenso esplicito</sub>\
+&emsp;*`extended-decl-modifier`* *`extended-decl-modifier-seq`*
 
-*`extended-decl-modifier`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`align(`***numero* di **`)`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`allocate("`***nomeseg***`")`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`allocator`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`appdomain`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`code_seg("`***nomeseg***`")`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`deprecated`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`dllimport`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`dllexport`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`jitintrinsic`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`naked`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`noalias`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`noinline`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`noreturn`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`nothrow`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`novtable`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`process`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`property(`**{ **`get=`** _Get-Func-Name_ &#124; **`,put=`** _put-Func-Name_ }**`)`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`restrict`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`safebuffers`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`selectany`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`spectre(nomitigation)`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`thread`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`uuid("`***ComObjectGUID***`")`**
+*`extended-decl-modifier`*:\
+&emsp;**`align(`***numero* di **`)`**\
+&emsp;**`allocate("`***nomeseg***`")`**\
+&emsp;**`allocator`**\
+&emsp;**`appdomain`**\
+&emsp;**`code_seg("`***nomeseg***`")`**\
+&emsp;**`deprecated`**\
+&emsp;**`dllimport`**\
+&emsp;**`dllexport`**\
+&emsp;**`jitintrinsic`**\
+&emsp;**`naked`**\
+&emsp;**`noalias`**\
+&emsp;**`noinline`**\
+&emsp;**`noreturn`**\
+&emsp;**`nothrow`**\
+&emsp;**`novtable`**\
+&emsp;**`no_sanitize_address`**\
+&emsp;**`process`**\
+&emsp;**`property(`**{ **`get=`** _Get-Func-Name_ &#124; **`,put=`** _put-Func-Name_ }**`)`**\
+&emsp;**`restrict`**\
+&emsp;**`safebuffers`**\
+&emsp;**`selectany`**\
+&emsp;**`spectre(nomitigation)`**\
+&emsp;**`thread`**\
+&emsp;**`uuid("`***ComObjectGUID***`")`**
 
 Uno spazio vuoto separa la sequenza dei modificatori di dichiarazione. Gli esempi vengono visualizzati nelle sezioni successive.
 
-La grammatica degli attributi estesa supporta questi attributi della classe di archiviazione specifici di Microsoft: [`align`](../cpp/align-cpp.md) ,, [`allocate`](../cpp/allocate.md) [`allocator`](../cpp/allocator.md) , [`appdomain`](../cpp/appdomain.md) , [`code_seg`](../cpp/code-seg-declspec.md) , [`deprecated`](../cpp/deprecated-cpp.md) , [`dllexport`](../cpp/dllexport-dllimport.md) , [`dllimport`](../cpp/dllexport-dllimport.md) , [`jitintrinsic`](../cpp/jitintrinsic.md) , [`naked`](../cpp/naked-cpp.md) , [`noalias`](../cpp/noalias.md) , [`noinline`](../cpp/noinline.md) , [`noreturn`](../cpp/noreturn.md) , [`nothrow`](../cpp/nothrow-cpp.md) , [`novtable`](../cpp/novtable.md) , [`process`](../cpp/process.md) , [`restrict`](../cpp/restrict.md) , [`safebuffers`](../cpp/safebuffers.md) , [`selectany`](../cpp/selectany.md) , [`spectre`](../cpp/spectre.md) e [`thread`](../cpp/thread.md) . Supporta inoltre questi attributi dell'oggetto COM: [`property`](../cpp/property-cpp.md) e [`uuid`](../cpp/uuid-cpp.md) .
+La grammatica degli attributi estesa supporta questi attributi della classe di archiviazione specifici di Microsoft: [`align`](../cpp/align-cpp.md) ,, [`allocate`](../cpp/allocate.md) [`allocator`](../cpp/allocator.md) , [`appdomain`](../cpp/appdomain.md) , [`code_seg`](../cpp/code-seg-declspec.md) , [`deprecated`](../cpp/deprecated-cpp.md) , [`dllexport`](../cpp/dllexport-dllimport.md) , [`dllimport`](../cpp/dllexport-dllimport.md) , [`jitintrinsic`](../cpp/jitintrinsic.md) , [`naked`](../cpp/naked-cpp.md) , [`noalias`](../cpp/noalias.md) , [`noinline`](../cpp/noinline.md) , [`noreturn`](../cpp/noreturn.md) , [`nothrow`](../cpp/nothrow-cpp.md) , [`novtable`](../cpp/novtable.md) , [`no_sanitize_address`](../cpp/no-sanitize-address.md) , [`process`](../cpp/process.md) , [`restrict`](../cpp/restrict.md) , [`safebuffers`](../cpp/safebuffers.md) , [`selectany`](../cpp/selectany.md) , [`spectre`](../cpp/spectre.md) e [`thread`](../cpp/thread.md) . Supporta inoltre questi attributi dell'oggetto COM: [`property`](../cpp/property-cpp.md) e [`uuid`](../cpp/uuid-cpp.md) .
 
-Gli **`code_seg`** **`dllexport`** attributi della classe di archiviazione,, **`dllimport`** , **`naked`** , **`noalias`** , **`nothrow`** , **`property`** , **`restrict`** , **`selectany`** , **`thread`** e **`uuid`** sono proprietà solo della dichiarazione dell'oggetto o della funzione a cui sono applicati. L' **`thread`** attributo influisca solo sui dati e sugli oggetti. Gli **`naked`** **`spectre`** attributi e influiscono solo sulle funzioni. Gli **`dllimport`** **`dllexport`** attributi e influiscono sulle funzioni, sui dati e sugli oggetti. Gli **`property`** **`selectany`** attributi, e **`uuid`** influiscono sugli oggetti com.
+Gli **`code_seg`** **`dllexport`** attributi della classe di archiviazione,, **`dllimport`** , **`naked`** , **`noalias`** , **`nothrow`** , **`no_sanitize_address`** , **`property`** , **`restrict`** , **`selectany`** , **`thread`** e **`uuid`** sono proprietà solo della dichiarazione dell'oggetto o della funzione a cui sono applicati. L' **`thread`** attributo influisca solo sui dati e sugli oggetti. Gli **`naked`** **`spectre`** attributi e influiscono solo sulle funzioni. Gli **`dllimport`** **`dllexport`** attributi e influiscono sulle funzioni, sui dati e sugli oggetti. Gli **`property`** **`selectany`** attributi, e **`uuid`** influiscono sugli oggetti com.
 
 Per compatibilità con le versioni precedenti, **`_declspec`** è un sinonimo di, a **`__declspec`** meno che non sia specificata l'opzione del compilatore [/za \( Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
 
@@ -102,5 +103,5 @@ __declspec( thread ) int tls_i = 1;
 
 ## <a name="see-also"></a>Vedi anche
 
-[Parole chiave](../cpp/keywords-cpp.md)<br/>
+[Parole](../cpp/keywords-cpp.md)\
 [Attributi di Storage-Class estese C](../c-language/c-extended-storage-class-attributes.md)
