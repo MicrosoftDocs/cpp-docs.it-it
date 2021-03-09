@@ -3,8 +3,6 @@
 - name: Funzionalità della libreria CRT
   expanded: false
   items:
-    - name: Funzionalità della libreria CRT
-      href: ../c-runtime-library/crt-library-features.md
     - name: Compatibilità
       expanded: false
       items:
@@ -66,6 +64,8 @@
       href: ../c-runtime-library/global-state.md
     - name: Operazione matematiche generiche di tipo
       href: ../c-runtime-library/tgmath.md
+    - name: Runtime C (CRT) e file con estensione LIB della libreria standard C++
+      href: ../c-runtime-library/crt-library-features.md
 - name: Routine di Universal C Runtime per categoria
   expanded: false
   items:

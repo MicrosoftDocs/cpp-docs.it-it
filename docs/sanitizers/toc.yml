@@ -1,0 +1,58 @@
+- name: Purificatori del codice
+  href: ../sanitizers/index.yml
+- name: AddressSanitizer
+  expanded: true
+  items:
+    - name: Panoramica di AddressSanitizer
+      href: ../sanitizers/asan.md
+    - name: Riferimenti per la compilazione e il linguaggio
+      href: ../sanitizers/asan-building.md
+    - name: Riferimento al runtime
+      href: ../sanitizers/asan-runtime.md
+    - name: Integrazione del debugger
+      href: ../sanitizers/asan-debugger-integration.md
+    - name: Byte ombreggiatura
+      href: ../sanitizers/asan-shadow-bytes.md
+    - name: Testing distribuito o cloud
+      href: ../sanitizers/asan-offline-crash-dumps.md
+    - name: Esempi di errore AddressSanitizer
+      expanded: true
+      items:
+        - name: Esempi di errore AddressSanitizer
+          href: ../sanitizers/asan-error-examples.md
+        - name: Alloc-Dealloc-errore di mancata corrispondenza
+          href: ../sanitizers/error-alloc-dealloc-mismatch.md
+        - name: errore di allocazione-dimensioni troppo grandi
+          href: ../sanitizers/error-allocation-size-too-big.md
+        - name: calloc-errore di overflow
+          href: ../sanitizers/error-calloc-overflow.md
+        - name: errore doppio libero
+          href: ../sanitizers/error-double-free.md
+        - name: errore dinamico-stack-buffer-overflow
+          href: ../sanitizers/error-dynamic-stack-buffer-overflow.md
+        - name: errore di overflow del buffer globale
+          href: ../sanitizers/error-global-buffer-overflow.md
+        - name: errore di overflow del buffer heap
+          href: ../sanitizers/error-heap-buffer-overflow.md
+        - name: errore heap-use-after-free
+          href: ../sanitizers/error-heap-use-after-free.md
+        - name: errore di allineamento allocazione non valido
+          href: ../sanitizers/error-invalid-allocation-alignment.md
+        - name: memcpy-param-errore di sovrapposizione
+          href: ../sanitizers/error-memcpy-param-overlap.md
+        - name: nuovo-delete-type-errore di mancata corrispondenza
+          href: ../sanitizers/error-new-delete-type-mismatch.md
+        - name: errore di overflow dello stack buffer
+          href: ../sanitizers/error-stack-buffer-overflow.md
+        - name: errore di underflow dello stack-buffer
+          href: ../sanitizers/error-stack-buffer-underflow.md
+        - name: errore stack-use-after-return
+          href: ../sanitizers/error-stack-use-after-return.md
+        - name: errore di stack-use-after-scope
+          href: ../sanitizers/error-stack-use-after-scope.md
+        - name: strcat-param-errore di sovrapposizione
+          href: ../sanitizers/error-strncat-param-overlap.md
+        - name: errore di utilizzo dopo-non elaborabile
+          href: ../sanitizers/error-use-after-poison.md
+    - name: Problemi noti
+      href: ../sanitizers/asan-known-issues.md
