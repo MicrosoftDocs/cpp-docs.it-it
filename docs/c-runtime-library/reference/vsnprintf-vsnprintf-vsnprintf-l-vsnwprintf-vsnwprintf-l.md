@@ -1,7 +1,7 @@
 ---
 title: vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 description: Informazioni di riferimento sulle API per vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf e _vsnwprintf_l; che scrivono l'output formattato usando un puntatore a un elenco di argomenti.
-ms.date: 06/24/2020
+ms.date: 3/9/2021
 api_name:
 - _vsnprintf
 - _vsnprintf_l
@@ -55,13 +55,12 @@ helpviewer_keywords:
 - _vsnprintf function
 - formatted text [C++]
 - vsnwprintf function
-ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: e6ed3d146458f514691fe0b20a4c88ffebb5f877
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 870afc9cae241e61daebcac06089d01ac2fc3675
+ms.sourcegitcommit: b04b39940b0c1e265f80fc1951278fdb05a1b30a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008692"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102621997"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -168,9 +167,9 @@ Sia **_vsnprintf** che **_vsnwprintf** funzioni restituiscono il numero di carat
 
 Il valore restituito da tutte queste funzioni non include la terminazione null, indipendentemente dal fatto che ne venga scritta una o meno.
 
-- Se *count* è zero e il *buffer* è **null**, il valore restituito è il numero di caratteri che verranno scritti dalle funzioni. Il valore non prende in considerazione un **null**di terminazione. È possibile usare questo risultato per allocare spazio nel buffer sufficiente per la stringa e il carattere Null di terminazione e quindi chiamare di nuovo la funzione per riempire il buffer.
+- Se *count* è zero e il *buffer* è **null**, il valore restituito è il numero di caratteri che verranno scritti dalle funzioni. Il valore non prende in considerazione un **null** di terminazione. È possibile usare questo risultato per allocare spazio nel buffer sufficiente per la stringa e il carattere Null di terminazione e quindi chiamare di nuovo la funzione per riempire il buffer.
 - Se *count* è zero, ma il *buffer* non è **null**, non viene scritto alcun elemento e la funzione restituisce `-1` .
-- Se *Format* è **null**o se il *buffer* è **null** e *count* non è uguale a zero, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono-1 e impostano **errno** su **EINVAL**.
+- Se *Format* è **null** o se il *buffer* è **null** e *count* non è uguale a zero, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono-1 e impostano **errno** su **EINVAL**.
 
 ## <a name="remarks"></a>Commenti
 
@@ -178,6 +177,7 @@ Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi 
 
 > [!IMPORTANT]
 > Per evitare determinati tipi di rischi per la sicurezza, assicurarsi che *Format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
+> A partire da Windows 10 versione 2004 (Build 19041), la `printf` famiglia di funzioni stampa numeri a virgola mobile rappresentati esattamente in base alle regole IEEE 754 per l'arrotondamento. Nelle versioni precedenti di Windows, i numeri a virgola mobile rappresentativi esatti che terminano con "5" verrebbero sempre arrotondati. IEEE 754 indica che è necessario arrotondare al numero pari più vicino (anche noto come "arrotondamento del banco"). Ad esempio, sia `printf("%1.0f", 1.5)` che `printf("%1.0f", 2.5)` devono arrotondare a 2. In precedenza, 1,5 veniva arrotondato a 2 e 2,5 veniva arrotondato a 3. Questa modifica ha effetto solo sui numeri rappresentabili. 2,35, ad esempio, che, quando rappresentata in memoria, è più vicino a 2.35000000000000008, continua a arrotondare fino a 2,4. L'arrotondamento eseguito da queste funzioni ora rispetta anche la modalità di arrotondamento a virgola mobile impostata da [`fesetround`](fegetround-fesetround2.md) . In precedenza, l'arrotondamento sceglie sempre il `FE_TONEAREST` comportamento. Questa modifica influiscono solo sui programmi compilati con Visual Studio 2019 versione 16,2 e successive. Per utilizzare il comportamento di arrotondamento a virgola mobile legacy, collegare con [' legacy_stdio_float_rounding. obj '](../link-options.md).
 
 > [!NOTE]
 > Per assicurarsi che sia disponibile spazio per il carattere null di terminazione durante la chiamata di **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** e **_vsnwprintf_l**, assicurarsi che *count* sia rigorosamente minore della lunghezza del buffer e inizializzare il buffer su null prima di chiamare la funzione.
@@ -284,7 +284,7 @@ nSize: 9, buff: Hi there!
 nSize: 10, buff: Hi there!
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
 [Funzioni vprintf](../../c-runtime-library/vprintf-functions.md)<br/>

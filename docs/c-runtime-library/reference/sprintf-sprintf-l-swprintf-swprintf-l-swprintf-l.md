@@ -1,7 +1,7 @@
 ---
 description: 'Altre informazioni su: sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l'
 title: sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
-ms.date: 06/23/2020
+ms.date: 3/9/2021
 api_name:
 - __swprintf_l
 - sprintf
@@ -49,13 +49,12 @@ helpviewer_keywords:
 - stprintf_l function
 - sprintf_l function
 - formatted text [C++]
-ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-ms.openlocfilehash: 12c7560a57c126e2e35cf78b0d11b1262c14a9e5
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: e8a83a8c92ab873c250e94e9e9317a18c36673a2
+ms.sourcegitcommit: b04b39940b0c1e265f80fc1951278fdb05a1b30a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97292208"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622101"
 ---
 # <a name="sprintf-_sprintf_l-swprintf-_swprintf_l-__swprintf_l"></a>sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 
@@ -140,6 +139,8 @@ La funzione **sprintf** formatta e archivia una serie di caratteri e valori nel 
 
 > [!IMPORTANT]
 > Se si usa **sprintf**, non esiste alcun modo per limitare il numero di caratteri scritti, il che significa che il codice che usa **sprintf** è soggetto a sovraccarichi del buffer. Provare a usare la funzione related [_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md), che specifica un numero massimo di caratteri da scrivere nel *buffer*, oppure usare [_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md) per determinare la dimensione di un buffer necessario. Assicurarsi inoltre che *Format* non sia una stringa definita dall'utente.
+>
+> A partire da Windows 10 versione 2004 (Build 19041), la `printf` famiglia di funzioni stampa numeri a virgola mobile rappresentati esattamente in base alle regole IEEE 754 per l'arrotondamento. Nelle versioni precedenti di Windows, i numeri a virgola mobile rappresentativi esatti che terminano con "5" verrebbero sempre arrotondati. IEEE 754 indica che è necessario arrotondare al numero pari più vicino (anche noto come "arrotondamento del banco"). Ad esempio, sia `printf("%1.0f", 1.5)` che `printf("%1.0f", 2.5)` devono arrotondare a 2. In precedenza, 1,5 veniva arrotondato a 2 e 2,5 veniva arrotondato a 3. Questa modifica ha effetto solo sui numeri rappresentabili. 2,35, ad esempio, che, quando rappresentata in memoria, è più vicino a 2.35000000000000008, continua a arrotondare fino a 2,4. L'arrotondamento eseguito da queste funzioni ora rispetta anche la modalità di arrotondamento a virgola mobile impostata da [`fesetround`](fegetround-fesetround2.md) . In precedenza, l'arrotondamento sceglie sempre il `FE_TONEAREST` comportamento. Questa modifica influiscono solo sui programmi compilati con Visual Studio 2019 versione 16,2 e successive. Per utilizzare il comportamento di arrotondamento a virgola mobile legacy, collegare con [' legacy_stdio_float_rounding. obj '](../link-options.md).
 
 **swprintf** è una versione a caratteri wide di **sprintf**; gli argomenti del puntatore a **swprintf** sono stringhe a caratteri wide. Il rilevamento degli errori di codifica in **swprintf** potrebbe differire da **sprintf**. **swprintf** e **fwprintf** si comportano in modo identico, ad eccezione di **swprintf** scrive l'output in una stringa anziché in una destinazione di tipo **file** e **swprintf** richiede il parametro *count* per specificare il numero massimo di caratteri da scrivere. Le versioni di queste funzioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
 

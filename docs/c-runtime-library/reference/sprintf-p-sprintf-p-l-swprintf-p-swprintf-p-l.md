@@ -1,7 +1,7 @@
 ---
 description: 'Altre informazioni su: _sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l'
 title: _sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
-ms.date: 11/04/2016
+ms.date: 3/9/2021
 api_name:
 - _sprintf_p
 - _swprintf_p_l
@@ -45,13 +45,12 @@ helpviewer_keywords:
 - stprintf_p_l function
 - formatted text [C++]
 - _stprintf_p_l function
-ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-ms.openlocfilehash: 84702c0ab04027f350978c511ee8f871af753bb9
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 356aa4c5266323e989ffbc5b651af4c77431eecd
+ms.sourcegitcommit: b04b39940b0c1e265f80fc1951278fdb05a1b30a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97292299"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102621646"
 ---
 # <a name="_sprintf_p-_sprintf_p_l-_swprintf_p-_swprintf_p_l"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 
@@ -118,6 +117,9 @@ La funzione **_sprintf_p** formatta e archivia una serie di caratteri e valori n
 **_swprintf_p** è una versione a caratteri wide di **_sprintf_p**; gli argomenti del puntatore per **_swprintf_p** sono stringhe a caratteri wide. Il rilevamento degli errori di codifica in **_swprintf_p** può essere diverso da quello **_sprintf_p**. **_swprintf_p** e **fwprintf_p** si comportano in modo identico, ad eccezione del fatto che **_swprintf_p** scrive l'output in una stringa anziché in una destinazione di tipo **file** e **_swprintf_p** richiede il parametro *count* per specificare il numero massimo di caratteri da scrivere. Le versioni di queste funzioni con il suffisso **_L** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
 
 **_sprintf_p** restituisce il numero di byte archiviati nel *buffer*, senza contare il carattere null di terminazione. **_swprintf_p** restituisce il numero di caratteri wide archiviati nel *buffer*, senza contare il carattere wide null di terminazione. Se *buffer* o *Format* è un puntatore null o se la stringa di formato contiene caratteri di formattazione non validi, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono-1 e impostano **errno** su **EINVAL**.
+
+> [!IMPORTANT]
+> A partire da Windows 10 versione 2004 (Build 19041), la `printf` famiglia di funzioni stampa numeri a virgola mobile rappresentati esattamente in base alle regole IEEE 754 per l'arrotondamento. Nelle versioni precedenti di Windows, i numeri a virgola mobile rappresentativi esatti che terminano con "5" verrebbero sempre arrotondati. IEEE 754 indica che è necessario arrotondare al numero pari più vicino (anche noto come "arrotondamento del banco"). Ad esempio, sia `printf("%1.0f", 1.5)` che `printf("%1.0f", 2.5)` devono arrotondare a 2. In precedenza, 1,5 veniva arrotondato a 2 e 2,5 veniva arrotondato a 3. Questa modifica ha effetto solo sui numeri rappresentabili. 2,35, ad esempio, che, quando rappresentata in memoria, è più vicino a 2.35000000000000008, continua a arrotondare fino a 2,4. L'arrotondamento eseguito da queste funzioni ora rispetta anche la modalità di arrotondamento a virgola mobile impostata da [`fesetround`](fegetround-fesetround2.md) . In precedenza, l'arrotondamento sceglie sempre il `FE_TONEAREST` comportamento. Questa modifica influiscono solo sui programmi compilati con Visual Studio 2019 versione 16,2 e successive. Per utilizzare il comportamento di arrotondamento a virgola mobile legacy, collegare con [' legacy_stdio_float_rounding. obj '](../link-options.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

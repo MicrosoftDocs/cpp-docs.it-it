@@ -1,7 +1,7 @@
 ---
 description: 'Altre informazioni su: vprintf, _vprintf_l, vwprintf, _vwprintf_l'
 title: vprintf, _vprintf_l, vwprintf, _vwprintf_l
-ms.date: 11/04/2016
+ms.date: 3/9/2021
 api_name:
 - vprintf
 - _vwprintf_l
@@ -37,13 +37,12 @@ helpviewer_keywords:
 - vtprintf function
 - _vtprintf_l function
 - formatted text [C++]
-ms.assetid: 44549505-00a0-4fa7-9a85-f2e666f55a38
-ms.openlocfilehash: f403d7b3cce54495bf7118017e348fa144b0fd8d
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: be3615902166f4e248b06d2145df404e5ba0fe76
+ms.sourcegitcommit: b04b39940b0c1e265f80fc1951278fdb05a1b30a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97155774"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102621425"
 ---
 # <a name="vprintf-_vprintf_l-vwprintf-_vwprintf_l"></a>vprintf, _vprintf_l, vwprintf, _vwprintf_l
 
@@ -101,6 +100,7 @@ Le versioni di queste funzioni con il suffisso **_L** sono identiche, ad eccezio
 
 > [!IMPORTANT]
 > Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns). Si noti che le stringhe di formato non valide vengono rilevate e generano un errore.
+A partire da Windows 10 versione 2004 (Build 19041), la `printf` famiglia di funzioni stampa numeri a virgola mobile rappresentati esattamente in base alle regole IEEE 754 per l'arrotondamento. Nelle versioni precedenti di Windows, i numeri a virgola mobile rappresentativi esatti che terminano con "5" verrebbero sempre arrotondati. IEEE 754 indica che è necessario arrotondare al numero pari più vicino (anche noto come "arrotondamento del banco"). Ad esempio, sia `printf("%1.0f", 1.5)` che `printf("%1.0f", 2.5)` devono arrotondare a 2. In precedenza, 1,5 veniva arrotondato a 2 e 2,5 veniva arrotondato a 3. Questa modifica ha effetto solo sui numeri rappresentabili. 2,35, ad esempio, che, quando rappresentata in memoria, è più vicino a 2.35000000000000008, continua a arrotondare fino a 2,4. L'arrotondamento eseguito da queste funzioni ora rispetta anche la modalità di arrotondamento a virgola mobile impostata da [`fesetround`](fegetround-fesetround2.md) . In precedenza, l'arrotondamento sceglie sempre il `FE_TONEAREST` comportamento. Questa modifica influiscono solo sui programmi compilati con Visual Studio 2019 versione 16,2 e successive. Per utilizzare il comportamento di arrotondamento a virgola mobile legacy, collegare con [' legacy_stdio_float_rounding. obj '](../link-options.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

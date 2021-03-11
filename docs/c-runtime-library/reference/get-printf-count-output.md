@@ -1,7 +1,7 @@
 ---
 description: 'Altre informazioni su: _get_printf_count_output'
 title: _get_printf_count_output
-ms.date: 11/04/2016
+ms.date: 3/9/2021
 api_name:
 - _get_printf_count_output
 api_location:
@@ -27,13 +27,12 @@ helpviewer_keywords:
 - '%n format'
 - get_printf_count_output function
 - _get_printf_count_output function
-ms.assetid: 850f9f33-8319-433e-98d8-6a694200d994
-ms.openlocfilehash: fe5ee728b7bc8400cd93ec4e93131496d59334c5
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: f31c0321d2d7873db20e7d663918aebc002c768d
+ms.sourcegitcommit: b04b39940b0c1e265f80fc1951278fdb05a1b30a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97339005"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622127"
 ---
 # <a name="_get_printf_count_output"></a>_get_printf_count_output
 
@@ -52,6 +51,9 @@ Diverso da zero se **% n** è supportato, 0 se **% n** non è supportato.
 ## <a name="remarks"></a>Commenti
 
 Se **% n** non è supportato (impostazione predefinita), la presenza di **% n** nella stringa di formato di una qualsiasi delle funzioni **printf** richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se è abilitato il supporto di **% n** (vedere [_set_printf_count_output](set-printf-count-output.md)), il comportamento di **% n** sarà analogo a quello descritto nella sintassi per la [specifica del formato: funzioni printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+
+> [!IMPORTANT]
+> A partire da Windows 10 versione 2004 (Build 19041), la `printf` famiglia di funzioni stampa numeri a virgola mobile rappresentati esattamente in base alle regole IEEE 754 per l'arrotondamento. Nelle versioni precedenti di Windows, i numeri a virgola mobile rappresentativi esatti che terminano con "5" verrebbero sempre arrotondati. IEEE 754 indica che è necessario arrotondare al numero pari più vicino (anche noto come "arrotondamento del banco"). Ad esempio, sia `printf("%1.0f", 1.5)` che `printf("%1.0f", 2.5)` devono arrotondare a 2. In precedenza, 1,5 veniva arrotondato a 2 e 2,5 veniva arrotondato a 3. Questa modifica ha effetto solo sui numeri rappresentabili. 2,35, ad esempio, che, quando rappresentata in memoria, è più vicino a 2.35000000000000008, continua a arrotondare fino a 2,4. L'arrotondamento eseguito da queste funzioni ora rispetta anche la modalità di arrotondamento a virgola mobile impostata da [`fesetround`](fegetround-fesetround2.md) . In precedenza, l'arrotondamento sceglie sempre il `FE_TONEAREST` comportamento. Questa modifica influiscono solo sui programmi compilati con Visual Studio 2019 versione 16,2 e successive. Per utilizzare il comportamento di arrotondamento a virgola mobile legacy, collegare con [' legacy_stdio_float_rounding. obj '](../link-options.md).
 
 ## <a name="requirements"></a>Requisiti
 

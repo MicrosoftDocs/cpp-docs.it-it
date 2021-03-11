@@ -1,7 +1,7 @@
 ---
 title: snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 description: Informazioni di riferimento sulle API per snprintf, _snprintf, _snprintf_l, _snwprintf e _snwprintf_; che scrive i dati formattati in una stringa.
-ms.date: 08/27/2020
+ms.date: 3/9/2021
 api_name:
 - _snwprintf
 - _snprintf
@@ -51,13 +51,12 @@ helpviewer_keywords:
 - snprintf function
 - sntprintf function
 - formatted text [C++]
-ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
-ms.openlocfilehash: 9a851f08e50d11d3716ea59e00e5e9028b6cd6d5
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: c36b7e480b2025c605d46128418c73e7b6887fc3
+ms.sourcegitcommit: b04b39940b0c1e265f80fc1951278fdb05a1b30a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556112"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102621659"
 ---
 # <a name="snprintf-_snprintf-_snprintf_l-_snwprintf-_snwprintf_l"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 
@@ -151,13 +150,13 @@ Per altre informazioni, vedere [Sintassi per la specifica del formato: funzioni 
 
 ## <a name="return-value"></a>Valore restituito
 
-Lasciare che **Len** sia la lunghezza della stringa di dati formattata, escluso il valore null di terminazione. Sia **Len** che **count** sono il numero di caratteri per **snprintf** e **_snprintf**e il numero di caratteri wide per **_snwprintf**.
+Lasciare che **Len** sia la lunghezza della stringa di dati formattata, escluso il valore null di terminazione. Sia **Len** che **count** sono il numero di caratteri per **snprintf** e **_snprintf** e il numero di caratteri wide per **_snwprintf**.
 
-Per tutte le funzioni, **se**  <  il*conteggio*Len, i caratteri **Len** vengono archiviati nel *buffer*, viene aggiunto un carattere di terminazione null e viene restituito **Len** .
+Per tutte le funzioni, **se**  <  il *conteggio* Len, i caratteri **Len** vengono archiviati nel *buffer*, viene aggiunto un carattere di terminazione null e viene restituito **Len** .
 
 La funzione **snprintf** tronca l'output quando **Len** è maggiore o uguale al *conteggio*, inserendo un carattere di terminazione null in `buffer[count-1]` . Il valore restituito è **Len**, il numero di caratteri che sarebbe stato restituito se il *conteggio* era sufficientemente grande. La funzione **snprintf** restituisce un valore negativo se si verifica un errore di codifica.
 
-Per tutte le funzioni diverse **da snprintf**, se **Len**  =  *count*, **Len** characters vengono archiviati nel *buffer*, non viene aggiunto alcun carattere di terminazione null e viene restituito **Len** . Se **len**  >  il*conteggio*Len, i caratteri di *conteggio* vengono archiviati nel *buffer*, non viene aggiunto alcun carattere di terminazione null e viene restituito un valore negativo.
+Per tutte le funzioni diverse **da snprintf**, se **Len**  =  *count*, **Len** characters vengono archiviati nel *buffer*, non viene aggiunto alcun carattere di terminazione null e viene restituito **Len** . Se   >  il *conteggio* Len, i caratteri di *conteggio* vengono archiviati nel *buffer*, non viene aggiunto alcun carattere di terminazione null e viene restituito un valore negativo.
 
 Se *buffer* è un puntatore null e *count* è zero, **Len** viene restituito come numero di caratteri necessari per formattare l'output, escluso il carattere null di terminazione. Per eseguire correttamente una chiamata con lo stesso *argomento* e i parametri delle *impostazioni locali* , allocare un buffer contenente almeno **Len** + 1 caratteri.
 
@@ -165,12 +164,14 @@ Se il *buffer* è un puntatore null e *count* è diverso da zero oppure se *Form
 
 Per informazioni su questi e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La funzione **snprintf** e la famiglia **_snprintf** di funzioni formattano e archiviano il *numero* di caratteri nel *buffer*. La funzione **snprintf** archivia sempre un carattere di terminazione null, troncando l'output, se necessario. Il **_snprintf** famiglia di funzioni aggiunge un carattere di terminazione null solo se la lunghezza della stringa formattata è rigorosamente minore dei caratteri di *conteggio* . Ogni *argomento* , se presente, viene convertito e viene restituito in base alla specifica di formato corrispondente nel *formato*. Il formato è costituito da caratteri ordinari e ha lo stesso formato e la stessa funzione dell'argomento *Format* per [printf](printf-printf-l-wprintf-wprintf-l.md). Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
 > [!IMPORTANT]
 > Assicurarsi che *format* non sia una stringa definita dall'utente. Poiché le funzioni **_snprintf** non garantiscono la terminazione null, in particolare quando il valore restituito è *count*, assicurarsi che siano seguite dal codice che aggiunge il carattere di terminazione null. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
+>
+> A partire da Windows 10 versione 2004 (Build 19041), la `printf` famiglia di funzioni stampa numeri a virgola mobile rappresentati esattamente in base alle regole IEEE 754 per l'arrotondamento. Nelle versioni precedenti di Windows, i numeri a virgola mobile rappresentativi esatti che terminano con "5" verrebbero sempre arrotondati. IEEE 754 indica che è necessario arrotondare al numero pari più vicino (anche noto come "arrotondamento del banco"). Ad esempio, sia `printf("%1.0f", 1.5)` che `printf("%1.0f", 2.5)` devono arrotondare a 2. In precedenza, 1,5 veniva arrotondato a 2 e 2,5 veniva arrotondato a 3. Questa modifica ha effetto solo sui numeri rappresentabili. 2,35, ad esempio, che, quando rappresentata in memoria, è più vicino a 2.35000000000000008, continua a arrotondare fino a 2,4. L'arrotondamento eseguito da queste funzioni ora rispetta anche la modalità di arrotondamento a virgola mobile impostata da [`fesetround`](fegetround-fesetround2.md) . In precedenza, l'arrotondamento sceglie sempre il `FE_TONEAREST` comportamento. Questa modifica influiscono solo sui programmi compilati con Visual Studio 2019 versione 16,2 e successive. Per usare il comportamento di arrotondamento a virgola mobile legacy, collegare con [`legacy_stdio_float_rounding.obj`](../link-options.md) .
 
 A partire da UCRT in Visual Studio 2015 e Windows 10, **snprintf** non è più identico a **_snprintf**. Il comportamento della funzione **snprintf** è ora conforme allo standard C99.
 

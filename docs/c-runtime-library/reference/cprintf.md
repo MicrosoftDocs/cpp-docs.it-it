@@ -1,7 +1,7 @@
 ---
 description: 'Altre informazioni su: cprintf'
 title: cprintf
-ms.date: 12/16/2019
+ms.date: 3/9/2021
 api_name:
 - cprintf
 api_location:
@@ -23,13 +23,12 @@ f1_keywords:
 - cprintf
 helpviewer_keywords:
 - cprintf function
-ms.assetid: 573e6634-d7e5-4856-8c01-627dcfbd5fc8
-ms.openlocfilehash: c42a02afaaa820e58f32b251ad760cf3bee825ef
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: b31865ac14653b80ff79f89df968128b727c9991
+ms.sourcegitcommit: b04b39940b0c1e265f80fc1951278fdb05a1b30a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97155904"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102621919"
 ---
 # <a name="cprintf"></a>cprintf
 
@@ -39,3 +38,5 @@ Il nome della funzione specifica `cprintf` di Microsoft è un alias deprecato pe
 
 > [!IMPORTANT]
 > Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+>
+> A partire da Windows 10 versione 2004 (Build 19041), la `printf` famiglia di funzioni stampa numeri a virgola mobile rappresentati esattamente in base alle regole IEEE 754 per l'arrotondamento. Nelle versioni precedenti di Windows, i numeri a virgola mobile rappresentativi esatti che terminano con "5" verrebbero sempre arrotondati. IEEE 754 indica che è necessario arrotondare al numero pari più vicino (anche noto come "arrotondamento del banco"). Ad esempio, sia `printf("%1.0f", 1.5)` che `printf("%1.0f", 2.5)` devono arrotondare a 2. In precedenza, 1,5 veniva arrotondato a 2 e 2,5 veniva arrotondato a 3. Questa modifica ha effetto solo sui numeri rappresentabili. 2,35, ad esempio, che, quando rappresentata in memoria, è più vicino a 2.35000000000000008, continua a arrotondare fino a 2,4. L'arrotondamento eseguito da queste funzioni ora rispetta anche la modalità di arrotondamento a virgola mobile impostata da [`fesetround`](fegetround-fesetround2.md) . In precedenza, l'arrotondamento sceglie sempre il `FE_TONEAREST` comportamento. Questa modifica influiscono solo sui programmi compilati con Visual Studio 2019 versione 16,2 e successive. Per usare il comportamento di arrotondamento a virgola mobile legacy, collegare con [`legacy_stdio_float_rounding.obj`](../link-options.md) .
