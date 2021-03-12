@@ -1,7 +1,7 @@
 ---
 description: 'Altre informazioni su: determinazione delle dll da ridistribuire'
 title: Determinazione delle DLL da ridistribuire
-ms.date: 07/15/2019
+ms.date: 03/10/2021
 helpviewer_keywords:
 - redistributing DLLs
 - DLLs [C++], redistributing
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-ms.openlocfilehash: 016351a6d204c71cfef516862c9b57bebafcc1a2
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 8adc9d6093cec18f4591f3929a84a55fcfc2f6d7
+ms.sourcegitcommit: f8ba5db09d05683b24c58505f0e57c21f85545dc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97329393"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103087207"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>Determinazione delle DLL da ridistribuire
 
@@ -22,7 +22,7 @@ Quando si compila un'applicazione che usa librerie DLL fornite da Visual Studio,
 
 Per includere le DLL ridistribuibili in modo più semplice nel programma di installazione, le DLL sono disponibili anche sotto forma di *pacchetti ridistribuibili* autonomi. Si tratta di file eseguibili specifici per l'architettura che installano i file ridistribuibili nel computer dell'utente tramite distribuzione centrale. Ad esempio, vcredist \_x86.exe installa le librerie a 32 bit per computer x86 e x64, vcredist \_x64.exe installa le librerie a 64 bit per i computer x64 e vcredist \_ARM.exe installa le librerie per i computer ARM. È consigliabile usare la distribuzione centrale perché Microsoft può aggiornare in modo indipendente queste librerie tramite il servizio Windows Update. Oltre alla copia nell'installazione di Visual Studio, i pacchetti ridistribuibili correnti sono disponibili per il download. Per i collegamenti ai pacchetti ridistribuibili più recenti supportati per set di strumenti correnti e precedenti, vedere [Download delle più recenti versioni di Visual C++ supportate](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads). È possibile trovare versioni precedenti specifiche dei pacchetti ridistribuibili cercando "Pacchetti ridistribuibili Visual C++" nell'[Area download Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=158431).
 
-Il numero di versione principale del pacchetto ridistribuibile distribuito deve corrispondere alla versione del set di strumenti di Visual Studio usato per creare l'applicazione e il numero di versione secondaria deve essere uguale o superiore. Visual Studio 2017 e Visual Studio 2015 hanno numeri di versione compatibili per i set di strumenti. Questo significa che i file ridistribuibili di Visual Studio 2017 possono essere usati da app compilate con il set di strumenti 2015. Anche se possono essere compatibili, non è supportato l'uso dei file ridistribuibili 2015 in app create usando il set di strumenti 2017. È supportato solo l'uso di un pacchetto ridistribuibile di una versione corrispondente alla versione del set di strumenti o più recente.
+È supportato solo l'uso di un pacchetto ridistribuibile uguale o più recente rispetto alla versione del set di strumenti. Il numero di versione principale del pacchetto ridistribuibile distribuito deve corrispondere alla versione del set di strumenti di Visual Studio usato per creare l'applicazione e il numero di versione secondaria deve essere uguale o superiore. Visual Studio 2019, 2017 e 2015 hanno tutti i numeri di versione del set di strumenti compatibili, il che significa che i file ridistribuibili di Visual Studio più recenti possono essere usati dalle app compilate da un set di strumenti di una versione precedente. Ad esempio, i file ridistribuibili di Visual Studio 2019 possono essere usati dalle app compilate con il set di strumenti di Visual Studio 2017 o 2015. Sebbene possano essere compatibili, non è supportato l'uso di file ridistribuibili obsoleti nelle app compilate usando un set di strumenti più recente. Ad esempio, l'uso dei file ridistribuibili 2017 nelle app compilate con il set di strumenti 2019 non è supportato.
 
 Un altro modo per includere le DLL ridistribuibili nel programma di installazione è l'uso di *modelli unione*. Questi moduli di Microsoft Installer sono inclusi nel programma di installazione dell'applicazione, che li installa. I moduli unione per le DLL ridistribuibili si trovano nella directory di installazione di Visual Studio in \\ VC \\ Redist\MSVC \\ *versione* \\ MergeModules \\ . Nelle versioni precedenti di Visual Studio, questi file sono disponibili nella directory \\Programmi o \\Programmi (x86) in una sottodirectory Common Files\\Merge Modules. Per altre informazioni sull'uso di questi file, vedere [Ridistribuzione di componenti tramite modelli unione](redistributing-components-by-using-merge-modules.md).
 
@@ -30,7 +30,7 @@ Nell'installazione di Visual Studio sono incluse anche le singole DLL ridistribu
 
 Per determinare quali DLL è necessario ridistribuire con l'applicazione, raccogliere un elenco delle DLL da cui dipende l'applicazione. Queste sono in genere elencate come input di librerie di importazione per il linker. Alcune librerie, ad esempio vcruntime e UCRT (Universal C Runtime Library), sono incluse per impostazione predefinita. Se l'app o una delle relative dipendenze usa LoadLibrary per caricare in modo dinamico una DLL, quest'ultima potrebbe non essere elencata tra gli input al linker. Un modo per raccogliere l'elenco delle DLL caricate in modo dinamico consiste nell'eseguire lo strumento Dependency Walker (depends.exe) per l'app, come descritto in [Informazioni sulle dipendenze di un'applicazione Visual C++](understanding-the-dependencies-of-a-visual-cpp-application.md). Questo strumento, tuttavia, è obsoleto e potrebbe segnalare che non riesce a trovare alcune DLL.
 
-Se si ha l'elenco delle dipendenze, confrontarlo con l'elenco collegato nel file Redist.txt nella directory di installazione di Microsoft Visual Studio o con l'"elenco REDIST" di DLL ridistribuibili a cui viene fatto riferimento nella sezione "Codice distribuibile" del Contratto di licenza per il software Microsoft per la copia di Visual Studio in uso. Per Visual Studio 2017, vedere [Codice distribuibile per Microsoft Visual Studio 2017 (inclusi utilità, estendibilità e file del server di compilazione)](/visualstudio/productinfo/2017-redistribution-vs). Per Visual Studio 2015, vedere [Codice distribuibile per Microsoft Visual Studio 2015 e Microsoft Visual Studio 2015 SDK (inclusi utilità e file del server di compilazione)](/visualstudio/productinfo/2015-redistribution-vs). Per Visual Studio 2013, l'elenco è disponibile online in [Distributable Code for Microsoft Visual Studio 2013 and Microsoft Visual Studio 2013 SDK](/visualstudio/productinfo/2013-redistribution-vs) (Codice distribuibile per Microsoft Visual Studio 2013 e Microsoft Visual Studio 2013 SDK).
+Se si ha l'elenco delle dipendenze, confrontarlo con l'elenco collegato nel file Redist.txt nella directory di installazione di Microsoft Visual Studio o con l'"elenco REDIST" di DLL ridistribuibili a cui viene fatto riferimento nella sezione "Codice distribuibile" del Contratto di licenza per il software Microsoft per la copia di Visual Studio in uso. Per Visual Studio 2019, vedere [codice distribuibile per Visual studio 2019](/visualstudio/releases/2019/redistribution).  Per Visual Studio 2017, vedere [Codice distribuibile per Microsoft Visual Studio 2017 (inclusi utilità, estendibilità e file del server di compilazione)](/visualstudio/productinfo/2017-redistribution-vs). Per Visual Studio 2015, vedere [Codice distribuibile per Microsoft Visual Studio 2015 e Microsoft Visual Studio 2015 SDK (inclusi utilità e file del server di compilazione)](/visualstudio/productinfo/2015-redistribution-vs). Per Visual Studio 2013, l'elenco è disponibile online in [Distributable Code for Microsoft Visual Studio 2013 and Microsoft Visual Studio 2013 SDK](/visualstudio/productinfo/2013-redistribution-vs) (Codice distribuibile per Microsoft Visual Studio 2013 e Microsoft Visual Studio 2013 SDK).
 
 Nelle versioni di Visual Studio precedenti a Visual Studio 2015, la Libreria di runtime C (CRT) era inclusa come DLL ridistribuibile in msvc *versione*.dll. A partire da Visual Studio 2015, le funzioni in CRT sono state sottoposte a refactoring nelle librerie vcruntime e UCRT. La libreria UCRT è ora un componente di sistema di Windows 10 gestito da Windows Update ed è disponibile in tutti i sistemi operativi Windows 10. Per distribuire l'applicazione a sistemi operativi precedenti, può essere necessario ridistribuire anche la libreria UCRT. Una versione precedente di questa è inclusa nei file ridistribuibili di Visual Studio e viene installata solo nei sistemi operativi precedenti a Windows 10, e solo se non è già installata alcuna versione della libreria UCRT. Per una versione installabile della libreria UCRT per i sistemi di livello inferiore come pacchetto di aggiornamento di sistema Microsoft, vedere [Windows 10 Universal C Runtime](https://www.microsoft.com/download/details.aspx?id=48234) nell'Area download Microsoft.
 
@@ -38,7 +38,7 @@ Non è possibile ridistribuire tutti i file inclusi in Visual Studio. È consent
 
 Nella tabella seguente vengono descritte alcune DLL di Visual C++ da cui l'applicazione potrebbe dipendere.
 
-|Libreria di Visual C++|Description|Si applica a|
+|Libreria di Visual C++|Descrizione|Si applica a|
 |--------------------------|-----------------|----------------|
 |vcruntime *Version*. dll|Libreria di runtime per codice nativo.|Applicazioni che usano i servizi di avvio e terminazione normali dei linguaggi C e C++ normali.|
 |vccorlib *version*.dll|Libreria di runtime per codice gestito.|Applicazioni che usano i servizi del linguaggio C++ per il codice gestito.|
