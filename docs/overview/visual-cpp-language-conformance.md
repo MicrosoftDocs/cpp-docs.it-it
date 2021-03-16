@@ -3,12 +3,12 @@ title: Tabella di conformità della libreria standard e del linguaggio Microsoft
 description: Tabella degli aggiornamenti della conformità di Microsoft C++ in base alla versione di Visual Studio.
 ms.date: 03/10/2021
 ms.technology: cpp-language
-ms.openlocfilehash: f957bfeb0888afd947d20d02dcb93360bfe085c0
-ms.sourcegitcommit: f8ba5db09d05683b24c58505f0e57c21f85545dc
+ms.openlocfilehash: d6a53a242d2803aa039c47666e9d45641978e59d
+ms.sourcegitcommit: f7d707e041dfb04e957af08098fdc38757adc8b0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "103087194"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103472756"
 ---
 # <a name="microsoft-c-language-and-standard-library-conformance-table"></a>Tabella di conformità della libreria standard e del linguaggio Microsoft C++
 
@@ -90,7 +90,7 @@ Per informazioni dettagliate sui miglioramenti apportati alla conformità di Vis
 | &nbsp;&nbsp;[`P1771R1 [[nodiscard]] for constructors`](https://wg21.link/p1771r1) | VS 2019 16,4 <sup> [17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P1825R0 Merged wording for P0527R1 and P1155R3, more implicit moves`](https://wg21.link/p1825r0) | VS 2019 16,4 <sup> [17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0929R2 Checking for abstract class types`](https://wg21.link/P0929R2) | VS 2019 16,5 <sup> [17](#note_17)</sup> |
-| &nbsp;&nbsp;[`P0962R2 Relaxing the range-for loop customization point finding rules`](https://wg21.link/p0962r1) | VS 2019 16,5 <sup> [17](#note_17)</sup> |
+| &nbsp;&nbsp;[`P0962R1 Relaxing the range-for loop customization point finding rules`](https://wg21.link/p0962r1) | VS 2019 16,5 <sup> [17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0859R0 CWG 1581: When are constexpr member functions defined`](https://wg21.link/p0859r0) | No |
 | &nbsp;&nbsp;[`P1009R2 Array size deduction in new-expressions`](https://wg21.link/P1009R2) | VS 2019 16,7 <sup> [17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P1286R2 Contra CWG DR1778`](https://wg21.link/P1286R2) | VS 2019 16,8 <sup> [17](#note_17)</sup> |
